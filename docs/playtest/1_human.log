@@ -1,0 +1,2537 @@
+T   0 mode=game_loop           Forlong II(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Forlong II(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 8 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=dungeon_mode        Forlong II(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=N
+  This dungeon is locked. A monster on this floor holds the key.
+-> u
+T   3 mode=game_loop           Forlong II(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=N
+  You don't have the key to this dungeon.
+-> l
+T   4 mode=game_loop           Forlong II(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=N
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 78
+-> e
+T   5 mode=combat_mode         Forlong II(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP25/25)
+  A Skeleton (Level 0) appears! Rattling bones form a reanimated skeleton. It was practicing a TikTok before you barged in.
+  The Skeleton strikes first!
+-> a
+T   6 mode=combat_mode         Forlong II(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP6/25)
+  Ouch! Skeleton hit Forlong II!
+  You took 1 damage!
+  You hit the evil Skeleton!
+  Skeleton took 19 damage.
+-> a
+T   7 mode=combat_mode         Forlong II(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP6/25)
+  You missed the evil Skeleton!
+-> a
+T   8 mode=combat_mode         Forlong II(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP6/25)
+-> a
+T   9 mode=combat_victory      Forlong II(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 345 room=.
+-> back
+T  10 mode=game_loop           Forlong II(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 345 room=.
+-> l
+T  11 mode=game_loop           Forlong II(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 345 room=.
+-> w
+T  12 mode=dungeon_mode        Forlong II(hum) F1@( 1, 2) HP 28/30 MP 0/0 Hu 97 $ 345 room=N
+-> u
+T  13 mode=dungeon_unlocked_mode Forlong II(hum) F1@( 1, 2) HP 28/30 MP 0/0 Hu 97 $ 345 room=N
+-> r
+T  14 mode=game_loop           Forlong II(hum) F1@( 1, 2) HP 28/30 MP 0/0 Hu 97 $ 345 room=N
+-> s
+T  15 mode=dungeon_mode        Forlong II(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 96 $ 345 room=N
+-> u
+T  16 mode=game_loop           Forlong II(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 96 $ 345 room=N
+-> e
+T  17 mode=combat_mode         Forlong II(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 345 room=M vs Stirge(L0 HP6/6)
+-> a
+T  18 mode=combat_victory      Forlong II(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 346 room=.
+-> back
+T  19 mode=game_loop           Forlong II(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 346 room=.
+-> l
+T  20 mode=game_loop           Forlong II(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 346 room=.
+-> s
+T  21 mode=game_loop           Forlong II(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 94 $ 346 room=.
+-> l
+T  22 mode=game_loop           Forlong II(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 94 $ 346 room=.
+-> e
+T  23 mode=combat_mode         Forlong II(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 93 $ 346 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  24 mode=combat_mode         Forlong II(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 93 $ 346 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  25 mode=combat_victory      Forlong II(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 93 $ 353 room=.
+-> back
+T  26 mode=game_loop           Forlong II(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 93 $ 353 room=.
+-> e
+T  27 mode=game_loop           Forlong II(hum) F1@( 4, 4) HP 29/30 MP 0/0 Hu 92 $ 353 room=.
+-> n
+T  28 mode=game_loop           Forlong II(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 91 $ 353 room=.
+-> n
+T  29 mode=chest_mode          Forlong II(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 90 $ 353 room=C
+-> o
+T  30 mode=game_loop           Forlong II(hum) F1@( 4, 2) HP 20/30 MP 0/0 Hu 90 $ 353 room=.
+-> w
+T  31 mode=chest_mode          Forlong II(hum) F1@( 3, 2) HP 20/30 MP 0/0 Hu 89 $ 353 room=C
+-> o
+T  32 mode=game_loop           Forlong II(hum) F1@( 2, 2) HP 21/30 MP 0/0 Hu 88 $ 353 room=.
+-> s
+T  33 mode=game_loop           Forlong II(hum) F1@( 2, 3) HP 21/30 MP 0/0 Hu 87 $ 353 room=.
+-> s
+T  34 mode=game_loop           Forlong II(hum) F1@( 2, 4) HP 22/30 MP 0/0 Hu 86 $ 353 room=.
+-> s
+T  35 mode=game_loop           Forlong II(hum) F1@( 2, 5) HP 22/30 MP 0/0 Hu 85 $ 353 room=.
+-> s
+T  36 mode=chest_mode          Forlong II(hum) F1@( 2, 6) HP 22/30 MP 0/0 Hu 84 $ 353 room=C
+-> s
+T  37 mode=game_loop           Forlong II(hum) F1@( 2, 7) HP 22/30 MP 0/0 Hu 83 $ 353 room=.
+-> s
+T  38 mode=altar_mode          Forlong II(hum) F1@( 2, 8) HP 23/30 MP 0/0 Hu 82 $ 353 room=A
+-> pray
+T  39 mode=game_loop           Forlong II(hum) F1@( 2, 8) HP 23/30 MP 0/0 Hu 82 $ 353 room=.
+-> i
+T  40 mode=inventory           Forlong II(hum) F1@( 2, 8) HP 23/30 MP 0/0 Hu 82 $ 353 room=.
+-> u3
+T  41 mode=inventory           Forlong II(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 82 $ 353 room=.
+-> x
+T  42 mode=game_loop           Forlong II(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 82 $ 353 room=.
+-> l
+T  43 mode=game_loop           Forlong II(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 82 $ 353 room=.
+-> s
+T  44 mode=combat_mode         Forlong II(hum) F1@( 2, 9) HP 30/30 MP 0/0 Hu 81 $ 353 room=M vs Stirge(L0 HP6/6)
+-> a
+T  45 mode=combat_mode         Forlong II(hum) F1@( 2, 9) HP 29/30 MP 0/0 Hu 81 $ 353 room=M vs Stirge(L0 HP6/6)
+-> a
+T  46 mode=combat_victory      Forlong II(hum) F1@( 2, 9) HP 28/30 MP 0/0 Hu 81 $ 358 room=.
+-> back
+T  47 mode=game_loop           Forlong II(hum) F1@( 2, 9) HP 28/30 MP 0/0 Hu 81 $ 358 room=.
+-> l
+T  48 mode=game_loop           Forlong II(hum) F1@( 2, 9) HP 28/30 MP 0/0 Hu 81 $ 358 room=.
+-> e
+T  49 mode=game_loop           Forlong II(hum) F1@( 3, 9) HP 28/30 MP 0/0 Hu 80 $ 358 room=.
+-> n
+T  50 mode=combat_mode         Forlong II(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 79 $ 358 room=M vs Zombie(L0 HP35/35)
+-> a
+T  51 mode=combat_mode         Forlong II(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 79 $ 358 room=M vs Zombie(L0 HP35/35)
+-> a
+T  52 mode=combat_mode         Forlong II(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 79 $ 358 room=M vs Zombie(L0 HP14/35)
+-> a
+T  53 mode=combat_victory      Forlong II(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 79 $ 362 room=.
+-> back
+T  54 mode=game_loop           Forlong II(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 79 $ 362 room=.
+-> e
+T  55 mode=combat_mode         Forlong II(hum) F1@( 4, 8) HP 28/30 MP 0/0 Hu 78 $ 362 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  56 mode=combat_mode         Forlong II(hum) F1@( 4, 8) HP 27/30 MP 0/0 Hu 78 $ 362 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  57 mode=combat_mode         Forlong II(hum) F1@( 4, 8) HP 26/30 MP 0/0 Hu 78 $ 362 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  58 mode=combat_victory      Forlong II(hum) F1@( 4, 8) HP 26/30 MP 0/0 Hu 78 $ 363 room=.
+-> back
+T  59 mode=game_loop           Forlong II(hum) F1@( 4, 8) HP 26/30 MP 0/0 Hu 78 $ 363 room=.
+-> e
+T  60 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 27/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  61 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 27/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  62 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 26/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  63 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 25/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  64 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 24/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  65 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 23/30 MP 0/0 Hu 77 $ 363 room=M vs Rust Monster(L0 HP18/18)
+-> f
+T  66 mode=flee_direction_mode Forlong II(hum) F1@( 5, 8) HP 23/30 MP 0/0 Hu 77 $ 363 room=M
+-> e
+T  67 mode=game_loop           Forlong II(hum) F1@( 6, 8) HP 23/30 MP 0/0 Hu 77 $ 363 room=.
+-> i
+T  68 mode=inventory           Forlong II(hum) F1@( 6, 8) HP 23/30 MP 0/0 Hu 77 $ 363 room=.
+-> u3
+T  69 mode=inventory           Forlong II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 77 $ 363 room=.
+-> x
+T  70 mode=game_loop           Forlong II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 77 $ 363 room=.
+-> l
+T  71 mode=game_loop           Forlong II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 77 $ 363 room=.
+-> e
+T  72 mode=game_loop           Forlong II(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 76 $ 363 room=.
+-> l
+T  73 mode=game_loop           Forlong II(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 76 $ 363 room=.
+-> e
+T  74 mode=game_loop           Forlong II(hum) F1@( 8, 8) HP 30/30 MP 0/0 Hu 75 $ 363 room=.
+-> l
+T  75 mode=game_loop           Forlong II(hum) F1@( 8, 8) HP 30/30 MP 0/0 Hu 75 $ 363 room=.
+-> e
+T  76 mode=game_loop           Forlong II(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 74 $ 363 room=.
+-> l
+T  77 mode=game_loop           Forlong II(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 74 $ 363 room=.
+-> e
+T  78 mode=garden_mode         Forlong II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 73 $ 363 room=G
+-> h
+T  79 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 73 $ 363 room=.
+-> l
+T  80 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 73 $ 363 room=.
+-> s
+T  81 mode=pool_mode           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 72 $ 363 room=P
+-> dr
+T  82 mode=game_loop           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 72 $ 363 room=.
+-> l
+T  83 mode=game_loop           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 72 $ 363 room=.
+-> e
+T  84 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 71 $ 363 room=.
+-> i
+T  85 mode=inventory           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 71 $ 363 room=.
+-> eat4
+T  86 mode=inventory           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 77 $ 363 room=.
+-> eat1
+T  87 mode=inventory           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu100 $ 363 room=.
+-> x
+T  88 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu100 $ 363 room=.
+-> l
+T  89 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu100 $ 363 room=.
+-> e
+T  90 mode=game_loop           Forlong II(hum) F1@(12, 9) HP 30/30 MP 0/0 Hu 99 $ 363 room=.
+-> l
+T  91 mode=game_loop           Forlong II(hum) F1@(12, 9) HP 30/30 MP 0/0 Hu 99 $ 363 room=.
+-> s
+T  92 mode=combat_mode         Forlong II(hum) F1@(12,10) HP 30/30 MP 0/0 Hu 98 $ 363 room=M vs Bat(L0 HP12/12)
+-> a
+T  93 mode=combat_victory      Forlong II(hum) F1@(12,10) HP 30/30 MP 0/0 Hu 98 $ 465 room=.
+-> back
+T  94 mode=game_loop           Forlong II(hum) F1@(12,10) HP 30/30 MP 0/0 Hu 98 $ 465 room=.
+-> w
+T  95 mode=combat_mode         Forlong II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 97 $ 465 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  96 mode=combat_victory      Forlong II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 97 $ 470 room=.
+-> back
+T  97 mode=game_loop           Forlong II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 97 $ 470 room=.
+-> s
+T  98 mode=game_loop           Forlong II(hum) F1@(11,11) HP 30/30 MP 0/0 Hu 96 $ 470 room=.
+-> e
+T  99 mode=game_loop           Forlong II(hum) F1@(12,11) HP 30/30 MP 0/0 Hu 95 $ 470 room=.
+-> l
+T 100 mode=game_loop           Forlong II(hum) F1@(12,11) HP 30/30 MP 0/0 Hu 95 $ 470 room=.
+-> s
+T 101 mode=combat_mode         Forlong II(hum) F1@(12,12) HP 30/30 MP 0/0 Hu 94 $ 470 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 102 mode=combat_victory      Forlong II(hum) F1@(12,12) HP 29/30 MP 0/0 Hu 94 $ 477 room=.
+-> back
+T 103 mode=game_loop           Forlong II(hum) F1@(12,12) HP 29/30 MP 0/0 Hu 94 $ 477 room=.
+-> s
+T 104 mode=game_loop           Forlong II(hum) F1@(12,13) HP 29/30 MP 0/0 Hu 93 $ 477 room=.
+-> l
+T 105 mode=game_loop           Forlong II(hum) F1@(12,13) HP 29/30 MP 0/0 Hu 93 $ 477 room=.
+-> n
+T 106 mode=game_loop           Forlong II(hum) F1@(12,12) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> n
+T 107 mode=game_loop           Forlong II(hum) F1@(12,11) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> n
+T 108 mode=game_loop           Forlong II(hum) F1@(12,10) HP 30/30 MP 0/0 Hu 90 $ 477 room=.
+-> n
+T 109 mode=game_loop           Forlong II(hum) F1@(12, 9) HP 30/30 MP 0/0 Hu 89 $ 477 room=.
+-> w
+T 110 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> w
+T 111 mode=game_loop           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> i
+T 112 mode=inventory           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> eat4
+T 113 mode=inventory           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> x
+T 114 mode=game_loop           Forlong II(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> n
+T 115 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> n
+T 116 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 90 $ 477 room=.
+-> w
+T 117 mode=pool_mode           Forlong II(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 89 $ 477 room=P
+-> dr
+T 118 mode=game_loop           Forlong II(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 89 $ 477 room=.
+-> n
+T 119 mode=game_loop           Forlong II(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> e
+T 120 mode=combat_mode         Forlong II(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 87 $ 477 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 121 mode=combat_mode         Forlong II(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 87 $ 477 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 122 mode=combat_victory      Forlong II(hum) F1@(10, 6) HP 28/30 MP 0/0 Hu 87 $ 583 room=.
+-> back
+T 123 mode=game_loop           Forlong II(hum) F1@(10, 6) HP 28/30 MP 0/0 Hu 87 $ 583 room=.
+-> e
+T 124 mode=game_loop           Forlong II(hum) F1@(11, 6) HP 28/30 MP 0/0 Hu 86 $ 583 room=.
+-> n
+T 125 mode=library_mode        Forlong II(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 85 $ 583 room=L
+-> r
+T 126 mode=library_read_decision_mode Forlong II(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 85 $ 583 room=L
+-> y
+T 127 mode=game_loop           Forlong II(hum) F1@(11, 5) HP 29/28 MP 0/0 Hu 85 $ 683 room=.
+-> w
+T 128 mode=combat_mode         Forlong II(hum) F1@(10, 5) HP 29/28 MP 0/0 Hu 84 $ 683 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 129 mode=combat_victory      Forlong II(hum) F1@(10, 5) HP 29/28 MP 0/0 Hu 84 $ 687 room=.
+-> back
+T 130 mode=game_loop           Forlong II(hum) F1@(10, 5) HP 29/28 MP 0/0 Hu 84 $ 687 room=.
+-> s
+T 131 mode=game_loop           Forlong II(hum) F1@(10, 6) HP 29/28 MP 0/0 Hu 83 $ 687 room=.
+-> s
+T 132 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 29/28 MP 0/0 Hu 82 $ 687 room=.
+-> e
+T 133 mode=game_loop           Forlong II(hum) F1@(11, 7) HP 29/28 MP 0/0 Hu 81 $ 687 room=.
+-> s
+T 134 mode=combat_mode         Forlong II(hum) F1@(11, 8) HP 29/28 MP 0/0 Hu 80 $ 687 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 135 mode=combat_mode         Forlong II(hum) F1@(11, 8) HP 28/28 MP 0/0 Hu 80 $ 687 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 136 mode=combat_victory      Forlong II(hum) F1@(11, 8) HP 27/28 MP 0/0 Hu 80 $ 689 room=.
+-> back
+T 137 mode=game_loop           Forlong II(hum) F1@(11, 8) HP 27/28 MP 0/0 Hu 80 $ 689 room=.
+-> s
+T 138 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 27/28 MP 0/0 Hu 79 $ 689 room=.
+-> s
+T 139 mode=game_loop           Forlong II(hum) F1@(11,10) HP 27/28 MP 0/0 Hu 78 $ 689 room=.
+-> s
+T 140 mode=game_loop           Forlong II(hum) F1@(11,11) HP 27/28 MP 0/0 Hu 77 $ 689 room=.
+-> e
+T 141 mode=game_loop           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu 76 $ 689 room=.
+-> e
+T 142 mode=game_loop           Forlong II(hum) F1@(13,11) HP 28/28 MP 0/0 Hu 75 $ 689 room=.
+-> e
+T 143 mode=game_loop           Forlong II(hum) F1@(14,11) HP 28/28 MP 0/0 Hu 74 $ 689 room=.
+-> w
+T 144 mode=game_loop           Forlong II(hum) F1@(13,11) HP 28/28 MP 0/0 Hu 73 $ 689 room=.
+-> e
+T 145 mode=game_loop           Forlong II(hum) F1@(14,11) HP 28/28 MP 0/0 Hu 72 $ 689 room=.
+-> w
+T 146 mode=game_loop           Forlong II(hum) F1@(13,11) HP 28/28 MP 0/0 Hu 71 $ 689 room=.
+-> w
+T 147 mode=game_loop           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu 70 $ 689 room=.
+-> i
+T 148 mode=inventory           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu 70 $ 689 room=.
+-> eat4
+T 149 mode=inventory           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu 75 $ 689 room=.
+-> eat1
+T 150 mode=inventory           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu100 $ 689 room=.
+-> x
+T 151 mode=game_loop           Forlong II(hum) F1@(12,11) HP 28/28 MP 0/0 Hu100 $ 689 room=.
+-> w
+T 152 mode=game_loop           Forlong II(hum) F1@(11,11) HP 28/28 MP 0/0 Hu 99 $ 689 room=.
+-> n
+T 153 mode=game_loop           Forlong II(hum) F1@(11,10) HP 28/28 MP 0/0 Hu 98 $ 689 room=.
+-> e
+T 154 mode=game_loop           Forlong II(hum) F1@(12,10) HP 28/28 MP 0/0 Hu 97 $ 689 room=.
+-> n
+T 155 mode=game_loop           Forlong II(hum) F1@(12, 9) HP 28/28 MP 0/0 Hu 96 $ 689 room=.
+-> w
+T 156 mode=game_loop           Forlong II(hum) F1@(11, 9) HP 28/28 MP 0/0 Hu 95 $ 689 room=.
+-> n
+T 157 mode=game_loop           Forlong II(hum) F1@(11, 8) HP 28/28 MP 0/0 Hu 94 $ 689 room=.
+-> w
+T 158 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 28/28 MP 0/0 Hu 93 $ 689 room=.
+-> s
+T 159 mode=game_loop           Forlong II(hum) F1@(10, 9) HP 28/28 MP 0/0 Hu 92 $ 689 room=.
+-> n
+T 160 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 28/28 MP 0/0 Hu 91 $ 689 room=.
+-> w
+T 161 mode=game_loop           Forlong II(hum) F1@( 9, 8) HP 28/28 MP 0/0 Hu 90 $ 689 room=.
+-> w
+T 162 mode=game_loop           Forlong II(hum) F1@( 8, 8) HP 28/28 MP 0/0 Hu 89 $ 689 room=.
+-> n
+T 163 mode=combat_mode         Forlong II(hum) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 689 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 164 mode=combat_mode         Forlong II(hum) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 689 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 165 mode=combat_victory      Forlong II(hum) F1@( 8, 7) HP 28/38 MP 0/0 Hu 88 $ 696 room=.
+-> back
+T 166 mode=game_loop           Forlong II(hum) F1@( 8, 7) HP 28/38 MP 0/0 Hu 88 $ 696 room=.
+-> i
+T 167 mode=inventory           Forlong II(hum) F1@( 8, 7) HP 28/38 MP 0/0 Hu 88 $ 696 room=.
+-> u3
+T 168 mode=inventory           Forlong II(hum) F1@( 8, 7) HP 38/38 MP 0/0 Hu 88 $ 696 room=.
+-> x
+T 169 mode=game_loop           Forlong II(hum) F1@( 8, 7) HP 38/38 MP 0/0 Hu 88 $ 696 room=.
+-> e
+T 170 mode=game_loop           Forlong II(hum) F1@( 9, 7) HP 38/38 MP 0/0 Hu 87 $ 696 room=.
+-> e
+T 171 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 86 $ 696 room=.
+-> s
+T 172 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 38/38 MP 0/0 Hu 85 $ 696 room=.
+-> e
+T 173 mode=game_loop           Forlong II(hum) F1@(11, 8) HP 38/38 MP 0/0 Hu 84 $ 696 room=.
+-> n
+T 174 mode=game_loop           Forlong II(hum) F1@(11, 7) HP 38/38 MP 0/0 Hu 83 $ 696 room=.
+-> n
+T 175 mode=game_loop           Forlong II(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 82 $ 696 room=.
+-> n
+T 176 mode=game_loop           Forlong II(hum) F1@(11, 5) HP 38/38 MP 0/0 Hu 81 $ 696 room=.
+-> w
+T 177 mode=game_loop           Forlong II(hum) F1@(10, 5) HP 38/38 MP 0/0 Hu 80 $ 696 room=.
+-> s
+T 178 mode=game_loop           Forlong II(hum) F1@(10, 6) HP 38/38 MP 0/0 Hu 79 $ 696 room=.
+-> s
+T 179 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 78 $ 696 room=.
+-> i
+T 180 mode=inventory           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 78 $ 696 room=.
+-> eat3
+T 181 mode=inventory           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 83 $ 696 room=.
+-> x
+T 182 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 83 $ 696 room=.
+-> s
+T 183 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 38/38 MP 0/0 Hu 82 $ 696 room=.
+-> w
+T 184 mode=game_loop           Forlong II(hum) F1@( 9, 8) HP 38/38 MP 0/0 Hu 81 $ 696 room=.
+-> n
+T 185 mode=game_loop           Forlong II(hum) F1@( 9, 7) HP 38/38 MP 0/0 Hu 80 $ 696 room=.
+-> n
+T 186 mode=game_loop           Forlong II(hum) F1@( 9, 6) HP 38/38 MP 0/0 Hu 79 $ 696 room=.
+-> i
+T 187 mode=inventory           Forlong II(hum) F1@( 9, 6) HP 38/38 MP 0/0 Hu 79 $ 696 room=.
+-> eat2
+T 188 mode=inventory           Forlong II(hum) F1@( 9, 6) HP 38/38 MP 0/0 Hu 97 $ 696 room=.
+-> x
+T 189 mode=game_loop           Forlong II(hum) F1@( 9, 6) HP 38/38 MP 0/0 Hu 97 $ 696 room=.
+-> e
+T 190 mode=game_loop           Forlong II(hum) F1@(10, 6) HP 38/38 MP 0/0 Hu 96 $ 696 room=.
+-> e
+T 191 mode=game_loop           Forlong II(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 95 $ 696 room=.
+-> n
+T 192 mode=game_loop           Forlong II(hum) F1@(11, 5) HP 38/38 MP 0/0 Hu 94 $ 696 room=.
+-> w
+T 193 mode=game_loop           Forlong II(hum) F1@(10, 5) HP 38/38 MP 0/0 Hu 93 $ 696 room=.
+-> e
+T 194 mode=game_loop           Forlong II(hum) F1@(11, 5) HP 38/38 MP 0/0 Hu 92 $ 696 room=.
+-> w
+T 195 mode=game_loop           Forlong II(hum) F1@(10, 5) HP 38/38 MP 0/0 Hu 91 $ 696 room=.
+-> s
+T 196 mode=game_loop           Forlong II(hum) F1@(10, 6) HP 38/38 MP 0/0 Hu 90 $ 696 room=.
+-> e
+T 197 mode=game_loop           Forlong II(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 89 $ 696 room=.
+-> s
+T 198 mode=game_loop           Forlong II(hum) F1@(11, 7) HP 38/38 MP 0/0 Hu 88 $ 696 room=.
+-> w
+T 199 mode=game_loop           Forlong II(hum) F1@(10, 7) HP 38/38 MP 0/0 Hu 87 $ 696 room=.
+-> s
+T 200 mode=game_loop           Forlong II(hum) F1@(10, 8) HP 38/38 MP 0/0 Hu 86 $ 696 room=.
+-> w
+T 201 mode=game_loop           Forlong II(hum) F1@( 9, 8) HP 38/38 MP 0/0 Hu 85 $ 696 room=.
+-> n
+T 202 mode=game_loop           Forlong II(hum) F1@( 9, 7) HP 38/38 MP 0/0 Hu 84 $ 696 room=.
+-> w
+T 203 mode=game_loop           Forlong II(hum) F1@( 8, 7) HP 38/38 MP 0/0 Hu 83 $ 696 room=.
+-> s
+T 204 mode=game_loop           Forlong II(hum) F1@( 8, 8) HP 38/38 MP 0/0 Hu 82 $ 696 room=.
+-> w
+T 205 mode=game_loop           Forlong II(hum) F1@( 7, 8) HP 38/38 MP 0/0 Hu 81 $ 696 room=.
+-> s
+T 206 mode=game_loop           Forlong II(hum) F1@( 7, 9) HP 38/38 MP 0/0 Hu 80 $ 696 room=.
+-> s
+T 207 mode=combat_mode         Forlong II(hum) F1@( 7,10) HP 38/38 MP 0/0 Hu 79 $ 696 room=M vs Zombie(L0 HP35/35)
+-> f
+T 208 mode=flee_direction_mode Forlong II(hum) F1@( 7,10) HP 38/38 MP 0/0 Hu 79 $ 696 room=M
+-> e
+T 209 mode=altar_mode          Forlong II(hum) F1@( 8,10) HP 38/38 MP 0/0 Hu 79 $ 696 room=A
+-> pray
+T 210 mode=game_loop           Forlong II(hum) F1@( 8,10) HP 38/38 MP 0/0 Hu 79 $ 696 room=.
+-> l
+T 211 mode=game_loop           Forlong II(hum) F1@( 8,10) HP 38/38 MP 0/0 Hu 79 $ 696 room=.
+-> e
+T 212 mode=game_loop           Forlong II(hum) F1@( 9,10) HP 38/38 MP 0/0 Hu 78 $ 696 room=.
+-> l
+T 213 mode=game_loop           Forlong II(hum) F1@( 9,10) HP 38/38 MP 0/0 Hu 78 $ 696 room=.
+-> s
+T 214 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 38/38 MP 0/0 Hu 77 $ 696 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 215 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 37/38 MP 0/0 Hu 77 $ 696 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T 216 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 34/38 MP 0/0 Hu 77 $ 696 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T 217 mode=flee_direction_mode Forlong II(hum) F1@( 9,11) HP 32/38 MP 0/0 Hu 77 $ 696 room=M
+-> s
+T 218 mode=combat_mode         Forlong II(hum) F1@( 9,12) HP 30/38 MP 0/0 Hu 77 $ 696 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 219 mode=combat_mode         Forlong II(hum) F1@( 9,12) HP 29/38 MP 0/0 Hu 77 $ 696 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 220 mode=combat_victory      Forlong II(hum) F1@( 9,12) HP 29/38 MP 0/0 Hu 77 $ 704 room=.
+-> back
+T 221 mode=game_loop           Forlong II(hum) F1@( 9,12) HP 29/38 MP 0/0 Hu 77 $ 704 room=.
+-> l
+T 222 mode=game_loop           Forlong II(hum) F1@( 9,12) HP 29/38 MP 0/0 Hu 77 $ 704 room=.
+-> n
+T 223 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 29/38 MP 0/0 Hu 76 $ 704 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 224 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 29/38 MP 0/0 Hu 76 $ 704 room=M vs Giant Rat(L0 HP2/22)
+-> a
+T 225 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 28/38 MP 0/0 Hu 76 $ 704 room=M vs Giant Rat(L0 HP2/22)
+-> a
+T 226 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 27/38 MP 0/0 Hu 76 $ 704 room=M vs Giant Rat(L0 HP2/22)
+-> a
+T 227 mode=combat_mode         Forlong II(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 76 $ 704 room=M vs Giant Rat(L0 HP2/22)
+-> a
+T 228 mode=combat_victory      Forlong II(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 76 $ 705 room=.
+-> back
+T 229 mode=game_loop           Forlong II(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 76 $ 705 room=.
+-> n
+T 230 mode=game_loop           Forlong II(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 75 $ 705 room=.
+-> l
+T 231 mode=game_loop           Forlong II(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 75 $ 705 room=.
+-> w
+T 232 mode=game_loop           Forlong II(hum) F1@( 8,10) HP 26/38 MP 0/0 Hu 74 $ 705 room=.
+-> w
+T 233 mode=combat_mode         Forlong II(hum) F1@( 7,10) HP 27/38 MP 0/0 Hu 73 $ 705 room=M vs Zombie(L0 HP35/35)
+-> a
+T 234 mode=combat_mode         Forlong II(hum) F1@( 7,10) HP 27/38 MP 0/0 Hu 73 $ 705 room=M vs Zombie(L0 HP15/35)
+-> a
+T 235 mode=combat_victory      Forlong II(hum) F1@( 7,10) HP 27/38 MP 0/0 Hu 73 $ 708 room=.
+-> back
+T 236 mode=game_loop           Forlong II(hum) F1@( 7,10) HP 27/38 MP 0/0 Hu 73 $ 708 room=.
+-> n
+T 237 mode=game_loop           Forlong II(hum) F1@( 7, 9) HP 27/38 MP 0/0 Hu 72 $ 708 room=.
+-> n
+T 238 mode=game_loop           Forlong II(hum) F1@( 7, 8) HP 27/38 MP 0/0 Hu 71 $ 708 room=.
+-> w
+T 239 mode=game_loop           Forlong II(hum) F1@( 6, 8) HP 27/38 MP 0/0 Hu 70 $ 708 room=.
+-> w
+T 240 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 28/38 MP 0/0 Hu 69 $ 708 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 241 mode=combat_mode         Forlong II(hum) F1@( 5, 8) HP 27/38 MP 0/0 Hu 69 $ 708 room=M vs Rust Monster(L0 HP17/18)
+-> f
+T 242 mode=flee_direction_mode Forlong II(hum) F1@( 5, 8) HP 27/38 MP 0/0 Hu 69 $ 708 room=M
+-> w
+T 243 mode=game_loop           Forlong II(hum) F1@( 4, 8) HP 27/38 MP 0/0 Hu 69 $ 708 room=.
+-> w
+T 244 mode=game_loop           Forlong II(hum) F1@( 3, 8) HP 27/38 MP 0/0 Hu 68 $ 708 room=.
+-> w
+T 245 mode=game_loop           Forlong II(hum) F1@( 2, 8) HP 27/38 MP 0/0 Hu 67 $ 708 room=.
+-> n
+T 246 mode=game_loop           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu 66 $ 708 room=.
+-> i
+T 247 mode=inventory           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu 66 $ 708 room=.
+-> eat2
+T 248 mode=inventory           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu 71 $ 708 room=.
+-> eat1
+T 249 mode=inventory           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu100 $ 708 room=.
+-> x
+T 250 mode=game_loop           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu100 $ 708 room=.
+-> l
+T 251 mode=game_loop           Forlong II(hum) F1@( 2, 7) HP 27/38 MP 0/0 Hu100 $ 708 room=.
+-> n
+T 252 mode=game_loop           Forlong II(hum) F1@( 2, 6) HP 28/38 MP 0/0 Hu 99 $ 708 room=C
+-> n
+T 253 mode=game_loop           Forlong II(hum) F1@( 2, 5) HP 28/38 MP 0/0 Hu 98 $ 708 room=.
+-> n
+T 254 mode=game_loop           Forlong II(hum) F1@( 2, 4) HP 29/38 MP 0/0 Hu 97 $ 708 room=.
+-> n
+T 255 mode=game_loop           Forlong II(hum) F1@( 2, 3) HP 29/38 MP 0/0 Hu 96 $ 708 room=.
+-> w
+T 256 mode=dungeon_mode        Forlong II(hum) F1@( 1, 3) HP 30/38 MP 0/0 Hu 95 $ 708 room=N
+-> u
+T 257 mode=dungeon_unlocked_mode Forlong II(hum) F1@( 1, 3) HP 30/38 MP 0/0 Hu 95 $ 708 room=N
+-> r
+T 258 mode=game_loop           Forlong II(hum) F1@( 1, 3) HP 30/38 MP 0/0 Hu 95 $ 708 room=N
+-> s
+T 259 mode=game_loop           Forlong II(hum) F1@( 1, 4) HP 30/38 MP 0/0 Hu 94 $ 708 room=.
+-> n
+T 260 mode=game_loop           Forlong II(hum) F1@( 1, 3) HP 31/38 MP 0/0 Hu 93 $ 708 room=N
+-> l
+T 261 mode=game_loop           Forlong II(hum) F1@( 1, 3) HP 31/38 MP 0/0 Hu 93 $ 708 room=N
+-> n
+T 262 mode=game_loop           Forlong II(hum) F1@( 1, 2) HP 31/38 MP 0/0 Hu 92 $ 708 room=N
+-> n
+T 263 mode=game_loop           Forlong II(hum) F1@( 1, 1) HP 32/38 MP 0/0 Hu 91 $ 708 room=E
+-> e
+T 264 mode=game_loop           Forlong II(hum) F1@( 2, 1) HP 32/38 MP 0/0 Hu 90 $ 708 room=.
+-> s
+T 265 mode=game_loop           Forlong II(hum) F1@( 2, 2) HP 33/38 MP 0/0 Hu 89 $ 708 room=.
+-> s
+T 266 mode=game_loop           Forlong II(hum) F1@( 2, 3) HP 33/38 MP 0/0 Hu 88 $ 708 room=.
+-> s
+T 267 mode=game_loop           Forlong II(hum) F1@( 2, 4) HP 34/38 MP 0/0 Hu 87 $ 708 room=.
+-> e
+T 268 mode=game_loop           Forlong II(hum) F1@( 3, 4) HP 34/38 MP 0/0 Hu 86 $ 708 room=.
+-> e
+T 269 mode=game_loop           Forlong II(hum) F1@( 4, 4) HP 35/38 MP 0/0 Hu 85 $ 708 room=.
+-> e
+T 270 mode=game_loop           Forlong II(hum) F1@( 5, 4) HP 35/38 MP 0/0 Hu 84 $ 708 room=.
+-> l
+T 271 mode=game_loop           Forlong II(hum) F1@( 5, 4) HP 35/38 MP 0/0 Hu 84 $ 708 room=.
+-> e
+T 272 mode=chest_mode          Forlong II(hum) F1@( 6, 4) HP 35/38 MP 0/0 Hu 83 $ 708 room=C
+-> o
+T 273 mode=game_loop           Forlong II(hum) F1@( 5, 4) HP 35/38 MP 0/0 Hu 82 $ 708 room=.
+-> e
+T 274 mode=game_loop           Forlong II(hum) F1@( 6, 4) HP 36/38 MP 0/0 Hu 81 $ 708 room=.
+-> l
+T 275 mode=game_loop           Forlong II(hum) F1@( 6, 4) HP 36/38 MP 0/0 Hu 81 $ 708 room=.
+-> s
+T 276 mode=chest_mode          Forlong II(hum) F1@( 6, 5) HP 36/38 MP 0/0 Hu 80 $ 708 room=C
+-> o
+T 277 mode=game_loop           Forlong II(hum) F1@( 6, 5) HP 36/38 MP 0/0 Hu 80 $ 718 room=.
+-> n
+T 278 mode=game_loop           Forlong II(hum) F1@( 6, 4) HP 36/38 MP 0/0 Hu 79 $ 718 room=.
+-> n
+T 279 mode=stairs_down_mode    Forlong II(hum) F1@( 6, 3) HP 36/38 MP 0/0 Hu 78 $ 718 room=D
+-> d
+T 280 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 36/38 MP 0/0 Hu 78 $ 718 room=U
+-> e
+T 281 mode=tomb_mode           Forlong II(hum) F2@( 2, 1) HP 37/38 MP 0/0 Hu 77 $ 718 room=T
+-> p
+T 282 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=T
+-> l
+T 283 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=T
+-> n
+T 284 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=T
+-> s
+T 285 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=T
+-> n
+T 286 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=T
+-> w
+T 287 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=U
+-> e
+T 288 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> n
+T 289 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> s
+T 290 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> s
+T 291 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> n
+T 292 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> n
+T 293 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> n
+T 294 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> s
+T 295 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=T
+-> w
+T 296 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=U
+-> e
+T 297 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=T
+-> n
+T 298 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=T
+-> w
+T 299 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=U
+-> e
+T 300 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=T
+-> s
+T 301 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=T
+-> w
+T 302 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=U
+-> e
+T 303 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=T
+-> w
+T 304 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=U
+-> e
+T 305 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=T
+-> s
+T 306 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=T
+-> s
+T 307 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=T
+-> w
+T 308 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=U
+-> e
+T 309 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 310 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 311 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 312 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> n
+T 313 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> n
+T 314 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 315 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 316 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 317 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 318 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> n
+T 319 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 320 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> n
+T 321 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> s
+T 322 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=T
+-> w
+T 323 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=U
+-> e
+T 324 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=T
+-> w
+T 325 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=U
+-> e
+T 326 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=T
+-> n
+T 327 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=T
+-> w
+T 328 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=U
+-> e
+T 329 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> s
+T 330 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> n
+T 331 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> n
+T 332 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> n
+T 333 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> s
+T 334 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> n
+T 335 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> n
+T 336 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=T
+-> w
+T 337 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=U
+-> e
+T 338 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=T
+-> n
+T 339 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=T
+-> s
+T 340 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=T
+-> w
+T 341 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=U
+-> e
+T 342 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=T
+-> w
+T 343 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=U
+-> e
+T 344 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=T
+-> w
+T 345 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=U
+-> e
+T 346 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=T
+-> s
+T 347 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=T
+-> w
+T 348 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=U
+-> e
+T 349 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=T
+-> i
+T 350 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=T
+-> eat1
+T 351 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 99 $ 718 room=T
+-> x
+T 352 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 99 $ 718 room=T
+-> n
+T 353 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 99 $ 718 room=T
+-> w
+T 354 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=U
+-> e
+T 355 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=T
+-> w
+T 356 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=U
+-> e
+T 357 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=T
+-> w
+T 358 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=U
+-> e
+T 359 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=T
+-> s
+T 360 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=T
+-> n
+T 361 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=T
+-> w
+T 362 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=U
+-> e
+T 363 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=T
+-> w
+T 364 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=U
+-> e
+T 365 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=T
+-> n
+T 366 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=T
+-> s
+T 367 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=T
+-> w
+T 368 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=U
+-> e
+T 369 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=T
+-> w
+T 370 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=U
+-> e
+T 371 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=T
+-> s
+T 372 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=T
+-> w
+T 373 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=U
+-> e
+T 374 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=T
+-> w
+T 375 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=U
+-> e
+T 376 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=T
+-> s
+T 377 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=T
+-> n
+T 378 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=T
+-> w
+T 379 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=U
+-> e
+T 380 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=T
+-> s
+T 381 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=T
+-> e
+T 382 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 383 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=M
+-> w
+T 384 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 385 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 386 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 387 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> s
+T 388 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 389 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 390 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> s
+T 391 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> s
+T 392 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 393 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 394 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 395 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 396 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 397 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 398 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 399 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 400 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 401 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 402 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 403 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 404 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 405 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 406 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> n
+T 407 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 408 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 409 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 410 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 411 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 412 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 413 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 414 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 415 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 416 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 417 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 418 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 419 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 420 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 421 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 422 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 423 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 424 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 425 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 426 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 427 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 428 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 429 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 430 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T 431 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> s
+T 432 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T 433 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 434 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T 435 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T 436 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T 437 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T 438 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T 439 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 440 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 441 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 442 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T 443 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T 444 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> s
+T 445 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> s
+T 446 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 447 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 448 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 449 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> s
+T 450 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T 451 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T 452 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T 453 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T 454 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T 455 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 456 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 457 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 458 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 459 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 460 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T 461 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T 462 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 463 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T 464 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T 465 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T 466 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> s
+T 467 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T 468 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T 469 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T 470 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T 471 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T 472 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T 473 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T 474 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T 475 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T 476 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T 477 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T 478 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 479 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 480 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 481 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 482 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 483 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T 484 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T 485 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> n
+T 486 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> s
+T 487 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> s
+T 488 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T 489 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T 490 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> l
+T 491 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T 492 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T 493 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 494 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 495 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 496 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 497 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> n
+T 498 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 499 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> n
+T 500 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> l
+T 501 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T 502 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T 503 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 504 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 505 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 506 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 507 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 508 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 509 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 510 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 511 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 512 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T 513 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 514 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T 515 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 516 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T 517 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 518 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 519 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T 520 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> l
+T 521 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 522 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 523 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 524 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 525 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 526 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 527 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 528 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 529 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 530 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> l
+T 531 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 532 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 533 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> n
+T 534 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 535 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 536 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 537 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 538 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 539 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 540 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> l
+T 541 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 542 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 543 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 544 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 545 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 546 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 547 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 548 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 549 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 550 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> l
+T 551 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 552 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 553 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 554 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 555 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 556 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T 557 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 558 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 559 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T 560 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> l
+T 561 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 562 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 563 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 564 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 565 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T 566 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T 567 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 568 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 569 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 570 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> l
+T 571 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 572 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 573 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T 574 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T 575 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 576 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 577 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T 578 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T 579 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T 580 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T 581 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T 582 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 583 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 584 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 585 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T 586 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T 587 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T 588 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T 589 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T 590 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> l
+T 591 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> s
+T 592 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T 593 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T 594 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> s
+T 595 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> s
+T 596 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> n
+T 597 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> n
+T 598 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T 599 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T 600 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> l
+T 601 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T 602 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 603 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 604 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 605 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T 606 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T 607 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T 608 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T 609 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T 610 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> l
+T 611 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 612 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 613 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 614 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 615 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 616 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 617 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 618 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 619 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T 620 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T 621 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> s
+T 622 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> n
+T 623 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> s
+T 624 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> n
+T 625 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T 626 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T 627 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T 628 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T 629 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T 630 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T 631 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> s
+T 632 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 633 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 634 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 635 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 636 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 637 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 638 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 639 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 640 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> l
+T 641 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 642 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 643 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 644 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 645 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 646 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 647 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 648 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 649 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 650 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> l
+T 651 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 652 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 653 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 654 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 655 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 656 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 657 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 658 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 659 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 660 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> l
+T 661 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 662 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 663 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 664 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 665 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 666 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 667 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 668 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 669 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T 670 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> l
+T 671 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 672 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T 673 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 674 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 675 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 676 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 677 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 678 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 679 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 680 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 681 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 682 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 683 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 684 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 685 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 686 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 687 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 688 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> s
+T 689 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 690 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 691 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T 692 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 693 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T 694 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 695 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 696 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T 697 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T 698 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 699 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 700 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> l
+T 701 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 702 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 703 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 704 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 705 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 706 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T 707 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T 708 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> s
+T 709 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 710 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> l
+T 711 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T 712 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T 713 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T 714 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T 715 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T 716 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T 717 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T 718 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 719 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 720 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> l
+T 721 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 722 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 723 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T 724 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T 725 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T 726 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T 727 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T 728 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T 729 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T 730 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> l
+T 731 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T 732 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T 733 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T 734 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 735 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 736 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T 737 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T 738 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T 739 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T 740 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T 741 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 742 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 743 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T 744 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T 745 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T 746 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T 747 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T 748 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T 749 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T 750 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T 751 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 752 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 753 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 754 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 755 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 756 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> s
+T 757 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 758 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 759 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 760 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> l
+T 761 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> n
+T 762 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 763 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 764 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 765 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 766 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> n
+T 767 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> s
+T 768 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> n
+T 769 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 770 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 771 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 772 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 773 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 774 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 775 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 776 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 777 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 778 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> s
+T 779 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 780 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 781 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 782 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 783 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 784 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 785 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 786 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 787 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 788 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 789 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 790 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 791 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> s
+T 792 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 793 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 794 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 795 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> n
+T 796 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 797 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 798 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> s
+T 799 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 800 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T 801 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 802 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T 803 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T 804 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 805 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T 806 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 807 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 808 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T 809 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T 810 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T 811 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> s
+T 812 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> n
+T 813 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T 814 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T 815 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T 816 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T 817 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T 818 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 819 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 820 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> l
+T 821 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 822 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 823 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 824 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T 825 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T 826 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T 827 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T 828 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T 829 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T 830 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T 831 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> s
+T 832 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T 833 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T 834 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T 835 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T 836 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T 837 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T 838 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 839 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 840 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> l
+T 841 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 842 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> s
+T 843 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T 844 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T 845 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> s
+T 846 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> n
+T 847 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T 848 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T 849 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> s
+T 850 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> l
+T 851 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> s
+T 852 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T 853 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T 854 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T 855 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T 856 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 857 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 858 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 859 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 860 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> l
+T 861 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T 862 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 863 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 864 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 865 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 866 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> n
+T 867 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 868 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 869 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 870 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 871 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 872 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 873 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 874 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 875 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T 876 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 877 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 878 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 879 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 880 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> l
+T 881 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> s
+T 882 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 883 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 884 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 885 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 886 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 887 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 888 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 889 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 890 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> l
+T 891 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 892 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 893 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> s
+T 894 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 895 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T 896 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 897 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T 898 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T 899 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T 900 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> l
+T 901 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T 902 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T 903 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T 904 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T 905 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T 906 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T 907 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T 908 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 909 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 910 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> l
+T 911 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 912 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 913 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T 914 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T 915 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T 916 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T 917 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T 918 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T 919 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> n
+T 920 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> l
+T 921 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> s
+T 922 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T 923 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T 924 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> s
+T 925 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T 926 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T 927 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T 928 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T 929 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> s
+T 930 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> l
+T 931 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> s
+T 932 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T 933 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T 934 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> n
+T 935 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T 936 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T 937 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T 938 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T 939 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> n
+T 940 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> l
+T 941 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T 942 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T 943 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> n
+T 944 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> s
+T 945 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T 946 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T 947 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> n
+T 948 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> s
+T 949 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T 950 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T 951 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 952 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T 953 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T 954 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T 955 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T 956 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T 957 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T 958 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T 959 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T 960 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T 961 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 962 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 963 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 964 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 965 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 966 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 967 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 968 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 969 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T 970 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> l
+T 971 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> n
+T 972 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T 973 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T 974 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 975 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T 976 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T 977 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T 978 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T 979 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T 980 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> l
+T 981 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T 982 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T 983 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T 984 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> n
+T 985 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T 986 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T 987 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> s
+T 988 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> s
+T 989 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> n
+T 990 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> l
+T 991 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> s
+T 992 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T 993 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T 994 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T 995 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T 996 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T 997 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T 998 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T 999 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T1000 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> l
+T1001 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T1002 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T1003 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T1004 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T1005 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T1006 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T1007 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T1008 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T1009 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T1010 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> i
+T1011 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> eat1
+T1012 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> x
+T1013 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T1014 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T1015 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T1016 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T1017 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> s
+T1018 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> n
+T1019 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 718 room=T
+-> w
+T1020 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 718 room=U
+-> e
+T1021 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> n
+T1022 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T1023 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> s
+T1024 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 718 room=T
+-> w
+T1025 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 718 room=U
+-> e
+T1026 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> s
+T1027 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 718 room=T
+-> w
+T1028 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 718 room=U
+-> e
+T1029 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> s
+T1030 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> l
+T1031 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> n
+T1032 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 718 room=T
+-> w
+T1033 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 718 room=U
+-> e
+T1034 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T1035 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T1036 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> s
+T1037 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T1038 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> n
+T1039 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 718 room=T
+-> w
+T1040 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 718 room=U
+-> e
+T1041 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> s
+T1042 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T1043 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> s
+T1044 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T1045 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T1046 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> n
+T1047 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 718 room=T
+-> w
+T1048 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 718 room=U
+-> e
+T1049 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 718 room=T
+-> w
+T1050 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 718 room=U
+-> e
+T1051 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> n
+T1052 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 718 room=T
+-> w
+T1053 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 718 room=U
+-> e
+T1054 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> s
+T1055 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 718 room=T
+-> w
+T1056 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 718 room=U
+-> e
+T1057 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 718 room=T
+-> w
+T1058 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 718 room=U
+-> e
+T1059 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 718 room=T
+-> w
+T1060 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 718 room=U
+-> e
+T1061 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T1062 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> n
+T1063 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 718 room=T
+-> w
+T1064 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 718 room=U
+-> e
+T1065 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> s
+T1066 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 718 room=T
+-> w
+T1067 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 718 room=U
+-> e
+T1068 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T1069 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> s
+T1070 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> l
+T1071 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 718 room=T
+-> w
+T1072 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 718 room=U
+-> e
+T1073 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 718 room=T
+-> w
+T1074 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 69 $ 718 room=U
+-> e
+T1075 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> s
+T1076 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 68 $ 718 room=T
+-> w
+T1077 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 718 room=U
+-> e
+T1078 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T1079 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T1080 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> l
+T1081 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> n
+T1082 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> s
+T1083 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 66 $ 718 room=T
+-> w
+T1084 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 718 room=U
+-> e
+T1085 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> s
+T1086 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> s
+T1087 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> s
+T1088 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 64 $ 718 room=T
+-> w
+T1089 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 63 $ 718 room=U
+-> e
+T1090 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> l
+T1091 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T1092 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> s
+T1093 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 62 $ 718 room=T
+-> w
+T1094 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 718 room=U
+-> e
+T1095 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 60 $ 718 room=T
+-> w
+T1096 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 718 room=U
+-> e
+T1097 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 58 $ 718 room=T
+-> w
+T1098 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 718 room=U
+-> e
+T1099 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> s
+T1100 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> l
+T1101 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> n
+T1102 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 56 $ 718 room=T
+-> w
+T1103 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 718 room=U
+-> e
+T1104 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T1105 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> s
+T1106 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> n
+T1107 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 54 $ 718 room=T
+-> w
+T1108 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 718 room=U
+-> e
+T1109 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> n
+T1110 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> l
+T1111 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> s
+T1112 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 52 $ 718 room=T
+-> w
+T1113 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 51 $ 718 room=U
+-> e
+T1114 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 50 $ 718 room=T
+-> w
+T1115 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 718 room=U
+-> e
+T1116 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 48 $ 718 room=T
+-> w
+T1117 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 47 $ 718 room=U
+-> e
+T1118 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 46 $ 718 room=T
+-> w
+T1119 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 45 $ 718 room=U
+-> e
+T1120 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 44 $ 718 room=T
+-> l
+T1121 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 44 $ 718 room=T
+-> w
+T1122 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 43 $ 718 room=U
+-> e
+T1123 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 42 $ 718 room=T
+-> w
+T1124 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 41 $ 718 room=U
+-> e
+T1125 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 40 $ 718 room=T
+-> n
+T1126 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 40 $ 718 room=T
+-> s
+T1127 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 40 $ 718 room=T
+-> w
+T1128 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 39 $ 718 room=U
+-> e
+T1129 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 38 $ 718 room=T
+-> w
+T1130 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 37 $ 718 room=U
+-> e
+T1131 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 36 $ 718 room=T
+-> s
+T1132 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 36 $ 718 room=T
+-> w
+T1133 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 35 $ 718 room=U
+-> e
+T1134 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 34 $ 718 room=T
+-> w
+T1135 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 33 $ 718 room=U
+-> e
+T1136 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 32 $ 718 room=T
+-> s
+T1137 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 32 $ 718 room=T
+-> w
+T1138 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 31 $ 718 room=U
+-> e
+T1139 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 30 $ 718 room=T
+-> s
+T1140 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 30 $ 718 room=T
+-> l
+T1141 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 30 $ 718 room=T
+-> w
+T1142 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 29 $ 718 room=U
+-> e
+T1143 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 28 $ 718 room=T
+-> s
+T1144 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 28 $ 718 room=T
+-> e
+T1145 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 27 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1146 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 34/38 MP 0/0 Hu 27 $ 718 room=M
+-> w
+T1147 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 27 $ 718 room=T
+-> n
+T1148 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 27 $ 718 room=T
+-> w
+T1149 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 34/38 MP 0/0 Hu 26 $ 718 room=U
+-> e
+T1150 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 25 $ 718 room=T
+-> l
+T1151 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 25 $ 718 room=T
+-> w
+T1152 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 34/38 MP 0/0 Hu 24 $ 718 room=U
+-> e
+T1153 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 23 $ 718 room=T
+-> w
+T1154 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 34/38 MP 0/0 Hu 22 $ 718 room=U
+-> e
+T1155 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu 21 $ 718 room=T
+-> e
+T1156 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 34/38 MP 0/0 Hu 20 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1157 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 30/38 MP 0/0 Hu 20 $ 718 room=M
+-> w
+T1158 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 30/38 MP 0/0 Hu 20 $ 718 room=T
+-> i
+T1159 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 30/38 MP 0/0 Hu 20 $ 718 room=T
+-> u2
+T1160 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 20 $ 718 room=T
+-> x
+T1161 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 20 $ 718 room=T
+-> n
+T1162 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 20 $ 718 room=T
+-> w
+T1163 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 19 $ 718 room=U
+-> e
+T1164 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 18 $ 718 room=T
+-> s
+T1165 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 18 $ 718 room=T
+-> e
+T1166 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 17 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1167 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 17 $ 718 room=M
+-> w
+T1168 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 17 $ 718 room=T
+-> n
+T1169 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 17 $ 718 room=T
+-> w
+T1170 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 16 $ 718 room=U
+-> e
+T1171 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 15 $ 718 room=T
+-> s
+T1172 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 15 $ 718 room=T
+-> w
+T1173 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu 14 $ 718 room=U
+-> e
+T1174 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 13 $ 718 room=T
+-> e
+T1175 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1176 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1177 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=M
+-> w
+T1178 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=T
+-> s
+T1179 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=T
+-> n
+T1180 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=T
+-> l
+T1181 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=T
+-> n
+T1182 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 12 $ 718 room=T
+-> e
+T1183 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 11 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1184 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 11 $ 718 room=M
+-> w
+T1185 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 11 $ 718 room=T
+-> e
+T1186 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 10 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1187 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 10 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1188 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu 10 $ 718 room=M
+-> w
+T1189 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu 10 $ 718 room=T
+-> w
+T1190 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu  9 $ 718 room=U
+-> e
+T1191 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  8 $ 718 room=T
+-> e
+T1192 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu  7 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1193 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu  7 $ 718 room=M
+-> w
+T1194 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  7 $ 718 room=T
+-> s
+T1195 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  7 $ 718 room=T
+-> w
+T1196 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu  6 $ 718 room=U
+-> e
+T1197 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  5 $ 718 room=T
+-> e
+T1198 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu  4 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1199 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 38/38 MP 0/0 Hu  4 $ 718 room=M
+-> w
+T1200 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  4 $ 718 room=T
+-> l
+T1201 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  4 $ 718 room=T
+-> w
+T1202 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu  3 $ 718 room=U
+-> e
+T1203 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  2 $ 718 room=T
+-> s
+T1204 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  2 $ 718 room=T
+-> w
+T1205 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 38/38 MP 0/0 Hu  1 $ 718 room=U
+-> e
+T1206 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 36/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1207 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 36/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1208 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 34/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1209 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 30/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1210 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 30/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1211 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 26/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1212 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 26/38 MP 0/0 Hu  0 $ 718 room=T
+-> i
+T1213 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 26/38 MP 0/0 Hu  0 $ 718 room=T
+-> u2
+T1214 mode=inventory           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  0 $ 718 room=T
+-> x
+T1215 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1216 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 38/38 MP 0/0 Hu  0 $ 718 room=T
+-> w
+T1217 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 36/38 MP 0/0 Hu  0 $ 718 room=U
+-> e
+T1218 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1219 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 34/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1220 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 32/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1221 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 32/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1222 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 32/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1223 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 32/38 MP 0/0 Hu  0 $ 718 room=T
+-> w
+T1224 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 30/38 MP 0/0 Hu  0 $ 718 room=U
+-> e
+T1225 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 28/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1226 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 28/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1227 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 28/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1228 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 28/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1229 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 28/38 MP 0/0 Hu  0 $ 718 room=T
+-> w
+T1230 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 26/38 MP 0/0 Hu  0 $ 718 room=U
+-> e
+T1231 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 24/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1232 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 22/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1233 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 22/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1234 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 22/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1235 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 20/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1236 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1237 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1238 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1239 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1240 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=T
+-> l
+T1241 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 16/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1242 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 14/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1243 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 14/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1244 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 14/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1245 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 12/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1246 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 12/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1247 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 12/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1248 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 12/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1249 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 12/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1250 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 10/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1251 mode=flee_direction_mode Forlong II(hum) F2@( 3, 1) HP 10/38 MP 0/0 Hu  0 $ 718 room=M
+-> w
+T1252 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 10/38 MP 0/0 Hu  0 $ 718 room=T
+-> w
+T1253 mode=stairs_up_mode      Forlong II(hum) F2@( 1, 1) HP 8/38 MP 0/0 Hu  0 $ 718 room=U
+-> e
+T1254 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 6/38 MP 0/0 Hu  0 $ 718 room=T
+-> n
+T1255 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 6/38 MP 0/0 Hu  0 $ 718 room=T
+-> s
+T1256 mode=game_loop           Forlong II(hum) F2@( 2, 1) HP 6/38 MP 0/0 Hu  0 $ 718 room=T
+-> e
+T1257 mode=combat_mode         Forlong II(hum) F2@( 3, 1) HP 4/38 MP 0/0 Hu  0 $ 718 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T1258 mode=death_screen        Forlong II(hum) F2@( 3, 1) HP 0/38 MP 0/0 Hu  0 $ 718 room=M
+
+=== run finished: turns=1258 floor=2 hp=0/38 gold=718 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00001_human.html

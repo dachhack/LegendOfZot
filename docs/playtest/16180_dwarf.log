@@ -1,0 +1,830 @@
+T   0 mode=game_loop           Fili the Mighty(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Fili the Mighty(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> e
+T   4 mode=chest_mode          Fili the Mighty(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 98 $ 290 room=C
+  [Well-fed] +1 HP
+-> o
+T   5 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 1) HP 52/64 MP 0/0 Hu 98 $ 290 room=.
+   The chest explodes!!! 
+  Your Minor Healing Potion was destroyed by the explosion!
+  You took 9 damage!
+-> l
+T   6 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 1) HP 52/64 MP 0/0 Hu 98 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 77
+-> e
+T   7 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 1) HP 52/64 MP 0/0 Hu 97 $ 290 room=M vs Slime Mold(L0 HP15/15)
+  A Slime Mold (Level 0) appears! A gelatinous blob quivers menacingly.
+  You seize the initiative!
+-> a
+T   8 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 1) HP 51/64 MP 0/0 Hu 97 $ 290 room=M vs Slime Mold(L0 HP15/15)
+  The Slime Mold's touch dissolves your Leather Armor! (-1 durability)
+-> a
+T   9 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 1) HP 50/64 MP 0/0 Hu 97 $ 290 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T  10 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 1) HP 49/64 MP 0/0 Hu 97 $ 290 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  11 mode=combat_victory      Fili the Mighty(dwa) F1@( 4, 1) HP 49/64 MP 0/0 Hu 97 $ 349 room=.
+-> back
+T  12 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 1) HP 49/64 MP 0/0 Hu 97 $ 349 room=.
+-> l
+T  13 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 1) HP 49/64 MP 0/0 Hu 97 $ 349 room=.
+-> i
+T  14 mode=inventory           Fili the Mighty(dwa) F1@( 4, 1) HP 49/64 MP 0/0 Hu 97 $ 349 room=.
+-> u3
+T  15 mode=inventory           Fili the Mighty(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 97 $ 349 room=.
+-> x
+T  16 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 97 $ 349 room=.
+-> s
+T  17 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 96 $ 349 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T  18 mode=flee_direction_mode Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 96 $ 349 room=M
+-> s
+T  19 mode=warp_mode           Fili the Mighty(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 96 $ 349 room=W
+-> y
+T  20 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 96 $ 349 room=W
+-> l
+T  21 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 96 $ 349 room=W
+-> s
+T  22 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 95 $ 349 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  23 mode=combat_victory      Fili the Mighty(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 95 $ 458 room=.
+-> back
+T  24 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 95 $ 458 room=.
+-> l
+T  25 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 95 $ 458 room=.
+-> w
+T  26 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 4) HP 64/64 MP 0/0 Hu 94 $ 458 room=.
+-> s
+T  27 mode=combat_mode         Fili the Mighty(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 93 $ 458 room=M vs Kobold(L0 HP20/20)
+-> a
+T  28 mode=combat_victory      Fili the Mighty(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 93 $ 461 room=.
+-> back
+T  29 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 93 $ 461 room=.
+-> e
+T  30 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 92 $ 461 room=.
+-> l
+T  31 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 92 $ 461 room=.
+-> e
+T  32 mode=chest_mode          Fili the Mighty(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 91 $ 461 room=C
+-> o
+T  33 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 90 $ 461 room=.
+-> n
+T  34 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 89 $ 461 room=.
+-> w
+T  35 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 4) HP 64/64 MP 0/0 Hu 88 $ 461 room=.
+-> n
+T  36 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 87 $ 461 room=.
+-> w
+T  37 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 3) HP 64/64 MP 0/0 Hu 86 $ 461 room=.
+-> w
+T  38 mode=chest_mode          Fili the Mighty(dwa) F1@( 1, 3) HP 64/64 MP 0/0 Hu 85 $ 461 room=C
+-> n
+T  39 mode=game_loop           Fili the Mighty(dwa) F1@( 1, 2) HP 64/64 MP 0/0 Hu 84 $ 461 room=.
+-> e
+T  40 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 83 $ 461 room=.
+-> i
+T  41 mode=inventory           Fili the Mighty(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 83 $ 461 room=.
+-> eat3
+T  42 mode=inventory           Fili the Mighty(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 88 $ 461 room=.
+-> x
+T  43 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 88 $ 461 room=.
+-> e
+T  44 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 87 $ 461 room=.
+-> e
+T  45 mode=combat_mode         Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 86 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  46 mode=combat_victory      Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 86 $ 468 room=.
+-> back
+T  47 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 86 $ 468 room=.
+-> l
+T  48 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 86 $ 468 room=.
+-> e
+T  49 mode=dungeon_mode        Fili the Mighty(dwa) F1@( 5, 2) HP 64/64 MP 0/0 Hu 85 $ 468 room=N
+-> u
+T  50 mode=game_loop           Fili the Mighty(dwa) F1@( 5, 2) HP 64/64 MP 0/0 Hu 85 $ 468 room=N
+-> s
+T  51 mode=combat_mode         Fili the Mighty(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 84 $ 468 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  52 mode=combat_mode         Fili the Mighty(dwa) F1@( 5, 3) HP 63/64 MP 0/0 Hu 84 $ 468 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  53 mode=combat_victory      Fili the Mighty(dwa) F1@( 5, 3) HP 63/64 MP 0/0 Hu 84 $ 478 room=.
+-> back
+T  54 mode=game_loop           Fili the Mighty(dwa) F1@( 5, 3) HP 63/64 MP 0/0 Hu 84 $ 478 room=.
+-> e
+T  55 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 83 $ 478 room=M vs Goblin(L0 HP12/12)
+-> a
+T  56 mode=combat_victory      Fili the Mighty(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 83 $ 482 room=.
+-> back
+T  57 mode=game_loop           Fili the Mighty(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 83 $ 482 room=.
+-> s
+T  58 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 82 $ 482 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  59 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 4) HP 62/64 MP 0/0 Hu 82 $ 482 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  60 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 4) HP 62/64 MP 0/0 Hu 82 $ 482 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  61 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 82 $ 482 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  62 mode=combat_mode         Fili the Mighty(dwa) F1@( 6, 4) HP 60/64 MP 0/0 Hu 82 $ 482 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  63 mode=combat_victory      Fili the Mighty(dwa) F1@( 6, 4) HP 60/64 MP 0/0 Hu 82 $ 487 room=.
+-> back
+T  64 mode=game_loop           Fili the Mighty(dwa) F1@( 6, 4) HP 60/64 MP 0/0 Hu 82 $ 487 room=.
+-> i
+T  65 mode=inventory           Fili the Mighty(dwa) F1@( 6, 4) HP 60/64 MP 0/0 Hu 82 $ 487 room=.
+-> u3
+T  66 mode=inventory           Fili the Mighty(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 82 $ 487 room=.
+-> x
+T  67 mode=game_loop           Fili the Mighty(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 82 $ 487 room=.
+-> i
+T  68 mode=inventory           Fili the Mighty(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 82 $ 487 room=.
+-> eat3
+T  69 mode=inventory           Fili the Mighty(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 87 $ 487 room=.
+-> x
+T  70 mode=game_loop           Fili the Mighty(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 87 $ 487 room=.
+-> e
+T  71 mode=altar_mode          Fili the Mighty(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 86 $ 487 room=A
+-> pray
+T  72 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu100 $ 487 room=.
+-> s
+T  73 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 99 $ 487 room=.
+-> l
+T  74 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 99 $ 487 room=.
+-> e
+T  75 mode=game_loop           Fili the Mighty(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 98 $ 487 room=.
+-> l
+T  76 mode=game_loop           Fili the Mighty(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 98 $ 487 room=.
+-> e
+T  77 mode=game_loop           Fili the Mighty(dwa) F1@( 9, 5) HP 64/64 MP 0/0 Hu 97 $ 487 room=.
+-> l
+T  78 mode=game_loop           Fili the Mighty(dwa) F1@( 9, 5) HP 64/64 MP 0/0 Hu 97 $ 487 room=.
+-> e
+T  79 mode=chest_mode          Fili the Mighty(dwa) F1@(10, 5) HP 64/64 MP 0/0 Hu 96 $ 487 room=C
+-> o
+T  80 mode=game_loop           Fili the Mighty(dwa) F1@(10, 5) HP 64/64 MP 0/0 Hu 96 $ 487 room=.
+-> l
+T  81 mode=game_loop           Fili the Mighty(dwa) F1@(10, 5) HP 64/64 MP 0/0 Hu 96 $ 487 room=.
+-> s
+T  82 mode=combat_mode         Fili the Mighty(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 95 $ 487 room=M vs Kobold(L0 HP20/20)
+-> a
+T  83 mode=combat_victory      Fili the Mighty(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 95 $ 489 room=.
+-> back
+T  84 mode=game_loop           Fili the Mighty(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 95 $ 489 room=.
+-> l
+T  85 mode=game_loop           Fili the Mighty(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 95 $ 489 room=.
+-> s
+T  86 mode=combat_mode         Fili the Mighty(dwa) F1@(10, 7) HP 64/64 MP 0/0 Hu 94 $ 489 room=M vs Goblin(L0 HP12/12)
+-> a
+T  87 mode=combat_mode         Fili the Mighty(dwa) F1@(10, 7) HP 64/64 MP 0/0 Hu 94 $ 489 room=M vs Goblin(L0 HP12/12)
+-> a
+T  88 mode=combat_victory      Fili the Mighty(dwa) F1@(10, 7) HP 63/64 MP 0/0 Hu 94 $ 493 room=.
+-> back
+T  89 mode=game_loop           Fili the Mighty(dwa) F1@(10, 7) HP 63/64 MP 0/0 Hu 94 $ 493 room=.
+-> l
+T  90 mode=game_loop           Fili the Mighty(dwa) F1@(10, 7) HP 63/64 MP 0/0 Hu 94 $ 493 room=.
+-> s
+T  91 mode=library_mode        Fili the Mighty(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 93 $ 493 room=L
+-> r
+T  92 mode=library_read_decision_mode Fili the Mighty(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 93 $ 493 room=L
+-> y
+T  93 mode=game_loop           Fili the Mighty(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 93 $ 543 room=.
+-> l
+T  94 mode=game_loop           Fili the Mighty(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 93 $ 543 room=.
+-> s
+T  95 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 543 room=V
+-> b12
+T  96 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 533 room=V
+-> b5
+T  97 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 483 room=V
+-> b5
+T  98 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 433 room=V
+-> b5
+T  99 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 403 room=V
+-> b5
+T 100 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 373 room=V
+-> b5
+T 101 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 343 room=V
+-> b5
+T 102 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 313 room=V
+-> b5
+T 103 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 163 room=V
+-> id7
+T 104 mode=vendor_shop         Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 113 room=V
+-> x
+T 105 mode=game_loop           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 113 room=V
+-> i
+T 106 mode=inventory           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 92 $ 113 room=V
+-> eat3
+T 107 mode=inventory           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 97 $ 113 room=V
+-> u6
+T 108 mode=upgrade_scroll_mode Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 97 $ 113 room=V
+-> 1
+T 109 mode=inventory           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 97 $ 113 room=V
+-> x
+T 110 mode=game_loop           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 97 $ 113 room=V
+-> l
+T 111 mode=game_loop           Fili the Mighty(dwa) F1@(10, 9) HP 64/64 MP 0/0 Hu 97 $ 113 room=V
+-> s
+T 112 mode=combat_mode         Fili the Mighty(dwa) F1@(10,10) HP 64/64 MP 0/0 Hu 96 $ 113 room=M vs Kobold(L0 HP8/8)
+-> a
+T 113 mode=combat_victory      Fili the Mighty(dwa) F1@(10,10) HP 64/64 MP 0/0 Hu 96 $ 221 room=.
+-> back
+T 114 mode=game_loop           Fili the Mighty(dwa) F1@(10,10) HP 64/64 MP 0/0 Hu 96 $ 221 room=.
+-> l
+T 115 mode=game_loop           Fili the Mighty(dwa) F1@(10,10) HP 64/64 MP 0/0 Hu 96 $ 221 room=.
+-> s
+T 116 mode=combat_mode         Fili the Mighty(dwa) F1@(10,11) HP 64/64 MP 0/0 Hu 95 $ 221 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 117 mode=combat_mode         Fili the Mighty(dwa) F1@(10,11) HP 63/64 MP 0/0 Hu 95 $ 221 room=M vs Skeleton(L0 HP1/25)
+-> a
+T 118 mode=combat_mode         Fili the Mighty(dwa) F1@(10,11) HP 62/64 MP 0/0 Hu 95 $ 221 room=M vs Skeleton(L0 HP1/25)
+-> a
+T 119 mode=combat_victory      Fili the Mighty(dwa) F1@(10,11) HP 62/64 MP 0/0 Hu 95 $ 223 room=.
+-> back
+T 120 mode=game_loop           Fili the Mighty(dwa) F1@(10,11) HP 62/64 MP 0/0 Hu 95 $ 223 room=.
+-> l
+T 121 mode=game_loop           Fili the Mighty(dwa) F1@(10,11) HP 62/64 MP 0/0 Hu 95 $ 223 room=.
+-> w
+T 122 mode=game_loop           Fili the Mighty(dwa) F1@( 9,11) HP 62/64 MP 0/0 Hu 94 $ 223 room=.
+-> s
+T 123 mode=combat_mode         Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 223 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 124 mode=combat_mode         Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 223 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 125 mode=combat_mode         Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 223 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 126 mode=combat_victory      Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 232 room=.
+-> back
+T 127 mode=game_loop           Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 232 room=.
+-> l
+T 128 mode=game_loop           Fili the Mighty(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 93 $ 232 room=.
+-> s
+T 129 mode=combat_mode         Fili the Mighty(dwa) F1@( 9,13) HP 63/64 MP 0/0 Hu 92 $ 232 room=M vs Bat(L0 HP12/12)
+-> a
+T 130 mode=combat_victory      Fili the Mighty(dwa) F1@( 9,13) HP 63/74 MP 0/0 Hu 92 $ 237 room=.
+-> back
+T 131 mode=game_loop           Fili the Mighty(dwa) F1@( 9,13) HP 63/74 MP 0/0 Hu 92 $ 237 room=.
+-> l
+T 132 mode=game_loop           Fili the Mighty(dwa) F1@( 9,13) HP 63/74 MP 0/0 Hu 92 $ 237 room=.
+-> e
+T 133 mode=game_loop           Fili the Mighty(dwa) F1@(10,13) HP 64/74 MP 0/0 Hu 91 $ 237 room=.
+-> e
+T 134 mode=game_loop           Fili the Mighty(dwa) F1@(11,13) HP 64/74 MP 0/0 Hu 90 $ 237 room=.
+-> i
+T 135 mode=inventory           Fili the Mighty(dwa) F1@(11,13) HP 64/74 MP 0/0 Hu 90 $ 237 room=.
+-> u4
+T 136 mode=inventory           Fili the Mighty(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 90 $ 237 room=.
+-> x
+T 137 mode=game_loop           Fili the Mighty(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 90 $ 237 room=.
+-> i
+T 138 mode=inventory           Fili the Mighty(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 90 $ 237 room=.
+-> eat5
+T 139 mode=inventory           Fili the Mighty(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 95 $ 237 room=.
+-> x
+T 140 mode=game_loop           Fili the Mighty(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 95 $ 237 room=.
+-> e
+T 141 mode=game_loop           Fili the Mighty(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 94 $ 237 room=.
+-> i
+T 142 mode=inventory           Fili the Mighty(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 94 $ 237 room=.
+-> eat4
+T 143 mode=inventory           Fili the Mighty(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 99 $ 237 room=.
+-> x
+T 144 mode=game_loop           Fili the Mighty(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 99 $ 237 room=.
+-> n
+T 145 mode=game_loop           Fili the Mighty(dwa) F1@(12,12) HP 74/74 MP 0/0 Hu 98 $ 237 room=.
+-> w
+T 146 mode=game_loop           Fili the Mighty(dwa) F1@(11,12) HP 74/74 MP 0/0 Hu 97 $ 237 room=.
+-> n
+T 147 mode=game_loop           Fili the Mighty(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 96 $ 237 room=.
+-> n
+T 148 mode=game_loop           Fili the Mighty(dwa) F1@(11,10) HP 74/74 MP 0/0 Hu 95 $ 237 room=.
+-> n
+T 149 mode=game_loop           Fili the Mighty(dwa) F1@(11, 9) HP 74/74 MP 0/0 Hu 94 $ 237 room=.
+-> w
+T 150 mode=game_loop           Fili the Mighty(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 93 $ 237 room=V
+-> i
+T 151 mode=inventory           Fili the Mighty(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 93 $ 237 room=V
+-> eat4
+T 152 mode=inventory           Fili the Mighty(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 99 $ 237 room=V
+-> x
+T 153 mode=game_loop           Fili the Mighty(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 99 $ 237 room=V
+-> n
+T 154 mode=game_loop           Fili the Mighty(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 98 $ 237 room=.
+-> i
+T 155 mode=inventory           Fili the Mighty(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 98 $ 237 room=.
+-> eat3
+T 156 mode=inventory           Fili the Mighty(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu100 $ 237 room=.
+-> x
+T 157 mode=game_loop           Fili the Mighty(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu100 $ 237 room=.
+-> n
+T 158 mode=game_loop           Fili the Mighty(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 99 $ 237 room=.
+-> n
+T 159 mode=game_loop           Fili the Mighty(dwa) F1@(10, 6) HP 74/74 MP 0/0 Hu 98 $ 237 room=.
+-> n
+T 160 mode=game_loop           Fili the Mighty(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 97 $ 237 room=.
+-> w
+T 161 mode=game_loop           Fili the Mighty(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 96 $ 237 room=.
+-> w
+T 162 mode=game_loop           Fili the Mighty(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 95 $ 237 room=.
+-> w
+T 163 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 94 $ 237 room=.
+-> n
+T 164 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 93 $ 237 room=.
+-> n
+T 165 mode=game_loop           Fili the Mighty(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 92 $ 237 room=.
+-> w
+T 166 mode=game_loop           Fili the Mighty(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 91 $ 237 room=.
+-> w
+T 167 mode=game_loop           Fili the Mighty(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 90 $ 237 room=.
+-> n
+T 168 mode=game_loop           Fili the Mighty(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 89 $ 237 room=N
+-> n
+T 169 mode=game_loop           Fili the Mighty(dwa) F1@( 5, 1) HP 74/74 MP 0/0 Hu 88 $ 237 room=.
+-> w
+T 170 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 237 room=.
+-> s
+T 171 mode=game_loop           Fili the Mighty(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 237 room=.
+-> w
+T 172 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 85 $ 237 room=.
+-> s
+T 173 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 84 $ 237 room=.
+-> s
+T 174 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 83 $ 237 room=.
+-> s
+T 175 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 82 $ 237 room=.
+-> s
+T 176 mode=game_loop           Fili the Mighty(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 81 $ 237 room=.
+-> w
+T 177 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 6) HP 74/74 MP 0/0 Hu 80 $ 237 room=.
+-> s
+T 178 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 79 $ 237 room=.
+-> s
+T 179 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 8) HP 74/74 MP 0/0 Hu 78 $ 237 room=.
+-> l
+T 180 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 8) HP 74/74 MP 0/0 Hu 78 $ 237 room=.
+-> s
+T 181 mode=combat_mode         Fili the Mighty(dwa) F1@( 2, 9) HP 74/74 MP 0/0 Hu 77 $ 237 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 182 mode=combat_victory      Fili the Mighty(dwa) F1@( 2, 9) HP 74/74 MP 0/0 Hu 77 $ 243 room=.
+-> back
+T 183 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 9) HP 74/74 MP 0/0 Hu 77 $ 243 room=.
+-> l
+T 184 mode=game_loop           Fili the Mighty(dwa) F1@( 2, 9) HP 74/74 MP 0/0 Hu 77 $ 243 room=.
+-> s
+T 185 mode=altar_mode          Fili the Mighty(dwa) F1@( 2,10) HP 74/74 MP 0/0 Hu 76 $ 243 room=A
+-> pray
+T 186 mode=game_loop           Fili the Mighty(dwa) F1@( 2,10) HP 74/74 MP 0/0 Hu 76 $ 243 room=.
+-> s
+T 187 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 75 $ 243 room=.
+-> s
+T 188 mode=combat_mode         Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 74 $ 243 room=M vs Zombie(L0 HP35/35)
+-> a
+T 189 mode=combat_mode         Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 74 $ 243 room=M vs Zombie(L0 HP8/35)
+-> a
+T 190 mode=combat_victory      Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 74 $ 245 room=.
+-> back
+T 191 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 74 $ 245 room=.
+-> l
+T 192 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 74 $ 245 room=.
+-> e
+T 193 mode=chest_mode          Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=C
+-> o
+T 194 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=.
+-> i
+T 195 mode=inventory           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=.
+-> e1
+T 196 mode=inventory           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=.
+-> x
+T 197 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=.
+-> l
+T 198 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 73 $ 245 room=.
+-> e
+T 199 mode=chest_mode          Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 72 $ 245 room=C
+-> o
+T 200 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 65/74 MP 0/0 Hu 72 $ 245 room=.
+-> l
+T 201 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 65/74 MP 0/0 Hu 72 $ 245 room=.
+-> n
+T 202 mode=combat_mode         Fili the Mighty(dwa) F1@( 4,11) HP 65/74 MP 0/0 Hu 71 $ 245 room=M vs Stirge(L0 HP6/6)
+-> a
+T 203 mode=combat_victory      Fili the Mighty(dwa) F1@( 4,11) HP 65/74 MP 0/0 Hu 71 $ 252 room=.
+-> back
+T 204 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 65/74 MP 0/0 Hu 71 $ 252 room=.
+-> n
+T 205 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 65/74 MP 0/0 Hu 70 $ 252 room=.
+-> e
+T 206 mode=stairs_down_mode    Fili the Mighty(dwa) F1@( 5,10) HP 65/74 MP 0/0 Hu 69 $ 252 room=D
+-> w
+T 207 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 66/74 MP 0/0 Hu 68 $ 252 room=.
+-> s
+T 208 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 66/74 MP 0/0 Hu 67 $ 252 room=.
+-> s
+T 209 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 66/74 MP 0/0 Hu 66 $ 252 room=.
+-> e
+T 210 mode=game_loop           Fili the Mighty(dwa) F1@( 5,12) HP 66/74 MP 0/0 Hu 65 $ 252 room=.
+-> l
+T 211 mode=game_loop           Fili the Mighty(dwa) F1@( 5,12) HP 66/74 MP 0/0 Hu 65 $ 252 room=.
+-> n
+T 212 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 67/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 213 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 66/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 214 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 65/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 215 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 64/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 216 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 64/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 217 mode=combat_mode         Fili the Mighty(dwa) F1@( 5,11) HP 64/74 MP 0/0 Hu 64 $ 252 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 218 mode=combat_victory      Fili the Mighty(dwa) F1@( 5,11) HP 63/74 MP 0/0 Hu 64 $ 254 room=.
+-> back
+T 219 mode=game_loop           Fili the Mighty(dwa) F1@( 5,11) HP 63/74 MP 0/0 Hu 64 $ 254 room=.
+-> n
+T 220 mode=stairs_down_mode    Fili the Mighty(dwa) F1@( 5,10) HP 63/74 MP 0/0 Hu 63 $ 254 room=D
+-> w
+T 221 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 63/74 MP 0/0 Hu 62 $ 254 room=.
+-> s
+T 222 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 63/74 MP 0/0 Hu 61 $ 254 room=.
+-> i
+T 223 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 63/74 MP 0/0 Hu 61 $ 254 room=.
+-> u4
+T 224 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 61 $ 254 room=.
+-> x
+T 225 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 61 $ 254 room=.
+-> i
+T 226 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 61 $ 254 room=.
+-> eat4
+T 227 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 67 $ 254 room=.
+-> eat1
+T 228 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu100 $ 254 room=.
+-> x
+T 229 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu100 $ 254 room=.
+-> s
+T 230 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 99 $ 254 room=.
+-> l
+T 231 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 99 $ 254 room=.
+-> s
+T 232 mode=combat_mode         Fili the Mighty(dwa) F1@( 4,13) HP 74/74 MP 0/0 Hu 98 $ 254 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 233 mode=combat_mode         Fili the Mighty(dwa) F1@( 4,13) HP 74/74 MP 0/0 Hu 98 $ 254 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 234 mode=combat_mode         Fili the Mighty(dwa) F1@( 4,13) HP 73/74 MP 0/0 Hu 98 $ 254 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 235 mode=combat_victory      Fili the Mighty(dwa) F1@( 4,13) HP 72/74 MP 0/0 Hu 98 $ 259 room=.
+-> back
+T 236 mode=game_loop           Fili the Mighty(dwa) F1@( 4,13) HP 72/74 MP 0/0 Hu 98 $ 259 room=.
+-> s
+T 237 mode=combat_mode         Fili the Mighty(dwa) F1@( 4,14) HP 72/74 MP 0/0 Hu 97 $ 259 room=M vs Kobold(L0 HP8/8)
+-> a
+T 238 mode=combat_victory      Fili the Mighty(dwa) F1@( 4,14) HP 71/74 MP 0/0 Hu 97 $ 262 room=.
+-> back
+T 239 mode=game_loop           Fili the Mighty(dwa) F1@( 4,14) HP 71/74 MP 0/0 Hu 97 $ 262 room=.
+-> w
+T 240 mode=game_loop           Fili the Mighty(dwa) F1@( 3,14) HP 72/74 MP 0/0 Hu 96 $ 262 room=.
+-> l
+T 241 mode=game_loop           Fili the Mighty(dwa) F1@( 3,14) HP 72/74 MP 0/0 Hu 96 $ 262 room=.
+-> w
+T 242 mode=game_loop           Fili the Mighty(dwa) F1@( 2,14) HP 72/74 MP 0/0 Hu 95 $ 262 room=.
+-> n
+T 243 mode=combat_mode         Fili the Mighty(dwa) F1@( 2,13) HP 73/74 MP 0/0 Hu 94 $ 262 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 244 mode=combat_victory      Fili the Mighty(dwa) F1@( 2,13) HP 73/74 MP 0/0 Hu 94 $ 263 room=.
+-> back
+T 245 mode=game_loop           Fili the Mighty(dwa) F1@( 2,13) HP 73/74 MP 0/0 Hu 94 $ 263 room=.
+-> l
+T 246 mode=game_loop           Fili the Mighty(dwa) F1@( 2,13) HP 73/74 MP 0/0 Hu 94 $ 263 room=.
+-> n
+T 247 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 73/74 MP 0/0 Hu 93 $ 263 room=.
+-> i
+T 248 mode=inventory           Fili the Mighty(dwa) F1@( 2,12) HP 73/74 MP 0/0 Hu 93 $ 263 room=.
+-> eat3
+T 249 mode=inventory           Fili the Mighty(dwa) F1@( 2,12) HP 73/74 MP 0/0 Hu 99 $ 263 room=.
+-> x
+T 250 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 73/74 MP 0/0 Hu 99 $ 263 room=.
+-> l
+T 251 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 73/74 MP 0/0 Hu 99 $ 263 room=.
+-> n
+T 252 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 98 $ 263 room=.
+-> n
+T 253 mode=game_loop           Fili the Mighty(dwa) F1@( 2,10) HP 74/74 MP 0/0 Hu 97 $ 263 room=.
+-> s
+T 254 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 96 $ 263 room=.
+-> e
+T 255 mode=combat_mode         Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 95 $ 263 room=M vs Goblin(L0 HP12/12)
+-> a
+T 256 mode=combat_victory      Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 95 $ 265 room=.
+-> back
+T 257 mode=game_loop           Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 95 $ 265 room=.
+-> e
+T 258 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 94 $ 265 room=.
+-> i
+T 259 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 94 $ 265 room=.
+-> eat5
+T 260 mode=inventory           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu100 $ 265 room=.
+-> x
+T 261 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu100 $ 265 room=.
+-> n
+T 262 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 99 $ 265 room=.
+-> i
+T 263 mode=inventory           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 99 $ 265 room=.
+-> eat4
+T 264 mode=inventory           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu100 $ 265 room=.
+-> x
+T 265 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu100 $ 265 room=.
+-> e
+T 266 mode=stairs_down_mode    Fili the Mighty(dwa) F1@( 5,10) HP 74/74 MP 0/0 Hu 99 $ 265 room=D
+-> w
+T 267 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 98 $ 265 room=.
+-> s
+T 268 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 97 $ 265 room=.
+-> e
+T 269 mode=game_loop           Fili the Mighty(dwa) F1@( 5,11) HP 74/74 MP 0/0 Hu 96 $ 265 room=.
+-> s
+T 270 mode=game_loop           Fili the Mighty(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 95 $ 265 room=.
+-> l
+T 271 mode=game_loop           Fili the Mighty(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 95 $ 265 room=.
+-> w
+T 272 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 94 $ 265 room=.
+-> s
+T 273 mode=game_loop           Fili the Mighty(dwa) F1@( 4,13) HP 74/74 MP 0/0 Hu 93 $ 265 room=.
+-> w
+T 274 mode=combat_mode         Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 92 $ 265 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 275 mode=combat_victory      Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 92 $ 269 room=.
+-> back
+T 276 mode=game_loop           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 92 $ 269 room=.
+-> i
+T 277 mode=inventory           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 92 $ 269 room=.
+-> eat4
+T 278 mode=inventory           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 97 $ 269 room=.
+-> x
+T 279 mode=game_loop           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 97 $ 269 room=.
+-> n
+T 280 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 96 $ 269 room=.
+-> l
+T 281 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 96 $ 269 room=.
+-> n
+T 282 mode=game_loop           Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 95 $ 269 room=.
+-> e
+T 283 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 94 $ 269 room=.
+-> n
+T 284 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 93 $ 269 room=.
+-> e
+T 285 mode=stairs_down_mode    Fili the Mighty(dwa) F1@( 5,10) HP 74/74 MP 0/0 Hu 92 $ 269 room=D
+-> w
+T 286 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 91 $ 269 room=.
+-> s
+T 287 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 90 $ 269 room=.
+-> w
+T 288 mode=game_loop           Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 89 $ 269 room=.
+-> s
+T 289 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 88 $ 269 room=.
+-> e
+T 290 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 87 $ 269 room=.
+-> i
+T 291 mode=inventory           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 87 $ 269 room=.
+-> eat3
+T 292 mode=inventory           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 92 $ 269 room=.
+-> x
+T 293 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 92 $ 269 room=.
+-> s
+T 294 mode=game_loop           Fili the Mighty(dwa) F1@( 4,13) HP 74/74 MP 0/0 Hu 91 $ 269 room=.
+-> w
+T 295 mode=game_loop           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 90 $ 269 room=.
+-> s
+T 296 mode=game_loop           Fili the Mighty(dwa) F1@( 3,14) HP 74/74 MP 0/0 Hu 89 $ 269 room=.
+-> w
+T 297 mode=game_loop           Fili the Mighty(dwa) F1@( 2,14) HP 74/74 MP 0/0 Hu 88 $ 269 room=.
+-> n
+T 298 mode=game_loop           Fili the Mighty(dwa) F1@( 2,13) HP 74/74 MP 0/0 Hu 87 $ 269 room=.
+-> n
+T 299 mode=game_loop           Fili the Mighty(dwa) F1@( 2,12) HP 74/74 MP 0/0 Hu 86 $ 269 room=.
+-> n
+T 300 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 85 $ 269 room=.
+-> l
+T 301 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 85 $ 269 room=.
+-> n
+T 302 mode=game_loop           Fili the Mighty(dwa) F1@( 2,10) HP 74/74 MP 0/0 Hu 84 $ 269 room=.
+-> s
+T 303 mode=game_loop           Fili the Mighty(dwa) F1@( 2,11) HP 74/74 MP 0/0 Hu 83 $ 269 room=.
+-> e
+T 304 mode=game_loop           Fili the Mighty(dwa) F1@( 3,11) HP 74/74 MP 0/0 Hu 82 $ 269 room=.
+-> s
+T 305 mode=game_loop           Fili the Mighty(dwa) F1@( 3,12) HP 74/74 MP 0/0 Hu 81 $ 269 room=.
+-> s
+T 306 mode=game_loop           Fili the Mighty(dwa) F1@( 3,13) HP 74/74 MP 0/0 Hu 80 $ 269 room=.
+-> s
+T 307 mode=game_loop           Fili the Mighty(dwa) F1@( 3,14) HP 74/74 MP 0/0 Hu 79 $ 269 room=.
+-> e
+T 308 mode=game_loop           Fili the Mighty(dwa) F1@( 4,14) HP 74/74 MP 0/0 Hu 78 $ 269 room=.
+-> n
+T 309 mode=game_loop           Fili the Mighty(dwa) F1@( 4,13) HP 74/74 MP 0/0 Hu 77 $ 269 room=.
+-> n
+T 310 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 76 $ 269 room=.
+-> l
+T 311 mode=game_loop           Fili the Mighty(dwa) F1@( 4,12) HP 74/74 MP 0/0 Hu 76 $ 269 room=.
+-> n
+T 312 mode=game_loop           Fili the Mighty(dwa) F1@( 4,11) HP 74/74 MP 0/0 Hu 75 $ 269 room=.
+-> n
+T 313 mode=game_loop           Fili the Mighty(dwa) F1@( 4,10) HP 74/74 MP 0/0 Hu 74 $ 269 room=.
+-> e
+T 314 mode=stairs_down_mode    Fili the Mighty(dwa) F1@( 5,10) HP 74/74 MP 0/0 Hu 73 $ 269 room=D
+-> d
+T 315 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> n
+T 316 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> e
+T 317 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> w
+T 318 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> w
+T 319 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> w
+T 320 mode=stairs_up_mode      Fili the Mighty(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 269 room=U
+-> s
+T 321 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 72 $ 269 room=.
+-> l
+T 322 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 72 $ 269 room=.
+-> s
+T 323 mode=library_mode        Fili the Mighty(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 71 $ 269 room=L
+-> r
+T 324 mode=library_read_decision_mode Fili the Mighty(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 71 $ 269 room=L
+-> y
+T 325 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 71 $ 269 room=.
+-> l
+T 326 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 71 $ 269 room=.
+-> s
+T 327 mode=altar_mode          Fili the Mighty(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 70 $ 269 room=A
+-> pray
+T 328 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 70 $ 269 room=.
+-> l
+T 329 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 70 $ 269 room=.
+-> e
+T 330 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP28/28)
+-> a
+T 331 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 73/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 332 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 72/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 333 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 62/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 334 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 335 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 336 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 269 room=M vs Harpy(L1 HP3/28)
+-> a
+T 337 mode=combat_victory      Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 423 room=.
+-> back
+T 338 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 423 room=.
+-> l
+T 339 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 4) HP 61/74 MP 0/0 Hu 69 $ 423 room=.
+-> s
+T 340 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 5) HP 61/74 MP 0/0 Hu 68 $ 423 room=M vs Wight(L1 HP40/40)
+-> a
+T 341 mode=combat_mode         Fili the Mighty(dwa) F2@( 2, 5) HP 61/74 MP 0/0 Hu 68 $ 423 room=M vs Wight(L1 HP16/40)
+-> a
+T 342 mode=combat_victory      Fili the Mighty(dwa) F2@( 2, 5) HP 61/74 MP 0/0 Hu 68 $ 435 room=.
+-> back
+T 343 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 5) HP 61/74 MP 0/0 Hu 68 $ 435 room=.
+-> l
+T 344 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 5) HP 61/74 MP 0/0 Hu 68 $ 435 room=.
+-> s
+T 345 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 6) HP 61/74 MP 0/0 Hu 67 $ 435 room=.
+-> l
+T 346 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 6) HP 61/74 MP 0/0 Hu 67 $ 435 room=.
+-> s
+T 347 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 7) HP 61/74 MP 0/0 Hu 66 $ 435 room=.
+-> l
+T 348 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 7) HP 61/74 MP 0/0 Hu 66 $ 435 room=.
+-> s
+T 349 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 8) HP 62/74 MP 0/0 Hu 65 $ 435 room=.
+-> l
+T 350 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 8) HP 62/74 MP 0/0 Hu 65 $ 435 room=.
+-> s
+T 351 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 9) HP 62/74 MP 0/0 Hu 64 $ 435 room=.
+-> l
+T 352 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 9) HP 62/74 MP 0/0 Hu 64 $ 435 room=.
+-> w
+T 353 mode=library_mode        Fili the Mighty(dwa) F2@( 1, 9) HP 62/74 MP 0/0 Hu 63 $ 435 room=L
+-> r
+T 354 mode=library_read_decision_mode Fili the Mighty(dwa) F2@( 1, 9) HP 62/74 MP 0/0 Hu 63 $ 435 room=L
+-> y
+T 355 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 9) HP 62/74 MP 0/0 Hu 63 $ 435 room=.
+-> l
+T 356 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 9) HP 62/74 MP 0/0 Hu 63 $ 435 room=.
+-> n
+T 357 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 8) HP 62/74 MP 0/0 Hu 62 $ 435 room=.
+-> n
+T 358 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 7) HP 63/74 MP 0/0 Hu 61 $ 435 room=.
+-> e
+T 359 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 7) HP 63/74 MP 0/0 Hu 60 $ 435 room=.
+-> s
+T 360 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 8) HP 63/74 MP 0/0 Hu 59 $ 435 room=.
+-> i
+T 361 mode=inventory           Fili the Mighty(dwa) F2@( 2, 8) HP 63/74 MP 0/0 Hu 59 $ 435 room=.
+-> u3
+T 362 mode=inventory           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 59 $ 435 room=.
+-> x
+T 363 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 59 $ 435 room=.
+-> i
+T 364 mode=inventory           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 59 $ 435 room=.
+-> eat3
+T 365 mode=inventory           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 65 $ 435 room=.
+-> eat1
+T 366 mode=inventory           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu100 $ 435 room=.
+-> x
+T 367 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu100 $ 435 room=.
+-> e
+T 368 mode=game_loop           Fili the Mighty(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 99 $ 435 room=.
+-> s
+T 369 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 74/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 370 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 70/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 371 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 66/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 372 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 62/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP20/45)
+-> a
+T 373 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 58/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP20/45)
+-> f
+T 374 mode=combat_mode         Fili the Mighty(dwa) F2@( 3, 9) HP 54/74 MP 0/0 Hu 98 $ 435 room=M vs Gnoll(L1 HP20/45)
+-> a
+T 375 mode=combat_victory      Fili the Mighty(dwa) F2@( 3, 9) HP 54/84 MP 0/0 Hu 98 $ 451 room=.
+-> back
+T 376 mode=game_loop           Fili the Mighty(dwa) F2@( 3, 9) HP 54/84 MP 0/0 Hu 98 $ 451 room=.
+-> w
+T 377 mode=game_loop           Fili the Mighty(dwa) F2@( 2, 9) HP 54/84 MP 0/0 Hu 97 $ 451 room=.
+-> w
+T 378 mode=game_loop           Fili the Mighty(dwa) F2@( 1, 9) HP 55/84 MP 0/0 Hu 96 $ 451 room=.
+-> s
+T 379 mode=game_loop           Fili the Mighty(dwa) F2@( 1,10) HP 55/84 MP 0/0 Hu 95 $ 451 room=.
+-> i
+T 380 mode=inventory           Fili the Mighty(dwa) F2@( 1,10) HP 55/84 MP 0/0 Hu 95 $ 451 room=.
+-> u3
+T 381 mode=inventory           Fili the Mighty(dwa) F2@( 1,10) HP 84/84 MP 0/0 Hu 95 $ 451 room=.
+-> x
+T 382 mode=game_loop           Fili the Mighty(dwa) F2@( 1,10) HP 84/84 MP 0/0 Hu 95 $ 451 room=.
+-> s
+T 383 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 84/84 MP 0/0 Hu 94 $ 451 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 384 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 84/84 MP 0/0 Hu 94 $ 451 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 385 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 75/84 MP 0/0 Hu 94 $ 451 room=M vs Giant Spider(L1 HP40/40)
+-> f
+T 386 mode=flee_direction_mode Fili the Mighty(dwa) F2@( 1,11) HP 66/84 MP 0/0 Hu 94 $ 451 room=M
+-> s
+T 387 mode=game_loop           Fili the Mighty(dwa) F2@( 1,12) HP 66/84 MP 0/0 Hu 94 $ 451 room=.
+-> i
+T 388 mode=inventory           Fili the Mighty(dwa) F2@( 1,12) HP 66/84 MP 0/0 Hu 94 $ 451 room=.
+-> u3
+T 389 mode=inventory           Fili the Mighty(dwa) F2@( 1,12) HP 84/84 MP 0/0 Hu 94 $ 451 room=.
+-> x
+T 390 mode=game_loop           Fili the Mighty(dwa) F2@( 1,12) HP 84/84 MP 0/0 Hu 94 $ 451 room=.
+-> e
+T 391 mode=game_loop           Fili the Mighty(dwa) F2@( 1,12) HP 84/84 MP 0/0 Hu 94 $ 451 room=.
+-> e
+T 392 mode=game_loop           Fili the Mighty(dwa) F2@( 1,12) HP 84/84 MP 0/0 Hu 94 $ 451 room=.
+-> n
+T 393 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 84/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 394 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 75/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 395 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 66/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 396 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 57/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 397 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 48/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 398 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 39/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 399 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 30/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> f
+T 400 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 21/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> f
+T 401 mode=combat_mode         Fili the Mighty(dwa) F2@( 1,11) HP 12/84 MP 0/0 Hu 93 $ 451 room=M vs Giant Spider(L1 HP16/40)
+-> f
+T 402 mode=flee_direction_mode Fili the Mighty(dwa) F2@( 1,11) HP 3/84 MP 0/0 Hu 93 $ 451 room=M
+-> e
+T 403 mode=combat_mode         Fili the Mighty(dwa) F2@( 2,11) HP 3/84 MP 0/0 Hu 93 $ 451 room=M vs Myconid Shaman(L1 HP45/45)
+-> f
+T 404 mode=death_screen        Fili the Mighty(dwa) F2@( 2,11) HP 0/84 MP 0/0 Hu 93 $ 451 room=M
+
+=== run finished: turns=404 floor=2 hp=0/84 gold=451 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/16180_dwarf.html

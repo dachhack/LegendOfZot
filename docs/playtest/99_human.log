@@ -1,0 +1,3110 @@
+T   0 mode=game_loop           Eomer II(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Eomer II(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  A Lichen (Level 0) appears! A slow and menacing living amalgam of fungus and plant. Like nature but mean.
+  The Lichen strikes first!
+-> a
+T   3 mode=combat_mode         Eomer II(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  Ouch! Lichen hit Eomer II!
+  You took 1 damage!
+  You missed the evil Lichen!
+-> a
+T   4 mode=combat_mode         Eomer II(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  Ouch! Lichen hit Eomer II!
+  You took 1 damage!
+  You missed the evil Lichen!
+-> a
+T   5 mode=combat_victory      Eomer II(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 99 $ 346 room=.
+  You gained 8 experience.
+  You found 6 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Lichen meat.
+-> back
+T   6 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 99 $ 346 room=.
+-> l
+T   7 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 99 $ 346 room=.
+-> e
+T   8 mode=combat_mode         Eomer II(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 98 $ 346 room=M vs Kobold(L0 HP20/20)
+-> a
+T   9 mode=combat_victory      Eomer II(hum) F1@( 3, 1) HP 26/30 MP 0/0 Hu 98 $ 350 room=.
+-> back
+T  10 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 26/30 MP 0/0 Hu 98 $ 350 room=.
+-> e
+T  11 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 97 $ 350 room=.
+-> w
+T  12 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 96 $ 350 room=.
+-> e
+T  13 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 95 $ 350 room=.
+-> w
+T  14 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 94 $ 350 room=.
+-> w
+T  15 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 93 $ 350 room=.
+-> e
+T  16 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 92 $ 350 room=.
+-> e
+T  17 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> w
+T  18 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> e
+T  19 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> i
+T  20 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> eat4
+T  21 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> x
+T  22 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> w
+T  23 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> i
+T  24 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> eat3
+T  25 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> u3
+T  26 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> u1
+T  27 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> u2
+T  28 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> u4
+T  29 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> x
+T  30 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 350 room=.
+-> w
+T  31 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 350 room=.
+-> e
+T  32 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> i
+T  33 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> u3
+T  34 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> u1
+T  35 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> u2
+T  36 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> u4
+T  37 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> x
+T  38 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 350 room=.
+-> e
+T  39 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 96 $ 350 room=.
+-> w
+T  40 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> i
+T  41 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> u3
+T  42 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> u1
+T  43 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> u2
+T  44 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> u4
+T  45 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> x
+T  46 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 95 $ 350 room=.
+-> e
+T  47 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> i
+T  48 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> u3
+T  49 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> u1
+T  50 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> u2
+T  51 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> u4
+T  52 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> x
+T  53 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 350 room=.
+-> w
+T  54 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> i
+T  55 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> u3
+T  56 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> u1
+T  57 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> u2
+T  58 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> u4
+T  59 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> x
+T  60 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 93 $ 350 room=.
+-> w
+T  61 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 92 $ 350 room=.
+-> e
+T  62 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> i
+T  63 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> u3
+T  64 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> u1
+T  65 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> u2
+T  66 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> u4
+T  67 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> x
+T  68 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 91 $ 350 room=.
+-> e
+T  69 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> i
+T  70 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> u3
+T  71 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> u1
+T  72 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> u2
+T  73 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> u4
+T  74 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> x
+T  75 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 90 $ 350 room=.
+-> w
+T  76 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> i
+T  77 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> u3
+T  78 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> u1
+T  79 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> u2
+T  80 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> u4
+T  81 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> x
+T  82 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 89 $ 350 room=.
+-> e
+T  83 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> i
+T  84 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> u3
+T  85 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> u1
+T  86 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> u2
+T  87 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> u4
+T  88 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> x
+T  89 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 350 room=.
+-> w
+T  90 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> i
+T  91 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> u3
+T  92 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> u1
+T  93 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> u2
+T  94 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> u4
+T  95 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> x
+T  96 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 87 $ 350 room=.
+-> w
+T  97 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 86 $ 350 room=.
+-> e
+T  98 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> i
+T  99 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> u3
+T 100 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> u1
+T 101 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> u2
+T 102 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> u4
+T 103 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> x
+T 104 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 350 room=.
+-> e
+T 105 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> i
+T 106 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> u3
+T 107 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> u1
+T 108 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> u2
+T 109 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> u4
+T 110 mode=inventory           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> x
+T 111 mode=game_loop           Eomer II(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 84 $ 350 room=.
+-> w
+T 112 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> i
+T 113 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> u3
+T 114 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> u1
+T 115 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> u2
+T 116 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> u4
+T 117 mode=inventory           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> x
+T 118 mode=game_loop           Eomer II(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 350 room=.
+-> w
+T 119 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> i
+T 120 mode=inventory           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> u3
+T 121 mode=inventory           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> u1
+T 122 mode=inventory           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> u2
+T 123 mode=inventory           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> u4
+T 124 mode=inventory           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> x
+T 125 mode=game_loop           Eomer II(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 350 room=.
+-> s
+T 126 mode=garden_mode         Eomer II(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 81 $ 350 room=G
+-> h
+T 127 mode=game_loop           Eomer II(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 81 $ 350 room=.
+-> w
+T 128 mode=tomb_mode           Eomer II(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 350 room=T
+-> p
+T 129 mode=game_loop           Eomer II(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 350 room=T
+-> e
+T 130 mode=game_loop           Eomer II(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 79 $ 350 room=.
+-> s
+T 131 mode=dungeon_mode        Eomer II(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 78 $ 350 room=N
+-> u
+T 132 mode=game_loop           Eomer II(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 78 $ 350 room=N
+-> l
+T 133 mode=game_loop           Eomer II(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 78 $ 350 room=N
+-> e
+T 134 mode=combat_mode         Eomer II(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 77 $ 350 room=M vs Goblin(L0 HP30/30)
+-> a
+T 135 mode=combat_mode         Eomer II(hum) F1@( 3, 3) HP 29/30 MP 0/0 Hu 77 $ 350 room=M vs Goblin(L0 HP30/30)
+-> a
+T 136 mode=combat_mode         Eomer II(hum) F1@( 3, 3) HP 29/30 MP 0/0 Hu 77 $ 350 room=M vs Goblin(L0 HP10/30)
+-> a
+T 137 mode=combat_victory      Eomer II(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 77 $ 358 room=.
+-> back
+T 138 mode=game_loop           Eomer II(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 77 $ 358 room=.
+-> l
+T 139 mode=game_loop           Eomer II(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 77 $ 358 room=.
+-> w
+T 140 mode=dungeon_mode        Eomer II(hum) F1@( 2, 3) HP 28/30 MP 0/0 Hu 76 $ 358 room=N
+-> u
+T 141 mode=dungeon_unlocked_mode Eomer II(hum) F1@( 2, 3) HP 28/30 MP 0/0 Hu 76 $ 358 room=N
+-> r
+T 142 mode=game_loop           Eomer II(hum) F1@( 2, 3) HP 28/30 MP 0/0 Hu 76 $ 467 room=N
+-> s
+T 143 mode=game_loop           Eomer II(hum) F1@( 2, 4) HP 28/30 MP 0/0 Hu 75 $ 467 room=.
+-> w
+T 144 mode=pool_mode           Eomer II(hum) F1@( 1, 4) HP 28/30 MP 0/0 Hu 74 $ 467 room=P
+-> dr
+T 145 mode=game_loop           Eomer II(hum) F1@( 1, 4) HP 28/30 MP 0/0 Hu 74 $ 467 room=.
+-> e
+T 146 mode=game_loop           Eomer II(hum) F1@( 2, 4) HP 29/30 MP 0/0 Hu 73 $ 467 room=.
+-> s
+T 147 mode=game_loop           Eomer II(hum) F1@( 2, 5) HP 29/30 MP 0/0 Hu 72 $ 467 room=.
+-> s
+T 148 mode=library_mode        Eomer II(hum) F1@( 2, 6) HP 29/30 MP 0/0 Hu 71 $ 467 room=L
+-> r
+T 149 mode=library_read_decision_mode Eomer II(hum) F1@( 2, 6) HP 29/30 MP 0/0 Hu 71 $ 467 room=L
+-> y
+T 150 mode=game_loop           Eomer II(hum) F1@( 2, 6) HP 4/30 MP 0/0 Hu 71 $ 567 room=.
+-> i
+T 151 mode=inventory           Eomer II(hum) F1@( 2, 6) HP 4/30 MP 0/0 Hu 71 $ 567 room=.
+-> u3
+T 152 mode=inventory           Eomer II(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 71 $ 567 room=.
+-> x
+T 153 mode=game_loop           Eomer II(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 71 $ 567 room=.
+-> s
+T 154 mode=combat_mode         Eomer II(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 70 $ 567 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 155 mode=combat_victory      Eomer II(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 70 $ 569 room=.
+-> back
+T 156 mode=game_loop           Eomer II(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 70 $ 569 room=.
+-> n
+T 157 mode=game_loop           Eomer II(hum) F1@( 2, 6) HP 27/30 MP 0/0 Hu 69 $ 569 room=.
+-> w
+T 158 mode=game_loop           Eomer II(hum) F1@( 1, 6) HP 25/30 MP 0/0 Hu 68 $ 569 room=.
+-> e
+T 159 mode=game_loop           Eomer II(hum) F1@( 2, 6) HP 25/30 MP 0/0 Hu 67 $ 569 room=.
+-> e
+T 160 mode=combat_mode         Eomer II(hum) F1@( 3, 6) HP 26/30 MP 0/0 Hu 66 $ 569 room=M vs Kobold(L0 HP8/8)
+-> f
+T 161 mode=flee_direction_mode Eomer II(hum) F1@( 3, 6) HP 25/30 MP 0/0 Hu 66 $ 569 room=M
+-> n
+T 162 mode=combat_mode         Eomer II(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 66 $ 569 room=M vs Kobold(L0 HP8/8)
+-> a
+T 163 mode=combat_mode         Eomer II(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 66 $ 569 room=M vs Kobold(L0 HP8/8)
+-> a
+T 164 mode=combat_mode         Eomer II(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 66 $ 569 room=M vs Kobold(L0 HP8/8)
+-> a
+T 165 mode=combat_victory      Eomer II(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 66 $ 575 room=.
+-> back
+T 166 mode=game_loop           Eomer II(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 66 $ 575 room=.
+-> n
+T 167 mode=game_loop           Eomer II(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 65 $ 575 room=.
+-> l
+T 168 mode=game_loop           Eomer II(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 65 $ 575 room=.
+-> e
+T 169 mode=game_loop           Eomer II(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 64 $ 575 room=.
+-> w
+T 170 mode=game_loop           Eomer II(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 63 $ 575 room=.
+-> w
+T 171 mode=game_loop           Eomer II(hum) F1@( 2, 4) HP 26/30 MP 0/0 Hu 62 $ 575 room=.
+-> w
+T 172 mode=game_loop           Eomer II(hum) F1@( 1, 4) HP 26/30 MP 0/0 Hu 61 $ 575 room=.
+-> e
+T 173 mode=game_loop           Eomer II(hum) F1@( 2, 4) HP 26/30 MP 0/0 Hu 60 $ 575 room=.
+-> n
+T 174 mode=game_loop           Eomer II(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 59 $ 575 room=N
+-> e
+T 175 mode=game_loop           Eomer II(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 58 $ 575 room=.
+-> s
+T 176 mode=game_loop           Eomer II(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 57 $ 575 room=.
+-> s
+T 177 mode=game_loop           Eomer II(hum) F1@( 3, 5) HP 26/30 MP 0/0 Hu 56 $ 575 room=.
+-> s
+T 178 mode=combat_mode         Eomer II(hum) F1@( 3, 6) HP 26/30 MP 0/0 Hu 55 $ 575 room=M vs Kobold(L0 HP8/8)
+-> a
+T 179 mode=combat_mode         Eomer II(hum) F1@( 3, 6) HP 26/30 MP 0/0 Hu 55 $ 575 room=M vs Kobold(L0 HP8/8)
+-> a
+T 180 mode=combat_victory      Eomer II(hum) F1@( 3, 6) HP 25/30 MP 0/0 Hu 55 $ 584 room=.
+-> back
+T 181 mode=game_loop           Eomer II(hum) F1@( 3, 6) HP 25/30 MP 0/0 Hu 55 $ 584 room=.
+-> l
+T 182 mode=game_loop           Eomer II(hum) F1@( 3, 6) HP 25/30 MP 0/0 Hu 55 $ 584 room=.
+-> s
+T 183 mode=combat_mode         Eomer II(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 54 $ 584 room=M vs Lichen(L0 HP10/10)
+-> a
+T 184 mode=combat_victory      Eomer II(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 54 $ 594 room=.
+-> back
+T 185 mode=game_loop           Eomer II(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 54 $ 594 room=.
+-> l
+T 186 mode=game_loop           Eomer II(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 54 $ 594 room=.
+-> s
+T 187 mode=combat_mode         Eomer II(hum) F1@( 3, 8) HP 25/30 MP 0/0 Hu 53 $ 594 room=M vs Lichen(L0 HP10/10)
+-> f
+T 188 mode=flee_direction_mode Eomer II(hum) F1@( 3, 8) HP 25/30 MP 0/0 Hu 53 $ 594 room=M
+-> n
+T 189 mode=game_loop           Eomer II(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 53 $ 594 room=.
+-> e
+T 190 mode=game_loop           Eomer II(hum) F1@( 4, 7) HP 25/30 MP 0/0 Hu 52 $ 594 room=.
+-> l
+T 191 mode=game_loop           Eomer II(hum) F1@( 4, 7) HP 25/30 MP 0/0 Hu 52 $ 594 room=.
+-> s
+T 192 mode=combat_mode         Eomer II(hum) F1@( 4, 8) HP 25/30 MP 0/0 Hu 51 $ 594 room=M vs Kobold(L0 HP8/8)
+-> a
+T 193 mode=combat_mode         Eomer II(hum) F1@( 4, 8) HP 24/30 MP 0/0 Hu 51 $ 594 room=M vs Kobold(L0 HP8/8)
+-> a
+T 194 mode=combat_mode         Eomer II(hum) F1@( 4, 8) HP 23/30 MP 0/0 Hu 51 $ 594 room=M vs Kobold(L0 HP8/8)
+-> a
+T 195 mode=combat_mode         Eomer II(hum) F1@( 4, 8) HP 23/30 MP 0/0 Hu 51 $ 594 room=M vs Kobold(L0 HP8/8)
+-> a
+T 196 mode=combat_mode         Eomer II(hum) F1@( 4, 8) HP 22/30 MP 0/0 Hu 51 $ 594 room=M vs Kobold(L0 HP8/8)
+-> a
+T 197 mode=combat_victory      Eomer II(hum) F1@( 4, 8) HP 22/30 MP 0/0 Hu 51 $ 595 room=.
+-> back
+T 198 mode=game_loop           Eomer II(hum) F1@( 4, 8) HP 22/30 MP 0/0 Hu 51 $ 595 room=.
+-> i
+T 199 mode=inventory           Eomer II(hum) F1@( 4, 8) HP 22/30 MP 0/0 Hu 51 $ 595 room=.
+-> u3
+T 200 mode=inventory           Eomer II(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 51 $ 595 room=.
+-> x
+T 201 mode=game_loop           Eomer II(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 51 $ 595 room=.
+-> l
+T 202 mode=game_loop           Eomer II(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 51 $ 595 room=.
+-> e
+T 203 mode=game_loop           Eomer II(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 50 $ 595 room=.
+-> l
+T 204 mode=game_loop           Eomer II(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 50 $ 595 room=.
+-> e
+T 205 mode=pool_mode           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 49 $ 595 room=P
+-> dr
+T 206 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 49 $ 595 room=.
+-> i
+T 207 mode=inventory           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 49 $ 595 room=.
+-> eat1
+T 208 mode=inventory           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> x
+T 209 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> l
+T 210 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> l
+T 211 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> n
+T 212 mode=altar_mode          Eomer II(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 99 $ 595 room=A
+-> pray
+T 213 mode=game_loop           Eomer II(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 99 $ 595 room=.
+-> e
+T 214 mode=pool_mode           Eomer II(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 98 $ 595 room=P
+-> dr
+T 215 mode=game_loop           Eomer II(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 98 $ 595 room=.
+-> s
+T 216 mode=game_loop           Eomer II(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 97 $ 595 room=.
+-> s
+T 217 mode=game_loop           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu 96 $ 595 room=.
+-> i
+T 218 mode=inventory           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu 96 $ 595 room=.
+-> eat3
+T 219 mode=inventory           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> x
+T 220 mode=game_loop           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> l
+T 221 mode=game_loop           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu100 $ 595 room=.
+-> s
+T 222 mode=library_mode        Eomer II(hum) F1@( 7,10) HP 30/30 MP 0/0 Hu 99 $ 595 room=L
+-> r
+T 223 mode=library_read_decision_mode Eomer II(hum) F1@( 7,10) HP 30/30 MP 0/0 Hu 99 $ 595 room=L
+-> y
+T 224 mode=game_loop           Eomer II(hum) F1@( 7,10) HP 30/30 MP 0/0 Hu 99 $ 595 room=.
+-> w
+T 225 mode=combat_mode         Eomer II(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 98 $ 595 room=M vs Kobold(L0 HP20/20)
+-> a
+T 226 mode=combat_victory      Eomer II(hum) F1@( 6,10) HP 29/30 MP 0/0 Hu 98 $ 602 room=.
+-> back
+T 227 mode=game_loop           Eomer II(hum) F1@( 6,10) HP 29/30 MP 0/0 Hu 98 $ 602 room=.
+-> n
+T 228 mode=combat_mode         Eomer II(hum) F1@( 6, 9) HP 29/30 MP 0/0 Hu 97 $ 602 room=M vs Kobold(L0 HP8/8)
+-> a
+T 229 mode=combat_mode         Eomer II(hum) F1@( 6, 9) HP 28/30 MP 0/0 Hu 97 $ 602 room=M vs Kobold(L0 HP8/8)
+-> a
+T 230 mode=combat_mode         Eomer II(hum) F1@( 6, 9) HP 27/30 MP 0/0 Hu 97 $ 602 room=M vs Kobold(L0 HP8/8)
+-> f
+T 231 mode=flee_direction_mode Eomer II(hum) F1@( 6, 9) HP 26/30 MP 0/0 Hu 97 $ 602 room=M
+-> n
+T 232 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 26/30 MP 0/0 Hu 97 $ 602 room=.
+-> e
+T 233 mode=game_loop           Eomer II(hum) F1@( 7, 8) HP 27/30 MP 0/0 Hu 96 $ 602 room=.
+-> s
+T 234 mode=game_loop           Eomer II(hum) F1@( 7, 9) HP 27/30 MP 0/0 Hu 95 $ 602 room=.
+-> e
+T 235 mode=game_loop           Eomer II(hum) F1@( 8, 9) HP 28/30 MP 0/0 Hu 94 $ 602 room=.
+-> e
+T 236 mode=chest_mode          Eomer II(hum) F1@( 9, 9) HP 28/30 MP 0/0 Hu 93 $ 602 room=C
+-> o
+T 237 mode=game_loop           Eomer II(hum) F1@( 9, 9) HP 19/30 MP 0/0 Hu 93 $ 602 room=.
+-> i
+T 238 mode=inventory           Eomer II(hum) F1@( 9, 9) HP 19/30 MP 0/0 Hu 93 $ 602 room=.
+-> u3
+T 239 mode=inventory           Eomer II(hum) F1@( 9, 9) HP 30/30 MP 0/0 Hu 93 $ 602 room=.
+-> x
+T 240 mode=game_loop           Eomer II(hum) F1@( 9, 9) HP 30/30 MP 0/0 Hu 93 $ 602 room=.
+-> l
+T 241 mode=game_loop           Eomer II(hum) F1@( 9, 9) HP 30/30 MP 0/0 Hu 93 $ 602 room=.
+-> n
+T 242 mode=combat_mode         Eomer II(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 92 $ 602 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 243 mode=flee_direction_mode Eomer II(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 92 $ 602 room=M
+-> e
+T 244 mode=library_mode        Eomer II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 92 $ 602 room=L
+-> r
+T 245 mode=library_read_decision_mode Eomer II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 92 $ 602 room=L
+-> y
+T 246 mode=game_loop           Eomer II(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 92 $ 652 room=.
+-> e
+T 247 mode=game_loop           Eomer II(hum) F1@(11, 8) HP 30/30 MP 0/0 Hu 91 $ 652 room=.
+-> s
+T 248 mode=game_loop           Eomer II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 90 $ 652 room=.
+-> l
+T 249 mode=game_loop           Eomer II(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 90 $ 652 room=.
+-> s
+T 250 mode=combat_mode         Eomer II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 89 $ 652 room=M vs Stirge(L0 HP6/6)
+-> a
+T 251 mode=combat_victory      Eomer II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 89 $ 860 room=.
+-> back
+T 252 mode=game_loop           Eomer II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 89 $ 860 room=.
+-> l
+T 253 mode=game_loop           Eomer II(hum) F1@(11,10) HP 30/30 MP 0/0 Hu 89 $ 860 room=.
+-> w
+T 254 mode=altar_mode          Eomer II(hum) F1@(10,10) HP 30/30 MP 0/0 Hu 88 $ 860 room=A
+-> pray
+T 255 mode=game_loop           Eomer II(hum) F1@(10,10) HP 30/30 MP 0/0 Hu 88 $ 860 room=.
+-> w
+T 256 mode=game_loop           Eomer II(hum) F1@( 9,10) HP 30/30 MP 0/0 Hu 87 $ 860 room=.
+-> n
+T 257 mode=game_loop           Eomer II(hum) F1@( 9, 9) HP 30/30 MP 0/0 Hu 86 $ 860 room=.
+-> w
+T 258 mode=game_loop           Eomer II(hum) F1@( 8, 9) HP 30/30 MP 0/0 Hu 85 $ 860 room=.
+-> w
+T 259 mode=game_loop           Eomer II(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu 84 $ 860 room=.
+-> n
+T 260 mode=game_loop           Eomer II(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 83 $ 860 room=.
+-> l
+T 261 mode=game_loop           Eomer II(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 83 $ 860 room=.
+-> w
+T 262 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 82 $ 860 room=.
+-> w
+T 263 mode=game_loop           Eomer II(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 81 $ 860 room=.
+-> w
+T 264 mode=game_loop           Eomer II(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 80 $ 860 room=.
+-> n
+T 265 mode=game_loop           Eomer II(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 79 $ 860 room=.
+-> i
+T 266 mode=inventory           Eomer II(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 79 $ 860 room=.
+-> eat4
+T 267 mode=inventory           Eomer II(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 860 room=.
+-> x
+T 268 mode=game_loop           Eomer II(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 860 room=.
+-> n
+T 269 mode=game_loop           Eomer II(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 84 $ 860 room=.
+-> e
+T 270 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 860 room=V
+-> b10
+T 271 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 850 room=V
+-> b3
+T 272 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 800 room=V
+-> b3
+T 273 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 770 room=V
+-> b3
+T 274 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 740 room=V
+-> b3
+T 275 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 710 room=V
+-> b4
+T 276 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 560 room=V
+-> b3
+T 277 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 510 room=V
+-> id7
+T 278 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 460 room=V
+-> id8
+T 279 mode=vendor_shop         Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 435 room=V
+-> x
+T 280 mode=game_loop           Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 435 room=V
+-> l
+T 281 mode=game_loop           Eomer II(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 83 $ 435 room=V
+-> s
+T 282 mode=combat_mode         Eomer II(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 82 $ 435 room=M vs Zombie(L0 HP35/35)
+-> a
+T 283 mode=combat_mode         Eomer II(hum) F1@( 5, 7) HP 29/30 MP 0/0 Hu 82 $ 435 room=M vs Zombie(L0 HP35/35)
+-> f
+T 284 mode=flee_direction_mode Eomer II(hum) F1@( 5, 7) HP 29/30 MP 0/0 Hu 82 $ 435 room=M
+-> s
+T 285 mode=game_loop           Eomer II(hum) F1@( 5, 8) HP 29/30 MP 0/0 Hu 82 $ 435 room=.
+-> e
+T 286 mode=game_loop           Eomer II(hum) F1@( 6, 8) HP 29/30 MP 0/0 Hu 81 $ 435 room=.
+-> s
+T 287 mode=combat_mode         Eomer II(hum) F1@( 6, 9) HP 29/30 MP 0/0 Hu 80 $ 435 room=M vs Kobold(L0 HP8/8)
+-> f
+T 288 mode=flee_direction_mode Eomer II(hum) F1@( 6, 9) HP 28/30 MP 0/0 Hu 80 $ 435 room=M
+-> s
+T 289 mode=game_loop           Eomer II(hum) F1@( 6,10) HP 28/30 MP 0/0 Hu 80 $ 435 room=.
+-> s
+T 290 mode=combat_mode         Eomer II(hum) F1@( 6,11) HP 28/30 MP 0/0 Hu 79 $ 435 room=M vs Lichen(L0 HP10/10)
+-> a
+T 291 mode=combat_victory      Eomer II(hum) F1@( 6,11) HP 28/30 MP 0/0 Hu 79 $ 438 room=.
+-> back
+T 292 mode=game_loop           Eomer II(hum) F1@( 6,11) HP 28/30 MP 0/0 Hu 79 $ 438 room=.
+-> s
+T 293 mode=game_loop           Eomer II(hum) F1@( 6,12) HP 29/30 MP 0/0 Hu 78 $ 438 room=.
+-> s
+T 294 mode=dungeon_mode        Eomer II(hum) F1@( 6,13) HP 29/30 MP 0/0 Hu 77 $ 438 room=N
+-> u
+T 295 mode=game_loop           Eomer II(hum) F1@( 6,13) HP 29/30 MP 0/0 Hu 77 $ 438 room=N
+-> e
+T 296 mode=game_loop           Eomer II(hum) F1@( 7,13) HP 29/30 MP 0/0 Hu 76 $ 438 room=.
+-> l
+T 297 mode=game_loop           Eomer II(hum) F1@( 7,13) HP 29/30 MP 0/0 Hu 76 $ 438 room=.
+-> e
+T 298 mode=chest_mode          Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=C
+-> o
+T 299 mode=game_loop           Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=.
+-> i
+T 300 mode=inventory           Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=.
+-> e2
+T 301 mode=inventory           Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=.
+-> x
+T 302 mode=game_loop           Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=.
+-> l
+T 303 mode=game_loop           Eomer II(hum) F1@( 8,13) HP 29/30 MP 0/0 Hu 75 $ 438 room=.
+-> e
+T 304 mode=game_loop           Eomer II(hum) F1@( 9,13) HP 30/30 MP 0/0 Hu 74 $ 438 room=.
+-> e
+T 305 mode=combat_mode         Eomer II(hum) F1@(10,13) HP 30/30 MP 0/0 Hu 73 $ 438 room=M vs Kobold(L0 HP8/8)
+-> a
+T 306 mode=combat_mode         Eomer II(hum) F1@(10,13) HP 29/30 MP 0/0 Hu 73 $ 438 room=M vs Kobold(L0 HP8/8)
+-> a
+T 307 mode=combat_victory      Eomer II(hum) F1@(10,13) HP 29/30 MP 0/0 Hu 73 $ 442 room=.
+-> back
+T 308 mode=game_loop           Eomer II(hum) F1@(10,13) HP 29/30 MP 0/0 Hu 73 $ 442 room=.
+-> l
+T 309 mode=game_loop           Eomer II(hum) F1@(10,13) HP 29/30 MP 0/0 Hu 73 $ 442 room=.
+-> e
+T 310 mode=combat_mode         Eomer II(hum) F1@(11,13) HP 29/30 MP 0/0 Hu 72 $ 442 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 311 mode=combat_mode         Eomer II(hum) F1@(11,13) HP 28/30 MP 0/0 Hu 72 $ 442 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 312 mode=combat_mode         Eomer II(hum) F1@(11,13) HP 27/30 MP 0/0 Hu 72 $ 442 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 313 mode=combat_victory      Eomer II(hum) F1@(11,13) HP 27/40 MP 0/0 Hu 72 $ 449 room=.
+-> back
+T 314 mode=game_loop           Eomer II(hum) F1@(11,13) HP 27/40 MP 0/0 Hu 72 $ 449 room=.
+-> i
+T 315 mode=inventory           Eomer II(hum) F1@(11,13) HP 27/40 MP 0/0 Hu 72 $ 449 room=.
+-> u4
+T 316 mode=inventory           Eomer II(hum) F1@(11,13) HP 40/40 MP 0/0 Hu 72 $ 449 room=.
+-> u3
+T 317 mode=upgrade_scroll_mode Eomer II(hum) F1@(11,13) HP 40/40 MP 0/0 Hu 72 $ 449 room=.
+-> 1
+T 318 mode=inventory           Eomer II(hum) F1@(11,13) HP 40/40 MP 0/0 Hu 72 $ 449 room=.
+-> x
+T 319 mode=game_loop           Eomer II(hum) F1@(11,13) HP 40/40 MP 0/0 Hu 72 $ 449 room=.
+-> s
+T 320 mode=combat_mode         Eomer II(hum) F1@(11,14) HP 40/40 MP 0/0 Hu 71 $ 449 room=M vs Stirge(L0 HP6/6)
+-> a
+T 321 mode=combat_mode         Eomer II(hum) F1@(11,14) HP 40/40 MP 0/0 Hu 71 $ 449 room=M vs Stirge(L0 HP6/6)
+-> a
+T 322 mode=combat_mode         Eomer II(hum) F1@(11,14) HP 39/40 MP 0/0 Hu 71 $ 449 room=M vs Stirge(L0 HP6/6)
+-> a
+T 323 mode=combat_victory      Eomer II(hum) F1@(11,14) HP 39/40 MP 0/0 Hu 71 $ 459 room=.
+-> back
+T 324 mode=game_loop           Eomer II(hum) F1@(11,14) HP 39/40 MP 0/0 Hu 71 $ 459 room=.
+-> s
+T 325 mode=game_loop           Eomer II(hum) F1@(11,15) HP 39/40 MP 0/0 Hu 70 $ 459 room=.
+-> l
+T 326 mode=game_loop           Eomer II(hum) F1@(11,15) HP 39/40 MP 0/0 Hu 70 $ 459 room=.
+-> e
+T 327 mode=combat_mode         Eomer II(hum) F1@(12,15) HP 39/40 MP 0/0 Hu 69 $ 459 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 328 mode=combat_mode         Eomer II(hum) F1@(12,15) HP 39/40 MP 0/0 Hu 69 $ 459 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 329 mode=combat_victory      Eomer II(hum) F1@(12,15) HP 39/40 MP 0/0 Hu 69 $ 468 room=.
+-> back
+T 330 mode=game_loop           Eomer II(hum) F1@(12,15) HP 39/40 MP 0/0 Hu 69 $ 468 room=.
+-> l
+T 331 mode=game_loop           Eomer II(hum) F1@(12,15) HP 39/40 MP 0/0 Hu 69 $ 468 room=.
+-> s
+T 332 mode=game_loop           Eomer II(hum) F1@(12,16) HP 39/40 MP 0/0 Hu 68 $ 468 room=.
+-> l
+T 333 mode=game_loop           Eomer II(hum) F1@(12,16) HP 39/40 MP 0/0 Hu 68 $ 468 room=.
+-> e
+T 334 mode=game_loop           Eomer II(hum) F1@(13,16) HP 40/40 MP 0/0 Hu 67 $ 468 room=.
+-> n
+T 335 mode=combat_mode         Eomer II(hum) F1@(13,15) HP 40/40 MP 0/0 Hu 66 $ 468 room=M vs Lichen(L0 HP10/10)
+-> a
+T 336 mode=combat_victory      Eomer II(hum) F1@(13,15) HP 39/40 MP 0/0 Hu 66 $ 474 room=.
+-> back
+T 337 mode=game_loop           Eomer II(hum) F1@(13,15) HP 39/40 MP 0/0 Hu 66 $ 474 room=.
+-> s
+T 338 mode=game_loop           Eomer II(hum) F1@(13,16) HP 39/40 MP 0/0 Hu 65 $ 474 room=.
+-> e
+T 339 mode=combat_mode         Eomer II(hum) F1@(14,16) HP 39/40 MP 0/0 Hu 64 $ 474 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 340 mode=combat_victory      Eomer II(hum) F1@(14,16) HP 39/40 MP 0/0 Hu 64 $ 482 room=.
+-> back
+T 341 mode=game_loop           Eomer II(hum) F1@(14,16) HP 39/40 MP 0/0 Hu 64 $ 482 room=.
+-> w
+T 342 mode=game_loop           Eomer II(hum) F1@(13,16) HP 39/40 MP 0/0 Hu 63 $ 482 room=.
+-> w
+T 343 mode=game_loop           Eomer II(hum) F1@(12,16) HP 40/40 MP 0/0 Hu 62 $ 482 room=.
+-> n
+T 344 mode=game_loop           Eomer II(hum) F1@(12,15) HP 40/40 MP 0/0 Hu 61 $ 482 room=.
+-> i
+T 345 mode=inventory           Eomer II(hum) F1@(12,15) HP 40/40 MP 0/0 Hu 61 $ 482 room=.
+-> eat5
+T 346 mode=inventory           Eomer II(hum) F1@(12,15) HP 40/40 MP 0/0 Hu 67 $ 482 room=.
+-> eat1
+T 347 mode=inventory           Eomer II(hum) F1@(12,15) HP 40/40 MP 0/0 Hu100 $ 482 room=.
+-> x
+T 348 mode=game_loop           Eomer II(hum) F1@(12,15) HP 40/40 MP 0/0 Hu100 $ 482 room=.
+-> w
+T 349 mode=game_loop           Eomer II(hum) F1@(11,15) HP 40/40 MP 0/0 Hu 99 $ 482 room=.
+-> n
+T 350 mode=game_loop           Eomer II(hum) F1@(11,14) HP 40/40 MP 0/0 Hu 98 $ 482 room=.
+-> l
+T 351 mode=game_loop           Eomer II(hum) F1@(11,14) HP 40/40 MP 0/0 Hu 98 $ 482 room=.
+-> n
+T 352 mode=game_loop           Eomer II(hum) F1@(11,13) HP 40/40 MP 0/0 Hu 97 $ 482 room=.
+-> w
+T 353 mode=game_loop           Eomer II(hum) F1@(10,13) HP 40/40 MP 0/0 Hu 96 $ 482 room=.
+-> w
+T 354 mode=game_loop           Eomer II(hum) F1@( 9,13) HP 40/40 MP 0/0 Hu 95 $ 482 room=.
+-> w
+T 355 mode=game_loop           Eomer II(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 94 $ 482 room=.
+-> w
+T 356 mode=game_loop           Eomer II(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 93 $ 482 room=.
+-> i
+T 357 mode=inventory           Eomer II(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 93 $ 482 room=.
+-> eat3
+T 358 mode=inventory           Eomer II(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 98 $ 482 room=.
+-> x
+T 359 mode=game_loop           Eomer II(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 98 $ 482 room=.
+-> w
+T 360 mode=game_loop           Eomer II(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 97 $ 482 room=N
+-> l
+T 361 mode=game_loop           Eomer II(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 97 $ 482 room=N
+-> n
+T 362 mode=game_loop           Eomer II(hum) F1@( 6,12) HP 40/40 MP 0/0 Hu 96 $ 482 room=.
+-> w
+T 363 mode=game_loop           Eomer II(hum) F1@( 5,12) HP 40/40 MP 0/0 Hu 95 $ 482 room=.
+-> l
+T 364 mode=game_loop           Eomer II(hum) F1@( 5,12) HP 40/40 MP 0/0 Hu 95 $ 482 room=.
+-> w
+T 365 mode=game_loop           Eomer II(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 94 $ 482 room=.
+-> l
+T 366 mode=game_loop           Eomer II(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 94 $ 482 room=.
+-> s
+T 367 mode=stairs_down_mode    Eomer II(hum) F1@( 4,13) HP 40/40 MP 0/0 Hu 93 $ 482 room=D
+-> d
+T 368 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 93 $ 482 room=U
+-> s
+T 369 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 93 $ 482 room=U
+-> e
+T 370 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 92 $ 482 room=.
+-> l
+T 371 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 92 $ 482 room=.
+-> e
+T 372 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 91 $ 482 room=.
+-> l
+T 373 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 91 $ 482 room=.
+-> e
+T 374 mode=chest_mode          Eomer II(hum) F2@( 4, 1) HP 40/40 MP 0/0 Hu 90 $ 482 room=C
+-> s
+T 375 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 89 $ 482 room=.
+-> l
+T 376 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 89 $ 482 room=.
+-> e
+T 377 mode=chest_mode          Eomer II(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 88 $ 482 room=C
+-> o
+T 378 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 88 $ 482 room=.
+-> n
+T 379 mode=pool_mode           Eomer II(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 87 $ 482 room=P
+-> dr
+T 380 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 87 $ 482 room=.
+-> e
+T 381 mode=oracle_mode         Eomer II(hum) F2@( 6, 1) HP 40/40 MP 0/0 Hu 86 $ 482 room=O
+-> s
+T 382 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 85 $ 482 room=.
+-> l
+T 383 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 85 $ 482 room=.
+-> s
+T 384 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 40/40 MP 0/0 Hu 84 $ 482 room=.
+-> l
+T 385 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 40/40 MP 0/0 Hu 84 $ 482 room=.
+-> e
+T 386 mode=combat_mode         Eomer II(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 83 $ 482 room=M vs Stirge(L1 HP6/6)
+-> a
+T 387 mode=combat_mode         Eomer II(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 83 $ 482 room=M vs Stirge(L1 HP6/6)
+-> a
+T 388 mode=combat_victory      Eomer II(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 83 $ 500 room=.
+-> back
+T 389 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 83 $ 500 room=.
+-> l
+T 390 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 83 $ 500 room=.
+-> n
+T 391 mode=game_loop           Eomer II(hum) F2@( 7, 2) HP 39/40 MP 0/0 Hu 82 $ 500 room=.
+-> n
+T 392 mode=game_loop           Eomer II(hum) F2@( 7, 1) HP 39/40 MP 0/0 Hu 81 $ 500 room=.
+-> w
+T 393 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 39/40 MP 0/0 Hu 80 $ 500 room=O
+-> s
+T 394 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 79 $ 500 room=.
+-> w
+T 395 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 78 $ 500 room=.
+-> w
+T 396 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 77 $ 500 room=.
+-> w
+T 397 mode=library_mode        Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 76 $ 500 room=L
+-> r
+T 398 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 76 $ 500 room=.
+-> s
+T 399 mode=library_mode        Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 75 $ 500 room=L
+-> r
+T 400 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 75 $ 500 room=.
+-> w
+T 401 mode=pool_mode           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 74 $ 500 room=P
+-> dr
+T 402 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 74 $ 500 room=.
+-> n
+T 403 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 73 $ 500 room=.
+-> n
+T 404 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 72 $ 500 room=.
+-> e
+T 405 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 71 $ 500 room=.
+-> s
+T 406 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 70 $ 500 room=.
+-> e
+T 407 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 69 $ 500 room=.
+-> s
+T 408 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 68 $ 500 room=.
+-> w
+T 409 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 67 $ 500 room=.
+-> w
+T 410 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 66 $ 500 room=.
+-> n
+T 411 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 65 $ 500 room=.
+-> n
+T 412 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 64 $ 500 room=.
+-> w
+T 413 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 63 $ 500 room=U
+-> e
+T 414 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 62 $ 500 room=.
+-> i
+T 415 mode=inventory           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 62 $ 500 room=.
+-> eat2
+T 416 mode=inventory           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 77 $ 500 room=.
+-> eat1
+T 417 mode=inventory           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu100 $ 500 room=.
+-> x
+T 418 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu100 $ 500 room=.
+-> e
+T 419 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 99 $ 500 room=.
+-> s
+T 420 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 98 $ 500 room=.
+-> e
+T 421 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 97 $ 500 room=.
+-> s
+T 422 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 96 $ 500 room=.
+-> w
+T 423 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 95 $ 500 room=.
+-> w
+T 424 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 94 $ 500 room=.
+-> n
+T 425 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 93 $ 500 room=.
+-> e
+T 426 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 92 $ 500 room=.
+-> n
+T 427 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 91 $ 500 room=.
+-> w
+T 428 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 90 $ 500 room=.
+-> w
+T 429 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 89 $ 500 room=U
+-> e
+T 430 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 88 $ 500 room=.
+-> s
+T 431 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 87 $ 500 room=.
+-> e
+T 432 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 86 $ 500 room=.
+-> s
+T 433 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 85 $ 500 room=.
+-> w
+T 434 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 84 $ 500 room=.
+-> e
+T 435 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 83 $ 500 room=.
+-> e
+T 436 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 82 $ 500 room=.
+-> n
+T 437 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 81 $ 500 room=.
+-> w
+T 438 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 80 $ 500 room=.
+-> n
+T 439 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 79 $ 500 room=.
+-> w
+T 440 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 78 $ 500 room=.
+-> s
+T 441 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 77 $ 500 room=.
+-> s
+T 442 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 76 $ 500 room=.
+-> e
+T 443 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 75 $ 500 room=.
+-> e
+T 444 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 74 $ 500 room=.
+-> n
+T 445 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 73 $ 500 room=.
+-> w
+T 446 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 72 $ 500 room=.
+-> n
+T 447 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 71 $ 500 room=.
+-> w
+T 448 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 70 $ 500 room=.
+-> s
+T 449 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 69 $ 500 room=.
+-> s
+T 450 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 40/40 MP 0/0 Hu 68 $ 500 room=.
+-> e
+T 451 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 67 $ 500 room=.
+-> n
+T 452 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 66 $ 500 room=.
+-> e
+T 453 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 65 $ 500 room=.
+-> e
+T 454 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 64 $ 500 room=.
+-> e
+T 455 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 63 $ 500 room=.
+-> s
+T 456 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 40/40 MP 0/0 Hu 62 $ 500 room=.
+-> e
+T 457 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 61 $ 500 room=.
+-> s
+T 458 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 40/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP28/28)
+-> f
+T 459 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP28/28)
+-> a
+T 460 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 38/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP28/28)
+-> a
+T 461 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 31/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP28/28)
+-> a
+T 462 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 31/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP28/28)
+-> a
+T 463 mode=combat_mode         Eomer II(hum) F2@( 7, 4) HP 30/40 MP 0/0 Hu 60 $ 500 room=M vs Harpy(L1 HP8/28)
+-> a
+T 464 mode=combat_victory      Eomer II(hum) F2@( 7, 4) HP 30/40 MP 0/0 Hu 60 $ 502 room=.
+-> back
+T 465 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 30/40 MP 0/0 Hu 60 $ 502 room=.
+-> l
+T 466 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 30/40 MP 0/0 Hu 60 $ 502 room=.
+-> s
+T 467 mode=chest_mode          Eomer II(hum) F2@( 7, 5) HP 30/40 MP 0/0 Hu 59 $ 502 room=C
+-> o
+T 468 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 15/40 MP 0/0 Hu 59 $ 502 room=.
+-> l
+T 469 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 15/40 MP 0/0 Hu 59 $ 502 room=.
+-> e
+T 470 mode=dungeon_mode        Eomer II(hum) F2@( 8, 5) HP 15/40 MP 0/0 Hu 58 $ 502 room=N
+-> u
+T 471 mode=game_loop           Eomer II(hum) F2@( 8, 5) HP 15/40 MP 0/0 Hu 58 $ 502 room=N
+-> l
+T 472 mode=game_loop           Eomer II(hum) F2@( 8, 5) HP 15/40 MP 0/0 Hu 58 $ 502 room=N
+-> n
+T 473 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 15/40 MP 0/0 Hu 57 $ 502 room=.
+-> e
+T 474 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 15/40 MP 0/0 Hu 56 $ 502 room=.
+-> e
+T 475 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 15/40 MP 0/0 Hu 55 $ 502 room=.
+-> s
+T 476 mode=game_loop           Eomer II(hum) F2@(10, 5) HP 15/40 MP 0/0 Hu 54 $ 502 room=.
+-> l
+T 477 mode=game_loop           Eomer II(hum) F2@(10, 5) HP 15/40 MP 0/0 Hu 54 $ 502 room=.
+-> n
+T 478 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 15/40 MP 0/0 Hu 53 $ 502 room=.
+-> e
+T 479 mode=game_loop           Eomer II(hum) F2@(11, 4) HP 15/40 MP 0/0 Hu 52 $ 502 room=.
+-> w
+T 480 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 15/40 MP 0/0 Hu 51 $ 502 room=.
+-> w
+T 481 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 15/40 MP 0/0 Hu 50 $ 502 room=.
+-> w
+T 482 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 15/40 MP 0/0 Hu 49 $ 502 room=.
+-> i
+T 483 mode=inventory           Eomer II(hum) F2@( 8, 4) HP 15/40 MP 0/0 Hu 49 $ 502 room=.
+-> eat1
+T 484 mode=inventory           Eomer II(hum) F2@( 8, 4) HP 15/40 MP 0/0 Hu 99 $ 502 room=.
+-> x
+T 485 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 15/40 MP 0/0 Hu 99 $ 502 room=.
+-> s
+T 486 mode=game_loop           Eomer II(hum) F2@( 8, 5) HP 15/40 MP 0/0 Hu 98 $ 502 room=N
+-> w
+T 487 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 16/40 MP 0/0 Hu 97 $ 502 room=.
+-> w
+T 488 mode=game_loop           Eomer II(hum) F2@( 6, 5) HP 16/40 MP 0/0 Hu 96 $ 502 room=.
+-> e
+T 489 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 17/40 MP 0/0 Hu 95 $ 502 room=.
+-> n
+T 490 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 17/40 MP 0/0 Hu 94 $ 502 room=.
+-> e
+T 491 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 18/40 MP 0/0 Hu 93 $ 502 room=.
+-> e
+T 492 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 18/40 MP 0/0 Hu 92 $ 502 room=.
+-> e
+T 493 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 19/40 MP 0/0 Hu 91 $ 502 room=.
+-> e
+T 494 mode=game_loop           Eomer II(hum) F2@(11, 4) HP 19/40 MP 0/0 Hu 90 $ 502 room=.
+-> w
+T 495 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 20/40 MP 0/0 Hu 89 $ 502 room=.
+-> s
+T 496 mode=game_loop           Eomer II(hum) F2@(10, 5) HP 20/40 MP 0/0 Hu 88 $ 502 room=.
+-> e
+T 497 mode=combat_mode         Eomer II(hum) F2@(11, 5) HP 21/40 MP 0/0 Hu 87 $ 502 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 498 mode=combat_mode         Eomer II(hum) F2@(11, 5) HP 20/40 MP 0/0 Hu 87 $ 502 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 499 mode=combat_victory      Eomer II(hum) F2@(11, 5) HP 20/40 MP 0/0 Hu 87 $ 518 room=.
+-> back
+T 500 mode=game_loop           Eomer II(hum) F2@(11, 5) HP 20/40 MP 0/0 Hu 87 $ 518 room=.
+-> l
+T 501 mode=game_loop           Eomer II(hum) F2@(11, 5) HP 20/40 MP 0/0 Hu 87 $ 518 room=.
+-> s
+T 502 mode=game_loop           Eomer II(hum) F2@(11, 6) HP 20/40 MP 0/0 Hu 86 $ 518 room=.
+-> l
+T 503 mode=game_loop           Eomer II(hum) F2@(11, 6) HP 20/40 MP 0/0 Hu 86 $ 518 room=.
+-> e
+T 504 mode=library_mode        Eomer II(hum) F2@(12, 6) HP 21/40 MP 0/0 Hu 85 $ 518 room=L
+-> r
+T 505 mode=library_read_decision_mode Eomer II(hum) F2@(12, 6) HP 21/40 MP 0/0 Hu 85 $ 518 room=L
+-> y
+T 506 mode=game_loop           Eomer II(hum) F2@(12, 6) HP 21/40 MP 0/0 Hu 85 $ 518 room=.
+-> l
+T 507 mode=game_loop           Eomer II(hum) F2@(12, 6) HP 21/40 MP 0/0 Hu 85 $ 518 room=.
+-> e
+T 508 mode=game_loop           Eomer II(hum) F2@(13, 6) HP 21/40 MP 0/0 Hu 84 $ 518 room=.
+-> l
+T 509 mode=game_loop           Eomer II(hum) F2@(13, 6) HP 21/40 MP 0/0 Hu 84 $ 518 room=.
+-> s
+T 510 mode=game_loop           Eomer II(hum) F2@(13, 7) HP 21/40 MP 0/0 Hu 83 $ 518 room=.
+-> w
+T 511 mode=combat_mode         Eomer II(hum) F2@(12, 7) HP 21/40 MP 0/0 Hu 82 $ 518 room=M vs Kobold(L1 HP8/8)
+-> a
+T 512 mode=combat_mode         Eomer II(hum) F2@(12, 7) HP 20/40 MP 0/0 Hu 82 $ 518 room=M vs Kobold(L1 HP8/8)
+-> a
+T 513 mode=combat_mode         Eomer II(hum) F2@(12, 7) HP 19/40 MP 0/0 Hu 82 $ 518 room=M vs Kobold(L1 HP8/8)
+-> f
+T 514 mode=combat_mode         Eomer II(hum) F2@(12, 7) HP 18/40 MP 0/0 Hu 82 $ 518 room=M vs Kobold(L1 HP8/8)
+-> a
+T 515 mode=combat_victory      Eomer II(hum) F2@(12, 7) HP 18/40 MP 0/0 Hu 82 $ 520 room=.
+-> back
+T 516 mode=game_loop           Eomer II(hum) F2@(12, 7) HP 18/40 MP 0/0 Hu 82 $ 520 room=.
+-> w
+T 517 mode=game_loop           Eomer II(hum) F2@(11, 7) HP 19/40 MP 0/0 Hu 81 $ 520 room=.
+-> w
+T 518 mode=game_loop           Eomer II(hum) F2@(10, 7) HP 19/40 MP 0/0 Hu 80 $ 520 room=.
+-> l
+T 519 mode=game_loop           Eomer II(hum) F2@(10, 7) HP 19/40 MP 0/0 Hu 80 $ 520 room=.
+-> e
+T 520 mode=game_loop           Eomer II(hum) F2@(11, 7) HP 19/40 MP 0/0 Hu 79 $ 520 room=.
+-> s
+T 521 mode=game_loop           Eomer II(hum) F2@(11, 8) HP 19/40 MP 0/0 Hu 78 $ 520 room=.
+-> e
+T 522 mode=game_loop           Eomer II(hum) F2@(12, 8) HP 20/40 MP 0/0 Hu 77 $ 520 room=.
+-> i
+T 523 mode=inventory           Eomer II(hum) F2@(12, 8) HP 20/40 MP 0/0 Hu 77 $ 520 room=.
+-> eat2
+T 524 mode=inventory           Eomer II(hum) F2@(12, 8) HP 20/40 MP 0/0 Hu 82 $ 520 room=.
+-> x
+T 525 mode=game_loop           Eomer II(hum) F2@(12, 8) HP 20/40 MP 0/0 Hu 82 $ 520 room=.
+-> n
+T 526 mode=game_loop           Eomer II(hum) F2@(12, 7) HP 20/40 MP 0/0 Hu 81 $ 520 room=.
+-> e
+T 527 mode=game_loop           Eomer II(hum) F2@(13, 7) HP 20/40 MP 0/0 Hu 80 $ 520 room=.
+-> n
+T 528 mode=game_loop           Eomer II(hum) F2@(13, 6) HP 20/40 MP 0/0 Hu 79 $ 520 room=.
+-> w
+T 529 mode=game_loop           Eomer II(hum) F2@(12, 6) HP 21/40 MP 0/0 Hu 78 $ 520 room=.
+-> w
+T 530 mode=game_loop           Eomer II(hum) F2@(11, 6) HP 21/40 MP 0/0 Hu 77 $ 520 room=.
+-> i
+T 531 mode=inventory           Eomer II(hum) F2@(11, 6) HP 21/40 MP 0/0 Hu 77 $ 520 room=.
+-> eat2
+T 532 mode=inventory           Eomer II(hum) F2@(11, 6) HP 21/40 MP 0/0 Hu 82 $ 520 room=.
+-> x
+T 533 mode=game_loop           Eomer II(hum) F2@(11, 6) HP 21/40 MP 0/0 Hu 82 $ 520 room=.
+-> n
+T 534 mode=game_loop           Eomer II(hum) F2@(11, 5) HP 21/40 MP 0/0 Hu 81 $ 520 room=.
+-> n
+T 535 mode=game_loop           Eomer II(hum) F2@(11, 4) HP 21/40 MP 0/0 Hu 80 $ 520 room=.
+-> w
+T 536 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 22/40 MP 0/0 Hu 79 $ 520 room=.
+-> w
+T 537 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 22/40 MP 0/0 Hu 78 $ 520 room=.
+-> w
+T 538 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 22/40 MP 0/0 Hu 77 $ 520 room=.
+-> w
+T 539 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 22/40 MP 0/0 Hu 76 $ 520 room=.
+-> n
+T 540 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 23/40 MP 0/0 Hu 75 $ 520 room=.
+-> w
+T 541 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 23/40 MP 0/0 Hu 74 $ 520 room=.
+-> n
+T 542 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 23/40 MP 0/0 Hu 73 $ 520 room=.
+-> w
+T 543 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 23/40 MP 0/0 Hu 72 $ 520 room=.
+-> w
+T 544 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 24/40 MP 0/0 Hu 71 $ 520 room=.
+-> s
+T 545 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 24/40 MP 0/0 Hu 70 $ 520 room=.
+-> w
+T 546 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 24/40 MP 0/0 Hu 69 $ 520 room=.
+-> n
+T 547 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 24/40 MP 0/0 Hu 68 $ 520 room=.
+-> w
+T 548 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 25/40 MP 0/0 Hu 67 $ 520 room=.
+-> n
+T 549 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 25/40 MP 0/0 Hu 66 $ 520 room=.
+-> e
+T 550 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 25/40 MP 0/0 Hu 65 $ 520 room=.
+-> e
+T 551 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 25/40 MP 0/0 Hu 64 $ 520 room=C
+-> e
+T 552 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 26/40 MP 0/0 Hu 63 $ 520 room=.
+-> s
+T 553 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 26/40 MP 0/0 Hu 62 $ 520 room=.
+-> w
+T 554 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 26/40 MP 0/0 Hu 61 $ 520 room=.
+-> w
+T 555 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 26/40 MP 0/0 Hu 60 $ 520 room=.
+-> n
+T 556 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 26/40 MP 0/0 Hu 59 $ 520 room=.
+-> w
+T 557 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 26/40 MP 0/0 Hu 58 $ 520 room=.
+-> w
+T 558 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 26/40 MP 0/0 Hu 57 $ 520 room=U
+-> e
+T 559 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 26/40 MP 0/0 Hu 56 $ 520 room=.
+-> s
+T 560 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 26/40 MP 0/0 Hu 55 $ 520 room=.
+-> s
+T 561 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 26/40 MP 0/0 Hu 54 $ 520 room=.
+-> e
+T 562 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 26/40 MP 0/0 Hu 53 $ 520 room=.
+-> e
+T 563 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 26/40 MP 0/0 Hu 52 $ 520 room=.
+-> n
+T 564 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 26/40 MP 0/0 Hu 51 $ 520 room=.
+-> e
+T 565 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 26/40 MP 0/0 Hu 50 $ 520 room=.
+-> n
+T 566 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 26/40 MP 0/0 Hu 49 $ 520 room=.
+-> i
+T 567 mode=inventory           Eomer II(hum) F2@( 5, 1) HP 26/40 MP 0/0 Hu 49 $ 520 room=.
+-> eat1
+T 568 mode=inventory           Eomer II(hum) F2@( 5, 1) HP 26/40 MP 0/0 Hu 99 $ 520 room=.
+-> x
+T 569 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 26/40 MP 0/0 Hu 99 $ 520 room=.
+-> w
+T 570 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 26/40 MP 0/0 Hu 98 $ 520 room=C
+-> l
+T 571 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 26/40 MP 0/0 Hu 98 $ 520 room=C
+-> w
+T 572 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 27/40 MP 0/0 Hu 97 $ 520 room=.
+-> w
+T 573 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 27/40 MP 0/0 Hu 96 $ 520 room=.
+-> s
+T 574 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 28/40 MP 0/0 Hu 95 $ 520 room=.
+-> e
+T 575 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 28/40 MP 0/0 Hu 94 $ 520 room=.
+-> e
+T 576 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 29/40 MP 0/0 Hu 93 $ 520 room=.
+-> s
+T 577 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 29/40 MP 0/0 Hu 92 $ 520 room=.
+-> w
+T 578 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 30/40 MP 0/0 Hu 91 $ 520 room=.
+-> w
+T 579 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 30/40 MP 0/0 Hu 90 $ 520 room=.
+-> n
+T 580 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 31/40 MP 0/0 Hu 89 $ 520 room=.
+-> l
+T 581 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 31/40 MP 0/0 Hu 89 $ 520 room=.
+-> n
+T 582 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 31/40 MP 0/0 Hu 88 $ 520 room=.
+-> w
+T 583 mode=stairs_up_mode      Eomer II(hum) F2@( 1, 1) HP 32/40 MP 0/0 Hu 87 $ 520 room=U
+-> e
+T 584 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 32/40 MP 0/0 Hu 86 $ 520 room=.
+-> e
+T 585 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 33/40 MP 0/0 Hu 85 $ 520 room=.
+-> s
+T 586 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 33/40 MP 0/0 Hu 84 $ 520 room=.
+-> s
+T 587 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 33/40 MP 0/0 Hu 83 $ 520 room=.
+-> e
+T 588 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 33/40 MP 0/0 Hu 82 $ 520 room=.
+-> n
+T 589 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 34/40 MP 0/0 Hu 81 $ 520 room=.
+-> e
+T 590 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 34/40 MP 0/0 Hu 80 $ 520 room=.
+-> l
+T 591 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 34/40 MP 0/0 Hu 80 $ 520 room=.
+-> n
+T 592 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 34/40 MP 0/0 Hu 79 $ 520 room=.
+-> w
+T 593 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 34/40 MP 0/0 Hu 78 $ 520 room=C
+-> w
+T 594 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 35/40 MP 0/0 Hu 77 $ 520 room=.
+-> s
+T 595 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 35/40 MP 0/0 Hu 76 $ 520 room=.
+-> e
+T 596 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 35/40 MP 0/0 Hu 75 $ 520 room=.
+-> s
+T 597 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 35/40 MP 0/0 Hu 74 $ 520 room=.
+-> w
+T 598 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 36/40 MP 0/0 Hu 73 $ 520 room=.
+-> w
+T 599 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 36/40 MP 0/0 Hu 72 $ 520 room=.
+-> n
+T 600 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 36/40 MP 0/0 Hu 71 $ 520 room=.
+-> l
+T 601 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 36/40 MP 0/0 Hu 71 $ 520 room=.
+-> e
+T 602 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 36/40 MP 0/0 Hu 70 $ 520 room=.
+-> e
+T 603 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 37/40 MP 0/0 Hu 69 $ 520 room=.
+-> s
+T 604 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 37/40 MP 0/0 Hu 68 $ 520 room=.
+-> w
+T 605 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 37/40 MP 0/0 Hu 67 $ 520 room=.
+-> w
+T 606 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 37/40 MP 0/0 Hu 66 $ 520 room=.
+-> n
+T 607 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 38/40 MP 0/0 Hu 65 $ 520 room=.
+-> n
+T 608 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 38/40 MP 0/0 Hu 64 $ 520 room=.
+-> e
+T 609 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 38/40 MP 0/0 Hu 63 $ 520 room=.
+-> s
+T 610 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 38/40 MP 0/0 Hu 62 $ 520 room=.
+-> l
+T 611 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 38/40 MP 0/0 Hu 62 $ 520 room=.
+-> s
+T 612 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 39/40 MP 0/0 Hu 61 $ 520 room=.
+-> w
+T 613 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 39/40 MP 0/0 Hu 60 $ 520 room=.
+-> n
+T 614 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 39/40 MP 0/0 Hu 59 $ 520 room=.
+-> n
+T 615 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 39/40 MP 0/0 Hu 58 $ 520 room=.
+-> e
+T 616 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 57 $ 520 room=.
+-> s
+T 617 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 56 $ 520 room=.
+-> s
+T 618 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 39/40 MP 0/0 Hu 55 $ 520 room=.
+-> e
+T 619 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 39/40 MP 0/0 Hu 54 $ 520 room=.
+-> n
+T 620 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 39/40 MP 0/0 Hu 53 $ 520 room=.
+-> l
+T 621 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 39/40 MP 0/0 Hu 53 $ 520 room=.
+-> e
+T 622 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 52 $ 520 room=.
+-> e
+T 623 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 39/40 MP 0/0 Hu 51 $ 520 room=.
+-> e
+T 624 mode=game_loop           Eomer II(hum) F2@( 7, 2) HP 39/40 MP 0/0 Hu 50 $ 520 room=.
+-> e
+T 625 mode=game_loop           Eomer II(hum) F2@( 8, 2) HP 39/40 MP 0/0 Hu 49 $ 520 room=.
+-> i
+T 626 mode=inventory           Eomer II(hum) F2@( 8, 2) HP 39/40 MP 0/0 Hu 49 $ 520 room=.
+-> eat1
+T 627 mode=inventory           Eomer II(hum) F2@( 8, 2) HP 39/40 MP 0/0 Hu 99 $ 520 room=.
+-> x
+T 628 mode=game_loop           Eomer II(hum) F2@( 8, 2) HP 39/40 MP 0/0 Hu 99 $ 520 room=.
+-> n
+T 629 mode=combat_mode         Eomer II(hum) F2@( 8, 1) HP 39/40 MP 0/0 Hu 98 $ 520 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 630 mode=combat_victory      Eomer II(hum) F2@( 8, 1) HP 39/50 MP 0/0 Hu 98 $ 538 room=.
+-> back
+T 631 mode=game_loop           Eomer II(hum) F2@( 8, 1) HP 39/50 MP 0/0 Hu 98 $ 538 room=.
+-> w
+T 632 mode=game_loop           Eomer II(hum) F2@( 7, 1) HP 40/50 MP 0/0 Hu 97 $ 538 room=.
+-> w
+T 633 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 40/50 MP 0/0 Hu 96 $ 538 room=O
+-> s
+T 634 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 41/50 MP 0/0 Hu 95 $ 538 room=.
+-> w
+T 635 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 41/50 MP 0/0 Hu 94 $ 538 room=.
+-> n
+T 636 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 42/50 MP 0/0 Hu 93 $ 538 room=.
+-> w
+T 637 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 42/50 MP 0/0 Hu 92 $ 538 room=C
+-> s
+T 638 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 43/50 MP 0/0 Hu 91 $ 538 room=.
+-> s
+T 639 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 43/50 MP 0/0 Hu 90 $ 538 room=.
+-> w
+T 640 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 44/50 MP 0/0 Hu 89 $ 538 room=.
+-> l
+T 641 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 44/50 MP 0/0 Hu 89 $ 538 room=.
+-> n
+T 642 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 44/50 MP 0/0 Hu 88 $ 538 room=.
+-> n
+T 643 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 45/50 MP 0/0 Hu 87 $ 538 room=.
+-> w
+T 644 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 45/50 MP 0/0 Hu 86 $ 538 room=.
+-> s
+T 645 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 46/50 MP 0/0 Hu 85 $ 538 room=.
+-> s
+T 646 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 46/50 MP 0/0 Hu 84 $ 538 room=.
+-> e
+T 647 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 46/50 MP 0/0 Hu 83 $ 538 room=.
+-> e
+T 648 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 46/50 MP 0/0 Hu 82 $ 538 room=.
+-> n
+T 649 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 47/50 MP 0/0 Hu 81 $ 538 room=.
+-> e
+T 650 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 47/50 MP 0/0 Hu 80 $ 538 room=.
+-> l
+T 651 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 47/50 MP 0/0 Hu 80 $ 538 room=.
+-> e
+T 652 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 47/50 MP 0/0 Hu 79 $ 538 room=.
+-> s
+T 653 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 47/50 MP 0/0 Hu 78 $ 538 room=.
+-> e
+T 654 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 48/50 MP 0/0 Hu 77 $ 538 room=.
+-> s
+T 655 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 48/50 MP 0/0 Hu 76 $ 538 room=.
+-> s
+T 656 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 48/50 MP 0/0 Hu 75 $ 538 room=.
+-> w
+T 657 mode=game_loop           Eomer II(hum) F2@( 6, 5) HP 48/50 MP 0/0 Hu 74 $ 538 room=.
+-> e
+T 658 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 49/50 MP 0/0 Hu 73 $ 538 room=.
+-> e
+T 659 mode=game_loop           Eomer II(hum) F2@( 8, 5) HP 49/50 MP 0/0 Hu 72 $ 538 room=N
+-> n
+T 660 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 49/50 MP 0/0 Hu 71 $ 538 room=.
+-> l
+T 661 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 49/50 MP 0/0 Hu 71 $ 538 room=.
+-> w
+T 662 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 49/50 MP 0/0 Hu 70 $ 538 room=.
+-> n
+T 663 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 50/50 MP 0/0 Hu 69 $ 538 room=.
+-> n
+T 664 mode=game_loop           Eomer II(hum) F2@( 7, 2) HP 50/50 MP 0/0 Hu 68 $ 538 room=.
+-> e
+T 665 mode=game_loop           Eomer II(hum) F2@( 8, 2) HP 50/50 MP 0/0 Hu 67 $ 538 room=.
+-> n
+T 666 mode=game_loop           Eomer II(hum) F2@( 8, 1) HP 50/50 MP 0/0 Hu 66 $ 538 room=.
+-> w
+T 667 mode=game_loop           Eomer II(hum) F2@( 7, 1) HP 50/50 MP 0/0 Hu 65 $ 538 room=.
+-> w
+T 668 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 50/50 MP 0/0 Hu 64 $ 538 room=O
+-> s
+T 669 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 50/50 MP 0/0 Hu 63 $ 538 room=.
+-> s
+T 670 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 50/50 MP 0/0 Hu 62 $ 538 room=.
+-> l
+T 671 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 50/50 MP 0/0 Hu 62 $ 538 room=.
+-> e
+T 672 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 50/50 MP 0/0 Hu 61 $ 538 room=.
+-> s
+T 673 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 50/50 MP 0/0 Hu 60 $ 538 room=.
+-> e
+T 674 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 50/50 MP 0/0 Hu 59 $ 538 room=.
+-> e
+T 675 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 50/50 MP 0/0 Hu 58 $ 538 room=.
+-> e
+T 676 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 50/50 MP 0/0 Hu 57 $ 538 room=.
+-> s
+T 677 mode=game_loop           Eomer II(hum) F2@(10, 5) HP 50/50 MP 0/0 Hu 56 $ 538 room=.
+-> e
+T 678 mode=game_loop           Eomer II(hum) F2@(11, 5) HP 50/50 MP 0/0 Hu 55 $ 538 room=.
+-> n
+T 679 mode=game_loop           Eomer II(hum) F2@(11, 4) HP 50/50 MP 0/0 Hu 54 $ 538 room=.
+-> w
+T 680 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 50/50 MP 0/0 Hu 53 $ 538 room=.
+-> l
+T 681 mode=game_loop           Eomer II(hum) F2@(10, 4) HP 50/50 MP 0/0 Hu 53 $ 538 room=.
+-> w
+T 682 mode=game_loop           Eomer II(hum) F2@( 9, 4) HP 50/50 MP 0/0 Hu 52 $ 538 room=.
+-> w
+T 683 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 50/50 MP 0/0 Hu 51 $ 538 room=.
+-> w
+T 684 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 50/50 MP 0/0 Hu 50 $ 538 room=.
+-> s
+T 685 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 49 $ 538 room=.
+-> i
+T 686 mode=inventory           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 49 $ 538 room=.
+-> eat1
+T 687 mode=inventory           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 99 $ 538 room=.
+-> x
+T 688 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 99 $ 538 room=.
+-> w
+T 689 mode=game_loop           Eomer II(hum) F2@( 6, 5) HP 50/50 MP 0/0 Hu 98 $ 538 room=.
+-> e
+T 690 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 97 $ 538 room=.
+-> l
+T 691 mode=game_loop           Eomer II(hum) F2@( 7, 5) HP 50/50 MP 0/0 Hu 97 $ 538 room=.
+-> e
+T 692 mode=game_loop           Eomer II(hum) F2@( 8, 5) HP 50/50 MP 0/0 Hu 96 $ 538 room=N
+-> n
+T 693 mode=game_loop           Eomer II(hum) F2@( 8, 4) HP 50/50 MP 0/0 Hu 95 $ 538 room=.
+-> w
+T 694 mode=game_loop           Eomer II(hum) F2@( 7, 4) HP 50/50 MP 0/0 Hu 94 $ 538 room=.
+-> n
+T 695 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 50/50 MP 0/0 Hu 93 $ 538 room=.
+-> n
+T 696 mode=game_loop           Eomer II(hum) F2@( 7, 2) HP 50/50 MP 0/0 Hu 92 $ 538 room=.
+-> e
+T 697 mode=game_loop           Eomer II(hum) F2@( 8, 2) HP 50/50 MP 0/0 Hu 91 $ 538 room=.
+-> n
+T 698 mode=game_loop           Eomer II(hum) F2@( 8, 1) HP 50/50 MP 0/0 Hu 90 $ 538 room=.
+-> w
+T 699 mode=game_loop           Eomer II(hum) F2@( 7, 1) HP 50/50 MP 0/0 Hu 89 $ 538 room=.
+-> w
+T 700 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 50/50 MP 0/0 Hu 88 $ 538 room=O
+-> l
+T 701 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 50/50 MP 0/0 Hu 88 $ 538 room=O
+-> w
+T 702 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 50/50 MP 0/0 Hu 87 $ 538 room=.
+-> s
+T 703 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 50/50 MP 0/0 Hu 86 $ 538 room=.
+-> w
+T 704 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 50/50 MP 0/0 Hu 85 $ 538 room=.
+-> w
+T 705 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 50/50 MP 0/0 Hu 84 $ 538 room=.
+-> w
+T 706 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 50/50 MP 0/0 Hu 83 $ 538 room=.
+-> n
+T 707 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 50/50 MP 0/0 Hu 82 $ 538 room=.
+-> e
+T 708 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 50/50 MP 0/0 Hu 81 $ 538 room=.
+-> e
+T 709 mode=game_loop           Eomer II(hum) F2@( 4, 1) HP 50/50 MP 0/0 Hu 80 $ 538 room=C
+-> e
+T 710 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 50/50 MP 0/0 Hu 79 $ 538 room=.
+-> l
+T 711 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 50/50 MP 0/0 Hu 79 $ 538 room=.
+-> s
+T 712 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 50/50 MP 0/0 Hu 78 $ 538 room=.
+-> w
+T 713 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 50/50 MP 0/0 Hu 77 $ 538 room=.
+-> s
+T 714 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 50/50 MP 0/0 Hu 76 $ 538 room=.
+-> w
+T 715 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 50/50 MP 0/0 Hu 75 $ 538 room=.
+-> w
+T 716 mode=game_loop           Eomer II(hum) F2@( 2, 3) HP 50/50 MP 0/0 Hu 74 $ 538 room=.
+-> n
+T 717 mode=game_loop           Eomer II(hum) F2@( 2, 2) HP 50/50 MP 0/0 Hu 73 $ 538 room=.
+-> n
+T 718 mode=game_loop           Eomer II(hum) F2@( 2, 1) HP 50/50 MP 0/0 Hu 72 $ 538 room=.
+-> e
+T 719 mode=game_loop           Eomer II(hum) F2@( 3, 1) HP 50/50 MP 0/0 Hu 71 $ 538 room=.
+-> s
+T 720 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 50/50 MP 0/0 Hu 70 $ 538 room=.
+-> l
+T 721 mode=game_loop           Eomer II(hum) F2@( 3, 2) HP 50/50 MP 0/0 Hu 70 $ 538 room=.
+-> s
+T 722 mode=game_loop           Eomer II(hum) F2@( 3, 3) HP 50/50 MP 0/0 Hu 69 $ 538 room=.
+-> e
+T 723 mode=game_loop           Eomer II(hum) F2@( 4, 3) HP 50/50 MP 0/0 Hu 68 $ 538 room=.
+-> n
+T 724 mode=game_loop           Eomer II(hum) F2@( 4, 2) HP 50/50 MP 0/0 Hu 67 $ 538 room=.
+-> e
+T 725 mode=game_loop           Eomer II(hum) F2@( 5, 2) HP 50/50 MP 0/0 Hu 66 $ 538 room=.
+-> n
+T 726 mode=game_loop           Eomer II(hum) F2@( 5, 1) HP 50/50 MP 0/0 Hu 65 $ 538 room=.
+-> e
+T 727 mode=game_loop           Eomer II(hum) F2@( 6, 1) HP 50/50 MP 0/0 Hu 64 $ 538 room=O
+-> s
+T 728 mode=game_loop           Eomer II(hum) F2@( 6, 2) HP 50/50 MP 0/0 Hu 63 $ 538 room=.
+-> s
+T 729 mode=game_loop           Eomer II(hum) F2@( 6, 3) HP 50/50 MP 0/0 Hu 62 $ 538 room=.
+-> e
+T 730 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 50/50 MP 0/0 Hu 61 $ 538 room=.
+-> l
+T 731 mode=game_loop           Eomer II(hum) F2@( 7, 3) HP 50/50 MP 0/0 Hu 61 $ 538 room=.
+-> e
+T 732 mode=warp_mode           Eomer II(hum) F2@( 8, 3) HP 50/50 MP 0/0 Hu 60 $ 538 room=W
+-> y
+T 733 mode=game_loop           Eomer II(hum) F4@(12,11) HP 50/50 MP 0/0 Hu 60 $ 538 room=.
+-> l
+T 734 mode=game_loop           Eomer II(hum) F4@(12,11) HP 50/50 MP 0/0 Hu 60 $ 538 room=.
+-> e
+T 735 mode=chest_mode          Eomer II(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 59 $ 538 room=C
+-> o
+T 736 mode=game_loop           Eomer II(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 59 $ 608 room=.
+-> l
+T 737 mode=game_loop           Eomer II(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 59 $ 608 room=.
+-> s
+T 738 mode=game_loop           Eomer II(hum) F4@(13,12) HP 50/50 MP 0/0 Hu 58 $ 608 room=.
+-> l
+T 739 mode=game_loop           Eomer II(hum) F4@(13,12) HP 50/50 MP 0/0 Hu 58 $ 608 room=.
+-> s
+T 740 mode=game_loop           Eomer II(hum) F4@(13,13) HP 50/50 MP 0/0 Hu 57 $ 608 room=.
+-> l
+T 741 mode=game_loop           Eomer II(hum) F4@(13,13) HP 50/50 MP 0/0 Hu 57 $ 608 room=.
+-> s
+T 742 mode=game_loop           Eomer II(hum) F4@(13,14) HP 50/50 MP 0/0 Hu 56 $ 608 room=.
+-> l
+T 743 mode=game_loop           Eomer II(hum) F4@(13,14) HP 50/50 MP 0/0 Hu 56 $ 608 room=.
+-> e
+T 744 mode=game_loop           Eomer II(hum) F4@(14,14) HP 50/50 MP 0/0 Hu 55 $ 608 room=.
+-> l
+T 745 mode=game_loop           Eomer II(hum) F4@(14,14) HP 50/50 MP 0/0 Hu 55 $ 608 room=.
+-> e
+T 746 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 608 room=V
+-> r1
+T 747 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 558 room=V
+-> b13
+T 748 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 548 room=V
+-> b3
+T 749 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 468 room=V
+-> b4
+T 750 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 438 room=V
+-> b4
+T 751 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 408 room=V
+-> b4
+T 752 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 378 room=V
+-> b4
+T 753 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 348 room=V
+-> b8
+T 754 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 343 room=V
+-> b8
+T 755 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 338 room=V
+-> b5
+T 756 mode=vendor_shop         Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 188 room=V
+-> x
+T 757 mode=game_loop           Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 188 room=V
+-> l
+T 758 mode=game_loop           Eomer II(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 54 $ 188 room=V
+-> s
+T 759 mode=game_loop           Eomer II(hum) F4@(15,15) HP 50/50 MP 0/0 Hu 53 $ 188 room=.
+-> l
+T 760 mode=game_loop           Eomer II(hum) F4@(15,15) HP 50/50 MP 0/0 Hu 53 $ 188 room=.
+-> s
+T 761 mode=game_loop           Eomer II(hum) F4@(15,16) HP 50/50 MP 0/0 Hu 52 $ 188 room=.
+-> l
+T 762 mode=game_loop           Eomer II(hum) F4@(15,16) HP 50/50 MP 0/0 Hu 52 $ 188 room=.
+-> e
+T 763 mode=game_loop           Eomer II(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 51 $ 188 room=.
+-> e
+T 764 mode=game_loop           Eomer II(hum) F4@(17,16) HP 50/50 MP 0/0 Hu 50 $ 188 room=.
+-> e
+T 765 mode=game_loop           Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 49 $ 188 room=.
+-> i
+T 766 mode=inventory           Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 49 $ 188 room=.
+-> eat1
+T 767 mode=inventory           Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> u7
+T 768 mode=upgrade_scroll_mode Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> 1
+T 769 mode=inventory           Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> x
+T 770 mode=game_loop           Eomer II(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> e
+T 771 mode=pool_mode           Eomer II(hum) F4@(19,16) HP 50/50 MP 0/0 Hu 98 $ 188 room=P
+-> dr
+T 772 mode=game_loop           Eomer II(hum) F4@(19,16) HP 50/50 MP 0/0 Hu 98 $ 188 room=.
+-> n
+T 773 mode=chest_mode          Eomer II(hum) F4@(19,15) HP 50/50 MP 0/0 Hu 97 $ 188 room=C
+-> o
+T 774 mode=game_loop           Eomer II(hum) F4@(19,15) HP 50/50 MP 0/0 Hu 97 $ 188 room=.
+-> n
+T 775 mode=game_loop           Eomer II(hum) F4@(19,14) HP 50/50 MP 0/0 Hu 96 $ 188 room=.
+-> s
+T 776 mode=game_loop           Eomer II(hum) F4@(19,15) HP 50/50 MP 0/0 Hu 95 $ 188 room=.
+-> w
+T 777 mode=combat_mode         Eomer II(hum) F4@(18,15) HP 50/50 MP 0/0 Hu 94 $ 188 room=M vs Harpy(L3 HP29/29)
+-> a
+T 778 mode=combat_mode         Eomer II(hum) F4@(18,15) HP 49/50 MP 0/0 Hu 94 $ 188 room=M vs Harpy(L3 HP8/29)
+-> a
+T 779 mode=combat_mode         Eomer II(hum) F4@(18,15) HP 41/50 MP 0/0 Hu 94 $ 188 room=M vs Harpy(L3 HP8/29)
+-> a
+T 780 mode=combat_mode         Eomer II(hum) F4@(18,15) HP 33/50 MP 0/0 Hu 94 $ 188 room=M vs Harpy(L3 HP8/29)
+-> f
+T 781 mode=flee_direction_mode Eomer II(hum) F4@(18,15) HP 32/50 MP 0/0 Hu 94 $ 188 room=M
+-> n
+T 782 mode=warp_mode           Eomer II(hum) F4@(18,14) HP 32/50 MP 0/0 Hu 94 $ 188 room=W
+-> y
+T 783 mode=game_loop           Eomer II(hum) F4@(18,14) HP 32/50 MP 0/0 Hu 94 $ 188 room=W
+-> i
+T 784 mode=inventory           Eomer II(hum) F4@(18,14) HP 32/50 MP 0/0 Hu 94 $ 188 room=W
+-> u5
+T 785 mode=inventory           Eomer II(hum) F4@(18,14) HP 50/50 MP 0/0 Hu 94 $ 188 room=W
+-> u2
+T 786 mode=upgrade_scroll_mode Eomer II(hum) F4@(18,14) HP 50/50 MP 0/0 Hu 94 $ 188 room=W
+-> 1
+T 787 mode=inventory           Eomer II(hum) F4@(18,14) HP 50/50 MP 0/0 Hu 94 $ 188 room=W
+-> x
+T 788 mode=warp_mode           Eomer II(hum) F4@(18,14) HP 50/50 MP 0/0 Hu 94 $ 188 room=W
+-> y
+T 789 mode=garden_mode         Eomer II(hum) F4@( 5, 7) HP 50/50 MP 0/0 Hu 94 $ 188 room=G
+-> h
+T 790 mode=game_loop           Eomer II(hum) F4@( 5, 7) HP 50/50 MP 0/0 Hu 94 $ 188 room=.
+-> l
+T 791 mode=game_loop           Eomer II(hum) F4@( 5, 7) HP 50/50 MP 0/0 Hu 94 $ 188 room=.
+-> s
+T 792 mode=game_loop           Eomer II(hum) F4@( 5, 8) HP 50/50 MP 0/0 Hu 93 $ 188 room=.
+-> l
+T 793 mode=game_loop           Eomer II(hum) F4@( 5, 8) HP 50/50 MP 0/0 Hu 93 $ 188 room=.
+-> s
+T 794 mode=game_loop           Eomer II(hum) F4@( 5, 9) HP 50/50 MP 0/0 Hu 92 $ 188 room=.
+-> l
+T 795 mode=game_loop           Eomer II(hum) F4@( 5, 9) HP 50/50 MP 0/0 Hu 92 $ 188 room=.
+-> s
+T 796 mode=chest_mode          Eomer II(hum) F4@( 5,10) HP 50/50 MP 0/0 Hu 91 $ 188 room=C
+-> o
+T 797 mode=game_loop           Eomer II(hum) F4@( 5,10) HP 50/50 MP 0/0 Hu 91 $ 188 room=.
+-> l
+T 798 mode=game_loop           Eomer II(hum) F4@( 5,10) HP 50/50 MP 0/0 Hu 91 $ 188 room=.
+-> s
+T 799 mode=game_loop           Eomer II(hum) F4@( 5,11) HP 50/50 MP 0/0 Hu 90 $ 188 room=.
+-> s
+T 800 mode=game_loop           Eomer II(hum) F4@( 5,12) HP 50/50 MP 0/0 Hu 89 $ 188 room=.
+-> l
+T 801 mode=game_loop           Eomer II(hum) F4@( 5,12) HP 50/50 MP 0/0 Hu 89 $ 188 room=.
+-> s
+T 802 mode=game_loop           Eomer II(hum) F4@( 5,13) HP 50/50 MP 0/0 Hu 88 $ 188 room=.
+-> l
+T 803 mode=game_loop           Eomer II(hum) F4@( 5,13) HP 50/50 MP 0/0 Hu 88 $ 188 room=.
+-> e
+T 804 mode=game_loop           Eomer II(hum) F4@( 6,13) HP 50/50 MP 0/0 Hu 87 $ 188 room=.
+-> e
+T 805 mode=game_loop           Eomer II(hum) F4@( 7,13) HP 50/50 MP 0/0 Hu 86 $ 188 room=.
+-> e
+T 806 mode=game_loop           Eomer II(hum) F4@( 8,13) HP 50/50 MP 0/0 Hu 85 $ 188 room=.
+-> l
+T 807 mode=game_loop           Eomer II(hum) F4@( 8,13) HP 50/50 MP 0/0 Hu 85 $ 188 room=.
+-> s
+T 808 mode=game_loop           Eomer II(hum) F4@( 8,14) HP 50/50 MP 0/0 Hu 84 $ 188 room=.
+-> n
+T 809 mode=game_loop           Eomer II(hum) F4@( 8,13) HP 50/50 MP 0/0 Hu 83 $ 188 room=.
+-> e
+T 810 mode=game_loop           Eomer II(hum) F4@( 9,13) HP 50/50 MP 0/0 Hu 82 $ 188 room=.
+-> n
+T 811 mode=game_loop           Eomer II(hum) F4@( 9,12) HP 50/50 MP 0/0 Hu 81 $ 188 room=.
+-> n
+T 812 mode=game_loop           Eomer II(hum) F4@( 9,11) HP 50/50 MP 0/0 Hu 80 $ 188 room=.
+-> n
+T 813 mode=game_loop           Eomer II(hum) F4@( 9,10) HP 50/50 MP 0/0 Hu 79 $ 188 room=.
+-> e
+T 814 mode=game_loop           Eomer II(hum) F4@(10,10) HP 50/50 MP 0/0 Hu 78 $ 188 room=.
+-> e
+T 815 mode=game_loop           Eomer II(hum) F4@(11,10) HP 50/50 MP 0/0 Hu 77 $ 188 room=.
+-> s
+T 816 mode=game_loop           Eomer II(hum) F4@(11,11) HP 50/50 MP 0/0 Hu 76 $ 188 room=.
+-> l
+T 817 mode=game_loop           Eomer II(hum) F4@(11,11) HP 50/50 MP 0/0 Hu 76 $ 188 room=.
+-> s
+T 818 mode=game_loop           Eomer II(hum) F4@(11,12) HP 50/50 MP 0/0 Hu 75 $ 188 room=.
+-> s
+T 819 mode=game_loop           Eomer II(hum) F4@(11,13) HP 50/50 MP 0/0 Hu 74 $ 188 room=.
+-> s
+T 820 mode=game_loop           Eomer II(hum) F4@(11,14) HP 50/50 MP 0/0 Hu 73 $ 188 room=.
+-> s
+T 821 mode=game_loop           Eomer II(hum) F4@(11,15) HP 50/50 MP 0/0 Hu 72 $ 188 room=.
+-> s
+T 822 mode=game_loop           Eomer II(hum) F4@(11,16) HP 50/50 MP 0/0 Hu 71 $ 188 room=.
+-> l
+T 823 mode=game_loop           Eomer II(hum) F4@(11,16) HP 50/50 MP 0/0 Hu 71 $ 188 room=.
+-> n
+T 824 mode=game_loop           Eomer II(hum) F4@(11,15) HP 50/50 MP 0/0 Hu 70 $ 188 room=.
+-> e
+T 825 mode=shrine_mode         Eomer II(hum) F4@(12,15) HP 50/50 MP 0/0 Hu 69 $ 188 room=F
+-> p
+T 826 mode=game_loop           Eomer II(hum) F4@(12,15) HP 50/50 MP 0/0 Hu 69 $ 188 room=.
+-> n
+T 827 mode=game_loop           Eomer II(hum) F4@(12,14) HP 50/50 MP 0/0 Hu 68 $ 188 room=.
+-> n
+T 828 mode=game_loop           Eomer II(hum) F4@(12,13) HP 50/50 MP 0/0 Hu 67 $ 188 room=.
+-> e
+T 829 mode=game_loop           Eomer II(hum) F4@(13,13) HP 50/50 MP 0/0 Hu 66 $ 188 room=.
+-> n
+T 830 mode=game_loop           Eomer II(hum) F4@(13,12) HP 50/50 MP 0/0 Hu 65 $ 188 room=.
+-> n
+T 831 mode=game_loop           Eomer II(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 64 $ 188 room=.
+-> n
+T 832 mode=game_loop           Eomer II(hum) F4@(13,10) HP 50/50 MP 0/0 Hu 63 $ 188 room=.
+-> e
+T 833 mode=library_mode        Eomer II(hum) F4@(14,10) HP 50/50 MP 0/0 Hu 62 $ 188 room=L
+-> r
+T 834 mode=library_read_decision_mode Eomer II(hum) F4@(14,10) HP 50/50 MP 0/0 Hu 62 $ 188 room=L
+-> y
+T 835 mode=game_loop           Eomer II(hum) F4@(14,10) HP 10/50 MP 0/0 Hu 62 $ 188 room=.
+-> i
+T 836 mode=inventory           Eomer II(hum) F4@(14,10) HP 10/50 MP 0/0 Hu 62 $ 188 room=.
+-> u5
+T 837 mode=inventory           Eomer II(hum) F4@(14,10) HP 40/50 MP 0/0 Hu 62 $ 188 room=.
+-> u1
+T 838 mode=inventory           Eomer II(hum) F4@(14,10) HP 50/50 MP 0/0 Hu 62 $ 188 room=.
+-> x
+T 839 mode=game_loop           Eomer II(hum) F4@(14,10) HP 50/50 MP 0/0 Hu 62 $ 188 room=.
+-> s
+T 840 mode=game_loop           Eomer II(hum) F4@(14,11) HP 50/50 MP 0/0 Hu 61 $ 188 room=.
+-> s
+T 841 mode=game_loop           Eomer II(hum) F4@(14,12) HP 50/50 MP 0/0 Hu 60 $ 188 room=.
+-> w
+T 842 mode=game_loop           Eomer II(hum) F4@(13,12) HP 50/50 MP 0/0 Hu 59 $ 188 room=.
+-> n
+T 843 mode=game_loop           Eomer II(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 58 $ 188 room=.
+-> n
+T 844 mode=game_loop           Eomer II(hum) F4@(13,10) HP 50/50 MP 0/0 Hu 57 $ 188 room=.
+-> w
+T 845 mode=game_loop           Eomer II(hum) F4@(12,10) HP 50/50 MP 0/0 Hu 56 $ 188 room=.
+-> n
+T 846 mode=game_loop           Eomer II(hum) F4@(12, 9) HP 50/50 MP 0/0 Hu 55 $ 188 room=.
+-> w
+T 847 mode=game_loop           Eomer II(hum) F4@(11, 9) HP 50/50 MP 0/0 Hu 54 $ 188 room=.
+-> n
+T 848 mode=game_loop           Eomer II(hum) F4@(11, 8) HP 50/50 MP 0/0 Hu 53 $ 188 room=.
+-> n
+T 849 mode=game_loop           Eomer II(hum) F4@(11, 7) HP 50/50 MP 0/0 Hu 52 $ 188 room=.
+-> n
+T 850 mode=game_loop           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 51 $ 188 room=.
+-> l
+T 851 mode=game_loop           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 51 $ 188 room=.
+-> e
+T 852 mode=game_loop           Eomer II(hum) F4@(12, 6) HP 50/50 MP 0/0 Hu 50 $ 188 room=.
+-> w
+T 853 mode=game_loop           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 49 $ 188 room=.
+-> i
+T 854 mode=inventory           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 49 $ 188 room=.
+-> eat1
+T 855 mode=inventory           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> x
+T 856 mode=game_loop           Eomer II(hum) F4@(11, 6) HP 50/50 MP 0/0 Hu 99 $ 188 room=.
+-> n
+T 857 mode=game_loop           Eomer II(hum) F4@(11, 5) HP 50/50 MP 0/0 Hu 98 $ 188 room=.
+-> l
+T 858 mode=game_loop           Eomer II(hum) F4@(11, 5) HP 50/50 MP 0/0 Hu 98 $ 188 room=.
+-> w
+T 859 mode=game_loop           Eomer II(hum) F4@(10, 5) HP 50/50 MP 0/0 Hu 97 $ 188 room=.
+-> l
+T 860 mode=game_loop           Eomer II(hum) F4@(10, 5) HP 50/50 MP 0/0 Hu 97 $ 188 room=.
+-> n
+T 861 mode=chest_mode          Eomer II(hum) F4@(10, 4) HP 50/50 MP 0/0 Hu 96 $ 188 room=C
+-> o
+T 862 mode=game_loop           Eomer II(hum) F4@(10, 4) HP 50/50 MP 0/0 Hu 96 $ 188 room=.
+-> l
+T 863 mode=game_loop           Eomer II(hum) F4@(10, 4) HP 50/50 MP 0/0 Hu 96 $ 188 room=.
+-> w
+T 864 mode=game_loop           Eomer II(hum) F4@( 9, 4) HP 50/50 MP 0/0 Hu 95 $ 188 room=.
+-> w
+T 865 mode=game_loop           Eomer II(hum) F4@( 8, 4) HP 50/50 MP 0/0 Hu 94 $ 188 room=.
+-> l
+T 866 mode=game_loop           Eomer II(hum) F4@( 8, 4) HP 50/50 MP 0/0 Hu 94 $ 188 room=.
+-> n
+T 867 mode=game_loop           Eomer II(hum) F4@( 8, 3) HP 50/50 MP 0/0 Hu 93 $ 188 room=.
+-> s
+T 868 mode=game_loop           Eomer II(hum) F4@( 8, 4) HP 50/50 MP 0/0 Hu 92 $ 188 room=.
+-> w
+T 869 mode=game_loop           Eomer II(hum) F4@( 7, 4) HP 50/50 MP 0/0 Hu 91 $ 188 room=.
+-> w
+T 870 mode=combat_mode         Eomer II(hum) F4@( 6, 4) HP 50/50 MP 0/0 Hu 90 $ 188 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 871 mode=combat_mode         Eomer II(hum) F4@( 6, 4) HP 50/50 MP 0/0 Hu 90 $ 188 room=M vs Minotaur(L3 HP56/75)
+-> a
+T 872 mode=combat_mode         Eomer II(hum) F4@( 6, 4) HP 42/50 MP 0/0 Hu 90 $ 188 room=M vs Minotaur(L3 HP37/75)
+-> a
+T 873 mode=combat_mode         Eomer II(hum) F4@( 6, 4) HP 42/50 MP 0/0 Hu 90 $ 188 room=M vs Minotaur(L3 HP18/75)
+-> a
+T 874 mode=combat_mode         Eomer II(hum) F4@( 6, 4) HP 34/50 MP 0/0 Hu 90 $ 188 room=M vs Minotaur(L3 HP18/75)
+-> a
+T 875 mode=combat_victory      Eomer II(hum) F4@( 6, 4) HP 34/50 MP 0/0 Hu 90 $ 216 room=.
+-> back
+T 876 mode=game_loop           Eomer II(hum) F4@( 6, 4) HP 34/50 MP 0/0 Hu 90 $ 216 room=.
+-> i
+T 877 mode=inventory           Eomer II(hum) F4@( 6, 4) HP 34/50 MP 0/0 Hu 90 $ 216 room=.
+-> u5
+T 878 mode=inventory           Eomer II(hum) F4@( 6, 4) HP 50/50 MP 0/0 Hu 90 $ 216 room=.
+-> x
+T 879 mode=game_loop           Eomer II(hum) F4@( 6, 4) HP 50/50 MP 0/0 Hu 90 $ 216 room=.
+-> l
+T 880 mode=game_loop           Eomer II(hum) F4@( 6, 4) HP 50/50 MP 0/0 Hu 90 $ 216 room=.
+-> n
+T 881 mode=game_loop           Eomer II(hum) F4@( 6, 3) HP 50/50 MP 0/0 Hu 89 $ 216 room=.
+-> l
+T 882 mode=game_loop           Eomer II(hum) F4@( 6, 3) HP 50/50 MP 0/0 Hu 89 $ 216 room=.
+-> n
+T 883 mode=library_mode        Eomer II(hum) F4@( 6, 2) HP 50/50 MP 0/0 Hu 88 $ 216 room=L
+-> r
+T 884 mode=library_read_decision_mode Eomer II(hum) F4@( 6, 2) HP 50/50 MP 0/0 Hu 88 $ 216 room=L
+-> y
+T 885 mode=game_loop           Eomer II(hum) F4@( 6, 2) HP 50/50 MP 0/0 Hu 88 $ 216 room=.
+-> l
+T 886 mode=game_loop           Eomer II(hum) F4@( 6, 2) HP 50/50 MP 0/0 Hu 88 $ 216 room=.
+-> w
+T 887 mode=oracle_mode         Eomer II(hum) F4@( 5, 2) HP 50/50 MP 0/0 Hu 87 $ 216 room=O
+-> s
+T 888 mode=game_loop           Eomer II(hum) F4@( 5, 3) HP 50/50 MP 0/0 Hu 86 $ 216 room=.
+-> w
+T 889 mode=garden_mode         Eomer II(hum) F4@( 4, 3) HP 50/50 MP 0/0 Hu 85 $ 216 room=G
+-> h
+T 890 mode=game_loop           Eomer II(hum) F4@( 4, 3) HP 50/50 MP 0/0 Hu 85 $ 216 room=.
+-> n
+T 891 mode=game_loop           Eomer II(hum) F4@( 4, 2) HP 50/50 MP 0/0 Hu 84 $ 216 room=.
+-> w
+T 892 mode=game_loop           Eomer II(hum) F4@( 3, 2) HP 50/50 MP 0/0 Hu 83 $ 216 room=.
+-> l
+T 893 mode=game_loop           Eomer II(hum) F4@( 3, 2) HP 50/50 MP 0/0 Hu 83 $ 216 room=.
+-> n
+T 894 mode=game_loop           Eomer II(hum) F4@( 3, 1) HP 50/50 MP 0/0 Hu 82 $ 216 room=.
+-> l
+T 895 mode=game_loop           Eomer II(hum) F4@( 3, 1) HP 50/50 MP 0/0 Hu 82 $ 216 room=.
+-> w
+T 896 mode=game_loop           Eomer II(hum) F4@( 2, 1) HP 50/50 MP 0/0 Hu 81 $ 216 room=.
+-> w
+T 897 mode=stairs_up_mode      Eomer II(hum) F4@( 1, 1) HP 50/50 MP 0/0 Hu 80 $ 216 room=U
+-> u
+T 898 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 50/50 MP 0/0 Hu 80 $ 216 room=D
+-> s
+T 899 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 79 $ 216 room=.
+-> i
+T 900 mode=inventory           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 79 $ 216 room=.
+-> eat2
+T 901 mode=inventory           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 91 $ 216 room=.
+-> x
+T 902 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 91 $ 216 room=.
+-> l
+T 903 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 91 $ 216 room=.
+-> s
+T 904 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 90 $ 216 room=.
+-> l
+T 905 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 90 $ 216 room=.
+-> e
+T 906 mode=game_loop           Eomer II(hum) F3@(14,12) HP 50/50 MP 0/0 Hu 89 $ 216 room=.
+-> l
+T 907 mode=game_loop           Eomer II(hum) F3@(14,12) HP 50/50 MP 0/0 Hu 89 $ 216 room=.
+-> s
+T 908 mode=game_loop           Eomer II(hum) F3@(14,13) HP 50/50 MP 0/0 Hu 88 $ 216 room=.
+-> l
+T 909 mode=game_loop           Eomer II(hum) F3@(14,13) HP 50/50 MP 0/0 Hu 88 $ 216 room=.
+-> s
+T 910 mode=game_loop           Eomer II(hum) F3@(14,14) HP 50/50 MP 0/0 Hu 87 $ 216 room=.
+-> s
+T 911 mode=game_loop           Eomer II(hum) F3@(14,15) HP 50/50 MP 0/0 Hu 86 $ 216 room=.
+-> l
+T 912 mode=game_loop           Eomer II(hum) F3@(14,15) HP 50/50 MP 0/0 Hu 86 $ 216 room=.
+-> s
+T 913 mode=game_loop           Eomer II(hum) F3@(14,16) HP 50/50 MP 0/0 Hu 85 $ 216 room=.
+-> l
+T 914 mode=game_loop           Eomer II(hum) F3@(14,16) HP 50/50 MP 0/0 Hu 85 $ 216 room=.
+-> e
+T 915 mode=chest_mode          Eomer II(hum) F3@(15,16) HP 50/50 MP 0/0 Hu 84 $ 216 room=C
+-> e
+T 916 mode=game_loop           Eomer II(hum) F3@(16,16) HP 50/50 MP 0/0 Hu 83 $ 216 room=.
+-> e
+T 917 mode=game_loop           Eomer II(hum) F3@(17,16) HP 50/50 MP 0/0 Hu 82 $ 216 room=.
+-> e
+T 918 mode=game_loop           Eomer II(hum) F3@(18,16) HP 50/50 MP 0/0 Hu 81 $ 216 room=.
+-> l
+T 919 mode=game_loop           Eomer II(hum) F3@(18,16) HP 50/50 MP 0/0 Hu 81 $ 216 room=.
+-> e
+T 920 mode=game_loop           Eomer II(hum) F3@(19,16) HP 50/50 MP 0/0 Hu 80 $ 216 room=.
+-> l
+T 921 mode=game_loop           Eomer II(hum) F3@(19,16) HP 50/50 MP 0/0 Hu 80 $ 216 room=.
+-> n
+T 922 mode=game_loop           Eomer II(hum) F3@(19,15) HP 50/50 MP 0/0 Hu 79 $ 216 room=.
+-> n
+T 923 mode=game_loop           Eomer II(hum) F3@(19,14) HP 50/50 MP 0/0 Hu 78 $ 216 room=.
+-> w
+T 924 mode=game_loop           Eomer II(hum) F3@(18,14) HP 50/50 MP 0/0 Hu 77 $ 216 room=.
+-> l
+T 925 mode=game_loop           Eomer II(hum) F3@(18,14) HP 50/50 MP 0/0 Hu 77 $ 216 room=.
+-> n
+T 926 mode=game_loop           Eomer II(hum) F3@(18,13) HP 50/50 MP 0/0 Hu 76 $ 216 room=.
+-> w
+T 927 mode=game_loop           Eomer II(hum) F3@(17,13) HP 50/50 MP 0/0 Hu 75 $ 216 room=.
+-> n
+T 928 mode=game_loop           Eomer II(hum) F3@(17,12) HP 50/50 MP 0/0 Hu 74 $ 216 room=.
+-> w
+T 929 mode=game_loop           Eomer II(hum) F3@(16,12) HP 50/50 MP 0/0 Hu 73 $ 216 room=.
+-> l
+T 930 mode=game_loop           Eomer II(hum) F3@(16,12) HP 50/50 MP 0/0 Hu 73 $ 216 room=.
+-> n
+T 931 mode=game_loop           Eomer II(hum) F3@(16,11) HP 50/50 MP 0/0 Hu 72 $ 216 room=.
+-> s
+T 932 mode=game_loop           Eomer II(hum) F3@(16,12) HP 50/50 MP 0/0 Hu 71 $ 216 room=.
+-> w
+T 933 mode=game_loop           Eomer II(hum) F3@(15,12) HP 50/50 MP 0/0 Hu 70 $ 216 room=.
+-> w
+T 934 mode=game_loop           Eomer II(hum) F3@(14,12) HP 50/50 MP 0/0 Hu 69 $ 216 room=.
+-> w
+T 935 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 68 $ 216 room=.
+-> n
+T 936 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 67 $ 216 room=.
+-> n
+T 937 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 50/50 MP 0/0 Hu 66 $ 216 room=D
+-> n
+T 938 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 50/50 MP 0/0 Hu 65 $ 216 room=.
+-> l
+T 939 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 50/50 MP 0/0 Hu 65 $ 216 room=.
+-> n
+T 940 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 50/50 MP 0/0 Hu 64 $ 216 room=.
+-> l
+T 941 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 50/50 MP 0/0 Hu 64 $ 216 room=.
+-> e
+T 942 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 50/50 MP 0/0 Hu 63 $ 216 room=.
+-> l
+T 943 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 50/50 MP 0/0 Hu 63 $ 216 room=.
+-> e
+T 944 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 50/50 MP 0/0 Hu 62 $ 216 room=.
+-> s
+T 945 mode=dungeon_mode        Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 61 $ 216 room=N
+-> u
+T 946 mode=game_loop           Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 61 $ 216 room=N
+-> w
+T 947 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 50/50 MP 0/0 Hu 60 $ 216 room=.
+-> w
+T 948 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 50/50 MP 0/0 Hu 59 $ 216 room=.
+-> s
+T 949 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 50/50 MP 0/0 Hu 58 $ 216 room=D
+-> s
+T 950 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 57 $ 216 room=.
+-> s
+T 951 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 56 $ 216 room=.
+-> s
+T 952 mode=combat_mode         Eomer II(hum) F3@(13,13) HP 50/50 MP 0/0 Hu 55 $ 216 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 953 mode=combat_victory      Eomer II(hum) F3@(13,13) HP 50/50 MP 0/0 Hu 55 $ 234 room=.
+-> back
+T 954 mode=game_loop           Eomer II(hum) F3@(13,13) HP 50/50 MP 0/0 Hu 55 $ 234 room=.
+-> w
+T 955 mode=library_mode        Eomer II(hum) F3@(12,13) HP 50/50 MP 0/0 Hu 54 $ 234 room=L
+-> r
+T 956 mode=game_loop           Eomer II(hum) F3@(12,13) HP 50/50 MP 0/0 Hu 54 $ 234 room=.
+-> s
+T 957 mode=game_loop           Eomer II(hum) F3@(12,14) HP 50/50 MP 0/0 Hu 53 $ 234 room=.
+-> s
+T 958 mode=game_loop           Eomer II(hum) F3@(12,15) HP 50/50 MP 0/0 Hu 52 $ 234 room=.
+-> s
+T 959 mode=game_loop           Eomer II(hum) F3@(12,16) HP 50/50 MP 0/0 Hu 51 $ 234 room=.
+-> e
+T 960 mode=game_loop           Eomer II(hum) F3@(13,16) HP 50/50 MP 0/0 Hu 50 $ 234 room=.
+-> n
+T 961 mode=game_loop           Eomer II(hum) F3@(13,15) HP 50/50 MP 0/0 Hu 49 $ 234 room=.
+-> i
+T 962 mode=inventory           Eomer II(hum) F3@(13,15) HP 50/50 MP 0/0 Hu 49 $ 234 room=.
+-> eat1
+T 963 mode=inventory           Eomer II(hum) F3@(13,15) HP 50/50 MP 0/0 Hu 99 $ 234 room=.
+-> x
+T 964 mode=game_loop           Eomer II(hum) F3@(13,15) HP 50/50 MP 0/0 Hu 99 $ 234 room=.
+-> e
+T 965 mode=game_loop           Eomer II(hum) F3@(14,15) HP 50/50 MP 0/0 Hu 98 $ 234 room=.
+-> n
+T 966 mode=game_loop           Eomer II(hum) F3@(14,14) HP 50/50 MP 0/0 Hu 97 $ 234 room=.
+-> n
+T 967 mode=game_loop           Eomer II(hum) F3@(14,13) HP 50/50 MP 0/0 Hu 96 $ 234 room=.
+-> n
+T 968 mode=game_loop           Eomer II(hum) F3@(14,12) HP 50/50 MP 0/0 Hu 95 $ 234 room=.
+-> w
+T 969 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 94 $ 234 room=.
+-> n
+T 970 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 93 $ 234 room=.
+-> n
+T 971 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 50/50 MP 0/0 Hu 92 $ 234 room=D
+-> n
+T 972 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 50/50 MP 0/0 Hu 91 $ 234 room=.
+-> e
+T 973 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 50/50 MP 0/0 Hu 90 $ 234 room=.
+-> e
+T 974 mode=dungeon_mode        Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 89 $ 234 room=N
+-> u
+T 975 mode=dungeon_unlocked_mode Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 89 $ 234 room=N
+-> r
+T 976 mode=game_loop           Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 89 $ 473 room=N
+-> n
+T 977 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 50/50 MP 0/0 Hu 88 $ 473 room=.
+-> e
+T 978 mode=game_loop           Eomer II(hum) F3@(16, 8) HP 50/50 MP 0/0 Hu 87 $ 473 room=.
+-> w
+T 979 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 50/50 MP 0/0 Hu 86 $ 473 room=.
+-> w
+T 980 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 50/50 MP 0/0 Hu 85 $ 473 room=.
+-> w
+T 981 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 50/50 MP 0/0 Hu 84 $ 473 room=.
+-> n
+T 982 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 50/50 MP 0/0 Hu 83 $ 473 room=.
+-> e
+T 983 mode=dungeon_mode        Eomer II(hum) F3@(14, 7) HP 50/50 MP 0/0 Hu 82 $ 473 room=N
+-> u
+T 984 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 50/50 MP 0/0 Hu 82 $ 473 room=N
+-> e
+T 985 mode=game_loop           Eomer II(hum) F3@(15, 7) HP 50/50 MP 0/0 Hu 81 $ 473 room=.
+-> s
+T 986 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 50/50 MP 0/0 Hu 80 $ 473 room=.
+-> e
+T 987 mode=game_loop           Eomer II(hum) F3@(16, 8) HP 50/50 MP 0/0 Hu 79 $ 473 room=.
+-> w
+T 988 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 50/50 MP 0/0 Hu 78 $ 473 room=.
+-> s
+T 989 mode=game_loop           Eomer II(hum) F3@(15, 9) HP 50/50 MP 0/0 Hu 77 $ 473 room=N
+-> w
+T 990 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 50/50 MP 0/0 Hu 76 $ 473 room=.
+-> w
+T 991 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 50/50 MP 0/0 Hu 75 $ 473 room=.
+-> s
+T 992 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 50/50 MP 0/0 Hu 74 $ 473 room=D
+-> s
+T 993 mode=game_loop           Eomer II(hum) F3@(13,11) HP 50/50 MP 0/0 Hu 73 $ 473 room=.
+-> s
+T 994 mode=game_loop           Eomer II(hum) F3@(13,12) HP 50/50 MP 0/0 Hu 72 $ 473 room=.
+-> e
+T 995 mode=game_loop           Eomer II(hum) F3@(14,12) HP 50/50 MP 0/0 Hu 71 $ 473 room=.
+-> e
+T 996 mode=game_loop           Eomer II(hum) F3@(15,12) HP 50/50 MP 0/0 Hu 70 $ 473 room=.
+-> e
+T 997 mode=game_loop           Eomer II(hum) F3@(16,12) HP 50/50 MP 0/0 Hu 69 $ 473 room=.
+-> n
+T 998 mode=game_loop           Eomer II(hum) F3@(16,11) HP 50/50 MP 0/0 Hu 68 $ 473 room=.
+-> s
+T 999 mode=game_loop           Eomer II(hum) F3@(16,12) HP 50/50 MP 0/0 Hu 67 $ 473 room=.
+-> s
+T1000 mode=game_loop           Eomer II(hum) F3@(16,13) HP 50/50 MP 0/0 Hu 66 $ 473 room=.
+-> w
+T1001 mode=game_loop           Eomer II(hum) F3@(15,13) HP 50/50 MP 0/0 Hu 65 $ 473 room=.
+-> w
+T1002 mode=game_loop           Eomer II(hum) F3@(14,13) HP 50/50 MP 0/0 Hu 64 $ 473 room=.
+-> w
+T1003 mode=game_loop           Eomer II(hum) F3@(13,13) HP 50/50 MP 0/0 Hu 63 $ 473 room=.
+-> w
+T1004 mode=game_loop           Eomer II(hum) F3@(12,13) HP 50/50 MP 0/0 Hu 62 $ 473 room=.
+-> s
+T1005 mode=game_loop           Eomer II(hum) F3@(12,14) HP 50/50 MP 0/0 Hu 61 $ 473 room=.
+-> s
+T1006 mode=game_loop           Eomer II(hum) F3@(12,15) HP 50/50 MP 0/0 Hu 60 $ 473 room=.
+-> w
+T1007 mode=game_loop           Eomer II(hum) F3@(11,15) HP 50/50 MP 0/0 Hu 59 $ 473 room=.
+-> s
+T1008 mode=game_loop           Eomer II(hum) F3@(11,16) HP 50/50 MP 0/0 Hu 58 $ 473 room=.
+-> e
+T1009 mode=game_loop           Eomer II(hum) F3@(12,16) HP 50/50 MP 0/0 Hu 57 $ 473 room=.
+-> e
+T1010 mode=game_loop           Eomer II(hum) F3@(13,16) HP 50/50 MP 0/0 Hu 56 $ 473 room=.
+-> n
+T1011 mode=game_loop           Eomer II(hum) F3@(13,15) HP 50/50 MP 0/0 Hu 55 $ 473 room=.
+-> w
+T1012 mode=game_loop           Eomer II(hum) F3@(12,15) HP 50/50 MP 0/0 Hu 54 $ 473 room=.
+-> n
+T1013 mode=game_loop           Eomer II(hum) F3@(12,14) HP 50/50 MP 0/0 Hu 53 $ 473 room=.
+-> w
+T1014 mode=game_loop           Eomer II(hum) F3@(11,14) HP 50/50 MP 0/0 Hu 52 $ 473 room=.
+-> n
+T1015 mode=game_loop           Eomer II(hum) F3@(11,13) HP 50/50 MP 0/0 Hu 51 $ 473 room=.
+-> w
+T1016 mode=game_loop           Eomer II(hum) F3@(10,13) HP 50/50 MP 0/0 Hu 50 $ 473 room=.
+-> w
+T1017 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 50/50 MP 0/0 Hu 49 $ 473 room=.
+-> i
+T1018 mode=inventory           Eomer II(hum) F3@( 9,13) HP 50/50 MP 0/0 Hu 49 $ 473 room=.
+-> eat1
+T1019 mode=inventory           Eomer II(hum) F3@( 9,13) HP 50/50 MP 0/0 Hu 99 $ 473 room=.
+-> x
+T1020 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 50/50 MP 0/0 Hu 99 $ 473 room=.
+-> n
+T1021 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 50/50 MP 0/0 Hu 98 $ 473 room=.
+-> w
+T1022 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 50/50 MP 0/0 Hu 97 $ 473 room=.
+-> n
+T1023 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 50/50 MP 0/0 Hu 96 $ 473 room=.
+-> n
+T1024 mode=chest_mode          Eomer II(hum) F3@( 8,10) HP 50/50 MP 0/0 Hu 95 $ 473 room=C
+-> o
+T1025 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 50/50 MP 0/0 Hu 95 $ 573 room=.
+-> n
+T1026 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 50/50 MP 0/0 Hu 94 $ 573 room=.
+-> w
+T1027 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 50/50 MP 0/0 Hu 93 $ 573 room=.
+-> w
+T1028 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 50/50 MP 0/0 Hu 92 $ 573 room=.
+-> w
+T1029 mode=combat_mode         Eomer II(hum) F3@( 5, 9) HP 50/50 MP 0/0 Hu 91 $ 573 room=M vs Wight(L2 HP40/40)
+-> a
+T1030 mode=combat_mode         Eomer II(hum) F3@( 5, 9) HP 48/50 MP 0/0 Hu 91 $ 573 room=M vs Wight(L2 HP40/40)
+-> a
+T1031 mode=combat_mode         Eomer II(hum) F3@( 5, 9) HP 48/50 MP 0/0 Hu 91 $ 573 room=M vs Wight(L2 HP40/40)
+-> a
+T1032 mode=combat_mode         Eomer II(hum) F3@( 5, 9) HP 48/50 MP 0/0 Hu 91 $ 573 room=M vs Wight(L2 HP40/40)
+-> a
+T1033 mode=combat_mode         Eomer II(hum) F3@( 5, 9) HP 46/50 MP 0/0 Hu 91 $ 573 room=M vs Wight(L2 HP19/40)
+-> a
+T1034 mode=combat_victory      Eomer II(hum) F3@( 5, 9) HP 46/50 MP 0/0 Hu 91 $ 576 room=.
+-> back
+T1035 mode=game_loop           Eomer II(hum) F3@( 5, 9) HP 46/50 MP 0/0 Hu 91 $ 576 room=.
+-> n
+T1036 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 46/50 MP 0/0 Hu 90 $ 576 room=.
+-> e
+T1037 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 47/50 MP 0/0 Hu 89 $ 576 room=.
+-> n
+T1038 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 47/50 MP 0/0 Hu 88 $ 576 room=.
+-> w
+T1039 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 48/50 MP 0/0 Hu 87 $ 576 room=.
+-> w
+T1040 mode=combat_mode         Eomer II(hum) F3@( 4, 7) HP 48/50 MP 0/0 Hu 86 $ 576 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> a
+T1041 mode=combat_mode         Eomer II(hum) F3@( 4, 7) HP 47/50 MP 0/0 Hu 86 $ 576 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> a
+T1042 mode=combat_mode         Eomer II(hum) F3@( 4, 7) HP 46/50 MP 0/0 Hu 86 $ 576 room=M vs UNDEAD ZOMBIE(L2 HP19/43)
+-> f
+T1043 mode=flee_direction_mode Eomer II(hum) F3@( 4, 7) HP 45/50 MP 0/0 Hu 86 $ 576 room=M
+-> e
+T1044 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 45/50 MP 0/0 Hu 86 $ 576 room=.
+-> s
+T1045 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 46/50 MP 0/0 Hu 85 $ 576 room=.
+-> e
+T1046 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 46/50 MP 0/0 Hu 84 $ 576 room=.
+-> s
+T1047 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 46/50 MP 0/0 Hu 83 $ 576 room=.
+-> e
+T1048 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 46/50 MP 0/0 Hu 82 $ 576 room=.
+-> s
+T1049 mode=library_mode        Eomer II(hum) F3@( 7,10) HP 47/50 MP 0/0 Hu 81 $ 576 room=L
+-> r
+T1050 mode=library_read_decision_mode Eomer II(hum) F3@( 7,10) HP 47/50 MP 0/0 Hu 81 $ 576 room=L
+-> y
+T1051 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 47/50 MP 0/0 Hu 81 $ 576 room=.
+-> e
+T1052 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 47/50 MP 0/0 Hu 80 $ 576 room=.
+-> s
+T1053 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 47/50 MP 0/0 Hu 79 $ 576 room=.
+-> s
+T1054 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 47/50 MP 0/0 Hu 78 $ 576 room=.
+-> e
+T1055 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 48/50 MP 0/0 Hu 77 $ 576 room=.
+-> s
+T1056 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 48/50 MP 0/0 Hu 76 $ 576 room=.
+-> e
+T1057 mode=game_loop           Eomer II(hum) F3@(10,13) HP 48/50 MP 0/0 Hu 75 $ 576 room=.
+-> n
+T1058 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 48/50 MP 0/0 Hu 74 $ 576 room=M vs Kobold(L2 HP8/8)
+-> a
+T1059 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 47/50 MP 0/0 Hu 74 $ 576 room=M vs Kobold(L2 HP8/8)
+-> a
+T1060 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 46/50 MP 0/0 Hu 74 $ 576 room=M vs Kobold(L2 HP8/8)
+-> a
+T1061 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 45/50 MP 0/0 Hu 74 $ 576 room=M vs Kobold(L2 HP8/8)
+-> a
+T1062 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 45/50 MP 0/0 Hu 74 $ 576 room=M vs Kobold(L2 HP8/8)
+-> f
+T1063 mode=flee_direction_mode Eomer II(hum) F3@(10,12) HP 45/50 MP 0/0 Hu 74 $ 576 room=M
+-> s
+T1064 mode=game_loop           Eomer II(hum) F3@(10,13) HP 45/50 MP 0/0 Hu 74 $ 576 room=.
+-> e
+T1065 mode=game_loop           Eomer II(hum) F3@(11,13) HP 46/50 MP 0/0 Hu 73 $ 576 room=.
+-> s
+T1066 mode=game_loop           Eomer II(hum) F3@(11,14) HP 46/50 MP 0/0 Hu 72 $ 576 room=.
+-> s
+T1067 mode=game_loop           Eomer II(hum) F3@(11,15) HP 46/50 MP 0/0 Hu 71 $ 576 room=.
+-> s
+T1068 mode=game_loop           Eomer II(hum) F3@(11,16) HP 46/50 MP 0/0 Hu 70 $ 576 room=.
+-> w
+T1069 mode=game_loop           Eomer II(hum) F3@(10,16) HP 47/50 MP 0/0 Hu 69 $ 576 room=.
+-> n
+T1070 mode=game_loop           Eomer II(hum) F3@(10,15) HP 47/50 MP 0/0 Hu 68 $ 576 room=.
+-> w
+T1071 mode=game_loop           Eomer II(hum) F3@( 9,15) HP 47/50 MP 0/0 Hu 67 $ 576 room=.
+-> w
+T1072 mode=pool_mode           Eomer II(hum) F3@( 8,15) HP 47/50 MP 0/0 Hu 66 $ 576 room=P
+-> dr
+T1073 mode=game_loop           Eomer II(hum) F3@( 8,15) HP 50/50 MP 0/0 Hu 66 $ 576 room=.
+-> s
+T1074 mode=game_loop           Eomer II(hum) F3@( 8,16) HP 50/50 MP 0/0 Hu 65 $ 576 room=.
+-> e
+T1075 mode=combat_mode         Eomer II(hum) F3@( 9,16) HP 50/50 MP 0/0 Hu 64 $ 576 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1076 mode=combat_mode         Eomer II(hum) F3@( 9,16) HP 50/50 MP 0/0 Hu 64 $ 576 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1077 mode=combat_victory      Eomer II(hum) F3@( 9,16) HP 50/50 MP 0/0 Hu 64 $ 588 room=.
+-> back
+T1078 mode=game_loop           Eomer II(hum) F3@( 9,16) HP 50/50 MP 0/0 Hu 64 $ 588 room=.
+-> e
+T1079 mode=game_loop           Eomer II(hum) F3@(10,16) HP 50/50 MP 0/0 Hu 63 $ 588 room=.
+-> n
+T1080 mode=game_loop           Eomer II(hum) F3@(10,15) HP 50/50 MP 0/0 Hu 62 $ 588 room=.
+-> w
+T1081 mode=game_loop           Eomer II(hum) F3@( 9,15) HP 50/50 MP 0/0 Hu 61 $ 588 room=.
+-> w
+T1082 mode=game_loop           Eomer II(hum) F3@( 8,15) HP 50/50 MP 0/0 Hu 60 $ 588 room=.
+-> n
+T1083 mode=game_loop           Eomer II(hum) F3@( 8,14) HP 50/50 MP 0/0 Hu 59 $ 588 room=.
+-> n
+T1084 mode=combat_mode         Eomer II(hum) F3@( 8,13) HP 50/50 MP 0/0 Hu 58 $ 588 room=M vs Harpy(L2 HP28/28)
+-> a
+T1085 mode=combat_mode         Eomer II(hum) F3@( 8,13) HP 50/50 MP 0/0 Hu 58 $ 588 room=M vs Harpy(L2 HP6/28)
+-> a
+T1086 mode=combat_victory      Eomer II(hum) F3@( 8,13) HP 49/60 MP 0/0 Hu 58 $ 603 room=.
+-> back
+T1087 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 49/60 MP 0/0 Hu 58 $ 603 room=.
+-> n
+T1088 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 49/60 MP 0/0 Hu 57 $ 603 room=.
+-> e
+T1089 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 49/60 MP 0/0 Hu 56 $ 603 room=.
+-> n
+T1090 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 49/60 MP 0/0 Hu 55 $ 603 room=.
+-> n
+T1091 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 49/60 MP 0/0 Hu 54 $ 603 room=.
+-> i
+T1092 mode=inventory           Eomer II(hum) F3@( 8,11) HP 49/60 MP 0/0 Hu 54 $ 603 room=.
+-> u5
+T1093 mode=inventory           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> u2
+T1094 mode=upgrade_scroll_mode Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> 1
+T1095 mode=upgrade_scroll_mode Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> 2
+T1096 mode=inventory           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> x
+T1097 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> i
+T1098 mode=inventory           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 54 $ 603 room=.
+-> eat2
+T1099 mode=inventory           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 60 $ 603 room=.
+-> eat1
+T1100 mode=inventory           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu100 $ 603 room=.
+-> x
+T1101 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu100 $ 603 room=.
+-> w
+T1102 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 99 $ 603 room=.
+-> n
+T1103 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 60/60 MP 0/0 Hu 98 $ 603 room=.
+-> n
+T1104 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 60/60 MP 0/0 Hu 97 $ 603 room=.
+-> w
+T1105 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 60/60 MP 0/0 Hu 96 $ 603 room=.
+-> s
+T1106 mode=game_loop           Eomer II(hum) F3@( 6,10) HP 60/60 MP 0/0 Hu 95 $ 603 room=.
+-> s
+T1107 mode=chest_mode          Eomer II(hum) F3@( 6,11) HP 60/60 MP 0/0 Hu 94 $ 603 room=C
+-> o
+T1108 mode=game_loop           Eomer II(hum) F3@( 6,11) HP 60/60 MP 0/0 Hu 94 $ 683 room=.
+-> e
+T1109 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 93 $ 683 room=.
+-> e
+T1110 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 92 $ 683 room=.
+-> s
+T1111 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 60/60 MP 0/0 Hu 91 $ 683 room=.
+-> s
+T1112 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 60/60 MP 0/0 Hu 90 $ 683 room=.
+-> s
+T1113 mode=game_loop           Eomer II(hum) F3@( 8,14) HP 60/60 MP 0/0 Hu 89 $ 683 room=.
+-> s
+T1114 mode=game_loop           Eomer II(hum) F3@( 8,15) HP 60/60 MP 0/0 Hu 88 $ 683 room=.
+-> e
+T1115 mode=game_loop           Eomer II(hum) F3@( 9,15) HP 60/60 MP 0/0 Hu 87 $ 683 room=.
+-> s
+T1116 mode=game_loop           Eomer II(hum) F3@( 9,16) HP 60/60 MP 0/0 Hu 86 $ 683 room=.
+-> w
+T1117 mode=game_loop           Eomer II(hum) F3@( 8,16) HP 60/60 MP 0/0 Hu 85 $ 683 room=.
+-> w
+T1118 mode=game_loop           Eomer II(hum) F3@( 7,16) HP 60/60 MP 0/0 Hu 84 $ 683 room=.
+-> w
+T1119 mode=game_loop           Eomer II(hum) F3@( 6,16) HP 60/60 MP 0/0 Hu 83 $ 683 room=.
+-> n
+T1120 mode=game_loop           Eomer II(hum) F3@( 6,15) HP 60/60 MP 0/0 Hu 82 $ 683 room=.
+-> e
+T1121 mode=combat_mode         Eomer II(hum) F3@( 7,15) HP 60/60 MP 0/0 Hu 81 $ 683 room=M vs Zombie(L2 HP36/36)
+-> a
+T1122 mode=combat_mode         Eomer II(hum) F3@( 7,15) HP 60/60 MP 0/0 Hu 81 $ 683 room=M vs Zombie(L2 HP36/36)
+-> a
+T1123 mode=combat_mode         Eomer II(hum) F3@( 7,15) HP 60/60 MP 0/0 Hu 81 $ 683 room=M vs Zombie(L2 HP12/36)
+-> a
+T1124 mode=combat_mode         Eomer II(hum) F3@( 7,15) HP 59/60 MP 0/0 Hu 81 $ 683 room=M vs Zombie(L2 HP12/36)
+-> a
+T1125 mode=combat_mode         Eomer II(hum) F3@( 7,15) HP 58/60 MP 0/0 Hu 81 $ 683 room=M vs Zombie(L2 HP12/36)
+-> a
+T1126 mode=combat_victory      Eomer II(hum) F3@( 7,15) HP 58/60 MP 0/0 Hu 81 $ 689 room=.
+-> back
+T1127 mode=game_loop           Eomer II(hum) F3@( 7,15) HP 58/60 MP 0/0 Hu 81 $ 689 room=.
+-> e
+T1128 mode=game_loop           Eomer II(hum) F3@( 8,15) HP 58/60 MP 0/0 Hu 80 $ 689 room=.
+-> e
+T1129 mode=game_loop           Eomer II(hum) F3@( 9,15) HP 58/60 MP 0/0 Hu 79 $ 689 room=.
+-> n
+T1130 mode=game_loop           Eomer II(hum) F3@( 9,14) HP 58/60 MP 0/0 Hu 78 $ 689 room=.
+-> n
+T1131 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 59/60 MP 0/0 Hu 77 $ 689 room=.
+-> n
+T1132 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 59/60 MP 0/0 Hu 76 $ 689 room=.
+-> w
+T1133 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 59/60 MP 0/0 Hu 75 $ 689 room=.
+-> s
+T1134 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 59/60 MP 0/0 Hu 74 $ 689 room=.
+-> s
+T1135 mode=game_loop           Eomer II(hum) F3@( 8,14) HP 60/60 MP 0/0 Hu 73 $ 689 room=.
+-> e
+T1136 mode=game_loop           Eomer II(hum) F3@( 9,14) HP 60/60 MP 0/0 Hu 72 $ 689 room=.
+-> n
+T1137 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 60/60 MP 0/0 Hu 71 $ 689 room=.
+-> n
+T1138 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 60/60 MP 0/0 Hu 70 $ 689 room=.
+-> w
+T1139 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 60/60 MP 0/0 Hu 69 $ 689 room=.
+-> s
+T1140 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 60/60 MP 0/0 Hu 68 $ 689 room=.
+-> w
+T1141 mode=game_loop           Eomer II(hum) F3@( 7,13) HP 60/60 MP 0/0 Hu 67 $ 689 room=.
+-> n
+T1142 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 60/60 MP 0/0 Hu 66 $ 689 room=.
+-> n
+T1143 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 65 $ 689 room=.
+-> e
+T1144 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 64 $ 689 room=.
+-> n
+T1145 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 60/60 MP 0/0 Hu 63 $ 689 room=.
+-> n
+T1146 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 60/60 MP 0/0 Hu 62 $ 689 room=.
+-> w
+T1147 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 60/60 MP 0/0 Hu 61 $ 689 room=.
+-> s
+T1148 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 60/60 MP 0/0 Hu 60 $ 689 room=.
+-> s
+T1149 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 59 $ 689 room=.
+-> s
+T1150 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 60/60 MP 0/0 Hu 58 $ 689 room=.
+-> s
+T1151 mode=game_loop           Eomer II(hum) F3@( 7,13) HP 60/60 MP 0/0 Hu 57 $ 689 room=.
+-> e
+T1152 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 60/60 MP 0/0 Hu 56 $ 689 room=.
+-> n
+T1153 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 60/60 MP 0/0 Hu 55 $ 689 room=.
+-> e
+T1154 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 60/60 MP 0/0 Hu 54 $ 689 room=.
+-> s
+T1155 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 60/60 MP 0/0 Hu 53 $ 689 room=.
+-> e
+T1156 mode=game_loop           Eomer II(hum) F3@(10,13) HP 60/60 MP 0/0 Hu 52 $ 689 room=.
+-> n
+T1157 mode=combat_mode         Eomer II(hum) F3@(10,12) HP 60/60 MP 0/0 Hu 51 $ 689 room=M vs Kobold(L2 HP8/8)
+-> a
+T1158 mode=combat_victory      Eomer II(hum) F3@(10,12) HP 60/60 MP 0/0 Hu 51 $ 710 room=.
+-> back
+T1159 mode=game_loop           Eomer II(hum) F3@(10,12) HP 60/60 MP 0/0 Hu 51 $ 710 room=.
+-> n
+T1160 mode=game_loop           Eomer II(hum) F3@(10,11) HP 60/60 MP 0/0 Hu 50 $ 710 room=.
+-> n
+T1161 mode=combat_mode         Eomer II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 49 $ 710 room=M vs Kobold(L2 HP8/8)
+-> a
+T1162 mode=combat_victory      Eomer II(hum) F3@(10,10) HP 59/60 MP 0/0 Hu 49 $ 722 room=.
+-> back
+T1163 mode=game_loop           Eomer II(hum) F3@(10,10) HP 59/60 MP 0/0 Hu 49 $ 722 room=.
+-> i
+T1164 mode=inventory           Eomer II(hum) F3@(10,10) HP 59/60 MP 0/0 Hu 49 $ 722 room=.
+-> eat1
+T1165 mode=inventory           Eomer II(hum) F3@(10,10) HP 59/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1166 mode=game_loop           Eomer II(hum) F3@(10,10) HP 59/60 MP 0/0 Hu 99 $ 722 room=.
+-> n
+T1167 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 59/60 MP 0/0 Hu 98 $ 722 room=.
+-> w
+T1168 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 60/60 MP 0/0 Hu 97 $ 722 room=.
+-> n
+T1169 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 60/60 MP 0/0 Hu 96 $ 722 room=.
+-> e
+T1170 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 60/60 MP 0/0 Hu 95 $ 722 room=.
+-> e
+T1171 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 94 $ 722 room=.
+-> e
+T1172 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 93 $ 722 room=.
+-> s
+T1173 mode=game_loop           Eomer II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 92 $ 722 room=.
+-> e
+T1174 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 91 $ 722 room=.
+-> i
+T1175 mode=inventory           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 91 $ 722 room=.
+-> eat2
+T1176 mode=inventory           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 96 $ 722 room=.
+-> x
+T1177 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 96 $ 722 room=.
+-> s
+T1178 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 60/60 MP 0/0 Hu 95 $ 722 room=D
+-> s
+T1179 mode=game_loop           Eomer II(hum) F3@(13,11) HP 60/60 MP 0/0 Hu 94 $ 722 room=.
+-> i
+T1180 mode=inventory           Eomer II(hum) F3@(13,11) HP 60/60 MP 0/0 Hu 94 $ 722 room=.
+-> eat2
+T1181 mode=inventory           Eomer II(hum) F3@(13,11) HP 60/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1182 mode=game_loop           Eomer II(hum) F3@(13,11) HP 60/60 MP 0/0 Hu 99 $ 722 room=.
+-> s
+T1183 mode=game_loop           Eomer II(hum) F3@(13,12) HP 60/60 MP 0/0 Hu 98 $ 722 room=.
+-> s
+T1184 mode=game_loop           Eomer II(hum) F3@(13,13) HP 60/60 MP 0/0 Hu 97 $ 722 room=.
+-> e
+T1185 mode=game_loop           Eomer II(hum) F3@(14,13) HP 60/60 MP 0/0 Hu 96 $ 722 room=.
+-> n
+T1186 mode=game_loop           Eomer II(hum) F3@(14,12) HP 60/60 MP 0/0 Hu 95 $ 722 room=.
+-> e
+T1187 mode=game_loop           Eomer II(hum) F3@(15,12) HP 60/60 MP 0/0 Hu 94 $ 722 room=.
+-> e
+T1188 mode=game_loop           Eomer II(hum) F3@(16,12) HP 60/60 MP 0/0 Hu 93 $ 722 room=.
+-> n
+T1189 mode=game_loop           Eomer II(hum) F3@(16,11) HP 60/60 MP 0/0 Hu 92 $ 722 room=.
+-> s
+T1190 mode=game_loop           Eomer II(hum) F3@(16,12) HP 60/60 MP 0/0 Hu 91 $ 722 room=.
+-> s
+T1191 mode=game_loop           Eomer II(hum) F3@(16,13) HP 60/60 MP 0/0 Hu 90 $ 722 room=.
+-> w
+T1192 mode=game_loop           Eomer II(hum) F3@(15,13) HP 60/60 MP 0/0 Hu 89 $ 722 room=.
+-> n
+T1193 mode=game_loop           Eomer II(hum) F3@(15,12) HP 60/60 MP 0/0 Hu 88 $ 722 room=.
+-> w
+T1194 mode=game_loop           Eomer II(hum) F3@(14,12) HP 60/60 MP 0/0 Hu 87 $ 722 room=.
+-> w
+T1195 mode=game_loop           Eomer II(hum) F3@(13,12) HP 60/60 MP 0/0 Hu 86 $ 722 room=.
+-> n
+T1196 mode=game_loop           Eomer II(hum) F3@(13,11) HP 60/60 MP 0/0 Hu 85 $ 722 room=.
+-> n
+T1197 mode=stairs_down_mode    Eomer II(hum) F3@(13,10) HP 60/60 MP 0/0 Hu 84 $ 722 room=D
+-> n
+T1198 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 83 $ 722 room=.
+-> e
+T1199 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 60/60 MP 0/0 Hu 82 $ 722 room=.
+-> e
+T1200 mode=game_loop           Eomer II(hum) F3@(15, 9) HP 60/60 MP 0/0 Hu 81 $ 722 room=N
+-> n
+T1201 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 60/60 MP 0/0 Hu 80 $ 722 room=.
+-> n
+T1202 mode=game_loop           Eomer II(hum) F3@(15, 7) HP 60/60 MP 0/0 Hu 79 $ 722 room=.
+-> w
+T1203 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 60/60 MP 0/0 Hu 78 $ 722 room=N
+-> w
+T1204 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 60/60 MP 0/0 Hu 77 $ 722 room=.
+-> s
+T1205 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 60/60 MP 0/0 Hu 76 $ 722 room=.
+-> w
+T1206 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 75 $ 722 room=.
+-> s
+T1207 mode=game_loop           Eomer II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 74 $ 722 room=.
+-> s
+T1208 mode=warp_mode           Eomer II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 73 $ 722 room=W
+-> y
+T1209 mode=game_loop           Eomer II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 73 $ 722 room=W
+-> n
+T1210 mode=game_loop           Eomer II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 72 $ 722 room=.
+-> e
+T1211 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 71 $ 722 room=.
+-> n
+T1212 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 60/60 MP 0/0 Hu 70 $ 722 room=.
+-> n
+T1213 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 60/60 MP 0/0 Hu 69 $ 722 room=.
+-> e
+T1214 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 60/60 MP 0/0 Hu 68 $ 722 room=N
+-> e
+T1215 mode=game_loop           Eomer II(hum) F3@(15, 7) HP 60/60 MP 0/0 Hu 67 $ 722 room=.
+-> n
+T1216 mode=game_loop           Eomer II(hum) F3@(15, 6) HP 60/60 MP 0/0 Hu 66 $ 722 room=.
+-> s
+T1217 mode=game_loop           Eomer II(hum) F3@(15, 7) HP 60/60 MP 0/0 Hu 65 $ 722 room=.
+-> s
+T1218 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 60/60 MP 0/0 Hu 64 $ 722 room=.
+-> e
+T1219 mode=game_loop           Eomer II(hum) F3@(16, 8) HP 60/60 MP 0/0 Hu 63 $ 722 room=.
+-> w
+T1220 mode=game_loop           Eomer II(hum) F3@(15, 8) HP 60/60 MP 0/0 Hu 62 $ 722 room=.
+-> s
+T1221 mode=game_loop           Eomer II(hum) F3@(15, 9) HP 60/60 MP 0/0 Hu 61 $ 722 room=N
+-> w
+T1222 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 60/60 MP 0/0 Hu 60 $ 722 room=.
+-> n
+T1223 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 60/60 MP 0/0 Hu 59 $ 722 room=.
+-> n
+T1224 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 60/60 MP 0/0 Hu 58 $ 722 room=N
+-> w
+T1225 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 60/60 MP 0/0 Hu 57 $ 722 room=.
+-> s
+T1226 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 60/60 MP 0/0 Hu 56 $ 722 room=.
+-> s
+T1227 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 55 $ 722 room=.
+-> e
+T1228 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 60/60 MP 0/0 Hu 54 $ 722 room=.
+-> n
+T1229 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 60/60 MP 0/0 Hu 53 $ 722 room=.
+-> n
+T1230 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 60/60 MP 0/0 Hu 52 $ 722 room=N
+-> w
+T1231 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 60/60 MP 0/0 Hu 51 $ 722 room=.
+-> s
+T1232 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 60/60 MP 0/0 Hu 50 $ 722 room=.
+-> s
+T1233 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 49 $ 722 room=.
+-> i
+T1234 mode=inventory           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 49 $ 722 room=.
+-> eat1
+T1235 mode=inventory           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1236 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 60/60 MP 0/0 Hu 99 $ 722 room=.
+-> w
+T1237 mode=game_loop           Eomer II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 98 $ 722 room=.
+-> n
+T1238 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 97 $ 722 room=.
+-> w
+T1239 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 96 $ 722 room=.
+-> n
+T1240 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 60/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
+-> a
+T1241 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 60/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> a
+T1242 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 38/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T1243 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 16/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> i
+T1244 mode=inventory           Eomer II(hum) F3@(11, 7) HP 16/60 MP 0/0 Hu 95 $ 722 room=M
+-> u1
+T1245 mode=inventory           Eomer II(hum) F3@(11, 7) HP 46/60 MP 0/0 Hu 95 $ 722 room=M
+-> x
+T1246 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 46/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> f
+T1247 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 24/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T1248 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 24/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T1249 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 24/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T1250 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 24/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP56/104)
+-> a
+T1251 mode=combat_mode         Eomer II(hum) F3@(11, 7) HP 2/60 MP 0/0 Hu 95 $ 722 room=M vs ELITE UNDEAD WRAITH(L3 HP56/104)
+-> f
+T1252 mode=flee_direction_mode Eomer II(hum) F3@(11, 7) HP 2/60 MP 0/0 Hu 95 $ 722 room=M
+-> s
+T1253 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 2/60 MP 0/0 Hu 95 $ 722 room=.
+-> w
+T1254 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 2/60 MP 0/0 Hu 94 $ 722 room=.
+-> s
+T1255 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 3/60 MP 0/0 Hu 93 $ 722 room=.
+-> s
+T1256 mode=game_loop           Eomer II(hum) F3@(10,10) HP 3/60 MP 0/0 Hu 92 $ 722 room=.
+-> s
+T1257 mode=game_loop           Eomer II(hum) F3@(10,11) HP 4/60 MP 0/0 Hu 91 $ 722 room=.
+-> s
+T1258 mode=game_loop           Eomer II(hum) F3@(10,12) HP 4/60 MP 0/0 Hu 90 $ 722 room=.
+-> s
+T1259 mode=game_loop           Eomer II(hum) F3@(10,13) HP 5/60 MP 0/0 Hu 89 $ 722 room=.
+-> w
+T1260 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 5/60 MP 0/0 Hu 88 $ 722 room=.
+-> n
+T1261 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 6/60 MP 0/0 Hu 87 $ 722 room=.
+-> w
+T1262 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 6/60 MP 0/0 Hu 86 $ 722 room=.
+-> w
+T1263 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 7/60 MP 0/0 Hu 85 $ 722 room=.
+-> n
+T1264 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 7/60 MP 0/0 Hu 84 $ 722 room=.
+-> n
+T1265 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 7/60 MP 0/0 Hu 83 $ 722 room=.
+-> e
+T1266 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 7/60 MP 0/0 Hu 82 $ 722 room=.
+-> n
+T1267 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 8/60 MP 0/0 Hu 81 $ 722 room=.
+-> w
+T1268 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 8/60 MP 0/0 Hu 80 $ 722 room=.
+-> w
+T1269 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 8/60 MP 0/0 Hu 79 $ 722 room=.
+-> w
+T1270 mode=game_loop           Eomer II(hum) F3@( 5, 9) HP 8/60 MP 0/0 Hu 78 $ 722 room=.
+-> n
+T1271 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 9/60 MP 0/0 Hu 77 $ 722 room=.
+-> e
+T1272 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 9/60 MP 0/0 Hu 76 $ 722 room=.
+-> n
+T1273 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 9/60 MP 0/0 Hu 75 $ 722 room=.
+-> e
+T1274 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 9/60 MP 0/0 Hu 74 $ 722 room=.
+-> s
+T1275 mode=garden_mode         Eomer II(hum) F3@( 7, 8) HP 10/60 MP 0/0 Hu 73 $ 722 room=G
+-> h
+T1276 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 10/60 MP 0/0 Hu 73 $ 722 room=.
+-> s
+T1277 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 10/60 MP 0/0 Hu 72 $ 722 room=.
+-> s
+T1278 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 10/60 MP 0/0 Hu 71 $ 722 room=.
+-> e
+T1279 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 10/60 MP 0/0 Hu 70 $ 722 room=.
+-> n
+T1280 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 11/60 MP 0/0 Hu 69 $ 722 room=.
+-> e
+T1281 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 11/60 MP 0/0 Hu 68 $ 722 room=.
+-> e
+T1282 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 11/60 MP 0/0 Hu 67 $ 722 room=.
+-> s
+T1283 mode=game_loop           Eomer II(hum) F3@(10,10) HP 11/60 MP 0/0 Hu 66 $ 722 room=.
+-> w
+T1284 mode=chest_mode          Eomer II(hum) F3@( 9,10) HP 12/60 MP 0/0 Hu 65 $ 722 room=C
+-> w
+T1285 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 12/60 MP 0/0 Hu 64 $ 722 room=.
+-> s
+T1286 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 12/60 MP 0/0 Hu 63 $ 722 room=.
+-> s
+T1287 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 12/60 MP 0/0 Hu 62 $ 722 room=.
+-> w
+T1288 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 13/60 MP 0/0 Hu 61 $ 722 room=.
+-> n
+T1289 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 13/60 MP 0/0 Hu 60 $ 722 room=.
+-> n
+T1290 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 13/60 MP 0/0 Hu 59 $ 722 room=.
+-> e
+T1291 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 13/60 MP 0/0 Hu 58 $ 722 room=.
+-> s
+T1292 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 13/60 MP 0/0 Hu 57 $ 722 room=.
+-> s
+T1293 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 13/60 MP 0/0 Hu 56 $ 722 room=.
+-> w
+T1294 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 13/60 MP 0/0 Hu 55 $ 722 room=.
+-> n
+T1295 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 13/60 MP 0/0 Hu 54 $ 722 room=.
+-> n
+T1296 mode=game_loop           Eomer II(hum) F3@( 7,10) HP 13/60 MP 0/0 Hu 53 $ 722 room=.
+-> n
+T1297 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 13/60 MP 0/0 Hu 52 $ 722 room=.
+-> n
+T1298 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 13/60 MP 0/0 Hu 51 $ 722 room=.
+-> n
+T1299 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 13/60 MP 0/0 Hu 50 $ 722 room=.
+-> w
+T1300 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 13/60 MP 0/0 Hu 49 $ 722 room=.
+-> i
+T1301 mode=inventory           Eomer II(hum) F3@( 6, 7) HP 13/60 MP 0/0 Hu 49 $ 722 room=.
+-> eat1
+T1302 mode=inventory           Eomer II(hum) F3@( 6, 7) HP 13/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1303 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 13/60 MP 0/0 Hu 99 $ 722 room=.
+-> s
+T1304 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 13/60 MP 0/0 Hu 98 $ 722 room=.
+-> w
+T1305 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 14/60 MP 0/0 Hu 97 $ 722 room=.
+-> n
+T1306 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 14/60 MP 0/0 Hu 96 $ 722 room=.
+-> n
+T1307 mode=combat_mode         Eomer II(hum) F3@( 5, 6) HP 15/60 MP 0/0 Hu 95 $ 722 room=M vs Rust Monster(L2 HP18/18)
+-> f
+T1308 mode=combat_mode         Eomer II(hum) F3@( 5, 6) HP 14/60 MP 0/0 Hu 95 $ 722 room=M vs Rust Monster(L2 HP18/18)
+-> f
+T1309 mode=flee_direction_mode Eomer II(hum) F3@( 5, 6) HP 13/60 MP 0/0 Hu 95 $ 722 room=M
+-> s
+T1310 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 13/60 MP 0/0 Hu 95 $ 722 room=.
+-> e
+T1311 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 13/60 MP 0/0 Hu 94 $ 722 room=.
+-> e
+T1312 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 14/60 MP 0/0 Hu 93 $ 722 room=.
+-> s
+T1313 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 14/60 MP 0/0 Hu 92 $ 722 room=.
+-> w
+T1314 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 15/60 MP 0/0 Hu 91 $ 722 room=.
+-> w
+T1315 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 15/60 MP 0/0 Hu 90 $ 722 room=.
+-> n
+T1316 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 16/60 MP 0/0 Hu 89 $ 722 room=.
+-> e
+T1317 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 16/60 MP 0/0 Hu 88 $ 722 room=.
+-> e
+T1318 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 17/60 MP 0/0 Hu 87 $ 722 room=.
+-> s
+T1319 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 17/60 MP 0/0 Hu 86 $ 722 room=.
+-> w
+T1320 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 18/60 MP 0/0 Hu 85 $ 722 room=.
+-> w
+T1321 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 18/60 MP 0/0 Hu 84 $ 722 room=.
+-> n
+T1322 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 18/60 MP 0/0 Hu 83 $ 722 room=.
+-> e
+T1323 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 18/60 MP 0/0 Hu 82 $ 722 room=.
+-> e
+T1324 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 19/60 MP 0/0 Hu 81 $ 722 room=.
+-> s
+T1325 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 19/60 MP 0/0 Hu 80 $ 722 room=.
+-> s
+T1326 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 19/60 MP 0/0 Hu 79 $ 722 room=.
+-> w
+T1327 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 19/60 MP 0/0 Hu 78 $ 722 room=.
+-> s
+T1328 mode=game_loop           Eomer II(hum) F3@( 6,10) HP 20/60 MP 0/0 Hu 77 $ 722 room=.
+-> s
+T1329 mode=game_loop           Eomer II(hum) F3@( 6,11) HP 20/60 MP 0/0 Hu 76 $ 722 room=.
+-> e
+T1330 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 20/60 MP 0/0 Hu 75 $ 722 room=.
+-> s
+T1331 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 20/60 MP 0/0 Hu 74 $ 722 room=.
+-> e
+T1332 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 21/60 MP 0/0 Hu 73 $ 722 room=.
+-> s
+T1333 mode=game_loop           Eomer II(hum) F3@( 8,13) HP 21/60 MP 0/0 Hu 72 $ 722 room=.
+-> e
+T1334 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 21/60 MP 0/0 Hu 71 $ 722 room=.
+-> n
+T1335 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 21/60 MP 0/0 Hu 70 $ 722 room=.
+-> e
+T1336 mode=game_loop           Eomer II(hum) F3@(10,12) HP 22/60 MP 0/0 Hu 69 $ 722 room=.
+-> n
+T1337 mode=game_loop           Eomer II(hum) F3@(10,11) HP 22/60 MP 0/0 Hu 68 $ 722 room=.
+-> n
+T1338 mode=game_loop           Eomer II(hum) F3@(10,10) HP 22/60 MP 0/0 Hu 67 $ 722 room=.
+-> n
+T1339 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 22/60 MP 0/0 Hu 66 $ 722 room=.
+-> n
+T1340 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 23/60 MP 0/0 Hu 65 $ 722 room=.
+-> e
+T1341 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 23/60 MP 0/0 Hu 64 $ 722 room=.
+-> e
+T1342 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 23/60 MP 0/0 Hu 63 $ 722 room=.
+-> e
+T1343 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 23/60 MP 0/0 Hu 62 $ 722 room=.
+-> n
+T1344 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 24/60 MP 0/0 Hu 61 $ 722 room=.
+-> w
+T1345 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 24/60 MP 0/0 Hu 60 $ 722 room=.
+-> n
+T1346 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 24/60 MP 0/0 Hu 59 $ 722 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T1347 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 20/60 MP 0/0 Hu 59 $ 722 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T1348 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 16/60 MP 0/0 Hu 59 $ 722 room=M vs Giant Spider(L2 HP40/40)
+-> f
+T1349 mode=flee_direction_mode Eomer II(hum) F3@(12, 6) HP 16/60 MP 0/0 Hu 59 $ 722 room=M
+-> s
+T1350 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 16/60 MP 0/0 Hu 59 $ 722 room=.
+-> s
+T1351 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 16/60 MP 0/0 Hu 59 $ 722 room=.
+-> e
+T1352 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 16/60 MP 0/0 Hu 59 $ 722 room=.
+-> s
+T1353 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 16/60 MP 0/0 Hu 58 $ 722 room=.
+-> w
+T1354 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 16/60 MP 0/0 Hu 57 $ 722 room=.
+-> w
+T1355 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 16/60 MP 0/0 Hu 56 $ 722 room=.
+-> s
+T1356 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 16/60 MP 0/0 Hu 55 $ 722 room=.
+-> s
+T1357 mode=game_loop           Eomer II(hum) F3@(10,10) HP 16/60 MP 0/0 Hu 54 $ 722 room=.
+-> s
+T1358 mode=game_loop           Eomer II(hum) F3@(10,11) HP 16/60 MP 0/0 Hu 53 $ 722 room=.
+-> s
+T1359 mode=game_loop           Eomer II(hum) F3@(10,12) HP 16/60 MP 0/0 Hu 52 $ 722 room=.
+-> w
+T1360 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 16/60 MP 0/0 Hu 51 $ 722 room=.
+-> w
+T1361 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 16/60 MP 0/0 Hu 50 $ 722 room=.
+-> w
+T1362 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 16/60 MP 0/0 Hu 49 $ 722 room=.
+-> i
+T1363 mode=inventory           Eomer II(hum) F3@( 7,12) HP 16/60 MP 0/0 Hu 49 $ 722 room=.
+-> eat1
+T1364 mode=inventory           Eomer II(hum) F3@( 7,12) HP 16/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1365 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 16/60 MP 0/0 Hu 99 $ 722 room=.
+-> n
+T1366 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 16/60 MP 0/0 Hu 98 $ 722 room=.
+-> w
+T1367 mode=game_loop           Eomer II(hum) F3@( 6,11) HP 17/60 MP 0/0 Hu 97 $ 722 room=.
+-> w
+T1368 mode=game_loop           Eomer II(hum) F3@( 5,11) HP 17/60 MP 0/0 Hu 96 $ 722 room=.
+-> s
+T1369 mode=game_loop           Eomer II(hum) F3@( 5,12) HP 18/60 MP 0/0 Hu 95 $ 722 room=.
+-> s
+T1370 mode=chest_mode          Eomer II(hum) F3@( 5,13) HP 18/60 MP 0/0 Hu 94 $ 722 room=C
+-> w
+T1371 mode=game_loop           Eomer II(hum) F3@( 4,13) HP 19/60 MP 0/0 Hu 93 $ 722 room=.
+-> n
+T1372 mode=game_loop           Eomer II(hum) F3@( 4,12) HP 19/60 MP 0/0 Hu 92 $ 722 room=.
+-> s
+T1373 mode=game_loop           Eomer II(hum) F3@( 4,13) HP 20/60 MP 0/0 Hu 91 $ 722 room=.
+-> n
+T1374 mode=game_loop           Eomer II(hum) F3@( 4,12) HP 20/60 MP 0/0 Hu 90 $ 722 room=.
+-> e
+T1375 mode=game_loop           Eomer II(hum) F3@( 5,12) HP 21/60 MP 0/0 Hu 89 $ 722 room=.
+-> n
+T1376 mode=game_loop           Eomer II(hum) F3@( 5,11) HP 21/60 MP 0/0 Hu 88 $ 722 room=.
+-> e
+T1377 mode=game_loop           Eomer II(hum) F3@( 6,11) HP 22/60 MP 0/0 Hu 87 $ 722 room=.
+-> e
+T1378 mode=game_loop           Eomer II(hum) F3@( 7,11) HP 22/60 MP 0/0 Hu 86 $ 722 room=.
+-> s
+T1379 mode=game_loop           Eomer II(hum) F3@( 7,12) HP 23/60 MP 0/0 Hu 85 $ 722 room=.
+-> w
+T1380 mode=game_loop           Eomer II(hum) F3@( 6,12) HP 23/60 MP 0/0 Hu 84 $ 722 room=.
+-> w
+T1381 mode=game_loop           Eomer II(hum) F3@( 5,12) HP 23/60 MP 0/0 Hu 83 $ 722 room=.
+-> n
+T1382 mode=game_loop           Eomer II(hum) F3@( 5,11) HP 23/60 MP 0/0 Hu 82 $ 722 room=.
+-> e
+T1383 mode=game_loop           Eomer II(hum) F3@( 6,11) HP 24/60 MP 0/0 Hu 81 $ 722 room=.
+-> n
+T1384 mode=game_loop           Eomer II(hum) F3@( 6,10) HP 24/60 MP 0/0 Hu 80 $ 722 room=.
+-> n
+T1385 mode=game_loop           Eomer II(hum) F3@( 6, 9) HP 24/60 MP 0/0 Hu 79 $ 722 room=.
+-> n
+T1386 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 24/60 MP 0/0 Hu 78 $ 722 room=.
+-> w
+T1387 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 25/60 MP 0/0 Hu 77 $ 722 room=.
+-> n
+T1388 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 25/60 MP 0/0 Hu 76 $ 722 room=.
+-> e
+T1389 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 25/60 MP 0/0 Hu 75 $ 722 room=.
+-> e
+T1390 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 25/60 MP 0/0 Hu 74 $ 722 room=.
+-> s
+T1391 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 26/60 MP 0/0 Hu 73 $ 722 room=.
+-> w
+T1392 mode=game_loop           Eomer II(hum) F3@( 6, 8) HP 26/60 MP 0/0 Hu 72 $ 722 room=.
+-> w
+T1393 mode=game_loop           Eomer II(hum) F3@( 5, 8) HP 26/60 MP 0/0 Hu 71 $ 722 room=.
+-> n
+T1394 mode=game_loop           Eomer II(hum) F3@( 5, 7) HP 26/60 MP 0/0 Hu 70 $ 722 room=.
+-> e
+T1395 mode=game_loop           Eomer II(hum) F3@( 6, 7) HP 27/60 MP 0/0 Hu 69 $ 722 room=.
+-> e
+T1396 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 27/60 MP 0/0 Hu 68 $ 722 room=.
+-> s
+T1397 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 27/60 MP 0/0 Hu 67 $ 722 room=.
+-> s
+T1398 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 27/60 MP 0/0 Hu 66 $ 722 room=.
+-> e
+T1399 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 28/60 MP 0/0 Hu 65 $ 722 room=.
+-> e
+T1400 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 28/60 MP 0/0 Hu 64 $ 722 room=.
+-> n
+T1401 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 28/60 MP 0/0 Hu 63 $ 722 room=.
+-> e
+T1402 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 28/60 MP 0/0 Hu 62 $ 722 room=.
+-> s
+T1403 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 29/60 MP 0/0 Hu 61 $ 722 room=.
+-> s
+T1404 mode=game_loop           Eomer II(hum) F3@(10,10) HP 29/60 MP 0/0 Hu 60 $ 722 room=.
+-> w
+T1405 mode=game_loop           Eomer II(hum) F3@( 9,10) HP 29/60 MP 0/0 Hu 59 $ 722 room=C
+-> n
+T1406 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 29/60 MP 0/0 Hu 58 $ 722 room=.
+-> n
+T1407 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 29/60 MP 0/0 Hu 57 $ 722 room=.
+-> e
+T1408 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 29/60 MP 0/0 Hu 56 $ 722 room=.
+-> s
+T1409 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 29/60 MP 0/0 Hu 55 $ 722 room=.
+-> e
+T1410 mode=game_loop           Eomer II(hum) F3@(11, 9) HP 29/60 MP 0/0 Hu 54 $ 722 room=.
+-> n
+T1411 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 29/60 MP 0/0 Hu 53 $ 722 room=.
+-> e
+T1412 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 29/60 MP 0/0 Hu 52 $ 722 room=.
+-> n
+T1413 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 29/60 MP 0/0 Hu 51 $ 722 room=.
+-> e
+T1414 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 29/60 MP 0/0 Hu 50 $ 722 room=.
+-> s
+T1415 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 29/60 MP 0/0 Hu 49 $ 722 room=.
+-> i
+T1416 mode=inventory           Eomer II(hum) F3@(13, 8) HP 29/60 MP 0/0 Hu 49 $ 722 room=.
+-> eat1
+T1417 mode=inventory           Eomer II(hum) F3@(13, 8) HP 29/60 MP 0/0 Hu 99 $ 722 room=.
+-> x
+T1418 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 29/60 MP 0/0 Hu 99 $ 722 room=.
+-> s
+T1419 mode=game_loop           Eomer II(hum) F3@(13, 9) HP 29/60 MP 0/0 Hu 98 $ 722 room=.
+-> e
+T1420 mode=game_loop           Eomer II(hum) F3@(14, 9) HP 30/60 MP 0/0 Hu 97 $ 722 room=.
+-> n
+T1421 mode=game_loop           Eomer II(hum) F3@(14, 8) HP 30/60 MP 0/0 Hu 96 $ 722 room=.
+-> n
+T1422 mode=game_loop           Eomer II(hum) F3@(14, 7) HP 31/60 MP 0/0 Hu 95 $ 722 room=N
+-> w
+T1423 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 31/60 MP 0/0 Hu 94 $ 722 room=.
+-> s
+T1424 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 32/60 MP 0/0 Hu 93 $ 722 room=.
+-> w
+T1425 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 32/60 MP 0/0 Hu 92 $ 722 room=.
+-> w
+T1426 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 33/60 MP 0/0 Hu 91 $ 722 room=.
+-> w
+T1427 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 33/60 MP 0/0 Hu 90 $ 722 room=.
+-> s
+T1428 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 34/60 MP 0/0 Hu 89 $ 722 room=.
+-> s
+T1429 mode=game_loop           Eomer II(hum) F3@(10,10) HP 34/60 MP 0/0 Hu 88 $ 722 room=.
+-> s
+T1430 mode=game_loop           Eomer II(hum) F3@(10,11) HP 35/60 MP 0/0 Hu 87 $ 722 room=.
+-> s
+T1431 mode=game_loop           Eomer II(hum) F3@(10,12) HP 35/60 MP 0/0 Hu 86 $ 722 room=.
+-> w
+T1432 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 36/60 MP 0/0 Hu 85 $ 722 room=.
+-> w
+T1433 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 36/60 MP 0/0 Hu 84 $ 722 room=.
+-> n
+T1434 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 36/60 MP 0/0 Hu 83 $ 722 room=.
+-> n
+T1435 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 36/60 MP 0/0 Hu 82 $ 722 room=.
+-> n
+T1436 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 37/60 MP 0/0 Hu 81 $ 722 room=.
+-> e
+T1437 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 37/60 MP 0/0 Hu 80 $ 722 room=.
+-> n
+T1438 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 37/60 MP 0/0 Hu 79 $ 722 room=.
+-> e
+T1439 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 37/60 MP 0/0 Hu 78 $ 722 room=.
+-> s
+T1440 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 38/60 MP 0/0 Hu 77 $ 722 room=.
+-> s
+T1441 mode=game_loop           Eomer II(hum) F3@(10,10) HP 38/60 MP 0/0 Hu 76 $ 722 room=.
+-> s
+T1442 mode=game_loop           Eomer II(hum) F3@(10,11) HP 38/60 MP 0/0 Hu 75 $ 722 room=.
+-> s
+T1443 mode=game_loop           Eomer II(hum) F3@(10,12) HP 38/60 MP 0/0 Hu 74 $ 722 room=.
+-> s
+T1444 mode=game_loop           Eomer II(hum) F3@(10,13) HP 39/60 MP 0/0 Hu 73 $ 722 room=.
+-> w
+T1445 mode=game_loop           Eomer II(hum) F3@( 9,13) HP 39/60 MP 0/0 Hu 72 $ 722 room=.
+-> n
+T1446 mode=game_loop           Eomer II(hum) F3@( 9,12) HP 39/60 MP 0/0 Hu 71 $ 722 room=.
+-> w
+T1447 mode=game_loop           Eomer II(hum) F3@( 8,12) HP 39/60 MP 0/0 Hu 70 $ 722 room=.
+-> n
+T1448 mode=game_loop           Eomer II(hum) F3@( 8,11) HP 40/60 MP 0/0 Hu 69 $ 722 room=.
+-> n
+T1449 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 40/60 MP 0/0 Hu 68 $ 722 room=.
+-> n
+T1450 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 40/60 MP 0/0 Hu 67 $ 722 room=.
+-> e
+T1451 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 40/60 MP 0/0 Hu 66 $ 722 room=.
+-> n
+T1452 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 41/60 MP 0/0 Hu 65 $ 722 room=.
+-> e
+T1453 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 41/60 MP 0/0 Hu 64 $ 722 room=.
+-> s
+T1454 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 41/60 MP 0/0 Hu 63 $ 722 room=.
+-> s
+T1455 mode=game_loop           Eomer II(hum) F3@(10,10) HP 41/60 MP 0/0 Hu 62 $ 722 room=.
+-> w
+T1456 mode=game_loop           Eomer II(hum) F3@( 9,10) HP 42/60 MP 0/0 Hu 61 $ 722 room=C
+-> n
+T1457 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 42/60 MP 0/0 Hu 60 $ 722 room=.
+-> n
+T1458 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 42/60 MP 0/0 Hu 59 $ 722 room=.
+-> e
+T1459 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 42/60 MP 0/0 Hu 58 $ 722 room=.
+-> s
+T1460 mode=game_loop           Eomer II(hum) F3@(10, 9) HP 42/60 MP 0/0 Hu 57 $ 722 room=.
+-> e
+T1461 mode=game_loop           Eomer II(hum) F3@(11, 9) HP 42/60 MP 0/0 Hu 56 $ 722 room=.
+-> n
+T1462 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 42/60 MP 0/0 Hu 55 $ 722 room=.
+-> e
+T1463 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 42/60 MP 0/0 Hu 54 $ 722 room=.
+-> e
+T1464 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 42/60 MP 0/0 Hu 53 $ 722 room=.
+-> n
+T1465 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 42/60 MP 0/0 Hu 52 $ 722 room=.
+-> w
+T1466 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 42/60 MP 0/0 Hu 51 $ 722 room=.
+-> n
+T1467 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 42/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T1468 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 38/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1469 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 38/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1470 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 34/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1471 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 30/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1472 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 26/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1473 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 22/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1474 mode=combat_mode         Eomer II(hum) F3@(12, 6) HP 22/60 MP 0/0 Hu 50 $ 722 room=M vs Giant Spider(L2 HP19/40)
+-> a
+T1475 mode=combat_victory      Eomer II(hum) F3@(12, 6) HP 22/60 MP 0/0 Hu 50 $ 746 room=.
+-> back
+T1476 mode=game_loop           Eomer II(hum) F3@(12, 6) HP 22/60 MP 0/0 Hu 50 $ 746 room=.
+-> n
+T1477 mode=game_loop           Eomer II(hum) F3@(12, 5) HP 22/60 MP 0/0 Hu 49 $ 746 room=.
+-> i
+T1478 mode=inventory           Eomer II(hum) F3@(12, 5) HP 22/60 MP 0/0 Hu 49 $ 746 room=.
+-> eat1
+T1479 mode=inventory           Eomer II(hum) F3@(12, 5) HP 22/60 MP 0/0 Hu 54 $ 746 room=.
+-> x
+T1480 mode=game_loop           Eomer II(hum) F3@(12, 5) HP 22/60 MP 0/0 Hu 54 $ 746 room=.
+-> n
+T1481 mode=game_loop           Eomer II(hum) F3@(12, 4) HP 22/60 MP 0/0 Hu 53 $ 746 room=.
+-> e
+T1482 mode=altar_mode          Eomer II(hum) F3@(13, 4) HP 22/60 MP 0/0 Hu 52 $ 746 room=A
+-> pray
+T1483 mode=game_loop           Eomer II(hum) F3@(13, 4) HP 22/60 MP 0/0 Hu 52 $ 746 room=.
+-> e
+T1484 mode=game_loop           Eomer II(hum) F3@(14, 4) HP 22/60 MP 0/0 Hu 51 $ 746 room=.
+-> s
+T1485 mode=altar_mode          Eomer II(hum) F3@(14, 5) HP 22/60 MP 0/0 Hu 50 $ 746 room=A
+-> pray
+T1486 mode=game_loop           Eomer II(hum) F3@(14, 5) HP 22/60 MP 0/0 Hu 50 $ 746 room=.
+-> w
+T1487 mode=garden_mode         Eomer II(hum) F3@(13, 5) HP 22/60 MP 0/0 Hu 49 $ 746 room=G
+-> h
+T1488 mode=game_loop           Eomer II(hum) F3@(13, 5) HP 22/60 MP 0/0 Hu 49 $ 746 room=.
+-> w
+T1489 mode=game_loop           Eomer II(hum) F3@(12, 5) HP 22/60 MP 0/0 Hu 48 $ 746 room=.
+-> s
+T1490 mode=game_loop           Eomer II(hum) F3@(12, 6) HP 22/60 MP 0/0 Hu 47 $ 746 room=.
+-> w
+T1491 mode=tomb_mode           Eomer II(hum) F3@(11, 6) HP 22/60 MP 0/0 Hu 46 $ 746 room=T
+-> p
+T1492 mode=game_loop           Eomer II(hum) F3@(11, 6) HP 40/60 MP 0/0 Hu 46 $ 746 room=T
+-> e
+T1493 mode=game_loop           Eomer II(hum) F3@(12, 6) HP 40/60 MP 0/0 Hu 45 $ 746 room=.
+-> s
+T1494 mode=game_loop           Eomer II(hum) F3@(12, 7) HP 40/60 MP 0/0 Hu 44 $ 746 room=.
+-> e
+T1495 mode=game_loop           Eomer II(hum) F3@(13, 7) HP 40/60 MP 0/0 Hu 43 $ 746 room=.
+-> s
+T1496 mode=game_loop           Eomer II(hum) F3@(13, 8) HP 40/60 MP 0/0 Hu 42 $ 746 room=.
+-> w
+T1497 mode=game_loop           Eomer II(hum) F3@(12, 8) HP 40/60 MP 0/0 Hu 41 $ 746 room=.
+-> w
+T1498 mode=game_loop           Eomer II(hum) F3@(11, 8) HP 40/60 MP 0/0 Hu 40 $ 746 room=.
+-> w
+T1499 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 40/60 MP 0/0 Hu 39 $ 746 room=.
+-> n
+T1500 mode=library_mode        Eomer II(hum) F3@(10, 7) HP 40/60 MP 0/0 Hu 38 $ 746 room=L
+-> r
+T1501 mode=library_read_decision_mode Eomer II(hum) F3@(10, 7) HP 40/60 MP 0/0 Hu 38 $ 746 room=L
+-> y
+T1502 mode=game_loop           Eomer II(hum) F3@(10, 7) HP 40/60 MP 0/0 Hu 38 $ 821 room=.
+-> s
+T1503 mode=game_loop           Eomer II(hum) F3@(10, 8) HP 32/60 MP 0/0 Hu 37 $ 821 room=.
+-> w
+T1504 mode=game_loop           Eomer II(hum) F3@( 9, 8) HP 24/60 MP 0/0 Hu 36 $ 821 room=.
+-> s
+T1505 mode=game_loop           Eomer II(hum) F3@( 9, 9) HP 16/60 MP 0/0 Hu 35 $ 821 room=.
+-> s
+T1506 mode=game_loop           Eomer II(hum) F3@( 9,10) HP 8/60 MP 0/0 Hu 34 $ 821 room=C
+-> w
+T1507 mode=game_loop           Eomer II(hum) F3@( 8,10) HP 8/60 MP 0/0 Hu 33 $ 821 room=.
+-> n
+T1508 mode=game_loop           Eomer II(hum) F3@( 8, 9) HP 8/60 MP 0/0 Hu 32 $ 821 room=.
+-> w
+T1509 mode=game_loop           Eomer II(hum) F3@( 7, 9) HP 8/60 MP 0/0 Hu 31 $ 821 room=.
+-> n
+T1510 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 8/60 MP 0/0 Hu 30 $ 821 room=.
+-> n
+T1511 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 8/60 MP 0/0 Hu 29 $ 821 room=.
+-> e
+T1512 mode=game_loop           Eomer II(hum) F3@( 8, 7) HP 8/60 MP 0/0 Hu 28 $ 821 room=.
+-> n
+T1513 mode=game_loop           Eomer II(hum) F3@( 8, 6) HP 8/60 MP 0/0 Hu 27 $ 821 room=.
+-> n
+T1514 mode=game_loop           Eomer II(hum) F3@( 8, 5) HP 8/60 MP 0/0 Hu 26 $ 821 room=.
+-> w
+T1515 mode=game_loop           Eomer II(hum) F3@( 7, 5) HP 8/60 MP 0/0 Hu 25 $ 821 room=.
+-> w
+T1516 mode=altar_mode          Eomer II(hum) F3@( 6, 5) HP 8/60 MP 0/0 Hu 24 $ 821 room=A
+-> pray
+T1517 mode=game_loop           Eomer II(hum) F3@( 6, 5) HP 8/60 MP 0/0 Hu 24 $ 821 room=.
+-> n
+T1518 mode=game_loop           Eomer II(hum) F3@( 6, 4) HP 8/60 MP 0/0 Hu 23 $ 821 room=.
+-> n
+T1519 mode=game_loop           Eomer II(hum) F3@( 6, 3) HP 8/60 MP 0/0 Hu 22 $ 821 room=.
+-> e
+T1520 mode=pool_mode           Eomer II(hum) F3@( 7, 3) HP 8/60 MP 0/0 Hu 21 $ 821 room=P
+-> s
+T1521 mode=game_loop           Eomer II(hum) F3@( 7, 4) HP 8/60 MP 0/0 Hu 20 $ 821 room=.
+-> e
+T1522 mode=game_loop           Eomer II(hum) F3@( 8, 4) HP 8/60 MP 0/0 Hu 19 $ 821 room=.
+-> s
+T1523 mode=game_loop           Eomer II(hum) F3@( 8, 5) HP 8/60 MP 0/0 Hu 18 $ 821 room=.
+-> w
+T1524 mode=game_loop           Eomer II(hum) F3@( 7, 5) HP 8/60 MP 0/0 Hu 17 $ 821 room=.
+-> w
+T1525 mode=game_loop           Eomer II(hum) F3@( 6, 5) HP 8/60 MP 0/0 Hu 16 $ 821 room=.
+-> n
+T1526 mode=game_loop           Eomer II(hum) F3@( 6, 4) HP 8/60 MP 0/0 Hu 15 $ 821 room=.
+-> n
+T1527 mode=game_loop           Eomer II(hum) F3@( 6, 3) HP 8/60 MP 0/0 Hu 14 $ 821 room=.
+-> e
+T1528 mode=game_loop           Eomer II(hum) F3@( 7, 3) HP 8/60 MP 0/0 Hu 13 $ 821 room=P
+-> s
+T1529 mode=game_loop           Eomer II(hum) F3@( 7, 4) HP 8/60 MP 0/0 Hu 12 $ 821 room=.
+-> s
+T1530 mode=game_loop           Eomer II(hum) F3@( 7, 5) HP 8/60 MP 0/0 Hu 11 $ 821 room=.
+-> w
+T1531 mode=game_loop           Eomer II(hum) F3@( 6, 5) HP 8/60 MP 0/0 Hu 10 $ 821 room=.
+-> n
+T1532 mode=game_loop           Eomer II(hum) F3@( 6, 4) HP 8/60 MP 0/0 Hu  9 $ 821 room=.
+-> n
+T1533 mode=game_loop           Eomer II(hum) F3@( 6, 3) HP 8/60 MP 0/0 Hu  8 $ 821 room=.
+-> e
+T1534 mode=game_loop           Eomer II(hum) F3@( 7, 3) HP 8/60 MP 0/0 Hu  7 $ 821 room=P
+-> s
+T1535 mode=game_loop           Eomer II(hum) F3@( 7, 4) HP 8/60 MP 0/0 Hu  6 $ 821 room=.
+-> s
+T1536 mode=game_loop           Eomer II(hum) F3@( 7, 5) HP 8/60 MP 0/0 Hu  5 $ 821 room=.
+-> e
+T1537 mode=game_loop           Eomer II(hum) F3@( 8, 5) HP 8/60 MP 0/0 Hu  4 $ 821 room=.
+-> n
+T1538 mode=game_loop           Eomer II(hum) F3@( 8, 4) HP 8/60 MP 0/0 Hu  3 $ 821 room=.
+-> s
+T1539 mode=game_loop           Eomer II(hum) F3@( 8, 5) HP 8/60 MP 0/0 Hu  2 $ 821 room=.
+-> s
+T1540 mode=game_loop           Eomer II(hum) F3@( 8, 6) HP 8/60 MP 0/0 Hu  1 $ 821 room=.
+-> s
+T1541 mode=game_loop           Eomer II(hum) F3@( 8, 7) HP 6/60 MP 0/0 Hu  0 $ 821 room=.
+-> w
+T1542 mode=game_loop           Eomer II(hum) F3@( 7, 7) HP 4/60 MP 0/0 Hu  0 $ 821 room=.
+-> s
+T1543 mode=game_loop           Eomer II(hum) F3@( 7, 8) HP 2/60 MP 0/0 Hu  0 $ 821 room=.
+-> w
+T1544 mode=death_screen        Eomer II(hum) F3@( 6, 8) HP 0/60 MP 0/0 Hu  0 $ 821 room=.
+
+=== run finished: turns=1544 floor=3 hp=0/60 gold=821 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00099_human.html

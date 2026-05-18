@@ -1,0 +1,287 @@
+T   0 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Maeglin Star-eyed(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Maeglin Star-eyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Maeglin Star-eyed drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> s
+T   5 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Rust Monster(L0 HP18/18)
+  A Rust Monster (Level 0) appears! An insectoid creature with feathery antennae that twitch toward your gear.
+  The Rust Monster strikes first!
+-> a
+T   6 mode=combat_victory      Maeglin Star-eyed(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 345 room=.
+  The rust monster crumbles into orange dust.
+  You gained 8 experience.
+  You found 5 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Rust Monster meat.
+-> back
+T   7 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 345 room=.
+-> l
+T   8 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 345 room=.
+-> s
+T   9 mode=stairs_down_mode    Maeglin Star-eyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 345 room=D
+-> n
+T  10 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 97 $ 345 room=.
+-> e
+T  11 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 345 room=.
+-> l
+T  12 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 345 room=.
+-> s
+T  13 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 345 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  14 mode=combat_victory      Maeglin Star-eyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 451 room=.
+-> back
+T  15 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 451 room=.
+-> l
+T  16 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 451 room=.
+-> s
+T  17 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 94 $ 451 room=.
+-> w
+T  18 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 451 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  19 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 451 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  20 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 451 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  21 mode=combat_victory      Maeglin Star-eyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 455 room=.
+-> back
+T  22 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 455 room=.
+-> s
+T  23 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 5) HP 28/28 MP 0/0 Hu 92 $ 455 room=.
+-> s
+T  24 mode=dungeon_mode        Maeglin Star-eyed(elf) F1@( 1, 6) HP 28/28 MP 0/0 Hu 91 $ 455 room=N
+-> u
+T  25 mode=game_loop           Maeglin Star-eyed(elf) F1@( 1, 6) HP 28/28 MP 0/0 Hu 91 $ 455 room=N
+-> e
+T  26 mode=chest_mode          Maeglin Star-eyed(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 90 $ 455 room=C
+-> o
+T  27 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 90 $ 475 room=.
+-> l
+T  28 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 90 $ 475 room=.
+-> n
+T  29 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 475 room=.
+-> i
+T  30 mode=inventory           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 475 room=.
+-> eat3
+T  31 mode=inventory           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 475 room=.
+-> x
+T  32 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 475 room=.
+-> l
+T  33 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 475 room=.
+-> e
+T  34 mode=game_loop           Maeglin Star-eyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 94 $ 475 room=.
+-> e
+T  35 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 475 room=.
+-> s
+T  36 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 92 $ 475 room=M vs Stirge(L0 HP6/6)
+-> a
+T  37 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 4, 6) HP 27/28 MP 0/0 Hu 92 $ 475 room=M vs Stirge(L0 HP6/6)
+-> a
+T  38 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 92 $ 475 room=M vs Stirge(L0 HP6/6)
+-> a
+T  39 mode=combat_victory      Maeglin Star-eyed(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 92 $ 478 room=.
+-> back
+T  40 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 92 $ 478 room=.
+-> l
+T  41 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 92 $ 478 room=.
+-> s
+T  42 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 91 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T  43 mode=combat_mode         Maeglin Star-eyed(elf) F1@( 4, 7) HP 24/28 MP 0/0 Hu 91 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  44 mode=combat_victory      Maeglin Star-eyed(elf) F1@( 4, 7) HP 23/28 MP 0/0 Hu 91 $ 485 room=.
+-> back
+T  45 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 7) HP 23/28 MP 0/0 Hu 91 $ 485 room=.
+-> n
+T  46 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 6) HP 24/28 MP 0/0 Hu 90 $ 485 room=.
+-> n
+T  47 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 89 $ 485 room=.
+-> i
+T  48 mode=inventory           Maeglin Star-eyed(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 89 $ 485 room=.
+-> u3
+T  49 mode=inventory           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 485 room=.
+-> x
+T  50 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 485 room=.
+-> i
+T  51 mode=inventory           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 485 room=.
+-> eat2
+T  52 mode=inventory           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 94 $ 485 room=.
+-> x
+T  53 mode=game_loop           Maeglin Star-eyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 94 $ 485 room=.
+-> w
+T  54 mode=game_loop           Maeglin Star-eyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> w
+T  55 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 92 $ 485 room=.
+-> n
+T  56 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 91 $ 485 room=.
+-> n
+T  57 mode=game_loop           Maeglin Star-eyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 90 $ 485 room=.
+-> w
+T  58 mode=stairs_down_mode    Maeglin Star-eyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 89 $ 485 room=D
+-> d
+T  59 mode=stairs_up_mode      Maeglin Star-eyed(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 485 room=U
+-> w
+T  60 mode=stairs_up_mode      Maeglin Star-eyed(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 485 room=U
+-> w
+T  61 mode=stairs_up_mode      Maeglin Star-eyed(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 485 room=U
+-> s
+T  62 mode=game_loop           Maeglin Star-eyed(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 485 room=.
+-> l
+T  63 mode=game_loop           Maeglin Star-eyed(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 485 room=.
+-> e
+T  64 mode=game_loop           Maeglin Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 87 $ 485 room=.
+-> i
+T  65 mode=inventory           Maeglin Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 87 $ 485 room=.
+-> eat2
+T  66 mode=inventory           Maeglin Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> x
+T  67 mode=game_loop           Maeglin Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> l
+T  68 mode=game_loop           Maeglin Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> s
+T  69 mode=pool_mode           Maeglin Star-eyed(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 485 room=P
+-> dr
+T  70 mode=game_loop           Maeglin Star-eyed(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 485 room=.
+-> l
+T  71 mode=game_loop           Maeglin Star-eyed(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 485 room=.
+-> e
+T  72 mode=library_mode        Maeglin Star-eyed(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 485 room=L
+-> r
+T  73 mode=game_loop           Maeglin Star-eyed(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 485 room=.
+-> l
+T  74 mode=game_loop           Maeglin Star-eyed(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 485 room=.
+-> e
+T  75 mode=oracle_mode         Maeglin Star-eyed(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 90 $ 485 room=O
+-> e
+T  76 mode=game_loop           Maeglin Star-eyed(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 89 $ 485 room=.
+-> l
+T  77 mode=game_loop           Maeglin Star-eyed(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 89 $ 485 room=.
+-> e
+T  78 mode=game_loop           Maeglin Star-eyed(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 485 room=.
+-> e
+T  79 mode=game_loop           Maeglin Star-eyed(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 87 $ 485 room=.
+-> e
+T  80 mode=altar_mode          Maeglin Star-eyed(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 86 $ 485 room=A
+-> pray
+T  81 mode=game_loop           Maeglin Star-eyed(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 86 $ 509 room=.
+-> l
+T  82 mode=game_loop           Maeglin Star-eyed(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 86 $ 509 room=.
+-> s
+T  83 mode=game_loop           Maeglin Star-eyed(elf) F2@( 8, 4) HP 28/28 MP 0/0 Hu 85 $ 509 room=.
+-> l
+T  84 mode=game_loop           Maeglin Star-eyed(elf) F2@( 8, 4) HP 28/28 MP 0/0 Hu 85 $ 509 room=.
+-> n
+T  85 mode=game_loop           Maeglin Star-eyed(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 84 $ 509 room=.
+-> e
+T  86 mode=game_loop           Maeglin Star-eyed(elf) F2@( 9, 3) HP 28/28 MP 0/0 Hu 83 $ 509 room=.
+-> l
+T  87 mode=game_loop           Maeglin Star-eyed(elf) F2@( 9, 3) HP 28/28 MP 0/0 Hu 83 $ 509 room=.
+-> e
+T  88 mode=game_loop           Maeglin Star-eyed(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 82 $ 509 room=.
+-> l
+T  89 mode=game_loop           Maeglin Star-eyed(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 82 $ 509 room=.
+-> s
+T  90 mode=game_loop           Maeglin Star-eyed(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 509 room=.
+-> e
+T  91 mode=garden_mode         Maeglin Star-eyed(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 80 $ 509 room=G
+-> h
+T  92 mode=game_loop           Maeglin Star-eyed(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 80 $ 509 room=.
+-> l
+T  93 mode=game_loop           Maeglin Star-eyed(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 80 $ 509 room=.
+-> e
+T  94 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 79 $ 509 room=.
+-> l
+T  95 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 79 $ 509 room=.
+-> e
+T  96 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 4) HP 28/28 MP 0/0 Hu 78 $ 509 room=.
+-> l
+T  97 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 4) HP 28/28 MP 0/0 Hu 78 $ 509 room=.
+-> n
+T  98 mode=chest_mode          Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 77 $ 509 room=C
+-> o
+T  99 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 77 $ 509 room=.
+-> i
+T 100 mode=inventory           Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 77 $ 509 room=.
+-> e1
+T 101 mode=inventory           Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 77 $ 509 room=.
+-> x
+T 102 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 77 $ 509 room=.
+-> n
+T 103 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 2) HP 28/28 MP 0/0 Hu 76 $ 509 room=.
+-> w
+T 104 mode=combat_mode         Maeglin Star-eyed(elf) F2@(12, 2) HP 28/28 MP 0/0 Hu 75 $ 509 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 105 mode=combat_victory      Maeglin Star-eyed(elf) F2@(12, 2) HP 27/28 MP 0/0 Hu 75 $ 523 room=.
+-> back
+T 106 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 2) HP 27/28 MP 0/0 Hu 75 $ 523 room=.
+-> n
+T 107 mode=combat_mode         Maeglin Star-eyed(elf) F2@(12, 1) HP 27/28 MP 0/0 Hu 74 $ 523 room=M vs Kobold(L1 HP8/8)
+-> a
+T 108 mode=combat_victory      Maeglin Star-eyed(elf) F2@(12, 1) HP 27/28 MP 0/0 Hu 74 $ 527 room=.
+-> back
+T 109 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 1) HP 27/28 MP 0/0 Hu 74 $ 527 room=.
+-> e
+T 110 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 1) HP 27/28 MP 0/0 Hu 73 $ 527 room=.
+-> l
+T 111 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 1) HP 27/28 MP 0/0 Hu 73 $ 527 room=.
+-> e
+T 112 mode=game_loop           Maeglin Star-eyed(elf) F2@(14, 1) HP 27/28 MP 0/0 Hu 72 $ 527 room=.
+-> w
+T 113 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 1) HP 28/28 MP 0/0 Hu 71 $ 527 room=.
+-> s
+T 114 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 2) HP 28/28 MP 0/0 Hu 70 $ 527 room=.
+-> s
+T 115 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 3) HP 28/28 MP 0/0 Hu 69 $ 527 room=.
+-> s
+T 116 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 4) HP 28/28 MP 0/0 Hu 68 $ 527 room=.
+-> w
+T 117 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 67 $ 527 room=.
+-> s
+T 118 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 5) HP 28/28 MP 0/0 Hu 66 $ 527 room=.
+-> s
+T 119 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 65 $ 527 room=.
+-> i
+T 120 mode=inventory           Maeglin Star-eyed(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 65 $ 527 room=.
+-> eat3
+T 121 mode=inventory           Maeglin Star-eyed(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 70 $ 527 room=.
+-> eat1
+T 122 mode=inventory           Maeglin Star-eyed(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu100 $ 527 room=.
+-> x
+T 123 mode=game_loop           Maeglin Star-eyed(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu100 $ 527 room=.
+-> e
+T 124 mode=combat_mode         Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu 99 $ 527 room=M vs Slime Mold(L1 HP15/15)
+-> a
+T 125 mode=combat_victory      Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu 99 $ 541 room=.
+-> back
+T 126 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu 99 $ 541 room=.
+-> i
+T 127 mode=inventory           Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu 99 $ 541 room=.
+-> eat2
+T 128 mode=inventory           Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu100 $ 541 room=.
+-> x
+T 129 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu100 $ 541 room=.
+-> l
+T 130 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu100 $ 541 room=.
+-> s
+T 131 mode=game_loop           Maeglin Star-eyed(elf) F2@(13, 7) HP 28/28 MP 0/0 Hu 99 $ 541 room=.
+-> s
+T 132 mode=pool_mode           Maeglin Star-eyed(elf) F2@(13, 8) HP 28/28 MP 0/0 Hu 98 $ 541 room=P
+-> dr
+T 133 mode=pool_mode           Maeglin Star-eyed(elf) F2@(13, 8) HP -3/28 MP 0/0 Hu 98 $ 541 room=P
+
+=== run finished: turns=133 floor=2 hp=-3/28 gold=541 alive=False mode=pool_mode ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00003_elf.html

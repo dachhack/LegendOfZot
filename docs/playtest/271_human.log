@@ -1,0 +1,2756 @@
+T   0 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 11 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Eomer the Vigilant(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  The Goblin strikes first!
+-> a
+T   3 mode=combat_victory      Eomer the Vigilant(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+  Ouch! Goblin hit Eomer the Vigilant!
+  You took 1 damage!
+  You hit the evil Goblin!
+  Goblin took 21 damage.
+  You defeated the Goblin!
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 8 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Goblin meat.
+-> back
+T   4 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+-> l
+T   5 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+-> e
+T   6 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 348 room=V
+-> b13
+T   7 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 338 room=V
+-> b4
+T   8 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 288 room=V
+-> b4
+T   9 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 238 room=V
+-> b9
+T  10 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 208 room=V
+-> b1
+T  11 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 163 room=V
+-> id5
+T  12 mode=vendor_shop         Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> x
+T  13 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> i
+T  14 mode=inventory           Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> e1
+T  15 mode=inventory           Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> x
+T  16 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> l
+T  17 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 138 room=V
+-> n
+T  18 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 97 $ 138 room=M vs Lichen(L0 HP10/10)
+-> a
+T  19 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 97 $ 138 room=M vs Lichen(L0 HP10/10)
+-> a
+T  20 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 97 $ 138 room=M vs Lichen(L0 HP10/10)
+-> a
+T  21 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 97 $ 138 room=M vs Lichen(L0 HP10/10)
+-> a
+T  22 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 97 $ 138 room=M vs Lichen(L0 HP10/10)
+-> a
+T  23 mode=combat_victory      Eomer the Vigilant(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 97 $ 141 room=.
+-> back
+T  24 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 97 $ 141 room=.
+-> s
+T  25 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 27/30 MP 0/0 Hu 96 $ 141 room=V
+-> s
+T  26 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 3) HP 28/30 MP 0/0 Hu 95 $ 141 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  27 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 3) HP 27/30 MP 0/0 Hu 95 $ 141 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  28 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 95 $ 141 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  29 mode=combat_mode         Eomer the Vigilant(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 95 $ 141 room=M vs Skeleton(L0 HP4/25)
+-> a
+T  30 mode=combat_victory      Eomer the Vigilant(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 95 $ 148 room=.
+-> back
+T  31 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 95 $ 148 room=.
+-> l
+T  32 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 3) HP 26/30 MP 0/0 Hu 95 $ 148 room=.
+-> e
+T  33 mode=combat_mode         Eomer the Vigilant(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 94 $ 148 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  34 mode=combat_mode         Eomer the Vigilant(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 94 $ 148 room=M vs Skeleton(L0 HP4/25)
+-> a
+T  35 mode=combat_victory      Eomer the Vigilant(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 94 $ 158 room=.
+-> back
+T  36 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 94 $ 158 room=.
+-> n
+T  37 mode=combat_mode         Eomer the Vigilant(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 93 $ 158 room=M vs Lichen(L0 HP10/10)
+-> a
+T  38 mode=combat_victory      Eomer the Vigilant(hum) F1@( 3, 2) HP 26/30 MP 0/0 Hu 93 $ 159 room=.
+-> back
+T  39 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 2) HP 26/30 MP 0/0 Hu 93 $ 159 room=.
+-> e
+T  40 mode=garden_mode         Eomer the Vigilant(hum) F1@( 4, 2) HP 26/30 MP 0/0 Hu 92 $ 159 room=G
+-> h
+T  41 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 26/30 MP 0/0 Hu 92 $ 159 room=.
+-> e
+T  42 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 2) HP 27/30 MP 0/0 Hu 91 $ 159 room=.
+-> n
+T  43 mode=combat_mode         Eomer the Vigilant(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 90 $ 159 room=M vs Kobold(L0 HP8/8)
+-> a
+T  44 mode=combat_victory      Eomer the Vigilant(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 90 $ 268 room=.
+-> back
+T  45 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 90 $ 268 room=.
+-> w
+T  46 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 89 $ 268 room=.
+-> i
+T  47 mode=inventory           Eomer the Vigilant(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 89 $ 268 room=.
+-> u4
+T  48 mode=inventory           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 89 $ 268 room=.
+-> x
+T  49 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 89 $ 268 room=.
+-> i
+T  50 mode=inventory           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 89 $ 268 room=.
+-> eat3
+T  51 mode=inventory           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 268 room=.
+-> x
+T  52 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 94 $ 268 room=.
+-> s
+T  53 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 93 $ 268 room=.
+-> w
+T  54 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 92 $ 268 room=.
+-> s
+T  55 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 91 $ 268 room=.
+-> w
+T  56 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 268 room=.
+-> n
+T  57 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 89 $ 268 room=V
+-> w
+T  58 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 88 $ 268 room=.
+-> i
+T  59 mode=inventory           Eomer the Vigilant(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 88 $ 268 room=.
+-> eat4
+T  60 mode=inventory           Eomer the Vigilant(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 94 $ 268 room=.
+-> x
+T  61 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 94 $ 268 room=.
+-> n
+T  62 mode=game_loop           Eomer the Vigilant(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 268 room=E
+-> e
+T  63 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 92 $ 268 room=.
+-> s
+T  64 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 91 $ 268 room=V
+-> i
+T  65 mode=inventory           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 91 $ 268 room=V
+-> eat3
+T  66 mode=inventory           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 268 room=V
+-> x
+T  67 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 268 room=V
+-> e
+T  68 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 95 $ 268 room=.
+-> e
+T  69 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 94 $ 268 room=.
+-> e
+T  70 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 93 $ 268 room=.
+-> e
+T  71 mode=dungeon_mode        Eomer the Vigilant(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 92 $ 268 room=N
+-> u
+T  72 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 92 $ 268 room=N
+-> l
+T  73 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 92 $ 268 room=N
+-> s
+T  74 mode=combat_mode         Eomer the Vigilant(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 91 $ 268 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  75 mode=combat_victory      Eomer the Vigilant(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 91 $ 370 room=.
+-> back
+T  76 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 91 $ 370 room=.
+-> s
+T  77 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 90 $ 370 room=.
+-> l
+T  78 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 90 $ 370 room=.
+-> e
+T  79 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+-> l
+T  80 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+-> s
+T  81 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 88 $ 370 room=.
+-> s
+T  82 mode=combat_mode         Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 87 $ 370 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  83 mode=combat_victory      Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 87 $ 373 room=.
+-> back
+T  84 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 87 $ 373 room=.
+-> l
+T  85 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 87 $ 373 room=.
+-> e
+T  86 mode=library_mode        Eomer the Vigilant(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 86 $ 373 room=L
+-> r
+T  87 mode=library_read_decision_mode Eomer the Vigilant(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 86 $ 373 room=L
+-> y
+T  88 mode=game_loop           Eomer the Vigilant(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 86 $ 473 room=.
+-> e
+T  89 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 85 $ 473 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  90 mode=combat_victory      Eomer the Vigilant(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 85 $ 479 room=.
+-> back
+T  91 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 85 $ 479 room=.
+-> l
+T  92 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 85 $ 479 room=.
+-> s
+T  93 mode=game_loop           Eomer the Vigilant(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 84 $ 479 room=.
+-> e
+T  94 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 83 $ 479 room=.
+-> n
+T  95 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 82 $ 479 room=.
+-> n
+T  96 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 81 $ 479 room=.
+-> i
+T  97 mode=inventory           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 81 $ 479 room=.
+-> eat3
+T  98 mode=inventory           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 86 $ 479 room=.
+-> x
+T  99 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 86 $ 479 room=.
+-> w
+T 100 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 85 $ 479 room=.
+-> n
+T 101 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 84 $ 479 room=.
+-> n
+T 102 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 83 $ 479 room=N
+-> n
+T 103 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 1) HP 30/30 MP 0/0 Hu 82 $ 479 room=.
+-> w
+T 104 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 1) HP 30/30 MP 0/0 Hu 81 $ 479 room=.
+-> s
+T 105 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 80 $ 479 room=.
+-> w
+T 106 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 79 $ 479 room=.
+-> n
+T 107 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 78 $ 479 room=.
+-> s
+T 108 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 77 $ 479 room=.
+-> w
+T 109 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 76 $ 479 room=.
+-> w
+T 110 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 75 $ 479 room=V
+-> s
+T 111 mode=game_loop           Eomer the Vigilant(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 74 $ 479 room=.
+-> e
+T 112 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 73 $ 479 room=.
+-> n
+T 113 mode=game_loop           Eomer the Vigilant(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 72 $ 479 room=.
+-> e
+T 114 mode=game_loop           Eomer the Vigilant(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 71 $ 479 room=.
+-> e
+T 115 mode=game_loop           Eomer the Vigilant(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 70 $ 479 room=.
+-> e
+T 116 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 69 $ 479 room=N
+-> s
+T 117 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 68 $ 479 room=.
+-> s
+T 118 mode=game_loop           Eomer the Vigilant(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 67 $ 479 room=.
+-> e
+T 119 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 66 $ 479 room=.
+-> s
+T 120 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 65 $ 479 room=.
+-> s
+T 121 mode=game_loop           Eomer the Vigilant(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 64 $ 479 room=.
+-> e
+T 122 mode=game_loop           Eomer the Vigilant(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 63 $ 479 room=.
+-> e
+T 123 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 62 $ 479 room=.
+-> s
+T 124 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 125 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 126 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 29/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 127 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 28/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 128 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 27/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 129 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 26/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 130 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 25/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP35/35)
+-> a
+T 131 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 25/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP12/35)
+-> a
+T 132 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 24/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP12/35)
+-> f
+T 133 mode=combat_mode         Eomer the Vigilant(hum) F1@( 9, 7) HP 23/30 MP 0/0 Hu 61 $ 479 room=M vs Zombie(L0 HP12/35)
+-> a
+T 134 mode=combat_victory      Eomer the Vigilant(hum) F1@( 9, 7) HP 23/30 MP 0/0 Hu 61 $ 584 room=.
+-> back
+T 135 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 7) HP 23/30 MP 0/0 Hu 61 $ 584 room=.
+-> i
+T 136 mode=inventory           Eomer the Vigilant(hum) F1@( 9, 7) HP 23/30 MP 0/0 Hu 61 $ 584 room=.
+-> u4
+T 137 mode=inventory           Eomer the Vigilant(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 61 $ 584 room=.
+-> x
+T 138 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 61 $ 584 room=.
+-> l
+T 139 mode=game_loop           Eomer the Vigilant(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 61 $ 584 room=.
+-> e
+T 140 mode=altar_mode          Eomer the Vigilant(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 60 $ 584 room=A
+-> pray
+T 141 mode=game_loop           Eomer the Vigilant(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 60 $ 584 room=.
+-> n
+T 142 mode=combat_mode         Eomer the Vigilant(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 59 $ 584 room=M vs Lichen(L0 HP10/10)
+-> a
+T 143 mode=combat_mode         Eomer the Vigilant(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 59 $ 584 room=M vs Lichen(L0 HP10/10)
+-> a
+T 144 mode=combat_victory      Eomer the Vigilant(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 59 $ 593 room=.
+-> back
+T 145 mode=game_loop           Eomer the Vigilant(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 59 $ 593 room=.
+-> s
+T 146 mode=game_loop           Eomer the Vigilant(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 58 $ 593 room=.
+-> e
+T 147 mode=combat_mode         Eomer the Vigilant(hum) F1@(11, 7) HP 29/30 MP 0/0 Hu 57 $ 593 room=M vs Kobold(L0 HP20/20)
+-> a
+T 148 mode=combat_victory      Eomer the Vigilant(hum) F1@(11, 7) HP 28/30 MP 0/0 Hu 57 $ 599 room=.
+-> back
+T 149 mode=game_loop           Eomer the Vigilant(hum) F1@(11, 7) HP 28/30 MP 0/0 Hu 57 $ 599 room=.
+-> e
+T 150 mode=game_loop           Eomer the Vigilant(hum) F1@(12, 7) HP 28/30 MP 0/0 Hu 56 $ 599 room=.
+-> n
+T 151 mode=chest_mode          Eomer the Vigilant(hum) F1@(12, 6) HP 28/30 MP 0/0 Hu 55 $ 599 room=C
+-> o
+T 152 mode=game_loop           Eomer the Vigilant(hum) F1@(12, 6) HP 28/30 MP 0/0 Hu 55 $ 599 room=.
+-> i
+T 153 mode=inventory           Eomer the Vigilant(hum) F1@(12, 6) HP 28/30 MP 0/0 Hu 55 $ 599 room=.
+-> u5
+T 154 mode=inventory           Eomer the Vigilant(hum) F1@(12, 6) HP 30/30 MP 0/0 Hu 55 $ 599 room=.
+-> x
+T 155 mode=game_loop           Eomer the Vigilant(hum) F1@(12, 6) HP 30/30 MP 0/0 Hu 55 $ 599 room=.
+-> i
+T 156 mode=inventory           Eomer the Vigilant(hum) F1@(12, 6) HP 30/30 MP 0/0 Hu 55 $ 599 room=.
+-> e3
+T 157 mode=inventory           Eomer the Vigilant(hum) F1@(12, 6) HP 30/30 MP 0/0 Hu 55 $ 599 room=.
+-> x
+T 158 mode=game_loop           Eomer the Vigilant(hum) F1@(12, 6) HP 30/30 MP 0/0 Hu 55 $ 599 room=.
+-> e
+T 159 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 6) HP 30/30 MP 0/0 Hu 54 $ 599 room=.
+-> l
+T 160 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 6) HP 30/30 MP 0/0 Hu 54 $ 599 room=.
+-> s
+T 161 mode=combat_mode         Eomer the Vigilant(hum) F1@(13, 7) HP 30/30 MP 0/0 Hu 53 $ 599 room=M vs Kobold(L0 HP8/8)
+-> a
+T 162 mode=combat_victory      Eomer the Vigilant(hum) F1@(13, 7) HP 29/40 MP 0/0 Hu 53 $ 608 room=.
+-> back
+T 163 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 7) HP 29/40 MP 0/0 Hu 53 $ 608 room=.
+-> n
+T 164 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 6) HP 29/40 MP 0/0 Hu 52 $ 608 room=.
+-> n
+T 165 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 5) HP 29/40 MP 0/0 Hu 51 $ 608 room=.
+-> i
+T 166 mode=inventory           Eomer the Vigilant(hum) F1@(13, 5) HP 29/40 MP 0/0 Hu 51 $ 608 room=.
+-> u5
+T 167 mode=inventory           Eomer the Vigilant(hum) F1@(13, 5) HP 40/40 MP 0/0 Hu 51 $ 608 room=.
+-> x
+T 168 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 5) HP 40/40 MP 0/0 Hu 51 $ 608 room=.
+-> n
+T 169 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 4) HP 40/40 MP 0/0 Hu 50 $ 608 room=.
+-> l
+T 170 mode=game_loop           Eomer the Vigilant(hum) F1@(13, 4) HP 40/40 MP 0/0 Hu 50 $ 608 room=.
+-> e
+T 171 mode=combat_mode         Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu 49 $ 608 room=M vs Stirge(L0 HP6/6)
+-> a
+T 172 mode=combat_victory      Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu 49 $ 617 room=.
+-> back
+T 173 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu 49 $ 617 room=.
+-> i
+T 174 mode=inventory           Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu 49 $ 617 room=.
+-> eat1
+T 175 mode=inventory           Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu100 $ 617 room=.
+-> x
+T 176 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu100 $ 617 room=.
+-> l
+T 177 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 4) HP 40/40 MP 0/0 Hu100 $ 617 room=.
+-> n
+T 178 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 3) HP 40/40 MP 0/0 Hu 99 $ 617 room=.
+-> n
+T 179 mode=altar_mode          Eomer the Vigilant(hum) F1@(14, 2) HP 40/40 MP 0/0 Hu 98 $ 617 room=A
+-> pray
+T 180 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 2) HP 40/40 MP 0/0 Hu 98 $ 617 room=.
+-> i
+T 181 mode=inventory           Eomer the Vigilant(hum) F1@(14, 2) HP 40/40 MP 0/0 Hu 98 $ 617 room=.
+-> eat3
+T 182 mode=inventory           Eomer the Vigilant(hum) F1@(14, 2) HP 40/40 MP 0/0 Hu100 $ 617 room=.
+-> x
+T 183 mode=game_loop           Eomer the Vigilant(hum) F1@(14, 2) HP 40/40 MP 0/0 Hu100 $ 617 room=.
+-> n
+T 184 mode=combat_mode         Eomer the Vigilant(hum) F1@(14, 1) HP 40/40 MP 0/0 Hu 99 $ 617 room=M vs Goblin(L0 HP12/12)
+-> a
+T 185 mode=combat_mode         Eomer the Vigilant(hum) F1@(14, 1) HP 40/40 MP 0/0 Hu 99 $ 617 room=M vs Goblin(L0 HP12/12)
+-> f
+T 186 mode=flee_direction_mode Eomer the Vigilant(hum) F1@(14, 1) HP 40/40 MP 0/0 Hu 99 $ 617 room=M
+-> w
+T 187 mode=stairs_down_mode    Eomer the Vigilant(hum) F1@(13, 1) HP 40/40 MP 0/0 Hu 99 $ 617 room=D
+-> d
+T 188 mode=stairs_up_mode      Eomer the Vigilant(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 99 $ 617 room=U
+-> e
+T 189 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 98 $ 617 room=.
+-> l
+T 190 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 98 $ 617 room=.
+-> s
+T 191 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 97 $ 617 room=.
+-> l
+T 192 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 97 $ 617 room=.
+-> e
+T 193 mode=chest_mode          Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 96 $ 617 room=C
+-> o
+T 194 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 96 $ 687 room=.
+-> i
+T 195 mode=inventory           Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 96 $ 687 room=.
+-> eat3
+T 196 mode=inventory           Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> x
+T 197 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> l
+T 198 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> e
+T 199 mode=combat_mode         Eomer the Vigilant(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 99 $ 687 room=M vs Cockatrice(L1 HP25/25)
+-> f
+T 200 mode=flee_direction_mode Eomer the Vigilant(hum) F2@( 4, 2) HP 39/40 MP 0/0 Hu 99 $ 687 room=M
+-> n
+T 201 mode=game_loop           Eomer the Vigilant(hum) F2@( 4, 1) HP 39/40 MP 0/0 Hu 99 $ 687 room=.
+-> w
+T 202 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 98 $ 687 room=.
+-> w
+T 203 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 97 $ 687 room=.
+-> w
+T 204 mode=stairs_up_mode      Eomer the Vigilant(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 96 $ 687 room=U
+-> s
+T 205 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 95 $ 687 room=.
+-> i
+T 206 mode=inventory           Eomer the Vigilant(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 95 $ 687 room=.
+-> eat3
+T 207 mode=inventory           Eomer the Vigilant(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> x
+T 208 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> l
+T 209 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu100 $ 687 room=.
+-> s
+T 210 mode=chest_mode          Eomer the Vigilant(hum) F2@( 1, 3) HP 40/40 MP 0/0 Hu 99 $ 687 room=C
+-> o
+T 211 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 3) HP 40/40 MP 0/0 Hu 99 $ 727 room=.
+-> s
+T 212 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 4) HP 40/40 MP 0/0 Hu 98 $ 727 room=.
+-> s
+T 213 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 727 room=.
+-> s
+T 214 mode=library_mode        Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 96 $ 727 room=L
+-> r
+T 215 mode=library_read_decision_mode Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 96 $ 727 room=L
+-> y
+T 216 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 96 $ 727 room=.
+-> s
+T 217 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 727 room=.
+-> n
+T 218 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 94 $ 727 room=.
+-> s
+T 219 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 5) HP 40/40 MP 0/0 Hu 93 $ 727 room=.
+-> e
+T 220 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 92 $ 727 room=.
+-> s
+T 221 mode=altar_mode          Eomer the Vigilant(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 91 $ 727 room=A
+-> pray
+T 222 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 91 $ 727 room=.
+-> n
+T 223 mode=game_loop           Eomer the Vigilant(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 90 $ 727 room=.
+-> e
+T 224 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 727 room=.
+-> n
+T 225 mode=game_loop           Eomer the Vigilant(hum) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 727 room=.
+-> e
+T 226 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 87 $ 727 room=.
+-> l
+T 227 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 87 $ 727 room=.
+-> n
+T 228 mode=combat_mode         Eomer the Vigilant(hum) F2@( 3, 4) HP 40/40 MP 0/0 Hu 86 $ 727 room=M vs Zombie(L1 HP35/35)
+-> a
+T 229 mode=combat_mode         Eomer the Vigilant(hum) F2@( 3, 4) HP 39/40 MP 0/0 Hu 86 $ 727 room=M vs Zombie(L1 HP35/35)
+-> a
+T 230 mode=combat_mode         Eomer the Vigilant(hum) F2@( 3, 4) HP 38/40 MP 0/0 Hu 86 $ 727 room=M vs Zombie(L1 HP35/35)
+-> a
+T 231 mode=combat_mode         Eomer the Vigilant(hum) F2@( 3, 4) HP 38/40 MP 0/0 Hu 86 $ 727 room=M vs Zombie(L1 HP11/35)
+-> a
+T 232 mode=combat_mode         Eomer the Vigilant(hum) F2@( 3, 4) HP 37/40 MP 0/0 Hu 86 $ 727 room=M vs Zombie(L1 HP11/35)
+-> a
+T 233 mode=combat_victory      Eomer the Vigilant(hum) F2@( 3, 4) HP 37/40 MP 0/0 Hu 86 $ 743 room=.
+-> back
+T 234 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 4) HP 37/40 MP 0/0 Hu 86 $ 743 room=.
+-> l
+T 235 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 4) HP 37/40 MP 0/0 Hu 86 $ 743 room=.
+-> n
+T 236 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 3) HP 37/40 MP 0/0 Hu 85 $ 743 room=.
+-> l
+T 237 mode=game_loop           Eomer the Vigilant(hum) F2@( 3, 3) HP 37/40 MP 0/0 Hu 85 $ 743 room=.
+-> e
+T 238 mode=altar_mode          Eomer the Vigilant(hum) F2@( 4, 3) HP 37/40 MP 0/0 Hu 84 $ 743 room=A
+-> pray
+T 239 mode=game_loop           Eomer the Vigilant(hum) F2@( 4, 3) HP 37/40 MP 0/0 Hu 84 $ 743 room=.
+-> e
+T 240 mode=game_loop           Eomer the Vigilant(hum) F2@( 5, 3) HP 37/40 MP 0/0 Hu 83 $ 743 room=.
+-> e
+T 241 mode=oracle_mode         Eomer the Vigilant(hum) F2@( 6, 3) HP 38/40 MP 0/0 Hu 82 $ 743 room=O
+-> s
+T 242 mode=combat_mode         Eomer the Vigilant(hum) F2@( 6, 4) HP 38/40 MP 0/0 Hu 81 $ 743 room=M vs Slime Mold(L1 HP15/15)
+-> a
+T 243 mode=combat_victory      Eomer the Vigilant(hum) F2@( 6, 4) HP 38/40 MP 0/0 Hu 81 $ 753 room=.
+-> back
+T 244 mode=game_loop           Eomer the Vigilant(hum) F2@( 6, 4) HP 38/40 MP 0/0 Hu 81 $ 753 room=.
+-> s
+T 245 mode=game_loop           Eomer the Vigilant(hum) F2@( 6, 5) HP 38/40 MP 0/0 Hu 80 $ 753 room=.
+-> l
+T 246 mode=game_loop           Eomer the Vigilant(hum) F2@( 6, 5) HP 38/40 MP 0/0 Hu 80 $ 753 room=.
+-> s
+T 247 mode=game_loop           Eomer the Vigilant(hum) F2@( 6, 6) HP 38/40 MP 0/0 Hu 79 $ 753 room=.
+-> l
+T 248 mode=game_loop           Eomer the Vigilant(hum) F2@( 6, 6) HP 38/40 MP 0/0 Hu 79 $ 753 room=.
+-> e
+T 249 mode=game_loop           Eomer the Vigilant(hum) F2@( 7, 6) HP 39/40 MP 0/0 Hu 78 $ 753 room=.
+-> l
+T 250 mode=game_loop           Eomer the Vigilant(hum) F2@( 7, 6) HP 39/40 MP 0/0 Hu 78 $ 753 room=.
+-> e
+T 251 mode=garden_mode         Eomer the Vigilant(hum) F2@( 8, 6) HP 39/40 MP 0/0 Hu 77 $ 753 room=G
+-> h
+T 252 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 6) HP 39/40 MP 0/0 Hu 77 $ 753 room=.
+-> l
+T 253 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 6) HP 39/40 MP 0/0 Hu 77 $ 753 room=.
+-> s
+T 254 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 7) HP 39/40 MP 0/0 Hu 76 $ 753 room=.
+-> l
+T 255 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 7) HP 39/40 MP 0/0 Hu 76 $ 753 room=.
+-> s
+T 256 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 8) HP 39/40 MP 0/0 Hu 75 $ 753 room=.
+-> l
+T 257 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 8) HP 39/40 MP 0/0 Hu 75 $ 753 room=.
+-> s
+T 258 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 74 $ 753 room=.
+-> l
+T 259 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 74 $ 753 room=.
+-> s
+T 260 mode=library_mode        Eomer the Vigilant(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 73 $ 753 room=L
+-> r
+T 261 mode=library_read_decision_mode Eomer the Vigilant(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 73 $ 753 room=L
+-> y
+T 262 mode=game_loop           Eomer the Vigilant(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 73 $ 828 room=.
+-> l
+T 263 mode=game_loop           Eomer the Vigilant(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 73 $ 828 room=.
+-> e
+T 264 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 828 room=V
+-> r1
+T 265 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 754 room=V
+-> b13
+T 266 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 744 room=V
+-> b4
+T 267 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 714 room=V
+-> b4
+T 268 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 684 room=V
+-> b8
+T 269 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 534 room=V
+-> b3
+T 270 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 474 room=V
+-> b5
+T 271 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 384 room=V
+-> b5
+T 272 mode=vendor_shop         Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 334 room=V
+-> x
+T 273 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 334 room=V
+-> l
+T 274 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,10) HP 32/40 MP 0/0 Hu 72 $ 334 room=V
+-> s
+T 275 mode=pool_mode           Eomer the Vigilant(hum) F2@( 9,11) HP 24/40 MP 0/0 Hu 71 $ 334 room=P
+-> dr
+T 276 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 24/40 MP 0/0 Hu 71 $ 334 room=.
+-> l
+T 277 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 24/40 MP 0/0 Hu 71 $ 334 room=.
+-> e
+T 278 mode=library_mode        Eomer the Vigilant(hum) F2@(10,11) HP 16/40 MP 0/0 Hu 70 $ 334 room=L
+-> r
+T 279 mode=library_read_decision_mode Eomer the Vigilant(hum) F2@(10,11) HP 16/40 MP 0/0 Hu 70 $ 334 room=L
+-> y
+T 280 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 16/40 MP 0/0 Hu 70 $ 384 room=.
+-> n
+T 281 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 9/40 MP 0/0 Hu 69 $ 384 room=.
+-> i
+T 282 mode=inventory           Eomer the Vigilant(hum) F2@(11,11) HP 9/40 MP 0/0 Hu 69 $ 384 room=.
+-> u6
+T 283 mode=inventory           Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 69 $ 384 room=.
+-> u7
+T 284 mode=upgrade_scroll_mode Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 69 $ 384 room=.
+-> 1
+T 285 mode=inventory           Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 69 $ 384 room=.
+-> x
+T 286 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 69 $ 384 room=.
+-> n
+T 287 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 68 $ 384 room=.
+-> n
+T 288 mode=game_loop           Eomer the Vigilant(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 67 $ 384 room=.
+-> e
+T 289 mode=game_loop           Eomer the Vigilant(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 66 $ 384 room=.
+-> e
+T 290 mode=chest_mode          Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 65 $ 384 room=C
+-> o
+T 291 mode=game_loop           Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 65 $ 444 room=.
+-> n
+T 292 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 9) HP 40/40 MP 0/0 Hu 64 $ 444 room=.
+-> n
+T 293 mode=pool_mode           Eomer the Vigilant(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 63 $ 444 room=P
+-> dr
+T 294 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 63 $ 444 room=.
+-> w
+T 295 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 62 $ 444 room=.
+-> n
+T 296 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 7) HP 40/40 MP 0/0 Hu 61 $ 444 room=M vs Kobold(L1 HP20/20)
+-> a
+T 297 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 7) HP 39/40 MP 0/0 Hu 61 $ 444 room=M vs Kobold(L1 HP20/20)
+-> a
+T 298 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 7) HP 38/40 MP 0/0 Hu 61 $ 444 room=M vs Kobold(L1 HP20/20)
+-> a
+T 299 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 7) HP 38/40 MP 0/0 Hu 61 $ 444 room=M vs Kobold(L1 HP20/20)
+-> a
+T 300 mode=combat_victory      Eomer the Vigilant(hum) F2@(11, 7) HP 38/40 MP 0/0 Hu 61 $ 452 room=.
+-> back
+T 301 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 7) HP 38/40 MP 0/0 Hu 61 $ 452 room=.
+-> e
+T 302 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 7) HP 38/40 MP 0/0 Hu 60 $ 452 room=.
+-> l
+T 303 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 7) HP 38/40 MP 0/0 Hu 60 $ 452 room=.
+-> n
+T 304 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 6) HP 38/40 MP 0/0 Hu 59 $ 452 room=.
+-> l
+T 305 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 6) HP 38/40 MP 0/0 Hu 59 $ 452 room=.
+-> n
+T 306 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 5) HP 38/40 MP 0/0 Hu 58 $ 452 room=.
+-> l
+T 307 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 5) HP 38/40 MP 0/0 Hu 58 $ 452 room=.
+-> w
+T 308 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 5) HP 38/40 MP 0/0 Hu 57 $ 452 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 309 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 5) HP 36/40 MP 0/0 Hu 57 $ 452 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 310 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 5) HP 34/40 MP 0/0 Hu 57 $ 452 room=M vs Bugbear(L1 HP16/35)
+-> a
+T 311 mode=combat_mode         Eomer the Vigilant(hum) F2@(11, 5) HP 32/40 MP 0/0 Hu 57 $ 452 room=M vs Bugbear(L1 HP16/35)
+-> a
+T 312 mode=combat_victory      Eomer the Vigilant(hum) F2@(11, 5) HP 32/40 MP 0/0 Hu 57 $ 456 room=.
+-> back
+T 313 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 5) HP 32/40 MP 0/0 Hu 57 $ 456 room=.
+-> l
+T 314 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 5) HP 32/40 MP 0/0 Hu 57 $ 456 room=.
+-> n
+T 315 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 4) HP 32/40 MP 0/0 Hu 56 $ 456 room=.
+-> l
+T 316 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 4) HP 32/40 MP 0/0 Hu 56 $ 456 room=.
+-> w
+T 317 mode=game_loop           Eomer the Vigilant(hum) F2@(10, 4) HP 32/40 MP 0/0 Hu 55 $ 456 room=.
+-> w
+T 318 mode=game_loop           Eomer the Vigilant(hum) F2@( 9, 4) HP 32/40 MP 0/0 Hu 54 $ 456 room=.
+-> w
+T 319 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 4) HP 32/40 MP 0/0 Hu 53 $ 456 room=.
+-> s
+T 320 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 5) HP 32/40 MP 0/0 Hu 52 $ 456 room=.
+-> s
+T 321 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 6) HP 32/40 MP 0/0 Hu 51 $ 456 room=.
+-> s
+T 322 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 7) HP 32/40 MP 0/0 Hu 50 $ 456 room=.
+-> s
+T 323 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 8) HP 32/40 MP 0/0 Hu 49 $ 456 room=.
+-> i
+T 324 mode=inventory           Eomer the Vigilant(hum) F2@( 8, 8) HP 32/40 MP 0/0 Hu 49 $ 456 room=.
+-> u6
+T 325 mode=inventory           Eomer the Vigilant(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 49 $ 456 room=.
+-> x
+T 326 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 49 $ 456 room=.
+-> i
+T 327 mode=inventory           Eomer the Vigilant(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 49 $ 456 room=.
+-> eat1
+T 328 mode=inventory           Eomer the Vigilant(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu100 $ 456 room=.
+-> x
+T 329 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu100 $ 456 room=.
+-> s
+T 330 mode=game_loop           Eomer the Vigilant(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 99 $ 456 room=.
+-> s
+T 331 mode=game_loop           Eomer the Vigilant(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 98 $ 456 room=.
+-> e
+T 332 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 97 $ 456 room=V
+-> e
+T 333 mode=game_loop           Eomer the Vigilant(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 96 $ 456 room=.
+-> e
+T 334 mode=game_loop           Eomer the Vigilant(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 95 $ 456 room=.
+-> e
+T 335 mode=game_loop           Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 94 $ 456 room=.
+-> e
+T 336 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 93 $ 456 room=.
+-> e
+T 337 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 92 $ 456 room=.
+-> n
+T 338 mode=dungeon_mode        Eomer the Vigilant(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 91 $ 456 room=N
+-> u
+T 339 mode=game_loop           Eomer the Vigilant(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 91 $ 456 room=N
+-> w
+T 340 mode=game_loop           Eomer the Vigilant(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 90 $ 456 room=.
+-> w
+T 341 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 9) HP 40/40 MP 0/0 Hu 89 $ 456 room=.
+-> s
+T 342 mode=game_loop           Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 88 $ 456 room=.
+-> e
+T 343 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 87 $ 456 room=.
+-> e
+T 344 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 86 $ 456 room=.
+-> e
+T 345 mode=game_loop           Eomer the Vigilant(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 85 $ 456 room=.
+-> e
+T 346 mode=garden_mode         Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 84 $ 456 room=G
+-> h
+T 347 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 84 $ 456 room=.
+-> l
+T 348 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 84 $ 456 room=.
+-> s
+T 349 mode=chest_mode          Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 83 $ 456 room=C
+-> o
+T 350 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 83 $ 606 room=.
+-> l
+T 351 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 83 $ 606 room=.
+-> s
+T 352 mode=combat_mode         Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 82 $ 606 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 353 mode=combat_mode         Eomer the Vigilant(hum) F2@(16,12) HP 38/40 MP 0/0 Hu 82 $ 606 room=M vs Skeleton(L1 HP4/25)
+-> a
+T 354 mode=combat_victory      Eomer the Vigilant(hum) F2@(16,12) HP 38/40 MP 0/0 Hu 82 $ 626 room=.
+-> back
+T 355 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 38/40 MP 0/0 Hu 82 $ 626 room=.
+-> l
+T 356 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 38/40 MP 0/0 Hu 82 $ 626 room=.
+-> e
+T 357 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 38/40 MP 0/0 Hu 81 $ 626 room=.
+-> l
+T 358 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 38/40 MP 0/0 Hu 81 $ 626 room=.
+-> e
+T 359 mode=dungeon_mode        Eomer the Vigilant(hum) F2@(18,12) HP 38/40 MP 0/0 Hu 80 $ 626 room=N
+-> u
+T 360 mode=dungeon_unlocked_mode Eomer the Vigilant(hum) F2@(18,12) HP 38/40 MP 0/0 Hu 80 $ 626 room=N
+-> r
+T 361 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 38/40 MP 0/0 Hu 80 $ 779 room=N
+-> l
+T 362 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 38/40 MP 0/0 Hu 80 $ 779 room=N
+-> n
+T 363 mode=chest_mode          Eomer the Vigilant(hum) F2@(18,11) HP 38/40 MP 0/0 Hu 79 $ 779 room=C
+-> e
+T 364 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 39/40 MP 0/0 Hu 78 $ 779 room=.
+-> s
+T 365 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 39/40 MP 0/0 Hu 77 $ 779 room=.
+-> l
+T 366 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 39/40 MP 0/0 Hu 77 $ 779 room=.
+-> n
+T 367 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 39/40 MP 0/0 Hu 76 $ 779 room=.
+-> s
+T 368 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 39/40 MP 0/0 Hu 75 $ 779 room=.
+-> w
+T 369 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 74 $ 779 room=N
+-> s
+T 370 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 73 $ 779 room=.
+-> w
+T 371 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 72 $ 779 room=.
+-> s
+T 372 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 779 room=.
+-> w
+T 373 mode=altar_mode          Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 779 room=A
+-> pray
+T 374 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 779 room=.
+-> l
+T 375 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 779 room=.
+-> n
+T 376 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 69 $ 779 room=.
+-> l
+T 377 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 69 $ 779 room=.
+-> w
+T 378 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 68 $ 779 room=.
+-> w
+T 379 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 67 $ 779 room=.
+-> w
+T 380 mode=pool_mode           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 66 $ 779 room=P
+-> dr
+T 381 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 66 $ 779 room=.
+-> n
+T 382 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 65 $ 779 room=.
+-> e
+T 383 mode=combat_mode         Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 64 $ 779 room=M vs Goblin(L1 HP12/12)
+-> a
+T 384 mode=combat_victory      Eomer the Vigilant(hum) F2@(14,12) HP 39/40 MP 0/0 Hu 64 $ 799 room=.
+-> back
+T 385 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 39/40 MP 0/0 Hu 64 $ 799 room=.
+-> n
+T 386 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 39/40 MP 0/0 Hu 63 $ 799 room=.
+-> n
+T 387 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 39/40 MP 0/0 Hu 62 $ 799 room=.
+-> n
+T 388 mode=game_loop           Eomer the Vigilant(hum) F2@(14, 9) HP 39/40 MP 0/0 Hu 61 $ 799 room=N
+-> w
+T 389 mode=game_loop           Eomer the Vigilant(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> s
+T 390 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> l
+T 391 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> s
+T 392 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> s
+T 393 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> s
+T 394 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> e
+T 395 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> e
+T 396 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> i
+T 397 mode=inventory           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> eat2
+T 398 mode=inventory           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> eat1
+T 399 mode=inventory           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu100 $ 799 room=.
+-> x
+T 400 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu100 $ 799 room=.
+-> l
+T 401 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu100 $ 799 room=.
+-> s
+T 402 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> e
+T 403 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> e
+T 404 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T 405 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> e
+T 406 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> n
+T 407 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 94 $ 799 room=N
+-> n
+T 408 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 93 $ 799 room=C
+-> e
+T 409 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> s
+T 410 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> l
+T 411 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 412 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> s
+T 413 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> w
+T 414 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 88 $ 799 room=N
+-> s
+T 415 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> w
+T 416 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> s
+T 417 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> s
+T 418 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> n
+T 419 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> w
+T 420 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> l
+T 421 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> w
+T 422 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> n
+T 423 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> e
+T 424 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T 425 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> e
+T 426 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> s
+T 427 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> s
+T 428 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> w
+T 429 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> n
+T 430 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> l
+T 431 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> n
+T 432 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> w
+T 433 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> s
+T 434 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> s
+T 435 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> e
+T 436 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> e
+T 437 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> s
+T 438 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> n
+T 439 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> n
+T 440 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> l
+T 441 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> n
+T 442 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> n
+T 443 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> e
+T 444 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 61 $ 799 room=C
+-> s
+T 445 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 60 $ 799 room=N
+-> s
+T 446 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> w
+T 447 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> s
+T 448 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> w
+T 449 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> n
+T 450 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> l
+T 451 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> n
+T 452 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> w
+T 453 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> s
+T 454 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> s
+T 455 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> e
+T 456 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> e
+T 457 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 458 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 459 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 460 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> l
+T 461 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> n
+T 462 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> n
+T 463 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> w
+T 464 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> s
+T 465 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> s
+T 466 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> e
+T 467 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> s
+T 468 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> n
+T 469 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 470 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> l
+T 471 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> w
+T 472 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> s
+T 473 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> w
+T 474 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> n
+T 475 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> w
+T 476 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> w
+T 477 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> n
+T 478 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> e
+T 479 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> e
+T 480 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> l
+T 481 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> s
+T 482 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> s
+T 483 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> e
+T 484 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> e
+T 485 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> s
+T 486 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> n
+T 487 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> n
+T 488 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> w
+T 489 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T 490 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> l
+T 491 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> w
+T 492 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> n
+T 493 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> w
+T 494 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> n
+T 495 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> n
+T 496 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> w
+T 497 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> s
+T 498 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> s
+T 499 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> e
+T 500 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> l
+T 501 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> e
+T 502 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> s
+T 503 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> e
+T 504 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 505 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 506 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> w
+T 507 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> w
+T 508 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> s
+T 509 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> e
+T 510 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> l
+T 511 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> e
+T 512 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> n
+T 513 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> w
+T 514 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> n
+T 515 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> e
+T 516 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 517 mode=inventory           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 518 mode=inventory           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 519 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> e
+T 520 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 98 $ 799 room=N
+-> l
+T 521 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 98 $ 799 room=N
+-> s
+T 522 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> w
+T 523 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> s
+T 524 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> w
+T 525 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> n
+T 526 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> n
+T 527 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> w
+T 528 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> s
+T 529 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> s
+T 530 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> l
+T 531 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> e
+T 532 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> e
+T 533 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> n
+T 534 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> n
+T 535 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> n
+T 536 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> e
+T 537 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 83 $ 799 room=C
+-> s
+T 538 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 82 $ 799 room=N
+-> s
+T 539 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> w
+T 540 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> l
+T 541 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> s
+T 542 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> s
+T 543 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> n
+T 544 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> w
+T 545 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> n
+T 546 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> n
+T 547 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> e
+T 548 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T 549 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> s
+T 550 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> l
+T 551 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> w
+T 552 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> w
+T 553 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> n
+T 554 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> e
+T 555 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> n
+T 556 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> e
+T 557 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> s
+T 558 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T 559 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> w
+T 560 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> l
+T 561 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> w
+T 562 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> n
+T 563 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 564 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 565 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> n
+T 566 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> w
+T 567 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> s
+T 568 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> s
+T 569 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> s
+T 570 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> l
+T 571 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> e
+T 572 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> e
+T 573 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> n
+T 574 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> w
+T 575 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 576 mode=inventory           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 577 mode=inventory           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 578 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> n
+T 579 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> n
+T 580 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> l
+T 581 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> e
+T 582 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> s
+T 583 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> s
+T 584 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> s
+T 585 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> w
+T 586 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> n
+T 587 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 588 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> n
+T 589 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> n
+T 590 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> l
+T 591 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> e
+T 592 mode=game_loop           Eomer the Vigilant(hum) F2@(17,10) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> s
+T 593 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> s
+T 594 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> s
+T 595 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> s
+T 596 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> s
+T 597 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> n
+T 598 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> w
+T 599 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> n
+T 600 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> l
+T 601 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> e
+T 602 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> n
+T 603 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> w
+T 604 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> n
+T 605 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> n
+T 606 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> e
+T 607 mode=game_loop           Eomer the Vigilant(hum) F2@(17,10) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T 608 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> s
+T 609 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> s
+T 610 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> l
+T 611 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> s
+T 612 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> w
+T 613 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> n
+T 614 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> n
+T 615 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> w
+T 616 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> s
+T 617 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T 618 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> e
+T 619 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> e
+T 620 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> l
+T 621 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> s
+T 622 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> n
+T 623 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 624 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> e
+T 625 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> n
+T 626 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 56 $ 799 room=N
+-> e
+T 627 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> n
+T 628 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> w
+T 629 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 53 $ 799 room=C
+-> w
+T 630 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> l
+T 631 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> s
+T 632 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> s
+T 633 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> s
+T 634 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 635 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 636 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 637 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> w
+T 638 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> w
+T 639 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T 640 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> l
+T 641 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> e
+T 642 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> e
+T 643 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> s
+T 644 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> w
+T 645 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> w
+T 646 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 647 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> w
+T 648 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> w
+T 649 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> n
+T 650 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> l
+T 651 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> n
+T 652 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> w
+T 653 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> n
+T 654 mode=game_loop           Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> e
+T 655 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> e
+T 656 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> s
+T 657 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> s
+T 658 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> s
+T 659 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> e
+T 660 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> l
+T 661 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> s
+T 662 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> e
+T 663 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> e
+T 664 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> s
+T 665 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> n
+T 666 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> n
+T 667 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> n
+T 668 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> n
+T 669 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> w
+T 670 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> l
+T 671 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> s
+T 672 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> s
+T 673 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> s
+T 674 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> e
+T 675 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> n
+T 676 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> e
+T 677 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> n
+T 678 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 62 $ 799 room=N
+-> e
+T 679 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> n
+T 680 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> l
+T 681 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> w
+T 682 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 59 $ 799 room=C
+-> w
+T 683 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> s
+T 684 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> s
+T 685 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> s
+T 686 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> s
+T 687 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> n
+T 688 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> w
+T 689 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> n
+T 690 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> l
+T 691 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> w
+T 692 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> s
+T 693 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 694 mode=inventory           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 695 mode=inventory           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 696 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> n
+T 697 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> w
+T 698 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T 699 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> n
+T 700 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> l
+T 701 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> n
+T 702 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> e
+T 703 mode=game_loop           Eomer the Vigilant(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> s
+T 704 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> s
+T 705 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> s
+T 706 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> s
+T 707 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> e
+T 708 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> e
+T 709 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> s
+T 710 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> l
+T 711 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> n
+T 712 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> n
+T 713 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> n
+T 714 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> e
+T 715 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 82 $ 799 room=N
+-> s
+T 716 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> n
+T 717 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 80 $ 799 room=N
+-> e
+T 718 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T 719 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> w
+T 720 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 77 $ 799 room=C
+-> l
+T 721 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 77 $ 799 room=C
+-> w
+T 722 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> s
+T 723 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> s
+T 724 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> s
+T 725 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T 726 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> n
+T 727 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> w
+T 728 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> n
+T 729 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> n
+T 730 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> l
+T 731 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> n
+T 732 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> e
+T 733 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> s
+T 734 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> s
+T 735 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T 736 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> w
+T 737 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> n
+T 738 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> n
+T 739 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> n
+T 740 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> l
+T 741 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> e
+T 742 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> s
+T 743 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> s
+T 744 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> s
+T 745 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> s
+T 746 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> n
+T 747 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> w
+T 748 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> w
+T 749 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> n
+T 750 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> l
+T 751 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> e
+T 752 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 753 mode=inventory           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 754 mode=inventory           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 755 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> n
+T 756 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> n
+T 757 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> w
+T 758 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> s
+T 759 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> s
+T 760 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> l
+T 761 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> s
+T 762 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> e
+T 763 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> e
+T 764 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 765 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> e
+T 766 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> n
+T 767 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 88 $ 799 room=N
+-> n
+T 768 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 87 $ 799 room=C
+-> w
+T 769 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> s
+T 770 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> l
+T 771 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> s
+T 772 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> s
+T 773 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> s
+T 774 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> n
+T 775 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> w
+T 776 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> w
+T 777 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T 778 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> e
+T 779 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> n
+T 780 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> l
+T 781 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> e
+T 782 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> s
+T 783 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> s
+T 784 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T 785 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> n
+T 786 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> w
+T 787 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> n
+T 788 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> w
+T 789 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> s
+T 790 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> l
+T 791 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> n
+T 792 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> n
+T 793 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> e
+T 794 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T 795 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> s
+T 796 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> e
+T 797 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> n
+T 798 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 799 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 800 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 58 $ 799 room=N
+-> l
+T 801 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 58 $ 799 room=N
+-> w
+T 802 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> n
+T 803 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> n
+T 804 mode=game_loop           Eomer the Vigilant(hum) F2@(17,10) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> w
+T 805 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> s
+T 806 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> s
+T 807 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> s
+T 808 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> s
+T 809 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> e
+T 810 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 811 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 812 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 813 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> s
+T 814 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> n
+T 815 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T 816 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> e
+T 817 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> n
+T 818 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 94 $ 799 room=N
+-> n
+T 819 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 93 $ 799 room=C
+-> w
+T 820 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> l
+T 821 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> s
+T 822 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> s
+T 823 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> s
+T 824 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> s
+T 825 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> n
+T 826 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> w
+T 827 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> n
+T 828 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> n
+T 829 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> e
+T 830 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> l
+T 831 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> s
+T 832 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> s
+T 833 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> w
+T 834 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> w
+T 835 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T 836 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> e
+T 837 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> e
+T 838 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> s
+T 839 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> w
+T 840 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> l
+T 841 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> w
+T 842 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> n
+T 843 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> e
+T 844 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> n
+T 845 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> w
+T 846 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> n
+T 847 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> n
+T 848 mode=game_loop           Eomer the Vigilant(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> w
+T 849 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> s
+T 850 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> l
+T 851 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> s
+T 852 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T 853 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> e
+T 854 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> s
+T 855 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> e
+T 856 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 857 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 858 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> n
+T 859 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> e
+T 860 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 56 $ 799 room=N
+-> l
+T 861 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 56 $ 799 room=N
+-> s
+T 862 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> n
+T 863 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 54 $ 799 room=N
+-> e
+T 864 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> n
+T 865 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> w
+T 866 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 51 $ 799 room=C
+-> w
+T 867 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> s
+T 868 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 869 mode=inventory           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 870 mode=inventory           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 871 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> s
+T 872 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> s
+T 873 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> w
+T 874 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> n
+T 875 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> w
+T 876 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> s
+T 877 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> n
+T 878 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> w
+T 879 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 880 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> l
+T 881 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> n
+T 882 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> n
+T 883 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> w
+T 884 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> s
+T 885 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> s
+T 886 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> s
+T 887 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> e
+T 888 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> e
+T 889 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> s
+T 890 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> l
+T 891 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> e
+T 892 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> e
+T 893 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> s
+T 894 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> n
+T 895 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> n
+T 896 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> e
+T 897 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> n
+T 898 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 74 $ 799 room=N
+-> n
+T 899 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 73 $ 799 room=C
+-> w
+T 900 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> l
+T 901 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> s
+T 902 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> s
+T 903 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> s
+T 904 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> s
+T 905 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> n
+T 906 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> w
+T 907 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> n
+T 908 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> n
+T 909 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> w
+T 910 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> l
+T 911 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> s
+T 912 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> s
+T 913 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> e
+T 914 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 915 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T 916 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> e
+T 917 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> n
+T 918 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 56 $ 799 room=N
+-> n
+T 919 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 55 $ 799 room=C
+-> w
+T 920 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> l
+T 921 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> s
+T 922 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> s
+T 923 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> s
+T 924 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> s
+T 925 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> n
+T 926 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 927 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 928 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 929 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> w
+T 930 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> w
+T 931 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T 932 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> e
+T 933 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> n
+T 934 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> n
+T 935 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> e
+T 936 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> s
+T 937 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> s
+T 938 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> s
+T 939 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> w
+T 940 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> w
+T 941 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> n
+T 942 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> w
+T 943 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> w
+T 944 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> n
+T 945 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> e
+T 946 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> n
+T 947 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> w
+T 948 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 80 $ 799 room=.
+-> w
+T 949 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T 950 mode=game_loop           Eomer the Vigilant(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> n
+T 951 mode=game_loop           Eomer the Vigilant(hum) F2@(12, 9) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> w
+T 952 mode=game_loop           Eomer the Vigilant(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> s
+T 953 mode=game_loop           Eomer the Vigilant(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> s
+T 954 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> e
+T 955 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> e
+T 956 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> s
+T 957 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> s
+T 958 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> e
+T 959 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> e
+T 960 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> s
+T 961 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> e
+T 962 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> e
+T 963 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> n
+T 964 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> w
+T 965 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> w
+T 966 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> s
+T 967 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> e
+T 968 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> e
+T 969 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> s
+T 970 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> n
+T 971 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> n
+T 972 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 56 $ 799 room=.
+-> n
+T 973 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 55 $ 799 room=.
+-> n
+T 974 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> e
+T 975 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 53 $ 799 room=C
+-> s
+T 976 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 52 $ 799 room=N
+-> s
+T 977 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> w
+T 978 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> s
+T 979 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T 980 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T 981 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T 982 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> s
+T 983 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> n
+T 984 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> w
+T 985 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> w
+T 986 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> n
+T 987 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> e
+T 988 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> n
+T 989 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> n
+T 990 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> n
+T 991 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> w
+T 992 mode=game_loop           Eomer the Vigilant(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> s
+T 993 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> s
+T 994 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> s
+T 995 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=.
+-> s
+T 996 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 85 $ 799 room=.
+-> e
+T 997 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 84 $ 799 room=.
+-> e
+T 998 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 83 $ 799 room=.
+-> n
+T 999 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 82 $ 799 room=.
+-> e
+T1000 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 81 $ 799 room=.
+-> n
+T1001 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 80 $ 799 room=N
+-> w
+T1002 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 79 $ 799 room=.
+-> n
+T1003 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 78 $ 799 room=.
+-> w
+T1004 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 40/40 MP 0/0 Hu 77 $ 799 room=.
+-> s
+T1005 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 76 $ 799 room=.
+-> s
+T1006 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 75 $ 799 room=.
+-> s
+T1007 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 74 $ 799 room=.
+-> e
+T1008 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 73 $ 799 room=.
+-> s
+T1009 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 72 $ 799 room=.
+-> n
+T1010 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 71 $ 799 room=.
+-> n
+T1011 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 70 $ 799 room=.
+-> w
+T1012 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 69 $ 799 room=.
+-> s
+T1013 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 68 $ 799 room=.
+-> w
+T1014 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 67 $ 799 room=.
+-> n
+T1015 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 66 $ 799 room=.
+-> n
+T1016 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 65 $ 799 room=.
+-> e
+T1017 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 64 $ 799 room=.
+-> s
+T1018 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 63 $ 799 room=.
+-> s
+T1019 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 799 room=.
+-> e
+T1020 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 61 $ 799 room=.
+-> s
+T1021 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 60 $ 799 room=.
+-> n
+T1022 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 59 $ 799 room=.
+-> n
+T1023 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 58 $ 799 room=.
+-> e
+T1024 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 57 $ 799 room=.
+-> n
+T1025 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 56 $ 799 room=N
+-> n
+T1026 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 40/40 MP 0/0 Hu 55 $ 799 room=C
+-> w
+T1027 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 54 $ 799 room=.
+-> s
+T1028 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 53 $ 799 room=.
+-> s
+T1029 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/40 MP 0/0 Hu 52 $ 799 room=.
+-> s
+T1030 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 51 $ 799 room=.
+-> s
+T1031 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 50 $ 799 room=.
+-> n
+T1032 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> i
+T1033 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 49 $ 799 room=.
+-> eat1
+T1034 mode=inventory           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> x
+T1035 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 99 $ 799 room=.
+-> w
+T1036 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 98 $ 799 room=.
+-> w
+T1037 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 97 $ 799 room=.
+-> n
+T1038 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 96 $ 799 room=.
+-> w
+T1039 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 95 $ 799 room=.
+-> w
+T1040 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 94 $ 799 room=.
+-> n
+T1041 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 93 $ 799 room=.
+-> n
+T1042 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 92 $ 799 room=.
+-> w
+T1043 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 91 $ 799 room=.
+-> w
+T1044 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 90 $ 799 room=.
+-> w
+T1045 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 89 $ 799 room=.
+-> w
+T1046 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 88 $ 799 room=.
+-> s
+T1047 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 87 $ 799 room=.
+-> s
+T1048 mode=combat_mode         Eomer the Vigilant(hum) F2@( 9,13) HP 40/40 MP 0/0 Hu 86 $ 799 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T1049 mode=combat_mode         Eomer the Vigilant(hum) F2@( 9,13) HP 39/40 MP 0/0 Hu 86 $ 799 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T1050 mode=combat_mode         Eomer the Vigilant(hum) F2@( 9,13) HP 38/40 MP 0/0 Hu 86 $ 799 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T1051 mode=combat_mode         Eomer the Vigilant(hum) F2@( 9,13) HP 38/40 MP 0/0 Hu 86 $ 799 room=M vs Giant Centipede(L1 HP15/15)
+-> f
+T1052 mode=flee_direction_mode Eomer the Vigilant(hum) F2@( 9,13) HP 38/40 MP 0/0 Hu 86 $ 799 room=M
+-> w
+T1053 mode=game_loop           Eomer the Vigilant(hum) F2@( 8,13) HP 38/40 MP 0/0 Hu 86 $ 799 room=.
+-> e
+T1054 mode=combat_mode         Eomer the Vigilant(hum) F2@( 9,13) HP 38/40 MP 0/0 Hu 85 $ 799 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T1055 mode=combat_victory      Eomer the Vigilant(hum) F2@( 9,13) HP 37/50 MP 0/0 Hu 85 $ 801 room=.
+-> back
+T1056 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,13) HP 37/50 MP 0/0 Hu 85 $ 801 room=.
+-> n
+T1057 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,12) HP 37/50 MP 0/0 Hu 84 $ 801 room=.
+-> n
+T1058 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 37/50 MP 0/0 Hu 83 $ 801 room=.
+-> e
+T1059 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 38/50 MP 0/0 Hu 82 $ 801 room=.
+-> e
+T1060 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 38/50 MP 0/0 Hu 81 $ 801 room=.
+-> e
+T1061 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 38/50 MP 0/0 Hu 80 $ 801 room=.
+-> e
+T1062 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 38/50 MP 0/0 Hu 79 $ 801 room=.
+-> s
+T1063 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 39/50 MP 0/0 Hu 78 $ 801 room=.
+-> s
+T1064 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 39/50 MP 0/0 Hu 77 $ 801 room=.
+-> e
+T1065 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 39/50 MP 0/0 Hu 76 $ 801 room=.
+-> e
+T1066 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 39/50 MP 0/0 Hu 75 $ 801 room=.
+-> s
+T1067 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 40/50 MP 0/0 Hu 74 $ 801 room=.
+-> e
+T1068 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/50 MP 0/0 Hu 73 $ 801 room=.
+-> e
+T1069 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 40/50 MP 0/0 Hu 72 $ 801 room=.
+-> n
+T1070 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/50 MP 0/0 Hu 71 $ 801 room=.
+-> n
+T1071 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 41/50 MP 0/0 Hu 70 $ 801 room=.
+-> w
+T1072 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 41/50 MP 0/0 Hu 69 $ 801 room=.
+-> s
+T1073 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 41/50 MP 0/0 Hu 68 $ 801 room=.
+-> s
+T1074 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 41/50 MP 0/0 Hu 67 $ 801 room=.
+-> e
+T1075 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 42/50 MP 0/0 Hu 66 $ 801 room=.
+-> n
+T1076 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 42/50 MP 0/0 Hu 65 $ 801 room=.
+-> n
+T1077 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 42/50 MP 0/0 Hu 64 $ 801 room=.
+-> e
+T1078 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 42/50 MP 0/0 Hu 63 $ 801 room=N
+-> s
+T1079 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 43/50 MP 0/0 Hu 62 $ 801 room=.
+-> n
+T1080 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 43/50 MP 0/0 Hu 61 $ 801 room=N
+-> e
+T1081 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 43/50 MP 0/0 Hu 60 $ 801 room=.
+-> n
+T1082 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 43/50 MP 0/0 Hu 59 $ 801 room=.
+-> w
+T1083 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 43/50 MP 0/0 Hu 58 $ 801 room=C
+-> w
+T1084 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 43/50 MP 0/0 Hu 57 $ 801 room=.
+-> s
+T1085 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 43/50 MP 0/0 Hu 56 $ 801 room=.
+-> s
+T1086 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 43/50 MP 0/0 Hu 55 $ 801 room=.
+-> s
+T1087 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 43/50 MP 0/0 Hu 54 $ 801 room=.
+-> s
+T1088 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 43/50 MP 0/0 Hu 53 $ 801 room=.
+-> n
+T1089 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 43/50 MP 0/0 Hu 52 $ 801 room=.
+-> w
+T1090 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 43/50 MP 0/0 Hu 51 $ 801 room=.
+-> n
+T1091 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 43/50 MP 0/0 Hu 50 $ 801 room=.
+-> e
+T1092 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 43/50 MP 0/0 Hu 49 $ 801 room=.
+-> i
+T1093 mode=inventory           Eomer the Vigilant(hum) F2@(17,13) HP 43/50 MP 0/0 Hu 49 $ 801 room=.
+-> u6
+T1094 mode=inventory           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> x
+T1095 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> i
+T1096 mode=inventory           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> eat1
+T1097 mode=inventory           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> x
+T1098 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> n
+T1099 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 98 $ 801 room=.
+-> n
+T1100 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu 97 $ 801 room=.
+-> e
+T1101 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 50/50 MP 0/0 Hu 96 $ 801 room=C
+-> s
+T1102 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 95 $ 801 room=N
+-> s
+T1103 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 94 $ 801 room=.
+-> w
+T1104 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 93 $ 801 room=.
+-> s
+T1105 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 92 $ 801 room=.
+-> w
+T1106 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 91 $ 801 room=.
+-> n
+T1107 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 90 $ 801 room=.
+-> n
+T1108 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 89 $ 801 room=.
+-> e
+T1109 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 88 $ 801 room=.
+-> s
+T1110 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 87 $ 801 room=.
+-> s
+T1111 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 86 $ 801 room=.
+-> s
+T1112 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 85 $ 801 room=.
+-> n
+T1113 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 84 $ 801 room=.
+-> w
+T1114 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 83 $ 801 room=.
+-> w
+T1115 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 82 $ 801 room=.
+-> n
+T1116 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 81 $ 801 room=.
+-> e
+T1117 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 80 $ 801 room=.
+-> e
+T1118 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 79 $ 801 room=.
+-> s
+T1119 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 78 $ 801 room=.
+-> w
+T1120 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 77 $ 801 room=.
+-> w
+T1121 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 76 $ 801 room=.
+-> n
+T1122 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 75 $ 801 room=.
+-> n
+T1123 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 74 $ 801 room=.
+-> w
+T1124 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 50/50 MP 0/0 Hu 73 $ 801 room=.
+-> s
+T1125 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 50/50 MP 0/0 Hu 72 $ 801 room=.
+-> w
+T1126 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 50/50 MP 0/0 Hu 71 $ 801 room=.
+-> n
+T1127 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 50/50 MP 0/0 Hu 70 $ 801 room=.
+-> n
+T1128 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 50/50 MP 0/0 Hu 69 $ 801 room=.
+-> w
+T1129 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 68 $ 801 room=.
+-> w
+T1130 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 67 $ 801 room=.
+-> w
+T1131 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 66 $ 801 room=.
+-> w
+T1132 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 50/50 MP 0/0 Hu 65 $ 801 room=.
+-> s
+T1133 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,12) HP 50/50 MP 0/0 Hu 64 $ 801 room=.
+-> s
+T1134 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,13) HP 50/50 MP 0/0 Hu 63 $ 801 room=.
+-> w
+T1135 mode=game_loop           Eomer the Vigilant(hum) F2@( 8,13) HP 50/50 MP 0/0 Hu 62 $ 801 room=.
+-> e
+T1136 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,13) HP 50/50 MP 0/0 Hu 61 $ 801 room=.
+-> n
+T1137 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,12) HP 50/50 MP 0/0 Hu 60 $ 801 room=.
+-> n
+T1138 mode=game_loop           Eomer the Vigilant(hum) F2@( 9,11) HP 50/50 MP 0/0 Hu 59 $ 801 room=.
+-> e
+T1139 mode=game_loop           Eomer the Vigilant(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 58 $ 801 room=.
+-> e
+T1140 mode=game_loop           Eomer the Vigilant(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 57 $ 801 room=.
+-> e
+T1141 mode=game_loop           Eomer the Vigilant(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 56 $ 801 room=.
+-> e
+T1142 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 50/50 MP 0/0 Hu 55 $ 801 room=.
+-> s
+T1143 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 50/50 MP 0/0 Hu 54 $ 801 room=.
+-> s
+T1144 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 50/50 MP 0/0 Hu 53 $ 801 room=.
+-> e
+T1145 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 50/50 MP 0/0 Hu 52 $ 801 room=.
+-> e
+T1146 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 51 $ 801 room=.
+-> s
+T1147 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 50 $ 801 room=.
+-> e
+T1148 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> i
+T1149 mode=inventory           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> eat1
+T1150 mode=inventory           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> x
+T1151 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> e
+T1152 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 98 $ 801 room=.
+-> s
+T1153 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 97 $ 801 room=.
+-> n
+T1154 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 96 $ 801 room=.
+-> n
+T1155 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 95 $ 801 room=.
+-> w
+T1156 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 94 $ 801 room=.
+-> s
+T1157 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 93 $ 801 room=.
+-> w
+T1158 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 92 $ 801 room=.
+-> n
+T1159 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 91 $ 801 room=.
+-> w
+T1160 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 50/50 MP 0/0 Hu 90 $ 801 room=.
+-> w
+T1161 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 50/50 MP 0/0 Hu 89 $ 801 room=.
+-> n
+T1162 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 50/50 MP 0/0 Hu 88 $ 801 room=.
+-> n
+T1163 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 50/50 MP 0/0 Hu 87 $ 801 room=.
+-> e
+T1164 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 50/50 MP 0/0 Hu 86 $ 801 room=.
+-> s
+T1165 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 50/50 MP 0/0 Hu 85 $ 801 room=.
+-> s
+T1166 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 50/50 MP 0/0 Hu 84 $ 801 room=.
+-> e
+T1167 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 83 $ 801 room=.
+-> s
+T1168 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 82 $ 801 room=.
+-> e
+T1169 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 81 $ 801 room=.
+-> e
+T1170 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 80 $ 801 room=.
+-> s
+T1171 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 79 $ 801 room=.
+-> n
+T1172 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 78 $ 801 room=.
+-> n
+T1173 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 77 $ 801 room=.
+-> w
+T1174 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 76 $ 801 room=.
+-> s
+T1175 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 75 $ 801 room=.
+-> w
+T1176 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 74 $ 801 room=.
+-> n
+T1177 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 73 $ 801 room=.
+-> n
+T1178 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 72 $ 801 room=.
+-> n
+T1179 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 50/50 MP 0/0 Hu 71 $ 801 room=.
+-> e
+T1180 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 50/50 MP 0/0 Hu 70 $ 801 room=.
+-> s
+T1181 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 69 $ 801 room=.
+-> s
+T1182 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 68 $ 801 room=.
+-> s
+T1183 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 67 $ 801 room=.
+-> e
+T1184 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 66 $ 801 room=.
+-> s
+T1185 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 65 $ 801 room=.
+-> n
+T1186 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 64 $ 801 room=.
+-> n
+T1187 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 63 $ 801 room=.
+-> e
+T1188 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 62 $ 801 room=.
+-> n
+T1189 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 61 $ 801 room=N
+-> w
+T1190 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 60 $ 801 room=.
+-> w
+T1191 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 59 $ 801 room=.
+-> s
+T1192 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 58 $ 801 room=.
+-> s
+T1193 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 57 $ 801 room=.
+-> e
+T1194 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 56 $ 801 room=.
+-> n
+T1195 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 55 $ 801 room=.
+-> n
+T1196 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 54 $ 801 room=.
+-> w
+T1197 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 53 $ 801 room=.
+-> s
+T1198 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 52 $ 801 room=.
+-> s
+T1199 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 51 $ 801 room=.
+-> e
+T1200 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 50 $ 801 room=.
+-> s
+T1201 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> i
+T1202 mode=inventory           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> eat1
+T1203 mode=inventory           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> x
+T1204 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 99 $ 801 room=.
+-> n
+T1205 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 98 $ 801 room=.
+-> n
+T1206 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 97 $ 801 room=.
+-> n
+T1207 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 96 $ 801 room=.
+-> w
+T1208 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 95 $ 801 room=.
+-> s
+T1209 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 94 $ 801 room=.
+-> s
+T1210 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 93 $ 801 room=.
+-> e
+T1211 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 92 $ 801 room=.
+-> n
+T1212 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 91 $ 801 room=.
+-> n
+T1213 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 90 $ 801 room=.
+-> n
+T1214 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu 89 $ 801 room=.
+-> n
+T1215 mode=game_loop           Eomer the Vigilant(hum) F2@(17,10) HP 50/50 MP 0/0 Hu 88 $ 801 room=.
+-> w
+T1216 mode=game_loop           Eomer the Vigilant(hum) F2@(16,10) HP 50/50 MP 0/0 Hu 87 $ 801 room=.
+-> s
+T1217 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 50/50 MP 0/0 Hu 86 $ 801 room=.
+-> s
+T1218 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 85 $ 801 room=.
+-> s
+T1219 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 84 $ 801 room=.
+-> s
+T1220 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 83 $ 801 room=.
+-> e
+T1221 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 82 $ 801 room=.
+-> n
+T1222 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 81 $ 801 room=.
+-> e
+T1223 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 80 $ 801 room=.
+-> n
+T1224 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 79 $ 801 room=N
+-> w
+T1225 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 78 $ 801 room=.
+-> n
+T1226 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu 77 $ 801 room=.
+-> e
+T1227 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 50/50 MP 0/0 Hu 76 $ 801 room=C
+-> e
+T1228 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 50/50 MP 0/0 Hu 75 $ 801 room=.
+-> s
+T1229 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 50/50 MP 0/0 Hu 74 $ 801 room=.
+-> w
+T1230 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 73 $ 801 room=N
+-> s
+T1231 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 72 $ 801 room=.
+-> w
+T1232 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 71 $ 801 room=.
+-> s
+T1233 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 70 $ 801 room=.
+-> w
+T1234 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 69 $ 801 room=.
+-> n
+T1235 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 68 $ 801 room=.
+-> n
+T1236 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 67 $ 801 room=.
+-> n
+T1237 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 50/50 MP 0/0 Hu 66 $ 801 room=.
+-> w
+T1238 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 50/50 MP 0/0 Hu 65 $ 801 room=.
+-> s
+T1239 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 64 $ 801 room=.
+-> s
+T1240 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 63 $ 801 room=.
+-> s
+T1241 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 62 $ 801 room=.
+-> e
+T1242 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 61 $ 801 room=.
+-> e
+T1243 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 60 $ 801 room=.
+-> s
+T1244 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 59 $ 801 room=.
+-> n
+T1245 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 58 $ 801 room=.
+-> n
+T1246 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 57 $ 801 room=.
+-> n
+T1247 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 56 $ 801 room=.
+-> w
+T1248 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 55 $ 801 room=.
+-> s
+T1249 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 54 $ 801 room=.
+-> s
+T1250 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 53 $ 801 room=.
+-> e
+T1251 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 52 $ 801 room=.
+-> s
+T1252 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 51 $ 801 room=.
+-> n
+T1253 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 50 $ 801 room=.
+-> n
+T1254 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 49 $ 801 room=.
+-> n
+T1255 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 48 $ 801 room=.
+-> n
+T1256 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu 47 $ 801 room=.
+-> w
+T1257 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 50/50 MP 0/0 Hu 46 $ 801 room=.
+-> s
+T1258 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 45 $ 801 room=.
+-> s
+T1259 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 44 $ 801 room=.
+-> s
+T1260 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 43 $ 801 room=.
+-> e
+T1261 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 42 $ 801 room=.
+-> s
+T1262 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 50/50 MP 0/0 Hu 41 $ 801 room=.
+-> n
+T1263 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 40 $ 801 room=.
+-> n
+T1264 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 39 $ 801 room=.
+-> e
+T1265 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 38 $ 801 room=.
+-> n
+T1266 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 37 $ 801 room=N
+-> e
+T1267 mode=game_loop           Eomer the Vigilant(hum) F2@(19,12) HP 50/50 MP 0/0 Hu 36 $ 801 room=.
+-> n
+T1268 mode=game_loop           Eomer the Vigilant(hum) F2@(19,11) HP 50/50 MP 0/0 Hu 35 $ 801 room=.
+-> w
+T1269 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 50/50 MP 0/0 Hu 34 $ 801 room=C
+-> w
+T1270 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu 33 $ 801 room=.
+-> s
+T1271 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 32 $ 801 room=.
+-> s
+T1272 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 31 $ 801 room=.
+-> s
+T1273 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 30 $ 801 room=.
+-> w
+T1274 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 29 $ 801 room=.
+-> n
+T1275 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 28 $ 801 room=.
+-> w
+T1276 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 27 $ 801 room=.
+-> s
+T1277 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 26 $ 801 room=.
+-> n
+T1278 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 25 $ 801 room=.
+-> w
+T1279 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 50/50 MP 0/0 Hu 24 $ 801 room=.
+-> w
+T1280 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 50/50 MP 0/0 Hu 23 $ 801 room=.
+-> n
+T1281 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 50/50 MP 0/0 Hu 22 $ 801 room=.
+-> e
+T1282 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 50/50 MP 0/0 Hu 21 $ 801 room=.
+-> n
+T1283 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 50/50 MP 0/0 Hu 20 $ 801 room=.
+-> e
+T1284 mode=game_loop           Eomer the Vigilant(hum) F2@(15,11) HP 50/50 MP 0/0 Hu 19 $ 801 room=.
+-> s
+T1285 mode=game_loop           Eomer the Vigilant(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 18 $ 801 room=.
+-> s
+T1286 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 17 $ 801 room=.
+-> s
+T1287 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu 16 $ 801 room=.
+-> e
+T1288 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu 15 $ 801 room=.
+-> e
+T1289 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu 14 $ 801 room=.
+-> n
+T1290 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 13 $ 801 room=.
+-> n
+T1291 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 12 $ 801 room=.
+-> w
+T1292 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu 11 $ 801 room=.
+-> s
+T1293 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu 10 $ 801 room=.
+-> s
+T1294 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu  9 $ 801 room=.
+-> e
+T1295 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 50/50 MP 0/0 Hu  8 $ 801 room=.
+-> n
+T1296 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 50/50 MP 0/0 Hu  7 $ 801 room=.
+-> n
+T1297 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 50/50 MP 0/0 Hu  6 $ 801 room=.
+-> n
+T1298 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 50/50 MP 0/0 Hu  5 $ 801 room=.
+-> w
+T1299 mode=game_loop           Eomer the Vigilant(hum) F2@(16,11) HP 50/50 MP 0/0 Hu  4 $ 801 room=.
+-> s
+T1300 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 50/50 MP 0/0 Hu  3 $ 801 room=.
+-> s
+T1301 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 50/50 MP 0/0 Hu  2 $ 801 room=.
+-> s
+T1302 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 50/50 MP 0/0 Hu  1 $ 801 room=.
+-> e
+T1303 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 48/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1304 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 46/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1305 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 44/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1306 mode=game_loop           Eomer the Vigilant(hum) F2@(16,12) HP 42/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1307 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 40/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1308 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 38/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1309 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 36/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1310 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 34/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1311 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 32/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1312 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 30/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1313 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 28/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1314 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 26/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1315 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 24/50 MP 0/0 Hu  0 $ 801 room=C
+-> s
+T1316 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 22/50 MP 0/0 Hu  0 $ 801 room=N
+-> s
+T1317 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 20/50 MP 0/0 Hu  0 $ 801 room=.
+-> i
+T1318 mode=inventory           Eomer the Vigilant(hum) F2@(18,13) HP 20/50 MP 0/0 Hu  0 $ 801 room=.
+-> u6
+T1319 mode=inventory           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu  0 $ 801 room=.
+-> x
+T1320 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 50/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1321 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 48/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1322 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 46/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1323 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 44/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1324 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 42/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1325 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 40/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1326 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 38/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1327 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 36/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1328 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 34/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1329 mode=game_loop           Eomer the Vigilant(hum) F2@(13,13) HP 32/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1330 mode=game_loop           Eomer the Vigilant(hum) F2@(13,12) HP 30/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1331 mode=game_loop           Eomer the Vigilant(hum) F2@(13,11) HP 28/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1332 mode=game_loop           Eomer the Vigilant(hum) F2@(13,10) HP 26/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1333 mode=game_loop           Eomer the Vigilant(hum) F2@(14,10) HP 24/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1334 mode=game_loop           Eomer the Vigilant(hum) F2@(14,11) HP 22/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1335 mode=game_loop           Eomer the Vigilant(hum) F2@(14,12) HP 20/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1336 mode=game_loop           Eomer the Vigilant(hum) F2@(14,13) HP 18/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1337 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 16/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1338 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 14/50 MP 0/0 Hu  0 $ 801 room=.
+-> i
+T1339 mode=inventory           Eomer the Vigilant(hum) F2@(15,14) HP 14/50 MP 0/0 Hu  0 $ 801 room=.
+-> u6
+T1340 mode=inventory           Eomer the Vigilant(hum) F2@(15,14) HP 44/50 MP 0/0 Hu  0 $ 801 room=.
+-> u2
+T1341 mode=inventory           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu  0 $ 801 room=.
+-> x
+T1342 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 50/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1343 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 48/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1344 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 46/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1345 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 44/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1346 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 42/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1347 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 40/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1348 mode=game_loop           Eomer the Vigilant(hum) F2@(18,13) HP 38/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1349 mode=game_loop           Eomer the Vigilant(hum) F2@(18,12) HP 36/50 MP 0/0 Hu  0 $ 801 room=N
+-> n
+T1350 mode=game_loop           Eomer the Vigilant(hum) F2@(18,11) HP 34/50 MP 0/0 Hu  0 $ 801 room=C
+-> w
+T1351 mode=game_loop           Eomer the Vigilant(hum) F2@(17,11) HP 32/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1352 mode=game_loop           Eomer the Vigilant(hum) F2@(17,12) HP 30/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1353 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 28/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1354 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 26/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1355 mode=game_loop           Eomer the Vigilant(hum) F2@(17,15) HP 24/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1356 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 22/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1357 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 20/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1358 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 18/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1359 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 16/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1360 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 14/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1361 mode=game_loop           Eomer the Vigilant(hum) F2@(17,13) HP 12/50 MP 0/0 Hu  0 $ 801 room=.
+-> s
+T1362 mode=game_loop           Eomer the Vigilant(hum) F2@(17,14) HP 10/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1363 mode=game_loop           Eomer the Vigilant(hum) F2@(16,14) HP 8/50 MP 0/0 Hu  0 $ 801 room=.
+-> w
+T1364 mode=game_loop           Eomer the Vigilant(hum) F2@(15,14) HP 6/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1365 mode=game_loop           Eomer the Vigilant(hum) F2@(15,13) HP 4/50 MP 0/0 Hu  0 $ 801 room=.
+-> e
+T1366 mode=game_loop           Eomer the Vigilant(hum) F2@(16,13) HP 2/50 MP 0/0 Hu  0 $ 801 room=.
+-> n
+T1367 mode=death_screen        Eomer the Vigilant(hum) F2@(16,12) HP 0/50 MP 0/0 Hu  0 $ 801 room=.
+
+=== run finished: turns=1367 floor=2 hp=0/50 gold=801 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00271_human.html

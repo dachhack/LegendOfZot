@@ -1,0 +1,2562 @@
+T   0 mode=game_loop           Beregond III(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Beregond III(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 13 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Beregond III(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Slime Mold(L0 HP15/15)
+  A Slime Mold (Level 0) appears! A gelatinous blob quivers menacingly.
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Beregond III(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs Slime Mold(L0 HP15/15)
+  You missed the evil Slime Mold!
+  Ouch! Slime Mold hit Beregond III!
+  You took 1 damage!
+  Beregond III is now affected by Slime Mold's Weakness!
+   The Slime Mold covers you in sticky slime!
+  You feel weakened!
+  The Slime Mold's touch dissolves your Leather Armor! (-3 durability)
+-> a
+T   4 mode=combat_victory      Beregond III(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+  You gained 8 experience.
+  You found 1 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T   5 mode=game_loop           Beregond III(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> l
+T   6 mode=game_loop           Beregond III(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> s
+T   7 mode=combat_mode         Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 341 room=M vs Stirge(L0 HP6/6)
+-> a
+T   8 mode=combat_mode         Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 341 room=M vs Stirge(L0 HP6/6)
+-> a
+T   9 mode=combat_mode         Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 341 room=M vs Stirge(L0 HP6/6)
+-> a
+T  10 mode=combat_victory      Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 350 room=.
+-> back
+T  11 mode=game_loop           Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 350 room=.
+-> l
+T  12 mode=game_loop           Beregond III(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 350 room=.
+-> e
+T  13 mode=combat_mode         Beregond III(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 350 room=M vs Kobold(L0 HP8/8)
+-> f
+T  14 mode=combat_mode         Beregond III(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 350 room=M vs Kobold(L0 HP8/8)
+-> a
+T  15 mode=combat_mode         Beregond III(hum) F1@( 3, 2) HP 29/30 MP 0/0 Hu 97 $ 350 room=M vs Kobold(L0 HP8/8)
+-> a
+T  16 mode=combat_mode         Beregond III(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 97 $ 350 room=M vs Kobold(L0 HP8/8)
+-> a
+T  17 mode=combat_victory      Beregond III(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 97 $ 353 room=.
+-> back
+T  18 mode=game_loop           Beregond III(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 97 $ 353 room=.
+-> l
+T  19 mode=game_loop           Beregond III(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 97 $ 353 room=.
+-> n
+T  20 mode=combat_mode         Beregond III(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 96 $ 353 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  21 mode=combat_victory      Beregond III(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 96 $ 361 room=.
+-> back
+T  22 mode=game_loop           Beregond III(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 96 $ 361 room=.
+-> e
+T  23 mode=combat_mode         Beregond III(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 95 $ 361 room=M vs Kobold(L0 HP20/20)
+-> a
+T  24 mode=combat_victory      Beregond III(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 95 $ 368 room=.
+-> back
+T  25 mode=game_loop           Beregond III(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 95 $ 368 room=.
+-> s
+T  26 mode=game_loop           Beregond III(hum) F1@( 4, 2) HP 28/30 MP 0/0 Hu 94 $ 368 room=.
+-> l
+T  27 mode=game_loop           Beregond III(hum) F1@( 4, 2) HP 28/30 MP 0/0 Hu 94 $ 368 room=.
+-> s
+T  28 mode=combat_mode         Beregond III(hum) F1@( 4, 3) HP 29/30 MP 0/0 Hu 93 $ 368 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  29 mode=combat_mode         Beregond III(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 93 $ 368 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  30 mode=combat_mode         Beregond III(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 93 $ 368 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  31 mode=combat_victory      Beregond III(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> back
+T  32 mode=game_loop           Beregond III(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> l
+T  33 mode=game_loop           Beregond III(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> e
+T  34 mode=chest_mode          Beregond III(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 92 $ 370 room=C
+-> o
+T  35 mode=game_loop           Beregond III(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 92 $ 370 room=.
+-> i
+T  36 mode=inventory           Beregond III(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 92 $ 370 room=.
+-> u4
+T  37 mode=inventory           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> x
+T  38 mode=game_loop           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> i
+T  39 mode=inventory           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> e1
+T  40 mode=inventory           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> x
+T  41 mode=game_loop           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> l
+T  42 mode=game_loop           Beregond III(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> s
+T  43 mode=combat_mode         Beregond III(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 91 $ 370 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  44 mode=combat_mode         Beregond III(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 91 $ 370 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  45 mode=combat_victory      Beregond III(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 91 $ 372 room=.
+-> back
+T  46 mode=game_loop           Beregond III(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 91 $ 372 room=.
+-> l
+T  47 mode=game_loop           Beregond III(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 91 $ 372 room=.
+-> w
+T  48 mode=shrine_mode         Beregond III(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 90 $ 372 room=F
+-> p
+T  49 mode=game_loop           Beregond III(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 90 $ 372 room=.
+-> w
+T  50 mode=altar_mode          Beregond III(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 89 $ 372 room=A
+-> pray
+T  51 mode=game_loop           Beregond III(hum) F1@( 3, 4) HP 29/32 MP 0/0 Hu 89 $ 372 room=.
+-> s
+T  52 mode=garden_mode         Beregond III(hum) F1@( 3, 5) HP 29/32 MP 0/0 Hu 88 $ 372 room=G
+-> h
+T  53 mode=game_loop           Beregond III(hum) F1@( 3, 5) HP 29/32 MP 0/0 Hu 88 $ 372 room=.
+-> i
+T  54 mode=inventory           Beregond III(hum) F1@( 3, 5) HP 29/32 MP 0/0 Hu 88 $ 372 room=.
+-> u4
+T  55 mode=inventory           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 88 $ 372 room=.
+-> x
+T  56 mode=game_loop           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 88 $ 372 room=.
+-> i
+T  57 mode=inventory           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 88 $ 372 room=.
+-> eat3
+T  58 mode=inventory           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 94 $ 372 room=.
+-> x
+T  59 mode=game_loop           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 94 $ 372 room=.
+-> n
+T  60 mode=game_loop           Beregond III(hum) F1@( 3, 4) HP 32/32 MP 0/0 Hu 93 $ 372 room=.
+-> n
+T  61 mode=combat_mode         Beregond III(hum) F1@( 3, 3) HP 32/32 MP 0/0 Hu 92 $ 372 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  62 mode=combat_victory      Beregond III(hum) F1@( 3, 3) HP 32/32 MP 0/0 Hu 92 $ 477 room=.
+-> back
+T  63 mode=game_loop           Beregond III(hum) F1@( 3, 3) HP 32/32 MP 0/0 Hu 92 $ 477 room=.
+-> n
+T  64 mode=game_loop           Beregond III(hum) F1@( 3, 2) HP 32/32 MP 0/0 Hu 91 $ 477 room=.
+-> e
+T  65 mode=game_loop           Beregond III(hum) F1@( 4, 2) HP 32/32 MP 0/0 Hu 90 $ 477 room=.
+-> s
+T  66 mode=game_loop           Beregond III(hum) F1@( 4, 3) HP 32/32 MP 0/0 Hu 89 $ 477 room=.
+-> s
+T  67 mode=game_loop           Beregond III(hum) F1@( 4, 4) HP 32/32 MP 0/0 Hu 88 $ 477 room=.
+-> w
+T  68 mode=game_loop           Beregond III(hum) F1@( 3, 4) HP 32/32 MP 0/0 Hu 87 $ 477 room=.
+-> s
+T  69 mode=game_loop           Beregond III(hum) F1@( 3, 5) HP 32/32 MP 0/0 Hu 86 $ 477 room=.
+-> n
+T  70 mode=game_loop           Beregond III(hum) F1@( 3, 4) HP 32/32 MP 0/0 Hu 85 $ 477 room=.
+-> n
+T  71 mode=game_loop           Beregond III(hum) F1@( 3, 3) HP 32/32 MP 0/0 Hu 84 $ 477 room=.
+-> e
+T  72 mode=game_loop           Beregond III(hum) F1@( 4, 3) HP 32/32 MP 0/0 Hu 83 $ 477 room=.
+-> s
+T  73 mode=game_loop           Beregond III(hum) F1@( 4, 4) HP 32/32 MP 0/0 Hu 82 $ 477 room=.
+-> e
+T  74 mode=game_loop           Beregond III(hum) F1@( 5, 4) HP 32/32 MP 0/0 Hu 81 $ 477 room=.
+-> s
+T  75 mode=combat_mode         Beregond III(hum) F1@( 5, 5) HP 32/32 MP 0/0 Hu 80 $ 477 room=M vs Bat(L0 HP12/12)
+-> a
+T  76 mode=combat_victory      Beregond III(hum) F1@( 5, 5) HP 32/32 MP 0/0 Hu 80 $ 486 room=.
+-> back
+T  77 mode=game_loop           Beregond III(hum) F1@( 5, 5) HP 32/32 MP 0/0 Hu 80 $ 486 room=.
+-> l
+T  78 mode=game_loop           Beregond III(hum) F1@( 5, 5) HP 32/32 MP 0/0 Hu 80 $ 486 room=.
+-> e
+T  79 mode=combat_mode         Beregond III(hum) F1@( 6, 5) HP 32/32 MP 0/0 Hu 79 $ 486 room=M vs Bat(L0 HP12/12)
+-> a
+T  80 mode=combat_mode         Beregond III(hum) F1@( 6, 5) HP 32/32 MP 0/0 Hu 79 $ 486 room=M vs Bat(L0 HP12/12)
+-> a
+T  81 mode=combat_victory      Beregond III(hum) F1@( 6, 5) HP 31/32 MP 0/0 Hu 79 $ 587 room=.
+-> back
+T  82 mode=game_loop           Beregond III(hum) F1@( 6, 5) HP 31/32 MP 0/0 Hu 79 $ 587 room=.
+-> l
+T  83 mode=game_loop           Beregond III(hum) F1@( 6, 5) HP 31/32 MP 0/0 Hu 79 $ 587 room=.
+-> n
+T  84 mode=combat_mode         Beregond III(hum) F1@( 6, 4) HP 31/32 MP 0/0 Hu 78 $ 587 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  85 mode=combat_mode         Beregond III(hum) F1@( 6, 4) HP 31/32 MP 0/0 Hu 78 $ 587 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T  86 mode=combat_mode         Beregond III(hum) F1@( 6, 4) HP 30/32 MP 0/0 Hu 78 $ 587 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T  87 mode=flee_direction_mode Beregond III(hum) F1@( 6, 4) HP 30/32 MP 0/0 Hu 78 $ 587 room=M
+-> n
+T  88 mode=game_loop           Beregond III(hum) F1@( 6, 3) HP 30/32 MP 0/0 Hu 78 $ 587 room=.
+-> w
+T  89 mode=game_loop           Beregond III(hum) F1@( 5, 3) HP 30/32 MP 0/0 Hu 77 $ 587 room=.
+-> s
+T  90 mode=game_loop           Beregond III(hum) F1@( 5, 4) HP 30/32 MP 0/0 Hu 76 $ 587 room=.
+-> s
+T  91 mode=game_loop           Beregond III(hum) F1@( 5, 5) HP 31/32 MP 0/0 Hu 75 $ 587 room=.
+-> s
+T  92 mode=game_loop           Beregond III(hum) F1@( 5, 6) HP 31/32 MP 0/0 Hu 74 $ 587 room=.
+-> l
+T  93 mode=game_loop           Beregond III(hum) F1@( 5, 6) HP 31/32 MP 0/0 Hu 74 $ 587 room=.
+-> s
+T  94 mode=library_mode        Beregond III(hum) F1@( 5, 7) HP 31/32 MP 0/0 Hu 73 $ 587 room=L
+-> r
+T  95 mode=game_loop           Beregond III(hum) F1@( 5, 7) HP 31/32 MP 0/0 Hu 73 $ 587 room=.
+-> l
+T  96 mode=game_loop           Beregond III(hum) F1@( 5, 7) HP 31/32 MP 0/0 Hu 73 $ 587 room=.
+-> s
+T  97 mode=combat_mode         Beregond III(hum) F1@( 5, 8) HP 31/32 MP 0/0 Hu 72 $ 587 room=M vs Kobold(L0 HP8/8)
+-> a
+T  98 mode=combat_victory      Beregond III(hum) F1@( 5, 8) HP 30/32 MP 0/0 Hu 72 $ 596 room=.
+-> back
+T  99 mode=game_loop           Beregond III(hum) F1@( 5, 8) HP 30/32 MP 0/0 Hu 72 $ 596 room=.
+-> l
+T 100 mode=game_loop           Beregond III(hum) F1@( 5, 8) HP 30/32 MP 0/0 Hu 72 $ 596 room=.
+-> s
+T 101 mode=combat_mode         Beregond III(hum) F1@( 5, 9) HP 31/32 MP 0/0 Hu 71 $ 596 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 102 mode=combat_victory      Beregond III(hum) F1@( 5, 9) HP 30/32 MP 0/0 Hu 71 $ 603 room=.
+-> back
+T 103 mode=game_loop           Beregond III(hum) F1@( 5, 9) HP 30/32 MP 0/0 Hu 71 $ 603 room=.
+-> e
+T 104 mode=combat_mode         Beregond III(hum) F1@( 6, 9) HP 30/32 MP 0/0 Hu 70 $ 603 room=M vs Goblin(L0 HP30/30)
+-> a
+T 105 mode=combat_mode         Beregond III(hum) F1@( 6, 9) HP 30/32 MP 0/0 Hu 70 $ 603 room=M vs Goblin(L0 HP30/30)
+-> a
+T 106 mode=combat_mode         Beregond III(hum) F1@( 6, 9) HP 30/32 MP 0/0 Hu 70 $ 603 room=M vs Goblin(L0 HP30/30)
+-> a
+T 107 mode=combat_victory      Beregond III(hum) F1@( 6, 9) HP 29/42 MP 0/0 Hu 70 $ 608 room=.
+-> back
+T 108 mode=game_loop           Beregond III(hum) F1@( 6, 9) HP 29/42 MP 0/0 Hu 70 $ 608 room=.
+-> i
+T 109 mode=inventory           Beregond III(hum) F1@( 6, 9) HP 29/42 MP 0/0 Hu 70 $ 608 room=.
+-> u4
+T 110 mode=inventory           Beregond III(hum) F1@( 6, 9) HP 42/42 MP 0/0 Hu 70 $ 608 room=.
+-> x
+T 111 mode=game_loop           Beregond III(hum) F1@( 6, 9) HP 42/42 MP 0/0 Hu 70 $ 608 room=.
+-> l
+T 112 mode=game_loop           Beregond III(hum) F1@( 6, 9) HP 42/42 MP 0/0 Hu 70 $ 608 room=.
+-> n
+T 113 mode=combat_mode         Beregond III(hum) F1@( 6, 8) HP 42/42 MP 0/0 Hu 69 $ 608 room=M vs Goblin(L0 HP12/12)
+-> a
+T 114 mode=combat_victory      Beregond III(hum) F1@( 6, 8) HP 42/42 MP 0/0 Hu 69 $ 612 room=.
+-> back
+T 115 mode=game_loop           Beregond III(hum) F1@( 6, 8) HP 42/42 MP 0/0 Hu 69 $ 612 room=.
+-> n
+T 116 mode=combat_mode         Beregond III(hum) F1@( 6, 7) HP 42/42 MP 0/0 Hu 68 $ 612 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 117 mode=combat_mode         Beregond III(hum) F1@( 6, 7) HP 42/42 MP 0/0 Hu 68 $ 612 room=M vs Skeleton(L0 HP25/25)
+-> f
+T 118 mode=combat_mode         Beregond III(hum) F1@( 6, 7) HP 41/42 MP 0/0 Hu 68 $ 612 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 119 mode=combat_mode         Beregond III(hum) F1@( 6, 7) HP 40/42 MP 0/0 Hu 68 $ 612 room=M vs Skeleton(L0 HP5/25)
+-> a
+T 120 mode=combat_victory      Beregond III(hum) F1@( 6, 7) HP 40/42 MP 0/0 Hu 68 $ 614 room=.
+-> back
+T 121 mode=game_loop           Beregond III(hum) F1@( 6, 7) HP 40/42 MP 0/0 Hu 68 $ 614 room=.
+-> e
+T 122 mode=combat_mode         Beregond III(hum) F1@( 7, 7) HP 40/42 MP 0/0 Hu 67 $ 614 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 123 mode=combat_mode         Beregond III(hum) F1@( 7, 7) HP 39/42 MP 0/0 Hu 67 $ 614 room=M vs Rust Monster(L0 HP18/18)
+-> f
+T 124 mode=combat_mode         Beregond III(hum) F1@( 7, 7) HP 38/42 MP 0/0 Hu 67 $ 614 room=M vs Rust Monster(L0 HP18/18)
+-> f
+T 125 mode=combat_mode         Beregond III(hum) F1@( 7, 7) HP 38/42 MP 0/0 Hu 67 $ 614 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 126 mode=combat_victory      Beregond III(hum) F1@( 7, 7) HP 38/42 MP 0/0 Hu 67 $ 615 room=.
+-> back
+T 127 mode=game_loop           Beregond III(hum) F1@( 7, 7) HP 38/42 MP 0/0 Hu 67 $ 615 room=.
+-> n
+T 128 mode=combat_mode         Beregond III(hum) F1@( 7, 6) HP 38/42 MP 0/0 Hu 66 $ 615 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 129 mode=combat_mode         Beregond III(hum) F1@( 7, 6) HP 37/42 MP 0/0 Hu 66 $ 615 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 130 mode=flee_direction_mode Beregond III(hum) F1@( 7, 6) HP 37/42 MP 0/0 Hu 66 $ 615 room=M
+-> n
+T 131 mode=game_loop           Beregond III(hum) F1@( 7, 5) HP 37/42 MP 0/0 Hu 66 $ 615 room=.
+-> n
+T 132 mode=dungeon_mode        Beregond III(hum) F1@( 7, 4) HP 37/42 MP 0/0 Hu 65 $ 615 room=N
+-> u
+T 133 mode=dungeon_unlocked_mode Beregond III(hum) F1@( 7, 4) HP 37/42 MP 0/0 Hu 65 $ 615 room=N
+-> r
+T 134 mode=game_loop           Beregond III(hum) F1@( 7, 4) HP 37/42 MP 0/0 Hu 65 $ 615 room=N
+-> n
+T 135 mode=game_loop           Beregond III(hum) F1@( 7, 3) HP 38/42 MP 0/0 Hu 64 $ 615 room=.
+-> e
+T 136 mode=combat_mode         Beregond III(hum) F1@( 8, 3) HP 38/42 MP 0/0 Hu 63 $ 615 room=M vs Lichen(L0 HP10/10)
+-> f
+T 137 mode=flee_direction_mode Beregond III(hum) F1@( 8, 3) HP 38/42 MP 0/0 Hu 63 $ 615 room=M
+-> s
+T 138 mode=game_loop           Beregond III(hum) F1@( 8, 4) HP 38/42 MP 0/0 Hu 63 $ 615 room=.
+-> s
+T 139 mode=game_loop           Beregond III(hum) F1@( 8, 5) HP 38/42 MP 0/0 Hu 62 $ 615 room=.
+-> w
+T 140 mode=game_loop           Beregond III(hum) F1@( 7, 5) HP 38/42 MP 0/0 Hu 61 $ 615 room=.
+-> w
+T 141 mode=game_loop           Beregond III(hum) F1@( 6, 5) HP 39/42 MP 0/0 Hu 60 $ 615 room=.
+-> w
+T 142 mode=game_loop           Beregond III(hum) F1@( 5, 5) HP 39/42 MP 0/0 Hu 59 $ 615 room=.
+-> s
+T 143 mode=game_loop           Beregond III(hum) F1@( 5, 6) HP 39/42 MP 0/0 Hu 58 $ 615 room=.
+-> e
+T 144 mode=combat_mode         Beregond III(hum) F1@( 6, 6) HP 39/42 MP 0/0 Hu 57 $ 615 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 145 mode=combat_mode         Beregond III(hum) F1@( 6, 6) HP 39/42 MP 0/0 Hu 57 $ 615 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 146 mode=flee_direction_mode Beregond III(hum) F1@( 6, 6) HP 39/42 MP 0/0 Hu 57 $ 615 room=M
+-> s
+T 147 mode=game_loop           Beregond III(hum) F1@( 6, 7) HP 39/42 MP 0/0 Hu 57 $ 615 room=.
+-> s
+T 148 mode=game_loop           Beregond III(hum) F1@( 6, 8) HP 39/42 MP 0/0 Hu 56 $ 615 room=.
+-> w
+T 149 mode=game_loop           Beregond III(hum) F1@( 5, 8) HP 39/42 MP 0/0 Hu 55 $ 615 room=.
+-> s
+T 150 mode=game_loop           Beregond III(hum) F1@( 5, 9) HP 39/42 MP 0/0 Hu 54 $ 615 room=.
+-> e
+T 151 mode=game_loop           Beregond III(hum) F1@( 6, 9) HP 39/42 MP 0/0 Hu 53 $ 615 room=.
+-> e
+T 152 mode=combat_mode         Beregond III(hum) F1@( 7, 9) HP 39/42 MP 0/0 Hu 52 $ 615 room=M vs Kobold(L0 HP20/20)
+-> a
+T 153 mode=combat_victory      Beregond III(hum) F1@( 7, 9) HP 39/42 MP 0/0 Hu 52 $ 624 room=.
+-> back
+T 154 mode=game_loop           Beregond III(hum) F1@( 7, 9) HP 39/42 MP 0/0 Hu 52 $ 624 room=.
+-> l
+T 155 mode=game_loop           Beregond III(hum) F1@( 7, 9) HP 39/42 MP 0/0 Hu 52 $ 624 room=.
+-> n
+T 156 mode=game_loop           Beregond III(hum) F1@( 7, 8) HP 39/42 MP 0/0 Hu 51 $ 624 room=.
+-> e
+T 157 mode=stairs_down_mode    Beregond III(hum) F1@( 8, 8) HP 39/42 MP 0/0 Hu 50 $ 624 room=D
+-> d
+T 158 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 39/42 MP 0/0 Hu 50 $ 624 room=U
+-> w
+T 159 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 39/42 MP 0/0 Hu 50 $ 624 room=U
+-> s
+T 160 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 39/42 MP 0/0 Hu 49 $ 724 room=.
+-> i
+T 161 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 39/42 MP 0/0 Hu 49 $ 724 room=.
+-> u5
+T 162 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 49 $ 724 room=.
+-> x
+T 163 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 49 $ 724 room=.
+-> i
+T 164 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 49 $ 724 room=.
+-> eat1
+T 165 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu100 $ 724 room=.
+-> x
+T 166 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu100 $ 724 room=.
+-> l
+T 167 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu100 $ 724 room=.
+-> e
+T 168 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 99 $ 724 room=.
+-> l
+T 169 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 99 $ 724 room=.
+-> s
+T 170 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 724 room=.
+-> l
+T 171 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 724 room=.
+-> e
+T 172 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 97 $ 724 room=.
+-> l
+T 173 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 97 $ 724 room=.
+-> s
+T 174 mode=library_mode        Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 96 $ 724 room=L
+-> r
+T 175 mode=library_read_decision_mode Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 96 $ 724 room=L
+-> y
+T 176 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 96 $ 774 room=.
+-> s
+T 177 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 774 room=.
+-> s
+T 178 mode=garden_mode         Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 94 $ 774 room=G
+-> h
+T 179 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 94 $ 774 room=.
+-> l
+T 180 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 94 $ 774 room=.
+-> e
+T 181 mode=chest_mode          Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 93 $ 774 room=C
+-> o
+T 182 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 93 $ 844 room=.
+-> l
+T 183 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 93 $ 844 room=.
+-> s
+T 184 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 92 $ 844 room=.
+-> w
+T 185 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 91 $ 844 room=.
+-> n
+T 186 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 90 $ 844 room=.
+-> n
+T 187 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 89 $ 844 room=.
+-> w
+T 188 mode=dungeon_mode        Beregond III(hum) F2@( 2, 5) HP 42/42 MP 0/0 Hu 88 $ 844 room=N
+-> u
+T 189 mode=game_loop           Beregond III(hum) F2@( 2, 5) HP 42/42 MP 0/0 Hu 88 $ 844 room=N
+-> n
+T 190 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 87 $ 844 room=.
+-> n
+T 191 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 86 $ 844 room=.
+-> e
+T 192 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 85 $ 844 room=.
+-> e
+T 193 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 84 $ 844 room=.
+-> e
+T 194 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> e
+T 195 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 82 $ 844 room=.
+-> e
+T 196 mode=altar_mode          Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 81 $ 844 room=A
+-> pray
+T 197 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu100 $ 844 room=.
+-> e
+T 198 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 99 $ 844 room=.
+-> l
+T 199 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 99 $ 844 room=.
+-> n
+T 200 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 98 $ 844 room=.
+-> l
+T 201 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 98 $ 844 room=.
+-> e
+T 202 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 42/42 MP 0/0 Hu 97 $ 844 room=.
+-> l
+T 203 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 42/42 MP 0/0 Hu 97 $ 844 room=.
+-> n
+T 204 mode=game_loop           Beregond III(hum) F2@( 9, 1) HP 42/42 MP 0/0 Hu 96 $ 844 room=.
+-> l
+T 205 mode=game_loop           Beregond III(hum) F2@( 9, 1) HP 42/42 MP 0/0 Hu 96 $ 844 room=.
+-> w
+T 206 mode=game_loop           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu 95 $ 844 room=.
+-> s
+T 207 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 94 $ 844 room=.
+-> s
+T 208 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 93 $ 844 room=.
+-> w
+T 209 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 92 $ 844 room=.
+-> w
+T 210 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 91 $ 844 room=.
+-> w
+T 211 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 90 $ 844 room=.
+-> w
+T 212 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 89 $ 844 room=.
+-> w
+T 213 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 844 room=.
+-> n
+T 214 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 87 $ 844 room=.
+-> n
+T 215 mode=game_loop           Beregond III(hum) F2@( 3, 1) HP 42/42 MP 0/0 Hu 86 $ 844 room=.
+-> w
+T 216 mode=game_loop           Beregond III(hum) F2@( 2, 1) HP 42/42 MP 0/0 Hu 85 $ 844 room=.
+-> s
+T 217 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 84 $ 844 room=.
+-> s
+T 218 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> s
+T 219 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 82 $ 844 room=.
+-> w
+T 220 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 81 $ 844 room=.
+-> s
+T 221 mode=game_loop           Beregond III(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 80 $ 844 room=.
+-> s
+T 222 mode=game_loop           Beregond III(hum) F2@( 1, 6) HP 42/42 MP 0/0 Hu 79 $ 844 room=.
+-> n
+T 223 mode=game_loop           Beregond III(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 78 $ 844 room=.
+-> e
+T 224 mode=game_loop           Beregond III(hum) F2@( 2, 5) HP 42/42 MP 0/0 Hu 77 $ 844 room=N
+-> n
+T 225 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 76 $ 844 room=.
+-> e
+T 226 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 75 $ 844 room=.
+-> s
+T 227 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 74 $ 844 room=.
+-> s
+T 228 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 73 $ 844 room=.
+-> e
+T 229 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 72 $ 844 room=.
+-> s
+T 230 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 71 $ 844 room=.
+-> w
+T 231 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 70 $ 844 room=.
+-> i
+T 232 mode=inventory           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 70 $ 844 room=.
+-> eat3
+T 233 mode=inventory           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> x
+T 234 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> e
+T 235 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 82 $ 844 room=.
+-> i
+T 236 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 82 $ 844 room=.
+-> eat3
+T 237 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 95 $ 844 room=.
+-> x
+T 238 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 95 $ 844 room=.
+-> n
+T 239 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 94 $ 844 room=.
+-> w
+T 240 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 93 $ 844 room=.
+-> n
+T 241 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 92 $ 844 room=.
+-> n
+T 242 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 91 $ 844 room=.
+-> n
+T 243 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 90 $ 844 room=.
+-> e
+T 244 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 89 $ 844 room=.
+-> e
+T 245 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 88 $ 844 room=.
+-> e
+T 246 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 87 $ 844 room=.
+-> e
+T 247 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 86 $ 844 room=.
+-> e
+T 248 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 85 $ 844 room=.
+-> n
+T 249 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 84 $ 844 room=.
+-> n
+T 250 mode=game_loop           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> i
+T 251 mode=inventory           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu 83 $ 844 room=.
+-> eat4
+T 252 mode=inventory           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu100 $ 844 room=.
+-> x
+T 253 mode=game_loop           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu100 $ 844 room=.
+-> e
+T 254 mode=game_loop           Beregond III(hum) F2@( 9, 1) HP 42/42 MP 0/0 Hu 99 $ 844 room=.
+-> s
+T 255 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 42/42 MP 0/0 Hu 98 $ 844 room=.
+-> e
+T 256 mode=combat_mode         Beregond III(hum) F2@(10, 2) HP 42/42 MP 0/0 Hu 97 $ 844 room=M vs Goblin(L1 HP30/30)
+-> a
+T 257 mode=combat_mode         Beregond III(hum) F2@(10, 2) HP 41/42 MP 0/0 Hu 97 $ 844 room=M vs Goblin(L1 HP30/30)
+-> a
+T 258 mode=combat_mode         Beregond III(hum) F2@(10, 2) HP 40/42 MP 0/0 Hu 97 $ 844 room=M vs Goblin(L1 HP30/30)
+-> a
+T 259 mode=combat_mode         Beregond III(hum) F2@(10, 2) HP 39/42 MP 0/0 Hu 97 $ 844 room=M vs Goblin(L1 HP30/30)
+-> a
+T 260 mode=combat_victory      Beregond III(hum) F2@(10, 2) HP 39/42 MP 0/0 Hu 97 $ 858 room=.
+-> back
+T 261 mode=game_loop           Beregond III(hum) F2@(10, 2) HP 39/42 MP 0/0 Hu 97 $ 858 room=.
+-> s
+T 262 mode=game_loop           Beregond III(hum) F2@(10, 3) HP 39/42 MP 0/0 Hu 96 $ 858 room=.
+-> l
+T 263 mode=game_loop           Beregond III(hum) F2@(10, 3) HP 39/42 MP 0/0 Hu 96 $ 858 room=.
+-> n
+T 264 mode=game_loop           Beregond III(hum) F2@(10, 2) HP 40/42 MP 0/0 Hu 95 $ 858 room=.
+-> s
+T 265 mode=game_loop           Beregond III(hum) F2@(10, 3) HP 40/42 MP 0/0 Hu 94 $ 858 room=.
+-> n
+T 266 mode=game_loop           Beregond III(hum) F2@(10, 2) HP 41/42 MP 0/0 Hu 93 $ 858 room=.
+-> w
+T 267 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 41/42 MP 0/0 Hu 92 $ 858 room=.
+-> w
+T 268 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 91 $ 858 room=.
+-> s
+T 269 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 858 room=.
+-> w
+T 270 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 89 $ 858 room=.
+-> w
+T 271 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 88 $ 858 room=.
+-> w
+T 272 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 87 $ 858 room=.
+-> w
+T 273 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 86 $ 858 room=.
+-> w
+T 274 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 85 $ 858 room=.
+-> i
+T 275 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 85 $ 858 room=.
+-> eat3
+T 276 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu100 $ 858 room=.
+-> x
+T 277 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu100 $ 858 room=.
+-> w
+T 278 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 858 room=.
+-> n
+T 279 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 98 $ 858 room=.
+-> e
+T 280 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 97 $ 858 room=.
+-> n
+T 281 mode=game_loop           Beregond III(hum) F2@( 3, 1) HP 42/42 MP 0/0 Hu 96 $ 858 room=.
+-> w
+T 282 mode=game_loop           Beregond III(hum) F2@( 2, 1) HP 42/42 MP 0/0 Hu 95 $ 858 room=.
+-> w
+T 283 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 42/42 MP 0/0 Hu 94 $ 858 room=U
+-> s
+T 284 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 93 $ 858 room=.
+-> s
+T 285 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 42/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 286 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 41/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 287 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 40/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 288 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 40/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP5/25)
+-> a
+T 289 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 39/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP5/25)
+-> a
+T 290 mode=combat_mode         Beregond III(hum) F2@( 1, 3) HP 38/42 MP 0/0 Hu 92 $ 858 room=M vs Skeleton(L1 HP5/25)
+-> a
+T 291 mode=combat_victory      Beregond III(hum) F2@( 1, 3) HP 38/42 MP 0/0 Hu 92 $ 868 room=.
+-> back
+T 292 mode=game_loop           Beregond III(hum) F2@( 1, 3) HP 38/42 MP 0/0 Hu 92 $ 868 room=.
+-> s
+T 293 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 38/42 MP 0/0 Hu 91 $ 868 room=.
+-> e
+T 294 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 39/42 MP 0/0 Hu 90 $ 868 room=.
+-> e
+T 295 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 39/42 MP 0/0 Hu 89 $ 868 room=.
+-> s
+T 296 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 40/42 MP 0/0 Hu 88 $ 868 room=.
+-> s
+T 297 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 40/42 MP 0/0 Hu 87 $ 868 room=.
+-> e
+T 298 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 41/42 MP 0/0 Hu 86 $ 868 room=.
+-> s
+T 299 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 41/42 MP 0/0 Hu 85 $ 868 room=.
+-> w
+T 300 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 41/42 MP 0/0 Hu 84 $ 868 room=.
+-> e
+T 301 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 41/42 MP 0/0 Hu 83 $ 868 room=.
+-> w
+T 302 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> n
+T 303 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> i
+T 304 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> u7
+T 305 mode=foresight_direction_mode Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> w
+T 306 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> u5
+T 307 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> u1
+T 308 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> x
+T 309 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> e
+T 310 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 80 $ 868 room=.
+-> s
+T 311 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> i
+T 312 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> eat1
+T 313 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u5
+T 314 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u1
+T 315 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> x
+T 316 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> n
+T 317 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> i
+T 318 mode=inventory           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u5
+T 319 mode=inventory           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u1
+T 320 mode=inventory           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> x
+T 321 mode=game_loop           Beregond III(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> s
+T 322 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> i
+T 323 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u5
+T 324 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u1
+T 325 mode=inventory           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> x
+T 326 mode=game_loop           Beregond III(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> w
+T 327 mode=game_loop           Beregond III(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> n
+T 328 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> i
+T 329 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u5
+T 330 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u1
+T 331 mode=inventory           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> x
+T 332 mode=game_loop           Beregond III(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> n
+T 333 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> i
+T 334 mode=inventory           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u5
+T 335 mode=inventory           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u1
+T 336 mode=inventory           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> x
+T 337 mode=game_loop           Beregond III(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> n
+T 338 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> n
+T 339 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> i
+T 340 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u5
+T 341 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u1
+T 342 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> x
+T 343 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> n
+T 344 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> w
+T 345 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> w
+T 346 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> n
+T 347 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 42/42 MP 0/0 Hu 89 $ 868 room=U
+-> e
+T 348 mode=game_loop           Beregond III(hum) F2@( 2, 1) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> e
+T 349 mode=game_loop           Beregond III(hum) F2@( 3, 1) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> s
+T 350 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> w
+T 351 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> s
+T 352 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> s
+T 353 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 83 $ 868 room=.
+-> w
+T 354 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> n
+T 355 mode=game_loop           Beregond III(hum) F2@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> n
+T 356 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 80 $ 868 room=.
+-> e
+T 357 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> i
+T 358 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> eat1
+T 359 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u5
+T 360 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u1
+T 361 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> x
+T 362 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> s
+T 363 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> i
+T 364 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u5
+T 365 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u1
+T 366 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> x
+T 367 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> e
+T 368 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> i
+T 369 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u5
+T 370 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u1
+T 371 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> x
+T 372 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> s
+T 373 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> i
+T 374 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u5
+T 375 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u1
+T 376 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> x
+T 377 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> w
+T 378 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> i
+T 379 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u5
+T 380 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u1
+T 381 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> x
+T 382 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> w
+T 383 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> s
+T 384 mode=game_loop           Beregond III(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> s
+T 385 mode=game_loop           Beregond III(hum) F2@( 1, 6) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> n
+T 386 mode=game_loop           Beregond III(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> n
+T 387 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> n
+T 388 mode=game_loop           Beregond III(hum) F2@( 1, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> e
+T 389 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> i
+T 390 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> u5
+T 391 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> u1
+T 392 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> x
+T 393 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> e
+T 394 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> i
+T 395 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> u5
+T 396 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> u1
+T 397 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> x
+T 398 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> e
+T 399 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> e
+T 400 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> l
+T 401 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> e
+T 402 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> e
+T 403 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> e
+T 404 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 83 $ 868 room=.
+-> e
+T 405 mode=combat_mode         Beregond III(hum) F2@( 9, 3) HP 42/42 MP 0/0 Hu 82 $ 868 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 406 mode=flee_direction_mode Beregond III(hum) F2@( 9, 3) HP 42/42 MP 0/0 Hu 82 $ 868 room=M
+-> n
+T 407 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> n
+T 408 mode=game_loop           Beregond III(hum) F2@( 9, 1) HP 42/42 MP 0/0 Hu 81 $ 868 room=.
+-> w
+T 409 mode=game_loop           Beregond III(hum) F2@( 8, 1) HP 42/42 MP 0/0 Hu 80 $ 868 room=.
+-> s
+T 410 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> l
+T 411 mode=game_loop           Beregond III(hum) F2@( 8, 2) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> s
+T 412 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 78 $ 868 room=.
+-> i
+T 413 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 78 $ 868 room=.
+-> eat1
+T 414 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u5
+T 415 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u1
+T 416 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> x
+T 417 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> w
+T 418 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> i
+T 419 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u5
+T 420 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u1
+T 421 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> x
+T 422 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> w
+T 423 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> i
+T 424 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u5
+T 425 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u1
+T 426 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> x
+T 427 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> w
+T 428 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> i
+T 429 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u5
+T 430 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u1
+T 431 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> x
+T 432 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> w
+T 433 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> i
+T 434 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u5
+T 435 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u1
+T 436 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> x
+T 437 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> w
+T 438 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> i
+T 439 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u5
+T 440 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u1
+T 441 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> x
+T 442 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> n
+T 443 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> w
+T 444 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> i
+T 445 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u5
+T 446 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u1
+T 447 mode=inventory           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> x
+T 448 mode=game_loop           Beregond III(hum) F2@( 2, 2) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> n
+T 449 mode=game_loop           Beregond III(hum) F2@( 2, 1) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> w
+T 450 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 42/42 MP 0/0 Hu 91 $ 868 room=U
+-> s
+T 451 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> s
+T 452 mode=game_loop           Beregond III(hum) F2@( 1, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> e
+T 453 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> i
+T 454 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> u5
+T 455 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> u1
+T 456 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> x
+T 457 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=.
+-> e
+T 458 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> i
+T 459 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> u5
+T 460 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> u1
+T 461 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> x
+T 462 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 87 $ 868 room=.
+-> s
+T 463 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> i
+T 464 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> u5
+T 465 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> u1
+T 466 mode=inventory           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> x
+T 467 mode=game_loop           Beregond III(hum) F2@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 868 room=.
+-> w
+T 468 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> i
+T 469 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> u5
+T 470 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> u1
+T 471 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> x
+T 472 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 85 $ 868 room=.
+-> w
+T 473 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> i
+T 474 mode=inventory           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> u5
+T 475 mode=inventory           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> u1
+T 476 mode=inventory           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> x
+T 477 mode=game_loop           Beregond III(hum) F2@( 1, 4) HP 42/42 MP 0/0 Hu 84 $ 868 room=.
+-> n
+T 478 mode=game_loop           Beregond III(hum) F2@( 1, 3) HP 42/42 MP 0/0 Hu 83 $ 868 room=.
+-> n
+T 479 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> i
+T 480 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> u5
+T 481 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> u1
+T 482 mode=inventory           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> x
+T 483 mode=game_loop           Beregond III(hum) F2@( 1, 2) HP 42/42 MP 0/0 Hu 82 $ 868 room=.
+-> n
+T 484 mode=stairs_up_mode      Beregond III(hum) F2@( 1, 1) HP 42/42 MP 0/0 Hu 81 $ 868 room=U
+-> e
+T 485 mode=game_loop           Beregond III(hum) F2@( 2, 1) HP 42/42 MP 0/0 Hu 80 $ 868 room=.
+-> e
+T 486 mode=game_loop           Beregond III(hum) F2@( 3, 1) HP 42/42 MP 0/0 Hu 79 $ 868 room=.
+-> s
+T 487 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 78 $ 868 room=.
+-> i
+T 488 mode=inventory           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu 78 $ 868 room=.
+-> eat1
+T 489 mode=inventory           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u5
+T 490 mode=inventory           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> u1
+T 491 mode=inventory           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> x
+T 492 mode=game_loop           Beregond III(hum) F2@( 3, 2) HP 42/42 MP 0/0 Hu100 $ 868 room=.
+-> s
+T 493 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> i
+T 494 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u5
+T 495 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> u1
+T 496 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> x
+T 497 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 99 $ 868 room=.
+-> w
+T 498 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> i
+T 499 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u5
+T 500 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> u1
+T 501 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> x
+T 502 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 98 $ 868 room=.
+-> s
+T 503 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> i
+T 504 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u5
+T 505 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> u1
+T 506 mode=inventory           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> x
+T 507 mode=game_loop           Beregond III(hum) F2@( 2, 4) HP 42/42 MP 0/0 Hu 97 $ 868 room=.
+-> n
+T 508 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> i
+T 509 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u5
+T 510 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> u1
+T 511 mode=inventory           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> x
+T 512 mode=game_loop           Beregond III(hum) F2@( 2, 3) HP 42/42 MP 0/0 Hu 96 $ 868 room=.
+-> e
+T 513 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> i
+T 514 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u5
+T 515 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> u1
+T 516 mode=inventory           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> x
+T 517 mode=game_loop           Beregond III(hum) F2@( 3, 3) HP 42/42 MP 0/0 Hu 95 $ 868 room=.
+-> e
+T 518 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> i
+T 519 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> u5
+T 520 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> u1
+T 521 mode=inventory           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> x
+T 522 mode=game_loop           Beregond III(hum) F2@( 4, 3) HP 42/42 MP 0/0 Hu 94 $ 868 room=.
+-> e
+T 523 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> i
+T 524 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u5
+T 525 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> u1
+T 526 mode=inventory           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> x
+T 527 mode=game_loop           Beregond III(hum) F2@( 5, 3) HP 42/42 MP 0/0 Hu 93 $ 868 room=.
+-> e
+T 528 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> i
+T 529 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> u5
+T 530 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> u1
+T 531 mode=inventory           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> x
+T 532 mode=game_loop           Beregond III(hum) F2@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 868 room=.
+-> e
+T 533 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> i
+T 534 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> u5
+T 535 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> u1
+T 536 mode=inventory           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> x
+T 537 mode=game_loop           Beregond III(hum) F2@( 7, 3) HP 42/42 MP 0/0 Hu 91 $ 868 room=.
+-> e
+T 538 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> i
+T 539 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> u5
+T 540 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> u1
+T 541 mode=inventory           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> x
+T 542 mode=game_loop           Beregond III(hum) F2@( 8, 3) HP 42/42 MP 0/0 Hu 90 $ 868 room=.
+-> e
+T 543 mode=combat_mode         Beregond III(hum) F2@( 9, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 544 mode=flee_direction_mode Beregond III(hum) F2@( 9, 3) HP 42/42 MP 0/0 Hu 89 $ 868 room=M
+-> n
+T 545 mode=game_loop           Beregond III(hum) F2@( 9, 2) HP 42/42 MP 0/0 Hu 89 $ 868 room=.
+-> s
+T 546 mode=combat_mode         Beregond III(hum) F2@( 9, 3) HP 42/42 MP 0/0 Hu 88 $ 868 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 547 mode=flee_direction_mode Beregond III(hum) F2@( 9, 3) HP 38/42 MP 0/0 Hu 88 $ 868 room=M
+-> s
+T 548 mode=tomb_mode           Beregond III(hum) F2@( 9, 4) HP 38/42 MP 0/0 Hu 88 $ 868 room=T
+-> p
+T 549 mode=game_loop           Beregond III(hum) F2@( 9, 4) HP 42/42 MP 0/0 Hu 88 $ 868 room=T
+-> s
+T 550 mode=combat_mode         Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 868 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T 551 mode=combat_mode         Beregond III(hum) F2@( 9, 5) HP 38/42 MP 0/0 Hu 87 $ 868 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T 552 mode=combat_mode         Beregond III(hum) F2@( 9, 5) HP 31/42 MP 0/0 Hu 87 $ 868 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T 553 mode=combat_mode         Beregond III(hum) F2@( 9, 5) HP 24/42 MP 0/0 Hu 87 $ 868 room=M vs UNDEAD SKELETON(L1 HP11/31)
+-> a
+T 554 mode=combat_mode         Beregond III(hum) F2@( 9, 5) HP 24/42 MP 0/0 Hu 87 $ 868 room=M vs UNDEAD SKELETON(L1 HP11/31)
+-> a
+T 555 mode=combat_victory      Beregond III(hum) F2@( 9, 5) HP 24/42 MP 0/0 Hu 87 $ 1020 room=.
+-> back
+T 556 mode=game_loop           Beregond III(hum) F2@( 9, 5) HP 24/42 MP 0/0 Hu 87 $ 1020 room=.
+-> i
+T 557 mode=inventory           Beregond III(hum) F2@( 9, 5) HP 24/42 MP 0/0 Hu 87 $ 1020 room=.
+-> u4
+T 558 mode=inventory           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> x
+T 559 mode=game_loop           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> i
+T 560 mode=inventory           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> e3
+T 561 mode=inventory           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> x
+T 562 mode=game_loop           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> l
+T 563 mode=game_loop           Beregond III(hum) F2@( 9, 5) HP 42/42 MP 0/0 Hu 87 $ 1020 room=.
+-> s
+T 564 mode=game_loop           Beregond III(hum) F2@( 9, 6) HP 42/42 MP 0/0 Hu 86 $ 1020 room=.
+-> l
+T 565 mode=game_loop           Beregond III(hum) F2@( 9, 6) HP 42/42 MP 0/0 Hu 86 $ 1020 room=.
+-> w
+T 566 mode=stairs_down_mode    Beregond III(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 85 $ 1020 room=D
+-> d
+T 567 mode=stairs_up_mode      Beregond III(hum) F3@( 1, 1) HP 42/42 MP 0/0 Hu 85 $ 1020 room=U
+-> s
+T 568 mode=game_loop           Beregond III(hum) F3@( 1, 2) HP 42/42 MP 0/0 Hu 84 $ 1020 room=.
+-> l
+T 569 mode=game_loop           Beregond III(hum) F3@( 1, 2) HP 42/42 MP 0/0 Hu 84 $ 1020 room=.
+-> s
+T 570 mode=game_loop           Beregond III(hum) F3@( 1, 3) HP 42/42 MP 0/0 Hu 83 $ 1020 room=.
+-> l
+T 571 mode=game_loop           Beregond III(hum) F3@( 1, 3) HP 42/42 MP 0/0 Hu 83 $ 1020 room=.
+-> e
+T 572 mode=game_loop           Beregond III(hum) F3@( 2, 3) HP 42/42 MP 0/0 Hu 82 $ 1020 room=.
+-> l
+T 573 mode=game_loop           Beregond III(hum) F3@( 2, 3) HP 42/42 MP 0/0 Hu 82 $ 1020 room=.
+-> s
+T 574 mode=game_loop           Beregond III(hum) F3@( 2, 4) HP 42/42 MP 0/0 Hu 81 $ 1020 room=.
+-> l
+T 575 mode=game_loop           Beregond III(hum) F3@( 2, 4) HP 42/42 MP 0/0 Hu 81 $ 1020 room=.
+-> e
+T 576 mode=library_mode        Beregond III(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 80 $ 1020 room=L
+-> r
+T 577 mode=library_read_decision_mode Beregond III(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 80 $ 1020 room=L
+-> y
+T 578 mode=game_loop           Beregond III(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 80 $ 1195 room=.
+-> l
+T 579 mode=game_loop           Beregond III(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 80 $ 1195 room=.
+-> e
+T 580 mode=game_loop           Beregond III(hum) F3@( 4, 4) HP 34/42 MP 0/0 Hu 79 $ 1195 room=.
+-> l
+T 581 mode=game_loop           Beregond III(hum) F3@( 4, 4) HP 34/42 MP 0/0 Hu 79 $ 1195 room=.
+-> s
+T 582 mode=game_loop           Beregond III(hum) F3@( 4, 5) HP 26/42 MP 0/0 Hu 78 $ 1195 room=.
+-> i
+T 583 mode=inventory           Beregond III(hum) F3@( 4, 5) HP 26/42 MP 0/0 Hu 78 $ 1195 room=.
+-> u4
+T 584 mode=inventory           Beregond III(hum) F3@( 4, 5) HP 42/42 MP 0/0 Hu 78 $ 1195 room=.
+-> x
+T 585 mode=game_loop           Beregond III(hum) F3@( 4, 5) HP 42/42 MP 0/0 Hu 78 $ 1195 room=.
+-> n
+T 586 mode=game_loop           Beregond III(hum) F3@( 4, 4) HP 34/42 MP 0/0 Hu 77 $ 1195 room=.
+-> n
+T 587 mode=game_loop           Beregond III(hum) F3@( 4, 3) HP 27/42 MP 0/0 Hu 76 $ 1195 room=.
+-> n
+T 588 mode=game_loop           Beregond III(hum) F3@( 4, 2) HP 27/42 MP 0/0 Hu 75 $ 1195 room=.
+-> n
+T 589 mode=game_loop           Beregond III(hum) F3@( 4, 1) HP 27/42 MP 0/0 Hu 74 $ 1195 room=.
+-> l
+T 590 mode=game_loop           Beregond III(hum) F3@( 4, 1) HP 27/42 MP 0/0 Hu 74 $ 1195 room=.
+-> e
+T 591 mode=game_loop           Beregond III(hum) F3@( 5, 1) HP 27/42 MP 0/0 Hu 73 $ 1195 room=.
+-> w
+T 592 mode=game_loop           Beregond III(hum) F3@( 4, 1) HP 28/42 MP 0/0 Hu 72 $ 1195 room=.
+-> w
+T 593 mode=game_loop           Beregond III(hum) F3@( 3, 1) HP 28/42 MP 0/0 Hu 71 $ 1195 room=.
+-> s
+T 594 mode=game_loop           Beregond III(hum) F3@( 3, 2) HP 28/42 MP 0/0 Hu 70 $ 1195 room=.
+-> s
+T 595 mode=game_loop           Beregond III(hum) F3@( 3, 3) HP 28/42 MP 0/0 Hu 69 $ 1195 room=.
+-> s
+T 596 mode=game_loop           Beregond III(hum) F3@( 3, 4) HP 29/42 MP 0/0 Hu 68 $ 1195 room=.
+-> w
+T 597 mode=game_loop           Beregond III(hum) F3@( 2, 4) HP 29/42 MP 0/0 Hu 67 $ 1195 room=.
+-> s
+T 598 mode=game_loop           Beregond III(hum) F3@( 2, 5) HP 29/42 MP 0/0 Hu 66 $ 1195 room=.
+-> w
+T 599 mode=game_loop           Beregond III(hum) F3@( 1, 5) HP 29/42 MP 0/0 Hu 65 $ 1195 room=.
+-> s
+T 600 mode=game_loop           Beregond III(hum) F3@( 1, 6) HP 30/42 MP 0/0 Hu 64 $ 1195 room=.
+-> s
+T 601 mode=game_loop           Beregond III(hum) F3@( 1, 7) HP 30/42 MP 0/0 Hu 63 $ 1195 room=.
+-> e
+T 602 mode=game_loop           Beregond III(hum) F3@( 2, 7) HP 30/42 MP 0/0 Hu 62 $ 1195 room=.
+-> e
+T 603 mode=game_loop           Beregond III(hum) F3@( 3, 7) HP 30/42 MP 0/0 Hu 61 $ 1195 room=.
+-> e
+T 604 mode=game_loop           Beregond III(hum) F3@( 4, 7) HP 31/42 MP 0/0 Hu 60 $ 1195 room=.
+-> l
+T 605 mode=game_loop           Beregond III(hum) F3@( 4, 7) HP 31/42 MP 0/0 Hu 60 $ 1195 room=.
+-> s
+T 606 mode=game_loop           Beregond III(hum) F3@( 4, 8) HP 31/42 MP 0/0 Hu 59 $ 1195 room=.
+-> w
+T 607 mode=game_loop           Beregond III(hum) F3@( 3, 8) HP 31/42 MP 0/0 Hu 58 $ 1195 room=.
+-> s
+T 608 mode=game_loop           Beregond III(hum) F3@( 3, 9) HP 31/42 MP 0/0 Hu 57 $ 1195 room=.
+-> s
+T 609 mode=game_loop           Beregond III(hum) F3@( 3,10) HP 31/42 MP 0/0 Hu 56 $ 1195 room=.
+-> l
+T 610 mode=game_loop           Beregond III(hum) F3@( 3,10) HP 31/42 MP 0/0 Hu 56 $ 1195 room=.
+-> s
+T 611 mode=game_loop           Beregond III(hum) F3@( 3,11) HP 31/42 MP 0/0 Hu 55 $ 1195 room=.
+-> l
+T 612 mode=game_loop           Beregond III(hum) F3@( 3,11) HP 31/42 MP 0/0 Hu 55 $ 1195 room=.
+-> s
+T 613 mode=game_loop           Beregond III(hum) F3@( 3,12) HP 31/42 MP 0/0 Hu 54 $ 1195 room=.
+-> l
+T 614 mode=game_loop           Beregond III(hum) F3@( 3,12) HP 31/42 MP 0/0 Hu 54 $ 1195 room=.
+-> w
+T 615 mode=chest_mode          Beregond III(hum) F3@( 2,12) HP 31/42 MP 0/0 Hu 53 $ 1195 room=C
+-> n
+T 616 mode=combat_mode         Beregond III(hum) F3@( 2,11) HP 31/42 MP 0/0 Hu 52 $ 1195 room=M vs Lichen(L2 HP10/10)
+-> a
+T 617 mode=combat_victory      Beregond III(hum) F3@( 2,11) HP 31/42 MP 0/0 Hu 52 $ 1219 room=.
+-> back
+T 618 mode=game_loop           Beregond III(hum) F3@( 2,11) HP 31/42 MP 0/0 Hu 52 $ 1219 room=.
+-> n
+T 619 mode=game_loop           Beregond III(hum) F3@( 2,10) HP 31/42 MP 0/0 Hu 51 $ 1219 room=.
+-> w
+T 620 mode=game_loop           Beregond III(hum) F3@( 1,10) HP 31/42 MP 0/0 Hu 50 $ 1219 room=.
+-> s
+T 621 mode=game_loop           Beregond III(hum) F3@( 1,11) HP 31/42 MP 0/0 Hu 49 $ 1219 room=.
+-> i
+T 622 mode=inventory           Beregond III(hum) F3@( 1,11) HP 31/42 MP 0/0 Hu 49 $ 1219 room=.
+-> eat1
+T 623 mode=inventory           Beregond III(hum) F3@( 1,11) HP 31/42 MP 0/0 Hu 99 $ 1219 room=.
+-> x
+T 624 mode=game_loop           Beregond III(hum) F3@( 1,11) HP 31/42 MP 0/0 Hu 99 $ 1219 room=.
+-> s
+T 625 mode=dungeon_mode        Beregond III(hum) F3@( 1,12) HP 31/42 MP 0/0 Hu 98 $ 1219 room=N
+-> u
+T 626 mode=game_loop           Beregond III(hum) F3@( 1,12) HP 31/42 MP 0/0 Hu 98 $ 1219 room=N
+-> l
+T 627 mode=game_loop           Beregond III(hum) F3@( 1,12) HP 31/42 MP 0/0 Hu 98 $ 1219 room=N
+-> s
+T 628 mode=library_mode        Beregond III(hum) F3@( 1,13) HP 32/42 MP 0/0 Hu 97 $ 1219 room=L
+-> r
+T 629 mode=library_read_decision_mode Beregond III(hum) F3@( 1,13) HP 32/42 MP 0/0 Hu 97 $ 1219 room=L
+-> y
+T 630 mode=game_loop           Beregond III(hum) F3@( 1,13) HP 32/42 MP 0/0 Hu 97 $ 1219 room=.
+-> l
+T 631 mode=game_loop           Beregond III(hum) F3@( 1,13) HP 32/42 MP 0/0 Hu 97 $ 1219 room=.
+-> e
+T 632 mode=combat_mode         Beregond III(hum) F3@( 2,13) HP 32/42 MP 0/0 Hu 96 $ 1219 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 633 mode=combat_mode         Beregond III(hum) F3@( 2,13) HP 29/42 MP 0/0 Hu 96 $ 1219 room=M vs Bugbear(L2 HP17/35)
+-> a
+T 634 mode=combat_mode         Beregond III(hum) F3@( 2,13) HP 26/42 MP 0/0 Hu 96 $ 1219 room=M vs Bugbear(L2 HP17/35)
+-> a
+T 635 mode=combat_victory      Beregond III(hum) F3@( 2,13) HP 26/52 MP 0/0 Hu 96 $ 1237 room=.
+-> back
+T 636 mode=game_loop           Beregond III(hum) F3@( 2,13) HP 26/52 MP 0/0 Hu 96 $ 1237 room=.
+-> l
+T 637 mode=game_loop           Beregond III(hum) F3@( 2,13) HP 26/52 MP 0/0 Hu 96 $ 1237 room=.
+-> n
+T 638 mode=game_loop           Beregond III(hum) F3@( 2,12) HP 27/52 MP 0/0 Hu 95 $ 1237 room=C
+-> e
+T 639 mode=game_loop           Beregond III(hum) F3@( 3,12) HP 27/52 MP 0/0 Hu 94 $ 1237 room=.
+-> e
+T 640 mode=game_loop           Beregond III(hum) F3@( 4,12) HP 28/52 MP 0/0 Hu 93 $ 1237 room=.
+-> s
+T 641 mode=game_loop           Beregond III(hum) F3@( 4,13) HP 28/52 MP 0/0 Hu 92 $ 1237 room=.
+-> s
+T 642 mode=chest_mode          Beregond III(hum) F3@( 4,14) HP 29/52 MP 0/0 Hu 91 $ 1237 room=C
+-> s
+T 643 mode=game_loop           Beregond III(hum) F3@( 4,15) HP 29/52 MP 0/0 Hu 90 $ 1237 room=.
+-> l
+T 644 mode=game_loop           Beregond III(hum) F3@( 4,15) HP 29/52 MP 0/0 Hu 90 $ 1237 room=.
+-> e
+T 645 mode=game_loop           Beregond III(hum) F3@( 5,15) HP 30/52 MP 0/0 Hu 89 $ 1237 room=.
+-> l
+T 646 mode=game_loop           Beregond III(hum) F3@( 5,15) HP 30/52 MP 0/0 Hu 89 $ 1237 room=.
+-> n
+T 647 mode=game_loop           Beregond III(hum) F3@( 5,14) HP 30/52 MP 0/0 Hu 88 $ 1237 room=.
+-> s
+T 648 mode=game_loop           Beregond III(hum) F3@( 5,15) HP 31/52 MP 0/0 Hu 87 $ 1237 room=.
+-> e
+T 649 mode=game_loop           Beregond III(hum) F3@( 6,15) HP 31/52 MP 0/0 Hu 86 $ 1237 room=.
+-> l
+T 650 mode=game_loop           Beregond III(hum) F3@( 6,15) HP 31/52 MP 0/0 Hu 86 $ 1237 room=.
+-> s
+T 651 mode=game_loop           Beregond III(hum) F3@( 6,16) HP 32/52 MP 0/0 Hu 85 $ 1237 room=.
+-> l
+T 652 mode=game_loop           Beregond III(hum) F3@( 6,16) HP 32/52 MP 0/0 Hu 85 $ 1237 room=.
+-> e
+T 653 mode=garden_mode         Beregond III(hum) F3@( 7,16) HP 32/52 MP 0/0 Hu 84 $ 1237 room=G
+-> h
+T 654 mode=game_loop           Beregond III(hum) F3@( 7,16) HP 32/52 MP 0/0 Hu 84 $ 1237 room=.
+-> e
+T 655 mode=game_loop           Beregond III(hum) F3@( 8,16) HP 32/52 MP 0/0 Hu 83 $ 1237 room=.
+-> e
+T 656 mode=game_loop           Beregond III(hum) F3@( 9,16) HP 32/52 MP 0/0 Hu 82 $ 1237 room=.
+-> e
+T 657 mode=game_loop           Beregond III(hum) F3@(10,16) HP 33/52 MP 0/0 Hu 81 $ 1237 room=.
+-> e
+T 658 mode=game_loop           Beregond III(hum) F3@(11,16) HP 33/52 MP 0/0 Hu 80 $ 1237 room=.
+-> l
+T 659 mode=game_loop           Beregond III(hum) F3@(11,16) HP 33/52 MP 0/0 Hu 80 $ 1237 room=.
+-> e
+T 660 mode=chest_mode          Beregond III(hum) F3@(12,16) HP 33/52 MP 0/0 Hu 79 $ 1237 room=C
+-> n
+T 661 mode=tomb_mode           Beregond III(hum) F3@(12,15) HP 33/52 MP 0/0 Hu 78 $ 1237 room=T
+-> p
+T 662 mode=game_loop           Beregond III(hum) F3@(12,15) HP 33/52 MP 0/0 Hu 78 $ 1237 room=T
+-> l
+T 663 mode=game_loop           Beregond III(hum) F3@(12,15) HP 33/52 MP 0/0 Hu 78 $ 1237 room=T
+-> s
+T 664 mode=game_loop           Beregond III(hum) F3@(12,16) HP 34/52 MP 0/0 Hu 77 $ 1237 room=C
+-> e
+T 665 mode=game_loop           Beregond III(hum) F3@(13,16) HP 34/52 MP 0/0 Hu 76 $ 1237 room=.
+-> e
+T 666 mode=game_loop           Beregond III(hum) F3@(14,16) HP 34/52 MP 0/0 Hu 75 $ 1237 room=.
+-> e
+T 667 mode=chest_mode          Beregond III(hum) F3@(15,16) HP 34/52 MP 0/0 Hu 74 $ 1237 room=C
+-> n
+T 668 mode=game_loop           Beregond III(hum) F3@(15,15) HP 35/52 MP 0/0 Hu 73 $ 1237 room=.
+-> l
+T 669 mode=game_loop           Beregond III(hum) F3@(15,15) HP 35/52 MP 0/0 Hu 73 $ 1237 room=.
+-> n
+T 670 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1237 room=V
+-> r1
+T 671 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1157 room=V
+-> b12
+T 672 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1147 room=V
+-> b5
+T 673 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1117 room=V
+-> b5
+T 674 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1087 room=V
+-> b5
+T 675 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1057 room=V
+-> b9
+T 676 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1052 room=V
+-> b9
+T 677 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 1047 room=V
+-> b6
+T 678 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 897 room=V
+-> b3
+T 679 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 812 room=V
+-> b4
+T 680 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 762 room=V
+-> b1
+T 681 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 542 room=V
+-> b1
+T 682 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 497 room=V
+-> id10
+T 683 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 447 room=V
+-> id11
+T 684 mode=vendor_shop         Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 422 room=V
+-> x
+T 685 mode=game_loop           Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 422 room=V
+-> i
+T 686 mode=inventory           Beregond III(hum) F3@(15,14) HP 35/52 MP 0/0 Hu 72 $ 422 room=V
+-> u7
+T 687 mode=inventory           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> u4
+T 688 mode=upgrade_scroll_mode Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> 1
+T 689 mode=inventory           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> x
+T 690 mode=game_loop           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> i
+T 691 mode=inventory           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> e5
+T 692 mode=inventory           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> x
+T 693 mode=game_loop           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> l
+T 694 mode=game_loop           Beregond III(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 72 $ 422 room=V
+-> n
+T 695 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 52/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 696 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 44/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 697 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 36/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> f
+T 698 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 20/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> i
+T 699 mode=inventory           Beregond III(hum) F3@(15,13) HP 20/52 MP 0/0 Hu 71 $ 422 room=M
+-> u2
+T 700 mode=inventory           Beregond III(hum) F3@(15,13) HP 50/52 MP 0/0 Hu 71 $ 422 room=M
+-> x
+T 701 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 50/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 702 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 42/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 703 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 34/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 704 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 26/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 705 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 26/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> a
+T 706 mode=combat_mode         Beregond III(hum) F3@(15,13) HP 26/52 MP 0/0 Hu 71 $ 422 room=M vs Giant Spider(L2 HP7/40)
+-> f
+T 707 mode=flee_direction_mode Beregond III(hum) F3@(15,13) HP 18/52 MP 0/0 Hu 71 $ 422 room=M
+-> s
+T 708 mode=game_loop           Beregond III(hum) F3@(15,14) HP 18/52 MP 0/0 Hu 71 $ 422 room=V
+-> i
+T 709 mode=inventory           Beregond III(hum) F3@(15,14) HP 18/52 MP 0/0 Hu 71 $ 422 room=V
+-> u7
+T 710 mode=inventory           Beregond III(hum) F3@(15,14) HP 48/52 MP 0/0 Hu 71 $ 422 room=V
+-> x
+T 711 mode=game_loop           Beregond III(hum) F3@(15,14) HP 48/52 MP 0/0 Hu 71 $ 422 room=V
+-> e
+T 712 mode=game_loop           Beregond III(hum) F3@(15,14) HP 48/52 MP 0/0 Hu 71 $ 422 room=V
+-> s
+T 713 mode=game_loop           Beregond III(hum) F3@(15,14) HP 48/52 MP 0/0 Hu 71 $ 422 room=V
+-> s
+T 714 mode=game_loop           Beregond III(hum) F3@(15,14) HP 48/52 MP 0/0 Hu 71 $ 422 room=V
+-> w
+T 715 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 48/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP28/28)
+-> a
+T 716 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 47/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP28/28)
+-> a
+T 717 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 46/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP28/28)
+-> a
+T 718 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP28/28)
+-> a
+T 719 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP8/28)
+-> a
+T 720 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP8/28)
+-> a
+T 721 mode=combat_mode         Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 422 room=M vs Harpy(L2 HP8/28)
+-> a
+T 722 mode=combat_victory      Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 437 room=.
+-> back
+T 723 mode=game_loop           Beregond III(hum) F3@(14,14) HP 39/52 MP 0/0 Hu 70 $ 437 room=.
+-> s
+T 724 mode=game_loop           Beregond III(hum) F3@(14,15) HP 39/52 MP 0/0 Hu 69 $ 437 room=.
+-> s
+T 725 mode=game_loop           Beregond III(hum) F3@(14,16) HP 39/52 MP 0/0 Hu 68 $ 437 room=.
+-> w
+T 726 mode=game_loop           Beregond III(hum) F3@(13,16) HP 40/52 MP 0/0 Hu 67 $ 437 room=.
+-> e
+T 727 mode=game_loop           Beregond III(hum) F3@(14,16) HP 40/52 MP 0/0 Hu 66 $ 437 room=.
+-> e
+T 728 mode=game_loop           Beregond III(hum) F3@(15,16) HP 40/52 MP 0/0 Hu 65 $ 437 room=C
+-> n
+T 729 mode=game_loop           Beregond III(hum) F3@(15,15) HP 40/52 MP 0/0 Hu 64 $ 437 room=.
+-> e
+T 730 mode=game_loop           Beregond III(hum) F3@(16,15) HP 41/52 MP 0/0 Hu 63 $ 437 room=.
+-> s
+T 731 mode=game_loop           Beregond III(hum) F3@(16,16) HP 41/52 MP 0/0 Hu 62 $ 437 room=.
+-> e
+T 732 mode=game_loop           Beregond III(hum) F3@(17,16) HP 41/52 MP 0/0 Hu 61 $ 437 room=.
+-> n
+T 733 mode=game_loop           Beregond III(hum) F3@(17,15) HP 41/52 MP 0/0 Hu 60 $ 437 room=.
+-> n
+T 734 mode=game_loop           Beregond III(hum) F3@(17,14) HP 41/52 MP 0/0 Hu 59 $ 437 room=.
+-> l
+T 735 mode=game_loop           Beregond III(hum) F3@(17,14) HP 41/52 MP 0/0 Hu 59 $ 437 room=.
+-> n
+T 736 mode=game_loop           Beregond III(hum) F3@(17,13) HP 41/52 MP 0/0 Hu 58 $ 437 room=.
+-> l
+T 737 mode=game_loop           Beregond III(hum) F3@(17,13) HP 41/52 MP 0/0 Hu 58 $ 437 room=.
+-> n
+T 738 mode=altar_mode          Beregond III(hum) F3@(17,12) HP 41/52 MP 0/0 Hu 57 $ 437 room=A
+-> pray
+T 739 mode=game_loop           Beregond III(hum) F3@(17,12) HP 41/52 MP 0/0 Hu 57 $ 437 room=.
+-> l
+T 740 mode=game_loop           Beregond III(hum) F3@(17,12) HP 41/52 MP 0/0 Hu 57 $ 437 room=.
+-> w
+T 741 mode=library_mode        Beregond III(hum) F3@(16,12) HP 41/52 MP 0/0 Hu 56 $ 437 room=L
+-> r
+T 742 mode=library_read_decision_mode Beregond III(hum) F3@(16,12) HP 41/52 MP 0/0 Hu 56 $ 437 room=L
+-> y
+T 743 mode=game_loop           Beregond III(hum) F3@(16,12) HP 41/52 MP 0/0 Hu 56 $ 437 room=.
+-> l
+T 744 mode=game_loop           Beregond III(hum) F3@(16,12) HP 41/52 MP 0/0 Hu 56 $ 437 room=.
+-> s
+T 745 mode=game_loop           Beregond III(hum) F3@(16,13) HP 33/52 MP 0/0 Hu 55 $ 437 room=.
+-> s
+T 746 mode=game_loop           Beregond III(hum) F3@(16,14) HP 25/52 MP 0/0 Hu 54 $ 437 room=.
+-> e
+T 747 mode=game_loop           Beregond III(hum) F3@(17,14) HP 17/52 MP 0/0 Hu 53 $ 437 room=.
+-> n
+T 748 mode=game_loop           Beregond III(hum) F3@(17,13) HP 9/52 MP 0/0 Hu 52 $ 437 room=.
+-> e
+T 749 mode=game_loop           Beregond III(hum) F3@(18,13) HP 9/52 MP 0/0 Hu 51 $ 437 room=.
+-> e
+T 750 mode=chest_mode          Beregond III(hum) F3@(19,13) HP 9/52 MP 0/0 Hu 50 $ 437 room=C
+-> s
+T 751 mode=combat_mode         Beregond III(hum) F3@(19,14) HP 9/52 MP 0/0 Hu 49 $ 437 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> f
+T 752 mode=flee_direction_mode Beregond III(hum) F3@(19,14) HP 9/52 MP 0/0 Hu 49 $ 437 room=M
+-> s
+T 753 mode=tomb_mode           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 49 $ 437 room=T
+-> p
+T 754 mode=game_loop           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 49 $ 437 room=T
+-> i
+T 755 mode=inventory           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 49 $ 437 room=T
+-> eat1
+T 756 mode=inventory           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 99 $ 437 room=T
+-> x
+T 757 mode=game_loop           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 99 $ 437 room=T
+-> l
+T 758 mode=game_loop           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 99 $ 437 room=T
+-> e
+T 759 mode=game_loop           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 99 $ 437 room=T
+-> e
+T 760 mode=game_loop           Beregond III(hum) F3@(19,15) HP 9/52 MP 0/0 Hu 99 $ 437 room=T
+-> s
+T 761 mode=combat_mode         Beregond III(hum) F3@(19,16) HP 9/52 MP 0/0 Hu 98 $ 437 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> f
+T 762 mode=combat_mode         Beregond III(hum) F3@(19,16) HP 8/52 MP 0/0 Hu 98 $ 437 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> f
+T 763 mode=flee_direction_mode Beregond III(hum) F3@(19,16) HP 7/52 MP 0/0 Hu 98 $ 437 room=M
+-> w
+T 764 mode=game_loop           Beregond III(hum) F3@(18,16) HP 7/52 MP 0/0 Hu 98 $ 437 room=.
+-> w
+T 765 mode=game_loop           Beregond III(hum) F3@(17,16) HP 8/52 MP 0/0 Hu 97 $ 437 room=.
+-> w
+T 766 mode=game_loop           Beregond III(hum) F3@(16,16) HP 8/52 MP 0/0 Hu 96 $ 437 room=.
+-> w
+T 767 mode=game_loop           Beregond III(hum) F3@(15,16) HP 9/52 MP 0/0 Hu 95 $ 437 room=C
+-> w
+T 768 mode=game_loop           Beregond III(hum) F3@(14,16) HP 9/52 MP 0/0 Hu 94 $ 437 room=.
+-> w
+T 769 mode=game_loop           Beregond III(hum) F3@(13,16) HP 10/52 MP 0/0 Hu 93 $ 437 room=.
+-> e
+T 770 mode=game_loop           Beregond III(hum) F3@(14,16) HP 10/52 MP 0/0 Hu 92 $ 437 room=.
+-> l
+T 771 mode=game_loop           Beregond III(hum) F3@(14,16) HP 10/52 MP 0/0 Hu 92 $ 437 room=.
+-> n
+T 772 mode=game_loop           Beregond III(hum) F3@(14,15) HP 11/52 MP 0/0 Hu 91 $ 437 room=.
+-> n
+T 773 mode=game_loop           Beregond III(hum) F3@(14,14) HP 11/52 MP 0/0 Hu 90 $ 437 room=.
+-> e
+T 774 mode=game_loop           Beregond III(hum) F3@(15,14) HP 12/52 MP 0/0 Hu 89 $ 437 room=V
+-> s
+T 775 mode=game_loop           Beregond III(hum) F3@(15,15) HP 12/52 MP 0/0 Hu 88 $ 437 room=.
+-> s
+T 776 mode=game_loop           Beregond III(hum) F3@(15,16) HP 13/52 MP 0/0 Hu 87 $ 437 room=C
+-> w
+T 777 mode=game_loop           Beregond III(hum) F3@(14,16) HP 13/52 MP 0/0 Hu 86 $ 437 room=.
+-> w
+T 778 mode=game_loop           Beregond III(hum) F3@(13,16) HP 14/52 MP 0/0 Hu 85 $ 437 room=.
+-> e
+T 779 mode=game_loop           Beregond III(hum) F3@(14,16) HP 14/52 MP 0/0 Hu 84 $ 437 room=.
+-> n
+T 780 mode=game_loop           Beregond III(hum) F3@(14,15) HP 14/52 MP 0/0 Hu 83 $ 437 room=.
+-> l
+T 781 mode=game_loop           Beregond III(hum) F3@(14,15) HP 14/52 MP 0/0 Hu 83 $ 437 room=.
+-> n
+T 782 mode=game_loop           Beregond III(hum) F3@(14,14) HP 14/52 MP 0/0 Hu 82 $ 437 room=.
+-> e
+T 783 mode=game_loop           Beregond III(hum) F3@(15,14) HP 15/52 MP 0/0 Hu 81 $ 437 room=V
+-> s
+T 784 mode=game_loop           Beregond III(hum) F3@(15,15) HP 15/52 MP 0/0 Hu 80 $ 437 room=.
+-> s
+T 785 mode=game_loop           Beregond III(hum) F3@(15,16) HP 15/52 MP 0/0 Hu 79 $ 437 room=C
+-> w
+T 786 mode=game_loop           Beregond III(hum) F3@(14,16) HP 15/52 MP 0/0 Hu 78 $ 437 room=.
+-> w
+T 787 mode=game_loop           Beregond III(hum) F3@(13,16) HP 16/52 MP 0/0 Hu 77 $ 437 room=.
+-> e
+T 788 mode=game_loop           Beregond III(hum) F3@(14,16) HP 16/52 MP 0/0 Hu 76 $ 437 room=.
+-> n
+T 789 mode=game_loop           Beregond III(hum) F3@(14,15) HP 16/52 MP 0/0 Hu 75 $ 437 room=.
+-> e
+T 790 mode=game_loop           Beregond III(hum) F3@(15,15) HP 16/52 MP 0/0 Hu 74 $ 437 room=.
+-> l
+T 791 mode=game_loop           Beregond III(hum) F3@(15,15) HP 16/52 MP 0/0 Hu 74 $ 437 room=.
+-> s
+T 792 mode=game_loop           Beregond III(hum) F3@(15,16) HP 17/52 MP 0/0 Hu 73 $ 437 room=C
+-> e
+T 793 mode=game_loop           Beregond III(hum) F3@(16,16) HP 17/52 MP 0/0 Hu 72 $ 437 room=.
+-> n
+T 794 mode=game_loop           Beregond III(hum) F3@(16,15) HP 17/52 MP 0/0 Hu 71 $ 437 room=.
+-> e
+T 795 mode=game_loop           Beregond III(hum) F3@(17,15) HP 17/52 MP 0/0 Hu 70 $ 437 room=.
+-> s
+T 796 mode=game_loop           Beregond III(hum) F3@(17,16) HP 18/52 MP 0/0 Hu 69 $ 437 room=.
+-> e
+T 797 mode=game_loop           Beregond III(hum) F3@(18,16) HP 18/52 MP 0/0 Hu 68 $ 437 room=.
+-> w
+T 798 mode=game_loop           Beregond III(hum) F3@(17,16) HP 18/52 MP 0/0 Hu 67 $ 437 room=.
+-> w
+T 799 mode=game_loop           Beregond III(hum) F3@(16,16) HP 18/52 MP 0/0 Hu 66 $ 437 room=.
+-> w
+T 800 mode=game_loop           Beregond III(hum) F3@(15,16) HP 19/52 MP 0/0 Hu 65 $ 437 room=C
+-> l
+T 801 mode=game_loop           Beregond III(hum) F3@(15,16) HP 19/52 MP 0/0 Hu 65 $ 437 room=C
+-> w
+T 802 mode=game_loop           Beregond III(hum) F3@(14,16) HP 19/52 MP 0/0 Hu 64 $ 437 room=.
+-> w
+T 803 mode=game_loop           Beregond III(hum) F3@(13,16) HP 19/52 MP 0/0 Hu 63 $ 437 room=.
+-> e
+T 804 mode=game_loop           Beregond III(hum) F3@(14,16) HP 19/52 MP 0/0 Hu 62 $ 437 room=.
+-> n
+T 805 mode=game_loop           Beregond III(hum) F3@(14,15) HP 20/52 MP 0/0 Hu 61 $ 437 room=.
+-> n
+T 806 mode=game_loop           Beregond III(hum) F3@(14,14) HP 20/52 MP 0/0 Hu 60 $ 437 room=.
+-> w
+T 807 mode=game_loop           Beregond III(hum) F3@(13,14) HP 20/52 MP 0/0 Hu 59 $ 437 room=.
+-> e
+T 808 mode=game_loop           Beregond III(hum) F3@(14,14) HP 20/52 MP 0/0 Hu 58 $ 437 room=.
+-> e
+T 809 mode=game_loop           Beregond III(hum) F3@(15,14) HP 20/52 MP 0/0 Hu 57 $ 437 room=V
+-> s
+T 810 mode=game_loop           Beregond III(hum) F3@(15,15) HP 20/52 MP 0/0 Hu 56 $ 437 room=.
+-> l
+T 811 mode=game_loop           Beregond III(hum) F3@(15,15) HP 20/52 MP 0/0 Hu 56 $ 437 room=.
+-> s
+T 812 mode=game_loop           Beregond III(hum) F3@(15,16) HP 20/52 MP 0/0 Hu 55 $ 437 room=C
+-> w
+T 813 mode=game_loop           Beregond III(hum) F3@(14,16) HP 20/52 MP 0/0 Hu 54 $ 437 room=.
+-> w
+T 814 mode=game_loop           Beregond III(hum) F3@(13,16) HP 20/52 MP 0/0 Hu 53 $ 437 room=.
+-> e
+T 815 mode=game_loop           Beregond III(hum) F3@(14,16) HP 20/52 MP 0/0 Hu 52 $ 437 room=.
+-> n
+T 816 mode=game_loop           Beregond III(hum) F3@(14,15) HP 20/52 MP 0/0 Hu 51 $ 437 room=.
+-> e
+T 817 mode=game_loop           Beregond III(hum) F3@(15,15) HP 20/52 MP 0/0 Hu 50 $ 437 room=.
+-> s
+T 818 mode=game_loop           Beregond III(hum) F3@(15,16) HP 20/52 MP 0/0 Hu 49 $ 437 room=C
+-> i
+T 819 mode=inventory           Beregond III(hum) F3@(15,16) HP 20/52 MP 0/0 Hu 49 $ 437 room=C
+-> eat1
+T 820 mode=inventory           Beregond III(hum) F3@(15,16) HP 20/52 MP 0/0 Hu 99 $ 437 room=C
+-> x
+T 821 mode=game_loop           Beregond III(hum) F3@(15,16) HP 20/52 MP 0/0 Hu 99 $ 437 room=C
+-> e
+T 822 mode=game_loop           Beregond III(hum) F3@(16,16) HP 20/52 MP 0/0 Hu 98 $ 437 room=.
+-> n
+T 823 mode=game_loop           Beregond III(hum) F3@(16,15) HP 21/52 MP 0/0 Hu 97 $ 437 room=.
+-> n
+T 824 mode=game_loop           Beregond III(hum) F3@(16,14) HP 21/52 MP 0/0 Hu 96 $ 437 room=.
+-> w
+T 825 mode=game_loop           Beregond III(hum) F3@(15,14) HP 22/52 MP 0/0 Hu 95 $ 437 room=V
+-> s
+T 826 mode=game_loop           Beregond III(hum) F3@(15,15) HP 22/52 MP 0/0 Hu 94 $ 437 room=.
+-> s
+T 827 mode=game_loop           Beregond III(hum) F3@(15,16) HP 23/52 MP 0/0 Hu 93 $ 437 room=C
+-> w
+T 828 mode=game_loop           Beregond III(hum) F3@(14,16) HP 23/52 MP 0/0 Hu 92 $ 437 room=.
+-> w
+T 829 mode=game_loop           Beregond III(hum) F3@(13,16) HP 24/52 MP 0/0 Hu 91 $ 437 room=.
+-> e
+T 830 mode=game_loop           Beregond III(hum) F3@(14,16) HP 24/52 MP 0/0 Hu 90 $ 437 room=.
+-> i
+T 831 mode=inventory           Beregond III(hum) F3@(14,16) HP 24/52 MP 0/0 Hu 90 $ 437 room=.
+-> eat2
+T 832 mode=inventory           Beregond III(hum) F3@(14,16) HP 24/52 MP 0/0 Hu100 $ 437 room=.
+-> x
+T 833 mode=game_loop           Beregond III(hum) F3@(14,16) HP 24/52 MP 0/0 Hu100 $ 437 room=.
+-> n
+T 834 mode=game_loop           Beregond III(hum) F3@(14,15) HP 25/52 MP 0/0 Hu 99 $ 437 room=.
+-> n
+T 835 mode=game_loop           Beregond III(hum) F3@(14,14) HP 25/52 MP 0/0 Hu 98 $ 437 room=.
+-> e
+T 836 mode=game_loop           Beregond III(hum) F3@(15,14) HP 26/52 MP 0/0 Hu 97 $ 437 room=V
+-> s
+T 837 mode=game_loop           Beregond III(hum) F3@(15,15) HP 26/52 MP 0/0 Hu 96 $ 437 room=.
+-> s
+T 838 mode=game_loop           Beregond III(hum) F3@(15,16) HP 27/52 MP 0/0 Hu 95 $ 437 room=C
+-> w
+T 839 mode=game_loop           Beregond III(hum) F3@(14,16) HP 27/52 MP 0/0 Hu 94 $ 437 room=.
+-> w
+T 840 mode=game_loop           Beregond III(hum) F3@(13,16) HP 28/52 MP 0/0 Hu 93 $ 437 room=.
+-> l
+T 841 mode=game_loop           Beregond III(hum) F3@(13,16) HP 28/52 MP 0/0 Hu 93 $ 437 room=.
+-> e
+T 842 mode=game_loop           Beregond III(hum) F3@(14,16) HP 28/52 MP 0/0 Hu 92 $ 437 room=.
+-> n
+T 843 mode=game_loop           Beregond III(hum) F3@(14,15) HP 29/52 MP 0/0 Hu 91 $ 437 room=.
+-> e
+T 844 mode=game_loop           Beregond III(hum) F3@(15,15) HP 29/52 MP 0/0 Hu 90 $ 437 room=.
+-> s
+T 845 mode=game_loop           Beregond III(hum) F3@(15,16) HP 30/52 MP 0/0 Hu 89 $ 437 room=C
+-> e
+T 846 mode=game_loop           Beregond III(hum) F3@(16,16) HP 30/52 MP 0/0 Hu 88 $ 437 room=.
+-> e
+T 847 mode=game_loop           Beregond III(hum) F3@(17,16) HP 31/52 MP 0/0 Hu 87 $ 437 room=.
+-> e
+T 848 mode=game_loop           Beregond III(hum) F3@(18,16) HP 31/52 MP 0/0 Hu 86 $ 437 room=.
+-> w
+T 849 mode=game_loop           Beregond III(hum) F3@(17,16) HP 32/52 MP 0/0 Hu 85 $ 437 room=.
+-> n
+T 850 mode=game_loop           Beregond III(hum) F3@(17,15) HP 32/52 MP 0/0 Hu 84 $ 437 room=.
+-> l
+T 851 mode=game_loop           Beregond III(hum) F3@(17,15) HP 32/52 MP 0/0 Hu 84 $ 437 room=.
+-> n
+T 852 mode=game_loop           Beregond III(hum) F3@(17,14) HP 32/52 MP 0/0 Hu 83 $ 437 room=.
+-> e
+T 853 mode=game_loop           Beregond III(hum) F3@(18,14) HP 32/52 MP 0/0 Hu 82 $ 437 room=.
+-> n
+T 854 mode=game_loop           Beregond III(hum) F3@(18,13) HP 33/52 MP 0/0 Hu 81 $ 437 room=.
+-> e
+T 855 mode=game_loop           Beregond III(hum) F3@(19,13) HP 33/52 MP 0/0 Hu 80 $ 437 room=C
+-> w
+T 856 mode=game_loop           Beregond III(hum) F3@(18,13) HP 33/52 MP 0/0 Hu 79 $ 437 room=.
+-> n
+T 857 mode=game_loop           Beregond III(hum) F3@(18,12) HP 33/52 MP 0/0 Hu 78 $ 437 room=.
+-> w
+T 858 mode=game_loop           Beregond III(hum) F3@(17,12) HP 34/52 MP 0/0 Hu 77 $ 437 room=.
+-> s
+T 859 mode=game_loop           Beregond III(hum) F3@(17,13) HP 34/52 MP 0/0 Hu 76 $ 437 room=.
+-> s
+T 860 mode=game_loop           Beregond III(hum) F3@(17,14) HP 34/52 MP 0/0 Hu 75 $ 437 room=.
+-> l
+T 861 mode=game_loop           Beregond III(hum) F3@(17,14) HP 34/52 MP 0/0 Hu 75 $ 437 room=.
+-> s
+T 862 mode=game_loop           Beregond III(hum) F3@(17,15) HP 34/52 MP 0/0 Hu 74 $ 437 room=.
+-> s
+T 863 mode=game_loop           Beregond III(hum) F3@(17,16) HP 35/52 MP 0/0 Hu 73 $ 437 room=.
+-> w
+T 864 mode=game_loop           Beregond III(hum) F3@(16,16) HP 35/52 MP 0/0 Hu 72 $ 437 room=.
+-> w
+T 865 mode=game_loop           Beregond III(hum) F3@(15,16) HP 35/52 MP 0/0 Hu 71 $ 437 room=C
+-> w
+T 866 mode=game_loop           Beregond III(hum) F3@(14,16) HP 35/52 MP 0/0 Hu 70 $ 437 room=.
+-> w
+T 867 mode=game_loop           Beregond III(hum) F3@(13,16) HP 36/52 MP 0/0 Hu 69 $ 437 room=.
+-> e
+T 868 mode=game_loop           Beregond III(hum) F3@(14,16) HP 36/52 MP 0/0 Hu 68 $ 437 room=.
+-> n
+T 869 mode=game_loop           Beregond III(hum) F3@(14,15) HP 36/52 MP 0/0 Hu 67 $ 437 room=.
+-> n
+T 870 mode=game_loop           Beregond III(hum) F3@(14,14) HP 36/52 MP 0/0 Hu 66 $ 437 room=.
+-> l
+T 871 mode=game_loop           Beregond III(hum) F3@(14,14) HP 36/52 MP 0/0 Hu 66 $ 437 room=.
+-> e
+T 872 mode=game_loop           Beregond III(hum) F3@(15,14) HP 37/52 MP 0/0 Hu 65 $ 437 room=V
+-> e
+T 873 mode=game_loop           Beregond III(hum) F3@(16,14) HP 37/52 MP 0/0 Hu 64 $ 437 room=.
+-> n
+T 874 mode=game_loop           Beregond III(hum) F3@(16,13) HP 37/52 MP 0/0 Hu 63 $ 437 room=.
+-> n
+T 875 mode=game_loop           Beregond III(hum) F3@(16,12) HP 37/52 MP 0/0 Hu 62 $ 437 room=.
+-> n
+T 876 mode=game_loop           Beregond III(hum) F3@(16,11) HP 38/52 MP 0/0 Hu 61 $ 437 room=.
+-> l
+T 877 mode=game_loop           Beregond III(hum) F3@(16,11) HP 38/52 MP 0/0 Hu 61 $ 437 room=.
+-> w
+T 878 mode=game_loop           Beregond III(hum) F3@(15,11) HP 38/52 MP 0/0 Hu 60 $ 437 room=.
+-> l
+T 879 mode=game_loop           Beregond III(hum) F3@(15,11) HP 38/52 MP 0/0 Hu 60 $ 437 room=.
+-> n
+T 880 mode=game_loop           Beregond III(hum) F3@(15,10) HP 38/52 MP 0/0 Hu 59 $ 437 room=.
+-> l
+T 881 mode=game_loop           Beregond III(hum) F3@(15,10) HP 38/52 MP 0/0 Hu 59 $ 437 room=.
+-> n
+T 882 mode=altar_mode          Beregond III(hum) F3@(15, 9) HP 38/52 MP 0/0 Hu 58 $ 437 room=A
+-> pray
+T 883 mode=game_loop           Beregond III(hum) F3@(15, 9) HP 38/52 MP 0/0 Hu 58 $ 437 room=.
+-> l
+T 884 mode=game_loop           Beregond III(hum) F3@(15, 9) HP 38/52 MP 0/0 Hu 58 $ 437 room=.
+-> s
+T 885 mode=game_loop           Beregond III(hum) F3@(15,10) HP 38/52 MP 0/0 Hu 57 $ 437 room=.
+-> w
+T 886 mode=game_loop           Beregond III(hum) F3@(14,10) HP 38/52 MP 0/0 Hu 56 $ 437 room=.
+-> s
+T 887 mode=pool_mode           Beregond III(hum) F3@(14,11) HP 38/52 MP 0/0 Hu 55 $ 437 room=P
+-> dr
+T 888 mode=game_loop           Beregond III(hum) F3@(14,11) HP 52/52 MP 0/0 Hu 55 $ 437 room=.
+-> w
+T 889 mode=combat_mode         Beregond III(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 54 $ 437 room=M vs Giant Centipede(L2 HP16/16)
+-> a
+T 890 mode=combat_victory      Beregond III(hum) F3@(13,11) HP 51/52 MP 0/0 Hu 54 $ 461 room=.
+-> back
+T 891 mode=game_loop           Beregond III(hum) F3@(13,11) HP 51/52 MP 0/0 Hu 54 $ 461 room=.
+-> n
+T 892 mode=game_loop           Beregond III(hum) F3@(13,10) HP 48/52 MP 0/0 Hu 53 $ 461 room=.
+-> n
+T 893 mode=game_loop           Beregond III(hum) F3@(13, 9) HP 45/52 MP 0/0 Hu 52 $ 461 room=.
+-> w
+T 894 mode=game_loop           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 51 $ 461 room=.
+-> l
+T 895 mode=game_loop           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 51 $ 461 room=.
+-> n
+T 896 mode=chest_mode          Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=C
+-> o
+T 897 mode=game_loop           Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=.
+-> i
+T 898 mode=inventory           Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=.
+-> e4
+T 899 mode=inventory           Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=.
+-> x
+T 900 mode=game_loop           Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=.
+-> l
+T 901 mode=game_loop           Beregond III(hum) F3@(12, 8) HP 42/52 MP 0/0 Hu 50 $ 461 room=.
+-> s
+T 902 mode=game_loop           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 49 $ 461 room=.
+-> i
+T 903 mode=inventory           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 49 $ 461 room=.
+-> eat1
+T 904 mode=inventory           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 99 $ 461 room=.
+-> x
+T 905 mode=game_loop           Beregond III(hum) F3@(12, 9) HP 42/52 MP 0/0 Hu 99 $ 461 room=.
+-> w
+T 906 mode=dungeon_mode        Beregond III(hum) F3@(11, 9) HP 42/52 MP 0/0 Hu 98 $ 461 room=N
+-> u
+T 907 mode=game_loop           Beregond III(hum) F3@(11, 9) HP 42/52 MP 0/0 Hu 98 $ 461 room=N
+-> w
+T 908 mode=game_loop           Beregond III(hum) F3@(10, 9) HP 43/52 MP 0/0 Hu 97 $ 461 room=.
+-> l
+T 909 mode=game_loop           Beregond III(hum) F3@(10, 9) HP 43/52 MP 0/0 Hu 97 $ 461 room=.
+-> n
+T 910 mode=game_loop           Beregond III(hum) F3@(10, 8) HP 43/52 MP 0/0 Hu 96 $ 461 room=.
+-> l
+T 911 mode=game_loop           Beregond III(hum) F3@(10, 8) HP 43/52 MP 0/0 Hu 96 $ 461 room=.
+-> w
+T 912 mode=game_loop           Beregond III(hum) F3@( 9, 8) HP 44/52 MP 0/0 Hu 95 $ 461 room=.
+-> w
+T 913 mode=game_loop           Beregond III(hum) F3@( 8, 8) HP 44/52 MP 0/0 Hu 94 $ 461 room=.
+-> w
+T 914 mode=game_loop           Beregond III(hum) F3@( 7, 8) HP 45/52 MP 0/0 Hu 93 $ 461 room=.
+-> w
+T 915 mode=stairs_down_mode    Beregond III(hum) F3@( 6, 8) HP 45/52 MP 0/0 Hu 92 $ 461 room=D
+-> d
+T 916 mode=stairs_up_mode      Beregond III(hum) F4@( 1, 1) HP 45/52 MP 0/0 Hu 92 $ 461 room=U
+-> e
+T 917 mode=chest_mode          Beregond III(hum) F4@( 2, 1) HP 46/52 MP 0/0 Hu 91 $ 461 room=C
+-> o
+T 918 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 46/52 MP 0/0 Hu 91 $ 591 room=.
+-> l
+T 919 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 46/52 MP 0/0 Hu 91 $ 591 room=.
+-> s
+T 920 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 591 room=V
+-> b10
+T 921 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 581 room=V
+-> b6
+T 922 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 551 room=V
+-> b6
+T 923 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 521 room=V
+-> b6
+T 924 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 491 room=V
+-> b7
+T 925 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 486 room=V
+-> b7
+T 926 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 481 room=V
+-> b6
+T 927 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 331 room=V
+-> b4
+T 928 mode=vendor_shop         Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 201 room=V
+-> x
+T 929 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 201 room=V
+-> l
+T 930 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 46/52 MP 0/0 Hu 90 $ 201 room=V
+-> e
+T 931 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 47/52 MP 0/0 Hu 89 $ 201 room=.
+-> i
+T 932 mode=inventory           Beregond III(hum) F4@( 3, 2) HP 47/52 MP 0/0 Hu 89 $ 201 room=.
+-> u9
+T 933 mode=inventory           Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 89 $ 201 room=.
+-> u5
+T 934 mode=upgrade_scroll_mode Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 89 $ 201 room=.
+-> 1
+T 935 mode=inventory           Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 89 $ 201 room=.
+-> x
+T 936 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 89 $ 201 room=.
+-> l
+T 937 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 89 $ 201 room=.
+-> s
+T 938 mode=oracle_mode         Beregond III(hum) F4@( 3, 3) HP 52/52 MP 0/0 Hu 88 $ 201 room=O
+-> s
+T 939 mode=game_loop           Beregond III(hum) F4@( 3, 4) HP 52/52 MP 0/0 Hu 87 $ 201 room=.
+-> l
+T 940 mode=game_loop           Beregond III(hum) F4@( 3, 4) HP 52/52 MP 0/0 Hu 87 $ 201 room=.
+-> w
+T 941 mode=combat_mode         Beregond III(hum) F4@( 2, 4) HP 52/52 MP 0/0 Hu 86 $ 201 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 942 mode=combat_victory      Beregond III(hum) F4@( 2, 4) HP 52/52 MP 0/0 Hu 86 $ 229 room=.
+-> back
+T 943 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 52/52 MP 0/0 Hu 86 $ 229 room=.
+-> n
+T 944 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 52/52 MP 0/0 Hu 85 $ 229 room=.
+-> l
+T 945 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 52/52 MP 0/0 Hu 85 $ 229 room=.
+-> n
+T 946 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 52/52 MP 0/0 Hu 84 $ 229 room=V
+-> e
+T 947 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 52/52 MP 0/0 Hu 83 $ 229 room=.
+-> n
+T 948 mode=combat_mode         Beregond III(hum) F4@( 3, 1) HP 52/52 MP 0/0 Hu 82 $ 229 room=M vs Rust Monster(L3 HP19/19)
+-> a
+T 949 mode=combat_victory      Beregond III(hum) F4@( 3, 1) HP 52/62 MP 0/0 Hu 82 $ 237 room=.
+-> back
+T 950 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 52/62 MP 0/0 Hu 82 $ 237 room=.
+-> e
+T 951 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 52/62 MP 0/0 Hu 81 $ 237 room=.
+-> e
+T 952 mode=garden_mode         Beregond III(hum) F4@( 5, 1) HP 52/62 MP 0/0 Hu 80 $ 237 room=G
+-> h
+T 953 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 52/62 MP 0/0 Hu 80 $ 237 room=.
+-> i
+T 954 mode=inventory           Beregond III(hum) F4@( 5, 1) HP 52/62 MP 0/0 Hu 80 $ 237 room=.
+-> u9
+T 955 mode=inventory           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 80 $ 237 room=.
+-> x
+T 956 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 80 $ 237 room=.
+-> s
+T 957 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 79 $ 237 room=.
+-> e
+T 958 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 78 $ 237 room=.
+-> w
+T 959 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 77 $ 237 room=.
+-> s
+T 960 mode=game_loop           Beregond III(hum) F4@( 5, 3) HP 62/62 MP 0/0 Hu 76 $ 237 room=.
+-> s
+T 961 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 75 $ 237 room=.
+-> l
+T 962 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 75 $ 237 room=.
+-> e
+T 963 mode=garden_mode         Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 74 $ 237 room=G
+-> h
+T 964 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 74 $ 237 room=.
+-> l
+T 965 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 74 $ 237 room=.
+-> e
+T 966 mode=altar_mode          Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 73 $ 237 room=A
+-> pray
+T 967 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 73 $ 237 room=.
+-> l
+T 968 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 73 $ 237 room=.
+-> s
+T 969 mode=game_loop           Beregond III(hum) F4@( 7, 5) HP 62/62 MP 0/0 Hu 72 $ 237 room=.
+-> l
+T 970 mode=game_loop           Beregond III(hum) F4@( 7, 5) HP 62/62 MP 0/0 Hu 72 $ 237 room=.
+-> e
+T 971 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 71 $ 237 room=.
+-> l
+T 972 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 71 $ 237 room=.
+-> e
+T 973 mode=library_mode        Beregond III(hum) F4@( 9, 5) HP 62/62 MP 0/0 Hu 70 $ 237 room=L
+-> r
+T 974 mode=library_read_decision_mode Beregond III(hum) F4@( 9, 5) HP 62/62 MP 0/0 Hu 70 $ 237 room=L
+-> y
+T 975 mode=game_loop           Beregond III(hum) F4@( 9, 5) HP 62/62 MP 0/0 Hu 70 $ 237 room=.
+-> l
+T 976 mode=game_loop           Beregond III(hum) F4@( 9, 5) HP 62/62 MP 0/0 Hu 70 $ 237 room=.
+-> w
+T 977 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 69 $ 237 room=.
+-> s
+T 978 mode=combat_mode         Beregond III(hum) F4@( 8, 6) HP 62/62 MP 0/0 Hu 68 $ 237 room=M vs Bat(L3 HP13/13)
+-> a
+T 979 mode=combat_mode         Beregond III(hum) F4@( 8, 6) HP 61/62 MP 0/0 Hu 68 $ 237 room=M vs Bat(L3 HP13/13)
+-> a
+T 980 mode=combat_mode         Beregond III(hum) F4@( 8, 6) HP 61/62 MP 0/0 Hu 68 $ 237 room=M vs Bat(L3 HP13/13)
+-> a
+T 981 mode=combat_mode         Beregond III(hum) F4@( 8, 6) HP 60/62 MP 0/0 Hu 68 $ 237 room=M vs Bat(L3 HP13/13)
+-> a
+T 982 mode=combat_victory      Beregond III(hum) F4@( 8, 6) HP 60/62 MP 0/0 Hu 68 $ 241 room=.
+-> back
+T 983 mode=game_loop           Beregond III(hum) F4@( 8, 6) HP 60/62 MP 0/0 Hu 68 $ 241 room=.
+-> w
+T 984 mode=game_loop           Beregond III(hum) F4@( 7, 6) HP 60/62 MP 0/0 Hu 67 $ 241 room=.
+-> w
+T 985 mode=altar_mode          Beregond III(hum) F4@( 6, 6) HP 60/62 MP 0/0 Hu 66 $ 241 room=A
+-> pray
+T 986 mode=game_loop           Beregond III(hum) F4@( 6, 6) HP 60/62 MP 0/0 Hu 66 $ 241 room=.
+-> n
+T 987 mode=game_loop           Beregond III(hum) F4@( 6, 5) HP 60/62 MP 0/0 Hu 65 $ 241 room=.
+-> n
+T 988 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 61/62 MP 0/0 Hu 64 $ 241 room=.
+-> e
+T 989 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 61/62 MP 0/0 Hu 63 $ 241 room=.
+-> e
+T 990 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 61/62 MP 0/0 Hu 62 $ 241 room=.
+-> n
+T 991 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 61/62 MP 0/0 Hu 61 $ 241 room=.
+-> n
+T 992 mode=game_loop           Beregond III(hum) F4@( 8, 2) HP 62/62 MP 0/0 Hu 60 $ 241 room=.
+-> s
+T 993 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 59 $ 241 room=.
+-> w
+T 994 mode=combat_mode         Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 58 $ 241 room=M vs Owlbear(L3 HP50/50)
+-> a
+T 995 mode=combat_mode         Beregond III(hum) F4@( 7, 3) HP 59/62 MP 0/0 Hu 58 $ 241 room=M vs Owlbear(L3 HP22/50)
+-> a
+T 996 mode=combat_mode         Beregond III(hum) F4@( 7, 3) HP 56/62 MP 0/0 Hu 58 $ 241 room=M vs Owlbear(L3 HP22/50)
+-> a
+T 997 mode=combat_victory      Beregond III(hum) F4@( 7, 3) HP 56/62 MP 0/0 Hu 58 $ 245 room=.
+-> back
+T 998 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 56/62 MP 0/0 Hu 58 $ 245 room=.
+-> s
+T 999 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 56/62 MP 0/0 Hu 57 $ 245 room=.
+-> e
+T1000 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 56/62 MP 0/0 Hu 56 $ 245 room=.
+-> s
+T1001 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 56/62 MP 0/0 Hu 55 $ 245 room=.
+-> s
+T1002 mode=game_loop           Beregond III(hum) F4@( 8, 6) HP 56/62 MP 0/0 Hu 54 $ 245 room=.
+-> w
+T1003 mode=game_loop           Beregond III(hum) F4@( 7, 6) HP 56/62 MP 0/0 Hu 53 $ 245 room=.
+-> n
+T1004 mode=game_loop           Beregond III(hum) F4@( 7, 5) HP 56/62 MP 0/0 Hu 52 $ 245 room=.
+-> n
+T1005 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 56/62 MP 0/0 Hu 51 $ 245 room=.
+-> n
+T1006 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 56/62 MP 0/0 Hu 50 $ 245 room=.
+-> e
+T1007 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 56/62 MP 0/0 Hu 49 $ 245 room=.
+-> i
+T1008 mode=inventory           Beregond III(hum) F4@( 8, 3) HP 56/62 MP 0/0 Hu 49 $ 245 room=.
+-> u9
+T1009 mode=inventory           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> x
+T1010 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> i
+T1011 mode=inventory           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> eat1
+T1012 mode=inventory           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> x
+T1013 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> n
+T1014 mode=game_loop           Beregond III(hum) F4@( 8, 2) HP 62/62 MP 0/0 Hu 98 $ 245 room=.
+-> s
+T1015 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 97 $ 245 room=.
+-> s
+T1016 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 62/62 MP 0/0 Hu 96 $ 245 room=.
+-> w
+T1017 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 95 $ 245 room=.
+-> n
+T1018 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 94 $ 245 room=.
+-> s
+T1019 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> i
+T1020 mode=inventory           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> u9
+T1021 mode=inventory           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> x
+T1022 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> w
+T1023 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 92 $ 245 room=.
+-> w
+T1024 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> n
+T1025 mode=game_loop           Beregond III(hum) F4@( 5, 3) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> n
+T1026 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> e
+T1027 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 88 $ 245 room=.
+-> w
+T1028 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> n
+T1029 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> w
+T1030 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> s
+T1031 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> w
+T1032 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> n
+T1033 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 82 $ 245 room=.
+-> w
+T1034 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> s
+T1035 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=V
+-> s
+T1036 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> s
+T1037 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 62/62 MP 0/0 Hu 78 $ 245 room=.
+-> e
+T1038 mode=game_loop           Beregond III(hum) F4@( 3, 4) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> n
+T1039 mode=game_loop           Beregond III(hum) F4@( 3, 3) HP 62/62 MP 0/0 Hu 76 $ 245 room=O
+-> n
+T1040 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 75 $ 245 room=.
+-> e
+T1041 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> i
+T1042 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> eat4
+T1043 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> x
+T1044 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> e
+T1045 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> e
+T1046 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 78 $ 245 room=.
+-> w
+T1047 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> n
+T1048 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> w
+T1049 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 75 $ 245 room=.
+-> s
+T1050 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> w
+T1051 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 73 $ 245 room=.
+-> n
+T1052 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 72 $ 245 room=.
+-> w
+T1053 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 71 $ 245 room=.
+-> s
+T1054 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 70 $ 245 room=V
+-> w
+T1055 mode=game_loop           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 69 $ 245 room=.
+-> s
+T1056 mode=game_loop           Beregond III(hum) F4@( 1, 3) HP 62/62 MP 0/0 Hu 68 $ 245 room=.
+-> e
+T1057 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 67 $ 245 room=.
+-> e
+T1058 mode=game_loop           Beregond III(hum) F4@( 3, 3) HP 62/62 MP 0/0 Hu 66 $ 245 room=O
+-> n
+T1059 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 65 $ 245 room=.
+-> e
+T1060 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 64 $ 245 room=.
+-> e
+T1061 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 63 $ 245 room=.
+-> e
+T1062 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 62 $ 245 room=.
+-> i
+T1063 mode=inventory           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 62 $ 245 room=.
+-> eat3
+T1064 mode=inventory           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> x
+T1065 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> w
+T1066 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> n
+T1067 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 78 $ 245 room=.
+-> w
+T1068 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> s
+T1069 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> i
+T1070 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> eat4
+T1071 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 94 $ 245 room=.
+-> x
+T1072 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 94 $ 245 room=.
+-> w
+T1073 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> w
+T1074 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 92 $ 245 room=V
+-> n
+T1075 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> w
+T1076 mode=stairs_up_mode      Beregond III(hum) F4@( 1, 1) HP 62/62 MP 0/0 Hu 90 $ 245 room=U
+-> s
+T1077 mode=game_loop           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> s
+T1078 mode=game_loop           Beregond III(hum) F4@( 1, 3) HP 62/62 MP 0/0 Hu 88 $ 245 room=.
+-> s
+T1079 mode=game_loop           Beregond III(hum) F4@( 1, 4) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> l
+T1080 mode=game_loop           Beregond III(hum) F4@( 1, 4) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> s
+T1081 mode=game_loop           Beregond III(hum) F4@( 1, 5) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> e
+T1082 mode=game_loop           Beregond III(hum) F4@( 2, 5) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> n
+T1083 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> n
+T1084 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> n
+T1085 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 82 $ 245 room=V
+-> e
+T1086 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> e
+T1087 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> i
+T1088 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> eat2
+T1089 mode=inventory           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> x
+T1090 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> e
+T1091 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 92 $ 245 room=.
+-> e
+T1092 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> w
+T1093 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> n
+T1094 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> w
+T1095 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 88 $ 245 room=.
+-> s
+T1096 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> w
+T1097 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> w
+T1098 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 85 $ 245 room=V
+-> n
+T1099 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> e
+T1100 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> i
+T1101 mode=inventory           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> eat2
+T1102 mode=inventory           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu100 $ 245 room=.
+-> x
+T1103 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu100 $ 245 room=.
+-> e
+T1104 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> s
+T1105 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 98 $ 245 room=.
+-> e
+T1106 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 97 $ 245 room=.
+-> e
+T1107 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 96 $ 245 room=.
+-> w
+T1108 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 95 $ 245 room=.
+-> s
+T1109 mode=game_loop           Beregond III(hum) F4@( 5, 3) HP 62/62 MP 0/0 Hu 94 $ 245 room=.
+-> s
+T1110 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> s
+T1111 mode=game_loop           Beregond III(hum) F4@( 5, 5) HP 62/62 MP 0/0 Hu 92 $ 245 room=.
+-> e
+T1112 mode=game_loop           Beregond III(hum) F4@( 6, 5) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> n
+T1113 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> e
+T1114 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> n
+T1115 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 88 $ 245 room=.
+-> e
+T1116 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> n
+T1117 mode=game_loop           Beregond III(hum) F4@( 8, 2) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> s
+T1118 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> s
+T1119 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> s
+T1120 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> l
+T1121 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> w
+T1122 mode=game_loop           Beregond III(hum) F4@( 7, 5) HP 62/62 MP 0/0 Hu 82 $ 245 room=.
+-> n
+T1123 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> n
+T1124 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> e
+T1125 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> n
+T1126 mode=game_loop           Beregond III(hum) F4@( 8, 2) HP 62/62 MP 0/0 Hu 78 $ 245 room=.
+-> s
+T1127 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> s
+T1128 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> w
+T1129 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 75 $ 245 room=.
+-> n
+T1130 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> l
+T1131 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> s
+T1132 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 73 $ 245 room=.
+-> s
+T1133 mode=game_loop           Beregond III(hum) F4@( 7, 5) HP 62/62 MP 0/0 Hu 72 $ 245 room=.
+-> e
+T1134 mode=game_loop           Beregond III(hum) F4@( 8, 5) HP 62/62 MP 0/0 Hu 71 $ 245 room=.
+-> n
+T1135 mode=game_loop           Beregond III(hum) F4@( 8, 4) HP 62/62 MP 0/0 Hu 70 $ 245 room=.
+-> n
+T1136 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 69 $ 245 room=.
+-> n
+T1137 mode=game_loop           Beregond III(hum) F4@( 8, 2) HP 62/62 MP 0/0 Hu 68 $ 245 room=.
+-> s
+T1138 mode=game_loop           Beregond III(hum) F4@( 8, 3) HP 62/62 MP 0/0 Hu 67 $ 245 room=.
+-> w
+T1139 mode=game_loop           Beregond III(hum) F4@( 7, 3) HP 62/62 MP 0/0 Hu 66 $ 245 room=.
+-> s
+T1140 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 65 $ 245 room=.
+-> l
+T1141 mode=game_loop           Beregond III(hum) F4@( 7, 4) HP 62/62 MP 0/0 Hu 65 $ 245 room=.
+-> w
+T1142 mode=game_loop           Beregond III(hum) F4@( 6, 4) HP 62/62 MP 0/0 Hu 64 $ 245 room=.
+-> w
+T1143 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 63 $ 245 room=.
+-> n
+T1144 mode=game_loop           Beregond III(hum) F4@( 5, 3) HP 62/62 MP 0/0 Hu 62 $ 245 room=.
+-> n
+T1145 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 61 $ 245 room=.
+-> e
+T1146 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 60 $ 245 room=.
+-> w
+T1147 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 59 $ 245 room=.
+-> n
+T1148 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 58 $ 245 room=.
+-> w
+T1149 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 57 $ 245 room=.
+-> s
+T1150 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 56 $ 245 room=.
+-> l
+T1151 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 56 $ 245 room=.
+-> s
+T1152 mode=game_loop           Beregond III(hum) F4@( 4, 3) HP 62/62 MP 0/0 Hu 55 $ 245 room=.
+-> e
+T1153 mode=game_loop           Beregond III(hum) F4@( 5, 3) HP 62/62 MP 0/0 Hu 54 $ 245 room=.
+-> n
+T1154 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 53 $ 245 room=.
+-> e
+T1155 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 52 $ 245 room=.
+-> w
+T1156 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 51 $ 245 room=.
+-> n
+T1157 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 50 $ 245 room=.
+-> w
+T1158 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> i
+T1159 mode=inventory           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> eat1
+T1160 mode=inventory           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> x
+T1161 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> s
+T1162 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 98 $ 245 room=.
+-> w
+T1163 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 97 $ 245 room=.
+-> n
+T1164 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 96 $ 245 room=.
+-> w
+T1165 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 95 $ 245 room=.
+-> s
+T1166 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 94 $ 245 room=V
+-> w
+T1167 mode=game_loop           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> s
+T1168 mode=game_loop           Beregond III(hum) F4@( 1, 3) HP 62/62 MP 0/0 Hu 92 $ 245 room=.
+-> s
+T1169 mode=game_loop           Beregond III(hum) F4@( 1, 4) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> e
+T1170 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> l
+T1171 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> n
+T1172 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> n
+T1173 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 88 $ 245 room=V
+-> e
+T1174 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> e
+T1175 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> e
+T1176 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> e
+T1177 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> w
+T1178 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> n
+T1179 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 82 $ 245 room=.
+-> w
+T1180 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> l
+T1181 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> s
+T1182 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> w
+T1183 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> s
+T1184 mode=game_loop           Beregond III(hum) F4@( 3, 3) HP 62/62 MP 0/0 Hu 78 $ 245 room=O
+-> s
+T1185 mode=game_loop           Beregond III(hum) F4@( 3, 4) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> e
+T1186 mode=game_loop           Beregond III(hum) F4@( 4, 4) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> n
+T1187 mode=game_loop           Beregond III(hum) F4@( 4, 3) HP 62/62 MP 0/0 Hu 75 $ 245 room=.
+-> n
+T1188 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> e
+T1189 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 73 $ 245 room=.
+-> e
+T1190 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 72 $ 245 room=.
+-> l
+T1191 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 72 $ 245 room=.
+-> w
+T1192 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 71 $ 245 room=.
+-> n
+T1193 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 70 $ 245 room=.
+-> w
+T1194 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 69 $ 245 room=.
+-> s
+T1195 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 68 $ 245 room=.
+-> w
+T1196 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 67 $ 245 room=.
+-> n
+T1197 mode=game_loop           Beregond III(hum) F4@( 3, 1) HP 62/62 MP 0/0 Hu 66 $ 245 room=.
+-> w
+T1198 mode=game_loop           Beregond III(hum) F4@( 2, 1) HP 62/62 MP 0/0 Hu 65 $ 245 room=.
+-> s
+T1199 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 64 $ 245 room=V
+-> s
+T1200 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 63 $ 245 room=.
+-> l
+T1201 mode=game_loop           Beregond III(hum) F4@( 2, 3) HP 62/62 MP 0/0 Hu 63 $ 245 room=.
+-> e
+T1202 mode=game_loop           Beregond III(hum) F4@( 3, 3) HP 62/62 MP 0/0 Hu 62 $ 245 room=O
+-> n
+T1203 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 61 $ 245 room=.
+-> e
+T1204 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 60 $ 245 room=.
+-> e
+T1205 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 59 $ 245 room=.
+-> e
+T1206 mode=game_loop           Beregond III(hum) F4@( 6, 2) HP 62/62 MP 0/0 Hu 58 $ 245 room=.
+-> w
+T1207 mode=game_loop           Beregond III(hum) F4@( 5, 2) HP 62/62 MP 0/0 Hu 57 $ 245 room=.
+-> n
+T1208 mode=game_loop           Beregond III(hum) F4@( 5, 1) HP 62/62 MP 0/0 Hu 56 $ 245 room=.
+-> w
+T1209 mode=game_loop           Beregond III(hum) F4@( 4, 1) HP 62/62 MP 0/0 Hu 55 $ 245 room=.
+-> s
+T1210 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 54 $ 245 room=.
+-> l
+T1211 mode=game_loop           Beregond III(hum) F4@( 4, 2) HP 62/62 MP 0/0 Hu 54 $ 245 room=.
+-> s
+T1212 mode=game_loop           Beregond III(hum) F4@( 4, 3) HP 62/62 MP 0/0 Hu 53 $ 245 room=.
+-> w
+T1213 mode=game_loop           Beregond III(hum) F4@( 3, 3) HP 62/62 MP 0/0 Hu 52 $ 245 room=O
+-> n
+T1214 mode=game_loop           Beregond III(hum) F4@( 3, 2) HP 62/62 MP 0/0 Hu 51 $ 245 room=.
+-> w
+T1215 mode=game_loop           Beregond III(hum) F4@( 2, 2) HP 62/62 MP 0/0 Hu 50 $ 245 room=V
+-> w
+T1216 mode=game_loop           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> i
+T1217 mode=inventory           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 49 $ 245 room=.
+-> eat1
+T1218 mode=inventory           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> x
+T1219 mode=game_loop           Beregond III(hum) F4@( 1, 2) HP 62/62 MP 0/0 Hu 99 $ 245 room=.
+-> s
+T1220 mode=game_loop           Beregond III(hum) F4@( 1, 3) HP 62/62 MP 0/0 Hu 98 $ 245 room=.
+-> s
+T1221 mode=game_loop           Beregond III(hum) F4@( 1, 4) HP 62/62 MP 0/0 Hu 97 $ 245 room=.
+-> e
+T1222 mode=game_loop           Beregond III(hum) F4@( 2, 4) HP 62/62 MP 0/0 Hu 96 $ 245 room=.
+-> e
+T1223 mode=game_loop           Beregond III(hum) F4@( 3, 4) HP 62/62 MP 0/0 Hu 95 $ 245 room=.
+-> e
+T1224 mode=game_loop           Beregond III(hum) F4@( 4, 4) HP 62/62 MP 0/0 Hu 94 $ 245 room=.
+-> e
+T1225 mode=game_loop           Beregond III(hum) F4@( 5, 4) HP 62/62 MP 0/0 Hu 93 $ 245 room=.
+-> s
+T1226 mode=game_loop           Beregond III(hum) F4@( 5, 5) HP 62/62 MP 0/0 Hu 92 $ 245 room=.
+-> e
+T1227 mode=game_loop           Beregond III(hum) F4@( 6, 5) HP 62/62 MP 0/0 Hu 91 $ 245 room=.
+-> s
+T1228 mode=game_loop           Beregond III(hum) F4@( 6, 6) HP 62/62 MP 0/0 Hu 90 $ 245 room=.
+-> s
+T1229 mode=game_loop           Beregond III(hum) F4@( 6, 7) HP 62/62 MP 0/0 Hu 89 $ 245 room=.
+-> s
+T1230 mode=game_loop           Beregond III(hum) F4@( 6, 8) HP 62/62 MP 0/0 Hu 88 $ 245 room=.
+-> s
+T1231 mode=game_loop           Beregond III(hum) F4@( 6, 9) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> l
+T1232 mode=game_loop           Beregond III(hum) F4@( 6, 9) HP 62/62 MP 0/0 Hu 87 $ 245 room=.
+-> e
+T1233 mode=game_loop           Beregond III(hum) F4@( 7, 9) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> l
+T1234 mode=game_loop           Beregond III(hum) F4@( 7, 9) HP 62/62 MP 0/0 Hu 86 $ 245 room=.
+-> s
+T1235 mode=game_loop           Beregond III(hum) F4@( 7,10) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> l
+T1236 mode=game_loop           Beregond III(hum) F4@( 7,10) HP 62/62 MP 0/0 Hu 85 $ 245 room=.
+-> s
+T1237 mode=game_loop           Beregond III(hum) F4@( 7,11) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> l
+T1238 mode=game_loop           Beregond III(hum) F4@( 7,11) HP 62/62 MP 0/0 Hu 84 $ 245 room=.
+-> e
+T1239 mode=game_loop           Beregond III(hum) F4@( 8,11) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> l
+T1240 mode=game_loop           Beregond III(hum) F4@( 8,11) HP 62/62 MP 0/0 Hu 83 $ 245 room=.
+-> e
+T1241 mode=dungeon_mode        Beregond III(hum) F4@( 9,11) HP 62/62 MP 0/0 Hu 82 $ 245 room=N
+-> u
+T1242 mode=game_loop           Beregond III(hum) F4@( 9,11) HP 62/62 MP 0/0 Hu 82 $ 245 room=N
+-> s
+T1243 mode=game_loop           Beregond III(hum) F4@( 9,12) HP 62/62 MP 0/0 Hu 81 $ 245 room=.
+-> s
+T1244 mode=chest_mode          Beregond III(hum) F4@( 9,13) HP 62/62 MP 0/0 Hu 80 $ 245 room=C
+-> o
+T1245 mode=game_loop           Beregond III(hum) F4@( 9,13) HP 62/62 MP 0/0 Hu 80 $ 245 room=.
+-> w
+T1246 mode=garden_mode         Beregond III(hum) F4@( 8,13) HP 62/62 MP 0/0 Hu 79 $ 245 room=G
+-> h
+T1247 mode=game_loop           Beregond III(hum) F4@( 8,13) HP 62/62 MP 0/0 Hu 79 $ 245 room=.
+-> w
+T1248 mode=stairs_down_mode    Beregond III(hum) F4@( 7,13) HP 62/62 MP 0/0 Hu 78 $ 245 room=D
+-> d
+T1249 mode=stairs_up_mode      Beregond III(hum) F5@( 1, 1) HP 62/62 MP 0/0 Hu 78 $ 245 room=U
+-> w
+T1250 mode=stairs_up_mode      Beregond III(hum) F5@( 1, 1) HP 62/62 MP 0/0 Hu 78 $ 245 room=U
+-> s
+T1251 mode=game_loop           Beregond III(hum) F5@( 1, 2) HP 62/62 MP 0/0 Hu 77 $ 245 room=.
+-> s
+T1252 mode=game_loop           Beregond III(hum) F5@( 1, 3) HP 62/62 MP 0/0 Hu 76 $ 245 room=.
+-> e
+T1253 mode=game_loop           Beregond III(hum) F5@( 2, 3) HP 62/62 MP 0/0 Hu 75 $ 245 room=.
+-> n
+T1254 mode=game_loop           Beregond III(hum) F5@( 2, 2) HP 62/62 MP 0/0 Hu 74 $ 245 room=.
+-> n
+T1255 mode=game_loop           Beregond III(hum) F5@( 2, 1) HP 62/62 MP 0/0 Hu 73 $ 245 room=.
+-> e
+T1256 mode=warp_mode           Beregond III(hum) F5@( 3, 1) HP 62/62 MP 0/0 Hu 72 $ 245 room=W
+-> y
+T1257 mode=game_loop           Beregond III(hum) F5@( 3, 1) HP 62/62 MP 0/0 Hu 72 $ 245 room=W
+-> s
+T1258 mode=game_loop           Beregond III(hum) F5@( 3, 2) HP 62/62 MP 0/0 Hu 71 $ 245 room=.
+-> e
+T1259 mode=game_loop           Beregond III(hum) F5@( 4, 2) HP 62/62 MP 0/0 Hu 70 $ 245 room=.
+-> n
+T1260 mode=warp_mode           Beregond III(hum) F5@( 4, 1) HP 62/62 MP 0/0 Hu 69 $ 245 room=W
+-> y
+T1261 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 62/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP86/86)
+-> a
+T1262 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 51/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP86/86)
+-> a
+T1263 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 40/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP86/86)
+-> a
+T1264 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 29/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP86/86)
+-> a
+T1265 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 18/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP59/86)
+-> f
+T1266 mode=flee_direction_mode Beregond III(hum) F6@(19,13) HP 7/62 MP 0/0 Hu 69 $ 245 room=M
+-> c
+T1267 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 7/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP59/86)
+-> f
+T1268 mode=flee_direction_mode Beregond III(hum) F6@(19,13) HP 7/62 MP 0/0 Hu 69 $ 245 room=M
+-> c
+T1269 mode=combat_mode         Beregond III(hum) F6@(19,13) HP 7/62 MP 0/0 Hu 69 $ 245 room=M vs Fungal Hulk(L5 HP59/86)
+-> f
+T1270 mode=death_screen        Beregond III(hum) F6@(19,13) HP -4/62 MP 0/0 Hu 69 $ 245 room=M
+
+=== run finished: turns=1270 floor=6 hp=-4/62 gold=245 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/01500_human.html

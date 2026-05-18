@@ -1,0 +1,2860 @@
+T   0 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 3 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=combat_mode         Borin Stonefoot(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 290 room=M vs Kobold(L0 HP20/20)
+  [Well-fed] +1 HP
+  A Kobold (Level 0) appears! A small, dog-like humanoid yaps angrily.
+  The Kobold strikes first!
+-> a
+T   5 mode=combat_victory      Borin Stonefoot(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 343 room=.
+  Kobold took 26 damage.
+  You defeated the Kobold!
+  The kobold whines as it falls, its primitive weapon clattering.
+  You gained 8 experience.
+  You found 3 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T   6 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 343 room=.
+-> l
+T   7 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 343 room=.
+-> s
+T   8 mode=chest_mode          Borin Stonefoot(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 97 $ 343 room=C
+-> o
+T   9 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 97 $ 383 room=.
+-> l
+T  10 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 97 $ 383 room=.
+-> e
+T  11 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 96 $ 383 room=.
+-> n
+T  12 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 2) HP 62/64 MP 0/0 Hu 95 $ 383 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  13 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 2) HP 62/64 MP 0/0 Hu 95 $ 383 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  14 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 95 $ 383 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  15 mode=combat_victory      Borin Stonefoot(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 95 $ 393 room=.
+-> back
+T  16 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 95 $ 393 room=.
+-> n
+T  17 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 1) HP 62/64 MP 0/0 Hu 94 $ 393 room=M vs Zombie(L0 HP35/35)
+-> a
+T  18 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 94 $ 393 room=M vs Zombie(L0 HP35/35)
+-> a
+T  19 mode=combat_mode         Borin Stonefoot(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 94 $ 393 room=M vs Zombie(L0 HP9/35)
+-> a
+T  20 mode=combat_victory      Borin Stonefoot(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 94 $ 400 room=.
+-> back
+T  21 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 94 $ 400 room=.
+-> w
+T  22 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 93 $ 400 room=.
+-> s
+T  23 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 92 $ 400 room=.
+-> s
+T  24 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 91 $ 400 room=.
+-> e
+T  25 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 90 $ 400 room=.
+-> e
+T  26 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 89 $ 400 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  27 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 89 $ 400 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  28 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 89 $ 400 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  29 mode=flee_direction_mode Borin Stonefoot(dwa) F1@( 4, 3) HP 56/64 MP 0/0 Hu 89 $ 400 room=M
+-> e
+T  30 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 3) HP 56/64 MP 0/0 Hu 89 $ 400 room=M vs Bat(L0 HP12/12)
+-> a
+T  31 mode=combat_victory      Borin Stonefoot(dwa) F1@( 5, 3) HP 55/64 MP 0/0 Hu 89 $ 409 room=.
+-> back
+T  32 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 55/64 MP 0/0 Hu 89 $ 409 room=.
+-> l
+T  33 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 55/64 MP 0/0 Hu 89 $ 409 room=.
+-> s
+T  34 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 56/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  35 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 55/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> f
+T  36 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 54/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  37 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 53/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  38 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 52/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  39 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 48/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  40 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 44/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  41 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 4) HP 43/64 MP 0/0 Hu 88 $ 409 room=M vs Stirge(L0 HP6/6)
+-> a
+T  42 mode=combat_victory      Borin Stonefoot(dwa) F1@( 5, 4) HP 43/64 MP 0/0 Hu 88 $ 411 room=.
+-> back
+T  43 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 43/64 MP 0/0 Hu 88 $ 411 room=.
+-> l
+T  44 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 43/64 MP 0/0 Hu 88 $ 411 room=.
+-> i
+T  45 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 4) HP 43/64 MP 0/0 Hu 88 $ 411 room=.
+-> u3
+T  46 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 88 $ 411 room=.
+-> x
+T  47 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 88 $ 411 room=.
+-> w
+T  48 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 4) HP 64/64 MP 0/0 Hu 87 $ 411 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  49 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 4) HP 63/64 MP 0/0 Hu 87 $ 411 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  50 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 4) HP 62/64 MP 0/0 Hu 87 $ 411 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  51 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 4) HP 62/64 MP 0/0 Hu 87 $ 411 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  52 mode=combat_victory      Borin Stonefoot(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 87 $ 414 room=.
+-> back
+T  53 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 87 $ 414 room=.
+-> n
+T  54 mode=combat_mode         Borin Stonefoot(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 86 $ 414 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  55 mode=combat_victory      Borin Stonefoot(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 86 $ 423 room=.
+-> back
+T  56 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 86 $ 423 room=.
+-> w
+T  57 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 61/64 MP 0/0 Hu 85 $ 423 room=.
+-> n
+T  58 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 84 $ 423 room=.
+-> n
+T  59 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 83 $ 423 room=.
+-> w
+T  60 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 61/64 MP 0/0 Hu 82 $ 423 room=.
+-> s
+T  61 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 62/64 MP 0/0 Hu 81 $ 423 room=.
+-> s
+T  62 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 62/64 MP 0/0 Hu 80 $ 423 room=.
+-> e
+T  63 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 79 $ 423 room=.
+-> e
+T  64 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 78 $ 423 room=.
+-> i
+T  65 mode=inventory           Borin Stonefoot(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 78 $ 423 room=.
+-> eat4
+T  66 mode=inventory           Borin Stonefoot(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 84 $ 423 room=.
+-> x
+T  67 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 84 $ 423 room=.
+-> e
+T  68 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 63/64 MP 0/0 Hu 83 $ 423 room=.
+-> e
+T  69 mode=combat_mode         Borin Stonefoot(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 82 $ 423 room=M vs Goblin(L0 HP30/30)
+-> a
+T  70 mode=combat_mode         Borin Stonefoot(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 82 $ 423 room=M vs Goblin(L0 HP30/30)
+-> a
+T  71 mode=combat_mode         Borin Stonefoot(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 82 $ 423 room=M vs Goblin(L0 HP30/30)
+-> a
+T  72 mode=combat_mode         Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 82 $ 423 room=M vs Goblin(L0 HP5/30)
+-> a
+T  73 mode=combat_victory      Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 82 $ 425 room=.
+-> back
+T  74 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 82 $ 425 room=.
+-> i
+T  75 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 82 $ 425 room=.
+-> eat4
+T  76 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 87 $ 425 room=.
+-> x
+T  77 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 87 $ 425 room=.
+-> l
+T  78 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 87 $ 425 room=.
+-> n
+T  79 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 2) HP 63/64 MP 0/0 Hu 86 $ 425 room=.
+-> l
+T  80 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 2) HP 63/64 MP 0/0 Hu 86 $ 425 room=.
+-> e
+T  81 mode=dungeon_mode        Borin Stonefoot(dwa) F1@( 7, 2) HP 63/64 MP 0/0 Hu 85 $ 425 room=N
+-> u
+T  82 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 63/64 MP 0/0 Hu 85 $ 425 room=N
+-> l
+T  83 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 63/64 MP 0/0 Hu 85 $ 425 room=N
+-> s
+T  84 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 3) HP 63/64 MP 0/0 Hu 84 $ 425 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  85 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 3) HP 62/64 MP 0/0 Hu 84 $ 425 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  86 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 3) HP 59/64 MP 0/0 Hu 84 $ 425 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  87 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 3) HP 56/64 MP 0/0 Hu 84 $ 425 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  88 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 3) HP 55/64 MP 0/0 Hu 84 $ 425 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  89 mode=combat_victory      Borin Stonefoot(dwa) F1@( 7, 3) HP 54/64 MP 0/0 Hu 84 $ 432 room=.
+-> back
+T  90 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 54/64 MP 0/0 Hu 84 $ 432 room=.
+-> e
+T  91 mode=pool_mode           Borin Stonefoot(dwa) F1@( 8, 3) HP 54/64 MP 0/0 Hu 83 $ 432 room=P
+-> dr
+T  92 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 54/64 MP 0/0 Hu 83 $ 432 room=.
+-> n
+T  93 mode=combat_mode         Borin Stonefoot(dwa) F1@( 8, 2) HP 55/64 MP 0/0 Hu 82 $ 432 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  94 mode=combat_victory      Borin Stonefoot(dwa) F1@( 8, 2) HP 54/64 MP 0/0 Hu 82 $ 541 room=.
+-> back
+T  95 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 54/64 MP 0/0 Hu 82 $ 541 room=.
+-> l
+T  96 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 54/64 MP 0/0 Hu 82 $ 541 room=.
+-> e
+T  97 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 52/64 MP 0/0 Hu 81 $ 541 room=.
+-> l
+T  98 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 52/64 MP 0/0 Hu 81 $ 541 room=.
+-> n
+T  99 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 50/64 MP 0/0 Hu 80 $ 541 room=.
+-> l
+T 100 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 50/64 MP 0/0 Hu 80 $ 541 room=.
+-> e
+T 101 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 48/64 MP 0/0 Hu 79 $ 541 room=.
+-> i
+T 102 mode=inventory           Borin Stonefoot(dwa) F1@(10, 1) HP 48/64 MP 0/0 Hu 79 $ 541 room=.
+-> u3
+T 103 mode=inventory           Borin Stonefoot(dwa) F1@(10, 1) HP 64/64 MP 0/0 Hu 79 $ 541 room=.
+-> x
+T 104 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 64/64 MP 0/0 Hu 79 $ 541 room=.
+-> w
+T 105 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 64/64 MP 0/0 Hu 78 $ 541 room=.
+-> w
+T 106 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 64/64 MP 0/0 Hu 77 $ 541 room=.
+-> i
+T 107 mode=inventory           Borin Stonefoot(dwa) F1@( 8, 1) HP 64/64 MP 0/0 Hu 77 $ 541 room=.
+-> eat4
+T 108 mode=inventory           Borin Stonefoot(dwa) F1@( 8, 1) HP 64/64 MP 0/0 Hu 82 $ 541 room=.
+-> x
+T 109 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 64/64 MP 0/0 Hu 82 $ 541 room=.
+-> s
+T 110 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 64/64 MP 0/0 Hu 81 $ 541 room=.
+-> s
+T 111 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 80 $ 541 room=.
+-> w
+T 112 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 64/64 MP 0/0 Hu 79 $ 541 room=.
+-> s
+T 113 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 78 $ 541 room=.
+-> w
+T 114 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 77 $ 541 room=.
+-> i
+T 115 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 77 $ 541 room=.
+-> eat3
+T 116 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 82 $ 541 room=.
+-> x
+T 117 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 82 $ 541 room=.
+-> n
+T 118 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 64/64 MP 0/0 Hu 81 $ 541 room=.
+-> w
+T 119 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 80 $ 541 room=.
+-> w
+T 120 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 79 $ 541 room=.
+-> w
+T 121 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 78 $ 541 room=.
+-> n
+T 122 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 77 $ 541 room=.
+-> w
+T 123 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 76 $ 541 room=.
+-> w
+T 124 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 2) HP 64/64 MP 0/0 Hu 75 $ 541 room=.
+-> n
+T 125 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 1) HP 64/64 MP 0/0 Hu 74 $ 541 room=E
+-> e
+T 126 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 64/64 MP 0/0 Hu 73 $ 541 room=.
+-> e
+T 127 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 1) HP 64/64 MP 0/0 Hu 72 $ 541 room=.
+-> s
+T 128 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 71 $ 541 room=.
+-> w
+T 129 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 70 $ 541 room=.
+-> w
+T 130 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 2) HP 64/64 MP 0/0 Hu 69 $ 541 room=.
+-> n
+T 131 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 1) HP 64/64 MP 0/0 Hu 68 $ 541 room=E
+-> e
+T 132 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 64/64 MP 0/0 Hu 67 $ 541 room=.
+-> e
+T 133 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 1) HP 64/64 MP 0/0 Hu 66 $ 541 room=.
+-> s
+T 134 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 65 $ 541 room=.
+-> s
+T 135 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 64 $ 541 room=.
+-> w
+T 136 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 64/64 MP 0/0 Hu 63 $ 541 room=.
+-> n
+T 137 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 62 $ 541 room=.
+-> n
+T 138 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 64/64 MP 0/0 Hu 61 $ 541 room=.
+-> w
+T 139 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 1) HP 64/64 MP 0/0 Hu 60 $ 541 room=E
+-> s
+T 140 mode=game_loop           Borin Stonefoot(dwa) F1@( 1, 2) HP 64/64 MP 0/0 Hu 59 $ 541 room=.
+-> e
+T 141 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 58 $ 541 room=.
+-> s
+T 142 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 64/64 MP 0/0 Hu 57 $ 541 room=.
+-> e
+T 143 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 56 $ 541 room=.
+-> e
+T 144 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 55 $ 541 room=.
+-> e
+T 145 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 54 $ 541 room=.
+-> e
+T 146 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 64/64 MP 0/0 Hu 53 $ 541 room=.
+-> e
+T 147 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 64/64 MP 0/0 Hu 52 $ 541 room=.
+-> e
+T 148 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 51 $ 541 room=.
+-> n
+T 149 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 64/64 MP 0/0 Hu 50 $ 541 room=.
+-> e
+T 150 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 64/64 MP 0/0 Hu 49 $ 541 room=.
+-> i
+T 151 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 2) HP 64/64 MP 0/0 Hu 49 $ 541 room=.
+-> eat1
+T 152 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 2) HP 64/64 MP 0/0 Hu100 $ 541 room=.
+-> x
+T 153 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 64/64 MP 0/0 Hu100 $ 541 room=.
+-> n
+T 154 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 64/64 MP 0/0 Hu 99 $ 541 room=.
+-> e
+T 155 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 64/64 MP 0/0 Hu 98 $ 541 room=.
+-> e
+T 156 mode=combat_mode         Borin Stonefoot(dwa) F1@(11, 1) HP 64/64 MP 0/0 Hu 97 $ 541 room=M vs Zombie(L0 HP35/35)
+-> a
+T 157 mode=combat_mode         Borin Stonefoot(dwa) F1@(11, 1) HP 63/64 MP 0/0 Hu 97 $ 541 room=M vs Zombie(L0 HP9/35)
+-> a
+T 158 mode=combat_mode         Borin Stonefoot(dwa) F1@(11, 1) HP 62/64 MP 0/0 Hu 97 $ 541 room=M vs Zombie(L0 HP9/35)
+-> a
+T 159 mode=combat_victory      Borin Stonefoot(dwa) F1@(11, 1) HP 62/64 MP 0/0 Hu 97 $ 547 room=.
+-> back
+T 160 mode=game_loop           Borin Stonefoot(dwa) F1@(11, 1) HP 62/64 MP 0/0 Hu 97 $ 547 room=.
+-> w
+T 161 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 62/64 MP 0/0 Hu 96 $ 547 room=.
+-> w
+T 162 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 63/64 MP 0/0 Hu 95 $ 547 room=.
+-> w
+T 163 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 63/64 MP 0/0 Hu 94 $ 547 room=.
+-> w
+T 164 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 1) HP 64/64 MP 0/0 Hu 93 $ 547 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 165 mode=combat_victory      Borin Stonefoot(dwa) F1@( 7, 1) HP 64/64 MP 0/0 Hu 93 $ 650 room=.
+-> back
+T 166 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 64/64 MP 0/0 Hu 93 $ 650 room=.
+-> s
+T 167 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 64/64 MP 0/0 Hu 92 $ 650 room=N
+-> s
+T 168 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 64/64 MP 0/0 Hu 91 $ 650 room=.
+-> s
+T 169 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 90 $ 650 room=.
+-> s
+T 170 mode=combat_mode         Borin Stonefoot(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 89 $ 650 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 171 mode=combat_victory      Borin Stonefoot(dwa) F1@( 7, 5) HP 63/74 MP 0/0 Hu 89 $ 654 room=.
+-> back
+T 172 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 5) HP 63/74 MP 0/0 Hu 89 $ 654 room=.
+-> e
+T 173 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 63/74 MP 0/0 Hu 88 $ 654 room=.
+-> l
+T 174 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 63/74 MP 0/0 Hu 88 $ 654 room=.
+-> s
+T 175 mode=combat_mode         Borin Stonefoot(dwa) F1@( 8, 6) HP 64/74 MP 0/0 Hu 87 $ 654 room=M vs Bat(L0 HP12/12)
+-> a
+T 176 mode=combat_victory      Borin Stonefoot(dwa) F1@( 8, 6) HP 64/74 MP 0/0 Hu 87 $ 664 room=.
+-> back
+T 177 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 6) HP 64/74 MP 0/0 Hu 87 $ 664 room=.
+-> l
+T 178 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 6) HP 64/74 MP 0/0 Hu 87 $ 664 room=.
+-> n
+T 179 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 64/74 MP 0/0 Hu 86 $ 664 room=.
+-> e
+T 180 mode=combat_mode         Borin Stonefoot(dwa) F1@( 9, 5) HP 65/74 MP 0/0 Hu 85 $ 664 room=M vs Bat(L0 HP12/12)
+-> a
+T 181 mode=combat_victory      Borin Stonefoot(dwa) F1@( 9, 5) HP 65/74 MP 0/0 Hu 85 $ 665 room=.
+-> back
+T 182 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 65/74 MP 0/0 Hu 85 $ 665 room=.
+-> e
+T 183 mode=combat_mode         Borin Stonefoot(dwa) F1@(10, 5) HP 65/74 MP 0/0 Hu 84 $ 665 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 184 mode=combat_victory      Borin Stonefoot(dwa) F1@(10, 5) HP 65/74 MP 0/0 Hu 84 $ 672 room=.
+-> back
+T 185 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 5) HP 65/74 MP 0/0 Hu 84 $ 672 room=.
+-> l
+T 186 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 5) HP 65/74 MP 0/0 Hu 84 $ 672 room=.
+-> w
+T 187 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 65/74 MP 0/0 Hu 83 $ 672 room=.
+-> w
+T 188 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 65/74 MP 0/0 Hu 82 $ 672 room=.
+-> w
+T 189 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 5) HP 66/74 MP 0/0 Hu 81 $ 672 room=.
+-> w
+T 190 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 5) HP 66/74 MP 0/0 Hu 80 $ 672 room=.
+-> w
+T 191 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 5) HP 66/74 MP 0/0 Hu 79 $ 672 room=.
+-> n
+T 192 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 66/74 MP 0/0 Hu 78 $ 672 room=.
+-> w
+T 193 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 4) HP 67/74 MP 0/0 Hu 77 $ 672 room=.
+-> n
+T 194 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 67/74 MP 0/0 Hu 76 $ 672 room=.
+-> e
+T 195 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 67/74 MP 0/0 Hu 75 $ 672 room=.
+-> e
+T 196 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 67/74 MP 0/0 Hu 74 $ 672 room=.
+-> i
+T 197 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 67/74 MP 0/0 Hu 74 $ 672 room=.
+-> u3
+T 198 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 74 $ 672 room=.
+-> x
+T 199 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 74 $ 672 room=.
+-> i
+T 200 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 74 $ 672 room=.
+-> eat3
+T 201 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 79 $ 672 room=.
+-> eat1
+T 202 mode=inventory           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu100 $ 672 room=.
+-> x
+T 203 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu100 $ 672 room=.
+-> e
+T 204 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 99 $ 672 room=.
+-> e
+T 205 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 98 $ 672 room=.
+-> n
+T 206 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 97 $ 672 room=.
+-> e
+T 207 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 96 $ 672 room=.
+-> n
+T 208 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 74/74 MP 0/0 Hu 95 $ 672 room=.
+-> w
+T 209 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 74/74 MP 0/0 Hu 94 $ 672 room=.
+-> w
+T 210 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 93 $ 672 room=.
+-> l
+T 211 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 93 $ 672 room=.
+-> s
+T 212 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 92 $ 672 room=N
+-> e
+T 213 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 91 $ 672 room=.
+-> e
+T 214 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 90 $ 672 room=.
+-> n
+T 215 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 74/74 MP 0/0 Hu 89 $ 672 room=.
+-> e
+T 216 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 74/74 MP 0/0 Hu 88 $ 672 room=.
+-> e
+T 217 mode=game_loop           Borin Stonefoot(dwa) F1@(11, 1) HP 74/74 MP 0/0 Hu 87 $ 672 room=.
+-> w
+T 218 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 1) HP 74/74 MP 0/0 Hu 86 $ 672 room=.
+-> w
+T 219 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 74/74 MP 0/0 Hu 85 $ 672 room=.
+-> s
+T 220 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 84 $ 672 room=.
+-> l
+T 221 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 84 $ 672 room=.
+-> w
+T 222 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 83 $ 672 room=.
+-> n
+T 223 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 74/74 MP 0/0 Hu 82 $ 672 room=.
+-> w
+T 224 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 81 $ 672 room=.
+-> s
+T 225 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 80 $ 672 room=N
+-> w
+T 226 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 79 $ 672 room=.
+-> s
+T 227 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 78 $ 672 room=.
+-> s
+T 228 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 77 $ 672 room=.
+-> s
+T 229 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 76 $ 672 room=.
+-> s
+T 230 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 75 $ 672 room=.
+-> l
+T 231 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 75 $ 672 room=.
+-> w
+T 232 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 74 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> f
+T 233 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 73/74 MP 0/0 Hu 74 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> f
+T 234 mode=flee_direction_mode Borin Stonefoot(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 74 $ 672 room=M
+-> n
+T 235 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 5) HP 72/74 MP 0/0 Hu 74 $ 672 room=.
+-> n
+T 236 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 72/74 MP 0/0 Hu 73 $ 672 room=.
+-> w
+T 237 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 4) HP 72/74 MP 0/0 Hu 72 $ 672 room=.
+-> n
+T 238 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 72/74 MP 0/0 Hu 71 $ 672 room=.
+-> e
+T 239 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 73/74 MP 0/0 Hu 70 $ 672 room=.
+-> n
+T 240 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 2) HP 73/74 MP 0/0 Hu 69 $ 672 room=.
+-> l
+T 241 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 2) HP 73/74 MP 0/0 Hu 69 $ 672 room=.
+-> e
+T 242 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 2) HP 73/74 MP 0/0 Hu 68 $ 672 room=.
+-> s
+T 243 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 73/74 MP 0/0 Hu 67 $ 672 room=.
+-> e
+T 244 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 66 $ 672 room=.
+-> s
+T 245 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 65 $ 672 room=.
+-> s
+T 246 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 64 $ 672 room=.
+-> w
+T 247 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 63 $ 672 room=.
+-> s
+T 248 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 62 $ 672 room=.
+-> w
+T 249 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 250 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 251 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 73/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 252 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> f
+T 253 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 71/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 254 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 70/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 255 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 69/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP24/25)
+-> a
+T 256 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 69/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP23/25)
+-> a
+T 257 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 69/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP22/25)
+-> a
+T 258 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 68/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP22/25)
+-> a
+T 259 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 68/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP21/25)
+-> a
+T 260 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 65/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP21/25)
+-> a
+T 261 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 62/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP20/25)
+-> a
+T 262 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 59/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP19/25)
+-> a
+T 263 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 56/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP19/25)
+-> a
+T 264 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 56/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP19/25)
+-> f
+T 265 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 56/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP19/25)
+-> a
+T 266 mode=combat_mode         Borin Stonefoot(dwa) F1@( 5, 6) HP 56/74 MP 0/0 Hu 61 $ 672 room=M vs Skeleton(L0 HP18/25)
+-> f
+T 267 mode=flee_direction_mode Borin Stonefoot(dwa) F1@( 5, 6) HP 56/74 MP 0/0 Hu 61 $ 672 room=M
+-> n
+T 268 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 5) HP 56/74 MP 0/0 Hu 61 $ 672 room=.
+-> i
+T 269 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 5) HP 56/74 MP 0/0 Hu 61 $ 672 room=.
+-> u1
+T 270 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 61 $ 672 room=.
+-> x
+T 271 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 61 $ 672 room=.
+-> n
+T 272 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 60 $ 672 room=.
+-> n
+T 273 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 59 $ 672 room=.
+-> w
+T 274 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 58 $ 672 room=.
+-> w
+T 275 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 57 $ 672 room=.
+-> w
+T 276 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 56 $ 672 room=.
+-> n
+T 277 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 55 $ 672 room=.
+-> n
+T 278 mode=game_loop           Borin Stonefoot(dwa) F1@( 2, 1) HP 74/74 MP 0/0 Hu 54 $ 672 room=.
+-> e
+T 279 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 1) HP 74/74 MP 0/0 Hu 53 $ 672 room=.
+-> s
+T 280 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 52 $ 672 room=.
+-> l
+T 281 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 52 $ 672 room=.
+-> s
+T 282 mode=game_loop           Borin Stonefoot(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 51 $ 672 room=.
+-> e
+T 283 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 50 $ 672 room=.
+-> e
+T 284 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 49 $ 672 room=.
+-> i
+T 285 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 49 $ 672 room=.
+-> eat1
+T 286 mode=inventory           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 99 $ 672 room=.
+-> x
+T 287 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 99 $ 672 room=.
+-> e
+T 288 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 98 $ 672 room=.
+-> s
+T 289 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 97 $ 672 room=.
+-> e
+T 290 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 96 $ 672 room=.
+-> l
+T 291 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 96 $ 672 room=.
+-> n
+T 292 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 95 $ 672 room=.
+-> e
+T 293 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 94 $ 672 room=.
+-> n
+T 294 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 93 $ 672 room=.
+-> e
+T 295 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 92 $ 672 room=.
+-> n
+T 296 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 74/74 MP 0/0 Hu 91 $ 672 room=.
+-> w
+T 297 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 74/74 MP 0/0 Hu 90 $ 672 room=.
+-> w
+T 298 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 89 $ 672 room=.
+-> s
+T 299 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 88 $ 672 room=N
+-> s
+T 300 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 87 $ 672 room=.
+-> l
+T 301 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 87 $ 672 room=.
+-> e
+T 302 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 86 $ 672 room=.
+-> n
+T 303 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 85 $ 672 room=.
+-> e
+T 304 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 2) HP 74/74 MP 0/0 Hu 84 $ 672 room=.
+-> n
+T 305 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 1) HP 74/74 MP 0/0 Hu 83 $ 672 room=.
+-> w
+T 306 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 1) HP 74/74 MP 0/0 Hu 82 $ 672 room=.
+-> w
+T 307 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 81 $ 672 room=.
+-> s
+T 308 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 80 $ 672 room=N
+-> w
+T 309 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 79 $ 672 room=.
+-> w
+T 310 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 78 $ 672 room=.
+-> l
+T 311 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 78 $ 672 room=.
+-> s
+T 312 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 77 $ 672 room=.
+-> e
+T 313 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 76 $ 672 room=.
+-> e
+T 314 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 75 $ 672 room=.
+-> s
+T 315 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 74 $ 672 room=.
+-> w
+T 316 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 73 $ 672 room=.
+-> w
+T 317 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 72 $ 672 room=.
+-> s
+T 318 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 71 $ 672 room=.
+-> e
+T 319 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 70 $ 672 room=.
+-> s
+T 320 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 69 $ 672 room=.
+-> l
+T 321 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 69 $ 672 room=.
+-> n
+T 322 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 68 $ 672 room=.
+-> n
+T 323 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 67 $ 672 room=.
+-> w
+T 324 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 66 $ 672 room=.
+-> w
+T 325 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 65 $ 672 room=.
+-> n
+T 326 mode=game_loop           Borin Stonefoot(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 64 $ 672 room=.
+-> e
+T 327 mode=game_loop           Borin Stonefoot(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 63 $ 672 room=.
+-> e
+T 328 mode=game_loop           Borin Stonefoot(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 62 $ 672 room=.
+-> e
+T 329 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 61 $ 672 room=.
+-> s
+T 330 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 60 $ 672 room=.
+-> l
+T 331 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 60 $ 672 room=.
+-> s
+T 332 mode=game_loop           Borin Stonefoot(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 59 $ 672 room=.
+-> e
+T 333 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 58 $ 672 room=.
+-> s
+T 334 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 57 $ 672 room=.
+-> n
+T 335 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 56 $ 672 room=.
+-> e
+T 336 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 55 $ 672 room=.
+-> e
+T 337 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 54 $ 672 room=.
+-> w
+T 338 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 53 $ 672 room=.
+-> e
+T 339 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 52 $ 672 room=.
+-> w
+T 340 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 51 $ 672 room=.
+-> l
+T 341 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 51 $ 672 room=.
+-> s
+T 342 mode=warp_mode           Borin Stonefoot(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 50 $ 672 room=W
+-> y
+T 343 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 50 $ 672 room=W
+-> s
+T 344 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 49 $ 672 room=.
+-> i
+T 345 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 49 $ 672 room=.
+-> eat1
+T 346 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 99 $ 672 room=.
+-> x
+T 347 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 99 $ 672 room=.
+-> s
+T 348 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 672 room=.
+-> l
+T 349 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 672 room=.
+-> s
+T 350 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 97 $ 672 room=.
+-> l
+T 351 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 97 $ 672 room=.
+-> s
+T 352 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 96 $ 672 room=.
+-> l
+T 353 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 96 $ 672 room=.
+-> w
+T 354 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 672 room=V
+-> b15
+T 355 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 662 room=V
+-> b4
+T 356 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 632 room=V
+-> b4
+T 357 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 602 room=V
+-> b4
+T 358 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 572 room=V
+-> b4
+T 359 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 542 room=V
+-> b4
+T 360 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 512 room=V
+-> b4
+T 361 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 482 room=V
+-> b4
+T 362 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 332 room=V
+-> b4
+T 363 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 182 room=V
+-> b4
+T 364 mode=vendor_shop         Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> x
+T 365 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> l
+T 366 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> s
+T 367 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> n
+T 368 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 93 $ 152 room=V
+-> e
+T 369 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> n
+T 370 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> l
+T 371 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> n
+T 372 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> e
+T 373 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 89 $ 152 room=.
+-> w
+T 374 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 88 $ 152 room=.
+-> n
+T 375 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 87 $ 152 room=.
+-> s
+T 376 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> w
+T 377 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> e
+T 378 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> e
+T 379 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 83 $ 152 room=.
+-> w
+T 380 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> i
+T 381 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> u3
+T 382 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> x
+T 383 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> n
+T 384 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 81 $ 152 room=.
+-> s
+T 385 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> i
+T 386 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> u3
+T 387 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> x
+T 388 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> s
+T 389 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 79 $ 152 room=.
+-> s
+T 390 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 78 $ 152 room=.
+-> l
+T 391 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 78 $ 152 room=.
+-> w
+T 392 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 77 $ 152 room=V
+-> s
+T 393 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 76 $ 152 room=.
+-> n
+T 394 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 75 $ 152 room=V
+-> e
+T 395 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 74 $ 152 room=.
+-> n
+T 396 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 73 $ 152 room=.
+-> n
+T 397 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 72 $ 152 room=.
+-> i
+T 398 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 72 $ 152 room=.
+-> eat1
+T 399 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> u3
+T 400 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> x
+T 401 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> w
+T 402 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 99 $ 152 room=.
+-> e
+T 403 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> i
+T 404 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> u3
+T 405 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> x
+T 406 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> n
+T 407 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 97 $ 152 room=.
+-> s
+T 408 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 96 $ 152 room=.
+-> i
+T 409 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 96 $ 152 room=.
+-> u3
+T 410 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 96 $ 152 room=.
+-> x
+T 411 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 96 $ 152 room=.
+-> e
+T 412 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 95 $ 152 room=.
+-> w
+T 413 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> i
+T 414 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> u3
+T 415 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> x
+T 416 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> s
+T 417 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 93 $ 152 room=.
+-> s
+T 418 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> w
+T 419 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 91 $ 152 room=V
+-> s
+T 420 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> l
+T 421 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> n
+T 422 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 89 $ 152 room=V
+-> i
+T 423 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 89 $ 152 room=V
+-> u3
+T 424 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 89 $ 152 room=V
+-> x
+T 425 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 89 $ 152 room=V
+-> s
+T 426 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 88 $ 152 room=.
+-> n
+T 427 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 87 $ 152 room=V
+-> i
+T 428 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 87 $ 152 room=V
+-> u3
+T 429 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 87 $ 152 room=V
+-> x
+T 430 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 87 $ 152 room=V
+-> l
+T 431 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 87 $ 152 room=V
+-> e
+T 432 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> i
+T 433 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> u3
+T 434 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> x
+T 435 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> n
+T 436 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> i
+T 437 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> u3
+T 438 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> x
+T 439 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> n
+T 440 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> i
+T 441 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> u3
+T 442 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> x
+T 443 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> n
+T 444 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 83 $ 152 room=.
+-> s
+T 445 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> i
+T 446 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> u3
+T 447 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> x
+T 448 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 82 $ 152 room=.
+-> e
+T 449 mode=game_loop           Borin Stonefoot(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 81 $ 152 room=.
+-> w
+T 450 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> i
+T 451 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> u3
+T 452 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> x
+T 453 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 80 $ 152 room=.
+-> w
+T 454 mode=game_loop           Borin Stonefoot(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 79 $ 152 room=.
+-> e
+T 455 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 78 $ 152 room=.
+-> i
+T 456 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 78 $ 152 room=.
+-> eat1
+T 457 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> u3
+T 458 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> x
+T 459 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu100 $ 152 room=.
+-> s
+T 460 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 99 $ 152 room=.
+-> i
+T 461 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 99 $ 152 room=.
+-> u3
+T 462 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 99 $ 152 room=.
+-> x
+T 463 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 99 $ 152 room=.
+-> s
+T 464 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> i
+T 465 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> u3
+T 466 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> x
+T 467 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 98 $ 152 room=.
+-> w
+T 468 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 97 $ 152 room=V
+-> i
+T 469 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 97 $ 152 room=V
+-> u3
+T 470 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 97 $ 152 room=V
+-> x
+T 471 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 97 $ 152 room=V
+-> s
+T 472 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 96 $ 152 room=.
+-> n
+T 473 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> i
+T 474 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> u3
+T 475 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> x
+T 476 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 95 $ 152 room=V
+-> s
+T 477 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> i
+T 478 mode=inventory           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> u3
+T 479 mode=inventory           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> x
+T 480 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> l
+T 481 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 94 $ 152 room=.
+-> n
+T 482 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 93 $ 152 room=V
+-> i
+T 483 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 93 $ 152 room=V
+-> u3
+T 484 mode=inventory           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 93 $ 152 room=V
+-> x
+T 485 mode=game_loop           Borin Stonefoot(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 93 $ 152 room=V
+-> e
+T 486 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> i
+T 487 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> u3
+T 488 mode=inventory           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> x
+T 489 mode=game_loop           Borin Stonefoot(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 92 $ 152 room=.
+-> n
+T 490 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> i
+T 491 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> u3
+T 492 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> x
+T 493 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 91 $ 152 room=.
+-> n
+T 494 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> i
+T 495 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> u3
+T 496 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> x
+T 497 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 90 $ 152 room=.
+-> n
+T 498 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 89 $ 152 room=.
+-> i
+T 499 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 89 $ 152 room=.
+-> u3
+T 500 mode=inventory           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 89 $ 152 room=.
+-> x
+T 501 mode=game_loop           Borin Stonefoot(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 89 $ 152 room=.
+-> n
+T 502 mode=warp_mode           Borin Stonefoot(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 88 $ 152 room=W
+-> n
+T 503 mode=altar_mode          Borin Stonefoot(dwa) F3@( 9, 4) HP 74/74 MP 0/0 Hu 88 $ 152 room=A
+-> pray
+T 504 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 4) HP 74/74 MP 0/0 Hu 88 $ 152 room=.
+-> l
+T 505 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 4) HP 74/74 MP 0/0 Hu 88 $ 152 room=.
+-> e
+T 506 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 4) HP 74/74 MP 0/0 Hu 87 $ 152 room=.
+-> l
+T 507 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 4) HP 74/74 MP 0/0 Hu 87 $ 152 room=.
+-> s
+T 508 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 5) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> l
+T 509 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 5) HP 74/74 MP 0/0 Hu 86 $ 152 room=.
+-> s
+T 510 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 6) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> l
+T 511 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 6) HP 74/74 MP 0/0 Hu 85 $ 152 room=.
+-> s
+T 512 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 7) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> l
+T 513 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 7) HP 74/74 MP 0/0 Hu 84 $ 152 room=.
+-> s
+T 514 mode=library_mode        Borin Stonefoot(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 83 $ 152 room=L
+-> r
+T 515 mode=library_read_decision_mode Borin Stonefoot(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 83 $ 152 room=L
+-> y
+T 516 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 83 $ 202 room=.
+-> l
+T 517 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 83 $ 202 room=.
+-> s
+T 518 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 9) HP 74/74 MP 0/0 Hu 82 $ 202 room=.
+-> l
+T 519 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 9) HP 74/74 MP 0/0 Hu 82 $ 202 room=.
+-> s
+T 520 mode=chest_mode          Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=C
+-> o
+T 521 mode=game_loop           Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=.
+-> i
+T 522 mode=inventory           Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=.
+-> e1
+T 523 mode=inventory           Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=.
+-> x
+T 524 mode=game_loop           Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=.
+-> l
+T 525 mode=game_loop           Borin Stonefoot(dwa) F3@(10,10) HP 74/74 MP 0/0 Hu 81 $ 202 room=.
+-> e
+T 526 mode=game_loop           Borin Stonefoot(dwa) F3@(11,10) HP 74/74 MP 0/0 Hu 80 $ 202 room=.
+-> n
+T 527 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 9) HP 74/74 MP 0/0 Hu 79 $ 202 room=.
+-> n
+T 528 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu 78 $ 202 room=.
+-> n
+T 529 mode=library_mode        Borin Stonefoot(dwa) F3@(11, 7) HP 74/74 MP 0/0 Hu 77 $ 202 room=L
+-> r
+T 530 mode=library_read_decision_mode Borin Stonefoot(dwa) F3@(11, 7) HP 74/74 MP 0/0 Hu 77 $ 202 room=L
+-> y
+T 531 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 7) HP 74/74 MP 0/0 Hu 77 $ 302 room=.
+-> e
+T 532 mode=pool_mode           Borin Stonefoot(dwa) F3@(12, 7) HP 74/74 MP 0/0 Hu 76 $ 302 room=P
+-> dr
+T 533 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 7) HP 74/74 MP 0/0 Hu 76 $ 302 room=.
+-> e
+T 534 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 7) HP 74/74 MP 0/0 Hu 75 $ 302 room=.
+-> l
+T 535 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 7) HP 74/74 MP 0/0 Hu 75 $ 302 room=.
+-> e
+T 536 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 7) HP 74/74 MP 0/0 Hu 74 $ 302 room=.
+-> e
+T 537 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 7) HP 74/74 MP 0/0 Hu 73 $ 302 room=.
+-> l
+T 538 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 7) HP 74/74 MP 0/0 Hu 73 $ 302 room=.
+-> s
+T 539 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 8) HP 74/74 MP 0/0 Hu 72 $ 302 room=.
+-> s
+T 540 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 9) HP 74/74 MP 0/0 Hu 71 $ 302 room=.
+-> s
+T 541 mode=game_loop           Borin Stonefoot(dwa) F3@(15,10) HP 74/74 MP 0/0 Hu 70 $ 302 room=.
+-> l
+T 542 mode=game_loop           Borin Stonefoot(dwa) F3@(15,10) HP 74/74 MP 0/0 Hu 70 $ 302 room=.
+-> s
+T 543 mode=game_loop           Borin Stonefoot(dwa) F3@(15,11) HP 74/74 MP 0/0 Hu 69 $ 302 room=.
+-> l
+T 544 mode=game_loop           Borin Stonefoot(dwa) F3@(15,11) HP 74/74 MP 0/0 Hu 69 $ 302 room=.
+-> e
+T 545 mode=game_loop           Borin Stonefoot(dwa) F3@(16,11) HP 74/74 MP 0/0 Hu 68 $ 302 room=.
+-> l
+T 546 mode=game_loop           Borin Stonefoot(dwa) F3@(16,11) HP 74/74 MP 0/0 Hu 68 $ 302 room=.
+-> s
+T 547 mode=game_loop           Borin Stonefoot(dwa) F3@(16,12) HP 74/74 MP 0/0 Hu 67 $ 302 room=.
+-> l
+T 548 mode=game_loop           Borin Stonefoot(dwa) F3@(16,12) HP 74/74 MP 0/0 Hu 67 $ 302 room=.
+-> e
+T 549 mode=shrine_mode         Borin Stonefoot(dwa) F3@(17,12) HP 74/74 MP 0/0 Hu 66 $ 302 room=F
+-> p
+T 550 mode=game_loop           Borin Stonefoot(dwa) F3@(17,12) HP 74/74 MP 0/0 Hu 66 $ 302 room=.
+-> l
+T 551 mode=game_loop           Borin Stonefoot(dwa) F3@(17,12) HP 74/74 MP 0/0 Hu 66 $ 302 room=.
+-> s
+T 552 mode=game_loop           Borin Stonefoot(dwa) F3@(17,13) HP 74/74 MP 0/0 Hu 65 $ 302 room=.
+-> l
+T 553 mode=game_loop           Borin Stonefoot(dwa) F3@(17,13) HP 74/74 MP 0/0 Hu 65 $ 302 room=.
+-> n
+T 554 mode=game_loop           Borin Stonefoot(dwa) F3@(17,12) HP 74/74 MP 0/0 Hu 64 $ 302 room=.
+-> n
+T 555 mode=garden_mode         Borin Stonefoot(dwa) F3@(17,11) HP 74/74 MP 0/0 Hu 63 $ 302 room=G
+-> h
+T 556 mode=game_loop           Borin Stonefoot(dwa) F3@(17,11) HP 74/74 MP 0/0 Hu 63 $ 302 room=.
+-> e
+T 557 mode=game_loop           Borin Stonefoot(dwa) F3@(18,11) HP 74/74 MP 0/0 Hu 62 $ 302 room=.
+-> l
+T 558 mode=game_loop           Borin Stonefoot(dwa) F3@(18,11) HP 74/74 MP 0/0 Hu 62 $ 302 room=.
+-> n
+T 559 mode=game_loop           Borin Stonefoot(dwa) F3@(18,10) HP 74/74 MP 0/0 Hu 61 $ 302 room=.
+-> n
+T 560 mode=chest_mode          Borin Stonefoot(dwa) F3@(18, 9) HP 74/74 MP 0/0 Hu 60 $ 302 room=C
+-> o
+T 561 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 9) HP 49/74 MP 0/0 Hu 60 $ 302 room=.
+-> n
+T 562 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 8) HP 49/74 MP 0/0 Hu 59 $ 302 room=.
+-> l
+T 563 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 8) HP 49/74 MP 0/0 Hu 59 $ 302 room=.
+-> e
+T 564 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 8) HP 49/74 MP 0/0 Hu 58 $ 302 room=.
+-> l
+T 565 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 8) HP 49/74 MP 0/0 Hu 58 $ 302 room=.
+-> n
+T 566 mode=dungeon_mode        Borin Stonefoot(dwa) F3@(19, 7) HP 49/74 MP 0/0 Hu 57 $ 302 room=N
+-> u
+T 567 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 7) HP 49/74 MP 0/0 Hu 57 $ 302 room=N
+-> n
+T 568 mode=altar_mode          Borin Stonefoot(dwa) F3@(19, 6) HP 49/74 MP 0/0 Hu 56 $ 302 room=A
+-> pray
+T 569 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 49/74 MP 0/0 Hu 56 $ 302 room=.
+-> n
+T 570 mode=pool_mode           Borin Stonefoot(dwa) F3@(19, 5) HP 49/74 MP 0/0 Hu 55 $ 302 room=P
+-> dr
+T 571 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 5) HP 49/74 MP 0/0 Hu 55 $ 302 room=.
+-> s
+T 572 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 49/74 MP 0/0 Hu 54 $ 302 room=.
+-> n
+T 573 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 5) HP 49/74 MP 0/0 Hu 53 $ 302 room=.
+-> s
+T 574 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 49/74 MP 0/0 Hu 52 $ 302 room=.
+-> s
+T 575 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 7) HP 49/74 MP 0/0 Hu 51 $ 302 room=N
+-> w
+T 576 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 7) HP 49/74 MP 0/0 Hu 50 $ 302 room=.
+-> w
+T 577 mode=game_loop           Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 49 $ 302 room=.
+-> i
+T 578 mode=inventory           Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 49 $ 302 room=.
+-> eat1
+T 579 mode=inventory           Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 99 $ 302 room=.
+-> u3
+T 580 mode=upgrade_scroll_mode Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 99 $ 302 room=.
+-> 1
+T 581 mode=inventory           Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 99 $ 302 room=.
+-> x
+T 582 mode=game_loop           Borin Stonefoot(dwa) F3@(17, 7) HP 49/74 MP 0/0 Hu 99 $ 302 room=.
+-> s
+T 583 mode=game_loop           Borin Stonefoot(dwa) F3@(17, 8) HP 49/74 MP 0/0 Hu 98 $ 302 room=.
+-> w
+T 584 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 8) HP 50/74 MP 0/0 Hu 97 $ 302 room=.
+-> w
+T 585 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 8) HP 50/74 MP 0/0 Hu 96 $ 302 room=.
+-> w
+T 586 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 8) HP 51/74 MP 0/0 Hu 95 $ 302 room=.
+-> w
+T 587 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 8) HP 51/74 MP 0/0 Hu 94 $ 302 room=.
+-> w
+T 588 mode=chest_mode          Borin Stonefoot(dwa) F3@(12, 8) HP 52/74 MP 0/0 Hu 93 $ 302 room=C
+-> o
+T 589 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 8) HP 52/74 MP 0/0 Hu 93 $ 362 room=.
+-> s
+T 590 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 9) HP 52/74 MP 0/0 Hu 92 $ 362 room=.
+-> w
+T 591 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 9) HP 53/74 MP 0/0 Hu 91 $ 362 room=.
+-> s
+T 592 mode=game_loop           Borin Stonefoot(dwa) F3@(11,10) HP 53/74 MP 0/0 Hu 90 $ 362 room=.
+-> w
+T 593 mode=game_loop           Borin Stonefoot(dwa) F3@(10,10) HP 54/74 MP 0/0 Hu 89 $ 362 room=.
+-> w
+T 594 mode=game_loop           Borin Stonefoot(dwa) F3@( 9,10) HP 54/74 MP 0/0 Hu 88 $ 362 room=.
+-> w
+T 595 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,10) HP 55/74 MP 0/0 Hu 87 $ 362 room=.
+-> l
+T 596 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,10) HP 55/74 MP 0/0 Hu 87 $ 362 room=.
+-> s
+T 597 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,11) HP 55/74 MP 0/0 Hu 86 $ 362 room=.
+-> l
+T 598 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,11) HP 55/74 MP 0/0 Hu 86 $ 362 room=.
+-> s
+T 599 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,12) HP 56/74 MP 0/0 Hu 85 $ 362 room=.
+-> s
+T 600 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,13) HP 56/74 MP 0/0 Hu 84 $ 362 room=.
+-> s
+T 601 mode=combat_mode         Borin Stonefoot(dwa) F3@( 8,14) HP 56/74 MP 0/0 Hu 83 $ 362 room=M vs Goblin(L2 HP31/31)
+-> a
+T 602 mode=combat_mode         Borin Stonefoot(dwa) F3@( 8,14) HP 56/74 MP 0/0 Hu 83 $ 362 room=M vs Goblin(L2 HP31/31)
+-> a
+T 603 mode=combat_mode         Borin Stonefoot(dwa) F3@( 8,14) HP 56/74 MP 0/0 Hu 83 $ 362 room=M vs Goblin(L2 HP31/31)
+-> a
+T 604 mode=combat_mode         Borin Stonefoot(dwa) F3@( 8,14) HP 55/74 MP 0/0 Hu 83 $ 362 room=M vs Goblin(L2 HP3/31)
+-> a
+T 605 mode=combat_victory      Borin Stonefoot(dwa) F3@( 8,14) HP 54/74 MP 0/0 Hu 83 $ 539 room=.
+-> back
+T 606 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,14) HP 54/74 MP 0/0 Hu 83 $ 539 room=.
+-> l
+T 607 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,14) HP 54/74 MP 0/0 Hu 83 $ 539 room=.
+-> w
+T 608 mode=pool_mode           Borin Stonefoot(dwa) F3@( 7,14) HP 54/74 MP 0/0 Hu 82 $ 539 room=P
+-> dr
+T 609 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,14) HP 54/74 MP 0/0 Hu 82 $ 598 room=.
+-> l
+T 610 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,14) HP 54/74 MP 0/0 Hu 82 $ 598 room=.
+-> s
+T 611 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,15) HP 55/74 MP 0/0 Hu 81 $ 598 room=.
+-> l
+T 612 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,15) HP 55/74 MP 0/0 Hu 81 $ 598 room=.
+-> s
+T 613 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,16) HP 55/74 MP 0/0 Hu 80 $ 598 room=.
+-> l
+T 614 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,16) HP 55/74 MP 0/0 Hu 80 $ 598 room=.
+-> w
+T 615 mode=game_loop           Borin Stonefoot(dwa) F3@( 6,16) HP 55/74 MP 0/0 Hu 79 $ 598 room=.
+-> w
+T 616 mode=altar_mode          Borin Stonefoot(dwa) F3@( 5,16) HP 55/74 MP 0/0 Hu 78 $ 598 room=A
+-> pray
+T 617 mode=game_loop           Borin Stonefoot(dwa) F3@( 5,16) HP 55/74 MP 0/0 Hu 78 $ 598 room=.
+-> e
+T 618 mode=game_loop           Borin Stonefoot(dwa) F3@( 6,16) HP 56/74 MP 0/0 Hu 77 $ 598 room=.
+-> n
+T 619 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 56/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 620 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 47/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 621 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 38/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 622 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 623 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 624 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T 625 mode=combat_mode         Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 598 room=M vs Giant Spider(L2 HP14/40)
+-> a
+T 626 mode=combat_victory      Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 619 room=.
+-> back
+T 627 mode=game_loop           Borin Stonefoot(dwa) F3@( 6,15) HP 29/74 MP 0/0 Hu 76 $ 619 room=.
+-> e
+T 628 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,15) HP 29/74 MP 0/0 Hu 75 $ 619 room=.
+-> n
+T 629 mode=game_loop           Borin Stonefoot(dwa) F3@( 7,14) HP 29/74 MP 0/0 Hu 74 $ 619 room=.
+-> e
+T 630 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,14) HP 30/74 MP 0/0 Hu 73 $ 619 room=.
+-> n
+T 631 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,13) HP 30/74 MP 0/0 Hu 72 $ 619 room=.
+-> n
+T 632 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,12) HP 30/74 MP 0/0 Hu 71 $ 619 room=.
+-> n
+T 633 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,11) HP 30/74 MP 0/0 Hu 70 $ 619 room=.
+-> n
+T 634 mode=game_loop           Borin Stonefoot(dwa) F3@( 8,10) HP 31/74 MP 0/0 Hu 69 $ 619 room=.
+-> e
+T 635 mode=game_loop           Borin Stonefoot(dwa) F3@( 9,10) HP 31/74 MP 0/0 Hu 68 $ 619 room=.
+-> n
+T 636 mode=stairs_down_mode    Borin Stonefoot(dwa) F3@( 9, 9) HP 31/74 MP 0/0 Hu 67 $ 619 room=D
+-> n
+T 637 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 8) HP 31/74 MP 0/0 Hu 66 $ 619 room=.
+-> i
+T 638 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 8) HP 31/74 MP 0/0 Hu 66 $ 619 room=.
+-> eat2
+T 639 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 8) HP 31/74 MP 0/0 Hu 71 $ 619 room=.
+-> eat1
+T 640 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 8) HP 31/74 MP 0/0 Hu100 $ 619 room=.
+-> x
+T 641 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 8) HP 31/74 MP 0/0 Hu100 $ 619 room=.
+-> e
+T 642 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 8) HP 32/74 MP 0/0 Hu 99 $ 619 room=.
+-> n
+T 643 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 7) HP 32/74 MP 0/0 Hu 98 $ 619 room=.
+-> n
+T 644 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 6) HP 33/74 MP 0/0 Hu 97 $ 619 room=.
+-> n
+T 645 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 5) HP 33/74 MP 0/0 Hu 96 $ 619 room=.
+-> n
+T 646 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 4) HP 34/74 MP 0/0 Hu 95 $ 619 room=.
+-> n
+T 647 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 3) HP 34/74 MP 0/0 Hu 94 $ 619 room=.
+-> l
+T 648 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 3) HP 34/74 MP 0/0 Hu 94 $ 619 room=.
+-> w
+T 649 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 3) HP 35/74 MP 0/0 Hu 93 $ 619 room=.
+-> n
+T 650 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 2) HP 35/74 MP 0/0 Hu 92 $ 619 room=.
+-> l
+T 651 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 2) HP 35/74 MP 0/0 Hu 92 $ 619 room=.
+-> n
+T 652 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 1) HP 36/74 MP 0/0 Hu 91 $ 619 room=.
+-> e
+T 653 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 1) HP 36/74 MP 0/0 Hu 90 $ 619 room=.
+-> l
+T 654 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 1) HP 36/74 MP 0/0 Hu 90 $ 619 room=.
+-> e
+T 655 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 1) HP 37/74 MP 0/0 Hu 89 $ 619 room=.
+-> e
+T 656 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 1) HP 37/74 MP 0/0 Hu 88 $ 619 room=.
+-> e
+T 657 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 1) HP 38/74 MP 0/0 Hu 87 $ 619 room=.
+-> s
+T 658 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 2) HP 38/74 MP 0/0 Hu 86 $ 619 room=.
+-> l
+T 659 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 2) HP 38/74 MP 0/0 Hu 86 $ 619 room=.
+-> s
+T 660 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 3) HP 39/74 MP 0/0 Hu 85 $ 619 room=.
+-> l
+T 661 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 3) HP 39/74 MP 0/0 Hu 85 $ 619 room=.
+-> e
+T 662 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 3) HP 39/74 MP 0/0 Hu 84 $ 619 room=.
+-> l
+T 663 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 3) HP 39/74 MP 0/0 Hu 84 $ 619 room=.
+-> s
+T 664 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 4) HP 39/74 MP 0/0 Hu 83 $ 619 room=.
+-> e
+T 665 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 4) HP 39/74 MP 0/0 Hu 82 $ 619 room=.
+-> l
+T 666 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 4) HP 39/74 MP 0/0 Hu 82 $ 619 room=.
+-> e
+T 667 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 4) HP 40/74 MP 0/0 Hu 81 $ 619 room=.
+-> l
+T 668 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 4) HP 40/74 MP 0/0 Hu 81 $ 619 room=.
+-> n
+T 669 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 3) HP 40/74 MP 0/0 Hu 80 $ 619 room=M vs Goblin(L2 HP12/12)
+-> a
+T 670 mode=combat_victory      Borin Stonefoot(dwa) F3@(16, 3) HP 39/74 MP 0/0 Hu 80 $ 649 room=.
+-> back
+T 671 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 3) HP 39/74 MP 0/0 Hu 80 $ 649 room=.
+-> w
+T 672 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 3) HP 39/74 MP 0/0 Hu 79 $ 649 room=.
+-> n
+T 673 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 2) HP 39/74 MP 0/0 Hu 78 $ 649 room=.
+-> n
+T 674 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 1) HP 40/74 MP 0/0 Hu 77 $ 649 room=.
+-> w
+T 675 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 1) HP 40/74 MP 0/0 Hu 76 $ 649 room=.
+-> w
+T 676 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 1) HP 40/74 MP 0/0 Hu 75 $ 649 room=.
+-> w
+T 677 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 1) HP 40/74 MP 0/0 Hu 74 $ 649 room=.
+-> w
+T 678 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 1) HP 41/74 MP 0/0 Hu 73 $ 649 room=.
+-> w
+T 679 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 1) HP 41/74 MP 0/0 Hu 72 $ 649 room=.
+-> w
+T 680 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 1) HP 41/74 MP 0/0 Hu 71 $ 649 room=.
+-> s
+T 681 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 2) HP 41/74 MP 0/0 Hu 70 $ 649 room=.
+-> i
+T 682 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 2) HP 41/74 MP 0/0 Hu 70 $ 649 room=.
+-> eat2
+T 683 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 2) HP 41/74 MP 0/0 Hu 75 $ 649 room=.
+-> eat1
+T 684 mode=inventory           Borin Stonefoot(dwa) F3@( 9, 2) HP 41/74 MP 0/0 Hu100 $ 649 room=.
+-> x
+T 685 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 2) HP 41/74 MP 0/0 Hu100 $ 649 room=.
+-> w
+T 686 mode=game_loop           Borin Stonefoot(dwa) F3@( 8, 2) HP 42/74 MP 0/0 Hu 99 $ 649 room=.
+-> w
+T 687 mode=game_loop           Borin Stonefoot(dwa) F3@( 7, 2) HP 42/74 MP 0/0 Hu 98 $ 649 room=.
+-> l
+T 688 mode=game_loop           Borin Stonefoot(dwa) F3@( 7, 2) HP 42/74 MP 0/0 Hu 98 $ 649 room=.
+-> s
+T 689 mode=chest_mode          Borin Stonefoot(dwa) F3@( 7, 3) HP 43/74 MP 0/0 Hu 97 $ 649 room=C
+-> o
+T 690 mode=game_loop           Borin Stonefoot(dwa) F3@( 7, 3) HP 43/74 MP 0/0 Hu 97 $ 709 room=.
+-> l
+T 691 mode=game_loop           Borin Stonefoot(dwa) F3@( 7, 3) HP 43/74 MP 0/0 Hu 97 $ 709 room=.
+-> w
+T 692 mode=game_loop           Borin Stonefoot(dwa) F3@( 6, 3) HP 43/74 MP 0/0 Hu 96 $ 709 room=.
+-> w
+T 693 mode=library_mode        Borin Stonefoot(dwa) F3@( 5, 3) HP 44/74 MP 0/0 Hu 95 $ 709 room=L
+-> r
+T 694 mode=library_read_decision_mode Borin Stonefoot(dwa) F3@( 5, 3) HP 44/74 MP 0/0 Hu 95 $ 709 room=L
+-> y
+T 695 mode=game_loop           Borin Stonefoot(dwa) F3@( 5, 3) HP 44/74 MP 0/0 Hu 95 $ 709 room=.
+-> l
+T 696 mode=game_loop           Borin Stonefoot(dwa) F3@( 5, 3) HP 44/74 MP 0/0 Hu 95 $ 709 room=.
+-> w
+T 697 mode=dungeon_mode        Borin Stonefoot(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 94 $ 709 room=N
+-> u
+T 698 mode=dungeon_unlocked_mode Borin Stonefoot(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 94 $ 709 room=N
+-> r
+T 699 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 94 $ 709 room=N
+-> l
+T 700 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 94 $ 709 room=N
+-> n
+T 701 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 2) HP 45/74 MP 0/0 Hu 93 $ 709 room=.
+-> n
+T 702 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 709 room=V
+-> b14
+T 703 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 699 room=V
+-> b7
+T 704 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 669 room=V
+-> b7
+T 705 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 639 room=V
+-> b7
+T 706 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 609 room=V
+-> b7
+T 707 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 579 room=V
+-> b10
+T 708 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 574 room=V
+-> b10
+T 709 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 569 room=V
+-> b10
+T 710 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 564 room=V
+-> b10
+T 711 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 559 room=V
+-> b9
+T 712 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 409 room=V
+-> b4
+T 713 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 319 room=V
+-> b5
+T 714 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 259 room=V
+-> b6
+T 715 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 179 room=V
+-> id4
+T 716 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 129 room=V
+-> id10
+T 717 mode=vendor_shop         Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 29 room=V
+-> x
+T 718 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 29 room=V
+-> l
+T 719 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu 92 $ 29 room=V
+-> w
+T 720 mode=chest_mode          Borin Stonefoot(dwa) F3@( 3, 1) HP 46/74 MP 0/0 Hu 91 $ 29 room=C
+-> s
+T 721 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 2) HP 46/74 MP 0/0 Hu 90 $ 29 room=.
+-> s
+T 722 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 3) HP 47/74 MP 0/0 Hu 89 $ 29 room=.
+-> l
+T 723 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 3) HP 47/74 MP 0/0 Hu 89 $ 29 room=.
+-> s
+T 724 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 4) HP 47/74 MP 0/0 Hu 88 $ 29 room=.
+-> l
+T 725 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 4) HP 47/74 MP 0/0 Hu 88 $ 29 room=.
+-> e
+T 726 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 4) HP 48/74 MP 0/0 Hu 87 $ 29 room=.
+-> n
+T 727 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 3) HP 48/74 MP 0/0 Hu 86 $ 29 room=N
+-> n
+T 728 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 2) HP 49/74 MP 0/0 Hu 85 $ 29 room=.
+-> n
+T 729 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 1) HP 49/74 MP 0/0 Hu 84 $ 29 room=V
+-> w
+T 730 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 1) HP 49/74 MP 0/0 Hu 83 $ 29 room=C
+-> l
+T 731 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 1) HP 49/74 MP 0/0 Hu 83 $ 29 room=C
+-> w
+T 732 mode=garden_mode         Borin Stonefoot(dwa) F3@( 2, 1) HP 49/74 MP 0/0 Hu 82 $ 29 room=G
+-> h
+T 733 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 1) HP 49/74 MP 0/0 Hu 82 $ 29 room=.
+-> w
+T 734 mode=stairs_up_mode      Borin Stonefoot(dwa) F3@( 1, 1) HP 50/74 MP 0/0 Hu 81 $ 29 room=U
+-> u
+T 735 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 50/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 736 mode=tomb_mode           Borin Stonefoot(dwa) F2@(16,15) HP 50/74 MP 0/0 Hu 80 $ 29 room=T
+-> p
+T 737 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 50/74 MP 0/0 Hu 80 $ 29 room=T
+-> l
+T 738 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 50/74 MP 0/0 Hu 80 $ 29 room=T
+-> i
+T 739 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 50/74 MP 0/0 Hu 80 $ 29 room=T
+-> u4
+T 740 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> u5
+T 741 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> x
+T 742 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 743 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 744 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 745 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 746 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 747 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 748 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 749 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 750 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T 751 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T 752 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> i
+T 753 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> eat1
+T 754 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu100 $ 29 room=T
+-> u6
+T 755 mode=upgrade_scroll_mode Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu100 $ 29 room=T
+-> 1
+T 756 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu100 $ 29 room=T
+-> x
+T 757 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu100 $ 29 room=T
+-> n
+T 758 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 99 $ 29 room=D
+-> s
+T 759 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T 760 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T 761 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T 762 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T 763 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T 764 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T 765 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T 766 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T 767 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T 768 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T 769 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T 770 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T 771 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T 772 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T 773 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T 774 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T 775 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T 776 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 777 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 778 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 779 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 780 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 781 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 782 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 783 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 784 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 785 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T 786 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T 787 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T 788 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T 789 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T 790 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T 791 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T 792 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T 793 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T 794 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T 795 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T 796 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T 797 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T 798 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T 799 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T 800 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T 801 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T 802 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T 803 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T 804 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T 805 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T 806 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T 807 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T 808 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T 809 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T 810 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T 811 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T 812 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T 813 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T 814 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T 815 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T 816 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T 817 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T 818 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T 819 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T 820 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T 821 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T 822 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T 823 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T 824 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T 825 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T 826 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T 827 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T 828 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T 829 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 830 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 831 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 832 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 833 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 834 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 835 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 836 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 837 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 838 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T 839 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T 840 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T 841 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T 842 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T 843 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T 844 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T 845 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T 846 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T 847 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T 848 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T 849 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T 850 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T 851 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T 852 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T 853 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T 854 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T 855 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T 856 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T 857 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T 858 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T 859 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T 860 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T 861 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T 862 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T 863 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T 864 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T 865 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T 866 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T 867 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T 868 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T 869 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T 870 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T 871 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T 872 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T 873 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T 874 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T 875 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T 876 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T 877 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T 878 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T 879 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T 880 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T 881 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T 882 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 883 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 884 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 885 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 886 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 887 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 888 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 889 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 890 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 891 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T 892 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T 893 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T 894 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T 895 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T 896 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T 897 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T 898 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T 899 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T 900 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T 901 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T 902 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T 903 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T 904 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T 905 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T 906 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T 907 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T 908 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T 909 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T 910 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T 911 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T 912 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T 913 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T 914 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T 915 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T 916 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T 917 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T 918 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T 919 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T 920 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T 921 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T 922 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T 923 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T 924 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T 925 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T 926 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T 927 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T 928 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T 929 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T 930 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T 931 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T 932 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T 933 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T 934 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T 935 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 936 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 937 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 938 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 939 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 940 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> l
+T 941 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 942 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 943 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 944 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 945 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T 946 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T 947 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T 948 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T 949 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T 950 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T 951 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T 952 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T 953 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T 954 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T 955 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T 956 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T 957 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T 958 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T 959 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T 960 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T 961 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T 962 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T 963 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T 964 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T 965 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T 966 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T 967 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T 968 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T 969 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T 970 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T 971 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T 972 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T 973 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T 974 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T 975 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T 976 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T 977 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T 978 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T 979 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T 980 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> l
+T 981 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T 982 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T 983 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T 984 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T 985 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T 986 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T 987 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T 988 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T 989 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T 990 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T 991 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T 992 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T 993 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T 994 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T 995 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T 996 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T 997 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T 998 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T 999 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T1000 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T1001 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T1002 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T1003 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T1004 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T1005 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T1006 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T1007 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T1008 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T1009 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T1010 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T1011 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T1012 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T1013 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T1014 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T1015 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T1016 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T1017 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T1018 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T1019 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T1020 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T1021 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T1022 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T1023 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T1024 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T1025 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T1026 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T1027 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T1028 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T1029 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T1030 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> l
+T1031 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T1032 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T1033 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T1034 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T1035 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T1036 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T1037 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T1038 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T1039 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T1040 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T1041 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T1042 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T1043 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T1044 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T1045 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T1046 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T1047 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T1048 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T1049 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T1050 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T1051 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T1052 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T1053 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T1054 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T1055 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T1056 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T1057 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T1058 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T1059 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T1060 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T1061 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T1062 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T1063 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T1064 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T1065 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T1066 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T1067 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T1068 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T1069 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T1070 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T1071 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T1072 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T1073 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T1074 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T1075 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T1076 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T1077 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T1078 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T1079 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T1080 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> l
+T1081 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T1082 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T1083 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T1084 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> s
+T1085 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 94 $ 29 room=T
+-> n
+T1086 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 93 $ 29 room=D
+-> s
+T1087 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 92 $ 29 room=T
+-> n
+T1088 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 91 $ 29 room=D
+-> s
+T1089 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 90 $ 29 room=T
+-> n
+T1090 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 89 $ 29 room=D
+-> s
+T1091 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 88 $ 29 room=T
+-> n
+T1092 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 87 $ 29 room=D
+-> s
+T1093 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 86 $ 29 room=T
+-> n
+T1094 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 85 $ 29 room=D
+-> s
+T1095 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 84 $ 29 room=T
+-> n
+T1096 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 83 $ 29 room=D
+-> s
+T1097 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 82 $ 29 room=T
+-> n
+T1098 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 81 $ 29 room=D
+-> s
+T1099 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 80 $ 29 room=T
+-> n
+T1100 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 79 $ 29 room=D
+-> s
+T1101 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 78 $ 29 room=T
+-> n
+T1102 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 77 $ 29 room=D
+-> s
+T1103 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 76 $ 29 room=T
+-> n
+T1104 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 75 $ 29 room=D
+-> s
+T1105 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 74 $ 29 room=T
+-> n
+T1106 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 73 $ 29 room=D
+-> s
+T1107 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 72 $ 29 room=T
+-> n
+T1108 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 71 $ 29 room=D
+-> s
+T1109 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 70 $ 29 room=T
+-> n
+T1110 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 69 $ 29 room=D
+-> s
+T1111 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 68 $ 29 room=T
+-> n
+T1112 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 67 $ 29 room=D
+-> s
+T1113 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 66 $ 29 room=T
+-> n
+T1114 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 65 $ 29 room=D
+-> s
+T1115 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 64 $ 29 room=T
+-> n
+T1116 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 63 $ 29 room=D
+-> s
+T1117 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 62 $ 29 room=T
+-> n
+T1118 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 61 $ 29 room=D
+-> s
+T1119 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 60 $ 29 room=T
+-> n
+T1120 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 59 $ 29 room=D
+-> s
+T1121 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 58 $ 29 room=T
+-> n
+T1122 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 57 $ 29 room=D
+-> s
+T1123 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 56 $ 29 room=T
+-> n
+T1124 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 55 $ 29 room=D
+-> s
+T1125 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 54 $ 29 room=T
+-> n
+T1126 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 53 $ 29 room=D
+-> s
+T1127 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 52 $ 29 room=T
+-> n
+T1128 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 51 $ 29 room=D
+-> s
+T1129 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 50 $ 29 room=T
+-> n
+T1130 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 49 $ 29 room=D
+-> s
+T1131 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> i
+T1132 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 48 $ 29 room=T
+-> eat1
+T1133 mode=inventory           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> x
+T1134 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 98 $ 29 room=T
+-> n
+T1135 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 97 $ 29 room=D
+-> s
+T1136 mode=game_loop           Borin Stonefoot(dwa) F2@(16,15) HP 74/74 MP 0/0 Hu 96 $ 29 room=T
+-> n
+T1137 mode=stairs_down_mode    Borin Stonefoot(dwa) F2@(16,14) HP 74/74 MP 0/0 Hu 95 $ 29 room=D
+-> d
+T1138 mode=stairs_up_mode      Borin Stonefoot(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 95 $ 29 room=U
+-> s
+T1139 mode=game_loop           Borin Stonefoot(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 94 $ 29 room=.
+-> s
+T1140 mode=game_loop           Borin Stonefoot(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 93 $ 29 room=.
+-> e
+T1141 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 92 $ 29 room=.
+-> s
+T1142 mode=chest_mode          Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=C
+-> o
+T1143 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=.
+-> i
+T1144 mode=inventory           Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=.
+-> e1
+T1145 mode=inventory           Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=.
+-> x
+T1146 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=.
+-> l
+T1147 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 91 $ 29 room=.
+-> s
+T1148 mode=game_loop           Borin Stonefoot(dwa) F3@( 2, 5) HP 74/74 MP 0/0 Hu 90 $ 29 room=.
+-> e
+T1149 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 5) HP 74/74 MP 0/0 Hu 89 $ 29 room=.
+-> n
+T1150 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 4) HP 74/74 MP 0/0 Hu 88 $ 29 room=.
+-> n
+T1151 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 87 $ 29 room=.
+-> n
+T1152 mode=game_loop           Borin Stonefoot(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 86 $ 29 room=.
+-> e
+T1153 mode=game_loop           Borin Stonefoot(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 85 $ 29 room=.
+-> e
+T1154 mode=game_loop           Borin Stonefoot(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 84 $ 29 room=.
+-> e
+T1155 mode=game_loop           Borin Stonefoot(dwa) F3@( 6, 2) HP 74/74 MP 0/0 Hu 83 $ 29 room=.
+-> e
+T1156 mode=game_loop           Borin Stonefoot(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 82 $ 29 room=.
+-> e
+T1157 mode=game_loop           Borin Stonefoot(dwa) F3@( 8, 2) HP 74/74 MP 0/0 Hu 81 $ 29 room=.
+-> e
+T1158 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 2) HP 74/74 MP 0/0 Hu 80 $ 29 room=.
+-> e
+T1159 mode=combat_mode         Borin Stonefoot(dwa) F3@(10, 2) HP 74/74 MP 0/0 Hu 79 $ 29 room=M vs Myconid Shaman(L2 HP45/45)
+-> a
+T1160 mode=combat_mode         Borin Stonefoot(dwa) F3@(10, 2) HP 71/74 MP 0/0 Hu 79 $ 29 room=M vs Myconid Shaman(L2 HP16/45)
+-> a
+T1161 mode=combat_victory      Borin Stonefoot(dwa) F3@(10, 2) HP 68/84 MP 0/0 Hu 79 $ 44 room=.
+-> back
+T1162 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 2) HP 68/84 MP 0/0 Hu 79 $ 44 room=.
+-> s
+T1163 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 3) HP 68/84 MP 0/0 Hu 78 $ 44 room=.
+-> e
+T1164 mode=combat_mode         Borin Stonefoot(dwa) F3@(11, 3) HP 68/84 MP 0/0 Hu 77 $ 44 room=M vs Gnoll(L2 HP32/32)
+-> f
+T1165 mode=flee_direction_mode Borin Stonefoot(dwa) F3@(11, 3) HP 68/84 MP 0/0 Hu 77 $ 44 room=M
+-> n
+T1166 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 2) HP 68/84 MP 0/0 Hu 77 $ 44 room=.
+-> e
+T1167 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 2) HP 68/84 MP 0/0 Hu 76 $ 44 room=.
+-> e
+T1168 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 2) HP 69/84 MP 0/0 Hu 75 $ 44 room=.
+-> s
+T1169 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 3) HP 69/84 MP 0/0 Hu 74 $ 44 room=.
+-> e
+T1170 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 3) HP 69/84 MP 0/0 Hu 73 $ 44 room=.
+-> s
+T1171 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 4) HP 69/84 MP 0/0 Hu 72 $ 44 room=.
+-> e
+T1172 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 4) HP 70/84 MP 0/0 Hu 71 $ 44 room=.
+-> s
+T1173 mode=combat_mode         Borin Stonefoot(dwa) F3@(15, 5) HP 70/84 MP 0/0 Hu 70 $ 44 room=M vs Giant Centipede(L2 HP16/16)
+-> a
+T1174 mode=combat_mode         Borin Stonefoot(dwa) F3@(15, 5) HP 69/84 MP 0/0 Hu 70 $ 44 room=M vs Giant Centipede(L2 HP16/16)
+-> a
+T1175 mode=combat_victory      Borin Stonefoot(dwa) F3@(15, 5) HP 69/84 MP 0/0 Hu 70 $ 71 room=.
+-> back
+T1176 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 5) HP 69/84 MP 0/0 Hu 70 $ 71 room=.
+-> e
+T1177 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 5) HP 69/84 MP 0/0 Hu 69 $ 71 room=.
+-> e
+T1178 mode=chest_mode          Borin Stonefoot(dwa) F3@(17, 5) HP 69/84 MP 0/0 Hu 68 $ 71 room=C
+-> o
+T1179 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 5) HP 70/84 MP 0/0 Hu 67 $ 71 room=.
+-> s
+T1180 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 6) HP 70/84 MP 0/0 Hu 66 $ 71 room=M vs Goblin(L2 HP31/31)
+-> a
+T1181 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 6) HP 70/84 MP 0/0 Hu 66 $ 71 room=M vs Goblin(L2 HP1/31)
+-> a
+T1182 mode=combat_victory      Borin Stonefoot(dwa) F3@(16, 6) HP 69/84 MP 0/0 Hu 66 $ 83 room=.
+-> back
+T1183 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 6) HP 69/84 MP 0/0 Hu 66 $ 83 room=.
+-> n
+T1184 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 5) HP 69/84 MP 0/0 Hu 65 $ 83 room=.
+-> n
+T1185 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 4) HP 69/84 MP 0/0 Hu 64 $ 83 room=.
+-> n
+T1186 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 3) HP 70/84 MP 0/0 Hu 63 $ 83 room=.
+-> w
+T1187 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 3) HP 70/84 MP 0/0 Hu 62 $ 83 room=.
+-> n
+T1188 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 2) HP 70/84 MP 0/0 Hu 61 $ 83 room=.
+-> w
+T1189 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 2) HP 70/84 MP 0/0 Hu 60 $ 83 room=.
+-> w
+T1190 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 2) HP 70/84 MP 0/0 Hu 59 $ 83 room=.
+-> w
+T1191 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 2) HP 70/84 MP 0/0 Hu 58 $ 83 room=.
+-> w
+T1192 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 2) HP 70/84 MP 0/0 Hu 57 $ 83 room=.
+-> w
+T1193 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 2) HP 70/84 MP 0/0 Hu 56 $ 83 room=.
+-> s
+T1194 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 3) HP 70/84 MP 0/0 Hu 55 $ 83 room=.
+-> s
+T1195 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 4) HP 70/84 MP 0/0 Hu 54 $ 83 room=.
+-> s
+T1196 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 5) HP 70/84 MP 0/0 Hu 53 $ 83 room=.
+-> s
+T1197 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 6) HP 70/84 MP 0/0 Hu 52 $ 83 room=.
+-> s
+T1198 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 7) HP 70/84 MP 0/0 Hu 51 $ 83 room=.
+-> w
+T1199 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 70/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1200 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 69/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1201 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 68/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1202 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 67/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1203 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 66/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1204 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 65/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1205 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 65/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1206 mode=combat_mode         Borin Stonefoot(dwa) F3@( 9, 7) HP 64/84 MP 0/0 Hu 50 $ 83 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1207 mode=combat_victory      Borin Stonefoot(dwa) F3@( 9, 7) HP 64/84 MP 0/0 Hu 50 $ 104 room=.
+-> back
+T1208 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 7) HP 64/84 MP 0/0 Hu 50 $ 104 room=.
+-> s
+T1209 mode=game_loop           Borin Stonefoot(dwa) F3@( 9, 8) HP 64/84 MP 0/0 Hu 49 $ 104 room=.
+-> e
+T1210 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 8) HP 64/84 MP 0/0 Hu 48 $ 104 room=.
+-> e
+T1211 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 8) HP 64/84 MP 0/0 Hu 47 $ 104 room=.
+-> e
+T1212 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 8) HP 64/84 MP 0/0 Hu 46 $ 104 room=.
+-> e
+T1213 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 8) HP 64/84 MP 0/0 Hu 45 $ 104 room=.
+-> i
+T1214 mode=inventory           Borin Stonefoot(dwa) F3@(13, 8) HP 64/84 MP 0/0 Hu 45 $ 104 room=.
+-> u5
+T1215 mode=inventory           Borin Stonefoot(dwa) F3@(13, 8) HP 84/84 MP 0/0 Hu 45 $ 104 room=.
+-> x
+T1216 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 8) HP 84/84 MP 0/0 Hu 45 $ 104 room=.
+-> s
+T1217 mode=combat_mode         Borin Stonefoot(dwa) F3@(13, 9) HP 84/84 MP 0/0 Hu 44 $ 104 room=M vs Bat(L2 HP12/12)
+-> a
+T1218 mode=combat_mode         Borin Stonefoot(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 44 $ 104 room=M vs Bat(L2 HP12/12)
+-> a
+T1219 mode=combat_mode         Borin Stonefoot(dwa) F3@(13, 9) HP 82/84 MP 0/0 Hu 44 $ 104 room=M vs Bat(L2 HP12/12)
+-> a
+T1220 mode=combat_victory      Borin Stonefoot(dwa) F3@(13, 9) HP 81/84 MP 0/0 Hu 44 $ 113 room=.
+-> back
+T1221 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 9) HP 81/84 MP 0/0 Hu 44 $ 113 room=.
+-> e
+T1222 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 9) HP 81/84 MP 0/0 Hu 43 $ 113 room=.
+-> n
+T1223 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 8) HP 81/84 MP 0/0 Hu 42 $ 113 room=.
+-> e
+T1224 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 8) HP 81/84 MP 0/0 Hu 41 $ 113 room=.
+-> e
+T1225 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 8) HP 81/84 MP 0/0 Hu 40 $ 113 room=.
+-> s
+T1226 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 81/84 MP 0/0 Hu 39 $ 113 room=M vs Orc(L2 HP50/50)
+-> f
+T1227 mode=flee_direction_mode Borin Stonefoot(dwa) F3@(16, 9) HP 81/84 MP 0/0 Hu 39 $ 113 room=M
+-> s
+T1228 mode=game_loop           Borin Stonefoot(dwa) F3@(16,10) HP 81/84 MP 0/0 Hu 39 $ 113 room=.
+-> s
+T1229 mode=game_loop           Borin Stonefoot(dwa) F3@(16,11) HP 81/84 MP 0/0 Hu 38 $ 113 room=.
+-> e
+T1230 mode=game_loop           Borin Stonefoot(dwa) F3@(17,11) HP 81/84 MP 0/0 Hu 37 $ 113 room=.
+-> e
+T1231 mode=game_loop           Borin Stonefoot(dwa) F3@(18,11) HP 81/84 MP 0/0 Hu 36 $ 113 room=.
+-> s
+T1232 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 81/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T1233 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 72/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP40/40)
+-> a
+T1234 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 63/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP12/40)
+-> a
+T1235 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 54/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP12/40)
+-> a
+T1236 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 54/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP12/40)
+-> a
+T1237 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 54/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP12/40)
+-> a
+T1238 mode=combat_mode         Borin Stonefoot(dwa) F3@(18,12) HP 54/84 MP 0/0 Hu 35 $ 113 room=M vs Giant Spider(L2 HP12/40)
+-> a
+T1239 mode=combat_victory      Borin Stonefoot(dwa) F3@(18,12) HP 54/94 MP 0/0 Hu 35 $ 140 room=.
+-> back
+T1240 mode=game_loop           Borin Stonefoot(dwa) F3@(18,12) HP 54/94 MP 0/0 Hu 35 $ 140 room=.
+-> i
+T1241 mode=inventory           Borin Stonefoot(dwa) F3@(18,12) HP 54/94 MP 0/0 Hu 35 $ 140 room=.
+-> u5
+T1242 mode=inventory           Borin Stonefoot(dwa) F3@(18,12) HP 79/94 MP 0/0 Hu 35 $ 140 room=.
+-> u3
+T1243 mode=inventory           Borin Stonefoot(dwa) F3@(18,12) HP 94/94 MP 0/0 Hu 35 $ 140 room=.
+-> x
+T1244 mode=game_loop           Borin Stonefoot(dwa) F3@(18,12) HP 94/94 MP 0/0 Hu 35 $ 140 room=.
+-> w
+T1245 mode=game_loop           Borin Stonefoot(dwa) F3@(17,12) HP 94/94 MP 0/0 Hu 34 $ 140 room=.
+-> s
+T1246 mode=game_loop           Borin Stonefoot(dwa) F3@(17,13) HP 94/94 MP 0/0 Hu 33 $ 140 room=.
+-> n
+T1247 mode=game_loop           Borin Stonefoot(dwa) F3@(17,12) HP 94/94 MP 0/0 Hu 32 $ 140 room=.
+-> n
+T1248 mode=game_loop           Borin Stonefoot(dwa) F3@(17,11) HP 94/94 MP 0/0 Hu 31 $ 140 room=.
+-> e
+T1249 mode=game_loop           Borin Stonefoot(dwa) F3@(18,11) HP 94/94 MP 0/0 Hu 30 $ 140 room=.
+-> n
+T1250 mode=game_loop           Borin Stonefoot(dwa) F3@(18,10) HP 94/94 MP 0/0 Hu 29 $ 140 room=.
+-> n
+T1251 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 9) HP 94/94 MP 0/0 Hu 28 $ 140 room=.
+-> n
+T1252 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 8) HP 94/94 MP 0/0 Hu 27 $ 140 room=.
+-> n
+T1253 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 7) HP 94/94 MP 0/0 Hu 26 $ 140 room=.
+-> e
+T1254 mode=dungeon_mode        Borin Stonefoot(dwa) F3@(19, 7) HP 94/94 MP 0/0 Hu 25 $ 140 room=N
+-> u
+T1255 mode=dungeon_unlocked_mode Borin Stonefoot(dwa) F3@(19, 7) HP 94/94 MP 0/0 Hu 25 $ 140 room=N
+-> r
+T1256 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 7) HP 94/94 MP 0/0 Hu 25 $ 312 room=N
+-> s
+T1257 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 8) HP 94/94 MP 0/0 Hu 24 $ 312 room=.
+-> n
+T1258 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 7) HP 94/94 MP 0/0 Hu 23 $ 312 room=N
+-> n
+T1259 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 94/94 MP 0/0 Hu 22 $ 312 room=.
+-> n
+T1260 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 5) HP 94/94 MP 0/0 Hu 21 $ 312 room=.
+-> s
+T1261 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 94/94 MP 0/0 Hu 20 $ 312 room=.
+-> n
+T1262 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 5) HP 94/94 MP 0/0 Hu 19 $ 312 room=.
+-> s
+T1263 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 6) HP 94/94 MP 0/0 Hu 18 $ 312 room=.
+-> s
+T1264 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 7) HP 94/94 MP 0/0 Hu 17 $ 312 room=N
+-> s
+T1265 mode=game_loop           Borin Stonefoot(dwa) F3@(19, 8) HP 94/94 MP 0/0 Hu 16 $ 312 room=.
+-> w
+T1266 mode=game_loop           Borin Stonefoot(dwa) F3@(18, 8) HP 94/94 MP 0/0 Hu 15 $ 312 room=.
+-> w
+T1267 mode=game_loop           Borin Stonefoot(dwa) F3@(17, 8) HP 94/94 MP 0/0 Hu 14 $ 312 room=.
+-> w
+T1268 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 8) HP 94/94 MP 0/0 Hu 13 $ 312 room=.
+-> w
+T1269 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 8) HP 94/94 MP 0/0 Hu 12 $ 312 room=.
+-> n
+T1270 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 7) HP 94/94 MP 0/0 Hu 11 $ 312 room=.
+-> w
+T1271 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 7) HP 94/94 MP 0/0 Hu 10 $ 312 room=.
+-> w
+T1272 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 7) HP 94/94 MP 0/0 Hu  9 $ 312 room=.
+-> n
+T1273 mode=garden_mode         Borin Stonefoot(dwa) F3@(13, 6) HP 94/94 MP 0/0 Hu  8 $ 312 room=G
+-> h
+T1274 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 6) HP 94/94 MP 0/0 Hu  8 $ 312 room=.
+-> s
+T1275 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 7) HP 94/94 MP 0/0 Hu  7 $ 312 room=.
+-> s
+T1276 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 8) HP 94/94 MP 0/0 Hu  6 $ 312 room=.
+-> e
+T1277 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 8) HP 94/94 MP 0/0 Hu  5 $ 312 room=.
+-> e
+T1278 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 8) HP 94/94 MP 0/0 Hu  4 $ 312 room=.
+-> e
+T1279 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 8) HP 94/94 MP 0/0 Hu  3 $ 312 room=.
+-> s
+T1280 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  2 $ 312 room=M vs Orc(L2 HP50/50)
+-> a
+T1281 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 88/94 MP 0/0 Hu  2 $ 312 room=M vs Orc(L2 HP50/50)
+-> a
+T1282 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 82/94 MP 0/0 Hu  2 $ 312 room=M vs Orc(L2 HP50/50)
+-> a
+T1283 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 76/94 MP 0/0 Hu  2 $ 312 room=M vs Orc(L2 HP50/50)
+-> a
+T1284 mode=combat_mode         Borin Stonefoot(dwa) F3@(16, 9) HP 70/94 MP 0/0 Hu  2 $ 312 room=M vs Orc(L2 HP23/50)
+-> a
+T1285 mode=combat_victory      Borin Stonefoot(dwa) F3@(16, 9) HP 70/94 MP 0/0 Hu  2 $ 342 room=.
+-> back
+T1286 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 9) HP 70/94 MP 0/0 Hu  2 $ 342 room=.
+-> i
+T1287 mode=inventory           Borin Stonefoot(dwa) F3@(16, 9) HP 70/94 MP 0/0 Hu  2 $ 342 room=.
+-> u5
+T1288 mode=inventory           Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  2 $ 342 room=.
+-> x
+T1289 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  2 $ 342 room=.
+-> i
+T1290 mode=inventory           Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  2 $ 342 room=.
+-> eat1
+T1291 mode=inventory           Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  7 $ 342 room=.
+-> x
+T1292 mode=game_loop           Borin Stonefoot(dwa) F3@(16, 9) HP 94/94 MP 0/0 Hu  7 $ 342 room=.
+-> w
+T1293 mode=game_loop           Borin Stonefoot(dwa) F3@(15, 9) HP 94/94 MP 0/0 Hu  6 $ 342 room=.
+-> w
+T1294 mode=game_loop           Borin Stonefoot(dwa) F3@(14, 9) HP 94/94 MP 0/0 Hu  5 $ 342 room=.
+-> w
+T1295 mode=game_loop           Borin Stonefoot(dwa) F3@(13, 9) HP 94/94 MP 0/0 Hu  4 $ 342 room=.
+-> w
+T1296 mode=game_loop           Borin Stonefoot(dwa) F3@(12, 9) HP 94/94 MP 0/0 Hu  3 $ 342 room=.
+-> w
+T1297 mode=game_loop           Borin Stonefoot(dwa) F3@(11, 9) HP 94/94 MP 0/0 Hu  2 $ 342 room=.
+-> w
+T1298 mode=game_loop           Borin Stonefoot(dwa) F3@(10, 9) HP 94/94 MP 0/0 Hu  1 $ 342 room=.
+-> w
+T1299 mode=stairs_down_mode    Borin Stonefoot(dwa) F3@( 9, 9) HP 92/94 MP 0/0 Hu  0 $ 342 room=D
+-> d
+T1300 mode=stairs_up_mode      Borin Stonefoot(dwa) F4@( 1, 1) HP 92/94 MP 0/0 Hu  0 $ 342 room=U
+-> w
+T1301 mode=stairs_up_mode      Borin Stonefoot(dwa) F4@( 1, 1) HP 92/94 MP 0/0 Hu  0 $ 342 room=U
+-> w
+T1302 mode=stairs_up_mode      Borin Stonefoot(dwa) F4@( 1, 1) HP 92/94 MP 0/0 Hu  0 $ 342 room=U
+-> e
+T1303 mode=stairs_up_mode      Borin Stonefoot(dwa) F4@( 1, 1) HP 92/94 MP 0/0 Hu  0 $ 342 room=U
+-> s
+T1304 mode=pool_mode           Borin Stonefoot(dwa) F4@( 1, 2) HP 90/94 MP 0/0 Hu  0 $ 342 room=P
+-> dr
+T1305 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 2) HP 81/94 MP 0/0 Hu  0 $ 342 room=.
+-> l
+T1306 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 2) HP 81/94 MP 0/0 Hu  0 $ 342 room=.
+-> s
+T1307 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 75/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP32/32)
+-> a
+T1308 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 71/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP32/32)
+-> a
+T1309 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 66/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP32/32)
+-> a
+T1310 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 61/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP2/32)
+-> a
+T1311 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 60/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP2/32)
+-> a
+T1312 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 59/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP2/32)
+-> a
+T1313 mode=combat_mode         Borin Stonefoot(dwa) F4@( 1, 3) HP 59/94 MP 0/0 Hu  0 $ 342 room=M vs Goblin(L3 HP2/32)
+-> a
+T1314 mode=combat_victory      Borin Stonefoot(dwa) F4@( 1, 3) HP 59/94 MP 0/0 Hu  0 $ 429 room=.
+-> back
+T1315 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 3) HP 59/94 MP 0/0 Hu  0 $ 429 room=.
+-> s
+T1316 mode=altar_mode          Borin Stonefoot(dwa) F4@( 1, 4) HP 57/94 MP 0/0 Hu  0 $ 429 room=A
+-> pray
+T1317 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 4) HP 57/94 MP 0/0 Hu  0 $ 429 room=.
+-> l
+T1318 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 4) HP 57/94 MP 0/0 Hu  0 $ 429 room=.
+-> e
+T1319 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 4) HP 55/94 MP 0/0 Hu  0 $ 429 room=.
+-> l
+T1320 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 4) HP 55/94 MP 0/0 Hu  0 $ 429 room=.
+-> s
+T1321 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 5) HP 53/94 MP 0/0 Hu  0 $ 429 room=.
+-> l
+T1322 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 5) HP 53/94 MP 0/0 Hu  0 $ 429 room=.
+-> e
+T1323 mode=chest_mode          Borin Stonefoot(dwa) F4@( 3, 5) HP 51/94 MP 0/0 Hu  0 $ 429 room=C
+-> o
+T1324 mode=game_loop           Borin Stonefoot(dwa) F4@( 3, 5) HP 51/94 MP 0/0 Hu  0 $ 529 room=.
+-> i
+T1325 mode=inventory           Borin Stonefoot(dwa) F4@( 3, 5) HP 51/94 MP 0/0 Hu  0 $ 529 room=.
+-> u6
+T1326 mode=inventory           Borin Stonefoot(dwa) F4@( 3, 5) HP 76/94 MP 0/0 Hu  0 $ 529 room=.
+-> u3
+T1327 mode=inventory           Borin Stonefoot(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu  0 $ 529 room=.
+-> x
+T1328 mode=game_loop           Borin Stonefoot(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu  0 $ 529 room=.
+-> i
+T1329 mode=inventory           Borin Stonefoot(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu  0 $ 529 room=.
+-> e3
+T1330 mode=inventory           Borin Stonefoot(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu  0 $ 529 room=.
+-> x
+T1331 mode=game_loop           Borin Stonefoot(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu  0 $ 529 room=.
+-> e
+T1332 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 5) HP 92/94 MP 0/0 Hu  0 $ 529 room=.
+-> l
+T1333 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 5) HP 92/94 MP 0/0 Hu  0 $ 529 room=.
+-> s
+T1334 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 90/94 MP 0/0 Hu  0 $ 529 room=.
+-> l
+T1335 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 90/94 MP 0/0 Hu  0 $ 529 room=.
+-> s
+T1336 mode=garden_mode         Borin Stonefoot(dwa) F4@( 4, 7) HP 88/94 MP 0/0 Hu  0 $ 529 room=G
+-> h
+T1337 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 88/94 MP 0/0 Hu  0 $ 529 room=.
+-> l
+T1338 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 88/94 MP 0/0 Hu  0 $ 529 room=.
+-> e
+T1339 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 7) HP 86/94 MP 0/0 Hu  0 $ 529 room=M vs Bugbear(L3 HP57/57)
+-> a
+T1340 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 7) HP 85/94 MP 0/0 Hu  0 $ 529 room=M vs Bugbear(L3 HP57/57)
+-> f
+T1341 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 7) HP 84/94 MP 0/0 Hu  0 $ 529 room=M vs Bugbear(L3 HP57/57)
+-> a
+T1342 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 7) HP 83/94 MP 0/0 Hu  0 $ 529 room=M vs Bugbear(L3 HP28/57)
+-> a
+T1343 mode=combat_victory      Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  0 $ 557 room=.
+-> back
+T1344 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  0 $ 557 room=.
+-> i
+T1345 mode=inventory           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  0 $ 557 room=.
+-> eat1
+T1346 mode=inventory           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  6 $ 557 room=.
+-> u5
+T1347 mode=inventory           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  6 $ 557 room=.
+-> x
+T1348 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  6 $ 557 room=.
+-> l
+T1349 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 82/94 MP 0/0 Hu  6 $ 557 room=.
+-> e
+T1350 mode=shrine_mode         Borin Stonefoot(dwa) F4@( 6, 7) HP 82/94 MP 0/0 Hu  5 $ 557 room=F
+-> p
+T1351 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 87/99 MP 0/0 Hu  5 $ 557 room=.
+-> l
+T1352 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 87/99 MP 0/0 Hu  5 $ 557 room=.
+-> s
+T1353 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 8) HP 87/99 MP 0/0 Hu  4 $ 557 room=.
+-> s
+T1354 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 9) HP 87/99 MP 0/0 Hu  3 $ 557 room=.
+-> n
+T1355 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 8) HP 87/99 MP 0/0 Hu  2 $ 557 room=.
+-> w
+T1356 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 8) HP 87/99 MP 0/0 Hu  1 $ 557 room=M vs Skeleton(L3 HP27/27)
+-> f
+T1357 mode=flee_direction_mode Borin Stonefoot(dwa) F4@( 5, 8) HP 86/99 MP 0/0 Hu  1 $ 557 room=M
+-> n
+T1358 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 86/99 MP 0/0 Hu  1 $ 557 room=.
+-> n
+T1359 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 6) HP 84/99 MP 0/0 Hu  0 $ 557 room=M vs Goblin(L3 HP32/32)
+-> a
+T1360 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 6) HP 84/99 MP 0/0 Hu  0 $ 557 room=M vs Goblin(L3 HP32/32)
+-> a
+T1361 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 6) HP 83/99 MP 0/0 Hu  0 $ 557 room=M vs Goblin(L3 HP2/32)
+-> a
+T1362 mode=combat_victory      Borin Stonefoot(dwa) F4@( 5, 6) HP 83/99 MP 0/0 Hu  0 $ 593 room=.
+-> back
+T1363 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 6) HP 83/99 MP 0/0 Hu  0 $ 593 room=.
+-> w
+T1364 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 81/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1365 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 79/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1366 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 77/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1367 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 8) HP 75/99 MP 0/0 Hu  0 $ 593 room=M vs Skeleton(L3 HP27/27)
+-> f
+T1368 mode=flee_direction_mode Borin Stonefoot(dwa) F4@( 5, 8) HP 75/99 MP 0/0 Hu  0 $ 593 room=M
+-> s
+T1369 mode=warp_mode           Borin Stonefoot(dwa) F4@( 5, 9) HP 75/99 MP 0/0 Hu  0 $ 593 room=W
+-> y
+T1370 mode=stairs_down_mode    Borin Stonefoot(dwa) F3@( 9, 9) HP 75/99 MP 0/0 Hu  0 $ 593 room=D
+-> d
+T1371 mode=stairs_up_mode      Borin Stonefoot(dwa) F4@( 1, 1) HP 75/99 MP 0/0 Hu  0 $ 593 room=U
+-> s
+T1372 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 2) HP 73/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1373 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 3) HP 71/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1374 mode=game_loop           Borin Stonefoot(dwa) F4@( 1, 4) HP 69/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1375 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 4) HP 67/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1376 mode=game_loop           Borin Stonefoot(dwa) F4@( 2, 5) HP 65/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1377 mode=game_loop           Borin Stonefoot(dwa) F4@( 3, 5) HP 63/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1378 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 5) HP 61/99 MP 0/0 Hu  0 $ 593 room=.
+-> s
+T1379 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 59/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1380 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 6) HP 57/99 MP 0/0 Hu  0 $ 593 room=.
+-> e
+T1381 mode=combat_mode         Borin Stonefoot(dwa) F4@( 6, 6) HP 55/99 MP 0/0 Hu  0 $ 593 room=M vs Bugbear(L3 HP36/36)
+-> a
+T1382 mode=combat_mode         Borin Stonefoot(dwa) F4@( 6, 6) HP 55/99 MP 0/0 Hu  0 $ 593 room=M vs Bugbear(L3 HP9/36)
+-> a
+T1383 mode=combat_mode         Borin Stonefoot(dwa) F4@( 6, 6) HP 54/99 MP 0/0 Hu  0 $ 593 room=M vs Bugbear(L3 HP9/36)
+-> a
+T1384 mode=combat_mode         Borin Stonefoot(dwa) F4@( 6, 6) HP 53/99 MP 0/0 Hu  0 $ 593 room=M vs Bugbear(L3 HP9/36)
+-> a
+T1385 mode=combat_mode         Borin Stonefoot(dwa) F4@( 6, 6) HP 53/99 MP 0/0 Hu  0 $ 593 room=M vs Bugbear(L3 HP9/36)
+-> a
+T1386 mode=combat_victory      Borin Stonefoot(dwa) F4@( 6, 6) HP 53/109 MP 0/0 Hu  0 $ 705 room=.
+-> back
+T1387 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 6) HP 53/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1388 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 51/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1389 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 49/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1390 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 47/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1391 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 45/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1392 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 6) HP 43/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1393 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 6) HP 41/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1394 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 39/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1395 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 8) HP 37/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1396 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 9) HP 35/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1397 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 8) HP 33/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1398 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 8) HP 31/109 MP 0/0 Hu  0 $ 705 room=M vs Skeleton(L3 HP27/27)
+-> f
+T1399 mode=flee_direction_mode Borin Stonefoot(dwa) F4@( 5, 8) HP 31/109 MP 0/0 Hu  0 $ 705 room=M
+-> n
+T1400 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 31/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1401 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 29/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1402 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 27/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1403 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 6) HP 25/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1404 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 6) HP 23/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1405 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 21/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1406 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 19/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1407 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 7) HP 17/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1408 mode=game_loop           Borin Stonefoot(dwa) F4@( 4, 6) HP 15/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1409 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 6) HP 13/109 MP 0/0 Hu  0 $ 705 room=.
+-> e
+T1410 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 6) HP 11/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1411 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 7) HP 9/109 MP 0/0 Hu  0 $ 705 room=.
+-> w
+T1412 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 7) HP 7/109 MP 0/0 Hu  0 $ 705 room=.
+-> s
+T1413 mode=combat_mode         Borin Stonefoot(dwa) F4@( 5, 8) HP 5/109 MP 0/0 Hu  0 $ 705 room=M vs Skeleton(L3 HP27/27)
+-> f
+T1414 mode=flee_direction_mode Borin Stonefoot(dwa) F4@( 5, 8) HP 5/109 MP 0/0 Hu  0 $ 705 room=M
+-> s
+T1415 mode=warp_mode           Borin Stonefoot(dwa) F4@( 5, 9) HP 5/109 MP 0/0 Hu  0 $ 705 room=W
+-> y
+T1416 mode=game_loop           Borin Stonefoot(dwa) F4@( 5, 9) HP 5/109 MP 0/0 Hu  0 $ 705 room=W
+-> e
+T1417 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 9) HP 3/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1418 mode=game_loop           Borin Stonefoot(dwa) F4@( 6, 8) HP 1/109 MP 0/0 Hu  0 $ 705 room=.
+-> n
+T1419 mode=death_screen        Borin Stonefoot(dwa) F4@( 6, 7) HP 0/109 MP 0/0 Hu  0 $ 705 room=.
+
+=== run finished: turns=1419 floor=4 hp=0/109 gold=705 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00211_dwarf.html

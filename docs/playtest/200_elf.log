@@ -1,0 +1,403 @@
+T   0 mode=game_loop           Idril Star-eyed(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Idril Star-eyed(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 6 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=library_mode        Idril Star-eyed(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=L
+  Ancient tomes line the dusty shelves. You could search for useful grimoires here.
+-> r
+T   3 mode=library_read_decision_mode Idril Star-eyed(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=L
+  You begin searching through the dusty tomes...
+  You found a grimoire!
+  You examine the tome...
+It appears to be a Level 1 grimoire.
+It contains Cleansing Magic.
+
+  Do you want to attempt to read this grimoire? (y/n)
+-> y
+T   4 mode=game_loop           Idril Star-eyed(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 340 room=.
+  You carefully open the grimoire and attempt to decipher its ancient text...
+  Success! You deciphered the grimoire and extracted the spell!
+  The unidentified spell has been added to your inventory. Take it to a vendor to identify it.
+   ACHIEVEMENT UNLOCKED: Apprentice Mage - Learn your first spell
+  Reward: 50 gold!
+  The library's knowledge has been exhausted. The shelves are now empty.
+-> e
+T   5 mode=pool_mode           Idril Star-eyed(elf) F1@( 3, 1) HP 21/28 MP 0/0 Hu 98 $ 340 room=P
+  
+  Will you drink from the basin?
+-> dr
+T   6 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 1) HP 9/28 MP 0/0 Hu 98 $ 340 room=.
+-> l
+T   7 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 1) HP 9/28 MP 0/0 Hu 98 $ 340 room=.
+-> s
+T   8 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 2) HP 3/28 MP 0/0 Hu 97 $ 340 room=.
+-> i
+T   9 mode=inventory           Idril Star-eyed(elf) F1@( 3, 2) HP 3/28 MP 0/0 Hu 97 $ 340 room=.
+-> u3
+T  10 mode=inventory           Idril Star-eyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 97 $ 340 room=.
+-> x
+T  11 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 97 $ 340 room=.
+-> n
+T  12 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 1) HP 23/28 MP 0/0 Hu 96 $ 340 room=.
+-> s
+T  13 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 2) HP 17/28 MP 0/0 Hu 95 $ 340 room=.
+-> i
+T  14 mode=inventory           Idril Star-eyed(elf) F1@( 3, 2) HP 17/28 MP 0/0 Hu 95 $ 340 room=.
+-> u3
+T  15 mode=inventory           Idril Star-eyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 95 $ 340 room=.
+-> x
+T  16 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 95 $ 340 room=.
+-> n
+T  17 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 1) HP 23/28 MP 0/0 Hu 94 $ 340 room=.
+-> w
+T  18 mode=game_loop           Idril Star-eyed(elf) F1@( 2, 1) HP 23/28 MP 0/0 Hu 93 $ 340 room=.
+-> w
+T  19 mode=game_loop           Idril Star-eyed(elf) F1@( 1, 1) HP 24/28 MP 0/0 Hu 92 $ 340 room=E
+-> e
+T  20 mode=game_loop           Idril Star-eyed(elf) F1@( 2, 1) HP 24/28 MP 0/0 Hu 91 $ 340 room=.
+-> e
+T  21 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 1) HP 25/28 MP 0/0 Hu 90 $ 340 room=.
+-> s
+T  22 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 89 $ 340 room=.
+-> s
+T  23 mode=combat_mode         Idril Star-eyed(elf) F1@( 3, 3) HP 26/28 MP 0/0 Hu 88 $ 340 room=M vs Kobold(L0 HP8/8)
+-> a
+T  24 mode=combat_mode         Idril Star-eyed(elf) F1@( 3, 3) HP 26/28 MP 0/0 Hu 88 $ 340 room=M vs Kobold(L0 HP8/8)
+-> a
+T  25 mode=combat_victory      Idril Star-eyed(elf) F1@( 3, 3) HP 25/28 MP 0/0 Hu 88 $ 474 room=.
+-> back
+T  26 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 3) HP 25/28 MP 0/0 Hu 88 $ 474 room=.
+-> l
+T  27 mode=game_loop           Idril Star-eyed(elf) F1@( 3, 3) HP 25/28 MP 0/0 Hu 88 $ 474 room=.
+-> e
+T  28 mode=game_loop           Idril Star-eyed(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 87 $ 474 room=.
+-> l
+T  29 mode=game_loop           Idril Star-eyed(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 87 $ 474 room=.
+-> e
+T  30 mode=combat_mode         Idril Star-eyed(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 86 $ 474 room=M vs Zombie(L0 HP35/35)
+-> a
+T  31 mode=combat_mode         Idril Star-eyed(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 86 $ 474 room=M vs Zombie(L0 HP35/35)
+-> a
+T  32 mode=combat_mode         Idril Star-eyed(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 86 $ 474 room=M vs Zombie(L0 HP14/35)
+-> a
+T  33 mode=combat_victory      Idril Star-eyed(elf) F1@( 5, 3) HP 24/28 MP 0/0 Hu 86 $ 477 room=.
+-> back
+T  34 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 3) HP 24/28 MP 0/0 Hu 86 $ 477 room=.
+-> l
+T  35 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 3) HP 24/28 MP 0/0 Hu 86 $ 477 room=.
+-> s
+T  36 mode=altar_mode          Idril Star-eyed(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 85 $ 477 room=A
+-> pray
+T  37 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 85 $ 477 room=.
+-> l
+T  38 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 85 $ 477 room=.
+-> s
+T  39 mode=combat_mode         Idril Star-eyed(elf) F1@( 5, 5) HP 24/28 MP 0/0 Hu 84 $ 477 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  40 mode=combat_mode         Idril Star-eyed(elf) F1@( 5, 5) HP 23/28 MP 0/0 Hu 84 $ 477 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  41 mode=combat_victory      Idril Star-eyed(elf) F1@( 5, 5) HP 22/28 MP 0/0 Hu 84 $ 485 room=.
+-> back
+T  42 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 5) HP 22/28 MP 0/0 Hu 84 $ 485 room=.
+-> l
+T  43 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 5) HP 22/28 MP 0/0 Hu 84 $ 485 room=.
+-> i
+T  44 mode=inventory           Idril Star-eyed(elf) F1@( 5, 5) HP 22/28 MP 0/0 Hu 84 $ 485 room=.
+-> u3
+T  45 mode=inventory           Idril Star-eyed(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 84 $ 485 room=.
+-> x
+T  46 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 84 $ 485 room=.
+-> e
+T  47 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 83 $ 485 room=M vs Goblin(L0 HP30/30)
+-> a
+T  48 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 83 $ 485 room=M vs Goblin(L0 HP30/30)
+-> a
+T  49 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 83 $ 485 room=M vs Goblin(L0 HP10/30)
+-> a
+T  50 mode=combat_victory      Idril Star-eyed(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 83 $ 494 room=.
+-> back
+T  51 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 83 $ 494 room=.
+-> n
+T  52 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 4) HP 27/28 MP 0/0 Hu 82 $ 494 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  53 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 4) HP 26/28 MP 0/0 Hu 82 $ 494 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  54 mode=combat_victory      Idril Star-eyed(elf) F1@( 6, 4) HP 26/28 MP 0/0 Hu 82 $ 495 room=.
+-> back
+T  55 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 4) HP 26/28 MP 0/0 Hu 82 $ 495 room=.
+-> n
+T  56 mode=combat_mode         Idril Star-eyed(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 81 $ 495 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  57 mode=combat_victory      Idril Star-eyed(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 81 $ 503 room=.
+-> back
+T  58 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 81 $ 503 room=.
+-> l
+T  59 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 81 $ 503 room=.
+-> n
+T  60 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 2) HP 26/28 MP 0/0 Hu 80 $ 503 room=.
+-> l
+T  61 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 2) HP 26/28 MP 0/0 Hu 80 $ 503 room=.
+-> e
+T  62 mode=combat_mode         Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 79 $ 503 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  63 mode=combat_victory      Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 79 $ 504 room=.
+-> back
+T  64 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 79 $ 504 room=.
+-> l
+T  65 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 79 $ 504 room=.
+-> n
+T  66 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 78 $ 504 room=.
+-> i
+T  67 mode=inventory           Idril Star-eyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 78 $ 504 room=.
+-> eat5
+T  68 mode=inventory           Idril Star-eyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 83 $ 504 room=.
+-> x
+T  69 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 83 $ 504 room=.
+-> s
+T  70 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 82 $ 504 room=.
+-> e
+T  71 mode=combat_mode         Idril Star-eyed(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 81 $ 504 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  72 mode=combat_victory      Idril Star-eyed(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 81 $ 510 room=.
+-> back
+T  73 mode=game_loop           Idril Star-eyed(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 81 $ 510 room=.
+-> l
+T  74 mode=game_loop           Idril Star-eyed(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 81 $ 510 room=.
+-> e
+T  75 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 80 $ 510 room=.
+-> l
+T  76 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 80 $ 510 room=.
+-> s
+T  77 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 79 $ 510 room=.
+-> s
+T  78 mode=combat_mode         Idril Star-eyed(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 78 $ 510 room=M vs Kobold(L0 HP20/20)
+-> a
+T  79 mode=combat_victory      Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 78 $ 518 room=.
+-> back
+T  80 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 78 $ 518 room=.
+-> i
+T  81 mode=inventory           Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 78 $ 518 room=.
+-> eat4
+T  82 mode=inventory           Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 83 $ 518 room=.
+-> x
+T  83 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 83 $ 518 room=.
+-> l
+T  84 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 27/28 MP 0/0 Hu 83 $ 518 room=.
+-> e
+T  85 mode=game_loop           Idril Star-eyed(elf) F1@(10, 4) HP 27/28 MP 0/0 Hu 82 $ 518 room=.
+-> e
+T  86 mode=pool_mode           Idril Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 81 $ 518 room=P
+-> dr
+T  87 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 81 $ 518 room=.
+-> i
+T  88 mode=inventory           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 81 $ 518 room=.
+-> eat4
+T  89 mode=inventory           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 86 $ 518 room=.
+-> x
+T  90 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 86 $ 518 room=.
+-> l
+T  91 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 86 $ 518 room=.
+-> e
+T  92 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 85 $ 518 room=.
+-> l
+T  93 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 85 $ 518 room=.
+-> n
+T  94 mode=combat_mode         Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 84 $ 518 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  95 mode=combat_mode         Idril Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 84 $ 518 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  96 mode=combat_victory      Idril Star-eyed(elf) F1@(12, 3) HP 26/28 MP 0/0 Hu 84 $ 626 room=.
+-> back
+T  97 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 26/28 MP 0/0 Hu 84 $ 626 room=.
+-> i
+T  98 mode=inventory           Idril Star-eyed(elf) F1@(12, 3) HP 26/28 MP 0/0 Hu 84 $ 626 room=.
+-> u3
+T  99 mode=inventory           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 84 $ 626 room=.
+-> x
+T 100 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 84 $ 626 room=.
+-> i
+T 101 mode=inventory           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 84 $ 626 room=.
+-> eat3
+T 102 mode=inventory           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 89 $ 626 room=.
+-> x
+T 103 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 89 $ 626 room=.
+-> l
+T 104 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 89 $ 626 room=.
+-> e
+T 105 mode=game_loop           Idril Star-eyed(elf) F1@(13, 3) HP 25/28 MP 0/0 Hu 88 $ 626 room=.
+-> w
+T 106 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 23/28 MP 0/0 Hu 87 $ 626 room=.
+-> s
+T 107 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 20/28 MP 0/0 Hu 86 $ 626 room=.
+-> i
+T 108 mode=inventory           Idril Star-eyed(elf) F1@(12, 4) HP 20/28 MP 0/0 Hu 86 $ 626 room=.
+-> eat4
+T 109 mode=inventory           Idril Star-eyed(elf) F1@(12, 4) HP 20/28 MP 0/0 Hu 91 $ 626 room=.
+-> x
+T 110 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 20/28 MP 0/0 Hu 91 $ 626 room=.
+-> w
+T 111 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 21/28 MP 0/0 Hu 90 $ 626 room=.
+-> n
+T 112 mode=combat_mode         Idril Star-eyed(elf) F1@(11, 3) HP 21/28 MP 0/0 Hu 89 $ 626 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 113 mode=combat_victory      Idril Star-eyed(elf) F1@(11, 3) HP 20/28 MP 0/0 Hu 89 $ 629 room=.
+-> back
+T 114 mode=game_loop           Idril Star-eyed(elf) F1@(11, 3) HP 20/28 MP 0/0 Hu 89 $ 629 room=.
+-> s
+T 115 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 21/28 MP 0/0 Hu 88 $ 629 room=.
+-> w
+T 116 mode=game_loop           Idril Star-eyed(elf) F1@(10, 4) HP 21/28 MP 0/0 Hu 87 $ 629 room=.
+-> w
+T 117 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 22/28 MP 0/0 Hu 86 $ 629 room=.
+-> n
+T 118 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 3) HP 22/28 MP 0/0 Hu 85 $ 629 room=.
+-> n
+T 119 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 22/28 MP 0/0 Hu 84 $ 629 room=.
+-> i
+T 120 mode=inventory           Idril Star-eyed(elf) F1@( 9, 2) HP 22/28 MP 0/0 Hu 84 $ 629 room=.
+-> eat3
+T 121 mode=inventory           Idril Star-eyed(elf) F1@( 9, 2) HP 22/28 MP 0/0 Hu 89 $ 629 room=.
+-> x
+T 122 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 22/28 MP 0/0 Hu 89 $ 629 room=.
+-> w
+T 123 mode=game_loop           Idril Star-eyed(elf) F1@( 8, 2) HP 23/28 MP 0/0 Hu 88 $ 629 room=.
+-> w
+T 124 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 2) HP 23/28 MP 0/0 Hu 87 $ 629 room=.
+-> w
+T 125 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 2) HP 24/28 MP 0/0 Hu 86 $ 629 room=.
+-> s
+T 126 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 3) HP 24/28 MP 0/0 Hu 85 $ 629 room=.
+-> s
+T 127 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 84 $ 629 room=.
+-> i
+T 128 mode=inventory           Idril Star-eyed(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 84 $ 629 room=.
+-> eat3
+T 129 mode=inventory           Idril Star-eyed(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 90 $ 629 room=.
+-> x
+T 130 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 90 $ 629 room=.
+-> s
+T 131 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 5) HP 25/28 MP 0/0 Hu 89 $ 629 room=.
+-> w
+T 132 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 5) HP 25/28 MP 0/0 Hu 88 $ 629 room=.
+-> n
+T 133 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 4) HP 26/28 MP 0/0 Hu 87 $ 629 room=.
+-> n
+T 134 mode=game_loop           Idril Star-eyed(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 86 $ 629 room=.
+-> e
+T 135 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 85 $ 629 room=.
+-> n
+T 136 mode=game_loop           Idril Star-eyed(elf) F1@( 6, 2) HP 27/28 MP 0/0 Hu 84 $ 629 room=.
+-> e
+T 137 mode=game_loop           Idril Star-eyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 83 $ 629 room=.
+-> e
+T 138 mode=game_loop           Idril Star-eyed(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 82 $ 629 room=.
+-> e
+T 139 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 81 $ 629 room=.
+-> s
+T 140 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 80 $ 629 room=.
+-> s
+T 141 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 79 $ 629 room=.
+-> e
+T 142 mode=game_loop           Idril Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 78 $ 629 room=.
+-> e
+T 143 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 77 $ 629 room=.
+-> n
+T 144 mode=game_loop           Idril Star-eyed(elf) F1@(11, 3) HP 28/28 MP 0/0 Hu 76 $ 629 room=.
+-> e
+T 145 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 75 $ 629 room=.
+-> e
+T 146 mode=game_loop           Idril Star-eyed(elf) F1@(13, 3) HP 28/28 MP 0/0 Hu 74 $ 629 room=.
+-> w
+T 147 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 73 $ 629 room=.
+-> s
+T 148 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 72 $ 629 room=.
+-> w
+T 149 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 71 $ 629 room=.
+-> n
+T 150 mode=game_loop           Idril Star-eyed(elf) F1@(11, 3) HP 28/28 MP 0/0 Hu 70 $ 629 room=.
+-> s
+T 151 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 69 $ 629 room=.
+-> w
+T 152 mode=game_loop           Idril Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 68 $ 629 room=.
+-> w
+T 153 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 67 $ 629 room=.
+-> n
+T 154 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 66 $ 629 room=.
+-> w
+T 155 mode=combat_mode         Idril Star-eyed(elf) F1@( 8, 3) HP 28/28 MP 0/0 Hu 65 $ 629 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 156 mode=flee_direction_mode Idril Star-eyed(elf) F1@( 8, 3) HP 28/28 MP 0/0 Hu 65 $ 629 room=M
+-> n
+T 157 mode=game_loop           Idril Star-eyed(elf) F1@( 8, 2) HP 28/28 MP 0/0 Hu 65 $ 629 room=.
+-> e
+T 158 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 64 $ 629 room=.
+-> s
+T 159 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 63 $ 629 room=.
+-> s
+T 160 mode=game_loop           Idril Star-eyed(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 62 $ 629 room=.
+-> e
+T 161 mode=game_loop           Idril Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 61 $ 629 room=.
+-> e
+T 162 mode=game_loop           Idril Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 60 $ 629 room=.
+-> n
+T 163 mode=game_loop           Idril Star-eyed(elf) F1@(11, 3) HP 28/28 MP 0/0 Hu 59 $ 629 room=.
+-> e
+T 164 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 58 $ 629 room=.
+-> e
+T 165 mode=game_loop           Idril Star-eyed(elf) F1@(13, 3) HP 28/28 MP 0/0 Hu 57 $ 629 room=.
+-> w
+T 166 mode=game_loop           Idril Star-eyed(elf) F1@(12, 3) HP 28/28 MP 0/0 Hu 56 $ 629 room=.
+-> s
+T 167 mode=game_loop           Idril Star-eyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 55 $ 629 room=.
+-> s
+T 168 mode=combat_mode         Idril Star-eyed(elf) F1@(12, 5) HP 28/28 MP 0/0 Hu 54 $ 629 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 169 mode=combat_mode         Idril Star-eyed(elf) F1@(12, 5) HP 27/28 MP 0/0 Hu 54 $ 629 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 170 mode=combat_victory      Idril Star-eyed(elf) F1@(12, 5) HP 27/28 MP 0/0 Hu 54 $ 635 room=.
+-> back
+T 171 mode=game_loop           Idril Star-eyed(elf) F1@(12, 5) HP 27/28 MP 0/0 Hu 54 $ 635 room=.
+-> l
+T 172 mode=game_loop           Idril Star-eyed(elf) F1@(12, 5) HP 27/28 MP 0/0 Hu 54 $ 635 room=.
+-> e
+T 173 mode=game_loop           Idril Star-eyed(elf) F1@(13, 5) HP 27/28 MP 0/0 Hu 53 $ 635 room=.
+-> l
+T 174 mode=game_loop           Idril Star-eyed(elf) F1@(13, 5) HP 27/28 MP 0/0 Hu 53 $ 635 room=.
+-> s
+T 175 mode=game_loop           Idril Star-eyed(elf) F1@(13, 6) HP 27/28 MP 0/0 Hu 52 $ 635 room=.
+-> l
+T 176 mode=game_loop           Idril Star-eyed(elf) F1@(13, 6) HP 27/28 MP 0/0 Hu 52 $ 635 room=.
+-> e
+T 177 mode=library_mode        Idril Star-eyed(elf) F1@(14, 6) HP 27/28 MP 0/0 Hu 51 $ 635 room=L
+-> r
+T 178 mode=library_read_decision_mode Idril Star-eyed(elf) F1@(14, 6) HP 27/28 MP 0/0 Hu 51 $ 635 room=L
+-> y
+T 179 mode=game_loop           Idril Star-eyed(elf) F1@(14, 6) HP 27/28 MP 0/0 Hu 51 $ 735 room=.
+-> l
+T 180 mode=game_loop           Idril Star-eyed(elf) F1@(14, 6) HP 27/28 MP 0/0 Hu 51 $ 735 room=.
+-> e
+T 181 mode=game_loop           Idril Star-eyed(elf) F1@(15, 6) HP 19/28 MP 0/0 Hu 50 $ 735 room=.
+-> l
+T 182 mode=game_loop           Idril Star-eyed(elf) F1@(15, 6) HP 19/28 MP 0/0 Hu 50 $ 735 room=.
+-> s
+T 183 mode=game_loop           Idril Star-eyed(elf) F1@(15, 7) HP 11/28 MP 0/0 Hu 49 $ 735 room=.
+-> i
+T 184 mode=inventory           Idril Star-eyed(elf) F1@(15, 7) HP 11/28 MP 0/0 Hu 49 $ 735 room=.
+-> eat1
+T 185 mode=inventory           Idril Star-eyed(elf) F1@(15, 7) HP 11/28 MP 0/0 Hu100 $ 735 room=.
+-> x
+T 186 mode=game_loop           Idril Star-eyed(elf) F1@(15, 7) HP 11/28 MP 0/0 Hu100 $ 735 room=.
+-> l
+T 187 mode=game_loop           Idril Star-eyed(elf) F1@(15, 7) HP 11/28 MP 0/0 Hu100 $ 735 room=.
+-> n
+T 188 mode=game_loop           Idril Star-eyed(elf) F1@(15, 6) HP 3/28 MP 0/0 Hu 99 $ 735 room=.
+-> n
+T 189 mode=death_screen        Idril Star-eyed(elf) F1@(15, 5) HP -4/28 MP 0/0 Hu 98 $ 735 room=.
+
+=== run finished: turns=189 floor=1 hp=-4/28 gold=735 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00200_elf.html

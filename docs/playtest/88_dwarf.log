@@ -1,0 +1,2368 @@
+T   0 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+-> e
+T   3 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 98 $ 290 room=.
+  [Well-fed] +1 HP
+-> l
+T   4 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 98 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 6 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   5 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 97 $ 290 room=.
+-> l
+T   6 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 97 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 2 nearby rooms!
+  Lantern fuel remaining: 77
+-> s
+T   7 mode=garden_mode         Thrain Stonebreaker(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 96 $ 290 room=G
+  [Well-fed] +1 HP
+  A lush magical garden blooms before you, filled with rare ingredients.
+-> h
+T   8 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 96 $ 290 room=.
+  You gather useful herbs and plants...
+  Gathered: Crystal Dew
+  Gathered: Dragon Scale
+  Gathered: Iron Bark
+-> l
+T   9 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 96 $ 290 room=.
+-> s
+T  10 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 3, 4) HP 62/64 MP 0/0 Hu 95 $ 290 room=C
+-> o
+T  11 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 4) HP 62/64 MP 0/0 Hu 95 $ 300 room=.
+-> l
+T  12 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 4) HP 62/64 MP 0/0 Hu 95 $ 300 room=.
+-> w
+T  13 mode=altar_mode          Thrain Stonebreaker(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 94 $ 300 room=A
+-> pray
+T  14 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 94 $ 300 room=.
+-> l
+T  15 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 94 $ 300 room=.
+-> n
+T  16 mode=altar_mode          Thrain Stonebreaker(dwa) F1@( 2, 3) HP 63/64 MP 0/0 Hu 93 $ 300 room=A
+-> pray
+T  17 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 3) HP 63/64 MP 0/0 Hu 93 $ 300 room=.
+-> s
+T  18 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 4) HP 64/64 MP 0/0 Hu 92 $ 300 room=.
+-> w
+T  19 mode=pool_mode           Thrain Stonebreaker(dwa) F1@( 1, 4) HP 64/64 MP 0/0 Hu 91 $ 300 room=P
+-> dr
+T  20 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 4) HP 64/64 MP 0/0 Hu 91 $ 300 room=.
+-> e
+T  21 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 4) HP 64/64 MP 0/0 Hu 90 $ 300 room=.
+-> s
+T  22 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 89 $ 300 room=M vs Goblin(L0 HP12/12)
+-> a
+T  23 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 89 $ 300 room=M vs Goblin(L0 HP12/12)
+-> a
+T  24 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 89 $ 456 room=.
+-> back
+T  25 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 89 $ 456 room=.
+-> e
+T  26 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 88 $ 456 room=.
+-> s
+T  27 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 87 $ 456 room=M vs Kobold(L0 HP20/20)
+-> a
+T  28 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 87 $ 465 room=.
+-> back
+T  29 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 87 $ 465 room=.
+-> l
+T  30 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 87 $ 465 room=.
+-> e
+T  31 mode=dungeon_mode        Thrain Stonebreaker(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 86 $ 465 room=N
+-> u
+T  32 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 86 $ 465 room=N
+-> l
+T  33 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 86 $ 465 room=N
+-> s
+T  34 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4, 7) HP 64/64 MP 0/0 Hu 85 $ 465 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  35 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 4, 7) HP 64/64 MP 0/0 Hu 85 $ 466 room=.
+-> back
+T  36 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 7) HP 64/64 MP 0/0 Hu 85 $ 466 room=.
+-> s
+T  37 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 466 room=V
+-> b12
+T  38 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 456 room=V
+-> b4
+T  39 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 406 room=V
+-> b4
+T  40 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 376 room=V
+-> b6
+T  41 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 346 room=V
+-> b6
+T  42 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 316 room=V
+-> b6
+T  43 mode=vendor_shop         Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 166 room=V
+-> x
+T  44 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 166 room=V
+-> l
+T  45 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 8) HP 64/64 MP 0/0 Hu 84 $ 166 room=V
+-> s
+T  46 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 83 $ 166 room=C
+-> o
+T  47 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 83 $ 266 room=.
+-> l
+T  48 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 83 $ 266 room=.
+-> e
+T  49 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5, 9) HP 64/64 MP 0/0 Hu 82 $ 266 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  50 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5, 9) HP 63/64 MP 0/0 Hu 82 $ 266 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  51 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 5, 9) HP 63/64 MP 0/0 Hu 82 $ 275 room=.
+-> back
+T  52 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5, 9) HP 63/64 MP 0/0 Hu 82 $ 275 room=.
+-> e
+T  53 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 81 $ 275 room=C
+-> o
+T  54 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 81 $ 275 room=.
+-> l
+T  55 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 81 $ 275 room=.
+-> w
+T  56 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5, 9) HP 63/64 MP 0/0 Hu 80 $ 275 room=.
+-> e
+T  57 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 79 $ 275 room=.
+-> i
+T  58 mode=inventory           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 79 $ 275 room=.
+-> eat4
+T  59 mode=inventory           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 84 $ 275 room=.
+-> u9
+T  60 mode=upgrade_scroll_mode Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 84 $ 275 room=.
+-> 1
+T  61 mode=inventory           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 84 $ 275 room=.
+-> x
+T  62 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 84 $ 275 room=.
+-> w
+T  63 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5, 9) HP 64/64 MP 0/0 Hu 83 $ 275 room=.
+-> w
+T  64 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 82 $ 275 room=.
+-> i
+T  65 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 82 $ 275 room=.
+-> eat4
+T  66 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 87 $ 275 room=.
+-> x
+T  67 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 64/64 MP 0/0 Hu 87 $ 275 room=.
+-> w
+T  68 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3, 9) HP 64/64 MP 0/0 Hu 86 $ 275 room=M vs Kobold(L0 HP20/20)
+-> f
+T  69 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 275 room=M vs Kobold(L0 HP20/20)
+-> a
+T  70 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 275 room=M vs Kobold(L0 HP20/20)
+-> a
+T  71 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 275 room=M vs Kobold(L0 HP20/20)
+-> a
+T  72 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 276 room=.
+-> back
+T  73 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 276 room=.
+-> l
+T  74 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 9) HP 63/64 MP 0/0 Hu 86 $ 276 room=.
+-> w
+T  75 mode=library_mode        Thrain Stonebreaker(dwa) F1@( 2, 9) HP 63/64 MP 0/0 Hu 85 $ 276 room=L
+-> r
+T  76 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F1@( 2, 9) HP 63/64 MP 0/0 Hu 85 $ 276 room=L
+-> y
+T  77 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 41/64 MP 0/0 Hu 85 $ 376 room=.
+-> i
+T  78 mode=inventory           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 41/64 MP 0/0 Hu 85 $ 376 room=.
+-> u3
+T  79 mode=inventory           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 85 $ 376 room=.
+-> x
+T  80 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 85 $ 376 room=.
+-> i
+T  81 mode=inventory           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 85 $ 376 room=.
+-> eat3
+T  82 mode=inventory           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 90 $ 376 room=.
+-> x
+T  83 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 90 $ 376 room=.
+-> l
+T  84 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 64/64 MP 0/0 Hu 90 $ 376 room=.
+-> n
+T  85 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 2, 8) HP 64/64 MP 0/0 Hu 89 $ 376 room=C
+-> o
+T  86 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 8) HP 64/64 MP 0/0 Hu 89 $ 376 room=.
+-> w
+T  87 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 1, 8) HP 64/64 MP 0/0 Hu 88 $ 376 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  88 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 1, 8) HP 63/64 MP 0/0 Hu 88 $ 376 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  89 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 1, 8) HP 62/64 MP 0/0 Hu 88 $ 376 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  90 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 1, 8) HP 61/64 MP 0/0 Hu 88 $ 378 room=.
+-> back
+T  91 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 8) HP 61/64 MP 0/0 Hu 88 $ 378 room=.
+-> s
+T  92 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 1, 9) HP 61/64 MP 0/0 Hu 87 $ 378 room=C
+-> o
+T  93 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 9) HP 61/64 MP 0/0 Hu 87 $ 528 room=.
+-> l
+T  94 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1, 9) HP 61/64 MP 0/0 Hu 87 $ 528 room=.
+-> s
+T  95 mode=garden_mode         Thrain Stonebreaker(dwa) F1@( 1,10) HP 62/64 MP 0/0 Hu 86 $ 528 room=G
+-> h
+T  96 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 1,10) HP 62/64 MP 0/0 Hu 86 $ 528 room=.
+-> e
+T  97 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 2,10) HP 62/64 MP 0/0 Hu 85 $ 528 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  98 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 2,10) HP 62/64 MP 0/0 Hu 85 $ 528 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  99 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 2,10) HP 62/64 MP 0/0 Hu 85 $ 536 room=.
+-> back
+T 100 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2,10) HP 62/64 MP 0/0 Hu 85 $ 536 room=.
+-> n
+T 101 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 62/64 MP 0/0 Hu 84 $ 536 room=.
+-> e
+T 102 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 9) HP 62/64 MP 0/0 Hu 83 $ 536 room=.
+-> e
+T 103 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 63/64 MP 0/0 Hu 82 $ 536 room=.
+-> s
+T 104 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,10) HP 63/64 MP 0/0 Hu 81 $ 536 room=.
+-> s
+T 105 mode=chest_mode          Thrain Stonebreaker(dwa) F1@( 4,11) HP 63/64 MP 0/0 Hu 80 $ 536 room=C
+-> s
+T 106 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,12) HP 63/64 MP 0/0 Hu 79 $ 536 room=.
+-> l
+T 107 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,12) HP 63/64 MP 0/0 Hu 79 $ 536 room=.
+-> s
+T 108 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,13) HP 64/64 MP 0/0 Hu 78 $ 536 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 109 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,13) HP 63/64 MP 0/0 Hu 78 $ 536 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 110 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 78 $ 536 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 111 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 78 $ 543 room=.
+-> back
+T 112 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 78 $ 543 room=.
+-> i
+T 113 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 78 $ 543 room=.
+-> eat3
+T 114 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 84 $ 543 room=.
+-> x
+T 115 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 84 $ 543 room=.
+-> l
+T 116 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,13) HP 62/64 MP 0/0 Hu 84 $ 543 room=.
+-> e
+T 117 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,13) HP 62/64 MP 0/0 Hu 83 $ 543 room=.
+-> l
+T 118 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,13) HP 62/64 MP 0/0 Hu 83 $ 543 room=.
+-> n
+T 119 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,12) HP 62/64 MP 0/0 Hu 82 $ 543 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 120 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 5,12) HP 62/64 MP 0/0 Hu 82 $ 552 room=.
+-> back
+T 121 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,12) HP 62/64 MP 0/0 Hu 82 $ 552 room=.
+-> n
+T 122 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,11) HP 62/64 MP 0/0 Hu 81 $ 552 room=M vs Lichen(L0 HP10/10)
+-> f
+T 123 mode=flee_direction_mode Thrain Stonebreaker(dwa) F1@( 5,11) HP 61/64 MP 0/0 Hu 81 $ 552 room=M
+-> w
+T 124 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,11) HP 61/64 MP 0/0 Hu 81 $ 552 room=C
+-> i
+T 125 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4,11) HP 61/64 MP 0/0 Hu 81 $ 552 room=C
+-> eat3
+T 126 mode=inventory           Thrain Stonebreaker(dwa) F1@( 4,11) HP 61/64 MP 0/0 Hu 87 $ 552 room=C
+-> x
+T 127 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,11) HP 61/64 MP 0/0 Hu 87 $ 552 room=C
+-> w
+T 128 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3,11) HP 62/64 MP 0/0 Hu 86 $ 552 room=M vs Kobold(L0 HP8/8)
+-> f
+T 129 mode=flee_direction_mode Thrain Stonebreaker(dwa) F1@( 3,11) HP 61/64 MP 0/0 Hu 86 $ 552 room=M
+-> n
+T 130 mode=warp_mode           Thrain Stonebreaker(dwa) F1@( 3,10) HP 61/64 MP 0/0 Hu 86 $ 552 room=W
+-> y
+T 131 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3,10) HP 61/64 MP 0/0 Hu 86 $ 552 room=W
+-> w
+T 132 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2,10) HP 61/64 MP 0/0 Hu 85 $ 552 room=.
+-> n
+T 133 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 2, 9) HP 61/64 MP 0/0 Hu 84 $ 552 room=.
+-> e
+T 134 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3, 9) HP 61/64 MP 0/0 Hu 83 $ 552 room=.
+-> e
+T 135 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4, 9) HP 62/64 MP 0/0 Hu 82 $ 552 room=.
+-> s
+T 136 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,10) HP 62/64 MP 0/0 Hu 81 $ 552 room=.
+-> s
+T 137 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,11) HP 62/64 MP 0/0 Hu 80 $ 552 room=C
+-> w
+T 138 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 3,11) HP 62/64 MP 0/0 Hu 79 $ 552 room=M vs Kobold(L0 HP8/8)
+-> a
+T 139 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 3,11) HP 61/64 MP 0/0 Hu 79 $ 661 room=.
+-> back
+T 140 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 3,11) HP 61/64 MP 0/0 Hu 79 $ 661 room=.
+-> e
+T 141 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,11) HP 62/64 MP 0/0 Hu 78 $ 661 room=C
+-> e
+T 142 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,11) HP 62/64 MP 0/0 Hu 77 $ 661 room=M vs Lichen(L0 HP10/10)
+-> a
+T 143 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,11) HP 62/64 MP 0/0 Hu 77 $ 661 room=M vs Lichen(L0 HP10/10)
+-> a
+T 144 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,11) HP 61/64 MP 0/0 Hu 77 $ 661 room=M vs Lichen(L0 HP10/10)
+-> a
+T 145 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 5,11) HP 60/64 MP 0/0 Hu 77 $ 669 room=.
+-> back
+T 146 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,11) HP 60/64 MP 0/0 Hu 77 $ 669 room=.
+-> s
+T 147 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,12) HP 60/64 MP 0/0 Hu 76 $ 669 room=.
+-> s
+T 148 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,13) HP 60/64 MP 0/0 Hu 75 $ 669 room=.
+-> s
+T 149 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,14) HP 61/64 MP 0/0 Hu 74 $ 669 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 150 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,14) HP 60/64 MP 0/0 Hu 74 $ 669 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 151 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 5,14) HP 59/64 MP 0/0 Hu 74 $ 669 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 152 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 5,14) HP 59/64 MP 0/0 Hu 74 $ 679 room=.
+-> back
+T 153 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,14) HP 59/64 MP 0/0 Hu 74 $ 679 room=.
+-> s
+T 154 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 5,15) HP 59/64 MP 0/0 Hu 73 $ 679 room=.
+-> w
+T 155 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,15) HP 59/64 MP 0/0 Hu 72 $ 679 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 156 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,15) HP 58/64 MP 0/0 Hu 72 $ 679 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 157 mode=combat_mode         Thrain Stonebreaker(dwa) F1@( 4,15) HP 57/64 MP 0/0 Hu 72 $ 679 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 158 mode=combat_victory      Thrain Stonebreaker(dwa) F1@( 4,15) HP 57/74 MP 0/0 Hu 72 $ 686 room=.
+-> back
+T 159 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,15) HP 57/74 MP 0/0 Hu 72 $ 686 room=.
+-> l
+T 160 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,15) HP 57/74 MP 0/0 Hu 72 $ 686 room=.
+-> s
+T 161 mode=library_mode        Thrain Stonebreaker(dwa) F1@( 4,16) HP 57/74 MP 0/0 Hu 71 $ 686 room=L
+-> r
+T 162 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F1@( 4,16) HP 57/74 MP 0/0 Hu 71 $ 686 room=L
+-> y
+T 163 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,16) HP 57/74 MP 0/0 Hu 71 $ 736 room=.
+-> n
+T 164 mode=game_loop           Thrain Stonebreaker(dwa) F1@( 4,15) HP 58/74 MP 0/0 Hu 70 $ 736 room=.
+-> w
+T 165 mode=stairs_down_mode    Thrain Stonebreaker(dwa) F1@( 3,15) HP 58/74 MP 0/0 Hu 69 $ 736 room=D
+-> d
+T 166 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F2@( 1, 1) HP 58/74 MP 0/0 Hu 69 $ 736 room=U
+-> w
+T 167 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F2@( 1, 1) HP 58/74 MP 0/0 Hu 69 $ 736 room=U
+-> e
+T 168 mode=dungeon_mode        Thrain Stonebreaker(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 68 $ 736 room=N
+-> u
+T 169 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 68 $ 736 room=N
+-> i
+T 170 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 68 $ 736 room=N
+-> u3
+T 171 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 68 $ 736 room=N
+-> x
+T 172 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 68 $ 736 room=N
+-> i
+T 173 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 68 $ 736 room=N
+-> eat3
+T 174 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 73 $ 736 room=N
+-> eat1
+T 175 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu100 $ 736 room=N
+-> x
+T 176 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu100 $ 736 room=N
+-> l
+T 177 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu100 $ 736 room=N
+-> e
+T 178 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 99 $ 736 room=.
+-> l
+T 179 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 99 $ 736 room=.
+-> e
+T 180 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 98 $ 736 room=.
+-> l
+T 181 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 98 $ 736 room=.
+-> e
+T 182 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 1) HP 74/74 MP 0/0 Hu 97 $ 736 room=.
+-> l
+T 183 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 1) HP 74/74 MP 0/0 Hu 97 $ 736 room=.
+-> e
+T 184 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 1) HP 74/74 MP 0/0 Hu 96 $ 736 room=.
+-> l
+T 185 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 1) HP 74/74 MP 0/0 Hu 96 $ 736 room=.
+-> e
+T 186 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 1) HP 74/74 MP 0/0 Hu 95 $ 736 room=.
+-> l
+T 187 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 1) HP 74/74 MP 0/0 Hu 95 $ 736 room=.
+-> e
+T 188 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 1) HP 74/74 MP 0/0 Hu 94 $ 736 room=.
+-> l
+T 189 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 1) HP 74/74 MP 0/0 Hu 94 $ 736 room=.
+-> e
+T 190 mode=chest_mode          Thrain Stonebreaker(dwa) F2@( 9, 1) HP 74/74 MP 0/0 Hu 93 $ 736 room=C
+-> o
+T 191 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 1) HP 74/74 MP 0/0 Hu 92 $ 736 room=.
+-> l
+T 192 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 1) HP 74/74 MP 0/0 Hu 92 $ 736 room=.
+-> s
+T 193 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 91 $ 736 room=.
+-> l
+T 194 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 91 $ 736 room=.
+-> s
+T 195 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 736 room=.
+-> l
+T 196 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 736 room=.
+-> s
+T 197 mode=chest_mode          Thrain Stonebreaker(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 89 $ 736 room=C
+-> o
+T 198 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 89 $ 736 room=.
+-> l
+T 199 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 89 $ 736 room=.
+-> e
+T 200 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 88 $ 736 room=.
+-> l
+T 201 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 88 $ 736 room=.
+-> e
+T 202 mode=chest_mode          Thrain Stonebreaker(dwa) F2@(12, 4) HP 74/74 MP 0/0 Hu 87 $ 736 room=C
+-> s
+T 203 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 86 $ 736 room=.
+-> l
+T 204 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 86 $ 736 room=.
+-> s
+T 205 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 6) HP 74/74 MP 0/0 Hu 85 $ 736 room=.
+-> l
+T 206 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 6) HP 74/74 MP 0/0 Hu 85 $ 736 room=.
+-> w
+T 207 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 6) HP 74/74 MP 0/0 Hu 84 $ 736 room=.
+-> w
+T 208 mode=oracle_mode         Thrain Stonebreaker(dwa) F2@(10, 6) HP 74/74 MP 0/0 Hu 83 $ 736 room=O
+-> n
+T 209 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 5) HP 74/74 MP 0/0 Hu 82 $ 736 room=.
+-> n
+T 210 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 81 $ 736 room=.
+-> n
+T 211 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 80 $ 736 room=.
+-> w
+T 212 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 79 $ 736 room=.
+-> w
+T 213 mode=chest_mode          Thrain Stonebreaker(dwa) F2@( 8, 3) HP 74/74 MP 0/0 Hu 78 $ 736 room=C
+-> o
+T 214 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 3) HP 74/74 MP 0/0 Hu 78 $ 811 room=.
+-> s
+T 215 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 77 $ 811 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 216 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 4) HP 73/74 MP 0/0 Hu 77 $ 811 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 217 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 8, 4) HP 72/74 MP 0/0 Hu 77 $ 815 room=.
+-> back
+T 218 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 4) HP 72/74 MP 0/0 Hu 77 $ 815 room=.
+-> s
+T 219 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 72/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 220 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 71/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> f
+T 221 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 70/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 222 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 69/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 223 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 68/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 224 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 67/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 225 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 67/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 226 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 66/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 227 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 65/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 228 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 65/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP8/35)
+-> a
+T 229 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8, 5) HP 64/74 MP 0/0 Hu 76 $ 815 room=M vs Gray Ooze(L1 HP8/35)
+-> a
+T 230 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 8, 5) HP 64/74 MP 0/0 Hu 76 $ 823 room=.
+-> back
+T 231 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 5) HP 64/74 MP 0/0 Hu 76 $ 823 room=.
+-> s
+T 232 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 6) HP 64/74 MP 0/0 Hu 75 $ 823 room=.
+-> w
+T 233 mode=pool_mode           Thrain Stonebreaker(dwa) F2@( 7, 6) HP 64/74 MP 0/0 Hu 74 $ 823 room=P
+-> dr
+T 234 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 6) HP 64/74 MP 0/0 Hu 74 $ 823 room=.
+-> w
+T 235 mode=garden_mode         Thrain Stonebreaker(dwa) F2@( 6, 6) HP 65/74 MP 0/0 Hu 73 $ 823 room=G
+-> h
+T 236 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 65/74 MP 0/0 Hu 73 $ 823 room=.
+-> n
+T 237 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 65/74 MP 0/0 Hu 72 $ 823 room=.
+-> n
+T 238 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 65/74 MP 0/0 Hu 71 $ 823 room=.
+-> e
+T 239 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 7, 4) HP 65/74 MP 0/0 Hu 70 $ 823 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 240 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 7, 4) HP 65/74 MP 0/0 Hu 70 $ 829 room=.
+-> back
+T 241 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 65/74 MP 0/0 Hu 70 $ 829 room=.
+-> n
+T 242 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 7, 3) HP 66/74 MP 0/0 Hu 69 $ 829 room=M vs Cockatrice(L1 HP25/25)
+-> a
+T 243 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 7, 3) HP 65/74 MP 0/0 Hu 69 $ 829 room=M vs Cockatrice(L1 HP1/25)
+-> f
+T 244 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 7, 3) HP 64/74 MP 0/0 Hu 69 $ 829 room=M vs Cockatrice(L1 HP1/25)
+-> a
+T 245 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 7, 3) HP 63/74 MP 0/0 Hu 69 $ 837 room=.
+-> back
+T 246 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 3) HP 63/74 MP 0/0 Hu 69 $ 837 room=.
+-> n
+T 247 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 2) HP 63/74 MP 0/0 Hu 68 $ 837 room=.
+-> n
+T 248 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 1) HP 63/74 MP 0/0 Hu 67 $ 837 room=.
+-> w
+T 249 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 1) HP 63/74 MP 0/0 Hu 66 $ 837 room=.
+-> w
+T 250 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 1) HP 64/74 MP 0/0 Hu 65 $ 837 room=.
+-> w
+T 251 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 1) HP 64/74 MP 0/0 Hu 64 $ 837 room=.
+-> w
+T 252 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 1) HP 64/74 MP 0/0 Hu 63 $ 837 room=.
+-> w
+T 253 mode=dungeon_mode        Thrain Stonebreaker(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 62 $ 837 room=N
+-> u
+T 254 mode=dungeon_unlocked_mode Thrain Stonebreaker(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 62 $ 837 room=N
+-> r
+T 255 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 62 $ 837 room=N
+-> s
+T 256 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 2) HP 65/74 MP 0/0 Hu 61 $ 837 room=.
+-> l
+T 257 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 2) HP 65/74 MP 0/0 Hu 61 $ 837 room=.
+-> s
+T 258 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 65/74 MP 0/0 Hu 60 $ 837 room=.
+-> i
+T 259 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 65/74 MP 0/0 Hu 60 $ 837 room=.
+-> u3
+T 260 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 60 $ 837 room=.
+-> x
+T 261 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 60 $ 837 room=.
+-> i
+T 262 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 60 $ 837 room=.
+-> eat3
+T 263 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 65 $ 837 room=.
+-> eat1
+T 264 mode=inventory           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu100 $ 837 room=.
+-> x
+T 265 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu100 $ 837 room=.
+-> l
+T 266 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu100 $ 837 room=.
+-> e
+T 267 mode=dungeon_mode        Thrain Stonebreaker(dwa) F2@( 3, 3) HP 74/74 MP 0/0 Hu 99 $ 837 room=N
+-> u
+T 268 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 3) HP 74/74 MP 0/0 Hu 99 $ 837 room=N
+-> s
+T 269 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 98 $ 837 room=M vs Goblin(L1 HP12/12)
+-> a
+T 270 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 98 $ 847 room=.
+-> back
+T 271 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 98 $ 847 room=.
+-> e
+T 272 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 97 $ 847 room=.
+-> s
+T 273 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 96 $ 847 room=.
+-> s
+T 274 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 95 $ 847 room=.
+-> w
+T 275 mode=pool_mode           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 94 $ 847 room=P
+-> dr
+T 276 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 59/74 MP 0/0 Hu 94 $ 847 room=.
+-> n
+T 277 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 5) HP 59/74 MP 0/0 Hu 93 $ 847 room=.
+-> n
+T 278 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 4) HP 60/74 MP 0/0 Hu 92 $ 847 room=.
+-> e
+T 279 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 4) HP 60/74 MP 0/0 Hu 91 $ 847 room=.
+-> s
+T 280 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 5) HP 61/74 MP 0/0 Hu 90 $ 847 room=.
+-> s
+T 281 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 61/74 MP 0/0 Hu 89 $ 847 room=.
+-> w
+T 282 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 62/74 MP 0/0 Hu 88 $ 847 room=.
+-> i
+T 283 mode=inventory           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 62/74 MP 0/0 Hu 88 $ 847 room=.
+-> u3
+T 284 mode=inventory           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 88 $ 847 room=.
+-> x
+T 285 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 88 $ 847 room=.
+-> i
+T 286 mode=inventory           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 88 $ 847 room=.
+-> eat2
+T 287 mode=inventory           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 93 $ 847 room=.
+-> x
+T 288 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 93 $ 847 room=.
+-> n
+T 289 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 92 $ 847 room=.
+-> n
+T 290 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 91 $ 847 room=.
+-> e
+T 291 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 90 $ 847 room=.
+-> s
+T 292 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 89 $ 847 room=.
+-> s
+T 293 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 88 $ 847 room=.
+-> s
+T 294 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 7) HP 74/74 MP 0/0 Hu 87 $ 847 room=.
+-> e
+T 295 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP35/35)
+-> a
+T 296 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 73/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP8/35)
+-> a
+T 297 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 72/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP8/35)
+-> a
+T 298 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 71/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP8/35)
+-> a
+T 299 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 71/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP8/35)
+-> f
+T 300 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 5, 7) HP 70/74 MP 0/0 Hu 86 $ 847 room=M vs Zombie(L1 HP8/35)
+-> a
+T 301 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 5, 7) HP 70/74 MP 0/0 Hu 86 $ 863 room=.
+-> back
+T 302 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 7) HP 70/74 MP 0/0 Hu 86 $ 863 room=.
+-> n
+T 303 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 6) HP 70/74 MP 0/0 Hu 85 $ 863 room=.
+-> e
+T 304 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 70/74 MP 0/0 Hu 84 $ 863 room=.
+-> n
+T 305 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 70/74 MP 0/0 Hu 83 $ 863 room=.
+-> n
+T 306 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 71/74 MP 0/0 Hu 82 $ 863 room=.
+-> e
+T 307 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 71/74 MP 0/0 Hu 81 $ 863 room=.
+-> e
+T 308 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 4) HP 71/74 MP 0/0 Hu 80 $ 863 room=.
+-> n
+T 309 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 3) HP 71/74 MP 0/0 Hu 79 $ 863 room=.
+-> e
+T 310 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9, 3) HP 72/74 MP 0/0 Hu 78 $ 863 room=.
+-> s
+T 311 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9, 4) HP 72/74 MP 0/0 Hu 77 $ 863 room=.
+-> e
+T 312 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 4) HP 72/74 MP 0/0 Hu 76 $ 863 room=.
+-> s
+T 313 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 5) HP 72/74 MP 0/0 Hu 75 $ 863 room=.
+-> s
+T 314 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 6) HP 73/74 MP 0/0 Hu 74 $ 863 room=O
+-> s
+T 315 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 7) HP 73/74 MP 0/0 Hu 73 $ 863 room=.
+-> l
+T 316 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 7) HP 73/74 MP 0/0 Hu 73 $ 863 room=.
+-> s
+T 317 mode=altar_mode          Thrain Stonebreaker(dwa) F2@(10, 8) HP 73/74 MP 0/0 Hu 72 $ 863 room=A
+-> pray
+T 318 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 8) HP 73/74 MP 0/0 Hu 72 $ 863 room=.
+-> e
+T 319 mode=library_mode        Thrain Stonebreaker(dwa) F2@(11, 8) HP 73/74 MP 0/0 Hu 71 $ 863 room=L
+-> r
+T 320 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F2@(11, 8) HP 73/74 MP 0/0 Hu 71 $ 863 room=L
+-> y
+T 321 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 8) HP 73/74 MP 0/0 Hu 71 $ 863 room=.
+-> n
+T 322 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 70 $ 863 room=.
+-> n
+T 323 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 6) HP 74/74 MP 0/0 Hu 69 $ 863 room=.
+-> n
+T 324 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 5) HP 74/74 MP 0/0 Hu 68 $ 863 room=.
+-> n
+T 325 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 67 $ 863 room=.
+-> w
+T 326 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 66 $ 863 room=.
+-> w
+T 327 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 65 $ 863 room=.
+-> w
+T 328 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 64 $ 863 room=.
+-> w
+T 329 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 63 $ 863 room=.
+-> w
+T 330 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 62 $ 863 room=.
+-> s
+T 331 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 61 $ 863 room=.
+-> e
+T 332 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 5) HP 74/74 MP 0/0 Hu 60 $ 863 room=.
+-> s
+T 333 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 6) HP 74/74 MP 0/0 Hu 59 $ 863 room=.
+-> w
+T 334 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 74/74 MP 0/0 Hu 58 $ 863 room=.
+-> s
+T 335 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 7) HP 74/74 MP 0/0 Hu 57 $ 863 room=.
+-> w
+T 336 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 56 $ 863 room=.
+-> n
+T 337 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 6) HP 74/74 MP 0/0 Hu 55 $ 863 room=.
+-> w
+T 338 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 54 $ 863 room=.
+-> n
+T 339 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 53 $ 863 room=.
+-> n
+T 340 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 52 $ 863 room=.
+-> w
+T 341 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 51 $ 863 room=.
+-> w
+T 342 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 50 $ 863 room=.
+-> l
+T 343 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 50 $ 863 room=.
+-> w
+T 344 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 49 $ 863 room=.
+-> i
+T 345 mode=inventory           Thrain Stonebreaker(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 49 $ 863 room=.
+-> eat1
+T 346 mode=inventory           Thrain Stonebreaker(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 99 $ 863 room=.
+-> x
+T 347 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 99 $ 863 room=.
+-> l
+T 348 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 99 $ 863 room=.
+-> s
+T 349 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu 98 $ 863 room=.
+-> s
+T 350 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 6) HP 74/74 MP 0/0 Hu 97 $ 863 room=.
+-> e
+T 351 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 96 $ 863 room=.
+-> n
+T 352 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 95 $ 863 room=.
+-> n
+T 353 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 94 $ 863 room=.
+-> e
+T 354 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 93 $ 863 room=.
+-> e
+T 355 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 92 $ 863 room=.
+-> s
+T 356 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 91 $ 863 room=.
+-> s
+T 357 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 90 $ 863 room=.
+-> e
+T 358 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 6) HP 74/74 MP 0/0 Hu 89 $ 863 room=.
+-> e
+T 359 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 74/74 MP 0/0 Hu 88 $ 863 room=.
+-> n
+T 360 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 863 room=.
+-> n
+T 361 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 86 $ 863 room=.
+-> e
+T 362 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 85 $ 863 room=.
+-> n
+T 363 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 3) HP 74/74 MP 0/0 Hu 84 $ 863 room=.
+-> e
+T 364 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 3) HP 74/74 MP 0/0 Hu 83 $ 863 room=.
+-> s
+T 365 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 82 $ 863 room=.
+-> s
+T 366 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 5) HP 74/74 MP 0/0 Hu 81 $ 863 room=.
+-> s
+T 367 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 6) HP 74/74 MP 0/0 Hu 80 $ 863 room=.
+-> w
+T 368 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 6) HP 74/74 MP 0/0 Hu 79 $ 863 room=.
+-> n
+T 369 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 5) HP 74/74 MP 0/0 Hu 78 $ 863 room=.
+-> n
+T 370 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 77 $ 863 room=.
+-> l
+T 371 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 77 $ 863 room=.
+-> w
+T 372 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 76 $ 863 room=.
+-> s
+T 373 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 75 $ 863 room=.
+-> s
+T 374 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 74/74 MP 0/0 Hu 74 $ 863 room=.
+-> e
+T 375 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 6) HP 74/74 MP 0/0 Hu 73 $ 863 room=.
+-> n
+T 376 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 863 room=.
+-> n
+T 377 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 71 $ 863 room=.
+-> w
+T 378 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 70 $ 863 room=.
+-> s
+T 379 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 69 $ 863 room=.
+-> s
+T 380 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 74/74 MP 0/0 Hu 68 $ 863 room=.
+-> l
+T 381 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 6) HP 74/74 MP 0/0 Hu 68 $ 863 room=.
+-> s
+T 382 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 7) HP 74/74 MP 0/0 Hu 67 $ 863 room=.
+-> s
+T 383 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 66 $ 863 room=.
+-> s
+T 384 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 863 room=V
+-> r1
+T 385 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 814 room=V
+-> r2
+T 386 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 765 room=V
+-> b13
+T 387 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 755 room=V
+-> b6
+T 388 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 725 room=V
+-> b10
+T 389 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 575 room=V
+-> b10
+T 390 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 425 room=V
+-> b5
+T 391 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 355 room=V
+-> b8
+T 392 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 235 room=V
+-> id11
+T 393 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 185 room=V
+-> id12
+T 394 mode=vendor_shop         Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 160 room=V
+-> x
+T 395 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 160 room=V
+-> l
+T 396 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 65 $ 160 room=V
+-> s
+T 397 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 6,10) HP 74/74 MP 0/0 Hu 64 $ 160 room=M vs Cockatrice(L1 HP25/25)
+-> a
+T 398 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 6,10) HP 73/74 MP 0/0 Hu 64 $ 160 room=M vs Cockatrice(L1 HP1/25)
+-> a
+T 399 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 6,10) HP 72/84 MP 0/0 Hu 64 $ 168 room=.
+-> back
+T 400 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,10) HP 72/84 MP 0/0 Hu 64 $ 168 room=.
+-> l
+T 401 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,10) HP 72/84 MP 0/0 Hu 64 $ 168 room=.
+-> s
+T 402 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,11) HP 72/84 MP 0/0 Hu 63 $ 168 room=.
+-> l
+T 403 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,11) HP 72/84 MP 0/0 Hu 63 $ 168 room=.
+-> e
+T 404 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,11) HP 72/84 MP 0/0 Hu 62 $ 168 room=.
+-> l
+T 405 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,11) HP 72/84 MP 0/0 Hu 62 $ 168 room=.
+-> s
+T 406 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,12) HP 72/84 MP 0/0 Hu 61 $ 168 room=.
+-> l
+T 407 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,12) HP 72/84 MP 0/0 Hu 61 $ 168 room=.
+-> e
+T 408 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 73/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 409 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 72/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 410 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 71/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 411 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 70/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 412 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 70/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 413 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 69/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 414 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 68/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 415 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 67/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP8/35)
+-> a
+T 416 mode=combat_mode         Thrain Stonebreaker(dwa) F2@( 8,12) HP 66/84 MP 0/0 Hu 60 $ 168 room=M vs Gray Ooze(L1 HP8/35)
+-> a
+T 417 mode=combat_victory      Thrain Stonebreaker(dwa) F2@( 8,12) HP 65/84 MP 0/0 Hu 60 $ 180 room=.
+-> back
+T 418 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,12) HP 65/84 MP 0/0 Hu 60 $ 180 room=.
+-> l
+T 419 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,12) HP 65/84 MP 0/0 Hu 60 $ 180 room=.
+-> s
+T 420 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,13) HP 65/84 MP 0/0 Hu 59 $ 180 room=.
+-> l
+T 421 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,13) HP 65/84 MP 0/0 Hu 59 $ 180 room=.
+-> s
+T 422 mode=chest_mode          Thrain Stonebreaker(dwa) F2@( 8,14) HP 65/84 MP 0/0 Hu 58 $ 180 room=C
+-> o
+T 423 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,14) HP 65/84 MP 0/0 Hu 58 $ 200 room=.
+-> s
+T 424 mode=pool_mode           Thrain Stonebreaker(dwa) F2@( 8,15) HP 65/84 MP 0/0 Hu 57 $ 200 room=P
+-> dr
+T 425 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,15) HP 65/84 MP 0/0 Hu 57 $ 200 room=.
+-> l
+T 426 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,15) HP 65/84 MP 0/0 Hu 57 $ 200 room=.
+-> w
+T 427 mode=library_mode        Thrain Stonebreaker(dwa) F2@( 7,15) HP 65/84 MP 0/0 Hu 56 $ 200 room=L
+-> r
+T 428 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,15) HP 65/84 MP 0/0 Hu 56 $ 200 room=.
+-> n
+T 429 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,14) HP 65/84 MP 0/0 Hu 55 $ 200 room=.
+-> n
+T 430 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,13) HP 65/84 MP 0/0 Hu 54 $ 200 room=.
+-> i
+T 431 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 65/84 MP 0/0 Hu 54 $ 200 room=.
+-> u4
+T 432 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 54 $ 200 room=.
+-> u8
+T 433 mode=upgrade_scroll_mode Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 54 $ 200 room=.
+-> 1
+T 434 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 54 $ 200 room=.
+-> x
+T 435 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 54 $ 200 room=.
+-> i
+T 436 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 54 $ 200 room=.
+-> eat2
+T 437 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 60 $ 200 room=.
+-> eat1
+T 438 mode=inventory           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu100 $ 200 room=.
+-> x
+T 439 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu100 $ 200 room=.
+-> n
+T 440 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,12) HP 84/84 MP 0/0 Hu 99 $ 200 room=.
+-> l
+T 441 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,12) HP 84/84 MP 0/0 Hu 99 $ 200 room=.
+-> w
+T 442 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,12) HP 84/84 MP 0/0 Hu 98 $ 200 room=.
+-> w
+T 443 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,12) HP 84/84 MP 0/0 Hu 97 $ 200 room=.
+-> w
+T 444 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4,12) HP 84/84 MP 0/0 Hu 96 $ 200 room=.
+-> w
+T 445 mode=garden_mode         Thrain Stonebreaker(dwa) F2@( 3,12) HP 84/84 MP 0/0 Hu 95 $ 200 room=G
+-> h
+T 446 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,12) HP 84/84 MP 0/0 Hu 95 $ 200 room=.
+-> s
+T 447 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,13) HP 84/84 MP 0/0 Hu 94 $ 200 room=.
+-> e
+T 448 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4,13) HP 84/84 MP 0/0 Hu 93 $ 200 room=.
+-> e
+T 449 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,13) HP 84/84 MP 0/0 Hu 92 $ 200 room=.
+-> n
+T 450 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,12) HP 84/84 MP 0/0 Hu 91 $ 200 room=.
+-> l
+T 451 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,12) HP 84/84 MP 0/0 Hu 91 $ 200 room=.
+-> e
+T 452 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,12) HP 84/84 MP 0/0 Hu 90 $ 200 room=.
+-> e
+T 453 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,12) HP 84/84 MP 0/0 Hu 89 $ 200 room=.
+-> e
+T 454 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,12) HP 84/84 MP 0/0 Hu 88 $ 200 room=.
+-> e
+T 455 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9,12) HP 84/84 MP 0/0 Hu 87 $ 200 room=.
+-> e
+T 456 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10,12) HP 84/84 MP 0/0 Hu 86 $ 200 room=.
+-> e
+T 457 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11,12) HP 84/84 MP 0/0 Hu 85 $ 200 room=.
+-> e
+T 458 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 84 $ 200 room=.
+-> e
+T 459 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,12) HP 84/84 MP 0/0 Hu 83 $ 200 room=.
+-> s
+T 460 mode=altar_mode          Thrain Stonebreaker(dwa) F2@(13,13) HP 84/84 MP 0/0 Hu 82 $ 200 room=A
+-> pray
+T 461 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,13) HP 84/84 MP 0/0 Hu 82 $ 200 room=.
+-> s
+T 462 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,14) HP 84/84 MP 0/0 Hu 81 $ 200 room=.
+-> e
+T 463 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,14) HP 84/84 MP 0/0 Hu 80 $ 200 room=.
+-> s
+T 464 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 79 $ 200 room=.
+-> l
+T 465 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 79 $ 200 room=.
+-> e
+T 466 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 78 $ 200 room=.
+-> l
+T 467 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 78 $ 200 room=.
+-> s
+T 468 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 77 $ 200 room=.
+-> l
+T 469 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 77 $ 200 room=.
+-> w
+T 470 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 76 $ 200 room=.
+-> l
+T 471 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 76 $ 200 room=.
+-> w
+T 472 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 75 $ 200 room=.
+-> e
+T 473 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 74 $ 200 room=.
+-> n
+T 474 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 73 $ 200 room=.
+-> e
+T 475 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 72 $ 200 room=.
+-> e
+T 476 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,15) HP 84/84 MP 0/0 Hu 71 $ 200 room=.
+-> l
+T 477 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,15) HP 84/84 MP 0/0 Hu 71 $ 200 room=.
+-> e
+T 478 mode=game_loop           Thrain Stonebreaker(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 70 $ 200 room=.
+-> l
+T 479 mode=game_loop           Thrain Stonebreaker(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 70 $ 200 room=.
+-> e
+T 480 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18,15) HP 84/84 MP 0/0 Hu 69 $ 200 room=.
+-> l
+T 481 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18,15) HP 84/84 MP 0/0 Hu 69 $ 200 room=.
+-> e
+T 482 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19,15) HP 84/84 MP 0/0 Hu 68 $ 200 room=.
+-> l
+T 483 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19,15) HP 84/84 MP 0/0 Hu 68 $ 200 room=.
+-> n
+T 484 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19,14) HP 84/84 MP 0/0 Hu 67 $ 200 room=.
+-> s
+T 485 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19,15) HP 84/84 MP 0/0 Hu 66 $ 200 room=.
+-> s
+T 486 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19,16) HP 84/84 MP 0/0 Hu 65 $ 200 room=.
+-> w
+T 487 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18,16) HP 84/84 MP 0/0 Hu 64 $ 200 room=.
+-> n
+T 488 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18,15) HP 84/84 MP 0/0 Hu 63 $ 200 room=.
+-> w
+T 489 mode=game_loop           Thrain Stonebreaker(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 62 $ 200 room=.
+-> n
+T 490 mode=combat_mode         Thrain Stonebreaker(dwa) F2@(17,14) HP 84/84 MP 0/0 Hu 61 $ 200 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 491 mode=combat_mode         Thrain Stonebreaker(dwa) F2@(17,14) HP 84/84 MP 0/0 Hu 61 $ 200 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 492 mode=combat_victory      Thrain Stonebreaker(dwa) F2@(17,14) HP 84/84 MP 0/0 Hu 61 $ 210 room=.
+-> back
+T 493 mode=game_loop           Thrain Stonebreaker(dwa) F2@(17,14) HP 84/84 MP 0/0 Hu 61 $ 210 room=.
+-> w
+T 494 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,14) HP 84/84 MP 0/0 Hu 60 $ 210 room=.
+-> n
+T 495 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,13) HP 84/84 MP 0/0 Hu 59 $ 210 room=.
+-> n
+T 496 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,12) HP 84/84 MP 0/0 Hu 58 $ 210 room=.
+-> n
+T 497 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,11) HP 84/84 MP 0/0 Hu 57 $ 210 room=.
+-> n
+T 498 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,10) HP 84/84 MP 0/0 Hu 56 $ 210 room=.
+-> w
+T 499 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 55 $ 210 room=.
+-> l
+T 500 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 55 $ 210 room=.
+-> l
+T 501 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 55 $ 210 room=.
+-> w
+T 502 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,10) HP 84/84 MP 0/0 Hu 54 $ 210 room=.
+-> w
+T 503 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,10) HP 84/84 MP 0/0 Hu 53 $ 210 room=.
+-> w
+T 504 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 52 $ 210 room=.
+-> n
+T 505 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 51 $ 210 room=.
+-> i
+T 506 mode=inventory           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 51 $ 210 room=.
+-> eat2
+T 507 mode=inventory           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 56 $ 210 room=.
+-> eat1
+T 508 mode=inventory           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu100 $ 210 room=.
+-> x
+T 509 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu100 $ 210 room=.
+-> n
+T 510 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 99 $ 210 room=.
+-> l
+T 511 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 99 $ 210 room=.
+-> n
+T 512 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 7) HP 84/84 MP 0/0 Hu 98 $ 210 room=.
+-> n
+T 513 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 97 $ 210 room=.
+-> n
+T 514 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 5) HP 84/84 MP 0/0 Hu 96 $ 210 room=.
+-> n
+T 515 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 95 $ 210 room=C
+-> e
+T 516 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13, 4) HP 84/84 MP 0/0 Hu 94 $ 210 room=.
+-> e
+T 517 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14, 4) HP 84/84 MP 0/0 Hu 93 $ 210 room=.
+-> s
+T 518 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14, 5) HP 84/84 MP 0/0 Hu 92 $ 210 room=.
+-> w
+T 519 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13, 5) HP 84/84 MP 0/0 Hu 91 $ 210 room=.
+-> s
+T 520 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13, 6) HP 84/84 MP 0/0 Hu 90 $ 210 room=.
+-> l
+T 521 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13, 6) HP 84/84 MP 0/0 Hu 90 $ 210 room=.
+-> w
+T 522 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 89 $ 210 room=.
+-> s
+T 523 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 7) HP 84/84 MP 0/0 Hu 88 $ 210 room=.
+-> s
+T 524 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 87 $ 210 room=.
+-> s
+T 525 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 86 $ 210 room=.
+-> s
+T 526 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 85 $ 210 room=.
+-> s
+T 527 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,11) HP 84/84 MP 0/0 Hu 84 $ 210 room=.
+-> s
+T 528 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 83 $ 210 room=.
+-> w
+T 529 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11,12) HP 84/84 MP 0/0 Hu 82 $ 210 room=.
+-> s
+T 530 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11,13) HP 84/84 MP 0/0 Hu 81 $ 210 room=.
+-> l
+T 531 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11,13) HP 84/84 MP 0/0 Hu 81 $ 210 room=.
+-> w
+T 532 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10,13) HP 84/84 MP 0/0 Hu 80 $ 210 room=.
+-> w
+T 533 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9,13) HP 84/84 MP 0/0 Hu 79 $ 210 room=.
+-> w
+T 534 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,13) HP 84/84 MP 0/0 Hu 78 $ 210 room=.
+-> s
+T 535 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,14) HP 84/84 MP 0/0 Hu 77 $ 210 room=.
+-> s
+T 536 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu 76 $ 210 room=.
+-> e
+T 537 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9,15) HP 84/84 MP 0/0 Hu 75 $ 210 room=.
+-> w
+T 538 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu 74 $ 210 room=.
+-> w
+T 539 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,15) HP 84/84 MP 0/0 Hu 73 $ 210 room=.
+-> n
+T 540 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,14) HP 84/84 MP 0/0 Hu 72 $ 210 room=.
+-> l
+T 541 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,14) HP 84/84 MP 0/0 Hu 72 $ 210 room=.
+-> n
+T 542 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7,13) HP 84/84 MP 0/0 Hu 71 $ 210 room=.
+-> w
+T 543 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6,13) HP 84/84 MP 0/0 Hu 70 $ 210 room=.
+-> w
+T 544 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,13) HP 84/84 MP 0/0 Hu 69 $ 210 room=.
+-> w
+T 545 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4,13) HP 84/84 MP 0/0 Hu 68 $ 210 room=.
+-> w
+T 546 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,13) HP 84/84 MP 0/0 Hu 67 $ 210 room=.
+-> w
+T 547 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2,13) HP 84/84 MP 0/0 Hu 66 $ 210 room=.
+-> e
+T 548 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,13) HP 84/84 MP 0/0 Hu 65 $ 210 room=.
+-> n
+T 549 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,12) HP 84/84 MP 0/0 Hu 64 $ 210 room=.
+-> n
+T 550 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,11) HP 84/84 MP 0/0 Hu 63 $ 210 room=.
+-> l
+T 551 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3,11) HP 84/84 MP 0/0 Hu 63 $ 210 room=.
+-> e
+T 552 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4,11) HP 84/84 MP 0/0 Hu 62 $ 210 room=.
+-> e
+T 553 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,11) HP 84/84 MP 0/0 Hu 61 $ 210 room=.
+-> n
+T 554 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5,10) HP 84/84 MP 0/0 Hu 60 $ 210 room=.
+-> n
+T 555 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 9) HP 84/84 MP 0/0 Hu 59 $ 210 room=.
+-> n
+T 556 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 58 $ 210 room=.
+-> n
+T 557 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 57 $ 210 room=.
+-> n
+T 558 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 6) HP 84/84 MP 0/0 Hu 56 $ 210 room=.
+-> w
+T 559 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 55 $ 210 room=.
+-> i
+T 560 mode=inventory           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 55 $ 210 room=.
+-> eat1
+T 561 mode=inventory           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu100 $ 210 room=.
+-> u9
+T 562 mode=inventory           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu100 $ 210 room=.
+-> x
+T 563 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu100 $ 210 room=.
+-> w
+T 564 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 84/84 MP 0/0 Hu 99 $ 210 room=.
+-> w
+T 565 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 98 $ 210 room=.
+-> w
+T 566 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 6) HP 84/84 MP 0/0 Hu 97 $ 210 room=.
+-> s
+T 567 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 7) HP 84/84 MP 0/0 Hu 96 $ 210 room=.
+-> n
+T 568 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 6) HP 84/84 MP 0/0 Hu 95 $ 210 room=.
+-> n
+T 569 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 94 $ 210 room=.
+-> e
+T 570 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 93 $ 210 room=.
+-> l
+T 571 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 93 $ 210 room=.
+-> s
+T 572 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 92 $ 210 room=.
+-> e
+T 573 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 3, 6) HP 84/84 MP 0/0 Hu 91 $ 210 room=.
+-> e
+T 574 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 90 $ 210 room=.
+-> s
+T 575 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 4, 7) HP 84/84 MP 0/0 Hu 89 $ 210 room=.
+-> e
+T 576 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 88 $ 210 room=.
+-> s
+T 577 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 87 $ 210 room=.
+-> s
+T 578 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 5, 9) HP 84/84 MP 0/0 Hu 86 $ 210 room=.
+-> e
+T 579 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 6, 9) HP 84/84 MP 0/0 Hu 85 $ 210 room=V
+-> e
+T 580 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 9) HP 84/84 MP 0/0 Hu 84 $ 210 room=.
+-> l
+T 581 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 7, 9) HP 84/84 MP 0/0 Hu 84 $ 210 room=.
+-> e
+T 582 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 8, 9) HP 84/84 MP 0/0 Hu 83 $ 210 room=.
+-> e
+T 583 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9, 9) HP 84/84 MP 0/0 Hu 82 $ 210 room=.
+-> s
+T 584 mode=game_loop           Thrain Stonebreaker(dwa) F2@( 9,10) HP 84/84 MP 0/0 Hu 81 $ 210 room=.
+-> e
+T 585 mode=game_loop           Thrain Stonebreaker(dwa) F2@(10,10) HP 84/84 MP 0/0 Hu 80 $ 210 room=.
+-> e
+T 586 mode=game_loop           Thrain Stonebreaker(dwa) F2@(11,10) HP 84/84 MP 0/0 Hu 79 $ 210 room=.
+-> e
+T 587 mode=game_loop           Thrain Stonebreaker(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 78 $ 210 room=.
+-> e
+T 588 mode=game_loop           Thrain Stonebreaker(dwa) F2@(13,10) HP 84/84 MP 0/0 Hu 77 $ 210 room=.
+-> e
+T 589 mode=game_loop           Thrain Stonebreaker(dwa) F2@(14,10) HP 84/84 MP 0/0 Hu 76 $ 210 room=.
+-> e
+T 590 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 75 $ 210 room=.
+-> l
+T 591 mode=game_loop           Thrain Stonebreaker(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 75 $ 210 room=.
+-> e
+T 592 mode=game_loop           Thrain Stonebreaker(dwa) F2@(16,10) HP 84/84 MP 0/0 Hu 74 $ 210 room=.
+-> e
+T 593 mode=game_loop           Thrain Stonebreaker(dwa) F2@(17,10) HP 84/84 MP 0/0 Hu 73 $ 210 room=.
+-> e
+T 594 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18,10) HP 84/84 MP 0/0 Hu 72 $ 210 room=.
+-> n
+T 595 mode=game_loop           Thrain Stonebreaker(dwa) F2@(18, 9) HP 84/84 MP 0/0 Hu 71 $ 210 room=.
+-> e
+T 596 mode=shrine_mode         Thrain Stonebreaker(dwa) F2@(19, 9) HP 84/84 MP 0/0 Hu 70 $ 210 room=F
+-> p
+T 597 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19, 9) HP 89/89 MP 0/0 Hu 70 $ 210 room=.
+-> n
+T 598 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19, 8) HP 89/89 MP 0/0 Hu 69 $ 210 room=.
+-> l
+T 599 mode=game_loop           Thrain Stonebreaker(dwa) F2@(19, 8) HP 89/89 MP 0/0 Hu 69 $ 210 room=.
+-> n
+T 600 mode=stairs_down_mode    Thrain Stonebreaker(dwa) F2@(19, 7) HP 89/89 MP 0/0 Hu 68 $ 210 room=D
+-> d
+T 601 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 68 $ 210 room=U
+-> w
+T 602 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 68 $ 210 room=U
+-> e
+T 603 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 67 $ 210 room=.
+-> l
+T 604 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 67 $ 210 room=.
+-> e
+T 605 mode=chest_mode          Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 66 $ 210 room=C
+-> o
+T 606 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 66 $ 210 room=.
+-> e
+T 607 mode=chest_mode          Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 65 $ 210 room=C
+-> s
+T 608 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 64 $ 210 room=.
+-> l
+T 609 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 64 $ 210 room=.
+-> e
+T 610 mode=combat_mode         Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 63 $ 210 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 611 mode=combat_mode         Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 63 $ 210 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 612 mode=combat_mode         Thrain Stonebreaker(dwa) F3@( 5, 2) HP 88/89 MP 0/0 Hu 63 $ 210 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 613 mode=combat_mode         Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 63 $ 210 room=M vs Gnoll(L2 HP19/45)
+-> a
+T 614 mode=combat_victory      Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 63 $ 216 room=.
+-> back
+T 615 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 63 $ 216 room=.
+-> w
+T 616 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 87/89 MP 0/0 Hu 62 $ 216 room=.
+-> n
+T 617 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 87/89 MP 0/0 Hu 61 $ 216 room=C
+-> w
+T 618 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 87/89 MP 0/0 Hu 60 $ 216 room=.
+-> w
+T 619 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 87/89 MP 0/0 Hu 59 $ 216 room=.
+-> w
+T 620 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 87/89 MP 0/0 Hu 58 $ 216 room=U
+-> e
+T 621 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 87/89 MP 0/0 Hu 57 $ 216 room=.
+-> e
+T 622 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 87/89 MP 0/0 Hu 56 $ 216 room=.
+-> e
+T 623 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 87/89 MP 0/0 Hu 55 $ 216 room=C
+-> s
+T 624 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 87/89 MP 0/0 Hu 54 $ 216 room=.
+-> e
+T 625 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 53 $ 216 room=.
+-> i
+T 626 mode=inventory           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 53 $ 216 room=.
+-> eat2
+T 627 mode=inventory           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu 60 $ 216 room=.
+-> eat1
+T 628 mode=inventory           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu100 $ 216 room=.
+-> x
+T 629 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 87/89 MP 0/0 Hu100 $ 216 room=.
+-> w
+T 630 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 87/89 MP 0/0 Hu 99 $ 216 room=.
+-> n
+T 631 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 88/89 MP 0/0 Hu 98 $ 216 room=C
+-> w
+T 632 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 88/89 MP 0/0 Hu 97 $ 216 room=.
+-> w
+T 633 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 96 $ 216 room=.
+-> w
+T 634 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 95 $ 216 room=U
+-> e
+T 635 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 94 $ 216 room=.
+-> e
+T 636 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 93 $ 216 room=.
+-> e
+T 637 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 92 $ 216 room=C
+-> s
+T 638 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 91 $ 216 room=.
+-> e
+T 639 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 90 $ 216 room=.
+-> w
+T 640 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 89 $ 216 room=.
+-> n
+T 641 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 88 $ 216 room=C
+-> w
+T 642 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 87 $ 216 room=.
+-> w
+T 643 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 86 $ 216 room=.
+-> w
+T 644 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 85 $ 216 room=U
+-> e
+T 645 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 84 $ 216 room=.
+-> e
+T 646 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 83 $ 216 room=.
+-> e
+T 647 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 82 $ 216 room=C
+-> s
+T 648 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 81 $ 216 room=.
+-> e
+T 649 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 80 $ 216 room=.
+-> w
+T 650 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 79 $ 216 room=.
+-> n
+T 651 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 78 $ 216 room=C
+-> w
+T 652 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 77 $ 216 room=.
+-> w
+T 653 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 76 $ 216 room=.
+-> w
+T 654 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 75 $ 216 room=U
+-> e
+T 655 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 74 $ 216 room=.
+-> e
+T 656 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 73 $ 216 room=.
+-> e
+T 657 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 72 $ 216 room=C
+-> s
+T 658 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 71 $ 216 room=.
+-> e
+T 659 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 70 $ 216 room=.
+-> w
+T 660 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 69 $ 216 room=.
+-> n
+T 661 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 68 $ 216 room=C
+-> w
+T 662 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 67 $ 216 room=.
+-> w
+T 663 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 66 $ 216 room=.
+-> w
+T 664 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 65 $ 216 room=U
+-> e
+T 665 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 64 $ 216 room=.
+-> e
+T 666 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 63 $ 216 room=.
+-> e
+T 667 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 62 $ 216 room=C
+-> s
+T 668 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 61 $ 216 room=.
+-> e
+T 669 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 60 $ 216 room=.
+-> w
+T 670 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 59 $ 216 room=.
+-> n
+T 671 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 58 $ 216 room=C
+-> w
+T 672 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 57 $ 216 room=.
+-> w
+T 673 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 56 $ 216 room=.
+-> w
+T 674 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 55 $ 216 room=U
+-> e
+T 675 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 54 $ 216 room=.
+-> e
+T 676 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 53 $ 216 room=.
+-> e
+T 677 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 52 $ 216 room=C
+-> s
+T 678 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 51 $ 216 room=.
+-> e
+T 679 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 50 $ 216 room=.
+-> w
+T 680 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 49 $ 216 room=.
+-> i
+T 681 mode=inventory           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 49 $ 216 room=.
+-> eat1
+T 682 mode=inventory           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 99 $ 216 room=.
+-> x
+T 683 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 99 $ 216 room=.
+-> n
+T 684 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 98 $ 216 room=C
+-> w
+T 685 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 97 $ 216 room=.
+-> w
+T 686 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 96 $ 216 room=.
+-> w
+T 687 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 95 $ 216 room=U
+-> e
+T 688 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 94 $ 216 room=.
+-> e
+T 689 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 93 $ 216 room=.
+-> e
+T 690 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 92 $ 216 room=C
+-> s
+T 691 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 91 $ 216 room=.
+-> e
+T 692 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 90 $ 216 room=.
+-> w
+T 693 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 89 $ 216 room=.
+-> n
+T 694 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 88 $ 216 room=C
+-> w
+T 695 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 87 $ 216 room=.
+-> w
+T 696 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 86 $ 216 room=.
+-> w
+T 697 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 85 $ 216 room=U
+-> e
+T 698 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 84 $ 216 room=.
+-> e
+T 699 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 83 $ 216 room=.
+-> e
+T 700 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 82 $ 216 room=C
+-> s
+T 701 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 81 $ 216 room=.
+-> e
+T 702 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 2) HP 89/89 MP 0/0 Hu 80 $ 216 room=.
+-> w
+T 703 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 2) HP 89/89 MP 0/0 Hu 79 $ 216 room=.
+-> n
+T 704 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 78 $ 216 room=C
+-> w
+T 705 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 77 $ 216 room=.
+-> w
+T 706 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 76 $ 216 room=.
+-> w
+T 707 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F3@( 1, 1) HP 89/89 MP 0/0 Hu 75 $ 216 room=U
+-> e
+T 708 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 2, 1) HP 89/89 MP 0/0 Hu 74 $ 216 room=.
+-> e
+T 709 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 3, 1) HP 89/89 MP 0/0 Hu 73 $ 216 room=.
+-> e
+T 710 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 4, 1) HP 89/89 MP 0/0 Hu 72 $ 216 room=C
+-> e
+T 711 mode=chest_mode          Thrain Stonebreaker(dwa) F3@( 5, 1) HP 89/89 MP 0/0 Hu 71 $ 216 room=C
+-> o
+T 712 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 1) HP 89/89 MP 0/0 Hu 71 $ 216 room=.
+-> i
+T 713 mode=inventory           Thrain Stonebreaker(dwa) F3@( 5, 1) HP 89/89 MP 0/0 Hu 71 $ 216 room=.
+-> e1
+T 714 mode=inventory           Thrain Stonebreaker(dwa) F3@( 5, 1) HP 89/89 MP 0/0 Hu 71 $ 216 room=.
+-> x
+T 715 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 5, 1) HP 89/89 MP 0/0 Hu 71 $ 216 room=.
+-> e
+T 716 mode=tomb_mode           Thrain Stonebreaker(dwa) F3@( 6, 1) HP 89/89 MP 0/0 Hu 70 $ 216 room=T
+-> p
+T 717 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 6, 1) HP 89/89 MP 0/0 Hu 70 $ 216 room=T
+-> e
+T 718 mode=altar_mode          Thrain Stonebreaker(dwa) F3@( 7, 1) HP 89/89 MP 0/0 Hu 69 $ 216 room=A
+-> pray
+T 719 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 7, 1) HP 89/89 MP 0/0 Hu100 $ 216 room=.
+-> e
+T 720 mode=pool_mode           Thrain Stonebreaker(dwa) F3@( 8, 1) HP 89/89 MP 0/0 Hu 99 $ 216 room=P
+-> dr
+T 721 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 1) HP 89/89 MP 0/0 Hu 99 $ 216 room=.
+-> e
+T 722 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 9, 1) HP 89/89 MP 0/0 Hu 98 $ 216 room=.
+-> l
+T 723 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 9, 1) HP 89/89 MP 0/0 Hu 98 $ 216 room=.
+-> e
+T 724 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 1) HP 89/89 MP 0/0 Hu 97 $ 216 room=.
+-> l
+T 725 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 1) HP 89/89 MP 0/0 Hu 97 $ 216 room=.
+-> e
+T 726 mode=chest_mode          Thrain Stonebreaker(dwa) F3@(11, 1) HP 89/89 MP 0/0 Hu 96 $ 216 room=C
+-> o
+T 727 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 1) HP 89/89 MP 0/0 Hu 96 $ 216 room=.
+-> l
+T 728 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 1) HP 89/89 MP 0/0 Hu 96 $ 216 room=.
+-> s
+T 729 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 2) HP 89/89 MP 0/0 Hu 95 $ 216 room=.
+-> l
+T 730 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 2) HP 89/89 MP 0/0 Hu 95 $ 216 room=.
+-> e
+T 731 mode=pool_mode           Thrain Stonebreaker(dwa) F3@(12, 2) HP 89/89 MP 0/0 Hu 94 $ 216 room=P
+-> dr
+T 732 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 2) HP 89/89 MP 0/0 Hu 94 $ 216 room=.
+-> l
+T 733 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 2) HP 89/89 MP 0/0 Hu 94 $ 216 room=.
+-> e
+T 734 mode=chest_mode          Thrain Stonebreaker(dwa) F3@(13, 2) HP 89/89 MP 0/0 Hu 93 $ 216 room=C
+-> w
+T 735 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 2) HP 89/89 MP 0/0 Hu 92 $ 216 room=.
+-> s
+T 736 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12, 3) HP 89/89 MP 0/0 Hu 91 $ 216 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 737 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12, 3) HP 88/89 MP 0/0 Hu 91 $ 216 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 738 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12, 3) HP 87/89 MP 0/0 Hu 91 $ 216 room=M vs Gnoll(L2 HP13/45)
+-> a
+T 739 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12, 3) HP 86/89 MP 0/0 Hu 91 $ 216 room=M vs Gnoll(L2 HP13/45)
+-> a
+T 740 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12, 3) HP 85/89 MP 0/0 Hu 91 $ 216 room=M vs Gnoll(L2 HP13/45)
+-> a
+T 741 mode=combat_victory      Thrain Stonebreaker(dwa) F3@(12, 3) HP 85/89 MP 0/0 Hu 91 $ 225 room=.
+-> back
+T 742 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 3) HP 85/89 MP 0/0 Hu 91 $ 225 room=.
+-> w
+T 743 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 3) HP 85/89 MP 0/0 Hu 90 $ 225 room=.
+-> s
+T 744 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 4) HP 86/89 MP 0/0 Hu 89 $ 225 room=.
+-> s
+T 745 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 5) HP 86/89 MP 0/0 Hu 88 $ 225 room=.
+-> w
+T 746 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(10, 5) HP 87/89 MP 0/0 Hu 87 $ 225 room=M vs Gnoll(L2 HP32/32)
+-> f
+T 747 mode=flee_direction_mode Thrain Stonebreaker(dwa) F3@(10, 5) HP 87/89 MP 0/0 Hu 87 $ 225 room=M
+-> n
+T 748 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 4) HP 87/89 MP 0/0 Hu 87 $ 225 room=.
+-> n
+T 749 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 3) HP 87/89 MP 0/0 Hu 86 $ 225 room=.
+-> l
+T 750 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 3) HP 87/89 MP 0/0 Hu 86 $ 225 room=.
+-> n
+T 751 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(10, 2) HP 88/89 MP 0/0 Hu 85 $ 225 room=M vs Goblin(L2 HP12/12)
+-> a
+T 752 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(10, 2) HP 87/89 MP 0/0 Hu 85 $ 225 room=M vs Goblin(L2 HP12/12)
+-> a
+T 753 mode=combat_victory      Thrain Stonebreaker(dwa) F3@(10, 2) HP 86/89 MP 0/0 Hu 85 $ 249 room=.
+-> back
+T 754 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 2) HP 86/89 MP 0/0 Hu 85 $ 249 room=.
+-> n
+T 755 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 1) HP 86/89 MP 0/0 Hu 84 $ 249 room=.
+-> w
+T 756 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 9, 1) HP 86/89 MP 0/0 Hu 83 $ 249 room=.
+-> w
+T 757 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 1) HP 86/89 MP 0/0 Hu 82 $ 249 room=.
+-> s
+T 758 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 2) HP 87/89 MP 0/0 Hu 81 $ 249 room=.
+-> i
+T 759 mode=inventory           Thrain Stonebreaker(dwa) F3@( 8, 2) HP 87/89 MP 0/0 Hu 81 $ 249 room=.
+-> eat2
+T 760 mode=inventory           Thrain Stonebreaker(dwa) F3@( 8, 2) HP 87/89 MP 0/0 Hu 88 $ 249 room=.
+-> x
+T 761 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 2) HP 87/89 MP 0/0 Hu 88 $ 249 room=.
+-> w
+T 762 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 7, 2) HP 87/89 MP 0/0 Hu 87 $ 249 room=.
+-> e
+T 763 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 2) HP 88/89 MP 0/0 Hu 86 $ 249 room=.
+-> n
+T 764 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 8, 1) HP 88/89 MP 0/0 Hu 85 $ 249 room=.
+-> e
+T 765 mode=game_loop           Thrain Stonebreaker(dwa) F3@( 9, 1) HP 88/89 MP 0/0 Hu 84 $ 249 room=.
+-> e
+T 766 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 1) HP 88/89 MP 0/0 Hu 83 $ 249 room=.
+-> s
+T 767 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 2) HP 89/89 MP 0/0 Hu 82 $ 249 room=.
+-> i
+T 768 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 2) HP 89/89 MP 0/0 Hu 82 $ 249 room=.
+-> eat2
+T 769 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 2) HP 89/89 MP 0/0 Hu 87 $ 249 room=.
+-> x
+T 770 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 2) HP 89/89 MP 0/0 Hu 87 $ 249 room=.
+-> s
+T 771 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 3) HP 89/89 MP 0/0 Hu 86 $ 249 room=.
+-> s
+T 772 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 4) HP 89/89 MP 0/0 Hu 85 $ 249 room=.
+-> e
+T 773 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 4) HP 89/89 MP 0/0 Hu 84 $ 249 room=.
+-> s
+T 774 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 5) HP 89/89 MP 0/0 Hu 83 $ 249 room=.
+-> s
+T 775 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 6) HP 89/89 MP 0/0 Hu 82 $ 249 room=.
+-> w
+T 776 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 6) HP 89/89 MP 0/0 Hu 81 $ 249 room=.
+-> l
+T 777 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 6) HP 89/89 MP 0/0 Hu 81 $ 249 room=.
+-> s
+T 778 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 7) HP 89/89 MP 0/0 Hu 80 $ 249 room=.
+-> s
+T 779 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 8) HP 89/89 MP 0/0 Hu 79 $ 249 room=.
+-> s
+T 780 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 9) HP 89/89 MP 0/0 Hu 78 $ 249 room=.
+-> l
+T 781 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 9) HP 89/89 MP 0/0 Hu 78 $ 249 room=.
+-> e
+T 782 mode=library_mode        Thrain Stonebreaker(dwa) F3@(11, 9) HP 89/89 MP 0/0 Hu 77 $ 249 room=L
+-> r
+T 783 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 9) HP 89/89 MP 0/0 Hu 77 $ 249 room=.
+-> e
+T 784 mode=chest_mode          Thrain Stonebreaker(dwa) F3@(12, 9) HP 89/89 MP 0/0 Hu 76 $ 249 room=C
+-> o
+T 785 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 9) HP 89/89 MP 0/0 Hu 76 $ 419 room=.
+-> l
+T 786 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 9) HP 89/89 MP 0/0 Hu 76 $ 419 room=.
+-> n
+T 787 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 8) HP 89/89 MP 0/0 Hu 75 $ 419 room=.
+-> l
+T 788 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 8) HP 89/89 MP 0/0 Hu 75 $ 419 room=.
+-> e
+T 789 mode=altar_mode          Thrain Stonebreaker(dwa) F3@(13, 8) HP 89/89 MP 0/0 Hu 74 $ 419 room=A
+-> pray
+T 790 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13, 8) HP 89/89 MP 0/0 Hu 74 $ 437 room=.
+-> e
+T 791 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 8) HP 89/89 MP 0/0 Hu 73 $ 437 room=.
+-> l
+T 792 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 8) HP 89/89 MP 0/0 Hu 73 $ 437 room=.
+-> s
+T 793 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu 72 $ 437 room=.
+-> s
+T 794 mode=shrine_mode         Thrain Stonebreaker(dwa) F3@(14,10) HP 89/89 MP 0/0 Hu 71 $ 437 room=F
+-> p
+T 795 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,10) HP 89/89 MP 0/0 Hu 71 $ 437 room=.
+-> l
+T 796 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,10) HP 89/89 MP 0/0 Hu 71 $ 437 room=.
+-> e
+T 797 mode=pool_mode           Thrain Stonebreaker(dwa) F3@(15,10) HP 89/89 MP 0/0 Hu 70 $ 437 room=P
+-> dr
+T 798 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,10) HP 89/89 MP 0/0 Hu 70 $ 437 room=.
+-> l
+T 799 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,10) HP 89/89 MP 0/0 Hu 70 $ 437 room=.
+-> n
+T 800 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15, 9) HP 89/89 MP 0/0 Hu 69 $ 437 room=.
+-> n
+T 801 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu 68 $ 437 room=.
+-> n
+T 802 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,10) HP 89/89 MP 0/0 Hu 67 $ 437 room=.
+-> s
+T 803 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,10) HP 89/89 MP 0/0 Hu 66 $ 437 room=.
+-> l
+T 804 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,10) HP 89/89 MP 0/0 Hu 66 $ 437 room=.
+-> s
+T 805 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,11) HP 89/89 MP 0/0 Hu 65 $ 437 room=.
+-> s
+T 806 mode=garden_mode         Thrain Stonebreaker(dwa) F3@(13,12) HP 89/89 MP 0/0 Hu 64 $ 437 room=G
+-> h
+T 807 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,12) HP 89/89 MP 0/0 Hu 64 $ 437 room=.
+-> s
+T 808 mode=dungeon_mode        Thrain Stonebreaker(dwa) F3@(13,13) HP 89/89 MP 0/0 Hu 63 $ 437 room=N
+-> u
+T 809 mode=dungeon_unlocked_mode Thrain Stonebreaker(dwa) F3@(13,13) HP 89/89 MP 0/0 Hu 63 $ 437 room=N
+-> r
+T 810 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,13) HP 89/89 MP 0/0 Hu 63 $ 437 room=N
+-> l
+T 811 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,13) HP 89/89 MP 0/0 Hu 63 $ 437 room=N
+-> w
+T 812 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,13) HP 89/89 MP 0/0 Hu 62 $ 437 room=.
+-> s
+T 813 mode=library_mode        Thrain Stonebreaker(dwa) F3@(12,14) HP 89/89 MP 0/0 Hu 61 $ 437 room=L
+-> r
+T 814 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F3@(12,14) HP 89/89 MP 0/0 Hu 61 $ 437 room=L
+-> y
+T 815 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,14) HP 61/89 MP 0/0 Hu 61 $ 437 room=.
+-> i
+T 816 mode=inventory           Thrain Stonebreaker(dwa) F3@(12,14) HP 61/89 MP 0/0 Hu 61 $ 437 room=.
+-> u5
+T 817 mode=inventory           Thrain Stonebreaker(dwa) F3@(12,14) HP 89/89 MP 0/0 Hu 61 $ 437 room=.
+-> x
+T 818 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,14) HP 89/89 MP 0/0 Hu 61 $ 437 room=.
+-> l
+T 819 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,14) HP 89/89 MP 0/0 Hu 61 $ 437 room=.
+-> s
+T 820 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12,15) HP 89/89 MP 0/0 Hu 60 $ 437 room=M vs Bugbear(L2 HP55/55)
+-> a
+T 821 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(12,15) HP 88/89 MP 0/0 Hu 60 $ 437 room=M vs Bugbear(L2 HP24/55)
+-> a
+T 822 mode=combat_victory      Thrain Stonebreaker(dwa) F3@(12,15) HP 88/89 MP 0/0 Hu 60 $ 449 room=.
+-> back
+T 823 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,15) HP 88/89 MP 0/0 Hu 60 $ 449 room=.
+-> l
+T 824 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,15) HP 88/89 MP 0/0 Hu 60 $ 449 room=.
+-> e
+T 825 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,15) HP 88/89 MP 0/0 Hu 59 $ 449 room=.
+-> e
+T 826 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,15) HP 88/89 MP 0/0 Hu 58 $ 449 room=.
+-> l
+T 827 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,15) HP 88/89 MP 0/0 Hu 58 $ 449 room=.
+-> e
+T 828 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 449 room=V
+-> b16
+T 829 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 439 room=V
+-> b6
+T 830 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 409 room=V
+-> b15
+T 831 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 404 room=V
+-> b15
+T 832 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 399 room=V
+-> b12
+T 833 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 249 room=V
+-> b11
+T 834 mode=vendor_shop         Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 169 room=V
+-> x
+T 835 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 169 room=V
+-> l
+T 836 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,15) HP 88/89 MP 0/0 Hu 57 $ 169 room=V
+-> e
+T 837 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(16,15) HP 88/89 MP 0/0 Hu 56 $ 169 room=M vs Myconid Shaman(L2 HP45/45)
+-> f
+T 838 mode=flee_direction_mode Thrain Stonebreaker(dwa) F3@(16,15) HP 87/89 MP 0/0 Hu 56 $ 169 room=M
+-> w
+T 839 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 56 $ 169 room=V
+-> i
+T 840 mode=inventory           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 56 $ 169 room=V
+-> eat1
+T 841 mode=inventory           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 62 $ 169 room=V
+-> u10
+T 842 mode=inventory           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 62 $ 169 room=V
+-> u7
+T 843 mode=upgrade_scroll_mode Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 62 $ 169 room=V
+-> 1
+T 844 mode=inventory           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 62 $ 169 room=V
+-> x
+T 845 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 62 $ 169 room=V
+-> n
+T 846 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,14) HP 87/89 MP 0/0 Hu 61 $ 169 room=.
+-> s
+T 847 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15,15) HP 87/89 MP 0/0 Hu 60 $ 169 room=V
+-> w
+T 848 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14,15) HP 87/89 MP 0/0 Hu 59 $ 169 room=.
+-> w
+T 849 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13,15) HP 87/89 MP 0/0 Hu 58 $ 169 room=.
+-> w
+T 850 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,15) HP 87/89 MP 0/0 Hu 57 $ 169 room=.
+-> l
+T 851 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,15) HP 87/89 MP 0/0 Hu 57 $ 169 room=.
+-> n
+T 852 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,14) HP 87/89 MP 0/0 Hu 56 $ 169 room=.
+-> n
+T 853 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12,13) HP 87/89 MP 0/0 Hu 55 $ 169 room=.
+-> w
+T 854 mode=dungeon_mode        Thrain Stonebreaker(dwa) F3@(11,13) HP 87/89 MP 0/0 Hu 54 $ 169 room=N
+-> u
+T 855 mode=dungeon_unlocked_mode Thrain Stonebreaker(dwa) F3@(11,13) HP 87/89 MP 0/0 Hu 54 $ 169 room=N
+-> r
+T 856 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11,13) HP 87/89 MP 0/0 Hu 54 $ 169 room=N
+-> l
+T 857 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11,13) HP 87/89 MP 0/0 Hu 54 $ 169 room=N
+-> n
+T 858 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(11,12) HP 87/89 MP 0/0 Hu 53 $ 169 room=M vs Giant Centipede(L2 HP16/16)
+-> a
+T 859 mode=combat_victory      Thrain Stonebreaker(dwa) F3@(11,12) HP 87/99 MP 0/0 Hu 53 $ 190 room=.
+-> back
+T 860 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11,12) HP 87/99 MP 0/0 Hu 53 $ 190 room=.
+-> l
+T 861 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11,12) HP 87/99 MP 0/0 Hu 53 $ 190 room=.
+-> n
+T 862 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11,11) HP 87/99 MP 0/0 Hu 52 $ 190 room=.
+-> w
+T 863 mode=chest_mode          Thrain Stonebreaker(dwa) F3@(10,11) HP 87/99 MP 0/0 Hu 51 $ 190 room=C
+-> o
+T 864 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10,11) HP 87/99 MP 0/0 Hu 51 $ 190 room=.
+-> l
+T 865 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10,11) HP 87/99 MP 0/0 Hu 51 $ 190 room=.
+-> n
+T 866 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10,10) HP 87/99 MP 0/0 Hu 50 $ 190 room=.
+-> l
+T 867 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10,10) HP 87/99 MP 0/0 Hu 50 $ 190 room=.
+-> n
+T 868 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 9) HP 87/99 MP 0/0 Hu 49 $ 190 room=.
+-> i
+T 869 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 9) HP 87/99 MP 0/0 Hu 49 $ 190 room=.
+-> u6
+T 870 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> u7
+T 871 mode=upgrade_scroll_mode Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> 1
+T 872 mode=upgrade_scroll_mode Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> 2
+T 873 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> x
+T 874 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> i
+T 875 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> eat1
+T 876 mode=inventory           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 54 $ 190 room=.
+-> x
+T 877 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 9) HP 99/99 MP 0/0 Hu 54 $ 190 room=.
+-> n
+T 878 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 8) HP 99/99 MP 0/0 Hu 53 $ 190 room=.
+-> e
+T 879 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 8) HP 99/99 MP 0/0 Hu 52 $ 190 room=.
+-> e
+T 880 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 8) HP 99/99 MP 0/0 Hu 51 $ 190 room=.
+-> l
+T 881 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 8) HP 99/99 MP 0/0 Hu 51 $ 190 room=.
+-> e
+T 882 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13, 8) HP 99/99 MP 0/0 Hu 50 $ 190 room=.
+-> e
+T 883 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 8) HP 99/99 MP 0/0 Hu 49 $ 190 room=.
+-> n
+T 884 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 7) HP 99/99 MP 0/0 Hu 48 $ 190 room=.
+-> e
+T 885 mode=altar_mode          Thrain Stonebreaker(dwa) F3@(15, 7) HP 99/99 MP 0/0 Hu 47 $ 190 room=A
+-> pray
+T 886 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15, 7) HP 99/99 MP 0/0 Hu 97 $ 390 room=.
+-> l
+T 887 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15, 7) HP 99/99 MP 0/0 Hu 97 $ 390 room=.
+-> e
+T 888 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(16, 7) HP 99/99 MP 0/0 Hu 96 $ 390 room=M vs Zombie(L2 HP36/36)
+-> a
+T 889 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(16, 7) HP 98/99 MP 0/0 Hu 96 $ 390 room=M vs Zombie(L2 HP36/36)
+-> a
+T 890 mode=combat_mode         Thrain Stonebreaker(dwa) F3@(16, 7) HP 97/99 MP 0/0 Hu 96 $ 390 room=M vs Zombie(L2 HP2/36)
+-> a
+T 891 mode=combat_victory      Thrain Stonebreaker(dwa) F3@(16, 7) HP 97/99 MP 0/0 Hu 96 $ 414 room=.
+-> back
+T 892 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 7) HP 97/99 MP 0/0 Hu 96 $ 414 room=.
+-> l
+T 893 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 7) HP 97/99 MP 0/0 Hu 96 $ 414 room=.
+-> n
+T 894 mode=library_mode        Thrain Stonebreaker(dwa) F3@(16, 6) HP 97/99 MP 0/0 Hu 95 $ 414 room=L
+-> r
+T 895 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F3@(16, 6) HP 97/99 MP 0/0 Hu 95 $ 414 room=L
+-> y
+T 896 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 6) HP 97/99 MP 0/0 Hu 95 $ 414 room=.
+-> l
+T 897 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 6) HP 97/99 MP 0/0 Hu 95 $ 414 room=.
+-> e
+T 898 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 6) HP 98/99 MP 0/0 Hu 94 $ 414 room=.
+-> l
+T 899 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 6) HP 98/99 MP 0/0 Hu 94 $ 414 room=.
+-> n
+T 900 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 5) HP 98/99 MP 0/0 Hu 93 $ 414 room=.
+-> s
+T 901 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 6) HP 99/99 MP 0/0 Hu 92 $ 414 room=.
+-> n
+T 902 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 5) HP 99/99 MP 0/0 Hu 91 $ 414 room=.
+-> s
+T 903 mode=game_loop           Thrain Stonebreaker(dwa) F3@(17, 6) HP 99/99 MP 0/0 Hu 90 $ 414 room=.
+-> w
+T 904 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 6) HP 99/99 MP 0/0 Hu 89 $ 414 room=.
+-> s
+T 905 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 7) HP 99/99 MP 0/0 Hu 88 $ 414 room=.
+-> s
+T 906 mode=game_loop           Thrain Stonebreaker(dwa) F3@(16, 8) HP 99/99 MP 0/0 Hu 87 $ 414 room=.
+-> w
+T 907 mode=game_loop           Thrain Stonebreaker(dwa) F3@(15, 8) HP 99/99 MP 0/0 Hu 86 $ 414 room=.
+-> w
+T 908 mode=game_loop           Thrain Stonebreaker(dwa) F3@(14, 8) HP 99/99 MP 0/0 Hu 85 $ 414 room=.
+-> w
+T 909 mode=game_loop           Thrain Stonebreaker(dwa) F3@(13, 8) HP 99/99 MP 0/0 Hu 84 $ 414 room=.
+-> w
+T 910 mode=game_loop           Thrain Stonebreaker(dwa) F3@(12, 8) HP 99/99 MP 0/0 Hu 83 $ 414 room=.
+-> w
+T 911 mode=game_loop           Thrain Stonebreaker(dwa) F3@(11, 8) HP 99/99 MP 0/0 Hu 82 $ 414 room=.
+-> w
+T 912 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 8) HP 99/99 MP 0/0 Hu 81 $ 414 room=.
+-> n
+T 913 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 7) HP 99/99 MP 0/0 Hu 80 $ 414 room=.
+-> n
+T 914 mode=game_loop           Thrain Stonebreaker(dwa) F3@(10, 6) HP 99/99 MP 0/0 Hu 79 $ 414 room=.
+-> w
+T 915 mode=stairs_down_mode    Thrain Stonebreaker(dwa) F3@( 9, 6) HP 99/99 MP 0/0 Hu 78 $ 414 room=D
+-> d
+T 916 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> e
+T 917 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> n
+T 918 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> e
+T 919 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> e
+T 920 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> w
+T 921 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> e
+T 922 mode=stairs_up_mode      Thrain Stonebreaker(dwa) F4@( 1, 1) HP 99/99 MP 0/0 Hu 78 $ 414 room=U
+-> s
+T 923 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 2) HP 99/99 MP 0/0 Hu 77 $ 414 room=.
+-> l
+T 924 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 2) HP 99/99 MP 0/0 Hu 77 $ 414 room=.
+-> s
+T 925 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 3) HP 99/99 MP 0/0 Hu 76 $ 414 room=.
+-> s
+T 926 mode=library_mode        Thrain Stonebreaker(dwa) F4@( 1, 4) HP 99/99 MP 0/0 Hu 75 $ 414 room=L
+-> r
+T 927 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F4@( 1, 4) HP 99/99 MP 0/0 Hu 75 $ 414 room=L
+-> y
+T 928 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 4) HP 99/99 MP 0/0 Hu 75 $ 414 room=.
+-> s
+T 929 mode=pool_mode           Thrain Stonebreaker(dwa) F4@( 1, 5) HP 99/99 MP 0/0 Hu 74 $ 414 room=P
+-> dr
+T 930 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 5) HP 99/99 MP 0/0 Hu 74 $ 414 room=.
+-> s
+T 931 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 99/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP41/41)
+-> a
+T 932 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 97/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 933 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 95/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 934 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 95/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 935 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 93/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 936 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 91/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 937 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 89/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 938 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 1, 6) HP 87/99 MP 0/0 Hu 73 $ 414 room=M vs Wight(L3 HP10/41)
+-> a
+T 939 mode=combat_victory      Thrain Stonebreaker(dwa) F4@( 1, 6) HP 87/99 MP 0/0 Hu 73 $ 454 room=.
+-> back
+T 940 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 6) HP 87/99 MP 0/0 Hu 73 $ 454 room=.
+-> s
+T 941 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 7) HP 87/99 MP 0/0 Hu 72 $ 454 room=.
+-> s
+T 942 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1, 8) HP 87/99 MP 0/0 Hu 71 $ 454 room=.
+-> e
+T 943 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 8) HP 87/99 MP 0/0 Hu 70 $ 454 room=.
+-> s
+T 944 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 9) HP 88/99 MP 0/0 Hu 69 $ 454 room=.
+-> e
+T 945 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 3, 9) HP 88/99 MP 0/0 Hu 68 $ 454 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 946 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 3, 9) HP 88/99 MP 0/0 Hu 68 $ 454 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 947 mode=combat_victory      Thrain Stonebreaker(dwa) F4@( 3, 9) HP 88/99 MP 0/0 Hu 68 $ 470 room=.
+-> back
+T 948 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 9) HP 88/99 MP 0/0 Hu 68 $ 470 room=.
+-> n
+T 949 mode=dungeon_mode        Thrain Stonebreaker(dwa) F4@( 3, 8) HP 88/99 MP 0/0 Hu 67 $ 470 room=N
+-> u
+T 950 mode=dungeon_unlocked_mode Thrain Stonebreaker(dwa) F4@( 3, 8) HP 88/99 MP 0/0 Hu 67 $ 470 room=N
+-> r
+T 951 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 8) HP 88/99 MP 0/0 Hu 67 $ 623 room=N
+-> n
+T 952 mode=chest_mode          Thrain Stonebreaker(dwa) F4@( 3, 7) HP 88/99 MP 0/0 Hu 66 $ 623 room=C
+-> o
+T 953 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 7) HP 88/99 MP 0/0 Hu 66 $ 723 room=.
+-> e
+T 954 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 4, 7) HP 89/99 MP 0/0 Hu 65 $ 723 room=.
+-> n
+T 955 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 4, 6) HP 89/99 MP 0/0 Hu 64 $ 723 room=.
+-> w
+T 956 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 6) HP 89/99 MP 0/0 Hu 63 $ 723 room=.
+-> n
+T 957 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 5) HP 89/99 MP 0/0 Hu 62 $ 723 room=.
+-> n
+T 958 mode=chest_mode          Thrain Stonebreaker(dwa) F4@( 3, 4) HP 90/99 MP 0/0 Hu 61 $ 723 room=C
+-> e
+T 959 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 4, 4) HP 90/99 MP 0/0 Hu 60 $ 723 room=.
+-> w
+T 960 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 4) HP 90/99 MP 0/0 Hu 59 $ 723 room=C
+-> w
+T 961 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 4) HP 90/99 MP 0/0 Hu 58 $ 723 room=.
+-> s
+T 962 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 2, 5) HP 90/99 MP 0/0 Hu 57 $ 723 room=M vs Gelatinous Cube(L3 HP45/45)
+-> a
+T 963 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 2, 5) HP 89/99 MP 0/0 Hu 57 $ 723 room=M vs Gelatinous Cube(L3 HP45/45)
+-> a
+T 964 mode=combat_mode         Thrain Stonebreaker(dwa) F4@( 2, 5) HP 88/99 MP 0/0 Hu 57 $ 723 room=M vs Gelatinous Cube(L3 HP12/45)
+-> a
+T 965 mode=combat_victory      Thrain Stonebreaker(dwa) F4@( 2, 5) HP 87/99 MP 0/0 Hu 57 $ 735 room=.
+-> back
+T 966 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 5) HP 87/99 MP 0/0 Hu 57 $ 735 room=.
+-> s
+T 967 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 6) HP 83/99 MP 0/0 Hu 56 $ 735 room=.
+-> e
+T 968 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 6) HP 79/99 MP 0/0 Hu 55 $ 735 room=.
+-> s
+T 969 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 7) HP 75/99 MP 0/0 Hu 54 $ 735 room=.
+-> s
+T 970 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 8) HP 71/99 MP 0/0 Hu 53 $ 735 room=N
+-> s
+T 971 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 3, 9) HP 71/99 MP 0/0 Hu 52 $ 735 room=.
+-> w
+T 972 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2, 9) HP 71/99 MP 0/0 Hu 51 $ 735 room=.
+-> s
+T 973 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 2,10) HP 71/99 MP 0/0 Hu 50 $ 735 room=.
+-> w
+T 974 mode=warp_mode           Thrain Stonebreaker(dwa) F4@( 1,10) HP 71/99 MP 0/0 Hu 49 $ 735 room=W
+-> y
+T 975 mode=game_loop           Thrain Stonebreaker(dwa) F4@( 1,10) HP 71/99 MP 0/0 Hu 49 $ 735 room=W
+-> i
+T 976 mode=inventory           Thrain Stonebreaker(dwa) F4@( 1,10) HP 71/99 MP 0/0 Hu 49 $ 735 room=W
+-> u6
+T 977 mode=inventory           Thrain Stonebreaker(dwa) F4@( 1,10) HP 99/99 MP 0/0 Hu 49 $ 735 room=W
+-> x
+T 978 mode=warp_mode           Thrain Stonebreaker(dwa) F4@( 1,10) HP 99/99 MP 0/0 Hu 49 $ 735 room=W
+-> y
+T 979 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 3,11) HP 99/99 MP 0/0 Hu 49 $ 735 room=.
+-> i
+T 980 mode=inventory           Thrain Stonebreaker(dwa) F5@( 3,11) HP 99/99 MP 0/0 Hu 49 $ 735 room=.
+-> eat1
+T 981 mode=inventory           Thrain Stonebreaker(dwa) F5@( 3,11) HP 99/99 MP 0/0 Hu 55 $ 735 room=.
+-> x
+T 982 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 3,11) HP 99/99 MP 0/0 Hu 55 $ 735 room=.
+-> s
+T 983 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 3,12) HP 99/99 MP 0/0 Hu 54 $ 735 room=.
+-> e
+T 984 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 4,12) HP 99/99 MP 0/0 Hu 53 $ 735 room=.
+-> n
+T 985 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 4,11) HP 99/99 MP 0/0 Hu 52 $ 735 room=.
+-> n
+T 986 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 4,10) HP 99/99 MP 0/0 Hu 51 $ 735 room=.
+-> e
+T 987 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 5,10) HP 99/99 MP 0/0 Hu 50 $ 735 room=.
+-> e
+T 988 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 6,10) HP 99/99 MP 0/0 Hu 49 $ 735 room=.
+-> e
+T 989 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,10) HP 99/99 MP 0/0 Hu 48 $ 735 room=.
+-> s
+T 990 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,11) HP 99/99 MP 0/0 Hu 47 $ 735 room=.
+-> s
+T 991 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,12) HP 99/99 MP 0/0 Hu 46 $ 735 room=.
+-> s
+T 992 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,13) HP 99/99 MP 0/0 Hu 45 $ 735 room=.
+-> e
+T 993 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,13) HP 99/99 MP 0/0 Hu 44 $ 735 room=.
+-> n
+T 994 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 99/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP83/83)
+-> a
+T 995 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 99/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP83/83)
+-> f
+T 996 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 91/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP83/83)
+-> a
+T 997 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 87/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP83/83)
+-> a
+T 998 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 83/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP83/83)
+-> a
+T 999 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 79/99 MP 0/0 Hu 43 $ 735 room=M vs Ogre(L4 HP55/83)
+-> f
+T1000 mode=flee_direction_mode Thrain Stonebreaker(dwa) F5@( 8,12) HP 79/99 MP 0/0 Hu 43 $ 735 room=M
+-> s
+T1001 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,13) HP 79/99 MP 0/0 Hu 43 $ 735 room=.
+-> i
+T1002 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,13) HP 79/99 MP 0/0 Hu 43 $ 735 room=.
+-> u6
+T1003 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,13) HP 99/99 MP 0/0 Hu 43 $ 735 room=.
+-> x
+T1004 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,13) HP 99/99 MP 0/0 Hu 43 $ 735 room=.
+-> n
+T1005 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 99/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1006 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 99/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1007 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 95/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1008 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 91/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1009 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 87/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1010 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 83/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1011 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 83/99 MP 0/0 Hu 42 $ 735 room=M vs Ogre(L4 HP55/83)
+-> f
+T1012 mode=flee_direction_mode Thrain Stonebreaker(dwa) F5@( 8,12) HP 79/99 MP 0/0 Hu 42 $ 735 room=M
+-> w
+T1013 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,12) HP 79/99 MP 0/0 Hu 42 $ 735 room=.
+-> i
+T1014 mode=inventory           Thrain Stonebreaker(dwa) F5@( 7,12) HP 79/99 MP 0/0 Hu 42 $ 735 room=.
+-> u6
+T1015 mode=inventory           Thrain Stonebreaker(dwa) F5@( 7,12) HP 99/99 MP 0/0 Hu 42 $ 735 room=.
+-> x
+T1016 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,12) HP 99/99 MP 0/0 Hu 42 $ 735 room=.
+-> s
+T1017 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,13) HP 99/99 MP 0/0 Hu 41 $ 735 room=.
+-> s
+T1018 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,14) HP 99/99 MP 0/0 Hu 40 $ 735 room=.
+-> n
+T1019 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,13) HP 99/99 MP 0/0 Hu 39 $ 735 room=.
+-> e
+T1020 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,13) HP 99/99 MP 0/0 Hu 38 $ 735 room=.
+-> n
+T1021 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 99/99 MP 0/0 Hu 37 $ 735 room=M vs Ogre(L4 HP55/83)
+-> a
+T1022 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 8,12) HP 95/99 MP 0/0 Hu 37 $ 735 room=M vs Ogre(L4 HP27/83)
+-> a
+T1023 mode=combat_victory      Thrain Stonebreaker(dwa) F5@( 8,12) HP 95/109 MP 0/0 Hu 37 $ 855 room=.
+-> back
+T1024 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,12) HP 95/109 MP 0/0 Hu 37 $ 855 room=.
+-> i
+T1025 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,12) HP 95/109 MP 0/0 Hu 37 $ 855 room=.
+-> u6
+T1026 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,12) HP 109/109 MP 0/0 Hu 37 $ 855 room=.
+-> x
+T1027 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,12) HP 109/109 MP 0/0 Hu 37 $ 855 room=.
+-> i
+T1028 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,12) HP 109/109 MP 0/0 Hu 37 $ 855 room=.
+-> eat1
+T1029 mode=inventory           Thrain Stonebreaker(dwa) F5@( 8,12) HP 109/109 MP 0/0 Hu 48 $ 855 room=.
+-> x
+T1030 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,12) HP 109/109 MP 0/0 Hu 48 $ 855 room=.
+-> w
+T1031 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,12) HP 109/109 MP 0/0 Hu 47 $ 855 room=.
+-> n
+T1032 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,11) HP 109/109 MP 0/0 Hu 46 $ 855 room=.
+-> n
+T1033 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 7,10) HP 109/109 MP 0/0 Hu 45 $ 855 room=.
+-> e
+T1034 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 8,10) HP 109/109 MP 0/0 Hu 44 $ 855 room=.
+-> e
+T1035 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9,10) HP 109/109 MP 0/0 Hu 43 $ 855 room=.
+-> e
+T1036 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10,10) HP 109/109 MP 0/0 Hu 42 $ 855 room=.
+-> s
+T1037 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10,11) HP 109/109 MP 0/0 Hu 41 $ 855 room=.
+-> e
+T1038 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,11) HP 109/109 MP 0/0 Hu 40 $ 855 room=.
+-> e
+T1039 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,11) HP 109/109 MP 0/0 Hu 39 $ 855 room=.
+-> n
+T1040 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,10) HP 109/109 MP 0/0 Hu 38 $ 855 room=.
+-> n
+T1041 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 9) HP 109/109 MP 0/0 Hu 37 $ 855 room=.
+-> e
+T1042 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 9) HP 109/109 MP 0/0 Hu 36 $ 855 room=.
+-> n
+T1043 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 109/109 MP 0/0 Hu 35 $ 855 room=.
+-> e
+T1044 mode=library_mode        Thrain Stonebreaker(dwa) F5@(14, 8) HP 109/109 MP 0/0 Hu 34 $ 855 room=L
+-> r
+T1045 mode=library_read_decision_mode Thrain Stonebreaker(dwa) F5@(14, 8) HP 109/109 MP 0/0 Hu 34 $ 855 room=L
+-> y
+T1046 mode=game_loop           Thrain Stonebreaker(dwa) F5@(14, 8) HP 109/109 MP 0/0 Hu 34 $ 930 room=.
+-> w
+T1047 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 101/109 MP 0/0 Hu 33 $ 930 room=.
+-> n
+T1048 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 7) HP 93/109 MP 0/0 Hu 32 $ 930 room=.
+-> w
+T1049 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 85/109 MP 0/0 Hu 31 $ 930 room=.
+-> w
+T1050 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11, 7) HP 77/109 MP 0/0 Hu 30 $ 930 room=M vs Orc(L4 HP54/54)
+-> a
+T1051 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11, 7) HP 76/109 MP 0/0 Hu 30 $ 930 room=M vs Orc(L4 HP24/54)
+-> a
+T1052 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11, 7) HP 75/109 MP 0/0 Hu 30 $ 930 room=M vs Orc(L4 HP24/54)
+-> a
+T1053 mode=combat_victory      Thrain Stonebreaker(dwa) F5@(11, 7) HP 74/109 MP 0/0 Hu 30 $ 975 room=.
+-> back
+T1054 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 74/109 MP 0/0 Hu 30 $ 975 room=.
+-> i
+T1055 mode=inventory           Thrain Stonebreaker(dwa) F5@(11, 7) HP 74/109 MP 0/0 Hu 30 $ 975 room=.
+-> u6
+T1056 mode=inventory           Thrain Stonebreaker(dwa) F5@(11, 7) HP 104/109 MP 0/0 Hu 30 $ 975 room=.
+-> x
+T1057 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 104/109 MP 0/0 Hu 30 $ 975 room=.
+-> i
+T1058 mode=inventory           Thrain Stonebreaker(dwa) F5@(11, 7) HP 104/109 MP 0/0 Hu 30 $ 975 room=.
+-> eat1
+T1059 mode=inventory           Thrain Stonebreaker(dwa) F5@(11, 7) HP 104/109 MP 0/0 Hu 35 $ 975 room=.
+-> x
+T1060 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 104/109 MP 0/0 Hu 35 $ 975 room=.
+-> s
+T1061 mode=dungeon_mode        Thrain Stonebreaker(dwa) F5@(11, 8) HP 104/109 MP 0/0 Hu 34 $ 975 room=N
+-> u
+T1062 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 104/109 MP 0/0 Hu 34 $ 975 room=N
+-> s
+T1063 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 104/109 MP 0/0 Hu 33 $ 975 room=.
+-> e
+T1064 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 9) HP 104/109 MP 0/0 Hu 32 $ 975 room=.
+-> s
+T1065 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,10) HP 104/109 MP 0/0 Hu 31 $ 975 room=.
+-> s
+T1066 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,11) HP 104/109 MP 0/0 Hu 30 $ 975 room=.
+-> w
+T1067 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,11) HP 104/109 MP 0/0 Hu 29 $ 975 room=.
+-> s
+T1068 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,12) HP 104/109 MP 0/0 Hu 28 $ 975 room=.
+-> s
+T1069 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 104/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> a
+T1070 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 103/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> a
+T1071 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 91/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> a
+T1072 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 79/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> a
+T1073 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 67/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> f
+T1074 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(11,13) HP 67/109 MP 0/0 Hu 27 $ 975 room=M vs Harpy(L4 HP30/30)
+-> a
+T1075 mode=combat_victory      Thrain Stonebreaker(dwa) F5@(11,13) HP 67/109 MP 0/0 Hu 27 $ 1020 room=.
+-> back
+T1076 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,13) HP 67/109 MP 0/0 Hu 27 $ 1020 room=.
+-> i
+T1077 mode=inventory           Thrain Stonebreaker(dwa) F5@(11,13) HP 67/109 MP 0/0 Hu 27 $ 1020 room=.
+-> u6
+T1078 mode=inventory           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 27 $ 1020 room=.
+-> x
+T1079 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 27 $ 1020 room=.
+-> i
+T1080 mode=inventory           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 27 $ 1020 room=.
+-> eat1
+T1081 mode=inventory           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 33 $ 1020 room=.
+-> x
+T1082 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 33 $ 1020 room=.
+-> e
+T1083 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,13) HP 97/109 MP 0/0 Hu 32 $ 1020 room=.
+-> s
+T1084 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,14) HP 97/109 MP 0/0 Hu 31 $ 1020 room=.
+-> s
+T1085 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,15) HP 97/109 MP 0/0 Hu 30 $ 1020 room=.
+-> w
+T1086 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,15) HP 97/109 MP 0/0 Hu 29 $ 1020 room=.
+-> n
+T1087 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,14) HP 97/109 MP 0/0 Hu 28 $ 1020 room=.
+-> n
+T1088 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,13) HP 97/109 MP 0/0 Hu 27 $ 1020 room=.
+-> n
+T1089 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,12) HP 97/109 MP 0/0 Hu 26 $ 1020 room=.
+-> n
+T1090 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,11) HP 97/109 MP 0/0 Hu 25 $ 1020 room=.
+-> e
+T1091 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,11) HP 97/109 MP 0/0 Hu 24 $ 1020 room=.
+-> n
+T1092 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12,10) HP 97/109 MP 0/0 Hu 23 $ 1020 room=.
+-> w
+T1093 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,10) HP 97/109 MP 0/0 Hu 22 $ 1020 room=.
+-> n
+T1094 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 97/109 MP 0/0 Hu 21 $ 1020 room=.
+-> n
+T1095 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 97/109 MP 0/0 Hu 20 $ 1020 room=N
+-> w
+T1096 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 8) HP 97/109 MP 0/0 Hu 19 $ 1020 room=.
+-> s
+T1097 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 9) HP 97/109 MP 0/0 Hu 18 $ 1020 room=.
+-> w
+T1098 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 9) HP 97/109 MP 0/0 Hu 17 $ 1020 room=.
+-> s
+T1099 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9,10) HP 97/109 MP 0/0 Hu 16 $ 1020 room=.
+-> e
+T1100 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10,10) HP 97/109 MP 0/0 Hu 15 $ 1020 room=.
+-> e
+T1101 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11,10) HP 97/109 MP 0/0 Hu 14 $ 1020 room=.
+-> n
+T1102 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 97/109 MP 0/0 Hu 13 $ 1020 room=.
+-> n
+T1103 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 97/109 MP 0/0 Hu 12 $ 1020 room=N
+-> n
+T1104 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 97/109 MP 0/0 Hu 11 $ 1020 room=.
+-> e
+T1105 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 97/109 MP 0/0 Hu 10 $ 1020 room=.
+-> n
+T1106 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(12, 6) HP 97/109 MP 0/0 Hu  9 $ 1020 room=M vs Spore Puff(L4 HP20/20)
+-> f
+T1107 mode=flee_direction_mode Thrain Stonebreaker(dwa) F5@(12, 6) HP 97/109 MP 0/0 Hu  9 $ 1020 room=M
+-> s
+T1108 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 97/109 MP 0/0 Hu  9 $ 1020 room=.
+-> e
+T1109 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 7) HP 97/109 MP 0/0 Hu  8 $ 1020 room=.
+-> s
+T1110 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 97/109 MP 0/0 Hu  7 $ 1020 room=.
+-> e
+T1111 mode=game_loop           Thrain Stonebreaker(dwa) F5@(14, 8) HP 97/109 MP 0/0 Hu  6 $ 1020 room=.
+-> w
+T1112 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 97/109 MP 0/0 Hu  5 $ 1020 room=.
+-> s
+T1113 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 9) HP 97/109 MP 0/0 Hu  4 $ 1020 room=.
+-> w
+T1114 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 9) HP 97/109 MP 0/0 Hu  3 $ 1020 room=.
+-> w
+T1115 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 97/109 MP 0/0 Hu  2 $ 1020 room=.
+-> n
+T1116 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 97/109 MP 0/0 Hu  1 $ 1020 room=N
+-> n
+T1117 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 95/109 MP 0/0 Hu  0 $ 1020 room=.
+-> e
+T1118 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 93/109 MP 0/0 Hu  0 $ 1020 room=.
+-> n
+T1119 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(12, 6) HP 91/109 MP 0/0 Hu  0 $ 1020 room=M vs Spore Puff(L4 HP20/20)
+-> f
+T1120 mode=flee_direction_mode Thrain Stonebreaker(dwa) F5@(12, 6) HP 90/109 MP 0/0 Hu  0 $ 1020 room=M
+-> s
+T1121 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 90/109 MP 0/0 Hu  0 $ 1020 room=.
+-> e
+T1122 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 7) HP 88/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1123 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 86/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1124 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 9) HP 84/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1125 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 9) HP 82/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1126 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 80/109 MP 0/0 Hu  0 $ 1020 room=.
+-> n
+T1127 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 78/109 MP 0/0 Hu  0 $ 1020 room=N
+-> n
+T1128 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 76/109 MP 0/0 Hu  0 $ 1020 room=.
+-> e
+T1129 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 74/109 MP 0/0 Hu  0 $ 1020 room=.
+-> e
+T1130 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 7) HP 72/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1131 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 8) HP 70/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1132 mode=game_loop           Thrain Stonebreaker(dwa) F5@(13, 9) HP 68/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1133 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 9) HP 66/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1134 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 64/109 MP 0/0 Hu  0 $ 1020 room=.
+-> n
+T1135 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 62/109 MP 0/0 Hu  0 $ 1020 room=N
+-> n
+T1136 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 60/109 MP 0/0 Hu  0 $ 1020 room=.
+-> n
+T1137 mode=garden_mode         Thrain Stonebreaker(dwa) F5@(11, 6) HP 58/109 MP 0/0 Hu  0 $ 1020 room=G
+-> h
+T1138 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 6) HP 58/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1139 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 6) HP 56/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1140 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 7) HP 54/109 MP 0/0 Hu  0 $ 1020 room=.
+-> s
+T1141 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 8) HP 52/109 MP 0/0 Hu  0 $ 1020 room=.
+-> w
+T1142 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 9, 8) HP 50/109 MP 0/0 Hu  0 $ 1020 room=M vs Displacer Beast(L4 HP43/43)
+-> a
+T1143 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 9, 8) HP 50/109 MP 0/0 Hu  0 $ 1020 room=M vs Displacer Beast(L4 HP43/43)
+-> a
+T1144 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 9, 8) HP 49/109 MP 0/0 Hu  0 $ 1020 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1145 mode=combat_mode         Thrain Stonebreaker(dwa) F5@( 9, 8) HP 48/109 MP 0/0 Hu  0 $ 1020 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1146 mode=combat_victory      Thrain Stonebreaker(dwa) F5@( 9, 8) HP 48/109 MP 0/0 Hu  0 $ 1030 room=.
+-> back
+T1147 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 8) HP 48/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1148 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 9) HP 46/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1149 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9,10) HP 44/109 MP 0/0 Hu  0 $ 1030 room=.
+-> e
+T1150 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10,10) HP 42/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1151 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 9) HP 40/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1152 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 8) HP 38/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1153 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 7) HP 36/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1154 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 6) HP 34/109 MP 0/0 Hu  0 $ 1030 room=.
+-> e
+T1155 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 6) HP 32/109 MP 0/0 Hu  0 $ 1030 room=.
+-> e
+T1156 mode=combat_mode         Thrain Stonebreaker(dwa) F5@(12, 6) HP 30/109 MP 0/0 Hu  0 $ 1030 room=M vs Spore Puff(L4 HP20/20)
+-> f
+T1157 mode=flee_direction_mode Thrain Stonebreaker(dwa) F5@(12, 6) HP 29/109 MP 0/0 Hu  0 $ 1030 room=M
+-> s
+T1158 mode=game_loop           Thrain Stonebreaker(dwa) F5@(12, 7) HP 29/109 MP 0/0 Hu  0 $ 1030 room=.
+-> w
+T1159 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 27/109 MP 0/0 Hu  0 $ 1030 room=.
+-> w
+T1160 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 7) HP 25/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1161 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 6) HP 23/109 MP 0/0 Hu  0 $ 1030 room=.
+-> w
+T1162 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 6) HP 21/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1163 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 7) HP 19/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1164 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 8) HP 17/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1165 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9, 9) HP 15/109 MP 0/0 Hu  0 $ 1030 room=.
+-> s
+T1166 mode=game_loop           Thrain Stonebreaker(dwa) F5@( 9,10) HP 13/109 MP 0/0 Hu  0 $ 1030 room=.
+-> e
+T1167 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10,10) HP 11/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1168 mode=game_loop           Thrain Stonebreaker(dwa) F5@(10, 9) HP 9/109 MP 0/0 Hu  0 $ 1030 room=.
+-> e
+T1169 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 9) HP 7/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1170 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 8) HP 5/109 MP 0/0 Hu  0 $ 1030 room=N
+-> n
+T1171 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 7) HP 3/109 MP 0/0 Hu  0 $ 1030 room=.
+-> n
+T1172 mode=game_loop           Thrain Stonebreaker(dwa) F5@(11, 6) HP 1/109 MP 0/0 Hu  0 $ 1030 room=.
+-> w
+T1173 mode=death_screen        Thrain Stonebreaker(dwa) F5@(10, 6) HP 0/109 MP 0/0 Hu  0 $ 1030 room=.
+
+=== run finished: turns=1173 floor=5 hp=0/109 gold=1030 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00088_dwarf.html

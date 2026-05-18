@@ -1,0 +1,2314 @@
+T   0 mode=game_loop           Beorn the Wanderer(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Beorn the Wanderer(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  A Lichen (Level 0) appears! A slow and menacing living amalgam of fungus and plant. Like nature but mean.
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  You missed the evil Lichen!
+  Ouch! Lichen hit Beorn the Wanderer!
+  You took 1 damage!
+-> a
+T   4 mode=combat_victory      Beorn the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+  Lichen took 22 damage.
+  You defeated the Lichen!
+  The lichen lies motionless at your feet.
+  You gained 8 experience.
+  You found 8 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Lichen meat.
+-> back
+T   5 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+-> l
+T   6 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 348 room=.
+-> s
+T   7 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 348 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T   8 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 348 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T   9 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 348 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  10 mode=combat_victory      Beorn the Wanderer(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 355 room=.
+-> back
+T  11 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 98 $ 355 room=.
+-> s
+T  12 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 97 $ 355 room=.
+-> s
+T  13 mode=combat_mode         Beorn the Wanderer(hum) F1@( 2, 4) HP 29/30 MP 0/0 Hu 96 $ 355 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  14 mode=combat_victory      Beorn the Wanderer(hum) F1@( 2, 4) HP 29/30 MP 0/0 Hu 96 $ 358 room=.
+-> back
+T  15 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 4) HP 29/30 MP 0/0 Hu 96 $ 358 room=.
+-> s
+T  16 mode=garden_mode         Beorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 358 room=G
+-> h
+T  17 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 358 room=.
+-> l
+T  18 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 358 room=.
+-> e
+T  19 mode=game_loop           Beorn the Wanderer(hum) F1@( 3, 5) HP 30/30 MP 0/0 Hu 94 $ 358 room=.
+-> e
+T  20 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  21 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 5) HP 29/30 MP 0/0 Hu 93 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  22 mode=combat_victory      Beorn the Wanderer(hum) F1@( 4, 5) HP 28/30 MP 0/0 Hu 93 $ 359 room=.
+-> back
+T  23 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 28/30 MP 0/0 Hu 93 $ 359 room=.
+-> l
+T  24 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 28/30 MP 0/0 Hu 93 $ 359 room=.
+-> n
+T  25 mode=pool_mode           Beorn the Wanderer(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 92 $ 359 room=P
+-> dr
+T  26 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 92 $ 359 room=.
+-> l
+T  27 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 92 $ 359 room=.
+-> e
+T  28 mode=chest_mode          Beorn the Wanderer(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 91 $ 359 room=C
+-> o
+T  29 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 91 $ 359 room=.
+-> l
+T  30 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 91 $ 359 room=.
+-> n
+T  31 mode=combat_mode         Beorn the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 90 $ 359 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  32 mode=combat_victory      Beorn the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 90 $ 363 room=.
+-> back
+T  33 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 90 $ 363 room=.
+-> l
+T  34 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 90 $ 363 room=.
+-> e
+T  35 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 89 $ 363 room=M vs Goblin(L0 HP12/12)
+-> a
+T  36 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 89 $ 363 room=M vs Goblin(L0 HP12/12)
+-> a
+T  37 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 89 $ 363 room=M vs Goblin(L0 HP12/12)
+-> f
+T  38 mode=flee_direction_mode Beorn the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 89 $ 363 room=M
+-> s
+T  39 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 363 room=M vs Bat(L0 HP12/12)
+-> a
+T  40 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 89 $ 363 room=M vs Bat(L0 HP12/12)
+-> a
+T  41 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 89 $ 363 room=M vs Bat(L0 HP12/12)
+-> a
+T  42 mode=combat_victory      Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 89 $ 371 room=.
+-> back
+T  43 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 89 $ 371 room=.
+-> i
+T  44 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 89 $ 371 room=.
+-> eat4
+T  45 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 95 $ 371 room=.
+-> x
+T  46 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 4) HP 29/30 MP 0/0 Hu 95 $ 371 room=.
+-> s
+T  47 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 94 $ 371 room=M vs Zombie(L0 HP35/35)
+-> a
+T  48 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 94 $ 371 room=M vs Zombie(L0 HP14/35)
+-> a
+T  49 mode=combat_victory      Beorn the Wanderer(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 94 $ 377 room=.
+-> back
+T  50 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 94 $ 377 room=.
+-> w
+T  51 mode=combat_mode         Beorn the Wanderer(hum) F1@( 5, 5) HP 29/30 MP 0/0 Hu 93 $ 377 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  52 mode=combat_victory      Beorn the Wanderer(hum) F1@( 5, 5) HP 29/30 MP 0/0 Hu 93 $ 386 room=.
+-> back
+T  53 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 5) HP 29/30 MP 0/0 Hu 93 $ 386 room=.
+-> s
+T  54 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 6) HP 29/30 MP 0/0 Hu 92 $ 386 room=.
+-> s
+T  55 mode=altar_mode          Beorn the Wanderer(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 386 room=A
+-> pray
+T  56 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 386 room=.
+-> s
+T  57 mode=altar_mode          Beorn the Wanderer(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 90 $ 386 room=A
+-> pray
+T  58 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 90 $ 386 room=.
+-> l
+T  59 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 90 $ 386 room=.
+-> e
+T  60 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 89 $ 386 room=.
+-> i
+T  61 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 89 $ 386 room=.
+-> eat4
+T  62 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 94 $ 386 room=.
+-> x
+T  63 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 94 $ 386 room=.
+-> l
+T  64 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 94 $ 386 room=.
+-> e
+T  65 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 93 $ 386 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  66 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7, 8) HP 29/30 MP 0/0 Hu 93 $ 386 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  67 mode=combat_victory      Beorn the Wanderer(hum) F1@( 7, 8) HP 29/30 MP 0/0 Hu 93 $ 396 room=.
+-> back
+T  68 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 8) HP 29/30 MP 0/0 Hu 93 $ 396 room=.
+-> l
+T  69 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 8) HP 29/30 MP 0/0 Hu 93 $ 396 room=.
+-> s
+T  70 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7, 9) HP 29/30 MP 0/0 Hu 92 $ 396 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  71 mode=combat_victory      Beorn the Wanderer(hum) F1@( 7, 9) HP 29/30 MP 0/0 Hu 92 $ 505 room=.
+-> back
+T  72 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 9) HP 29/30 MP 0/0 Hu 92 $ 505 room=.
+-> w
+T  73 mode=dungeon_mode        Beorn the Wanderer(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 91 $ 505 room=N
+-> u
+T  74 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 91 $ 505 room=N
+-> i
+T  75 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 91 $ 505 room=N
+-> eat3
+T  76 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 97 $ 505 room=N
+-> x
+T  77 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 97 $ 505 room=N
+-> s
+T  78 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 96 $ 505 room=.
+-> s
+T  79 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6,11) HP 30/30 MP 0/0 Hu 95 $ 505 room=M vs Kobold(L0 HP8/8)
+-> a
+T  80 mode=combat_victory      Beorn the Wanderer(hum) F1@( 6,11) HP 30/30 MP 0/0 Hu 95 $ 606 room=.
+-> back
+T  81 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,11) HP 30/30 MP 0/0 Hu 95 $ 606 room=.
+-> e
+T  82 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu 94 $ 606 room=M vs Goblin(L0 HP30/30)
+-> a
+T  83 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu 94 $ 606 room=M vs Goblin(L0 HP10/30)
+-> a
+T  84 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,11) HP 29/30 MP 0/0 Hu 94 $ 606 room=M vs Goblin(L0 HP10/30)
+-> a
+T  85 mode=combat_victory      Beorn the Wanderer(hum) F1@( 7,11) HP 29/30 MP 0/0 Hu 94 $ 609 room=.
+-> back
+T  86 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 29/30 MP 0/0 Hu 94 $ 609 room=.
+-> l
+T  87 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 29/30 MP 0/0 Hu 94 $ 609 room=.
+-> n
+T  88 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,10) HP 29/30 MP 0/0 Hu 93 $ 609 room=.
+-> n
+T  89 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 9) HP 30/30 MP 0/0 Hu 92 $ 609 room=.
+-> n
+T  90 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 8) HP 30/30 MP 0/0 Hu 91 $ 609 room=.
+-> w
+T  91 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 90 $ 609 room=.
+-> w
+T  92 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 89 $ 609 room=.
+-> n
+T  93 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 609 room=.
+-> w
+T  94 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 87 $ 609 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  95 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 7) HP 29/30 MP 0/0 Hu 87 $ 609 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  96 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 7) HP 28/30 MP 0/0 Hu 87 $ 609 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  97 mode=combat_victory      Beorn the Wanderer(hum) F1@( 4, 7) HP 27/40 MP 0/0 Hu 87 $ 618 room=.
+-> back
+T  98 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 27/40 MP 0/0 Hu 87 $ 618 room=.
+-> i
+T  99 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 7) HP 27/40 MP 0/0 Hu 87 $ 618 room=.
+-> u4
+T 100 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 87 $ 618 room=.
+-> x
+T 101 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 87 $ 618 room=.
+-> s
+T 102 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 86 $ 618 room=.
+-> n
+T 103 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 85 $ 618 room=.
+-> i
+T 104 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 85 $ 618 room=.
+-> eat4
+T 105 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 90 $ 618 room=.
+-> x
+T 106 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 90 $ 618 room=.
+-> n
+T 107 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 89 $ 618 room=M vs Goblin(L0 HP30/30)
+-> a
+T 108 mode=combat_mode         Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 89 $ 618 room=M vs Goblin(L0 HP10/30)
+-> a
+T 109 mode=combat_victory      Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 89 $ 625 room=.
+-> back
+T 110 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 89 $ 625 room=.
+-> i
+T 111 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 89 $ 625 room=.
+-> eat3
+T 112 mode=inventory           Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 94 $ 625 room=.
+-> x
+T 113 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 6) HP 39/40 MP 0/0 Hu 94 $ 625 room=.
+-> n
+T 114 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 39/40 MP 0/0 Hu 93 $ 625 room=.
+-> n
+T 115 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 92 $ 625 room=.
+-> n
+T 116 mode=dungeon_mode        Beorn the Wanderer(hum) F1@( 4, 3) HP 40/40 MP 0/0 Hu 91 $ 625 room=N
+-> u
+T 117 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 3) HP 40/40 MP 0/0 Hu 91 $ 625 room=N
+-> e
+T 118 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 3) HP 40/40 MP 0/0 Hu 90 $ 625 room=.
+-> s
+T 119 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 89 $ 625 room=.
+-> e
+T 120 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 4) HP 40/40 MP 0/0 Hu 88 $ 625 room=.
+-> e
+T 121 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 87 $ 625 room=.
+-> e
+T 122 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 86 $ 625 room=.
+-> l
+T 123 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 86 $ 625 room=.
+-> s
+T 124 mode=chest_mode          Beorn the Wanderer(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 85 $ 625 room=C
+-> o
+T 125 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 85 $ 635 room=.
+-> l
+T 126 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 85 $ 635 room=.
+-> n
+T 127 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 84 $ 635 room=.
+-> i
+T 128 mode=inventory           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 84 $ 635 room=.
+-> eat3
+T 129 mode=inventory           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 89 $ 635 room=.
+-> x
+T 130 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 89 $ 635 room=.
+-> e
+T 131 mode=garden_mode         Beorn the Wanderer(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 88 $ 635 room=G
+-> h
+T 132 mode=game_loop           Beorn the Wanderer(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 88 $ 635 room=.
+-> l
+T 133 mode=game_loop           Beorn the Wanderer(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 88 $ 635 room=.
+-> n
+T 134 mode=combat_mode         Beorn the Wanderer(hum) F1@( 9, 3) HP 40/40 MP 0/0 Hu 87 $ 635 room=M vs Kobold(L0 HP8/8)
+-> a
+T 135 mode=combat_victory      Beorn the Wanderer(hum) F1@( 9, 3) HP 40/40 MP 0/0 Hu 87 $ 645 room=.
+-> back
+T 136 mode=game_loop           Beorn the Wanderer(hum) F1@( 9, 3) HP 40/40 MP 0/0 Hu 87 $ 645 room=.
+-> w
+T 137 mode=combat_mode         Beorn the Wanderer(hum) F1@( 8, 3) HP 40/40 MP 0/0 Hu 86 $ 645 room=M vs Stirge(L0 HP6/6)
+-> a
+T 138 mode=combat_victory      Beorn the Wanderer(hum) F1@( 8, 3) HP 40/40 MP 0/0 Hu 86 $ 654 room=.
+-> back
+T 139 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 3) HP 40/40 MP 0/0 Hu 86 $ 654 room=.
+-> s
+T 140 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 85 $ 654 room=.
+-> w
+T 141 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 84 $ 654 room=.
+-> w
+T 142 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 4) HP 40/40 MP 0/0 Hu 83 $ 654 room=.
+-> s
+T 143 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 5) HP 40/40 MP 0/0 Hu 82 $ 654 room=.
+-> w
+T 144 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 81 $ 654 room=.
+-> s
+T 145 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 80 $ 654 room=.
+-> s
+T 146 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 79 $ 654 room=.
+-> s
+T 147 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 78 $ 654 room=.
+-> s
+T 148 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 77 $ 654 room=.
+-> i
+T 149 mode=inventory           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 77 $ 654 room=.
+-> eat3
+T 150 mode=inventory           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 82 $ 654 room=.
+-> x
+T 151 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 82 $ 654 room=.
+-> e
+T 152 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 81 $ 654 room=N
+-> i
+T 153 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 81 $ 654 room=N
+-> eat3
+T 154 mode=inventory           Beorn the Wanderer(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 87 $ 654 room=N
+-> x
+T 155 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 87 $ 654 room=N
+-> s
+T 156 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,10) HP 40/40 MP 0/0 Hu 86 $ 654 room=.
+-> s
+T 157 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,11) HP 40/40 MP 0/0 Hu 85 $ 654 room=.
+-> e
+T 158 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu 84 $ 654 room=.
+-> s
+T 159 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 83 $ 654 room=.
+-> l
+T 160 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 83 $ 654 room=.
+-> s
+T 161 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 82 $ 654 room=.
+-> l
+T 162 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 82 $ 654 room=.
+-> w
+T 163 mode=library_mode        Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 81 $ 654 room=L
+-> r
+T 164 mode=library_read_decision_mode Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 81 $ 654 room=L
+-> y
+T 165 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 81 $ 754 room=.
+-> l
+T 166 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 81 $ 754 room=.
+-> s
+T 167 mode=combat_mode         Beorn the Wanderer(hum) F1@( 5,13) HP 40/40 MP 0/0 Hu 80 $ 754 room=M vs Stirge(L0 HP6/6)
+-> a
+T 168 mode=combat_mode         Beorn the Wanderer(hum) F1@( 5,13) HP 29/40 MP 0/0 Hu 80 $ 754 room=M vs Stirge(L0 HP6/6)
+-> a
+T 169 mode=combat_mode         Beorn the Wanderer(hum) F1@( 5,13) HP 21/40 MP 0/0 Hu 80 $ 754 room=M vs Stirge(L0 HP6/6)
+-> a
+T 170 mode=combat_victory      Beorn the Wanderer(hum) F1@( 5,13) HP 21/40 MP 0/0 Hu 80 $ 761 room=.
+-> back
+T 171 mode=game_loop           Beorn the Wanderer(hum) F1@( 5,13) HP 21/40 MP 0/0 Hu 80 $ 761 room=.
+-> e
+T 172 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 21/40 MP 0/0 Hu 79 $ 761 room=.
+-> i
+T 173 mode=inventory           Beorn the Wanderer(hum) F1@( 6,13) HP 21/40 MP 0/0 Hu 79 $ 761 room=.
+-> u4
+T 174 mode=inventory           Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 79 $ 761 room=.
+-> x
+T 175 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 79 $ 761 room=.
+-> s
+T 176 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6,14) HP 40/40 MP 0/0 Hu 78 $ 761 room=M vs Stirge(L0 HP6/6)
+-> f
+T 177 mode=flee_direction_mode Beorn the Wanderer(hum) F1@( 6,14) HP 39/40 MP 0/0 Hu 78 $ 761 room=M
+-> e
+T 178 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 39/40 MP 0/0 Hu 78 $ 761 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 179 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 38/40 MP 0/0 Hu 78 $ 761 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T 180 mode=flee_direction_mode Beorn the Wanderer(hum) F1@( 7,14) HP 35/40 MP 0/0 Hu 78 $ 761 room=M
+-> n
+T 181 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 32/40 MP 0/0 Hu 78 $ 761 room=.
+-> e
+T 182 mode=pool_mode           Beorn the Wanderer(hum) F1@( 8,13) HP 29/40 MP 0/0 Hu 77 $ 761 room=P
+-> dr
+T 183 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 29/40 MP 0/0 Hu 77 $ 761 room=.
+-> e
+T 184 mode=chest_mode          Beorn the Wanderer(hum) F1@( 9,13) HP 29/40 MP 0/0 Hu 76 $ 761 room=C
+-> s
+T 185 mode=combat_mode         Beorn the Wanderer(hum) F1@( 9,14) HP 29/40 MP 0/0 Hu 75 $ 761 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 186 mode=combat_mode         Beorn the Wanderer(hum) F1@( 9,14) HP 28/40 MP 0/0 Hu 75 $ 761 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 187 mode=combat_victory      Beorn the Wanderer(hum) F1@( 9,14) HP 28/40 MP 0/0 Hu 75 $ 764 room=.
+-> back
+T 188 mode=game_loop           Beorn the Wanderer(hum) F1@( 9,14) HP 28/40 MP 0/0 Hu 75 $ 764 room=.
+-> w
+T 189 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 29/40 MP 0/0 Hu 74 $ 764 room=.
+-> i
+T 190 mode=inventory           Beorn the Wanderer(hum) F1@( 8,14) HP 29/40 MP 0/0 Hu 74 $ 764 room=.
+-> u4
+T 191 mode=inventory           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 74 $ 764 room=.
+-> x
+T 192 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 74 $ 764 room=.
+-> s
+T 193 mode=altar_mode          Beorn the Wanderer(hum) F1@( 8,15) HP 40/40 MP 0/0 Hu 73 $ 764 room=A
+-> pray
+T 194 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,15) HP 40/40 MP 0/0 Hu 73 $ 764 room=.
+-> w
+T 195 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,15) HP 40/40 MP 0/0 Hu 72 $ 764 room=.
+-> n
+T 196 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 197 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 198 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 199 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 200 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 39/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP9/15)
+-> a
+T 201 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 38/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP6/15)
+-> a
+T 202 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 37/40 MP 0/0 Hu 71 $ 764 room=M vs Giant Centipede(L0 HP3/15)
+-> f
+T 203 mode=flee_direction_mode Beorn the Wanderer(hum) F1@( 7,14) HP 34/40 MP 0/0 Hu 71 $ 764 room=M
+-> n
+T 204 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 31/40 MP 0/0 Hu 71 $ 764 room=.
+-> i
+T 205 mode=inventory           Beorn the Wanderer(hum) F1@( 7,13) HP 31/40 MP 0/0 Hu 71 $ 764 room=.
+-> u3
+T 206 mode=inventory           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> x
+T 207 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> i
+T 208 mode=inventory           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> e1
+T 209 mode=inventory           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> x
+T 210 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> l
+T 211 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 71 $ 764 room=.
+-> e
+T 212 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 37/40 MP 0/0 Hu 70 $ 764 room=.
+-> i
+T 213 mode=inventory           Beorn the Wanderer(hum) F1@( 8,13) HP 37/40 MP 0/0 Hu 70 $ 764 room=.
+-> u3
+T 214 mode=inventory           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 70 $ 764 room=.
+-> x
+T 215 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 70 $ 764 room=.
+-> i
+T 216 mode=inventory           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 70 $ 764 room=.
+-> eat3
+T 217 mode=inventory           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 76 $ 764 room=.
+-> eat1
+T 218 mode=inventory           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu100 $ 764 room=.
+-> x
+T 219 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu100 $ 764 room=.
+-> s
+T 220 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 99 $ 764 room=.
+-> l
+T 221 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 99 $ 764 room=.
+-> s
+T 222 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,15) HP 40/40 MP 0/0 Hu 98 $ 764 room=.
+-> w
+T 223 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,15) HP 40/40 MP 0/0 Hu 97 $ 764 room=.
+-> n
+T 224 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 96 $ 764 room=M vs Giant Centipede(L0 HP3/15)
+-> f
+T 225 mode=flee_direction_mode Beorn the Wanderer(hum) F1@( 7,14) HP 39/40 MP 0/0 Hu 96 $ 764 room=M
+-> n
+T 226 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 39/40 MP 0/0 Hu 96 $ 764 room=.
+-> e
+T 227 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 39/40 MP 0/0 Hu 95 $ 764 room=.
+-> s
+T 228 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 94 $ 764 room=.
+-> s
+T 229 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,15) HP 40/40 MP 0/0 Hu 93 $ 764 room=.
+-> w
+T 230 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,15) HP 40/40 MP 0/0 Hu 92 $ 764 room=.
+-> l
+T 231 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,15) HP 40/40 MP 0/0 Hu 92 $ 764 room=.
+-> n
+T 232 mode=combat_mode         Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 91 $ 764 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 233 mode=combat_victory      Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 91 $ 772 room=.
+-> back
+T 234 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 91 $ 772 room=.
+-> n
+T 235 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 90 $ 772 room=.
+-> e
+T 236 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 89 $ 772 room=.
+-> n
+T 237 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu 88 $ 772 room=.
+-> n
+T 238 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,11) HP 40/40 MP 0/0 Hu 87 $ 772 room=.
+-> w
+T 239 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu 86 $ 772 room=.
+-> s
+T 240 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 85 $ 772 room=.
+-> l
+T 241 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 85 $ 772 room=.
+-> s
+T 242 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 84 $ 772 room=.
+-> e
+T 243 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 83 $ 772 room=.
+-> s
+T 244 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 82 $ 772 room=.
+-> w
+T 245 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 81 $ 772 room=.
+-> i
+T 246 mode=inventory           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 81 $ 772 room=.
+-> eat3
+T 247 mode=inventory           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 86 $ 772 room=.
+-> x
+T 248 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 86 $ 772 room=.
+-> w
+T 249 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6,14) HP 40/40 MP 0/0 Hu 85 $ 772 room=M vs Stirge(L0 HP6/6)
+-> a
+T 250 mode=combat_victory      Beorn the Wanderer(hum) F1@( 6,14) HP 36/40 MP 0/0 Hu 85 $ 774 room=.
+-> back
+T 251 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,14) HP 36/40 MP 0/0 Hu 85 $ 774 room=.
+-> n
+T 252 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 36/40 MP 0/0 Hu 84 $ 774 room=.
+-> w
+T 253 mode=game_loop           Beorn the Wanderer(hum) F1@( 5,13) HP 36/40 MP 0/0 Hu 83 $ 774 room=.
+-> e
+T 254 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 36/40 MP 0/0 Hu 82 $ 774 room=.
+-> e
+T 255 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 37/40 MP 0/0 Hu 81 $ 774 room=.
+-> n
+T 256 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 37/40 MP 0/0 Hu 80 $ 774 room=.
+-> n
+T 257 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 37/40 MP 0/0 Hu 79 $ 774 room=.
+-> n
+T 258 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,10) HP 37/40 MP 0/0 Hu 78 $ 774 room=.
+-> w
+T 259 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,10) HP 38/40 MP 0/0 Hu 77 $ 774 room=.
+-> s
+T 260 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 76 $ 774 room=.
+-> l
+T 261 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 76 $ 774 room=.
+-> n
+T 262 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,10) HP 38/40 MP 0/0 Hu 75 $ 774 room=.
+-> n
+T 263 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 38/40 MP 0/0 Hu 74 $ 774 room=N
+-> w
+T 264 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 9) HP 39/40 MP 0/0 Hu 73 $ 774 room=.
+-> n
+T 265 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 39/40 MP 0/0 Hu 72 $ 774 room=.
+-> n
+T 266 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 7) HP 39/40 MP 0/0 Hu 71 $ 774 room=.
+-> w
+T 267 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 39/40 MP 0/0 Hu 70 $ 774 room=.
+-> s
+T 268 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 69 $ 774 room=.
+-> e
+T 269 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 68 $ 774 room=.
+-> s
+T 270 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 67 $ 774 room=.
+-> l
+T 271 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 9) HP 40/40 MP 0/0 Hu 67 $ 774 room=.
+-> e
+T 272 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 66 $ 774 room=N
+-> e
+T 273 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 65 $ 774 room=.
+-> s
+T 274 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu 64 $ 774 room=.
+-> w
+T 275 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,10) HP 40/40 MP 0/0 Hu 63 $ 774 room=.
+-> s
+T 276 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,11) HP 40/40 MP 0/0 Hu 62 $ 774 room=.
+-> e
+T 277 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu 61 $ 774 room=.
+-> e
+T 278 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,11) HP 40/40 MP 0/0 Hu 60 $ 774 room=.
+-> s
+T 279 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu 59 $ 774 room=.
+-> w
+T 280 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 58 $ 774 room=.
+-> l
+T 281 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 58 $ 774 room=.
+-> s
+T 282 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,13) HP 40/40 MP 0/0 Hu 57 $ 774 room=.
+-> w
+T 283 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,13) HP 40/40 MP 0/0 Hu 56 $ 774 room=.
+-> s
+T 284 mode=game_loop           Beorn the Wanderer(hum) F1@( 6,14) HP 40/40 MP 0/0 Hu 55 $ 774 room=.
+-> e
+T 285 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,14) HP 40/40 MP 0/0 Hu 54 $ 774 room=.
+-> s
+T 286 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,15) HP 40/40 MP 0/0 Hu 53 $ 774 room=.
+-> e
+T 287 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,15) HP 40/40 MP 0/0 Hu 52 $ 774 room=.
+-> n
+T 288 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,14) HP 40/40 MP 0/0 Hu 51 $ 774 room=.
+-> n
+T 289 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,13) HP 40/40 MP 0/0 Hu 50 $ 774 room=.
+-> n
+T 290 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu 49 $ 774 room=.
+-> i
+T 291 mode=inventory           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu 49 $ 774 room=.
+-> eat1
+T 292 mode=inventory           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu100 $ 774 room=.
+-> x
+T 293 mode=game_loop           Beorn the Wanderer(hum) F1@( 8,12) HP 40/40 MP 0/0 Hu100 $ 774 room=.
+-> w
+T 294 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,12) HP 40/40 MP 0/0 Hu 99 $ 774 room=.
+-> n
+T 295 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu 98 $ 774 room=.
+-> n
+T 296 mode=game_loop           Beorn the Wanderer(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu 97 $ 774 room=.
+-> n
+T 297 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 96 $ 774 room=.
+-> n
+T 298 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 8) HP 40/40 MP 0/0 Hu 95 $ 774 room=.
+-> w
+T 299 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 8) HP 40/40 MP 0/0 Hu 94 $ 774 room=.
+-> w
+T 300 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 93 $ 774 room=.
+-> l
+T 301 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 93 $ 774 room=.
+-> w
+T 302 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 92 $ 774 room=.
+-> n
+T 303 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 91 $ 774 room=.
+-> n
+T 304 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 90 $ 774 room=.
+-> e
+T 305 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 89 $ 774 room=.
+-> n
+T 306 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 88 $ 774 room=.
+-> w
+T 307 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 87 $ 774 room=.
+-> w
+T 308 mode=game_loop           Beorn the Wanderer(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 86 $ 774 room=.
+-> w
+T 309 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 774 room=.
+-> n
+T 310 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 84 $ 774 room=.
+-> l
+T 311 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 84 $ 774 room=.
+-> n
+T 312 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 83 $ 774 room=.
+-> n
+T 313 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 82 $ 774 room=.
+-> n
+T 314 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 81 $ 774 room=.
+-> w
+T 315 mode=game_loop           Beorn the Wanderer(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 80 $ 774 room=E
+-> e
+T 316 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 79 $ 774 room=.
+-> w
+T 317 mode=game_loop           Beorn the Wanderer(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 78 $ 774 room=E
+-> e
+T 318 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 77 $ 774 room=.
+-> s
+T 319 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 76 $ 774 room=.
+-> s
+T 320 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 75 $ 774 room=.
+-> l
+T 321 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 75 $ 774 room=.
+-> s
+T 322 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 774 room=.
+-> s
+T 323 mode=game_loop           Beorn the Wanderer(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 774 room=.
+-> e
+T 324 mode=game_loop           Beorn the Wanderer(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 72 $ 774 room=.
+-> e
+T 325 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 71 $ 774 room=.
+-> e
+T 326 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 70 $ 774 room=.
+-> s
+T 327 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 69 $ 774 room=.
+-> s
+T 328 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 68 $ 774 room=.
+-> s
+T 329 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 67 $ 774 room=.
+-> w
+T 330 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 66 $ 774 room=.
+-> l
+T 331 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 66 $ 774 room=.
+-> n
+T 332 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 65 $ 774 room=.
+-> n
+T 333 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 64 $ 774 room=.
+-> n
+T 334 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 63 $ 774 room=.
+-> n
+T 335 mode=game_loop           Beorn the Wanderer(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 62 $ 774 room=.
+-> e
+T 336 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 61 $ 774 room=.
+-> n
+T 337 mode=game_loop           Beorn the Wanderer(hum) F1@( 5, 3) HP 40/40 MP 0/0 Hu 60 $ 774 room=.
+-> e
+T 338 mode=combat_mode         Beorn the Wanderer(hum) F1@( 6, 3) HP 40/40 MP 0/0 Hu 59 $ 774 room=M vs Goblin(L0 HP12/12)
+-> a
+T 339 mode=combat_victory      Beorn the Wanderer(hum) F1@( 6, 3) HP 40/40 MP 0/0 Hu 59 $ 777 room=.
+-> back
+T 340 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 3) HP 40/40 MP 0/0 Hu 59 $ 777 room=.
+-> l
+T 341 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 3) HP 40/40 MP 0/0 Hu 59 $ 777 room=.
+-> s
+T 342 mode=game_loop           Beorn the Wanderer(hum) F1@( 6, 4) HP 40/40 MP 0/0 Hu 58 $ 777 room=.
+-> e
+T 343 mode=game_loop           Beorn the Wanderer(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 57 $ 777 room=.
+-> e
+T 344 mode=game_loop           Beorn the Wanderer(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 56 $ 777 room=.
+-> e
+T 345 mode=game_loop           Beorn the Wanderer(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 55 $ 777 room=.
+-> s
+T 346 mode=warp_mode           Beorn the Wanderer(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 54 $ 777 room=W
+-> y
+T 347 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 54 $ 777 room=.
+-> l
+T 348 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 54 $ 777 room=.
+-> s
+T 349 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 53 $ 777 room=.
+-> l
+T 350 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 53 $ 777 room=.
+-> s
+T 351 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 8) HP 40/40 MP 0/0 Hu 52 $ 777 room=.
+-> l
+T 352 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 8) HP 40/40 MP 0/0 Hu 52 $ 777 room=.
+-> e
+T 353 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 8) HP 40/40 MP 0/0 Hu 51 $ 777 room=.
+-> l
+T 354 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 8) HP 40/40 MP 0/0 Hu 51 $ 777 room=.
+-> s
+T 355 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 50 $ 777 room=.
+-> l
+T 356 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 50 $ 777 room=.
+-> s
+T 357 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 49 $ 777 room=.
+-> i
+T 358 mode=inventory           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 49 $ 777 room=.
+-> eat1
+T 359 mode=inventory           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 99 $ 777 room=.
+-> x
+T 360 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 99 $ 777 room=.
+-> l
+T 361 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 99 $ 777 room=.
+-> s
+T 362 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,11) HP 40/40 MP 0/0 Hu 98 $ 777 room=.
+-> l
+T 363 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,11) HP 40/40 MP 0/0 Hu 98 $ 777 room=.
+-> e
+T 364 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 97 $ 777 room=.
+-> l
+T 365 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 97 $ 777 room=.
+-> s
+T 366 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 777 room=.
+-> l
+T 367 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 777 room=.
+-> s
+T 368 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,13) HP 40/40 MP 0/0 Hu 95 $ 777 room=.
+-> l
+T 369 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,13) HP 40/40 MP 0/0 Hu 95 $ 777 room=.
+-> e
+T 370 mode=game_loop           Beorn the Wanderer(hum) F2@( 5,13) HP 40/40 MP 0/0 Hu 94 $ 777 room=.
+-> l
+T 371 mode=game_loop           Beorn the Wanderer(hum) F2@( 5,13) HP 40/40 MP 0/0 Hu 94 $ 777 room=.
+-> e
+T 372 mode=game_loop           Beorn the Wanderer(hum) F2@( 6,13) HP 40/40 MP 0/0 Hu 93 $ 777 room=.
+-> l
+T 373 mode=game_loop           Beorn the Wanderer(hum) F2@( 6,13) HP 40/40 MP 0/0 Hu 93 $ 777 room=.
+-> s
+T 374 mode=game_loop           Beorn the Wanderer(hum) F2@( 6,14) HP 40/40 MP 0/0 Hu 92 $ 777 room=.
+-> l
+T 375 mode=game_loop           Beorn the Wanderer(hum) F2@( 6,14) HP 40/40 MP 0/0 Hu 92 $ 777 room=.
+-> e
+T 376 mode=game_loop           Beorn the Wanderer(hum) F2@( 7,14) HP 40/40 MP 0/0 Hu 91 $ 777 room=.
+-> n
+T 377 mode=game_loop           Beorn the Wanderer(hum) F2@( 7,13) HP 40/40 MP 0/0 Hu 90 $ 777 room=.
+-> l
+T 378 mode=game_loop           Beorn the Wanderer(hum) F2@( 7,13) HP 40/40 MP 0/0 Hu 90 $ 777 room=.
+-> n
+T 379 mode=game_loop           Beorn the Wanderer(hum) F2@( 7,12) HP 40/40 MP 0/0 Hu 89 $ 777 room=.
+-> s
+T 380 mode=game_loop           Beorn the Wanderer(hum) F2@( 7,13) HP 40/40 MP 0/0 Hu 88 $ 777 room=.
+-> w
+T 381 mode=game_loop           Beorn the Wanderer(hum) F2@( 6,13) HP 40/40 MP 0/0 Hu 87 $ 777 room=.
+-> w
+T 382 mode=game_loop           Beorn the Wanderer(hum) F2@( 5,13) HP 40/40 MP 0/0 Hu 86 $ 777 room=.
+-> n
+T 383 mode=game_loop           Beorn the Wanderer(hum) F2@( 5,12) HP 40/40 MP 0/0 Hu 85 $ 777 room=.
+-> w
+T 384 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,12) HP 40/40 MP 0/0 Hu 84 $ 777 room=.
+-> n
+T 385 mode=game_loop           Beorn the Wanderer(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 83 $ 777 room=.
+-> w
+T 386 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,11) HP 40/40 MP 0/0 Hu 82 $ 777 room=.
+-> w
+T 387 mode=game_loop           Beorn the Wanderer(hum) F2@( 2,11) HP 40/40 MP 0/0 Hu 81 $ 777 room=.
+-> l
+T 388 mode=game_loop           Beorn the Wanderer(hum) F2@( 2,11) HP 40/40 MP 0/0 Hu 81 $ 777 room=.
+-> s
+T 389 mode=game_loop           Beorn the Wanderer(hum) F2@( 2,12) HP 40/40 MP 0/0 Hu 80 $ 777 room=.
+-> n
+T 390 mode=game_loop           Beorn the Wanderer(hum) F2@( 2,11) HP 40/40 MP 0/0 Hu 79 $ 777 room=.
+-> n
+T 391 mode=game_loop           Beorn the Wanderer(hum) F2@( 2,10) HP 40/40 MP 0/0 Hu 78 $ 777 room=.
+-> e
+T 392 mode=game_loop           Beorn the Wanderer(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 77 $ 777 room=.
+-> n
+T 393 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 76 $ 777 room=.
+-> n
+T 394 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 8) HP 40/40 MP 0/0 Hu 75 $ 777 room=.
+-> e
+T 395 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 40/40 MP 0/0 Hu 74 $ 777 room=.
+-> e
+T 396 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 40/40 MP 0/0 Hu 73 $ 777 room=.
+-> e
+T 397 mode=library_mode        Beorn the Wanderer(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 72 $ 777 room=L
+-> r
+T 398 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 72 $ 777 room=.
+-> e
+T 399 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 71 $ 777 room=.
+-> e
+T 400 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 70 $ 777 room=.
+-> l
+T 401 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 70 $ 777 room=.
+-> s
+T 402 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 69 $ 777 room=.
+-> l
+T 403 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 69 $ 777 room=.
+-> s
+T 404 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 68 $ 777 room=.
+-> l
+T 405 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 68 $ 777 room=.
+-> e
+T 406 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 67 $ 777 room=.
+-> l
+T 407 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 67 $ 777 room=.
+-> e
+T 408 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 66 $ 777 room=.
+-> l
+T 409 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 66 $ 777 room=.
+-> e
+T 410 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 777 room=V
+-> r2
+T 411 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 731 room=V
+-> b16
+T 412 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 721 room=V
+-> b7
+T 413 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 691 room=V
+-> b7
+T 414 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 661 room=V
+-> b7
+T 415 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 631 room=V
+-> b7
+T 416 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 601 room=V
+-> b7
+T 417 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 571 room=V
+-> b11
+T 418 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 566 room=V
+-> b11
+T 419 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 561 room=V
+-> b9
+T 420 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 411 room=V
+-> b5
+T 421 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 341 room=V
+-> b6
+T 422 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 251 room=V
+-> b6
+T 423 mode=vendor_shop         Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 201 room=V
+-> x
+T 424 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 201 room=V
+-> l
+T 425 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 65 $ 201 room=V
+-> s
+T 426 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 64 $ 201 room=.
+-> l
+T 427 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 64 $ 201 room=.
+-> s
+T 428 mode=pool_mode           Beorn the Wanderer(hum) F2@(11,12) HP 40/40 MP 0/0 Hu 63 $ 201 room=P
+-> dr
+T 429 mode=game_loop           Beorn the Wanderer(hum) F2@(11,12) HP 40/40 MP 0/0 Hu 63 $ 201 room=.
+-> w
+T 430 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 40/40 MP 0/0 Hu 62 $ 201 room=.
+-> s
+T 431 mode=altar_mode          Beorn the Wanderer(hum) F2@(10,13) HP 40/40 MP 0/0 Hu 61 $ 201 room=A
+-> pray
+T 432 mode=game_loop           Beorn the Wanderer(hum) F2@(10,13) HP 40/40 MP 0/0 Hu 61 $ 201 room=.
+-> n
+T 433 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 40/40 MP 0/0 Hu 60 $ 201 room=.
+-> n
+T 434 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 59 $ 201 room=.
+-> e
+T 435 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 58 $ 201 room=.
+-> e
+T 436 mode=garden_mode         Beorn the Wanderer(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 57 $ 201 room=G
+-> h
+T 437 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 57 $ 201 room=.
+-> e
+T 438 mode=game_loop           Beorn the Wanderer(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 56 $ 201 room=.
+-> n
+T 439 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 55 $ 201 room=.
+-> e
+T 440 mode=chest_mode          Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 54 $ 201 room=C
+-> o
+T 441 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 54 $ 301 room=.
+-> i
+T 442 mode=inventory           Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 54 $ 301 room=.
+-> e1
+T 443 mode=inventory           Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 54 $ 301 room=.
+-> x
+T 444 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 54 $ 301 room=.
+-> e
+T 445 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 53 $ 301 room=.
+-> s
+T 446 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 52 $ 301 room=.
+-> l
+T 447 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 52 $ 301 room=.
+-> s
+T 448 mode=game_loop           Beorn the Wanderer(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 51 $ 301 room=.
+-> l
+T 449 mode=game_loop           Beorn the Wanderer(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 51 $ 301 room=.
+-> s
+T 450 mode=game_loop           Beorn the Wanderer(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 50 $ 301 room=.
+-> l
+T 451 mode=game_loop           Beorn the Wanderer(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 50 $ 301 room=.
+-> s
+T 452 mode=game_loop           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 49 $ 301 room=.
+-> i
+T 453 mode=inventory           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 49 $ 301 room=.
+-> eat1
+T 454 mode=inventory           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 301 room=.
+-> u8
+T 455 mode=upgrade_scroll_mode Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 301 room=.
+-> 1
+T 456 mode=inventory           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 301 room=.
+-> x
+T 457 mode=game_loop           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 301 room=.
+-> l
+T 458 mode=game_loop           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 99 $ 301 room=.
+-> e
+T 459 mode=game_loop           Beorn the Wanderer(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 98 $ 301 room=.
+-> e
+T 460 mode=game_loop           Beorn the Wanderer(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 301 room=.
+-> l
+T 461 mode=game_loop           Beorn the Wanderer(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 97 $ 301 room=.
+-> s
+T 462 mode=chest_mode          Beorn the Wanderer(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 96 $ 301 room=C
+-> o
+T 463 mode=game_loop           Beorn the Wanderer(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 96 $ 361 room=.
+-> l
+T 464 mode=game_loop           Beorn the Wanderer(hum) F2@(17,15) HP 40/40 MP 0/0 Hu 96 $ 361 room=.
+-> s
+T 465 mode=game_loop           Beorn the Wanderer(hum) F2@(17,16) HP 40/40 MP 0/0 Hu 95 $ 361 room=.
+-> l
+T 466 mode=game_loop           Beorn the Wanderer(hum) F2@(17,16) HP 40/40 MP 0/0 Hu 95 $ 361 room=.
+-> e
+T 467 mode=chest_mode          Beorn the Wanderer(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 94 $ 361 room=C
+-> n
+T 468 mode=game_loop           Beorn the Wanderer(hum) F2@(18,15) HP 40/40 MP 0/0 Hu 93 $ 361 room=.
+-> n
+T 469 mode=game_loop           Beorn the Wanderer(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 92 $ 361 room=.
+-> l
+T 470 mode=game_loop           Beorn the Wanderer(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 92 $ 361 room=.
+-> e
+T 471 mode=game_loop           Beorn the Wanderer(hum) F2@(19,14) HP 40/40 MP 0/0 Hu 91 $ 361 room=.
+-> l
+T 472 mode=game_loop           Beorn the Wanderer(hum) F2@(19,14) HP 40/40 MP 0/0 Hu 91 $ 361 room=.
+-> n
+T 473 mode=game_loop           Beorn the Wanderer(hum) F2@(19,13) HP 40/40 MP 0/0 Hu 90 $ 361 room=.
+-> n
+T 474 mode=game_loop           Beorn the Wanderer(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 89 $ 361 room=.
+-> n
+T 475 mode=dungeon_mode        Beorn the Wanderer(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 88 $ 361 room=N
+-> u
+T 476 mode=game_loop           Beorn the Wanderer(hum) F2@(19,11) HP 40/40 MP 0/0 Hu 88 $ 361 room=N
+-> n
+T 477 mode=garden_mode         Beorn the Wanderer(hum) F2@(19,10) HP 40/40 MP 0/0 Hu 87 $ 361 room=G
+-> h
+T 478 mode=game_loop           Beorn the Wanderer(hum) F2@(19,10) HP 40/40 MP 0/0 Hu 87 $ 361 room=.
+-> n
+T 479 mode=game_loop           Beorn the Wanderer(hum) F2@(19, 9) HP 40/40 MP 0/0 Hu 86 $ 361 room=.
+-> n
+T 480 mode=game_loop           Beorn the Wanderer(hum) F2@(19, 8) HP 40/40 MP 0/0 Hu 85 $ 361 room=.
+-> n
+T 481 mode=chest_mode          Beorn the Wanderer(hum) F2@(19, 7) HP 40/40 MP 0/0 Hu 84 $ 361 room=C
+-> o
+T 482 mode=game_loop           Beorn the Wanderer(hum) F2@(19, 7) HP 40/40 MP 0/0 Hu 84 $ 421 room=.
+-> w
+T 483 mode=game_loop           Beorn the Wanderer(hum) F2@(18, 7) HP 40/40 MP 0/0 Hu 83 $ 421 room=.
+-> l
+T 484 mode=game_loop           Beorn the Wanderer(hum) F2@(18, 7) HP 40/40 MP 0/0 Hu 83 $ 421 room=.
+-> s
+T 485 mode=game_loop           Beorn the Wanderer(hum) F2@(18, 8) HP 40/40 MP 0/0 Hu 82 $ 421 room=.
+-> n
+T 486 mode=game_loop           Beorn the Wanderer(hum) F2@(18, 7) HP 40/40 MP 0/0 Hu 81 $ 421 room=.
+-> n
+T 487 mode=chest_mode          Beorn the Wanderer(hum) F2@(18, 6) HP 40/40 MP 0/0 Hu 80 $ 421 room=C
+-> o
+T 488 mode=game_loop           Beorn the Wanderer(hum) F2@(17, 6) HP 40/40 MP 0/0 Hu 79 $ 421 room=.
+-> s
+T 489 mode=game_loop           Beorn the Wanderer(hum) F2@(17, 7) HP 40/40 MP 0/0 Hu 78 $ 421 room=.
+-> w
+T 490 mode=game_loop           Beorn the Wanderer(hum) F2@(16, 7) HP 40/40 MP 0/0 Hu 77 $ 421 room=.
+-> l
+T 491 mode=game_loop           Beorn the Wanderer(hum) F2@(16, 7) HP 40/40 MP 0/0 Hu 77 $ 421 room=.
+-> w
+T 492 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 7) HP 40/40 MP 0/0 Hu 76 $ 421 room=.
+-> s
+T 493 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 8) HP 40/40 MP 0/0 Hu 75 $ 421 room=.
+-> s
+T 494 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 9) HP 40/40 MP 0/0 Hu 74 $ 421 room=.
+-> e
+T 495 mode=game_loop           Beorn the Wanderer(hum) F2@(16, 9) HP 40/40 MP 0/0 Hu 73 $ 421 room=.
+-> l
+T 496 mode=game_loop           Beorn the Wanderer(hum) F2@(16, 9) HP 40/40 MP 0/0 Hu 73 $ 421 room=.
+-> e
+T 497 mode=game_loop           Beorn the Wanderer(hum) F2@(17, 9) HP 40/40 MP 0/0 Hu 72 $ 421 room=.
+-> s
+T 498 mode=game_loop           Beorn the Wanderer(hum) F2@(17,10) HP 40/40 MP 0/0 Hu 71 $ 421 room=.
+-> s
+T 499 mode=game_loop           Beorn the Wanderer(hum) F2@(17,11) HP 40/40 MP 0/0 Hu 70 $ 421 room=.
+-> s
+T 500 mode=chest_mode          Beorn the Wanderer(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 69 $ 421 room=C
+-> e
+T 501 mode=pool_mode           Beorn the Wanderer(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 68 $ 421 room=P
+-> dr
+T 502 mode=game_loop           Beorn the Wanderer(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 68 $ 421 room=.
+-> e
+T 503 mode=game_loop           Beorn the Wanderer(hum) F2@(19,12) HP 40/40 MP 0/0 Hu 67 $ 421 room=.
+-> s
+T 504 mode=game_loop           Beorn the Wanderer(hum) F2@(19,13) HP 40/40 MP 0/0 Hu 66 $ 421 room=.
+-> s
+T 505 mode=game_loop           Beorn the Wanderer(hum) F2@(19,14) HP 40/40 MP 0/0 Hu 65 $ 421 room=.
+-> w
+T 506 mode=game_loop           Beorn the Wanderer(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 64 $ 421 room=.
+-> w
+T 507 mode=game_loop           Beorn the Wanderer(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 63 $ 421 room=.
+-> w
+T 508 mode=game_loop           Beorn the Wanderer(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 62 $ 421 room=.
+-> w
+T 509 mode=game_loop           Beorn the Wanderer(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 61 $ 421 room=.
+-> w
+T 510 mode=game_loop           Beorn the Wanderer(hum) F2@(14,14) HP 40/40 MP 0/0 Hu 60 $ 421 room=.
+-> l
+T 511 mode=game_loop           Beorn the Wanderer(hum) F2@(14,14) HP 40/40 MP 0/0 Hu 60 $ 421 room=.
+-> s
+T 512 mode=game_loop           Beorn the Wanderer(hum) F2@(14,15) HP 40/40 MP 0/0 Hu 59 $ 421 room=.
+-> l
+T 513 mode=game_loop           Beorn the Wanderer(hum) F2@(14,15) HP 40/40 MP 0/0 Hu 59 $ 421 room=.
+-> w
+T 514 mode=combat_mode         Beorn the Wanderer(hum) F2@(13,15) HP 40/40 MP 0/0 Hu 58 $ 421 room=M vs Wight(L1 HP40/40)
+-> a
+T 515 mode=combat_mode         Beorn the Wanderer(hum) F2@(13,15) HP 36/40 MP 0/0 Hu 58 $ 421 room=M vs Wight(L1 HP15/40)
+-> a
+T 516 mode=combat_mode         Beorn the Wanderer(hum) F2@(13,15) HP 32/40 MP 0/0 Hu 58 $ 421 room=M vs Wight(L1 HP15/40)
+-> a
+T 517 mode=combat_victory      Beorn the Wanderer(hum) F2@(13,15) HP 28/40 MP 0/0 Hu 58 $ 429 room=.
+-> back
+T 518 mode=game_loop           Beorn the Wanderer(hum) F2@(13,15) HP 28/40 MP 0/0 Hu 58 $ 429 room=.
+-> l
+T 519 mode=game_loop           Beorn the Wanderer(hum) F2@(13,15) HP 28/40 MP 0/0 Hu 58 $ 429 room=.
+-> s
+T 520 mode=game_loop           Beorn the Wanderer(hum) F2@(13,16) HP 28/40 MP 0/0 Hu 57 $ 429 room=.
+-> n
+T 521 mode=game_loop           Beorn the Wanderer(hum) F2@(13,15) HP 28/40 MP 0/0 Hu 56 $ 429 room=.
+-> n
+T 522 mode=shrine_mode         Beorn the Wanderer(hum) F2@(13,14) HP 28/40 MP 0/0 Hu 55 $ 429 room=F
+-> p
+T 523 mode=game_loop           Beorn the Wanderer(hum) F2@(13,14) HP 28/40 MP 0/0 Hu 55 $ 429 room=.
+-> e
+T 524 mode=game_loop           Beorn the Wanderer(hum) F2@(14,14) HP 28/40 MP 0/0 Hu 54 $ 429 room=.
+-> n
+T 525 mode=game_loop           Beorn the Wanderer(hum) F2@(14,13) HP 28/40 MP 0/0 Hu 53 $ 429 room=.
+-> n
+T 526 mode=oracle_mode         Beorn the Wanderer(hum) F2@(14,12) HP 28/40 MP 0/0 Hu 52 $ 429 room=O
+-> e
+T 527 mode=game_loop           Beorn the Wanderer(hum) F2@(15,12) HP 28/40 MP 0/0 Hu 51 $ 429 room=.
+-> n
+T 528 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 28/40 MP 0/0 Hu 50 $ 429 room=.
+-> i
+T 529 mode=inventory           Beorn the Wanderer(hum) F2@(15,11) HP 28/40 MP 0/0 Hu 50 $ 429 room=.
+-> u5
+T 530 mode=inventory           Beorn the Wanderer(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 50 $ 429 room=.
+-> x
+T 531 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 50 $ 429 room=.
+-> n
+T 532 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 49 $ 429 room=.
+-> i
+T 533 mode=inventory           Beorn the Wanderer(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 49 $ 429 room=.
+-> eat1
+T 534 mode=inventory           Beorn the Wanderer(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 99 $ 429 room=.
+-> x
+T 535 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 99 $ 429 room=.
+-> w
+T 536 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 40/40 MP 0/0 Hu 98 $ 429 room=.
+-> w
+T 537 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 97 $ 429 room=.
+-> w
+T 538 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 96 $ 429 room=.
+-> w
+T 539 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 95 $ 429 room=V
+-> n
+T 540 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 94 $ 429 room=.
+-> n
+T 541 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 93 $ 429 room=.
+-> e
+T 542 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 92 $ 429 room=.
+-> w
+T 543 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 91 $ 429 room=.
+-> s
+T 544 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 90 $ 429 room=.
+-> s
+T 545 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 89 $ 429 room=V
+-> e
+T 546 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 88 $ 429 room=.
+-> s
+T 547 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 87 $ 429 room=.
+-> w
+T 548 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 86 $ 429 room=.
+-> s
+T 549 mode=game_loop           Beorn the Wanderer(hum) F2@(11,12) HP 40/40 MP 0/0 Hu 85 $ 429 room=.
+-> w
+T 550 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 40/40 MP 0/0 Hu 84 $ 429 room=.
+-> l
+T 551 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 40/40 MP 0/0 Hu 84 $ 429 room=.
+-> n
+T 552 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 83 $ 429 room=.
+-> n
+T 553 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 82 $ 429 room=.
+-> n
+T 554 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 81 $ 429 room=.
+-> e
+T 555 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 80 $ 429 room=.
+-> n
+T 556 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 79 $ 429 room=.
+-> e
+T 557 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 78 $ 429 room=.
+-> w
+T 558 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 77 $ 429 room=.
+-> s
+T 559 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 76 $ 429 room=.
+-> s
+T 560 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 75 $ 429 room=V
+-> l
+T 561 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 75 $ 429 room=V
+-> w
+T 562 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 74 $ 429 room=.
+-> n
+T 563 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 73 $ 429 room=.
+-> w
+T 564 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 72 $ 429 room=.
+-> s
+T 565 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 71 $ 429 room=.
+-> s
+T 566 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 70 $ 429 room=.
+-> e
+T 567 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 69 $ 429 room=.
+-> n
+T 568 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 68 $ 429 room=.
+-> n
+T 569 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 429 room=.
+-> e
+T 570 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 66 $ 429 room=.
+-> l
+T 571 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 66 $ 429 room=.
+-> n
+T 572 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 65 $ 429 room=.
+-> e
+T 573 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 64 $ 429 room=.
+-> w
+T 574 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 63 $ 429 room=.
+-> s
+T 575 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 62 $ 429 room=.
+-> w
+T 576 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 61 $ 429 room=.
+-> s
+T 577 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 60 $ 429 room=.
+-> w
+T 578 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 59 $ 429 room=.
+-> n
+T 579 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 58 $ 429 room=.
+-> n
+T 580 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 581 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 582 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 34/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 583 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 28/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 584 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 22/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 585 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 16/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> i
+T 586 mode=inventory           Beorn the Wanderer(hum) F2@( 9, 8) HP 16/40 MP 0/0 Hu 57 $ 429 room=M
+-> u2
+T 587 mode=inventory           Beorn the Wanderer(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 57 $ 429 room=M
+-> x
+T 588 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 589 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 34/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 590 mode=combat_mode         Beorn the Wanderer(hum) F2@( 9, 8) HP 34/40 MP 0/0 Hu 57 $ 429 room=M vs Giant Spider(L1 HP15/40)
+-> a
+T 591 mode=combat_victory      Beorn the Wanderer(hum) F2@( 9, 8) HP 34/40 MP 0/0 Hu 57 $ 447 room=.
+-> back
+T 592 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 34/40 MP 0/0 Hu 57 $ 447 room=.
+-> w
+T 593 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 34/40 MP 0/0 Hu 56 $ 447 room=.
+-> n
+T 594 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 7) HP 34/40 MP 0/0 Hu 55 $ 447 room=.
+-> w
+T 595 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 34/40 MP 0/0 Hu 54 $ 447 room=.
+-> n
+T 596 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 6) HP 34/40 MP 0/0 Hu 53 $ 447 room=.
+-> w
+T 597 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 6) HP 34/40 MP 0/0 Hu 52 $ 447 room=.
+-> w
+T 598 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 6) HP 34/40 MP 0/0 Hu 51 $ 447 room=.
+-> w
+T 599 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 6) HP 34/40 MP 0/0 Hu 50 $ 447 room=.
+-> n
+T 600 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 34/40 MP 0/0 Hu 49 $ 447 room=.
+-> i
+T 601 mode=inventory           Beorn the Wanderer(hum) F2@( 4, 5) HP 34/40 MP 0/0 Hu 49 $ 447 room=.
+-> u5
+T 602 mode=inventory           Beorn the Wanderer(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 49 $ 447 room=.
+-> x
+T 603 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 49 $ 447 room=.
+-> i
+T 604 mode=inventory           Beorn the Wanderer(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 49 $ 447 room=.
+-> eat1
+T 605 mode=inventory           Beorn the Wanderer(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 99 $ 447 room=.
+-> x
+T 606 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 99 $ 447 room=.
+-> n
+T 607 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 4) HP 40/40 MP 0/0 Hu 98 $ 447 room=.
+-> l
+T 608 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 4) HP 40/40 MP 0/0 Hu 98 $ 447 room=.
+-> n
+T 609 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 97 $ 447 room=.
+-> n
+T 610 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 447 room=.
+-> l
+T 611 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 447 room=.
+-> e
+T 612 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 95 $ 447 room=.
+-> l
+T 613 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 95 $ 447 room=.
+-> n
+T 614 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 94 $ 447 room=.
+-> w
+T 615 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 447 room=.
+-> w
+T 616 mode=pool_mode           Beorn the Wanderer(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 92 $ 447 room=P
+-> dr
+T 617 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 92 $ 447 room=.
+-> w
+T 618 mode=library_mode        Beorn the Wanderer(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 91 $ 447 room=L
+-> r
+T 619 mode=library_read_decision_mode Beorn the Wanderer(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 91 $ 447 room=L
+-> y
+T 620 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 91 $ 497 room=.
+-> l
+T 621 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 91 $ 497 room=.
+-> w
+T 622 mode=stairs_up_mode      Beorn the Wanderer(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 90 $ 497 room=U
+-> u
+T 623 mode=stairs_down_mode    Beorn the Wanderer(hum) F1@(18, 8) HP 40/40 MP 0/0 Hu 90 $ 497 room=D
+-> d
+T 624 mode=stairs_up_mode      Beorn the Wanderer(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 90 $ 497 room=U
+-> s
+T 625 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 89 $ 497 room=.
+-> l
+T 626 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 89 $ 497 room=.
+-> s
+T 627 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 3) HP 40/40 MP 0/0 Hu 88 $ 497 room=.
+-> s
+T 628 mode=chest_mode          Beorn the Wanderer(hum) F2@( 1, 4) HP 40/40 MP 0/0 Hu 87 $ 497 room=C
+-> o
+T 629 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 4) HP 40/40 MP 0/0 Hu 87 $ 497 room=.
+-> s
+T 630 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 5) HP 40/40 MP 0/0 Hu 86 $ 497 room=.
+-> e
+T 631 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 497 room=.
+-> e
+T 632 mode=combat_mode         Beorn the Wanderer(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 84 $ 497 room=M vs Goblin(L1 HP30/30)
+-> a
+T 633 mode=combat_mode         Beorn the Wanderer(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 84 $ 497 room=M vs Goblin(L1 HP30/30)
+-> a
+T 634 mode=combat_mode         Beorn the Wanderer(hum) F2@( 3, 5) HP 39/40 MP 0/0 Hu 84 $ 497 room=M vs Goblin(L1 HP30/30)
+-> a
+T 635 mode=combat_mode         Beorn the Wanderer(hum) F2@( 3, 5) HP 39/40 MP 0/0 Hu 84 $ 497 room=M vs Goblin(L1 HP30/30)
+-> a
+T 636 mode=combat_mode         Beorn the Wanderer(hum) F2@( 3, 5) HP 38/40 MP 0/0 Hu 84 $ 497 room=M vs Goblin(L1 HP3/30)
+-> a
+T 637 mode=combat_victory      Beorn the Wanderer(hum) F2@( 3, 5) HP 38/40 MP 0/0 Hu 84 $ 515 room=.
+-> back
+T 638 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 5) HP 38/40 MP 0/0 Hu 84 $ 515 room=.
+-> e
+T 639 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 38/40 MP 0/0 Hu 83 $ 515 room=.
+-> s
+T 640 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 6) HP 38/40 MP 0/0 Hu 82 $ 515 room=.
+-> s
+T 641 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 7) HP 38/40 MP 0/0 Hu 81 $ 515 room=.
+-> s
+T 642 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 39/40 MP 0/0 Hu 80 $ 515 room=.
+-> e
+T 643 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 39/40 MP 0/0 Hu 79 $ 515 room=.
+-> e
+T 644 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 39/40 MP 0/0 Hu 78 $ 515 room=.
+-> e
+T 645 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 39/40 MP 0/0 Hu 77 $ 515 room=.
+-> e
+T 646 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 76 $ 515 room=.
+-> s
+T 647 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 75 $ 515 room=.
+-> e
+T 648 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 74 $ 515 room=.
+-> i
+T 649 mode=inventory           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 74 $ 515 room=.
+-> eat2
+T 650 mode=inventory           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 79 $ 515 room=.
+-> eat1
+T 651 mode=inventory           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu100 $ 515 room=.
+-> x
+T 652 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu100 $ 515 room=.
+-> e
+T 653 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 99 $ 515 room=.
+-> e
+T 654 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 98 $ 515 room=.
+-> n
+T 655 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 97 $ 515 room=.
+-> e
+T 656 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 96 $ 515 room=.
+-> w
+T 657 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 95 $ 515 room=.
+-> s
+T 658 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 94 $ 515 room=.
+-> w
+T 659 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 93 $ 515 room=.
+-> w
+T 660 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 92 $ 515 room=.
+-> s
+T 661 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 91 $ 515 room=.
+-> e
+T 662 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 90 $ 515 room=.
+-> s
+T 663 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 89 $ 515 room=.
+-> w
+T 664 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 88 $ 515 room=.
+-> n
+T 665 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 87 $ 515 room=.
+-> n
+T 666 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 86 $ 515 room=.
+-> e
+T 667 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 85 $ 515 room=.
+-> e
+T 668 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 84 $ 515 room=.
+-> n
+T 669 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 83 $ 515 room=.
+-> e
+T 670 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 82 $ 515 room=.
+-> w
+T 671 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 81 $ 515 room=.
+-> s
+T 672 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 80 $ 515 room=.
+-> s
+T 673 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 79 $ 515 room=V
+-> w
+T 674 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 78 $ 515 room=.
+-> n
+T 675 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 77 $ 515 room=.
+-> w
+T 676 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 76 $ 515 room=.
+-> n
+T 677 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 75 $ 515 room=.
+-> w
+T 678 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 74 $ 515 room=.
+-> s
+T 679 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 73 $ 515 room=.
+-> s
+T 680 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 72 $ 515 room=.
+-> e
+T 681 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 71 $ 515 room=.
+-> n
+T 682 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 70 $ 515 room=.
+-> e
+T 683 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 69 $ 515 room=.
+-> e
+T 684 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 68 $ 515 room=.
+-> n
+T 685 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 67 $ 515 room=.
+-> e
+T 686 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 66 $ 515 room=.
+-> w
+T 687 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 65 $ 515 room=.
+-> s
+T 688 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 64 $ 515 room=.
+-> w
+T 689 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 63 $ 515 room=.
+-> s
+T 690 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 40/40 MP 0/0 Hu 62 $ 515 room=.
+-> e
+T 691 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 61 $ 515 room=V
+-> s
+T 692 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 60 $ 515 room=.
+-> e
+T 693 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 59 $ 515 room=.
+-> n
+T 694 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 40/40 MP 0/0 Hu 58 $ 515 room=.
+-> e
+T 695 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 40/40 MP 0/0 Hu 57 $ 515 room=.
+-> s
+T 696 mode=game_loop           Beorn the Wanderer(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 56 $ 515 room=.
+-> e
+T 697 mode=combat_mode         Beorn the Wanderer(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 55 $ 515 room=M vs Kobold(L1 HP20/20)
+-> f
+T 698 mode=combat_mode         Beorn the Wanderer(hum) F2@(14,11) HP 39/40 MP 0/0 Hu 55 $ 515 room=M vs Kobold(L1 HP20/20)
+-> a
+T 699 mode=combat_mode         Beorn the Wanderer(hum) F2@(14,11) HP 38/40 MP 0/0 Hu 55 $ 515 room=M vs Kobold(L1 HP20/20)
+-> f
+T 700 mode=flee_direction_mode Beorn the Wanderer(hum) F2@(14,11) HP 38/40 MP 0/0 Hu 55 $ 515 room=M
+-> n
+T 701 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 38/40 MP 0/0 Hu 55 $ 515 room=.
+-> e
+T 702 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 38/40 MP 0/0 Hu 54 $ 515 room=.
+-> e
+T 703 mode=combat_mode         Beorn the Wanderer(hum) F2@(16,10) HP 38/40 MP 0/0 Hu 53 $ 515 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 704 mode=combat_victory      Beorn the Wanderer(hum) F2@(16,10) HP 38/50 MP 0/0 Hu 53 $ 527 room=.
+-> back
+T 705 mode=game_loop           Beorn the Wanderer(hum) F2@(16,10) HP 38/50 MP 0/0 Hu 53 $ 527 room=.
+-> s
+T 706 mode=game_loop           Beorn the Wanderer(hum) F2@(16,11) HP 38/50 MP 0/0 Hu 52 $ 527 room=.
+-> s
+T 707 mode=game_loop           Beorn the Wanderer(hum) F2@(16,12) HP 38/50 MP 0/0 Hu 51 $ 527 room=.
+-> s
+T 708 mode=library_mode        Beorn the Wanderer(hum) F2@(16,13) HP 38/50 MP 0/0 Hu 50 $ 527 room=L
+-> r
+T 709 mode=library_read_decision_mode Beorn the Wanderer(hum) F2@(16,13) HP 38/50 MP 0/0 Hu 50 $ 527 room=L
+-> y
+T 710 mode=game_loop           Beorn the Wanderer(hum) F2@(16,13) HP 38/50 MP 0/0 Hu 50 $ 527 room=.
+-> w
+T 711 mode=game_loop           Beorn the Wanderer(hum) F2@(15,13) HP 38/50 MP 0/0 Hu 49 $ 527 room=.
+-> i
+T 712 mode=inventory           Beorn the Wanderer(hum) F2@(15,13) HP 38/50 MP 0/0 Hu 49 $ 527 room=.
+-> u5
+T 713 mode=inventory           Beorn the Wanderer(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> x
+T 714 mode=game_loop           Beorn the Wanderer(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> i
+T 715 mode=inventory           Beorn the Wanderer(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> eat1
+T 716 mode=inventory           Beorn the Wanderer(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> x
+T 717 mode=game_loop           Beorn the Wanderer(hum) F2@(15,13) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> n
+T 718 mode=game_loop           Beorn the Wanderer(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 98 $ 527 room=.
+-> n
+T 719 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 50/50 MP 0/0 Hu 97 $ 527 room=.
+-> n
+T 720 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 50/50 MP 0/0 Hu 96 $ 527 room=.
+-> w
+T 721 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 50/50 MP 0/0 Hu 95 $ 527 room=.
+-> w
+T 722 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 94 $ 527 room=.
+-> w
+T 723 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 93 $ 527 room=.
+-> w
+T 724 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 92 $ 527 room=V
+-> n
+T 725 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 91 $ 527 room=.
+-> n
+T 726 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 90 $ 527 room=.
+-> e
+T 727 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 89 $ 527 room=.
+-> w
+T 728 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 88 $ 527 room=.
+-> s
+T 729 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 87 $ 527 room=.
+-> w
+T 730 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 86 $ 527 room=.
+-> w
+T 731 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 85 $ 527 room=.
+-> n
+T 732 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu 84 $ 527 room=.
+-> w
+T 733 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 83 $ 527 room=.
+-> s
+T 734 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 82 $ 527 room=.
+-> s
+T 735 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 81 $ 527 room=.
+-> e
+T 736 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 80 $ 527 room=.
+-> n
+T 737 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 79 $ 527 room=.
+-> e
+T 738 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 78 $ 527 room=.
+-> e
+T 739 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 77 $ 527 room=.
+-> n
+T 740 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 76 $ 527 room=.
+-> e
+T 741 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 75 $ 527 room=.
+-> w
+T 742 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 74 $ 527 room=.
+-> s
+T 743 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 73 $ 527 room=.
+-> s
+T 744 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 72 $ 527 room=V
+-> w
+T 745 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 71 $ 527 room=.
+-> n
+T 746 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 70 $ 527 room=.
+-> w
+T 747 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 69 $ 527 room=.
+-> n
+T 748 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu 68 $ 527 room=.
+-> w
+T 749 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 67 $ 527 room=.
+-> s
+T 750 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 66 $ 527 room=.
+-> s
+T 751 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 65 $ 527 room=.
+-> e
+T 752 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 64 $ 527 room=.
+-> n
+T 753 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 63 $ 527 room=.
+-> e
+T 754 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 62 $ 527 room=.
+-> e
+T 755 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 61 $ 527 room=.
+-> n
+T 756 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 60 $ 527 room=.
+-> e
+T 757 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 59 $ 527 room=.
+-> w
+T 758 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 58 $ 527 room=.
+-> s
+T 759 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 57 $ 527 room=.
+-> w
+T 760 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 56 $ 527 room=.
+-> w
+T 761 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 55 $ 527 room=.
+-> s
+T 762 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 54 $ 527 room=.
+-> e
+T 763 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 53 $ 527 room=.
+-> e
+T 764 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 52 $ 527 room=V
+-> n
+T 765 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 51 $ 527 room=.
+-> n
+T 766 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 50 $ 527 room=.
+-> e
+T 767 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> i
+T 768 mode=inventory           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> eat1
+T 769 mode=inventory           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> x
+T 770 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> w
+T 771 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 98 $ 527 room=.
+-> s
+T 772 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 97 $ 527 room=.
+-> s
+T 773 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 96 $ 527 room=V
+-> s
+T 774 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 95 $ 527 room=.
+-> w
+T 775 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 94 $ 527 room=.
+-> n
+T 776 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 93 $ 527 room=.
+-> n
+T 777 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 92 $ 527 room=.
+-> e
+T 778 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 91 $ 527 room=.
+-> n
+T 779 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 90 $ 527 room=.
+-> e
+T 780 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 89 $ 527 room=.
+-> w
+T 781 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 88 $ 527 room=.
+-> s
+T 782 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 87 $ 527 room=.
+-> w
+T 783 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 86 $ 527 room=.
+-> s
+T 784 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 85 $ 527 room=.
+-> w
+T 785 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 84 $ 527 room=.
+-> n
+T 786 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 83 $ 527 room=.
+-> n
+T 787 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu 82 $ 527 room=.
+-> w
+T 788 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 81 $ 527 room=.
+-> s
+T 789 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 80 $ 527 room=.
+-> s
+T 790 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 79 $ 527 room=.
+-> e
+T 791 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 78 $ 527 room=.
+-> n
+T 792 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 77 $ 527 room=.
+-> e
+T 793 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 76 $ 527 room=.
+-> e
+T 794 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 75 $ 527 room=.
+-> n
+T 795 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 74 $ 527 room=.
+-> e
+T 796 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 73 $ 527 room=.
+-> w
+T 797 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 72 $ 527 room=.
+-> s
+T 798 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 71 $ 527 room=.
+-> s
+T 799 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 70 $ 527 room=V
+-> s
+T 800 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 69 $ 527 room=.
+-> e
+T 801 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 68 $ 527 room=.
+-> n
+T 802 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 67 $ 527 room=.
+-> e
+T 803 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 66 $ 527 room=.
+-> e
+T 804 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 50/50 MP 0/0 Hu 65 $ 527 room=.
+-> n
+T 805 mode=game_loop           Beorn the Wanderer(hum) F2@(14, 9) HP 50/50 MP 0/0 Hu 64 $ 527 room=.
+-> n
+T 806 mode=game_loop           Beorn the Wanderer(hum) F2@(14, 8) HP 50/50 MP 0/0 Hu 63 $ 527 room=.
+-> e
+T 807 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 8) HP 50/50 MP 0/0 Hu 62 $ 527 room=.
+-> s
+T 808 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 9) HP 50/50 MP 0/0 Hu 61 $ 527 room=.
+-> s
+T 809 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 50/50 MP 0/0 Hu 60 $ 527 room=.
+-> w
+T 810 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 50/50 MP 0/0 Hu 59 $ 527 room=.
+-> w
+T 811 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 58 $ 527 room=.
+-> w
+T 812 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 57 $ 527 room=.
+-> w
+T 813 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 56 $ 527 room=V
+-> n
+T 814 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 55 $ 527 room=.
+-> n
+T 815 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 54 $ 527 room=.
+-> e
+T 816 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 53 $ 527 room=.
+-> w
+T 817 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 52 $ 527 room=.
+-> s
+T 818 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 51 $ 527 room=.
+-> s
+T 819 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 50 $ 527 room=V
+-> e
+T 820 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> i
+T 821 mode=inventory           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 49 $ 527 room=.
+-> eat1
+T 822 mode=inventory           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> x
+T 823 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 99 $ 527 room=.
+-> e
+T 824 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 98 $ 527 room=.
+-> s
+T 825 mode=game_loop           Beorn the Wanderer(hum) F2@(13,11) HP 50/50 MP 0/0 Hu 97 $ 527 room=.
+-> e
+T 826 mode=combat_mode         Beorn the Wanderer(hum) F2@(14,11) HP 50/50 MP 0/0 Hu 96 $ 527 room=M vs Kobold(L1 HP20/20)
+-> a
+T 827 mode=combat_mode         Beorn the Wanderer(hum) F2@(14,11) HP 49/50 MP 0/0 Hu 96 $ 527 room=M vs Kobold(L1 HP20/20)
+-> a
+T 828 mode=combat_victory      Beorn the Wanderer(hum) F2@(14,11) HP 49/50 MP 0/0 Hu 96 $ 541 room=.
+-> back
+T 829 mode=game_loop           Beorn the Wanderer(hum) F2@(14,11) HP 49/50 MP 0/0 Hu 96 $ 541 room=.
+-> n
+T 830 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 49/50 MP 0/0 Hu 95 $ 541 room=.
+-> l
+T 831 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 49/50 MP 0/0 Hu 95 $ 541 room=.
+-> e
+T 832 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 50/50 MP 0/0 Hu 94 $ 541 room=.
+-> s
+T 833 mode=game_loop           Beorn the Wanderer(hum) F2@(15,11) HP 50/50 MP 0/0 Hu 93 $ 541 room=.
+-> s
+T 834 mode=game_loop           Beorn the Wanderer(hum) F2@(15,12) HP 50/50 MP 0/0 Hu 92 $ 541 room=.
+-> w
+T 835 mode=game_loop           Beorn the Wanderer(hum) F2@(14,12) HP 50/50 MP 0/0 Hu 91 $ 541 room=O
+-> n
+T 836 mode=game_loop           Beorn the Wanderer(hum) F2@(14,11) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> n
+T 837 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> w
+T 838 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 88 $ 541 room=.
+-> w
+T 839 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 87 $ 541 room=.
+-> w
+T 840 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 86 $ 541 room=V
+-> i
+T 841 mode=inventory           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 86 $ 541 room=V
+-> eat2
+T 842 mode=inventory           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 91 $ 541 room=V
+-> x
+T 843 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 91 $ 541 room=V
+-> n
+T 844 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> n
+T 845 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> e
+T 846 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 88 $ 541 room=.
+-> w
+T 847 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 87 $ 541 room=.
+-> s
+T 848 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 86 $ 541 room=.
+-> w
+T 849 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 85 $ 541 room=.
+-> w
+T 850 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 84 $ 541 room=.
+-> l
+T 851 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 84 $ 541 room=.
+-> n
+T 852 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu 83 $ 541 room=.
+-> w
+T 853 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 82 $ 541 room=.
+-> s
+T 854 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 81 $ 541 room=.
+-> s
+T 855 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 80 $ 541 room=.
+-> e
+T 856 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 79 $ 541 room=.
+-> n
+T 857 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 78 $ 541 room=.
+-> e
+T 858 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 77 $ 541 room=.
+-> e
+T 859 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 76 $ 541 room=.
+-> n
+T 860 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 75 $ 541 room=.
+-> l
+T 861 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 75 $ 541 room=.
+-> e
+T 862 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 74 $ 541 room=.
+-> w
+T 863 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 73 $ 541 room=.
+-> s
+T 864 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 72 $ 541 room=.
+-> s
+T 865 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 71 $ 541 room=V
+-> e
+T 866 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 70 $ 541 room=.
+-> s
+T 867 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 69 $ 541 room=.
+-> w
+T 868 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 68 $ 541 room=.
+-> w
+T 869 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 67 $ 541 room=.
+-> n
+T 870 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 66 $ 541 room=.
+-> l
+T 871 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 66 $ 541 room=.
+-> n
+T 872 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 65 $ 541 room=.
+-> e
+T 873 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 64 $ 541 room=.
+-> n
+T 874 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 63 $ 541 room=.
+-> e
+T 875 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 62 $ 541 room=.
+-> w
+T 876 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 61 $ 541 room=.
+-> s
+T 877 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 60 $ 541 room=.
+-> s
+T 878 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 59 $ 541 room=V
+-> e
+T 879 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 58 $ 541 room=.
+-> s
+T 880 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 57 $ 541 room=.
+-> l
+T 881 mode=game_loop           Beorn the Wanderer(hum) F2@(12,11) HP 50/50 MP 0/0 Hu 57 $ 541 room=.
+-> e
+T 882 mode=game_loop           Beorn the Wanderer(hum) F2@(13,11) HP 50/50 MP 0/0 Hu 56 $ 541 room=.
+-> n
+T 883 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 55 $ 541 room=.
+-> e
+T 884 mode=game_loop           Beorn the Wanderer(hum) F2@(14,10) HP 50/50 MP 0/0 Hu 54 $ 541 room=.
+-> e
+T 885 mode=game_loop           Beorn the Wanderer(hum) F2@(15,10) HP 50/50 MP 0/0 Hu 53 $ 541 room=.
+-> n
+T 886 mode=game_loop           Beorn the Wanderer(hum) F2@(15, 9) HP 50/50 MP 0/0 Hu 52 $ 541 room=.
+-> w
+T 887 mode=game_loop           Beorn the Wanderer(hum) F2@(14, 9) HP 50/50 MP 0/0 Hu 51 $ 541 room=.
+-> w
+T 888 mode=game_loop           Beorn the Wanderer(hum) F2@(13, 9) HP 50/50 MP 0/0 Hu 50 $ 541 room=.
+-> s
+T 889 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> i
+T 890 mode=inventory           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> eat1
+T 891 mode=inventory           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> x
+T 892 mode=game_loop           Beorn the Wanderer(hum) F2@(13,10) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> w
+T 893 mode=game_loop           Beorn the Wanderer(hum) F2@(12,10) HP 50/50 MP 0/0 Hu 98 $ 541 room=.
+-> w
+T 894 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 97 $ 541 room=V
+-> n
+T 895 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 96 $ 541 room=.
+-> n
+T 896 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 95 $ 541 room=.
+-> e
+T 897 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 94 $ 541 room=.
+-> w
+T 898 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 93 $ 541 room=.
+-> s
+T 899 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 92 $ 541 room=.
+-> w
+T 900 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 91 $ 541 room=.
+-> l
+T 901 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 91 $ 541 room=.
+-> s
+T 902 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> w
+T 903 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> n
+T 904 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 88 $ 541 room=.
+-> w
+T 905 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 87 $ 541 room=.
+-> n
+T 906 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 86 $ 541 room=.
+-> w
+T 907 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 85 $ 541 room=.
+-> w
+T 908 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 84 $ 541 room=.
+-> w
+T 909 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 50/50 MP 0/0 Hu 83 $ 541 room=.
+-> n
+T 910 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 7) HP 50/50 MP 0/0 Hu 82 $ 541 room=.
+-> l
+T 911 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 7) HP 50/50 MP 0/0 Hu 82 $ 541 room=.
+-> w
+T 912 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 7) HP 50/50 MP 0/0 Hu 81 $ 541 room=.
+-> s
+T 913 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 80 $ 541 room=.
+-> w
+T 914 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 8) HP 50/50 MP 0/0 Hu 79 $ 541 room=.
+-> n
+T 915 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 7) HP 50/50 MP 0/0 Hu 78 $ 541 room=.
+-> w
+T 916 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 50/50 MP 0/0 Hu 77 $ 541 room=.
+-> s
+T 917 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 8) HP 50/50 MP 0/0 Hu 76 $ 541 room=.
+-> n
+T 918 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 50/50 MP 0/0 Hu 75 $ 541 room=.
+-> n
+T 919 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 6) HP 50/50 MP 0/0 Hu 74 $ 541 room=.
+-> n
+T 920 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 5) HP 50/50 MP 0/0 Hu 73 $ 541 room=.
+-> l
+T 921 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 5) HP 50/50 MP 0/0 Hu 73 $ 541 room=.
+-> w
+T 922 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 5) HP 50/50 MP 0/0 Hu 72 $ 541 room=.
+-> n
+T 923 mode=game_loop           Beorn the Wanderer(hum) F2@( 1, 4) HP 50/50 MP 0/0 Hu 71 $ 541 room=.
+-> e
+T 924 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 4) HP 50/50 MP 0/0 Hu 70 $ 541 room=.
+-> e
+T 925 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 4) HP 50/50 MP 0/0 Hu 69 $ 541 room=.
+-> s
+T 926 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 5) HP 50/50 MP 0/0 Hu 68 $ 541 room=.
+-> e
+T 927 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 50/50 MP 0/0 Hu 67 $ 541 room=.
+-> s
+T 928 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 6) HP 50/50 MP 0/0 Hu 66 $ 541 room=.
+-> s
+T 929 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 7) HP 50/50 MP 0/0 Hu 65 $ 541 room=.
+-> s
+T 930 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 64 $ 541 room=.
+-> l
+T 931 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 64 $ 541 room=.
+-> e
+T 932 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 50/50 MP 0/0 Hu 63 $ 541 room=.
+-> e
+T 933 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 62 $ 541 room=.
+-> e
+T 934 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 61 $ 541 room=.
+-> e
+T 935 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 60 $ 541 room=.
+-> s
+T 936 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 59 $ 541 room=.
+-> e
+T 937 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 58 $ 541 room=.
+-> e
+T 938 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 57 $ 541 room=.
+-> e
+T 939 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 56 $ 541 room=.
+-> n
+T 940 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 55 $ 541 room=.
+-> l
+T 941 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 55 $ 541 room=.
+-> e
+T 942 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 54 $ 541 room=.
+-> w
+T 943 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 53 $ 541 room=.
+-> s
+T 944 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 52 $ 541 room=.
+-> w
+T 945 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 51 $ 541 room=.
+-> s
+T 946 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 50 $ 541 room=.
+-> w
+T 947 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> i
+T 948 mode=inventory           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> eat1
+T 949 mode=inventory           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> x
+T 950 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> l
+T 951 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> n
+T 952 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 98 $ 541 room=.
+-> w
+T 953 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 97 $ 541 room=.
+-> s
+T 954 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 96 $ 541 room=.
+-> n
+T 955 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 95 $ 541 room=.
+-> n
+T 956 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 94 $ 541 room=.
+-> n
+T 957 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 93 $ 541 room=.
+-> w
+T 958 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 50/50 MP 0/0 Hu 92 $ 541 room=.
+-> s
+T 959 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 91 $ 541 room=.
+-> w
+T 960 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> l
+T 961 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> n
+T 962 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 7) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> w
+T 963 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 7) HP 50/50 MP 0/0 Hu 88 $ 541 room=.
+-> s
+T 964 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 50/50 MP 0/0 Hu 87 $ 541 room=.
+-> w
+T 965 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 86 $ 541 room=.
+-> s
+T 966 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 9) HP 50/50 MP 0/0 Hu 85 $ 541 room=.
+-> w
+T 967 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 9) HP 50/50 MP 0/0 Hu 84 $ 541 room=.
+-> n
+T 968 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 8) HP 50/50 MP 0/0 Hu 83 $ 541 room=.
+-> w
+T 969 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 8) HP 50/50 MP 0/0 Hu 82 $ 541 room=.
+-> n
+T 970 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 50/50 MP 0/0 Hu 81 $ 541 room=.
+-> l
+T 971 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 7) HP 50/50 MP 0/0 Hu 81 $ 541 room=.
+-> n
+T 972 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 6) HP 50/50 MP 0/0 Hu 80 $ 541 room=.
+-> n
+T 973 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 5) HP 50/50 MP 0/0 Hu 79 $ 541 room=.
+-> n
+T 974 mode=game_loop           Beorn the Wanderer(hum) F2@( 2, 4) HP 50/50 MP 0/0 Hu 78 $ 541 room=.
+-> e
+T 975 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 4) HP 50/50 MP 0/0 Hu 77 $ 541 room=.
+-> s
+T 976 mode=game_loop           Beorn the Wanderer(hum) F2@( 3, 5) HP 50/50 MP 0/0 Hu 76 $ 541 room=.
+-> e
+T 977 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 5) HP 50/50 MP 0/0 Hu 75 $ 541 room=.
+-> s
+T 978 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 6) HP 50/50 MP 0/0 Hu 74 $ 541 room=.
+-> s
+T 979 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 7) HP 50/50 MP 0/0 Hu 73 $ 541 room=.
+-> s
+T 980 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 72 $ 541 room=.
+-> l
+T 981 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 72 $ 541 room=.
+-> e
+T 982 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 50/50 MP 0/0 Hu 71 $ 541 room=.
+-> e
+T 983 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 70 $ 541 room=.
+-> e
+T 984 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 69 $ 541 room=.
+-> e
+T 985 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 68 $ 541 room=.
+-> s
+T 986 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 67 $ 541 room=.
+-> e
+T 987 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 66 $ 541 room=.
+-> e
+T 988 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 65 $ 541 room=.
+-> e
+T 989 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 64 $ 541 room=.
+-> n
+T 990 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 63 $ 541 room=.
+-> l
+T 991 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 63 $ 541 room=.
+-> e
+T 992 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 62 $ 541 room=.
+-> w
+T 993 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 61 $ 541 room=.
+-> s
+T 994 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 60 $ 541 room=.
+-> s
+T 995 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 59 $ 541 room=V
+-> s
+T 996 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 58 $ 541 room=.
+-> s
+T 997 mode=game_loop           Beorn the Wanderer(hum) F2@(11,12) HP 50/50 MP 0/0 Hu 57 $ 541 room=.
+-> w
+T 998 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 50/50 MP 0/0 Hu 56 $ 541 room=.
+-> n
+T 999 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 55 $ 541 room=.
+-> n
+T1000 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 54 $ 541 room=.
+-> l
+T1001 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 54 $ 541 room=.
+-> n
+T1002 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 53 $ 541 room=.
+-> e
+T1003 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 52 $ 541 room=.
+-> n
+T1004 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 51 $ 541 room=.
+-> e
+T1005 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 50 $ 541 room=.
+-> w
+T1006 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> i
+T1007 mode=inventory           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> eat1
+T1008 mode=inventory           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> x
+T1009 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 99 $ 541 room=.
+-> s
+T1010 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 98 $ 541 room=.
+-> l
+T1011 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 98 $ 541 room=.
+-> w
+T1012 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 97 $ 541 room=.
+-> w
+T1013 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 96 $ 541 room=.
+-> s
+T1014 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 95 $ 541 room=.
+-> w
+T1015 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 94 $ 541 room=.
+-> n
+T1016 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 93 $ 541 room=.
+-> n
+T1017 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 92 $ 541 room=.
+-> w
+T1018 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 91 $ 541 room=.
+-> n
+T1019 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 50/50 MP 0/0 Hu 90 $ 541 room=.
+-> w
+T1020 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 7) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> l
+T1021 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 7) HP 50/50 MP 0/0 Hu 89 $ 541 room=.
+-> s
+T1022 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 88 $ 541 room=.
+-> w
+T1023 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 8) HP 50/50 MP 0/0 Hu 87 $ 541 room=.
+-> w
+T1024 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 8) HP 50/50 MP 0/0 Hu 86 $ 541 room=.
+-> n
+T1025 mode=game_loop           Beorn the Wanderer(hum) F2@( 4, 7) HP 50/50 MP 0/0 Hu 85 $ 541 room=.
+-> e
+T1026 mode=game_loop           Beorn the Wanderer(hum) F2@( 5, 7) HP 50/50 MP 0/0 Hu 84 $ 541 room=.
+-> e
+T1027 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 7) HP 50/50 MP 0/0 Hu 83 $ 541 room=.
+-> s
+T1028 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 82 $ 541 room=.
+-> e
+T1029 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 81 $ 541 room=.
+-> e
+T1030 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 80 $ 541 room=.
+-> l
+T1031 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 80 $ 541 room=.
+-> s
+T1032 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 79 $ 541 room=.
+-> e
+T1033 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 78 $ 541 room=.
+-> e
+T1034 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 77 $ 541 room=.
+-> e
+T1035 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 76 $ 541 room=.
+-> n
+T1036 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 75 $ 541 room=.
+-> e
+T1037 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 74 $ 541 room=.
+-> w
+T1038 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 73 $ 541 room=.
+-> s
+T1039 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 72 $ 541 room=.
+-> w
+T1040 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 71 $ 541 room=.
+-> l
+T1041 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 71 $ 541 room=.
+-> s
+T1042 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 70 $ 541 room=.
+-> s
+T1043 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 69 $ 541 room=.
+-> s
+T1044 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 50/50 MP 0/0 Hu 68 $ 541 room=.
+-> s
+T1045 mode=game_loop           Beorn the Wanderer(hum) F2@(10,13) HP 50/50 MP 0/0 Hu 67 $ 541 room=.
+-> n
+T1046 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 50/50 MP 0/0 Hu 66 $ 541 room=.
+-> e
+T1047 mode=game_loop           Beorn the Wanderer(hum) F2@(11,12) HP 50/50 MP 0/0 Hu 65 $ 541 room=.
+-> n
+T1048 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 50/50 MP 0/0 Hu 64 $ 541 room=.
+-> n
+T1049 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 50/50 MP 0/0 Hu 63 $ 541 room=V
+-> n
+T1050 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 62 $ 541 room=.
+-> l
+T1051 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 62 $ 541 room=.
+-> n
+T1052 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 61 $ 541 room=.
+-> e
+T1053 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 60 $ 541 room=.
+-> w
+T1054 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 59 $ 541 room=.
+-> s
+T1055 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 58 $ 541 room=.
+-> w
+T1056 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 57 $ 541 room=.
+-> w
+T1057 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 56 $ 541 room=.
+-> s
+T1058 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 55 $ 541 room=.
+-> w
+T1059 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 54 $ 541 room=.
+-> n
+T1060 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 53 $ 541 room=.
+-> n
+T1061 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 52 $ 541 room=.
+-> n
+T1062 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 51 $ 541 room=.
+-> w
+T1063 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 50/50 MP 0/0 Hu 50 $ 541 room=.
+-> s
+T1064 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 49 $ 541 room=.
+-> w
+T1065 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 8) HP 50/50 MP 0/0 Hu 48 $ 541 room=.
+-> n
+T1066 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 7) HP 50/50 MP 0/0 Hu 47 $ 541 room=.
+-> n
+T1067 mode=game_loop           Beorn the Wanderer(hum) F2@( 6, 6) HP 50/50 MP 0/0 Hu 46 $ 541 room=.
+-> e
+T1068 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 6) HP 50/50 MP 0/0 Hu 45 $ 541 room=.
+-> s
+T1069 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 50/50 MP 0/0 Hu 44 $ 541 room=.
+-> s
+T1070 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 50/50 MP 0/0 Hu 43 $ 541 room=.
+-> e
+T1071 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 42 $ 541 room=.
+-> s
+T1072 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 41 $ 541 room=.
+-> e
+T1073 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 40 $ 541 room=.
+-> e
+T1074 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 39 $ 541 room=.
+-> e
+T1075 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 38 $ 541 room=.
+-> n
+T1076 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 37 $ 541 room=.
+-> e
+T1077 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 36 $ 541 room=.
+-> w
+T1078 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 35 $ 541 room=.
+-> s
+T1079 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 34 $ 541 room=.
+-> w
+T1080 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 33 $ 541 room=.
+-> w
+T1081 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 32 $ 541 room=.
+-> s
+T1082 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 31 $ 541 room=.
+-> s
+T1083 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,11) HP 50/50 MP 0/0 Hu 30 $ 541 room=.
+-> e
+T1084 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 50/50 MP 0/0 Hu 29 $ 541 room=.
+-> n
+T1085 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 28 $ 541 room=.
+-> n
+T1086 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 27 $ 541 room=.
+-> e
+T1087 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 26 $ 541 room=.
+-> n
+T1088 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 25 $ 541 room=.
+-> e
+T1089 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu 24 $ 541 room=.
+-> w
+T1090 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu 23 $ 541 room=.
+-> s
+T1091 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 22 $ 541 room=.
+-> w
+T1092 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 21 $ 541 room=.
+-> s
+T1093 mode=game_loop           Beorn the Wanderer(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 20 $ 541 room=.
+-> w
+T1094 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 19 $ 541 room=.
+-> n
+T1095 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 18 $ 541 room=.
+-> n
+T1096 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu 17 $ 541 room=.
+-> w
+T1097 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 16 $ 541 room=.
+-> s
+T1098 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 15 $ 541 room=.
+-> s
+T1099 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 50/50 MP 0/0 Hu 14 $ 541 room=.
+-> e
+T1100 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 13 $ 541 room=.
+-> n
+T1101 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 12 $ 541 room=.
+-> e
+T1102 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 11 $ 541 room=.
+-> e
+T1103 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu 10 $ 541 room=.
+-> n
+T1104 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu  9 $ 541 room=.
+-> e
+T1105 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 50/50 MP 0/0 Hu  8 $ 541 room=.
+-> w
+T1106 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu  7 $ 541 room=.
+-> s
+T1107 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 50/50 MP 0/0 Hu  6 $ 541 room=.
+-> w
+T1108 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu  5 $ 541 room=.
+-> w
+T1109 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu  4 $ 541 room=.
+-> n
+T1110 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 8) HP 50/50 MP 0/0 Hu  3 $ 541 room=.
+-> w
+T1111 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu  2 $ 541 room=.
+-> s
+T1112 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu  1 $ 541 room=.
+-> s
+T1113 mode=game_loop           Beorn the Wanderer(hum) F2@( 8,10) HP 48/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1114 mode=game_loop           Beorn the Wanderer(hum) F2@( 9,10) HP 46/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1115 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 44/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1116 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 42/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1117 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 40/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1118 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 38/50 MP 0/0 Hu  0 $ 541 room=.
+-> i
+T1119 mode=inventory           Beorn the Wanderer(hum) F2@(11, 8) HP 38/50 MP 0/0 Hu  0 $ 541 room=.
+-> u5
+T1120 mode=inventory           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu  0 $ 541 room=.
+-> x
+T1121 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 50/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1122 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 48/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1123 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 46/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1124 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 44/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1125 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 42/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1126 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 40/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1127 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 38/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1128 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 36/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1129 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 8) HP 34/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1130 mode=game_loop           Beorn the Wanderer(hum) F2@( 7, 7) HP 32/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1131 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 7) HP 30/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1132 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 8) HP 28/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1133 mode=game_loop           Beorn the Wanderer(hum) F2@( 8, 9) HP 26/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1134 mode=game_loop           Beorn the Wanderer(hum) F2@( 9, 9) HP 24/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1135 mode=game_loop           Beorn the Wanderer(hum) F2@(10, 9) HP 22/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1136 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 20/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1137 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 18/50 MP 0/0 Hu  0 $ 541 room=.
+-> e
+T1138 mode=game_loop           Beorn the Wanderer(hum) F2@(12, 8) HP 16/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1139 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 8) HP 14/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1140 mode=game_loop           Beorn the Wanderer(hum) F2@(11, 9) HP 12/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1141 mode=game_loop           Beorn the Wanderer(hum) F2@(11,10) HP 10/50 MP 0/0 Hu  0 $ 541 room=V
+-> s
+T1142 mode=game_loop           Beorn the Wanderer(hum) F2@(11,11) HP 8/50 MP 0/0 Hu  0 $ 541 room=.
+-> s
+T1143 mode=game_loop           Beorn the Wanderer(hum) F2@(11,12) HP 6/50 MP 0/0 Hu  0 $ 541 room=.
+-> w
+T1144 mode=game_loop           Beorn the Wanderer(hum) F2@(10,12) HP 4/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1145 mode=game_loop           Beorn the Wanderer(hum) F2@(10,11) HP 2/50 MP 0/0 Hu  0 $ 541 room=.
+-> n
+T1146 mode=death_screen        Beorn the Wanderer(hum) F2@(10,10) HP 0/50 MP 0/0 Hu  0 $ 541 room=.
+
+=== run finished: turns=1146 floor=2 hp=0/50 gold=541 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00719_human.html

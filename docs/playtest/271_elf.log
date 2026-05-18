@@ -1,0 +1,662 @@
+T   0 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 11 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Celeborn the Lorekeeper drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> s
+T   5 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  The Goblin strikes first!
+-> a
+T   6 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 348 room=.
+  You defeated the Goblin!
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 8 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Goblin meat.
+-> back
+T   7 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 348 room=.
+-> l
+T   8 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 348 room=.
+-> e
+T   9 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 348 room=V
+-> b13
+T  10 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 338 room=V
+-> b4
+T  11 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 288 room=V
+-> b4
+T  12 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 238 room=V
+-> b4
+T  13 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 208 room=V
+-> b8
+T  14 mode=vendor_shop         Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 178 room=V
+-> x
+T  15 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 178 room=V
+-> l
+T  16 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 178 room=V
+-> n
+T  17 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 178 room=M vs Lichen(L0 HP10/10)
+-> a
+T  18 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 97 $ 178 room=M vs Lichen(L0 HP10/10)
+-> a
+T  19 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 97 $ 178 room=M vs Lichen(L0 HP10/10)
+-> a
+T  20 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 26/28 MP 0/0 Hu 97 $ 178 room=M vs Lichen(L0 HP10/10)
+-> a
+T  21 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 97 $ 178 room=M vs Lichen(L0 HP10/10)
+-> a
+T  22 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 97 $ 181 room=.
+-> back
+T  23 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 97 $ 181 room=.
+-> s
+T  24 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 25/28 MP 0/0 Hu 96 $ 181 room=V
+-> s
+T  25 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 26/28 MP 0/0 Hu 95 $ 181 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  26 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 25/28 MP 0/0 Hu 95 $ 181 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  27 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 24/28 MP 0/0 Hu 95 $ 181 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  28 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 24/28 MP 0/0 Hu 95 $ 181 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  29 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 24/28 MP 0/0 Hu 95 $ 188 room=.
+-> back
+T  30 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 24/28 MP 0/0 Hu 95 $ 188 room=.
+-> l
+T  31 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 24/28 MP 0/0 Hu 95 $ 188 room=.
+-> e
+T  32 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 3, 3) HP 24/28 MP 0/0 Hu 94 $ 188 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  33 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 3, 3) HP 24/28 MP 0/0 Hu 94 $ 188 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  34 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 3, 3) HP 24/28 MP 0/0 Hu 94 $ 197 room=.
+-> back
+T  35 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 3) HP 24/28 MP 0/0 Hu 94 $ 197 room=.
+-> n
+T  36 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 93 $ 197 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  37 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 24/28 MP 0/0 Hu 93 $ 198 room=.
+-> back
+T  38 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 24/28 MP 0/0 Hu 93 $ 198 room=.
+-> e
+T  39 mode=garden_mode         Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 24/28 MP 0/0 Hu 92 $ 198 room=G
+-> h
+T  40 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 24/28 MP 0/0 Hu 92 $ 198 room=.
+-> e
+T  41 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 2) HP 25/28 MP 0/0 Hu 91 $ 198 room=.
+-> n
+T  42 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 90 $ 198 room=M vs Kobold(L0 HP8/8)
+-> a
+T  43 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 90 $ 207 room=.
+-> back
+T  44 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 90 $ 207 room=.
+-> w
+T  45 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 26/28 MP 0/0 Hu 89 $ 207 room=.
+-> i
+T  46 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 26/28 MP 0/0 Hu 89 $ 207 room=.
+-> u3
+T  47 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 89 $ 207 room=.
+-> x
+T  48 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 89 $ 207 room=.
+-> i
+T  49 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 89 $ 207 room=.
+-> eat4
+T  50 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 94 $ 207 room=.
+-> x
+T  51 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 94 $ 207 room=.
+-> s
+T  52 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 93 $ 207 room=.
+-> w
+T  53 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 92 $ 207 room=.
+-> s
+T  54 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 207 room=.
+-> w
+T  55 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 90 $ 207 room=.
+-> n
+T  56 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 89 $ 207 room=V
+-> w
+T  57 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 207 room=.
+-> i
+T  58 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 207 room=.
+-> eat3
+T  59 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 207 room=.
+-> x
+T  60 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 207 room=.
+-> n
+T  61 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 207 room=E
+-> e
+T  62 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 207 room=.
+-> s
+T  63 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 207 room=V
+-> i
+T  64 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 207 room=V
+-> eat3
+T  65 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 207 room=V
+-> x
+T  66 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 207 room=V
+-> e
+T  67 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 95 $ 207 room=.
+-> e
+T  68 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 94 $ 207 room=.
+-> e
+T  69 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 93 $ 207 room=.
+-> e
+T  70 mode=dungeon_mode        Celeborn the Lorekeeper(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 92 $ 207 room=N
+-> u
+T  71 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 92 $ 207 room=N
+-> l
+T  72 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 92 $ 207 room=N
+-> s
+T  73 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 91 $ 207 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  74 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 91 $ 207 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  75 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 91 $ 308 room=.
+-> back
+T  76 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 91 $ 308 room=.
+-> s
+T  77 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 90 $ 308 room=.
+-> l
+T  78 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 90 $ 308 room=.
+-> e
+T  79 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 89 $ 308 room=.
+-> l
+T  80 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 89 $ 308 room=.
+-> s
+T  81 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 88 $ 308 room=.
+-> s
+T  82 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 308 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  83 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 311 room=.
+-> back
+T  84 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 311 room=.
+-> l
+T  85 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 311 room=.
+-> e
+T  86 mode=library_mode        Celeborn the Lorekeeper(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 86 $ 311 room=L
+-> r
+T  87 mode=library_read_decision_mode Celeborn the Lorekeeper(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 86 $ 311 room=L
+-> y
+T  88 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 86 $ 411 room=.
+-> e
+T  89 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 85 $ 411 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  90 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 85 $ 417 room=.
+-> back
+T  91 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 85 $ 417 room=.
+-> l
+T  92 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 85 $ 417 room=.
+-> s
+T  93 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 84 $ 417 room=.
+-> e
+T  94 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 83 $ 417 room=.
+-> n
+T  95 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 82 $ 417 room=.
+-> n
+T  96 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 81 $ 417 room=.
+-> w
+T  97 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 80 $ 417 room=.
+-> n
+T  98 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 79 $ 417 room=.
+-> n
+T  99 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 78 $ 417 room=N
+-> n
+T 100 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 77 $ 417 room=.
+-> w
+T 101 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 76 $ 417 room=.
+-> s
+T 102 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 75 $ 417 room=.
+-> w
+T 103 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 74 $ 417 room=.
+-> n
+T 104 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 73 $ 417 room=.
+-> s
+T 105 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 72 $ 417 room=.
+-> w
+T 106 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 71 $ 417 room=.
+-> w
+T 107 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 70 $ 417 room=V
+-> w
+T 108 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 69 $ 417 room=.
+-> n
+T 109 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 417 room=E
+-> e
+T 110 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 67 $ 417 room=.
+-> s
+T 111 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 66 $ 417 room=V
+-> e
+T 112 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 65 $ 417 room=.
+-> e
+T 113 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 64 $ 417 room=.
+-> e
+T 114 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 63 $ 417 room=.
+-> e
+T 115 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 62 $ 417 room=N
+-> s
+T 116 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 61 $ 417 room=.
+-> s
+T 117 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 60 $ 417 room=.
+-> e
+T 118 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 59 $ 417 room=.
+-> s
+T 119 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 58 $ 417 room=.
+-> s
+T 120 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 57 $ 417 room=.
+-> e
+T 121 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 56 $ 417 room=.
+-> e
+T 122 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 55 $ 417 room=.
+-> s
+T 123 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP35/35)
+-> a
+T 124 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP35/35)
+-> a
+T 125 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 27/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP35/35)
+-> a
+T 126 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 26/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP35/35)
+-> a
+T 127 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 25/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP14/35)
+-> a
+T 128 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 24/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP14/35)
+-> a
+T 129 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 23/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP14/35)
+-> a
+T 130 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 22/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP14/35)
+-> f
+T 131 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 21/28 MP 0/0 Hu 54 $ 417 room=M vs Zombie(L0 HP14/35)
+-> a
+T 132 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 21/28 MP 0/0 Hu 54 $ 526 room=.
+-> back
+T 133 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 21/28 MP 0/0 Hu 54 $ 526 room=.
+-> i
+T 134 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 21/28 MP 0/0 Hu 54 $ 526 room=.
+-> u3
+T 135 mode=inventory           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 54 $ 526 room=.
+-> x
+T 136 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 54 $ 526 room=.
+-> l
+T 137 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 54 $ 526 room=.
+-> e
+T 138 mode=altar_mode          Celeborn the Lorekeeper(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 53 $ 526 room=A
+-> pray
+T 139 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu100 $ 526 room=.
+-> l
+T 140 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu100 $ 526 room=.
+-> s
+T 141 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 8) HP 28/28 MP 0/0 Hu 99 $ 526 room=.
+-> l
+T 142 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 8) HP 28/28 MP 0/0 Hu 99 $ 526 room=.
+-> s
+T 143 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 9) HP 28/28 MP 0/0 Hu 98 $ 526 room=.
+-> w
+T 144 mode=chest_mode          Celeborn the Lorekeeper(elf) F1@( 9, 9) HP 28/28 MP 0/0 Hu 97 $ 526 room=C
+-> n
+T 145 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 8) HP 28/28 MP 0/0 Hu 96 $ 526 room=M vs Kobold(L0 HP8/8)
+-> a
+T 146 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@( 9, 8) HP 27/28 MP 0/0 Hu 96 $ 526 room=M vs Kobold(L0 HP8/8)
+-> a
+T 147 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@( 9, 8) HP 27/28 MP 0/0 Hu 96 $ 533 room=.
+-> back
+T 148 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 8) HP 27/28 MP 0/0 Hu 96 $ 533 room=.
+-> n
+T 149 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 27/28 MP 0/0 Hu 95 $ 533 room=.
+-> n
+T 150 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 94 $ 533 room=.
+-> n
+T 151 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 5) HP 28/28 MP 0/0 Hu 93 $ 533 room=.
+-> n
+T 152 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 92 $ 533 room=.
+-> n
+T 153 mode=library_mode        Celeborn the Lorekeeper(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 91 $ 533 room=L
+-> r
+T 154 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 91 $ 533 room=.
+-> n
+T 155 mode=pool_mode           Celeborn the Lorekeeper(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 90 $ 533 room=P
+-> dr
+T 156 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 2) HP 28/28 MP 0/0 Hu 90 $ 533 room=.
+-> e
+T 157 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 158 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 159 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 160 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(10, 2) HP 26/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 161 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(10, 2) HP 25/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 162 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@(10, 2) HP 25/28 MP 0/0 Hu 89 $ 535 room=.
+-> back
+T 163 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 25/28 MP 0/0 Hu 89 $ 535 room=.
+-> i
+T 164 mode=inventory           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 25/28 MP 0/0 Hu 89 $ 535 room=.
+-> u3
+T 165 mode=inventory           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 89 $ 535 room=.
+-> x
+T 166 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 89 $ 535 room=.
+-> i
+T 167 mode=inventory           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 89 $ 535 room=.
+-> eat1
+T 168 mode=inventory           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 94 $ 535 room=.
+-> x
+T 169 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 94 $ 535 room=.
+-> l
+T 170 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 2) HP 28/28 MP 0/0 Hu 94 $ 535 room=.
+-> s
+T 171 mode=pool_mode           Celeborn the Lorekeeper(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 93 $ 535 room=P
+-> dr
+T 172 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 93 $ 535 room=.
+-> l
+T 173 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 93 $ 535 room=.
+-> e
+T 174 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 3) HP 28/28 MP 0/0 Hu 92 $ 535 room=M vs Stirge(L0 HP6/6)
+-> a
+T 175 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 3) HP 24/28 MP 0/0 Hu 92 $ 535 room=M vs Stirge(L0 HP6/6)
+-> f
+T 176 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 3) HP 24/28 MP 0/0 Hu 92 $ 535 room=M vs Stirge(L0 HP6/6)
+-> f
+T 177 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 3) HP 24/28 MP 0/0 Hu 92 $ 535 room=M vs Stirge(L0 HP6/6)
+-> a
+T 178 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 3) HP 20/28 MP 0/0 Hu 92 $ 535 room=M vs Stirge(L0 HP6/6)
+-> a
+T 179 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@(11, 3) HP 20/38 MP 0/0 Hu 92 $ 542 room=.
+-> back
+T 180 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 3) HP 20/38 MP 0/0 Hu 92 $ 542 room=.
+-> l
+T 181 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 3) HP 20/38 MP 0/0 Hu 92 $ 542 room=.
+-> s
+T 182 mode=dungeon_mode        Celeborn the Lorekeeper(elf) F1@(11, 4) HP 20/38 MP 0/0 Hu 91 $ 542 room=N
+-> u
+T 183 mode=dungeon_unlocked_mode Celeborn the Lorekeeper(elf) F1@(11, 4) HP 20/38 MP 0/0 Hu 91 $ 542 room=N
+-> r
+T 184 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 4) HP 20/38 MP 0/0 Hu 91 $ 833 room=N
+-> l
+T 185 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 4) HP 20/38 MP 0/0 Hu 91 $ 833 room=N
+-> s
+T 186 mode=tomb_mode           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 21/38 MP 0/0 Hu 90 $ 833 room=T
+-> p
+T 187 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 21/38 MP 0/0 Hu 90 $ 833 room=T
+-> i
+T 188 mode=inventory           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 21/38 MP 0/0 Hu 90 $ 833 room=T
+-> u3
+T 189 mode=inventory           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 38/38 MP 0/0 Hu 90 $ 833 room=T
+-> x
+T 190 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 38/38 MP 0/0 Hu 90 $ 833 room=T
+-> l
+T 191 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 5) HP 38/38 MP 0/0 Hu 90 $ 833 room=T
+-> n
+T 192 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 4) HP 38/38 MP 0/0 Hu 89 $ 833 room=N
+-> w
+T 193 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 4) HP 38/38 MP 0/0 Hu 88 $ 833 room=.
+-> n
+T 194 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 3) HP 38/38 MP 0/0 Hu 87 $ 833 room=.
+-> e
+T 195 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 3) HP 38/38 MP 0/0 Hu 86 $ 833 room=.
+-> e
+T 196 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 3) HP 38/38 MP 0/0 Hu 85 $ 833 room=.
+-> e
+T 197 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 84 $ 833 room=.
+-> e
+T 198 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(14, 3) HP 38/38 MP 0/0 Hu 83 $ 833 room=.
+-> n
+T 199 mode=altar_mode          Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu 82 $ 833 room=A
+-> pray
+T 200 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu100 $ 833 room=.
+-> i
+T 201 mode=inventory           Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu100 $ 833 room=.
+-> eat1
+T 202 mode=inventory           Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu100 $ 833 room=.
+-> x
+T 203 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu100 $ 833 room=.
+-> l
+T 204 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu100 $ 833 room=.
+-> w
+T 205 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 99 $ 833 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 206 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 99 $ 833 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 207 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(13, 2) HP 36/38 MP 0/0 Hu 99 $ 833 room=M vs Skeleton(L0 HP6/25)
+-> f
+T 208 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F1@(13, 2) HP 36/38 MP 0/0 Hu 99 $ 833 room=M
+-> w
+T 209 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 2) HP 36/38 MP 0/0 Hu 99 $ 833 room=.
+-> l
+T 210 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 2) HP 36/38 MP 0/0 Hu 99 $ 833 room=.
+-> l
+T 211 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 2) HP 36/38 MP 0/0 Hu 99 $ 833 room=.
+-> n
+T 212 mode=chest_mode          Celeborn the Lorekeeper(elf) F1@(12, 1) HP 36/38 MP 0/0 Hu 98 $ 833 room=C
+-> o
+T 213 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 36/38 MP 0/0 Hu 98 $ 833 room=.
+-> i
+T 214 mode=inventory           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 36/38 MP 0/0 Hu 98 $ 833 room=.
+-> u4
+T 215 mode=inventory           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> x
+T 216 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> i
+T 217 mode=inventory           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> e1
+T 218 mode=inventory           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> x
+T 219 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> l
+T 220 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> l
+T 221 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 38/38 MP 0/0 Hu 98 $ 833 room=.
+-> w
+T 222 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 1) HP 38/38 MP 0/0 Hu 97 $ 833 room=.
+-> s
+T 223 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 2) HP 38/38 MP 0/0 Hu 96 $ 833 room=.
+-> s
+T 224 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 3) HP 38/38 MP 0/0 Hu 95 $ 833 room=.
+-> e
+T 225 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 3) HP 38/38 MP 0/0 Hu 94 $ 833 room=.
+-> e
+T 226 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 93 $ 833 room=.
+-> s
+T 227 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(13, 4) HP 38/38 MP 0/0 Hu 92 $ 833 room=.
+-> s
+T 228 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(13, 5) HP 38/38 MP 0/0 Hu 91 $ 833 room=.
+-> s
+T 229 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(13, 6) HP 38/38 MP 0/0 Hu 90 $ 833 room=.
+-> w
+T 230 mode=chest_mode          Celeborn the Lorekeeper(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 89 $ 833 room=C
+-> o
+T 231 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 6) HP 29/38 MP 0/0 Hu 89 $ 833 room=.
+-> s
+T 232 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 7) HP 29/38 MP 0/0 Hu 88 $ 833 room=.
+-> w
+T 233 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 7) HP 30/38 MP 0/0 Hu 87 $ 833 room=M vs Zombie(L0 HP35/35)
+-> a
+T 234 mode=combat_mode         Celeborn the Lorekeeper(elf) F1@(11, 7) HP 29/38 MP 0/0 Hu 87 $ 833 room=M vs Zombie(L0 HP12/35)
+-> a
+T 235 mode=combat_victory      Celeborn the Lorekeeper(elf) F1@(11, 7) HP 29/38 MP 0/0 Hu 87 $ 843 room=.
+-> back
+T 236 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 7) HP 29/38 MP 0/0 Hu 87 $ 843 room=.
+-> w
+T 237 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 7) HP 29/38 MP 0/0 Hu 86 $ 843 room=.
+-> w
+T 238 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 7) HP 30/38 MP 0/0 Hu 85 $ 843 room=.
+-> n
+T 239 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 6) HP 30/38 MP 0/0 Hu 84 $ 843 room=.
+-> n
+T 240 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 5) HP 30/38 MP 0/0 Hu 83 $ 843 room=.
+-> l
+T 241 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 5) HP 30/38 MP 0/0 Hu 83 $ 843 room=.
+-> n
+T 242 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 4) HP 30/38 MP 0/0 Hu 82 $ 843 room=.
+-> n
+T 243 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 3) HP 31/38 MP 0/0 Hu 81 $ 843 room=.
+-> n
+T 244 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 2) HP 31/38 MP 0/0 Hu 80 $ 843 room=.
+-> n
+T 245 mode=game_loop           Celeborn the Lorekeeper(elf) F1@( 9, 1) HP 31/38 MP 0/0 Hu 79 $ 843 room=.
+-> e
+T 246 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(10, 1) HP 31/38 MP 0/0 Hu 78 $ 843 room=.
+-> e
+T 247 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(11, 1) HP 32/38 MP 0/0 Hu 77 $ 843 room=.
+-> e
+T 248 mode=game_loop           Celeborn the Lorekeeper(elf) F1@(12, 1) HP 32/38 MP 0/0 Hu 76 $ 843 room=.
+-> e
+T 249 mode=stairs_down_mode    Celeborn the Lorekeeper(elf) F1@(13, 1) HP 32/38 MP 0/0 Hu 75 $ 843 room=D
+-> d
+T 250 mode=stairs_up_mode      Celeborn the Lorekeeper(elf) F2@( 1, 1) HP 32/38 MP 0/0 Hu 75 $ 843 room=U
+-> s
+T 251 mode=stairs_up_mode      Celeborn the Lorekeeper(elf) F2@( 1, 1) HP 32/38 MP 0/0 Hu 75 $ 843 room=U
+-> s
+T 252 mode=stairs_up_mode      Celeborn the Lorekeeper(elf) F2@( 1, 1) HP 32/38 MP 0/0 Hu 75 $ 843 room=U
+-> n
+T 253 mode=stairs_up_mode      Celeborn the Lorekeeper(elf) F2@( 1, 1) HP 32/38 MP 0/0 Hu 75 $ 843 room=U
+-> e
+T 254 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 2, 1) HP 32/38 MP 0/0 Hu 74 $ 843 room=.
+-> l
+T 255 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 2, 1) HP 32/38 MP 0/0 Hu 74 $ 843 room=.
+-> e
+T 256 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 3, 1) HP 33/38 MP 0/0 Hu 73 $ 843 room=.
+-> l
+T 257 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 3, 1) HP 33/38 MP 0/0 Hu 73 $ 843 room=.
+-> e
+T 258 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 4, 1) HP 33/38 MP 0/0 Hu 72 $ 843 room=.
+-> l
+T 259 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 4, 1) HP 33/38 MP 0/0 Hu 72 $ 843 room=.
+-> s
+T 260 mode=chest_mode          Celeborn the Lorekeeper(elf) F2@( 4, 2) HP 33/38 MP 0/0 Hu 71 $ 843 room=C
+-> e
+T 261 mode=chest_mode          Celeborn the Lorekeeper(elf) F2@( 5, 2) HP 33/38 MP 0/0 Hu 70 $ 843 room=C
+-> n
+T 262 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 5, 1) HP 34/38 MP 0/0 Hu 69 $ 843 room=.
+-> e
+T 263 mode=chest_mode          Celeborn the Lorekeeper(elf) F2@( 6, 1) HP 34/38 MP 0/0 Hu 68 $ 843 room=C
+-> s
+T 264 mode=library_mode        Celeborn the Lorekeeper(elf) F2@( 6, 2) HP 34/38 MP 0/0 Hu 67 $ 843 room=L
+-> r
+T 265 mode=library_read_decision_mode Celeborn the Lorekeeper(elf) F2@( 6, 2) HP 34/38 MP 0/0 Hu 67 $ 843 room=L
+-> y
+T 266 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 6, 2) HP 34/38 MP 0/0 Hu 67 $ 918 room=.
+-> l
+T 267 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 6, 2) HP 34/38 MP 0/0 Hu 67 $ 918 room=.
+-> e
+T 268 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 2) HP 26/38 MP 0/0 Hu 66 $ 918 room=.
+-> l
+T 269 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 2) HP 26/38 MP 0/0 Hu 66 $ 918 room=.
+-> s
+T 270 mode=chest_mode          Celeborn the Lorekeeper(elf) F2@( 7, 3) HP 19/38 MP 0/0 Hu 65 $ 918 room=C
+-> s
+T 271 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 7, 4) HP 11/38 MP 0/0 Hu 64 $ 918 room=M vs Bat(L1 HP12/12)
+-> f
+T 272 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F2@( 7, 4) HP 3/38 MP 0/0 Hu 64 $ 918 room=M
+-> s
+T 273 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 7, 5) HP 3/38 MP 0/0 Hu 64 $ 918 room=M vs Stirge(L1 HP6/6)
+-> f
+T 274 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 7, 5) HP 1/38 MP 0/0 Hu 64 $ 918 room=M vs Stirge(L1 HP6/6)
+-> f
+T 275 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F2@( 7, 5) HP 1/38 MP 0/0 Hu 64 $ 918 room=M
+-> s
+T 276 mode=warp_mode           Celeborn the Lorekeeper(elf) F2@( 7, 6) HP 1/38 MP 0/0 Hu 64 $ 918 room=W
+-> y
+T 277 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 6) HP 1/38 MP 0/0 Hu 64 $ 918 room=W
+-> l
+T 278 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 6) HP 1/38 MP 0/0 Hu 64 $ 918 room=W
+-> s
+T 279 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 1/38 MP 0/0 Hu 63 $ 918 room=.
+-> s
+T 280 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 1/38 MP 0/0 Hu 62 $ 918 room=.
+-> s
+T 281 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 61 $ 918 room=.
+-> l
+T 282 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 61 $ 918 room=.
+-> s
+T 283 mode=pool_mode           Celeborn the Lorekeeper(elf) F2@( 7,10) HP 2/38 MP 0/0 Hu 60 $ 918 room=P
+-> n
+T 284 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 59 $ 918 room=.
+-> n
+T 285 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 58 $ 918 room=.
+-> n
+T 286 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 57 $ 918 room=.
+-> s
+T 287 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 56 $ 918 room=.
+-> s
+T 288 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 55 $ 918 room=.
+-> s
+T 289 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7,10) HP 2/38 MP 0/0 Hu 54 $ 918 room=P
+-> n
+T 290 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 53 $ 918 room=.
+-> n
+T 291 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 52 $ 918 room=.
+-> n
+T 292 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 51 $ 918 room=.
+-> s
+T 293 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 50 $ 918 room=.
+-> s
+T 294 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 49 $ 918 room=.
+-> s
+T 295 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7,10) HP 2/38 MP 0/0 Hu 48 $ 918 room=P
+-> n
+T 296 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 47 $ 918 room=.
+-> n
+T 297 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 46 $ 918 room=.
+-> n
+T 298 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 45 $ 918 room=.
+-> s
+T 299 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 44 $ 918 room=.
+-> s
+T 300 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 43 $ 918 room=.
+-> s
+T 301 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7,10) HP 2/38 MP 0/0 Hu 42 $ 918 room=P
+-> n
+T 302 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 41 $ 918 room=.
+-> n
+T 303 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 40 $ 918 room=.
+-> n
+T 304 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 39 $ 918 room=.
+-> s
+T 305 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 38 $ 918 room=.
+-> n
+T 306 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 37 $ 918 room=.
+-> s
+T 307 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 36 $ 918 room=.
+-> s
+T 308 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 35 $ 918 room=.
+-> s
+T 309 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7,10) HP 2/38 MP 0/0 Hu 34 $ 918 room=P
+-> n
+T 310 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 33 $ 918 room=.
+-> n
+T 311 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 32 $ 918 room=.
+-> n
+T 312 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 31 $ 918 room=.
+-> s
+T 313 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 30 $ 918 room=.
+-> n
+T 314 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 7) HP 2/38 MP 0/0 Hu 29 $ 918 room=.
+-> s
+T 315 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 8) HP 2/38 MP 0/0 Hu 28 $ 918 room=.
+-> s
+T 316 mode=game_loop           Celeborn the Lorekeeper(elf) F2@( 7, 9) HP 2/38 MP 0/0 Hu 27 $ 918 room=.
+-> e
+T 317 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 8, 9) HP 2/38 MP 0/0 Hu 26 $ 918 room=M vs Orc(L1 HP50/50)
+-> a
+T 318 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 8, 9) HP 2/38 MP 0/0 Hu 26 $ 918 room=M vs Orc(L1 HP31/50)
+-> a
+T 319 mode=combat_mode         Celeborn the Lorekeeper(elf) F2@( 8, 9) HP 2/38 MP 0/0 Hu 26 $ 918 room=M vs Orc(L1 HP12/50)
+-> a
+T 320 mode=death_screen        Celeborn the Lorekeeper(elf) F2@( 8, 9) HP -3/38 MP 0/0 Hu 26 $ 918 room=M
+
+=== run finished: turns=320 floor=2 hp=-3/38 gold=918 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00271_elf.html

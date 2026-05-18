@@ -1,0 +1,1269 @@
+T   0 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 8 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=dungeon_mode        Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=N
+  This dungeon is locked. A monster on this floor holds the key.
+-> u
+T   3 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=N
+  You don't have the key to this dungeon.
+-> l
+T   4 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=N
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 78
+-> i
+T   5 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=N
+-> u3
+T   6 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=N
+  You have identified: Minor Healing Potion!
+  Galadhrim the Twice-Born drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   7 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=N
+  Inventory closed.
+  This dungeon is locked. A monster on this floor holds the key.
+-> e
+T   8 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP25/25)
+  A Skeleton (Level 0) appears! Rattling bones form a reanimated skeleton. It was practicing a TikTok before you barged in.
+  The Skeleton strikes first!
+-> a
+T   9 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  10 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 290 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  11 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 345 room=.
+-> back
+T  12 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 345 room=.
+-> l
+T  13 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 345 room=.
+-> w
+T  14 mode=dungeon_mode        Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 97 $ 345 room=N
+-> u
+T  15 mode=dungeon_unlocked_mode Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 97 $ 345 room=N
+-> r
+T  16 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 97 $ 572 room=N
+-> s
+T  17 mode=dungeon_mode        Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 96 $ 572 room=N
+-> u
+T  18 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 96 $ 572 room=N
+-> e
+T  19 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 572 room=M vs Lichen(L0 HP10/10)
+-> a
+T  20 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 572 room=M vs Lichen(L0 HP10/10)
+-> a
+T  21 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 573 room=.
+-> back
+T  22 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 573 room=.
+-> l
+T  23 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 573 room=.
+-> s
+T  24 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 94 $ 573 room=.
+-> l
+T  25 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 94 $ 573 room=.
+-> e
+T  26 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 93 $ 573 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  27 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 3, 4) HP 27/28 MP 0/0 Hu 93 $ 578 room=.
+-> back
+T  28 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 4) HP 27/28 MP 0/0 Hu 93 $ 578 room=.
+-> e
+T  29 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 578 room=.
+-> n
+T  30 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 91 $ 578 room=.
+-> n
+T  31 mode=chest_mode          Galadhrim the Twice-Born(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 90 $ 578 room=C
+-> o
+T  32 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 90 $ 578 room=.
+-> w
+T  33 mode=chest_mode          Galadhrim the Twice-Born(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 89 $ 578 room=C
+-> o
+T  34 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 89 $ 618 room=.
+-> w
+T  35 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 88 $ 618 room=.
+-> s
+T  36 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 87 $ 618 room=.
+-> s
+T  37 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 86 $ 618 room=.
+-> s
+T  38 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 85 $ 618 room=.
+-> s
+T  39 mode=chest_mode          Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 618 room=C
+-> o
+T  40 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 618 room=.
+-> i
+T  41 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 618 room=.
+-> e1
+T  42 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 618 room=.
+-> x
+T  43 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 618 room=.
+-> s
+T  44 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 7) HP 28/28 MP 0/0 Hu 83 $ 618 room=.
+-> i
+T  45 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 7) HP 28/28 MP 0/0 Hu 83 $ 618 room=.
+-> eat3
+T  46 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 7) HP 28/28 MP 0/0 Hu 88 $ 618 room=.
+-> x
+T  47 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 7) HP 28/28 MP 0/0 Hu 88 $ 618 room=.
+-> s
+T  48 mode=altar_mode          Galadhrim the Twice-Born(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 87 $ 618 room=A
+-> pray
+T  49 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 87 $ 618 room=.
+-> l
+T  50 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 87 $ 618 room=.
+-> s
+T  51 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 86 $ 618 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  52 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 86 $ 723 room=.
+-> back
+T  53 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 86 $ 723 room=.
+-> l
+T  54 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 86 $ 723 room=.
+-> e
+T  55 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 85 $ 723 room=.
+-> n
+T  56 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 84 $ 723 room=M vs Zombie(L0 HP35/35)
+-> a
+T  57 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 84 $ 723 room=M vs Zombie(L0 HP35/35)
+-> a
+T  58 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 84 $ 723 room=M vs Zombie(L0 HP11/35)
+-> a
+T  59 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 84 $ 727 room=.
+-> back
+T  60 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 84 $ 727 room=.
+-> e
+T  61 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 83 $ 727 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  62 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 27/28 MP 0/0 Hu 83 $ 727 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  63 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 26/28 MP 0/0 Hu 83 $ 727 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  64 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 26/28 MP 0/0 Hu 83 $ 734 room=.
+-> back
+T  65 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 26/28 MP 0/0 Hu 83 $ 734 room=.
+-> e
+T  66 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 26/28 MP 0/0 Hu 82 $ 734 room=M vs Stirge(L0 HP6/6)
+-> a
+T  67 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 26/28 MP 0/0 Hu 82 $ 734 room=M vs Stirge(L0 HP6/6)
+-> a
+T  68 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 25/28 MP 0/0 Hu 82 $ 734 room=M vs Stirge(L0 HP6/6)
+-> a
+T  69 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 24/28 MP 0/0 Hu 82 $ 734 room=M vs Stirge(L0 HP6/6)
+-> a
+T  70 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 24/28 MP 0/0 Hu 82 $ 740 room=.
+-> back
+T  71 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 24/28 MP 0/0 Hu 82 $ 740 room=.
+-> l
+T  72 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 24/28 MP 0/0 Hu 82 $ 740 room=.
+-> n
+T  73 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 81 $ 740 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  74 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 81 $ 745 room=.
+-> back
+T  75 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 81 $ 745 room=.
+-> l
+T  76 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 81 $ 745 room=.
+-> e
+T  77 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 6, 7) HP 24/28 MP 0/0 Hu 80 $ 745 room=M vs Lichen(L0 HP10/10)
+-> a
+T  78 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 6, 7) HP 24/28 MP 0/0 Hu 80 $ 748 room=.
+-> back
+T  79 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 6, 7) HP 24/28 MP 0/0 Hu 80 $ 748 room=.
+-> e
+T  80 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 7, 7) HP 25/28 MP 0/0 Hu 79 $ 748 room=M vs Lichen(L0 HP10/10)
+-> a
+T  81 mode=combat_victory      Galadhrim the Twice-Born(elf) F1@( 7, 7) HP 25/28 MP 0/0 Hu 79 $ 849 room=.
+-> back
+T  82 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 7, 7) HP 25/28 MP 0/0 Hu 79 $ 849 room=.
+-> e
+T  83 mode=combat_mode         Galadhrim the Twice-Born(elf) F1@( 8, 7) HP 25/28 MP 0/0 Hu 78 $ 849 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T  84 mode=flee_direction_mode Galadhrim the Twice-Born(elf) F1@( 8, 7) HP 24/28 MP 0/0 Hu 78 $ 849 room=M
+-> s
+T  85 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 8, 8) HP 24/28 MP 0/0 Hu 78 $ 849 room=.
+-> l
+T  86 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 8, 8) HP 24/28 MP 0/0 Hu 78 $ 849 room=.
+-> w
+T  87 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 7, 8) HP 24/28 MP 0/0 Hu 77 $ 849 room=.
+-> l
+T  88 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 7, 8) HP 24/28 MP 0/0 Hu 77 $ 849 room=.
+-> w
+T  89 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 24/28 MP 0/0 Hu 76 $ 849 room=.
+-> i
+T  90 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 24/28 MP 0/0 Hu 76 $ 849 room=.
+-> u4
+T  91 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 76 $ 849 room=.
+-> x
+T  92 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 76 $ 849 room=.
+-> i
+T  93 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 76 $ 849 room=.
+-> eat4
+T  94 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> x
+T  95 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> l
+T  96 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> w
+T  97 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> w
+T  98 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> w
+T  99 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 79 $ 849 room=.
+-> w
+T 100 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 78 $ 849 room=.
+-> n
+T 101 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 7) HP 28/28 MP 0/0 Hu 77 $ 849 room=.
+-> n
+T 102 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 76 $ 849 room=.
+-> i
+T 103 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 76 $ 849 room=.
+-> eat3
+T 104 mode=inventory           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> x
+T 105 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> n
+T 106 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> n
+T 107 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> n
+T 108 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 79 $ 849 room=.
+-> w
+T 109 mode=dungeon_mode        Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 78 $ 849 room=N
+-> u
+T 110 mode=dungeon_unlocked_mode Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 78 $ 849 room=N
+-> r
+T 111 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 78 $ 849 room=N
+-> s
+T 112 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 77 $ 849 room=.
+-> n
+T 113 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 76 $ 849 room=N
+-> n
+T 114 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 75 $ 849 room=N
+-> n
+T 115 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 74 $ 849 room=E
+-> e
+T 116 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 73 $ 849 room=.
+-> s
+T 117 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 72 $ 849 room=.
+-> s
+T 118 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 71 $ 849 room=.
+-> s
+T 119 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 70 $ 849 room=.
+-> e
+T 120 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 69 $ 849 room=.
+-> e
+T 121 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 68 $ 849 room=.
+-> e
+T 122 mode=game_loop           Galadhrim the Twice-Born(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 67 $ 849 room=.
+-> e
+T 123 mode=chest_mode          Galadhrim the Twice-Born(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 66 $ 849 room=C
+-> n
+T 124 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 65 $ 849 room=D
+-> d
+T 125 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 849 room=U
+-> s
+T 126 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 849 room=.
+-> l
+T 127 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 849 room=.
+-> s
+T 128 mode=chest_mode          Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 849 room=C
+-> o
+T 129 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 849 room=.
+-> l
+T 130 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 849 room=.
+-> n
+T 131 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 62 $ 849 room=.
+-> e
+T 132 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 61 $ 849 room=.
+-> l
+T 133 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 61 $ 849 room=.
+-> n
+T 134 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 60 $ 849 room=.
+-> w
+T 135 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 59 $ 849 room=U
+-> s
+T 136 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 58 $ 849 room=.
+-> s
+T 137 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 57 $ 849 room=.
+-> n
+T 138 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 56 $ 849 room=.
+-> e
+T 139 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 55 $ 849 room=.
+-> n
+T 140 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 54 $ 849 room=.
+-> w
+T 141 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 849 room=U
+-> s
+T 142 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 52 $ 849 room=.
+-> s
+T 143 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 51 $ 849 room=.
+-> n
+T 144 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 849 room=.
+-> i
+T 145 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 849 room=.
+-> eat1
+T 146 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> u4
+T 147 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> u1
+T 148 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> x
+T 149 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> e
+T 150 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> n
+T 151 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> w
+T 152 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 97 $ 849 room=U
+-> s
+T 153 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> i
+T 154 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> u4
+T 155 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> u1
+T 156 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> x
+T 157 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> s
+T 158 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 95 $ 849 room=.
+-> n
+T 159 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> i
+T 160 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> u4
+T 161 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> u1
+T 162 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> x
+T 163 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> e
+T 164 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> n
+T 165 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 849 room=.
+-> w
+T 166 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 849 room=U
+-> s
+T 167 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 849 room=.
+-> i
+T 168 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 849 room=.
+-> u4
+T 169 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 849 room=.
+-> u1
+T 170 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 849 room=.
+-> x
+T 171 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 849 room=.
+-> s
+T 172 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 89 $ 849 room=.
+-> n
+T 173 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 849 room=.
+-> i
+T 174 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 849 room=.
+-> u4
+T 175 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 849 room=.
+-> u1
+T 176 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 849 room=.
+-> x
+T 177 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 849 room=.
+-> e
+T 178 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 87 $ 849 room=.
+-> n
+T 179 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 849 room=.
+-> w
+T 180 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 849 room=U
+-> s
+T 181 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 849 room=.
+-> i
+T 182 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 849 room=.
+-> u4
+T 183 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 849 room=.
+-> u1
+T 184 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 849 room=.
+-> x
+T 185 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 849 room=.
+-> s
+T 186 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 849 room=.
+-> i
+T 187 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 849 room=.
+-> u4
+T 188 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 849 room=.
+-> u1
+T 189 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 849 room=.
+-> x
+T 190 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 849 room=.
+-> n
+T 191 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> i
+T 192 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> u4
+T 193 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> u1
+T 194 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> x
+T 195 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 849 room=.
+-> e
+T 196 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> i
+T 197 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> u4
+T 198 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> u1
+T 199 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> x
+T 200 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 849 room=.
+-> n
+T 201 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> i
+T 202 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> u4
+T 203 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> u1
+T 204 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> x
+T 205 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 849 room=.
+-> w
+T 206 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 79 $ 849 room=U
+-> s
+T 207 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 849 room=.
+-> i
+T 208 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 849 room=.
+-> eat1
+T 209 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> u4
+T 210 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> u1
+T 211 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> x
+T 212 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu100 $ 849 room=.
+-> s
+T 213 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> i
+T 214 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> u4
+T 215 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> u1
+T 216 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> x
+T 217 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 849 room=.
+-> n
+T 218 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> i
+T 219 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> u4
+T 220 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> u1
+T 221 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> x
+T 222 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 849 room=.
+-> e
+T 223 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 849 room=.
+-> i
+T 224 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 849 room=.
+-> u4
+T 225 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 849 room=.
+-> u1
+T 226 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 849 room=.
+-> x
+T 227 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 849 room=.
+-> n
+T 228 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> i
+T 229 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> u4
+T 230 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> u1
+T 231 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> x
+T 232 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 849 room=.
+-> w
+T 233 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 849 room=U
+-> s
+T 234 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> i
+T 235 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> u4
+T 236 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> u1
+T 237 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> x
+T 238 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 849 room=.
+-> e
+T 239 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> i
+T 240 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> u4
+T 241 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> u1
+T 242 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> x
+T 243 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 849 room=.
+-> s
+T 244 mode=warp_mode           Galadhrim the Twice-Born(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 849 room=W
+-> y
+T 245 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 849 room=W
+-> e
+T 246 mode=chest_mode          Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 849 room=C
+-> o
+T 247 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 849 room=.
+-> l
+T 248 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 849 room=.
+-> s
+T 249 mode=library_mode        Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 90 $ 849 room=L
+-> r
+T 250 mode=library_read_decision_mode Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 90 $ 849 room=L
+-> y
+T 251 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 90 $ 899 room=.
+-> w
+T 252 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 899 room=V
+-> b10
+T 253 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 889 room=V
+-> b4
+T 254 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 859 room=V
+-> b4
+T 255 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 829 room=V
+-> b4
+T 256 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 799 room=V
+-> b6
+T 257 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 649 room=V
+-> b3
+T 258 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 574 room=V
+-> b1
+T 259 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 484 room=V
+-> id6
+T 260 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 434 room=V
+-> id10
+T 261 mode=vendor_shop         Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> x
+T 262 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> i
+T 263 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> e1
+T 264 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> x
+T 265 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> s
+T 266 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 88 $ 334 room=D
+-> n
+T 267 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 87 $ 334 room=V
+-> e
+T 268 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 334 room=.
+-> n
+T 269 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 85 $ 334 room=.
+-> s
+T 270 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 84 $ 334 room=.
+-> n
+T 271 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 334 room=.
+-> s
+T 272 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 334 room=.
+-> w
+T 273 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 334 room=V
+-> s
+T 274 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 80 $ 334 room=D
+-> n
+T 275 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 79 $ 334 room=V
+-> e
+T 276 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 78 $ 334 room=.
+-> n
+T 277 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 334 room=.
+-> s
+T 278 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 334 room=.
+-> i
+T 279 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 334 room=.
+-> eat1
+T 280 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu100 $ 334 room=.
+-> u9
+T 281 mode=upgrade_scroll_mode Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu100 $ 334 room=.
+-> 1
+T 282 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu100 $ 334 room=.
+-> x
+T 283 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu100 $ 334 room=.
+-> n
+T 284 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 99 $ 334 room=.
+-> s
+T 285 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 98 $ 334 room=.
+-> w
+T 286 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 97 $ 334 room=V
+-> s
+T 287 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 96 $ 334 room=D
+-> n
+T 288 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 95 $ 334 room=V
+-> e
+T 289 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> n
+T 290 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 334 room=.
+-> s
+T 291 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 92 $ 334 room=.
+-> n
+T 292 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 334 room=.
+-> s
+T 293 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 90 $ 334 room=.
+-> w
+T 294 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> s
+T 295 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 88 $ 334 room=D
+-> n
+T 296 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 87 $ 334 room=V
+-> e
+T 297 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 334 room=.
+-> n
+T 298 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 85 $ 334 room=.
+-> s
+T 299 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 84 $ 334 room=.
+-> n
+T 300 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 334 room=.
+-> s
+T 301 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 334 room=.
+-> w
+T 302 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 334 room=V
+-> s
+T 303 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 80 $ 334 room=D
+-> n
+T 304 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 79 $ 334 room=V
+-> e
+T 305 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 78 $ 334 room=.
+-> n
+T 306 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 334 room=.
+-> s
+T 307 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 334 room=.
+-> n
+T 308 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 334 room=.
+-> s
+T 309 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 334 room=.
+-> w
+T 310 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 73 $ 334 room=V
+-> s
+T 311 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 72 $ 334 room=D
+-> n
+T 312 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 334 room=V
+-> e
+T 313 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 70 $ 334 room=.
+-> n
+T 314 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 69 $ 334 room=.
+-> s
+T 315 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 68 $ 334 room=.
+-> n
+T 316 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 334 room=.
+-> s
+T 317 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 66 $ 334 room=.
+-> w
+T 318 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 65 $ 334 room=V
+-> s
+T 319 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 64 $ 334 room=D
+-> n
+T 320 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 63 $ 334 room=V
+-> e
+T 321 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 62 $ 334 room=.
+-> n
+T 322 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 334 room=.
+-> s
+T 323 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 60 $ 334 room=.
+-> n
+T 324 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 59 $ 334 room=.
+-> s
+T 325 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 58 $ 334 room=.
+-> w
+T 326 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 57 $ 334 room=V
+-> s
+T 327 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 56 $ 334 room=D
+-> n
+T 328 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 55 $ 334 room=V
+-> e
+T 329 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 54 $ 334 room=.
+-> n
+T 330 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 334 room=.
+-> l
+T 331 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 334 room=.
+-> s
+T 332 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 52 $ 334 room=.
+-> n
+T 333 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 51 $ 334 room=.
+-> s
+T 334 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 50 $ 334 room=.
+-> w
+T 335 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 334 room=V
+-> i
+T 336 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 334 room=V
+-> eat1
+T 337 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 334 room=V
+-> x
+T 338 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 334 room=V
+-> s
+T 339 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 98 $ 334 room=D
+-> n
+T 340 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 97 $ 334 room=V
+-> l
+T 341 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 97 $ 334 room=V
+-> e
+T 342 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 96 $ 334 room=.
+-> n
+T 343 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 95 $ 334 room=.
+-> s
+T 344 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> n
+T 345 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 334 room=.
+-> s
+T 346 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 92 $ 334 room=.
+-> w
+T 347 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 91 $ 334 room=V
+-> s
+T 348 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 90 $ 334 room=D
+-> n
+T 349 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 334 room=V
+-> e
+T 350 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 334 room=.
+-> l
+T 351 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 334 room=.
+-> n
+T 352 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 334 room=.
+-> s
+T 353 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 334 room=.
+-> n
+T 354 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 85 $ 334 room=.
+-> s
+T 355 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 84 $ 334 room=.
+-> w
+T 356 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 83 $ 334 room=V
+-> s
+T 357 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 82 $ 334 room=D
+-> n
+T 358 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 334 room=V
+-> e
+T 359 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 80 $ 334 room=.
+-> n
+T 360 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 79 $ 334 room=.
+-> l
+T 361 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 79 $ 334 room=.
+-> s
+T 362 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 78 $ 334 room=.
+-> n
+T 363 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 334 room=.
+-> s
+T 364 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 334 room=.
+-> w
+T 365 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 75 $ 334 room=V
+-> s
+T 366 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 74 $ 334 room=D
+-> n
+T 367 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 73 $ 334 room=V
+-> e
+T 368 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 334 room=.
+-> n
+T 369 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 71 $ 334 room=.
+-> s
+T 370 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 70 $ 334 room=.
+-> l
+T 371 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 70 $ 334 room=.
+-> n
+T 372 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 69 $ 334 room=.
+-> s
+T 373 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 68 $ 334 room=.
+-> w
+T 374 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 67 $ 334 room=V
+-> s
+T 375 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 66 $ 334 room=D
+-> n
+T 376 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 65 $ 334 room=V
+-> e
+T 377 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 64 $ 334 room=.
+-> n
+T 378 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 334 room=.
+-> s
+T 379 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 62 $ 334 room=.
+-> n
+T 380 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 334 room=.
+-> l
+T 381 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 334 room=.
+-> s
+T 382 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 60 $ 334 room=.
+-> w
+T 383 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 59 $ 334 room=V
+-> s
+T 384 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 58 $ 334 room=D
+-> n
+T 385 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 57 $ 334 room=V
+-> e
+T 386 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 56 $ 334 room=.
+-> n
+T 387 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 55 $ 334 room=.
+-> s
+T 388 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 54 $ 334 room=.
+-> n
+T 389 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 334 room=.
+-> s
+T 390 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 52 $ 334 room=.
+-> l
+T 391 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 52 $ 334 room=.
+-> w
+T 392 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 51 $ 334 room=V
+-> s
+T 393 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 50 $ 334 room=D
+-> n
+T 394 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 334 room=V
+-> i
+T 395 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 334 room=V
+-> eat1
+T 396 mode=inventory           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 334 room=V
+-> x
+T 397 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 334 room=V
+-> e
+T 398 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 98 $ 334 room=.
+-> n
+T 399 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 334 room=.
+-> s
+T 400 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 96 $ 334 room=.
+-> l
+T 401 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 96 $ 334 room=.
+-> n
+T 402 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 95 $ 334 room=.
+-> s
+T 403 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> w
+T 404 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 93 $ 334 room=V
+-> s
+T 405 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 92 $ 334 room=D
+-> n
+T 406 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 91 $ 334 room=V
+-> e
+T 407 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 90 $ 334 room=.
+-> n
+T 408 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 89 $ 334 room=.
+-> s
+T 409 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 334 room=.
+-> n
+T 410 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 334 room=.
+-> l
+T 411 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 334 room=.
+-> s
+T 412 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 334 room=.
+-> w
+T 413 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 85 $ 334 room=V
+-> s
+T 414 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 84 $ 334 room=D
+-> n
+T 415 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 83 $ 334 room=V
+-> e
+T 416 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 334 room=.
+-> n
+T 417 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 334 room=.
+-> s
+T 418 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 80 $ 334 room=.
+-> n
+T 419 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 79 $ 334 room=.
+-> s
+T 420 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 78 $ 334 room=.
+-> l
+T 421 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 78 $ 334 room=.
+-> w
+T 422 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 77 $ 334 room=V
+-> s
+T 423 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 76 $ 334 room=D
+-> n
+T 424 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 75 $ 334 room=V
+-> e
+T 425 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 334 room=.
+-> n
+T 426 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 334 room=.
+-> s
+T 427 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 334 room=.
+-> n
+T 428 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 71 $ 334 room=.
+-> s
+T 429 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 70 $ 334 room=.
+-> w
+T 430 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 334 room=V
+-> l
+T 431 mode=game_loop           Galadhrim the Twice-Born(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 334 room=V
+-> s
+T 432 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 68 $ 334 room=D
+-> d
+T 433 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 334 room=U
+-> s
+T 434 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 334 room=U
+-> w
+T 435 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 334 room=U
+-> n
+T 436 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 334 room=U
+-> w
+T 437 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 334 room=U
+-> e
+T 438 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 67 $ 334 room=D
+-> w
+T 439 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 66 $ 334 room=U
+-> e
+T 440 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 65 $ 334 room=D
+-> w
+T 441 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 64 $ 334 room=U
+-> e
+T 442 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 63 $ 334 room=D
+-> w
+T 443 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 62 $ 334 room=U
+-> e
+T 444 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 61 $ 334 room=D
+-> w
+T 445 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 60 $ 334 room=U
+-> e
+T 446 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 59 $ 334 room=D
+-> w
+T 447 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 58 $ 334 room=U
+-> e
+T 448 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 57 $ 334 room=D
+-> w
+T 449 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 56 $ 334 room=U
+-> e
+T 450 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 55 $ 334 room=D
+-> w
+T 451 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 54 $ 334 room=U
+-> e
+T 452 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 53 $ 334 room=D
+-> w
+T 453 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 52 $ 334 room=U
+-> e
+T 454 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 51 $ 334 room=D
+-> w
+T 455 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 50 $ 334 room=U
+-> e
+T 456 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 49 $ 334 room=D
+-> w
+T 457 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 48 $ 334 room=U
+-> e
+T 458 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 47 $ 334 room=D
+-> w
+T 459 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 46 $ 334 room=U
+-> e
+T 460 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 45 $ 334 room=D
+-> w
+T 461 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 44 $ 334 room=U
+-> e
+T 462 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 43 $ 334 room=D
+-> w
+T 463 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 42 $ 334 room=U
+-> e
+T 464 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 41 $ 334 room=D
+-> w
+T 465 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 40 $ 334 room=U
+-> e
+T 466 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 39 $ 334 room=D
+-> w
+T 467 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 38 $ 334 room=U
+-> e
+T 468 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 37 $ 334 room=D
+-> w
+T 469 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 36 $ 334 room=U
+-> e
+T 470 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 35 $ 334 room=D
+-> w
+T 471 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 34 $ 334 room=U
+-> e
+T 472 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 33 $ 334 room=D
+-> w
+T 473 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 32 $ 334 room=U
+-> e
+T 474 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 31 $ 334 room=D
+-> w
+T 475 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 30 $ 334 room=U
+-> e
+T 476 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 29 $ 334 room=D
+-> w
+T 477 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 28 $ 334 room=U
+-> e
+T 478 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 27 $ 334 room=D
+-> w
+T 479 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 26 $ 334 room=U
+-> e
+T 480 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 25 $ 334 room=D
+-> w
+T 481 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 24 $ 334 room=U
+-> e
+T 482 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 23 $ 334 room=D
+-> w
+T 483 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 22 $ 334 room=U
+-> e
+T 484 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 21 $ 334 room=D
+-> w
+T 485 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 20 $ 334 room=U
+-> e
+T 486 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 19 $ 334 room=D
+-> w
+T 487 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 18 $ 334 room=U
+-> e
+T 488 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 17 $ 334 room=D
+-> w
+T 489 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 16 $ 334 room=U
+-> e
+T 490 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 15 $ 334 room=D
+-> w
+T 491 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 14 $ 334 room=U
+-> e
+T 492 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 13 $ 334 room=D
+-> w
+T 493 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 12 $ 334 room=U
+-> e
+T 494 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu 11 $ 334 room=D
+-> w
+T 495 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 10 $ 334 room=U
+-> e
+T 496 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu  9 $ 334 room=D
+-> w
+T 497 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu  8 $ 334 room=U
+-> e
+T 498 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu  7 $ 334 room=D
+-> w
+T 499 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu  6 $ 334 room=U
+-> e
+T 500 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu  5 $ 334 room=D
+-> w
+T 501 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu  4 $ 334 room=U
+-> e
+T 502 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu  3 $ 334 room=D
+-> w
+T 503 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu  2 $ 334 room=U
+-> e
+T 504 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 28/28 MP 0/0 Hu  1 $ 334 room=D
+-> w
+T 505 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 26/28 MP 0/0 Hu  0 $ 334 room=U
+-> e
+T 506 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 24/28 MP 0/0 Hu  0 $ 334 room=D
+-> w
+T 507 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 22/28 MP 0/0 Hu  0 $ 334 room=U
+-> e
+T 508 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 20/28 MP 0/0 Hu  0 $ 334 room=D
+-> w
+T 509 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 18/28 MP 0/0 Hu  0 $ 334 room=U
+-> e
+T 510 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 16/28 MP 0/0 Hu  0 $ 334 room=D
+-> w
+T 511 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F3@( 1, 1) HP 14/28 MP 0/0 Hu  0 $ 334 room=U
+-> e
+T 512 mode=stairs_down_mode    Galadhrim the Twice-Born(elf) F3@( 2, 1) HP 12/28 MP 0/0 Hu  0 $ 334 room=D
+-> d
+T 513 mode=stairs_up_mode      Galadhrim the Twice-Born(elf) F4@( 1, 1) HP 12/28 MP 0/0 Hu  0 $ 334 room=U
+-> s
+T 514 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 10/28 MP 0/0 Hu  0 $ 334 room=.
+-> i
+T 515 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 10/28 MP 0/0 Hu  0 $ 334 room=.
+-> u6
+T 516 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu  0 $ 334 room=.
+-> x
+T 517 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu  0 $ 334 room=.
+-> i
+T 518 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu  0 $ 334 room=.
+-> eat1
+T 519 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 334 room=.
+-> x
+T 520 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 334 room=.
+-> l
+T 521 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 334 room=.
+-> s
+T 522 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 3) HP 28/28 MP 0/0 Hu 49 $ 334 room=.
+-> i
+T 523 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 3) HP 28/28 MP 0/0 Hu 49 $ 334 room=.
+-> eat1
+T 524 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 334 room=.
+-> x
+T 525 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 334 room=.
+-> l
+T 526 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 334 room=.
+-> s
+T 527 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 334 room=.
+-> s
+T 528 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 5) HP 28/28 MP 0/0 Hu 97 $ 334 room=.
+-> l
+T 529 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 5) HP 28/28 MP 0/0 Hu 97 $ 334 room=.
+-> e
+T 530 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 5) HP 28/28 MP 0/0 Hu 96 $ 334 room=.
+-> l
+T 531 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 5) HP 28/28 MP 0/0 Hu 96 $ 334 room=.
+-> e
+T 532 mode=pool_mode           Galadhrim the Twice-Born(elf) F4@( 3, 5) HP 28/28 MP 0/0 Hu 95 $ 334 room=P
+-> dr
+T 533 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 5) HP 12/28 MP 0/0 Hu 95 $ 334 room=.
+-> l
+T 534 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 5) HP 12/28 MP 0/0 Hu 95 $ 334 room=.
+-> s
+T 535 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 4/28 MP 0/0 Hu 94 $ 334 room=.
+-> i
+T 536 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 4/28 MP 0/0 Hu 94 $ 334 room=.
+-> u6
+T 537 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> x
+T 538 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> l
+T 539 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 334 room=.
+-> w
+T 540 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 6) HP 21/28 MP 0/0 Hu 93 $ 334 room=.
+-> s
+T 541 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 7) HP 13/28 MP 0/0 Hu 92 $ 334 room=.
+-> s
+T 542 mode=chest_mode          Galadhrim the Twice-Born(elf) F4@( 2, 8) HP 6/28 MP 0/0 Hu 91 $ 334 room=C
+-> s
+T 543 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 6/28 MP 0/0 Hu 90 $ 334 room=.
+-> i
+T 544 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 6/28 MP 0/0 Hu 90 $ 334 room=.
+-> u6
+T 545 mode=inventory           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 334 room=.
+-> x
+T 546 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 334 room=.
+-> l
+T 547 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 334 room=.
+-> w
+T 548 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 9) HP 28/28 MP 0/0 Hu 89 $ 334 room=.
+-> l
+T 549 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 9) HP 28/28 MP 0/0 Hu 89 $ 334 room=.
+-> n
+T 550 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@( 1, 8) HP 28/28 MP 0/0 Hu 88 $ 334 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 551 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@( 1, 8) HP 27/28 MP 0/0 Hu 88 $ 334 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 552 mode=combat_victory      Galadhrim the Twice-Born(elf) F4@( 1, 8) HP 27/38 MP 0/0 Hu 88 $ 429 room=.
+-> back
+T 553 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 8) HP 27/38 MP 0/0 Hu 88 $ 429 room=.
+-> s
+T 554 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1, 9) HP 27/38 MP 0/0 Hu 87 $ 429 room=.
+-> s
+T 555 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 1,10) HP 28/38 MP 0/0 Hu 86 $ 429 room=.
+-> e
+T 556 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2,10) HP 28/38 MP 0/0 Hu 85 $ 429 room=.
+-> n
+T 557 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 9) HP 28/38 MP 0/0 Hu 84 $ 429 room=.
+-> n
+T 558 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 8) HP 28/38 MP 0/0 Hu 83 $ 429 room=C
+-> n
+T 559 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 7) HP 29/38 MP 0/0 Hu 82 $ 429 room=.
+-> n
+T 560 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 2, 6) HP 29/38 MP 0/0 Hu 81 $ 429 room=.
+-> e
+T 561 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 3, 6) HP 29/38 MP 0/0 Hu 80 $ 429 room=.
+-> e
+T 562 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 4, 6) HP 29/38 MP 0/0 Hu 79 $ 429 room=.
+-> e
+T 563 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 5, 6) HP 30/38 MP 0/0 Hu 78 $ 429 room=.
+-> e
+T 564 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 6, 6) HP 30/38 MP 0/0 Hu 77 $ 429 room=.
+-> l
+T 565 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 6, 6) HP 30/38 MP 0/0 Hu 77 $ 429 room=.
+-> e
+T 566 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 7, 6) HP 30/38 MP 0/0 Hu 76 $ 429 room=.
+-> l
+T 567 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 7, 6) HP 30/38 MP 0/0 Hu 76 $ 429 room=.
+-> e
+T 568 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 8, 6) HP 30/38 MP 0/0 Hu 75 $ 429 room=.
+-> l
+T 569 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 8, 6) HP 30/38 MP 0/0 Hu 75 $ 429 room=.
+-> e
+T 570 mode=chest_mode          Galadhrim the Twice-Born(elf) F4@( 9, 6) HP 31/38 MP 0/0 Hu 74 $ 429 room=C
+-> o
+T 571 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 9, 6) HP 31/38 MP 0/0 Hu 74 $ 539 room=.
+-> l
+T 572 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 9, 6) HP 31/38 MP 0/0 Hu 74 $ 539 room=.
+-> n
+T 573 mode=altar_mode          Galadhrim the Twice-Born(elf) F4@( 9, 5) HP 31/38 MP 0/0 Hu 73 $ 539 room=A
+-> pray
+T 574 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 9, 5) HP 31/38 MP 0/0 Hu 73 $ 539 room=.
+-> w
+T 575 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 8, 5) HP 31/38 MP 0/0 Hu 72 $ 539 room=.
+-> s
+T 576 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 8, 6) HP 31/38 MP 0/0 Hu 71 $ 539 room=.
+-> s
+T 577 mode=pool_mode           Galadhrim the Twice-Born(elf) F4@( 8, 7) HP 32/38 MP 0/0 Hu 70 $ 539 room=P
+-> dr
+T 578 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 8, 7) HP 32/38 MP 0/0 Hu 70 $ 539 room=.
+-> e
+T 579 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 9, 7) HP 32/38 MP 0/0 Hu 69 $ 539 room=.
+-> n
+T 580 mode=game_loop           Galadhrim the Twice-Born(elf) F4@( 9, 6) HP 32/38 MP 0/0 Hu 68 $ 539 room=.
+-> e
+T 581 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(10, 6) HP 32/38 MP 0/0 Hu 67 $ 539 room=.
+-> e
+T 582 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(11, 6) HP 33/38 MP 0/0 Hu 66 $ 539 room=.
+-> l
+T 583 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(11, 6) HP 33/38 MP 0/0 Hu 66 $ 539 room=.
+-> e
+T 584 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 6) HP 33/38 MP 0/0 Hu 65 $ 539 room=M vs Bat(L3 HP13/13)
+-> a
+T 585 mode=combat_victory      Galadhrim the Twice-Born(elf) F4@(12, 6) HP 33/38 MP 0/0 Hu 65 $ 543 room=.
+-> back
+T 586 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(12, 6) HP 33/38 MP 0/0 Hu 65 $ 543 room=.
+-> l
+T 587 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(12, 6) HP 33/38 MP 0/0 Hu 65 $ 543 room=.
+-> n
+T 588 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 5) HP 33/38 MP 0/0 Hu 64 $ 543 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 589 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 5) HP 32/38 MP 0/0 Hu 64 $ 543 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 590 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 5) HP 31/38 MP 0/0 Hu 64 $ 543 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 591 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 5) HP 30/38 MP 0/0 Hu 64 $ 543 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 592 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(12, 5) HP 29/38 MP 0/0 Hu 64 $ 543 room=M vs Gray Ooze(L3 HP11/36)
+-> a
+T 593 mode=combat_victory      Galadhrim the Twice-Born(elf) F4@(12, 5) HP 28/48 MP 0/0 Hu 64 $ 555 room=.
+-> back
+T 594 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(12, 5) HP 28/48 MP 0/0 Hu 64 $ 555 room=.
+-> l
+T 595 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(12, 5) HP 28/48 MP 0/0 Hu 64 $ 555 room=.
+-> e
+T 596 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(13, 5) HP 28/48 MP 0/0 Hu 63 $ 555 room=.
+-> l
+T 597 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(13, 5) HP 28/48 MP 0/0 Hu 63 $ 555 room=.
+-> s
+T 598 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(13, 6) HP 29/48 MP 0/0 Hu 62 $ 555 room=.
+-> e
+T 599 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 6) HP 29/48 MP 0/0 Hu 61 $ 555 room=.
+-> l
+T 600 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 6) HP 29/48 MP 0/0 Hu 61 $ 555 room=.
+-> s
+T 601 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 7) HP 29/48 MP 0/0 Hu 60 $ 555 room=.
+-> l
+T 602 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 7) HP 29/48 MP 0/0 Hu 60 $ 555 room=.
+-> s
+T 603 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 8) HP 29/48 MP 0/0 Hu 59 $ 555 room=.
+-> l
+T 604 mode=game_loop           Galadhrim the Twice-Born(elf) F4@(14, 8) HP 29/48 MP 0/0 Hu 59 $ 555 room=.
+-> w
+T 605 mode=chest_mode          Galadhrim the Twice-Born(elf) F4@(13, 8) HP 29/48 MP 0/0 Hu 58 $ 555 room=C
+-> s
+T 606 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 29/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T 607 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 8/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> i
+T 608 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 8/48 MP 0/0 Hu 57 $ 555 room=M
+-> u4
+T 609 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 38/48 MP 0/0 Hu 57 $ 555 room=M
+-> x
+T 610 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 38/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T 611 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 38/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T 612 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 17/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP68/87)
+-> i
+T 613 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 17/48 MP 0/0 Hu 57 $ 555 room=M
+-> u4
+T 614 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 47/48 MP 0/0 Hu 57 $ 555 room=M
+-> x
+T 615 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 47/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP68/87)
+-> a
+T 616 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 26/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP49/87)
+-> a
+T 617 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 26/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP49/87)
+-> a
+T 618 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 26/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP49/87)
+-> a
+T 619 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 5/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP30/87)
+-> i
+T 620 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 5/48 MP 0/0 Hu 57 $ 555 room=M
+-> u4
+T 621 mode=inventory           Galadhrim the Twice-Born(elf) F4@(13, 9) HP 35/48 MP 0/0 Hu 57 $ 555 room=M
+-> x
+T 622 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 35/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP30/87)
+-> a
+T 623 mode=combat_mode         Galadhrim the Twice-Born(elf) F4@(13, 9) HP 14/48 MP 0/0 Hu 57 $ 555 room=M vs UNDEAD SPECTER(L3 HP11/87)
+-> f
+T 624 mode=death_screen        Galadhrim the Twice-Born(elf) F4@(13, 9) HP -7/48 MP 0/0 Hu 57 $ 555 room=M
+
+=== run finished: turns=624 floor=4 hp=-7/48 gold=555 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00001_elf.html

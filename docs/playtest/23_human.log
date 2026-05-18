@@ -1,0 +1,880 @@
+T   0 mode=game_loop           Faramir the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Faramir the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Faramir the Stalwart(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Lichen(L0 HP10/10)
+  A Lichen (Level 0) appears! A slow and menacing living amalgam of fungus and plant. Like nature but mean.
+  The Lichen strikes first!
+-> f
+T   3 mode=flee_direction_mode Faramir the Stalwart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 290 room=M
+  Ouch! Lichen hit Faramir the Stalwart!
+  You took 1 damage!
+  You successfully broke away from combat!
+  Choose a direction to flee (n/s/e/w):
+-> s
+T   4 mode=game_loop           Faramir the Stalwart(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   5 mode=game_loop           Faramir the Stalwart(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 6 nearby rooms!
+  Lantern fuel remaining: 78
+-> e
+T   6 mode=game_loop           Faramir the Stalwart(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 98 $ 290 room=.
+-> l
+T   7 mode=game_loop           Faramir the Stalwart(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 98 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 4 nearby rooms!
+  Lantern fuel remaining: 77
+-> e
+T   8 mode=combat_mode         Faramir the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 290 room=M vs Giant Centipede(L0 HP15/15)
+  You seize the initiative!
+-> a
+T   9 mode=combat_victory      Faramir the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 444 room=.
+-> back
+T  10 mode=game_loop           Faramir the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 444 room=.
+-> l
+T  11 mode=game_loop           Faramir the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 444 room=.
+-> e
+T  12 mode=game_loop           Faramir the Stalwart(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 444 room=.
+-> l
+T  13 mode=game_loop           Faramir the Stalwart(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 444 room=.
+-> e
+T  14 mode=altar_mode          Faramir the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 444 room=A
+-> pray
+T  15 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 488 room=.
+-> l
+T  16 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 488 room=.
+-> s
+T  17 mode=altar_mode          Faramir the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 488 room=A
+-> pray
+T  18 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 488 room=.
+-> s
+T  19 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 93 $ 488 room=.
+-> l
+T  20 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 93 $ 488 room=.
+-> s
+T  21 mode=combat_mode         Faramir the Stalwart(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 92 $ 488 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  22 mode=combat_mode         Faramir the Stalwart(hum) F1@( 5, 6) HP 29/30 MP 0/0 Hu 92 $ 488 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  23 mode=combat_mode         Faramir the Stalwart(hum) F1@( 5, 6) HP 29/30 MP 0/0 Hu 92 $ 488 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  24 mode=combat_mode         Faramir the Stalwart(hum) F1@( 5, 6) HP 28/30 MP 0/0 Hu 92 $ 488 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  25 mode=combat_victory      Faramir the Stalwart(hum) F1@( 5, 6) HP 28/30 MP 0/0 Hu 92 $ 497 room=.
+-> back
+T  26 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 6) HP 28/30 MP 0/0 Hu 92 $ 497 room=.
+-> l
+T  27 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 6) HP 28/30 MP 0/0 Hu 92 $ 497 room=.
+-> s
+T  28 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 497 room=V
+-> b13
+T  29 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 487 room=V
+-> b5
+T  30 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 457 room=V
+-> b5
+T  31 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 427 room=V
+-> b6
+T  32 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 397 room=V
+-> b6
+T  33 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 247 room=V
+-> b2
+T  34 mode=vendor_shop         Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 222 room=V
+-> x
+T  35 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 222 room=V
+-> i
+T  36 mode=inventory           Faramir the Stalwart(hum) F1@( 5, 7) HP 28/30 MP 0/0 Hu 91 $ 222 room=V
+-> u4
+T  37 mode=inventory           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> u6
+T  38 mode=upgrade_scroll_mode Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> 1
+T  39 mode=inventory           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> x
+T  40 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> i
+T  41 mode=inventory           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> e2
+T  42 mode=inventory           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> x
+T  43 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> l
+T  44 mode=game_loop           Faramir the Stalwart(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 91 $ 222 room=V
+-> e
+T  45 mode=combat_mode         Faramir the Stalwart(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 90 $ 222 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  46 mode=combat_victory      Faramir the Stalwart(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 90 $ 225 room=.
+-> back
+T  47 mode=game_loop           Faramir the Stalwart(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 90 $ 225 room=.
+-> l
+T  48 mode=game_loop           Faramir the Stalwart(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 90 $ 225 room=.
+-> e
+T  49 mode=chest_mode          Faramir the Stalwart(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 89 $ 225 room=C
+-> o
+T  50 mode=game_loop           Faramir the Stalwart(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 89 $ 225 room=.
+-> l
+T  51 mode=game_loop           Faramir the Stalwart(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 89 $ 225 room=.
+-> e
+T  52 mode=game_loop           Faramir the Stalwart(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 225 room=.
+-> l
+T  53 mode=game_loop           Faramir the Stalwart(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 225 room=.
+-> e
+T  54 mode=game_loop           Faramir the Stalwart(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 87 $ 225 room=.
+-> l
+T  55 mode=game_loop           Faramir the Stalwart(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 87 $ 225 room=.
+-> e
+T  56 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 86 $ 225 room=.
+-> l
+T  57 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 86 $ 225 room=.
+-> e
+T  58 mode=garden_mode         Faramir the Stalwart(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 85 $ 225 room=G
+-> h
+T  59 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 85 $ 225 room=.
+-> l
+T  60 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 85 $ 225 room=.
+-> n
+T  61 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 6) HP 30/30 MP 0/0 Hu 84 $ 225 room=M vs Zombie(L0 HP35/35)
+-> a
+T  62 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 6) HP 30/30 MP 0/0 Hu 84 $ 225 room=M vs Zombie(L0 HP12/35)
+-> a
+T  63 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 6) HP 29/30 MP 0/0 Hu 84 $ 225 room=M vs Zombie(L0 HP12/35)
+-> a
+T  64 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 6) HP 28/30 MP 0/0 Hu 84 $ 225 room=M vs Zombie(L0 HP12/35)
+-> a
+T  65 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 6) HP 27/30 MP 0/0 Hu 84 $ 225 room=M vs Zombie(L0 HP12/35)
+-> f
+T  66 mode=flee_direction_mode Faramir the Stalwart(hum) F1@(11, 6) HP 27/30 MP 0/0 Hu 84 $ 225 room=M
+-> w
+T  67 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 6) HP 27/30 MP 0/0 Hu 84 $ 225 room=.
+-> n
+T  68 mode=combat_mode         Faramir the Stalwart(hum) F1@(10, 5) HP 27/30 MP 0/0 Hu 83 $ 225 room=M vs Kobold(L0 HP8/8)
+-> a
+T  69 mode=combat_victory      Faramir the Stalwart(hum) F1@(10, 5) HP 27/30 MP 0/0 Hu 83 $ 226 room=.
+-> back
+T  70 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 5) HP 27/30 MP 0/0 Hu 83 $ 226 room=.
+-> n
+T  71 mode=combat_mode         Faramir the Stalwart(hum) F1@(10, 4) HP 27/30 MP 0/0 Hu 82 $ 226 room=M vs Bat(L0 HP12/12)
+-> a
+T  72 mode=combat_victory      Faramir the Stalwart(hum) F1@(10, 4) HP 27/30 MP 0/0 Hu 82 $ 233 room=.
+-> back
+T  73 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 4) HP 27/30 MP 0/0 Hu 82 $ 233 room=.
+-> l
+T  74 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 4) HP 27/30 MP 0/0 Hu 82 $ 233 room=.
+-> e
+T  75 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 233 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  76 mode=combat_victory      Faramir the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 242 room=.
+-> back
+T  77 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 242 room=.
+-> l
+T  78 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 242 room=.
+-> n
+T  79 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 3) HP 28/30 MP 0/0 Hu 80 $ 242 room=.
+-> i
+T  80 mode=inventory           Faramir the Stalwart(hum) F1@(11, 3) HP 28/30 MP 0/0 Hu 80 $ 242 room=.
+-> u4
+T  81 mode=inventory           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 80 $ 242 room=.
+-> x
+T  82 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 80 $ 242 room=.
+-> i
+T  83 mode=inventory           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 80 $ 242 room=.
+-> eat5
+T  84 mode=inventory           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 85 $ 242 room=.
+-> x
+T  85 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 85 $ 242 room=.
+-> l
+T  86 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 85 $ 242 room=.
+-> e
+T  87 mode=library_mode        Faramir the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 84 $ 242 room=L
+-> r
+T  88 mode=library_read_decision_mode Faramir the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 84 $ 242 room=L
+-> y
+T  89 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 84 $ 292 room=.
+-> l
+T  90 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 84 $ 292 room=.
+-> n
+T  91 mode=combat_mode         Faramir the Stalwart(hum) F1@(12, 2) HP 30/30 MP 0/0 Hu 83 $ 292 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  92 mode=combat_victory      Faramir the Stalwart(hum) F1@(12, 2) HP 29/30 MP 0/0 Hu 83 $ 293 room=.
+-> back
+T  93 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 2) HP 29/30 MP 0/0 Hu 83 $ 293 room=.
+-> n
+T  94 mode=combat_mode         Faramir the Stalwart(hum) F1@(12, 1) HP 29/30 MP 0/0 Hu 82 $ 293 room=M vs Bat(L0 HP12/12)
+-> a
+T  95 mode=combat_mode         Faramir the Stalwart(hum) F1@(12, 1) HP 28/30 MP 0/0 Hu 82 $ 293 room=M vs Bat(L0 HP12/12)
+-> a
+T  96 mode=combat_victory      Faramir the Stalwart(hum) F1@(12, 1) HP 28/30 MP 0/0 Hu 82 $ 301 room=.
+-> back
+T  97 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 1) HP 28/30 MP 0/0 Hu 82 $ 301 room=.
+-> s
+T  98 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 2) HP 28/30 MP 0/0 Hu 81 $ 301 room=.
+-> w
+T  99 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 2) HP 28/30 MP 0/0 Hu 80 $ 301 room=.
+-> s
+T 100 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 3) HP 29/30 MP 0/0 Hu 79 $ 301 room=.
+-> s
+T 101 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 78 $ 301 room=.
+-> w
+T 102 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 4) HP 29/30 MP 0/0 Hu 77 $ 301 room=.
+-> i
+T 103 mode=inventory           Faramir the Stalwart(hum) F1@(10, 4) HP 29/30 MP 0/0 Hu 77 $ 301 room=.
+-> eat3
+T 104 mode=inventory           Faramir the Stalwart(hum) F1@(10, 4) HP 29/30 MP 0/0 Hu 82 $ 301 room=.
+-> x
+T 105 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 4) HP 29/30 MP 0/0 Hu 82 $ 301 room=.
+-> s
+T 106 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 81 $ 301 room=.
+-> i
+T 107 mode=inventory           Faramir the Stalwart(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 81 $ 301 room=.
+-> eat4
+T 108 mode=inventory           Faramir the Stalwart(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 87 $ 301 room=.
+-> x
+T 109 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 87 $ 301 room=.
+-> s
+T 110 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 86 $ 301 room=.
+-> s
+T 111 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 85 $ 301 room=.
+-> s
+T 112 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 84 $ 301 room=.
+-> s
+T 113 mode=combat_mode         Faramir the Stalwart(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 83 $ 301 room=M vs Goblin(L0 HP30/30)
+-> a
+T 114 mode=combat_mode         Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 301 room=M vs Goblin(L0 HP8/30)
+-> a
+T 115 mode=combat_victory      Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 311 room=.
+-> back
+T 116 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 311 room=.
+-> i
+T 117 mode=inventory           Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 311 room=.
+-> eat3
+T 118 mode=inventory           Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 88 $ 311 room=.
+-> x
+T 119 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 88 $ 311 room=.
+-> s
+T 120 mode=pool_mode           Faramir the Stalwart(hum) F1@(10,10) HP 29/30 MP 0/0 Hu 87 $ 311 room=P
+-> dr
+T 121 mode=game_loop           Faramir the Stalwart(hum) F1@(10,10) HP 29/34 MP 0/0 Hu 87 $ 311 room=.
+-> e
+T 122 mode=combat_mode         Faramir the Stalwart(hum) F1@(11,10) HP 30/34 MP 0/0 Hu 86 $ 311 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 123 mode=flee_direction_mode Faramir the Stalwart(hum) F1@(11,10) HP 30/34 MP 0/0 Hu 86 $ 311 room=M
+-> n
+T 124 mode=combat_mode         Faramir the Stalwart(hum) F1@(11, 9) HP 30/34 MP 0/0 Hu 86 $ 311 room=M vs Kobold(L0 HP8/8)
+-> a
+T 125 mode=combat_victory      Faramir the Stalwart(hum) F1@(11, 9) HP 29/34 MP 0/0 Hu 86 $ 420 room=.
+-> back
+T 126 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 9) HP 29/34 MP 0/0 Hu 86 $ 420 room=.
+-> l
+T 127 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 9) HP 29/34 MP 0/0 Hu 86 $ 420 room=.
+-> e
+T 128 mode=pool_mode           Faramir the Stalwart(hum) F1@(12, 9) HP 29/34 MP 0/0 Hu 85 $ 420 room=P
+-> dr
+T 129 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 9) HP 29/38 MP 0/0 Hu 85 $ 420 room=.
+-> i
+T 130 mode=inventory           Faramir the Stalwart(hum) F1@(12, 9) HP 29/38 MP 0/0 Hu 85 $ 420 room=.
+-> u4
+T 131 mode=inventory           Faramir the Stalwart(hum) F1@(12, 9) HP 38/38 MP 0/0 Hu 85 $ 420 room=.
+-> x
+T 132 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 9) HP 38/38 MP 0/0 Hu 85 $ 420 room=.
+-> l
+T 133 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 9) HP 38/38 MP 0/0 Hu 85 $ 420 room=.
+-> n
+T 134 mode=altar_mode          Faramir the Stalwart(hum) F1@(12, 8) HP 38/38 MP 0/0 Hu 84 $ 420 room=A
+-> pray
+T 135 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 8) HP 38/38 MP 0/0 Hu 84 $ 420 room=.
+-> l
+T 136 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 8) HP 38/38 MP 0/0 Hu 84 $ 420 room=.
+-> e
+T 137 mode=combat_mode         Faramir the Stalwart(hum) F1@(13, 8) HP 38/38 MP 0/0 Hu 83 $ 420 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 138 mode=combat_victory      Faramir the Stalwart(hum) F1@(13, 8) HP 38/38 MP 0/0 Hu 83 $ 430 room=.
+-> back
+T 139 mode=game_loop           Faramir the Stalwart(hum) F1@(13, 8) HP 38/38 MP 0/0 Hu 83 $ 430 room=.
+-> s
+T 140 mode=combat_mode         Faramir the Stalwart(hum) F1@(13, 9) HP 38/38 MP 0/0 Hu 82 $ 430 room=M vs Lichen(L0 HP10/10)
+-> a
+T 141 mode=combat_victory      Faramir the Stalwart(hum) F1@(13, 9) HP 37/38 MP 0/0 Hu 82 $ 436 room=.
+-> back
+T 142 mode=game_loop           Faramir the Stalwart(hum) F1@(13, 9) HP 37/38 MP 0/0 Hu 82 $ 436 room=.
+-> l
+T 143 mode=game_loop           Faramir the Stalwart(hum) F1@(13, 9) HP 37/38 MP 0/0 Hu 82 $ 436 room=.
+-> e
+T 144 mode=combat_mode         Faramir the Stalwart(hum) F1@(14, 9) HP 37/38 MP 0/0 Hu 81 $ 436 room=M vs Lichen(L0 HP10/10)
+-> a
+T 145 mode=combat_victory      Faramir the Stalwart(hum) F1@(14, 9) HP 37/48 MP 0/0 Hu 81 $ 442 room=.
+-> back
+T 146 mode=game_loop           Faramir the Stalwart(hum) F1@(14, 9) HP 37/48 MP 0/0 Hu 81 $ 442 room=.
+-> l
+T 147 mode=game_loop           Faramir the Stalwart(hum) F1@(14, 9) HP 37/48 MP 0/0 Hu 81 $ 442 room=.
+-> i
+T 148 mode=inventory           Faramir the Stalwart(hum) F1@(14, 9) HP 37/48 MP 0/0 Hu 81 $ 442 room=.
+-> u4
+T 149 mode=inventory           Faramir the Stalwart(hum) F1@(14, 9) HP 48/48 MP 0/0 Hu 81 $ 442 room=.
+-> x
+T 150 mode=game_loop           Faramir the Stalwart(hum) F1@(14, 9) HP 48/48 MP 0/0 Hu 81 $ 442 room=.
+-> s
+T 151 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu 80 $ 442 room=M vs Lichen(L0 HP10/10)
+-> a
+T 152 mode=combat_victory      Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu 80 $ 445 room=.
+-> back
+T 153 mode=game_loop           Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu 80 $ 445 room=.
+-> s
+T 154 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 79 $ 445 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 155 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 79 $ 445 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 156 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 79 $ 445 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 157 mode=combat_victory      Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 79 $ 446 room=.
+-> back
+T 158 mode=game_loop           Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 79 $ 446 room=.
+-> s
+T 159 mode=game_loop           Faramir the Stalwart(hum) F1@(14,12) HP 48/48 MP 0/0 Hu 78 $ 446 room=.
+-> s
+T 160 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,13) HP 48/48 MP 0/0 Hu 77 $ 446 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 161 mode=combat_victory      Faramir the Stalwart(hum) F1@(14,13) HP 48/48 MP 0/0 Hu 77 $ 452 room=.
+-> back
+T 162 mode=game_loop           Faramir the Stalwart(hum) F1@(14,13) HP 48/48 MP 0/0 Hu 77 $ 452 room=.
+-> l
+T 163 mode=game_loop           Faramir the Stalwart(hum) F1@(14,13) HP 48/48 MP 0/0 Hu 77 $ 452 room=.
+-> s
+T 164 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 48/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP30/30)
+-> a
+T 165 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 48/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP30/30)
+-> a
+T 166 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 47/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP30/30)
+-> a
+T 167 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 47/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP6/30)
+-> a
+T 168 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 46/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP6/30)
+-> a
+T 169 mode=combat_mode         Faramir the Stalwart(hum) F1@(14,14) HP 46/48 MP 0/0 Hu 76 $ 452 room=M vs Goblin(L0 HP6/30)
+-> a
+T 170 mode=combat_victory      Faramir the Stalwart(hum) F1@(14,14) HP 46/48 MP 0/0 Hu 76 $ 456 room=.
+-> back
+T 171 mode=game_loop           Faramir the Stalwart(hum) F1@(14,14) HP 46/48 MP 0/0 Hu 76 $ 456 room=.
+-> l
+T 172 mode=game_loop           Faramir the Stalwart(hum) F1@(14,14) HP 46/48 MP 0/0 Hu 76 $ 456 room=.
+-> s
+T 173 mode=game_loop           Faramir the Stalwart(hum) F1@(14,15) HP 46/48 MP 0/0 Hu 75 $ 456 room=.
+-> l
+T 174 mode=game_loop           Faramir the Stalwart(hum) F1@(14,15) HP 46/48 MP 0/0 Hu 75 $ 456 room=.
+-> w
+T 175 mode=chest_mode          Faramir the Stalwart(hum) F1@(13,15) HP 46/48 MP 0/0 Hu 74 $ 456 room=C
+-> o
+T 176 mode=game_loop           Faramir the Stalwart(hum) F1@(13,15) HP 46/48 MP 0/0 Hu 74 $ 566 room=.
+-> w
+T 177 mode=dungeon_mode        Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu 73 $ 566 room=N
+-> u
+T 178 mode=dungeon_unlocked_mode Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu 73 $ 566 room=N
+-> r
+T 179 mode=game_loop           Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu 73 $ 845 room=N
+-> i
+T 180 mode=inventory           Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu 73 $ 845 room=N
+-> eat3
+T 181 mode=inventory           Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu 78 $ 845 room=N
+-> eat1
+T 182 mode=inventory           Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu100 $ 845 room=N
+-> x
+T 183 mode=game_loop           Faramir the Stalwart(hum) F1@(12,15) HP 46/48 MP 0/0 Hu100 $ 845 room=N
+-> n
+T 184 mode=combat_mode         Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu 99 $ 845 room=M vs Stirge(L0 HP6/6)
+-> a
+T 185 mode=combat_victory      Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu 99 $ 855 room=.
+-> back
+T 186 mode=game_loop           Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu 99 $ 855 room=.
+-> i
+T 187 mode=inventory           Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu 99 $ 855 room=.
+-> eat5
+T 188 mode=inventory           Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 189 mode=game_loop           Faramir the Stalwart(hum) F1@(12,14) HP 47/48 MP 0/0 Hu100 $ 855 room=.
+-> n
+T 190 mode=game_loop           Faramir the Stalwart(hum) F1@(12,13) HP 47/48 MP 0/0 Hu 99 $ 855 room=.
+-> i
+T 191 mode=inventory           Faramir the Stalwart(hum) F1@(12,13) HP 47/48 MP 0/0 Hu 99 $ 855 room=.
+-> eat4
+T 192 mode=inventory           Faramir the Stalwart(hum) F1@(12,13) HP 47/48 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 193 mode=game_loop           Faramir the Stalwart(hum) F1@(12,13) HP 47/48 MP 0/0 Hu100 $ 855 room=.
+-> e
+T 194 mode=game_loop           Faramir the Stalwart(hum) F1@(13,13) HP 48/48 MP 0/0 Hu 99 $ 855 room=.
+-> e
+T 195 mode=game_loop           Faramir the Stalwart(hum) F1@(14,13) HP 48/48 MP 0/0 Hu 98 $ 855 room=.
+-> n
+T 196 mode=game_loop           Faramir the Stalwart(hum) F1@(14,12) HP 48/48 MP 0/0 Hu 97 $ 855 room=.
+-> n
+T 197 mode=game_loop           Faramir the Stalwart(hum) F1@(14,11) HP 48/48 MP 0/0 Hu 96 $ 855 room=.
+-> n
+T 198 mode=game_loop           Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu 95 $ 855 room=.
+-> i
+T 199 mode=inventory           Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu 95 $ 855 room=.
+-> eat3
+T 200 mode=inventory           Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 201 mode=game_loop           Faramir the Stalwart(hum) F1@(14,10) HP 48/48 MP 0/0 Hu100 $ 855 room=.
+-> n
+T 202 mode=game_loop           Faramir the Stalwart(hum) F1@(14, 9) HP 48/48 MP 0/0 Hu 99 $ 855 room=.
+-> w
+T 203 mode=game_loop           Faramir the Stalwart(hum) F1@(13, 9) HP 48/48 MP 0/0 Hu 98 $ 855 room=.
+-> w
+T 204 mode=game_loop           Faramir the Stalwart(hum) F1@(12, 9) HP 48/48 MP 0/0 Hu 97 $ 855 room=.
+-> w
+T 205 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 9) HP 48/48 MP 0/0 Hu 96 $ 855 room=.
+-> i
+T 206 mode=inventory           Faramir the Stalwart(hum) F1@(11, 9) HP 48/48 MP 0/0 Hu 96 $ 855 room=.
+-> eat3
+T 207 mode=inventory           Faramir the Stalwart(hum) F1@(11, 9) HP 48/48 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 208 mode=game_loop           Faramir the Stalwart(hum) F1@(11, 9) HP 48/48 MP 0/0 Hu100 $ 855 room=.
+-> w
+T 209 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 9) HP 48/48 MP 0/0 Hu 99 $ 855 room=.
+-> n
+T 210 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 8) HP 48/48 MP 0/0 Hu 98 $ 855 room=.
+-> l
+T 211 mode=game_loop           Faramir the Stalwart(hum) F1@(10, 8) HP 48/48 MP 0/0 Hu 98 $ 855 room=.
+-> w
+T 212 mode=game_loop           Faramir the Stalwart(hum) F1@( 9, 8) HP 48/48 MP 0/0 Hu 97 $ 855 room=.
+-> w
+T 213 mode=stairs_down_mode    Faramir the Stalwart(hum) F1@( 8, 8) HP 48/48 MP 0/0 Hu 96 $ 855 room=D
+-> d
+T 214 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 96 $ 855 room=U
+-> n
+T 215 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 96 $ 855 room=U
+-> n
+T 216 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 96 $ 855 room=U
+-> w
+T 217 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 96 $ 855 room=U
+-> n
+T 218 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 96 $ 855 room=U
+-> e
+T 219 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 95 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 220 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 95 $ 855 room=M
+-> w
+T 221 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 95 $ 855 room=U
+-> e
+T 222 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 94 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 223 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 94 $ 855 room=M
+-> w
+T 224 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 94 $ 855 room=U
+-> e
+T 225 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 93 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 226 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 93 $ 855 room=M
+-> w
+T 227 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 93 $ 855 room=U
+-> e
+T 228 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 92 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 229 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 92 $ 855 room=M
+-> w
+T 230 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 92 $ 855 room=U
+-> e
+T 231 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 46/48 MP 0/0 Hu 91 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 232 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 46/48 MP 0/0 Hu 91 $ 855 room=M
+-> w
+T 233 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 46/48 MP 0/0 Hu 91 $ 855 room=U
+-> e
+T 234 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 46/48 MP 0/0 Hu 90 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 235 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 46/48 MP 0/0 Hu 90 $ 855 room=M
+-> w
+T 236 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 46/48 MP 0/0 Hu 90 $ 855 room=U
+-> e
+T 237 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 47/48 MP 0/0 Hu 89 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 238 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 43/48 MP 0/0 Hu 89 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 239 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 39/48 MP 0/0 Hu 89 $ 855 room=M
+-> w
+T 240 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 39/48 MP 0/0 Hu 89 $ 855 room=U
+-> e
+T 241 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 39/48 MP 0/0 Hu 88 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 242 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 39/48 MP 0/0 Hu 88 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 243 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 35/48 MP 0/0 Hu 88 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 244 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 35/48 MP 0/0 Hu 88 $ 855 room=M
+-> w
+T 245 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 35/48 MP 0/0 Hu 88 $ 855 room=U
+-> e
+T 246 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 87 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 247 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 87 $ 855 room=M
+-> w
+T 248 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 36/48 MP 0/0 Hu 87 $ 855 room=U
+-> e
+T 249 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 86 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 250 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 86 $ 855 room=M
+-> w
+T 251 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 36/48 MP 0/0 Hu 86 $ 855 room=U
+-> e
+T 252 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 37/48 MP 0/0 Hu 85 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 253 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 33/48 MP 0/0 Hu 85 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 254 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 33/48 MP 0/0 Hu 85 $ 855 room=M
+-> w
+T 255 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 33/48 MP 0/0 Hu 85 $ 855 room=U
+-> e
+T 256 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 33/48 MP 0/0 Hu 84 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 257 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 29/48 MP 0/0 Hu 84 $ 855 room=M
+-> w
+T 258 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 29/48 MP 0/0 Hu 84 $ 855 room=U
+-> e
+T 259 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 29/48 MP 0/0 Hu 83 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 260 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 21/48 MP 0/0 Hu 83 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 261 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 21/48 MP 0/0 Hu 83 $ 855 room=M
+-> u1
+T 262 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 83 $ 855 room=M
+-> x
+T 263 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 83 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 264 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 83 $ 855 room=M
+-> w
+T 265 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 83 $ 855 room=U
+-> e
+T 266 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 82 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 267 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 82 $ 855 room=M
+-> w
+T 268 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 82 $ 855 room=U
+-> e
+T 269 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 81 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 270 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 81 $ 855 room=M
+-> w
+T 271 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 81 $ 855 room=U
+-> e
+T 272 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 80 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 273 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 80 $ 855 room=M
+-> w
+T 274 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 80 $ 855 room=U
+-> e
+T 275 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 79 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 276 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 79 $ 855 room=M
+-> w
+T 277 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 79 $ 855 room=U
+-> e
+T 278 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 78 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 279 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 45/48 MP 0/0 Hu 78 $ 855 room=M
+-> w
+T 280 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 45/48 MP 0/0 Hu 78 $ 855 room=U
+-> e
+T 281 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 46/48 MP 0/0 Hu 77 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 282 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 38/48 MP 0/0 Hu 77 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 283 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 38/48 MP 0/0 Hu 77 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 284 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 77 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 285 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 77 $ 855 room=M
+-> w
+T 286 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 34/48 MP 0/0 Hu 77 $ 855 room=U
+-> e
+T 287 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 76 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 288 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 76 $ 855 room=M
+-> w
+T 289 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 34/48 MP 0/0 Hu 76 $ 855 room=U
+-> e
+T 290 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 75 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 291 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 30/48 MP 0/0 Hu 75 $ 855 room=M
+-> w
+T 292 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 30/48 MP 0/0 Hu 75 $ 855 room=U
+-> e
+T 293 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 30/48 MP 0/0 Hu 74 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 294 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 26/48 MP 0/0 Hu 74 $ 855 room=M
+-> w
+T 295 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 26/48 MP 0/0 Hu 74 $ 855 room=U
+-> e
+T 296 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 73 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 297 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 73 $ 855 room=M
+-> w
+T 298 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 27/48 MP 0/0 Hu 73 $ 855 room=U
+-> e
+T 299 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 72 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 300 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 72 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 301 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 72 $ 855 room=M
+-> w
+T 302 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 27/48 MP 0/0 Hu 72 $ 855 room=U
+-> e
+T 303 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 27/48 MP 0/0 Hu 71 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 304 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 23/48 MP 0/0 Hu 71 $ 855 room=M
+-> w
+T 305 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 23/48 MP 0/0 Hu 71 $ 855 room=U
+-> e
+T 306 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 23/48 MP 0/0 Hu 70 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 307 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 23/48 MP 0/0 Hu 70 $ 855 room=M
+-> u1
+T 308 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 70 $ 855 room=M
+-> x
+T 309 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 70 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 310 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 70 $ 855 room=M
+-> w
+T 311 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 70 $ 855 room=U
+-> e
+T 312 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 69 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 313 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 69 $ 855 room=M
+-> w
+T 314 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 69 $ 855 room=U
+-> e
+T 315 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 68 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 316 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 68 $ 855 room=M
+-> w
+T 317 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 68 $ 855 room=U
+-> e
+T 318 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 67 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 319 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 67 $ 855 room=M
+-> w
+T 320 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 40/48 MP 0/0 Hu 67 $ 855 room=U
+-> e
+T 321 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 66 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 322 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 66 $ 855 room=M
+-> w
+T 323 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 40/48 MP 0/0 Hu 66 $ 855 room=U
+-> e
+T 324 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 65 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 325 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 65 $ 855 room=M
+-> w
+T 326 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 40/48 MP 0/0 Hu 65 $ 855 room=U
+-> e
+T 327 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 41/48 MP 0/0 Hu 64 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 328 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 41/48 MP 0/0 Hu 64 $ 855 room=M
+-> w
+T 329 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 41/48 MP 0/0 Hu 64 $ 855 room=U
+-> e
+T 330 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 41/48 MP 0/0 Hu 63 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 331 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 37/48 MP 0/0 Hu 63 $ 855 room=M
+-> w
+T 332 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 37/48 MP 0/0 Hu 63 $ 855 room=U
+-> e
+T 333 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 37/48 MP 0/0 Hu 62 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 334 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 37/48 MP 0/0 Hu 62 $ 855 room=M
+-> w
+T 335 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 37/48 MP 0/0 Hu 62 $ 855 room=U
+-> e
+T 336 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 37/48 MP 0/0 Hu 61 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 337 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 33/48 MP 0/0 Hu 61 $ 855 room=M
+-> w
+T 338 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 33/48 MP 0/0 Hu 61 $ 855 room=U
+-> e
+T 339 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 34/48 MP 0/0 Hu 60 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 340 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 30/48 MP 0/0 Hu 60 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 341 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 26/48 MP 0/0 Hu 60 $ 855 room=M
+-> w
+T 342 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 26/48 MP 0/0 Hu 60 $ 855 room=U
+-> e
+T 343 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 26/48 MP 0/0 Hu 59 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 344 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 26/48 MP 0/0 Hu 59 $ 855 room=M
+-> w
+T 345 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 26/48 MP 0/0 Hu 59 $ 855 room=U
+-> e
+T 346 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 26/48 MP 0/0 Hu 58 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 347 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 22/48 MP 0/0 Hu 58 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 348 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 22/48 MP 0/0 Hu 58 $ 855 room=M
+-> u1
+T 349 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 58 $ 855 room=M
+-> x
+T 350 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 58 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 351 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 58 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 352 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 58 $ 855 room=M
+-> w
+T 353 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 58 $ 855 room=U
+-> e
+T 354 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 57 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 355 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 57 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 356 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 57 $ 855 room=M
+-> w
+T 357 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 36/48 MP 0/0 Hu 57 $ 855 room=U
+-> e
+T 358 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 56 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 359 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 56 $ 855 room=M
+-> w
+T 360 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 36/48 MP 0/0 Hu 56 $ 855 room=U
+-> e
+T 361 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 36/48 MP 0/0 Hu 55 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 362 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 32/48 MP 0/0 Hu 55 $ 855 room=M
+-> w
+T 363 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 32/48 MP 0/0 Hu 55 $ 855 room=U
+-> e
+T 364 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 32/48 MP 0/0 Hu 54 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 365 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 32/48 MP 0/0 Hu 54 $ 855 room=M
+-> w
+T 366 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 32/48 MP 0/0 Hu 54 $ 855 room=U
+-> e
+T 367 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 32/48 MP 0/0 Hu 53 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 368 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 28/48 MP 0/0 Hu 53 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 369 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 53 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 370 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 53 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 371 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 53 $ 855 room=M
+-> w
+T 372 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 24/48 MP 0/0 Hu 53 $ 855 room=U
+-> e
+T 373 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 52 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 374 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 52 $ 855 room=M
+-> w
+T 375 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 24/48 MP 0/0 Hu 52 $ 855 room=U
+-> e
+T 376 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 51 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 377 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 51 $ 855 room=M
+-> w
+T 378 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 20/48 MP 0/0 Hu 51 $ 855 room=U
+-> e
+T 379 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 50 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 380 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 50 $ 855 room=M
+-> u1
+T 381 mode=inventory           Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 50 $ 855 room=M
+-> x
+T 382 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 50 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 383 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 50 $ 855 room=M
+-> w
+T 384 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 50 $ 855 room=U
+-> e
+T 385 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 49 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 386 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 49 $ 855 room=M
+-> w
+T 387 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 48/48 MP 0/0 Hu 49 $ 855 room=U
+-> e
+T 388 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 48/48 MP 0/0 Hu 48 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 389 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 48 $ 855 room=M
+-> w
+T 390 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 48 $ 855 room=U
+-> e
+T 391 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 47 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 392 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 47 $ 855 room=M
+-> w
+T 393 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 47 $ 855 room=U
+-> e
+T 394 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 46 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 395 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 46 $ 855 room=M
+-> w
+T 396 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 44/48 MP 0/0 Hu 46 $ 855 room=U
+-> e
+T 397 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 45 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 398 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 44/48 MP 0/0 Hu 45 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 399 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 40/48 MP 0/0 Hu 45 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 400 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 32/48 MP 0/0 Hu 45 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 401 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 28/48 MP 0/0 Hu 45 $ 855 room=M
+-> w
+T 402 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 28/48 MP 0/0 Hu 45 $ 855 room=U
+-> e
+T 403 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 28/48 MP 0/0 Hu 44 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 404 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 28/48 MP 0/0 Hu 44 $ 855 room=M
+-> w
+T 405 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 28/48 MP 0/0 Hu 44 $ 855 room=U
+-> e
+T 406 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 28/48 MP 0/0 Hu 43 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 407 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 43 $ 855 room=M
+-> w
+T 408 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 24/48 MP 0/0 Hu 43 $ 855 room=U
+-> e
+T 409 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 24/48 MP 0/0 Hu 42 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 410 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 42 $ 855 room=M
+-> w
+T 411 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 20/48 MP 0/0 Hu 42 $ 855 room=U
+-> e
+T 412 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 41 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 413 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 41 $ 855 room=M
+-> w
+T 414 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 20/48 MP 0/0 Hu 41 $ 855 room=U
+-> e
+T 415 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 40 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 416 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 40 $ 855 room=M
+-> w
+T 417 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 20/48 MP 0/0 Hu 40 $ 855 room=U
+-> e
+T 418 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 20/48 MP 0/0 Hu 39 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 419 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 16/48 MP 0/0 Hu 39 $ 855 room=M
+-> w
+T 420 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 16/48 MP 0/0 Hu 39 $ 855 room=U
+-> e
+T 421 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 16/48 MP 0/0 Hu 38 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 422 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 12/48 MP 0/0 Hu 38 $ 855 room=M
+-> w
+T 423 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 12/48 MP 0/0 Hu 38 $ 855 room=U
+-> e
+T 424 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 12/48 MP 0/0 Hu 37 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 425 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 8/48 MP 0/0 Hu 37 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 426 mode=flee_direction_mode Faramir the Stalwart(hum) F2@( 2, 1) HP 4/48 MP 0/0 Hu 37 $ 855 room=M
+-> w
+T 427 mode=stairs_up_mode      Faramir the Stalwart(hum) F2@( 1, 1) HP 4/48 MP 0/0 Hu 37 $ 855 room=U
+-> e
+T 428 mode=combat_mode         Faramir the Stalwart(hum) F2@( 2, 1) HP 4/48 MP 0/0 Hu 36 $ 855 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 429 mode=death_screen        Faramir the Stalwart(hum) F2@( 2, 1) HP 0/48 MP 0/0 Hu 36 $ 855 room=M
+
+=== run finished: turns=429 floor=2 hp=0/48 gold=855 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00023_human.html

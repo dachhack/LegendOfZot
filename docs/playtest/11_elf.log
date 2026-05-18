@@ -1,0 +1,366 @@
+T   0 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 15 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=garden_mode         Thranduil Moonsinger(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=G
+  A lush magical garden blooms before you, filled with rare ingredients.
+-> h
+T   3 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+  You gather useful herbs and plants...
+  Gathered: Wisdom Moss
+  Gathered: Stone Flower
+-> i
+T   4 mode=inventory           Thranduil Moonsinger(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> u3
+T   5 mode=inventory           Thranduil Moonsinger(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You have identified: Minor Healing Potion!
+  Thranduil Moonsinger drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   6 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  Inventory closed.
+-> l
+T   7 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   8 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Bat(L0 HP12/12)
+  A Bat (Level 0) appears! A cranky flying puppy intent on violence.
+  You seize the initiative!
+-> a
+T   9 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 446 room=.
+-> back
+T  10 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 446 room=.
+-> l
+T  11 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 446 room=.
+-> s
+T  12 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 446 room=M vs Bat(L0 HP12/12)
+-> a
+T  13 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 455 room=.
+-> back
+T  14 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 455 room=.
+-> l
+T  15 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 455 room=.
+-> s
+T  16 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 1, 5) HP 28/28 MP 0/0 Hu 96 $ 455 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  17 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 96 $ 455 room=M
+-> s
+T  18 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 6) HP 27/28 MP 0/0 Hu 96 $ 455 room=.
+-> l
+T  19 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 6) HP 27/28 MP 0/0 Hu 96 $ 455 room=.
+-> s
+T  20 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 1, 7) HP 27/28 MP 0/0 Hu 95 $ 455 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  21 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 1, 7) HP 26/28 MP 0/0 Hu 95 $ 455 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  22 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 1, 7) HP 25/28 MP 0/0 Hu 95 $ 461 room=.
+-> back
+T  23 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 7) HP 25/28 MP 0/0 Hu 95 $ 461 room=.
+-> l
+T  24 mode=game_loop           Thranduil Moonsinger(elf) F1@( 1, 7) HP 25/28 MP 0/0 Hu 95 $ 461 room=.
+-> e
+T  25 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 7) HP 26/28 MP 0/0 Hu 94 $ 461 room=M vs Kobold(L0 HP20/20)
+-> a
+T  26 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 2, 7) HP 26/28 MP 0/0 Hu 94 $ 471 room=.
+-> back
+T  27 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 7) HP 26/28 MP 0/0 Hu 94 $ 471 room=.
+-> l
+T  28 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 7) HP 26/28 MP 0/0 Hu 94 $ 471 room=.
+-> n
+T  29 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 6) HP 26/28 MP 0/0 Hu 93 $ 471 room=M vs Kobold(L0 HP8/8)
+-> a
+T  30 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 6) HP 25/28 MP 0/0 Hu 93 $ 471 room=M vs Kobold(L0 HP8/8)
+-> a
+T  31 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 6) HP 24/28 MP 0/0 Hu 93 $ 471 room=M vs Kobold(L0 HP8/8)
+-> a
+T  32 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 2, 6) HP 24/28 MP 0/0 Hu 93 $ 479 room=.
+-> back
+T  33 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 6) HP 24/28 MP 0/0 Hu 93 $ 479 room=.
+-> n
+T  34 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 92 $ 479 room=.
+-> l
+T  35 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 92 $ 479 room=.
+-> n
+T  36 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 4) HP 25/28 MP 0/0 Hu 91 $ 479 room=M vs Lichen(L0 HP10/10)
+-> a
+T  37 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 2, 4) HP 25/28 MP 0/0 Hu 91 $ 479 room=M vs Lichen(L0 HP10/10)
+-> a
+T  38 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 2, 4) HP 25/28 MP 0/0 Hu 91 $ 481 room=.
+-> back
+T  39 mode=game_loop           Thranduil Moonsinger(elf) F1@( 2, 4) HP 25/28 MP 0/0 Hu 91 $ 481 room=.
+-> e
+T  40 mode=library_mode        Thranduil Moonsinger(elf) F1@( 3, 4) HP 26/28 MP 0/0 Hu 90 $ 481 room=L
+-> r
+T  41 mode=game_loop           Thranduil Moonsinger(elf) F1@( 3, 4) HP 26/28 MP 0/0 Hu 90 $ 481 room=.
+-> s
+T  42 mode=combat_mode         Thranduil Moonsinger(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 89 $ 481 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  43 mode=combat_victory      Thranduil Moonsinger(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 89 $ 489 room=.
+-> back
+T  44 mode=game_loop           Thranduil Moonsinger(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 89 $ 489 room=.
+-> s
+T  45 mode=game_loop           Thranduil Moonsinger(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 88 $ 489 room=.
+-> i
+T  46 mode=inventory           Thranduil Moonsinger(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 88 $ 489 room=.
+-> eat3
+T  47 mode=inventory           Thranduil Moonsinger(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
+-> x
+T  48 mode=game_loop           Thranduil Moonsinger(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
+-> e
+T  49 mode=stairs_down_mode    Thranduil Moonsinger(elf) F1@( 4, 6) HP 27/28 MP 0/0 Hu 92 $ 489 room=D
+-> d
+T  50 mode=stairs_up_mode      Thranduil Moonsinger(elf) F2@( 1, 1) HP 27/28 MP 0/0 Hu 92 $ 489 room=U
+-> n
+T  51 mode=stairs_up_mode      Thranduil Moonsinger(elf) F2@( 1, 1) HP 27/28 MP 0/0 Hu 92 $ 489 room=U
+-> w
+T  52 mode=stairs_up_mode      Thranduil Moonsinger(elf) F2@( 1, 1) HP 27/28 MP 0/0 Hu 92 $ 489 room=U
+-> w
+T  53 mode=stairs_up_mode      Thranduil Moonsinger(elf) F2@( 1, 1) HP 27/28 MP 0/0 Hu 92 $ 489 room=U
+-> s
+T  54 mode=warp_mode           Thranduil Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 91 $ 489 room=W
+-> y
+T  55 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  56 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  57 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  58 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  59 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  60 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  61 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  62 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  63 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  64 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  65 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  66 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  67 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  68 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  69 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  70 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  71 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  72 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  73 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  74 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  75 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  76 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  77 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  78 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  79 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  80 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  81 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> i
+T  82 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M
+-> u1
+T  83 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> x
+T  84 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  85 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  86 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  87 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  88 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  89 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  90 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  91 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  92 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  93 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  94 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  95 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  96 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T  97 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  98 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> i
+T  99 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M
+-> u1
+T 100 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> x
+T 101 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 102 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 103 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 104 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 105 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 106 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 107 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 108 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 109 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 110 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 111 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 112 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 113 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 114 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 115 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 116 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 117 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 118 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 119 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 120 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 121 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> i
+T 122 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M
+-> u1
+T 123 mode=inventory           Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> x
+T 124 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 125 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 126 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 127 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 128 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 129 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 130 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 131 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 132 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 133 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 134 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 135 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 136 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 137 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 138 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 139 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 140 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 141 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 142 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 143 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 144 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 145 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 146 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 147 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 148 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 149 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 150 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 151 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 152 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 24/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 153 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 154 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 155 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 20/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 156 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 16/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 157 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 158 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 159 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 12/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 160 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 161 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 162 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 163 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 164 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 165 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 166 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 167 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 8/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 168 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 4/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 169 mode=flee_direction_mode Thranduil Moonsinger(elf) F1@(11, 4) HP 4/28 MP 0/0 Hu 91 $ 489 room=M
+-> c
+T 170 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 4/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 171 mode=combat_mode         Thranduil Moonsinger(elf) F1@(11, 4) HP 4/28 MP 0/0 Hu 91 $ 489 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 172 mode=death_screen        Thranduil Moonsinger(elf) F1@(11, 4) HP 0/28 MP 0/0 Hu 91 $ 489 room=M
+
+=== run finished: turns=172 floor=1 hp=0/28 gold=489 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00011_elf.html

@@ -1,0 +1,718 @@
+T   0 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 14 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Galadhrim Goldenbough(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Galadhrim Goldenbough(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Galadhrim Goldenbough drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> s
+T   5 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+  A Crawling Claw (Level 0) appears! A severed hand scuttles across the floor with malicious intent.
+  The Crawling Claw strikes first!
+-> a
+T   6 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+  The crawling claw twitches and goes still.
+  You gained 8 experience.
+  You found 1 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  The Crawling Claw dropped some Ring Mail!
+  You harvested some raw Crawling Claw meat.
+-> back
+T   7 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+-> i
+T   8 mode=inventory           Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+-> e2
+T   9 mode=inventory           Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+-> x
+T  10 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+-> l
+T  11 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 2) HP 27/28 MP 0/0 Hu 99 $ 341 room=.
+-> s
+T  12 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 341 room=M vs Goblin(L0 HP12/12)
+-> a
+T  13 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 98 $ 341 room=M vs Goblin(L0 HP12/12)
+-> a
+T  14 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 1, 3) HP 25/28 MP 0/0 Hu 98 $ 350 room=.
+-> back
+T  15 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 3) HP 25/28 MP 0/0 Hu 98 $ 350 room=.
+-> l
+T  16 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 3) HP 25/28 MP 0/0 Hu 98 $ 350 room=.
+-> s
+T  17 mode=altar_mode          Galadhrim Goldenbough(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 97 $ 350 room=A
+-> pray
+T  18 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu100 $ 350 room=.
+-> l
+T  19 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu100 $ 350 room=.
+-> s
+T  20 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 5) HP 28/28 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP35/35)
+-> a
+T  21 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP35/35)
+-> a
+T  22 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP14/35)
+-> a
+T  23 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 1, 5) HP 26/28 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP14/35)
+-> a
+T  24 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 1, 5) HP 26/28 MP 0/0 Hu 99 $ 351 room=.
+-> back
+T  25 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 5) HP 26/28 MP 0/0 Hu 99 $ 351 room=.
+-> l
+T  26 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 1, 5) HP 26/28 MP 0/0 Hu 99 $ 351 room=.
+-> e
+T  27 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2, 5) HP 26/28 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  28 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  29 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2, 5) HP 24/28 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  30 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 2, 5) HP 24/28 MP 0/0 Hu 98 $ 358 room=.
+-> back
+T  31 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 5) HP 24/28 MP 0/0 Hu 98 $ 358 room=.
+-> l
+T  32 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 5) HP 24/28 MP 0/0 Hu 98 $ 358 room=.
+-> e
+T  33 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 5) HP 25/28 MP 0/0 Hu 97 $ 358 room=.
+-> e
+T  34 mode=pool_mode           Galadhrim Goldenbough(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 96 $ 358 room=P
+-> dr
+T  35 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 96 $ 358 room=.
+-> l
+T  36 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 96 $ 358 room=.
+-> e
+T  37 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 26/28 MP 0/0 Hu 95 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  38 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 25/28 MP 0/0 Hu 95 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  39 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 5, 5) HP 24/28 MP 0/0 Hu 95 $ 358 room=M
+-> e
+T  40 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 24/28 MP 0/0 Hu 95 $ 358 room=.
+-> l
+T  41 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 24/28 MP 0/0 Hu 95 $ 358 room=.
+-> s
+T  42 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6, 6) HP 24/28 MP 0/0 Hu 94 $ 358 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  43 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6, 6) HP 24/28 MP 0/0 Hu 94 $ 358 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  44 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 6, 6) HP 23/28 MP 0/0 Hu 94 $ 364 room=.
+-> back
+T  45 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 23/28 MP 0/0 Hu 94 $ 364 room=.
+-> l
+T  46 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 23/28 MP 0/0 Hu 94 $ 364 room=.
+-> w
+T  47 mode=chest_mode          Galadhrim Goldenbough(elf) F1@( 5, 6) HP 24/28 MP 0/0 Hu 93 $ 364 room=C
+-> o
+T  48 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 24/28 MP 0/0 Hu 93 $ 374 room=.
+-> l
+T  49 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 24/28 MP 0/0 Hu 93 $ 374 room=.
+-> s
+T  50 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 92 $ 374 room=.
+-> i
+T  51 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 24/28 MP 0/0 Hu 92 $ 374 room=.
+-> u4
+T  52 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 92 $ 374 room=.
+-> x
+T  53 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 92 $ 374 room=.
+-> i
+T  54 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 92 $ 374 room=.
+-> eat3
+T  55 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 98 $ 374 room=.
+-> x
+T  56 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 98 $ 374 room=.
+-> s
+T  57 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 97 $ 374 room=.
+-> i
+T  58 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 97 $ 374 room=.
+-> eat4
+T  59 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu100 $ 374 room=.
+-> x
+T  60 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu100 $ 374 room=.
+-> s
+T  61 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 9) HP 28/28 MP 0/0 Hu 99 $ 374 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  62 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 99 $ 374 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  63 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 5, 9) HP 24/28 MP 0/0 Hu 99 $ 374 room=M
+-> s
+T  64 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 21/28 MP 0/0 Hu 99 $ 374 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  65 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 5,10) HP 17/28 MP 0/0 Hu 99 $ 374 room=M
+-> s
+T  66 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,11) HP 17/28 MP 0/0 Hu 99 $ 374 room=.
+-> i
+T  67 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5,11) HP 17/28 MP 0/0 Hu 99 $ 374 room=.
+-> u4
+T  68 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 99 $ 374 room=.
+-> x
+T  69 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 99 $ 374 room=.
+-> l
+T  70 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 99 $ 374 room=.
+-> s
+T  71 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 98 $ 374 room=M vs Kobold(L0 HP8/8)
+-> a
+T  72 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 98 $ 475 room=.
+-> back
+T  73 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 98 $ 475 room=.
+-> l
+T  74 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 98 $ 475 room=.
+-> e
+T  75 mode=chest_mode          Galadhrim Goldenbough(elf) F1@( 6,12) HP 28/28 MP 0/0 Hu 97 $ 475 room=C
+-> n
+T  76 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6,11) HP 28/28 MP 0/0 Hu 96 $ 475 room=M vs Bat(L0 HP12/12)
+-> f
+T  77 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 6,11) HP 28/28 MP 0/0 Hu 96 $ 475 room=M
+-> n
+T  78 mode=pool_mode           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu 96 $ 475 room=P
+-> dr
+T  79 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu 96 $ 475 room=.
+-> i
+T  80 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu 96 $ 475 room=.
+-> eat3
+T  81 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu100 $ 475 room=.
+-> x
+T  82 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu100 $ 475 room=.
+-> l
+T  83 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu100 $ 475 room=.
+-> n
+T  84 mode=chest_mode          Galadhrim Goldenbough(elf) F1@( 6, 9) HP 28/28 MP 0/0 Hu 99 $ 475 room=C
+-> o
+T  85 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6,10) HP 28/28 MP 0/0 Hu 98 $ 475 room=.
+-> e
+T  86 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,10) HP 28/28 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  87 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,10) HP 27/28 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  88 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,10) HP 26/28 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  89 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 7,10) HP 26/28 MP 0/0 Hu 97 $ 478 room=.
+-> back
+T  90 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7,10) HP 26/28 MP 0/0 Hu 97 $ 478 room=.
+-> l
+T  91 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7,10) HP 26/28 MP 0/0 Hu 97 $ 478 room=.
+-> s
+T  92 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,11) HP 26/28 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  93 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,11) HP 25/28 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T  94 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,11) HP 23/28 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  95 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7,11) HP 22/28 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  96 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 7,11) HP 21/28 MP 0/0 Hu 96 $ 485 room=.
+-> back
+T  97 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7,11) HP 21/28 MP 0/0 Hu 96 $ 485 room=.
+-> i
+T  98 mode=inventory           Galadhrim Goldenbough(elf) F1@( 7,11) HP 21/28 MP 0/0 Hu 96 $ 485 room=.
+-> u4
+T  99 mode=inventory           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu 96 $ 485 room=.
+-> x
+T 100 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu 96 $ 485 room=.
+-> i
+T 101 mode=inventory           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu 96 $ 485 room=.
+-> eat2
+T 102 mode=inventory           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu100 $ 485 room=.
+-> eat1
+T 103 mode=inventory           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu100 $ 485 room=.
+-> x
+T 104 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7,11) HP 28/28 MP 0/0 Hu100 $ 485 room=.
+-> w
+T 105 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6,11) HP 28/28 MP 0/0 Hu 99 $ 485 room=M vs Bat(L0 HP12/12)
+-> a
+T 106 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6,11) HP 27/28 MP 0/0 Hu 99 $ 485 room=M vs Bat(L0 HP12/12)
+-> a
+T 107 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6,11) HP 26/28 MP 0/0 Hu 99 $ 485 room=M vs Bat(L0 HP12/12)
+-> a
+T 108 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 6,11) HP 26/28 MP 0/0 Hu 99 $ 485 room=M vs Bat(L0 HP12/12)
+-> f
+T 109 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 6,11) HP 25/28 MP 0/0 Hu 99 $ 485 room=M
+-> s
+T 110 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6,12) HP 25/28 MP 0/0 Hu 99 $ 485 room=C
+-> w
+T 111 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,12) HP 25/28 MP 0/0 Hu 98 $ 485 room=.
+-> n
+T 112 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,11) HP 26/28 MP 0/0 Hu 97 $ 485 room=.
+-> w
+T 113 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,11) HP 26/28 MP 0/0 Hu 96 $ 485 room=.
+-> w
+T 114 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,11) HP 27/28 MP 0/0 Hu 95 $ 485 room=.
+-> n
+T 115 mode=dungeon_mode        Galadhrim Goldenbough(elf) F1@( 3,10) HP 27/28 MP 0/0 Hu 94 $ 485 room=N
+-> u
+T 116 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 27/28 MP 0/0 Hu 94 $ 485 room=N
+-> l
+T 117 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 27/28 MP 0/0 Hu 94 $ 485 room=N
+-> n
+T 118 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> l
+T 119 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 93 $ 485 room=.
+-> e
+T 120 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 92 $ 485 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 121 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 4, 9) HP 27/28 MP 0/0 Hu 92 $ 492 room=.
+-> back
+T 122 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 27/28 MP 0/0 Hu 92 $ 492 room=.
+-> e
+T 123 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 91 $ 492 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 124 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 91 $ 594 room=.
+-> back
+T 125 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 91 $ 594 room=.
+-> n
+T 126 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 594 room=.
+-> e
+T 127 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 89 $ 594 room=.
+-> n
+T 128 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 88 $ 594 room=.
+-> e
+T 129 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 87 $ 594 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 130 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> back
+T 131 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> l
+T 132 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> n
+T 133 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 86 $ 604 room=.
+-> n
+T 134 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 85 $ 604 room=.
+-> n
+T 135 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 84 $ 604 room=.
+-> l
+T 136 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 84 $ 604 room=.
+-> w
+T 137 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 83 $ 604 room=.
+-> s
+T 138 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 82 $ 604 room=.
+-> i
+T 139 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 82 $ 604 room=.
+-> eat1
+T 140 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> x
+T 141 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> s
+T 142 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 604 room=.
+-> i
+T 143 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 604 room=.
+-> eat1
+T 144 mode=inventory           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 91 $ 604 room=.
+-> x
+T 145 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 91 $ 604 room=.
+-> s
+T 146 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 604 room=.
+-> s
+T 147 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 89 $ 604 room=.
+-> w
+T 148 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 88 $ 604 room=.
+-> s
+T 149 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 28/28 MP 0/0 Hu 87 $ 604 room=.
+-> w
+T 150 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 86 $ 604 room=.
+-> w
+T 151 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 85 $ 604 room=.
+-> s
+T 152 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 84 $ 604 room=N
+-> s
+T 153 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 83 $ 604 room=.
+-> e
+T 154 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 82 $ 604 room=.
+-> n
+T 155 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 81 $ 604 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 156 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 4,10) HP 27/28 MP 0/0 Hu 81 $ 604 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 157 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 4,10) HP 26/28 MP 0/0 Hu 81 $ 604 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 158 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 4,10) HP 26/28 MP 0/0 Hu 81 $ 614 room=.
+-> back
+T 159 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,10) HP 26/28 MP 0/0 Hu 81 $ 614 room=.
+-> n
+T 160 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 26/28 MP 0/0 Hu 80 $ 614 room=.
+-> e
+T 161 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 26/28 MP 0/0 Hu 79 $ 614 room=.
+-> n
+T 162 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 26/28 MP 0/0 Hu 78 $ 614 room=.
+-> e
+T 163 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 27/28 MP 0/0 Hu 77 $ 614 room=.
+-> n
+T 164 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 27/28 MP 0/0 Hu 76 $ 614 room=.
+-> n
+T 165 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 75 $ 614 room=.
+-> n
+T 166 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 74 $ 614 room=.
+-> n
+T 167 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 73 $ 614 room=.
+-> n
+T 168 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 72 $ 614 room=.
+-> n
+T 169 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 71 $ 614 room=.
+-> w
+T 170 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 70 $ 614 room=M vs Kobold(L0 HP20/20)
+-> a
+T 171 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 70 $ 614 room=M vs Kobold(L0 HP20/20)
+-> a
+T 172 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 70 $ 614 room=M vs Kobold(L0 HP20/20)
+-> a
+T 173 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 5, 2) HP 25/38 MP 0/0 Hu 70 $ 618 room=.
+-> back
+T 174 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 2) HP 25/38 MP 0/0 Hu 70 $ 618 room=.
+-> s
+T 175 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 3) HP 25/38 MP 0/0 Hu 69 $ 618 room=.
+-> i
+T 176 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 3) HP 25/38 MP 0/0 Hu 69 $ 618 room=.
+-> u4
+T 177 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 69 $ 618 room=.
+-> x
+T 178 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 69 $ 618 room=.
+-> l
+T 179 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 69 $ 618 room=.
+-> w
+T 180 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 4, 3) HP 38/38 MP 0/0 Hu 68 $ 618 room=M vs Stirge(L0 HP6/6)
+-> a
+T 181 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 4, 3) HP 38/38 MP 0/0 Hu 68 $ 627 room=.
+-> back
+T 182 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 3) HP 38/38 MP 0/0 Hu 68 $ 627 room=.
+-> n
+T 183 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 2) HP 38/38 MP 0/0 Hu 67 $ 627 room=.
+-> n
+T 184 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 66 $ 627 room=.
+-> w
+T 185 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 65 $ 627 room=.
+-> s
+T 186 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 64 $ 627 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 187 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 64 $ 627 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 188 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 3, 2) HP 37/38 MP 0/0 Hu 64 $ 627 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 189 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 3, 2) HP 36/38 MP 0/0 Hu 64 $ 632 room=.
+-> back
+T 190 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 2) HP 36/38 MP 0/0 Hu 64 $ 632 room=.
+-> w
+T 191 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 2) HP 36/38 MP 0/0 Hu 63 $ 632 room=.
+-> s
+T 192 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2, 3) HP 36/38 MP 0/0 Hu 62 $ 632 room=M vs Stirge(L0 HP6/6)
+-> a
+T 193 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2, 3) HP 36/38 MP 0/0 Hu 62 $ 632 room=M vs Stirge(L0 HP6/6)
+-> a
+T 194 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 2, 3) HP 36/38 MP 0/0 Hu 62 $ 636 room=.
+-> back
+T 195 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 3) HP 36/38 MP 0/0 Hu 62 $ 636 room=.
+-> s
+T 196 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 61 $ 636 room=.
+-> s
+T 197 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2, 5) HP 37/38 MP 0/0 Hu 60 $ 636 room=.
+-> e
+T 198 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 5) HP 37/38 MP 0/0 Hu 59 $ 636 room=.
+-> e
+T 199 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 58 $ 636 room=.
+-> s
+T 200 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 6) HP 37/38 MP 0/0 Hu 57 $ 636 room=.
+-> e
+T 201 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 37/38 MP 0/0 Hu 56 $ 636 room=.
+-> s
+T 202 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 37/38 MP 0/0 Hu 55 $ 636 room=.
+-> s
+T 203 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 37/38 MP 0/0 Hu 54 $ 636 room=.
+-> e
+T 204 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 37/38 MP 0/0 Hu 53 $ 636 room=.
+-> n
+T 205 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 37/38 MP 0/0 Hu 52 $ 636 room=.
+-> n
+T 206 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 37/38 MP 0/0 Hu 51 $ 636 room=.
+-> w
+T 207 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 37/38 MP 0/0 Hu 50 $ 636 room=.
+-> s
+T 208 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 37/38 MP 0/0 Hu 49 $ 636 room=.
+-> s
+T 209 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 37/38 MP 0/0 Hu 48 $ 636 room=.
+-> e
+T 210 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 37/38 MP 0/0 Hu 47 $ 636 room=.
+-> l
+T 211 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 37/38 MP 0/0 Hu 47 $ 636 room=.
+-> n
+T 212 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 37/38 MP 0/0 Hu 46 $ 636 room=.
+-> n
+T 213 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 37/38 MP 0/0 Hu 45 $ 636 room=.
+-> n
+T 214 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 44 $ 636 room=.
+-> e
+T 215 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 5) HP 37/38 MP 0/0 Hu 43 $ 636 room=.
+-> s
+T 216 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 6) HP 37/38 MP 0/0 Hu 42 $ 636 room=.
+-> s
+T 217 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 37/38 MP 0/0 Hu 41 $ 636 room=.
+-> e
+T 218 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 7) HP 37/38 MP 0/0 Hu 40 $ 636 room=.
+-> s
+T 219 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 39 $ 636 room=M vs Lichen(L0 HP10/10)
+-> a
+T 220 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 39 $ 636 room=M vs Lichen(L0 HP6/10)
+-> a
+T 221 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 8) HP 36/38 MP 0/0 Hu 39 $ 636 room=M vs Lichen(L0 HP6/10)
+-> a
+T 222 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 8) HP 35/38 MP 0/0 Hu 39 $ 636 room=M vs Lichen(L0 HP2/10)
+-> a
+T 223 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 39 $ 636 room=M vs Lichen(L0 HP2/10)
+-> a
+T 224 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 39 $ 638 room=.
+-> back
+T 225 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 39 $ 638 room=.
+-> i
+T 226 mode=inventory           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 39 $ 638 room=.
+-> eat1
+T 227 mode=inventory           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 45 $ 638 room=.
+-> x
+T 228 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 45 $ 638 room=.
+-> n
+T 229 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 7) HP 34/38 MP 0/0 Hu 44 $ 638 room=.
+-> s
+T 230 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 43 $ 638 room=.
+-> l
+T 231 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 34/38 MP 0/0 Hu 43 $ 638 room=.
+-> n
+T 232 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 7) HP 34/38 MP 0/0 Hu 42 $ 638 room=.
+-> w
+T 233 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 34/38 MP 0/0 Hu 41 $ 638 room=.
+-> w
+T 234 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 34/38 MP 0/0 Hu 40 $ 638 room=.
+-> s
+T 235 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 34/38 MP 0/0 Hu 39 $ 638 room=.
+-> w
+T 236 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 34/38 MP 0/0 Hu 38 $ 638 room=.
+-> n
+T 237 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 34/38 MP 0/0 Hu 37 $ 638 room=.
+-> n
+T 238 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 34/38 MP 0/0 Hu 36 $ 638 room=.
+-> e
+T 239 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 34/38 MP 0/0 Hu 35 $ 638 room=.
+-> s
+T 240 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 34/38 MP 0/0 Hu 34 $ 638 room=.
+-> l
+T 241 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 34/38 MP 0/0 Hu 34 $ 638 room=.
+-> s
+T 242 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 34/38 MP 0/0 Hu 33 $ 638 room=.
+-> w
+T 243 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 34/38 MP 0/0 Hu 32 $ 638 room=.
+-> n
+T 244 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 34/38 MP 0/0 Hu 31 $ 638 room=.
+-> n
+T 245 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 34/38 MP 0/0 Hu 30 $ 638 room=.
+-> e
+T 246 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 34/38 MP 0/0 Hu 29 $ 638 room=.
+-> s
+T 247 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 34/38 MP 0/0 Hu 28 $ 638 room=.
+-> s
+T 248 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 34/38 MP 0/0 Hu 27 $ 638 room=.
+-> w
+T 249 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 34/38 MP 0/0 Hu 26 $ 638 room=.
+-> n
+T 250 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 34/38 MP 0/0 Hu 25 $ 638 room=.
+-> l
+T 251 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 7) HP 34/38 MP 0/0 Hu 25 $ 638 room=.
+-> n
+T 252 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 6) HP 34/38 MP 0/0 Hu 24 $ 638 room=.
+-> w
+T 253 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 6) HP 34/38 MP 0/0 Hu 23 $ 638 room=.
+-> n
+T 254 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 5) HP 34/38 MP 0/0 Hu 22 $ 638 room=.
+-> e
+T 255 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 34/38 MP 0/0 Hu 21 $ 638 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 256 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 33/38 MP 0/0 Hu 21 $ 638 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 257 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 33/38 MP 0/0 Hu 21 $ 638 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 258 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 32/38 MP 0/0 Hu 21 $ 638 room=M vs Sewer Rat(L0 HP2/10)
+-> a
+T 259 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5, 5) HP 31/38 MP 0/0 Hu 21 $ 638 room=M vs Sewer Rat(L0 HP2/10)
+-> a
+T 260 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 5, 5) HP 30/38 MP 0/0 Hu 21 $ 648 room=.
+-> back
+T 261 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 5) HP 30/38 MP 0/0 Hu 21 $ 648 room=.
+-> i
+T 262 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 5) HP 30/38 MP 0/0 Hu 21 $ 648 room=.
+-> eat1
+T 263 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5, 5) HP 30/38 MP 0/0 Hu 26 $ 648 room=.
+-> x
+T 264 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 5) HP 30/38 MP 0/0 Hu 26 $ 648 room=.
+-> e
+T 265 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 5) HP 30/38 MP 0/0 Hu 25 $ 648 room=.
+-> s
+T 266 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 6) HP 30/38 MP 0/0 Hu 24 $ 648 room=.
+-> s
+T 267 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 30/38 MP 0/0 Hu 23 $ 648 room=.
+-> s
+T 268 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 30/38 MP 0/0 Hu 22 $ 648 room=.
+-> w
+T 269 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 30/38 MP 0/0 Hu 21 $ 648 room=.
+-> s
+T 270 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 30/38 MP 0/0 Hu 20 $ 648 room=.
+-> l
+T 271 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 30/38 MP 0/0 Hu 20 $ 648 room=.
+-> s
+T 272 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 30/38 MP 0/0 Hu 19 $ 648 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 273 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 29/38 MP 0/0 Hu 19 $ 648 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 274 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 29/38 MP 0/0 Hu 19 $ 648 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 275 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 28/38 MP 0/0 Hu 19 $ 648 room=M vs Sewer Rat(L0 HP2/10)
+-> a
+T 276 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 5,10) HP 28/38 MP 0/0 Hu 19 $ 648 room=M vs Sewer Rat(L0 HP2/10)
+-> a
+T 277 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu 19 $ 657 room=.
+-> back
+T 278 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu 19 $ 657 room=.
+-> i
+T 279 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu 19 $ 657 room=.
+-> eat1
+T 280 mode=inventory           Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu 24 $ 657 room=.
+-> x
+T 281 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu 24 $ 657 room=.
+-> w
+T 282 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,10) HP 27/38 MP 0/0 Hu 23 $ 657 room=.
+-> n
+T 283 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 27/38 MP 0/0 Hu 22 $ 657 room=.
+-> w
+T 284 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 27/38 MP 0/0 Hu 21 $ 657 room=.
+-> s
+T 285 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 27/38 MP 0/0 Hu 20 $ 657 room=N
+-> w
+T 286 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2,10) HP 27/38 MP 0/0 Hu 19 $ 657 room=M vs Bat(L0 HP12/12)
+-> a
+T 287 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2,10) HP 26/38 MP 0/0 Hu 19 $ 657 room=M vs Bat(L0 HP8/12)
+-> a
+T 288 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 2,10) HP 25/38 MP 0/0 Hu 19 $ 657 room=M vs Bat(L0 HP4/12)
+-> a
+T 289 mode=combat_victory      Galadhrim Goldenbough(elf) F1@( 2,10) HP 24/38 MP 0/0 Hu 19 $ 664 room=.
+-> back
+T 290 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,10) HP 24/38 MP 0/0 Hu 19 $ 664 room=.
+-> i
+T 291 mode=inventory           Galadhrim Goldenbough(elf) F1@( 2,10) HP 24/38 MP 0/0 Hu 19 $ 664 room=.
+-> eat1
+T 292 mode=inventory           Galadhrim Goldenbough(elf) F1@( 2,10) HP 24/38 MP 0/0 Hu 24 $ 664 room=.
+-> x
+T 293 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,10) HP 24/38 MP 0/0 Hu 24 $ 664 room=.
+-> s
+T 294 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,11) HP 24/38 MP 0/0 Hu 23 $ 664 room=.
+-> e
+T 295 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,11) HP 24/38 MP 0/0 Hu 22 $ 664 room=.
+-> s
+T 296 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,12) HP 24/38 MP 0/0 Hu 21 $ 664 room=.
+-> e
+T 297 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,12) HP 24/38 MP 0/0 Hu 20 $ 664 room=.
+-> l
+T 298 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,12) HP 24/38 MP 0/0 Hu 20 $ 664 room=.
+-> n
+T 299 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,11) HP 24/38 MP 0/0 Hu 19 $ 664 room=.
+-> n
+T 300 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,10) HP 24/38 MP 0/0 Hu 18 $ 664 room=.
+-> l
+T 301 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,10) HP 24/38 MP 0/0 Hu 18 $ 664 room=.
+-> n
+T 302 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 24/38 MP 0/0 Hu 17 $ 664 room=.
+-> e
+T 303 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 24/38 MP 0/0 Hu 16 $ 664 room=.
+-> n
+T 304 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 24/38 MP 0/0 Hu 15 $ 664 room=.
+-> e
+T 305 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 24/38 MP 0/0 Hu 14 $ 664 room=.
+-> n
+T 306 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 24/38 MP 0/0 Hu 13 $ 664 room=.
+-> e
+T 307 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 24/38 MP 0/0 Hu 12 $ 664 room=.
+-> e
+T 308 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 7) HP 24/38 MP 0/0 Hu 11 $ 664 room=.
+-> s
+T 309 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 8) HP 24/38 MP 0/0 Hu 10 $ 664 room=.
+-> e
+T 310 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 24/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP20/20)
+-> a
+T 311 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 24/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP17/20)
+-> a
+T 312 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 23/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP14/20)
+-> a
+T 313 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 22/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP11/20)
+-> a
+T 314 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 21/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP8/20)
+-> a
+T 315 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 21/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP5/20)
+-> a
+T 316 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 8) HP 20/38 MP 0/0 Hu  9 $ 664 room=M vs Kobold(L0 HP2/20)
+-> f
+T 317 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 9, 8) HP 19/38 MP 0/0 Hu  9 $ 664 room=M
+-> n
+T 318 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 9, 7) HP 19/38 MP 0/0 Hu  9 $ 664 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T 319 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 9, 7) HP 19/38 MP 0/0 Hu  9 $ 664 room=M
+-> n
+T 320 mode=tomb_mode           Galadhrim Goldenbough(elf) F1@( 9, 6) HP 19/38 MP 0/0 Hu  9 $ 664 room=T
+-> p
+T 321 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 9, 6) HP 30/38 MP 0/0 Hu  9 $ 664 room=T
+-> w
+T 322 mode=combat_mode         Galadhrim Goldenbough(elf) F1@( 8, 6) HP 30/38 MP 0/0 Hu  8 $ 664 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
+-> f
+T 323 mode=flee_direction_mode Galadhrim Goldenbough(elf) F1@( 8, 6) HP 29/38 MP 0/0 Hu  8 $ 664 room=M
+-> n
+T 324 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 8, 5) HP 29/38 MP 0/0 Hu  8 $ 664 room=.
+-> w
+T 325 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 5) HP 29/38 MP 0/0 Hu  7 $ 664 room=.
+-> s
+T 326 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 6) HP 29/38 MP 0/0 Hu  6 $ 664 room=.
+-> s
+T 327 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 7, 7) HP 29/38 MP 0/0 Hu  5 $ 664 room=.
+-> w
+T 328 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 7) HP 29/38 MP 0/0 Hu  4 $ 664 room=.
+-> s
+T 329 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 6, 8) HP 29/38 MP 0/0 Hu  3 $ 664 room=.
+-> w
+T 330 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 29/38 MP 0/0 Hu  2 $ 664 room=.
+-> l
+T 331 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 8) HP 29/38 MP 0/0 Hu  2 $ 664 room=.
+-> s
+T 332 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 29/38 MP 0/0 Hu  1 $ 664 room=.
+-> s
+T 333 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5,10) HP 27/38 MP 0/0 Hu  0 $ 664 room=.
+-> w
+T 334 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4,10) HP 25/38 MP 0/0 Hu  0 $ 664 room=.
+-> n
+T 335 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 23/38 MP 0/0 Hu  0 $ 664 room=.
+-> w
+T 336 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 21/38 MP 0/0 Hu  0 $ 664 room=.
+-> s
+T 337 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 19/38 MP 0/0 Hu  0 $ 664 room=N
+-> s
+T 338 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,11) HP 17/38 MP 0/0 Hu  0 $ 664 room=.
+-> w
+T 339 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,11) HP 15/38 MP 0/0 Hu  0 $ 664 room=.
+-> n
+T 340 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,10) HP 13/38 MP 0/0 Hu  0 $ 664 room=.
+-> l
+T 341 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,10) HP 13/38 MP 0/0 Hu  0 $ 664 room=.
+-> s
+T 342 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,11) HP 11/38 MP 0/0 Hu  0 $ 664 room=.
+-> n
+T 343 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 2,10) HP 9/38 MP 0/0 Hu  0 $ 664 room=.
+-> e
+T 344 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3,10) HP 7/38 MP 0/0 Hu  0 $ 664 room=N
+-> n
+T 345 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 3, 9) HP 5/38 MP 0/0 Hu  0 $ 664 room=.
+-> e
+T 346 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 4, 9) HP 3/38 MP 0/0 Hu  0 $ 664 room=.
+-> e
+T 347 mode=game_loop           Galadhrim Goldenbough(elf) F1@( 5, 9) HP 1/38 MP 0/0 Hu  0 $ 664 room=.
+-> n
+T 348 mode=death_screen        Galadhrim Goldenbough(elf) F1@( 5, 8) HP 0/38 MP 0/0 Hu  0 $ 664 room=.
+
+=== run finished: turns=348 floor=1 hp=0/38 gold=664 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00999_elf.html

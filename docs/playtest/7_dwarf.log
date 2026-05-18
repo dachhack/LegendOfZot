@@ -1,0 +1,2634 @@
+T   0 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 9 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Oin Runesinger(dwa) F1@( 1, 2) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Oin Runesinger(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  You missed the evil Goblin!
+  Ouch! Goblin hit Oin Runesinger!
+  You took 1 damage!
+-> a
+T   4 mode=combat_mode         Oin Runesinger(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  You missed the evil Goblin!
+  Ouch! Goblin hit Oin Runesinger!
+  You took 1 damage!
+-> a
+T   5 mode=combat_victory      Oin Runesinger(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 347 room=.
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 7 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T   6 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 347 room=.
+-> s
+T   7 mode=combat_mode         Oin Runesinger(dwa) F1@( 1, 3) HP 59/64 MP 0/0 Hu 98 $ 347 room=M vs Stirge(L0 HP6/6)
+-> a
+T   8 mode=combat_victory      Oin Runesinger(dwa) F1@( 1, 3) HP 59/64 MP 0/0 Hu 98 $ 352 room=.
+-> back
+T   9 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 59/64 MP 0/0 Hu 98 $ 352 room=.
+-> l
+T  10 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 59/64 MP 0/0 Hu 98 $ 352 room=.
+-> e
+T  11 mode=dungeon_mode        Oin Runesinger(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 97 $ 352 room=N
+-> u
+T  12 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 97 $ 352 room=N
+-> l
+T  13 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 97 $ 352 room=N
+-> s
+T  14 mode=chest_mode          Oin Runesinger(dwa) F1@( 2, 4) HP 60/64 MP 0/0 Hu 96 $ 352 room=C
+-> o
+T  15 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 60/64 MP 0/0 Hu 96 $ 352 room=.
+-> l
+T  16 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 60/64 MP 0/0 Hu 96 $ 352 room=.
+-> e
+T  17 mode=garden_mode         Oin Runesinger(dwa) F1@( 3, 4) HP 60/64 MP 0/0 Hu 95 $ 352 room=G
+-> h
+T  18 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 60/64 MP 0/0 Hu 95 $ 352 room=.
+-> e
+T  19 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 94 $ 352 room=M vs Bat(L0 HP12/12)
+-> a
+T  20 mode=combat_victory      Oin Runesinger(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 94 $ 357 room=.
+-> back
+T  21 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 94 $ 357 room=.
+-> l
+T  22 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 61/64 MP 0/0 Hu 94 $ 357 room=.
+-> n
+T  23 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 93 $ 357 room=M vs Lichen(L0 HP10/10)
+-> a
+T  24 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 93 $ 357 room=M vs Lichen(L0 HP10/10)
+-> a
+T  25 mode=combat_victory      Oin Runesinger(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 93 $ 366 room=.
+-> back
+T  26 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 93 $ 366 room=.
+-> e
+T  27 mode=chest_mode          Oin Runesinger(dwa) F1@( 5, 3) HP 60/64 MP 0/0 Hu 92 $ 366 room=C
+-> o
+T  28 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 60/64 MP 0/0 Hu 92 $ 366 room=.
+-> l
+T  29 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 60/64 MP 0/0 Hu 92 $ 366 room=.
+-> n
+T  30 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 2) HP 60/64 MP 0/0 Hu 91 $ 366 room=M vs Kobold(L0 HP20/20)
+-> a
+T  31 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 2) HP 60/64 MP 0/0 Hu 91 $ 366 room=M vs Kobold(L0 HP20/20)
+-> a
+T  32 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 91 $ 366 room=M vs Kobold(L0 HP20/20)
+-> a
+T  33 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 91 $ 366 room=M vs Kobold(L0 HP20/20)
+-> a
+T  34 mode=combat_victory      Oin Runesinger(dwa) F1@( 5, 2) HP 58/64 MP 0/0 Hu 91 $ 369 room=.
+-> back
+T  35 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 58/64 MP 0/0 Hu 91 $ 369 room=.
+-> l
+T  36 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 58/64 MP 0/0 Hu 91 $ 369 room=.
+-> w
+T  37 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 2) HP 59/64 MP 0/0 Hu 90 $ 369 room=M vs Zombie(L0 HP35/35)
+-> a
+T  38 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 2) HP 59/64 MP 0/0 Hu 90 $ 369 room=M vs Zombie(L0 HP9/35)
+-> a
+T  39 mode=combat_victory      Oin Runesinger(dwa) F1@( 4, 2) HP 58/64 MP 0/0 Hu 90 $ 377 room=.
+-> back
+T  40 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 58/64 MP 0/0 Hu 90 $ 377 room=.
+-> n
+T  41 mode=pool_mode           Oin Runesinger(dwa) F1@( 4, 1) HP 58/64 MP 0/0 Hu 89 $ 377 room=P
+-> dr
+T  42 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 89 $ 377 room=.
+-> e
+T  43 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 88 $ 377 room=.
+-> i
+T  44 mode=inventory           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 88 $ 377 room=.
+-> eat4
+T  45 mode=inventory           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 94 $ 377 room=.
+-> x
+T  46 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 94 $ 377 room=.
+-> l
+T  47 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 94 $ 377 room=.
+-> e
+T  48 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 1) HP 64/64 MP 0/0 Hu 93 $ 377 room=.
+-> w
+T  49 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 92 $ 377 room=.
+-> s
+T  50 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 64/64 MP 0/0 Hu 91 $ 377 room=.
+-> s
+T  51 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 90 $ 377 room=.
+-> s
+T  52 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 89 $ 377 room=M vs Bat(L0 HP12/12)
+-> a
+T  53 mode=combat_victory      Oin Runesinger(dwa) F1@( 5, 4) HP 63/64 MP 0/0 Hu 89 $ 384 room=.
+-> back
+T  54 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 63/64 MP 0/0 Hu 89 $ 384 room=.
+-> e
+T  55 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 88 $ 384 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  56 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 4) HP 62/64 MP 0/0 Hu 88 $ 384 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  57 mode=flee_direction_mode Oin Runesinger(dwa) F1@( 6, 4) HP 62/64 MP 0/0 Hu 88 $ 384 room=M
+-> n
+T  58 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 88 $ 384 room=.
+-> s
+T  59 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 87 $ 384 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  60 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 4) HP 62/64 MP 0/0 Hu 87 $ 384 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  61 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 87 $ 384 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  62 mode=combat_victory      Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 87 $ 392 room=.
+-> back
+T  63 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 87 $ 392 room=.
+-> i
+T  64 mode=inventory           Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 87 $ 392 room=.
+-> eat3
+T  65 mode=inventory           Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 92 $ 392 room=.
+-> x
+T  66 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 92 $ 392 room=.
+-> l
+T  67 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 92 $ 392 room=.
+-> s
+T  68 mode=combat_mode         Oin Runesinger(dwa) F1@( 6, 5) HP 61/64 MP 0/0 Hu 91 $ 392 room=M vs Goblin(L0 HP12/12)
+-> a
+T  69 mode=combat_victory      Oin Runesinger(dwa) F1@( 6, 5) HP 60/64 MP 0/0 Hu 91 $ 395 room=.
+-> back
+T  70 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 60/64 MP 0/0 Hu 91 $ 395 room=.
+-> l
+T  71 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 60/64 MP 0/0 Hu 91 $ 395 room=.
+-> e
+T  72 mode=combat_mode         Oin Runesinger(dwa) F1@( 7, 5) HP 61/64 MP 0/0 Hu 90 $ 395 room=M vs Bat(L0 HP12/12)
+-> a
+T  73 mode=combat_mode         Oin Runesinger(dwa) F1@( 7, 5) HP 61/64 MP 0/0 Hu 90 $ 395 room=M vs Bat(L0 HP12/12)
+-> a
+T  74 mode=combat_victory      Oin Runesinger(dwa) F1@( 7, 5) HP 61/64 MP 0/0 Hu 90 $ 498 room=.
+-> back
+T  75 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 61/64 MP 0/0 Hu 90 $ 498 room=.
+-> l
+T  76 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 61/64 MP 0/0 Hu 90 $ 498 room=.
+-> s
+T  77 mode=chest_mode          Oin Runesinger(dwa) F1@( 7, 6) HP 61/64 MP 0/0 Hu 89 $ 498 room=C
+-> o
+T  78 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 61/64 MP 0/0 Hu 89 $ 528 room=.
+-> l
+T  79 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 61/64 MP 0/0 Hu 89 $ 528 room=.
+-> e
+T  80 mode=library_mode        Oin Runesinger(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 88 $ 528 room=L
+-> r
+T  81 mode=library_read_decision_mode Oin Runesinger(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 88 $ 528 room=L
+-> y
+T  82 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 88 $ 628 room=.
+-> l
+T  83 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 88 $ 628 room=.
+-> s
+T  84 mode=combat_mode         Oin Runesinger(dwa) F1@( 8, 7) HP 62/64 MP 0/0 Hu 87 $ 628 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  85 mode=combat_victory      Oin Runesinger(dwa) F1@( 8, 7) HP 62/64 MP 0/0 Hu 87 $ 633 room=.
+-> back
+T  86 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 62/64 MP 0/0 Hu 87 $ 633 room=.
+-> l
+T  87 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 62/64 MP 0/0 Hu 87 $ 633 room=.
+-> w
+T  88 mode=warp_mode           Oin Runesinger(dwa) F1@( 8, 8) HP 63/64 MP 0/0 Hu 86 $ 633 room=W
+-> y
+T  89 mode=tomb_mode           Oin Runesinger(dwa) F2@(10, 8) HP 63/64 MP 0/0 Hu 86 $ 633 room=T
+-> p
+T  90 mode=game_loop           Oin Runesinger(dwa) F2@(10, 8) HP 64/64 MP 0/0 Hu 86 $ 633 room=T
+-> l
+T  91 mode=game_loop           Oin Runesinger(dwa) F2@(10, 8) HP 64/64 MP 0/0 Hu 86 $ 633 room=T
+-> w
+T  92 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 64/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T  93 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 61/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T  94 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 58/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T  95 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 55/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP7/31)
+-> a
+T  96 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 52/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP7/31)
+-> a
+T  97 mode=combat_mode         Oin Runesinger(dwa) F2@(11, 8) HP 49/64 MP 0/0 Hu 85 $ 633 room=M vs UNDEAD SKELETON(L1 HP7/31)
+-> a
+T  98 mode=combat_victory      Oin Runesinger(dwa) F2@(11, 8) HP 49/74 MP 0/0 Hu 85 $ 639 room=.
+-> back
+T  99 mode=game_loop           Oin Runesinger(dwa) F2@(11, 8) HP 49/74 MP 0/0 Hu 85 $ 639 room=.
+-> l
+T 100 mode=game_loop           Oin Runesinger(dwa) F2@(11, 8) HP 49/74 MP 0/0 Hu 85 $ 639 room=.
+-> s
+T 101 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 49/74 MP 0/0 Hu 84 $ 639 room=.
+-> i
+T 102 mode=inventory           Oin Runesinger(dwa) F2@(11, 9) HP 49/74 MP 0/0 Hu 84 $ 639 room=.
+-> u3
+T 103 mode=inventory           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> x
+T 104 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> l
+T 105 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> e
+T 106 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 83 $ 639 room=.
+-> n
+T 107 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 82 $ 639 room=.
+-> s
+T 108 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 81 $ 639 room=.
+-> n
+T 109 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 80 $ 639 room=.
+-> s
+T 110 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 79 $ 639 room=.
+-> w
+T 111 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 78 $ 639 room=.
+-> e
+T 112 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 77 $ 639 room=.
+-> i
+T 113 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 77 $ 639 room=.
+-> eat3
+T 114 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 83 $ 639 room=.
+-> x
+T 115 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 83 $ 639 room=.
+-> n
+T 116 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 82 $ 639 room=.
+-> s
+T 117 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 81 $ 639 room=.
+-> n
+T 118 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 80 $ 639 room=.
+-> s
+T 119 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 79 $ 639 room=.
+-> i
+T 120 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 79 $ 639 room=.
+-> eat1
+T 121 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> u7
+T 122 mode=upgrade_scroll_mode Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> 1
+T 123 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> u3
+T 124 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> u1
+T 125 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> u2
+T 126 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> u4
+T 127 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> x
+T 128 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu100 $ 639 room=.
+-> w
+T 129 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 99 $ 639 room=.
+-> e
+T 130 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> i
+T 131 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> u3
+T 132 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> u1
+T 133 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> u2
+T 134 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> u4
+T 135 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> x
+T 136 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 98 $ 639 room=.
+-> n
+T 137 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 97 $ 639 room=.
+-> s
+T 138 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> i
+T 139 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> u3
+T 140 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> u1
+T 141 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> u2
+T 142 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> u4
+T 143 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> x
+T 144 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 96 $ 639 room=.
+-> n
+T 145 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> i
+T 146 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> u3
+T 147 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> u1
+T 148 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> u2
+T 149 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> u4
+T 150 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> x
+T 151 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 95 $ 639 room=.
+-> s
+T 152 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> i
+T 153 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> u3
+T 154 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> u1
+T 155 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> u2
+T 156 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> u4
+T 157 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> x
+T 158 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 94 $ 639 room=.
+-> w
+T 159 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 93 $ 639 room=.
+-> e
+T 160 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> i
+T 161 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> u3
+T 162 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> u1
+T 163 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> u2
+T 164 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> u4
+T 165 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> x
+T 166 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 92 $ 639 room=.
+-> n
+T 167 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> i
+T 168 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> u3
+T 169 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> u1
+T 170 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> u2
+T 171 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> u4
+T 172 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> x
+T 173 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 639 room=.
+-> s
+T 174 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> i
+T 175 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> u3
+T 176 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> u1
+T 177 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> u2
+T 178 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> u4
+T 179 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> x
+T 180 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 90 $ 639 room=.
+-> n
+T 181 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> i
+T 182 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> u3
+T 183 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> u1
+T 184 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> u2
+T 185 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> u4
+T 186 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> x
+T 187 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 89 $ 639 room=.
+-> s
+T 188 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> i
+T 189 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> u3
+T 190 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> u1
+T 191 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> u2
+T 192 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> u4
+T 193 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> x
+T 194 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 88 $ 639 room=.
+-> w
+T 195 mode=game_loop           Oin Runesinger(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 87 $ 639 room=.
+-> e
+T 196 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> i
+T 197 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> u3
+T 198 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> u1
+T 199 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> u2
+T 200 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> u4
+T 201 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> x
+T 202 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 639 room=.
+-> n
+T 203 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> i
+T 204 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> u3
+T 205 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> u1
+T 206 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> u2
+T 207 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> u4
+T 208 mode=inventory           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> x
+T 209 mode=game_loop           Oin Runesinger(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 85 $ 639 room=.
+-> s
+T 210 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> i
+T 211 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> u3
+T 212 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> u1
+T 213 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> u2
+T 214 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> u4
+T 215 mode=inventory           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> x
+T 216 mode=game_loop           Oin Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 84 $ 639 room=.
+-> e
+T 217 mode=warp_mode           Oin Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 83 $ 639 room=W
+-> y
+T 218 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 83 $ 639 room=M vs ELITE UNDEAD ZOMBIE(L1 HP45/45)
+-> a
+T 219 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 7) HP 73/74 MP 0/0 Hu 83 $ 639 room=M vs ELITE UNDEAD ZOMBIE(L1 HP18/45)
+-> a
+T 220 mode=combat_victory      Oin Runesinger(dwa) F1@(12, 7) HP 72/74 MP 0/0 Hu 83 $ 641 room=.
+-> back
+T 221 mode=game_loop           Oin Runesinger(dwa) F1@(12, 7) HP 72/74 MP 0/0 Hu 83 $ 641 room=.
+-> l
+T 222 mode=game_loop           Oin Runesinger(dwa) F1@(12, 7) HP 72/74 MP 0/0 Hu 83 $ 641 room=.
+-> n
+T 223 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 6) HP 72/74 MP 0/0 Hu 82 $ 641 room=M vs Stirge(L0 HP6/6)
+-> a
+T 224 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 6) HP 71/74 MP 0/0 Hu 82 $ 641 room=M vs Stirge(L0 HP6/6)
+-> a
+T 225 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 6) HP 70/74 MP 0/0 Hu 82 $ 641 room=M vs Stirge(L0 HP6/6)
+-> a
+T 226 mode=combat_mode         Oin Runesinger(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 82 $ 641 room=M vs Stirge(L0 HP6/6)
+-> a
+T 227 mode=combat_victory      Oin Runesinger(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 82 $ 645 room=.
+-> back
+T 228 mode=game_loop           Oin Runesinger(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 82 $ 645 room=.
+-> l
+T 229 mode=game_loop           Oin Runesinger(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 82 $ 645 room=.
+-> s
+T 230 mode=game_loop           Oin Runesinger(dwa) F1@(12, 7) HP 69/74 MP 0/0 Hu 81 $ 645 room=.
+-> e
+T 231 mode=tomb_mode           Oin Runesinger(dwa) F1@(13, 7) HP 69/74 MP 0/0 Hu 80 $ 645 room=T
+-> p
+T 232 mode=game_loop           Oin Runesinger(dwa) F1@(13, 7) HP 69/74 MP 0/0 Hu 80 $ 645 room=T
+-> l
+T 233 mode=game_loop           Oin Runesinger(dwa) F1@(13, 7) HP 69/74 MP 0/0 Hu 80 $ 645 room=T
+-> w
+T 234 mode=game_loop           Oin Runesinger(dwa) F1@(12, 7) HP 70/74 MP 0/0 Hu 79 $ 645 room=.
+-> s
+T 235 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 70/74 MP 0/0 Hu 78 $ 645 room=.
+-> l
+T 236 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 70/74 MP 0/0 Hu 78 $ 645 room=.
+-> w
+T 237 mode=combat_mode         Oin Runesinger(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 77 $ 645 room=M vs Kobold(L0 HP8/8)
+-> a
+T 238 mode=combat_victory      Oin Runesinger(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 77 $ 650 room=.
+-> back
+T 239 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 77 $ 650 room=.
+-> l
+T 240 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 77 $ 650 room=.
+-> s
+T 241 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 70/74 MP 0/0 Hu 76 $ 650 room=.
+-> l
+T 242 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 70/74 MP 0/0 Hu 76 $ 650 room=.
+-> w
+T 243 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 71/74 MP 0/0 Hu 75 $ 650 room=.
+-> w
+T 244 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 71/74 MP 0/0 Hu 74 $ 650 room=.
+-> w
+T 245 mode=combat_mode         Oin Runesinger(dwa) F1@( 8, 9) HP 71/74 MP 0/0 Hu 73 $ 650 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 246 mode=combat_victory      Oin Runesinger(dwa) F1@( 8, 9) HP 70/74 MP 0/0 Hu 73 $ 660 room=.
+-> back
+T 247 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 9) HP 70/74 MP 0/0 Hu 73 $ 660 room=.
+-> e
+T 248 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 70/74 MP 0/0 Hu 72 $ 660 room=.
+-> e
+T 249 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 71/74 MP 0/0 Hu 71 $ 660 room=.
+-> n
+T 250 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 71/74 MP 0/0 Hu 70 $ 660 room=.
+-> e
+T 251 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 71/74 MP 0/0 Hu 69 $ 660 room=.
+-> s
+T 252 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 71/74 MP 0/0 Hu 68 $ 660 room=.
+-> w
+T 253 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 72/74 MP 0/0 Hu 67 $ 660 room=.
+-> w
+T 254 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 72/74 MP 0/0 Hu 66 $ 660 room=.
+-> w
+T 255 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 9) HP 72/74 MP 0/0 Hu 65 $ 660 room=.
+-> e
+T 256 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 72/74 MP 0/0 Hu 64 $ 660 room=.
+-> e
+T 257 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 73/74 MP 0/0 Hu 63 $ 660 room=.
+-> n
+T 258 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 73/74 MP 0/0 Hu 62 $ 660 room=.
+-> e
+T 259 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 73/74 MP 0/0 Hu 61 $ 660 room=.
+-> e
+T 260 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 73/74 MP 0/0 Hu 60 $ 660 room=.
+-> w
+T 261 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 73/74 MP 0/0 Hu 59 $ 660 room=.
+-> s
+T 262 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 73/74 MP 0/0 Hu 58 $ 660 room=.
+-> w
+T 263 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 73/74 MP 0/0 Hu 57 $ 660 room=.
+-> n
+T 264 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 73/74 MP 0/0 Hu 56 $ 660 room=.
+-> n
+T 265 mode=combat_mode         Oin Runesinger(dwa) F1@(10, 7) HP 73/74 MP 0/0 Hu 55 $ 660 room=M vs Bat(L0 HP12/12)
+-> f
+T 266 mode=flee_direction_mode Oin Runesinger(dwa) F1@(10, 7) HP 73/74 MP 0/0 Hu 55 $ 660 room=M
+-> e
+T 267 mode=warp_mode           Oin Runesinger(dwa) F1@(11, 7) HP 73/74 MP 0/0 Hu 55 $ 660 room=W
+-> y
+T 268 mode=game_loop           Oin Runesinger(dwa) F1@(11, 7) HP 73/74 MP 0/0 Hu 55 $ 660 room=W
+-> s
+T 269 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 73/74 MP 0/0 Hu 54 $ 660 room=.
+-> s
+T 270 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 73/74 MP 0/0 Hu 53 $ 660 room=.
+-> w
+T 271 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 73/74 MP 0/0 Hu 52 $ 660 room=.
+-> i
+T 272 mode=inventory           Oin Runesinger(dwa) F1@(10, 9) HP 73/74 MP 0/0 Hu 52 $ 660 room=.
+-> eat1
+T 273 mode=inventory           Oin Runesinger(dwa) F1@(10, 9) HP 73/74 MP 0/0 Hu100 $ 660 room=.
+-> u3
+T 274 mode=inventory           Oin Runesinger(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu100 $ 660 room=.
+-> x
+T 275 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu100 $ 660 room=.
+-> w
+T 276 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 99 $ 660 room=.
+-> w
+T 277 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 98 $ 660 room=.
+-> e
+T 278 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 97 $ 660 room=.
+-> w
+T 279 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 96 $ 660 room=.
+-> e
+T 280 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 95 $ 660 room=.
+-> e
+T 281 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 94 $ 660 room=.
+-> e
+T 282 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 74/74 MP 0/0 Hu 93 $ 660 room=.
+-> n
+T 283 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 92 $ 660 room=.
+-> e
+T 284 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 74/74 MP 0/0 Hu 91 $ 660 room=.
+-> w
+T 285 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 90 $ 660 room=.
+-> w
+T 286 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 89 $ 660 room=.
+-> n
+T 287 mode=combat_mode         Oin Runesinger(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 88 $ 660 room=M vs Bat(L0 HP12/12)
+-> a
+T 288 mode=combat_victory      Oin Runesinger(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 88 $ 768 room=.
+-> back
+T 289 mode=game_loop           Oin Runesinger(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 88 $ 768 room=.
+-> w
+T 290 mode=combat_mode         Oin Runesinger(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 87 $ 768 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 291 mode=combat_victory      Oin Runesinger(dwa) F1@( 9, 7) HP 73/74 MP 0/0 Hu 87 $ 774 room=.
+-> back
+T 292 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 7) HP 73/74 MP 0/0 Hu 87 $ 774 room=.
+-> w
+T 293 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 73/74 MP 0/0 Hu 86 $ 774 room=.
+-> w
+T 294 mode=pool_mode           Oin Runesinger(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 85 $ 774 room=P
+-> dr
+T 295 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 74/80 MP 0/0 Hu 85 $ 774 room=.
+-> n
+T 296 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 74/80 MP 0/0 Hu 84 $ 774 room=.
+-> n
+T 297 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 74/80 MP 0/0 Hu 83 $ 774 room=.
+-> w
+T 298 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 74/80 MP 0/0 Hu 82 $ 774 room=.
+-> n
+T 299 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 75/80 MP 0/0 Hu 81 $ 774 room=.
+-> w
+T 300 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 75/80 MP 0/0 Hu 80 $ 774 room=.
+-> w
+T 301 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 75/80 MP 0/0 Hu 79 $ 774 room=.
+-> w
+T 302 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 75/80 MP 0/0 Hu 78 $ 774 room=.
+-> w
+T 303 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 76/80 MP 0/0 Hu 77 $ 774 room=.
+-> i
+T 304 mode=inventory           Oin Runesinger(dwa) F1@( 2, 4) HP 76/80 MP 0/0 Hu 77 $ 774 room=.
+-> eat2
+T 305 mode=inventory           Oin Runesinger(dwa) F1@( 2, 4) HP 76/80 MP 0/0 Hu 83 $ 774 room=.
+-> x
+T 306 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 76/80 MP 0/0 Hu 83 $ 774 room=.
+-> s
+T 307 mode=altar_mode          Oin Runesinger(dwa) F1@( 2, 5) HP 76/80 MP 0/0 Hu 82 $ 774 room=A
+-> pray
+T 308 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 76/80 MP 0/0 Hu 82 $ 774 room=.
+-> s
+T 309 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 76/80 MP 0/0 Hu 81 $ 774 room=.
+-> w
+T 310 mode=chest_mode          Oin Runesinger(dwa) F1@( 1, 6) HP 76/80 MP 0/0 Hu 80 $ 774 room=C
+-> o
+T 311 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 76/80 MP 0/0 Hu 80 $ 774 room=.
+-> n
+T 312 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 77/80 MP 0/0 Hu 79 $ 774 room=.
+-> n
+T 313 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 77/80 MP 0/0 Hu 78 $ 774 room=.
+-> e
+T 314 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 77/80 MP 0/0 Hu 77 $ 774 room=.
+-> s
+T 315 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 77/80 MP 0/0 Hu 76 $ 774 room=.
+-> s
+T 316 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 78/80 MP 0/0 Hu 75 $ 774 room=.
+-> w
+T 317 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 78/80 MP 0/0 Hu 74 $ 774 room=.
+-> n
+T 318 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 78/80 MP 0/0 Hu 73 $ 774 room=.
+-> n
+T 319 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 78/80 MP 0/0 Hu 72 $ 774 room=.
+-> n
+T 320 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 79/80 MP 0/0 Hu 71 $ 774 room=.
+-> n
+T 321 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 79/80 MP 0/0 Hu 70 $ 774 room=.
+-> n
+T 322 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 79/80 MP 0/0 Hu 69 $ 774 room=E
+-> s
+T 323 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 79/80 MP 0/0 Hu 68 $ 774 room=.
+-> s
+T 324 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 67 $ 774 room=.
+-> s
+T 325 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 66 $ 774 room=.
+-> s
+T 326 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 65 $ 774 room=.
+-> s
+T 327 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 64 $ 774 room=.
+-> e
+T 328 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 63 $ 774 room=.
+-> n
+T 329 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 62 $ 774 room=.
+-> n
+T 330 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 61 $ 774 room=.
+-> e
+T 331 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 60 $ 774 room=.
+-> n
+T 332 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 59 $ 774 room=.
+-> n
+T 333 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 58 $ 774 room=.
+-> e
+T 334 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 57 $ 774 room=.
+-> e
+T 335 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 56 $ 774 room=.
+-> n
+T 336 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 55 $ 774 room=.
+-> w
+T 337 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 80/80 MP 0/0 Hu 54 $ 774 room=.
+-> e
+T 338 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 53 $ 774 room=.
+-> e
+T 339 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 1) HP 80/80 MP 0/0 Hu 52 $ 774 room=.
+-> w
+T 340 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 51 $ 774 room=.
+-> s
+T 341 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 50 $ 774 room=.
+-> w
+T 342 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 49 $ 774 room=.
+-> i
+T 343 mode=inventory           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 49 $ 774 room=.
+-> eat1
+T 344 mode=inventory           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 99 $ 774 room=.
+-> x
+T 345 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 99 $ 774 room=.
+-> w
+T 346 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 98 $ 774 room=.
+-> s
+T 347 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 97 $ 774 room=.
+-> s
+T 348 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 96 $ 774 room=.
+-> e
+T 349 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 95 $ 774 room=.
+-> s
+T 350 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 94 $ 774 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 351 mode=combat_victory      Oin Runesinger(dwa) F1@( 4, 5) HP 79/80 MP 0/0 Hu 94 $ 782 room=.
+-> back
+T 352 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 79/80 MP 0/0 Hu 94 $ 782 room=.
+-> e
+T 353 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 79/80 MP 0/0 Hu 93 $ 782 room=.
+-> e
+T 354 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 92 $ 782 room=.
+-> e
+T 355 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 91 $ 782 room=.
+-> s
+T 356 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 90 $ 782 room=.
+-> s
+T 357 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 89 $ 782 room=.
+-> e
+T 358 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 88 $ 782 room=.
+-> e
+T 359 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 7) HP 80/80 MP 0/0 Hu 87 $ 782 room=.
+-> e
+T 360 mode=game_loop           Oin Runesinger(dwa) F1@(10, 7) HP 80/80 MP 0/0 Hu 86 $ 782 room=.
+-> s
+T 361 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 80/80 MP 0/0 Hu 85 $ 782 room=.
+-> s
+T 362 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 80/80 MP 0/0 Hu 84 $ 782 room=.
+-> e
+T 363 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 80/80 MP 0/0 Hu 83 $ 782 room=.
+-> n
+T 364 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 80/80 MP 0/0 Hu 82 $ 782 room=.
+-> e
+T 365 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 80/80 MP 0/0 Hu 81 $ 782 room=.
+-> w
+T 366 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 80/80 MP 0/0 Hu 80 $ 782 room=.
+-> w
+T 367 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 80/80 MP 0/0 Hu 79 $ 782 room=.
+-> n
+T 368 mode=game_loop           Oin Runesinger(dwa) F1@(10, 7) HP 80/80 MP 0/0 Hu 78 $ 782 room=.
+-> w
+T 369 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 7) HP 80/80 MP 0/0 Hu 77 $ 782 room=.
+-> w
+T 370 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 76 $ 782 room=.
+-> n
+T 371 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 80/80 MP 0/0 Hu 75 $ 782 room=.
+-> w
+T 372 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 74 $ 782 room=.
+-> s
+T 373 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 73 $ 782 room=.
+-> s
+T 374 mode=combat_mode         Oin Runesinger(dwa) F1@( 7, 8) HP 80/80 MP 0/0 Hu 72 $ 782 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 375 mode=combat_victory      Oin Runesinger(dwa) F1@( 7, 8) HP 80/80 MP 0/0 Hu 72 $ 786 room=.
+-> back
+T 376 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 8) HP 80/80 MP 0/0 Hu 72 $ 786 room=.
+-> n
+T 377 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 71 $ 786 room=.
+-> e
+T 378 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 70 $ 786 room=.
+-> n
+T 379 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 80/80 MP 0/0 Hu 69 $ 786 room=.
+-> w
+T 380 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 68 $ 786 room=.
+-> n
+T 381 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 67 $ 786 room=.
+-> w
+T 382 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 66 $ 786 room=.
+-> w
+T 383 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 65 $ 786 room=.
+-> n
+T 384 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 64 $ 786 room=.
+-> n
+T 385 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 63 $ 786 room=.
+-> e
+T 386 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 80/80 MP 0/0 Hu 62 $ 786 room=.
+-> s
+T 387 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 61 $ 786 room=.
+-> s
+T 388 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 60 $ 786 room=.
+-> w
+T 389 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 59 $ 786 room=.
+-> w
+T 390 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 58 $ 786 room=.
+-> n
+T 391 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 57 $ 786 room=.
+-> n
+T 392 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 56 $ 786 room=.
+-> n
+T 393 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 55 $ 786 room=.
+-> w
+T 394 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 54 $ 786 room=.
+-> s
+T 395 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 53 $ 786 room=.
+-> s
+T 396 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 52 $ 786 room=.
+-> w
+T 397 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 51 $ 786 room=.
+-> s
+T 398 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 50 $ 786 room=.
+-> s
+T 399 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 49 $ 786 room=.
+-> i
+T 400 mode=inventory           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 49 $ 786 room=.
+-> eat1
+T 401 mode=inventory           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 99 $ 786 room=.
+-> x
+T 402 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 99 $ 786 room=.
+-> w
+T 403 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 98 $ 786 room=.
+-> n
+T 404 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 97 $ 786 room=.
+-> n
+T 405 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 96 $ 786 room=.
+-> n
+T 406 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 95 $ 786 room=.
+-> n
+T 407 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 80/80 MP 0/0 Hu 94 $ 786 room=.
+-> n
+T 408 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 80/80 MP 0/0 Hu 93 $ 786 room=E
+-> s
+T 409 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 80/80 MP 0/0 Hu 92 $ 786 room=.
+-> s
+T 410 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 91 $ 786 room=.
+-> s
+T 411 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 90 $ 786 room=.
+-> e
+T 412 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 89 $ 786 room=.
+-> s
+T 413 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 88 $ 786 room=.
+-> w
+T 414 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 87 $ 786 room=.
+-> s
+T 415 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 86 $ 786 room=.
+-> e
+T 416 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 85 $ 786 room=.
+-> n
+T 417 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 84 $ 786 room=.
+-> n
+T 418 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 83 $ 786 room=.
+-> e
+T 419 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 82 $ 786 room=.
+-> n
+T 420 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 81 $ 786 room=.
+-> l
+T 421 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 81 $ 786 room=.
+-> e
+T 422 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 80 $ 786 room=.
+-> s
+T 423 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 79 $ 786 room=.
+-> s
+T 424 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 78 $ 786 room=.
+-> s
+T 425 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 80/80 MP 0/0 Hu 77 $ 786 room=.
+-> s
+T 426 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 76 $ 786 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 427 mode=combat_mode         Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 76 $ 786 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 428 mode=combat_victory      Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 76 $ 787 room=.
+-> back
+T 429 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 76 $ 787 room=.
+-> l
+T 430 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 76 $ 787 room=.
+-> l
+T 431 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 76 $ 787 room=.
+-> e
+T 432 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 79/80 MP 0/0 Hu 75 $ 787 room=M vs Lichen(L0 HP10/10)
+-> a
+T 433 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 78/80 MP 0/0 Hu 75 $ 787 room=M vs Lichen(L0 HP10/10)
+-> f
+T 434 mode=flee_direction_mode Oin Runesinger(dwa) F1@( 5, 7) HP 77/80 MP 0/0 Hu 75 $ 787 room=M
+-> w
+T 435 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 77/80 MP 0/0 Hu 75 $ 787 room=.
+-> e
+T 436 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 77/80 MP 0/0 Hu 74 $ 787 room=M vs Lichen(L0 HP10/10)
+-> f
+T 437 mode=flee_direction_mode Oin Runesinger(dwa) F1@( 5, 7) HP 77/80 MP 0/0 Hu 74 $ 787 room=M
+-> w
+T 438 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 77/80 MP 0/0 Hu 74 $ 787 room=.
+-> n
+T 439 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 77/80 MP 0/0 Hu 73 $ 787 room=.
+-> n
+T 440 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 78/80 MP 0/0 Hu 72 $ 787 room=.
+-> l
+T 441 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 78/80 MP 0/0 Hu 72 $ 787 room=.
+-> n
+T 442 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 78/80 MP 0/0 Hu 71 $ 787 room=.
+-> n
+T 443 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 78/80 MP 0/0 Hu 70 $ 787 room=.
+-> n
+T 444 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 78/80 MP 0/0 Hu 69 $ 787 room=.
+-> e
+T 445 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 79/80 MP 0/0 Hu 68 $ 787 room=.
+-> n
+T 446 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 79/80 MP 0/0 Hu 67 $ 787 room=.
+-> w
+T 447 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 79/80 MP 0/0 Hu 66 $ 787 room=.
+-> i
+T 448 mode=inventory           Oin Runesinger(dwa) F1@( 4, 1) HP 79/80 MP 0/0 Hu 66 $ 787 room=.
+-> eat2
+T 449 mode=inventory           Oin Runesinger(dwa) F1@( 4, 1) HP 79/80 MP 0/0 Hu 71 $ 787 room=.
+-> eat1
+T 450 mode=inventory           Oin Runesinger(dwa) F1@( 4, 1) HP 79/80 MP 0/0 Hu100 $ 787 room=.
+-> x
+T 451 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 79/80 MP 0/0 Hu100 $ 787 room=.
+-> s
+T 452 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> w
+T 453 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 98 $ 787 room=.
+-> s
+T 454 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 97 $ 787 room=.
+-> e
+T 455 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 96 $ 787 room=.
+-> e
+T 456 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 95 $ 787 room=.
+-> e
+T 457 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 80/80 MP 0/0 Hu 94 $ 787 room=.
+-> s
+T 458 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 93 $ 787 room=.
+-> s
+T 459 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 92 $ 787 room=.
+-> w
+T 460 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 91 $ 787 room=.
+-> l
+T 461 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 91 $ 787 room=.
+-> n
+T 462 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 90 $ 787 room=.
+-> w
+T 463 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 89 $ 787 room=.
+-> n
+T 464 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 88 $ 787 room=.
+-> e
+T 465 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 87 $ 787 room=.
+-> e
+T 466 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 80/80 MP 0/0 Hu 86 $ 787 room=.
+-> s
+T 467 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 85 $ 787 room=.
+-> w
+T 468 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 84 $ 787 room=.
+-> w
+T 469 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 83 $ 787 room=.
+-> s
+T 470 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 82 $ 787 room=.
+-> l
+T 471 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 82 $ 787 room=.
+-> s
+T 472 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 80/80 MP 0/0 Hu 81 $ 787 room=.
+-> s
+T 473 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 80 $ 787 room=.
+-> e
+T 474 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 80/80 MP 0/0 Hu 79 $ 787 room=M vs Lichen(L0 HP10/10)
+-> f
+T 475 mode=flee_direction_mode Oin Runesinger(dwa) F1@( 5, 7) HP 79/80 MP 0/0 Hu 79 $ 787 room=M
+-> w
+T 476 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 79 $ 787 room=.
+-> n
+T 477 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 79/80 MP 0/0 Hu 78 $ 787 room=.
+-> n
+T 478 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 79/80 MP 0/0 Hu 77 $ 787 room=.
+-> e
+T 479 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 79/80 MP 0/0 Hu 76 $ 787 room=.
+-> n
+T 480 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 75 $ 787 room=.
+-> l
+T 481 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 75 $ 787 room=.
+-> w
+T 482 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 74 $ 787 room=.
+-> w
+T 483 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 73 $ 787 room=.
+-> w
+T 484 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 72 $ 787 room=.
+-> s
+T 485 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 71 $ 787 room=.
+-> s
+T 486 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 70 $ 787 room=.
+-> w
+T 487 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 69 $ 787 room=.
+-> n
+T 488 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 68 $ 787 room=.
+-> n
+T 489 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 67 $ 787 room=.
+-> n
+T 490 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 66 $ 787 room=.
+-> l
+T 491 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 66 $ 787 room=.
+-> n
+T 492 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 80/80 MP 0/0 Hu 65 $ 787 room=.
+-> n
+T 493 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 80/80 MP 0/0 Hu 64 $ 787 room=E
+-> s
+T 494 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 80/80 MP 0/0 Hu 63 $ 787 room=.
+-> n
+T 495 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 1) HP 80/80 MP 0/0 Hu 62 $ 787 room=E
+-> s
+T 496 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 2) HP 80/80 MP 0/0 Hu 61 $ 787 room=.
+-> s
+T 497 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 3) HP 80/80 MP 0/0 Hu 60 $ 787 room=.
+-> s
+T 498 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 59 $ 787 room=.
+-> s
+T 499 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 58 $ 787 room=.
+-> e
+T 500 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 57 $ 787 room=.
+-> l
+T 501 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 57 $ 787 room=.
+-> s
+T 502 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 56 $ 787 room=.
+-> w
+T 503 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 55 $ 787 room=.
+-> n
+T 504 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 54 $ 787 room=.
+-> n
+T 505 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 53 $ 787 room=.
+-> e
+T 506 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 52 $ 787 room=.
+-> e
+T 507 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 51 $ 787 room=.
+-> e
+T 508 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 50 $ 787 room=.
+-> e
+T 509 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> i
+T 510 mode=inventory           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> eat1
+T 511 mode=inventory           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> x
+T 512 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> n
+T 513 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 98 $ 787 room=.
+-> w
+T 514 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 97 $ 787 room=.
+-> n
+T 515 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 96 $ 787 room=.
+-> w
+T 516 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 95 $ 787 room=.
+-> s
+T 517 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 94 $ 787 room=.
+-> s
+T 518 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 93 $ 787 room=.
+-> e
+T 519 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 92 $ 787 room=.
+-> e
+T 520 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 91 $ 787 room=.
+-> l
+T 521 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 91 $ 787 room=.
+-> n
+T 522 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 90 $ 787 room=.
+-> n
+T 523 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 89 $ 787 room=.
+-> n
+T 524 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 88 $ 787 room=.
+-> e
+T 525 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 1) HP 80/80 MP 0/0 Hu 87 $ 787 room=.
+-> w
+T 526 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 86 $ 787 room=.
+-> w
+T 527 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 80/80 MP 0/0 Hu 85 $ 787 room=.
+-> s
+T 528 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 84 $ 787 room=.
+-> e
+T 529 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 83 $ 787 room=.
+-> s
+T 530 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 82 $ 787 room=.
+-> l
+T 531 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 82 $ 787 room=.
+-> s
+T 532 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 81 $ 787 room=.
+-> s
+T 533 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 80 $ 787 room=.
+-> e
+T 534 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 79 $ 787 room=.
+-> e
+T 535 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 78 $ 787 room=.
+-> s
+T 536 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 77 $ 787 room=.
+-> s
+T 537 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 76 $ 787 room=.
+-> e
+T 538 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 75 $ 787 room=.
+-> s
+T 539 mode=warp_mode           Oin Runesinger(dwa) F1@( 8, 8) HP 80/80 MP 0/0 Hu 74 $ 787 room=W
+-> y
+T 540 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 8) HP 80/80 MP 0/0 Hu 74 $ 787 room=W
+-> l
+T 541 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 8) HP 80/80 MP 0/0 Hu 74 $ 787 room=W
+-> s
+T 542 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 9) HP 80/80 MP 0/0 Hu 73 $ 787 room=.
+-> e
+T 543 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 9) HP 80/80 MP 0/0 Hu 72 $ 787 room=.
+-> e
+T 544 mode=game_loop           Oin Runesinger(dwa) F1@(10, 9) HP 80/80 MP 0/0 Hu 71 $ 787 room=.
+-> e
+T 545 mode=game_loop           Oin Runesinger(dwa) F1@(11, 9) HP 80/80 MP 0/0 Hu 70 $ 787 room=.
+-> n
+T 546 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 80/80 MP 0/0 Hu 69 $ 787 room=.
+-> e
+T 547 mode=game_loop           Oin Runesinger(dwa) F1@(12, 8) HP 80/80 MP 0/0 Hu 68 $ 787 room=.
+-> w
+T 548 mode=game_loop           Oin Runesinger(dwa) F1@(11, 8) HP 80/80 MP 0/0 Hu 67 $ 787 room=.
+-> w
+T 549 mode=game_loop           Oin Runesinger(dwa) F1@(10, 8) HP 80/80 MP 0/0 Hu 66 $ 787 room=.
+-> n
+T 550 mode=game_loop           Oin Runesinger(dwa) F1@(10, 7) HP 80/80 MP 0/0 Hu 65 $ 787 room=.
+-> l
+T 551 mode=game_loop           Oin Runesinger(dwa) F1@(10, 7) HP 80/80 MP 0/0 Hu 65 $ 787 room=.
+-> w
+T 552 mode=game_loop           Oin Runesinger(dwa) F1@( 9, 7) HP 80/80 MP 0/0 Hu 64 $ 787 room=.
+-> w
+T 553 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 63 $ 787 room=.
+-> n
+T 554 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 80/80 MP 0/0 Hu 62 $ 787 room=.
+-> w
+T 555 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 61 $ 787 room=.
+-> s
+T 556 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 60 $ 787 room=.
+-> s
+T 557 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 8) HP 80/80 MP 0/0 Hu 59 $ 787 room=.
+-> n
+T 558 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 58 $ 787 room=.
+-> e
+T 559 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 57 $ 787 room=.
+-> n
+T 560 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 80/80 MP 0/0 Hu 56 $ 787 room=.
+-> l
+T 561 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 6) HP 80/80 MP 0/0 Hu 56 $ 787 room=.
+-> w
+T 562 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 55 $ 787 room=.
+-> n
+T 563 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 54 $ 787 room=.
+-> w
+T 564 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 53 $ 787 room=.
+-> n
+T 565 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 52 $ 787 room=.
+-> w
+T 566 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 51 $ 787 room=.
+-> s
+T 567 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 50 $ 787 room=.
+-> w
+T 568 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> i
+T 569 mode=inventory           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> eat1
+T 570 mode=inventory           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> x
+T 571 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> n
+T 572 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 98 $ 787 room=.
+-> n
+T 573 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 97 $ 787 room=.
+-> e
+T 574 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 96 $ 787 room=.
+-> n
+T 575 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 95 $ 787 room=.
+-> n
+T 576 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 1) HP 80/80 MP 0/0 Hu 94 $ 787 room=.
+-> w
+T 577 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 1) HP 80/80 MP 0/0 Hu 93 $ 787 room=.
+-> s
+T 578 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 92 $ 787 room=.
+-> s
+T 579 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 3) HP 80/80 MP 0/0 Hu 91 $ 787 room=.
+-> w
+T 580 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 90 $ 787 room=.
+-> l
+T 581 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 90 $ 787 room=.
+-> s
+T 582 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 89 $ 787 room=.
+-> e
+T 583 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 88 $ 787 room=.
+-> e
+T 584 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 4) HP 80/80 MP 0/0 Hu 87 $ 787 room=.
+-> n
+T 585 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 86 $ 787 room=.
+-> e
+T 586 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 80/80 MP 0/0 Hu 85 $ 787 room=.
+-> s
+T 587 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 84 $ 787 room=.
+-> s
+T 588 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 83 $ 787 room=.
+-> w
+T 589 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 82 $ 787 room=.
+-> w
+T 590 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 81 $ 787 room=.
+-> l
+T 591 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 81 $ 787 room=.
+-> n
+T 592 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 80 $ 787 room=.
+-> w
+T 593 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 79 $ 787 room=.
+-> n
+T 594 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 3) HP 80/80 MP 0/0 Hu 78 $ 787 room=.
+-> n
+T 595 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 2) HP 80/80 MP 0/0 Hu 77 $ 787 room=.
+-> e
+T 596 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 2) HP 80/80 MP 0/0 Hu 76 $ 787 room=.
+-> e
+T 597 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 2) HP 80/80 MP 0/0 Hu 75 $ 787 room=.
+-> s
+T 598 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 3) HP 80/80 MP 0/0 Hu 74 $ 787 room=.
+-> e
+T 599 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 3) HP 80/80 MP 0/0 Hu 73 $ 787 room=.
+-> s
+T 600 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 72 $ 787 room=.
+-> l
+T 601 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 4) HP 80/80 MP 0/0 Hu 72 $ 787 room=.
+-> s
+T 602 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 71 $ 787 room=.
+-> w
+T 603 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 70 $ 787 room=.
+-> w
+T 604 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 69 $ 787 room=.
+-> n
+T 605 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 68 $ 787 room=.
+-> w
+T 606 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 67 $ 787 room=.
+-> w
+T 607 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 66 $ 787 room=.
+-> s
+T 608 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 65 $ 787 room=.
+-> w
+T 609 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 64 $ 787 room=.
+-> s
+T 610 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 63 $ 787 room=.
+-> l
+T 611 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 63 $ 787 room=.
+-> e
+T 612 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 62 $ 787 room=.
+-> n
+T 613 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 61 $ 787 room=.
+-> n
+T 614 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 60 $ 787 room=.
+-> w
+T 615 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 4) HP 80/80 MP 0/0 Hu 59 $ 787 room=.
+-> s
+T 616 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 5) HP 80/80 MP 0/0 Hu 58 $ 787 room=.
+-> s
+T 617 mode=game_loop           Oin Runesinger(dwa) F1@( 1, 6) HP 80/80 MP 0/0 Hu 57 $ 787 room=.
+-> e
+T 618 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 6) HP 80/80 MP 0/0 Hu 56 $ 787 room=.
+-> n
+T 619 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 5) HP 80/80 MP 0/0 Hu 55 $ 787 room=.
+-> n
+T 620 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 54 $ 787 room=.
+-> l
+T 621 mode=game_loop           Oin Runesinger(dwa) F1@( 2, 4) HP 80/80 MP 0/0 Hu 54 $ 787 room=.
+-> e
+T 622 mode=game_loop           Oin Runesinger(dwa) F1@( 3, 4) HP 80/80 MP 0/0 Hu 53 $ 787 room=.
+-> e
+T 623 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 52 $ 787 room=.
+-> s
+T 624 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 51 $ 787 room=.
+-> s
+T 625 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 80/80 MP 0/0 Hu 50 $ 787 room=.
+-> s
+T 626 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> i
+T 627 mode=inventory           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 49 $ 787 room=.
+-> eat1
+T 628 mode=inventory           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> x
+T 629 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 99 $ 787 room=.
+-> e
+T 630 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 80/80 MP 0/0 Hu 98 $ 787 room=M vs Lichen(L0 HP10/10)
+-> a
+T 631 mode=combat_mode         Oin Runesinger(dwa) F1@( 5, 7) HP 79/80 MP 0/0 Hu 98 $ 787 room=M vs Lichen(L0 HP10/10)
+-> a
+T 632 mode=combat_victory      Oin Runesinger(dwa) F1@( 5, 7) HP 79/80 MP 0/0 Hu 98 $ 789 room=.
+-> back
+T 633 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 7) HP 79/80 MP 0/0 Hu 98 $ 789 room=.
+-> w
+T 634 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 79/80 MP 0/0 Hu 97 $ 789 room=.
+-> e
+T 635 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 7) HP 80/80 MP 0/0 Hu 96 $ 789 room=.
+-> w
+T 636 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 7) HP 80/80 MP 0/0 Hu 95 $ 789 room=.
+-> n
+T 637 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 6) HP 80/80 MP 0/0 Hu 94 $ 789 room=.
+-> n
+T 638 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 93 $ 789 room=.
+-> n
+T 639 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 4) HP 80/80 MP 0/0 Hu 92 $ 789 room=.
+-> s
+T 640 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 91 $ 789 room=.
+-> l
+T 641 mode=game_loop           Oin Runesinger(dwa) F1@( 4, 5) HP 80/80 MP 0/0 Hu 91 $ 789 room=.
+-> e
+T 642 mode=game_loop           Oin Runesinger(dwa) F1@( 5, 5) HP 80/80 MP 0/0 Hu 90 $ 789 room=.
+-> e
+T 643 mode=game_loop           Oin Runesinger(dwa) F1@( 6, 5) HP 80/80 MP 0/0 Hu 89 $ 789 room=.
+-> e
+T 644 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 88 $ 789 room=.
+-> i
+T 645 mode=inventory           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 88 $ 789 room=.
+-> eat2
+T 646 mode=inventory           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 94 $ 789 room=.
+-> x
+T 647 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 5) HP 80/80 MP 0/0 Hu 94 $ 789 room=.
+-> s
+T 648 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 6) HP 80/80 MP 0/0 Hu 93 $ 789 room=.
+-> s
+T 649 mode=game_loop           Oin Runesinger(dwa) F1@( 7, 7) HP 80/80 MP 0/0 Hu 92 $ 789 room=.
+-> e
+T 650 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 91 $ 789 room=.
+-> l
+T 651 mode=game_loop           Oin Runesinger(dwa) F1@( 8, 7) HP 80/80 MP 0/0 Hu 91 $ 789 room=.
+-> s
+T 652 mode=warp_mode           Oin Runesinger(dwa) F1@( 8, 8) HP 80/80 MP 0/0 Hu 90 $ 789 room=W
+-> n
+T 653 mode=combat_mode         Oin Runesinger(dwa) F3@( 4,12) HP 80/80 MP 0/0 Hu 90 $ 789 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 654 mode=combat_mode         Oin Runesinger(dwa) F3@( 4,12) HP 80/80 MP 0/0 Hu 90 $ 789 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 655 mode=combat_mode         Oin Runesinger(dwa) F3@( 4,12) HP 79/80 MP 0/0 Hu 90 $ 789 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 656 mode=combat_victory      Oin Runesinger(dwa) F3@( 4,12) HP 79/90 MP 0/0 Hu 90 $ 816 room=.
+-> back
+T 657 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 79/90 MP 0/0 Hu 90 $ 816 room=.
+-> l
+T 658 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 79/90 MP 0/0 Hu 90 $ 816 room=.
+-> s
+T 659 mode=altar_mode          Oin Runesinger(dwa) F3@( 4,13) HP 79/90 MP 0/0 Hu 89 $ 816 room=A
+-> pray
+T 660 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 79/90 MP 0/0 Hu 89 $ 816 room=.
+-> l
+T 661 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 79/90 MP 0/0 Hu 89 $ 816 room=.
+-> s
+T 662 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 80/90 MP 0/0 Hu 88 $ 816 room=.
+-> l
+T 663 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 80/90 MP 0/0 Hu 88 $ 816 room=.
+-> s
+T 664 mode=game_loop           Oin Runesinger(dwa) F3@( 4,15) HP 80/90 MP 0/0 Hu 87 $ 816 room=.
+-> l
+T 665 mode=game_loop           Oin Runesinger(dwa) F3@( 4,15) HP 80/90 MP 0/0 Hu 87 $ 816 room=.
+-> n
+T 666 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 81/90 MP 0/0 Hu 86 $ 816 room=.
+-> e
+T 667 mode=chest_mode          Oin Runesinger(dwa) F3@( 5,14) HP 81/90 MP 0/0 Hu 85 $ 816 room=C
+-> o
+T 668 mode=game_loop           Oin Runesinger(dwa) F3@( 5,14) HP 81/90 MP 0/0 Hu 85 $ 996 room=.
+-> n
+T 669 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 81/90 MP 0/0 Hu 84 $ 996 room=.
+-> n
+T 670 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 81/90 MP 0/0 Hu 83 $ 996 room=.
+-> e
+T 671 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 82/90 MP 0/0 Hu 82 $ 996 room=.
+-> l
+T 672 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 82/90 MP 0/0 Hu 82 $ 996 room=.
+-> e
+T 673 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 82/90 MP 0/0 Hu 81 $ 996 room=.
+-> l
+T 674 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 82/90 MP 0/0 Hu 81 $ 996 room=.
+-> e
+T 675 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 82/90 MP 0/0 Hu 80 $ 996 room=.
+-> i
+T 676 mode=inventory           Oin Runesinger(dwa) F3@( 8,12) HP 82/90 MP 0/0 Hu 80 $ 996 room=.
+-> u4
+T 677 mode=inventory           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 80 $ 996 room=.
+-> x
+T 678 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 80 $ 996 room=.
+-> i
+T 679 mode=inventory           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 80 $ 996 room=.
+-> eat2
+T 680 mode=inventory           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 86 $ 996 room=.
+-> x
+T 681 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 86 $ 996 room=.
+-> l
+T 682 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 86 $ 996 room=.
+-> e
+T 683 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 85 $ 996 room=.
+-> l
+T 684 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 85 $ 996 room=.
+-> e
+T 685 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 90/90 MP 0/0 Hu 84 $ 996 room=.
+-> l
+T 686 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 90/90 MP 0/0 Hu 84 $ 996 room=.
+-> n
+T 687 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 90/90 MP 0/0 Hu 83 $ 996 room=.
+-> l
+T 688 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 90/90 MP 0/0 Hu 83 $ 996 room=.
+-> n
+T 689 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 90/90 MP 0/0 Hu 82 $ 996 room=.
+-> l
+T 690 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 90/90 MP 0/0 Hu 82 $ 996 room=.
+-> n
+T 691 mode=pool_mode           Oin Runesinger(dwa) F3@(10, 9) HP 90/90 MP 0/0 Hu 81 $ 996 room=P
+-> dr
+T 692 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 90/90 MP 0/0 Hu 81 $ 996 room=.
+-> l
+T 693 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 90/90 MP 0/0 Hu 81 $ 996 room=.
+-> w
+T 694 mode=altar_mode          Oin Runesinger(dwa) F3@( 9, 9) HP 90/90 MP 0/0 Hu 80 $ 996 room=A
+-> pray
+T 695 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 90/90 MP 0/0 Hu 80 $ 1004 room=.
+-> n
+T 696 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 8) HP 90/90 MP 0/0 Hu 79 $ 1004 room=.
+-> n
+T 697 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 7) HP 90/90 MP 0/0 Hu 78 $ 1004 room=.
+-> e
+T 698 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 1004 room=V
+-> r2
+T 699 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 956 room=V
+-> r3
+T 700 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 908 room=V
+-> b12
+T 701 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 898 room=V
+-> b4
+T 702 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 818 room=V
+-> b4
+T 703 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 738 room=V
+-> b5
+T 704 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 708 room=V
+-> b5
+T 705 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 678 room=V
+-> b7
+T 706 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 528 room=V
+-> b4
+T 707 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 458 room=V
+-> b1
+T 708 mode=vendor_shop         Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> x
+T 709 mode=game_loop           Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> i
+T 710 mode=inventory           Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> e1
+T 711 mode=inventory           Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> x
+T 712 mode=game_loop           Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> l
+T 713 mode=game_loop           Oin Runesinger(dwa) F3@(10, 7) HP 90/90 MP 0/0 Hu 77 $ 278 room=V
+-> s
+T 714 mode=combat_mode         Oin Runesinger(dwa) F3@(10, 8) HP 90/90 MP 0/0 Hu 76 $ 278 room=M vs Lichen(L2 HP10/10)
+-> a
+T 715 mode=combat_mode         Oin Runesinger(dwa) F3@(10, 8) HP 89/90 MP 0/0 Hu 76 $ 278 room=M vs Lichen(L2 HP10/10)
+-> a
+T 716 mode=combat_victory      Oin Runesinger(dwa) F3@(10, 8) HP 89/90 MP 0/0 Hu 76 $ 393 room=.
+-> back
+T 717 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 89/90 MP 0/0 Hu 76 $ 393 room=.
+-> l
+T 718 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 89/90 MP 0/0 Hu 76 $ 393 room=.
+-> s
+T 719 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 89/90 MP 0/0 Hu 75 $ 393 room=.
+-> s
+T 720 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 89/90 MP 0/0 Hu 74 $ 393 room=.
+-> s
+T 721 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 89/90 MP 0/0 Hu 73 $ 393 room=.
+-> s
+T 722 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 90/90 MP 0/0 Hu 72 $ 393 room=.
+-> s
+T 723 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 90/90 MP 0/0 Hu 71 $ 393 room=.
+-> s
+T 724 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 90/90 MP 0/0 Hu 70 $ 393 room=.
+-> s
+T 725 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 90/90 MP 0/0 Hu 69 $ 393 room=.
+-> s
+T 726 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 90/90 MP 0/0 Hu 68 $ 393 room=.
+-> w
+T 727 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 90/90 MP 0/0 Hu 67 $ 393 room=.
+-> n
+T 728 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu 66 $ 393 room=.
+-> i
+T 729 mode=inventory           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu 66 $ 393 room=.
+-> eat2
+T 730 mode=inventory           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu 72 $ 393 room=.
+-> eat1
+T 731 mode=inventory           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu100 $ 393 room=.
+-> u11
+T 732 mode=upgrade_scroll_mode Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu100 $ 393 room=.
+-> 1
+T 733 mode=inventory           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu100 $ 393 room=.
+-> x
+T 734 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu100 $ 393 room=.
+-> n
+T 735 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 90/90 MP 0/0 Hu 99 $ 393 room=.
+-> n
+T 736 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 90/90 MP 0/0 Hu 98 $ 393 room=.
+-> n
+T 737 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 97 $ 393 room=.
+-> w
+T 738 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 96 $ 393 room=.
+-> w
+T 739 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 95 $ 393 room=.
+-> w
+T 740 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 94 $ 393 room=.
+-> w
+T 741 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 93 $ 393 room=.
+-> w
+T 742 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 90/90 MP 0/0 Hu 92 $ 393 room=.
+-> n
+T 743 mode=game_loop           Oin Runesinger(dwa) F3@( 4,11) HP 90/90 MP 0/0 Hu 91 $ 393 room=.
+-> n
+T 744 mode=game_loop           Oin Runesinger(dwa) F3@( 4,10) HP 90/90 MP 0/0 Hu 90 $ 393 room=.
+-> l
+T 745 mode=game_loop           Oin Runesinger(dwa) F3@( 4,10) HP 90/90 MP 0/0 Hu 90 $ 393 room=.
+-> e
+T 746 mode=game_loop           Oin Runesinger(dwa) F3@( 5,10) HP 90/90 MP 0/0 Hu 89 $ 393 room=.
+-> l
+T 747 mode=game_loop           Oin Runesinger(dwa) F3@( 5,10) HP 90/90 MP 0/0 Hu 89 $ 393 room=.
+-> n
+T 748 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 9) HP 90/90 MP 0/0 Hu 88 $ 393 room=.
+-> w
+T 749 mode=garden_mode         Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 87 $ 393 room=G
+-> h
+T 750 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 87 $ 393 room=.
+-> l
+T 751 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 87 $ 393 room=.
+-> n
+T 752 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 86 $ 393 room=.
+-> l
+T 753 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 86 $ 393 room=.
+-> w
+T 754 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 85 $ 393 room=.
+-> l
+T 755 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 85 $ 393 room=.
+-> w
+T 756 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 8) HP 90/90 MP 0/0 Hu 84 $ 393 room=.
+-> l
+T 757 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 8) HP 90/90 MP 0/0 Hu 84 $ 393 room=.
+-> n
+T 758 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 7) HP 90/90 MP 0/0 Hu 83 $ 393 room=.
+-> l
+T 759 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 7) HP 90/90 MP 0/0 Hu 83 $ 393 room=.
+-> n
+T 760 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 6) HP 90/90 MP 0/0 Hu 82 $ 393 room=.
+-> l
+T 761 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 6) HP 90/90 MP 0/0 Hu 82 $ 393 room=.
+-> n
+T 762 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 5) HP 90/90 MP 0/0 Hu 81 $ 393 room=.
+-> l
+T 763 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 5) HP 90/90 MP 0/0 Hu 81 $ 393 room=.
+-> w
+T 764 mode=altar_mode          Oin Runesinger(dwa) F3@( 1, 5) HP 90/90 MP 0/0 Hu 80 $ 393 room=A
+-> pray
+T 765 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 5) HP 90/90 MP 0/0 Hu 80 $ 393 room=.
+-> l
+T 766 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 5) HP 90/90 MP 0/0 Hu 80 $ 393 room=.
+-> n
+T 767 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 4) HP 90/90 MP 0/0 Hu 79 $ 393 room=.
+-> s
+T 768 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 5) HP 90/90 MP 0/0 Hu 78 $ 393 room=.
+-> n
+T 769 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 4) HP 90/90 MP 0/0 Hu 77 $ 393 room=.
+-> s
+T 770 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 5) HP 90/90 MP 0/0 Hu 76 $ 393 room=.
+-> e
+T 771 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 5) HP 90/90 MP 0/0 Hu 75 $ 393 room=.
+-> e
+T 772 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 5) HP 90/90 MP 0/0 Hu 74 $ 393 room=.
+-> e
+T 773 mode=dungeon_mode        Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 73 $ 393 room=N
+-> u
+T 774 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 73 $ 393 room=N
+-> l
+T 775 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 73 $ 393 room=N
+-> n
+T 776 mode=chest_mode          Oin Runesinger(dwa) F3@( 4, 4) HP 90/90 MP 0/0 Hu 72 $ 393 room=C
+-> o
+T 777 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 4) HP 90/90 MP 0/0 Hu 72 $ 393 room=.
+-> w
+T 778 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 4) HP 90/90 MP 0/0 Hu 71 $ 393 room=.
+-> s
+T 779 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 5) HP 90/90 MP 0/0 Hu 70 $ 393 room=.
+-> w
+T 780 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 5) HP 90/90 MP 0/0 Hu 69 $ 393 room=.
+-> s
+T 781 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 6) HP 90/90 MP 0/0 Hu 68 $ 393 room=.
+-> e
+T 782 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 6) HP 90/90 MP 0/0 Hu 67 $ 393 room=.
+-> s
+T 783 mode=combat_mode         Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 66 $ 393 room=M vs Spore Puff(L2 HP18/18)
+-> a
+T 784 mode=combat_victory      Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 66 $ 411 room=.
+-> back
+T 785 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 66 $ 411 room=.
+-> w
+T 786 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 7) HP 90/90 MP 0/0 Hu 65 $ 411 room=.
+-> w
+T 787 mode=garden_mode         Oin Runesinger(dwa) F3@( 1, 7) HP 90/90 MP 0/0 Hu 64 $ 411 room=G
+-> h
+T 788 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 7) HP 90/90 MP 0/0 Hu 64 $ 411 room=.
+-> s
+T 789 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 8) HP 90/90 MP 0/0 Hu 63 $ 411 room=.
+-> s
+T 790 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 9) HP 90/90 MP 0/0 Hu 62 $ 411 room=.
+-> e
+T 791 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 9) HP 90/90 MP 0/0 Hu 61 $ 411 room=.
+-> n
+T 792 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 8) HP 90/90 MP 0/0 Hu 60 $ 411 room=.
+-> n
+T 793 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 7) HP 90/90 MP 0/0 Hu 59 $ 411 room=.
+-> e
+T 794 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 58 $ 411 room=.
+-> n
+T 795 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 6) HP 90/90 MP 0/0 Hu 57 $ 411 room=.
+-> n
+T 796 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 5) HP 90/90 MP 0/0 Hu 56 $ 411 room=.
+-> n
+T 797 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 4) HP 90/90 MP 0/0 Hu 55 $ 411 room=.
+-> e
+T 798 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 4) HP 90/90 MP 0/0 Hu 54 $ 411 room=.
+-> s
+T 799 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 53 $ 411 room=N
+-> s
+T 800 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 6) HP 90/90 MP 0/0 Hu 52 $ 411 room=.
+-> w
+T 801 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 6) HP 90/90 MP 0/0 Hu 51 $ 411 room=.
+-> s
+T 802 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 50 $ 411 room=.
+-> s
+T 803 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 49 $ 411 room=.
+-> i
+T 804 mode=inventory           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 49 $ 411 room=.
+-> eat1
+T 805 mode=inventory           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 99 $ 411 room=.
+-> x
+T 806 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 99 $ 411 room=.
+-> e
+T 807 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 98 $ 411 room=.
+-> e
+T 808 mode=combat_mode         Oin Runesinger(dwa) F3@( 5, 8) HP 90/90 MP 0/0 Hu 97 $ 411 room=M vs Kobold(L2 HP20/20)
+-> a
+T 809 mode=combat_victory      Oin Runesinger(dwa) F3@( 5, 8) HP 89/90 MP 0/0 Hu 97 $ 429 room=.
+-> back
+T 810 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 8) HP 89/90 MP 0/0 Hu 97 $ 429 room=.
+-> n
+T 811 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 7) HP 89/90 MP 0/0 Hu 96 $ 429 room=.
+-> e
+T 812 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 7) HP 90/90 MP 0/0 Hu 95 $ 429 room=.
+-> l
+T 813 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 7) HP 90/90 MP 0/0 Hu 95 $ 429 room=.
+-> e
+T 814 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 7) HP 90/90 MP 0/0 Hu 94 $ 429 room=.
+-> l
+T 815 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 7) HP 90/90 MP 0/0 Hu 94 $ 429 room=.
+-> e
+T 816 mode=combat_mode         Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 93 $ 429 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 817 mode=combat_mode         Oin Runesinger(dwa) F3@( 8, 7) HP 89/90 MP 0/0 Hu 93 $ 429 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 818 mode=combat_mode         Oin Runesinger(dwa) F3@( 8, 7) HP 88/90 MP 0/0 Hu 93 $ 429 room=M vs Bugbear(L2 HP8/35)
+-> a
+T 819 mode=combat_victory      Oin Runesinger(dwa) F3@( 8, 7) HP 87/90 MP 0/0 Hu 93 $ 432 room=.
+-> back
+T 820 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 7) HP 87/90 MP 0/0 Hu 93 $ 432 room=.
+-> s
+T 821 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 8) HP 87/90 MP 0/0 Hu 92 $ 432 room=.
+-> e
+T 822 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 8) HP 88/90 MP 0/0 Hu 91 $ 432 room=.
+-> n
+T 823 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 7) HP 88/90 MP 0/0 Hu 90 $ 432 room=.
+-> n
+T 824 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 6) HP 89/90 MP 0/0 Hu 89 $ 432 room=.
+-> s
+T 825 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 7) HP 89/90 MP 0/0 Hu 88 $ 432 room=.
+-> w
+T 826 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 87 $ 432 room=.
+-> i
+T 827 mode=inventory           Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 87 $ 432 room=.
+-> eat2
+T 828 mode=inventory           Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 92 $ 432 room=.
+-> x
+T 829 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 92 $ 432 room=.
+-> w
+T 830 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 7) HP 90/90 MP 0/0 Hu 91 $ 432 room=.
+-> w
+T 831 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 7) HP 90/90 MP 0/0 Hu 90 $ 432 room=.
+-> s
+T 832 mode=library_mode        Oin Runesinger(dwa) F3@( 6, 8) HP 90/90 MP 0/0 Hu 89 $ 432 room=L
+-> r
+T 833 mode=library_read_decision_mode Oin Runesinger(dwa) F3@( 6, 8) HP 90/90 MP 0/0 Hu 89 $ 432 room=L
+-> y
+T 834 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 8) HP 90/90 MP 0/0 Hu 89 $ 482 room=.
+-> w
+T 835 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 8) HP 90/90 MP 0/0 Hu 88 $ 482 room=.
+-> w
+T 836 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 87 $ 482 room=.
+-> w
+T 837 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 86 $ 482 room=.
+-> n
+T 838 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 7) HP 90/90 MP 0/0 Hu 85 $ 482 room=.
+-> n
+T 839 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 6) HP 90/90 MP 0/0 Hu 84 $ 482 room=.
+-> n
+T 840 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 5) HP 90/90 MP 0/0 Hu 83 $ 482 room=.
+-> e
+T 841 mode=dungeon_mode        Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 82 $ 482 room=N
+-> u
+T 842 mode=dungeon_unlocked_mode Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 82 $ 482 room=N
+-> r
+T 843 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 5) HP 90/90 MP 0/0 Hu 82 $ 656 room=N
+-> s
+T 844 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 6) HP 90/90 MP 0/0 Hu 81 $ 656 room=.
+-> w
+T 845 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 6) HP 90/90 MP 0/0 Hu 80 $ 656 room=.
+-> w
+T 846 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 6) HP 90/90 MP 0/0 Hu 79 $ 656 room=.
+-> s
+T 847 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 7) HP 90/90 MP 0/0 Hu 78 $ 656 room=.
+-> w
+T 848 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 7) HP 90/90 MP 0/0 Hu 77 $ 656 room=.
+-> s
+T 849 mode=game_loop           Oin Runesinger(dwa) F3@( 1, 8) HP 90/90 MP 0/0 Hu 76 $ 656 room=.
+-> e
+T 850 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 8) HP 90/90 MP 0/0 Hu 75 $ 656 room=.
+-> s
+T 851 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 9) HP 90/90 MP 0/0 Hu 74 $ 656 room=.
+-> s
+T 852 mode=game_loop           Oin Runesinger(dwa) F3@( 2,10) HP 90/90 MP 0/0 Hu 73 $ 656 room=.
+-> n
+T 853 mode=game_loop           Oin Runesinger(dwa) F3@( 2, 9) HP 90/90 MP 0/0 Hu 72 $ 656 room=.
+-> e
+T 854 mode=pool_mode           Oin Runesinger(dwa) F3@( 3, 9) HP 90/90 MP 0/0 Hu 71 $ 656 room=P
+-> dr
+T 855 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 9) HP 90/90 MP 0/0 Hu 71 $ 656 room=.
+-> n
+T 856 mode=game_loop           Oin Runesinger(dwa) F3@( 3, 8) HP 90/90 MP 0/0 Hu 70 $ 656 room=.
+-> e
+T 857 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 69 $ 656 room=.
+-> e
+T 858 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 8) HP 90/90 MP 0/0 Hu 68 $ 656 room=.
+-> n
+T 859 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 7) HP 90/90 MP 0/0 Hu 67 $ 656 room=.
+-> e
+T 860 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 7) HP 90/90 MP 0/0 Hu 66 $ 656 room=.
+-> l
+T 861 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 7) HP 90/90 MP 0/0 Hu 66 $ 656 room=.
+-> n
+T 862 mode=game_loop           Oin Runesinger(dwa) F3@( 6, 6) HP 90/90 MP 0/0 Hu 65 $ 656 room=.
+-> e
+T 863 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 6) HP 90/90 MP 0/0 Hu 64 $ 656 room=.
+-> s
+T 864 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 7) HP 90/90 MP 0/0 Hu 63 $ 656 room=.
+-> e
+T 865 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 7) HP 90/90 MP 0/0 Hu 62 $ 656 room=.
+-> s
+T 866 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 8) HP 90/90 MP 0/0 Hu 61 $ 656 room=.
+-> s
+T 867 mode=dungeon_mode        Oin Runesinger(dwa) F3@( 8, 9) HP 90/90 MP 0/0 Hu 60 $ 656 room=N
+-> u
+T 868 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 90/90 MP 0/0 Hu 60 $ 656 room=N
+-> s
+T 869 mode=game_loop           Oin Runesinger(dwa) F3@( 8,10) HP 90/90 MP 0/0 Hu 59 $ 656 room=.
+-> w
+T 870 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 90/90 MP 0/0 Hu 58 $ 656 room=.
+-> l
+T 871 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 90/90 MP 0/0 Hu 58 $ 656 room=.
+-> s
+T 872 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 90/90 MP 0/0 Hu 57 $ 656 room=.
+-> w
+T 873 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 90/90 MP 0/0 Hu 56 $ 656 room=.
+-> s
+T 874 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 55 $ 656 room=.
+-> w
+T 875 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 54 $ 656 room=.
+-> s
+T 876 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 53 $ 656 room=.
+-> w
+T 877 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 90/90 MP 0/0 Hu 52 $ 656 room=.
+-> s
+T 878 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 51 $ 656 room=.
+-> s
+T 879 mode=game_loop           Oin Runesinger(dwa) F3@( 4,15) HP 90/90 MP 0/0 Hu 50 $ 656 room=.
+-> n
+T 880 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 49 $ 656 room=.
+-> i
+T 881 mode=inventory           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 49 $ 656 room=.
+-> eat1
+T 882 mode=inventory           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 99 $ 656 room=.
+-> x
+T 883 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 99 $ 656 room=.
+-> e
+T 884 mode=game_loop           Oin Runesinger(dwa) F3@( 5,14) HP 90/90 MP 0/0 Hu 98 $ 656 room=.
+-> n
+T 885 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 97 $ 656 room=.
+-> e
+T 886 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 96 $ 656 room=.
+-> s
+T 887 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 90/90 MP 0/0 Hu 95 $ 656 room=.
+-> s
+T 888 mode=combat_mode         Oin Runesinger(dwa) F3@( 6,15) HP 90/90 MP 0/0 Hu 94 $ 656 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 889 mode=combat_mode         Oin Runesinger(dwa) F3@( 6,15) HP 89/90 MP 0/0 Hu 94 $ 656 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 890 mode=combat_mode         Oin Runesinger(dwa) F3@( 6,15) HP 88/90 MP 0/0 Hu 94 $ 656 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 891 mode=flee_direction_mode Oin Runesinger(dwa) F3@( 6,15) HP 88/90 MP 0/0 Hu 94 $ 656 room=M
+-> e
+T 892 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 88/90 MP 0/0 Hu 94 $ 656 room=.
+-> e
+T 893 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 88/90 MP 0/0 Hu 93 $ 656 room=.
+-> s
+T 894 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 89/90 MP 0/0 Hu 92 $ 656 room=.
+-> e
+T 895 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 89/90 MP 0/0 Hu 91 $ 656 room=.
+-> n
+T 896 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu 90 $ 656 room=.
+-> e
+T 897 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 90/90 MP 0/0 Hu 89 $ 656 room=.
+-> n
+T 898 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 90/90 MP 0/0 Hu 88 $ 656 room=.
+-> w
+T 899 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 90/90 MP 0/0 Hu 87 $ 656 room=.
+-> n
+T 900 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 90/90 MP 0/0 Hu 86 $ 656 room=.
+-> l
+T 901 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 90/90 MP 0/0 Hu 86 $ 656 room=.
+-> n
+T 902 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 85 $ 656 room=.
+-> e
+T 903 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 90/90 MP 0/0 Hu 84 $ 656 room=.
+-> s
+T 904 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 90/90 MP 0/0 Hu 83 $ 656 room=.
+-> s
+T 905 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 90/90 MP 0/0 Hu 82 $ 656 room=.
+-> w
+T 906 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 90/90 MP 0/0 Hu 81 $ 656 room=.
+-> s
+T 907 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 90/90 MP 0/0 Hu 80 $ 656 room=.
+-> w
+T 908 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 90/90 MP 0/0 Hu 79 $ 656 room=.
+-> w
+T 909 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 90/90 MP 0/0 Hu 78 $ 656 room=.
+-> n
+T 910 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 90/90 MP 0/0 Hu 77 $ 656 room=.
+-> l
+T 911 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 90/90 MP 0/0 Hu 77 $ 656 room=.
+-> n
+T 912 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 76 $ 656 room=.
+-> w
+T 913 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 75 $ 656 room=.
+-> n
+T 914 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 74 $ 656 room=.
+-> n
+T 915 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 90/90 MP 0/0 Hu 73 $ 656 room=.
+-> e
+T 916 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 90/90 MP 0/0 Hu 72 $ 656 room=.
+-> n
+T 917 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 90/90 MP 0/0 Hu 71 $ 656 room=.
+-> n
+T 918 mode=combat_mode         Oin Runesinger(dwa) F3@( 7, 9) HP 90/90 MP 0/0 Hu 70 $ 656 room=M vs Kobold(L2 HP20/20)
+-> a
+T 919 mode=combat_victory      Oin Runesinger(dwa) F3@( 7, 9) HP 89/90 MP 0/0 Hu 70 $ 677 room=.
+-> back
+T 920 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 9) HP 89/90 MP 0/0 Hu 70 $ 677 room=.
+-> l
+T 921 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 9) HP 89/90 MP 0/0 Hu 70 $ 677 room=.
+-> e
+T 922 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 89/90 MP 0/0 Hu 69 $ 677 room=N
+-> s
+T 923 mode=game_loop           Oin Runesinger(dwa) F3@( 8,10) HP 89/90 MP 0/0 Hu 68 $ 677 room=.
+-> s
+T 924 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 89/90 MP 0/0 Hu 67 $ 677 room=.
+-> e
+T 925 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 90/90 MP 0/0 Hu 66 $ 677 room=.
+-> s
+T 926 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 65 $ 677 room=.
+-> w
+T 927 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 64 $ 677 room=.
+-> s
+T 928 mode=chest_mode          Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 63 $ 677 room=C
+-> o
+T 929 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 63 $ 747 room=.
+-> w
+T 930 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 62 $ 747 room=.
+-> l
+T 931 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 62 $ 747 room=.
+-> n
+T 932 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 61 $ 747 room=.
+-> w
+T 933 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 60 $ 747 room=.
+-> s
+T 934 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 59 $ 747 room=.
+-> w
+T 935 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 58 $ 747 room=.
+-> n
+T 936 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 57 $ 747 room=.
+-> w
+T 937 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 90/90 MP 0/0 Hu 56 $ 747 room=.
+-> n
+T 938 mode=game_loop           Oin Runesinger(dwa) F3@( 4,11) HP 90/90 MP 0/0 Hu 55 $ 747 room=.
+-> n
+T 939 mode=game_loop           Oin Runesinger(dwa) F3@( 4,10) HP 90/90 MP 0/0 Hu 54 $ 747 room=.
+-> e
+T 940 mode=game_loop           Oin Runesinger(dwa) F3@( 5,10) HP 90/90 MP 0/0 Hu 53 $ 747 room=.
+-> l
+T 941 mode=game_loop           Oin Runesinger(dwa) F3@( 5,10) HP 90/90 MP 0/0 Hu 53 $ 747 room=.
+-> n
+T 942 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 9) HP 90/90 MP 0/0 Hu 52 $ 747 room=.
+-> n
+T 943 mode=game_loop           Oin Runesinger(dwa) F3@( 5, 8) HP 90/90 MP 0/0 Hu 51 $ 747 room=.
+-> w
+T 944 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 8) HP 90/90 MP 0/0 Hu 50 $ 747 room=.
+-> s
+T 945 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 49 $ 747 room=.
+-> i
+T 946 mode=inventory           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 49 $ 747 room=.
+-> eat1
+T 947 mode=inventory           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 99 $ 747 room=.
+-> x
+T 948 mode=game_loop           Oin Runesinger(dwa) F3@( 4, 9) HP 90/90 MP 0/0 Hu 99 $ 747 room=.
+-> s
+T 949 mode=game_loop           Oin Runesinger(dwa) F3@( 4,10) HP 90/90 MP 0/0 Hu 98 $ 747 room=.
+-> s
+T 950 mode=game_loop           Oin Runesinger(dwa) F3@( 4,11) HP 90/90 MP 0/0 Hu 97 $ 747 room=.
+-> l
+T 951 mode=game_loop           Oin Runesinger(dwa) F3@( 4,11) HP 90/90 MP 0/0 Hu 97 $ 747 room=.
+-> s
+T 952 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 90/90 MP 0/0 Hu 96 $ 747 room=.
+-> s
+T 953 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 90/90 MP 0/0 Hu 95 $ 747 room=.
+-> e
+T 954 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 94 $ 747 room=.
+-> n
+T 955 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 93 $ 747 room=.
+-> e
+T 956 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 92 $ 747 room=.
+-> s
+T 957 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 91 $ 747 room=.
+-> s
+T 958 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 90/90 MP 0/0 Hu 90 $ 747 room=.
+-> w
+T 959 mode=game_loop           Oin Runesinger(dwa) F3@( 5,14) HP 90/90 MP 0/0 Hu 89 $ 747 room=.
+-> n
+T 960 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 88 $ 747 room=.
+-> l
+T 961 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 88 $ 747 room=.
+-> n
+T 962 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 87 $ 747 room=.
+-> w
+T 963 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 90/90 MP 0/0 Hu 86 $ 747 room=.
+-> s
+T 964 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 90/90 MP 0/0 Hu 85 $ 747 room=.
+-> s
+T 965 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 84 $ 747 room=.
+-> e
+T 966 mode=game_loop           Oin Runesinger(dwa) F3@( 5,14) HP 90/90 MP 0/0 Hu 83 $ 747 room=.
+-> n
+T 967 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 82 $ 747 room=.
+-> n
+T 968 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 81 $ 747 room=.
+-> e
+T 969 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 80 $ 747 room=.
+-> e
+T 970 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 79 $ 747 room=.
+-> l
+T 971 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 79 $ 747 room=.
+-> e
+T 972 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 78 $ 747 room=.
+-> s
+T 973 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 77 $ 747 room=.
+-> e
+T 974 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 90/90 MP 0/0 Hu 76 $ 747 room=.
+-> n
+T 975 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 90/90 MP 0/0 Hu 75 $ 747 room=.
+-> e
+T 976 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 90/90 MP 0/0 Hu 74 $ 747 room=.
+-> n
+T 977 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 90/90 MP 0/0 Hu 73 $ 747 room=.
+-> w
+T 978 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 90/90 MP 0/0 Hu 72 $ 747 room=.
+-> n
+T 979 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 90/90 MP 0/0 Hu 71 $ 747 room=.
+-> n
+T 980 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 90/90 MP 0/0 Hu 70 $ 747 room=.
+-> l
+T 981 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 90/90 MP 0/0 Hu 70 $ 747 room=.
+-> e
+T 982 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 90/90 MP 0/0 Hu 69 $ 747 room=.
+-> s
+T 983 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 90/90 MP 0/0 Hu 68 $ 747 room=.
+-> e
+T 984 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 90/90 MP 0/0 Hu 67 $ 747 room=.
+-> n
+T 985 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 90/90 MP 0/0 Hu 66 $ 747 room=.
+-> n
+T 986 mode=game_loop           Oin Runesinger(dwa) F3@(11, 8) HP 90/90 MP 0/0 Hu 65 $ 747 room=.
+-> w
+T 987 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 90/90 MP 0/0 Hu 64 $ 747 room=.
+-> s
+T 988 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 90/90 MP 0/0 Hu 63 $ 747 room=.
+-> s
+T 989 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 90/90 MP 0/0 Hu 62 $ 747 room=.
+-> s
+T 990 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 90/90 MP 0/0 Hu 61 $ 747 room=.
+-> l
+T 991 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 90/90 MP 0/0 Hu 61 $ 747 room=.
+-> w
+T 992 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 90/90 MP 0/0 Hu 60 $ 747 room=.
+-> n
+T 993 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 90/90 MP 0/0 Hu 59 $ 747 room=.
+-> w
+T 994 mode=game_loop           Oin Runesinger(dwa) F3@( 8,10) HP 90/90 MP 0/0 Hu 58 $ 747 room=.
+-> w
+T 995 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 90/90 MP 0/0 Hu 57 $ 747 room=.
+-> s
+T 996 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 90/90 MP 0/0 Hu 56 $ 747 room=.
+-> w
+T 997 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 90/90 MP 0/0 Hu 55 $ 747 room=.
+-> s
+T 998 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 54 $ 747 room=.
+-> s
+T 999 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 53 $ 747 room=.
+-> e
+T1000 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 52 $ 747 room=.
+-> l
+T1001 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 52 $ 747 room=.
+-> n
+T1002 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 51 $ 747 room=.
+-> e
+T1003 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 90/90 MP 0/0 Hu 50 $ 747 room=.
+-> s
+T1004 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 49 $ 747 room=.
+-> i
+T1005 mode=inventory           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 49 $ 747 room=.
+-> eat1
+T1006 mode=inventory           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 99 $ 747 room=.
+-> x
+T1007 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 90/90 MP 0/0 Hu 99 $ 747 room=.
+-> s
+T1008 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 90/90 MP 0/0 Hu 98 $ 747 room=.
+-> w
+T1009 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 90/90 MP 0/0 Hu 97 $ 747 room=.
+-> n
+T1010 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 96 $ 747 room=.
+-> l
+T1011 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 96 $ 747 room=.
+-> w
+T1012 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 95 $ 747 room=.
+-> s
+T1013 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 90/90 MP 0/0 Hu 94 $ 747 room=.
+-> w
+T1014 mode=game_loop           Oin Runesinger(dwa) F3@( 5,14) HP 90/90 MP 0/0 Hu 93 $ 747 room=.
+-> w
+T1015 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 92 $ 747 room=.
+-> s
+T1016 mode=game_loop           Oin Runesinger(dwa) F3@( 4,15) HP 90/90 MP 0/0 Hu 91 $ 747 room=.
+-> n
+T1017 mode=game_loop           Oin Runesinger(dwa) F3@( 4,14) HP 90/90 MP 0/0 Hu 90 $ 747 room=.
+-> n
+T1018 mode=game_loop           Oin Runesinger(dwa) F3@( 4,13) HP 90/90 MP 0/0 Hu 89 $ 747 room=.
+-> n
+T1019 mode=game_loop           Oin Runesinger(dwa) F3@( 4,12) HP 90/90 MP 0/0 Hu 88 $ 747 room=.
+-> e
+T1020 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 87 $ 747 room=.
+-> l
+T1021 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 90/90 MP 0/0 Hu 87 $ 747 room=.
+-> s
+T1022 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 90/90 MP 0/0 Hu 86 $ 747 room=.
+-> e
+T1023 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 90/90 MP 0/0 Hu 85 $ 747 room=.
+-> n
+T1024 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 90/90 MP 0/0 Hu 84 $ 747 room=.
+-> e
+T1025 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 90/90 MP 0/0 Hu 83 $ 747 room=.
+-> s
+T1026 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 90/90 MP 0/0 Hu 82 $ 747 room=.
+-> s
+T1027 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 90/90 MP 0/0 Hu 81 $ 747 room=.
+-> w
+T1028 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 90/90 MP 0/0 Hu 80 $ 747 room=.
+-> s
+T1029 mode=combat_mode         Oin Runesinger(dwa) F3@( 6,15) HP 90/90 MP 0/0 Hu 79 $ 747 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T1030 mode=combat_mode         Oin Runesinger(dwa) F3@( 6,15) HP 89/90 MP 0/0 Hu 79 $ 747 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T1031 mode=combat_victory      Oin Runesinger(dwa) F3@( 6,15) HP 89/100 MP 0/0 Hu 79 $ 759 room=.
+-> back
+T1032 mode=game_loop           Oin Runesinger(dwa) F3@( 6,15) HP 89/100 MP 0/0 Hu 79 $ 759 room=.
+-> e
+T1033 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 89/100 MP 0/0 Hu 78 $ 759 room=.
+-> s
+T1034 mode=game_loop           Oin Runesinger(dwa) F3@( 7,16) HP 89/100 MP 0/0 Hu 77 $ 759 room=.
+-> e
+T1035 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 89/100 MP 0/0 Hu 76 $ 759 room=.
+-> n
+T1036 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 90/100 MP 0/0 Hu 75 $ 759 room=.
+-> e
+T1037 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 90/100 MP 0/0 Hu 74 $ 759 room=.
+-> s
+T1038 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 90/100 MP 0/0 Hu 73 $ 759 room=.
+-> e
+T1039 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 90/100 MP 0/0 Hu 72 $ 759 room=.
+-> n
+T1040 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 91/100 MP 0/0 Hu 71 $ 759 room=.
+-> l
+T1041 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 91/100 MP 0/0 Hu 71 $ 759 room=.
+-> n
+T1042 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 91/100 MP 0/0 Hu 70 $ 759 room=.
+-> w
+T1043 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 91/100 MP 0/0 Hu 69 $ 759 room=.
+-> n
+T1044 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 91/100 MP 0/0 Hu 68 $ 759 room=.
+-> e
+T1045 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 92/100 MP 0/0 Hu 67 $ 759 room=.
+-> n
+T1046 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 92/100 MP 0/0 Hu 66 $ 759 room=.
+-> e
+T1047 mode=game_loop           Oin Runesinger(dwa) F3@(11,12) HP 92/100 MP 0/0 Hu 65 $ 759 room=.
+-> n
+T1048 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 92/100 MP 0/0 Hu 64 $ 759 room=.
+-> n
+T1049 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 93/100 MP 0/0 Hu 63 $ 759 room=.
+-> n
+T1050 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 93/100 MP 0/0 Hu 62 $ 759 room=.
+-> l
+T1051 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 93/100 MP 0/0 Hu 62 $ 759 room=.
+-> w
+T1052 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 93/100 MP 0/0 Hu 61 $ 759 room=.
+-> w
+T1053 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 93/100 MP 0/0 Hu 60 $ 759 room=.
+-> s
+T1054 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 93/100 MP 0/0 Hu 59 $ 759 room=.
+-> e
+T1055 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 93/100 MP 0/0 Hu 58 $ 759 room=.
+-> e
+T1056 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 93/100 MP 0/0 Hu 57 $ 759 room=.
+-> n
+T1057 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 93/100 MP 0/0 Hu 56 $ 759 room=.
+-> w
+T1058 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 93/100 MP 0/0 Hu 55 $ 759 room=.
+-> w
+T1059 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 93/100 MP 0/0 Hu 54 $ 759 room=.
+-> s
+T1060 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 93/100 MP 0/0 Hu 53 $ 759 room=.
+-> l
+T1061 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 93/100 MP 0/0 Hu 53 $ 759 room=.
+-> e
+T1062 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 93/100 MP 0/0 Hu 52 $ 759 room=.
+-> s
+T1063 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 93/100 MP 0/0 Hu 51 $ 759 room=.
+-> e
+T1064 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 93/100 MP 0/0 Hu 50 $ 759 room=.
+-> n
+T1065 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 93/100 MP 0/0 Hu 49 $ 759 room=.
+-> n
+T1066 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 93/100 MP 0/0 Hu 48 $ 759 room=.
+-> w
+T1067 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 93/100 MP 0/0 Hu 47 $ 759 room=.
+-> s
+T1068 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 93/100 MP 0/0 Hu 46 $ 759 room=.
+-> s
+T1069 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 93/100 MP 0/0 Hu 45 $ 759 room=.
+-> s
+T1070 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 93/100 MP 0/0 Hu 44 $ 759 room=.
+-> l
+T1071 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 93/100 MP 0/0 Hu 44 $ 759 room=.
+-> w
+T1072 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 93/100 MP 0/0 Hu 43 $ 759 room=.
+-> n
+T1073 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 93/100 MP 0/0 Hu 42 $ 759 room=.
+-> w
+T1074 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 93/100 MP 0/0 Hu 41 $ 759 room=.
+-> s
+T1075 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 93/100 MP 0/0 Hu 40 $ 759 room=.
+-> w
+T1076 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 93/100 MP 0/0 Hu 39 $ 759 room=.
+-> n
+T1077 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 93/100 MP 0/0 Hu 38 $ 759 room=.
+-> w
+T1078 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 93/100 MP 0/0 Hu 37 $ 759 room=.
+-> s
+T1079 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 93/100 MP 0/0 Hu 36 $ 759 room=.
+-> s
+T1080 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 93/100 MP 0/0 Hu 35 $ 759 room=.
+-> l
+T1081 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 93/100 MP 0/0 Hu 35 $ 759 room=.
+-> e
+T1082 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 93/100 MP 0/0 Hu 34 $ 759 room=.
+-> s
+T1083 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 93/100 MP 0/0 Hu 33 $ 759 room=.
+-> e
+T1084 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 93/100 MP 0/0 Hu 32 $ 759 room=.
+-> n
+T1085 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 93/100 MP 0/0 Hu 31 $ 759 room=.
+-> e
+T1086 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 93/100 MP 0/0 Hu 30 $ 759 room=.
+-> n
+T1087 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 93/100 MP 0/0 Hu 29 $ 759 room=.
+-> n
+T1088 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 93/100 MP 0/0 Hu 28 $ 759 room=.
+-> w
+T1089 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 93/100 MP 0/0 Hu 27 $ 759 room=.
+-> s
+T1090 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 93/100 MP 0/0 Hu 26 $ 759 room=.
+-> l
+T1091 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 93/100 MP 0/0 Hu 26 $ 759 room=.
+-> s
+T1092 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 93/100 MP 0/0 Hu 25 $ 759 room=.
+-> s
+T1093 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 93/100 MP 0/0 Hu 24 $ 759 room=.
+-> e
+T1094 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 93/100 MP 0/0 Hu 23 $ 759 room=.
+-> s
+T1095 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 93/100 MP 0/0 Hu 22 $ 759 room=.
+-> w
+T1096 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 93/100 MP 0/0 Hu 21 $ 759 room=.
+-> w
+T1097 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 93/100 MP 0/0 Hu 20 $ 759 room=.
+-> n
+T1098 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 93/100 MP 0/0 Hu 19 $ 759 room=.
+-> e
+T1099 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 93/100 MP 0/0 Hu 18 $ 759 room=.
+-> e
+T1100 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 93/100 MP 0/0 Hu 17 $ 759 room=.
+-> l
+T1101 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 93/100 MP 0/0 Hu 17 $ 759 room=.
+-> n
+T1102 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 93/100 MP 0/0 Hu 16 $ 759 room=.
+-> w
+T1103 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 93/100 MP 0/0 Hu 15 $ 759 room=.
+-> w
+T1104 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 93/100 MP 0/0 Hu 14 $ 759 room=.
+-> w
+T1105 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 93/100 MP 0/0 Hu 13 $ 759 room=.
+-> w
+T1106 mode=game_loop           Oin Runesinger(dwa) F3@( 5,13) HP 93/100 MP 0/0 Hu 12 $ 759 room=.
+-> n
+T1107 mode=game_loop           Oin Runesinger(dwa) F3@( 5,12) HP 93/100 MP 0/0 Hu 11 $ 759 room=.
+-> e
+T1108 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 93/100 MP 0/0 Hu 10 $ 759 room=.
+-> n
+T1109 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 93/100 MP 0/0 Hu  9 $ 759 room=.
+-> e
+T1110 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 93/100 MP 0/0 Hu  8 $ 759 room=.
+-> l
+T1111 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 93/100 MP 0/0 Hu  8 $ 759 room=.
+-> s
+T1112 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 93/100 MP 0/0 Hu  7 $ 759 room=.
+-> s
+T1113 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 93/100 MP 0/0 Hu  6 $ 759 room=.
+-> w
+T1114 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 93/100 MP 0/0 Hu  5 $ 759 room=.
+-> s
+T1115 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 93/100 MP 0/0 Hu  4 $ 759 room=.
+-> e
+T1116 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 93/100 MP 0/0 Hu  3 $ 759 room=.
+-> s
+T1117 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 93/100 MP 0/0 Hu  2 $ 759 room=.
+-> w
+T1118 mode=game_loop           Oin Runesinger(dwa) F3@( 6,15) HP 93/100 MP 0/0 Hu  1 $ 759 room=.
+-> n
+T1119 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 91/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1120 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 89/100 MP 0/0 Hu  0 $ 759 room=.
+-> l
+T1121 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 89/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1122 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 87/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1123 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 85/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1124 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 83/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1125 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 81/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1126 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 79/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1127 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 77/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1128 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 75/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1129 mode=game_loop           Oin Runesinger(dwa) F3@( 7,16) HP 73/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1130 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 71/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1131 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 69/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1132 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 67/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1133 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 65/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1134 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 63/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1135 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 61/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1136 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 59/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1137 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 57/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1138 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 55/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1139 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 53/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1140 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 51/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1141 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 49/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1142 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 47/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1143 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 45/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1144 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 43/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1145 mode=game_loop           Oin Runesinger(dwa) F3@( 7,16) HP 41/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1146 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 39/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1147 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 37/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1148 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 35/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1149 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 33/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1150 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 31/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1151 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 29/100 MP 0/0 Hu  0 $ 759 room=.
+-> i
+T1152 mode=inventory           Oin Runesinger(dwa) F3@( 9,12) HP 29/100 MP 0/0 Hu  0 $ 759 room=.
+-> u5
+T1153 mode=inventory           Oin Runesinger(dwa) F3@( 9,12) HP 100/100 MP 0/0 Hu  0 $ 759 room=.
+-> x
+T1154 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 100/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1155 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 98/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1156 mode=game_loop           Oin Runesinger(dwa) F3@(11,12) HP 96/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1157 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 94/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1158 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 92/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1159 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 90/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1160 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 88/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1161 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 86/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1162 mode=game_loop           Oin Runesinger(dwa) F3@(11, 8) HP 84/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1163 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 82/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1164 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 8) HP 80/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1165 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 78/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1166 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 76/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1167 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 74/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1168 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 72/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1169 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 70/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1170 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 68/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1171 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 66/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1172 mode=game_loop           Oin Runesinger(dwa) F3@(11,12) HP 64/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1173 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 62/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1174 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 60/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1175 mode=game_loop           Oin Runesinger(dwa) F3@( 9,11) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1176 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 56/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1177 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 54/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1178 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 52/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1179 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 50/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1180 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 48/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1181 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 46/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1182 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 44/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1183 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 42/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1184 mode=game_loop           Oin Runesinger(dwa) F3@( 8,13) HP 40/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1185 mode=game_loop           Oin Runesinger(dwa) F3@( 9,13) HP 38/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1186 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 36/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1187 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 34/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1188 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 32/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1189 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 30/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1190 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 28/100 MP 0/0 Hu  0 $ 759 room=.
+-> i
+T1191 mode=inventory           Oin Runesinger(dwa) F3@(10,11) HP 28/100 MP 0/0 Hu  0 $ 759 room=.
+-> u7
+T1192 mode=inventory           Oin Runesinger(dwa) F3@(10,11) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> u3
+T1193 mode=inventory           Oin Runesinger(dwa) F3@(10,11) HP 88/100 MP 0/0 Hu  0 $ 759 room=.
+-> x
+T1194 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 88/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1195 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 86/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1196 mode=game_loop           Oin Runesinger(dwa) F3@(11,12) HP 84/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1197 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 82/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1198 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 80/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1199 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 78/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1200 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 76/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1201 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 74/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1202 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 72/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1203 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 70/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1204 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 68/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1205 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 66/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1206 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 64/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1207 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 62/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1208 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 60/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1209 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1210 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 56/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1211 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 54/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1212 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 52/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1213 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 50/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1214 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 48/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1215 mode=game_loop           Oin Runesinger(dwa) F3@( 6,14) HP 46/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1216 mode=game_loop           Oin Runesinger(dwa) F3@( 6,13) HP 44/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1217 mode=game_loop           Oin Runesinger(dwa) F3@( 6,12) HP 42/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1218 mode=game_loop           Oin Runesinger(dwa) F3@( 6,11) HP 40/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1219 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 38/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1220 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 36/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1221 mode=game_loop           Oin Runesinger(dwa) F3@( 8,10) HP 34/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1222 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 32/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1223 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 9) HP 30/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1224 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 28/100 MP 0/0 Hu  0 $ 759 room=N
+-> i
+T1225 mode=inventory           Oin Runesinger(dwa) F3@( 8, 9) HP 28/100 MP 0/0 Hu  0 $ 759 room=N
+-> u7
+T1226 mode=inventory           Oin Runesinger(dwa) F3@( 8, 9) HP 58/100 MP 0/0 Hu  0 $ 759 room=N
+-> u3
+T1227 mode=inventory           Oin Runesinger(dwa) F3@( 8, 9) HP 88/100 MP 0/0 Hu  0 $ 759 room=N
+-> x
+T1228 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 88/100 MP 0/0 Hu  0 $ 759 room=N
+-> e
+T1229 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 86/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1230 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 84/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1231 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 82/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1232 mode=game_loop           Oin Runesinger(dwa) F3@(11, 8) HP 80/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1233 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 78/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1234 mode=game_loop           Oin Runesinger(dwa) F3@(11,10) HP 76/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1235 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 74/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1236 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 72/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1237 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 70/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1238 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 68/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1239 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 66/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1240 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 64/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1241 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 62/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1242 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 60/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1243 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1244 mode=game_loop           Oin Runesinger(dwa) F3@( 7,16) HP 56/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1245 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 54/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1246 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 52/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1247 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 50/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1248 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 48/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1249 mode=game_loop           Oin Runesinger(dwa) F3@( 7,13) HP 46/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1250 mode=game_loop           Oin Runesinger(dwa) F3@( 7,12) HP 44/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1251 mode=game_loop           Oin Runesinger(dwa) F3@( 8,12) HP 42/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1252 mode=game_loop           Oin Runesinger(dwa) F3@( 9,12) HP 40/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1253 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 38/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1254 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 36/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1255 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 34/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1256 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 32/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1257 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 30/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1258 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 28/100 MP 0/0 Hu  0 $ 759 room=.
+-> i
+T1259 mode=inventory           Oin Runesinger(dwa) F3@( 9,16) HP 28/100 MP 0/0 Hu  0 $ 759 room=.
+-> u7
+T1260 mode=inventory           Oin Runesinger(dwa) F3@( 9,16) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> u3
+T1261 mode=inventory           Oin Runesinger(dwa) F3@( 9,16) HP 88/100 MP 0/0 Hu  0 $ 759 room=.
+-> x
+T1262 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 88/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1263 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 86/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1264 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 84/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1265 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 82/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1266 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 80/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1267 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 78/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1268 mode=game_loop           Oin Runesinger(dwa) F3@( 7,14) HP 76/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1269 mode=game_loop           Oin Runesinger(dwa) F3@( 7,15) HP 74/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1270 mode=game_loop           Oin Runesinger(dwa) F3@( 7,16) HP 72/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1271 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 70/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1272 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 68/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1273 mode=game_loop           Oin Runesinger(dwa) F3@( 9,15) HP 66/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1274 mode=game_loop           Oin Runesinger(dwa) F3@(10,15) HP 64/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1275 mode=game_loop           Oin Runesinger(dwa) F3@(10,16) HP 62/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1276 mode=game_loop           Oin Runesinger(dwa) F3@( 9,16) HP 60/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1277 mode=game_loop           Oin Runesinger(dwa) F3@( 8,16) HP 58/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1278 mode=game_loop           Oin Runesinger(dwa) F3@( 8,15) HP 56/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1279 mode=game_loop           Oin Runesinger(dwa) F3@( 8,14) HP 54/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1280 mode=game_loop           Oin Runesinger(dwa) F3@( 9,14) HP 52/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1281 mode=game_loop           Oin Runesinger(dwa) F3@(10,14) HP 50/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1282 mode=game_loop           Oin Runesinger(dwa) F3@(10,13) HP 48/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1283 mode=game_loop           Oin Runesinger(dwa) F3@(10,12) HP 46/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1284 mode=game_loop           Oin Runesinger(dwa) F3@(11,12) HP 44/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1285 mode=game_loop           Oin Runesinger(dwa) F3@(11,11) HP 42/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1286 mode=game_loop           Oin Runesinger(dwa) F3@(10,11) HP 40/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1287 mode=game_loop           Oin Runesinger(dwa) F3@(10,10) HP 38/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1288 mode=game_loop           Oin Runesinger(dwa) F3@(10, 9) HP 36/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1289 mode=game_loop           Oin Runesinger(dwa) F3@(11, 9) HP 34/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1290 mode=game_loop           Oin Runesinger(dwa) F3@(11, 8) HP 32/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1291 mode=game_loop           Oin Runesinger(dwa) F3@(10, 8) HP 30/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1292 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 8) HP 28/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1293 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 7) HP 26/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1294 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 7) HP 24/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1295 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 8) HP 22/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1296 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 20/100 MP 0/0 Hu  0 $ 759 room=N
+-> e
+T1297 mode=game_loop           Oin Runesinger(dwa) F3@( 9, 9) HP 18/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1298 mode=game_loop           Oin Runesinger(dwa) F3@( 9,10) HP 16/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1299 mode=game_loop           Oin Runesinger(dwa) F3@( 8,10) HP 14/100 MP 0/0 Hu  0 $ 759 room=.
+-> s
+T1300 mode=game_loop           Oin Runesinger(dwa) F3@( 8,11) HP 12/100 MP 0/0 Hu  0 $ 759 room=.
+-> w
+T1301 mode=game_loop           Oin Runesinger(dwa) F3@( 7,11) HP 10/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1302 mode=game_loop           Oin Runesinger(dwa) F3@( 7,10) HP 8/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1303 mode=game_loop           Oin Runesinger(dwa) F3@( 7, 9) HP 6/100 MP 0/0 Hu  0 $ 759 room=.
+-> e
+T1304 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 9) HP 4/100 MP 0/0 Hu  0 $ 759 room=N
+-> n
+T1305 mode=game_loop           Oin Runesinger(dwa) F3@( 8, 8) HP 2/100 MP 0/0 Hu  0 $ 759 room=.
+-> n
+T1306 mode=death_screen        Oin Runesinger(dwa) F3@( 8, 7) HP 0/100 MP 0/0 Hu  0 $ 759 room=.
+
+=== run finished: turns=1306 floor=3 hp=0/100 gold=759 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00007_dwarf.html

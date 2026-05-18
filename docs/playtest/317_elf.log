@@ -1,0 +1,3074 @@
+T   0 mode=game_loop           Elrond the Singer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Elrond the Singer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Elrond the Singer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Elrond the Singer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Elrond the Singer drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Elrond the Singer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> s
+T   5 mode=combat_mode         Elrond the Singer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Kobold(L0 HP20/20)
+  A Kobold (Level 0) appears! A small, dog-like humanoid yaps angrily.
+  You seize the initiative!
+-> a
+T   6 mode=combat_victory      Elrond the Singer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 443 room=.
+  The kobold whines as it falls, its primitive weapon clattering.
+  You gained 8 experience.
+  You found 3 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+   ACHIEVEMENT UNLOCKED: Untouchable - Kill a monster without taking damage
+  Reward: 100 gold!
+-> back
+T   7 mode=game_loop           Elrond the Singer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 443 room=.
+-> l
+T   8 mode=game_loop           Elrond the Singer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 443 room=.
+-> s
+T   9 mode=combat_mode         Elrond the Singer(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 443 room=M vs Kobold(L0 HP8/8)
+-> a
+T  10 mode=combat_victory      Elrond the Singer(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 445 room=.
+-> back
+T  11 mode=game_loop           Elrond the Singer(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 445 room=.
+-> l
+T  12 mode=game_loop           Elrond the Singer(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 445 room=.
+-> e
+T  13 mode=game_loop           Elrond the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 445 room=.
+-> l
+T  14 mode=game_loop           Elrond the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 445 room=.
+-> s
+T  15 mode=game_loop           Elrond the Singer(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 96 $ 445 room=.
+-> s
+T  16 mode=combat_mode         Elrond the Singer(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 445 room=M vs Stirge(L0 HP6/6)
+-> a
+T  17 mode=combat_victory      Elrond the Singer(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 455 room=.
+-> back
+T  18 mode=game_loop           Elrond the Singer(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 455 room=.
+-> l
+T  19 mode=game_loop           Elrond the Singer(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 95 $ 455 room=.
+-> s
+T  20 mode=combat_mode         Elrond the Singer(elf) F1@( 2, 6) HP 28/28 MP 0/0 Hu 94 $ 455 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  21 mode=combat_mode         Elrond the Singer(elf) F1@( 2, 6) HP 27/28 MP 0/0 Hu 94 $ 455 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  22 mode=combat_victory      Elrond the Singer(elf) F1@( 2, 6) HP 27/28 MP 0/0 Hu 94 $ 457 room=.
+-> back
+T  23 mode=game_loop           Elrond the Singer(elf) F1@( 2, 6) HP 27/28 MP 0/0 Hu 94 $ 457 room=.
+-> l
+T  24 mode=game_loop           Elrond the Singer(elf) F1@( 2, 6) HP 27/28 MP 0/0 Hu 94 $ 457 room=.
+-> e
+T  25 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 93 $ 457 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  26 mode=combat_victory      Elrond the Singer(elf) F1@( 3, 6) HP 26/28 MP 0/0 Hu 93 $ 458 room=.
+-> back
+T  27 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 26/28 MP 0/0 Hu 93 $ 458 room=.
+-> l
+T  28 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 26/28 MP 0/0 Hu 93 $ 458 room=.
+-> s
+T  29 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 92 $ 458 room=M vs Zombie(L0 HP35/35)
+-> a
+T  30 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 92 $ 458 room=M vs Zombie(L0 HP35/35)
+-> a
+T  31 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 92 $ 458 room=M vs Zombie(L0 HP14/35)
+-> a
+T  32 mode=combat_victory      Elrond the Singer(elf) F1@( 3, 7) HP 26/28 MP 0/0 Hu 92 $ 466 room=.
+-> back
+T  33 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 26/28 MP 0/0 Hu 92 $ 466 room=.
+-> l
+T  34 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 26/28 MP 0/0 Hu 92 $ 466 room=.
+-> s
+T  35 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 8) HP 26/28 MP 0/0 Hu 91 $ 466 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  36 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 8) HP 25/28 MP 0/0 Hu 91 $ 466 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  37 mode=combat_mode         Elrond the Singer(elf) F1@( 3, 8) HP 25/28 MP 0/0 Hu 91 $ 466 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  38 mode=combat_victory      Elrond the Singer(elf) F1@( 3, 8) HP 24/28 MP 0/0 Hu 91 $ 470 room=.
+-> back
+T  39 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 24/28 MP 0/0 Hu 91 $ 470 room=.
+-> l
+T  40 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 24/28 MP 0/0 Hu 91 $ 470 room=.
+-> e
+T  41 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 470 room=V
+-> b17
+T  42 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 460 room=V
+-> b5
+T  43 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 410 room=V
+-> b5
+T  44 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 360 room=V
+-> b5
+T  45 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 330 room=V
+-> b5
+T  46 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 300 room=V
+-> b9
+T  47 mode=vendor_shop         Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 150 room=V
+-> x
+T  48 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 90 $ 150 room=V
+-> e
+T  49 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 8) HP 25/28 MP 0/0 Hu 89 $ 150 room=M vs Goblin(L0 HP30/30)
+-> a
+T  50 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 8) HP 25/28 MP 0/0 Hu 89 $ 150 room=M vs Goblin(L0 HP10/30)
+-> a
+T  51 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 8) HP 25/28 MP 0/0 Hu 89 $ 150 room=M vs Goblin(L0 HP10/30)
+-> f
+T  52 mode=flee_direction_mode Elrond the Singer(elf) F1@( 5, 8) HP 25/28 MP 0/0 Hu 89 $ 150 room=M
+-> n
+T  53 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 25/28 MP 0/0 Hu 89 $ 150 room=.
+-> n
+T  54 mode=garden_mode         Elrond the Singer(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 88 $ 150 room=G
+-> h
+T  55 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 88 $ 150 room=.
+-> i
+T  56 mode=inventory           Elrond the Singer(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 88 $ 150 room=.
+-> u3
+T  57 mode=inventory           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 150 room=.
+-> u5
+T  58 mode=upgrade_scroll_mode Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 150 room=.
+-> 1
+T  59 mode=inventory           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 150 room=.
+-> x
+T  60 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 150 room=.
+-> i
+T  61 mode=inventory           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 150 room=.
+-> eat4
+T  62 mode=inventory           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 93 $ 150 room=.
+-> x
+T  63 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 93 $ 150 room=.
+-> l
+T  64 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 93 $ 150 room=.
+-> n
+T  65 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 150 room=M vs Stirge(L0 HP6/6)
+-> a
+T  66 mode=combat_victory      Elrond the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 159 room=.
+-> back
+T  67 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 159 room=.
+-> l
+T  68 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 159 room=.
+-> n
+T  69 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 91 $ 159 room=M vs Goblin(L0 HP12/12)
+-> f
+T  70 mode=flee_direction_mode Elrond the Singer(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 91 $ 159 room=M
+-> n
+T  71 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 91 $ 159 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  72 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 91 $ 159 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  73 mode=combat_victory      Elrond the Singer(elf) F1@( 5, 3) HP 27/28 MP 0/0 Hu 91 $ 162 room=.
+-> back
+T  74 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 27/28 MP 0/0 Hu 91 $ 162 room=.
+-> l
+T  75 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 27/28 MP 0/0 Hu 91 $ 162 room=.
+-> e
+T  76 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 90 $ 162 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  77 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 90 $ 162 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  78 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 90 $ 272 room=.
+-> back
+T  79 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 90 $ 272 room=.
+-> i
+T  80 mode=inventory           Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 90 $ 272 room=.
+-> eat5
+T  81 mode=inventory           Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 96 $ 272 room=.
+-> x
+T  82 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 96 $ 272 room=.
+-> l
+T  83 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 96 $ 272 room=.
+-> n
+T  84 mode=altar_mode          Elrond the Singer(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 95 $ 272 room=A
+-> pray
+T  85 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 95 $ 272 room=.
+-> e
+T  86 mode=chest_mode          Elrond the Singer(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 94 $ 272 room=C
+-> o
+T  87 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 94 $ 302 room=.
+-> s
+T  88 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 93 $ 302 room=.
+-> l
+T  89 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 93 $ 302 room=.
+-> s
+T  90 mode=chest_mode          Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 92 $ 302 room=C
+-> o
+T  91 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 92 $ 342 room=.
+-> i
+T  92 mode=inventory           Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 92 $ 342 room=.
+-> eat3
+T  93 mode=inventory           Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 97 $ 342 room=.
+-> x
+T  94 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 97 $ 342 room=.
+-> l
+T  95 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 97 $ 342 room=.
+-> e
+T  96 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 4) HP 28/28 MP 0/0 Hu 96 $ 342 room=M vs Goblin(L0 HP12/12)
+-> a
+T  97 mode=combat_victory      Elrond the Singer(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 96 $ 345 room=.
+-> back
+T  98 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 96 $ 345 room=.
+-> n
+T  99 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 3) HP 27/28 MP 0/0 Hu 95 $ 345 room=M vs Kobold(L0 HP8/8)
+-> a
+T 100 mode=combat_victory      Elrond the Singer(elf) F1@( 8, 3) HP 26/28 MP 0/0 Hu 95 $ 349 room=.
+-> back
+T 101 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 26/28 MP 0/0 Hu 95 $ 349 room=.
+-> e
+T 102 mode=altar_mode          Elrond the Singer(elf) F1@( 9, 3) HP 27/28 MP 0/0 Hu 94 $ 349 room=A
+-> pray
+T 103 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 27/28 MP 0/0 Hu 94 $ 349 room=.
+-> e
+T 104 mode=library_mode        Elrond the Singer(elf) F1@(10, 3) HP 27/28 MP 0/0 Hu 93 $ 349 room=L
+-> r
+T 105 mode=library_read_decision_mode Elrond the Singer(elf) F1@(10, 3) HP 27/28 MP 0/0 Hu 93 $ 349 room=L
+-> y
+T 106 mode=game_loop           Elrond the Singer(elf) F1@(10, 3) HP 27/26 MP 0/0 Hu 93 $ 449 room=.
+-> n
+T 107 mode=game_loop           Elrond the Singer(elf) F1@(10, 2) HP 27/26 MP 0/0 Hu 92 $ 449 room=.
+-> i
+T 108 mode=inventory           Elrond the Singer(elf) F1@(10, 2) HP 27/26 MP 0/0 Hu 92 $ 449 room=.
+-> eat5
+T 109 mode=inventory           Elrond the Singer(elf) F1@(10, 2) HP 27/26 MP 0/0 Hu 98 $ 449 room=.
+-> x
+T 110 mode=game_loop           Elrond the Singer(elf) F1@(10, 2) HP 27/26 MP 0/0 Hu 98 $ 449 room=.
+-> n
+T 111 mode=combat_mode         Elrond the Singer(elf) F1@(10, 1) HP 27/26 MP 0/0 Hu 97 $ 449 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 112 mode=combat_victory      Elrond the Singer(elf) F1@(10, 1) HP 27/36 MP 0/0 Hu 97 $ 453 room=.
+-> back
+T 113 mode=game_loop           Elrond the Singer(elf) F1@(10, 1) HP 27/36 MP 0/0 Hu 97 $ 453 room=.
+-> e
+T 114 mode=game_loop           Elrond the Singer(elf) F1@(11, 1) HP 27/36 MP 0/0 Hu 96 $ 453 room=.
+-> i
+T 115 mode=inventory           Elrond the Singer(elf) F1@(11, 1) HP 27/36 MP 0/0 Hu 96 $ 453 room=.
+-> u4
+T 116 mode=inventory           Elrond the Singer(elf) F1@(11, 1) HP 36/36 MP 0/0 Hu 96 $ 453 room=.
+-> x
+T 117 mode=game_loop           Elrond the Singer(elf) F1@(11, 1) HP 36/36 MP 0/0 Hu 96 $ 453 room=.
+-> l
+T 118 mode=game_loop           Elrond the Singer(elf) F1@(11, 1) HP 36/36 MP 0/0 Hu 96 $ 453 room=.
+-> w
+T 119 mode=game_loop           Elrond the Singer(elf) F1@(10, 1) HP 36/36 MP 0/0 Hu 95 $ 453 room=.
+-> s
+T 120 mode=game_loop           Elrond the Singer(elf) F1@(10, 2) HP 36/36 MP 0/0 Hu 94 $ 453 room=.
+-> s
+T 121 mode=game_loop           Elrond the Singer(elf) F1@(10, 3) HP 36/36 MP 0/0 Hu 93 $ 453 room=.
+-> w
+T 122 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 36/36 MP 0/0 Hu 92 $ 453 room=.
+-> i
+T 123 mode=inventory           Elrond the Singer(elf) F1@( 9, 3) HP 36/36 MP 0/0 Hu 92 $ 453 room=.
+-> eat4
+T 124 mode=inventory           Elrond the Singer(elf) F1@( 9, 3) HP 36/36 MP 0/0 Hu 97 $ 453 room=.
+-> x
+T 125 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 36/36 MP 0/0 Hu 97 $ 453 room=.
+-> s
+T 126 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 36/36 MP 0/0 Hu 96 $ 453 room=.
+-> i
+T 127 mode=inventory           Elrond the Singer(elf) F1@( 9, 4) HP 36/36 MP 0/0 Hu 96 $ 453 room=.
+-> eat4
+T 128 mode=inventory           Elrond the Singer(elf) F1@( 9, 4) HP 36/36 MP 0/0 Hu100 $ 453 room=.
+-> x
+T 129 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 36/36 MP 0/0 Hu100 $ 453 room=.
+-> s
+T 130 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 36/36 MP 0/0 Hu 99 $ 453 room=.
+-> s
+T 131 mode=chest_mode          Elrond the Singer(elf) F1@( 9, 6) HP 36/36 MP 0/0 Hu 98 $ 453 room=C
+-> o
+T 132 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 36/36 MP 0/0 Hu 98 $ 493 room=.
+-> s
+T 133 mode=combat_mode         Elrond the Singer(elf) F1@( 9, 7) HP 36/36 MP 0/0 Hu 97 $ 493 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 134 mode=combat_victory      Elrond the Singer(elf) F1@( 9, 7) HP 36/36 MP 0/0 Hu 97 $ 501 room=.
+-> back
+T 135 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 36/36 MP 0/0 Hu 97 $ 501 room=.
+-> e
+T 136 mode=combat_mode         Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu 96 $ 501 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 137 mode=combat_victory      Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu 96 $ 508 room=.
+-> back
+T 138 mode=game_loop           Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu 96 $ 508 room=.
+-> i
+T 139 mode=inventory           Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu 96 $ 508 room=.
+-> eat3
+T 140 mode=inventory           Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu100 $ 508 room=.
+-> x
+T 141 mode=game_loop           Elrond the Singer(elf) F1@(10, 7) HP 36/36 MP 0/0 Hu100 $ 508 room=.
+-> n
+T 142 mode=combat_mode         Elrond the Singer(elf) F1@(10, 6) HP 36/36 MP 0/0 Hu 99 $ 508 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 143 mode=combat_mode         Elrond the Singer(elf) F1@(10, 6) HP 35/36 MP 0/0 Hu 99 $ 508 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 144 mode=combat_victory      Elrond the Singer(elf) F1@(10, 6) HP 35/36 MP 0/0 Hu 99 $ 510 room=.
+-> back
+T 145 mode=game_loop           Elrond the Singer(elf) F1@(10, 6) HP 35/36 MP 0/0 Hu 99 $ 510 room=.
+-> e
+T 146 mode=game_loop           Elrond the Singer(elf) F1@(11, 6) HP 35/36 MP 0/0 Hu 98 $ 510 room=.
+-> e
+T 147 mode=combat_mode         Elrond the Singer(elf) F1@(12, 6) HP 36/36 MP 0/0 Hu 97 $ 510 room=M vs Zombie(L0 HP35/35)
+-> a
+T 148 mode=combat_mode         Elrond the Singer(elf) F1@(12, 6) HP 36/36 MP 0/0 Hu 97 $ 510 room=M vs Zombie(L0 HP14/35)
+-> a
+T 149 mode=combat_victory      Elrond the Singer(elf) F1@(12, 6) HP 36/36 MP 0/0 Hu 97 $ 520 room=.
+-> back
+T 150 mode=game_loop           Elrond the Singer(elf) F1@(12, 6) HP 36/36 MP 0/0 Hu 97 $ 520 room=.
+-> l
+T 151 mode=game_loop           Elrond the Singer(elf) F1@(12, 6) HP 36/36 MP 0/0 Hu 97 $ 520 room=.
+-> e
+T 152 mode=dungeon_mode        Elrond the Singer(elf) F1@(13, 6) HP 36/36 MP 0/0 Hu 96 $ 520 room=N
+-> u
+T 153 mode=game_loop           Elrond the Singer(elf) F1@(13, 6) HP 36/36 MP 0/0 Hu 96 $ 520 room=N
+-> l
+T 154 mode=game_loop           Elrond the Singer(elf) F1@(13, 6) HP 36/36 MP 0/0 Hu 96 $ 520 room=N
+-> n
+T 155 mode=chest_mode          Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=C
+-> o
+T 156 mode=game_loop           Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=.
+-> i
+T 157 mode=inventory           Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=.
+-> e1
+T 158 mode=inventory           Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=.
+-> x
+T 159 mode=game_loop           Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=.
+-> l
+T 160 mode=game_loop           Elrond the Singer(elf) F1@(13, 5) HP 36/36 MP 0/0 Hu 95 $ 520 room=.
+-> e
+T 161 mode=combat_mode         Elrond the Singer(elf) F1@(14, 5) HP 36/36 MP 0/0 Hu 94 $ 520 room=M vs Kobold(L0 HP8/8)
+-> a
+T 162 mode=combat_mode         Elrond the Singer(elf) F1@(14, 5) HP 36/36 MP 0/0 Hu 94 $ 520 room=M vs Kobold(L0 HP8/8)
+-> a
+T 163 mode=combat_mode         Elrond the Singer(elf) F1@(14, 5) HP 35/36 MP 0/0 Hu 94 $ 520 room=M vs Kobold(L0 HP8/8)
+-> f
+T 164 mode=combat_mode         Elrond the Singer(elf) F1@(14, 5) HP 34/36 MP 0/0 Hu 94 $ 520 room=M vs Kobold(L0 HP8/8)
+-> a
+T 165 mode=combat_mode         Elrond the Singer(elf) F1@(14, 5) HP 34/36 MP 0/0 Hu 94 $ 520 room=M vs Kobold(L0 HP8/8)
+-> f
+T 166 mode=flee_direction_mode Elrond the Singer(elf) F1@(14, 5) HP 34/36 MP 0/0 Hu 94 $ 520 room=M
+-> s
+T 167 mode=combat_mode         Elrond the Singer(elf) F1@(14, 6) HP 34/36 MP 0/0 Hu 94 $ 520 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 168 mode=combat_mode         Elrond the Singer(elf) F1@(14, 6) HP 33/36 MP 0/0 Hu 94 $ 520 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 169 mode=combat_victory      Elrond the Singer(elf) F1@(14, 6) HP 33/36 MP 0/0 Hu 94 $ 528 room=.
+-> back
+T 170 mode=game_loop           Elrond the Singer(elf) F1@(14, 6) HP 33/36 MP 0/0 Hu 94 $ 528 room=.
+-> l
+T 171 mode=game_loop           Elrond the Singer(elf) F1@(14, 6) HP 33/36 MP 0/0 Hu 94 $ 528 room=.
+-> s
+T 172 mode=combat_mode         Elrond the Singer(elf) F1@(14, 7) HP 33/36 MP 0/0 Hu 93 $ 528 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 173 mode=combat_victory      Elrond the Singer(elf) F1@(14, 7) HP 32/36 MP 0/0 Hu 93 $ 538 room=.
+-> back
+T 174 mode=game_loop           Elrond the Singer(elf) F1@(14, 7) HP 32/36 MP 0/0 Hu 93 $ 538 room=.
+-> l
+T 175 mode=game_loop           Elrond the Singer(elf) F1@(14, 7) HP 32/36 MP 0/0 Hu 93 $ 538 room=.
+-> w
+T 176 mode=combat_mode         Elrond the Singer(elf) F1@(13, 7) HP 33/36 MP 0/0 Hu 92 $ 538 room=M vs Kobold(L0 HP20/20)
+-> a
+T 177 mode=combat_victory      Elrond the Singer(elf) F1@(13, 7) HP 32/36 MP 0/0 Hu 92 $ 548 room=.
+-> back
+T 178 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 32/36 MP 0/0 Hu 92 $ 548 room=.
+-> s
+T 179 mode=chest_mode          Elrond the Singer(elf) F1@(13, 8) HP 32/36 MP 0/0 Hu 91 $ 548 room=C
+-> o
+T 180 mode=game_loop           Elrond the Singer(elf) F1@(13, 8) HP 32/36 MP 0/0 Hu 91 $ 578 room=.
+-> w
+T 181 mode=combat_mode         Elrond the Singer(elf) F1@(12, 8) HP 33/36 MP 0/0 Hu 90 $ 578 room=M vs Goblin(L0 HP30/30)
+-> a
+T 182 mode=combat_mode         Elrond the Singer(elf) F1@(12, 8) HP 32/36 MP 0/0 Hu 90 $ 578 room=M vs Goblin(L0 HP7/30)
+-> f
+T 183 mode=flee_direction_mode Elrond the Singer(elf) F1@(12, 8) HP 32/36 MP 0/0 Hu 90 $ 578 room=M
+-> n
+T 184 mode=combat_mode         Elrond the Singer(elf) F1@(12, 7) HP 32/36 MP 0/0 Hu 90 $ 578 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 185 mode=combat_mode         Elrond the Singer(elf) F1@(12, 7) HP 32/36 MP 0/0 Hu 90 $ 578 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 186 mode=combat_victory      Elrond the Singer(elf) F1@(12, 7) HP 32/36 MP 0/0 Hu 90 $ 584 room=.
+-> back
+T 187 mode=game_loop           Elrond the Singer(elf) F1@(12, 7) HP 32/36 MP 0/0 Hu 90 $ 584 room=.
+-> n
+T 188 mode=game_loop           Elrond the Singer(elf) F1@(12, 6) HP 32/36 MP 0/0 Hu 89 $ 584 room=.
+-> w
+T 189 mode=game_loop           Elrond the Singer(elf) F1@(11, 6) HP 33/36 MP 0/0 Hu 88 $ 584 room=.
+-> w
+T 190 mode=game_loop           Elrond the Singer(elf) F1@(10, 6) HP 33/36 MP 0/0 Hu 87 $ 584 room=.
+-> w
+T 191 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 34/36 MP 0/0 Hu 86 $ 584 room=.
+-> n
+T 192 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 34/36 MP 0/0 Hu 85 $ 584 room=.
+-> n
+T 193 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 34/36 MP 0/0 Hu 84 $ 584 room=.
+-> n
+T 194 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 34/36 MP 0/0 Hu 83 $ 584 room=.
+-> w
+T 195 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 35/36 MP 0/0 Hu 82 $ 584 room=.
+-> i
+T 196 mode=inventory           Elrond the Singer(elf) F1@( 8, 3) HP 35/36 MP 0/0 Hu 82 $ 584 room=.
+-> eat2
+T 197 mode=inventory           Elrond the Singer(elf) F1@( 8, 3) HP 35/36 MP 0/0 Hu 87 $ 584 room=.
+-> x
+T 198 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 35/36 MP 0/0 Hu 87 $ 584 room=.
+-> w
+T 199 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 35/36 MP 0/0 Hu 86 $ 584 room=.
+-> w
+T 200 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 36/36 MP 0/0 Hu 85 $ 584 room=.
+-> i
+T 201 mode=inventory           Elrond the Singer(elf) F1@( 6, 3) HP 36/36 MP 0/0 Hu 85 $ 584 room=.
+-> eat2
+T 202 mode=inventory           Elrond the Singer(elf) F1@( 6, 3) HP 36/36 MP 0/0 Hu 90 $ 584 room=.
+-> x
+T 203 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 36/36 MP 0/0 Hu 90 $ 584 room=.
+-> w
+T 204 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 36/36 MP 0/0 Hu 89 $ 584 room=.
+-> w
+T 205 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 36/36 MP 0/0 Hu 88 $ 584 room=.
+-> s
+T 206 mode=library_mode        Elrond the Singer(elf) F1@( 4, 4) HP 36/36 MP 0/0 Hu 87 $ 584 room=L
+-> r
+T 207 mode=library_read_decision_mode Elrond the Singer(elf) F1@( 4, 4) HP 36/36 MP 0/0 Hu 87 $ 584 room=L
+-> y
+T 208 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 36/36 MP 0/0 Hu 87 $ 634 room=.
+-> e
+T 209 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 4) HP 36/36 MP 0/0 Hu 86 $ 634 room=M vs Goblin(L0 HP12/12)
+-> a
+T 210 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 4) HP 36/36 MP 0/0 Hu 86 $ 634 room=M vs Goblin(L0 HP12/12)
+-> a
+T 211 mode=combat_victory      Elrond the Singer(elf) F1@( 5, 4) HP 36/36 MP 0/0 Hu 86 $ 640 room=.
+-> back
+T 212 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 36/36 MP 0/0 Hu 86 $ 640 room=.
+-> e
+T 213 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 36/36 MP 0/0 Hu 85 $ 640 room=.
+-> e
+T 214 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 36/36 MP 0/0 Hu 84 $ 640 room=.
+-> e
+T 215 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 36/36 MP 0/0 Hu 83 $ 640 room=.
+-> e
+T 216 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 36/36 MP 0/0 Hu 82 $ 640 room=.
+-> s
+T 217 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 36/36 MP 0/0 Hu 81 $ 640 room=.
+-> s
+T 218 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 36/36 MP 0/0 Hu 80 $ 640 room=.
+-> s
+T 219 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 36/36 MP 0/0 Hu 79 $ 640 room=.
+-> s
+T 220 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 36/36 MP 0/0 Hu 78 $ 640 room=.
+-> l
+T 221 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 36/36 MP 0/0 Hu 78 $ 640 room=.
+-> s
+T 222 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 36/36 MP 0/0 Hu 77 $ 640 room=.
+-> l
+T 223 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 36/36 MP 0/0 Hu 77 $ 640 room=.
+-> s
+T 224 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 36/36 MP 0/0 Hu 76 $ 640 room=.
+-> l
+T 225 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 36/36 MP 0/0 Hu 76 $ 640 room=.
+-> w
+T 226 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 36/36 MP 0/0 Hu 75 $ 640 room=.
+-> l
+T 227 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 36/36 MP 0/0 Hu 75 $ 640 room=.
+-> w
+T 228 mode=pool_mode           Elrond the Singer(elf) F1@( 7,10) HP 36/36 MP 0/0 Hu 74 $ 640 room=P
+-> dr
+T 229 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 17/36 MP 0/0 Hu 74 $ 640 room=.
+-> i
+T 230 mode=inventory           Elrond the Singer(elf) F1@( 7,10) HP 17/36 MP 0/0 Hu 74 $ 640 room=.
+-> u5
+T 231 mode=inventory           Elrond the Singer(elf) F1@( 7,10) HP 36/36 MP 0/0 Hu 74 $ 640 room=.
+-> x
+T 232 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 36/36 MP 0/0 Hu 74 $ 640 room=.
+-> w
+T 233 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 27/36 MP 0/0 Hu 73 $ 640 room=.
+-> i
+T 234 mode=inventory           Elrond the Singer(elf) F1@( 6,10) HP 27/36 MP 0/0 Hu 73 $ 640 room=.
+-> u5
+T 235 mode=inventory           Elrond the Singer(elf) F1@( 6,10) HP 36/36 MP 0/0 Hu 73 $ 640 room=.
+-> x
+T 236 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 36/36 MP 0/0 Hu 73 $ 640 room=.
+-> l
+T 237 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 36/36 MP 0/0 Hu 73 $ 640 room=.
+-> w
+T 238 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 27/36 MP 0/0 Hu 72 $ 640 room=.
+-> i
+T 239 mode=inventory           Elrond the Singer(elf) F1@( 5,10) HP 27/36 MP 0/0 Hu 72 $ 640 room=.
+-> u5
+T 240 mode=inventory           Elrond the Singer(elf) F1@( 5,10) HP 36/36 MP 0/0 Hu 72 $ 640 room=.
+-> x
+T 241 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 36/36 MP 0/0 Hu 72 $ 640 room=.
+-> w
+T 242 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 27/36 MP 0/0 Hu 71 $ 640 room=.
+-> l
+T 243 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 27/36 MP 0/0 Hu 71 $ 640 room=.
+-> i
+T 244 mode=inventory           Elrond the Singer(elf) F1@( 4,10) HP 27/36 MP 0/0 Hu 71 $ 640 room=.
+-> u5
+T 245 mode=inventory           Elrond the Singer(elf) F1@( 4,10) HP 36/36 MP 0/0 Hu 71 $ 640 room=.
+-> x
+T 246 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 36/36 MP 0/0 Hu 71 $ 640 room=.
+-> w
+T 247 mode=game_loop           Elrond the Singer(elf) F1@( 3,10) HP 28/36 MP 0/0 Hu 70 $ 640 room=.
+-> e
+T 248 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 28/36 MP 0/0 Hu 69 $ 640 room=.
+-> i
+T 249 mode=inventory           Elrond the Singer(elf) F1@( 4,10) HP 28/36 MP 0/0 Hu 69 $ 640 room=.
+-> u5
+T 250 mode=inventory           Elrond the Singer(elf) F1@( 4,10) HP 36/36 MP 0/0 Hu 69 $ 640 room=.
+-> x
+T 251 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 36/36 MP 0/0 Hu 69 $ 640 room=.
+-> s
+T 252 mode=combat_mode         Elrond the Singer(elf) F1@( 4,11) HP 36/36 MP 0/0 Hu 68 $ 640 room=M vs Bat(L0 HP12/12)
+-> a
+T 253 mode=combat_mode         Elrond the Singer(elf) F1@( 4,11) HP 36/36 MP 0/0 Hu 68 $ 640 room=M vs Bat(L0 HP12/12)
+-> a
+T 254 mode=combat_mode         Elrond the Singer(elf) F1@( 4,11) HP 36/36 MP 0/0 Hu 68 $ 640 room=M vs Bat(L0 HP12/12)
+-> a
+T 255 mode=combat_victory      Elrond the Singer(elf) F1@( 4,11) HP 36/36 MP 0/0 Hu 68 $ 724 room=.
+-> back
+T 256 mode=game_loop           Elrond the Singer(elf) F1@( 4,11) HP 36/36 MP 0/0 Hu 68 $ 724 room=.
+-> e
+T 257 mode=combat_mode         Elrond the Singer(elf) F1@( 5,11) HP 36/36 MP 0/0 Hu 67 $ 724 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 258 mode=combat_mode         Elrond the Singer(elf) F1@( 5,11) HP 36/36 MP 0/0 Hu 67 $ 724 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 259 mode=combat_mode         Elrond the Singer(elf) F1@( 5,11) HP 36/36 MP 0/0 Hu 67 $ 724 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 260 mode=combat_victory      Elrond the Singer(elf) F1@( 5,11) HP 35/36 MP 0/0 Hu 67 $ 727 room=.
+-> back
+T 261 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 35/36 MP 0/0 Hu 67 $ 727 room=.
+-> i
+T 262 mode=inventory           Elrond the Singer(elf) F1@( 5,11) HP 35/36 MP 0/0 Hu 67 $ 727 room=.
+-> e3
+T 263 mode=inventory           Elrond the Singer(elf) F1@( 5,11) HP 35/36 MP 0/0 Hu 67 $ 727 room=.
+-> x
+T 264 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 35/36 MP 0/0 Hu 67 $ 727 room=.
+-> s
+T 265 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 35/36 MP 0/0 Hu 66 $ 727 room=.
+-> e
+T 266 mode=combat_mode         Elrond the Singer(elf) F1@( 6,12) HP 35/36 MP 0/0 Hu 65 $ 727 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 267 mode=flee_direction_mode Elrond the Singer(elf) F1@( 6,12) HP 35/36 MP 0/0 Hu 65 $ 727 room=M
+-> n
+T 268 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 35/36 MP 0/0 Hu 65 $ 727 room=.
+-> e
+T 269 mode=combat_mode         Elrond the Singer(elf) F1@( 7,11) HP 35/36 MP 0/0 Hu 64 $ 727 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 270 mode=combat_mode         Elrond the Singer(elf) F1@( 7,11) HP 34/36 MP 0/0 Hu 64 $ 727 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 271 mode=combat_victory      Elrond the Singer(elf) F1@( 7,11) HP 33/36 MP 0/0 Hu 64 $ 730 room=.
+-> back
+T 272 mode=game_loop           Elrond the Singer(elf) F1@( 7,11) HP 33/36 MP 0/0 Hu 64 $ 730 room=.
+-> l
+T 273 mode=game_loop           Elrond the Singer(elf) F1@( 7,11) HP 33/36 MP 0/0 Hu 64 $ 730 room=.
+-> s
+T 274 mode=combat_mode         Elrond the Singer(elf) F1@( 7,12) HP 34/36 MP 0/0 Hu 63 $ 730 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 275 mode=combat_victory      Elrond the Singer(elf) F1@( 7,12) HP 34/36 MP 0/0 Hu 63 $ 733 room=.
+-> back
+T 276 mode=game_loop           Elrond the Singer(elf) F1@( 7,12) HP 34/36 MP 0/0 Hu 63 $ 733 room=.
+-> s
+T 277 mode=combat_mode         Elrond the Singer(elf) F1@( 7,13) HP 34/36 MP 0/0 Hu 62 $ 733 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 278 mode=combat_mode         Elrond the Singer(elf) F1@( 7,13) HP 33/36 MP 0/0 Hu 62 $ 733 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 279 mode=combat_victory      Elrond the Singer(elf) F1@( 7,13) HP 32/36 MP 0/0 Hu 62 $ 738 room=.
+-> back
+T 280 mode=game_loop           Elrond the Singer(elf) F1@( 7,13) HP 32/36 MP 0/0 Hu 62 $ 738 room=.
+-> l
+T 281 mode=game_loop           Elrond the Singer(elf) F1@( 7,13) HP 32/36 MP 0/0 Hu 62 $ 738 room=.
+-> w
+T 282 mode=chest_mode          Elrond the Singer(elf) F1@( 6,13) HP 32/36 MP 0/0 Hu 61 $ 738 room=C
+-> o
+T 283 mode=game_loop           Elrond the Singer(elf) F1@( 6,13) HP 32/36 MP 0/0 Hu 61 $ 778 room=.
+-> w
+T 284 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 32/36 MP 0/0 Hu 60 $ 778 room=.
+-> l
+T 285 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 32/36 MP 0/0 Hu 60 $ 778 room=.
+-> w
+T 286 mode=game_loop           Elrond the Singer(elf) F1@( 4,13) HP 32/36 MP 0/0 Hu 59 $ 778 room=.
+-> w
+T 287 mode=pool_mode           Elrond the Singer(elf) F1@( 3,13) HP 32/36 MP 0/0 Hu 58 $ 778 room=P
+-> dr
+T 288 mode=game_loop           Elrond the Singer(elf) F1@( 3,13) HP 32/36 MP 0/0 Hu 58 $ 778 room=.
+-> l
+T 289 mode=game_loop           Elrond the Singer(elf) F1@( 3,13) HP 32/36 MP 0/0 Hu 58 $ 778 room=.
+-> s
+T 290 mode=combat_mode         Elrond the Singer(elf) F1@( 3,14) HP 32/36 MP 0/0 Hu 57 $ 778 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 291 mode=combat_victory      Elrond the Singer(elf) F1@( 3,14) HP 32/36 MP 0/0 Hu 57 $ 887 room=.
+-> back
+T 292 mode=game_loop           Elrond the Singer(elf) F1@( 3,14) HP 32/36 MP 0/0 Hu 57 $ 887 room=.
+-> l
+T 293 mode=game_loop           Elrond the Singer(elf) F1@( 3,14) HP 32/36 MP 0/0 Hu 57 $ 887 room=.
+-> e
+T 294 mode=combat_mode         Elrond the Singer(elf) F1@( 4,14) HP 32/36 MP 0/0 Hu 56 $ 887 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 295 mode=combat_mode         Elrond the Singer(elf) F1@( 4,14) HP 32/36 MP 0/0 Hu 56 $ 887 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 296 mode=combat_mode         Elrond the Singer(elf) F1@( 4,14) HP 31/36 MP 0/0 Hu 56 $ 887 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 297 mode=combat_mode         Elrond the Singer(elf) F1@( 4,14) HP 30/36 MP 0/0 Hu 56 $ 887 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 298 mode=combat_victory      Elrond the Singer(elf) F1@( 4,14) HP 29/46 MP 0/0 Hu 56 $ 891 room=.
+-> back
+T 299 mode=game_loop           Elrond the Singer(elf) F1@( 4,14) HP 29/46 MP 0/0 Hu 56 $ 891 room=.
+-> e
+T 300 mode=game_loop           Elrond the Singer(elf) F1@( 5,14) HP 29/46 MP 0/0 Hu 55 $ 891 room=.
+-> l
+T 301 mode=game_loop           Elrond the Singer(elf) F1@( 5,14) HP 29/46 MP 0/0 Hu 55 $ 891 room=.
+-> n
+T 302 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 29/46 MP 0/0 Hu 54 $ 891 room=.
+-> i
+T 303 mode=inventory           Elrond the Singer(elf) F1@( 5,13) HP 29/46 MP 0/0 Hu 54 $ 891 room=.
+-> u5
+T 304 mode=inventory           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu 54 $ 891 room=.
+-> x
+T 305 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu 54 $ 891 room=.
+-> i
+T 306 mode=inventory           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu 54 $ 891 room=.
+-> eat3
+T 307 mode=inventory           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu 60 $ 891 room=.
+-> eat1
+T 308 mode=inventory           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu100 $ 891 room=.
+-> x
+T 309 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu100 $ 891 room=.
+-> w
+T 310 mode=game_loop           Elrond the Singer(elf) F1@( 4,13) HP 46/46 MP 0/0 Hu 99 $ 891 room=.
+-> i
+T 311 mode=inventory           Elrond the Singer(elf) F1@( 4,13) HP 46/46 MP 0/0 Hu 99 $ 891 room=.
+-> eat2
+T 312 mode=inventory           Elrond the Singer(elf) F1@( 4,13) HP 46/46 MP 0/0 Hu100 $ 891 room=.
+-> x
+T 313 mode=game_loop           Elrond the Singer(elf) F1@( 4,13) HP 46/46 MP 0/0 Hu100 $ 891 room=.
+-> w
+T 314 mode=game_loop           Elrond the Singer(elf) F1@( 3,13) HP 46/46 MP 0/0 Hu 99 $ 891 room=.
+-> w
+T 315 mode=game_loop           Elrond the Singer(elf) F1@( 2,13) HP 46/46 MP 0/0 Hu 98 $ 891 room=.
+-> w
+T 316 mode=combat_mode         Elrond the Singer(elf) F1@( 1,13) HP 46/46 MP 0/0 Hu 97 $ 891 room=M vs Goblin(L0 HP30/30)
+-> a
+T 317 mode=combat_mode         Elrond the Singer(elf) F1@( 1,13) HP 46/46 MP 0/0 Hu 97 $ 891 room=M vs Goblin(L0 HP7/30)
+-> a
+T 318 mode=combat_victory      Elrond the Singer(elf) F1@( 1,13) HP 46/46 MP 0/0 Hu 97 $ 896 room=.
+-> back
+T 319 mode=game_loop           Elrond the Singer(elf) F1@( 1,13) HP 46/46 MP 0/0 Hu 97 $ 896 room=.
+-> s
+T 320 mode=game_loop           Elrond the Singer(elf) F1@( 1,14) HP 46/46 MP 0/0 Hu 96 $ 896 room=.
+-> l
+T 321 mode=game_loop           Elrond the Singer(elf) F1@( 1,14) HP 46/46 MP 0/0 Hu 96 $ 896 room=.
+-> e
+T 322 mode=combat_mode         Elrond the Singer(elf) F1@( 2,14) HP 46/46 MP 0/0 Hu 95 $ 896 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 323 mode=combat_mode         Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 896 room=M vs Skeleton(L0 HP3/25)
+-> a
+T 324 mode=combat_mode         Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 896 room=M vs Skeleton(L0 HP3/25)
+-> a
+T 325 mode=combat_mode         Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 896 room=M vs Skeleton(L0 HP3/25)
+-> a
+T 326 mode=combat_victory      Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 906 room=.
+-> back
+T 327 mode=game_loop           Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 906 room=.
+-> l
+T 328 mode=game_loop           Elrond the Singer(elf) F1@( 2,14) HP 45/46 MP 0/0 Hu 95 $ 906 room=.
+-> s
+T 329 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 45/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP35/35)
+-> a
+T 330 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 45/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP11/35)
+-> a
+T 331 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 44/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP11/35)
+-> f
+T 332 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 43/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP11/35)
+-> a
+T 333 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 42/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP11/35)
+-> a
+T 334 mode=combat_mode         Elrond the Singer(elf) F1@( 2,15) HP 41/46 MP 0/0 Hu 94 $ 906 room=M vs Zombie(L0 HP11/35)
+-> f
+T 335 mode=flee_direction_mode Elrond the Singer(elf) F1@( 2,15) HP 40/46 MP 0/0 Hu 94 $ 906 room=M
+-> s
+T 336 mode=game_loop           Elrond the Singer(elf) F1@( 2,16) HP 40/46 MP 0/0 Hu 94 $ 906 room=.
+-> e
+T 337 mode=game_loop           Elrond the Singer(elf) F1@( 3,16) HP 41/46 MP 0/0 Hu 93 $ 906 room=.
+-> n
+T 338 mode=game_loop           Elrond the Singer(elf) F1@( 3,15) HP 41/46 MP 0/0 Hu 92 $ 906 room=.
+-> n
+T 339 mode=game_loop           Elrond the Singer(elf) F1@( 3,14) HP 42/46 MP 0/0 Hu 91 $ 906 room=.
+-> n
+T 340 mode=game_loop           Elrond the Singer(elf) F1@( 3,13) HP 42/46 MP 0/0 Hu 90 $ 906 room=.
+-> l
+T 341 mode=game_loop           Elrond the Singer(elf) F1@( 3,13) HP 42/46 MP 0/0 Hu 90 $ 906 room=.
+-> e
+T 342 mode=game_loop           Elrond the Singer(elf) F1@( 4,13) HP 43/46 MP 0/0 Hu 89 $ 906 room=.
+-> e
+T 343 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 43/46 MP 0/0 Hu 88 $ 906 room=.
+-> n
+T 344 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 44/46 MP 0/0 Hu 87 $ 906 room=.
+-> i
+T 345 mode=inventory           Elrond the Singer(elf) F1@( 5,12) HP 44/46 MP 0/0 Hu 87 $ 906 room=.
+-> eat2
+T 346 mode=inventory           Elrond the Singer(elf) F1@( 5,12) HP 44/46 MP 0/0 Hu 92 $ 906 room=.
+-> x
+T 347 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 44/46 MP 0/0 Hu 92 $ 906 room=.
+-> n
+T 348 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 44/46 MP 0/0 Hu 91 $ 906 room=.
+-> n
+T 349 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 45/46 MP 0/0 Hu 90 $ 906 room=.
+-> e
+T 350 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 45/46 MP 0/0 Hu 89 $ 906 room=.
+-> l
+T 351 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 45/46 MP 0/0 Hu 89 $ 906 room=.
+-> e
+T 352 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 46/46 MP 0/0 Hu 88 $ 906 room=.
+-> e
+T 353 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 46/46 MP 0/0 Hu 87 $ 906 room=.
+-> e
+T 354 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 86 $ 906 room=.
+-> e
+T 355 mode=game_loop           Elrond the Singer(elf) F1@(10,10) HP 46/46 MP 0/0 Hu 85 $ 906 room=.
+-> l
+T 356 mode=game_loop           Elrond the Singer(elf) F1@(10,10) HP 46/46 MP 0/0 Hu 85 $ 906 room=.
+-> n
+T 357 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 84 $ 906 room=.
+-> w
+T 358 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 46/46 MP 0/0 Hu 83 $ 906 room=.
+-> n
+T 359 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 46/46 MP 0/0 Hu 82 $ 906 room=.
+-> n
+T 360 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 46/46 MP 0/0 Hu 81 $ 906 room=.
+-> l
+T 361 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 46/46 MP 0/0 Hu 81 $ 906 room=.
+-> n
+T 362 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 46/46 MP 0/0 Hu 80 $ 906 room=.
+-> n
+T 363 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 46/46 MP 0/0 Hu 79 $ 906 room=.
+-> n
+T 364 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 46/46 MP 0/0 Hu 78 $ 906 room=.
+-> w
+T 365 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 46/46 MP 0/0 Hu 77 $ 906 room=.
+-> w
+T 366 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 46/46 MP 0/0 Hu 76 $ 906 room=.
+-> s
+T 367 mode=game_loop           Elrond the Singer(elf) F1@( 7, 5) HP 46/46 MP 0/0 Hu 75 $ 906 room=.
+-> w
+T 368 mode=game_loop           Elrond the Singer(elf) F1@( 6, 5) HP 46/46 MP 0/0 Hu 74 $ 906 room=.
+-> w
+T 369 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 46/46 MP 0/0 Hu 73 $ 906 room=.
+-> s
+T 370 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 72 $ 906 room=.
+-> l
+T 371 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 72 $ 906 room=.
+-> s
+T 372 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 71 $ 906 room=.
+-> w
+T 373 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 70 $ 906 room=.
+-> w
+T 374 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 69 $ 906 room=.
+-> w
+T 375 mode=game_loop           Elrond the Singer(elf) F1@( 2, 7) HP 46/46 MP 0/0 Hu 68 $ 906 room=.
+-> w
+T 376 mode=game_loop           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 67 $ 906 room=.
+-> s
+T 377 mode=game_loop           Elrond the Singer(elf) F1@( 1, 8) HP 46/46 MP 0/0 Hu 66 $ 906 room=.
+-> l
+T 378 mode=game_loop           Elrond the Singer(elf) F1@( 1, 8) HP 46/46 MP 0/0 Hu 66 $ 906 room=.
+-> s
+T 379 mode=game_loop           Elrond the Singer(elf) F1@( 1, 9) HP 46/46 MP 0/0 Hu 65 $ 906 room=.
+-> e
+T 380 mode=game_loop           Elrond the Singer(elf) F1@( 2, 9) HP 46/46 MP 0/0 Hu 64 $ 906 room=.
+-> l
+T 381 mode=game_loop           Elrond the Singer(elf) F1@( 2, 9) HP 46/46 MP 0/0 Hu 64 $ 906 room=.
+-> w
+T 382 mode=game_loop           Elrond the Singer(elf) F1@( 1, 9) HP 46/46 MP 0/0 Hu 63 $ 906 room=.
+-> e
+T 383 mode=game_loop           Elrond the Singer(elf) F1@( 2, 9) HP 46/46 MP 0/0 Hu 62 $ 906 room=.
+-> w
+T 384 mode=game_loop           Elrond the Singer(elf) F1@( 1, 9) HP 46/46 MP 0/0 Hu 61 $ 906 room=.
+-> n
+T 385 mode=game_loop           Elrond the Singer(elf) F1@( 1, 8) HP 46/46 MP 0/0 Hu 60 $ 906 room=.
+-> n
+T 386 mode=game_loop           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 59 $ 906 room=.
+-> e
+T 387 mode=game_loop           Elrond the Singer(elf) F1@( 2, 7) HP 46/46 MP 0/0 Hu 58 $ 906 room=.
+-> e
+T 388 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 57 $ 906 room=.
+-> s
+T 389 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 46/46 MP 0/0 Hu 56 $ 906 room=.
+-> e
+T 390 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 46/46 MP 0/0 Hu 55 $ 906 room=V
+-> l
+T 391 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 46/46 MP 0/0 Hu 55 $ 906 room=V
+-> n
+T 392 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 54 $ 906 room=.
+-> n
+T 393 mode=combat_mode         Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 53 $ 906 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 394 mode=combat_victory      Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 53 $ 914 room=.
+-> back
+T 395 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 53 $ 914 room=.
+-> e
+T 396 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 52 $ 914 room=.
+-> s
+T 397 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 51 $ 914 room=.
+-> e
+T 398 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 7) HP 46/46 MP 0/0 Hu 50 $ 914 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 399 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 7) HP 45/46 MP 0/0 Hu 50 $ 918 room=.
+-> back
+T 400 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 45/46 MP 0/0 Hu 50 $ 918 room=.
+-> l
+T 401 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 45/46 MP 0/0 Hu 50 $ 918 room=.
+-> e
+T 402 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 7) HP 45/46 MP 0/0 Hu 49 $ 918 room=M vs Goblin(L0 HP30/30)
+-> a
+T 403 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 7) HP 44/46 MP 0/0 Hu 49 $ 918 room=M vs Goblin(L0 HP30/30)
+-> a
+T 404 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 7) HP 43/46 MP 0/0 Hu 49 $ 918 room=M vs Goblin(L0 HP30/30)
+-> a
+T 405 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 7) HP 42/46 MP 0/0 Hu 49 $ 918 room=M vs Goblin(L0 HP7/30)
+-> a
+T 406 mode=combat_victory      Elrond the Singer(elf) F1@( 7, 7) HP 41/46 MP 0/0 Hu 49 $ 921 room=.
+-> back
+T 407 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 41/46 MP 0/0 Hu 49 $ 921 room=.
+-> i
+T 408 mode=inventory           Elrond the Singer(elf) F1@( 7, 7) HP 41/46 MP 0/0 Hu 49 $ 921 room=.
+-> u6
+T 409 mode=inventory           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 49 $ 921 room=.
+-> x
+T 410 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 49 $ 921 room=.
+-> i
+T 411 mode=inventory           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 49 $ 921 room=.
+-> eat1
+T 412 mode=inventory           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 99 $ 921 room=.
+-> x
+T 413 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 99 $ 921 room=.
+-> s
+T 414 mode=game_loop           Elrond the Singer(elf) F1@( 7, 8) HP 46/46 MP 0/0 Hu 98 $ 921 room=.
+-> w
+T 415 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 8) HP 46/46 MP 0/0 Hu 97 $ 921 room=M vs Kobold(L0 HP20/20)
+-> a
+T 416 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 8) HP 45/46 MP 0/0 Hu 97 $ 921 room=M vs Kobold(L0 HP20/20)
+-> f
+T 417 mode=flee_direction_mode Elrond the Singer(elf) F1@( 6, 8) HP 44/46 MP 0/0 Hu 97 $ 921 room=M
+-> s
+T 418 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 9) HP 44/46 MP 0/0 Hu 97 $ 921 room=M vs Kobold(L0 HP8/8)
+-> a
+T 419 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 9) HP 44/46 MP 0/0 Hu 97 $ 931 room=.
+-> back
+T 420 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 44/46 MP 0/0 Hu 97 $ 931 room=.
+-> l
+T 421 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 44/46 MP 0/0 Hu 97 $ 931 room=.
+-> s
+T 422 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 44/46 MP 0/0 Hu 96 $ 931 room=.
+-> e
+T 423 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 45/46 MP 0/0 Hu 95 $ 931 room=.
+-> e
+T 424 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 45/46 MP 0/0 Hu 94 $ 931 room=.
+-> s
+T 425 mode=game_loop           Elrond the Singer(elf) F1@( 8,11) HP 46/46 MP 0/0 Hu 93 $ 931 room=.
+-> i
+T 426 mode=inventory           Elrond the Singer(elf) F1@( 8,11) HP 46/46 MP 0/0 Hu 93 $ 931 room=.
+-> eat4
+T 427 mode=inventory           Elrond the Singer(elf) F1@( 8,11) HP 46/46 MP 0/0 Hu 99 $ 931 room=.
+-> x
+T 428 mode=game_loop           Elrond the Singer(elf) F1@( 8,11) HP 46/46 MP 0/0 Hu 99 $ 931 room=.
+-> w
+T 429 mode=game_loop           Elrond the Singer(elf) F1@( 7,11) HP 46/46 MP 0/0 Hu 98 $ 931 room=.
+-> s
+T 430 mode=game_loop           Elrond the Singer(elf) F1@( 7,12) HP 46/46 MP 0/0 Hu 97 $ 931 room=.
+-> l
+T 431 mode=game_loop           Elrond the Singer(elf) F1@( 7,12) HP 46/46 MP 0/0 Hu 97 $ 931 room=.
+-> w
+T 432 mode=combat_mode         Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 96 $ 931 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 433 mode=combat_victory      Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 96 $ 936 room=.
+-> back
+T 434 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 96 $ 936 room=.
+-> i
+T 435 mode=inventory           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 96 $ 936 room=.
+-> eat2
+T 436 mode=inventory           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu100 $ 936 room=.
+-> x
+T 437 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu100 $ 936 room=.
+-> n
+T 438 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu 99 $ 936 room=.
+-> i
+T 439 mode=inventory           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu 99 $ 936 room=.
+-> eat2
+T 440 mode=inventory           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu100 $ 936 room=.
+-> x
+T 441 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu100 $ 936 room=.
+-> n
+T 442 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 46/46 MP 0/0 Hu 99 $ 936 room=.
+-> w
+T 443 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu 98 $ 936 room=.
+-> n
+T 444 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 9) HP 46/46 MP 0/0 Hu 97 $ 936 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 445 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 9) HP 45/46 MP 0/0 Hu 97 $ 936 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 446 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 9) HP 44/46 MP 0/0 Hu 97 $ 936 room=M vs Skeleton(L0 HP3/25)
+-> a
+T 447 mode=combat_victory      Elrond the Singer(elf) F1@( 5, 9) HP 44/46 MP 0/0 Hu 97 $ 943 room=.
+-> back
+T 448 mode=game_loop           Elrond the Singer(elf) F1@( 5, 9) HP 44/46 MP 0/0 Hu 97 $ 943 room=.
+-> n
+T 449 mode=combat_mode         Elrond the Singer(elf) F1@( 5, 8) HP 44/46 MP 0/0 Hu 96 $ 943 room=M vs Goblin(L0 HP10/30)
+-> a
+T 450 mode=combat_victory      Elrond the Singer(elf) F1@( 5, 8) HP 44/46 MP 0/0 Hu 96 $ 946 room=.
+-> back
+T 451 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 44/46 MP 0/0 Hu 96 $ 946 room=.
+-> n
+T 452 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 45/46 MP 0/0 Hu 95 $ 946 room=.
+-> w
+T 453 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 45/46 MP 0/0 Hu 94 $ 946 room=.
+-> n
+T 454 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 93 $ 946 room=.
+-> w
+T 455 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 46/46 MP 0/0 Hu 92 $ 946 room=.
+-> w
+T 456 mode=game_loop           Elrond the Singer(elf) F1@( 2, 6) HP 46/46 MP 0/0 Hu 91 $ 946 room=.
+-> s
+T 457 mode=game_loop           Elrond the Singer(elf) F1@( 2, 7) HP 46/46 MP 0/0 Hu 90 $ 946 room=.
+-> e
+T 458 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 89 $ 946 room=.
+-> e
+T 459 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 88 $ 946 room=.
+-> e
+T 460 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 87 $ 946 room=.
+-> l
+T 461 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 87 $ 946 room=.
+-> e
+T 462 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 46/46 MP 0/0 Hu 86 $ 946 room=.
+-> e
+T 463 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 85 $ 946 room=.
+-> e
+T 464 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 46/46 MP 0/0 Hu 84 $ 946 room=.
+-> e
+T 465 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 46/46 MP 0/0 Hu 83 $ 946 room=.
+-> s
+T 466 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 46/46 MP 0/0 Hu 82 $ 946 room=.
+-> s
+T 467 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 46/46 MP 0/0 Hu 81 $ 946 room=.
+-> s
+T 468 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 80 $ 946 room=.
+-> e
+T 469 mode=game_loop           Elrond the Singer(elf) F1@(10,10) HP 46/46 MP 0/0 Hu 79 $ 946 room=.
+-> n
+T 470 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 78 $ 946 room=.
+-> l
+T 471 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 78 $ 946 room=.
+-> e
+T 472 mode=combat_mode         Elrond the Singer(elf) F1@(11, 9) HP 46/46 MP 0/0 Hu 77 $ 946 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 473 mode=combat_mode         Elrond the Singer(elf) F1@(11, 9) HP 45/46 MP 0/0 Hu 77 $ 946 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 474 mode=combat_victory      Elrond the Singer(elf) F1@(11, 9) HP 44/46 MP 0/0 Hu 77 $ 951 room=.
+-> back
+T 475 mode=game_loop           Elrond the Singer(elf) F1@(11, 9) HP 44/46 MP 0/0 Hu 77 $ 951 room=.
+-> n
+T 476 mode=combat_mode         Elrond the Singer(elf) F1@(11, 8) HP 44/46 MP 0/0 Hu 76 $ 951 room=M vs Bat(L0 HP12/12)
+-> a
+T 477 mode=combat_victory      Elrond the Singer(elf) F1@(11, 8) HP 43/46 MP 0/0 Hu 76 $ 955 room=.
+-> back
+T 478 mode=game_loop           Elrond the Singer(elf) F1@(11, 8) HP 43/46 MP 0/0 Hu 76 $ 955 room=.
+-> w
+T 479 mode=combat_mode         Elrond the Singer(elf) F1@(10, 8) HP 43/46 MP 0/0 Hu 75 $ 955 room=M vs Zombie(L0 HP35/35)
+-> a
+T 480 mode=combat_mode         Elrond the Singer(elf) F1@(10, 8) HP 43/46 MP 0/0 Hu 75 $ 955 room=M vs Zombie(L0 HP35/35)
+-> a
+T 481 mode=combat_mode         Elrond the Singer(elf) F1@(10, 8) HP 43/46 MP 0/0 Hu 75 $ 955 room=M vs Zombie(L0 HP11/35)
+-> a
+T 482 mode=combat_victory      Elrond the Singer(elf) F1@(10, 8) HP 43/46 MP 0/0 Hu 75 $ 956 room=.
+-> back
+T 483 mode=game_loop           Elrond the Singer(elf) F1@(10, 8) HP 43/46 MP 0/0 Hu 75 $ 956 room=.
+-> n
+T 484 mode=game_loop           Elrond the Singer(elf) F1@(10, 7) HP 43/46 MP 0/0 Hu 74 $ 956 room=.
+-> w
+T 485 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 44/46 MP 0/0 Hu 73 $ 956 room=.
+-> n
+T 486 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 44/46 MP 0/0 Hu 72 $ 956 room=.
+-> n
+T 487 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 44/46 MP 0/0 Hu 71 $ 956 room=.
+-> n
+T 488 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 44/46 MP 0/0 Hu 70 $ 956 room=.
+-> n
+T 489 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 45/46 MP 0/0 Hu 69 $ 956 room=.
+-> w
+T 490 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 45/46 MP 0/0 Hu 68 $ 956 room=.
+-> l
+T 491 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 45/46 MP 0/0 Hu 68 $ 956 room=.
+-> s
+T 492 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 45/46 MP 0/0 Hu 67 $ 956 room=.
+-> w
+T 493 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 45/46 MP 0/0 Hu 66 $ 956 room=.
+-> i
+T 494 mode=inventory           Elrond the Singer(elf) F1@( 7, 4) HP 45/46 MP 0/0 Hu 66 $ 956 room=.
+-> eat2
+T 495 mode=inventory           Elrond the Singer(elf) F1@( 7, 4) HP 45/46 MP 0/0 Hu 71 $ 956 room=.
+-> eat1
+T 496 mode=inventory           Elrond the Singer(elf) F1@( 7, 4) HP 45/46 MP 0/0 Hu100 $ 956 room=.
+-> x
+T 497 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 45/46 MP 0/0 Hu100 $ 956 room=.
+-> n
+T 498 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 46/46 MP 0/0 Hu 99 $ 956 room=.
+-> n
+T 499 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 46/46 MP 0/0 Hu 98 $ 956 room=.
+-> w
+T 500 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 97 $ 956 room=.
+-> l
+T 501 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 97 $ 956 room=.
+-> n
+T 502 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 96 $ 956 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 503 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 96 $ 966 room=.
+-> back
+T 504 mode=game_loop           Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 96 $ 966 room=.
+-> s
+T 505 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 95 $ 966 room=.
+-> s
+T 506 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 46/46 MP 0/0 Hu 94 $ 966 room=.
+-> w
+T 507 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 93 $ 966 room=.
+-> n
+T 508 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 92 $ 966 room=.
+-> w
+T 509 mode=combat_mode         Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 91 $ 966 room=M vs Bat(L0 HP12/12)
+-> a
+T 510 mode=combat_victory      Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 91 $ 967 room=.
+-> back
+T 511 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 91 $ 967 room=.
+-> w
+T 512 mode=game_loop           Elrond the Singer(elf) F1@( 3, 2) HP 46/46 MP 0/0 Hu 90 $ 967 room=.
+-> e
+T 513 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 89 $ 967 room=.
+-> s
+T 514 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 88 $ 967 room=.
+-> e
+T 515 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 87 $ 967 room=.
+-> n
+T 516 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 86 $ 967 room=.
+-> e
+T 517 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 85 $ 967 room=.
+-> n
+T 518 mode=game_loop           Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 84 $ 967 room=.
+-> s
+T 519 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 83 $ 967 room=.
+-> s
+T 520 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 46/46 MP 0/0 Hu 82 $ 967 room=.
+-> l
+T 521 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 46/46 MP 0/0 Hu 82 $ 967 room=.
+-> e
+T 522 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 46/46 MP 0/0 Hu 81 $ 967 room=.
+-> n
+T 523 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 46/46 MP 0/0 Hu 80 $ 967 room=.
+-> w
+T 524 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 79 $ 967 room=.
+-> i
+T 525 mode=inventory           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 79 $ 967 room=.
+-> eat1
+T 526 mode=inventory           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu100 $ 967 room=.
+-> u8
+T 527 mode=identify_scroll_mode Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu100 $ 967 room=.
+-> 1
+T 528 mode=inventory           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu100 $ 967 room=.
+-> x
+T 529 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu100 $ 967 room=.
+-> w
+T 530 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 99 $ 967 room=.
+-> l
+T 531 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 99 $ 967 room=.
+-> s
+T 532 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 98 $ 967 room=.
+-> s
+T 533 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 97 $ 967 room=.
+-> e
+T 534 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 46/46 MP 0/0 Hu 96 $ 967 room=.
+-> n
+T 535 mode=game_loop           Elrond the Singer(elf) F1@( 6, 3) HP 46/46 MP 0/0 Hu 95 $ 967 room=.
+-> e
+T 536 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 46/46 MP 0/0 Hu 94 $ 967 room=.
+-> n
+T 537 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 46/46 MP 0/0 Hu 93 $ 967 room=.
+-> w
+T 538 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 92 $ 967 room=.
+-> n
+T 539 mode=game_loop           Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 91 $ 967 room=.
+-> s
+T 540 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 90 $ 967 room=.
+-> l
+T 541 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 90 $ 967 room=.
+-> w
+T 542 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 89 $ 967 room=.
+-> s
+T 543 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 88 $ 967 room=.
+-> w
+T 544 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 87 $ 967 room=.
+-> s
+T 545 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 86 $ 967 room=.
+-> e
+T 546 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 85 $ 967 room=.
+-> e
+T 547 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 46/46 MP 0/0 Hu 84 $ 967 room=.
+-> e
+T 548 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 46/46 MP 0/0 Hu 83 $ 967 room=.
+-> e
+T 549 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 46/46 MP 0/0 Hu 82 $ 967 room=.
+-> n
+T 550 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 46/46 MP 0/0 Hu 81 $ 967 room=.
+-> l
+T 551 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 46/46 MP 0/0 Hu 81 $ 967 room=.
+-> w
+T 552 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 46/46 MP 0/0 Hu 80 $ 967 room=.
+-> n
+T 553 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 46/46 MP 0/0 Hu 79 $ 967 room=.
+-> w
+T 554 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 78 $ 967 room=.
+-> n
+T 555 mode=game_loop           Elrond the Singer(elf) F1@( 6, 1) HP 46/46 MP 0/0 Hu 77 $ 967 room=.
+-> s
+T 556 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 46/46 MP 0/0 Hu 76 $ 967 room=.
+-> w
+T 557 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 75 $ 967 room=.
+-> s
+T 558 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 74 $ 967 room=.
+-> s
+T 559 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 73 $ 967 room=.
+-> w
+T 560 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 72 $ 967 room=.
+-> l
+T 561 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 72 $ 967 room=.
+-> n
+T 562 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 71 $ 967 room=.
+-> n
+T 563 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 70 $ 967 room=.
+-> w
+T 564 mode=game_loop           Elrond the Singer(elf) F1@( 3, 2) HP 46/46 MP 0/0 Hu 69 $ 967 room=.
+-> e
+T 565 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 68 $ 967 room=.
+-> e
+T 566 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 67 $ 967 room=.
+-> s
+T 567 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 66 $ 967 room=.
+-> w
+T 568 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 65 $ 967 room=.
+-> s
+T 569 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 64 $ 967 room=.
+-> e
+T 570 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 63 $ 967 room=.
+-> l
+T 571 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 63 $ 967 room=.
+-> e
+T 572 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 46/46 MP 0/0 Hu 62 $ 967 room=.
+-> s
+T 573 mode=game_loop           Elrond the Singer(elf) F1@( 6, 5) HP 46/46 MP 0/0 Hu 61 $ 967 room=.
+-> s
+T 574 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 60 $ 967 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 575 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 60 $ 977 room=.
+-> back
+T 576 mode=game_loop           Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 60 $ 977 room=.
+-> e
+T 577 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 977 room=M vs Lichen(L0 HP10/10)
+-> a
+T 578 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 6) HP 45/46 MP 0/0 Hu 59 $ 977 room=M vs Lichen(L0 HP10/10)
+-> a
+T 579 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 6) HP 44/46 MP 0/0 Hu 59 $ 977 room=M vs Lichen(L0 HP6/10)
+-> a
+T 580 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 6) HP 44/46 MP 0/0 Hu 59 $ 977 room=M vs Lichen(L0 HP2/10)
+-> a
+T 581 mode=combat_mode         Elrond the Singer(elf) F1@( 7, 6) HP 43/46 MP 0/0 Hu 59 $ 977 room=M vs Lichen(L0 HP2/10)
+-> a
+T 582 mode=combat_victory      Elrond the Singer(elf) F1@( 7, 6) HP 43/46 MP 0/0 Hu 59 $ 982 room=.
+-> back
+T 583 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 43/46 MP 0/0 Hu 59 $ 982 room=.
+-> i
+T 584 mode=inventory           Elrond the Singer(elf) F1@( 7, 6) HP 43/46 MP 0/0 Hu 59 $ 982 room=.
+-> u5
+T 585 mode=inventory           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 982 room=.
+-> x
+T 586 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 982 room=.
+-> i
+T 587 mode=inventory           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 982 room=.
+-> e1
+T 588 mode=inventory           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 982 room=.
+-> x
+T 589 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 59 $ 982 room=.
+-> s
+T 590 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 58 $ 982 room=.
+-> l
+T 591 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 58 $ 982 room=.
+-> s
+T 592 mode=game_loop           Elrond the Singer(elf) F1@( 7, 8) HP 46/46 MP 0/0 Hu 57 $ 982 room=.
+-> e
+T 593 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 8) HP 46/46 MP 0/0 Hu 56 $ 982 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 594 mode=combat_victory      Elrond the Singer(elf) F1@( 8, 8) HP 46/46 MP 0/0 Hu 56 $ 991 room=.
+-> back
+T 595 mode=game_loop           Elrond the Singer(elf) F1@( 8, 8) HP 46/46 MP 0/0 Hu 56 $ 991 room=.
+-> e
+T 596 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 46/46 MP 0/0 Hu 55 $ 991 room=.
+-> e
+T 597 mode=game_loop           Elrond the Singer(elf) F1@(10, 8) HP 46/46 MP 0/0 Hu 54 $ 991 room=.
+-> e
+T 598 mode=game_loop           Elrond the Singer(elf) F1@(11, 8) HP 46/46 MP 0/0 Hu 53 $ 991 room=.
+-> s
+T 599 mode=game_loop           Elrond the Singer(elf) F1@(11, 9) HP 46/46 MP 0/0 Hu 52 $ 991 room=.
+-> w
+T 600 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 51 $ 991 room=.
+-> l
+T 601 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 51 $ 991 room=.
+-> s
+T 602 mode=game_loop           Elrond the Singer(elf) F1@(10,10) HP 46/46 MP 0/0 Hu 50 $ 991 room=.
+-> w
+T 603 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 49 $ 991 room=.
+-> i
+T 604 mode=inventory           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 49 $ 991 room=.
+-> eat1
+T 605 mode=inventory           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 99 $ 991 room=.
+-> x
+T 606 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 99 $ 991 room=.
+-> n
+T 607 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 46/46 MP 0/0 Hu 98 $ 991 room=.
+-> n
+T 608 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 46/46 MP 0/0 Hu 97 $ 991 room=.
+-> e
+T 609 mode=game_loop           Elrond the Singer(elf) F1@(10, 8) HP 46/46 MP 0/0 Hu 96 $ 991 room=.
+-> e
+T 610 mode=game_loop           Elrond the Singer(elf) F1@(11, 8) HP 46/46 MP 0/0 Hu 95 $ 991 room=.
+-> l
+T 611 mode=game_loop           Elrond the Singer(elf) F1@(11, 8) HP 46/46 MP 0/0 Hu 95 $ 991 room=.
+-> s
+T 612 mode=game_loop           Elrond the Singer(elf) F1@(11, 9) HP 46/46 MP 0/0 Hu 94 $ 991 room=.
+-> w
+T 613 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 93 $ 991 room=.
+-> w
+T 614 mode=game_loop           Elrond the Singer(elf) F1@( 9, 9) HP 46/46 MP 0/0 Hu 92 $ 991 room=.
+-> w
+T 615 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 9) HP 46/46 MP 0/0 Hu 91 $ 991 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 616 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 9) HP 46/46 MP 0/0 Hu 91 $ 991 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 617 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 9) HP 46/46 MP 0/0 Hu 91 $ 991 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 618 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 9) HP 46/46 MP 0/0 Hu 91 $ 991 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 619 mode=combat_victory      Elrond the Singer(elf) F1@( 8, 9) HP 45/46 MP 0/0 Hu 91 $ 994 room=.
+-> back
+T 620 mode=game_loop           Elrond the Singer(elf) F1@( 8, 9) HP 45/46 MP 0/0 Hu 91 $ 994 room=.
+-> l
+T 621 mode=game_loop           Elrond the Singer(elf) F1@( 8, 9) HP 45/46 MP 0/0 Hu 91 $ 994 room=.
+-> s
+T 622 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 45/46 MP 0/0 Hu 90 $ 994 room=.
+-> e
+T 623 mode=game_loop           Elrond the Singer(elf) F1@( 9,10) HP 46/46 MP 0/0 Hu 89 $ 994 room=.
+-> e
+T 624 mode=game_loop           Elrond the Singer(elf) F1@(10,10) HP 46/46 MP 0/0 Hu 88 $ 994 room=.
+-> n
+T 625 mode=game_loop           Elrond the Singer(elf) F1@(10, 9) HP 46/46 MP 0/0 Hu 87 $ 994 room=.
+-> e
+T 626 mode=game_loop           Elrond the Singer(elf) F1@(11, 9) HP 46/46 MP 0/0 Hu 86 $ 994 room=.
+-> n
+T 627 mode=game_loop           Elrond the Singer(elf) F1@(11, 8) HP 46/46 MP 0/0 Hu 85 $ 994 room=.
+-> w
+T 628 mode=game_loop           Elrond the Singer(elf) F1@(10, 8) HP 46/46 MP 0/0 Hu 84 $ 994 room=.
+-> w
+T 629 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 46/46 MP 0/0 Hu 83 $ 994 room=.
+-> n
+T 630 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 46/46 MP 0/0 Hu 82 $ 994 room=.
+-> l
+T 631 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 46/46 MP 0/0 Hu 82 $ 994 room=.
+-> w
+T 632 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 46/46 MP 0/0 Hu 81 $ 994 room=.
+-> w
+T 633 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 80 $ 994 room=.
+-> w
+T 634 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 46/46 MP 0/0 Hu 79 $ 994 room=.
+-> s
+T 635 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 8) HP 46/46 MP 0/0 Hu 78 $ 994 room=M vs Kobold(L0 HP20/20)
+-> f
+T 636 mode=flee_direction_mode Elrond the Singer(elf) F1@( 6, 8) HP 46/46 MP 0/0 Hu 78 $ 994 room=M
+-> s
+T 637 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 46/46 MP 0/0 Hu 78 $ 994 room=.
+-> s
+T 638 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 46/46 MP 0/0 Hu 77 $ 994 room=.
+-> s
+T 639 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu 76 $ 994 room=.
+-> w
+T 640 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 46/46 MP 0/0 Hu 75 $ 994 room=.
+-> l
+T 641 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 46/46 MP 0/0 Hu 75 $ 994 room=.
+-> s
+T 642 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 46/46 MP 0/0 Hu 74 $ 994 room=.
+-> e
+T 643 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 73 $ 994 room=.
+-> s
+T 644 mode=game_loop           Elrond the Singer(elf) F1@( 6,13) HP 46/46 MP 0/0 Hu 72 $ 994 room=.
+-> s
+T 645 mode=game_loop           Elrond the Singer(elf) F1@( 6,14) HP 46/46 MP 0/0 Hu 71 $ 994 room=.
+-> s
+T 646 mode=combat_mode         Elrond the Singer(elf) F1@( 6,15) HP 46/46 MP 0/0 Hu 70 $ 994 room=M vs Bat(L0 HP12/12)
+-> a
+T 647 mode=combat_victory      Elrond the Singer(elf) F1@( 6,15) HP 46/46 MP 0/0 Hu 70 $ 997 room=.
+-> back
+T 648 mode=game_loop           Elrond the Singer(elf) F1@( 6,15) HP 46/46 MP 0/0 Hu 70 $ 997 room=.
+-> w
+T 649 mode=game_loop           Elrond the Singer(elf) F1@( 5,15) HP 46/46 MP 0/0 Hu 69 $ 997 room=.
+-> n
+T 650 mode=game_loop           Elrond the Singer(elf) F1@( 5,14) HP 46/46 MP 0/0 Hu 68 $ 997 room=.
+-> l
+T 651 mode=game_loop           Elrond the Singer(elf) F1@( 5,14) HP 46/46 MP 0/0 Hu 68 $ 997 room=.
+-> n
+T 652 mode=game_loop           Elrond the Singer(elf) F1@( 5,13) HP 46/46 MP 0/0 Hu 67 $ 997 room=.
+-> n
+T 653 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 46/46 MP 0/0 Hu 66 $ 997 room=.
+-> e
+T 654 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 46/46 MP 0/0 Hu 65 $ 997 room=.
+-> e
+T 655 mode=game_loop           Elrond the Singer(elf) F1@( 7,12) HP 46/46 MP 0/0 Hu 64 $ 997 room=.
+-> n
+T 656 mode=game_loop           Elrond the Singer(elf) F1@( 7,11) HP 46/46 MP 0/0 Hu 63 $ 997 room=.
+-> w
+T 657 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 46/46 MP 0/0 Hu 62 $ 997 room=.
+-> n
+T 658 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 46/46 MP 0/0 Hu 61 $ 997 room=.
+-> w
+T 659 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu 60 $ 997 room=.
+-> i
+T 660 mode=inventory           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu 60 $ 997 room=.
+-> eat2
+T 661 mode=inventory           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu 65 $ 997 room=.
+-> eat1
+T 662 mode=inventory           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu100 $ 997 room=.
+-> x
+T 663 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 46/46 MP 0/0 Hu100 $ 997 room=.
+-> n
+T 664 mode=game_loop           Elrond the Singer(elf) F1@( 5, 9) HP 46/46 MP 0/0 Hu 99 $ 997 room=.
+-> n
+T 665 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 46/46 MP 0/0 Hu 98 $ 997 room=.
+-> n
+T 666 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 97 $ 997 room=.
+-> w
+T 667 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 96 $ 997 room=.
+-> n
+T 668 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 95 $ 997 room=.
+-> e
+T 669 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 94 $ 997 room=.
+-> n
+T 670 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 46/46 MP 0/0 Hu 93 $ 997 room=.
+-> l
+T 671 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 46/46 MP 0/0 Hu 93 $ 997 room=.
+-> n
+T 672 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 92 $ 997 room=.
+-> w
+T 673 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 91 $ 997 room=.
+-> n
+T 674 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 90 $ 997 room=.
+-> n
+T 675 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 89 $ 997 room=.
+-> w
+T 676 mode=game_loop           Elrond the Singer(elf) F1@( 3, 2) HP 46/46 MP 0/0 Hu 88 $ 997 room=.
+-> e
+T 677 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 46/46 MP 0/0 Hu 87 $ 997 room=.
+-> e
+T 678 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 46/46 MP 0/0 Hu 86 $ 997 room=.
+-> s
+T 679 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 46/46 MP 0/0 Hu 85 $ 997 room=.
+-> w
+T 680 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 84 $ 997 room=.
+-> l
+T 681 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 46/46 MP 0/0 Hu 84 $ 997 room=.
+-> s
+T 682 mode=game_loop           Elrond the Singer(elf) F1@( 4, 4) HP 46/46 MP 0/0 Hu 83 $ 997 room=.
+-> e
+T 683 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 46/46 MP 0/0 Hu 82 $ 997 room=.
+-> s
+T 684 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 46/46 MP 0/0 Hu 81 $ 997 room=.
+-> s
+T 685 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 80 $ 997 room=.
+-> s
+T 686 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 79 $ 997 room=.
+-> w
+T 687 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 78 $ 997 room=.
+-> w
+T 688 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 77 $ 997 room=.
+-> s
+T 689 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 46/46 MP 0/0 Hu 76 $ 997 room=.
+-> e
+T 690 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 46/46 MP 0/0 Hu 75 $ 997 room=V
+-> l
+T 691 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 46/46 MP 0/0 Hu 75 $ 997 room=V
+-> e
+T 692 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 46/46 MP 0/0 Hu 74 $ 997 room=.
+-> n
+T 693 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 46/46 MP 0/0 Hu 73 $ 997 room=.
+-> w
+T 694 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 72 $ 997 room=.
+-> n
+T 695 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 71 $ 997 room=.
+-> w
+T 696 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 46/46 MP 0/0 Hu 70 $ 997 room=.
+-> s
+T 697 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 69 $ 997 room=.
+-> s
+T 698 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 46/46 MP 0/0 Hu 68 $ 997 room=.
+-> e
+T 699 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 46/46 MP 0/0 Hu 67 $ 997 room=V
+-> n
+T 700 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 66 $ 997 room=.
+-> l
+T 701 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 46/46 MP 0/0 Hu 66 $ 997 room=.
+-> n
+T 702 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/46 MP 0/0 Hu 65 $ 997 room=.
+-> e
+T 703 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/46 MP 0/0 Hu 64 $ 997 room=.
+-> n
+T 704 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 46/46 MP 0/0 Hu 63 $ 997 room=.
+-> e
+T 705 mode=game_loop           Elrond the Singer(elf) F1@( 6, 5) HP 46/46 MP 0/0 Hu 62 $ 997 room=.
+-> n
+T 706 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 46/46 MP 0/0 Hu 61 $ 997 room=.
+-> e
+T 707 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 46/46 MP 0/0 Hu 60 $ 997 room=.
+-> e
+T 708 mode=game_loop           Elrond the Singer(elf) F1@( 8, 4) HP 46/46 MP 0/0 Hu 59 $ 997 room=.
+-> e
+T 709 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 46/46 MP 0/0 Hu 58 $ 997 room=.
+-> n
+T 710 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 46/46 MP 0/0 Hu 57 $ 997 room=.
+-> l
+T 711 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 46/46 MP 0/0 Hu 57 $ 997 room=.
+-> w
+T 712 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 46/46 MP 0/0 Hu 56 $ 997 room=.
+-> w
+T 713 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 46/46 MP 0/0 Hu 55 $ 997 room=.
+-> s
+T 714 mode=game_loop           Elrond the Singer(elf) F1@( 7, 4) HP 46/46 MP 0/0 Hu 54 $ 997 room=.
+-> w
+T 715 mode=game_loop           Elrond the Singer(elf) F1@( 6, 4) HP 46/46 MP 0/0 Hu 53 $ 997 room=.
+-> s
+T 716 mode=game_loop           Elrond the Singer(elf) F1@( 6, 5) HP 46/46 MP 0/0 Hu 52 $ 997 room=.
+-> e
+T 717 mode=game_loop           Elrond the Singer(elf) F1@( 7, 5) HP 46/46 MP 0/0 Hu 51 $ 997 room=.
+-> s
+T 718 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 46/46 MP 0/0 Hu 50 $ 997 room=.
+-> w
+T 719 mode=game_loop           Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 49 $ 997 room=.
+-> i
+T 720 mode=inventory           Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 49 $ 997 room=.
+-> eat1
+T 721 mode=inventory           Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 99 $ 997 room=.
+-> x
+T 722 mode=game_loop           Elrond the Singer(elf) F1@( 6, 6) HP 46/46 MP 0/0 Hu 99 $ 997 room=.
+-> s
+T 723 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 46/46 MP 0/0 Hu 98 $ 997 room=.
+-> e
+T 724 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 46/46 MP 0/0 Hu 97 $ 997 room=.
+-> s
+T 725 mode=game_loop           Elrond the Singer(elf) F1@( 7, 8) HP 46/46 MP 0/0 Hu 96 $ 997 room=.
+-> s
+T 726 mode=game_loop           Elrond the Singer(elf) F1@( 7, 9) HP 46/46 MP 0/0 Hu 95 $ 997 room=.
+-> s
+T 727 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 46/46 MP 0/0 Hu 94 $ 997 room=.
+-> s
+T 728 mode=game_loop           Elrond the Singer(elf) F1@( 7,11) HP 46/46 MP 0/0 Hu 93 $ 997 room=.
+-> e
+T 729 mode=game_loop           Elrond the Singer(elf) F1@( 8,11) HP 46/46 MP 0/0 Hu 92 $ 997 room=.
+-> n
+T 730 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 46/46 MP 0/0 Hu 91 $ 997 room=.
+-> l
+T 731 mode=game_loop           Elrond the Singer(elf) F1@( 8,10) HP 46/46 MP 0/0 Hu 91 $ 997 room=.
+-> n
+T 732 mode=game_loop           Elrond the Singer(elf) F1@( 8, 9) HP 46/46 MP 0/0 Hu 90 $ 997 room=.
+-> w
+T 733 mode=game_loop           Elrond the Singer(elf) F1@( 7, 9) HP 46/46 MP 0/0 Hu 89 $ 997 room=.
+-> w
+T 734 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 46/46 MP 0/0 Hu 88 $ 997 room=.
+-> n
+T 735 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 8) HP 46/46 MP 0/0 Hu 87 $ 997 room=M vs Kobold(L0 HP20/20)
+-> a
+T 736 mode=combat_mode         Elrond the Singer(elf) F1@( 6, 8) HP 45/46 MP 0/0 Hu 87 $ 997 room=M vs Kobold(L0 HP20/20)
+-> a
+T 737 mode=combat_victory      Elrond the Singer(elf) F1@( 6, 8) HP 44/46 MP 0/0 Hu 87 $ 999 room=.
+-> back
+T 738 mode=game_loop           Elrond the Singer(elf) F1@( 6, 8) HP 44/46 MP 0/0 Hu 87 $ 999 room=.
+-> w
+T 739 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 44/46 MP 0/0 Hu 86 $ 999 room=.
+-> n
+T 740 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 45/46 MP 0/0 Hu 85 $ 999 room=.
+-> l
+T 741 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 45/46 MP 0/0 Hu 85 $ 999 room=.
+-> n
+T 742 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 45/46 MP 0/0 Hu 84 $ 999 room=.
+-> w
+T 743 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 45/46 MP 0/0 Hu 83 $ 999 room=.
+-> s
+T 744 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 45/46 MP 0/0 Hu 82 $ 999 room=.
+-> w
+T 745 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 46/46 MP 0/0 Hu 81 $ 999 room=.
+-> n
+T 746 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 46/46 MP 0/0 Hu 80 $ 999 room=.
+-> w
+T 747 mode=game_loop           Elrond the Singer(elf) F1@( 2, 6) HP 46/46 MP 0/0 Hu 79 $ 999 room=.
+-> s
+T 748 mode=game_loop           Elrond the Singer(elf) F1@( 2, 7) HP 46/46 MP 0/0 Hu 78 $ 999 room=.
+-> w
+T 749 mode=game_loop           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 77 $ 999 room=.
+-> i
+T 750 mode=inventory           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 77 $ 999 room=.
+-> eat2
+T 751 mode=inventory           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 82 $ 999 room=.
+-> x
+T 752 mode=game_loop           Elrond the Singer(elf) F1@( 1, 7) HP 46/46 MP 0/0 Hu 82 $ 999 room=.
+-> n
+T 753 mode=game_loop           Elrond the Singer(elf) F1@( 1, 6) HP 46/46 MP 0/0 Hu 81 $ 999 room=.
+-> n
+T 754 mode=combat_mode         Elrond the Singer(elf) F1@( 1, 5) HP 46/46 MP 0/0 Hu 80 $ 999 room=M vs Kobold(L0 HP20/20)
+-> a
+T 755 mode=combat_mode         Elrond the Singer(elf) F1@( 1, 5) HP 45/46 MP 0/0 Hu 80 $ 999 room=M vs Kobold(L0 HP20/20)
+-> a
+T 756 mode=combat_victory      Elrond the Singer(elf) F1@( 1, 5) HP 45/56 MP 0/0 Hu 80 $ 1253 room=.
+-> back
+T 757 mode=game_loop           Elrond the Singer(elf) F1@( 1, 5) HP 45/56 MP 0/0 Hu 80 $ 1253 room=.
+-> e
+T 758 mode=game_loop           Elrond the Singer(elf) F1@( 2, 5) HP 45/56 MP 0/0 Hu 79 $ 1253 room=.
+-> s
+T 759 mode=game_loop           Elrond the Singer(elf) F1@( 2, 6) HP 45/56 MP 0/0 Hu 78 $ 1253 room=.
+-> e
+T 760 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 45/56 MP 0/0 Hu 77 $ 1253 room=.
+-> l
+T 761 mode=game_loop           Elrond the Singer(elf) F1@( 3, 6) HP 45/56 MP 0/0 Hu 77 $ 1253 room=.
+-> e
+T 762 mode=game_loop           Elrond the Singer(elf) F1@( 4, 6) HP 46/56 MP 0/0 Hu 76 $ 1253 room=.
+-> e
+T 763 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 46/56 MP 0/0 Hu 75 $ 1253 room=.
+-> e
+T 764 mode=game_loop           Elrond the Singer(elf) F1@( 6, 6) HP 46/56 MP 0/0 Hu 74 $ 1253 room=.
+-> e
+T 765 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 46/56 MP 0/0 Hu 73 $ 1253 room=.
+-> e
+T 766 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP12/12)
+-> a
+T 767 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP12/12)
+-> a
+T 768 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP12/12)
+-> a
+T 769 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP12/12)
+-> a
+T 770 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP9/12)
+-> a
+T 771 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP9/12)
+-> a
+T 772 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP6/12)
+-> a
+T 773 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 47/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP3/12)
+-> a
+T 774 mode=combat_mode         Elrond the Singer(elf) F1@( 8, 6) HP 46/56 MP 0/0 Hu 72 $ 1253 room=M vs Goblin(L0 HP3/12)
+-> a
+T 775 mode=combat_victory      Elrond the Singer(elf) F1@( 8, 6) HP 45/56 MP 0/0 Hu 72 $ 1256 room=.
+-> back
+T 776 mode=game_loop           Elrond the Singer(elf) F1@( 8, 6) HP 45/56 MP 0/0 Hu 72 $ 1256 room=.
+-> e
+T 777 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 45/56 MP 0/0 Hu 71 $ 1256 room=.
+-> s
+T 778 mode=game_loop           Elrond the Singer(elf) F1@( 9, 7) HP 45/56 MP 0/0 Hu 70 $ 1256 room=.
+-> e
+T 779 mode=game_loop           Elrond the Singer(elf) F1@(10, 7) HP 45/56 MP 0/0 Hu 69 $ 1256 room=.
+-> e
+T 780 mode=game_loop           Elrond the Singer(elf) F1@(11, 7) HP 46/56 MP 0/0 Hu 68 $ 1256 room=.
+-> l
+T 781 mode=game_loop           Elrond the Singer(elf) F1@(11, 7) HP 46/56 MP 0/0 Hu 68 $ 1256 room=.
+-> n
+T 782 mode=game_loop           Elrond the Singer(elf) F1@(11, 6) HP 46/56 MP 0/0 Hu 67 $ 1256 room=.
+-> n
+T 783 mode=game_loop           Elrond the Singer(elf) F1@(11, 5) HP 46/56 MP 0/0 Hu 66 $ 1256 room=.
+-> e
+T 784 mode=game_loop           Elrond the Singer(elf) F1@(12, 5) HP 46/56 MP 0/0 Hu 65 $ 1256 room=.
+-> s
+T 785 mode=game_loop           Elrond the Singer(elf) F1@(12, 6) HP 47/56 MP 0/0 Hu 64 $ 1256 room=.
+-> s
+T 786 mode=game_loop           Elrond the Singer(elf) F1@(12, 7) HP 47/56 MP 0/0 Hu 63 $ 1256 room=.
+-> e
+T 787 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 47/56 MP 0/0 Hu 62 $ 1256 room=.
+-> i
+T 788 mode=inventory           Elrond the Singer(elf) F1@(13, 7) HP 47/56 MP 0/0 Hu 62 $ 1256 room=.
+-> u5
+T 789 mode=inventory           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 62 $ 1256 room=.
+-> x
+T 790 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 62 $ 1256 room=.
+-> i
+T 791 mode=inventory           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 62 $ 1256 room=.
+-> eat2
+T 792 mode=inventory           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 67 $ 1256 room=.
+-> eat1
+T 793 mode=inventory           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu100 $ 1256 room=.
+-> x
+T 794 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu100 $ 1256 room=.
+-> s
+T 795 mode=game_loop           Elrond the Singer(elf) F1@(13, 8) HP 56/56 MP 0/0 Hu 99 $ 1256 room=.
+-> n
+T 796 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 98 $ 1256 room=.
+-> e
+T 797 mode=game_loop           Elrond the Singer(elf) F1@(14, 7) HP 56/56 MP 0/0 Hu 97 $ 1256 room=.
+-> n
+T 798 mode=game_loop           Elrond the Singer(elf) F1@(14, 6) HP 56/56 MP 0/0 Hu 96 $ 1256 room=.
+-> w
+T 799 mode=game_loop           Elrond the Singer(elf) F1@(13, 6) HP 56/56 MP 0/0 Hu 95 $ 1256 room=N
+-> n
+T 800 mode=game_loop           Elrond the Singer(elf) F1@(13, 5) HP 56/56 MP 0/0 Hu 94 $ 1256 room=.
+-> l
+T 801 mode=game_loop           Elrond the Singer(elf) F1@(13, 5) HP 56/56 MP 0/0 Hu 94 $ 1256 room=.
+-> w
+T 802 mode=game_loop           Elrond the Singer(elf) F1@(12, 5) HP 56/56 MP 0/0 Hu 93 $ 1256 room=.
+-> s
+T 803 mode=game_loop           Elrond the Singer(elf) F1@(12, 6) HP 56/56 MP 0/0 Hu 92 $ 1256 room=.
+-> w
+T 804 mode=game_loop           Elrond the Singer(elf) F1@(11, 6) HP 56/56 MP 0/0 Hu 91 $ 1256 room=.
+-> w
+T 805 mode=game_loop           Elrond the Singer(elf) F1@(10, 6) HP 56/56 MP 0/0 Hu 90 $ 1256 room=.
+-> s
+T 806 mode=game_loop           Elrond the Singer(elf) F1@(10, 7) HP 56/56 MP 0/0 Hu 89 $ 1256 room=.
+-> s
+T 807 mode=game_loop           Elrond the Singer(elf) F1@(10, 8) HP 56/56 MP 0/0 Hu 88 $ 1256 room=.
+-> w
+T 808 mode=game_loop           Elrond the Singer(elf) F1@( 9, 8) HP 56/56 MP 0/0 Hu 87 $ 1256 room=.
+-> w
+T 809 mode=game_loop           Elrond the Singer(elf) F1@( 8, 8) HP 56/56 MP 0/0 Hu 86 $ 1256 room=.
+-> n
+T 810 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 85 $ 1256 room=.
+-> l
+T 811 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 85 $ 1256 room=.
+-> w
+T 812 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 56/56 MP 0/0 Hu 84 $ 1256 room=.
+-> w
+T 813 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 56/56 MP 0/0 Hu 83 $ 1256 room=.
+-> w
+T 814 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 56/56 MP 0/0 Hu 82 $ 1256 room=.
+-> s
+T 815 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 56/56 MP 0/0 Hu 81 $ 1256 room=.
+-> e
+T 816 mode=game_loop           Elrond the Singer(elf) F1@( 6, 8) HP 56/56 MP 0/0 Hu 80 $ 1256 room=.
+-> e
+T 817 mode=game_loop           Elrond the Singer(elf) F1@( 7, 8) HP 56/56 MP 0/0 Hu 79 $ 1256 room=.
+-> s
+T 818 mode=game_loop           Elrond the Singer(elf) F1@( 7, 9) HP 56/56 MP 0/0 Hu 78 $ 1256 room=.
+-> w
+T 819 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 56/56 MP 0/0 Hu 77 $ 1256 room=.
+-> w
+T 820 mode=game_loop           Elrond the Singer(elf) F1@( 5, 9) HP 56/56 MP 0/0 Hu 76 $ 1256 room=.
+-> l
+T 821 mode=game_loop           Elrond the Singer(elf) F1@( 5, 9) HP 56/56 MP 0/0 Hu 76 $ 1256 room=.
+-> s
+T 822 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 56/56 MP 0/0 Hu 75 $ 1256 room=.
+-> w
+T 823 mode=game_loop           Elrond the Singer(elf) F1@( 4,10) HP 56/56 MP 0/0 Hu 74 $ 1256 room=.
+-> s
+T 824 mode=game_loop           Elrond the Singer(elf) F1@( 4,11) HP 56/56 MP 0/0 Hu 73 $ 1256 room=.
+-> e
+T 825 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 56/56 MP 0/0 Hu 72 $ 1256 room=.
+-> s
+T 826 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 56/56 MP 0/0 Hu 71 $ 1256 room=.
+-> e
+T 827 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 56/56 MP 0/0 Hu 70 $ 1256 room=.
+-> n
+T 828 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 56/56 MP 0/0 Hu 69 $ 1256 room=.
+-> n
+T 829 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 56/56 MP 0/0 Hu 68 $ 1256 room=.
+-> w
+T 830 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 56/56 MP 0/0 Hu 67 $ 1256 room=.
+-> l
+T 831 mode=game_loop           Elrond the Singer(elf) F1@( 5,10) HP 56/56 MP 0/0 Hu 67 $ 1256 room=.
+-> s
+T 832 mode=game_loop           Elrond the Singer(elf) F1@( 5,11) HP 56/56 MP 0/0 Hu 66 $ 1256 room=.
+-> s
+T 833 mode=game_loop           Elrond the Singer(elf) F1@( 5,12) HP 56/56 MP 0/0 Hu 65 $ 1256 room=.
+-> e
+T 834 mode=game_loop           Elrond the Singer(elf) F1@( 6,12) HP 56/56 MP 0/0 Hu 64 $ 1256 room=.
+-> n
+T 835 mode=game_loop           Elrond the Singer(elf) F1@( 6,11) HP 56/56 MP 0/0 Hu 63 $ 1256 room=.
+-> n
+T 836 mode=game_loop           Elrond the Singer(elf) F1@( 6,10) HP 56/56 MP 0/0 Hu 62 $ 1256 room=.
+-> e
+T 837 mode=game_loop           Elrond the Singer(elf) F1@( 7,10) HP 56/56 MP 0/0 Hu 61 $ 1256 room=.
+-> n
+T 838 mode=game_loop           Elrond the Singer(elf) F1@( 7, 9) HP 56/56 MP 0/0 Hu 60 $ 1256 room=.
+-> n
+T 839 mode=game_loop           Elrond the Singer(elf) F1@( 7, 8) HP 56/56 MP 0/0 Hu 59 $ 1256 room=.
+-> w
+T 840 mode=game_loop           Elrond the Singer(elf) F1@( 6, 8) HP 56/56 MP 0/0 Hu 58 $ 1256 room=.
+-> l
+T 841 mode=game_loop           Elrond the Singer(elf) F1@( 6, 8) HP 56/56 MP 0/0 Hu 58 $ 1256 room=.
+-> s
+T 842 mode=game_loop           Elrond the Singer(elf) F1@( 6, 9) HP 56/56 MP 0/0 Hu 57 $ 1256 room=.
+-> w
+T 843 mode=game_loop           Elrond the Singer(elf) F1@( 5, 9) HP 56/56 MP 0/0 Hu 56 $ 1256 room=.
+-> n
+T 844 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 56/56 MP 0/0 Hu 55 $ 1256 room=.
+-> n
+T 845 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 56/56 MP 0/0 Hu 54 $ 1256 room=.
+-> e
+T 846 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 56/56 MP 0/0 Hu 53 $ 1256 room=.
+-> n
+T 847 mode=game_loop           Elrond the Singer(elf) F1@( 6, 6) HP 56/56 MP 0/0 Hu 52 $ 1256 room=.
+-> e
+T 848 mode=game_loop           Elrond the Singer(elf) F1@( 7, 6) HP 56/56 MP 0/0 Hu 51 $ 1256 room=.
+-> e
+T 849 mode=game_loop           Elrond the Singer(elf) F1@( 8, 6) HP 56/56 MP 0/0 Hu 50 $ 1256 room=.
+-> s
+T 850 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 49 $ 1256 room=.
+-> i
+T 851 mode=inventory           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 49 $ 1256 room=.
+-> eat1
+T 852 mode=inventory           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 99 $ 1256 room=.
+-> x
+T 853 mode=game_loop           Elrond the Singer(elf) F1@( 8, 7) HP 56/56 MP 0/0 Hu 99 $ 1256 room=.
+-> w
+T 854 mode=game_loop           Elrond the Singer(elf) F1@( 7, 7) HP 56/56 MP 0/0 Hu 98 $ 1256 room=.
+-> w
+T 855 mode=game_loop           Elrond the Singer(elf) F1@( 6, 7) HP 56/56 MP 0/0 Hu 97 $ 1256 room=.
+-> w
+T 856 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 56/56 MP 0/0 Hu 96 $ 1256 room=.
+-> w
+T 857 mode=game_loop           Elrond the Singer(elf) F1@( 4, 7) HP 56/56 MP 0/0 Hu 95 $ 1256 room=.
+-> w
+T 858 mode=game_loop           Elrond the Singer(elf) F1@( 3, 7) HP 56/56 MP 0/0 Hu 94 $ 1256 room=.
+-> s
+T 859 mode=game_loop           Elrond the Singer(elf) F1@( 3, 8) HP 56/56 MP 0/0 Hu 93 $ 1256 room=.
+-> e
+T 860 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 56/56 MP 0/0 Hu 92 $ 1256 room=V
+-> l
+T 861 mode=game_loop           Elrond the Singer(elf) F1@( 4, 8) HP 56/56 MP 0/0 Hu 92 $ 1256 room=V
+-> e
+T 862 mode=game_loop           Elrond the Singer(elf) F1@( 5, 8) HP 56/56 MP 0/0 Hu 91 $ 1256 room=.
+-> n
+T 863 mode=game_loop           Elrond the Singer(elf) F1@( 5, 7) HP 56/56 MP 0/0 Hu 90 $ 1256 room=.
+-> n
+T 864 mode=game_loop           Elrond the Singer(elf) F1@( 5, 6) HP 56/56 MP 0/0 Hu 89 $ 1256 room=.
+-> n
+T 865 mode=game_loop           Elrond the Singer(elf) F1@( 5, 5) HP 56/56 MP 0/0 Hu 88 $ 1256 room=.
+-> n
+T 866 mode=game_loop           Elrond the Singer(elf) F1@( 5, 4) HP 56/56 MP 0/0 Hu 87 $ 1256 room=.
+-> n
+T 867 mode=game_loop           Elrond the Singer(elf) F1@( 5, 3) HP 56/56 MP 0/0 Hu 86 $ 1256 room=.
+-> w
+T 868 mode=game_loop           Elrond the Singer(elf) F1@( 4, 3) HP 56/56 MP 0/0 Hu 85 $ 1256 room=.
+-> n
+T 869 mode=game_loop           Elrond the Singer(elf) F1@( 4, 2) HP 56/56 MP 0/0 Hu 84 $ 1256 room=.
+-> e
+T 870 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 56/56 MP 0/0 Hu 83 $ 1256 room=.
+-> l
+T 871 mode=game_loop           Elrond the Singer(elf) F1@( 5, 2) HP 56/56 MP 0/0 Hu 83 $ 1256 room=.
+-> e
+T 872 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 56/56 MP 0/0 Hu 82 $ 1256 room=.
+-> n
+T 873 mode=game_loop           Elrond the Singer(elf) F1@( 6, 1) HP 56/56 MP 0/0 Hu 81 $ 1256 room=.
+-> s
+T 874 mode=game_loop           Elrond the Singer(elf) F1@( 6, 2) HP 56/56 MP 0/0 Hu 80 $ 1256 room=.
+-> e
+T 875 mode=game_loop           Elrond the Singer(elf) F1@( 7, 2) HP 56/56 MP 0/0 Hu 79 $ 1256 room=.
+-> s
+T 876 mode=game_loop           Elrond the Singer(elf) F1@( 7, 3) HP 56/56 MP 0/0 Hu 78 $ 1256 room=.
+-> e
+T 877 mode=game_loop           Elrond the Singer(elf) F1@( 8, 3) HP 56/56 MP 0/0 Hu 77 $ 1256 room=.
+-> e
+T 878 mode=game_loop           Elrond the Singer(elf) F1@( 9, 3) HP 56/56 MP 0/0 Hu 76 $ 1256 room=.
+-> s
+T 879 mode=game_loop           Elrond the Singer(elf) F1@( 9, 4) HP 56/56 MP 0/0 Hu 75 $ 1256 room=.
+-> s
+T 880 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 56/56 MP 0/0 Hu 74 $ 1256 room=.
+-> l
+T 881 mode=game_loop           Elrond the Singer(elf) F1@( 9, 5) HP 56/56 MP 0/0 Hu 74 $ 1256 room=.
+-> s
+T 882 mode=game_loop           Elrond the Singer(elf) F1@( 9, 6) HP 56/56 MP 0/0 Hu 73 $ 1256 room=.
+-> e
+T 883 mode=game_loop           Elrond the Singer(elf) F1@(10, 6) HP 56/56 MP 0/0 Hu 72 $ 1256 room=.
+-> e
+T 884 mode=game_loop           Elrond the Singer(elf) F1@(11, 6) HP 56/56 MP 0/0 Hu 71 $ 1256 room=.
+-> s
+T 885 mode=game_loop           Elrond the Singer(elf) F1@(11, 7) HP 56/56 MP 0/0 Hu 70 $ 1256 room=.
+-> e
+T 886 mode=game_loop           Elrond the Singer(elf) F1@(12, 7) HP 56/56 MP 0/0 Hu 69 $ 1256 room=.
+-> e
+T 887 mode=game_loop           Elrond the Singer(elf) F1@(13, 7) HP 56/56 MP 0/0 Hu 68 $ 1256 room=.
+-> e
+T 888 mode=game_loop           Elrond the Singer(elf) F1@(14, 7) HP 56/56 MP 0/0 Hu 67 $ 1256 room=.
+-> e
+T 889 mode=warp_mode           Elrond the Singer(elf) F1@(15, 7) HP 56/56 MP 0/0 Hu 66 $ 1256 room=W
+-> y
+T 890 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 56/56 MP 0/0 Hu 66 $ 1256 room=.
+-> l
+T 891 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 56/56 MP 0/0 Hu 66 $ 1256 room=.
+-> e
+T 892 mode=chest_mode          Elrond the Singer(elf) F3@( 8, 8) HP 56/56 MP 0/0 Hu 65 $ 1256 room=C
+-> n
+T 893 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 56/56 MP 0/0 Hu 64 $ 1256 room=.
+-> l
+T 894 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 56/56 MP 0/0 Hu 64 $ 1256 room=.
+-> s
+T 895 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 56/56 MP 0/0 Hu 63 $ 1256 room=C
+-> e
+T 896 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 1256 room=V
+-> r2
+T 897 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 1058 room=V
+-> r3
+T 898 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 1012 room=V
+-> b14
+T 899 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 1002 room=V
+-> b6
+T 900 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 972 room=V
+-> b6
+T 901 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 942 room=V
+-> b6
+T 902 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 912 room=V
+-> b6
+T 903 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 882 room=V
+-> b6
+T 904 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 852 room=V
+-> b9
+T 905 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 847 room=V
+-> b9
+T 906 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 842 room=V
+-> b9
+T 907 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 837 room=V
+-> b6
+T 908 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 687 room=V
+-> b3
+T 909 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 597 room=V
+-> b3
+T 910 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 527 room=V
+-> b1
+T 911 mode=vendor_shop         Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> x
+T 912 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> i
+T 913 mode=inventory           Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> e1
+T 914 mode=inventory           Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> x
+T 915 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> l
+T 916 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 56/56 MP 0/0 Hu 62 $ 247 room=V
+-> s
+T 917 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 56/56 MP 0/0 Hu 61 $ 247 room=.
+-> l
+T 918 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 56/56 MP 0/0 Hu 61 $ 247 room=.
+-> s
+T 919 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 56/56 MP 0/0 Hu 60 $ 247 room=.
+-> l
+T 920 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 56/56 MP 0/0 Hu 60 $ 247 room=.
+-> s
+T 921 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 56/56 MP 0/0 Hu 59 $ 247 room=.
+-> l
+T 922 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 56/56 MP 0/0 Hu 59 $ 247 room=.
+-> s
+T 923 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 56/56 MP 0/0 Hu 58 $ 247 room=.
+-> l
+T 924 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 56/56 MP 0/0 Hu 58 $ 247 room=.
+-> e
+T 925 mode=game_loop           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 57 $ 247 room=.
+-> e
+T 926 mode=game_loop           Elrond the Singer(elf) F3@(11,12) HP 56/56 MP 0/0 Hu 56 $ 247 room=.
+-> l
+T 927 mode=game_loop           Elrond the Singer(elf) F3@(11,12) HP 56/56 MP 0/0 Hu 56 $ 247 room=.
+-> s
+T 928 mode=game_loop           Elrond the Singer(elf) F3@(11,13) HP 56/56 MP 0/0 Hu 55 $ 247 room=.
+-> l
+T 929 mode=game_loop           Elrond the Singer(elf) F3@(11,13) HP 56/56 MP 0/0 Hu 55 $ 247 room=.
+-> e
+T 930 mode=game_loop           Elrond the Singer(elf) F3@(12,13) HP 56/56 MP 0/0 Hu 54 $ 247 room=.
+-> n
+T 931 mode=game_loop           Elrond the Singer(elf) F3@(12,12) HP 56/56 MP 0/0 Hu 53 $ 247 room=.
+-> s
+T 932 mode=game_loop           Elrond the Singer(elf) F3@(12,13) HP 56/56 MP 0/0 Hu 52 $ 247 room=.
+-> n
+T 933 mode=game_loop           Elrond the Singer(elf) F3@(12,12) HP 56/56 MP 0/0 Hu 51 $ 247 room=.
+-> w
+T 934 mode=game_loop           Elrond the Singer(elf) F3@(11,12) HP 56/56 MP 0/0 Hu 50 $ 247 room=.
+-> w
+T 935 mode=game_loop           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 49 $ 247 room=.
+-> i
+T 936 mode=inventory           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 49 $ 247 room=.
+-> eat1
+T 937 mode=inventory           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 99 $ 247 room=.
+-> u9
+T 938 mode=upgrade_scroll_mode Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 99 $ 247 room=.
+-> 1
+T 939 mode=inventory           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 99 $ 247 room=.
+-> x
+T 940 mode=game_loop           Elrond the Singer(elf) F3@(10,12) HP 56/56 MP 0/0 Hu 99 $ 247 room=.
+-> w
+T 941 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 56/56 MP 0/0 Hu 98 $ 247 room=.
+-> w
+T 942 mode=altar_mode          Elrond the Singer(elf) F3@( 8,12) HP 56/56 MP 0/0 Hu 97 $ 247 room=A
+-> pray
+T 943 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 56/56 MP 0/0 Hu 97 $ 247 room=.
+-> w
+T 944 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 56/56 MP 0/0 Hu 96 $ 247 room=.
+-> w
+T 945 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 56/56 MP 0/0 Hu 95 $ 247 room=.
+-> w
+T 946 mode=dungeon_mode        Elrond the Singer(elf) F3@( 5,12) HP 56/56 MP 0/0 Hu 94 $ 247 room=N
+-> u
+T 947 mode=game_loop           Elrond the Singer(elf) F3@( 5,12) HP 56/56 MP 0/0 Hu 94 $ 247 room=N
+-> w
+T 948 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 56/56 MP 0/0 Hu 93 $ 247 room=.
+-> l
+T 949 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 56/56 MP 0/0 Hu 93 $ 247 room=.
+-> s
+T 950 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 56/56 MP 0/0 Hu 92 $ 247 room=.
+-> l
+T 951 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 56/56 MP 0/0 Hu 92 $ 247 room=.
+-> s
+T 952 mode=game_loop           Elrond the Singer(elf) F3@( 4,14) HP 56/56 MP 0/0 Hu 91 $ 247 room=.
+-> l
+T 953 mode=game_loop           Elrond the Singer(elf) F3@( 4,14) HP 56/56 MP 0/0 Hu 91 $ 247 room=.
+-> w
+T 954 mode=game_loop           Elrond the Singer(elf) F3@( 3,14) HP 56/56 MP 0/0 Hu 90 $ 247 room=.
+-> n
+T 955 mode=game_loop           Elrond the Singer(elf) F3@( 3,13) HP 56/56 MP 0/0 Hu 89 $ 247 room=.
+-> n
+T 956 mode=game_loop           Elrond the Singer(elf) F3@( 3,12) HP 56/56 MP 0/0 Hu 88 $ 247 room=.
+-> e
+T 957 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 56/56 MP 0/0 Hu 87 $ 247 room=.
+-> n
+T 958 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 56/56 MP 0/0 Hu 86 $ 247 room=.
+-> n
+T 959 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 56/56 MP 0/0 Hu 85 $ 247 room=.
+-> n
+T 960 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 56/56 MP 0/0 Hu 84 $ 247 room=.
+-> w
+T 961 mode=game_loop           Elrond the Singer(elf) F3@( 3, 9) HP 56/56 MP 0/0 Hu 83 $ 247 room=.
+-> e
+T 962 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 56/56 MP 0/0 Hu 82 $ 247 room=.
+-> e
+T 963 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 56/56 MP 0/0 Hu 81 $ 247 room=.
+-> e
+T 964 mode=library_mode        Elrond the Singer(elf) F3@( 6, 9) HP 56/56 MP 0/0 Hu 80 $ 247 room=L
+-> r
+T 965 mode=library_read_decision_mode Elrond the Singer(elf) F3@( 6, 9) HP 56/56 MP 0/0 Hu 80 $ 247 room=L
+-> y
+T 966 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 56/52 MP 0/0 Hu 80 $ 247 room=.
+-> n
+T 967 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 56/52 MP 0/0 Hu 79 $ 247 room=.
+-> e
+T 968 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 56/52 MP 0/0 Hu 78 $ 247 room=.
+-> e
+T 969 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 56/52 MP 0/0 Hu 77 $ 247 room=C
+-> e
+T 970 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 56/52 MP 0/0 Hu 76 $ 247 room=V
+-> e
+T 971 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 56/52 MP 0/0 Hu 75 $ 247 room=.
+-> n
+T 972 mode=game_loop           Elrond the Singer(elf) F3@(10, 7) HP 56/52 MP 0/0 Hu 74 $ 247 room=.
+-> w
+T 973 mode=combat_mode         Elrond the Singer(elf) F3@( 9, 7) HP 56/52 MP 0/0 Hu 73 $ 247 room=M vs Kobold(L2 HP20/20)
+-> a
+T 974 mode=combat_mode         Elrond the Singer(elf) F3@( 9, 7) HP 55/52 MP 0/0 Hu 73 $ 247 room=M vs Kobold(L2 HP20/20)
+-> a
+T 975 mode=combat_victory      Elrond the Singer(elf) F3@( 9, 7) HP 55/52 MP 0/0 Hu 73 $ 250 room=.
+-> back
+T 976 mode=game_loop           Elrond the Singer(elf) F3@( 9, 7) HP 55/52 MP 0/0 Hu 73 $ 250 room=.
+-> w
+T 977 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 55/52 MP 0/0 Hu 72 $ 250 room=.
+-> s
+T 978 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 55/52 MP 0/0 Hu 71 $ 250 room=C
+-> e
+T 979 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 55/52 MP 0/0 Hu 70 $ 250 room=V
+-> e
+T 980 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 55/52 MP 0/0 Hu 69 $ 250 room=.
+-> e
+T 981 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 55/52 MP 0/0 Hu 68 $ 250 room=.
+-> e
+T 982 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 55/52 MP 0/0 Hu 67 $ 250 room=.
+-> e
+T 983 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 55/52 MP 0/0 Hu 66 $ 250 room=.
+-> l
+T 984 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 55/52 MP 0/0 Hu 66 $ 250 room=.
+-> e
+T 985 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 55/52 MP 0/0 Hu 65 $ 250 room=.
+-> l
+T 986 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 55/52 MP 0/0 Hu 65 $ 250 room=.
+-> e
+T 987 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 55/52 MP 0/0 Hu 64 $ 250 room=.
+-> l
+T 988 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 55/52 MP 0/0 Hu 64 $ 250 room=.
+-> e
+T 989 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 55/52 MP 0/0 Hu 63 $ 250 room=.
+-> l
+T 990 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 55/52 MP 0/0 Hu 63 $ 250 room=.
+-> s
+T 991 mode=game_loop           Elrond the Singer(elf) F3@(16, 9) HP 55/52 MP 0/0 Hu 62 $ 250 room=.
+-> l
+T 992 mode=game_loop           Elrond the Singer(elf) F3@(16, 9) HP 55/52 MP 0/0 Hu 62 $ 250 room=.
+-> e
+T 993 mode=game_loop           Elrond the Singer(elf) F3@(17, 9) HP 55/52 MP 0/0 Hu 61 $ 250 room=.
+-> e
+T 994 mode=altar_mode          Elrond the Singer(elf) F3@(18, 9) HP 55/52 MP 0/0 Hu 60 $ 250 room=A
+-> pray
+T 995 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 55/52 MP 0/0 Hu 60 $ 250 room=.
+-> s
+T 996 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 55/52 MP 0/0 Hu 59 $ 250 room=.
+-> s
+T 997 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 55/52 MP 0/0 Hu 58 $ 250 room=.
+-> l
+T 998 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 55/52 MP 0/0 Hu 58 $ 250 room=.
+-> s
+T 999 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 55/52 MP 0/0 Hu 57 $ 250 room=.
+-> l
+T1000 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 55/52 MP 0/0 Hu 57 $ 250 room=.
+-> s
+T1001 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 55/52 MP 0/0 Hu 56 $ 250 room=.
+-> l
+T1002 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 55/52 MP 0/0 Hu 56 $ 250 room=.
+-> s
+T1003 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 55/52 MP 0/0 Hu 55 $ 250 room=.
+-> s
+T1004 mode=game_loop           Elrond the Singer(elf) F3@(18,15) HP 55/52 MP 0/0 Hu 54 $ 250 room=.
+-> s
+T1005 mode=game_loop           Elrond the Singer(elf) F3@(18,16) HP 55/52 MP 0/0 Hu 53 $ 250 room=.
+-> e
+T1006 mode=game_loop           Elrond the Singer(elf) F3@(19,16) HP 55/52 MP 0/0 Hu 52 $ 250 room=.
+-> n
+T1007 mode=game_loop           Elrond the Singer(elf) F3@(19,15) HP 55/52 MP 0/0 Hu 51 $ 250 room=.
+-> n
+T1008 mode=game_loop           Elrond the Singer(elf) F3@(19,14) HP 55/52 MP 0/0 Hu 50 $ 250 room=.
+-> w
+T1009 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 55/52 MP 0/0 Hu 49 $ 250 room=.
+-> i
+T1010 mode=inventory           Elrond the Singer(elf) F3@(18,14) HP 55/52 MP 0/0 Hu 49 $ 250 room=.
+-> eat1
+T1011 mode=inventory           Elrond the Singer(elf) F3@(18,14) HP 55/52 MP 0/0 Hu 99 $ 250 room=.
+-> x
+T1012 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 55/52 MP 0/0 Hu 99 $ 250 room=.
+-> s
+T1013 mode=game_loop           Elrond the Singer(elf) F3@(18,15) HP 55/52 MP 0/0 Hu 98 $ 250 room=.
+-> s
+T1014 mode=game_loop           Elrond the Singer(elf) F3@(18,16) HP 55/52 MP 0/0 Hu 97 $ 250 room=.
+-> w
+T1015 mode=game_loop           Elrond the Singer(elf) F3@(17,16) HP 55/52 MP 0/0 Hu 96 $ 250 room=.
+-> w
+T1016 mode=game_loop           Elrond the Singer(elf) F3@(16,16) HP 55/52 MP 0/0 Hu 95 $ 250 room=.
+-> n
+T1017 mode=game_loop           Elrond the Singer(elf) F3@(16,15) HP 55/52 MP 0/0 Hu 94 $ 250 room=.
+-> n
+T1018 mode=game_loop           Elrond the Singer(elf) F3@(16,14) HP 55/52 MP 0/0 Hu 93 $ 250 room=.
+-> w
+T1019 mode=chest_mode          Elrond the Singer(elf) F3@(15,14) HP 55/52 MP 0/0 Hu 92 $ 250 room=C
+-> o
+T1020 mode=game_loop           Elrond the Singer(elf) F3@(15,14) HP 55/52 MP 0/0 Hu 92 $ 250 room=.
+-> w
+T1021 mode=dungeon_mode        Elrond the Singer(elf) F3@(14,14) HP 55/52 MP 0/0 Hu 91 $ 250 room=N
+-> u
+T1022 mode=game_loop           Elrond the Singer(elf) F3@(14,14) HP 55/52 MP 0/0 Hu 91 $ 250 room=N
+-> s
+T1023 mode=combat_mode         Elrond the Singer(elf) F3@(14,15) HP 55/52 MP 0/0 Hu 90 $ 250 room=M vs Gnoll(L2 HP32/32)
+-> a
+T1024 mode=combat_mode         Elrond the Singer(elf) F3@(14,15) HP 54/52 MP 0/0 Hu 90 $ 250 room=M vs Gnoll(L2 HP6/32)
+-> a
+T1025 mode=combat_victory      Elrond the Singer(elf) F3@(14,15) HP 53/52 MP 0/0 Hu 90 $ 262 room=.
+-> back
+T1026 mode=game_loop           Elrond the Singer(elf) F3@(14,15) HP 53/52 MP 0/0 Hu 90 $ 262 room=.
+-> s
+T1027 mode=game_loop           Elrond the Singer(elf) F3@(14,16) HP 53/52 MP 0/0 Hu 89 $ 262 room=.
+-> e
+T1028 mode=combat_mode         Elrond the Singer(elf) F3@(15,16) HP 53/52 MP 0/0 Hu 88 $ 262 room=M vs Stirge(L2 HP6/6)
+-> a
+T1029 mode=combat_mode         Elrond the Singer(elf) F3@(15,16) HP 49/52 MP 0/0 Hu 88 $ 262 room=M vs Stirge(L2 HP6/6)
+-> a
+T1030 mode=combat_victory      Elrond the Singer(elf) F3@(15,16) HP 49/52 MP 0/0 Hu 88 $ 283 room=.
+-> back
+T1031 mode=game_loop           Elrond the Singer(elf) F3@(15,16) HP 49/52 MP 0/0 Hu 88 $ 283 room=.
+-> e
+T1032 mode=game_loop           Elrond the Singer(elf) F3@(16,16) HP 49/52 MP 0/0 Hu 87 $ 283 room=.
+-> e
+T1033 mode=game_loop           Elrond the Singer(elf) F3@(17,16) HP 50/52 MP 0/0 Hu 86 $ 283 room=.
+-> e
+T1034 mode=game_loop           Elrond the Singer(elf) F3@(18,16) HP 50/52 MP 0/0 Hu 85 $ 283 room=.
+-> n
+T1035 mode=game_loop           Elrond the Singer(elf) F3@(18,15) HP 50/52 MP 0/0 Hu 84 $ 283 room=.
+-> n
+T1036 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 50/52 MP 0/0 Hu 83 $ 283 room=.
+-> n
+T1037 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 51/52 MP 0/0 Hu 82 $ 283 room=.
+-> n
+T1038 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 51/52 MP 0/0 Hu 81 $ 283 room=.
+-> n
+T1039 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 51/52 MP 0/0 Hu 80 $ 283 room=.
+-> i
+T1040 mode=inventory           Elrond the Singer(elf) F3@(18,11) HP 51/52 MP 0/0 Hu 80 $ 283 room=.
+-> eat2
+T1041 mode=inventory           Elrond the Singer(elf) F3@(18,11) HP 51/52 MP 0/0 Hu 87 $ 283 room=.
+-> x
+T1042 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 51/52 MP 0/0 Hu 87 $ 283 room=.
+-> n
+T1043 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 52/52 MP 0/0 Hu 86 $ 283 room=.
+-> n
+T1044 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 52/52 MP 0/0 Hu 85 $ 283 room=.
+-> n
+T1045 mode=game_loop           Elrond the Singer(elf) F3@(18, 8) HP 52/52 MP 0/0 Hu 84 $ 283 room=.
+-> w
+T1046 mode=game_loop           Elrond the Singer(elf) F3@(17, 8) HP 52/52 MP 0/0 Hu 83 $ 283 room=.
+-> w
+T1047 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 82 $ 283 room=.
+-> w
+T1048 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 52/52 MP 0/0 Hu 81 $ 283 room=.
+-> w
+T1049 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 52/52 MP 0/0 Hu 80 $ 283 room=.
+-> w
+T1050 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 79 $ 283 room=.
+-> w
+T1051 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 52/52 MP 0/0 Hu 78 $ 283 room=.
+-> w
+T1052 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 52/52 MP 0/0 Hu 77 $ 283 room=.
+-> s
+T1053 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 52/52 MP 0/0 Hu 76 $ 283 room=.
+-> s
+T1054 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 52/52 MP 0/0 Hu 75 $ 283 room=.
+-> s
+T1055 mode=game_loop           Elrond the Singer(elf) F3@(11,11) HP 52/52 MP 0/0 Hu 74 $ 283 room=.
+-> s
+T1056 mode=game_loop           Elrond the Singer(elf) F3@(11,12) HP 52/52 MP 0/0 Hu 73 $ 283 room=.
+-> w
+T1057 mode=game_loop           Elrond the Singer(elf) F3@(10,12) HP 52/52 MP 0/0 Hu 72 $ 283 room=.
+-> w
+T1058 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 52/52 MP 0/0 Hu 71 $ 283 room=.
+-> w
+T1059 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 52/52 MP 0/0 Hu 70 $ 283 room=.
+-> w
+T1060 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 52/52 MP 0/0 Hu 69 $ 283 room=.
+-> w
+T1061 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 52/52 MP 0/0 Hu 68 $ 283 room=.
+-> w
+T1062 mode=dungeon_mode        Elrond the Singer(elf) F3@( 5,12) HP 52/52 MP 0/0 Hu 67 $ 283 room=N
+-> u
+T1063 mode=dungeon_unlocked_mode Elrond the Singer(elf) F3@( 5,12) HP 52/52 MP 0/0 Hu 67 $ 283 room=N
+-> r
+T1064 mode=game_loop           Elrond the Singer(elf) F3@( 5,12) HP 52/52 MP 0/0 Hu 67 $ 283 room=N
+-> n
+T1065 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 52/52 MP 0/0 Hu 66 $ 283 room=.
+-> n
+T1066 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 52/52 MP 0/0 Hu 65 $ 283 room=.
+-> n
+T1067 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 52/52 MP 0/0 Hu 64 $ 283 room=.
+-> e
+T1068 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 52/52 MP 0/0 Hu 63 $ 283 room=.
+-> n
+T1069 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 52/52 MP 0/0 Hu 62 $ 283 room=.
+-> e
+T1070 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 52/52 MP 0/0 Hu 61 $ 283 room=.
+-> e
+T1071 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 52/52 MP 0/0 Hu 60 $ 283 room=C
+-> e
+T1072 mode=game_loop           Elrond the Singer(elf) F3@( 9, 8) HP 52/52 MP 0/0 Hu 59 $ 283 room=V
+-> e
+T1073 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 52/52 MP 0/0 Hu 58 $ 283 room=.
+-> e
+T1074 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 52/52 MP 0/0 Hu 57 $ 283 room=.
+-> e
+T1075 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 52/52 MP 0/0 Hu 56 $ 283 room=.
+-> e
+T1076 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 55 $ 283 room=.
+-> n
+T1077 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 52/52 MP 0/0 Hu 54 $ 283 room=.
+-> n
+T1078 mode=garden_mode         Elrond the Singer(elf) F3@(13, 6) HP 52/52 MP 0/0 Hu 53 $ 283 room=G
+-> h
+T1079 mode=game_loop           Elrond the Singer(elf) F3@(13, 6) HP 52/52 MP 0/0 Hu 53 $ 283 room=.
+-> e
+T1080 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 52 $ 283 room=.
+-> e
+T1081 mode=game_loop           Elrond the Singer(elf) F3@(15, 6) HP 52/52 MP 0/0 Hu 51 $ 283 room=.
+-> e
+T1082 mode=pool_mode           Elrond the Singer(elf) F3@(16, 6) HP 52/52 MP 0/0 Hu 50 $ 283 room=P
+-> dr
+T1083 mode=game_loop           Elrond the Singer(elf) F3@(16, 6) HP 52/52 MP 0/0 Hu 50 $ 283 room=.
+-> s
+T1084 mode=game_loop           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 49 $ 283 room=.
+-> i
+T1085 mode=inventory           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 49 $ 283 room=.
+-> eat1
+T1086 mode=inventory           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 99 $ 283 room=.
+-> x
+T1087 mode=game_loop           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 99 $ 283 room=.
+-> s
+T1088 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 98 $ 283 room=.
+-> s
+T1089 mode=game_loop           Elrond the Singer(elf) F3@(16, 9) HP 52/52 MP 0/0 Hu 97 $ 283 room=.
+-> e
+T1090 mode=game_loop           Elrond the Singer(elf) F3@(17, 9) HP 52/52 MP 0/0 Hu 96 $ 283 room=.
+-> e
+T1091 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 52/52 MP 0/0 Hu 95 $ 283 room=.
+-> s
+T1092 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 52/52 MP 0/0 Hu 94 $ 283 room=.
+-> s
+T1093 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 52/52 MP 0/0 Hu 93 $ 283 room=.
+-> s
+T1094 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 52/52 MP 0/0 Hu 92 $ 283 room=.
+-> s
+T1095 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 52/52 MP 0/0 Hu 91 $ 283 room=.
+-> s
+T1096 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 52/52 MP 0/0 Hu 90 $ 283 room=.
+-> s
+T1097 mode=game_loop           Elrond the Singer(elf) F3@(18,15) HP 52/52 MP 0/0 Hu 89 $ 283 room=.
+-> w
+T1098 mode=game_loop           Elrond the Singer(elf) F3@(17,15) HP 52/52 MP 0/0 Hu 88 $ 283 room=.
+-> w
+T1099 mode=game_loop           Elrond the Singer(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 87 $ 283 room=.
+-> s
+T1100 mode=game_loop           Elrond the Singer(elf) F3@(16,16) HP 52/52 MP 0/0 Hu 86 $ 283 room=.
+-> e
+T1101 mode=game_loop           Elrond the Singer(elf) F3@(17,16) HP 52/52 MP 0/0 Hu 85 $ 283 room=.
+-> e
+T1102 mode=game_loop           Elrond the Singer(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 84 $ 283 room=.
+-> n
+T1103 mode=game_loop           Elrond the Singer(elf) F3@(18,15) HP 52/52 MP 0/0 Hu 83 $ 283 room=.
+-> n
+T1104 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 52/52 MP 0/0 Hu 82 $ 283 room=.
+-> w
+T1105 mode=game_loop           Elrond the Singer(elf) F3@(17,14) HP 52/52 MP 0/0 Hu 81 $ 283 room=.
+-> s
+T1106 mode=game_loop           Elrond the Singer(elf) F3@(17,15) HP 52/52 MP 0/0 Hu 80 $ 283 room=.
+-> w
+T1107 mode=game_loop           Elrond the Singer(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 79 $ 283 room=.
+-> s
+T1108 mode=game_loop           Elrond the Singer(elf) F3@(16,16) HP 52/52 MP 0/0 Hu 78 $ 283 room=.
+-> w
+T1109 mode=game_loop           Elrond the Singer(elf) F3@(15,16) HP 52/52 MP 0/0 Hu 77 $ 283 room=.
+-> w
+T1110 mode=game_loop           Elrond the Singer(elf) F3@(14,16) HP 52/52 MP 0/0 Hu 76 $ 283 room=.
+-> n
+T1111 mode=game_loop           Elrond the Singer(elf) F3@(14,15) HP 52/52 MP 0/0 Hu 75 $ 283 room=.
+-> e
+T1112 mode=combat_mode         Elrond the Singer(elf) F3@(15,15) HP 52/52 MP 0/0 Hu 74 $ 283 room=M vs Goblin(L2 HP31/31)
+-> a
+T1113 mode=combat_mode         Elrond the Singer(elf) F3@(15,15) HP 51/52 MP 0/0 Hu 74 $ 283 room=M vs Goblin(L2 HP3/31)
+-> a
+T1114 mode=combat_victory      Elrond the Singer(elf) F3@(15,15) HP 51/52 MP 0/0 Hu 74 $ 301 room=.
+-> back
+T1115 mode=game_loop           Elrond the Singer(elf) F3@(15,15) HP 51/52 MP 0/0 Hu 74 $ 301 room=.
+-> n
+T1116 mode=game_loop           Elrond the Singer(elf) F3@(15,14) HP 51/52 MP 0/0 Hu 73 $ 301 room=.
+-> e
+T1117 mode=game_loop           Elrond the Singer(elf) F3@(16,14) HP 51/52 MP 0/0 Hu 72 $ 301 room=.
+-> e
+T1118 mode=game_loop           Elrond the Singer(elf) F3@(17,14) HP 51/52 MP 0/0 Hu 71 $ 301 room=.
+-> e
+T1119 mode=game_loop           Elrond the Singer(elf) F3@(18,14) HP 52/52 MP 0/0 Hu 70 $ 301 room=.
+-> n
+T1120 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 52/52 MP 0/0 Hu 69 $ 301 room=.
+-> w
+T1121 mode=game_loop           Elrond the Singer(elf) F3@(17,13) HP 52/52 MP 0/0 Hu 68 $ 301 room=.
+-> n
+T1122 mode=game_loop           Elrond the Singer(elf) F3@(17,12) HP 52/52 MP 0/0 Hu 67 $ 301 room=.
+-> e
+T1123 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 52/52 MP 0/0 Hu 66 $ 301 room=.
+-> n
+T1124 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 52/52 MP 0/0 Hu 65 $ 301 room=.
+-> n
+T1125 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 52/52 MP 0/0 Hu 64 $ 301 room=.
+-> n
+T1126 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 52/52 MP 0/0 Hu 63 $ 301 room=.
+-> w
+T1127 mode=game_loop           Elrond the Singer(elf) F3@(17, 9) HP 52/52 MP 0/0 Hu 62 $ 301 room=.
+-> w
+T1128 mode=game_loop           Elrond the Singer(elf) F3@(16, 9) HP 52/52 MP 0/0 Hu 61 $ 301 room=.
+-> n
+T1129 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 60 $ 301 room=.
+-> n
+T1130 mode=game_loop           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 59 $ 301 room=.
+-> n
+T1131 mode=game_loop           Elrond the Singer(elf) F3@(16, 6) HP 52/52 MP 0/0 Hu 58 $ 301 room=.
+-> w
+T1132 mode=game_loop           Elrond the Singer(elf) F3@(15, 6) HP 52/52 MP 0/0 Hu 57 $ 301 room=.
+-> w
+T1133 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 56 $ 301 room=.
+-> n
+T1134 mode=game_loop           Elrond the Singer(elf) F3@(14, 5) HP 52/52 MP 0/0 Hu 55 $ 301 room=.
+-> s
+T1135 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 54 $ 301 room=.
+-> w
+T1136 mode=game_loop           Elrond the Singer(elf) F3@(13, 6) HP 52/52 MP 0/0 Hu 53 $ 301 room=.
+-> s
+T1137 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 52/52 MP 0/0 Hu 52 $ 301 room=.
+-> s
+T1138 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 51 $ 301 room=.
+-> w
+T1139 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 52/52 MP 0/0 Hu 50 $ 301 room=.
+-> s
+T1140 mode=combat_mode         Elrond the Singer(elf) F3@(12, 9) HP 52/52 MP 0/0 Hu 49 $ 301 room=M vs Crawling Claw(L2 HP5/5)
+-> f
+T1141 mode=flee_direction_mode Elrond the Singer(elf) F3@(12, 9) HP 51/52 MP 0/0 Hu 49 $ 301 room=M
+-> s
+T1142 mode=pool_mode           Elrond the Singer(elf) F3@(12,10) HP 51/52 MP 0/0 Hu 49 $ 301 room=P
+-> dr
+T1143 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 51/52 MP 0/0 Hu 49 $ 301 room=.
+-> i
+T1144 mode=inventory           Elrond the Singer(elf) F3@(12,10) HP 51/52 MP 0/0 Hu 49 $ 301 room=.
+-> eat1
+T1145 mode=inventory           Elrond the Singer(elf) F3@(12,10) HP 51/52 MP 0/0 Hu 99 $ 301 room=.
+-> x
+T1146 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 51/52 MP 0/0 Hu 99 $ 301 room=.
+-> w
+T1147 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 51/52 MP 0/0 Hu 98 $ 301 room=.
+-> s
+T1148 mode=game_loop           Elrond the Singer(elf) F3@(11,11) HP 52/52 MP 0/0 Hu 97 $ 301 room=.
+-> w
+T1149 mode=chest_mode          Elrond the Singer(elf) F3@(10,11) HP 52/52 MP 0/0 Hu 96 $ 301 room=C
+-> n
+T1150 mode=library_mode        Elrond the Singer(elf) F3@(10,10) HP 52/52 MP 0/0 Hu 95 $ 301 room=L
+-> r
+T1151 mode=library_read_decision_mode Elrond the Singer(elf) F3@(10,10) HP 52/52 MP 0/0 Hu 95 $ 301 room=L
+-> y
+T1152 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 52/52 MP 0/0 Hu 95 $ 301 room=.
+-> n
+T1153 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 52/52 MP 0/0 Hu 94 $ 301 room=.
+-> w
+T1154 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 52/52 MP 0/0 Hu 93 $ 301 room=.
+-> s
+T1155 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 52/52 MP 0/0 Hu 92 $ 301 room=.
+-> s
+T1156 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 52/52 MP 0/0 Hu 91 $ 301 room=.
+-> w
+T1157 mode=combat_mode         Elrond the Singer(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 90 $ 301 room=M vs Spore Puff(L2 HP18/18)
+-> a
+T1158 mode=combat_mode         Elrond the Singer(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 90 $ 301 room=M vs Spore Puff(L2 HP18/18)
+-> a
+T1159 mode=combat_mode         Elrond the Singer(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 90 $ 301 room=M vs Spore Puff(L2 HP18/18)
+-> a
+T1160 mode=combat_victory      Elrond the Singer(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 90 $ 304 room=.
+-> back
+T1161 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 90 $ 304 room=.
+-> n
+T1162 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 52/52 MP 0/0 Hu 89 $ 304 room=.
+-> w
+T1163 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 52/52 MP 0/0 Hu 88 $ 304 room=.
+-> n
+T1164 mode=chest_mode          Elrond the Singer(elf) F3@( 7, 9) HP 52/52 MP 0/0 Hu 87 $ 304 room=C
+-> o
+T1165 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 52/52 MP 0/0 Hu 87 $ 304 room=.
+-> e
+T1166 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 52/52 MP 0/0 Hu 86 $ 304 room=.
+-> e
+T1167 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 52/52 MP 0/0 Hu 85 $ 304 room=.
+-> e
+T1168 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 52/52 MP 0/0 Hu 84 $ 304 room=.
+-> s
+T1169 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 52/52 MP 0/0 Hu 83 $ 304 room=.
+-> e
+T1170 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 52/52 MP 0/0 Hu 82 $ 304 room=.
+-> e
+T1171 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 52/52 MP 0/0 Hu 81 $ 304 room=.
+-> n
+T1172 mode=combat_mode         Elrond the Singer(elf) F3@(12, 9) HP 52/52 MP 0/0 Hu 80 $ 304 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1173 mode=combat_victory      Elrond the Singer(elf) F3@(12, 9) HP 52/52 MP 0/0 Hu 80 $ 310 room=.
+-> back
+T1174 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 52/52 MP 0/0 Hu 80 $ 310 room=.
+-> e
+T1175 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 52/52 MP 0/0 Hu 79 $ 310 room=.
+-> n
+T1176 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 78 $ 310 room=.
+-> e
+T1177 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 52/52 MP 0/0 Hu 77 $ 310 room=.
+-> e
+T1178 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 52/52 MP 0/0 Hu 76 $ 310 room=.
+-> e
+T1179 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 75 $ 310 room=.
+-> s
+T1180 mode=game_loop           Elrond the Singer(elf) F3@(16, 9) HP 52/52 MP 0/0 Hu 74 $ 310 room=.
+-> e
+T1181 mode=game_loop           Elrond the Singer(elf) F3@(17, 9) HP 52/52 MP 0/0 Hu 73 $ 310 room=.
+-> n
+T1182 mode=game_loop           Elrond the Singer(elf) F3@(17, 8) HP 52/52 MP 0/0 Hu 72 $ 310 room=.
+-> e
+T1183 mode=game_loop           Elrond the Singer(elf) F3@(18, 8) HP 52/52 MP 0/0 Hu 71 $ 310 room=.
+-> s
+T1184 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 52/52 MP 0/0 Hu 70 $ 310 room=.
+-> s
+T1185 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 52/52 MP 0/0 Hu 69 $ 310 room=.
+-> s
+T1186 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 52/52 MP 0/0 Hu 68 $ 310 room=.
+-> s
+T1187 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 52/52 MP 0/0 Hu 67 $ 310 room=.
+-> w
+T1188 mode=game_loop           Elrond the Singer(elf) F3@(17,12) HP 52/52 MP 0/0 Hu 66 $ 310 room=.
+-> s
+T1189 mode=game_loop           Elrond the Singer(elf) F3@(17,13) HP 52/52 MP 0/0 Hu 65 $ 310 room=.
+-> e
+T1190 mode=game_loop           Elrond the Singer(elf) F3@(18,13) HP 52/52 MP 0/0 Hu 64 $ 310 room=.
+-> e
+T1191 mode=game_loop           Elrond the Singer(elf) F3@(19,13) HP 52/52 MP 0/0 Hu 63 $ 310 room=.
+-> n
+T1192 mode=game_loop           Elrond the Singer(elf) F3@(19,12) HP 52/52 MP 0/0 Hu 62 $ 310 room=.
+-> w
+T1193 mode=game_loop           Elrond the Singer(elf) F3@(18,12) HP 52/52 MP 0/0 Hu 61 $ 310 room=.
+-> n
+T1194 mode=game_loop           Elrond the Singer(elf) F3@(18,11) HP 52/52 MP 0/0 Hu 60 $ 310 room=.
+-> n
+T1195 mode=game_loop           Elrond the Singer(elf) F3@(18,10) HP 52/52 MP 0/0 Hu 59 $ 310 room=.
+-> n
+T1196 mode=game_loop           Elrond the Singer(elf) F3@(18, 9) HP 52/52 MP 0/0 Hu 58 $ 310 room=.
+-> w
+T1197 mode=game_loop           Elrond the Singer(elf) F3@(17, 9) HP 52/52 MP 0/0 Hu 57 $ 310 room=.
+-> n
+T1198 mode=game_loop           Elrond the Singer(elf) F3@(17, 8) HP 52/52 MP 0/0 Hu 56 $ 310 room=.
+-> w
+T1199 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 55 $ 310 room=.
+-> w
+T1200 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 52/52 MP 0/0 Hu 54 $ 310 room=.
+-> w
+T1201 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 52/52 MP 0/0 Hu 53 $ 310 room=.
+-> w
+T1202 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 52 $ 310 room=.
+-> n
+T1203 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 52/52 MP 0/0 Hu 51 $ 310 room=.
+-> e
+T1204 mode=game_loop           Elrond the Singer(elf) F3@(14, 7) HP 52/52 MP 0/0 Hu 50 $ 310 room=.
+-> n
+T1205 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 49 $ 310 room=.
+-> i
+T1206 mode=inventory           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 49 $ 310 room=.
+-> eat1
+T1207 mode=inventory           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 99 $ 310 room=.
+-> x
+T1208 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 99 $ 310 room=.
+-> e
+T1209 mode=game_loop           Elrond the Singer(elf) F3@(15, 6) HP 52/52 MP 0/0 Hu 98 $ 310 room=.
+-> e
+T1210 mode=game_loop           Elrond the Singer(elf) F3@(16, 6) HP 52/52 MP 0/0 Hu 97 $ 310 room=.
+-> s
+T1211 mode=game_loop           Elrond the Singer(elf) F3@(16, 7) HP 52/52 MP 0/0 Hu 96 $ 310 room=.
+-> e
+T1212 mode=game_loop           Elrond the Singer(elf) F3@(17, 7) HP 52/52 MP 0/0 Hu 95 $ 310 room=.
+-> s
+T1213 mode=game_loop           Elrond the Singer(elf) F3@(17, 8) HP 52/52 MP 0/0 Hu 94 $ 310 room=.
+-> w
+T1214 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 52/52 MP 0/0 Hu 93 $ 310 room=.
+-> w
+T1215 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 52/52 MP 0/0 Hu 92 $ 310 room=.
+-> w
+T1216 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 52/52 MP 0/0 Hu 91 $ 310 room=.
+-> n
+T1217 mode=game_loop           Elrond the Singer(elf) F3@(14, 7) HP 52/52 MP 0/0 Hu 90 $ 310 room=.
+-> n
+T1218 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 89 $ 310 room=.
+-> n
+T1219 mode=game_loop           Elrond the Singer(elf) F3@(14, 5) HP 52/52 MP 0/0 Hu 88 $ 310 room=.
+-> s
+T1220 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 52/52 MP 0/0 Hu 87 $ 310 room=.
+-> w
+T1221 mode=game_loop           Elrond the Singer(elf) F3@(13, 6) HP 52/52 MP 0/0 Hu 86 $ 310 room=.
+-> s
+T1222 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 52/52 MP 0/0 Hu 85 $ 310 room=.
+-> s
+T1223 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 84 $ 310 room=.
+-> s
+T1224 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 52/52 MP 0/0 Hu 83 $ 310 room=.
+-> w
+T1225 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 52/52 MP 0/0 Hu 82 $ 310 room=.
+-> n
+T1226 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 52/52 MP 0/0 Hu 81 $ 310 room=.
+-> w
+T1227 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 52/52 MP 0/0 Hu 80 $ 310 room=.
+-> w
+T1228 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 52/52 MP 0/0 Hu 79 $ 310 room=.
+-> n
+T1229 mode=game_loop           Elrond the Singer(elf) F3@(10, 7) HP 52/52 MP 0/0 Hu 78 $ 310 room=.
+-> e
+T1230 mode=combat_mode         Elrond the Singer(elf) F3@(11, 7) HP 52/52 MP 0/0 Hu 77 $ 310 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T1231 mode=combat_victory      Elrond the Singer(elf) F3@(11, 7) HP 51/62 MP 0/0 Hu 77 $ 413 room=.
+-> back
+T1232 mode=game_loop           Elrond the Singer(elf) F3@(11, 7) HP 51/62 MP 0/0 Hu 77 $ 413 room=.
+-> w
+T1233 mode=game_loop           Elrond the Singer(elf) F3@(10, 7) HP 51/62 MP 0/0 Hu 76 $ 413 room=.
+-> w
+T1234 mode=game_loop           Elrond the Singer(elf) F3@( 9, 7) HP 51/62 MP 0/0 Hu 75 $ 413 room=.
+-> w
+T1235 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 51/62 MP 0/0 Hu 74 $ 413 room=.
+-> i
+T1236 mode=inventory           Elrond the Singer(elf) F3@( 8, 7) HP 51/62 MP 0/0 Hu 74 $ 413 room=.
+-> u9
+T1237 mode=inventory           Elrond the Singer(elf) F3@( 8, 7) HP 62/62 MP 0/0 Hu 74 $ 413 room=.
+-> x
+T1238 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 62/62 MP 0/0 Hu 74 $ 413 room=.
+-> s
+T1239 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 62/62 MP 0/0 Hu 73 $ 413 room=C
+-> w
+T1240 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 72 $ 413 room=.
+-> w
+T1241 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 62/62 MP 0/0 Hu 71 $ 413 room=.
+-> s
+T1242 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 62/62 MP 0/0 Hu 70 $ 413 room=.
+-> e
+T1243 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 69 $ 413 room=.
+-> s
+T1244 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 68 $ 413 room=.
+-> e
+T1245 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 67 $ 413 room=.
+-> s
+T1246 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 66 $ 413 room=.
+-> w
+T1247 mode=garden_mode         Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 65 $ 413 room=G
+-> h
+T1248 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 65 $ 413 room=.
+-> w
+T1249 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 62/62 MP 0/0 Hu 64 $ 413 room=.
+-> s
+T1250 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 62/62 MP 0/0 Hu 63 $ 413 room=.
+-> e
+T1251 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 62/62 MP 0/0 Hu 62 $ 413 room=.
+-> e
+T1252 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 62/62 MP 0/0 Hu 61 $ 413 room=.
+-> n
+T1253 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 60 $ 413 room=.
+-> w
+T1254 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 59 $ 413 room=.
+-> n
+T1255 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 58 $ 413 room=.
+-> w
+T1256 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu 57 $ 413 room=.
+-> w
+T1257 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 62/62 MP 0/0 Hu 56 $ 413 room=.
+-> w
+T1258 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 62/62 MP 0/0 Hu 55 $ 413 room=.
+-> s
+T1259 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 62/62 MP 0/0 Hu 54 $ 413 room=.
+-> e
+T1260 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 62/62 MP 0/0 Hu 53 $ 413 room=.
+-> e
+T1261 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 62/62 MP 0/0 Hu 52 $ 413 room=.
+-> n
+T1262 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu 51 $ 413 room=.
+-> e
+T1263 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 50 $ 413 room=.
+-> e
+T1264 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 49 $ 413 room=.
+-> i
+T1265 mode=inventory           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 49 $ 413 room=.
+-> eat1
+T1266 mode=inventory           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 99 $ 413 room=.
+-> x
+T1267 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 99 $ 413 room=.
+-> s
+T1268 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 98 $ 413 room=.
+-> e
+T1269 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 62/62 MP 0/0 Hu 97 $ 413 room=.
+-> n
+T1270 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 96 $ 413 room=.
+-> n
+T1271 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 95 $ 413 room=.
+-> e
+T1272 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 94 $ 413 room=.
+-> n
+T1273 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 62/62 MP 0/0 Hu 93 $ 413 room=.
+-> n
+T1274 mode=game_loop           Elrond the Singer(elf) F3@(10, 7) HP 62/62 MP 0/0 Hu 92 $ 413 room=.
+-> w
+T1275 mode=game_loop           Elrond the Singer(elf) F3@( 9, 7) HP 62/62 MP 0/0 Hu 91 $ 413 room=.
+-> w
+T1276 mode=game_loop           Elrond the Singer(elf) F3@( 8, 7) HP 62/62 MP 0/0 Hu 90 $ 413 room=.
+-> s
+T1277 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 62/62 MP 0/0 Hu 89 $ 413 room=C
+-> w
+T1278 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 88 $ 413 room=.
+-> s
+T1279 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 87 $ 413 room=.
+-> s
+T1280 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 86 $ 413 room=.
+-> e
+T1281 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 85 $ 413 room=.
+-> e
+T1282 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 84 $ 413 room=.
+-> n
+T1283 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 83 $ 413 room=.
+-> e
+T1284 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 82 $ 413 room=.
+-> s
+T1285 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 62/62 MP 0/0 Hu 81 $ 413 room=.
+-> e
+T1286 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 62/62 MP 0/0 Hu 80 $ 413 room=.
+-> e
+T1287 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 62/62 MP 0/0 Hu 79 $ 413 room=.
+-> n
+T1288 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 62/62 MP 0/0 Hu 78 $ 413 room=.
+-> n
+T1289 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 62/62 MP 0/0 Hu 77 $ 413 room=.
+-> w
+T1290 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 62/62 MP 0/0 Hu 76 $ 413 room=.
+-> s
+T1291 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 75 $ 413 room=.
+-> w
+T1292 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 74 $ 413 room=.
+-> w
+T1293 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 73 $ 413 room=.
+-> s
+T1294 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 72 $ 413 room=.
+-> e
+T1295 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 62/62 MP 0/0 Hu 71 $ 413 room=.
+-> e
+T1296 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 62/62 MP 0/0 Hu 70 $ 413 room=.
+-> e
+T1297 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 62/62 MP 0/0 Hu 69 $ 413 room=.
+-> n
+T1298 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 62/62 MP 0/0 Hu 68 $ 413 room=.
+-> e
+T1299 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 62/62 MP 0/0 Hu 67 $ 413 room=.
+-> n
+T1300 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 62/62 MP 0/0 Hu 66 $ 413 room=.
+-> n
+T1301 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 62/62 MP 0/0 Hu 65 $ 413 room=.
+-> e
+T1302 mode=game_loop           Elrond the Singer(elf) F3@(14, 7) HP 62/62 MP 0/0 Hu 64 $ 413 room=.
+-> s
+T1303 mode=game_loop           Elrond the Singer(elf) F3@(14, 8) HP 62/62 MP 0/0 Hu 63 $ 413 room=.
+-> e
+T1304 mode=game_loop           Elrond the Singer(elf) F3@(15, 8) HP 62/62 MP 0/0 Hu 62 $ 413 room=.
+-> e
+T1305 mode=game_loop           Elrond the Singer(elf) F3@(16, 8) HP 62/62 MP 0/0 Hu 61 $ 413 room=.
+-> e
+T1306 mode=game_loop           Elrond the Singer(elf) F3@(17, 8) HP 62/62 MP 0/0 Hu 60 $ 413 room=.
+-> n
+T1307 mode=game_loop           Elrond the Singer(elf) F3@(17, 7) HP 62/62 MP 0/0 Hu 59 $ 413 room=.
+-> w
+T1308 mode=game_loop           Elrond the Singer(elf) F3@(16, 7) HP 62/62 MP 0/0 Hu 58 $ 413 room=.
+-> n
+T1309 mode=game_loop           Elrond the Singer(elf) F3@(16, 6) HP 62/62 MP 0/0 Hu 57 $ 413 room=.
+-> w
+T1310 mode=game_loop           Elrond the Singer(elf) F3@(15, 6) HP 62/62 MP 0/0 Hu 56 $ 413 room=.
+-> w
+T1311 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 62/62 MP 0/0 Hu 55 $ 413 room=.
+-> w
+T1312 mode=game_loop           Elrond the Singer(elf) F3@(13, 6) HP 62/62 MP 0/0 Hu 54 $ 413 room=.
+-> s
+T1313 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 62/62 MP 0/0 Hu 53 $ 413 room=.
+-> s
+T1314 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 62/62 MP 0/0 Hu 52 $ 413 room=.
+-> s
+T1315 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 62/62 MP 0/0 Hu 51 $ 413 room=.
+-> w
+T1316 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 62/62 MP 0/0 Hu 50 $ 413 room=.
+-> w
+T1317 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 49 $ 413 room=.
+-> i
+T1318 mode=inventory           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 49 $ 413 room=.
+-> eat1
+T1319 mode=inventory           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 99 $ 413 room=.
+-> x
+T1320 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 99 $ 413 room=.
+-> w
+T1321 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 98 $ 413 room=.
+-> w
+T1322 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 97 $ 413 room=.
+-> w
+T1323 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 62/62 MP 0/0 Hu 96 $ 413 room=.
+-> s
+T1324 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 95 $ 413 room=.
+-> s
+T1325 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 94 $ 413 room=.
+-> w
+T1326 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 93 $ 413 room=.
+-> n
+T1327 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 92 $ 413 room=.
+-> n
+T1328 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 91 $ 413 room=.
+-> w
+T1329 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 62/62 MP 0/0 Hu 90 $ 413 room=.
+-> n
+T1330 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 62/62 MP 0/0 Hu 89 $ 413 room=.
+-> e
+T1331 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 88 $ 413 room=.
+-> e
+T1332 mode=game_loop           Elrond the Singer(elf) F3@( 8, 8) HP 62/62 MP 0/0 Hu 87 $ 413 room=C
+-> s
+T1333 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 62/62 MP 0/0 Hu 86 $ 413 room=.
+-> e
+T1334 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 85 $ 413 room=.
+-> e
+T1335 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 84 $ 413 room=.
+-> s
+T1336 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 62/62 MP 0/0 Hu 83 $ 413 room=.
+-> w
+T1337 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 82 $ 413 room=.
+-> s
+T1338 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 62/62 MP 0/0 Hu 81 $ 413 room=.
+-> w
+T1339 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 80 $ 413 room=.
+-> n
+T1340 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 79 $ 413 room=.
+-> w
+T1341 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 78 $ 413 room=.
+-> w
+T1342 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu 77 $ 413 room=.
+-> n
+T1343 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 62/62 MP 0/0 Hu 76 $ 413 room=.
+-> n
+T1344 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 62/62 MP 0/0 Hu 75 $ 413 room=.
+-> e
+T1345 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 74 $ 413 room=.
+-> s
+T1346 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 73 $ 413 room=.
+-> s
+T1347 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 72 $ 413 room=.
+-> s
+T1348 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 71 $ 413 room=.
+-> e
+T1349 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 70 $ 413 room=.
+-> n
+T1350 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 69 $ 413 room=.
+-> e
+T1351 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 68 $ 413 room=.
+-> n
+T1352 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 67 $ 413 room=.
+-> e
+T1353 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 62/62 MP 0/0 Hu 66 $ 413 room=.
+-> e
+T1354 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 62/62 MP 0/0 Hu 65 $ 413 room=.
+-> e
+T1355 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 62/62 MP 0/0 Hu 64 $ 413 room=.
+-> s
+T1356 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 62/62 MP 0/0 Hu 63 $ 413 room=.
+-> w
+T1357 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 62/62 MP 0/0 Hu 62 $ 413 room=.
+-> w
+T1358 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 62/62 MP 0/0 Hu 61 $ 413 room=.
+-> w
+T1359 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 60 $ 413 room=.
+-> w
+T1360 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 62/62 MP 0/0 Hu 59 $ 413 room=.
+-> w
+T1361 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 58 $ 413 room=.
+-> s
+T1362 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 57 $ 413 room=.
+-> e
+T1363 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 56 $ 413 room=.
+-> s
+T1364 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 62/62 MP 0/0 Hu 55 $ 413 room=.
+-> w
+T1365 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 62/62 MP 0/0 Hu 54 $ 413 room=.
+-> w
+T1366 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 62/62 MP 0/0 Hu 53 $ 413 room=.
+-> n
+T1367 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 62/62 MP 0/0 Hu 52 $ 413 room=.
+-> w
+T1368 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 62/62 MP 0/0 Hu 51 $ 413 room=.
+-> n
+T1369 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 62/62 MP 0/0 Hu 50 $ 413 room=.
+-> n
+T1370 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 62/62 MP 0/0 Hu 49 $ 413 room=.
+-> e
+T1371 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 62/62 MP 0/0 Hu 48 $ 413 room=.
+-> n
+T1372 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 62/62 MP 0/0 Hu 47 $ 413 room=.
+-> e
+T1373 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 46 $ 413 room=.
+-> s
+T1374 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 45 $ 413 room=.
+-> e
+T1375 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 62/62 MP 0/0 Hu 44 $ 413 room=.
+-> e
+T1376 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 62/62 MP 0/0 Hu 43 $ 413 room=.
+-> s
+T1377 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 62/62 MP 0/0 Hu 42 $ 413 room=.
+-> s
+T1378 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 62/62 MP 0/0 Hu 41 $ 413 room=.
+-> w
+T1379 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 62/62 MP 0/0 Hu 40 $ 413 room=.
+-> w
+T1380 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 62/62 MP 0/0 Hu 39 $ 413 room=.
+-> w
+T1381 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 62/62 MP 0/0 Hu 38 $ 413 room=.
+-> n
+T1382 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu 37 $ 413 room=.
+-> e
+T1383 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 62/62 MP 0/0 Hu 36 $ 413 room=.
+-> n
+T1384 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 62/62 MP 0/0 Hu 35 $ 413 room=.
+-> n
+T1385 mode=game_loop           Elrond the Singer(elf) F3@( 7, 8) HP 62/62 MP 0/0 Hu 34 $ 413 room=.
+-> w
+T1386 mode=game_loop           Elrond the Singer(elf) F3@( 6, 8) HP 62/62 MP 0/0 Hu 33 $ 413 room=.
+-> s
+T1387 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 62/62 MP 0/0 Hu 32 $ 413 room=.
+-> w
+T1388 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 62/62 MP 0/0 Hu 31 $ 413 room=.
+-> w
+T1389 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 62/62 MP 0/0 Hu 30 $ 413 room=.
+-> s
+T1390 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 62/62 MP 0/0 Hu 29 $ 413 room=.
+-> e
+T1391 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 62/62 MP 0/0 Hu 28 $ 413 room=.
+-> s
+T1392 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 62/62 MP 0/0 Hu 27 $ 413 room=.
+-> w
+T1393 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 62/62 MP 0/0 Hu 26 $ 413 room=.
+-> s
+T1394 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 62/62 MP 0/0 Hu 25 $ 413 room=.
+-> s
+T1395 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 62/62 MP 0/0 Hu 24 $ 413 room=.
+-> w
+T1396 mode=game_loop           Elrond the Singer(elf) F3@( 3,13) HP 62/62 MP 0/0 Hu 23 $ 413 room=.
+-> s
+T1397 mode=game_loop           Elrond the Singer(elf) F3@( 3,14) HP 62/62 MP 0/0 Hu 22 $ 413 room=.
+-> e
+T1398 mode=game_loop           Elrond the Singer(elf) F3@( 4,14) HP 62/62 MP 0/0 Hu 21 $ 413 room=.
+-> n
+T1399 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 62/62 MP 0/0 Hu 20 $ 413 room=.
+-> n
+T1400 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 62/62 MP 0/0 Hu 19 $ 413 room=.
+-> w
+T1401 mode=game_loop           Elrond the Singer(elf) F3@( 3,12) HP 62/62 MP 0/0 Hu 18 $ 413 room=.
+-> w
+T1402 mode=combat_mode         Elrond the Singer(elf) F3@( 2,12) HP 62/62 MP 0/0 Hu 17 $ 413 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T1403 mode=combat_mode         Elrond the Singer(elf) F3@( 2,12) HP 61/62 MP 0/0 Hu 17 $ 413 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T1404 mode=combat_victory      Elrond the Singer(elf) F3@( 2,12) HP 61/62 MP 0/0 Hu 17 $ 434 room=.
+-> back
+T1405 mode=game_loop           Elrond the Singer(elf) F3@( 2,12) HP 61/62 MP 0/0 Hu 17 $ 434 room=.
+-> n
+T1406 mode=game_loop           Elrond the Singer(elf) F3@( 2,11) HP 61/62 MP 0/0 Hu 16 $ 434 room=.
+-> w
+T1407 mode=game_loop           Elrond the Singer(elf) F3@( 1,11) HP 61/62 MP 0/0 Hu 15 $ 434 room=.
+-> e
+T1408 mode=game_loop           Elrond the Singer(elf) F3@( 2,11) HP 61/62 MP 0/0 Hu 14 $ 434 room=.
+-> s
+T1409 mode=game_loop           Elrond the Singer(elf) F3@( 2,12) HP 61/62 MP 0/0 Hu 13 $ 434 room=.
+-> s
+T1410 mode=game_loop           Elrond the Singer(elf) F3@( 2,13) HP 61/62 MP 0/0 Hu 12 $ 434 room=.
+-> e
+T1411 mode=game_loop           Elrond the Singer(elf) F3@( 3,13) HP 61/62 MP 0/0 Hu 11 $ 434 room=.
+-> s
+T1412 mode=game_loop           Elrond the Singer(elf) F3@( 3,14) HP 61/62 MP 0/0 Hu 10 $ 434 room=.
+-> e
+T1413 mode=game_loop           Elrond the Singer(elf) F3@( 4,14) HP 61/62 MP 0/0 Hu  9 $ 434 room=.
+-> n
+T1414 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 61/62 MP 0/0 Hu  8 $ 434 room=.
+-> n
+T1415 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 61/62 MP 0/0 Hu  7 $ 434 room=.
+-> n
+T1416 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 61/62 MP 0/0 Hu  6 $ 434 room=.
+-> n
+T1417 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 61/62 MP 0/0 Hu  5 $ 434 room=.
+-> e
+T1418 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 61/62 MP 0/0 Hu  4 $ 434 room=.
+-> e
+T1419 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 61/62 MP 0/0 Hu  3 $ 434 room=.
+-> e
+T1420 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 61/62 MP 0/0 Hu  2 $ 434 room=.
+-> s
+T1421 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 61/62 MP 0/0 Hu  1 $ 434 room=.
+-> s
+T1422 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 59/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1423 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 57/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1424 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 55/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1425 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 53/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1426 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 51/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1427 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 49/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1428 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 47/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1429 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 45/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1430 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 43/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1431 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 41/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1432 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 39/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1433 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 37/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1434 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 35/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1435 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 33/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1436 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 31/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1437 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 29/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1438 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 27/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1439 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 25/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1440 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 23/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1441 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 21/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1442 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 19/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1443 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 17/62 MP 0/0 Hu  0 $ 434 room=.
+-> i
+T1444 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 17/62 MP 0/0 Hu  0 $ 434 room=.
+-> u10
+T1445 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 47/62 MP 0/0 Hu  0 $ 434 room=.
+-> u4
+T1446 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> x
+T1447 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1448 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 60/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1449 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 58/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1450 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 56/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1451 mode=game_loop           Elrond the Singer(elf) F3@( 7,11) HP 54/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1452 mode=game_loop           Elrond the Singer(elf) F3@( 8,11) HP 52/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1453 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 50/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1454 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 48/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1455 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 46/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1456 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 44/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1457 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 42/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1458 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 40/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1459 mode=game_loop           Elrond the Singer(elf) F3@(11, 9) HP 38/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1460 mode=game_loop           Elrond the Singer(elf) F3@(11,10) HP 36/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1461 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 34/62 MP 0/0 Hu  0 $ 434 room=.
+-> i
+T1462 mode=inventory           Elrond the Singer(elf) F3@(12,10) HP 34/62 MP 0/0 Hu  0 $ 434 room=.
+-> u10
+T1463 mode=inventory           Elrond the Singer(elf) F3@(12,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> x
+T1464 mode=game_loop           Elrond the Singer(elf) F3@(12,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1465 mode=game_loop           Elrond the Singer(elf) F3@(12, 9) HP 60/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1466 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 58/62 MP 0/0 Hu  0 $ 434 room=.
+-> i
+T1467 mode=inventory           Elrond the Singer(elf) F3@(13, 9) HP 58/62 MP 0/0 Hu  0 $ 434 room=.
+-> u10
+T1468 mode=inventory           Elrond the Singer(elf) F3@(13, 9) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> x
+T1469 mode=game_loop           Elrond the Singer(elf) F3@(13, 9) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1470 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 60/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1471 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 58/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1472 mode=game_loop           Elrond the Singer(elf) F3@(13, 6) HP 56/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1473 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 54/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1474 mode=game_loop           Elrond the Singer(elf) F3@(14, 5) HP 52/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1475 mode=game_loop           Elrond the Singer(elf) F3@(14, 6) HP 50/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1476 mode=game_loop           Elrond the Singer(elf) F3@(14, 7) HP 48/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1477 mode=game_loop           Elrond the Singer(elf) F3@(13, 7) HP 46/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1478 mode=game_loop           Elrond the Singer(elf) F3@(13, 8) HP 44/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1479 mode=game_loop           Elrond the Singer(elf) F3@(12, 8) HP 42/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1480 mode=game_loop           Elrond the Singer(elf) F3@(11, 8) HP 40/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1481 mode=game_loop           Elrond the Singer(elf) F3@(10, 8) HP 38/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1482 mode=game_loop           Elrond the Singer(elf) F3@(10, 9) HP 36/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1483 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 34/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1484 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 32/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1485 mode=game_loop           Elrond the Singer(elf) F3@( 9, 9) HP 30/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1486 mode=game_loop           Elrond the Singer(elf) F3@( 8, 9) HP 28/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1487 mode=game_loop           Elrond the Singer(elf) F3@( 8,10) HP 26/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1488 mode=game_loop           Elrond the Singer(elf) F3@( 7,10) HP 24/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1489 mode=game_loop           Elrond the Singer(elf) F3@( 7, 9) HP 22/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1490 mode=game_loop           Elrond the Singer(elf) F3@( 6, 9) HP 20/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1491 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 18/62 MP 0/0 Hu  0 $ 434 room=.
+-> i
+T1492 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 18/62 MP 0/0 Hu  0 $ 434 room=.
+-> u10
+T1493 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 48/62 MP 0/0 Hu  0 $ 434 room=.
+-> u4
+T1494 mode=inventory           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> x
+T1495 mode=game_loop           Elrond the Singer(elf) F3@( 6,10) HP 62/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1496 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 60/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1497 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 58/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1498 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 56/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1499 mode=game_loop           Elrond the Singer(elf) F3@( 5, 9) HP 54/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1500 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 52/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1501 mode=game_loop           Elrond the Singer(elf) F3@( 3, 9) HP 50/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1502 mode=game_loop           Elrond the Singer(elf) F3@( 4, 9) HP 48/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1503 mode=game_loop           Elrond the Singer(elf) F3@( 4,10) HP 46/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1504 mode=game_loop           Elrond the Singer(elf) F3@( 5,10) HP 44/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1505 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 42/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1506 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 40/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1507 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 38/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1508 mode=game_loop           Elrond the Singer(elf) F3@( 4,13) HP 36/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1509 mode=game_loop           Elrond the Singer(elf) F3@( 4,14) HP 34/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1510 mode=game_loop           Elrond the Singer(elf) F3@( 3,14) HP 32/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1511 mode=game_loop           Elrond the Singer(elf) F3@( 3,13) HP 30/62 MP 0/0 Hu  0 $ 434 room=.
+-> w
+T1512 mode=game_loop           Elrond the Singer(elf) F3@( 2,13) HP 28/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1513 mode=game_loop           Elrond the Singer(elf) F3@( 2,12) HP 26/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1514 mode=game_loop           Elrond the Singer(elf) F3@( 3,12) HP 24/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1515 mode=game_loop           Elrond the Singer(elf) F3@( 4,12) HP 22/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1516 mode=game_loop           Elrond the Singer(elf) F3@( 4,11) HP 20/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1517 mode=game_loop           Elrond the Singer(elf) F3@( 5,11) HP 18/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1518 mode=game_loop           Elrond the Singer(elf) F3@( 6,11) HP 16/62 MP 0/0 Hu  0 $ 434 room=.
+-> s
+T1519 mode=game_loop           Elrond the Singer(elf) F3@( 6,12) HP 14/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1520 mode=game_loop           Elrond the Singer(elf) F3@( 7,12) HP 12/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1521 mode=game_loop           Elrond the Singer(elf) F3@( 8,12) HP 10/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1522 mode=game_loop           Elrond the Singer(elf) F3@( 9,12) HP 8/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1523 mode=game_loop           Elrond the Singer(elf) F3@( 9,11) HP 6/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1524 mode=game_loop           Elrond the Singer(elf) F3@( 9,10) HP 4/62 MP 0/0 Hu  0 $ 434 room=.
+-> e
+T1525 mode=game_loop           Elrond the Singer(elf) F3@(10,10) HP 2/62 MP 0/0 Hu  0 $ 434 room=.
+-> n
+T1526 mode=death_screen        Elrond the Singer(elf) F3@(10, 9) HP 0/62 MP 0/0 Hu  0 $ 434 room=.
+
+=== run finished: turns=1526 floor=3 hp=0/62 gold=434 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00317_elf.html

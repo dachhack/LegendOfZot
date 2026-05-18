@@ -1,0 +1,745 @@
+T   0 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Rust Monster(L0 HP18/18)
+  A Rust Monster (Level 0) appears! An insectoid creature with feathery antennae that twitch toward your gear.
+  The Rust Monster strikes first!
+-> a
+T   3 mode=combat_victory      Gilraen the Stalwart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 345 room=.
+  You took 1 damage!
+  You hit the evil Rust Monster!
+  Rust Monster took 20 damage.
+  You defeated the Rust Monster!
+  The rust monster crumbles into orange dust.
+  You gained 8 experience.
+  You found 5 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Rust Monster meat.
+-> back
+T   4 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 345 room=.
+-> l
+T   5 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 345 room=.
+-> s
+T   6 mode=stairs_down_mode    Gilraen the Stalwart(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 98 $ 345 room=D
+-> n
+T   7 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 97 $ 345 room=.
+-> e
+T   8 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 345 room=.
+-> l
+T   9 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 345 room=.
+-> s
+T  10 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 345 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  11 mode=combat_victory      Gilraen the Stalwart(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 355 room=.
+-> back
+T  12 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 355 room=.
+-> l
+T  13 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 3) HP 29/30 MP 0/0 Hu 95 $ 355 room=.
+-> s
+T  14 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 4) HP 29/30 MP 0/0 Hu 94 $ 355 room=.
+-> w
+T  15 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 93 $ 355 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  16 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 93 $ 355 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  17 mode=combat_victory      Gilraen the Stalwart(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 93 $ 459 room=.
+-> back
+T  18 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 93 $ 459 room=.
+-> s
+T  19 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 92 $ 459 room=.
+-> s
+T  20 mode=dungeon_mode        Gilraen the Stalwart(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 91 $ 459 room=N
+-> u
+T  21 mode=game_loop           Gilraen the Stalwart(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 91 $ 459 room=N
+-> e
+T  22 mode=chest_mode          Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=C
+-> o
+T  23 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=.
+-> i
+T  24 mode=inventory           Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=.
+-> e1
+T  25 mode=inventory           Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=.
+-> x
+T  26 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=.
+-> l
+T  27 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 6) HP 30/30 MP 0/0 Hu 90 $ 459 room=.
+-> n
+T  28 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 89 $ 459 room=.
+-> i
+T  29 mode=inventory           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 89 $ 459 room=.
+-> eat5
+T  30 mode=inventory           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 459 room=.
+-> x
+T  31 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 459 room=.
+-> l
+T  32 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 459 room=.
+-> e
+T  33 mode=game_loop           Gilraen the Stalwart(hum) F1@( 3, 5) HP 30/30 MP 0/0 Hu 94 $ 459 room=.
+-> e
+T  34 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 459 room=.
+-> s
+T  35 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP35/35)
+-> a
+T  36 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP35/35)
+-> a
+T  37 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 28/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP35/35)
+-> a
+T  38 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 27/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP35/35)
+-> a
+T  39 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 26/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP12/35)
+-> f
+T  40 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 6) HP 25/30 MP 0/0 Hu 92 $ 459 room=M vs Zombie(L0 HP12/35)
+-> a
+T  41 mode=combat_victory      Gilraen the Stalwart(hum) F1@( 4, 6) HP 25/30 MP 0/0 Hu 92 $ 466 room=.
+-> back
+T  42 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 6) HP 25/30 MP 0/0 Hu 92 $ 466 room=.
+-> l
+T  43 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 6) HP 25/30 MP 0/0 Hu 92 $ 466 room=.
+-> s
+T  44 mode=combat_mode         Gilraen the Stalwart(hum) F1@( 4, 7) HP 25/30 MP 0/0 Hu 91 $ 466 room=M vs Stirge(L0 HP6/6)
+-> a
+T  45 mode=combat_victory      Gilraen the Stalwart(hum) F1@( 4, 7) HP 24/30 MP 0/0 Hu 91 $ 468 room=.
+-> back
+T  46 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 7) HP 24/30 MP 0/0 Hu 91 $ 468 room=.
+-> i
+T  47 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 7) HP 24/30 MP 0/0 Hu 91 $ 468 room=.
+-> u4
+T  48 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> x
+T  49 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> i
+T  50 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> eat4
+T  51 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 97 $ 468 room=.
+-> x
+T  52 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 97 $ 468 room=.
+-> n
+T  53 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 96 $ 468 room=.
+-> n
+T  54 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 95 $ 468 room=.
+-> i
+T  55 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 95 $ 468 room=.
+-> eat3
+T  56 mode=inventory           Gilraen the Stalwart(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu100 $ 468 room=.
+-> x
+T  57 mode=game_loop           Gilraen the Stalwart(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu100 $ 468 room=.
+-> w
+T  58 mode=game_loop           Gilraen the Stalwart(hum) F1@( 3, 5) HP 30/30 MP 0/0 Hu 99 $ 468 room=.
+-> w
+T  59 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 98 $ 468 room=.
+-> n
+T  60 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 97 $ 468 room=.
+-> n
+T  61 mode=game_loop           Gilraen the Stalwart(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 96 $ 468 room=.
+-> w
+T  62 mode=stairs_down_mode    Gilraen the Stalwart(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 95 $ 468 room=D
+-> d
+T  63 mode=stairs_up_mode      Gilraen the Stalwart(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 95 $ 468 room=U
+-> w
+T  64 mode=stairs_up_mode      Gilraen the Stalwart(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 95 $ 468 room=U
+-> w
+T  65 mode=stairs_up_mode      Gilraen the Stalwart(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 95 $ 468 room=U
+-> s
+T  66 mode=game_loop           Gilraen the Stalwart(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 94 $ 468 room=.
+-> l
+T  67 mode=game_loop           Gilraen the Stalwart(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 94 $ 468 room=.
+-> e
+T  68 mode=altar_mode          Gilraen the Stalwart(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 93 $ 468 room=A
+-> pray
+T  69 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 93 $ 468 room=.
+-> l
+T  70 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 93 $ 468 room=.
+-> s
+T  71 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> i
+T  72 mode=inventory           Gilraen the Stalwart(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> eat3
+T  73 mode=inventory           Gilraen the Stalwart(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 98 $ 468 room=.
+-> x
+T  74 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 98 $ 468 room=.
+-> l
+T  75 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 98 $ 468 room=.
+-> w
+T  76 mode=pool_mode           Gilraen the Stalwart(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 97 $ 468 room=P
+-> dr
+T  77 mode=game_loop           Gilraen the Stalwart(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 97 $ 468 room=.
+-> s
+T  78 mode=chest_mode          Gilraen the Stalwart(hum) F2@( 1, 4) HP 30/30 MP 0/0 Hu 96 $ 468 room=C
+-> o
+T  79 mode=game_loop           Gilraen the Stalwart(hum) F2@( 1, 4) HP 30/30 MP 0/0 Hu 96 $ 468 room=.
+-> e
+T  80 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 2, 4) HP 30/30 MP 0/0 Hu 95 $ 468 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T  81 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 2, 4) HP 29/30 MP 0/0 Hu 95 $ 468 room=M vs Rust Monster(L1 HP18/18)
+-> f
+T  82 mode=flee_direction_mode Gilraen the Stalwart(hum) F2@( 2, 4) HP 28/30 MP 0/0 Hu 95 $ 468 room=M
+-> s
+T  83 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 5) HP 28/30 MP 0/0 Hu 95 $ 468 room=.
+-> l
+T  84 mode=game_loop           Gilraen the Stalwart(hum) F2@( 2, 5) HP 28/30 MP 0/0 Hu 95 $ 468 room=.
+-> e
+T  85 mode=game_loop           Gilraen the Stalwart(hum) F2@( 3, 5) HP 28/30 MP 0/0 Hu 94 $ 468 room=.
+-> l
+T  86 mode=game_loop           Gilraen the Stalwart(hum) F2@( 3, 5) HP 28/30 MP 0/0 Hu 94 $ 468 room=.
+-> e
+T  87 mode=game_loop           Gilraen the Stalwart(hum) F2@( 4, 5) HP 29/30 MP 0/0 Hu 93 $ 468 room=.
+-> l
+T  88 mode=game_loop           Gilraen the Stalwart(hum) F2@( 4, 5) HP 29/30 MP 0/0 Hu 93 $ 468 room=.
+-> e
+T  89 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 5, 5) HP 29/30 MP 0/0 Hu 92 $ 468 room=M vs Orc(L1 HP50/50)
+-> a
+T  90 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 5, 5) HP 25/30 MP 0/0 Hu 92 $ 468 room=M vs Orc(L1 HP50/50)
+-> a
+T  91 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 5, 5) HP 21/30 MP 0/0 Hu 92 $ 468 room=M vs Orc(L1 HP31/50)
+-> a
+T  92 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 5, 5) HP 17/30 MP 0/0 Hu 92 $ 468 room=M vs Orc(L1 HP12/50)
+-> f
+T  93 mode=flee_direction_mode Gilraen the Stalwart(hum) F2@( 5, 5) HP 13/30 MP 0/0 Hu 92 $ 468 room=M
+-> e
+T  94 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 5) HP 13/30 MP 0/0 Hu 92 $ 468 room=.
+-> i
+T  95 mode=inventory           Gilraen the Stalwart(hum) F2@( 6, 5) HP 13/30 MP 0/0 Hu 92 $ 468 room=.
+-> u4
+T  96 mode=inventory           Gilraen the Stalwart(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> x
+T  97 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> l
+T  98 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> e
+T  99 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> l
+T 100 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> e
+T 101 mode=chest_mode          Gilraen the Stalwart(hum) F2@( 8, 5) HP 30/30 MP 0/0 Hu 90 $ 468 room=C
+-> o
+T 102 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 5) HP 30/30 MP 0/0 Hu 90 $ 518 room=.
+-> l
+T 103 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 5) HP 30/30 MP 0/0 Hu 90 $ 518 room=.
+-> s
+T 104 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 6) HP 30/30 MP 0/0 Hu 89 $ 518 room=.
+-> l
+T 105 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 6) HP 30/30 MP 0/0 Hu 89 $ 518 room=.
+-> s
+T 106 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 518 room=M vs Orc(L1 HP50/50)
+-> a
+T 107 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 518 room=M vs Orc(L1 HP31/50)
+-> a
+T 108 mode=combat_mode         Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 518 room=M vs Orc(L1 HP12/50)
+-> a
+T 109 mode=combat_victory      Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 536 room=.
+-> back
+T 110 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 536 room=.
+-> l
+T 111 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 7) HP 30/30 MP 0/0 Hu 88 $ 536 room=.
+-> s
+T 112 mode=altar_mode          Gilraen the Stalwart(hum) F2@( 8, 8) HP 30/30 MP 0/0 Hu 87 $ 536 room=A
+-> pray
+T 113 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 8) HP 30/32 MP 0/0 Hu 87 $ 536 room=.
+-> l
+T 114 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 8) HP 30/32 MP 0/0 Hu 87 $ 536 room=.
+-> s
+T 115 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 9) HP 30/32 MP 0/0 Hu 86 $ 536 room=.
+-> l
+T 116 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 9) HP 30/32 MP 0/0 Hu 86 $ 536 room=.
+-> w
+T 117 mode=chest_mode          Gilraen the Stalwart(hum) F2@( 7, 9) HP 31/32 MP 0/0 Hu 85 $ 536 room=C
+-> o
+T 118 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 9) HP 31/32 MP 0/0 Hu 85 $ 536 room=.
+-> i
+T 119 mode=inventory           Gilraen the Stalwart(hum) F2@( 7, 9) HP 31/32 MP 0/0 Hu 85 $ 536 room=.
+-> e1
+T 120 mode=inventory           Gilraen the Stalwart(hum) F2@( 7, 9) HP 31/32 MP 0/0 Hu 85 $ 536 room=.
+-> x
+T 121 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 9) HP 31/32 MP 0/0 Hu 85 $ 536 room=.
+-> n
+T 122 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 8) HP 31/32 MP 0/0 Hu 84 $ 536 room=.
+-> w
+T 123 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 8) HP 31/32 MP 0/0 Hu 83 $ 536 room=.
+-> w
+T 124 mode=game_loop           Gilraen the Stalwart(hum) F2@( 5, 8) HP 31/32 MP 0/0 Hu 82 $ 536 room=.
+-> s
+T 125 mode=game_loop           Gilraen the Stalwart(hum) F2@( 5, 9) HP 32/32 MP 0/0 Hu 81 $ 536 room=.
+-> l
+T 126 mode=game_loop           Gilraen the Stalwart(hum) F2@( 5, 9) HP 32/32 MP 0/0 Hu 81 $ 536 room=.
+-> e
+T 127 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 9) HP 32/32 MP 0/0 Hu 80 $ 536 room=.
+-> l
+T 128 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6, 9) HP 32/32 MP 0/0 Hu 80 $ 536 room=.
+-> e
+T 129 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 9) HP 32/32 MP 0/0 Hu 79 $ 536 room=.
+-> n
+T 130 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7, 8) HP 32/32 MP 0/0 Hu 78 $ 536 room=.
+-> e
+T 131 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8, 8) HP 32/32 MP 0/0 Hu 77 $ 536 room=.
+-> e
+T 132 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9, 8) HP 32/32 MP 0/0 Hu 76 $ 536 room=.
+-> e
+T 133 mode=game_loop           Gilraen the Stalwart(hum) F2@(10, 8) HP 32/32 MP 0/0 Hu 75 $ 536 room=.
+-> e
+T 134 mode=game_loop           Gilraen the Stalwart(hum) F2@(11, 8) HP 32/32 MP 0/0 Hu 74 $ 536 room=.
+-> e
+T 135 mode=game_loop           Gilraen the Stalwart(hum) F2@(12, 8) HP 32/32 MP 0/0 Hu 73 $ 536 room=.
+-> e
+T 136 mode=game_loop           Gilraen the Stalwart(hum) F2@(13, 8) HP 32/32 MP 0/0 Hu 72 $ 536 room=.
+-> e
+T 137 mode=oracle_mode         Gilraen the Stalwart(hum) F2@(14, 8) HP 32/32 MP 0/0 Hu 71 $ 536 room=O
+-> s
+T 138 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 9) HP 32/32 MP 0/0 Hu 70 $ 536 room=.
+-> l
+T 139 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 9) HP 32/32 MP 0/0 Hu 70 $ 536 room=.
+-> s
+T 140 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,10) HP 32/32 MP 0/0 Hu 69 $ 536 room=.
+-> l
+T 141 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,10) HP 32/32 MP 0/0 Hu 69 $ 536 room=.
+-> w
+T 142 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,10) HP 32/32 MP 0/0 Hu 68 $ 536 room=.
+-> l
+T 143 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,10) HP 32/32 MP 0/0 Hu 68 $ 536 room=.
+-> w
+T 144 mode=altar_mode          Gilraen the Stalwart(hum) F2@(12,10) HP 32/32 MP 0/0 Hu 67 $ 536 room=A
+-> pray
+T 145 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,10) HP 32/32 MP 0/0 Hu 67 $ 536 room=.
+-> l
+T 146 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,10) HP 32/32 MP 0/0 Hu 67 $ 536 room=.
+-> s
+T 147 mode=combat_mode         Gilraen the Stalwart(hum) F2@(12,11) HP 32/32 MP 0/0 Hu 66 $ 536 room=M vs Harpy(L1 HP28/28)
+-> a
+T 148 mode=combat_mode         Gilraen the Stalwart(hum) F2@(12,11) HP 31/32 MP 0/0 Hu 66 $ 536 room=M vs Harpy(L1 HP2/28)
+-> a
+T 149 mode=combat_mode         Gilraen the Stalwart(hum) F2@(12,11) HP 30/32 MP 0/0 Hu 66 $ 536 room=M vs Harpy(L1 HP2/28)
+-> a
+T 150 mode=combat_victory      Gilraen the Stalwart(hum) F2@(12,11) HP 30/32 MP 0/0 Hu 66 $ 538 room=.
+-> back
+T 151 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,11) HP 30/32 MP 0/0 Hu 66 $ 538 room=.
+-> l
+T 152 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,11) HP 30/32 MP 0/0 Hu 66 $ 538 room=.
+-> s
+T 153 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,12) HP 30/32 MP 0/0 Hu 65 $ 538 room=.
+-> l
+T 154 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,12) HP 30/32 MP 0/0 Hu 65 $ 538 room=.
+-> e
+T 155 mode=chest_mode          Gilraen the Stalwart(hum) F2@(13,12) HP 30/32 MP 0/0 Hu 64 $ 538 room=C
+-> o
+T 156 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,12) HP 30/32 MP 0/0 Hu 64 $ 538 room=.
+-> i
+T 157 mode=inventory           Gilraen the Stalwart(hum) F2@(13,12) HP 30/32 MP 0/0 Hu 64 $ 538 room=.
+-> u6
+T 158 mode=inventory           Gilraen the Stalwart(hum) F2@(13,12) HP 32/32 MP 0/0 Hu 64 $ 538 room=.
+-> x
+T 159 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,12) HP 32/32 MP 0/0 Hu 64 $ 538 room=.
+-> i
+T 160 mode=inventory           Gilraen the Stalwart(hum) F2@(13,12) HP 32/32 MP 0/0 Hu 64 $ 538 room=.
+-> e4
+T 161 mode=inventory           Gilraen the Stalwart(hum) F2@(13,12) HP 32/32 MP 0/0 Hu 64 $ 538 room=.
+-> x
+T 162 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,12) HP 32/32 MP 0/0 Hu 64 $ 538 room=.
+-> s
+T 163 mode=garden_mode         Gilraen the Stalwart(hum) F2@(13,13) HP 32/32 MP 0/0 Hu 63 $ 538 room=G
+-> h
+T 164 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,13) HP 32/32 MP 0/0 Hu 63 $ 538 room=.
+-> w
+T 165 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,13) HP 32/32 MP 0/0 Hu 62 $ 538 room=.
+-> l
+T 166 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,13) HP 32/32 MP 0/0 Hu 62 $ 538 room=.
+-> w
+T 167 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 32/32 MP 0/0 Hu 61 $ 538 room=.
+-> l
+T 168 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 32/32 MP 0/0 Hu 61 $ 538 room=.
+-> s
+T 169 mode=chest_mode          Gilraen the Stalwart(hum) F2@(11,14) HP 32/32 MP 0/0 Hu 60 $ 538 room=C
+-> o
+T 170 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 32/32 MP 0/0 Hu 60 $ 838 room=.
+-> l
+T 171 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 32/32 MP 0/0 Hu 60 $ 838 room=.
+-> w
+T 172 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 32/32 MP 0/0 Hu 59 $ 838 room=.
+-> n
+T 173 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,13) HP 32/32 MP 0/0 Hu 58 $ 838 room=.
+-> w
+T 174 mode=library_mode        Gilraen the Stalwart(hum) F2@( 9,13) HP 32/32 MP 0/0 Hu 57 $ 838 room=L
+-> r
+T 175 mode=library_read_decision_mode Gilraen the Stalwart(hum) F2@( 9,13) HP 32/32 MP 0/0 Hu 57 $ 838 room=L
+-> y
+T 176 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9,13) HP 13/32 MP 0/0 Hu 57 $ 938 room=.
+-> w
+T 177 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,13) HP 13/32 MP 0/0 Hu 56 $ 938 room=.
+-> i
+T 178 mode=inventory           Gilraen the Stalwart(hum) F2@( 8,13) HP 13/32 MP 0/0 Hu 56 $ 938 room=.
+-> u6
+T 179 mode=inventory           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu 56 $ 938 room=.
+-> x
+T 180 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu 56 $ 938 room=.
+-> i
+T 181 mode=inventory           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu 56 $ 938 room=.
+-> eat3
+T 182 mode=inventory           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu 62 $ 938 room=.
+-> eat1
+T 183 mode=inventory           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu100 $ 938 room=.
+-> x
+T 184 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,13) HP 32/32 MP 0/0 Hu100 $ 938 room=.
+-> n
+T 185 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,12) HP 32/32 MP 0/0 Hu 99 $ 938 room=.
+-> n
+T 186 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,11) HP 32/32 MP 0/0 Hu 98 $ 938 room=.
+-> n
+T 187 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,10) HP 32/32 MP 0/0 Hu 97 $ 938 room=.
+-> e
+T 188 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9,10) HP 32/32 MP 0/0 Hu 96 $ 938 room=.
+-> e
+T 189 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,10) HP 32/32 MP 0/0 Hu 95 $ 938 room=.
+-> e
+T 190 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,10) HP 32/32 MP 0/0 Hu 94 $ 938 room=.
+-> e
+T 191 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,10) HP 32/32 MP 0/0 Hu 93 $ 938 room=.
+-> e
+T 192 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,10) HP 32/32 MP 0/0 Hu 92 $ 938 room=.
+-> e
+T 193 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,10) HP 32/32 MP 0/0 Hu 91 $ 938 room=.
+-> e
+T 194 mode=game_loop           Gilraen the Stalwart(hum) F2@(15,10) HP 32/32 MP 0/0 Hu 90 $ 938 room=.
+-> e
+T 195 mode=game_loop           Gilraen the Stalwart(hum) F2@(16,10) HP 32/32 MP 0/0 Hu 89 $ 938 room=.
+-> e
+T 196 mode=game_loop           Gilraen the Stalwart(hum) F2@(17,10) HP 32/32 MP 0/0 Hu 88 $ 938 room=.
+-> e
+T 197 mode=dungeon_mode        Gilraen the Stalwart(hum) F2@(18,10) HP 32/32 MP 0/0 Hu 87 $ 938 room=N
+-> u
+T 198 mode=dungeon_unlocked_mode Gilraen the Stalwart(hum) F2@(18,10) HP 32/32 MP 0/0 Hu 87 $ 938 room=N
+-> r
+T 199 mode=game_loop           Gilraen the Stalwart(hum) F2@(18,10) HP 32/32 MP 0/0 Hu 87 $ 938 room=N
+-> l
+T 200 mode=game_loop           Gilraen the Stalwart(hum) F2@(18,10) HP 32/32 MP 0/0 Hu 87 $ 938 room=N
+-> n
+T 201 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 9) HP 32/32 MP 0/0 Hu 86 $ 938 room=.
+-> n
+T 202 mode=pool_mode           Gilraen the Stalwart(hum) F2@(18, 8) HP 32/32 MP 0/0 Hu 85 $ 938 room=P
+-> dr
+T 203 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 8) HP 32/32 MP 0/0 Hu 85 $ 938 room=.
+-> n
+T 204 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 7) HP 32/32 MP 0/0 Hu 84 $ 938 room=.
+-> n
+T 205 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 32/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 206 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 31/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 207 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 30/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 208 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 29/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 209 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 28/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 210 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 27/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 211 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 26/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP19/45)
+-> a
+T 212 mode=combat_mode         Gilraen the Stalwart(hum) F2@(18, 6) HP 25/32 MP 0/0 Hu 83 $ 938 room=M vs Myconid Shaman(L1 HP19/45)
+-> a
+T 213 mode=combat_victory      Gilraen the Stalwart(hum) F2@(18, 6) HP 25/32 MP 0/0 Hu 83 $ 952 room=.
+-> back
+T 214 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 6) HP 25/32 MP 0/0 Hu 83 $ 952 room=.
+-> n
+T 215 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 5) HP 25/32 MP 0/0 Hu 82 $ 952 room=.
+-> s
+T 216 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 6) HP 25/32 MP 0/0 Hu 81 $ 952 room=.
+-> n
+T 217 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 5) HP 25/32 MP 0/0 Hu 80 $ 952 room=.
+-> s
+T 218 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 6) HP 26/32 MP 0/0 Hu 79 $ 952 room=.
+-> s
+T 219 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 7) HP 26/32 MP 0/0 Hu 78 $ 952 room=.
+-> s
+T 220 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 8) HP 26/32 MP 0/0 Hu 77 $ 952 room=.
+-> s
+T 221 mode=game_loop           Gilraen the Stalwart(hum) F2@(18, 9) HP 26/32 MP 0/0 Hu 76 $ 952 room=.
+-> s
+T 222 mode=game_loop           Gilraen the Stalwart(hum) F2@(18,10) HP 27/32 MP 0/0 Hu 75 $ 952 room=N
+-> w
+T 223 mode=game_loop           Gilraen the Stalwart(hum) F2@(17,10) HP 27/32 MP 0/0 Hu 74 $ 952 room=.
+-> w
+T 224 mode=game_loop           Gilraen the Stalwart(hum) F2@(16,10) HP 27/32 MP 0/0 Hu 73 $ 952 room=.
+-> w
+T 225 mode=game_loop           Gilraen the Stalwart(hum) F2@(15,10) HP 27/32 MP 0/0 Hu 72 $ 952 room=.
+-> w
+T 226 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,10) HP 28/32 MP 0/0 Hu 71 $ 952 room=.
+-> n
+T 227 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 9) HP 28/32 MP 0/0 Hu 70 $ 952 room=.
+-> n
+T 228 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 8) HP 28/32 MP 0/0 Hu 69 $ 952 room=O
+-> w
+T 229 mode=game_loop           Gilraen the Stalwart(hum) F2@(13, 8) HP 28/32 MP 0/0 Hu 68 $ 952 room=.
+-> n
+T 230 mode=game_loop           Gilraen the Stalwart(hum) F2@(13, 7) HP 29/32 MP 0/0 Hu 67 $ 952 room=.
+-> n
+T 231 mode=chest_mode          Gilraen the Stalwart(hum) F2@(13, 6) HP 29/32 MP 0/0 Hu 66 $ 952 room=C
+-> o
+T 232 mode=game_loop           Gilraen the Stalwart(hum) F2@(13, 6) HP 29/32 MP 0/0 Hu 66 $ 952 room=.
+-> l
+T 233 mode=game_loop           Gilraen the Stalwart(hum) F2@(13, 6) HP 29/32 MP 0/0 Hu 66 $ 952 room=.
+-> e
+T 234 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 6) HP 29/32 MP 0/0 Hu 65 $ 952 room=.
+-> e
+T 235 mode=game_loop           Gilraen the Stalwart(hum) F2@(15, 6) HP 29/32 MP 0/0 Hu 64 $ 952 room=.
+-> e
+T 236 mode=shrine_mode         Gilraen the Stalwart(hum) F2@(16, 6) HP 30/32 MP 0/0 Hu 63 $ 952 room=F
+-> p
+T 237 mode=game_loop           Gilraen the Stalwart(hum) F2@(16, 6) HP 30/32 MP 0/0 Hu 63 $ 952 room=.
+-> l
+T 238 mode=game_loop           Gilraen the Stalwart(hum) F2@(16, 6) HP 30/32 MP 0/0 Hu 63 $ 952 room=.
+-> s
+T 239 mode=game_loop           Gilraen the Stalwart(hum) F2@(16, 7) HP 30/32 MP 0/0 Hu 62 $ 952 room=.
+-> s
+T 240 mode=game_loop           Gilraen the Stalwart(hum) F2@(16, 8) HP 30/32 MP 0/0 Hu 61 $ 952 room=.
+-> w
+T 241 mode=game_loop           Gilraen the Stalwart(hum) F2@(15, 8) HP 30/32 MP 0/0 Hu 60 $ 952 room=.
+-> w
+T 242 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 8) HP 30/32 MP 0/0 Hu 59 $ 952 room=O
+-> s
+T 243 mode=game_loop           Gilraen the Stalwart(hum) F2@(14, 9) HP 30/32 MP 0/0 Hu 58 $ 952 room=.
+-> s
+T 244 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,10) HP 30/32 MP 0/0 Hu 57 $ 952 room=.
+-> s
+T 245 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,11) HP 30/32 MP 0/0 Hu 56 $ 952 room=.
+-> s
+T 246 mode=game_loop           Gilraen the Stalwart(hum) F2@(14,12) HP 30/32 MP 0/0 Hu 55 $ 952 room=.
+-> w
+T 247 mode=game_loop           Gilraen the Stalwart(hum) F2@(13,12) HP 30/32 MP 0/0 Hu 54 $ 952 room=.
+-> w
+T 248 mode=game_loop           Gilraen the Stalwart(hum) F2@(12,12) HP 30/32 MP 0/0 Hu 53 $ 952 room=.
+-> w
+T 249 mode=library_mode        Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 52 $ 952 room=L
+-> r
+T 250 mode=library_read_decision_mode Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 52 $ 952 room=L
+-> y
+T 251 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 52 $ 952 room=.
+-> s
+T 252 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 30/32 MP 0/0 Hu 51 $ 952 room=.
+-> s
+T 253 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 30/32 MP 0/0 Hu 50 $ 952 room=.
+-> w
+T 254 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 49 $ 952 room=.
+-> n
+T 255 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,13) HP 30/32 MP 0/0 Hu 48 $ 952 room=.
+-> n
+T 256 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,12) HP 30/32 MP 0/0 Hu 47 $ 952 room=.
+-> e
+T 257 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 46 $ 952 room=.
+-> s
+T 258 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 30/32 MP 0/0 Hu 45 $ 952 room=.
+-> s
+T 259 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 30/32 MP 0/0 Hu 44 $ 952 room=.
+-> w
+T 260 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 43 $ 952 room=.
+-> n
+T 261 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,13) HP 30/32 MP 0/0 Hu 42 $ 952 room=.
+-> n
+T 262 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,12) HP 30/32 MP 0/0 Hu 41 $ 952 room=.
+-> e
+T 263 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 40 $ 952 room=.
+-> s
+T 264 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 30/32 MP 0/0 Hu 39 $ 952 room=.
+-> s
+T 265 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 30/32 MP 0/0 Hu 38 $ 952 room=.
+-> w
+T 266 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 37 $ 952 room=.
+-> n
+T 267 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,13) HP 30/32 MP 0/0 Hu 36 $ 952 room=.
+-> w
+T 268 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9,13) HP 30/32 MP 0/0 Hu 35 $ 952 room=.
+-> s
+T 269 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9,14) HP 30/32 MP 0/0 Hu 34 $ 952 room=.
+-> w
+T 270 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,14) HP 30/32 MP 0/0 Hu 33 $ 952 room=.
+-> l
+T 271 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,14) HP 30/32 MP 0/0 Hu 33 $ 952 room=.
+-> w
+T 272 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7,14) HP 30/32 MP 0/0 Hu 32 $ 952 room=.
+-> l
+T 273 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7,14) HP 30/32 MP 0/0 Hu 32 $ 952 room=.
+-> s
+T 274 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7,15) HP 30/32 MP 0/0 Hu 31 $ 952 room=.
+-> w
+T 275 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6,15) HP 30/32 MP 0/0 Hu 30 $ 952 room=.
+-> l
+T 276 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6,15) HP 30/32 MP 0/0 Hu 30 $ 952 room=.
+-> n
+T 277 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6,14) HP 30/32 MP 0/0 Hu 29 $ 952 room=.
+-> n
+T 278 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6,13) HP 30/32 MP 0/0 Hu 28 $ 952 room=.
+-> n
+T 279 mode=game_loop           Gilraen the Stalwart(hum) F2@( 6,12) HP 30/32 MP 0/0 Hu 27 $ 952 room=.
+-> e
+T 280 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7,12) HP 30/32 MP 0/0 Hu 26 $ 952 room=.
+-> l
+T 281 mode=game_loop           Gilraen the Stalwart(hum) F2@( 7,12) HP 30/32 MP 0/0 Hu 26 $ 952 room=.
+-> e
+T 282 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,12) HP 30/32 MP 0/0 Hu 25 $ 952 room=.
+-> s
+T 283 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,13) HP 30/32 MP 0/0 Hu 24 $ 952 room=.
+-> s
+T 284 mode=game_loop           Gilraen the Stalwart(hum) F2@( 8,14) HP 30/32 MP 0/0 Hu 23 $ 952 room=.
+-> e
+T 285 mode=game_loop           Gilraen the Stalwart(hum) F2@( 9,14) HP 30/32 MP 0/0 Hu 22 $ 952 room=.
+-> e
+T 286 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 21 $ 952 room=.
+-> e
+T 287 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 30/32 MP 0/0 Hu 20 $ 952 room=.
+-> n
+T 288 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 30/32 MP 0/0 Hu 19 $ 952 room=.
+-> n
+T 289 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,12) HP 30/32 MP 0/0 Hu 18 $ 952 room=.
+-> w
+T 290 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,12) HP 30/32 MP 0/0 Hu 17 $ 952 room=.
+-> l
+T 291 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,12) HP 30/32 MP 0/0 Hu 17 $ 952 room=.
+-> s
+T 292 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,13) HP 30/32 MP 0/0 Hu 16 $ 952 room=.
+-> s
+T 293 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 15 $ 952 room=.
+-> i
+T 294 mode=inventory           Gilraen the Stalwart(hum) F2@(10,14) HP 30/32 MP 0/0 Hu 15 $ 952 room=.
+-> u7
+T 295 mode=inventory           Gilraen the Stalwart(hum) F2@(10,14) HP 32/32 MP 0/0 Hu 15 $ 952 room=.
+-> x
+T 296 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,14) HP 32/32 MP 0/0 Hu 15 $ 952 room=.
+-> e
+T 297 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,14) HP 32/32 MP 0/0 Hu 14 $ 952 room=.
+-> n
+T 298 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,13) HP 32/32 MP 0/0 Hu 13 $ 952 room=.
+-> n
+T 299 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,12) HP 32/32 MP 0/0 Hu 12 $ 952 room=.
+-> n
+T 300 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,11) HP 32/32 MP 0/0 Hu 11 $ 952 room=.
+-> l
+T 301 mode=game_loop           Gilraen the Stalwart(hum) F2@(11,11) HP 32/32 MP 0/0 Hu 11 $ 952 room=.
+-> w
+T 302 mode=game_loop           Gilraen the Stalwart(hum) F2@(10,11) HP 32/32 MP 0/0 Hu 10 $ 952 room=.
+-> w
+T 303 mode=stairs_down_mode    Gilraen the Stalwart(hum) F2@( 9,11) HP 32/32 MP 0/0 Hu  9 $ 952 room=D
+-> d
+T 304 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 32/32 MP 0/0 Hu  9 $ 952 room=U
+-> w
+T 305 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 32/32 MP 0/0 Hu  9 $ 952 room=U
+-> e
+T 306 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 32/32 MP 0/0 Hu  8 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 307 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 31/32 MP 0/0 Hu  8 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 308 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 30/32 MP 0/0 Hu  8 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 309 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 29/32 MP 0/0 Hu  8 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 310 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 29/32 MP 0/0 Hu  8 $ 952 room=M
+-> w
+T 311 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 29/32 MP 0/0 Hu  8 $ 952 room=U
+-> e
+T 312 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 29/32 MP 0/0 Hu  7 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 313 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 28/32 MP 0/0 Hu  7 $ 952 room=M
+-> w
+T 314 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 28/32 MP 0/0 Hu  7 $ 952 room=U
+-> e
+T 315 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 28/32 MP 0/0 Hu  6 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 316 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 27/32 MP 0/0 Hu  6 $ 952 room=M
+-> w
+T 317 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 27/32 MP 0/0 Hu  6 $ 952 room=U
+-> e
+T 318 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 27/32 MP 0/0 Hu  5 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 319 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 27/32 MP 0/0 Hu  5 $ 952 room=M
+-> w
+T 320 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 27/32 MP 0/0 Hu  5 $ 952 room=U
+-> e
+T 321 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 27/32 MP 0/0 Hu  4 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 322 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 26/32 MP 0/0 Hu  4 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 323 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  4 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 324 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  4 $ 952 room=M
+-> w
+T 325 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 25/32 MP 0/0 Hu  4 $ 952 room=U
+-> e
+T 326 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  3 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 327 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  3 $ 952 room=M
+-> w
+T 328 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 25/32 MP 0/0 Hu  3 $ 952 room=U
+-> e
+T 329 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  2 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 330 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  2 $ 952 room=M
+-> w
+T 331 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 25/32 MP 0/0 Hu  2 $ 952 room=U
+-> e
+T 332 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 25/32 MP 0/0 Hu  1 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 333 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 24/32 MP 0/0 Hu  1 $ 952 room=M
+-> w
+T 334 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 24/32 MP 0/0 Hu  1 $ 952 room=U
+-> e
+T 335 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 22/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 336 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 22/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 337 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 22/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 338 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 20/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 339 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 20/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 340 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 20/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 341 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 18/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 342 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 18/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 343 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 18/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 344 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 16/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 345 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 15/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 346 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 15/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 347 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 13/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 348 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 12/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 349 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 10/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 350 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 10/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 351 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 10/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 352 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 8/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 353 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 7/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 354 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 7/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 355 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 7/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 356 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 5/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 357 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 5/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 358 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 5/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 359 mode=combat_mode         Gilraen the Stalwart(hum) F3@( 2, 1) HP 3/32 MP 0/0 Hu  0 $ 952 room=M vs Skeleton(L2 HP26/26)
+-> f
+T 360 mode=flee_direction_mode Gilraen the Stalwart(hum) F3@( 2, 1) HP 2/32 MP 0/0 Hu  0 $ 952 room=M
+-> w
+T 361 mode=stairs_up_mode      Gilraen the Stalwart(hum) F3@( 1, 1) HP 2/32 MP 0/0 Hu  0 $ 952 room=U
+-> e
+T 362 mode=death_screen        Gilraen the Stalwart(hum) F3@( 2, 1) HP 0/32 MP 0/0 Hu  0 $ 952 room=M
+
+=== run finished: turns=362 floor=3 hp=0/32 gold=952 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00003_human.html

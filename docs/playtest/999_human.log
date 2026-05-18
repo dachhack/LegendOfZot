@@ -1,0 +1,576 @@
+T   0 mode=game_loop           Forlong the Tall(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Forlong the Tall(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 14 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+  A Crawling Claw (Level 0) appears! A severed hand scuttles across the floor with malicious intent.
+  The Crawling Claw strikes first!
+-> a
+T   3 mode=combat_victory      Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+  You took 1 damage!
+  You hit the evil Crawling Claw!
+  Crawling Claw took 22 damage.
+  You defeated the Crawling Claw!
+  The crawling claw twitches and goes still.
+  You gained 8 experience.
+  You found 1 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  The Crawling Claw dropped some Ring Mail!
+  You harvested some raw Crawling Claw meat.
+-> back
+T   4 mode=game_loop           Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> i
+T   5 mode=inventory           Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> e2
+T   6 mode=inventory           Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> x
+T   7 mode=game_loop           Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> l
+T   8 mode=game_loop           Forlong the Tall(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 341 room=.
+-> s
+T   9 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 3) HP 29/30 MP 0/0 Hu 98 $ 341 room=M vs Goblin(L0 HP12/12)
+-> a
+T  10 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 3) HP 28/30 MP 0/0 Hu 98 $ 341 room=M vs Goblin(L0 HP12/12)
+-> a
+T  11 mode=combat_victory      Forlong the Tall(hum) F1@( 1, 3) HP 27/30 MP 0/0 Hu 98 $ 350 room=.
+-> back
+T  12 mode=game_loop           Forlong the Tall(hum) F1@( 1, 3) HP 27/30 MP 0/0 Hu 98 $ 350 room=.
+-> l
+T  13 mode=game_loop           Forlong the Tall(hum) F1@( 1, 3) HP 27/30 MP 0/0 Hu 98 $ 350 room=.
+-> s
+T  14 mode=altar_mode          Forlong the Tall(hum) F1@( 1, 4) HP 28/30 MP 0/0 Hu 97 $ 350 room=A
+-> pray
+T  15 mode=game_loop           Forlong the Tall(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu100 $ 350 room=.
+-> l
+T  16 mode=game_loop           Forlong the Tall(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu100 $ 350 room=.
+-> s
+T  17 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP35/35)
+-> a
+T  18 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 5) HP 29/30 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP35/35)
+-> a
+T  19 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 5) HP 29/30 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP14/35)
+-> a
+T  20 mode=combat_mode         Forlong the Tall(hum) F1@( 1, 5) HP 28/30 MP 0/0 Hu 99 $ 350 room=M vs Zombie(L0 HP14/35)
+-> a
+T  21 mode=combat_victory      Forlong the Tall(hum) F1@( 1, 5) HP 28/30 MP 0/0 Hu 99 $ 351 room=.
+-> back
+T  22 mode=game_loop           Forlong the Tall(hum) F1@( 1, 5) HP 28/30 MP 0/0 Hu 99 $ 351 room=.
+-> l
+T  23 mode=game_loop           Forlong the Tall(hum) F1@( 1, 5) HP 28/30 MP 0/0 Hu 99 $ 351 room=.
+-> e
+T  24 mode=combat_mode         Forlong the Tall(hum) F1@( 2, 5) HP 28/30 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  25 mode=combat_mode         Forlong the Tall(hum) F1@( 2, 5) HP 27/30 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  26 mode=combat_mode         Forlong the Tall(hum) F1@( 2, 5) HP 26/30 MP 0/0 Hu 98 $ 351 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  27 mode=combat_victory      Forlong the Tall(hum) F1@( 2, 5) HP 26/30 MP 0/0 Hu 98 $ 358 room=.
+-> back
+T  28 mode=game_loop           Forlong the Tall(hum) F1@( 2, 5) HP 26/30 MP 0/0 Hu 98 $ 358 room=.
+-> l
+T  29 mode=game_loop           Forlong the Tall(hum) F1@( 2, 5) HP 26/30 MP 0/0 Hu 98 $ 358 room=.
+-> e
+T  30 mode=game_loop           Forlong the Tall(hum) F1@( 3, 5) HP 27/30 MP 0/0 Hu 97 $ 358 room=.
+-> e
+T  31 mode=pool_mode           Forlong the Tall(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 96 $ 358 room=P
+-> dr
+T  32 mode=game_loop           Forlong the Tall(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 96 $ 358 room=.
+-> l
+T  33 mode=game_loop           Forlong the Tall(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 96 $ 358 room=.
+-> e
+T  34 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 5) HP 28/30 MP 0/0 Hu 95 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  35 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 5) HP 27/30 MP 0/0 Hu 95 $ 358 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  36 mode=flee_direction_mode Forlong the Tall(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 95 $ 358 room=M
+-> e
+T  37 mode=game_loop           Forlong the Tall(hum) F1@( 6, 5) HP 26/30 MP 0/0 Hu 95 $ 358 room=.
+-> l
+T  38 mode=game_loop           Forlong the Tall(hum) F1@( 6, 5) HP 26/30 MP 0/0 Hu 95 $ 358 room=.
+-> s
+T  39 mode=combat_mode         Forlong the Tall(hum) F1@( 6, 6) HP 26/30 MP 0/0 Hu 94 $ 358 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  40 mode=combat_mode         Forlong the Tall(hum) F1@( 6, 6) HP 26/30 MP 0/0 Hu 94 $ 358 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  41 mode=combat_victory      Forlong the Tall(hum) F1@( 6, 6) HP 25/30 MP 0/0 Hu 94 $ 364 room=.
+-> back
+T  42 mode=game_loop           Forlong the Tall(hum) F1@( 6, 6) HP 25/30 MP 0/0 Hu 94 $ 364 room=.
+-> l
+T  43 mode=game_loop           Forlong the Tall(hum) F1@( 6, 6) HP 25/30 MP 0/0 Hu 94 $ 364 room=.
+-> w
+T  44 mode=chest_mode          Forlong the Tall(hum) F1@( 5, 6) HP 26/30 MP 0/0 Hu 93 $ 364 room=C
+-> o
+T  45 mode=game_loop           Forlong the Tall(hum) F1@( 5, 6) HP 26/30 MP 0/0 Hu 93 $ 374 room=.
+-> l
+T  46 mode=game_loop           Forlong the Tall(hum) F1@( 5, 6) HP 26/30 MP 0/0 Hu 93 $ 374 room=.
+-> s
+T  47 mode=game_loop           Forlong the Tall(hum) F1@( 5, 7) HP 26/30 MP 0/0 Hu 92 $ 374 room=.
+-> i
+T  48 mode=inventory           Forlong the Tall(hum) F1@( 5, 7) HP 26/30 MP 0/0 Hu 92 $ 374 room=.
+-> u4
+T  49 mode=inventory           Forlong the Tall(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 374 room=.
+-> x
+T  50 mode=game_loop           Forlong the Tall(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 374 room=.
+-> i
+T  51 mode=inventory           Forlong the Tall(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 374 room=.
+-> eat3
+T  52 mode=inventory           Forlong the Tall(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 98 $ 374 room=.
+-> x
+T  53 mode=game_loop           Forlong the Tall(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 98 $ 374 room=.
+-> s
+T  54 mode=game_loop           Forlong the Tall(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 97 $ 374 room=.
+-> i
+T  55 mode=inventory           Forlong the Tall(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 97 $ 374 room=.
+-> eat4
+T  56 mode=inventory           Forlong the Tall(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu100 $ 374 room=.
+-> x
+T  57 mode=game_loop           Forlong the Tall(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu100 $ 374 room=.
+-> s
+T  58 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 30/30 MP 0/0 Hu 99 $ 374 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  59 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 29/30 MP 0/0 Hu 99 $ 374 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  60 mode=flee_direction_mode Forlong the Tall(hum) F1@( 5, 9) HP 26/30 MP 0/0 Hu 99 $ 374 room=M
+-> s
+T  61 mode=combat_mode         Forlong the Tall(hum) F1@( 5,10) HP 23/30 MP 0/0 Hu 99 $ 374 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  62 mode=flee_direction_mode Forlong the Tall(hum) F1@( 5,10) HP 19/30 MP 0/0 Hu 99 $ 374 room=M
+-> s
+T  63 mode=game_loop           Forlong the Tall(hum) F1@( 5,11) HP 19/30 MP 0/0 Hu 99 $ 374 room=.
+-> i
+T  64 mode=inventory           Forlong the Tall(hum) F1@( 5,11) HP 19/30 MP 0/0 Hu 99 $ 374 room=.
+-> u4
+T  65 mode=inventory           Forlong the Tall(hum) F1@( 5,11) HP 30/30 MP 0/0 Hu 99 $ 374 room=.
+-> x
+T  66 mode=game_loop           Forlong the Tall(hum) F1@( 5,11) HP 30/30 MP 0/0 Hu 99 $ 374 room=.
+-> l
+T  67 mode=game_loop           Forlong the Tall(hum) F1@( 5,11) HP 30/30 MP 0/0 Hu 99 $ 374 room=.
+-> s
+T  68 mode=combat_mode         Forlong the Tall(hum) F1@( 5,12) HP 30/30 MP 0/0 Hu 98 $ 374 room=M vs Kobold(L0 HP8/8)
+-> a
+T  69 mode=combat_victory      Forlong the Tall(hum) F1@( 5,12) HP 30/30 MP 0/0 Hu 98 $ 475 room=.
+-> back
+T  70 mode=game_loop           Forlong the Tall(hum) F1@( 5,12) HP 30/30 MP 0/0 Hu 98 $ 475 room=.
+-> l
+T  71 mode=game_loop           Forlong the Tall(hum) F1@( 5,12) HP 30/30 MP 0/0 Hu 98 $ 475 room=.
+-> e
+T  72 mode=chest_mode          Forlong the Tall(hum) F1@( 6,12) HP 30/30 MP 0/0 Hu 97 $ 475 room=C
+-> n
+T  73 mode=combat_mode         Forlong the Tall(hum) F1@( 6,11) HP 30/30 MP 0/0 Hu 96 $ 475 room=M vs Bat(L0 HP12/12)
+-> f
+T  74 mode=flee_direction_mode Forlong the Tall(hum) F1@( 6,11) HP 30/30 MP 0/0 Hu 96 $ 475 room=M
+-> n
+T  75 mode=pool_mode           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 96 $ 475 room=P
+-> dr
+T  76 mode=game_loop           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 96 $ 475 room=.
+-> i
+T  77 mode=inventory           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 96 $ 475 room=.
+-> eat3
+T  78 mode=inventory           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu100 $ 475 room=.
+-> x
+T  79 mode=game_loop           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu100 $ 475 room=.
+-> l
+T  80 mode=game_loop           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu100 $ 475 room=.
+-> n
+T  81 mode=chest_mode          Forlong the Tall(hum) F1@( 6, 9) HP 30/30 MP 0/0 Hu 99 $ 475 room=C
+-> o
+T  82 mode=game_loop           Forlong the Tall(hum) F1@( 6,10) HP 30/30 MP 0/0 Hu 98 $ 475 room=.
+-> e
+T  83 mode=combat_mode         Forlong the Tall(hum) F1@( 7,10) HP 30/30 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  84 mode=combat_mode         Forlong the Tall(hum) F1@( 7,10) HP 29/30 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  85 mode=combat_mode         Forlong the Tall(hum) F1@( 7,10) HP 28/30 MP 0/0 Hu 97 $ 475 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  86 mode=combat_victory      Forlong the Tall(hum) F1@( 7,10) HP 28/30 MP 0/0 Hu 97 $ 478 room=.
+-> back
+T  87 mode=game_loop           Forlong the Tall(hum) F1@( 7,10) HP 28/30 MP 0/0 Hu 97 $ 478 room=.
+-> l
+T  88 mode=game_loop           Forlong the Tall(hum) F1@( 7,10) HP 28/30 MP 0/0 Hu 97 $ 478 room=.
+-> s
+T  89 mode=combat_mode         Forlong the Tall(hum) F1@( 7,11) HP 28/30 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  90 mode=combat_mode         Forlong the Tall(hum) F1@( 7,11) HP 27/30 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T  91 mode=combat_mode         Forlong the Tall(hum) F1@( 7,11) HP 25/30 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  92 mode=combat_mode         Forlong the Tall(hum) F1@( 7,11) HP 24/30 MP 0/0 Hu 96 $ 478 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  93 mode=combat_victory      Forlong the Tall(hum) F1@( 7,11) HP 23/30 MP 0/0 Hu 96 $ 485 room=.
+-> back
+T  94 mode=game_loop           Forlong the Tall(hum) F1@( 7,11) HP 23/30 MP 0/0 Hu 96 $ 485 room=.
+-> i
+T  95 mode=inventory           Forlong the Tall(hum) F1@( 7,11) HP 23/30 MP 0/0 Hu 96 $ 485 room=.
+-> u4
+T  96 mode=inventory           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu 96 $ 485 room=.
+-> x
+T  97 mode=game_loop           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu 96 $ 485 room=.
+-> i
+T  98 mode=inventory           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu 96 $ 485 room=.
+-> eat2
+T  99 mode=inventory           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu100 $ 485 room=.
+-> eat1
+T 100 mode=inventory           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu100 $ 485 room=.
+-> x
+T 101 mode=game_loop           Forlong the Tall(hum) F1@( 7,11) HP 30/30 MP 0/0 Hu100 $ 485 room=.
+-> s
+T 102 mode=combat_mode         Forlong the Tall(hum) F1@( 7,12) HP 30/30 MP 0/0 Hu 99 $ 485 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 103 mode=combat_victory      Forlong the Tall(hum) F1@( 7,12) HP 30/30 MP 0/0 Hu 99 $ 486 room=.
+-> back
+T 104 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 30/30 MP 0/0 Hu 99 $ 486 room=.
+-> e
+T 105 mode=library_mode        Forlong the Tall(hum) F1@( 8,12) HP 30/30 MP 0/0 Hu 98 $ 486 room=L
+-> r
+T 106 mode=game_loop           Forlong the Tall(hum) F1@( 8,12) HP 30/30 MP 0/0 Hu 98 $ 486 room=.
+-> l
+T 107 mode=game_loop           Forlong the Tall(hum) F1@( 8,12) HP 30/30 MP 0/0 Hu 98 $ 486 room=.
+-> e
+T 108 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 30/30 MP 0/0 Hu 97 $ 486 room=.
+-> l
+T 109 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 30/30 MP 0/0 Hu 97 $ 486 room=.
+-> n
+T 110 mode=library_mode        Forlong the Tall(hum) F1@( 9,11) HP 30/30 MP 0/0 Hu 96 $ 486 room=L
+-> r
+T 111 mode=library_read_decision_mode Forlong the Tall(hum) F1@( 9,11) HP 30/30 MP 0/0 Hu 96 $ 486 room=L
+-> y
+T 112 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 30/28 MP 0/0 Hu 96 $ 586 room=.
+-> n
+T 113 mode=combat_mode         Forlong the Tall(hum) F1@( 9,10) HP 30/28 MP 0/0 Hu 95 $ 586 room=M vs Kobold(L0 HP20/20)
+-> a
+T 114 mode=combat_victory      Forlong the Tall(hum) F1@( 9,10) HP 30/28 MP 0/0 Hu 95 $ 691 room=.
+-> back
+T 115 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 30/28 MP 0/0 Hu 95 $ 691 room=.
+-> n
+T 116 mode=chest_mode          Forlong the Tall(hum) F1@( 9, 9) HP 30/28 MP 0/0 Hu 94 $ 691 room=C
+-> n
+T 117 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 30/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> a
+T 118 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 26/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> f
+T 119 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 25/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> a
+T 120 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 24/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> a
+T 121 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 23/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> a
+T 122 mode=combat_mode         Forlong the Tall(hum) F1@( 9, 8) HP 22/28 MP 0/0 Hu 93 $ 691 room=M vs Stirge(L0 HP6/6)
+-> a
+T 123 mode=combat_victory      Forlong the Tall(hum) F1@( 9, 8) HP 21/28 MP 0/0 Hu 93 $ 695 room=.
+-> back
+T 124 mode=game_loop           Forlong the Tall(hum) F1@( 9, 8) HP 21/28 MP 0/0 Hu 93 $ 695 room=.
+-> i
+T 125 mode=inventory           Forlong the Tall(hum) F1@( 9, 8) HP 21/28 MP 0/0 Hu 93 $ 695 room=.
+-> u4
+T 126 mode=inventory           Forlong the Tall(hum) F1@( 9, 8) HP 28/28 MP 0/0 Hu 93 $ 695 room=.
+-> x
+T 127 mode=game_loop           Forlong the Tall(hum) F1@( 9, 8) HP 28/28 MP 0/0 Hu 93 $ 695 room=.
+-> l
+T 128 mode=game_loop           Forlong the Tall(hum) F1@( 9, 8) HP 28/28 MP 0/0 Hu 93 $ 695 room=.
+-> e
+T 129 mode=chest_mode          Forlong the Tall(hum) F1@(10, 8) HP 28/28 MP 0/0 Hu 92 $ 695 room=C
+-> o
+T 130 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 28/28 MP 0/0 Hu 92 $ 695 room=.
+-> l
+T 131 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 28/28 MP 0/0 Hu 92 $ 695 room=.
+-> n
+T 132 mode=garden_mode         Forlong the Tall(hum) F1@(10, 7) HP 28/28 MP 0/0 Hu 91 $ 695 room=G
+-> h
+T 133 mode=game_loop           Forlong the Tall(hum) F1@(10, 7) HP 28/28 MP 0/0 Hu 91 $ 695 room=.
+-> l
+T 134 mode=game_loop           Forlong the Tall(hum) F1@(10, 7) HP 28/28 MP 0/0 Hu 91 $ 695 room=.
+-> e
+T 135 mode=combat_mode         Forlong the Tall(hum) F1@(11, 7) HP 28/28 MP 0/0 Hu 90 $ 695 room=M vs Zombie(L0 HP35/35)
+-> a
+T 136 mode=combat_mode         Forlong the Tall(hum) F1@(11, 7) HP 27/28 MP 0/0 Hu 90 $ 695 room=M vs Zombie(L0 HP15/35)
+-> a
+T 137 mode=combat_victory      Forlong the Tall(hum) F1@(11, 7) HP 27/28 MP 0/0 Hu 90 $ 699 room=.
+-> back
+T 138 mode=game_loop           Forlong the Tall(hum) F1@(11, 7) HP 27/28 MP 0/0 Hu 90 $ 699 room=.
+-> n
+T 139 mode=combat_mode         Forlong the Tall(hum) F1@(11, 6) HP 27/28 MP 0/0 Hu 89 $ 699 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 140 mode=combat_mode         Forlong the Tall(hum) F1@(11, 6) HP 26/28 MP 0/0 Hu 89 $ 699 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 141 mode=combat_victory      Forlong the Tall(hum) F1@(11, 6) HP 26/38 MP 0/0 Hu 89 $ 705 room=.
+-> back
+T 142 mode=game_loop           Forlong the Tall(hum) F1@(11, 6) HP 26/38 MP 0/0 Hu 89 $ 705 room=.
+-> i
+T 143 mode=inventory           Forlong the Tall(hum) F1@(11, 6) HP 26/38 MP 0/0 Hu 89 $ 705 room=.
+-> u5
+T 144 mode=inventory           Forlong the Tall(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 89 $ 705 room=.
+-> x
+T 145 mode=game_loop           Forlong the Tall(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 89 $ 705 room=.
+-> l
+T 146 mode=game_loop           Forlong the Tall(hum) F1@(11, 6) HP 38/38 MP 0/0 Hu 89 $ 705 room=.
+-> e
+T 147 mode=combat_mode         Forlong the Tall(hum) F1@(12, 6) HP 38/38 MP 0/0 Hu 88 $ 705 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 148 mode=combat_mode         Forlong the Tall(hum) F1@(12, 6) HP 37/38 MP 0/0 Hu 88 $ 705 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T 149 mode=flee_direction_mode Forlong the Tall(hum) F1@(12, 6) HP 34/38 MP 0/0 Hu 88 $ 705 room=M
+-> s
+T 150 mode=combat_mode         Forlong the Tall(hum) F1@(12, 7) HP 31/38 MP 0/0 Hu 88 $ 705 room=M vs Stirge(L0 HP6/6)
+-> f
+T 151 mode=flee_direction_mode Forlong the Tall(hum) F1@(12, 7) HP 28/38 MP 0/0 Hu 88 $ 705 room=M
+-> s
+T 152 mode=combat_mode         Forlong the Tall(hum) F1@(12, 8) HP 28/38 MP 0/0 Hu 88 $ 705 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 153 mode=combat_mode         Forlong the Tall(hum) F1@(12, 8) HP 27/38 MP 0/0 Hu 88 $ 705 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 154 mode=flee_direction_mode Forlong the Tall(hum) F1@(12, 8) HP 25/38 MP 0/0 Hu 88 $ 705 room=M
+-> e
+T 155 mode=combat_mode         Forlong the Tall(hum) F1@(13, 8) HP 23/38 MP 0/0 Hu 88 $ 705 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T 156 mode=flee_direction_mode Forlong the Tall(hum) F1@(13, 8) HP 22/38 MP 0/0 Hu 88 $ 705 room=M
+-> n
+T 157 mode=game_loop           Forlong the Tall(hum) F1@(13, 7) HP 22/38 MP 0/0 Hu 88 $ 705 room=.
+-> w
+T 158 mode=combat_mode         Forlong the Tall(hum) F1@(12, 7) HP 22/38 MP 0/0 Hu 87 $ 705 room=M vs Stirge(L0 HP6/6)
+-> a
+T 159 mode=combat_victory      Forlong the Tall(hum) F1@(12, 7) HP 22/38 MP 0/0 Hu 87 $ 708 room=.
+-> back
+T 160 mode=game_loop           Forlong the Tall(hum) F1@(12, 7) HP 22/38 MP 0/0 Hu 87 $ 708 room=.
+-> w
+T 161 mode=game_loop           Forlong the Tall(hum) F1@(11, 7) HP 23/38 MP 0/0 Hu 86 $ 708 room=.
+-> w
+T 162 mode=game_loop           Forlong the Tall(hum) F1@(10, 7) HP 23/38 MP 0/0 Hu 85 $ 708 room=.
+-> s
+T 163 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 23/38 MP 0/0 Hu 84 $ 708 room=.
+-> s
+T 164 mode=game_loop           Forlong the Tall(hum) F1@(10, 9) HP 23/38 MP 0/0 Hu 83 $ 708 room=.
+-> w
+T 165 mode=game_loop           Forlong the Tall(hum) F1@( 9, 9) HP 24/38 MP 0/0 Hu 82 $ 708 room=C
+-> s
+T 166 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 24/38 MP 0/0 Hu 81 $ 708 room=.
+-> w
+T 167 mode=game_loop           Forlong the Tall(hum) F1@( 8,10) HP 24/38 MP 0/0 Hu 80 $ 708 room=.
+-> e
+T 168 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 24/38 MP 0/0 Hu 79 $ 708 room=.
+-> s
+T 169 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 25/38 MP 0/0 Hu 78 $ 708 room=.
+-> s
+T 170 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 25/38 MP 0/0 Hu 77 $ 708 room=.
+-> i
+T 171 mode=inventory           Forlong the Tall(hum) F1@( 9,12) HP 25/38 MP 0/0 Hu 77 $ 708 room=.
+-> eat1
+T 172 mode=inventory           Forlong the Tall(hum) F1@( 9,12) HP 25/38 MP 0/0 Hu 83 $ 708 room=.
+-> x
+T 173 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 25/38 MP 0/0 Hu 83 $ 708 room=.
+-> s
+T 174 mode=game_loop           Forlong the Tall(hum) F1@( 9,13) HP 25/38 MP 0/0 Hu 82 $ 708 room=.
+-> e
+T 175 mode=combat_mode         Forlong the Tall(hum) F1@(10,13) HP 25/38 MP 0/0 Hu 81 $ 708 room=M vs Stirge(L0 HP6/6)
+-> a
+T 176 mode=combat_victory      Forlong the Tall(hum) F1@(10,13) HP 25/38 MP 0/0 Hu 81 $ 714 room=.
+-> back
+T 177 mode=game_loop           Forlong the Tall(hum) F1@(10,13) HP 25/38 MP 0/0 Hu 81 $ 714 room=.
+-> n
+T 178 mode=combat_mode         Forlong the Tall(hum) F1@(10,12) HP 26/38 MP 0/0 Hu 80 $ 714 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 179 mode=combat_mode         Forlong the Tall(hum) F1@(10,12) HP 26/38 MP 0/0 Hu 80 $ 714 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 180 mode=combat_mode         Forlong the Tall(hum) F1@(10,12) HP 25/38 MP 0/0 Hu 80 $ 714 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 181 mode=combat_victory      Forlong the Tall(hum) F1@(10,12) HP 25/38 MP 0/0 Hu 80 $ 718 room=.
+-> back
+T 182 mode=game_loop           Forlong the Tall(hum) F1@(10,12) HP 25/38 MP 0/0 Hu 80 $ 718 room=.
+-> n
+T 183 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 25/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 184 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 24/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 185 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 24/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 186 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 23/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 187 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 23/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP12/15)
+-> a
+T 188 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 23/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP12/15)
+-> a
+T 189 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 22/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP9/15)
+-> f
+T 190 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 21/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP9/15)
+-> a
+T 191 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 21/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP6/15)
+-> a
+T 192 mode=combat_mode         Forlong the Tall(hum) F1@(10,11) HP 21/38 MP 0/0 Hu 79 $ 718 room=M vs Slime Mold(L0 HP3/15)
+-> a
+T 193 mode=combat_victory      Forlong the Tall(hum) F1@(10,11) HP 21/38 MP 0/0 Hu 79 $ 720 room=.
+-> back
+T 194 mode=game_loop           Forlong the Tall(hum) F1@(10,11) HP 21/38 MP 0/0 Hu 79 $ 720 room=.
+-> w
+T 195 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 21/38 MP 0/0 Hu 78 $ 720 room=.
+-> n
+T 196 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 21/38 MP 0/0 Hu 77 $ 720 room=.
+-> w
+T 197 mode=game_loop           Forlong the Tall(hum) F1@( 8,10) HP 22/38 MP 0/0 Hu 76 $ 720 room=.
+-> e
+T 198 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 22/38 MP 0/0 Hu 75 $ 720 room=.
+-> n
+T 199 mode=game_loop           Forlong the Tall(hum) F1@( 9, 9) HP 22/38 MP 0/0 Hu 74 $ 720 room=C
+-> n
+T 200 mode=game_loop           Forlong the Tall(hum) F1@( 9, 8) HP 22/38 MP 0/0 Hu 73 $ 720 room=.
+-> e
+T 201 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 23/38 MP 0/0 Hu 72 $ 720 room=.
+-> s
+T 202 mode=game_loop           Forlong the Tall(hum) F1@(10, 9) HP 23/38 MP 0/0 Hu 71 $ 720 room=.
+-> n
+T 203 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 23/38 MP 0/0 Hu 70 $ 720 room=.
+-> n
+T 204 mode=game_loop           Forlong the Tall(hum) F1@(10, 7) HP 23/38 MP 0/0 Hu 69 $ 720 room=.
+-> e
+T 205 mode=game_loop           Forlong the Tall(hum) F1@(11, 7) HP 24/38 MP 0/0 Hu 68 $ 720 room=.
+-> e
+T 206 mode=game_loop           Forlong the Tall(hum) F1@(12, 7) HP 24/38 MP 0/0 Hu 67 $ 720 room=.
+-> e
+T 207 mode=game_loop           Forlong the Tall(hum) F1@(13, 7) HP 24/38 MP 0/0 Hu 66 $ 720 room=.
+-> w
+T 208 mode=game_loop           Forlong the Tall(hum) F1@(12, 7) HP 24/38 MP 0/0 Hu 65 $ 720 room=.
+-> e
+T 209 mode=game_loop           Forlong the Tall(hum) F1@(13, 7) HP 25/38 MP 0/0 Hu 64 $ 720 room=.
+-> w
+T 210 mode=game_loop           Forlong the Tall(hum) F1@(12, 7) HP 25/38 MP 0/0 Hu 63 $ 720 room=.
+-> l
+T 211 mode=game_loop           Forlong the Tall(hum) F1@(12, 7) HP 25/38 MP 0/0 Hu 63 $ 720 room=.
+-> w
+T 212 mode=game_loop           Forlong the Tall(hum) F1@(11, 7) HP 25/38 MP 0/0 Hu 62 $ 720 room=.
+-> w
+T 213 mode=game_loop           Forlong the Tall(hum) F1@(10, 7) HP 25/38 MP 0/0 Hu 61 $ 720 room=.
+-> s
+T 214 mode=game_loop           Forlong the Tall(hum) F1@(10, 8) HP 26/38 MP 0/0 Hu 60 $ 720 room=.
+-> s
+T 215 mode=game_loop           Forlong the Tall(hum) F1@(10, 9) HP 26/38 MP 0/0 Hu 59 $ 720 room=.
+-> w
+T 216 mode=game_loop           Forlong the Tall(hum) F1@( 9, 9) HP 26/38 MP 0/0 Hu 58 $ 720 room=C
+-> s
+T 217 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 57 $ 720 room=.
+-> w
+T 218 mode=game_loop           Forlong the Tall(hum) F1@( 8,10) HP 26/38 MP 0/0 Hu 56 $ 720 room=.
+-> e
+T 219 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 55 $ 720 room=.
+-> s
+T 220 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 54 $ 720 room=.
+-> l
+T 221 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 54 $ 720 room=.
+-> s
+T 222 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 26/38 MP 0/0 Hu 53 $ 720 room=.
+-> s
+T 223 mode=game_loop           Forlong the Tall(hum) F1@( 9,13) HP 26/38 MP 0/0 Hu 52 $ 720 room=.
+-> w
+T 224 mode=game_loop           Forlong the Tall(hum) F1@( 8,13) HP 26/38 MP 0/0 Hu 51 $ 720 room=.
+-> n
+T 225 mode=game_loop           Forlong the Tall(hum) F1@( 8,12) HP 26/38 MP 0/0 Hu 50 $ 720 room=.
+-> w
+T 226 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 26/38 MP 0/0 Hu 49 $ 720 room=.
+-> n
+T 227 mode=game_loop           Forlong the Tall(hum) F1@( 7,11) HP 26/38 MP 0/0 Hu 48 $ 720 room=.
+-> s
+T 228 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 26/38 MP 0/0 Hu 47 $ 720 room=.
+-> s
+T 229 mode=game_loop           Forlong the Tall(hum) F1@( 7,13) HP 26/38 MP 0/0 Hu 46 $ 720 room=.
+-> s
+T 230 mode=game_loop           Forlong the Tall(hum) F1@( 7,14) HP 26/38 MP 0/0 Hu 45 $ 720 room=.
+-> l
+T 231 mode=game_loop           Forlong the Tall(hum) F1@( 7,14) HP 26/38 MP 0/0 Hu 45 $ 720 room=.
+-> s
+T 232 mode=dungeon_mode        Forlong the Tall(hum) F1@( 7,15) HP 26/38 MP 0/0 Hu 44 $ 720 room=N
+-> u
+T 233 mode=game_loop           Forlong the Tall(hum) F1@( 7,15) HP 26/38 MP 0/0 Hu 44 $ 720 room=N
+-> e
+T 234 mode=game_loop           Forlong the Tall(hum) F1@( 8,15) HP 26/38 MP 0/0 Hu 43 $ 720 room=.
+-> w
+T 235 mode=game_loop           Forlong the Tall(hum) F1@( 7,15) HP 26/38 MP 0/0 Hu 42 $ 720 room=N
+-> n
+T 236 mode=game_loop           Forlong the Tall(hum) F1@( 7,14) HP 26/38 MP 0/0 Hu 41 $ 720 room=.
+-> n
+T 237 mode=game_loop           Forlong the Tall(hum) F1@( 7,13) HP 26/38 MP 0/0 Hu 40 $ 720 room=.
+-> n
+T 238 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 26/38 MP 0/0 Hu 39 $ 720 room=.
+-> n
+T 239 mode=game_loop           Forlong the Tall(hum) F1@( 7,11) HP 26/38 MP 0/0 Hu 38 $ 720 room=.
+-> s
+T 240 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 26/38 MP 0/0 Hu 37 $ 720 room=.
+-> l
+T 241 mode=game_loop           Forlong the Tall(hum) F1@( 7,12) HP 26/38 MP 0/0 Hu 37 $ 720 room=.
+-> e
+T 242 mode=game_loop           Forlong the Tall(hum) F1@( 8,12) HP 26/38 MP 0/0 Hu 36 $ 720 room=.
+-> e
+T 243 mode=game_loop           Forlong the Tall(hum) F1@( 9,12) HP 26/38 MP 0/0 Hu 35 $ 720 room=.
+-> n
+T 244 mode=game_loop           Forlong the Tall(hum) F1@( 9,11) HP 26/38 MP 0/0 Hu 34 $ 720 room=.
+-> n
+T 245 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 33 $ 720 room=.
+-> w
+T 246 mode=game_loop           Forlong the Tall(hum) F1@( 8,10) HP 26/38 MP 0/0 Hu 32 $ 720 room=.
+-> e
+T 247 mode=game_loop           Forlong the Tall(hum) F1@( 9,10) HP 26/38 MP 0/0 Hu 31 $ 720 room=.
+-> n
+T 248 mode=game_loop           Forlong the Tall(hum) F1@( 9, 9) HP 26/38 MP 0/0 Hu 30 $ 720 room=C
+-> n
+T 249 mode=game_loop           Forlong the Tall(hum) F1@( 9, 8) HP 26/38 MP 0/0 Hu 29 $ 720 room=.
+-> w
+T 250 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 26/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 251 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 26/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 252 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 25/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP9/15)
+-> a
+T 253 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 25/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP6/15)
+-> a
+T 254 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 24/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP3/15)
+-> f
+T 255 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 21/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 256 mode=combat_mode         Forlong the Tall(hum) F1@( 8, 8) HP 17/38 MP 0/0 Hu 28 $ 720 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 257 mode=combat_victory      Forlong the Tall(hum) F1@( 8, 8) HP 14/38 MP 0/0 Hu 28 $ 729 room=.
+-> back
+T 258 mode=game_loop           Forlong the Tall(hum) F1@( 8, 8) HP 14/38 MP 0/0 Hu 28 $ 729 room=.
+-> n
+T 259 mode=game_loop           Forlong the Tall(hum) F1@( 8, 7) HP 14/38 MP 0/0 Hu 27 $ 729 room=.
+-> w
+T 260 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 14/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP10/10)
+-> a
+T 261 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 13/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP7/10)
+-> a
+T 262 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 12/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP7/10)
+-> a
+T 263 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 11/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP4/10)
+-> a
+T 264 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 10/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP1/10)
+-> a
+T 265 mode=combat_mode         Forlong the Tall(hum) F1@( 7, 7) HP 9/38 MP 0/0 Hu 26 $ 729 room=M vs Lichen(L0 HP1/10)
+-> a
+T 266 mode=combat_victory      Forlong the Tall(hum) F1@( 7, 7) HP 8/38 MP 0/0 Hu 26 $ 735 room=.
+-> back
+T 267 mode=game_loop           Forlong the Tall(hum) F1@( 7, 7) HP 8/38 MP 0/0 Hu 26 $ 735 room=.
+-> w
+T 268 mode=game_loop           Forlong the Tall(hum) F1@( 6, 7) HP 8/38 MP 0/0 Hu 25 $ 735 room=.
+-> s
+T 269 mode=game_loop           Forlong the Tall(hum) F1@( 6, 8) HP 8/38 MP 0/0 Hu 24 $ 735 room=.
+-> w
+T 270 mode=game_loop           Forlong the Tall(hum) F1@( 5, 8) HP 8/38 MP 0/0 Hu 23 $ 735 room=.
+-> l
+T 271 mode=game_loop           Forlong the Tall(hum) F1@( 5, 8) HP 8/38 MP 0/0 Hu 23 $ 735 room=.
+-> s
+T 272 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 8/38 MP 0/0 Hu 22 $ 735 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 273 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 8/38 MP 0/0 Hu 22 $ 735 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 274 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 7/38 MP 0/0 Hu 22 $ 735 room=M vs Giant Centipede(L0 HP9/15)
+-> a
+T 275 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 6/38 MP 0/0 Hu 22 $ 735 room=M vs Giant Centipede(L0 HP6/15)
+-> a
+T 276 mode=combat_mode         Forlong the Tall(hum) F1@( 5, 9) HP 2/38 MP 0/0 Hu 22 $ 735 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 277 mode=death_screen        Forlong the Tall(hum) F1@( 5, 9) HP -1/38 MP 0/0 Hu 22 $ 735 room=M
+
+=== run finished: turns=277 floor=1 hp=-1/38 gold=735 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00999_human.html

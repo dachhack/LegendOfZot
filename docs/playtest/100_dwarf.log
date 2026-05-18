@@ -1,0 +1,1887 @@
+T   0 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 8 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Nain Oakshield(dwa) F1@( 1, 2) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Giant Centipede(L0 HP15/15)
+  A Giant Centipede (Level 0) appears! Like a bunch of bugs sewn together face to butt.
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Nain Oakshield(dwa) F1@( 1, 2) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Giant Centipede(L0 HP15/15)
+  You missed the evil Giant Centipede!
+  Giant Centipede missed Nain Oakshield!
+-> a
+T   4 mode=combat_mode         Nain Oakshield(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 290 room=M vs Giant Centipede(L0 HP15/15)
+  You missed the evil Giant Centipede!
+  Ouch! Giant Centipede hit Nain Oakshield!
+  You took 1 damage!
+-> a
+T   5 mode=combat_victory      Nain Oakshield(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 341 room=.
+  The centipede's legs curl up, motionless.
+  You gained 8 experience.
+  You found 1 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T   6 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 341 room=.
+-> l
+T   7 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 341 room=.
+-> e
+T   8 mode=game_loop           Nain Oakshield(dwa) F1@( 2, 2) HP 60/64 MP 0/0 Hu 98 $ 341 room=.
+-> e
+T   9 mode=shrine_mode         Nain Oakshield(dwa) F1@( 3, 2) HP 60/64 MP 0/0 Hu 97 $ 341 room=F
+-> p
+T  10 mode=game_loop           Nain Oakshield(dwa) F1@( 3, 2) HP 65/69 MP 0/0 Hu 97 $ 341 room=.
+-> l
+T  11 mode=game_loop           Nain Oakshield(dwa) F1@( 3, 2) HP 65/69 MP 0/0 Hu 97 $ 341 room=.
+-> n
+T  12 mode=chest_mode          Nain Oakshield(dwa) F1@( 3, 1) HP 66/69 MP 0/0 Hu 96 $ 341 room=C
+-> o
+T  13 mode=game_loop           Nain Oakshield(dwa) F1@( 3, 1) HP 66/69 MP 0/0 Hu 96 $ 341 room=.
+-> w
+T  14 mode=game_loop           Nain Oakshield(dwa) F1@( 2, 1) HP 66/69 MP 0/0 Hu 95 $ 341 room=.
+-> w
+T  15 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 1) HP 67/69 MP 0/0 Hu 94 $ 341 room=E
+-> s
+T  16 mode=game_loop           Nain Oakshield(dwa) F1@( 1, 2) HP 67/69 MP 0/0 Hu 93 $ 341 room=.
+-> e
+T  17 mode=game_loop           Nain Oakshield(dwa) F1@( 2, 2) HP 68/69 MP 0/0 Hu 92 $ 341 room=.
+-> e
+T  18 mode=game_loop           Nain Oakshield(dwa) F1@( 3, 2) HP 68/69 MP 0/0 Hu 91 $ 341 room=.
+-> e
+T  19 mode=combat_mode         Nain Oakshield(dwa) F1@( 4, 2) HP 69/69 MP 0/0 Hu 90 $ 341 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  20 mode=combat_victory      Nain Oakshield(dwa) F1@( 4, 2) HP 69/69 MP 0/0 Hu 90 $ 442 room=.
+-> back
+T  21 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 2) HP 69/69 MP 0/0 Hu 90 $ 442 room=.
+-> l
+T  22 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 2) HP 69/69 MP 0/0 Hu 90 $ 442 room=.
+-> s
+T  23 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 3) HP 69/69 MP 0/0 Hu 89 $ 442 room=.
+-> l
+T  24 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 3) HP 69/69 MP 0/0 Hu 89 $ 442 room=.
+-> s
+T  25 mode=combat_mode         Nain Oakshield(dwa) F1@( 4, 4) HP 69/69 MP 0/0 Hu 88 $ 442 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  26 mode=combat_mode         Nain Oakshield(dwa) F1@( 4, 4) HP 68/69 MP 0/0 Hu 88 $ 442 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  27 mode=combat_victory      Nain Oakshield(dwa) F1@( 4, 4) HP 68/69 MP 0/0 Hu 88 $ 450 room=.
+-> back
+T  28 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 4) HP 68/69 MP 0/0 Hu 88 $ 450 room=.
+-> l
+T  29 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 4) HP 68/69 MP 0/0 Hu 88 $ 450 room=.
+-> s
+T  30 mode=chest_mode          Nain Oakshield(dwa) F1@( 4, 5) HP 68/69 MP 0/0 Hu 87 $ 450 room=C
+-> o
+T  31 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 5) HP 68/69 MP 0/0 Hu 87 $ 480 room=.
+-> l
+T  32 mode=game_loop           Nain Oakshield(dwa) F1@( 4, 5) HP 68/69 MP 0/0 Hu 87 $ 480 room=.
+-> e
+T  33 mode=altar_mode          Nain Oakshield(dwa) F1@( 5, 5) HP 69/69 MP 0/0 Hu 86 $ 480 room=A
+-> pray
+T  34 mode=game_loop           Nain Oakshield(dwa) F1@( 5, 5) HP 69/69 MP 0/0 Hu 86 $ 510 room=.
+-> l
+T  35 mode=game_loop           Nain Oakshield(dwa) F1@( 5, 5) HP 69/69 MP 0/0 Hu 86 $ 510 room=.
+-> e
+T  36 mode=garden_mode         Nain Oakshield(dwa) F1@( 6, 5) HP 69/69 MP 0/0 Hu 85 $ 510 room=G
+-> h
+T  37 mode=game_loop           Nain Oakshield(dwa) F1@( 6, 5) HP 69/69 MP 0/0 Hu 85 $ 510 room=.
+-> l
+T  38 mode=game_loop           Nain Oakshield(dwa) F1@( 6, 5) HP 69/69 MP 0/0 Hu 85 $ 510 room=.
+-> e
+T  39 mode=library_mode        Nain Oakshield(dwa) F1@( 7, 5) HP 69/69 MP 0/0 Hu 84 $ 510 room=L
+-> r
+T  40 mode=game_loop           Nain Oakshield(dwa) F1@( 7, 5) HP 69/69 MP 0/0 Hu 84 $ 510 room=.
+-> l
+T  41 mode=game_loop           Nain Oakshield(dwa) F1@( 7, 5) HP 69/69 MP 0/0 Hu 84 $ 510 room=.
+-> s
+T  42 mode=combat_mode         Nain Oakshield(dwa) F1@( 7, 6) HP 69/69 MP 0/0 Hu 83 $ 510 room=M vs Stirge(L0 HP6/6)
+-> a
+T  43 mode=combat_victory      Nain Oakshield(dwa) F1@( 7, 6) HP 69/69 MP 0/0 Hu 83 $ 513 room=.
+-> back
+T  44 mode=game_loop           Nain Oakshield(dwa) F1@( 7, 6) HP 69/69 MP 0/0 Hu 83 $ 513 room=.
+-> l
+T  45 mode=game_loop           Nain Oakshield(dwa) F1@( 7, 6) HP 69/69 MP 0/0 Hu 83 $ 513 room=.
+-> e
+T  46 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 69/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  47 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 69/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  48 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 69/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  49 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 68/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  50 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 67/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  51 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 6) HP 66/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T  52 mode=flee_direction_mode Nain Oakshield(dwa) F1@( 8, 6) HP 66/69 MP 0/0 Hu 82 $ 513 room=M
+-> n
+T  53 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 5) HP 66/69 MP 0/0 Hu 82 $ 513 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  54 mode=flee_direction_mode Nain Oakshield(dwa) F1@( 8, 5) HP 66/69 MP 0/0 Hu 82 $ 513 room=M
+-> n
+T  55 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 4) HP 66/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  56 mode=combat_mode         Nain Oakshield(dwa) F1@( 8, 4) HP 65/69 MP 0/0 Hu 82 $ 513 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  57 mode=combat_victory      Nain Oakshield(dwa) F1@( 8, 4) HP 65/69 MP 0/0 Hu 82 $ 523 room=.
+-> back
+T  58 mode=game_loop           Nain Oakshield(dwa) F1@( 8, 4) HP 65/69 MP 0/0 Hu 82 $ 523 room=.
+-> e
+T  59 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 4) HP 65/69 MP 0/0 Hu 81 $ 523 room=.
+-> l
+T  60 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 4) HP 65/69 MP 0/0 Hu 81 $ 523 room=.
+-> n
+T  61 mode=combat_mode         Nain Oakshield(dwa) F1@( 9, 3) HP 65/69 MP 0/0 Hu 80 $ 523 room=M vs Bat(L0 HP12/12)
+-> a
+T  62 mode=combat_mode         Nain Oakshield(dwa) F1@( 9, 3) HP 64/69 MP 0/0 Hu 80 $ 523 room=M vs Bat(L0 HP12/12)
+-> f
+T  63 mode=combat_mode         Nain Oakshield(dwa) F1@( 9, 3) HP 62/69 MP 0/0 Hu 80 $ 523 room=M vs Bat(L0 HP12/12)
+-> a
+T  64 mode=combat_victory      Nain Oakshield(dwa) F1@( 9, 3) HP 62/69 MP 0/0 Hu 80 $ 528 room=.
+-> back
+T  65 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 3) HP 62/69 MP 0/0 Hu 80 $ 528 room=.
+-> l
+T  66 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 3) HP 62/69 MP 0/0 Hu 80 $ 528 room=.
+-> e
+T  67 mode=combat_mode         Nain Oakshield(dwa) F1@(10, 3) HP 62/69 MP 0/0 Hu 79 $ 528 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  68 mode=combat_mode         Nain Oakshield(dwa) F1@(10, 3) HP 62/69 MP 0/0 Hu 79 $ 528 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  69 mode=combat_mode         Nain Oakshield(dwa) F1@(10, 3) HP 62/69 MP 0/0 Hu 79 $ 528 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  70 mode=combat_mode         Nain Oakshield(dwa) F1@(10, 3) HP 61/69 MP 0/0 Hu 79 $ 528 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  71 mode=combat_victory      Nain Oakshield(dwa) F1@(10, 3) HP 61/69 MP 0/0 Hu 79 $ 532 room=.
+-> back
+T  72 mode=game_loop           Nain Oakshield(dwa) F1@(10, 3) HP 61/69 MP 0/0 Hu 79 $ 532 room=.
+-> s
+T  73 mode=combat_mode         Nain Oakshield(dwa) F1@(10, 4) HP 62/69 MP 0/0 Hu 78 $ 532 room=M vs Bat(L0 HP12/12)
+-> a
+T  74 mode=combat_victory      Nain Oakshield(dwa) F1@(10, 4) HP 62/69 MP 0/0 Hu 78 $ 539 room=.
+-> back
+T  75 mode=game_loop           Nain Oakshield(dwa) F1@(10, 4) HP 62/69 MP 0/0 Hu 78 $ 539 room=.
+-> s
+T  76 mode=game_loop           Nain Oakshield(dwa) F1@(10, 5) HP 62/69 MP 0/0 Hu 77 $ 539 room=.
+-> w
+T  77 mode=combat_mode         Nain Oakshield(dwa) F1@( 9, 5) HP 62/69 MP 0/0 Hu 76 $ 539 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  78 mode=combat_mode         Nain Oakshield(dwa) F1@( 9, 5) HP 61/69 MP 0/0 Hu 76 $ 539 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  79 mode=combat_victory      Nain Oakshield(dwa) F1@( 9, 5) HP 61/69 MP 0/0 Hu 76 $ 546 room=.
+-> back
+T  80 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 5) HP 61/69 MP 0/0 Hu 76 $ 546 room=.
+-> s
+T  81 mode=chest_mode          Nain Oakshield(dwa) F1@( 9, 6) HP 61/69 MP 0/0 Hu 75 $ 546 room=C
+-> o
+T  82 mode=game_loop           Nain Oakshield(dwa) F1@( 9, 6) HP 61/69 MP 0/0 Hu 75 $ 546 room=.
+-> e
+T  83 mode=game_loop           Nain Oakshield(dwa) F1@(10, 6) HP 62/69 MP 0/0 Hu 74 $ 546 room=.
+-> l
+T  84 mode=game_loop           Nain Oakshield(dwa) F1@(10, 6) HP 62/69 MP 0/0 Hu 74 $ 546 room=.
+-> s
+T  85 mode=dungeon_mode        Nain Oakshield(dwa) F1@(10, 7) HP 62/69 MP 0/0 Hu 73 $ 546 room=N
+-> u
+T  86 mode=dungeon_unlocked_mode Nain Oakshield(dwa) F1@(10, 7) HP 62/69 MP 0/0 Hu 73 $ 546 room=N
+-> r
+T  87 mode=game_loop           Nain Oakshield(dwa) F1@(10, 7) HP 62/69 MP 0/0 Hu 73 $ 546 room=N
+-> l
+T  88 mode=game_loop           Nain Oakshield(dwa) F1@(10, 7) HP 62/69 MP 0/0 Hu 73 $ 546 room=N
+-> s
+T  89 mode=tomb_mode           Nain Oakshield(dwa) F1@(10, 8) HP 62/69 MP 0/0 Hu 72 $ 546 room=T
+-> p
+T  90 mode=game_loop           Nain Oakshield(dwa) F1@(10, 8) HP 62/69 MP 0/0 Hu 72 $ 546 room=T
+-> l
+T  91 mode=game_loop           Nain Oakshield(dwa) F1@(10, 8) HP 62/69 MP 0/0 Hu 72 $ 546 room=T
+-> s
+T  92 mode=garden_mode         Nain Oakshield(dwa) F1@(10, 9) HP 62/69 MP 0/0 Hu 71 $ 546 room=G
+-> h
+T  93 mode=game_loop           Nain Oakshield(dwa) F1@(10, 9) HP 62/69 MP 0/0 Hu 71 $ 546 room=.
+-> l
+T  94 mode=game_loop           Nain Oakshield(dwa) F1@(10, 9) HP 62/69 MP 0/0 Hu 71 $ 546 room=.
+-> s
+T  95 mode=combat_mode         Nain Oakshield(dwa) F1@(10,10) HP 63/69 MP 0/0 Hu 70 $ 546 room=M vs Bat(L0 HP12/12)
+-> a
+T  96 mode=combat_victory      Nain Oakshield(dwa) F1@(10,10) HP 63/69 MP 0/0 Hu 70 $ 647 room=.
+-> back
+T  97 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 63/69 MP 0/0 Hu 70 $ 647 room=.
+-> i
+T  98 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 63/69 MP 0/0 Hu 70 $ 647 room=.
+-> u3
+T  99 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu 70 $ 647 room=.
+-> x
+T 100 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu 70 $ 647 room=.
+-> i
+T 101 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu 70 $ 647 room=.
+-> eat3
+T 102 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu 75 $ 647 room=.
+-> eat1
+T 103 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu100 $ 647 room=.
+-> x
+T 104 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu100 $ 647 room=.
+-> l
+T 105 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 69/69 MP 0/0 Hu100 $ 647 room=.
+-> s
+T 106 mode=library_mode        Nain Oakshield(dwa) F1@(10,11) HP 69/69 MP 0/0 Hu 99 $ 647 room=L
+-> r
+T 107 mode=library_read_decision_mode Nain Oakshield(dwa) F1@(10,11) HP 69/69 MP 0/0 Hu 99 $ 647 room=L
+-> y
+T 108 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 69/69 MP 0/0 Hu 99 $ 697 room=.
+-> l
+T 109 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 69/69 MP 0/0 Hu 99 $ 697 room=.
+-> e
+T 110 mode=combat_mode         Nain Oakshield(dwa) F1@(11,11) HP 69/69 MP 0/0 Hu 98 $ 697 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 111 mode=combat_mode         Nain Oakshield(dwa) F1@(11,11) HP 69/69 MP 0/0 Hu 98 $ 697 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 112 mode=combat_victory      Nain Oakshield(dwa) F1@(11,11) HP 68/69 MP 0/0 Hu 98 $ 707 room=.
+-> back
+T 113 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 68/69 MP 0/0 Hu 98 $ 707 room=.
+-> l
+T 114 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 68/69 MP 0/0 Hu 98 $ 707 room=.
+-> n
+T 115 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 68/69 MP 0/0 Hu 97 $ 707 room=.
+-> e
+T 116 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 69/69 MP 0/0 Hu 96 $ 707 room=.
+-> n
+T 117 mode=combat_mode         Nain Oakshield(dwa) F1@(12, 9) HP 69/69 MP 0/0 Hu 95 $ 707 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 118 mode=combat_mode         Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu 95 $ 707 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 119 mode=combat_victory      Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu 95 $ 709 room=.
+-> back
+T 120 mode=game_loop           Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu 95 $ 709 room=.
+-> i
+T 121 mode=inventory           Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu 95 $ 709 room=.
+-> eat2
+T 122 mode=inventory           Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu100 $ 709 room=.
+-> e2
+T 123 mode=inventory           Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu100 $ 709 room=.
+-> x
+T 124 mode=game_loop           Nain Oakshield(dwa) F1@(12, 9) HP 68/69 MP 0/0 Hu100 $ 709 room=.
+-> e
+T 125 mode=game_loop           Nain Oakshield(dwa) F1@(13, 9) HP 68/69 MP 0/0 Hu 99 $ 709 room=.
+-> l
+T 126 mode=game_loop           Nain Oakshield(dwa) F1@(13, 9) HP 68/69 MP 0/0 Hu 99 $ 709 room=.
+-> s
+T 127 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 69/69 MP 0/0 Hu 98 $ 709 room=.
+-> e
+T 128 mode=game_loop           Nain Oakshield(dwa) F1@(14,10) HP 69/69 MP 0/0 Hu 97 $ 709 room=.
+-> e
+T 129 mode=combat_mode         Nain Oakshield(dwa) F1@(15,10) HP 69/69 MP 0/0 Hu 96 $ 709 room=M vs Stirge(L0 HP6/6)
+-> f
+T 130 mode=combat_mode         Nain Oakshield(dwa) F1@(15,10) HP 65/69 MP 0/0 Hu 96 $ 709 room=M vs Stirge(L0 HP6/6)
+-> a
+T 131 mode=combat_victory      Nain Oakshield(dwa) F1@(15,10) HP 65/79 MP 0/0 Hu 96 $ 710 room=.
+-> back
+T 132 mode=game_loop           Nain Oakshield(dwa) F1@(15,10) HP 65/79 MP 0/0 Hu 96 $ 710 room=.
+-> n
+T 133 mode=combat_mode         Nain Oakshield(dwa) F1@(15, 9) HP 65/79 MP 0/0 Hu 95 $ 710 room=M vs Kobold(L0 HP20/20)
+-> a
+T 134 mode=combat_mode         Nain Oakshield(dwa) F1@(15, 9) HP 64/79 MP 0/0 Hu 95 $ 710 room=M vs Kobold(L0 HP20/20)
+-> a
+T 135 mode=combat_victory      Nain Oakshield(dwa) F1@(15, 9) HP 64/79 MP 0/0 Hu 95 $ 713 room=.
+-> back
+T 136 mode=game_loop           Nain Oakshield(dwa) F1@(15, 9) HP 64/79 MP 0/0 Hu 95 $ 713 room=.
+-> l
+T 137 mode=game_loop           Nain Oakshield(dwa) F1@(15, 9) HP 64/79 MP 0/0 Hu 95 $ 713 room=.
+-> w
+T 138 mode=game_loop           Nain Oakshield(dwa) F1@(14, 9) HP 65/79 MP 0/0 Hu 94 $ 713 room=.
+-> l
+T 139 mode=game_loop           Nain Oakshield(dwa) F1@(14, 9) HP 65/79 MP 0/0 Hu 94 $ 713 room=.
+-> w
+T 140 mode=game_loop           Nain Oakshield(dwa) F1@(13, 9) HP 65/79 MP 0/0 Hu 93 $ 713 room=.
+-> s
+T 141 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 66/79 MP 0/0 Hu 92 $ 713 room=.
+-> w
+T 142 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 66/79 MP 0/0 Hu 91 $ 713 room=.
+-> w
+T 143 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 67/79 MP 0/0 Hu 90 $ 713 room=.
+-> w
+T 144 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 67/79 MP 0/0 Hu 89 $ 713 room=.
+-> s
+T 145 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 68/79 MP 0/0 Hu 88 $ 713 room=.
+-> e
+T 146 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 68/79 MP 0/0 Hu 87 $ 713 room=.
+-> s
+T 147 mode=combat_mode         Nain Oakshield(dwa) F1@(11,12) HP 69/79 MP 0/0 Hu 86 $ 713 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T 148 mode=flee_direction_mode Nain Oakshield(dwa) F1@(11,12) HP 69/79 MP 0/0 Hu 86 $ 713 room=M
+-> n
+T 149 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 69/79 MP 0/0 Hu 86 $ 713 room=.
+-> i
+T 150 mode=inventory           Nain Oakshield(dwa) F1@(11,11) HP 69/79 MP 0/0 Hu 86 $ 713 room=.
+-> u4
+T 151 mode=inventory           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 86 $ 713 room=.
+-> x
+T 152 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 86 $ 713 room=.
+-> i
+T 153 mode=inventory           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 86 $ 713 room=.
+-> eat3
+T 154 mode=inventory           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 92 $ 713 room=.
+-> x
+T 155 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 92 $ 713 room=.
+-> n
+T 156 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 91 $ 713 room=.
+-> i
+T 157 mode=inventory           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 91 $ 713 room=.
+-> eat2
+T 158 mode=inventory           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 96 $ 713 room=.
+-> x
+T 159 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 96 $ 713 room=.
+-> w
+T 160 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 95 $ 713 room=.
+-> s
+T 161 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 94 $ 713 room=.
+-> n
+T 162 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 93 $ 713 room=.
+-> s
+T 163 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 92 $ 713 room=.
+-> e
+T 164 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 91 $ 713 room=.
+-> n
+T 165 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 90 $ 713 room=.
+-> e
+T 166 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 89 $ 713 room=.
+-> e
+T 167 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 88 $ 713 room=.
+-> e
+T 168 mode=game_loop           Nain Oakshield(dwa) F1@(14,10) HP 79/79 MP 0/0 Hu 87 $ 713 room=.
+-> s
+T 169 mode=combat_mode         Nain Oakshield(dwa) F1@(14,11) HP 79/79 MP 0/0 Hu 86 $ 713 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 170 mode=combat_victory      Nain Oakshield(dwa) F1@(14,11) HP 79/79 MP 0/0 Hu 86 $ 718 room=.
+-> back
+T 171 mode=game_loop           Nain Oakshield(dwa) F1@(14,11) HP 79/79 MP 0/0 Hu 86 $ 718 room=.
+-> w
+T 172 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 85 $ 718 room=.
+-> s
+T 173 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 84 $ 718 room=.
+-> l
+T 174 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 84 $ 718 room=.
+-> w
+T 175 mode=chest_mode          Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 83 $ 718 room=C
+-> n
+T 176 mode=warp_mode           Nain Oakshield(dwa) F1@(12,11) HP 79/79 MP 0/0 Hu 82 $ 718 room=W
+-> y
+T 177 mode=game_loop           Nain Oakshield(dwa) F1@(12,11) HP 79/79 MP 0/0 Hu 82 $ 718 room=W
+-> n
+T 178 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 81 $ 718 room=.
+-> w
+T 179 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 80 $ 718 room=.
+-> w
+T 180 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 79 $ 718 room=.
+-> s
+T 181 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 78 $ 718 room=.
+-> e
+T 182 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 77 $ 718 room=.
+-> s
+T 183 mode=combat_mode         Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 76 $ 718 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 184 mode=combat_mode         Nain Oakshield(dwa) F1@(11,12) HP 78/79 MP 0/0 Hu 76 $ 718 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 185 mode=combat_victory      Nain Oakshield(dwa) F1@(11,12) HP 77/79 MP 0/0 Hu 76 $ 728 room=.
+-> back
+T 186 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 77/79 MP 0/0 Hu 76 $ 728 room=.
+-> e
+T 187 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 77/79 MP 0/0 Hu 75 $ 728 room=C
+-> e
+T 188 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 77/79 MP 0/0 Hu 74 $ 728 room=.
+-> n
+T 189 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 77/79 MP 0/0 Hu 73 $ 728 room=.
+-> n
+T 190 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 78/79 MP 0/0 Hu 72 $ 728 room=.
+-> w
+T 191 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 78/79 MP 0/0 Hu 71 $ 728 room=.
+-> w
+T 192 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 78/79 MP 0/0 Hu 70 $ 728 room=.
+-> w
+T 193 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 78/79 MP 0/0 Hu 69 $ 728 room=.
+-> s
+T 194 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 68 $ 728 room=.
+-> e
+T 195 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 67 $ 728 room=.
+-> s
+T 196 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 66 $ 728 room=.
+-> e
+T 197 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 65 $ 728 room=C
+-> e
+T 198 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 64 $ 728 room=.
+-> n
+T 199 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 63 $ 728 room=.
+-> n
+T 200 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 62 $ 728 room=.
+-> w
+T 201 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 61 $ 728 room=.
+-> w
+T 202 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 60 $ 728 room=.
+-> w
+T 203 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 59 $ 728 room=.
+-> s
+T 204 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 58 $ 728 room=.
+-> e
+T 205 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 57 $ 728 room=.
+-> s
+T 206 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 56 $ 728 room=.
+-> e
+T 207 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 55 $ 728 room=C
+-> e
+T 208 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 54 $ 728 room=.
+-> n
+T 209 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 53 $ 728 room=.
+-> n
+T 210 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 52 $ 728 room=.
+-> l
+T 211 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 52 $ 728 room=.
+-> w
+T 212 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 51 $ 728 room=.
+-> w
+T 213 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 50 $ 728 room=.
+-> w
+T 214 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 49 $ 728 room=.
+-> i
+T 215 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 49 $ 728 room=.
+-> eat1
+T 216 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 99 $ 728 room=.
+-> x
+T 217 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 99 $ 728 room=.
+-> s
+T 218 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 98 $ 728 room=.
+-> e
+T 219 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 97 $ 728 room=.
+-> s
+T 220 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 96 $ 728 room=.
+-> l
+T 221 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 96 $ 728 room=.
+-> e
+T 222 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 95 $ 728 room=C
+-> e
+T 223 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 94 $ 728 room=.
+-> n
+T 224 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 93 $ 728 room=.
+-> n
+T 225 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 92 $ 728 room=.
+-> w
+T 226 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 91 $ 728 room=.
+-> w
+T 227 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 90 $ 728 room=.
+-> w
+T 228 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 89 $ 728 room=.
+-> s
+T 229 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 88 $ 728 room=.
+-> e
+T 230 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 87 $ 728 room=.
+-> l
+T 231 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 87 $ 728 room=.
+-> s
+T 232 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 86 $ 728 room=.
+-> e
+T 233 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 85 $ 728 room=C
+-> e
+T 234 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 84 $ 728 room=.
+-> n
+T 235 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 83 $ 728 room=.
+-> n
+T 236 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 82 $ 728 room=.
+-> w
+T 237 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 81 $ 728 room=.
+-> w
+T 238 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 80 $ 728 room=.
+-> w
+T 239 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 79 $ 728 room=.
+-> s
+T 240 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 78 $ 728 room=.
+-> l
+T 241 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 78 $ 728 room=.
+-> e
+T 242 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 77 $ 728 room=.
+-> s
+T 243 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 76 $ 728 room=.
+-> e
+T 244 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 75 $ 728 room=C
+-> e
+T 245 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 74 $ 728 room=.
+-> n
+T 246 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 73 $ 728 room=.
+-> n
+T 247 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 72 $ 728 room=.
+-> w
+T 248 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 71 $ 728 room=.
+-> w
+T 249 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 70 $ 728 room=.
+-> w
+T 250 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 69 $ 728 room=.
+-> l
+T 251 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 69 $ 728 room=.
+-> s
+T 252 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 68 $ 728 room=.
+-> e
+T 253 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 67 $ 728 room=.
+-> s
+T 254 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 66 $ 728 room=.
+-> e
+T 255 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 65 $ 728 room=C
+-> e
+T 256 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 64 $ 728 room=.
+-> n
+T 257 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 63 $ 728 room=.
+-> n
+T 258 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 62 $ 728 room=.
+-> w
+T 259 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 61 $ 728 room=.
+-> w
+T 260 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 60 $ 728 room=.
+-> l
+T 261 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 60 $ 728 room=.
+-> w
+T 262 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 59 $ 728 room=.
+-> s
+T 263 mode=game_loop           Nain Oakshield(dwa) F1@(10,11) HP 79/79 MP 0/0 Hu 58 $ 728 room=.
+-> e
+T 264 mode=game_loop           Nain Oakshield(dwa) F1@(11,11) HP 79/79 MP 0/0 Hu 57 $ 728 room=.
+-> s
+T 265 mode=game_loop           Nain Oakshield(dwa) F1@(11,12) HP 79/79 MP 0/0 Hu 56 $ 728 room=.
+-> e
+T 266 mode=game_loop           Nain Oakshield(dwa) F1@(12,12) HP 79/79 MP 0/0 Hu 55 $ 728 room=C
+-> e
+T 267 mode=game_loop           Nain Oakshield(dwa) F1@(13,12) HP 79/79 MP 0/0 Hu 54 $ 728 room=.
+-> n
+T 268 mode=game_loop           Nain Oakshield(dwa) F1@(13,11) HP 79/79 MP 0/0 Hu 53 $ 728 room=.
+-> n
+T 269 mode=game_loop           Nain Oakshield(dwa) F1@(13,10) HP 79/79 MP 0/0 Hu 52 $ 728 room=.
+-> w
+T 270 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 51 $ 728 room=.
+-> l
+T 271 mode=game_loop           Nain Oakshield(dwa) F1@(12,10) HP 79/79 MP 0/0 Hu 51 $ 728 room=.
+-> w
+T 272 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 50 $ 728 room=.
+-> w
+T 273 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 49 $ 728 room=.
+-> i
+T 274 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 49 $ 728 room=.
+-> eat1
+T 275 mode=inventory           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 99 $ 728 room=.
+-> x
+T 276 mode=game_loop           Nain Oakshield(dwa) F1@(10,10) HP 79/79 MP 0/0 Hu 99 $ 728 room=.
+-> e
+T 277 mode=game_loop           Nain Oakshield(dwa) F1@(11,10) HP 79/79 MP 0/0 Hu 98 $ 728 room=.
+-> n
+T 278 mode=warp_mode           Nain Oakshield(dwa) F1@(11, 9) HP 79/79 MP 0/0 Hu 97 $ 728 room=W
+-> y
+T 279 mode=garden_mode         Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 97 $ 728 room=G
+-> h
+T 280 mode=game_loop           Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 97 $ 728 room=.
+-> l
+T 281 mode=game_loop           Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 97 $ 728 room=.
+-> s
+T 282 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 96 $ 728 room=.
+-> l
+T 283 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 96 $ 728 room=.
+-> e
+T 284 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 95 $ 728 room=.
+-> e
+T 285 mode=game_loop           Nain Oakshield(dwa) F3@(16,16) HP 79/79 MP 0/0 Hu 94 $ 728 room=.
+-> e
+T 286 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 93 $ 728 room=.
+-> e
+T 287 mode=game_loop           Nain Oakshield(dwa) F3@(18,16) HP 79/79 MP 0/0 Hu 92 $ 728 room=.
+-> e
+T 288 mode=shrine_mode         Nain Oakshield(dwa) F3@(19,16) HP 79/79 MP 0/0 Hu 91 $ 728 room=F
+-> p
+T 289 mode=game_loop           Nain Oakshield(dwa) F3@(19,16) HP 79/79 MP 0/0 Hu 91 $ 728 room=.
+-> n
+T 290 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 90 $ 728 room=.
+-> l
+T 291 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 90 $ 728 room=.
+-> n
+T 292 mode=game_loop           Nain Oakshield(dwa) F3@(19,14) HP 79/79 MP 0/0 Hu 89 $ 728 room=.
+-> l
+T 293 mode=game_loop           Nain Oakshield(dwa) F3@(19,14) HP 79/79 MP 0/0 Hu 89 $ 728 room=.
+-> w
+T 294 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 88 $ 728 room=.
+-> l
+T 295 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 88 $ 728 room=.
+-> n
+T 296 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 87 $ 728 room=.
+-> l
+T 297 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 87 $ 728 room=.
+-> w
+T 298 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 86 $ 728 room=.
+-> l
+T 299 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 86 $ 728 room=.
+-> n
+T 300 mode=altar_mode          Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 85 $ 728 room=A
+-> pray
+T 301 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 85 $ 728 room=.
+-> l
+T 302 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 85 $ 728 room=.
+-> n
+T 303 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 84 $ 728 room=.
+-> l
+T 304 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 84 $ 728 room=.
+-> n
+T 305 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 83 $ 728 room=.
+-> l
+T 306 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 83 $ 728 room=.
+-> n
+T 307 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 82 $ 728 room=.
+-> l
+T 308 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 82 $ 728 room=.
+-> n
+T 309 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 81 $ 728 room=.
+-> l
+T 310 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 81 $ 728 room=.
+-> n
+T 311 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 80 $ 728 room=.
+-> l
+T 312 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 80 $ 728 room=.
+-> e
+T 313 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 79 $ 728 room=.
+-> e
+T 314 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 78 $ 728 room=.
+-> s
+T 315 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 77 $ 728 room=.
+-> s
+T 316 mode=chest_mode          Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 76 $ 728 room=C
+-> o
+T 317 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 76 $ 728 room=.
+-> s
+T 318 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 75 $ 728 room=.
+-> s
+T 319 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 74 $ 728 room=.
+-> w
+T 320 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 73 $ 728 room=.
+-> w
+T 321 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 72 $ 728 room=.
+-> s
+T 322 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 71 $ 728 room=.
+-> w
+T 323 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 70 $ 728 room=.
+-> w
+T 324 mode=dungeon_mode        Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 69 $ 728 room=N
+-> u
+T 325 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 69 $ 728 room=N
+-> l
+T 326 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 69 $ 728 room=N
+-> s
+T 327 mode=game_loop           Nain Oakshield(dwa) F3@(15,13) HP 79/79 MP 0/0 Hu 68 $ 728 room=.
+-> s
+T 328 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 67 $ 728 room=.
+-> l
+T 329 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 67 $ 728 room=.
+-> s
+T 330 mode=stairs_down_mode    Nain Oakshield(dwa) F3@(15,15) HP 79/79 MP 0/0 Hu 66 $ 728 room=D
+-> s
+T 331 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 65 $ 728 room=.
+-> w
+T 332 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 64 $ 728 room=.
+-> w
+T 333 mode=game_loop           Nain Oakshield(dwa) F3@(13,16) HP 79/79 MP 0/0 Hu 63 $ 728 room=.
+-> n
+T 334 mode=game_loop           Nain Oakshield(dwa) F3@(13,15) HP 79/79 MP 0/0 Hu 62 $ 728 room=.
+-> e
+T 335 mode=game_loop           Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 61 $ 728 room=.
+-> n
+T 336 mode=game_loop           Nain Oakshield(dwa) F3@(14,14) HP 79/79 MP 0/0 Hu 60 $ 728 room=.
+-> e
+T 337 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 59 $ 728 room=.
+-> e
+T 338 mode=game_loop           Nain Oakshield(dwa) F3@(16,14) HP 79/79 MP 0/0 Hu 58 $ 728 room=.
+-> s
+T 339 mode=combat_mode         Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 57 $ 728 room=M vs Stirge(L2 HP6/6)
+-> a
+T 340 mode=combat_victory      Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 57 $ 749 room=.
+-> back
+T 341 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 57 $ 749 room=.
+-> e
+T 342 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 56 $ 749 room=.
+-> s
+T 343 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 55 $ 749 room=.
+-> w
+T 344 mode=game_loop           Nain Oakshield(dwa) F3@(16,16) HP 79/79 MP 0/0 Hu 54 $ 749 room=.
+-> w
+T 345 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 53 $ 749 room=.
+-> w
+T 346 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 52 $ 749 room=.
+-> n
+T 347 mode=game_loop           Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 51 $ 749 room=.
+-> w
+T 348 mode=game_loop           Nain Oakshield(dwa) F3@(13,15) HP 79/79 MP 0/0 Hu 50 $ 749 room=.
+-> s
+T 349 mode=game_loop           Nain Oakshield(dwa) F3@(13,16) HP 79/79 MP 0/0 Hu 49 $ 749 room=.
+-> i
+T 350 mode=inventory           Nain Oakshield(dwa) F3@(13,16) HP 79/79 MP 0/0 Hu 49 $ 749 room=.
+-> eat1
+T 351 mode=inventory           Nain Oakshield(dwa) F3@(13,16) HP 79/79 MP 0/0 Hu 99 $ 749 room=.
+-> x
+T 352 mode=game_loop           Nain Oakshield(dwa) F3@(13,16) HP 79/79 MP 0/0 Hu 99 $ 749 room=.
+-> e
+T 353 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 98 $ 749 room=.
+-> e
+T 354 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 97 $ 749 room=.
+-> i
+T 355 mode=inventory           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 97 $ 749 room=.
+-> eat2
+T 356 mode=inventory           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu100 $ 749 room=.
+-> x
+T 357 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu100 $ 749 room=.
+-> e
+T 358 mode=game_loop           Nain Oakshield(dwa) F3@(16,16) HP 79/79 MP 0/0 Hu 99 $ 749 room=.
+-> n
+T 359 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 98 $ 749 room=.
+-> n
+T 360 mode=game_loop           Nain Oakshield(dwa) F3@(16,14) HP 79/79 MP 0/0 Hu 97 $ 749 room=.
+-> w
+T 361 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 96 $ 749 room=.
+-> n
+T 362 mode=game_loop           Nain Oakshield(dwa) F3@(15,13) HP 79/79 MP 0/0 Hu 95 $ 749 room=.
+-> n
+T 363 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 94 $ 749 room=N
+-> e
+T 364 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 93 $ 749 room=.
+-> n
+T 365 mode=altar_mode          Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 92 $ 749 room=A
+-> pray
+T 366 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 92 $ 749 room=.
+-> e
+T 367 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 91 $ 749 room=.
+-> s
+T 368 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 90 $ 749 room=.
+-> s
+T 369 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 89 $ 749 room=.
+-> e
+T 370 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 88 $ 749 room=.
+-> e
+T 371 mode=combat_mode         Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 87 $ 749 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 372 mode=combat_mode         Nain Oakshield(dwa) F3@(19,13) HP 78/79 MP 0/0 Hu 87 $ 749 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 373 mode=combat_mode         Nain Oakshield(dwa) F3@(19,13) HP 77/79 MP 0/0 Hu 87 $ 749 room=M vs Skeleton(L2 HP1/26)
+-> a
+T 374 mode=combat_mode         Nain Oakshield(dwa) F3@(19,13) HP 77/79 MP 0/0 Hu 87 $ 749 room=M vs Skeleton(L2 HP1/26)
+-> a
+T 375 mode=combat_victory      Nain Oakshield(dwa) F3@(19,13) HP 77/79 MP 0/0 Hu 87 $ 752 room=.
+-> back
+T 376 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 77/79 MP 0/0 Hu 87 $ 752 room=.
+-> n
+T 377 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 77/79 MP 0/0 Hu 86 $ 752 room=.
+-> n
+T 378 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 78/79 MP 0/0 Hu 85 $ 752 room=.
+-> w
+T 379 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 78/79 MP 0/0 Hu 84 $ 752 room=.
+-> w
+T 380 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 78/79 MP 0/0 Hu 83 $ 752 room=.
+-> s
+T 381 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 78/79 MP 0/0 Hu 82 $ 752 room=.
+-> w
+T 382 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 81 $ 752 room=.
+-> w
+T 383 mode=dungeon_mode        Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 80 $ 752 room=N
+-> u
+T 384 mode=dungeon_unlocked_mode Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 80 $ 752 room=N
+-> r
+T 385 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 80 $ 1042 room=N
+-> n
+T 386 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 79 $ 1042 room=.
+-> w
+T 387 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 78 $ 1042 room=.
+-> n
+T 388 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 77 $ 1042 room=.
+-> e
+T 389 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 76 $ 1042 room=.
+-> e
+T 390 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 75 $ 1042 room=.
+-> n
+T 391 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 74 $ 1042 room=.
+-> w
+T 392 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 73 $ 1042 room=.
+-> n
+T 393 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 72 $ 1042 room=.
+-> e
+T 394 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP12/12)
+-> a
+T 395 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 78/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP12/12)
+-> a
+T 396 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 77/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP12/12)
+-> a
+T 397 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 76/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP8/12)
+-> a
+T 398 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 75/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP4/12)
+-> a
+T 399 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 75/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP4/12)
+-> a
+T 400 mode=combat_mode         Nain Oakshield(dwa) F3@(16, 8) HP 74/79 MP 0/0 Hu 71 $ 1042 room=M vs Bat(L2 HP4/12)
+-> a
+T 401 mode=combat_victory      Nain Oakshield(dwa) F3@(16, 8) HP 74/79 MP 0/0 Hu 71 $ 1057 room=.
+-> back
+T 402 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 74/79 MP 0/0 Hu 71 $ 1057 room=.
+-> e
+T 403 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 74/79 MP 0/0 Hu 70 $ 1057 room=.
+-> e
+T 404 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 74/79 MP 0/0 Hu 69 $ 1057 room=.
+-> s
+T 405 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 74/79 MP 0/0 Hu 68 $ 1057 room=.
+-> w
+T 406 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 75/79 MP 0/0 Hu 67 $ 1057 room=.
+-> w
+T 407 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 75/79 MP 0/0 Hu 66 $ 1057 room=.
+-> n
+T 408 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 75/79 MP 0/0 Hu 65 $ 1057 room=.
+-> w
+T 409 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 75/79 MP 0/0 Hu 64 $ 1057 room=.
+-> s
+T 410 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 76/79 MP 0/0 Hu 63 $ 1057 room=.
+-> s
+T 411 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 76/79 MP 0/0 Hu 62 $ 1057 room=.
+-> s
+T 412 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 76/79 MP 0/0 Hu 61 $ 1057 room=.
+-> i
+T 413 mode=inventory           Nain Oakshield(dwa) F3@(15,11) HP 76/79 MP 0/0 Hu 61 $ 1057 room=.
+-> eat2
+T 414 mode=inventory           Nain Oakshield(dwa) F3@(15,11) HP 76/79 MP 0/0 Hu 66 $ 1057 room=.
+-> eat1
+T 415 mode=inventory           Nain Oakshield(dwa) F3@(15,11) HP 76/79 MP 0/0 Hu100 $ 1057 room=.
+-> x
+T 416 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 76/79 MP 0/0 Hu100 $ 1057 room=.
+-> e
+T 417 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 77/79 MP 0/0 Hu 99 $ 1057 room=.
+-> n
+T 418 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 77/79 MP 0/0 Hu 98 $ 1057 room=.
+-> e
+T 419 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 78/79 MP 0/0 Hu 97 $ 1057 room=.
+-> n
+T 420 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 78/79 MP 0/0 Hu 96 $ 1057 room=.
+-> w
+T 421 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> w
+T 422 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 94 $ 1057 room=.
+-> n
+T 423 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 93 $ 1057 room=.
+-> e
+T 424 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 92 $ 1057 room=.
+-> e
+T 425 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 91 $ 1057 room=.
+-> e
+T 426 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 90 $ 1057 room=.
+-> s
+T 427 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> s
+T 428 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> s
+T 429 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> e
+T 430 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> n
+T 431 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 85 $ 1057 room=.
+-> n
+T 432 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 84 $ 1057 room=.
+-> w
+T 433 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 83 $ 1057 room=.
+-> s
+T 434 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 82 $ 1057 room=.
+-> w
+T 435 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 81 $ 1057 room=.
+-> n
+T 436 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> n
+T 437 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 79 $ 1057 room=.
+-> n
+T 438 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> e
+T 439 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> e
+T 440 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 76 $ 1057 room=.
+-> s
+T 441 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 75 $ 1057 room=.
+-> s
+T 442 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 74 $ 1057 room=.
+-> w
+T 443 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 73 $ 1057 room=.
+-> n
+T 444 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 72 $ 1057 room=.
+-> n
+T 445 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> w
+T 446 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> s
+T 447 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> s
+T 448 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 68 $ 1057 room=.
+-> s
+T 449 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 67 $ 1057 room=.
+-> w
+T 450 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 66 $ 1057 room=.
+-> w
+T 451 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 65 $ 1057 room=.
+-> n
+T 452 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 64 $ 1057 room=.
+-> n
+T 453 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 63 $ 1057 room=.
+-> e
+T 454 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 62 $ 1057 room=.
+-> e
+T 455 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> e
+T 456 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> e
+T 457 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 59 $ 1057 room=.
+-> n
+T 458 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> w
+T 459 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 57 $ 1057 room=.
+-> w
+T 460 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 56 $ 1057 room=.
+-> s
+T 461 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 55 $ 1057 room=.
+-> w
+T 462 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 54 $ 1057 room=.
+-> w
+T 463 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> s
+T 464 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> s
+T 465 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> w
+T 466 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 50 $ 1057 room=.
+-> s
+T 467 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> i
+T 468 mode=inventory           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> eat1
+T 469 mode=inventory           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> x
+T 470 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> e
+T 471 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 98 $ 1057 room=.
+-> e
+T 472 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 97 $ 1057 room=.
+-> n
+T 473 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 96 $ 1057 room=.
+-> n
+T 474 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> w
+T 475 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 94 $ 1057 room=.
+-> n
+T 476 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 93 $ 1057 room=.
+-> e
+T 477 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 92 $ 1057 room=.
+-> e
+T 478 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 91 $ 1057 room=.
+-> s
+T 479 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 90 $ 1057 room=.
+-> w
+T 480 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> l
+T 481 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> s
+T 482 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> w
+T 483 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> s
+T 484 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> w
+T 485 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 85 $ 1057 room=.
+-> n
+T 486 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 84 $ 1057 room=.
+-> s
+T 487 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 83 $ 1057 room=.
+-> e
+T 488 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 82 $ 1057 room=.
+-> n
+T 489 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 81 $ 1057 room=.
+-> e
+T 490 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> l
+T 491 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> n
+T 492 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 79 $ 1057 room=.
+-> w
+T 493 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> n
+T 494 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> e
+T 495 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 76 $ 1057 room=.
+-> e
+T 496 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 75 $ 1057 room=.
+-> e
+T 497 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 74 $ 1057 room=.
+-> e
+T 498 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 73 $ 1057 room=.
+-> n
+T 499 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 72 $ 1057 room=.
+-> w
+T 500 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> l
+T 501 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> w
+T 502 mode=game_loop           Nain Oakshield(dwa) F3@(17, 7) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> s
+T 503 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> s
+T 504 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 68 $ 1057 room=.
+-> e
+T 505 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 67 $ 1057 room=.
+-> s
+T 506 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 66 $ 1057 room=.
+-> s
+T 507 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 65 $ 1057 room=.
+-> w
+T 508 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 64 $ 1057 room=.
+-> n
+T 509 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 63 $ 1057 room=.
+-> w
+T 510 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 62 $ 1057 room=.
+-> l
+T 511 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 62 $ 1057 room=.
+-> s
+T 512 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> w
+T 513 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> n
+T 514 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 59 $ 1057 room=.
+-> w
+T 515 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> s
+T 516 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 57 $ 1057 room=.
+-> n
+T 517 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 56 $ 1057 room=.
+-> e
+T 518 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 55 $ 1057 room=.
+-> e
+T 519 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 54 $ 1057 room=.
+-> e
+T 520 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> l
+T 521 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> e
+T 522 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> n
+T 523 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> n
+T 524 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 50 $ 1057 room=.
+-> w
+T 525 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> i
+T 526 mode=inventory           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> eat1
+T 527 mode=inventory           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> x
+T 528 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> s
+T 529 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 98 $ 1057 room=.
+-> s
+T 530 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 97 $ 1057 room=.
+-> l
+T 531 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 97 $ 1057 room=.
+-> s
+T 532 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 96 $ 1057 room=.
+-> e
+T 533 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> n
+T 534 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 94 $ 1057 room=.
+-> e
+T 535 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 93 $ 1057 room=.
+-> s
+T 536 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 92 $ 1057 room=.
+-> s
+T 537 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 79/79 MP 0/0 Hu 91 $ 1057 room=.
+-> s
+T 538 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 90 $ 1057 room=.
+-> w
+T 539 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> s
+T 540 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> l
+T 541 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> s
+T 542 mode=game_loop           Nain Oakshield(dwa) F3@(18,15) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> w
+T 543 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> s
+T 544 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 85 $ 1057 room=.
+-> w
+T 545 mode=game_loop           Nain Oakshield(dwa) F3@(16,16) HP 79/79 MP 0/0 Hu 84 $ 1057 room=.
+-> n
+T 546 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 83 $ 1057 room=.
+-> n
+T 547 mode=game_loop           Nain Oakshield(dwa) F3@(16,14) HP 79/79 MP 0/0 Hu 82 $ 1057 room=.
+-> w
+T 548 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 81 $ 1057 room=.
+-> n
+T 549 mode=game_loop           Nain Oakshield(dwa) F3@(15,13) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> n
+T 550 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 79 $ 1057 room=N
+-> l
+T 551 mode=game_loop           Nain Oakshield(dwa) F3@(15,12) HP 79/79 MP 0/0 Hu 79 $ 1057 room=N
+-> e
+T 552 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> n
+T 553 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> e
+T 554 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 76 $ 1057 room=.
+-> s
+T 555 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 75 $ 1057 room=.
+-> s
+T 556 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 74 $ 1057 room=.
+-> e
+T 557 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 73 $ 1057 room=.
+-> e
+T 558 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 72 $ 1057 room=.
+-> n
+T 559 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> n
+T 560 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> l
+T 561 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> w
+T 562 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> w
+T 563 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 68 $ 1057 room=.
+-> n
+T 564 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 67 $ 1057 room=.
+-> e
+T 565 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 66 $ 1057 room=.
+-> e
+T 566 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 65 $ 1057 room=.
+-> s
+T 567 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 64 $ 1057 room=.
+-> w
+T 568 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 63 $ 1057 room=.
+-> w
+T 569 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 62 $ 1057 room=.
+-> n
+T 570 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> l
+T 571 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> w
+T 572 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> s
+T 573 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 59 $ 1057 room=.
+-> s
+T 574 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> e
+T 575 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 57 $ 1057 room=.
+-> n
+T 576 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 56 $ 1057 room=.
+-> e
+T 577 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 55 $ 1057 room=.
+-> n
+T 578 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 54 $ 1057 room=.
+-> w
+T 579 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> w
+T 580 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> l
+T 581 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> n
+T 582 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> n
+T 583 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 50 $ 1057 room=.
+-> w
+T 584 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> i
+T 585 mode=inventory           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> eat1
+T 586 mode=inventory           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> x
+T 587 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> s
+T 588 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 98 $ 1057 room=.
+-> s
+T 589 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 97 $ 1057 room=.
+-> w
+T 590 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 96 $ 1057 room=.
+-> l
+T 591 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 96 $ 1057 room=.
+-> s
+T 592 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> e
+T 593 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 94 $ 1057 room=.
+-> e
+T 594 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 93 $ 1057 room=.
+-> s
+T 595 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 92 $ 1057 room=.
+-> e
+T 596 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 91 $ 1057 room=.
+-> n
+T 597 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 90 $ 1057 room=.
+-> e
+T 598 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> e
+T 599 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> n
+T 600 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> l
+T 601 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> n
+T 602 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> w
+T 603 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 85 $ 1057 room=.
+-> n
+T 604 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 84 $ 1057 room=.
+-> w
+T 605 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 83 $ 1057 room=.
+-> s
+T 606 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 82 $ 1057 room=.
+-> w
+T 607 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 81 $ 1057 room=.
+-> w
+T 608 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> s
+T 609 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 79 $ 1057 room=.
+-> w
+T 610 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> l
+T 611 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> s
+T 612 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> e
+T 613 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 76 $ 1057 room=.
+-> e
+T 614 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 75 $ 1057 room=.
+-> n
+T 615 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 74 $ 1057 room=.
+-> n
+T 616 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 73 $ 1057 room=.
+-> w
+T 617 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 72 $ 1057 room=.
+-> n
+T 618 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> e
+T 619 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> e
+T 620 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> l
+T 621 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> s
+T 622 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 68 $ 1057 room=.
+-> w
+T 623 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 79/79 MP 0/0 Hu 67 $ 1057 room=.
+-> w
+T 624 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 79/79 MP 0/0 Hu 66 $ 1057 room=.
+-> n
+T 625 mode=game_loop           Nain Oakshield(dwa) F3@(15, 8) HP 79/79 MP 0/0 Hu 65 $ 1057 room=.
+-> e
+T 626 mode=game_loop           Nain Oakshield(dwa) F3@(16, 8) HP 79/79 MP 0/0 Hu 64 $ 1057 room=.
+-> e
+T 627 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 63 $ 1057 room=.
+-> e
+T 628 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 62 $ 1057 room=.
+-> n
+T 629 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> e
+T 630 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> l
+T 631 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> s
+T 632 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 59 $ 1057 room=.
+-> s
+T 633 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> s
+T 634 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 57 $ 1057 room=.
+-> s
+T 635 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 56 $ 1057 room=.
+-> w
+T 636 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 55 $ 1057 room=.
+-> w
+T 637 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 54 $ 1057 room=.
+-> n
+T 638 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> e
+T 639 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> e
+T 640 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> l
+T 641 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> n
+T 642 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 50 $ 1057 room=.
+-> w
+T 643 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> i
+T 644 mode=inventory           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> eat1
+T 645 mode=inventory           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> x
+T 646 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 99 $ 1057 room=.
+-> w
+T 647 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 98 $ 1057 room=.
+-> s
+T 648 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 97 $ 1057 room=.
+-> w
+T 649 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 96 $ 1057 room=.
+-> s
+T 650 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> l
+T 651 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 95 $ 1057 room=.
+-> w
+T 652 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 94 $ 1057 room=.
+-> n
+T 653 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 79/79 MP 0/0 Hu 93 $ 1057 room=.
+-> w
+T 654 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu 92 $ 1057 room=.
+-> s
+T 655 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 79/79 MP 0/0 Hu 91 $ 1057 room=.
+-> e
+T 656 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 79/79 MP 0/0 Hu 90 $ 1057 room=.
+-> e
+T 657 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 89 $ 1057 room=.
+-> n
+T 658 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 88 $ 1057 room=.
+-> e
+T 659 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 87 $ 1057 room=.
+-> s
+T 660 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> l
+T 661 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 79/79 MP 0/0 Hu 86 $ 1057 room=.
+-> s
+T 662 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 85 $ 1057 room=.
+-> s
+T 663 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 84 $ 1057 room=.
+-> e
+T 664 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 83 $ 1057 room=.
+-> s
+T 665 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 82 $ 1057 room=.
+-> s
+T 666 mode=game_loop           Nain Oakshield(dwa) F3@(18,15) HP 79/79 MP 0/0 Hu 81 $ 1057 room=.
+-> e
+T 667 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 80 $ 1057 room=.
+-> s
+T 668 mode=game_loop           Nain Oakshield(dwa) F3@(19,16) HP 79/79 MP 0/0 Hu 79 $ 1057 room=.
+-> w
+T 669 mode=game_loop           Nain Oakshield(dwa) F3@(18,16) HP 79/79 MP 0/0 Hu 78 $ 1057 room=.
+-> w
+T 670 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> l
+T 671 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 77 $ 1057 room=.
+-> n
+T 672 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 76 $ 1057 room=.
+-> w
+T 673 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 75 $ 1057 room=.
+-> w
+T 674 mode=stairs_down_mode    Nain Oakshield(dwa) F3@(15,15) HP 79/79 MP 0/0 Hu 74 $ 1057 room=D
+-> n
+T 675 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 73 $ 1057 room=.
+-> w
+T 676 mode=game_loop           Nain Oakshield(dwa) F3@(14,14) HP 79/79 MP 0/0 Hu 72 $ 1057 room=.
+-> s
+T 677 mode=game_loop           Nain Oakshield(dwa) F3@(14,15) HP 79/79 MP 0/0 Hu 71 $ 1057 room=.
+-> s
+T 678 mode=game_loop           Nain Oakshield(dwa) F3@(14,16) HP 79/79 MP 0/0 Hu 70 $ 1057 room=.
+-> e
+T 679 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 69 $ 1057 room=.
+-> n
+T 680 mode=stairs_down_mode    Nain Oakshield(dwa) F3@(15,15) HP 79/79 MP 0/0 Hu 68 $ 1057 room=D
+-> n
+T 681 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 67 $ 1057 room=.
+-> e
+T 682 mode=game_loop           Nain Oakshield(dwa) F3@(16,14) HP 79/79 MP 0/0 Hu 66 $ 1057 room=.
+-> s
+T 683 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 65 $ 1057 room=.
+-> s
+T 684 mode=game_loop           Nain Oakshield(dwa) F3@(16,16) HP 79/79 MP 0/0 Hu 64 $ 1057 room=.
+-> w
+T 685 mode=game_loop           Nain Oakshield(dwa) F3@(15,16) HP 79/79 MP 0/0 Hu 63 $ 1057 room=.
+-> n
+T 686 mode=stairs_down_mode    Nain Oakshield(dwa) F3@(15,15) HP 79/79 MP 0/0 Hu 62 $ 1057 room=D
+-> n
+T 687 mode=game_loop           Nain Oakshield(dwa) F3@(15,14) HP 79/79 MP 0/0 Hu 61 $ 1057 room=.
+-> e
+T 688 mode=game_loop           Nain Oakshield(dwa) F3@(16,14) HP 79/79 MP 0/0 Hu 60 $ 1057 room=.
+-> s
+T 689 mode=game_loop           Nain Oakshield(dwa) F3@(16,15) HP 79/79 MP 0/0 Hu 59 $ 1057 room=.
+-> e
+T 690 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> l
+T 691 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 58 $ 1057 room=.
+-> e
+T 692 mode=game_loop           Nain Oakshield(dwa) F3@(18,15) HP 79/79 MP 0/0 Hu 57 $ 1057 room=.
+-> s
+T 693 mode=game_loop           Nain Oakshield(dwa) F3@(18,16) HP 79/79 MP 0/0 Hu 56 $ 1057 room=.
+-> e
+T 694 mode=game_loop           Nain Oakshield(dwa) F3@(19,16) HP 79/79 MP 0/0 Hu 55 $ 1057 room=.
+-> n
+T 695 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 54 $ 1057 room=.
+-> n
+T 696 mode=game_loop           Nain Oakshield(dwa) F3@(19,14) HP 79/79 MP 0/0 Hu 53 $ 1057 room=.
+-> n
+T 697 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 52 $ 1057 room=.
+-> w
+T 698 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 51 $ 1057 room=.
+-> w
+T 699 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 79/79 MP 0/0 Hu 50 $ 1057 room=.
+-> n
+T 700 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> l
+T 701 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/79 MP 0/0 Hu 49 $ 1057 room=.
+-> w
+T 702 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 79/79 MP 0/0 Hu 48 $ 1057 room=.
+-> n
+T 703 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 79/79 MP 0/0 Hu 47 $ 1057 room=.
+-> n
+T 704 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/79 MP 0/0 Hu 46 $ 1057 room=.
+-> e
+T 705 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 45 $ 1057 room=.
+-> e
+T 706 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 44 $ 1057 room=.
+-> e
+T 707 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 43 $ 1057 room=.
+-> s
+T 708 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 42 $ 1057 room=.
+-> s
+T 709 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 79/79 MP 0/0 Hu 41 $ 1057 room=.
+-> s
+T 710 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 40 $ 1057 room=.
+-> l
+T 711 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 40 $ 1057 room=.
+-> w
+T 712 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 79/79 MP 0/0 Hu 39 $ 1057 room=.
+-> s
+T 713 mode=game_loop           Nain Oakshield(dwa) F3@(18,14) HP 79/79 MP 0/0 Hu 38 $ 1057 room=.
+-> e
+T 714 mode=game_loop           Nain Oakshield(dwa) F3@(19,14) HP 79/79 MP 0/0 Hu 37 $ 1057 room=.
+-> s
+T 715 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 36 $ 1057 room=.
+-> s
+T 716 mode=game_loop           Nain Oakshield(dwa) F3@(19,16) HP 79/79 MP 0/0 Hu 35 $ 1057 room=.
+-> w
+T 717 mode=game_loop           Nain Oakshield(dwa) F3@(18,16) HP 79/79 MP 0/0 Hu 34 $ 1057 room=.
+-> w
+T 718 mode=game_loop           Nain Oakshield(dwa) F3@(17,16) HP 79/79 MP 0/0 Hu 33 $ 1057 room=.
+-> n
+T 719 mode=game_loop           Nain Oakshield(dwa) F3@(17,15) HP 79/79 MP 0/0 Hu 32 $ 1057 room=.
+-> e
+T 720 mode=game_loop           Nain Oakshield(dwa) F3@(18,15) HP 79/79 MP 0/0 Hu 31 $ 1057 room=.
+-> l
+T 721 mode=game_loop           Nain Oakshield(dwa) F3@(18,15) HP 79/79 MP 0/0 Hu 31 $ 1057 room=.
+-> e
+T 722 mode=game_loop           Nain Oakshield(dwa) F3@(19,15) HP 79/79 MP 0/0 Hu 30 $ 1057 room=.
+-> n
+T 723 mode=game_loop           Nain Oakshield(dwa) F3@(19,14) HP 79/79 MP 0/0 Hu 29 $ 1057 room=.
+-> n
+T 724 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 79/79 MP 0/0 Hu 28 $ 1057 room=.
+-> n
+T 725 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 79/79 MP 0/0 Hu 27 $ 1057 room=.
+-> n
+T 726 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 79/79 MP 0/0 Hu 26 $ 1057 room=.
+-> w
+T 727 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu 25 $ 1057 room=.
+-> n
+T 728 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 24 $ 1057 room=.
+-> e
+T 729 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 23 $ 1057 room=.
+-> n
+T 730 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 22 $ 1057 room=.
+-> l
+T 731 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 22 $ 1057 room=.
+-> w
+T 732 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu 21 $ 1057 room=.
+-> w
+T 733 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 20 $ 1057 room=.
+-> s
+T 734 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 79/79 MP 0/0 Hu 19 $ 1057 room=.
+-> e
+T 735 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu 18 $ 1057 room=.
+-> e
+T 736 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 79/79 MP 0/0 Hu 17 $ 1057 room=.
+-> n
+T 737 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 79/79 MP 0/0 Hu 16 $ 1057 room=.
+-> n
+T 738 mode=game_loop           Nain Oakshield(dwa) F3@(19, 8) HP 79/79 MP 0/0 Hu 15 $ 1057 room=.
+-> n
+T 739 mode=game_loop           Nain Oakshield(dwa) F3@(19, 7) HP 79/79 MP 0/0 Hu 14 $ 1057 room=.
+-> w
+T 740 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 13 $ 1057 room=.
+-> l
+T 741 mode=game_loop           Nain Oakshield(dwa) F3@(18, 7) HP 79/79 MP 0/0 Hu 13 $ 1057 room=.
+-> s
+T 742 mode=game_loop           Nain Oakshield(dwa) F3@(18, 8) HP 79/79 MP 0/0 Hu 12 $ 1057 room=.
+-> w
+T 743 mode=game_loop           Nain Oakshield(dwa) F3@(17, 8) HP 79/79 MP 0/0 Hu 11 $ 1057 room=.
+-> s
+T 744 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 79/79 MP 0/0 Hu 10 $ 1057 room=.
+-> e
+T 745 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 79/79 MP 0/0 Hu  9 $ 1057 room=.
+-> s
+T 746 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 79/79 MP 0/0 Hu  8 $ 1057 room=.
+-> s
+T 747 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 79/79 MP 0/0 Hu  7 $ 1057 room=.
+-> s
+T 748 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 79/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 749 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 79/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 750 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 78/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 751 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 77/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP31/32)
+-> a
+T 752 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 77/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP31/32)
+-> a
+T 753 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 76/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP30/32)
+-> a
+T 754 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 75/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP29/32)
+-> f
+T 755 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 75/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP29/32)
+-> a
+T 756 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 74/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP29/32)
+-> a
+T 757 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 73/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP29/32)
+-> f
+T 758 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 73/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP29/32)
+-> a
+T 759 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 72/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP28/32)
+-> a
+T 760 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 72/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP28/32)
+-> a
+T 761 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 71/79 MP 0/0 Hu  6 $ 1057 room=M vs Gnoll(L2 HP28/32)
+-> f
+T 762 mode=flee_direction_mode Nain Oakshield(dwa) F3@(18,12) HP 70/79 MP 0/0 Hu  6 $ 1057 room=M
+-> s
+T 763 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 70/79 MP 0/0 Hu  6 $ 1057 room=.
+-> e
+T 764 mode=game_loop           Nain Oakshield(dwa) F3@(19,13) HP 70/79 MP 0/0 Hu  5 $ 1057 room=.
+-> n
+T 765 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 70/79 MP 0/0 Hu  4 $ 1057 room=.
+-> n
+T 766 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 70/79 MP 0/0 Hu  3 $ 1057 room=.
+-> n
+T 767 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 70/79 MP 0/0 Hu  2 $ 1057 room=.
+-> w
+T 768 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 70/79 MP 0/0 Hu  1 $ 1057 room=.
+-> w
+T 769 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 68/79 MP 0/0 Hu  0 $ 1057 room=.
+-> w
+T 770 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 66/79 MP 0/0 Hu  0 $ 1057 room=.
+-> l
+T 771 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 66/79 MP 0/0 Hu  0 $ 1057 room=.
+-> w
+T 772 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 64/79 MP 0/0 Hu  0 $ 1057 room=.
+-> s
+T 773 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 62/79 MP 0/0 Hu  0 $ 1057 room=.
+-> w
+T 774 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 60/79 MP 0/0 Hu  0 $ 1057 room=.
+-> n
+T 775 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 58/79 MP 0/0 Hu  0 $ 1057 room=.
+-> i
+T 776 mode=inventory           Nain Oakshield(dwa) F3@(14,10) HP 58/79 MP 0/0 Hu  0 $ 1057 room=.
+-> u3
+T 777 mode=inventory           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu  0 $ 1057 room=.
+-> x
+T 778 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 79/79 MP 0/0 Hu  0 $ 1057 room=.
+-> n
+T 779 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 77/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 780 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 76/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 781 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 75/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP19/22)
+-> a
+T 782 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 74/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP19/22)
+-> a
+T 783 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 73/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP16/22)
+-> a
+T 784 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 73/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP16/22)
+-> a
+T 785 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 73/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP16/22)
+-> a
+T 786 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 72/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP13/22)
+-> a
+T 787 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 72/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP13/22)
+-> a
+T 788 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 72/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP10/22)
+-> a
+T 789 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 72/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP10/22)
+-> a
+T 790 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 71/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP7/22)
+-> a
+T 791 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 70/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP4/22)
+-> a
+T 792 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 69/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP1/22)
+-> a
+T 793 mode=combat_mode         Nain Oakshield(dwa) F3@(14, 9) HP 69/79 MP 0/0 Hu  0 $ 1057 room=M vs Giant Rat(L2 HP1/22)
+-> a
+T 794 mode=combat_victory      Nain Oakshield(dwa) F3@(14, 9) HP 69/89 MP 0/0 Hu  0 $ 1063 room=.
+-> back
+T 795 mode=game_loop           Nain Oakshield(dwa) F3@(14, 9) HP 69/89 MP 0/0 Hu  0 $ 1063 room=.
+-> i
+T 796 mode=inventory           Nain Oakshield(dwa) F3@(14, 9) HP 69/89 MP 0/0 Hu  0 $ 1063 room=.
+-> u3
+T 797 mode=inventory           Nain Oakshield(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> x
+T 798 mode=game_loop           Nain Oakshield(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> i
+T 799 mode=inventory           Nain Oakshield(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> eat1
+T 800 mode=inventory           Nain Oakshield(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu  5 $ 1063 room=.
+-> x
+T 801 mode=game_loop           Nain Oakshield(dwa) F3@(14, 9) HP 89/89 MP 0/0 Hu  5 $ 1063 room=.
+-> e
+T 802 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 89/89 MP 0/0 Hu  4 $ 1063 room=.
+-> s
+T 803 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 89/89 MP 0/0 Hu  3 $ 1063 room=.
+-> s
+T 804 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 89/89 MP 0/0 Hu  2 $ 1063 room=.
+-> w
+T 805 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 89/89 MP 0/0 Hu  1 $ 1063 room=.
+-> n
+T 806 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 87/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 807 mode=game_loop           Nain Oakshield(dwa) F3@(14, 9) HP 85/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 808 mode=game_loop           Nain Oakshield(dwa) F3@(15, 9) HP 83/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 809 mode=game_loop           Nain Oakshield(dwa) F3@(16, 9) HP 81/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 810 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/89 MP 0/0 Hu  0 $ 1063 room=.
+-> l
+T 811 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 79/89 MP 0/0 Hu  0 $ 1063 room=.
+-> w
+T 812 mode=game_loop           Nain Oakshield(dwa) F3@(15,10) HP 77/89 MP 0/0 Hu  0 $ 1063 room=.
+-> w
+T 813 mode=game_loop           Nain Oakshield(dwa) F3@(14,10) HP 75/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 814 mode=game_loop           Nain Oakshield(dwa) F3@(14,11) HP 73/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 815 mode=game_loop           Nain Oakshield(dwa) F3@(15,11) HP 71/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 816 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 69/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 817 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 67/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 818 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 65/89 MP 0/0 Hu  0 $ 1063 room=.
+-> i
+T 819 mode=inventory           Nain Oakshield(dwa) F3@(17,12) HP 65/89 MP 0/0 Hu  0 $ 1063 room=.
+-> u3
+T 820 mode=inventory           Nain Oakshield(dwa) F3@(17,12) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> x
+T 821 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 822 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 87/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 823 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 85/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 824 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 83/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP28/32)
+-> f
+T 825 mode=flee_direction_mode Nain Oakshield(dwa) F3@(18,12) HP 83/89 MP 0/0 Hu  0 $ 1063 room=M
+-> s
+T 826 mode=game_loop           Nain Oakshield(dwa) F3@(18,13) HP 83/89 MP 0/0 Hu  0 $ 1063 room=.
+-> w
+T 827 mode=game_loop           Nain Oakshield(dwa) F3@(17,13) HP 81/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 828 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 79/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 829 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 77/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 830 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 75/89 MP 0/0 Hu  0 $ 1063 room=.
+-> l
+T 831 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 75/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 832 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 73/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 833 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 71/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 834 mode=game_loop           Nain Oakshield(dwa) F3@(19, 9) HP 69/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 835 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 67/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 836 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 65/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 837 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 63/89 MP 0/0 Hu  0 $ 1063 room=.
+-> i
+T 838 mode=inventory           Nain Oakshield(dwa) F3@(19,12) HP 63/89 MP 0/0 Hu  0 $ 1063 room=.
+-> u3
+T 839 mode=inventory           Nain Oakshield(dwa) F3@(19,12) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> x
+T 840 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> l
+T 841 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 89/89 MP 0/0 Hu  0 $ 1063 room=.
+-> w
+T 842 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 87/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP28/32)
+-> a
+T 843 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 87/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP28/32)
+-> a
+T 844 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 86/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP27/32)
+-> a
+T 845 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 85/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP26/32)
+-> a
+T 846 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 84/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP26/32)
+-> a
+T 847 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 83/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP25/32)
+-> f
+T 848 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 82/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP25/32)
+-> a
+T 849 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 81/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP24/32)
+-> a
+T 850 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 80/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP23/32)
+-> a
+T 851 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 79/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP23/32)
+-> a
+T 852 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 78/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP23/32)
+-> a
+T 853 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 78/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP22/32)
+-> a
+T 854 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 77/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP22/32)
+-> a
+T 855 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 76/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 856 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 75/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 857 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 74/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 858 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 74/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 859 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 73/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 860 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 72/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP21/32)
+-> a
+T 861 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 72/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP20/32)
+-> a
+T 862 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 71/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP20/32)
+-> a
+T 863 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 70/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP20/32)
+-> f
+T 864 mode=flee_direction_mode Nain Oakshield(dwa) F3@(18,12) HP 70/89 MP 0/0 Hu  0 $ 1063 room=M
+-> n
+T 865 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 70/89 MP 0/0 Hu  0 $ 1063 room=.
+-> n
+T 866 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 68/89 MP 0/0 Hu  0 $ 1063 room=.
+-> e
+T 867 mode=game_loop           Nain Oakshield(dwa) F3@(19,10) HP 66/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 868 mode=game_loop           Nain Oakshield(dwa) F3@(19,11) HP 64/89 MP 0/0 Hu  0 $ 1063 room=.
+-> s
+T 869 mode=game_loop           Nain Oakshield(dwa) F3@(19,12) HP 62/89 MP 0/0 Hu  0 $ 1063 room=.
+-> w
+T 870 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 60/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP20/32)
+-> a
+T 871 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 59/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP19/32)
+-> a
+T 872 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 59/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP18/32)
+-> a
+T 873 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 59/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP17/32)
+-> a
+T 874 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 58/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP16/32)
+-> a
+T 875 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 57/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP16/32)
+-> a
+T 876 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 56/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP15/32)
+-> a
+T 877 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 55/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP15/32)
+-> a
+T 878 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 54/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP14/32)
+-> a
+T 879 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 53/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP14/32)
+-> a
+T 880 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 52/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP14/32)
+-> a
+T 881 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 51/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP14/32)
+-> a
+T 882 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 50/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP14/32)
+-> a
+T 883 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 49/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP13/32)
+-> a
+T 884 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 48/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP13/32)
+-> a
+T 885 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 47/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP12/32)
+-> a
+T 886 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 46/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP11/32)
+-> a
+T 887 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 45/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP11/32)
+-> a
+T 888 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 44/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP11/32)
+-> a
+T 889 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 43/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP10/32)
+-> a
+T 890 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 42/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP10/32)
+-> a
+T 891 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 42/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 892 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 41/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 893 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 40/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 894 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 39/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 895 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 38/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 896 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 37/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 897 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 36/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP8/32)
+-> a
+T 898 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 36/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP7/32)
+-> a
+T 899 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 36/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP7/32)
+-> a
+T 900 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 35/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP6/32)
+-> a
+T 901 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 34/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP6/32)
+-> a
+T 902 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 34/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP6/32)
+-> a
+T 903 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 34/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP5/32)
+-> a
+T 904 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 33/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP4/32)
+-> a
+T 905 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 32/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP4/32)
+-> a
+T 906 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 31/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP4/32)
+-> a
+T 907 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 30/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP3/32)
+-> a
+T 908 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 29/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP3/32)
+-> a
+T 909 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 29/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP2/32)
+-> a
+T 910 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 28/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP2/32)
+-> a
+T 911 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 27/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP2/32)
+-> a
+T 912 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 27/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP2/32)
+-> a
+T 913 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 25/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP2/32)
+-> a
+T 914 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 23/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP1/32)
+-> a
+T 915 mode=combat_mode         Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1063 room=M vs Gnoll(L2 HP1/32)
+-> a
+T 916 mode=combat_victory      Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> back
+T 917 mode=game_loop           Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> i
+T 918 mode=inventory           Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> e2
+T 919 mode=inventory           Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> x
+T 920 mode=game_loop           Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> l
+T 921 mode=game_loop           Nain Oakshield(dwa) F3@(18,12) HP 21/89 MP 0/0 Hu  0 $ 1084 room=.
+-> w
+T 922 mode=game_loop           Nain Oakshield(dwa) F3@(17,12) HP 19/89 MP 0/0 Hu  0 $ 1084 room=.
+-> w
+T 923 mode=game_loop           Nain Oakshield(dwa) F3@(16,12) HP 17/89 MP 0/0 Hu  0 $ 1084 room=.
+-> n
+T 924 mode=game_loop           Nain Oakshield(dwa) F3@(16,11) HP 15/89 MP 0/0 Hu  0 $ 1084 room=.
+-> e
+T 925 mode=game_loop           Nain Oakshield(dwa) F3@(17,11) HP 13/89 MP 0/0 Hu  0 $ 1084 room=.
+-> e
+T 926 mode=game_loop           Nain Oakshield(dwa) F3@(18,11) HP 11/89 MP 0/0 Hu  0 $ 1084 room=.
+-> n
+T 927 mode=game_loop           Nain Oakshield(dwa) F3@(18,10) HP 9/89 MP 0/0 Hu  0 $ 1084 room=.
+-> n
+T 928 mode=game_loop           Nain Oakshield(dwa) F3@(18, 9) HP 7/89 MP 0/0 Hu  0 $ 1084 room=.
+-> w
+T 929 mode=game_loop           Nain Oakshield(dwa) F3@(17, 9) HP 5/89 MP 0/0 Hu  0 $ 1084 room=.
+-> s
+T 930 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 3/89 MP 0/0 Hu  0 $ 1084 room=.
+-> l
+T 931 mode=game_loop           Nain Oakshield(dwa) F3@(17,10) HP 3/89 MP 0/0 Hu  0 $ 1084 room=.
+-> w
+T 932 mode=game_loop           Nain Oakshield(dwa) F3@(16,10) HP 1/89 MP 0/0 Hu  0 $ 1084 room=.
+-> w
+T 933 mode=death_screen        Nain Oakshield(dwa) F3@(15,10) HP 0/89 MP 0/0 Hu  0 $ 1084 room=.
+
+=== run finished: turns=933 floor=3 hp=0/89 gold=1084 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00100_dwarf.html

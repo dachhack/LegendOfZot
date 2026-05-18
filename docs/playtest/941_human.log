@@ -1,0 +1,2139 @@
+T   0 mode=game_loop           Mablung Stormcrow(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Mablung Stormcrow(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 11 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Mablung Stormcrow(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Kobold(L0 HP20/20)
+  A Kobold (Level 0) appears! A small, dog-like humanoid yaps angrily.
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Mablung Stormcrow(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Kobold(L0 HP20/20)
+  You missed the evil Kobold!
+  Kobold missed Mablung Stormcrow!
+-> a
+T   4 mode=combat_victory      Mablung Stormcrow(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 442 room=.
+  You defeated the Kobold!
+  The kobold whines as it falls, its primitive weapon clattering.
+  You gained 8 experience.
+  You found 2 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+   ACHIEVEMENT UNLOCKED: Untouchable - Kill a monster without taking damage
+  Reward: 100 gold!
+-> back
+T   5 mode=game_loop           Mablung Stormcrow(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 442 room=.
+-> l
+T   6 mode=game_loop           Mablung Stormcrow(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 442 room=.
+-> s
+T   7 mode=pool_mode           Mablung Stormcrow(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 442 room=P
+-> dr
+T   8 mode=game_loop           Mablung Stormcrow(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 442 room=.
+-> e
+T   9 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 442 room=M vs Goblin(L0 HP12/12)
+-> a
+T  10 mode=combat_victory      Mablung Stormcrow(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 451 room=.
+-> back
+T  11 mode=game_loop           Mablung Stormcrow(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 451 room=.
+-> s
+T  12 mode=game_loop           Mablung Stormcrow(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 96 $ 451 room=.
+-> e
+T  13 mode=chest_mode          Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 95 $ 451 room=C
+-> o
+T  14 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 95 $ 451 room=.
+-> s
+T  15 mode=combat_mode         Mablung Stormcrow(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 94 $ 451 room=M vs Lichen(L0 HP10/10)
+-> a
+T  16 mode=combat_mode         Mablung Stormcrow(hum) F1@( 4, 4) HP 29/30 MP 0/0 Hu 94 $ 451 room=M vs Lichen(L0 HP10/10)
+-> a
+T  17 mode=combat_victory      Mablung Stormcrow(hum) F1@( 4, 4) HP 29/30 MP 0/0 Hu 94 $ 461 room=.
+-> back
+T  18 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 4) HP 29/30 MP 0/0 Hu 94 $ 461 room=.
+-> w
+T  19 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  20 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  21 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  22 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  23 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  24 mode=combat_mode         Mablung Stormcrow(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 93 $ 461 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  25 mode=combat_victory      Mablung Stormcrow(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 93 $ 468 room=.
+-> back
+T  26 mode=game_loop           Mablung Stormcrow(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 93 $ 468 room=.
+-> w
+T  27 mode=game_loop           Mablung Stormcrow(hum) F1@( 2, 4) HP 26/30 MP 0/0 Hu 92 $ 468 room=.
+-> w
+T  28 mode=garden_mode         Mablung Stormcrow(hum) F1@( 1, 4) HP 26/30 MP 0/0 Hu 91 $ 468 room=G
+-> h
+T  29 mode=game_loop           Mablung Stormcrow(hum) F1@( 1, 4) HP 26/30 MP 0/0 Hu 91 $ 468 room=.
+-> e
+T  30 mode=game_loop           Mablung Stormcrow(hum) F1@( 2, 4) HP 27/30 MP 0/0 Hu 90 $ 468 room=.
+-> e
+T  31 mode=game_loop           Mablung Stormcrow(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 89 $ 468 room=.
+-> n
+T  32 mode=game_loop           Mablung Stormcrow(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 88 $ 468 room=.
+-> e
+T  33 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 87 $ 468 room=.
+-> i
+T  34 mode=inventory           Mablung Stormcrow(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 87 $ 468 room=.
+-> u3
+T  35 mode=inventory           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 87 $ 468 room=.
+-> x
+T  36 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 87 $ 468 room=.
+-> i
+T  37 mode=inventory           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 87 $ 468 room=.
+-> eat3
+T  38 mode=inventory           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> x
+T  39 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 92 $ 468 room=.
+-> s
+T  40 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 91 $ 468 room=.
+-> s
+T  41 mode=game_loop           Mablung Stormcrow(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 90 $ 468 room=.
+-> s
+T  42 mode=combat_mode         Mablung Stormcrow(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 89 $ 468 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  43 mode=combat_mode         Mablung Stormcrow(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 89 $ 468 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  44 mode=combat_mode         Mablung Stormcrow(hum) F1@( 4, 6) HP 28/30 MP 0/0 Hu 89 $ 468 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T  45 mode=flee_direction_mode Mablung Stormcrow(hum) F1@( 4, 6) HP 25/30 MP 0/0 Hu 89 $ 468 room=M
+-> e
+T  46 mode=garden_mode         Mablung Stormcrow(hum) F1@( 5, 6) HP 23/30 MP 0/0 Hu 89 $ 468 room=G
+-> h
+T  47 mode=game_loop           Mablung Stormcrow(hum) F1@( 5, 6) HP 23/30 MP 0/0 Hu 89 $ 468 room=.
+-> i
+T  48 mode=inventory           Mablung Stormcrow(hum) F1@( 5, 6) HP 23/30 MP 0/0 Hu 89 $ 468 room=.
+-> u3
+T  49 mode=inventory           Mablung Stormcrow(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 89 $ 468 room=.
+-> x
+T  50 mode=game_loop           Mablung Stormcrow(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 89 $ 468 room=.
+-> i
+T  51 mode=inventory           Mablung Stormcrow(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 89 $ 468 room=.
+-> eat3
+T  52 mode=inventory           Mablung Stormcrow(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 95 $ 468 room=.
+-> x
+T  53 mode=game_loop           Mablung Stormcrow(hum) F1@( 5, 6) HP 30/30 MP 0/0 Hu 95 $ 468 room=.
+-> n
+T  54 mode=combat_mode         Mablung Stormcrow(hum) F1@( 5, 5) HP 28/30 MP 0/0 Hu 94 $ 468 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T  55 mode=flee_direction_mode Mablung Stormcrow(hum) F1@( 5, 5) HP 27/30 MP 0/0 Hu 94 $ 468 room=M
+-> e
+T  56 mode=combat_mode         Mablung Stormcrow(hum) F1@( 6, 5) HP 27/30 MP 0/0 Hu 94 $ 468 room=M vs Zombie(L0 HP35/35)
+-> a
+T  57 mode=combat_mode         Mablung Stormcrow(hum) F1@( 6, 5) HP 26/30 MP 0/0 Hu 94 $ 468 room=M vs Zombie(L0 HP35/35)
+-> a
+T  58 mode=combat_mode         Mablung Stormcrow(hum) F1@( 6, 5) HP 25/30 MP 0/0 Hu 94 $ 468 room=M vs Zombie(L0 HP14/35)
+-> a
+T  59 mode=combat_victory      Mablung Stormcrow(hum) F1@( 6, 5) HP 24/30 MP 0/0 Hu 94 $ 474 room=.
+-> back
+T  60 mode=game_loop           Mablung Stormcrow(hum) F1@( 6, 5) HP 24/30 MP 0/0 Hu 94 $ 474 room=.
+-> e
+T  61 mode=combat_mode         Mablung Stormcrow(hum) F1@( 7, 5) HP 25/30 MP 0/0 Hu 93 $ 474 room=M vs Goblin(L0 HP12/12)
+-> a
+T  62 mode=combat_mode         Mablung Stormcrow(hum) F1@( 7, 5) HP 24/30 MP 0/0 Hu 93 $ 474 room=M vs Goblin(L0 HP12/12)
+-> a
+T  63 mode=combat_victory      Mablung Stormcrow(hum) F1@( 7, 5) HP 23/30 MP 0/0 Hu 93 $ 479 room=.
+-> back
+T  64 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 23/30 MP 0/0 Hu 93 $ 479 room=.
+-> l
+T  65 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 23/30 MP 0/0 Hu 93 $ 479 room=.
+-> e
+T  66 mode=chest_mode          Mablung Stormcrow(hum) F1@( 8, 5) HP 23/30 MP 0/0 Hu 92 $ 479 room=C
+-> o
+T  67 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 23/30 MP 0/0 Hu 92 $ 509 room=.
+-> i
+T  68 mode=inventory           Mablung Stormcrow(hum) F1@( 8, 5) HP 23/30 MP 0/0 Hu 92 $ 509 room=.
+-> u3
+T  69 mode=inventory           Mablung Stormcrow(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 92 $ 509 room=.
+-> x
+T  70 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 92 $ 509 room=.
+-> l
+T  71 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 92 $ 509 room=.
+-> s
+T  72 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 91 $ 509 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  73 mode=combat_victory      Mablung Stormcrow(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 91 $ 511 room=.
+-> back
+T  74 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 91 $ 511 room=.
+-> l
+T  75 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 30/30 MP 0/0 Hu 91 $ 511 room=.
+-> e
+T  76 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 90 $ 511 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  77 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 90 $ 511 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  78 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 90 $ 511 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  79 mode=combat_victory      Mablung Stormcrow(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 90 $ 519 room=.
+-> back
+T  80 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 90 $ 519 room=.
+-> n
+T  81 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 89 $ 519 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  82 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 5) HP 29/30 MP 0/0 Hu 89 $ 519 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  83 mode=combat_mode         Mablung Stormcrow(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 89 $ 519 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  84 mode=combat_victory      Mablung Stormcrow(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 89 $ 521 room=.
+-> back
+T  85 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 89 $ 521 room=.
+-> l
+T  86 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 89 $ 521 room=.
+-> n
+T  87 mode=chest_mode          Mablung Stormcrow(hum) F1@( 9, 4) HP 28/30 MP 0/0 Hu 88 $ 521 room=C
+-> o
+T  88 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 28/30 MP 0/0 Hu 88 $ 521 room=.
+-> l
+T  89 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 28/30 MP 0/0 Hu 88 $ 521 room=.
+-> n
+T  90 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 3) HP 29/30 MP 0/0 Hu 87 $ 521 room=.
+-> w
+T  91 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 29/30 MP 0/0 Hu 86 $ 521 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  92 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 28/30 MP 0/0 Hu 86 $ 521 room=M vs Skeleton(L0 HP6/25)
+-> f
+T  93 mode=flee_direction_mode Mablung Stormcrow(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 86 $ 521 room=M
+-> s
+T  94 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 27/30 MP 0/0 Hu 86 $ 521 room=.
+-> s
+T  95 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 28/30 MP 0/0 Hu 85 $ 521 room=.
+-> e
+T  96 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 84 $ 521 room=.
+-> e
+T  97 mode=library_mode        Mablung Stormcrow(hum) F1@(10, 5) HP 28/30 MP 0/0 Hu 83 $ 521 room=L
+-> r
+T  98 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 28/30 MP 0/0 Hu 83 $ 521 room=.
+-> e
+T  99 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 28/30 MP 0/0 Hu 82 $ 521 room=.
+-> l
+T 100 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 28/30 MP 0/0 Hu 82 $ 521 room=.
+-> n
+T 101 mode=altar_mode          Mablung Stormcrow(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 81 $ 521 room=A
+-> pray
+T 102 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 81 $ 521 room=.
+-> i
+T 103 mode=inventory           Mablung Stormcrow(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 81 $ 521 room=.
+-> eat3
+T 104 mode=inventory           Mablung Stormcrow(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 86 $ 521 room=.
+-> x
+T 105 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 86 $ 521 room=.
+-> e
+T 106 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 29/30 MP 0/0 Hu 85 $ 521 room=.
+-> i
+T 107 mode=inventory           Mablung Stormcrow(hum) F1@(12, 4) HP 29/30 MP 0/0 Hu 85 $ 521 room=.
+-> eat3
+T 108 mode=inventory           Mablung Stormcrow(hum) F1@(12, 4) HP 29/30 MP 0/0 Hu 90 $ 521 room=.
+-> x
+T 109 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 29/30 MP 0/0 Hu 90 $ 521 room=.
+-> s
+T 110 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 5) HP 30/30 MP 0/0 Hu 89 $ 521 room=M vs Kobold(L0 HP8/8)
+-> a
+T 111 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 5) HP 29/30 MP 0/0 Hu 89 $ 521 room=M vs Kobold(L0 HP8/8)
+-> a
+T 112 mode=combat_victory      Mablung Stormcrow(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 89 $ 622 room=.
+-> back
+T 113 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 89 $ 622 room=.
+-> n
+T 114 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 28/30 MP 0/0 Hu 88 $ 622 room=.
+-> s
+T 115 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 29/30 MP 0/0 Hu 87 $ 622 room=.
+-> w
+T 116 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 86 $ 622 room=.
+-> w
+T 117 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 30/30 MP 0/0 Hu 85 $ 622 room=.
+-> w
+T 118 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 84 $ 622 room=.
+-> n
+T 119 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 30/30 MP 0/0 Hu 83 $ 622 room=.
+-> w
+T 120 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 30/30 MP 0/0 Hu 82 $ 622 room=.
+-> w
+T 121 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 30/30 MP 0/0 Hu 81 $ 622 room=.
+-> n
+T 122 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 80 $ 622 room=.
+-> n
+T 123 mode=dungeon_mode        Mablung Stormcrow(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 79 $ 622 room=N
+-> u
+T 124 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 79 $ 622 room=N
+-> n
+T 125 mode=combat_mode         Mablung Stormcrow(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 78 $ 622 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 126 mode=combat_victory      Mablung Stormcrow(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 78 $ 631 room=.
+-> back
+T 127 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 78 $ 631 room=.
+-> w
+T 128 mode=combat_mode         Mablung Stormcrow(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 77 $ 631 room=M vs Stirge(L0 HP6/6)
+-> a
+T 129 mode=combat_victory      Mablung Stormcrow(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 77 $ 637 room=.
+-> back
+T 130 mode=game_loop           Mablung Stormcrow(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 77 $ 637 room=.
+-> e
+T 131 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 76 $ 637 room=.
+-> w
+T 132 mode=game_loop           Mablung Stormcrow(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 75 $ 637 room=.
+-> e
+T 133 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 74 $ 637 room=.
+-> s
+T 134 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 73 $ 637 room=N
+-> s
+T 135 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 72 $ 637 room=.
+-> e
+T 136 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 30/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 137 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 29/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 138 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 29/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 139 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 29/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 140 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 28/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 141 mode=combat_mode         Mablung Stormcrow(hum) F1@( 8, 3) HP 28/30 MP 0/0 Hu 71 $ 637 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 142 mode=combat_victory      Mablung Stormcrow(hum) F1@( 8, 3) HP 28/40 MP 0/0 Hu 71 $ 647 room=.
+-> back
+T 143 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 3) HP 28/40 MP 0/0 Hu 71 $ 647 room=.
+-> s
+T 144 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 28/40 MP 0/0 Hu 70 $ 647 room=.
+-> w
+T 145 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 28/40 MP 0/0 Hu 69 $ 647 room=.
+-> s
+T 146 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 28/40 MP 0/0 Hu 68 $ 647 room=.
+-> i
+T 147 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 28/40 MP 0/0 Hu 68 $ 647 room=.
+-> u4
+T 148 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 68 $ 647 room=.
+-> x
+T 149 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 68 $ 647 room=.
+-> i
+T 150 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 68 $ 647 room=.
+-> eat3
+T 151 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 73 $ 647 room=.
+-> eat1
+T 152 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu100 $ 647 room=.
+-> x
+T 153 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu100 $ 647 room=.
+-> s
+T 154 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 99 $ 647 room=.
+-> e
+T 155 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 40/40 MP 0/0 Hu 98 $ 647 room=.
+-> e
+T 156 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 40/40 MP 0/0 Hu 97 $ 647 room=.
+-> n
+T 157 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 96 $ 647 room=.
+-> e
+T 158 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 40/40 MP 0/0 Hu 95 $ 647 room=.
+-> e
+T 159 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 94 $ 647 room=.
+-> s
+T 160 mode=combat_mode         Mablung Stormcrow(hum) F1@(11, 6) HP 40/40 MP 0/0 Hu 93 $ 647 room=M vs Kobold(L0 HP8/8)
+-> a
+T 161 mode=combat_mode         Mablung Stormcrow(hum) F1@(11, 6) HP 40/40 MP 0/0 Hu 93 $ 647 room=M vs Kobold(L0 HP8/8)
+-> a
+T 162 mode=combat_victory      Mablung Stormcrow(hum) F1@(11, 6) HP 39/40 MP 0/0 Hu 93 $ 657 room=.
+-> back
+T 163 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 6) HP 39/40 MP 0/0 Hu 93 $ 657 room=.
+-> s
+T 164 mode=altar_mode          Mablung Stormcrow(hum) F1@(11, 7) HP 39/40 MP 0/0 Hu 92 $ 657 room=A
+-> pray
+T 165 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 7) HP 39/40 MP 0/0 Hu 92 $ 657 room=.
+-> s
+T 166 mode=combat_mode         Mablung Stormcrow(hum) F1@(11, 8) HP 40/40 MP 0/0 Hu 91 $ 657 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 167 mode=combat_victory      Mablung Stormcrow(hum) F1@(11, 8) HP 39/40 MP 0/0 Hu 91 $ 665 room=.
+-> back
+T 168 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 8) HP 39/40 MP 0/0 Hu 91 $ 665 room=.
+-> s
+T 169 mode=shrine_mode         Mablung Stormcrow(hum) F1@(11, 9) HP 39/40 MP 0/0 Hu 90 $ 665 room=F
+-> p
+T 170 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 9) HP 39/40 MP 0/0 Hu 90 $ 665 room=.
+-> w
+T 171 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 9) HP 40/40 MP 0/0 Hu 89 $ 665 room=.
+-> e
+T 172 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 9) HP 40/40 MP 0/0 Hu 88 $ 665 room=.
+-> e
+T 173 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 9) HP 40/40 MP 0/0 Hu 87 $ 665 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 174 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 9) HP 39/40 MP 0/0 Hu 87 $ 665 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 175 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 9) HP 38/40 MP 0/0 Hu 87 $ 665 room=M vs Skeleton(L0 HP24/25)
+-> a
+T 176 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 9) HP 38/40 MP 0/0 Hu 87 $ 665 room=M vs Skeleton(L0 HP24/25)
+-> f
+T 177 mode=flee_direction_mode Mablung Stormcrow(hum) F1@(12, 9) HP 38/40 MP 0/0 Hu 87 $ 665 room=M
+-> n
+T 178 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 38/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 179 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 37/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 180 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 36/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 181 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 36/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 182 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 36/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 183 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 36/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP12/15)
+-> a
+T 184 mode=combat_mode         Mablung Stormcrow(hum) F1@(12, 8) HP 35/40 MP 0/0 Hu 87 $ 665 room=M vs Giant Centipede(L0 HP9/15)
+-> f
+T 185 mode=flee_direction_mode Mablung Stormcrow(hum) F1@(12, 8) HP 31/40 MP 0/0 Hu 87 $ 665 room=M
+-> w
+T 186 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 8) HP 28/40 MP 0/0 Hu 87 $ 665 room=.
+-> i
+T 187 mode=inventory           Mablung Stormcrow(hum) F1@(11, 8) HP 28/40 MP 0/0 Hu 87 $ 665 room=.
+-> u3
+T 188 mode=inventory           Mablung Stormcrow(hum) F1@(11, 8) HP 40/40 MP 0/0 Hu 87 $ 665 room=.
+-> x
+T 189 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 8) HP 40/40 MP 0/0 Hu 87 $ 665 room=.
+-> n
+T 190 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 7) HP 37/40 MP 0/0 Hu 86 $ 665 room=.
+-> n
+T 191 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 6) HP 38/40 MP 0/0 Hu 85 $ 665 room=.
+-> n
+T 192 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 38/40 MP 0/0 Hu 84 $ 665 room=.
+-> n
+T 193 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 38/40 MP 0/0 Hu 83 $ 665 room=.
+-> i
+T 194 mode=inventory           Mablung Stormcrow(hum) F1@(11, 4) HP 38/40 MP 0/0 Hu 83 $ 665 room=.
+-> eat3
+T 195 mode=inventory           Mablung Stormcrow(hum) F1@(11, 4) HP 38/40 MP 0/0 Hu 88 $ 665 room=.
+-> x
+T 196 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 38/40 MP 0/0 Hu 88 $ 665 room=.
+-> e
+T 197 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 39/40 MP 0/0 Hu 87 $ 665 room=.
+-> s
+T 198 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 39/40 MP 0/0 Hu 86 $ 665 room=.
+-> w
+T 199 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 85 $ 665 room=.
+-> s
+T 200 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 6) HP 40/40 MP 0/0 Hu 84 $ 665 room=.
+-> s
+T 201 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 7) HP 40/40 MP 0/0 Hu 83 $ 665 room=.
+-> s
+T 202 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 8) HP 40/40 MP 0/0 Hu 82 $ 665 room=.
+-> s
+T 203 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 9) HP 40/40 MP 0/0 Hu 81 $ 665 room=.
+-> w
+T 204 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 9) HP 40/40 MP 0/0 Hu 80 $ 665 room=.
+-> e
+T 205 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 9) HP 40/40 MP 0/0 Hu 79 $ 665 room=.
+-> n
+T 206 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 8) HP 40/40 MP 0/0 Hu 78 $ 665 room=.
+-> n
+T 207 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 7) HP 40/40 MP 0/0 Hu 77 $ 665 room=.
+-> n
+T 208 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 6) HP 40/40 MP 0/0 Hu 76 $ 665 room=.
+-> n
+T 209 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 75 $ 665 room=.
+-> n
+T 210 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 40/40 MP 0/0 Hu 74 $ 665 room=.
+-> l
+T 211 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 40/40 MP 0/0 Hu 74 $ 665 room=.
+-> e
+T 212 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 40/40 MP 0/0 Hu 73 $ 665 room=.
+-> s
+T 213 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 40/40 MP 0/0 Hu 72 $ 665 room=.
+-> n
+T 214 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 40/40 MP 0/0 Hu 71 $ 665 room=.
+-> s
+T 215 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 40/40 MP 0/0 Hu 70 $ 665 room=.
+-> w
+T 216 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 69 $ 665 room=.
+-> w
+T 217 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 40/40 MP 0/0 Hu 68 $ 665 room=.
+-> w
+T 218 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 67 $ 665 room=.
+-> w
+T 219 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 66 $ 665 room=.
+-> w
+T 220 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 65 $ 665 room=.
+-> l
+T 221 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 65 $ 665 room=.
+-> n
+T 222 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 64 $ 665 room=.
+-> n
+T 223 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 3) HP 40/40 MP 0/0 Hu 63 $ 665 room=.
+-> e
+T 224 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 3) HP 40/40 MP 0/0 Hu 62 $ 665 room=.
+-> e
+T 225 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 3) HP 40/40 MP 0/0 Hu 61 $ 665 room=.
+-> s
+T 226 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 60 $ 665 room=.
+-> w
+T 227 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 59 $ 665 room=.
+-> w
+T 228 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 58 $ 665 room=.
+-> s
+T 229 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 57 $ 665 room=.
+-> w
+T 230 mode=game_loop           Mablung Stormcrow(hum) F1@( 6, 5) HP 40/40 MP 0/0 Hu 56 $ 665 room=.
+-> l
+T 231 mode=game_loop           Mablung Stormcrow(hum) F1@( 6, 5) HP 40/40 MP 0/0 Hu 56 $ 665 room=.
+-> e
+T 232 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 55 $ 665 room=.
+-> s
+T 233 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 54 $ 665 room=.
+-> e
+T 234 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 40/40 MP 0/0 Hu 53 $ 665 room=.
+-> e
+T 235 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 40/40 MP 0/0 Hu 52 $ 665 room=.
+-> n
+T 236 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 51 $ 665 room=.
+-> w
+T 237 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 50 $ 665 room=.
+-> w
+T 238 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 49 $ 665 room=.
+-> i
+T 239 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 49 $ 665 room=.
+-> eat1
+T 240 mode=inventory           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu100 $ 665 room=.
+-> x
+T 241 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu100 $ 665 room=.
+-> s
+T 242 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 99 $ 665 room=.
+-> e
+T 243 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 40/40 MP 0/0 Hu 98 $ 665 room=.
+-> e
+T 244 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 40/40 MP 0/0 Hu 97 $ 665 room=.
+-> n
+T 245 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 96 $ 665 room=.
+-> n
+T 246 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 95 $ 665 room=.
+-> w
+T 247 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 94 $ 665 room=.
+-> w
+T 248 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 93 $ 665 room=.
+-> s
+T 249 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 92 $ 665 room=.
+-> s
+T 250 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 91 $ 665 room=.
+-> l
+T 251 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 91 $ 665 room=.
+-> e
+T 252 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 40/40 MP 0/0 Hu 90 $ 665 room=.
+-> e
+T 253 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 40/40 MP 0/0 Hu 89 $ 665 room=.
+-> n
+T 254 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 88 $ 665 room=.
+-> w
+T 255 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 5) HP 40/40 MP 0/0 Hu 87 $ 665 room=.
+-> w
+T 256 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 5) HP 40/40 MP 0/0 Hu 86 $ 665 room=.
+-> s
+T 257 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 6) HP 40/40 MP 0/0 Hu 85 $ 665 room=.
+-> e
+T 258 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 6) HP 40/40 MP 0/0 Hu 84 $ 665 room=.
+-> e
+T 259 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 6) HP 40/40 MP 0/0 Hu 83 $ 665 room=.
+-> n
+T 260 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 82 $ 665 room=.
+-> l
+T 261 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 82 $ 665 room=.
+-> e
+T 262 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 40/40 MP 0/0 Hu 81 $ 665 room=.
+-> e
+T 263 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 80 $ 665 room=.
+-> e
+T 264 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 5) HP 40/40 MP 0/0 Hu 79 $ 665 room=.
+-> n
+T 265 mode=game_loop           Mablung Stormcrow(hum) F1@(12, 4) HP 40/40 MP 0/0 Hu 78 $ 665 room=.
+-> w
+T 266 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 4) HP 40/40 MP 0/0 Hu 77 $ 665 room=.
+-> s
+T 267 mode=game_loop           Mablung Stormcrow(hum) F1@(11, 5) HP 40/40 MP 0/0 Hu 76 $ 665 room=.
+-> w
+T 268 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 40/40 MP 0/0 Hu 75 $ 665 room=.
+-> w
+T 269 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 74 $ 665 room=.
+-> n
+T 270 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 73 $ 665 room=.
+-> l
+T 271 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 73 $ 665 room=.
+-> w
+T 272 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 4) HP 40/40 MP 0/0 Hu 72 $ 665 room=.
+-> w
+T 273 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 4) HP 40/40 MP 0/0 Hu 71 $ 665 room=.
+-> n
+T 274 mode=game_loop           Mablung Stormcrow(hum) F1@( 7, 3) HP 40/40 MP 0/0 Hu 70 $ 665 room=.
+-> e
+T 275 mode=game_loop           Mablung Stormcrow(hum) F1@( 8, 3) HP 40/40 MP 0/0 Hu 69 $ 665 room=.
+-> e
+T 276 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 3) HP 40/40 MP 0/0 Hu 68 $ 665 room=.
+-> s
+T 277 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 4) HP 40/40 MP 0/0 Hu 67 $ 665 room=.
+-> s
+T 278 mode=game_loop           Mablung Stormcrow(hum) F1@( 9, 5) HP 40/40 MP 0/0 Hu 66 $ 665 room=.
+-> e
+T 279 mode=game_loop           Mablung Stormcrow(hum) F1@(10, 5) HP 40/40 MP 0/0 Hu 65 $ 665 room=.
+-> n
+T 280 mode=warp_mode           Mablung Stormcrow(hum) F1@(10, 4) HP 40/40 MP 0/0 Hu 64 $ 665 room=W
+-> y
+T 281 mode=game_loop           Mablung Stormcrow(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 64 $ 665 room=.
+-> l
+T 282 mode=game_loop           Mablung Stormcrow(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 64 $ 665 room=.
+-> s
+T 283 mode=game_loop           Mablung Stormcrow(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 63 $ 665 room=.
+-> l
+T 284 mode=game_loop           Mablung Stormcrow(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 63 $ 665 room=.
+-> s
+T 285 mode=game_loop           Mablung Stormcrow(hum) F2@(15,15) HP 40/40 MP 0/0 Hu 62 $ 665 room=.
+-> l
+T 286 mode=game_loop           Mablung Stormcrow(hum) F2@(15,15) HP 40/40 MP 0/0 Hu 62 $ 665 room=.
+-> s
+T 287 mode=game_loop           Mablung Stormcrow(hum) F2@(15,16) HP 40/40 MP 0/0 Hu 61 $ 665 room=.
+-> l
+T 288 mode=game_loop           Mablung Stormcrow(hum) F2@(15,16) HP 40/40 MP 0/0 Hu 61 $ 665 room=.
+-> e
+T 289 mode=garden_mode         Mablung Stormcrow(hum) F2@(16,16) HP 40/40 MP 0/0 Hu 60 $ 665 room=G
+-> h
+T 290 mode=game_loop           Mablung Stormcrow(hum) F2@(16,16) HP 40/40 MP 0/0 Hu 60 $ 665 room=.
+-> e
+T 291 mode=game_loop           Mablung Stormcrow(hum) F2@(17,16) HP 40/40 MP 0/0 Hu 59 $ 665 room=.
+-> e
+T 292 mode=pool_mode           Mablung Stormcrow(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 58 $ 665 room=P
+-> dr
+T 293 mode=game_loop           Mablung Stormcrow(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 58 $ 665 room=.
+-> e
+T 294 mode=game_loop           Mablung Stormcrow(hum) F2@(19,16) HP 40/40 MP 0/0 Hu 57 $ 665 room=.
+-> n
+T 295 mode=game_loop           Mablung Stormcrow(hum) F2@(19,15) HP 40/40 MP 0/0 Hu 56 $ 665 room=.
+-> n
+T 296 mode=game_loop           Mablung Stormcrow(hum) F2@(19,14) HP 40/40 MP 0/0 Hu 55 $ 665 room=.
+-> l
+T 297 mode=game_loop           Mablung Stormcrow(hum) F2@(19,14) HP 40/40 MP 0/0 Hu 55 $ 665 room=.
+-> n
+T 298 mode=game_loop           Mablung Stormcrow(hum) F2@(19,13) HP 40/40 MP 0/0 Hu 54 $ 665 room=.
+-> l
+T 299 mode=game_loop           Mablung Stormcrow(hum) F2@(19,13) HP 40/40 MP 0/0 Hu 54 $ 665 room=.
+-> w
+T 300 mode=game_loop           Mablung Stormcrow(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 53 $ 665 room=.
+-> s
+T 301 mode=game_loop           Mablung Stormcrow(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 52 $ 665 room=.
+-> w
+T 302 mode=game_loop           Mablung Stormcrow(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 51 $ 665 room=.
+-> w
+T 303 mode=stairs_down_mode    Mablung Stormcrow(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 50 $ 665 room=D
+-> n
+T 304 mode=game_loop           Mablung Stormcrow(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 665 room=.
+-> i
+T 305 mode=inventory           Mablung Stormcrow(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 49 $ 665 room=.
+-> eat1
+T 306 mode=inventory           Mablung Stormcrow(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 665 room=.
+-> x
+T 307 mode=game_loop           Mablung Stormcrow(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 99 $ 665 room=.
+-> w
+T 308 mode=game_loop           Mablung Stormcrow(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 98 $ 665 room=.
+-> n
+T 309 mode=game_loop           Mablung Stormcrow(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 97 $ 665 room=.
+-> l
+T 310 mode=game_loop           Mablung Stormcrow(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 97 $ 665 room=.
+-> n
+T 311 mode=game_loop           Mablung Stormcrow(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 96 $ 665 room=.
+-> l
+T 312 mode=game_loop           Mablung Stormcrow(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 96 $ 665 room=.
+-> w
+T 313 mode=game_loop           Mablung Stormcrow(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 95 $ 665 room=.
+-> l
+T 314 mode=game_loop           Mablung Stormcrow(hum) F2@(14,11) HP 40/40 MP 0/0 Hu 95 $ 665 room=.
+-> w
+T 315 mode=game_loop           Mablung Stormcrow(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 94 $ 665 room=.
+-> w
+T 316 mode=game_loop           Mablung Stormcrow(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 93 $ 665 room=.
+-> w
+T 317 mode=game_loop           Mablung Stormcrow(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 92 $ 665 room=.
+-> w
+T 318 mode=library_mode        Mablung Stormcrow(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 91 $ 665 room=L
+-> r
+T 319 mode=library_read_decision_mode Mablung Stormcrow(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 91 $ 665 room=L
+-> y
+T 320 mode=game_loop           Mablung Stormcrow(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 91 $ 765 room=.
+-> l
+T 321 mode=game_loop           Mablung Stormcrow(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 91 $ 765 room=.
+-> w
+T 322 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 90 $ 765 room=.
+-> l
+T 323 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 90 $ 765 room=.
+-> s
+T 324 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 89 $ 765 room=.
+-> l
+T 325 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 89 $ 765 room=.
+-> w
+T 326 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 88 $ 765 room=.
+-> l
+T 327 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 88 $ 765 room=.
+-> s
+T 328 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,13) HP 40/40 MP 0/0 Hu 87 $ 765 room=.
+-> l
+T 329 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,13) HP 40/40 MP 0/0 Hu 87 $ 765 room=.
+-> s
+T 330 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,14) HP 40/40 MP 0/0 Hu 86 $ 765 room=.
+-> l
+T 331 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,14) HP 40/40 MP 0/0 Hu 86 $ 765 room=.
+-> w
+T 332 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,14) HP 40/40 MP 0/0 Hu 85 $ 765 room=.
+-> l
+T 333 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,14) HP 40/40 MP 0/0 Hu 85 $ 765 room=.
+-> s
+T 334 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,15) HP 40/40 MP 0/0 Hu 84 $ 765 room=.
+-> l
+T 335 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,15) HP 40/40 MP 0/0 Hu 84 $ 765 room=.
+-> s
+T 336 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,16) HP 40/40 MP 0/0 Hu 83 $ 765 room=.
+-> n
+T 337 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,15) HP 40/40 MP 0/0 Hu 82 $ 765 room=.
+-> w
+T 338 mode=game_loop           Mablung Stormcrow(hum) F2@( 6,15) HP 40/40 MP 0/0 Hu 81 $ 765 room=.
+-> e
+T 339 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,15) HP 40/40 MP 0/0 Hu 80 $ 765 room=.
+-> n
+T 340 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,14) HP 40/40 MP 0/0 Hu 79 $ 765 room=.
+-> n
+T 341 mode=pool_mode           Mablung Stormcrow(hum) F2@( 7,13) HP 40/40 MP 0/0 Hu 78 $ 765 room=P
+-> dr
+T 342 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,13) HP 40/40 MP 0/0 Hu 78 $ 765 room=.
+-> n
+T 343 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,12) HP 40/40 MP 0/0 Hu 77 $ 765 room=.
+-> e
+T 344 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 76 $ 765 room=.
+-> n
+T 345 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,11) HP 40/40 MP 0/0 Hu 75 $ 765 room=.
+-> n
+T 346 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 74 $ 765 room=.
+-> l
+T 347 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 74 $ 765 room=.
+-> w
+T 348 mode=chest_mode          Mablung Stormcrow(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 73 $ 765 room=C
+-> o
+T 349 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 73 $ 765 room=.
+-> l
+T 350 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 73 $ 765 room=.
+-> n
+T 351 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 765 room=.
+-> l
+T 352 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 765 room=.
+-> n
+T 353 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 71 $ 765 room=.
+-> l
+T 354 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 71 $ 765 room=.
+-> n
+T 355 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 70 $ 765 room=.
+-> l
+T 356 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 70 $ 765 room=.
+-> w
+T 357 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 7) HP 40/40 MP 0/0 Hu 69 $ 765 room=.
+-> l
+T 358 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 7) HP 40/40 MP 0/0 Hu 69 $ 765 room=.
+-> n
+T 359 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 68 $ 765 room=.
+-> l
+T 360 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 68 $ 765 room=.
+-> n
+T 361 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 67 $ 765 room=.
+-> l
+T 362 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 67 $ 765 room=.
+-> e
+T 363 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 5) HP 40/40 MP 0/0 Hu 66 $ 765 room=.
+-> s
+T 364 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 65 $ 765 room=.
+-> s
+T 365 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 64 $ 765 room=.
+-> s
+T 366 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 63 $ 765 room=.
+-> s
+T 367 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 62 $ 765 room=.
+-> s
+T 368 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 61 $ 765 room=.
+-> e
+T 369 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 60 $ 765 room=.
+-> e
+T 370 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 59 $ 765 room=.
+-> n
+T 371 mode=chest_mode          Mablung Stormcrow(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 58 $ 765 room=C
+-> o
+T 372 mode=combat_mode         Mablung Stormcrow(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 57 $ 765 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 373 mode=combat_mode         Mablung Stormcrow(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 57 $ 765 room=M vs Giant Rat(L1 HP20/22)
+-> f
+T 374 mode=flee_direction_mode Mablung Stormcrow(hum) F2@( 8, 9) HP 39/40 MP 0/0 Hu 57 $ 765 room=M
+-> n
+T 375 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 8) HP 39/40 MP 0/0 Hu 57 $ 765 room=.
+-> w
+T 376 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 39/40 MP 0/0 Hu 56 $ 765 room=.
+-> s
+T 377 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 9) HP 39/40 MP 0/0 Hu 55 $ 765 room=.
+-> s
+T 378 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 39/40 MP 0/0 Hu 54 $ 765 room=.
+-> e
+T 379 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 39/40 MP 0/0 Hu 53 $ 765 room=.
+-> e
+T 380 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,10) HP 39/40 MP 0/0 Hu 52 $ 765 room=.
+-> n
+T 381 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 9) HP 39/40 MP 0/0 Hu 51 $ 765 room=.
+-> e
+T 382 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 9) HP 39/40 MP 0/0 Hu 50 $ 765 room=.
+-> e
+T 383 mode=chest_mode          Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=C
+-> o
+T 384 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=.
+-> i
+T 385 mode=inventory           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=.
+-> e1
+T 386 mode=inventory           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=.
+-> x
+T 387 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=.
+-> i
+T 388 mode=inventory           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 49 $ 765 room=.
+-> eat1
+T 389 mode=inventory           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 99 $ 765 room=.
+-> x
+T 390 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 99 $ 765 room=.
+-> l
+T 391 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 9) HP 39/40 MP 0/0 Hu 99 $ 765 room=.
+-> e
+T 392 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 9) HP 39/40 MP 0/0 Hu 98 $ 765 room=.
+-> l
+T 393 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 9) HP 39/40 MP 0/0 Hu 98 $ 765 room=.
+-> e
+T 394 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 97 $ 765 room=.
+-> l
+T 395 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 97 $ 765 room=.
+-> e
+T 396 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 765 room=V
+-> r3
+T 397 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 716 room=V
+-> b10
+T 398 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 706 room=V
+-> b4
+T 399 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 676 room=V
+-> b4
+T 400 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 646 room=V
+-> b4
+T 401 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 616 room=V
+-> b4
+T 402 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 586 room=V
+-> b5
+T 403 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 436 room=V
+-> b3
+T 404 mode=vendor_shop         Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 361 room=V
+-> x
+T 405 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 96 $ 361 room=V
+-> n
+T 406 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 8) HP 40/40 MP 0/0 Hu 95 $ 361 room=.
+-> n
+T 407 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 7) HP 40/40 MP 0/0 Hu 94 $ 361 room=.
+-> w
+T 408 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 7) HP 40/40 MP 0/0 Hu 93 $ 361 room=.
+-> n
+T 409 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 6) HP 40/40 MP 0/0 Hu 92 $ 361 room=.
+-> n
+T 410 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 5) HP 40/40 MP 0/0 Hu 91 $ 361 room=.
+-> n
+T 411 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 4) HP 40/40 MP 0/0 Hu 90 $ 361 room=.
+-> l
+T 412 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 4) HP 40/40 MP 0/0 Hu 90 $ 361 room=.
+-> e
+T 413 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 4) HP 40/40 MP 0/0 Hu 89 $ 361 room=.
+-> l
+T 414 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 4) HP 40/40 MP 0/0 Hu 89 $ 361 room=.
+-> w
+T 415 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 4) HP 40/40 MP 0/0 Hu 88 $ 361 room=.
+-> n
+T 416 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 3) HP 40/40 MP 0/0 Hu 87 $ 361 room=.
+-> w
+T 417 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 3) HP 40/40 MP 0/0 Hu 86 $ 361 room=.
+-> l
+T 418 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 3) HP 40/40 MP 0/0 Hu 86 $ 361 room=.
+-> n
+T 419 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 2) HP 40/40 MP 0/0 Hu 85 $ 361 room=.
+-> l
+T 420 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 2) HP 40/40 MP 0/0 Hu 85 $ 361 room=.
+-> n
+T 421 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 1) HP 40/40 MP 0/0 Hu 84 $ 361 room=.
+-> l
+T 422 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 1) HP 40/40 MP 0/0 Hu 84 $ 361 room=.
+-> w
+T 423 mode=combat_mode         Mablung Stormcrow(hum) F2@(11, 1) HP 40/40 MP 0/0 Hu 83 $ 361 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 424 mode=combat_mode         Mablung Stormcrow(hum) F2@(11, 1) HP 40/40 MP 0/0 Hu 83 $ 361 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 425 mode=combat_mode         Mablung Stormcrow(hum) F2@(11, 1) HP 40/40 MP 0/0 Hu 83 $ 361 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 426 mode=combat_mode         Mablung Stormcrow(hum) F2@(11, 1) HP 39/40 MP 0/0 Hu 83 $ 361 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 427 mode=combat_mode         Mablung Stormcrow(hum) F2@(11, 1) HP 38/40 MP 0/0 Hu 83 $ 361 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 428 mode=combat_victory      Mablung Stormcrow(hum) F2@(11, 1) HP 38/40 MP 0/0 Hu 83 $ 473 room=.
+-> back
+T 429 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 1) HP 38/40 MP 0/0 Hu 83 $ 473 room=.
+-> s
+T 430 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 2) HP 38/40 MP 0/0 Hu 82 $ 473 room=.
+-> s
+T 431 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 3) HP 38/40 MP 0/0 Hu 81 $ 473 room=.
+-> w
+T 432 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 3) HP 38/40 MP 0/0 Hu 80 $ 473 room=.
+-> l
+T 433 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 3) HP 38/40 MP 0/0 Hu 80 $ 473 room=.
+-> w
+T 434 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 3) HP 39/40 MP 0/0 Hu 79 $ 473 room=.
+-> l
+T 435 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 3) HP 39/40 MP 0/0 Hu 79 $ 473 room=.
+-> s
+T 436 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 4) HP 39/40 MP 0/0 Hu 78 $ 473 room=.
+-> w
+T 437 mode=dungeon_mode        Mablung Stormcrow(hum) F2@( 8, 4) HP 39/40 MP 0/0 Hu 77 $ 473 room=N
+-> u
+T 438 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 4) HP 39/40 MP 0/0 Hu 77 $ 473 room=N
+-> w
+T 439 mode=dungeon_mode        Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> u
+T 440 mode=dungeon_unlocked_mode Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> r
+T 441 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> i
+T 442 mode=inventory           Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> e2
+T 443 mode=inventory           Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> x
+T 444 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 4) HP 39/40 MP 0/0 Hu 76 $ 473 room=N
+-> n
+T 445 mode=combat_mode         Mablung Stormcrow(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 75 $ 473 room=M vs Slime Mold(L1 HP15/15)
+-> a
+T 446 mode=combat_victory      Mablung Stormcrow(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 75 $ 487 room=.
+-> back
+T 447 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 75 $ 487 room=.
+-> n
+T 448 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 2) HP 40/40 MP 0/0 Hu 74 $ 487 room=.
+-> e
+T 449 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 2) HP 40/40 MP 0/0 Hu 73 $ 487 room=.
+-> l
+T 450 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 2) HP 40/40 MP 0/0 Hu 73 $ 487 room=.
+-> n
+T 451 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 1) HP 40/40 MP 0/0 Hu 72 $ 487 room=.
+-> w
+T 452 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 1) HP 40/40 MP 0/0 Hu 71 $ 487 room=.
+-> w
+T 453 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 1) HP 40/40 MP 0/0 Hu 70 $ 487 room=.
+-> l
+T 454 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 1) HP 40/40 MP 0/0 Hu 70 $ 487 room=.
+-> w
+T 455 mode=game_loop           Mablung Stormcrow(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 69 $ 487 room=.
+-> s
+T 456 mode=game_loop           Mablung Stormcrow(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 68 $ 487 room=.
+-> w
+T 457 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 67 $ 487 room=.
+-> s
+T 458 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 66 $ 487 room=.
+-> l
+T 459 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 3) HP 40/40 MP 0/0 Hu 66 $ 487 room=.
+-> w
+T 460 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 65 $ 487 room=.
+-> l
+T 461 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 3) HP 40/40 MP 0/0 Hu 65 $ 487 room=.
+-> s
+T 462 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 4) HP 40/40 MP 0/0 Hu 64 $ 487 room=.
+-> l
+T 463 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 4) HP 40/40 MP 0/0 Hu 64 $ 487 room=.
+-> s
+T 464 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 63 $ 487 room=.
+-> s
+T 465 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 62 $ 487 room=.
+-> s
+T 466 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 61 $ 487 room=.
+-> s
+T 467 mode=chest_mode          Mablung Stormcrow(hum) F2@( 3, 8) HP 40/40 MP 0/0 Hu 60 $ 487 room=C
+-> o
+T 468 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 8) HP 40/40 MP 0/0 Hu 60 $ 547 room=.
+-> s
+T 469 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 59 $ 547 room=.
+-> l
+T 470 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 59 $ 547 room=.
+-> s
+T 471 mode=game_loop           Mablung Stormcrow(hum) F2@( 3,10) HP 40/40 MP 0/0 Hu 58 $ 547 room=.
+-> s
+T 472 mode=game_loop           Mablung Stormcrow(hum) F2@( 3,11) HP 40/40 MP 0/0 Hu 57 $ 547 room=.
+-> l
+T 473 mode=game_loop           Mablung Stormcrow(hum) F2@( 3,11) HP 40/40 MP 0/0 Hu 57 $ 547 room=.
+-> e
+T 474 mode=library_mode        Mablung Stormcrow(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 56 $ 547 room=L
+-> r
+T 475 mode=library_read_decision_mode Mablung Stormcrow(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 56 $ 547 room=L
+-> y
+T 476 mode=game_loop           Mablung Stormcrow(hum) F2@( 4,11) HP 40/40 MP 0/0 Hu 56 $ 622 room=.
+-> e
+T 477 mode=game_loop           Mablung Stormcrow(hum) F2@( 5,11) HP 32/40 MP 0/0 Hu 55 $ 622 room=.
+-> n
+T 478 mode=game_loop           Mablung Stormcrow(hum) F2@( 5,10) HP 24/40 MP 0/0 Hu 54 $ 622 room=.
+-> e
+T 479 mode=game_loop           Mablung Stormcrow(hum) F2@( 6,10) HP 16/40 MP 0/0 Hu 53 $ 622 room=.
+-> e
+T 480 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 8/40 MP 0/0 Hu 52 $ 622 room=.
+-> i
+T 481 mode=inventory           Mablung Stormcrow(hum) F2@( 7,10) HP 8/40 MP 0/0 Hu 52 $ 622 room=.
+-> u6
+T 482 mode=inventory           Mablung Stormcrow(hum) F2@( 7,10) HP 38/40 MP 0/0 Hu 52 $ 622 room=.
+-> u3
+T 483 mode=upgrade_scroll_mode Mablung Stormcrow(hum) F2@( 7,10) HP 38/40 MP 0/0 Hu 52 $ 622 room=.
+-> 1
+T 484 mode=inventory           Mablung Stormcrow(hum) F2@( 7,10) HP 38/40 MP 0/0 Hu 52 $ 622 room=.
+-> x
+T 485 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 38/40 MP 0/0 Hu 52 $ 622 room=.
+-> e
+T 486 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 38/40 MP 0/0 Hu 51 $ 622 room=.
+-> s
+T 487 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,11) HP 38/40 MP 0/0 Hu 50 $ 622 room=.
+-> e
+T 488 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,11) HP 38/40 MP 0/0 Hu 49 $ 622 room=.
+-> i
+T 489 mode=inventory           Mablung Stormcrow(hum) F2@( 9,11) HP 38/40 MP 0/0 Hu 49 $ 622 room=.
+-> eat1
+T 490 mode=inventory           Mablung Stormcrow(hum) F2@( 9,11) HP 38/40 MP 0/0 Hu 99 $ 622 room=.
+-> x
+T 491 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,11) HP 38/40 MP 0/0 Hu 99 $ 622 room=.
+-> e
+T 492 mode=game_loop           Mablung Stormcrow(hum) F2@(10,11) HP 38/40 MP 0/0 Hu 98 $ 622 room=.
+-> e
+T 493 mode=game_loop           Mablung Stormcrow(hum) F2@(11,11) HP 39/40 MP 0/0 Hu 97 $ 622 room=.
+-> e
+T 494 mode=game_loop           Mablung Stormcrow(hum) F2@(12,11) HP 39/40 MP 0/0 Hu 96 $ 622 room=.
+-> e
+T 495 mode=game_loop           Mablung Stormcrow(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 95 $ 622 room=.
+-> s
+T 496 mode=game_loop           Mablung Stormcrow(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 94 $ 622 room=.
+-> s
+T 497 mode=game_loop           Mablung Stormcrow(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 93 $ 622 room=.
+-> l
+T 498 mode=game_loop           Mablung Stormcrow(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 93 $ 622 room=.
+-> s
+T 499 mode=game_loop           Mablung Stormcrow(hum) F2@(13,14) HP 40/40 MP 0/0 Hu 92 $ 622 room=.
+-> l
+T 500 mode=game_loop           Mablung Stormcrow(hum) F2@(13,14) HP 40/40 MP 0/0 Hu 92 $ 622 room=.
+-> l
+T 501 mode=game_loop           Mablung Stormcrow(hum) F2@(13,14) HP 40/40 MP 0/0 Hu 92 $ 622 room=.
+-> s
+T 502 mode=game_loop           Mablung Stormcrow(hum) F2@(13,15) HP 40/40 MP 0/0 Hu 91 $ 622 room=.
+-> s
+T 503 mode=game_loop           Mablung Stormcrow(hum) F2@(13,16) HP 40/40 MP 0/0 Hu 90 $ 622 room=.
+-> e
+T 504 mode=game_loop           Mablung Stormcrow(hum) F2@(14,16) HP 40/40 MP 0/0 Hu 89 $ 622 room=.
+-> n
+T 505 mode=game_loop           Mablung Stormcrow(hum) F2@(14,15) HP 40/40 MP 0/0 Hu 88 $ 622 room=.
+-> e
+T 506 mode=game_loop           Mablung Stormcrow(hum) F2@(15,15) HP 40/40 MP 0/0 Hu 87 $ 622 room=.
+-> s
+T 507 mode=game_loop           Mablung Stormcrow(hum) F2@(15,16) HP 40/40 MP 0/0 Hu 86 $ 622 room=.
+-> e
+T 508 mode=game_loop           Mablung Stormcrow(hum) F2@(16,16) HP 40/40 MP 0/0 Hu 85 $ 622 room=.
+-> e
+T 509 mode=game_loop           Mablung Stormcrow(hum) F2@(17,16) HP 40/40 MP 0/0 Hu 84 $ 622 room=.
+-> e
+T 510 mode=game_loop           Mablung Stormcrow(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 83 $ 622 room=.
+-> l
+T 511 mode=game_loop           Mablung Stormcrow(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 83 $ 622 room=.
+-> n
+T 512 mode=game_loop           Mablung Stormcrow(hum) F2@(18,15) HP 40/40 MP 0/0 Hu 82 $ 622 room=.
+-> n
+T 513 mode=game_loop           Mablung Stormcrow(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 81 $ 622 room=.
+-> w
+T 514 mode=game_loop           Mablung Stormcrow(hum) F2@(17,14) HP 40/40 MP 0/0 Hu 80 $ 622 room=.
+-> w
+T 515 mode=stairs_down_mode    Mablung Stormcrow(hum) F2@(16,14) HP 40/40 MP 0/0 Hu 79 $ 622 room=D
+-> n
+T 516 mode=game_loop           Mablung Stormcrow(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 78 $ 622 room=.
+-> w
+T 517 mode=game_loop           Mablung Stormcrow(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 77 $ 622 room=.
+-> s
+T 518 mode=game_loop           Mablung Stormcrow(hum) F2@(15,14) HP 40/40 MP 0/0 Hu 76 $ 622 room=.
+-> s
+T 519 mode=game_loop           Mablung Stormcrow(hum) F2@(15,15) HP 40/40 MP 0/0 Hu 75 $ 622 room=.
+-> s
+T 520 mode=game_loop           Mablung Stormcrow(hum) F2@(15,16) HP 40/40 MP 0/0 Hu 74 $ 622 room=.
+-> l
+T 521 mode=game_loop           Mablung Stormcrow(hum) F2@(15,16) HP 40/40 MP 0/0 Hu 74 $ 622 room=.
+-> w
+T 522 mode=game_loop           Mablung Stormcrow(hum) F2@(14,16) HP 40/40 MP 0/0 Hu 73 $ 622 room=.
+-> w
+T 523 mode=game_loop           Mablung Stormcrow(hum) F2@(13,16) HP 40/40 MP 0/0 Hu 72 $ 622 room=.
+-> w
+T 524 mode=game_loop           Mablung Stormcrow(hum) F2@(12,16) HP 40/40 MP 0/0 Hu 71 $ 622 room=.
+-> w
+T 525 mode=game_loop           Mablung Stormcrow(hum) F2@(11,16) HP 40/40 MP 0/0 Hu 70 $ 622 room=.
+-> w
+T 526 mode=game_loop           Mablung Stormcrow(hum) F2@(10,16) HP 40/40 MP 0/0 Hu 69 $ 622 room=.
+-> w
+T 527 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,16) HP 40/40 MP 0/0 Hu 68 $ 622 room=.
+-> n
+T 528 mode=combat_mode         Mablung Stormcrow(hum) F2@( 9,15) HP 40/40 MP 0/0 Hu 67 $ 622 room=M vs Stirge(L1 HP6/6)
+-> a
+T 529 mode=combat_victory      Mablung Stormcrow(hum) F2@( 9,15) HP 40/40 MP 0/0 Hu 67 $ 624 room=.
+-> back
+T 530 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,15) HP 40/40 MP 0/0 Hu 67 $ 624 room=.
+-> l
+T 531 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,15) HP 40/40 MP 0/0 Hu 67 $ 624 room=.
+-> n
+T 532 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,14) HP 40/40 MP 0/0 Hu 66 $ 624 room=.
+-> w
+T 533 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,14) HP 40/40 MP 0/0 Hu 65 $ 624 room=.
+-> n
+T 534 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,13) HP 40/40 MP 0/0 Hu 64 $ 624 room=.
+-> n
+T 535 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 63 $ 624 room=.
+-> n
+T 536 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,11) HP 40/40 MP 0/0 Hu 62 $ 624 room=.
+-> n
+T 537 mode=game_loop           Mablung Stormcrow(hum) F2@( 8,10) HP 40/40 MP 0/0 Hu 61 $ 624 room=.
+-> w
+T 538 mode=game_loop           Mablung Stormcrow(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 60 $ 624 room=.
+-> n
+T 539 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 59 $ 624 room=.
+-> n
+T 540 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 58 $ 624 room=.
+-> l
+T 541 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 58 $ 624 room=.
+-> n
+T 542 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 57 $ 624 room=.
+-> i
+T 543 mode=inventory           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 57 $ 624 room=.
+-> eat2
+T 544 mode=inventory           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 63 $ 624 room=.
+-> eat1
+T 545 mode=inventory           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu100 $ 624 room=.
+-> x
+T 546 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu100 $ 624 room=.
+-> n
+T 547 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 99 $ 624 room=.
+-> n
+T 548 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 5) HP 40/40 MP 0/0 Hu 98 $ 624 room=.
+-> n
+T 549 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 4) HP 40/40 MP 0/0 Hu 97 $ 624 room=N
+-> n
+T 550 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 96 $ 624 room=.
+-> l
+T 551 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 96 $ 624 room=.
+-> n
+T 552 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 2) HP 40/40 MP 0/0 Hu 95 $ 624 room=.
+-> w
+T 553 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 94 $ 624 room=.
+-> w
+T 554 mode=game_loop           Mablung Stormcrow(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 93 $ 624 room=.
+-> w
+T 555 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 2) HP 40/40 MP 0/0 Hu 92 $ 624 room=.
+-> w
+T 556 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 91 $ 624 room=.
+-> n
+T 557 mode=library_mode        Mablung Stormcrow(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 624 room=L
+-> r
+T 558 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 624 room=.
+-> l
+T 559 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 624 room=.
+-> w
+T 560 mode=chest_mode          Mablung Stormcrow(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 89 $ 624 room=C
+-> s
+T 561 mode=game_loop           Mablung Stormcrow(hum) F2@( 2, 2) HP 40/40 MP 0/0 Hu 88 $ 624 room=.
+-> w
+T 562 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 87 $ 624 room=.
+-> n
+T 563 mode=stairs_up_mode      Mablung Stormcrow(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 86 $ 624 room=U
+-> u
+T 564 mode=stairs_down_mode    Mablung Stormcrow(hum) F1@(17,14) HP 40/40 MP 0/0 Hu 86 $ 624 room=D
+-> d
+T 565 mode=stairs_up_mode      Mablung Stormcrow(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 86 $ 624 room=U
+-> s
+T 566 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 2) HP 40/40 MP 0/0 Hu 85 $ 624 room=.
+-> s
+T 567 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 3) HP 40/40 MP 0/0 Hu 84 $ 624 room=.
+-> s
+T 568 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 4) HP 40/40 MP 0/0 Hu 83 $ 624 room=.
+-> s
+T 569 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 5) HP 40/40 MP 0/0 Hu 82 $ 624 room=.
+-> s
+T 570 mode=garden_mode         Mablung Stormcrow(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 81 $ 624 room=G
+-> h
+T 571 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 6) HP 40/40 MP 0/0 Hu 81 $ 624 room=.
+-> s
+T 572 mode=combat_mode         Mablung Stormcrow(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 80 $ 624 room=M vs Spore Puff(L1 HP18/18)
+-> f
+T 573 mode=combat_mode         Mablung Stormcrow(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 80 $ 624 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 574 mode=combat_victory      Mablung Stormcrow(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 80 $ 642 room=.
+-> back
+T 575 mode=game_loop           Mablung Stormcrow(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 80 $ 642 room=.
+-> e
+T 576 mode=game_loop           Mablung Stormcrow(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 79 $ 642 room=.
+-> n
+T 577 mode=combat_mode         Mablung Stormcrow(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 78 $ 642 room=M vs Lichen(L1 HP10/10)
+-> f
+T 578 mode=flee_direction_mode Mablung Stormcrow(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 78 $ 642 room=M
+-> n
+T 579 mode=game_loop           Mablung Stormcrow(hum) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 642 room=.
+-> e
+T 580 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 77 $ 642 room=.
+-> s
+T 581 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 76 $ 642 room=.
+-> s
+T 582 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 75 $ 642 room=.
+-> e
+T 583 mode=chest_mode          Mablung Stormcrow(hum) F2@( 4, 7) HP 40/40 MP 0/0 Hu 74 $ 642 room=C
+-> o
+T 584 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 7) HP 40/40 MP 0/0 Hu 74 $ 642 room=.
+-> s
+T 585 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 8) HP 40/40 MP 0/0 Hu 73 $ 642 room=.
+-> s
+T 586 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 9) HP 40/40 MP 0/0 Hu 72 $ 642 room=.
+-> w
+T 587 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 9) HP 40/40 MP 0/0 Hu 71 $ 642 room=.
+-> w
+T 588 mode=chest_mode          Mablung Stormcrow(hum) F2@( 2, 9) HP 40/40 MP 0/0 Hu 70 $ 642 room=C
+-> o
+T 589 mode=game_loop           Mablung Stormcrow(hum) F2@( 2, 9) HP 40/40 MP 0/0 Hu 70 $ 722 room=.
+-> s
+T 590 mode=pool_mode           Mablung Stormcrow(hum) F2@( 2,10) HP 40/40 MP 0/0 Hu 69 $ 722 room=P
+-> dr
+T 591 mode=game_loop           Mablung Stormcrow(hum) F2@( 2,10) HP 40/40 MP 0/0 Hu 69 $ 722 room=.
+-> s
+T 592 mode=combat_mode         Mablung Stormcrow(hum) F2@( 2,11) HP 40/40 MP 0/0 Hu 68 $ 722 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 593 mode=combat_mode         Mablung Stormcrow(hum) F2@( 2,11) HP 34/40 MP 0/0 Hu 68 $ 722 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 594 mode=combat_victory      Mablung Stormcrow(hum) F2@( 2,11) HP 34/40 MP 0/0 Hu 68 $ 724 room=.
+-> back
+T 595 mode=game_loop           Mablung Stormcrow(hum) F2@( 2,11) HP 34/40 MP 0/0 Hu 68 $ 724 room=.
+-> e
+T 596 mode=game_loop           Mablung Stormcrow(hum) F2@( 3,11) HP 34/40 MP 0/0 Hu 67 $ 724 room=.
+-> n
+T 597 mode=game_loop           Mablung Stormcrow(hum) F2@( 3,10) HP 34/40 MP 0/0 Hu 66 $ 724 room=.
+-> n
+T 598 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 9) HP 34/40 MP 0/0 Hu 65 $ 724 room=.
+-> n
+T 599 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 8) HP 35/40 MP 0/0 Hu 64 $ 724 room=.
+-> n
+T 600 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 7) HP 35/40 MP 0/0 Hu 63 $ 724 room=.
+-> n
+T 601 mode=game_loop           Mablung Stormcrow(hum) F2@( 3, 6) HP 35/40 MP 0/0 Hu 62 $ 724 room=.
+-> e
+T 602 mode=game_loop           Mablung Stormcrow(hum) F2@( 4, 6) HP 35/40 MP 0/0 Hu 61 $ 724 room=.
+-> e
+T 603 mode=game_loop           Mablung Stormcrow(hum) F2@( 5, 6) HP 36/40 MP 0/0 Hu 60 $ 724 room=.
+-> e
+T 604 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 6) HP 36/40 MP 0/0 Hu 59 $ 724 room=.
+-> n
+T 605 mode=game_loop           Mablung Stormcrow(hum) F2@( 6, 5) HP 36/40 MP 0/0 Hu 58 $ 724 room=.
+-> e
+T 606 mode=game_loop           Mablung Stormcrow(hum) F2@( 7, 5) HP 36/40 MP 0/0 Hu 57 $ 724 room=.
+-> e
+T 607 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 5) HP 36/40 MP 0/0 Hu 56 $ 724 room=.
+-> e
+T 608 mode=altar_mode          Mablung Stormcrow(hum) F2@( 9, 5) HP 36/40 MP 0/0 Hu 55 $ 724 room=A
+-> pray
+T 609 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 5) HP 36/40 MP 0/0 Hu 55 $ 724 room=.
+-> e
+T 610 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 5) HP 36/40 MP 0/0 Hu 54 $ 724 room=.
+-> e
+T 611 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 5) HP 36/40 MP 0/0 Hu 53 $ 724 room=.
+-> e
+T 612 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 5) HP 36/40 MP 0/0 Hu 52 $ 724 room=.
+-> s
+T 613 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 6) HP 36/40 MP 0/0 Hu 51 $ 724 room=.
+-> s
+T 614 mode=altar_mode          Mablung Stormcrow(hum) F2@(12, 7) HP 36/40 MP 0/0 Hu 50 $ 724 room=A
+-> pray
+T 615 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 7) HP 36/40 MP 0/0 Hu 50 $ 724 room=.
+-> s
+T 616 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 8) HP 36/40 MP 0/0 Hu 49 $ 724 room=.
+-> i
+T 617 mode=inventory           Mablung Stormcrow(hum) F2@(12, 8) HP 36/40 MP 0/0 Hu 49 $ 724 room=.
+-> u6
+T 618 mode=inventory           Mablung Stormcrow(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 49 $ 724 room=.
+-> x
+T 619 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 49 $ 724 room=.
+-> i
+T 620 mode=inventory           Mablung Stormcrow(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 49 $ 724 room=.
+-> eat1
+T 621 mode=inventory           Mablung Stormcrow(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 99 $ 724 room=.
+-> x
+T 622 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 99 $ 724 room=.
+-> w
+T 623 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 98 $ 724 room=.
+-> n
+T 624 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 7) HP 40/40 MP 0/0 Hu 97 $ 724 room=.
+-> w
+T 625 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 40/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP28/28)
+-> a
+T 626 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 39/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 627 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 39/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> f
+T 628 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 39/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 629 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 38/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 630 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 37/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 631 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 36/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 632 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 36/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 633 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 35/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 634 mode=combat_mode         Mablung Stormcrow(hum) F2@(10, 7) HP 26/40 MP 0/0 Hu 96 $ 724 room=M vs Harpy(L1 HP4/28)
+-> a
+T 635 mode=combat_victory      Mablung Stormcrow(hum) F2@(10, 7) HP 26/50 MP 0/0 Hu 96 $ 740 room=.
+-> back
+T 636 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 7) HP 26/50 MP 0/0 Hu 96 $ 740 room=.
+-> e
+T 637 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 7) HP 26/50 MP 0/0 Hu 95 $ 740 room=.
+-> e
+T 638 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 8) HP 27/50 MP 0/0 Hu 94 $ 740 room=.
+-> s
+T 639 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 9) HP 27/50 MP 0/0 Hu 93 $ 740 room=.
+-> w
+T 640 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 9) HP 28/50 MP 0/0 Hu 92 $ 740 room=.
+-> i
+T 641 mode=inventory           Mablung Stormcrow(hum) F2@(10, 9) HP 28/50 MP 0/0 Hu 92 $ 740 room=.
+-> u6
+T 642 mode=inventory           Mablung Stormcrow(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 92 $ 740 room=.
+-> x
+T 643 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 9) HP 50/50 MP 0/0 Hu 92 $ 740 room=.
+-> s
+T 644 mode=combat_mode         Mablung Stormcrow(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 91 $ 740 room=M vs Goblin(L1 HP30/30)
+-> a
+T 645 mode=combat_mode         Mablung Stormcrow(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 91 $ 740 room=M vs Goblin(L1 HP30/30)
+-> a
+T 646 mode=combat_mode         Mablung Stormcrow(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 91 $ 740 room=M vs Goblin(L1 HP7/30)
+-> a
+T 647 mode=combat_victory      Mablung Stormcrow(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 91 $ 748 room=.
+-> back
+T 648 mode=game_loop           Mablung Stormcrow(hum) F2@(10,10) HP 50/50 MP 0/0 Hu 91 $ 748 room=.
+-> w
+T 649 mode=game_loop           Mablung Stormcrow(hum) F2@( 9,10) HP 50/50 MP 0/0 Hu 90 $ 748 room=.
+-> n
+T 650 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 9) HP 50/50 MP 0/0 Hu 89 $ 748 room=.
+-> w
+T 651 mode=combat_mode         Mablung Stormcrow(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 88 $ 748 room=M vs Giant Rat(L1 HP20/22)
+-> a
+T 652 mode=combat_victory      Mablung Stormcrow(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 88 $ 766 room=.
+-> back
+T 653 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 9) HP 50/50 MP 0/0 Hu 88 $ 766 room=.
+-> n
+T 654 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 8) HP 50/50 MP 0/0 Hu 87 $ 766 room=.
+-> n
+T 655 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 86 $ 766 room=.
+-> i
+T 656 mode=inventory           Mablung Stormcrow(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 86 $ 766 room=.
+-> eat3
+T 657 mode=inventory           Mablung Stormcrow(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 92 $ 766 room=.
+-> x
+T 658 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 7) HP 50/50 MP 0/0 Hu 92 $ 766 room=.
+-> n
+T 659 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 6) HP 50/50 MP 0/0 Hu 91 $ 766 room=.
+-> n
+T 660 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 5) HP 50/50 MP 0/0 Hu 90 $ 766 room=.
+-> n
+T 661 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 4) HP 50/50 MP 0/0 Hu 89 $ 766 room=N
+-> n
+T 662 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 3) HP 50/50 MP 0/0 Hu 88 $ 766 room=.
+-> n
+T 663 mode=game_loop           Mablung Stormcrow(hum) F2@( 8, 2) HP 50/50 MP 0/0 Hu 87 $ 766 room=.
+-> e
+T 664 mode=game_loop           Mablung Stormcrow(hum) F2@( 9, 2) HP 50/50 MP 0/0 Hu 86 $ 766 room=.
+-> e
+T 665 mode=game_loop           Mablung Stormcrow(hum) F2@(10, 2) HP 50/50 MP 0/0 Hu 85 $ 766 room=.
+-> e
+T 666 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 2) HP 50/50 MP 0/0 Hu 84 $ 766 room=.
+-> i
+T 667 mode=inventory           Mablung Stormcrow(hum) F2@(11, 2) HP 50/50 MP 0/0 Hu 84 $ 766 room=.
+-> eat2
+T 668 mode=inventory           Mablung Stormcrow(hum) F2@(11, 2) HP 50/50 MP 0/0 Hu 89 $ 766 room=.
+-> x
+T 669 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 2) HP 50/50 MP 0/0 Hu 89 $ 766 room=.
+-> n
+T 670 mode=game_loop           Mablung Stormcrow(hum) F2@(11, 1) HP 50/50 MP 0/0 Hu 88 $ 766 room=.
+-> e
+T 671 mode=game_loop           Mablung Stormcrow(hum) F2@(12, 1) HP 50/50 MP 0/0 Hu 87 $ 766 room=.
+-> e
+T 672 mode=altar_mode          Mablung Stormcrow(hum) F2@(13, 1) HP 50/50 MP 0/0 Hu 86 $ 766 room=A
+-> pray
+T 673 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 1) HP 50/50 MP 0/0 Hu 86 $ 766 room=.
+-> s
+T 674 mode=game_loop           Mablung Stormcrow(hum) F2@(13, 2) HP 50/50 MP 0/0 Hu 85 $ 766 room=.
+-> e
+T 675 mode=game_loop           Mablung Stormcrow(hum) F2@(14, 2) HP 50/50 MP 0/0 Hu 84 $ 766 room=.
+-> e
+T 676 mode=game_loop           Mablung Stormcrow(hum) F2@(15, 2) HP 50/50 MP 0/0 Hu 83 $ 766 room=.
+-> s
+T 677 mode=oracle_mode         Mablung Stormcrow(hum) F2@(15, 3) HP 50/50 MP 0/0 Hu 82 $ 766 room=O
+-> w
+T 678 mode=warp_mode           Mablung Stormcrow(hum) F2@(14, 3) HP 50/50 MP 0/0 Hu 81 $ 766 room=W
+-> y
+T 679 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 50/50 MP 0/0 Hu 81 $ 766 room=.
+-> l
+T 680 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 50/50 MP 0/0 Hu 81 $ 766 room=.
+-> s
+T 681 mode=dungeon_mode        Mablung Stormcrow(hum) F4@(10, 8) HP 50/50 MP 0/0 Hu 80 $ 766 room=N
+-> u
+T 682 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 50/50 MP 0/0 Hu 80 $ 766 room=N
+-> l
+T 683 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 50/50 MP 0/0 Hu 80 $ 766 room=N
+-> s
+T 684 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 50/50 MP 0/0 Hu 79 $ 766 room=.
+-> l
+T 685 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 50/50 MP 0/0 Hu 79 $ 766 room=.
+-> s
+T 686 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 50/50 MP 0/0 Hu 78 $ 766 room=.
+-> n
+T 687 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 50/50 MP 0/0 Hu 77 $ 766 room=.
+-> e
+T 688 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 50/50 MP 0/0 Hu 76 $ 766 room=.
+-> e
+T 689 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 50/50 MP 0/0 Hu 75 $ 766 room=.
+-> l
+T 690 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 50/50 MP 0/0 Hu 75 $ 766 room=.
+-> s
+T 691 mode=library_mode        Mablung Stormcrow(hum) F4@(12,10) HP 50/50 MP 0/0 Hu 74 $ 766 room=L
+-> r
+T 692 mode=game_loop           Mablung Stormcrow(hum) F4@(12,10) HP 50/50 MP 0/0 Hu 74 $ 766 room=.
+-> s
+T 693 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 50/50 MP 0/0 Hu 73 $ 766 room=.
+-> l
+T 694 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 50/50 MP 0/0 Hu 73 $ 766 room=.
+-> e
+T 695 mode=game_loop           Mablung Stormcrow(hum) F4@(13,11) HP 50/50 MP 0/0 Hu 72 $ 766 room=.
+-> e
+T 696 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 50/50 MP 0/0 Hu 71 $ 766 room=.
+-> l
+T 697 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 50/50 MP 0/0 Hu 71 $ 766 room=.
+-> s
+T 698 mode=game_loop           Mablung Stormcrow(hum) F4@(14,12) HP 50/50 MP 0/0 Hu 70 $ 766 room=.
+-> s
+T 699 mode=garden_mode         Mablung Stormcrow(hum) F4@(14,13) HP 50/50 MP 0/0 Hu 69 $ 766 room=G
+-> h
+T 700 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 50/50 MP 0/0 Hu 69 $ 766 room=.
+-> l
+T 701 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 50/50 MP 0/0 Hu 69 $ 766 room=.
+-> e
+T 702 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 50/50 MP 0/0 Hu 68 $ 766 room=.
+-> l
+T 703 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 50/50 MP 0/0 Hu 68 $ 766 room=.
+-> s
+T 704 mode=chest_mode          Mablung Stormcrow(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 67 $ 766 room=C
+-> o
+T 705 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 67 $ 876 room=.
+-> l
+T 706 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 50/50 MP 0/0 Hu 67 $ 876 room=.
+-> s
+T 707 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 50/50 MP 0/0 Hu 66 $ 876 room=.
+-> l
+T 708 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 50/50 MP 0/0 Hu 66 $ 876 room=.
+-> e
+T 709 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 876 room=V
+-> b11
+T 710 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 866 room=V
+-> b5
+T 711 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 836 room=V
+-> b5
+T 712 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 806 room=V
+-> b8
+T 713 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 656 room=V
+-> b6
+T 714 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 356 room=V
+-> b2
+T 715 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 236 room=V
+-> id6
+T 716 mode=vendor_shop         Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> x
+T 717 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> i
+T 718 mode=inventory           Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> e2
+T 719 mode=inventory           Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> x
+T 720 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> l
+T 721 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 50/50 MP 0/0 Hu 65 $ 136 room=V
+-> s
+T 722 mode=library_mode        Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=L
+-> r
+T 723 mode=library_read_decision_mode Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=L
+-> y
+T 724 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 8/50 MP 0/0 Hu 64 $ 136 room=.
+-> i
+T 725 mode=inventory           Mablung Stormcrow(hum) F4@(16,16) HP 8/50 MP 0/0 Hu 64 $ 136 room=.
+-> u8
+T 726 mode=inventory           Mablung Stormcrow(hum) F4@(16,16) HP 38/50 MP 0/0 Hu 64 $ 136 room=.
+-> u3
+T 727 mode=inventory           Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=.
+-> u5
+T 728 mode=upgrade_scroll_mode Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=.
+-> 1
+T 729 mode=inventory           Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=.
+-> x
+T 730 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=.
+-> l
+T 731 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 50/50 MP 0/0 Hu 64 $ 136 room=.
+-> e
+T 732 mode=game_loop           Mablung Stormcrow(hum) F4@(17,16) HP 50/50 MP 0/0 Hu 63 $ 136 room=.
+-> e
+T 733 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 62 $ 136 room=.
+-> l
+T 734 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 50/50 MP 0/0 Hu 62 $ 136 room=.
+-> e
+T 735 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 50/50 MP 0/0 Hu 61 $ 136 room=.
+-> l
+T 736 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 50/50 MP 0/0 Hu 61 $ 136 room=.
+-> n
+T 737 mode=combat_mode         Mablung Stormcrow(hum) F4@(19,15) HP 50/50 MP 0/0 Hu 60 $ 136 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T 738 mode=combat_victory      Mablung Stormcrow(hum) F4@(19,15) HP 49/50 MP 0/0 Hu 60 $ 160 room=.
+-> back
+T 739 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 49/50 MP 0/0 Hu 60 $ 160 room=.
+-> n
+T 740 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 49/50 MP 0/0 Hu 59 $ 160 room=.
+-> n
+T 741 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 49/50 MP 0/0 Hu 58 $ 160 room=.
+-> n
+T 742 mode=game_loop           Mablung Stormcrow(hum) F4@(19,12) HP 49/50 MP 0/0 Hu 57 $ 160 room=.
+-> w
+T 743 mode=game_loop           Mablung Stormcrow(hum) F4@(18,12) HP 49/50 MP 0/0 Hu 56 $ 160 room=.
+-> s
+T 744 mode=chest_mode          Mablung Stormcrow(hum) F4@(18,13) HP 49/50 MP 0/0 Hu 55 $ 160 room=C
+-> o
+T 745 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 49/50 MP 0/0 Hu 55 $ 400 room=.
+-> s
+T 746 mode=chest_mode          Mablung Stormcrow(hum) F4@(18,14) HP 49/50 MP 0/0 Hu 54 $ 400 room=C
+-> o
+T 747 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 49/50 MP 0/0 Hu 54 $ 400 room=.
+-> s
+T 748 mode=game_loop           Mablung Stormcrow(hum) F4@(18,15) HP 49/50 MP 0/0 Hu 53 $ 400 room=.
+-> s
+T 749 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 49/50 MP 0/0 Hu 52 $ 400 room=.
+-> e
+T 750 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 49/50 MP 0/0 Hu 51 $ 400 room=.
+-> n
+T 751 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 49/50 MP 0/0 Hu 50 $ 400 room=.
+-> n
+T 752 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 49/50 MP 0/0 Hu 49 $ 400 room=.
+-> i
+T 753 mode=inventory           Mablung Stormcrow(hum) F4@(19,14) HP 49/50 MP 0/0 Hu 49 $ 400 room=.
+-> eat1
+T 754 mode=inventory           Mablung Stormcrow(hum) F4@(19,14) HP 49/50 MP 0/0 Hu 99 $ 400 room=.
+-> x
+T 755 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 49/50 MP 0/0 Hu 99 $ 400 room=.
+-> n
+T 756 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 49/50 MP 0/0 Hu 98 $ 400 room=.
+-> n
+T 757 mode=game_loop           Mablung Stormcrow(hum) F4@(19,12) HP 50/50 MP 0/0 Hu 97 $ 400 room=.
+-> w
+T 758 mode=game_loop           Mablung Stormcrow(hum) F4@(18,12) HP 50/50 MP 0/0 Hu 96 $ 400 room=.
+-> s
+T 759 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 50/50 MP 0/0 Hu 95 $ 400 room=.
+-> s
+T 760 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 50/50 MP 0/0 Hu 94 $ 400 room=.
+-> e
+T 761 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 50/50 MP 0/0 Hu 93 $ 400 room=.
+-> n
+T 762 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 50/50 MP 0/0 Hu 92 $ 400 room=.
+-> n
+T 763 mode=game_loop           Mablung Stormcrow(hum) F4@(19,12) HP 50/50 MP 0/0 Hu 91 $ 400 room=.
+-> w
+T 764 mode=game_loop           Mablung Stormcrow(hum) F4@(18,12) HP 50/50 MP 0/0 Hu 90 $ 400 room=.
+-> s
+T 765 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 50/50 MP 0/0 Hu 89 $ 400 room=.
+-> w
+T 766 mode=altar_mode          Mablung Stormcrow(hum) F4@(17,13) HP 50/50 MP 0/0 Hu 88 $ 400 room=A
+-> pray
+T 767 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 50/50 MP 0/0 Hu 88 $ 400 room=.
+-> w
+T 768 mode=combat_mode         Mablung Stormcrow(hum) F4@(16,13) HP 50/50 MP 0/0 Hu 87 $ 400 room=M vs Hell Hound(L3 HP65/65)
+-> a
+T 769 mode=combat_mode         Mablung Stormcrow(hum) F4@(16,13) HP 41/50 MP 0/0 Hu 87 $ 400 room=M vs Hell Hound(L3 HP45/65)
+-> a
+T 770 mode=combat_mode         Mablung Stormcrow(hum) F4@(16,13) HP 32/50 MP 0/0 Hu 87 $ 400 room=M vs Hell Hound(L3 HP25/65)
+-> a
+T 771 mode=combat_mode         Mablung Stormcrow(hum) F4@(16,13) HP 23/50 MP 0/0 Hu 87 $ 400 room=M vs Hell Hound(L3 HP5/65)
+-> a
+T 772 mode=combat_victory      Mablung Stormcrow(hum) F4@(16,13) HP 23/50 MP 0/0 Hu 87 $ 432 room=.
+-> back
+T 773 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 23/50 MP 0/0 Hu 87 $ 432 room=.
+-> s
+T 774 mode=dungeon_mode        Mablung Stormcrow(hum) F4@(16,14) HP 23/50 MP 0/0 Hu 86 $ 432 room=N
+-> u
+T 775 mode=game_loop           Mablung Stormcrow(hum) F4@(16,14) HP 23/50 MP 0/0 Hu 86 $ 432 room=N
+-> w
+T 776 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 24/50 MP 0/0 Hu 85 $ 432 room=.
+-> n
+T 777 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 24/50 MP 0/0 Hu 84 $ 432 room=.
+-> w
+T 778 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 24/50 MP 0/0 Hu 83 $ 432 room=.
+-> n
+T 779 mode=game_loop           Mablung Stormcrow(hum) F4@(14,12) HP 24/50 MP 0/0 Hu 82 $ 432 room=.
+-> n
+T 780 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 25/50 MP 0/0 Hu 81 $ 432 room=.
+-> w
+T 781 mode=game_loop           Mablung Stormcrow(hum) F4@(13,11) HP 25/50 MP 0/0 Hu 80 $ 432 room=.
+-> w
+T 782 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 25/50 MP 0/0 Hu 79 $ 432 room=.
+-> n
+T 783 mode=game_loop           Mablung Stormcrow(hum) F4@(12,10) HP 25/50 MP 0/0 Hu 78 $ 432 room=.
+-> n
+T 784 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 26/50 MP 0/0 Hu 77 $ 432 room=.
+-> i
+T 785 mode=inventory           Mablung Stormcrow(hum) F4@(12, 9) HP 26/50 MP 0/0 Hu 77 $ 432 room=.
+-> eat2
+T 786 mode=inventory           Mablung Stormcrow(hum) F4@(12, 9) HP 26/50 MP 0/0 Hu 83 $ 432 room=.
+-> x
+T 787 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 26/50 MP 0/0 Hu 83 $ 432 room=.
+-> w
+T 788 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 26/50 MP 0/0 Hu 82 $ 432 room=.
+-> n
+T 789 mode=garden_mode         Mablung Stormcrow(hum) F4@(11, 8) HP 26/50 MP 0/0 Hu 81 $ 432 room=G
+-> h
+T 790 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 26/50 MP 0/0 Hu 81 $ 432 room=.
+-> w
+T 791 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 26/50 MP 0/0 Hu 80 $ 432 room=N
+-> s
+T 792 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 27/50 MP 0/0 Hu 79 $ 432 room=.
+-> s
+T 793 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 27/50 MP 0/0 Hu 78 $ 432 room=.
+-> n
+T 794 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 27/50 MP 0/0 Hu 77 $ 432 room=.
+-> e
+T 795 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 27/50 MP 0/0 Hu 76 $ 432 room=.
+-> n
+T 796 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 28/50 MP 0/0 Hu 75 $ 432 room=.
+-> w
+T 797 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 28/50 MP 0/0 Hu 74 $ 432 room=N
+-> w
+T 798 mode=pool_mode           Mablung Stormcrow(hum) F4@( 9, 8) HP 28/50 MP 0/0 Hu 73 $ 432 room=P
+-> n
+T 799 mode=combat_mode         Mablung Stormcrow(hum) F4@( 9, 7) HP 28/50 MP 0/0 Hu 72 $ 432 room=M vs Goblin(L3 HP12/12)
+-> a
+T 800 mode=combat_victory      Mablung Stormcrow(hum) F4@( 9, 7) HP 27/60 MP 0/0 Hu 72 $ 444 room=.
+-> back
+T 801 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 27/60 MP 0/0 Hu 72 $ 444 room=.
+-> l
+T 802 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 27/60 MP 0/0 Hu 72 $ 444 room=.
+-> n
+T 803 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 28/60 MP 0/0 Hu 71 $ 444 room=.
+-> n
+T 804 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 28/60 MP 0/0 Hu 70 $ 444 room=.
+-> s
+T 805 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 28/60 MP 0/0 Hu 69 $ 444 room=.
+-> n
+T 806 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 28/60 MP 0/0 Hu 68 $ 444 room=.
+-> s
+T 807 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 29/60 MP 0/0 Hu 67 $ 444 room=.
+-> s
+T 808 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 29/60 MP 0/0 Hu 66 $ 444 room=.
+-> w
+T 809 mode=chest_mode          Mablung Stormcrow(hum) F4@( 8, 7) HP 29/60 MP 0/0 Hu 65 $ 444 room=C
+-> s
+T 810 mode=combat_mode         Mablung Stormcrow(hum) F4@( 8, 8) HP 29/60 MP 0/0 Hu 64 $ 444 room=M vs Bugbear(L3 HP36/36)
+-> a
+T 811 mode=combat_mode         Mablung Stormcrow(hum) F4@( 8, 8) HP 28/60 MP 0/0 Hu 64 $ 444 room=M vs Bugbear(L3 HP36/36)
+-> f
+T 812 mode=flee_direction_mode Mablung Stormcrow(hum) F4@( 8, 8) HP 28/60 MP 0/0 Hu 64 $ 444 room=M
+-> e
+T 813 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 8) HP 28/60 MP 0/0 Hu 64 $ 444 room=P
+-> e
+T 814 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 29/60 MP 0/0 Hu 63 $ 444 room=N
+-> n
+T 815 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 29/60 MP 0/0 Hu 62 $ 444 room=.
+-> w
+T 816 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 29/60 MP 0/0 Hu 61 $ 444 room=.
+-> w
+T 817 mode=game_loop           Mablung Stormcrow(hum) F4@( 8, 7) HP 29/60 MP 0/0 Hu 60 $ 444 room=C
+-> w
+T 818 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 7) HP 29/60 MP 0/0 Hu 59 $ 444 room=.
+-> l
+T 819 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 7) HP 29/60 MP 0/0 Hu 59 $ 444 room=.
+-> n
+T 820 mode=pool_mode           Mablung Stormcrow(hum) F4@( 7, 6) HP 29/60 MP 0/0 Hu 58 $ 444 room=P
+-> n
+T 821 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 5) HP 29/60 MP 0/0 Hu 57 $ 444 room=.
+-> l
+T 822 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 5) HP 29/60 MP 0/0 Hu 57 $ 444 room=.
+-> n
+T 823 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 4) HP 29/60 MP 0/0 Hu 56 $ 444 room=.
+-> l
+T 824 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 4) HP 29/60 MP 0/0 Hu 56 $ 444 room=.
+-> w
+T 825 mode=library_mode        Mablung Stormcrow(hum) F4@( 6, 4) HP 29/60 MP 0/0 Hu 55 $ 444 room=L
+-> r
+T 826 mode=library_read_decision_mode Mablung Stormcrow(hum) F4@( 6, 4) HP 29/60 MP 0/0 Hu 55 $ 444 room=L
+-> y
+T 827 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 4) HP 29/60 MP 0/0 Hu 55 $ 444 room=.
+-> l
+T 828 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 4) HP 29/60 MP 0/0 Hu 55 $ 444 room=.
+-> n
+T 829 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 3) HP 29/60 MP 0/0 Hu 54 $ 444 room=.
+-> l
+T 830 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 3) HP 29/60 MP 0/0 Hu 54 $ 444 room=.
+-> n
+T 831 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 2) HP 29/60 MP 0/0 Hu 53 $ 444 room=.
+-> l
+T 832 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 2) HP 29/60 MP 0/0 Hu 53 $ 444 room=.
+-> e
+T 833 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 2) HP 29/60 MP 0/0 Hu 52 $ 444 room=.
+-> l
+T 834 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 2) HP 29/60 MP 0/0 Hu 52 $ 444 room=.
+-> n
+T 835 mode=altar_mode          Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 51 $ 444 room=A
+-> pray
+T 836 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 51 $ 644 room=.
+-> s
+T 837 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 2) HP 29/60 MP 0/0 Hu 50 $ 644 room=.
+-> n
+T 838 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 49 $ 644 room=.
+-> i
+T 839 mode=inventory           Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 49 $ 644 room=.
+-> eat1
+T 840 mode=inventory           Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 99 $ 644 room=.
+-> x
+T 841 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 1) HP 29/60 MP 0/0 Hu 99 $ 644 room=.
+-> s
+T 842 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 2) HP 29/60 MP 0/0 Hu 98 $ 644 room=.
+-> w
+T 843 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 2) HP 30/60 MP 0/0 Hu 97 $ 644 room=.
+-> w
+T 844 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 2) HP 30/60 MP 0/0 Hu 96 $ 644 room=.
+-> l
+T 845 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 2) HP 30/60 MP 0/0 Hu 96 $ 644 room=.
+-> n
+T 846 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 1) HP 31/60 MP 0/0 Hu 95 $ 644 room=.
+-> l
+T 847 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 1) HP 31/60 MP 0/0 Hu 95 $ 644 room=.
+-> w
+T 848 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 1) HP 31/60 MP 0/0 Hu 94 $ 644 room=.
+-> w
+T 849 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 1) HP 32/60 MP 0/0 Hu 93 $ 644 room=.
+-> s
+T 850 mode=combat_mode         Mablung Stormcrow(hum) F4@( 3, 2) HP 32/60 MP 0/0 Hu 92 $ 644 room=M vs Giant Centipede(L3 HP16/16)
+-> a
+T 851 mode=combat_mode         Mablung Stormcrow(hum) F4@( 3, 2) HP 31/60 MP 0/0 Hu 92 $ 644 room=M vs Giant Centipede(L3 HP16/16)
+-> f
+T 852 mode=flee_direction_mode Mablung Stormcrow(hum) F4@( 3, 2) HP 31/60 MP 0/0 Hu 92 $ 644 room=M
+-> s
+T 853 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 3) HP 31/60 MP 0/0 Hu 92 $ 644 room=.
+-> s
+T 854 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 4) HP 32/60 MP 0/0 Hu 91 $ 644 room=.
+-> s
+T 855 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 5) HP 32/60 MP 0/0 Hu 90 $ 644 room=.
+-> l
+T 856 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 5) HP 32/60 MP 0/0 Hu 90 $ 644 room=.
+-> e
+T 857 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 5) HP 33/60 MP 0/0 Hu 89 $ 644 room=.
+-> l
+T 858 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 5) HP 33/60 MP 0/0 Hu 89 $ 644 room=.
+-> n
+T 859 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 4) HP 33/60 MP 0/0 Hu 88 $ 644 room=.
+-> n
+T 860 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 3) HP 34/60 MP 0/0 Hu 87 $ 644 room=.
+-> w
+T 861 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 3) HP 34/60 MP 0/0 Hu 86 $ 644 room=.
+-> w
+T 862 mode=game_loop           Mablung Stormcrow(hum) F4@( 2, 3) HP 35/60 MP 0/0 Hu 85 $ 644 room=.
+-> w
+T 863 mode=chest_mode          Mablung Stormcrow(hum) F4@( 1, 3) HP 35/60 MP 0/0 Hu 84 $ 644 room=C
+-> e
+T 864 mode=game_loop           Mablung Stormcrow(hum) F4@( 2, 3) HP 35/60 MP 0/0 Hu 83 $ 644 room=.
+-> e
+T 865 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 3) HP 35/60 MP 0/0 Hu 82 $ 644 room=.
+-> s
+T 866 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 4) HP 36/60 MP 0/0 Hu 81 $ 644 room=.
+-> s
+T 867 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 5) HP 36/60 MP 0/0 Hu 80 $ 644 room=.
+-> w
+T 868 mode=game_loop           Mablung Stormcrow(hum) F4@( 2, 5) HP 36/60 MP 0/0 Hu 79 $ 644 room=.
+-> l
+T 869 mode=game_loop           Mablung Stormcrow(hum) F4@( 2, 5) HP 36/60 MP 0/0 Hu 79 $ 644 room=.
+-> e
+T 870 mode=game_loop           Mablung Stormcrow(hum) F4@( 3, 5) HP 36/60 MP 0/0 Hu 78 $ 644 room=.
+-> e
+T 871 mode=game_loop           Mablung Stormcrow(hum) F4@( 4, 5) HP 37/60 MP 0/0 Hu 77 $ 644 room=.
+-> e
+T 872 mode=combat_mode         Mablung Stormcrow(hum) F4@( 5, 5) HP 37/60 MP 0/0 Hu 76 $ 644 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 873 mode=combat_mode         Mablung Stormcrow(hum) F4@( 5, 5) HP 36/60 MP 0/0 Hu 76 $ 644 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 874 mode=combat_mode         Mablung Stormcrow(hum) F4@( 5, 5) HP 36/60 MP 0/0 Hu 76 $ 644 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 875 mode=combat_mode         Mablung Stormcrow(hum) F4@( 5, 5) HP 36/60 MP 0/0 Hu 76 $ 644 room=M vs Gnoll(L3 HP12/33)
+-> a
+T 876 mode=combat_victory      Mablung Stormcrow(hum) F4@( 5, 5) HP 36/60 MP 0/0 Hu 76 $ 672 room=.
+-> back
+T 877 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 5) HP 36/60 MP 0/0 Hu 76 $ 672 room=.
+-> s
+T 878 mode=game_loop           Mablung Stormcrow(hum) F4@( 5, 6) HP 36/60 MP 0/0 Hu 75 $ 672 room=.
+-> e
+T 879 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 6) HP 36/60 MP 0/0 Hu 74 $ 672 room=.
+-> s
+T 880 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 7) HP 37/60 MP 0/0 Hu 73 $ 672 room=.
+-> l
+T 881 mode=game_loop           Mablung Stormcrow(hum) F4@( 6, 7) HP 37/60 MP 0/0 Hu 73 $ 672 room=.
+-> e
+T 882 mode=game_loop           Mablung Stormcrow(hum) F4@( 7, 7) HP 37/60 MP 0/0 Hu 72 $ 672 room=.
+-> e
+T 883 mode=game_loop           Mablung Stormcrow(hum) F4@( 8, 7) HP 37/60 MP 0/0 Hu 71 $ 672 room=C
+-> e
+T 884 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 37/60 MP 0/0 Hu 70 $ 672 room=.
+-> s
+T 885 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 8) HP 38/60 MP 0/0 Hu 69 $ 672 room=P
+-> e
+T 886 mode=dungeon_mode        Mablung Stormcrow(hum) F4@(10, 8) HP 38/60 MP 0/0 Hu 68 $ 672 room=N
+-> u
+T 887 mode=dungeon_unlocked_mode Mablung Stormcrow(hum) F4@(10, 8) HP 38/60 MP 0/0 Hu 68 $ 672 room=N
+-> r
+T 888 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 38/60 MP 0/0 Hu 68 $ 820 room=N
+-> s
+T 889 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 38/60 MP 0/0 Hu 67 $ 820 room=.
+-> s
+T 890 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 38/60 MP 0/0 Hu 66 $ 820 room=.
+-> l
+T 891 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 38/60 MP 0/0 Hu 66 $ 820 room=.
+-> n
+T 892 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 39/60 MP 0/0 Hu 65 $ 820 room=.
+-> e
+T 893 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 39/60 MP 0/0 Hu 64 $ 820 room=.
+-> n
+T 894 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 39/60 MP 0/0 Hu 63 $ 820 room=.
+-> w
+T 895 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 39/60 MP 0/0 Hu 62 $ 820 room=N
+-> n
+T 896 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 40/60 MP 0/0 Hu 61 $ 820 room=.
+-> w
+T 897 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 40/60 MP 0/0 Hu 60 $ 820 room=.
+-> n
+T 898 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 40/60 MP 0/0 Hu 59 $ 820 room=.
+-> n
+T 899 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 40/60 MP 0/0 Hu 58 $ 820 room=.
+-> s
+T 900 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 40/60 MP 0/0 Hu 57 $ 820 room=.
+-> l
+T 901 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 40/60 MP 0/0 Hu 57 $ 820 room=.
+-> s
+T 902 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 40/60 MP 0/0 Hu 56 $ 820 room=.
+-> e
+T 903 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 40/60 MP 0/0 Hu 55 $ 820 room=.
+-> s
+T 904 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 40/60 MP 0/0 Hu 54 $ 820 room=N
+-> e
+T 905 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 40/60 MP 0/0 Hu 53 $ 820 room=.
+-> s
+T 906 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 40/60 MP 0/0 Hu 52 $ 820 room=.
+-> w
+T 907 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 40/60 MP 0/0 Hu 51 $ 820 room=.
+-> s
+T 908 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 40/60 MP 0/0 Hu 50 $ 820 room=.
+-> n
+T 909 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 40/60 MP 0/0 Hu 49 $ 820 room=.
+-> i
+T 910 mode=inventory           Mablung Stormcrow(hum) F4@(10, 9) HP 40/60 MP 0/0 Hu 49 $ 820 room=.
+-> eat1
+T 911 mode=inventory           Mablung Stormcrow(hum) F4@(10, 9) HP 40/60 MP 0/0 Hu 99 $ 820 room=.
+-> x
+T 912 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 40/60 MP 0/0 Hu 99 $ 820 room=.
+-> n
+T 913 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 40/60 MP 0/0 Hu 98 $ 820 room=N
+-> e
+T 914 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 41/60 MP 0/0 Hu 97 $ 820 room=.
+-> s
+T 915 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 41/60 MP 0/0 Hu 96 $ 820 room=.
+-> e
+T 916 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 42/60 MP 0/0 Hu 95 $ 820 room=.
+-> s
+T 917 mode=game_loop           Mablung Stormcrow(hum) F4@(12,10) HP 42/60 MP 0/0 Hu 94 $ 820 room=.
+-> s
+T 918 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 43/60 MP 0/0 Hu 93 $ 820 room=.
+-> e
+T 919 mode=game_loop           Mablung Stormcrow(hum) F4@(13,11) HP 43/60 MP 0/0 Hu 92 $ 820 room=.
+-> e
+T 920 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 44/60 MP 0/0 Hu 91 $ 820 room=.
+-> s
+T 921 mode=game_loop           Mablung Stormcrow(hum) F4@(14,12) HP 44/60 MP 0/0 Hu 90 $ 820 room=.
+-> s
+T 922 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 45/60 MP 0/0 Hu 89 $ 820 room=.
+-> e
+T 923 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 45/60 MP 0/0 Hu 88 $ 820 room=.
+-> e
+T 924 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 46/60 MP 0/0 Hu 87 $ 820 room=.
+-> e
+T 925 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 46/60 MP 0/0 Hu 86 $ 820 room=.
+-> s
+T 926 mode=game_loop           Mablung Stormcrow(hum) F4@(17,14) HP 47/60 MP 0/0 Hu 85 $ 820 room=.
+-> e
+T 927 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 47/60 MP 0/0 Hu 84 $ 820 room=.
+-> n
+T 928 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 47/60 MP 0/0 Hu 83 $ 820 room=.
+-> n
+T 929 mode=game_loop           Mablung Stormcrow(hum) F4@(18,12) HP 47/60 MP 0/0 Hu 82 $ 820 room=.
+-> e
+T 930 mode=game_loop           Mablung Stormcrow(hum) F4@(19,12) HP 48/60 MP 0/0 Hu 81 $ 820 room=.
+-> s
+T 931 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 48/60 MP 0/0 Hu 80 $ 820 room=.
+-> s
+T 932 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 48/60 MP 0/0 Hu 79 $ 820 room=.
+-> s
+T 933 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 48/60 MP 0/0 Hu 78 $ 820 room=.
+-> s
+T 934 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 49/60 MP 0/0 Hu 77 $ 820 room=.
+-> w
+T 935 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 49/60 MP 0/0 Hu 76 $ 820 room=.
+-> w
+T 936 mode=game_loop           Mablung Stormcrow(hum) F4@(17,16) HP 49/60 MP 0/0 Hu 75 $ 820 room=.
+-> w
+T 937 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 49/60 MP 0/0 Hu 74 $ 820 room=.
+-> n
+T 938 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 50/60 MP 0/0 Hu 73 $ 820 room=V
+-> w
+T 939 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 50/60 MP 0/0 Hu 72 $ 820 room=.
+-> w
+T 940 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 50/60 MP 0/0 Hu 71 $ 820 room=M vs Troll(L3 HP70/70)
+-> a
+T 941 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 44/60 MP 0/0 Hu 71 $ 820 room=M vs Troll(L3 HP70/70)
+-> a
+T 942 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 38/60 MP 0/0 Hu 71 $ 820 room=M vs Troll(L3 HP70/70)
+-> a
+T 943 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 32/60 MP 0/0 Hu 71 $ 820 room=M vs Troll(L3 HP51/70)
+-> a
+T 944 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 26/60 MP 0/0 Hu 71 $ 820 room=M vs Troll(L3 HP32/70)
+-> f
+T 945 mode=flee_direction_mode Mablung Stormcrow(hum) F4@(14,15) HP 26/60 MP 0/0 Hu 71 $ 820 room=M
+-> n
+T 946 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,14) HP 26/60 MP 0/0 Hu 71 $ 820 room=M vs UNDEAD WRAITH(L3 HP100/100)
+-> a
+T 947 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,14) HP 26/60 MP 0/0 Hu 71 $ 820 room=M vs UNDEAD WRAITH(L3 HP100/100)
+-> a
+T 948 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,14) HP 5/60 MP 0/0 Hu 71 $ 820 room=M vs UNDEAD WRAITH(L3 HP83/100)
+-> f
+T 949 mode=flee_direction_mode Mablung Stormcrow(hum) F4@(14,14) HP 5/60 MP 0/0 Hu 71 $ 820 room=M
+-> n
+T 950 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 5/60 MP 0/0 Hu 71 $ 820 room=.
+-> n
+T 951 mode=game_loop           Mablung Stormcrow(hum) F4@(14,12) HP 5/60 MP 0/0 Hu 70 $ 820 room=.
+-> n
+T 952 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 6/60 MP 0/0 Hu 69 $ 820 room=.
+-> w
+T 953 mode=game_loop           Mablung Stormcrow(hum) F4@(13,11) HP 6/60 MP 0/0 Hu 68 $ 820 room=.
+-> w
+T 954 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 6/60 MP 0/0 Hu 67 $ 820 room=.
+-> n
+T 955 mode=game_loop           Mablung Stormcrow(hum) F4@(12,10) HP 6/60 MP 0/0 Hu 66 $ 820 room=.
+-> n
+T 956 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 7/60 MP 0/0 Hu 65 $ 820 room=.
+-> w
+T 957 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 7/60 MP 0/0 Hu 64 $ 820 room=.
+-> w
+T 958 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 7/60 MP 0/0 Hu 63 $ 820 room=.
+-> s
+T 959 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 7/60 MP 0/0 Hu 62 $ 820 room=.
+-> n
+T 960 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 8/60 MP 0/0 Hu 61 $ 820 room=.
+-> n
+T 961 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 8/60 MP 0/0 Hu 60 $ 820 room=N
+-> n
+T 962 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 8/60 MP 0/0 Hu 59 $ 820 room=.
+-> w
+T 963 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 8/60 MP 0/0 Hu 58 $ 820 room=.
+-> n
+T 964 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 8/60 MP 0/0 Hu 57 $ 820 room=.
+-> n
+T 965 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 8/60 MP 0/0 Hu 56 $ 820 room=.
+-> s
+T 966 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 8/60 MP 0/0 Hu 55 $ 820 room=.
+-> n
+T 967 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 8/60 MP 0/0 Hu 54 $ 820 room=.
+-> s
+T 968 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 8/60 MP 0/0 Hu 53 $ 820 room=.
+-> s
+T 969 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 8/60 MP 0/0 Hu 52 $ 820 room=.
+-> e
+T 970 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 8/60 MP 0/0 Hu 51 $ 820 room=.
+-> s
+T 971 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 8/60 MP 0/0 Hu 50 $ 820 room=N
+-> s
+T 972 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 8/60 MP 0/0 Hu 49 $ 820 room=.
+-> i
+T 973 mode=inventory           Mablung Stormcrow(hum) F4@(10, 9) HP 8/60 MP 0/0 Hu 49 $ 820 room=.
+-> eat1
+T 974 mode=inventory           Mablung Stormcrow(hum) F4@(10, 9) HP 8/60 MP 0/0 Hu 99 $ 820 room=.
+-> x
+T 975 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 8/60 MP 0/0 Hu 99 $ 820 room=.
+-> s
+T 976 mode=game_loop           Mablung Stormcrow(hum) F4@(10,10) HP 8/60 MP 0/0 Hu 98 $ 820 room=.
+-> n
+T 977 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 9/60 MP 0/0 Hu 97 $ 820 room=.
+-> e
+T 978 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 9/60 MP 0/0 Hu 96 $ 820 room=.
+-> n
+T 979 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 10/60 MP 0/0 Hu 95 $ 820 room=.
+-> w
+T 980 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 10/60 MP 0/0 Hu 94 $ 820 room=N
+-> n
+T 981 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 11/60 MP 0/0 Hu 93 $ 820 room=.
+-> w
+T 982 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 11/60 MP 0/0 Hu 92 $ 820 room=.
+-> n
+T 983 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 12/60 MP 0/0 Hu 91 $ 820 room=.
+-> n
+T 984 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 5) HP 12/60 MP 0/0 Hu 90 $ 820 room=.
+-> s
+T 985 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 6) HP 13/60 MP 0/0 Hu 89 $ 820 room=.
+-> s
+T 986 mode=game_loop           Mablung Stormcrow(hum) F4@( 9, 7) HP 13/60 MP 0/0 Hu 88 $ 820 room=.
+-> e
+T 987 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 7) HP 14/60 MP 0/0 Hu 87 $ 820 room=.
+-> s
+T 988 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 8) HP 14/60 MP 0/0 Hu 86 $ 820 room=N
+-> s
+T 989 mode=game_loop           Mablung Stormcrow(hum) F4@(10, 9) HP 15/60 MP 0/0 Hu 85 $ 820 room=.
+-> e
+T 990 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 15/60 MP 0/0 Hu 84 $ 820 room=.
+-> n
+T 991 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 8) HP 15/60 MP 0/0 Hu 83 $ 820 room=.
+-> s
+T 992 mode=game_loop           Mablung Stormcrow(hum) F4@(11, 9) HP 15/60 MP 0/0 Hu 82 $ 820 room=.
+-> e
+T 993 mode=game_loop           Mablung Stormcrow(hum) F4@(12, 9) HP 16/60 MP 0/0 Hu 81 $ 820 room=.
+-> s
+T 994 mode=game_loop           Mablung Stormcrow(hum) F4@(12,10) HP 16/60 MP 0/0 Hu 80 $ 820 room=.
+-> s
+T 995 mode=game_loop           Mablung Stormcrow(hum) F4@(12,11) HP 16/60 MP 0/0 Hu 79 $ 820 room=.
+-> e
+T 996 mode=game_loop           Mablung Stormcrow(hum) F4@(13,11) HP 16/60 MP 0/0 Hu 78 $ 820 room=.
+-> e
+T 997 mode=game_loop           Mablung Stormcrow(hum) F4@(14,11) HP 17/60 MP 0/0 Hu 77 $ 820 room=.
+-> s
+T 998 mode=game_loop           Mablung Stormcrow(hum) F4@(14,12) HP 17/60 MP 0/0 Hu 76 $ 820 room=.
+-> s
+T 999 mode=game_loop           Mablung Stormcrow(hum) F4@(14,13) HP 17/60 MP 0/0 Hu 75 $ 820 room=.
+-> e
+T1000 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 17/60 MP 0/0 Hu 74 $ 820 room=.
+-> e
+T1001 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 18/60 MP 0/0 Hu 73 $ 820 room=.
+-> e
+T1002 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 18/60 MP 0/0 Hu 72 $ 820 room=.
+-> e
+T1003 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 18/60 MP 0/0 Hu 71 $ 820 room=.
+-> n
+T1004 mode=game_loop           Mablung Stormcrow(hum) F4@(18,12) HP 18/60 MP 0/0 Hu 70 $ 820 room=.
+-> e
+T1005 mode=game_loop           Mablung Stormcrow(hum) F4@(19,12) HP 19/60 MP 0/0 Hu 69 $ 820 room=.
+-> s
+T1006 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 19/60 MP 0/0 Hu 68 $ 820 room=.
+-> s
+T1007 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 19/60 MP 0/0 Hu 67 $ 820 room=.
+-> s
+T1008 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 19/60 MP 0/0 Hu 66 $ 820 room=.
+-> s
+T1009 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 20/60 MP 0/0 Hu 65 $ 820 room=.
+-> w
+T1010 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 20/60 MP 0/0 Hu 64 $ 820 room=.
+-> n
+T1011 mode=game_loop           Mablung Stormcrow(hum) F4@(18,15) HP 20/60 MP 0/0 Hu 63 $ 820 room=.
+-> n
+T1012 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 20/60 MP 0/0 Hu 62 $ 820 room=.
+-> e
+T1013 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 21/60 MP 0/0 Hu 61 $ 820 room=.
+-> s
+T1014 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 21/60 MP 0/0 Hu 60 $ 820 room=.
+-> s
+T1015 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 21/60 MP 0/0 Hu 59 $ 820 room=.
+-> w
+T1016 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 21/60 MP 0/0 Hu 58 $ 820 room=.
+-> w
+T1017 mode=game_loop           Mablung Stormcrow(hum) F4@(17,16) HP 21/60 MP 0/0 Hu 57 $ 820 room=.
+-> w
+T1018 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 21/60 MP 0/0 Hu 56 $ 820 room=.
+-> n
+T1019 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 21/60 MP 0/0 Hu 55 $ 820 room=V
+-> w
+T1020 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 21/60 MP 0/0 Hu 54 $ 820 room=.
+-> n
+T1021 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 21/60 MP 0/0 Hu 53 $ 820 room=.
+-> n
+T1022 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 21/60 MP 0/0 Hu 52 $ 820 room=.
+-> e
+T1023 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 21/60 MP 0/0 Hu 51 $ 820 room=.
+-> e
+T1024 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 21/60 MP 0/0 Hu 50 $ 820 room=.
+-> s
+T1025 mode=game_loop           Mablung Stormcrow(hum) F4@(17,14) HP 21/60 MP 0/0 Hu 49 $ 820 room=.
+-> i
+T1026 mode=inventory           Mablung Stormcrow(hum) F4@(17,14) HP 21/60 MP 0/0 Hu 49 $ 820 room=.
+-> eat1
+T1027 mode=inventory           Mablung Stormcrow(hum) F4@(17,14) HP 21/60 MP 0/0 Hu 99 $ 820 room=.
+-> x
+T1028 mode=game_loop           Mablung Stormcrow(hum) F4@(17,14) HP 21/60 MP 0/0 Hu 99 $ 820 room=.
+-> e
+T1029 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 21/60 MP 0/0 Hu 98 $ 820 room=.
+-> e
+T1030 mode=game_loop           Mablung Stormcrow(hum) F4@(19,14) HP 22/60 MP 0/0 Hu 97 $ 820 room=.
+-> n
+T1031 mode=game_loop           Mablung Stormcrow(hum) F4@(19,13) HP 22/60 MP 0/0 Hu 96 $ 820 room=.
+-> w
+T1032 mode=game_loop           Mablung Stormcrow(hum) F4@(18,13) HP 23/60 MP 0/0 Hu 95 $ 820 room=.
+-> w
+T1033 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 23/60 MP 0/0 Hu 94 $ 820 room=.
+-> w
+T1034 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 24/60 MP 0/0 Hu 93 $ 820 room=.
+-> w
+T1035 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 24/60 MP 0/0 Hu 92 $ 820 room=.
+-> s
+T1036 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 25/60 MP 0/0 Hu 91 $ 820 room=.
+-> s
+T1037 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 25/60 MP 0/0 Hu 90 $ 820 room=.
+-> e
+T1038 mode=game_loop           Mablung Stormcrow(hum) F4@(16,15) HP 26/60 MP 0/0 Hu 89 $ 820 room=V
+-> s
+T1039 mode=game_loop           Mablung Stormcrow(hum) F4@(16,16) HP 26/60 MP 0/0 Hu 88 $ 820 room=.
+-> e
+T1040 mode=game_loop           Mablung Stormcrow(hum) F4@(17,16) HP 27/60 MP 0/0 Hu 87 $ 820 room=.
+-> e
+T1041 mode=game_loop           Mablung Stormcrow(hum) F4@(18,16) HP 27/60 MP 0/0 Hu 86 $ 820 room=.
+-> e
+T1042 mode=game_loop           Mablung Stormcrow(hum) F4@(19,16) HP 28/60 MP 0/0 Hu 85 $ 820 room=.
+-> n
+T1043 mode=game_loop           Mablung Stormcrow(hum) F4@(19,15) HP 28/60 MP 0/0 Hu 84 $ 820 room=.
+-> w
+T1044 mode=game_loop           Mablung Stormcrow(hum) F4@(18,15) HP 28/60 MP 0/0 Hu 83 $ 820 room=.
+-> n
+T1045 mode=game_loop           Mablung Stormcrow(hum) F4@(18,14) HP 28/60 MP 0/0 Hu 82 $ 820 room=.
+-> w
+T1046 mode=game_loop           Mablung Stormcrow(hum) F4@(17,14) HP 29/60 MP 0/0 Hu 81 $ 820 room=.
+-> n
+T1047 mode=game_loop           Mablung Stormcrow(hum) F4@(17,13) HP 29/60 MP 0/0 Hu 80 $ 820 room=.
+-> w
+T1048 mode=game_loop           Mablung Stormcrow(hum) F4@(16,13) HP 29/60 MP 0/0 Hu 79 $ 820 room=.
+-> w
+T1049 mode=game_loop           Mablung Stormcrow(hum) F4@(15,13) HP 29/60 MP 0/0 Hu 78 $ 820 room=.
+-> s
+T1050 mode=game_loop           Mablung Stormcrow(hum) F4@(15,14) HP 30/60 MP 0/0 Hu 77 $ 820 room=.
+-> s
+T1051 mode=game_loop           Mablung Stormcrow(hum) F4@(15,15) HP 30/60 MP 0/0 Hu 76 $ 820 room=.
+-> w
+T1052 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 30/60 MP 0/0 Hu 75 $ 820 room=M vs Troll(L3 HP32/70)
+-> a
+T1053 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 30/60 MP 0/0 Hu 75 $ 820 room=M vs Troll(L3 HP32/70)
+-> a
+T1054 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 24/60 MP 0/0 Hu 75 $ 820 room=M vs Troll(L3 HP32/70)
+-> a
+T1055 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 18/60 MP 0/0 Hu 75 $ 820 room=M vs Troll(L3 HP32/70)
+-> a
+T1056 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,15) HP 12/60 MP 0/0 Hu 75 $ 820 room=M vs Troll(L3 HP13/70)
+-> f
+T1057 mode=flee_direction_mode Mablung Stormcrow(hum) F4@(14,15) HP 12/60 MP 0/0 Hu 75 $ 820 room=M
+-> n
+T1058 mode=combat_mode         Mablung Stormcrow(hum) F4@(14,14) HP 12/60 MP 0/0 Hu 75 $ 820 room=M vs UNDEAD WRAITH(L3 HP83/100)
+-> f
+T1059 mode=death_screen        Mablung Stormcrow(hum) F4@(14,14) HP -9/60 MP 0/0 Hu 75 $ 820 room=M
+
+=== run finished: turns=1059 floor=4 hp=-9/60 gold=820 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00941_human.html

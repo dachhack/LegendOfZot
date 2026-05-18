@@ -1,0 +1,466 @@
+T   0 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> i
+T   4 mode=inventory           Galadriel the Fair(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> u3
+T   5 mode=inventory           Galadriel the Fair(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You have identified: Minor Healing Potion!
+  Galadriel the Fair drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   6 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  Inventory closed.
+-> s
+T   7 mode=combat_mode         Galadriel the Fair(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Bat(L0 HP12/12)
+  A Bat (Level 0) appears! A cranky flying puppy intent on violence.
+  You seize the initiative!
+-> a
+T   8 mode=combat_victory      Galadriel the Fair(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 443 room=.
+  Reward: 50 gold!
+   ACHIEVEMENT UNLOCKED: Untouchable - Kill a monster without taking damage
+  Reward: 100 gold!
+  The monster dropped a dungeon key for location (1, 8)!
+-> back
+T   9 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 443 room=.
+-> l
+T  10 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 443 room=.
+-> e
+T  11 mode=garden_mode         Galadriel the Fair(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 97 $ 443 room=G
+-> h
+T  12 mode=game_loop           Galadriel the Fair(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 97 $ 443 room=.
+-> l
+T  13 mode=game_loop           Galadriel the Fair(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 97 $ 443 room=.
+-> s
+T  14 mode=combat_mode         Galadriel the Fair(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 96 $ 443 room=M vs Kobold(L0 HP20/20)
+-> a
+T  15 mode=combat_victory      Galadriel the Fair(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 96 $ 448 room=.
+-> back
+T  16 mode=game_loop           Galadriel the Fair(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 96 $ 448 room=.
+-> l
+T  17 mode=game_loop           Galadriel the Fair(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 96 $ 448 room=.
+-> w
+T  18 mode=combat_mode         Galadriel the Fair(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 448 room=M vs Kobold(L0 HP20/20)
+-> a
+T  19 mode=combat_victory      Galadriel the Fair(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 456 room=.
+-> back
+T  20 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 456 room=.
+-> w
+T  21 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> s
+T  22 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  23 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  24 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  25 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  26 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  27 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  28 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 93 $ 456 room=M vs Bat(L0 HP12/12)
+-> a
+T  29 mode=combat_victory      Galadriel the Fair(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 93 $ 461 room=.
+-> back
+T  30 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 93 $ 461 room=.
+-> s
+T  31 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 5) HP 25/28 MP 0/0 Hu 92 $ 461 room=.
+-> s
+T  32 mode=combat_mode         Galadriel the Fair(elf) F1@( 1, 6) HP 26/28 MP 0/0 Hu 91 $ 461 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  33 mode=combat_victory      Galadriel the Fair(elf) F1@( 1, 6) HP 26/28 MP 0/0 Hu 91 $ 464 room=.
+-> back
+T  34 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 6) HP 26/28 MP 0/0 Hu 91 $ 464 room=.
+-> e
+T  35 mode=combat_mode         Galadriel the Fair(elf) F1@( 2, 6) HP 26/28 MP 0/0 Hu 90 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  36 mode=combat_mode         Galadriel the Fair(elf) F1@( 2, 6) HP 26/28 MP 0/0 Hu 90 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  37 mode=combat_victory      Galadriel the Fair(elf) F1@( 2, 6) HP 26/28 MP 0/0 Hu 90 $ 467 room=.
+-> back
+T  38 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 6) HP 26/28 MP 0/0 Hu 90 $ 467 room=.
+-> s
+T  39 mode=chest_mode          Galadriel the Fair(elf) F1@( 2, 7) HP 27/28 MP 0/0 Hu 89 $ 467 room=C
+-> o
+T  40 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 7) HP 27/28 MP 0/0 Hu 89 $ 507 room=.
+-> w
+T  41 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 7) HP 27/28 MP 0/0 Hu 88 $ 507 room=.
+-> s
+T  42 mode=dungeon_mode        Galadriel the Fair(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 87 $ 507 room=N
+-> u
+T  43 mode=dungeon_unlocked_mode Galadriel the Fair(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 87 $ 507 room=N
+-> r
+T  44 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 87 $ 680 room=N
+-> l
+T  45 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 87 $ 680 room=N
+-> s
+T  46 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 9) HP 28/28 MP 0/0 Hu 86 $ 680 room=.
+-> l
+T  47 mode=game_loop           Galadriel the Fair(elf) F1@( 1, 9) HP 28/28 MP 0/0 Hu 86 $ 680 room=.
+-> e
+T  48 mode=altar_mode          Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 85 $ 680 room=A
+-> pray
+T  49 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 85 $ 680 room=.
+-> i
+T  50 mode=inventory           Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 85 $ 680 room=.
+-> eat4
+T  51 mode=inventory           Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> x
+T  52 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> l
+T  53 mode=game_loop           Galadriel the Fair(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> s
+T  54 mode=chest_mode          Galadriel the Fair(elf) F1@( 2,10) HP 28/28 MP 0/0 Hu 89 $ 680 room=C
+-> e
+T  55 mode=warp_mode           Galadriel the Fair(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 88 $ 680 room=W
+-> y
+T  56 mode=game_loop           Galadriel the Fair(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 88 $ 680 room=W
+-> i
+T  57 mode=inventory           Galadriel the Fair(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 88 $ 680 room=W
+-> eat3
+T  58 mode=inventory           Galadriel the Fair(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 93 $ 680 room=W
+-> x
+T  59 mode=warp_mode           Galadriel the Fair(elf) F1@( 3,10) HP 28/28 MP 0/0 Hu 93 $ 680 room=W
+-> y
+T  60 mode=game_loop           Galadriel the Fair(elf) F3@( 4, 9) HP 28/28 MP 0/0 Hu 93 $ 680 room=.
+-> l
+T  61 mode=game_loop           Galadriel the Fair(elf) F3@( 4, 9) HP 28/28 MP 0/0 Hu 93 $ 680 room=.
+-> e
+T  62 mode=game_loop           Galadriel the Fair(elf) F3@( 5, 9) HP 28/28 MP 0/0 Hu 92 $ 680 room=.
+-> l
+T  63 mode=game_loop           Galadriel the Fair(elf) F3@( 5, 9) HP 28/28 MP 0/0 Hu 92 $ 680 room=.
+-> e
+T  64 mode=game_loop           Galadriel the Fair(elf) F3@( 6, 9) HP 28/28 MP 0/0 Hu 91 $ 680 room=.
+-> l
+T  65 mode=game_loop           Galadriel the Fair(elf) F3@( 6, 9) HP 28/28 MP 0/0 Hu 91 $ 680 room=.
+-> e
+T  66 mode=game_loop           Galadriel the Fair(elf) F3@( 7, 9) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> i
+T  67 mode=inventory           Galadriel the Fair(elf) F3@( 7, 9) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> eat3
+T  68 mode=inventory           Galadriel the Fair(elf) F3@( 7, 9) HP 28/28 MP 0/0 Hu 95 $ 680 room=.
+-> x
+T  69 mode=game_loop           Galadriel the Fair(elf) F3@( 7, 9) HP 28/28 MP 0/0 Hu 95 $ 680 room=.
+-> l
+T  70 mode=game_loop           Galadriel the Fair(elf) F3@( 7, 9) HP 28/28 MP 0/0 Hu 95 $ 680 room=.
+-> e
+T  71 mode=game_loop           Galadriel the Fair(elf) F3@( 8, 9) HP 28/28 MP 0/0 Hu 94 $ 680 room=.
+-> l
+T  72 mode=game_loop           Galadriel the Fair(elf) F3@( 8, 9) HP 28/28 MP 0/0 Hu 94 $ 680 room=.
+-> e
+T  73 mode=game_loop           Galadriel the Fair(elf) F3@( 9, 9) HP 28/28 MP 0/0 Hu 93 $ 680 room=.
+-> l
+T  74 mode=game_loop           Galadriel the Fair(elf) F3@( 9, 9) HP 28/28 MP 0/0 Hu 93 $ 680 room=.
+-> e
+T  75 mode=game_loop           Galadriel the Fair(elf) F3@(10, 9) HP 28/28 MP 0/0 Hu 92 $ 680 room=.
+-> l
+T  76 mode=game_loop           Galadriel the Fair(elf) F3@(10, 9) HP 28/28 MP 0/0 Hu 92 $ 680 room=.
+-> s
+T  77 mode=game_loop           Galadriel the Fair(elf) F3@(10,10) HP 28/28 MP 0/0 Hu 91 $ 680 room=.
+-> l
+T  78 mode=game_loop           Galadriel the Fair(elf) F3@(10,10) HP 28/28 MP 0/0 Hu 91 $ 680 room=.
+-> e
+T  79 mode=game_loop           Galadriel the Fair(elf) F3@(11,10) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> l
+T  80 mode=game_loop           Galadriel the Fair(elf) F3@(11,10) HP 28/28 MP 0/0 Hu 90 $ 680 room=.
+-> s
+T  81 mode=game_loop           Galadriel the Fair(elf) F3@(11,11) HP 28/28 MP 0/0 Hu 89 $ 680 room=.
+-> l
+T  82 mode=game_loop           Galadriel the Fair(elf) F3@(11,11) HP 28/28 MP 0/0 Hu 89 $ 680 room=.
+-> s
+T  83 mode=game_loop           Galadriel the Fair(elf) F3@(11,12) HP 28/28 MP 0/0 Hu 88 $ 680 room=.
+-> l
+T  84 mode=game_loop           Galadriel the Fair(elf) F3@(11,12) HP 28/28 MP 0/0 Hu 88 $ 680 room=.
+-> s
+T  85 mode=game_loop           Galadriel the Fair(elf) F3@(11,13) HP 28/28 MP 0/0 Hu 87 $ 680 room=.
+-> l
+T  86 mode=game_loop           Galadriel the Fair(elf) F3@(11,13) HP 28/28 MP 0/0 Hu 87 $ 680 room=.
+-> w
+T  87 mode=chest_mode          Galadriel the Fair(elf) F3@(10,13) HP 28/28 MP 0/0 Hu 86 $ 680 room=C
+-> o
+T  88 mode=game_loop           Galadriel the Fair(elf) F3@(10,13) HP 28/28 MP 0/0 Hu 86 $ 680 room=.
+-> w
+T  89 mode=game_loop           Galadriel the Fair(elf) F3@( 9,13) HP 28/28 MP 0/0 Hu 85 $ 680 room=.
+-> w
+T  90 mode=altar_mode          Galadriel the Fair(elf) F3@( 8,13) HP 28/28 MP 0/0 Hu 84 $ 680 room=A
+-> pray
+T  91 mode=game_loop           Galadriel the Fair(elf) F3@( 8,13) HP 28/28 MP 0/0 Hu 84 $ 692 room=.
+-> l
+T  92 mode=game_loop           Galadriel the Fair(elf) F3@( 8,13) HP 28/28 MP 0/0 Hu 84 $ 692 room=.
+-> w
+T  93 mode=chest_mode          Galadriel the Fair(elf) F3@( 7,13) HP 28/28 MP 0/0 Hu 83 $ 692 room=C
+-> o
+T  94 mode=game_loop           Galadriel the Fair(elf) F3@( 7,13) HP 4/28 MP 0/0 Hu 83 $ 692 room=.
+-> l
+T  95 mode=game_loop           Galadriel the Fair(elf) F3@( 7,13) HP 4/28 MP 0/0 Hu 83 $ 692 room=.
+-> w
+T  96 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 692 room=V
+-> b12
+T  97 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 682 room=V
+-> b5
+T  98 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 652 room=V
+-> b5
+T  99 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 622 room=V
+-> b5
+T 100 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 592 room=V
+-> b6
+T 101 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 442 room=V
+-> b4
+T 102 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 362 room=V
+-> b4
+T 103 mode=vendor_shop         Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 162 room=V
+-> x
+T 104 mode=game_loop           Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 162 room=V
+-> i
+T 105 mode=inventory           Galadriel the Fair(elf) F3@( 6,13) HP 4/28 MP 0/0 Hu 82 $ 162 room=V
+-> u4
+T 106 mode=inventory           Galadriel the Fair(elf) F3@( 6,13) HP 28/28 MP 0/0 Hu 82 $ 162 room=V
+-> u3
+T 107 mode=inventory           Galadriel the Fair(elf) F3@( 6,13) HP 28/28 MP 0/0 Hu 82 $ 162 room=V
+-> x
+T 108 mode=game_loop           Galadriel the Fair(elf) F3@( 6,13) HP 28/28 MP 0/0 Hu 82 $ 162 room=V
+-> l
+T 109 mode=game_loop           Galadriel the Fair(elf) F3@( 6,13) HP 28/28 MP 0/0 Hu 82 $ 162 room=V
+-> s
+T 110 mode=game_loop           Galadriel the Fair(elf) F3@( 6,14) HP 28/28 MP 0/0 Hu 81 $ 162 room=.
+-> l
+T 111 mode=game_loop           Galadriel the Fair(elf) F3@( 6,14) HP 28/28 MP 0/0 Hu 81 $ 162 room=.
+-> s
+T 112 mode=game_loop           Galadriel the Fair(elf) F3@( 6,15) HP 28/28 MP 0/0 Hu 80 $ 162 room=.
+-> s
+T 113 mode=game_loop           Galadriel the Fair(elf) F3@( 6,16) HP 28/28 MP 0/0 Hu 79 $ 162 room=.
+-> e
+T 114 mode=game_loop           Galadriel the Fair(elf) F3@( 7,16) HP 28/28 MP 0/0 Hu 78 $ 162 room=.
+-> n
+T 115 mode=game_loop           Galadriel the Fair(elf) F3@( 7,15) HP 28/28 MP 0/0 Hu 77 $ 162 room=.
+-> e
+T 116 mode=game_loop           Galadriel the Fair(elf) F3@( 8,15) HP 28/28 MP 0/0 Hu 76 $ 162 room=.
+-> e
+T 117 mode=game_loop           Galadriel the Fair(elf) F3@( 9,15) HP 28/28 MP 0/0 Hu 75 $ 162 room=.
+-> n
+T 118 mode=game_loop           Galadriel the Fair(elf) F3@( 9,14) HP 28/28 MP 0/0 Hu 74 $ 162 room=.
+-> e
+T 119 mode=chest_mode          Galadriel the Fair(elf) F3@(10,14) HP 28/28 MP 0/0 Hu 73 $ 162 room=C
+-> o
+T 120 mode=game_loop           Galadriel the Fair(elf) F3@(10,14) HP 28/28 MP 0/0 Hu 73 $ 252 room=.
+-> e
+T 121 mode=game_loop           Galadriel the Fair(elf) F3@(11,14) HP 28/28 MP 0/0 Hu 72 $ 252 room=.
+-> s
+T 122 mode=game_loop           Galadriel the Fair(elf) F3@(11,15) HP 28/28 MP 0/0 Hu 71 $ 252 room=.
+-> w
+T 123 mode=combat_mode         Galadriel the Fair(elf) F3@(10,15) HP 28/28 MP 0/0 Hu 70 $ 252 room=M vs Bat(L2 HP12/12)
+-> a
+T 124 mode=combat_mode         Galadriel the Fair(elf) F3@(10,15) HP 27/28 MP 0/0 Hu 70 $ 252 room=M vs Bat(L2 HP12/12)
+-> a
+T 125 mode=combat_mode         Galadriel the Fair(elf) F3@(10,15) HP 26/28 MP 0/0 Hu 70 $ 252 room=M vs Bat(L2 HP12/12)
+-> f
+T 126 mode=flee_direction_mode Galadriel the Fair(elf) F3@(10,15) HP 26/28 MP 0/0 Hu 70 $ 252 room=M
+-> w
+T 127 mode=game_loop           Galadriel the Fair(elf) F3@( 9,15) HP 26/28 MP 0/0 Hu 70 $ 252 room=.
+-> n
+T 128 mode=game_loop           Galadriel the Fair(elf) F3@( 9,14) HP 26/28 MP 0/0 Hu 69 $ 252 room=.
+-> n
+T 129 mode=game_loop           Galadriel the Fair(elf) F3@( 9,13) HP 26/28 MP 0/0 Hu 68 $ 252 room=.
+-> e
+T 130 mode=game_loop           Galadriel the Fair(elf) F3@(10,13) HP 26/28 MP 0/0 Hu 67 $ 252 room=.
+-> n
+T 131 mode=game_loop           Galadriel the Fair(elf) F3@(10,12) HP 27/28 MP 0/0 Hu 66 $ 252 room=.
+-> e
+T 132 mode=game_loop           Galadriel the Fair(elf) F3@(11,12) HP 27/28 MP 0/0 Hu 65 $ 252 room=.
+-> e
+T 133 mode=game_loop           Galadriel the Fair(elf) F3@(12,12) HP 27/28 MP 0/0 Hu 64 $ 252 room=.
+-> e
+T 134 mode=game_loop           Galadriel the Fair(elf) F3@(13,12) HP 27/28 MP 0/0 Hu 63 $ 252 room=.
+-> e
+T 135 mode=game_loop           Galadriel the Fair(elf) F3@(14,12) HP 28/28 MP 0/0 Hu 62 $ 252 room=.
+-> e
+T 136 mode=dungeon_mode        Galadriel the Fair(elf) F3@(15,12) HP 28/28 MP 0/0 Hu 61 $ 252 room=N
+-> u
+T 137 mode=game_loop           Galadriel the Fair(elf) F3@(15,12) HP 28/28 MP 0/0 Hu 61 $ 252 room=N
+-> l
+T 138 mode=game_loop           Galadriel the Fair(elf) F3@(15,12) HP 28/28 MP 0/0 Hu 61 $ 252 room=N
+-> s
+T 139 mode=game_loop           Galadriel the Fair(elf) F3@(15,13) HP 28/28 MP 0/0 Hu 60 $ 252 room=.
+-> l
+T 140 mode=game_loop           Galadriel the Fair(elf) F3@(15,13) HP 28/28 MP 0/0 Hu 60 $ 252 room=.
+-> s
+T 141 mode=game_loop           Galadriel the Fair(elf) F3@(15,14) HP 28/28 MP 0/0 Hu 59 $ 252 room=.
+-> l
+T 142 mode=game_loop           Galadriel the Fair(elf) F3@(15,14) HP 28/28 MP 0/0 Hu 59 $ 252 room=.
+-> s
+T 143 mode=game_loop           Galadriel the Fair(elf) F3@(15,15) HP 28/28 MP 0/0 Hu 58 $ 252 room=.
+-> l
+T 144 mode=game_loop           Galadriel the Fair(elf) F3@(15,15) HP 28/28 MP 0/0 Hu 58 $ 252 room=.
+-> s
+T 145 mode=game_loop           Galadriel the Fair(elf) F3@(15,16) HP 28/28 MP 0/0 Hu 57 $ 252 room=.
+-> l
+T 146 mode=game_loop           Galadriel the Fair(elf) F3@(15,16) HP 28/28 MP 0/0 Hu 57 $ 252 room=.
+-> w
+T 147 mode=game_loop           Galadriel the Fair(elf) F3@(14,16) HP 28/28 MP 0/0 Hu 56 $ 252 room=.
+-> w
+T 148 mode=game_loop           Galadriel the Fair(elf) F3@(13,16) HP 28/28 MP 0/0 Hu 55 $ 252 room=.
+-> e
+T 149 mode=game_loop           Galadriel the Fair(elf) F3@(14,16) HP 28/28 MP 0/0 Hu 54 $ 252 room=.
+-> n
+T 150 mode=game_loop           Galadriel the Fair(elf) F3@(14,15) HP 28/28 MP 0/0 Hu 53 $ 252 room=.
+-> e
+T 151 mode=game_loop           Galadriel the Fair(elf) F3@(15,15) HP 28/28 MP 0/0 Hu 52 $ 252 room=.
+-> e
+T 152 mode=game_loop           Galadriel the Fair(elf) F3@(16,15) HP 28/28 MP 0/0 Hu 51 $ 252 room=.
+-> e
+T 153 mode=altar_mode          Galadriel the Fair(elf) F3@(17,15) HP 28/28 MP 0/0 Hu 50 $ 252 room=A
+-> pray
+T 154 mode=game_loop           Galadriel the Fair(elf) F3@(17,15) HP 28/28 MP 0/0 Hu 50 $ 252 room=.
+-> s
+T 155 mode=game_loop           Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 49 $ 252 room=.
+-> i
+T 156 mode=inventory           Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 49 $ 252 room=.
+-> eat1
+T 157 mode=inventory           Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu100 $ 252 room=.
+-> u5
+T 158 mode=upgrade_scroll_mode Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu100 $ 252 room=.
+-> 1
+T 159 mode=inventory           Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu100 $ 252 room=.
+-> x
+T 160 mode=game_loop           Galadriel the Fair(elf) F3@(17,16) HP 28/28 MP 0/0 Hu100 $ 252 room=.
+-> e
+T 161 mode=garden_mode         Galadriel the Fair(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 99 $ 252 room=G
+-> h
+T 162 mode=game_loop           Galadriel the Fair(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 99 $ 252 room=.
+-> e
+T 163 mode=game_loop           Galadriel the Fair(elf) F3@(19,16) HP 28/28 MP 0/0 Hu 98 $ 252 room=.
+-> n
+T 164 mode=game_loop           Galadriel the Fair(elf) F3@(19,15) HP 28/28 MP 0/0 Hu 97 $ 252 room=.
+-> w
+T 165 mode=game_loop           Galadriel the Fair(elf) F3@(18,15) HP 28/28 MP 0/0 Hu 96 $ 252 room=.
+-> n
+T 166 mode=library_mode        Galadriel the Fair(elf) F3@(18,14) HP 28/28 MP 0/0 Hu 95 $ 252 room=L
+-> r
+T 167 mode=library_read_decision_mode Galadriel the Fair(elf) F3@(18,14) HP 28/28 MP 0/0 Hu 95 $ 252 room=L
+-> y
+T 168 mode=game_loop           Galadriel the Fair(elf) F3@(18,14) HP 28/24 MP 0/0 Hu 95 $ 352 room=.
+-> n
+T 169 mode=game_loop           Galadriel the Fair(elf) F3@(18,13) HP 28/24 MP 0/0 Hu 94 $ 352 room=.
+-> n
+T 170 mode=game_loop           Galadriel the Fair(elf) F3@(18,12) HP 28/24 MP 0/0 Hu 93 $ 352 room=.
+-> l
+T 171 mode=game_loop           Galadriel the Fair(elf) F3@(18,12) HP 28/24 MP 0/0 Hu 93 $ 352 room=.
+-> w
+T 172 mode=game_loop           Galadriel the Fair(elf) F3@(17,12) HP 28/24 MP 0/0 Hu 92 $ 352 room=.
+-> l
+T 173 mode=game_loop           Galadriel the Fair(elf) F3@(17,12) HP 28/24 MP 0/0 Hu 92 $ 352 room=.
+-> n
+T 174 mode=game_loop           Galadriel the Fair(elf) F3@(17,11) HP 28/24 MP 0/0 Hu 91 $ 352 room=.
+-> l
+T 175 mode=game_loop           Galadriel the Fair(elf) F3@(17,11) HP 28/24 MP 0/0 Hu 91 $ 352 room=.
+-> n
+T 176 mode=game_loop           Galadriel the Fair(elf) F3@(17,10) HP 28/24 MP 0/0 Hu 90 $ 352 room=.
+-> e
+T 177 mode=game_loop           Galadriel the Fair(elf) F3@(18,10) HP 28/24 MP 0/0 Hu 89 $ 352 room=.
+-> s
+T 178 mode=combat_mode         Galadriel the Fair(elf) F3@(18,11) HP 28/24 MP 0/0 Hu 88 $ 352 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 179 mode=combat_mode         Galadriel the Fair(elf) F3@(18,11) HP 28/24 MP 0/0 Hu 88 $ 352 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 180 mode=combat_victory      Galadriel the Fair(elf) F3@(18,11) HP 28/24 MP 0/0 Hu 88 $ 358 room=.
+-> back
+T 181 mode=game_loop           Galadriel the Fair(elf) F3@(18,11) HP 28/24 MP 0/0 Hu 88 $ 358 room=.
+-> s
+T 182 mode=game_loop           Galadriel the Fair(elf) F3@(18,12) HP 28/24 MP 0/0 Hu 87 $ 358 room=.
+-> w
+T 183 mode=game_loop           Galadriel the Fair(elf) F3@(17,12) HP 28/24 MP 0/0 Hu 86 $ 358 room=.
+-> n
+T 184 mode=game_loop           Galadriel the Fair(elf) F3@(17,11) HP 28/24 MP 0/0 Hu 85 $ 358 room=.
+-> n
+T 185 mode=game_loop           Galadriel the Fair(elf) F3@(17,10) HP 28/24 MP 0/0 Hu 84 $ 358 room=.
+-> n
+T 186 mode=game_loop           Galadriel the Fair(elf) F3@(17, 9) HP 28/24 MP 0/0 Hu 83 $ 358 room=.
+-> n
+T 187 mode=game_loop           Galadriel the Fair(elf) F3@(17, 8) HP 28/24 MP 0/0 Hu 82 $ 358 room=.
+-> l
+T 188 mode=game_loop           Galadriel the Fair(elf) F3@(17, 8) HP 28/24 MP 0/0 Hu 82 $ 358 room=.
+-> e
+T 189 mode=game_loop           Galadriel the Fair(elf) F3@(18, 8) HP 28/24 MP 0/0 Hu 81 $ 358 room=.
+-> l
+T 190 mode=game_loop           Galadriel the Fair(elf) F3@(18, 8) HP 28/24 MP 0/0 Hu 81 $ 358 room=.
+-> n
+T 191 mode=pool_mode           Galadriel the Fair(elf) F3@(18, 7) HP 28/24 MP 0/0 Hu 80 $ 358 room=P
+-> dr
+T 192 mode=game_loop           Galadriel the Fair(elf) F3@(18, 7) HP 15/24 MP 0/0 Hu 80 $ 358 room=.
+-> n
+T 193 mode=game_loop           Galadriel the Fair(elf) F3@(18, 6) HP 9/24 MP 0/0 Hu 79 $ 358 room=.
+-> n
+T 194 mode=game_loop           Galadriel the Fair(elf) F3@(18, 5) HP 3/24 MP 0/0 Hu 78 $ 358 room=.
+-> i
+T 195 mode=inventory           Galadriel the Fair(elf) F3@(18, 5) HP 3/24 MP 0/0 Hu 78 $ 358 room=.
+-> u4
+T 196 mode=inventory           Galadriel the Fair(elf) F3@(18, 5) HP 24/24 MP 0/0 Hu 78 $ 358 room=.
+-> x
+T 197 mode=game_loop           Galadriel the Fair(elf) F3@(18, 5) HP 24/24 MP 0/0 Hu 78 $ 358 room=.
+-> s
+T 198 mode=game_loop           Galadriel the Fair(elf) F3@(18, 6) HP 18/24 MP 0/0 Hu 77 $ 358 room=.
+-> n
+T 199 mode=game_loop           Galadriel the Fair(elf) F3@(18, 5) HP 13/24 MP 0/0 Hu 76 $ 358 room=.
+-> s
+T 200 mode=game_loop           Galadriel the Fair(elf) F3@(18, 6) HP 13/24 MP 0/0 Hu 75 $ 358 room=.
+-> s
+T 201 mode=game_loop           Galadriel the Fair(elf) F3@(18, 7) HP 13/24 MP 0/0 Hu 74 $ 358 room=.
+-> w
+T 202 mode=game_loop           Galadriel the Fair(elf) F3@(17, 7) HP 13/24 MP 0/0 Hu 73 $ 358 room=.
+-> l
+T 203 mode=game_loop           Galadriel the Fair(elf) F3@(17, 7) HP 13/24 MP 0/0 Hu 73 $ 358 room=.
+-> i
+T 204 mode=inventory           Galadriel the Fair(elf) F3@(17, 7) HP 13/24 MP 0/0 Hu 73 $ 358 room=.
+-> u4
+T 205 mode=inventory           Galadriel the Fair(elf) F3@(17, 7) HP 24/24 MP 0/0 Hu 73 $ 358 room=.
+-> x
+T 206 mode=game_loop           Galadriel the Fair(elf) F3@(17, 7) HP 24/24 MP 0/0 Hu 73 $ 358 room=.
+-> s
+T 207 mode=game_loop           Galadriel the Fair(elf) F3@(17, 8) HP 24/24 MP 0/0 Hu 72 $ 358 room=.
+-> s
+T 208 mode=game_loop           Galadriel the Fair(elf) F3@(17, 9) HP 24/24 MP 0/0 Hu 71 $ 358 room=.
+-> w
+T 209 mode=game_loop           Galadriel the Fair(elf) F3@(16, 9) HP 24/24 MP 0/0 Hu 70 $ 358 room=.
+-> w
+T 210 mode=game_loop           Galadriel the Fair(elf) F3@(15, 9) HP 24/24 MP 0/0 Hu 69 $ 358 room=.
+-> n
+T 211 mode=game_loop           Galadriel the Fair(elf) F3@(15, 8) HP 24/24 MP 0/0 Hu 68 $ 358 room=.
+-> n
+T 212 mode=game_loop           Galadriel the Fair(elf) F3@(15, 7) HP 24/24 MP 0/0 Hu 67 $ 358 room=.
+-> w
+T 213 mode=game_loop           Galadriel the Fair(elf) F3@(14, 7) HP 24/24 MP 0/0 Hu 66 $ 358 room=.
+-> s
+T 214 mode=game_loop           Galadriel the Fair(elf) F3@(14, 8) HP 24/24 MP 0/0 Hu 65 $ 358 room=.
+-> s
+T 215 mode=game_loop           Galadriel the Fair(elf) F3@(14, 9) HP 24/24 MP 0/0 Hu 64 $ 358 room=.
+-> s
+T 216 mode=game_loop           Galadriel the Fair(elf) F3@(14,10) HP 24/24 MP 0/0 Hu 63 $ 358 room=.
+-> w
+T 217 mode=library_mode        Galadriel the Fair(elf) F3@(13,10) HP 24/24 MP 0/0 Hu 62 $ 358 room=L
+-> r
+T 218 mode=library_read_decision_mode Galadriel the Fair(elf) F3@(13,10) HP 24/24 MP 0/0 Hu 62 $ 358 room=L
+-> y
+T 219 mode=game_loop           Galadriel the Fair(elf) F3@(13,10) HP 24/24 MP 0/0 Hu 62 $ 433 room=.
+-> w
+T 220 mode=game_loop           Galadriel the Fair(elf) F3@(12,10) HP 16/24 MP 0/0 Hu 61 $ 433 room=.
+-> w
+T 221 mode=game_loop           Galadriel the Fair(elf) F3@(11,10) HP 8/24 MP 0/0 Hu 60 $ 433 room=.
+-> w
+T 222 mode=death_screen        Galadriel the Fair(elf) F3@(10,10) HP 0/24 MP 0/0 Hu 59 $ 433 room=.
+
+=== run finished: turns=222 floor=3 hp=0/24 gold=433 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00643_elf.html

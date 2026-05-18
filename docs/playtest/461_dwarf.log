@@ -1,0 +1,1324 @@
+T   0 mode=game_loop           Kili Runesinger(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Kili Runesinger(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Kili Runesinger(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Sewer Rat(L0 HP10/10)
+  A Sewer Rat (Level 0) appears! A scurrying rat, unnaturally large.
+  The Sewer Rat strikes first!
+-> a
+T   3 mode=combat_mode         Kili Runesinger(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Sewer Rat(L0 HP10/10)
+  Sewer Rat missed Kili Runesinger!
+  You missed the evil Sewer Rat!
+-> a
+T   4 mode=combat_victory      Kili Runesinger(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 349 room=.
+  You hit the evil Sewer Rat!
+  Sewer Rat took 27 damage.
+  You defeated the Sewer Rat!
+  The rat squeals the last squeal it will ever squeal.
+  You gained 8 experience.
+  You found 9 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Sewer Rat meat.
+-> back
+T   5 mode=game_loop           Kili Runesinger(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 349 room=.
+-> l
+T   6 mode=game_loop           Kili Runesinger(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 349 room=.
+-> e
+T   7 mode=chest_mode          Kili Runesinger(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 98 $ 349 room=C
+-> o
+T   8 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 98 $ 349 room=.
+-> l
+T   9 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 98 $ 349 room=.
+-> s
+T  10 mode=combat_mode         Kili Runesinger(dwa) F1@( 3, 2) HP 60/64 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
+-> a
+T  11 mode=combat_mode         Kili Runesinger(dwa) F1@( 3, 2) HP 59/64 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
+-> f
+T  12 mode=flee_direction_mode Kili Runesinger(dwa) F1@( 3, 2) HP 59/64 MP 0/0 Hu 97 $ 349 room=M
+-> s
+T  13 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 3) HP 59/64 MP 0/0 Hu 97 $ 349 room=.
+-> s
+T  14 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 4) HP 60/64 MP 0/0 Hu 96 $ 349 room=.
+-> l
+T  15 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 4) HP 60/64 MP 0/0 Hu 96 $ 349 room=.
+-> e
+T  16 mode=altar_mode          Kili Runesinger(dwa) F1@( 4, 4) HP 60/64 MP 0/0 Hu 95 $ 349 room=A
+-> pray
+T  17 mode=game_loop           Kili Runesinger(dwa) F1@( 4, 4) HP 60/64 MP 0/0 Hu 95 $ 349 room=.
+-> e
+T  18 mode=garden_mode         Kili Runesinger(dwa) F1@( 5, 4) HP 61/64 MP 0/0 Hu 94 $ 349 room=G
+-> h
+T  19 mode=game_loop           Kili Runesinger(dwa) F1@( 5, 4) HP 61/64 MP 0/0 Hu 94 $ 349 room=.
+-> e
+T  20 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 93 $ 349 room=M vs Zombie(L0 HP35/35)
+-> a
+T  21 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 4) HP 61/64 MP 0/0 Hu 93 $ 349 room=M vs Zombie(L0 HP35/35)
+-> a
+T  22 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 4) HP 60/64 MP 0/0 Hu 93 $ 349 room=M vs Zombie(L0 HP9/35)
+-> a
+T  23 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 4) HP 59/64 MP 0/0 Hu 93 $ 349 room=M vs Zombie(L0 HP9/35)
+-> a
+T  24 mode=combat_victory      Kili Runesinger(dwa) F1@( 6, 4) HP 58/64 MP 0/0 Hu 93 $ 354 room=.
+-> back
+T  25 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 4) HP 58/64 MP 0/0 Hu 93 $ 354 room=.
+-> n
+T  26 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 3) HP 59/64 MP 0/0 Hu 92 $ 354 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  27 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 3) HP 59/64 MP 0/0 Hu 92 $ 354 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  28 mode=combat_mode         Kili Runesinger(dwa) F1@( 6, 3) HP 59/64 MP 0/0 Hu 92 $ 354 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  29 mode=combat_victory      Kili Runesinger(dwa) F1@( 6, 3) HP 58/64 MP 0/0 Hu 92 $ 361 room=.
+-> back
+T  30 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 58/64 MP 0/0 Hu 92 $ 361 room=.
+-> l
+T  31 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 58/64 MP 0/0 Hu 92 $ 361 room=.
+-> e
+T  32 mode=game_loop           Kili Runesinger(dwa) F1@( 7, 3) HP 58/64 MP 0/0 Hu 91 $ 361 room=.
+-> e
+T  33 mode=combat_mode         Kili Runesinger(dwa) F1@( 8, 3) HP 59/64 MP 0/0 Hu 90 $ 361 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  34 mode=combat_mode         Kili Runesinger(dwa) F1@( 8, 3) HP 58/64 MP 0/0 Hu 90 $ 361 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  35 mode=combat_mode         Kili Runesinger(dwa) F1@( 8, 3) HP 57/64 MP 0/0 Hu 90 $ 361 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  36 mode=combat_victory      Kili Runesinger(dwa) F1@( 8, 3) HP 56/64 MP 0/0 Hu 90 $ 367 room=.
+-> back
+T  37 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 56/64 MP 0/0 Hu 90 $ 367 room=.
+-> e
+T  38 mode=combat_mode         Kili Runesinger(dwa) F1@( 9, 3) HP 56/64 MP 0/0 Hu 89 $ 367 room=M vs Bat(L0 HP12/12)
+-> f
+T  39 mode=flee_direction_mode Kili Runesinger(dwa) F1@( 9, 3) HP 56/64 MP 0/0 Hu 89 $ 367 room=M
+-> w
+T  40 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 56/64 MP 0/0 Hu 89 $ 367 room=.
+-> i
+T  41 mode=inventory           Kili Runesinger(dwa) F1@( 8, 3) HP 56/64 MP 0/0 Hu 89 $ 367 room=.
+-> u4
+T  42 mode=inventory           Kili Runesinger(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 89 $ 367 room=.
+-> x
+T  43 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 89 $ 367 room=.
+-> i
+T  44 mode=inventory           Kili Runesinger(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 89 $ 367 room=.
+-> eat3
+T  45 mode=inventory           Kili Runesinger(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 94 $ 367 room=.
+-> x
+T  46 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 64/64 MP 0/0 Hu 94 $ 367 room=.
+-> e
+T  47 mode=combat_mode         Kili Runesinger(dwa) F1@( 9, 3) HP 64/64 MP 0/0 Hu 93 $ 367 room=M vs Bat(L0 HP12/12)
+-> a
+T  48 mode=combat_victory      Kili Runesinger(dwa) F1@( 9, 3) HP 64/64 MP 0/0 Hu 93 $ 468 room=.
+-> back
+T  49 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 3) HP 64/64 MP 0/0 Hu 93 $ 468 room=.
+-> l
+T  50 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 3) HP 64/64 MP 0/0 Hu 93 $ 468 room=.
+-> s
+T  51 mode=dungeon_mode        Kili Runesinger(dwa) F1@( 9, 4) HP 64/64 MP 0/0 Hu 92 $ 468 room=N
+-> u
+T  52 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 4) HP 64/64 MP 0/0 Hu 92 $ 468 room=N
+-> s
+T  53 mode=chest_mode          Kili Runesinger(dwa) F1@( 9, 5) HP 64/64 MP 0/0 Hu 91 $ 468 room=C
+-> o
+T  54 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 5) HP 64/64 MP 0/0 Hu 91 $ 498 room=.
+-> l
+T  55 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 5) HP 64/64 MP 0/0 Hu 91 $ 498 room=.
+-> s
+T  56 mode=chest_mode          Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=C
+-> o
+T  57 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=.
+-> i
+T  58 mode=inventory           Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=.
+-> e1
+T  59 mode=inventory           Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=.
+-> x
+T  60 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=.
+-> l
+T  61 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 6) HP 64/64 MP 0/0 Hu 90 $ 498 room=.
+-> e
+T  62 mode=shrine_mode         Kili Runesinger(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 89 $ 498 room=F
+-> p
+T  63 mode=game_loop           Kili Runesinger(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 89 $ 498 room=.
+-> l
+T  64 mode=game_loop           Kili Runesinger(dwa) F1@(10, 6) HP 64/64 MP 0/0 Hu 89 $ 498 room=.
+-> n
+T  65 mode=garden_mode         Kili Runesinger(dwa) F1@(10, 5) HP 64/64 MP 0/0 Hu 88 $ 498 room=G
+-> h
+T  66 mode=game_loop           Kili Runesinger(dwa) F1@(10, 5) HP 64/64 MP 0/0 Hu 88 $ 498 room=.
+-> e
+T  67 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 598 room=V
+-> b14
+T  68 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 588 room=V
+-> b3
+T  69 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 558 room=V
+-> b3
+T  70 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 528 room=V
+-> b6
+T  71 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 498 room=V
+-> b7
+T  72 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 348 room=V
+-> b6
+T  73 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 298 room=V
+-> b6
+T  74 mode=vendor_shop         Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 248 room=V
+-> x
+T  75 mode=game_loop           Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 248 room=V
+-> l
+T  76 mode=game_loop           Kili Runesinger(dwa) F1@(11, 5) HP 64/64 MP 0/0 Hu 87 $ 248 room=V
+-> s
+T  77 mode=game_loop           Kili Runesinger(dwa) F1@(11, 6) HP 64/64 MP 0/0 Hu 86 $ 248 room=.
+-> s
+T  78 mode=chest_mode          Kili Runesinger(dwa) F1@(11, 7) HP 64/64 MP 0/0 Hu 85 $ 248 room=C
+-> o
+T  79 mode=game_loop           Kili Runesinger(dwa) F1@(11, 7) HP 64/64 MP 0/0 Hu 85 $ 268 room=.
+-> l
+T  80 mode=game_loop           Kili Runesinger(dwa) F1@(11, 7) HP 64/64 MP 0/0 Hu 85 $ 268 room=.
+-> w
+T  81 mode=combat_mode         Kili Runesinger(dwa) F1@(10, 7) HP 64/64 MP 0/0 Hu 84 $ 268 room=M vs Lichen(L0 HP10/10)
+-> a
+T  82 mode=combat_victory      Kili Runesinger(dwa) F1@(10, 7) HP 63/64 MP 0/0 Hu 84 $ 270 room=.
+-> back
+T  83 mode=game_loop           Kili Runesinger(dwa) F1@(10, 7) HP 63/64 MP 0/0 Hu 84 $ 270 room=.
+-> s
+T  84 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 83 $ 270 room=.
+-> s
+T  85 mode=game_loop           Kili Runesinger(dwa) F1@(10, 9) HP 63/64 MP 0/0 Hu 82 $ 270 room=.
+-> n
+T  86 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 63/64 MP 0/0 Hu 81 $ 270 room=.
+-> e
+T  87 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 64/64 MP 0/0 Hu 80 $ 270 room=.
+-> l
+T  88 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 64/64 MP 0/0 Hu 80 $ 270 room=.
+-> e
+T  89 mode=combat_mode         Kili Runesinger(dwa) F1@(12, 8) HP 64/64 MP 0/0 Hu 79 $ 270 room=M vs Zombie(L0 HP35/35)
+-> a
+T  90 mode=combat_mode         Kili Runesinger(dwa) F1@(12, 8) HP 63/64 MP 0/0 Hu 79 $ 270 room=M vs Zombie(L0 HP7/35)
+-> a
+T  91 mode=combat_victory      Kili Runesinger(dwa) F1@(12, 8) HP 63/64 MP 0/0 Hu 79 $ 273 room=.
+-> back
+T  92 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 63/64 MP 0/0 Hu 79 $ 273 room=.
+-> l
+T  93 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 63/64 MP 0/0 Hu 79 $ 273 room=.
+-> s
+T  94 mode=combat_mode         Kili Runesinger(dwa) F1@(12, 9) HP 63/64 MP 0/0 Hu 78 $ 273 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  95 mode=combat_victory      Kili Runesinger(dwa) F1@(12, 9) HP 63/64 MP 0/0 Hu 78 $ 283 room=.
+-> back
+T  96 mode=game_loop           Kili Runesinger(dwa) F1@(12, 9) HP 63/64 MP 0/0 Hu 78 $ 283 room=.
+-> l
+T  97 mode=game_loop           Kili Runesinger(dwa) F1@(12, 9) HP 63/64 MP 0/0 Hu 78 $ 283 room=.
+-> e
+T  98 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 63/64 MP 0/0 Hu 77 $ 283 room=.
+-> l
+T  99 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 63/64 MP 0/0 Hu 77 $ 283 room=.
+-> s
+T 100 mode=combat_mode         Kili Runesinger(dwa) F1@(13,10) HP 63/64 MP 0/0 Hu 76 $ 283 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 101 mode=combat_mode         Kili Runesinger(dwa) F1@(13,10) HP 63/64 MP 0/0 Hu 76 $ 283 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 102 mode=combat_victory      Kili Runesinger(dwa) F1@(13,10) HP 63/64 MP 0/0 Hu 76 $ 289 room=.
+-> back
+T 103 mode=game_loop           Kili Runesinger(dwa) F1@(13,10) HP 63/64 MP 0/0 Hu 76 $ 289 room=.
+-> n
+T 104 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 64/64 MP 0/0 Hu 75 $ 289 room=.
+-> e
+T 105 mode=combat_mode         Kili Runesinger(dwa) F1@(14, 9) HP 64/64 MP 0/0 Hu 74 $ 289 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 106 mode=combat_victory      Kili Runesinger(dwa) F1@(14, 9) HP 63/64 MP 0/0 Hu 74 $ 394 room=.
+-> back
+T 107 mode=game_loop           Kili Runesinger(dwa) F1@(14, 9) HP 63/64 MP 0/0 Hu 74 $ 394 room=.
+-> e
+T 108 mode=altar_mode          Kili Runesinger(dwa) F1@(15, 9) HP 63/64 MP 0/0 Hu 73 $ 394 room=A
+-> pray
+T 109 mode=game_loop           Kili Runesinger(dwa) F1@(15, 9) HP 63/64 MP 0/0 Hu 73 $ 394 room=.
+-> l
+T 110 mode=game_loop           Kili Runesinger(dwa) F1@(15, 9) HP 63/64 MP 0/0 Hu 73 $ 394 room=.
+-> s
+T 111 mode=library_mode        Kili Runesinger(dwa) F1@(15,10) HP 63/64 MP 0/0 Hu 72 $ 394 room=L
+-> r
+T 112 mode=library_read_decision_mode Kili Runesinger(dwa) F1@(15,10) HP 63/64 MP 0/0 Hu 72 $ 394 room=L
+-> y
+T 113 mode=game_loop           Kili Runesinger(dwa) F1@(15,10) HP 63/64 MP 0/0 Hu 72 $ 444 room=.
+-> l
+T 114 mode=game_loop           Kili Runesinger(dwa) F1@(15,10) HP 63/64 MP 0/0 Hu 72 $ 444 room=.
+-> s
+T 115 mode=pool_mode           Kili Runesinger(dwa) F1@(15,11) HP 63/64 MP 0/0 Hu 71 $ 444 room=P
+-> dr
+T 116 mode=game_loop           Kili Runesinger(dwa) F1@(15,11) HP 64/64 MP 0/0 Hu 71 $ 444 room=.
+-> l
+T 117 mode=game_loop           Kili Runesinger(dwa) F1@(15,11) HP 64/64 MP 0/0 Hu 71 $ 444 room=.
+-> e
+T 118 mode=game_loop           Kili Runesinger(dwa) F1@(16,11) HP 64/64 MP 0/0 Hu 70 $ 444 room=.
+-> l
+T 119 mode=game_loop           Kili Runesinger(dwa) F1@(16,11) HP 64/64 MP 0/0 Hu 70 $ 444 room=.
+-> n
+T 120 mode=combat_mode         Kili Runesinger(dwa) F1@(16,10) HP 64/64 MP 0/0 Hu 69 $ 444 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 121 mode=combat_victory      Kili Runesinger(dwa) F1@(16,10) HP 63/64 MP 0/0 Hu 69 $ 453 room=.
+-> back
+T 122 mode=game_loop           Kili Runesinger(dwa) F1@(16,10) HP 63/64 MP 0/0 Hu 69 $ 453 room=.
+-> e
+T 123 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 63/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 124 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 62/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 125 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 61/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 126 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 60/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 127 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 128 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 129 mode=combat_mode         Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 453 room=M vs Goblin(L0 HP12/12)
+-> a
+T 130 mode=combat_victory      Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 460 room=.
+-> back
+T 131 mode=game_loop           Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 460 room=.
+-> i
+T 132 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 59/64 MP 0/0 Hu 68 $ 460 room=.
+-> u5
+T 133 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> u7
+T 134 mode=upgrade_scroll_mode Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> 1
+T 135 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> u7
+T 136 mode=identify_scroll_mode Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> 1
+T 137 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> x
+T 138 mode=game_loop           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> i
+T 139 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 68 $ 460 room=.
+-> eat4
+T 140 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu 73 $ 460 room=.
+-> eat1
+T 141 mode=inventory           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu100 $ 460 room=.
+-> x
+T 142 mode=game_loop           Kili Runesinger(dwa) F1@(17,10) HP 64/64 MP 0/0 Hu100 $ 460 room=.
+-> e
+T 143 mode=game_loop           Kili Runesinger(dwa) F1@(18,10) HP 64/64 MP 0/0 Hu 99 $ 460 room=.
+-> n
+T 144 mode=game_loop           Kili Runesinger(dwa) F1@(18, 9) HP 64/64 MP 0/0 Hu 98 $ 460 room=.
+-> l
+T 145 mode=game_loop           Kili Runesinger(dwa) F1@(18, 9) HP 64/64 MP 0/0 Hu 98 $ 460 room=.
+-> e
+T 146 mode=chest_mode          Kili Runesinger(dwa) F1@(19, 9) HP 64/64 MP 0/0 Hu 97 $ 460 room=C
+-> o
+T 147 mode=game_loop           Kili Runesinger(dwa) F1@(19, 9) HP 64/64 MP 0/0 Hu 97 $ 460 room=.
+-> s
+T 148 mode=game_loop           Kili Runesinger(dwa) F1@(19,10) HP 64/64 MP 0/0 Hu 96 $ 460 room=.
+-> i
+T 149 mode=inventory           Kili Runesinger(dwa) F1@(19,10) HP 64/64 MP 0/0 Hu 96 $ 460 room=.
+-> eat3
+T 150 mode=inventory           Kili Runesinger(dwa) F1@(19,10) HP 64/64 MP 0/0 Hu100 $ 460 room=.
+-> x
+T 151 mode=game_loop           Kili Runesinger(dwa) F1@(19,10) HP 64/64 MP 0/0 Hu100 $ 460 room=.
+-> s
+T 152 mode=combat_mode         Kili Runesinger(dwa) F1@(19,11) HP 64/64 MP 0/0 Hu 99 $ 460 room=M vs Kobold(L0 HP20/20)
+-> a
+T 153 mode=combat_victory      Kili Runesinger(dwa) F1@(19,11) HP 64/74 MP 0/0 Hu 99 $ 466 room=.
+-> back
+T 154 mode=game_loop           Kili Runesinger(dwa) F1@(19,11) HP 64/74 MP 0/0 Hu 99 $ 466 room=.
+-> l
+T 155 mode=game_loop           Kili Runesinger(dwa) F1@(19,11) HP 64/74 MP 0/0 Hu 99 $ 466 room=.
+-> s
+T 156 mode=combat_mode         Kili Runesinger(dwa) F1@(19,12) HP 64/74 MP 0/0 Hu 98 $ 466 room=M vs Lichen(L0 HP10/10)
+-> a
+T 157 mode=combat_mode         Kili Runesinger(dwa) F1@(19,12) HP 64/74 MP 0/0 Hu 98 $ 466 room=M vs Lichen(L0 HP10/10)
+-> a
+T 158 mode=combat_victory      Kili Runesinger(dwa) F1@(19,12) HP 64/74 MP 0/0 Hu 98 $ 469 room=.
+-> back
+T 159 mode=game_loop           Kili Runesinger(dwa) F1@(19,12) HP 64/74 MP 0/0 Hu 98 $ 469 room=.
+-> s
+T 160 mode=combat_mode         Kili Runesinger(dwa) F1@(19,13) HP 65/74 MP 0/0 Hu 97 $ 469 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 161 mode=combat_mode         Kili Runesinger(dwa) F1@(19,13) HP 64/74 MP 0/0 Hu 97 $ 469 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 162 mode=combat_mode         Kili Runesinger(dwa) F1@(19,13) HP 63/74 MP 0/0 Hu 97 $ 469 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 163 mode=combat_victory      Kili Runesinger(dwa) F1@(19,13) HP 63/74 MP 0/0 Hu 97 $ 470 room=.
+-> back
+T 164 mode=game_loop           Kili Runesinger(dwa) F1@(19,13) HP 63/74 MP 0/0 Hu 97 $ 470 room=.
+-> w
+T 165 mode=game_loop           Kili Runesinger(dwa) F1@(18,13) HP 63/74 MP 0/0 Hu 96 $ 470 room=.
+-> l
+T 166 mode=game_loop           Kili Runesinger(dwa) F1@(18,13) HP 63/74 MP 0/0 Hu 96 $ 470 room=.
+-> w
+T 167 mode=game_loop           Kili Runesinger(dwa) F1@(17,13) HP 64/74 MP 0/0 Hu 95 $ 470 room=.
+-> l
+T 168 mode=game_loop           Kili Runesinger(dwa) F1@(17,13) HP 64/74 MP 0/0 Hu 95 $ 470 room=.
+-> s
+T 169 mode=game_loop           Kili Runesinger(dwa) F1@(17,14) HP 64/74 MP 0/0 Hu 94 $ 470 room=.
+-> i
+T 170 mode=inventory           Kili Runesinger(dwa) F1@(17,14) HP 64/74 MP 0/0 Hu 94 $ 470 room=.
+-> u5
+T 171 mode=inventory           Kili Runesinger(dwa) F1@(17,14) HP 74/74 MP 0/0 Hu 94 $ 470 room=.
+-> x
+T 172 mode=game_loop           Kili Runesinger(dwa) F1@(17,14) HP 74/74 MP 0/0 Hu 94 $ 470 room=.
+-> i
+T 173 mode=inventory           Kili Runesinger(dwa) F1@(17,14) HP 74/74 MP 0/0 Hu 94 $ 470 room=.
+-> eat3
+T 174 mode=inventory           Kili Runesinger(dwa) F1@(17,14) HP 74/74 MP 0/0 Hu 99 $ 470 room=.
+-> x
+T 175 mode=game_loop           Kili Runesinger(dwa) F1@(17,14) HP 74/74 MP 0/0 Hu 99 $ 470 room=.
+-> w
+T 176 mode=library_mode        Kili Runesinger(dwa) F1@(16,14) HP 74/74 MP 0/0 Hu 98 $ 470 room=L
+-> r
+T 177 mode=library_read_decision_mode Kili Runesinger(dwa) F1@(16,14) HP 74/74 MP 0/0 Hu 98 $ 470 room=L
+-> y
+T 178 mode=game_loop           Kili Runesinger(dwa) F1@(16,14) HP 74/74 MP 0/0 Hu 98 $ 470 room=.
+-> s
+T 179 mode=pool_mode           Kili Runesinger(dwa) F1@(16,15) HP 74/74 MP 0/0 Hu 97 $ 470 room=P
+-> dr
+T 180 mode=game_loop           Kili Runesinger(dwa) F1@(16,15) HP 74/74 MP 0/0 Hu 97 $ 470 room=.
+-> e
+T 181 mode=game_loop           Kili Runesinger(dwa) F1@(17,15) HP 74/74 MP 0/0 Hu 96 $ 470 room=.
+-> e
+T 182 mode=combat_mode         Kili Runesinger(dwa) F1@(18,15) HP 74/74 MP 0/0 Hu 95 $ 470 room=M vs Lichen(L0 HP10/10)
+-> a
+T 183 mode=combat_victory      Kili Runesinger(dwa) F1@(18,15) HP 73/74 MP 0/0 Hu 95 $ 473 room=.
+-> back
+T 184 mode=game_loop           Kili Runesinger(dwa) F1@(18,15) HP 73/74 MP 0/0 Hu 95 $ 473 room=.
+-> s
+T 185 mode=pool_mode           Kili Runesinger(dwa) F1@(18,16) HP 73/74 MP 0/0 Hu 94 $ 473 room=P
+-> dr
+T 186 mode=game_loop           Kili Runesinger(dwa) F1@(18,16) HP 53/74 MP 0/0 Hu 94 $ 473 room=.
+-> i
+T 187 mode=inventory           Kili Runesinger(dwa) F1@(18,16) HP 53/74 MP 0/0 Hu 94 $ 473 room=.
+-> u5
+T 188 mode=inventory           Kili Runesinger(dwa) F1@(18,16) HP 74/74 MP 0/0 Hu 94 $ 473 room=.
+-> x
+T 189 mode=game_loop           Kili Runesinger(dwa) F1@(18,16) HP 74/74 MP 0/0 Hu 94 $ 473 room=.
+-> w
+T 190 mode=combat_mode         Kili Runesinger(dwa) F1@(17,16) HP 74/74 MP 0/0 Hu 93 $ 473 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 191 mode=combat_mode         Kili Runesinger(dwa) F1@(17,16) HP 73/74 MP 0/0 Hu 93 $ 473 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 192 mode=combat_mode         Kili Runesinger(dwa) F1@(17,16) HP 73/74 MP 0/0 Hu 93 $ 473 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 193 mode=combat_victory      Kili Runesinger(dwa) F1@(17,16) HP 72/74 MP 0/0 Hu 93 $ 474 room=.
+-> back
+T 194 mode=game_loop           Kili Runesinger(dwa) F1@(17,16) HP 72/74 MP 0/0 Hu 93 $ 474 room=.
+-> w
+T 195 mode=combat_mode         Kili Runesinger(dwa) F1@(16,16) HP 72/74 MP 0/0 Hu 92 $ 474 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 196 mode=combat_mode         Kili Runesinger(dwa) F1@(16,16) HP 72/74 MP 0/0 Hu 92 $ 474 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 197 mode=combat_mode         Kili Runesinger(dwa) F1@(16,16) HP 71/74 MP 0/0 Hu 92 $ 474 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 198 mode=combat_victory      Kili Runesinger(dwa) F1@(16,16) HP 71/74 MP 0/0 Hu 92 $ 476 room=.
+-> back
+T 199 mode=game_loop           Kili Runesinger(dwa) F1@(16,16) HP 71/74 MP 0/0 Hu 92 $ 476 room=.
+-> n
+T 200 mode=game_loop           Kili Runesinger(dwa) F1@(16,15) HP 72/74 MP 0/0 Hu 91 $ 476 room=.
+-> n
+T 201 mode=game_loop           Kili Runesinger(dwa) F1@(16,14) HP 72/74 MP 0/0 Hu 90 $ 476 room=.
+-> n
+T 202 mode=game_loop           Kili Runesinger(dwa) F1@(16,13) HP 73/74 MP 0/0 Hu 89 $ 476 room=.
+-> e
+T 203 mode=game_loop           Kili Runesinger(dwa) F1@(17,13) HP 73/74 MP 0/0 Hu 88 $ 476 room=.
+-> e
+T 204 mode=game_loop           Kili Runesinger(dwa) F1@(18,13) HP 74/74 MP 0/0 Hu 87 $ 476 room=.
+-> e
+T 205 mode=game_loop           Kili Runesinger(dwa) F1@(19,13) HP 74/74 MP 0/0 Hu 86 $ 476 room=.
+-> n
+T 206 mode=game_loop           Kili Runesinger(dwa) F1@(19,12) HP 74/74 MP 0/0 Hu 85 $ 476 room=.
+-> i
+T 207 mode=inventory           Kili Runesinger(dwa) F1@(19,12) HP 74/74 MP 0/0 Hu 85 $ 476 room=.
+-> eat3
+T 208 mode=inventory           Kili Runesinger(dwa) F1@(19,12) HP 74/74 MP 0/0 Hu 91 $ 476 room=.
+-> x
+T 209 mode=game_loop           Kili Runesinger(dwa) F1@(19,12) HP 74/74 MP 0/0 Hu 91 $ 476 room=.
+-> n
+T 210 mode=game_loop           Kili Runesinger(dwa) F1@(19,11) HP 74/74 MP 0/0 Hu 90 $ 476 room=.
+-> l
+T 211 mode=game_loop           Kili Runesinger(dwa) F1@(19,11) HP 74/74 MP 0/0 Hu 90 $ 476 room=.
+-> n
+T 212 mode=game_loop           Kili Runesinger(dwa) F1@(19,10) HP 74/74 MP 0/0 Hu 89 $ 476 room=.
+-> i
+T 213 mode=inventory           Kili Runesinger(dwa) F1@(19,10) HP 74/74 MP 0/0 Hu 89 $ 476 room=.
+-> eat3
+T 214 mode=inventory           Kili Runesinger(dwa) F1@(19,10) HP 74/74 MP 0/0 Hu 95 $ 476 room=.
+-> x
+T 215 mode=game_loop           Kili Runesinger(dwa) F1@(19,10) HP 74/74 MP 0/0 Hu 95 $ 476 room=.
+-> w
+T 216 mode=game_loop           Kili Runesinger(dwa) F1@(18,10) HP 74/74 MP 0/0 Hu 94 $ 476 room=.
+-> w
+T 217 mode=game_loop           Kili Runesinger(dwa) F1@(17,10) HP 74/74 MP 0/0 Hu 93 $ 476 room=.
+-> w
+T 218 mode=game_loop           Kili Runesinger(dwa) F1@(16,10) HP 74/74 MP 0/0 Hu 92 $ 476 room=.
+-> n
+T 219 mode=game_loop           Kili Runesinger(dwa) F1@(16, 9) HP 74/74 MP 0/0 Hu 91 $ 476 room=.
+-> w
+T 220 mode=game_loop           Kili Runesinger(dwa) F1@(15, 9) HP 74/74 MP 0/0 Hu 90 $ 476 room=.
+-> l
+T 221 mode=game_loop           Kili Runesinger(dwa) F1@(15, 9) HP 74/74 MP 0/0 Hu 90 $ 476 room=.
+-> w
+T 222 mode=game_loop           Kili Runesinger(dwa) F1@(14, 9) HP 74/74 MP 0/0 Hu 89 $ 476 room=.
+-> w
+T 223 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 74/74 MP 0/0 Hu 88 $ 476 room=.
+-> n
+T 224 mode=game_loop           Kili Runesinger(dwa) F1@(13, 8) HP 74/74 MP 0/0 Hu 87 $ 476 room=.
+-> w
+T 225 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 74/74 MP 0/0 Hu 86 $ 476 room=.
+-> w
+T 226 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 85 $ 476 room=.
+-> n
+T 227 mode=game_loop           Kili Runesinger(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 84 $ 476 room=.
+-> n
+T 228 mode=game_loop           Kili Runesinger(dwa) F1@(11, 6) HP 74/74 MP 0/0 Hu 83 $ 476 room=.
+-> n
+T 229 mode=game_loop           Kili Runesinger(dwa) F1@(11, 5) HP 74/74 MP 0/0 Hu 82 $ 476 room=V
+-> w
+T 230 mode=game_loop           Kili Runesinger(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 81 $ 476 room=.
+-> l
+T 231 mode=game_loop           Kili Runesinger(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 81 $ 476 room=.
+-> w
+T 232 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 80 $ 476 room=.
+-> n
+T 233 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 4) HP 74/74 MP 0/0 Hu 79 $ 476 room=N
+-> n
+T 234 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 78 $ 476 room=.
+-> w
+T 235 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 77 $ 476 room=.
+-> w
+T 236 mode=game_loop           Kili Runesinger(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 76 $ 476 room=.
+-> w
+T 237 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 75 $ 476 room=.
+-> s
+T 238 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 74 $ 476 room=.
+-> w
+T 239 mode=game_loop           Kili Runesinger(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 73 $ 476 room=.
+-> s
+T 240 mode=dungeon_mode        Kili Runesinger(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 72 $ 476 room=N
+-> u
+T 241 mode=dungeon_unlocked_mode Kili Runesinger(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 72 $ 476 room=N
+-> r
+T 242 mode=game_loop           Kili Runesinger(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 72 $ 594 room=N
+-> w
+T 243 mode=game_loop           Kili Runesinger(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 71 $ 594 room=.
+-> w
+T 244 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 70 $ 594 room=.
+-> s
+T 245 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 69 $ 594 room=.
+-> w
+T 246 mode=altar_mode          Kili Runesinger(dwa) F1@( 2, 6) HP 74/74 MP 0/0 Hu 68 $ 594 room=A
+-> pray
+T 247 mode=game_loop           Kili Runesinger(dwa) F1@( 2, 6) HP 74/74 MP 0/0 Hu 68 $ 594 room=.
+-> e
+T 248 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 67 $ 594 room=.
+-> s
+T 249 mode=combat_mode         Kili Runesinger(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 66 $ 594 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 250 mode=combat_victory      Kili Runesinger(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 66 $ 601 room=.
+-> back
+T 251 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 66 $ 601 room=.
+-> n
+T 252 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 65 $ 601 room=.
+-> n
+T 253 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 64 $ 601 room=.
+-> n
+T 254 mode=game_loop           Kili Runesinger(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 63 $ 601 room=.
+-> e
+T 255 mode=game_loop           Kili Runesinger(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 62 $ 601 room=.
+-> e
+T 256 mode=game_loop           Kili Runesinger(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 61 $ 601 room=.
+-> e
+T 257 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 60 $ 601 room=.
+-> n
+T 258 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 59 $ 601 room=.
+-> e
+T 259 mode=game_loop           Kili Runesinger(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 58 $ 601 room=.
+-> e
+T 260 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 57 $ 601 room=.
+-> l
+T 261 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 57 $ 601 room=.
+-> e
+T 262 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 56 $ 601 room=.
+-> s
+T 263 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 4) HP 74/74 MP 0/0 Hu 55 $ 601 room=N
+-> s
+T 264 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 54 $ 601 room=.
+-> e
+T 265 mode=game_loop           Kili Runesinger(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 53 $ 601 room=.
+-> e
+T 266 mode=game_loop           Kili Runesinger(dwa) F1@(11, 5) HP 74/74 MP 0/0 Hu 52 $ 601 room=V
+-> n
+T 267 mode=game_loop           Kili Runesinger(dwa) F1@(11, 4) HP 74/74 MP 0/0 Hu 51 $ 601 room=.
+-> e
+T 268 mode=chest_mode          Kili Runesinger(dwa) F1@(12, 4) HP 74/74 MP 0/0 Hu 50 $ 601 room=C
+-> o
+T 269 mode=game_loop           Kili Runesinger(dwa) F1@(12, 4) HP 74/74 MP 0/0 Hu 50 $ 601 room=.
+-> s
+T 270 mode=game_loop           Kili Runesinger(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu 49 $ 601 room=.
+-> i
+T 271 mode=inventory           Kili Runesinger(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu 49 $ 601 room=.
+-> eat1
+T 272 mode=inventory           Kili Runesinger(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu100 $ 601 room=.
+-> x
+T 273 mode=game_loop           Kili Runesinger(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu100 $ 601 room=.
+-> n
+T 274 mode=game_loop           Kili Runesinger(dwa) F1@(12, 4) HP 74/74 MP 0/0 Hu 99 $ 601 room=.
+-> s
+T 275 mode=game_loop           Kili Runesinger(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu 98 $ 601 room=.
+-> w
+T 276 mode=game_loop           Kili Runesinger(dwa) F1@(11, 5) HP 74/74 MP 0/0 Hu 97 $ 601 room=V
+-> s
+T 277 mode=game_loop           Kili Runesinger(dwa) F1@(11, 6) HP 74/74 MP 0/0 Hu 96 $ 601 room=.
+-> s
+T 278 mode=game_loop           Kili Runesinger(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 95 $ 601 room=.
+-> s
+T 279 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 94 $ 601 room=.
+-> w
+T 280 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 93 $ 601 room=.
+-> l
+T 281 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 93 $ 601 room=.
+-> s
+T 282 mode=game_loop           Kili Runesinger(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 92 $ 601 room=.
+-> n
+T 283 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 91 $ 601 room=.
+-> n
+T 284 mode=game_loop           Kili Runesinger(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 90 $ 601 room=.
+-> e
+T 285 mode=game_loop           Kili Runesinger(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 89 $ 601 room=.
+-> s
+T 286 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 88 $ 601 room=.
+-> e
+T 287 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 74/74 MP 0/0 Hu 87 $ 601 room=.
+-> s
+T 288 mode=game_loop           Kili Runesinger(dwa) F1@(12, 9) HP 74/74 MP 0/0 Hu 86 $ 601 room=.
+-> e
+T 289 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 74/74 MP 0/0 Hu 85 $ 601 room=.
+-> s
+T 290 mode=game_loop           Kili Runesinger(dwa) F1@(13,10) HP 74/74 MP 0/0 Hu 84 $ 601 room=.
+-> l
+T 291 mode=game_loop           Kili Runesinger(dwa) F1@(13,10) HP 74/74 MP 0/0 Hu 84 $ 601 room=.
+-> n
+T 292 mode=game_loop           Kili Runesinger(dwa) F1@(13, 9) HP 74/74 MP 0/0 Hu 83 $ 601 room=.
+-> n
+T 293 mode=game_loop           Kili Runesinger(dwa) F1@(13, 8) HP 74/74 MP 0/0 Hu 82 $ 601 room=.
+-> w
+T 294 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 74/74 MP 0/0 Hu 81 $ 601 room=.
+-> s
+T 295 mode=game_loop           Kili Runesinger(dwa) F1@(12, 9) HP 74/74 MP 0/0 Hu 80 $ 601 room=.
+-> n
+T 296 mode=game_loop           Kili Runesinger(dwa) F1@(12, 8) HP 74/74 MP 0/0 Hu 79 $ 601 room=.
+-> w
+T 297 mode=game_loop           Kili Runesinger(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 78 $ 601 room=.
+-> w
+T 298 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 77 $ 601 room=.
+-> s
+T 299 mode=game_loop           Kili Runesinger(dwa) F1@(10, 9) HP 74/74 MP 0/0 Hu 76 $ 601 room=.
+-> n
+T 300 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 75 $ 601 room=.
+-> l
+T 301 mode=game_loop           Kili Runesinger(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 75 $ 601 room=.
+-> n
+T 302 mode=game_loop           Kili Runesinger(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 74 $ 601 room=.
+-> n
+T 303 mode=game_loop           Kili Runesinger(dwa) F1@(10, 6) HP 74/74 MP 0/0 Hu 73 $ 601 room=.
+-> n
+T 304 mode=game_loop           Kili Runesinger(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 72 $ 601 room=.
+-> w
+T 305 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 71 $ 601 room=.
+-> n
+T 306 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 4) HP 74/74 MP 0/0 Hu 70 $ 601 room=N
+-> n
+T 307 mode=game_loop           Kili Runesinger(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 69 $ 601 room=.
+-> w
+T 308 mode=game_loop           Kili Runesinger(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 68 $ 601 room=.
+-> w
+T 309 mode=game_loop           Kili Runesinger(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 67 $ 601 room=.
+-> w
+T 310 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 66 $ 601 room=.
+-> l
+T 311 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 66 $ 601 room=.
+-> n
+T 312 mode=game_loop           Kili Runesinger(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 65 $ 601 room=.
+-> w
+T 313 mode=stairs_down_mode    Kili Runesinger(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 64 $ 601 room=D
+-> d
+T 314 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 64 $ 601 room=U
+-> e
+T 315 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 63 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 316 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 63 $ 601 room=M
+-> w
+T 317 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 63 $ 601 room=U
+-> e
+T 318 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 62 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 319 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 62 $ 601 room=M
+-> w
+T 320 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 62 $ 601 room=U
+-> e
+T 321 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 61 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 322 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 72/74 MP 0/0 Hu 61 $ 601 room=M
+-> w
+T 323 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 72/74 MP 0/0 Hu 61 $ 601 room=U
+-> e
+T 324 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 72/74 MP 0/0 Hu 60 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 325 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 60 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 326 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 60 $ 601 room=M
+-> w
+T 327 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 70/74 MP 0/0 Hu 60 $ 601 room=U
+-> e
+T 328 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 59 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 329 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 59 $ 601 room=M
+-> w
+T 330 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 70/74 MP 0/0 Hu 59 $ 601 room=U
+-> e
+T 331 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 58 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 332 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 58 $ 601 room=M
+-> w
+T 333 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 70/74 MP 0/0 Hu 58 $ 601 room=U
+-> e
+T 334 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 70/74 MP 0/0 Hu 57 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 335 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 57 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 336 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 57 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 337 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 57 $ 601 room=M
+-> w
+T 338 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 68/74 MP 0/0 Hu 57 $ 601 room=U
+-> e
+T 339 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 56 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 340 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 56 $ 601 room=M
+-> w
+T 341 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 68/74 MP 0/0 Hu 56 $ 601 room=U
+-> e
+T 342 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 55 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 343 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 55 $ 601 room=M
+-> w
+T 344 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 68/74 MP 0/0 Hu 55 $ 601 room=U
+-> e
+T 345 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 68/74 MP 0/0 Hu 54 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 346 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 54 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 347 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 54 $ 601 room=M
+-> w
+T 348 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 64/74 MP 0/0 Hu 54 $ 601 room=U
+-> e
+T 349 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 53 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 350 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 53 $ 601 room=M
+-> w
+T 351 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 62/74 MP 0/0 Hu 53 $ 601 room=U
+-> e
+T 352 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 52 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 353 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 52 $ 601 room=M
+-> w
+T 354 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 62/74 MP 0/0 Hu 52 $ 601 room=U
+-> e
+T 355 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 51 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 356 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 51 $ 601 room=M
+-> w
+T 357 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 51 $ 601 room=U
+-> e
+T 358 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 50 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 359 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 50 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 360 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 50 $ 601 room=M
+-> w
+T 361 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 50 $ 601 room=U
+-> e
+T 362 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 49 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 363 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 49 $ 601 room=M
+-> w
+T 364 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 49 $ 601 room=U
+-> e
+T 365 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 48 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 366 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 48 $ 601 room=M
+-> w
+T 367 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 48 $ 601 room=U
+-> e
+T 368 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 47 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 369 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 47 $ 601 room=M
+-> w
+T 370 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 47 $ 601 room=U
+-> e
+T 371 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 46 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 372 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu 46 $ 601 room=M
+-> w
+T 373 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 54/74 MP 0/0 Hu 46 $ 601 room=U
+-> e
+T 374 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu 45 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 375 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu 45 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 376 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu 45 $ 601 room=M
+-> w
+T 377 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 50/74 MP 0/0 Hu 45 $ 601 room=U
+-> e
+T 378 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu 44 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 379 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 44 $ 601 room=M
+-> w
+T 380 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 44 $ 601 room=U
+-> e
+T 381 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 43 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 382 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 43 $ 601 room=M
+-> w
+T 383 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 43 $ 601 room=U
+-> e
+T 384 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 42 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 385 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 42 $ 601 room=M
+-> w
+T 386 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 42 $ 601 room=U
+-> e
+T 387 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 41 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 388 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 41 $ 601 room=M
+-> w
+T 389 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 41 $ 601 room=U
+-> e
+T 390 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 40 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 391 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 40 $ 601 room=M
+-> w
+T 392 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 46/74 MP 0/0 Hu 40 $ 601 room=U
+-> e
+T 393 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 39 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 394 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 39 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 395 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 39 $ 601 room=M
+-> w
+T 396 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu 39 $ 601 room=U
+-> e
+T 397 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 38 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 398 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 38 $ 601 room=M
+-> w
+T 399 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu 38 $ 601 room=U
+-> e
+T 400 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 37 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 401 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 37 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 402 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 37 $ 601 room=M
+-> w
+T 403 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu 37 $ 601 room=U
+-> e
+T 404 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 36 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 405 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu 36 $ 601 room=M
+-> w
+T 406 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 42/74 MP 0/0 Hu 36 $ 601 room=U
+-> e
+T 407 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu 35 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 408 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu 35 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 409 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu 35 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 410 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu 35 $ 601 room=M
+-> u1
+T 411 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 35 $ 601 room=M
+-> x
+T 412 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 35 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 413 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 35 $ 601 room=M
+-> w
+T 414 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 62/74 MP 0/0 Hu 35 $ 601 room=U
+-> e
+T 415 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 34 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 416 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 34 $ 601 room=M
+-> w
+T 417 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 34 $ 601 room=U
+-> e
+T 418 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 33 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 419 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 33 $ 601 room=M
+-> w
+T 420 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 33 $ 601 room=U
+-> e
+T 421 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 32 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 422 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 32 $ 601 room=M
+-> w
+T 423 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 58/74 MP 0/0 Hu 32 $ 601 room=U
+-> e
+T 424 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu 31 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 425 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 31 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 426 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu 31 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 427 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu 31 $ 601 room=M
+-> w
+T 428 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 54/74 MP 0/0 Hu 31 $ 601 room=U
+-> e
+T 429 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu 30 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 430 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu 30 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 431 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 30 $ 601 room=M
+-> w
+T 432 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 30 $ 601 room=U
+-> e
+T 433 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 29 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 434 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 29 $ 601 room=M
+-> w
+T 435 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu 29 $ 601 room=U
+-> e
+T 436 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 28 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 437 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu 28 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 438 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 28 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 439 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 28 $ 601 room=M
+-> w
+T 440 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 46/74 MP 0/0 Hu 28 $ 601 room=U
+-> e
+T 441 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 27 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 442 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 27 $ 601 room=M
+-> w
+T 443 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu 27 $ 601 room=U
+-> e
+T 444 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu 26 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 445 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu 26 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 446 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu 26 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 447 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu 26 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 448 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu 26 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 449 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu 26 $ 601 room=M
+-> w
+T 450 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 40/74 MP 0/0 Hu 26 $ 601 room=U
+-> e
+T 451 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu 25 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 452 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu 25 $ 601 room=M
+-> w
+T 453 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 40/74 MP 0/0 Hu 25 $ 601 room=U
+-> e
+T 454 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu 24 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 455 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu 24 $ 601 room=M
+-> w
+T 456 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 38/74 MP 0/0 Hu 24 $ 601 room=U
+-> e
+T 457 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu 23 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 458 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu 23 $ 601 room=M
+-> w
+T 459 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 38/74 MP 0/0 Hu 23 $ 601 room=U
+-> e
+T 460 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu 22 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 461 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu 22 $ 601 room=M
+-> w
+T 462 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 36/74 MP 0/0 Hu 22 $ 601 room=U
+-> e
+T 463 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu 21 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 464 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu 21 $ 601 room=M
+-> u1
+T 465 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 21 $ 601 room=M
+-> x
+T 466 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 21 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 467 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 21 $ 601 room=M
+-> w
+T 468 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 66/74 MP 0/0 Hu 21 $ 601 room=U
+-> e
+T 469 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 20 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 470 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 20 $ 601 room=M
+-> w
+T 471 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 66/74 MP 0/0 Hu 20 $ 601 room=U
+-> e
+T 472 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 19 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 473 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 19 $ 601 room=M
+-> w
+T 474 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 66/74 MP 0/0 Hu 19 $ 601 room=U
+-> e
+T 475 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 18 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 476 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu 18 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 477 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 18 $ 601 room=M
+-> w
+T 478 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 64/74 MP 0/0 Hu 18 $ 601 room=U
+-> e
+T 479 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu 17 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 480 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 17 $ 601 room=M
+-> w
+T 481 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 62/74 MP 0/0 Hu 17 $ 601 room=U
+-> e
+T 482 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 16 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 483 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 16 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 484 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 16 $ 601 room=M
+-> w
+T 485 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 62/74 MP 0/0 Hu 16 $ 601 room=U
+-> e
+T 486 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu 15 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 487 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 15 $ 601 room=M
+-> w
+T 488 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 15 $ 601 room=U
+-> e
+T 489 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 14 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 490 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 14 $ 601 room=M
+-> w
+T 491 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 14 $ 601 room=U
+-> e
+T 492 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 13 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 493 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 13 $ 601 room=M
+-> w
+T 494 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu 13 $ 601 room=U
+-> e
+T 495 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu 12 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 496 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 12 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 497 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 12 $ 601 room=M
+-> w
+T 498 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 12 $ 601 room=U
+-> e
+T 499 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 11 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 500 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 11 $ 601 room=M
+-> w
+T 501 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 11 $ 601 room=U
+-> e
+T 502 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 10 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 503 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu 10 $ 601 room=M
+-> w
+T 504 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu 10 $ 601 room=U
+-> e
+T 505 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  9 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 506 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  9 $ 601 room=M
+-> w
+T 507 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu  9 $ 601 room=U
+-> e
+T 508 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  8 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 509 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  8 $ 601 room=M
+-> w
+T 510 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu  8 $ 601 room=U
+-> e
+T 511 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  7 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 512 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  7 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 513 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu  7 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 514 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  7 $ 601 room=M
+-> w
+T 515 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu  7 $ 601 room=U
+-> e
+T 516 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  6 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 517 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  6 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 518 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  6 $ 601 room=M
+-> w
+T 519 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 46/74 MP 0/0 Hu  6 $ 601 room=U
+-> e
+T 520 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  5 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 521 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu  5 $ 601 room=M
+-> w
+T 522 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu  5 $ 601 room=U
+-> e
+T 523 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu  4 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 524 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  4 $ 601 room=M
+-> w
+T 525 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 42/74 MP 0/0 Hu  4 $ 601 room=U
+-> e
+T 526 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  3 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 527 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  3 $ 601 room=M
+-> w
+T 528 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 40/74 MP 0/0 Hu  3 $ 601 room=U
+-> e
+T 529 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  2 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 530 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  2 $ 601 room=M
+-> w
+T 531 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 40/74 MP 0/0 Hu  2 $ 601 room=U
+-> e
+T 532 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  1 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 533 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu  1 $ 601 room=M
+-> w
+T 534 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 38/74 MP 0/0 Hu  1 $ 601 room=U
+-> e
+T 535 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 536 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=M
+-> u1
+T 537 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu  0 $ 601 room=M
+-> x
+T 538 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 66/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 539 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 540 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 541 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 542 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 60/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 543 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 544 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 545 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 546 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 56/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 547 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 548 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 549 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 550 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 551 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 552 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 553 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 554 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 555 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 556 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 557 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 558 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 559 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 560 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 561 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 46/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 562 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 563 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 564 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 565 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 566 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 567 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 568 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 569 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 570 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 571 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=M
+-> u1
+T 572 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M
+-> x
+T 573 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 574 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 575 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 576 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 577 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 578 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 579 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 580 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 581 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 582 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 583 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 584 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 585 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 586 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 587 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 588 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 589 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 590 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 591 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 592 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 40/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 593 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 594 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 595 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 596 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> i
+T 597 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=M
+-> u1
+T 598 mode=inventory           Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M
+-> x
+T 599 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 600 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 601 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 64/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 602 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 62/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 603 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 60/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 604 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 605 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 606 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 58/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 607 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 56/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 608 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 609 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 54/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 610 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 611 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 612 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 52/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 613 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 614 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 615 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 50/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 616 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 617 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 618 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 48/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 619 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 620 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 44/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 621 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 44/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 622 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 42/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 623 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 40/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 624 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 38/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 625 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 38/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 626 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 627 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 628 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 34/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 629 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 32/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 630 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 28/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 631 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 26/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 632 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 26/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 633 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 24/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 634 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 22/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 635 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 22/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 636 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 20/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 637 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 18/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 638 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 18/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 639 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 16/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 640 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 14/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 641 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 14/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 642 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 12/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 643 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 10/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 644 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 10/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 645 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 8/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 646 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 6/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 647 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 6/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 648 mode=combat_mode         Kili Runesinger(dwa) F2@( 2, 1) HP 4/74 MP 0/0 Hu  0 $ 601 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 649 mode=flee_direction_mode Kili Runesinger(dwa) F2@( 2, 1) HP 2/74 MP 0/0 Hu  0 $ 601 room=M
+-> w
+T 650 mode=stairs_up_mode      Kili Runesinger(dwa) F2@( 1, 1) HP 2/74 MP 0/0 Hu  0 $ 601 room=U
+-> e
+T 651 mode=death_screen        Kili Runesinger(dwa) F2@( 2, 1) HP 0/74 MP 0/0 Hu  0 $ 601 room=M
+
+=== run finished: turns=651 floor=2 hp=0/74 gold=601 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00461_dwarf.html

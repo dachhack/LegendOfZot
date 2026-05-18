@@ -1,0 +1,1944 @@
+T   0 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 13 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 4 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 98 $ 290 room=.
+-> l
+T   5 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 98 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 77
+-> s
+T   6 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 97 $ 290 room=.
+-> l
+T   7 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 97 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 76
+-> e
+T   8 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 290 room=M vs Stirge(L0 HP6/6)
+  A Stirge (Level 0) appears! A bat-like creature with a long proboscis, hungry for blood.
+  You seize the initiative!
+-> a
+T   9 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 290 room=M vs Stirge(L0 HP6/6)
+  You missed the evil Stirge!
+  Stirge missed Aragorn the Wanderer!
+-> a
+T  10 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 447 room=.
+-> back
+T  11 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 447 room=.
+-> l
+T  12 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 447 room=.
+-> s
+T  13 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 447 room=M vs Stirge(L0 HP6/6)
+-> a
+T  14 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 447 room=M vs Stirge(L0 HP6/6)
+-> a
+T  15 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> back
+T  16 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> i
+T  17 mode=inventory           Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> e1
+T  18 mode=inventory           Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> x
+T  19 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> l
+T  20 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=.
+-> w
+T  21 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 94 $ 455 room=.
+-> s
+T  22 mode=altar_mode          Aragorn the Wanderer(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 93 $ 455 room=A
+-> pray
+T  23 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 93 $ 455 room=.
+-> s
+T  24 mode=library_mode        Aragorn the Wanderer(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 92 $ 455 room=L
+-> r
+T  25 mode=library_read_decision_mode Aragorn the Wanderer(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 92 $ 455 room=L
+-> y
+T  26 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 92 $ 630 room=.
+-> n
+T  27 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 6) HP 22/30 MP 0/0 Hu 91 $ 630 room=.
+-> n
+T  28 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 5) HP 15/30 MP 0/0 Hu 90 $ 630 room=.
+-> n
+T  29 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 4) HP 7/30 MP 0/0 Hu 89 $ 630 room=.
+-> i
+T  30 mode=inventory           Aragorn the Wanderer(hum) F1@( 1, 4) HP 7/30 MP 0/0 Hu 89 $ 630 room=.
+-> u4
+T  31 mode=inventory           Aragorn the Wanderer(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 89 $ 630 room=.
+-> x
+T  32 mode=game_loop           Aragorn the Wanderer(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 89 $ 630 room=.
+-> e
+T  33 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 4) HP 23/30 MP 0/0 Hu 88 $ 630 room=.
+-> e
+T  34 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 4) HP 23/30 MP 0/0 Hu 87 $ 630 room=.
+-> i
+T  35 mode=inventory           Aragorn the Wanderer(hum) F1@( 3, 4) HP 23/30 MP 0/0 Hu 87 $ 630 room=.
+-> u4
+T  36 mode=inventory           Aragorn the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 87 $ 630 room=.
+-> x
+T  37 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 87 $ 630 room=.
+-> e
+T  38 mode=garden_mode         Aragorn the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 86 $ 630 room=G
+-> h
+T  39 mode=game_loop           Aragorn the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 86 $ 630 room=.
+-> n
+T  40 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 85 $ 630 room=M vs Kobold(L0 HP8/8)
+-> a
+T  41 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 85 $ 637 room=.
+-> back
+T  42 mode=game_loop           Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 85 $ 637 room=.
+-> i
+T  43 mode=inventory           Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 85 $ 637 room=.
+-> eat3
+T  44 mode=inventory           Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 91 $ 637 room=.
+-> x
+T  45 mode=game_loop           Aragorn the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 91 $ 637 room=.
+-> e
+T  46 mode=chest_mode          Aragorn the Wanderer(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 90 $ 637 room=C
+-> n
+T  47 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 89 $ 637 room=M vs Bat(L0 HP12/12)
+-> a
+T  48 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 89 $ 637 room=M vs Bat(L0 HP12/12)
+-> a
+T  49 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 89 $ 637 room=M vs Bat(L0 HP12/12)
+-> a
+T  50 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 89 $ 637 room=M vs Bat(L0 HP12/12)
+-> a
+T  51 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 89 $ 645 room=.
+-> back
+T  52 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 89 $ 645 room=.
+-> s
+T  53 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 88 $ 645 room=C
+-> s
+T  54 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 87 $ 645 room=.
+-> s
+T  55 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 86 $ 645 room=.
+-> l
+T  56 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 86 $ 645 room=.
+-> e
+T  57 mode=chest_mode          Aragorn the Wanderer(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 85 $ 645 room=C
+-> o
+T  58 mode=game_loop           Aragorn the Wanderer(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 85 $ 675 room=.
+-> w
+T  59 mode=game_loop           Aragorn the Wanderer(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 84 $ 675 room=.
+-> w
+T  60 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 83 $ 675 room=M vs Goblin(L0 HP12/12)
+-> f
+T  61 mode=flee_direction_mode Aragorn the Wanderer(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 83 $ 675 room=M
+-> n
+T  62 mode=game_loop           Aragorn the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 83 $ 675 room=.
+-> w
+T  63 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 82 $ 675 room=.
+-> n
+T  64 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 81 $ 675 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  65 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 81 $ 676 room=.
+-> back
+T  66 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 81 $ 676 room=.
+-> n
+T  67 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 676 room=.
+-> n
+T  68 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 79 $ 676 room=M vs Lichen(L0 HP10/10)
+-> a
+T  69 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 79 $ 676 room=M vs Lichen(L0 HP10/10)
+-> a
+T  70 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 79 $ 686 room=.
+-> back
+T  71 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 79 $ 686 room=.
+-> e
+T  72 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 78 $ 686 room=M vs Kobold(L0 HP8/8)
+-> a
+T  73 mode=combat_mode         Aragorn the Wanderer(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 78 $ 686 room=M vs Kobold(L0 HP8/8)
+-> a
+T  74 mode=combat_victory      Aragorn the Wanderer(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 78 $ 693 room=.
+-> back
+T  75 mode=game_loop           Aragorn the Wanderer(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 78 $ 693 room=.
+-> w
+T  76 mode=game_loop           Aragorn the Wanderer(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 77 $ 693 room=.
+-> w
+T  77 mode=game_loop           Aragorn the Wanderer(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 76 $ 693 room=.
+-> s
+T  78 mode=stairs_down_mode    Aragorn the Wanderer(hum) F1@( 2, 2) HP 28/30 MP 0/0 Hu 75 $ 693 room=D
+-> d
+T  79 mode=stairs_up_mode      Aragorn the Wanderer(hum) F2@( 1, 1) HP 28/30 MP 0/0 Hu 75 $ 693 room=U
+-> n
+T  80 mode=stairs_up_mode      Aragorn the Wanderer(hum) F2@( 1, 1) HP 28/30 MP 0/0 Hu 75 $ 693 room=U
+-> w
+T  81 mode=stairs_up_mode      Aragorn the Wanderer(hum) F2@( 1, 1) HP 28/30 MP 0/0 Hu 75 $ 693 room=U
+-> e
+T  82 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 1) HP 28/30 MP 0/0 Hu 74 $ 693 room=.
+-> l
+T  83 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 1) HP 28/30 MP 0/0 Hu 74 $ 693 room=.
+-> s
+T  84 mode=chest_mode          Aragorn the Wanderer(hum) F2@( 2, 2) HP 28/30 MP 0/0 Hu 73 $ 693 room=C
+-> s
+T  85 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 3) HP 28/30 MP 0/0 Hu 72 $ 693 room=.
+-> l
+T  86 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 3) HP 28/30 MP 0/0 Hu 72 $ 693 room=.
+-> e
+T  87 mode=chest_mode          Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu 71 $ 693 room=C
+-> o
+T  88 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu 71 $ 743 room=.
+-> i
+T  89 mode=inventory           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu 71 $ 743 room=.
+-> eat3
+T  90 mode=inventory           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu 76 $ 743 room=.
+-> eat1
+T  91 mode=inventory           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu100 $ 743 room=.
+-> x
+T  92 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu100 $ 743 room=.
+-> l
+T  93 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu100 $ 743 room=.
+-> n
+T  94 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 2) HP 29/30 MP 0/0 Hu 99 $ 743 room=.
+-> l
+T  95 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 2) HP 29/30 MP 0/0 Hu 99 $ 743 room=.
+-> n
+T  96 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 743 room=.
+-> i
+T  97 mode=inventory           Aragorn the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 743 room=.
+-> eat4
+T  98 mode=inventory           Aragorn the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu100 $ 743 room=.
+-> x
+T  99 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu100 $ 743 room=.
+-> e
+T 100 mode=chest_mode          Aragorn the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu 99 $ 743 room=C
+-> o
+T 101 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu 99 $ 783 room=.
+-> i
+T 102 mode=inventory           Aragorn the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu 99 $ 783 room=.
+-> eat3
+T 103 mode=inventory           Aragorn the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu100 $ 783 room=.
+-> x
+T 104 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu100 $ 783 room=.
+-> s
+T 105 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 99 $ 783 room=.
+-> e
+T 106 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 98 $ 783 room=.
+-> e
+T 107 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 783 room=V
+-> b12
+T 108 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 773 room=V
+-> b5
+T 109 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 743 room=V
+-> b5
+T 110 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 713 room=V
+-> b5
+T 111 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 683 room=V
+-> b8
+T 112 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 533 room=V
+-> b4
+T 113 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 458 room=V
+-> b6
+T 114 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 308 room=V
+-> b3
+T 115 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 228 room=V
+-> id6
+T 116 mode=vendor_shop         Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 178 room=V
+-> x
+T 117 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 178 room=V
+-> i
+T 118 mode=inventory           Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 178 room=V
+-> e3
+T 119 mode=inventory           Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 178 room=V
+-> x
+T 120 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 97 $ 178 room=V
+-> e
+T 121 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 122 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 96 $ 178 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 123 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 96 $ 178 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 124 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 96 $ 178 room=M vs Giant Spider(L1 HP40/40)
+-> f
+T 125 mode=flee_direction_mode Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 96 $ 178 room=M
+-> e
+T 126 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 2) HP 18/30 MP 0/0 Hu 96 $ 178 room=.
+-> i
+T 127 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 2) HP 18/30 MP 0/0 Hu 96 $ 178 room=.
+-> u6
+T 128 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> u5
+T 129 mode=upgrade_scroll_mode Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> 1
+T 130 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> x
+T 131 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> l
+T 132 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> n
+T 133 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 2) HP 30/30 MP 0/0 Hu 96 $ 178 room=.
+-> s
+T 134 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 8, 3) HP 30/30 MP 0/0 Hu 95 $ 178 room=M vs Kobold(L1 HP20/20)
+-> f
+T 135 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 8, 3) HP 28/30 MP 0/0 Hu 95 $ 178 room=M vs Kobold(L1 HP20/20)
+-> a
+T 136 mode=combat_victory      Aragorn the Wanderer(hum) F2@( 8, 3) HP 27/30 MP 0/0 Hu 95 $ 192 room=.
+-> back
+T 137 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 3) HP 27/30 MP 0/0 Hu 95 $ 192 room=.
+-> l
+T 138 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 3) HP 27/30 MP 0/0 Hu 95 $ 192 room=.
+-> e
+T 139 mode=dungeon_mode        Aragorn the Wanderer(hum) F2@( 9, 3) HP 27/30 MP 0/0 Hu 94 $ 192 room=N
+-> u
+T 140 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 3) HP 27/30 MP 0/0 Hu 94 $ 192 room=N
+-> l
+T 141 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 3) HP 27/30 MP 0/0 Hu 94 $ 192 room=N
+-> s
+T 142 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 4) HP 28/30 MP 0/0 Hu 93 $ 192 room=.
+-> n
+T 143 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 3) HP 28/30 MP 0/0 Hu 92 $ 192 room=N
+-> s
+T 144 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 4) HP 29/30 MP 0/0 Hu 91 $ 192 room=.
+-> n
+T 145 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 3) HP 29/30 MP 0/0 Hu 90 $ 192 room=N
+-> w
+T 146 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 3) HP 30/30 MP 0/0 Hu 89 $ 192 room=.
+-> w
+T 147 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 3) HP 30/30 MP 0/0 Hu 88 $ 192 room=.
+-> l
+T 148 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 3) HP 30/30 MP 0/0 Hu 88 $ 192 room=.
+-> n
+T 149 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 150 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 151 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 152 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> i
+T 153 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M
+-> u2
+T 154 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M
+-> x
+T 155 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 156 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 157 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 158 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> i
+T 159 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M
+-> u2
+T 160 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M
+-> x
+T 161 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 162 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 163 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 164 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 18/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 165 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> i
+T 166 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 12/30 MP 0/0 Hu 87 $ 192 room=M
+-> u2
+T 167 mode=inventory           Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M
+-> x
+T 168 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 169 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 192 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 170 mode=combat_victory      Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 208 room=.
+-> back
+T 171 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 2) HP 24/30 MP 0/0 Hu 87 $ 208 room=.
+-> w
+T 172 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 2) HP 24/30 MP 0/0 Hu 86 $ 208 room=V
+-> w
+T 173 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 2) HP 25/30 MP 0/0 Hu 85 $ 208 room=.
+-> i
+T 174 mode=inventory           Aragorn the Wanderer(hum) F2@( 5, 2) HP 25/30 MP 0/0 Hu 85 $ 208 room=.
+-> u6
+T 175 mode=inventory           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 85 $ 208 room=.
+-> x
+T 176 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 85 $ 208 room=.
+-> i
+T 177 mode=inventory           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 85 $ 208 room=.
+-> eat3
+T 178 mode=inventory           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 90 $ 208 room=.
+-> x
+T 179 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 90 $ 208 room=.
+-> w
+T 180 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 89 $ 208 room=.
+-> w
+T 181 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 88 $ 208 room=.
+-> w
+T 182 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 87 $ 208 room=C
+-> w
+T 183 mode=altar_mode          Aragorn the Wanderer(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 208 room=A
+-> pray
+T 184 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 208 room=.
+-> n
+T 185 mode=stairs_up_mode      Aragorn the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 208 room=U
+-> e
+T 186 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 208 room=.
+-> e
+T 187 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 83 $ 208 room=.
+-> s
+T 188 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 82 $ 208 room=.
+-> e
+T 189 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 81 $ 208 room=.
+-> e
+T 190 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 2) HP 30/30 MP 0/0 Hu 80 $ 208 room=.
+-> e
+T 191 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 79 $ 208 room=V
+-> e
+T 192 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 2) HP 30/30 MP 0/0 Hu 78 $ 208 room=.
+-> s
+T 193 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 3) HP 30/30 MP 0/0 Hu 77 $ 208 room=.
+-> s
+T 194 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 76 $ 208 room=.
+-> l
+T 195 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 76 $ 208 room=.
+-> s
+T 196 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 75 $ 208 room=.
+-> l
+T 197 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 75 $ 208 room=.
+-> s
+T 198 mode=stairs_down_mode    Aragorn the Wanderer(hum) F2@( 7, 6) HP 30/30 MP 0/0 Hu 74 $ 208 room=D
+-> s
+T 199 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 7) HP 30/30 MP 0/0 Hu 73 $ 208 room=.
+-> l
+T 200 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 7) HP 30/30 MP 0/0 Hu 73 $ 208 room=.
+-> s
+T 201 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 8) HP 30/30 MP 0/0 Hu 72 $ 208 room=.
+-> l
+T 202 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 8) HP 30/30 MP 0/0 Hu 72 $ 208 room=.
+-> s
+T 203 mode=dungeon_mode        Aragorn the Wanderer(hum) F2@( 7, 9) HP 30/30 MP 0/0 Hu 71 $ 208 room=N
+-> u
+T 204 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 9) HP 30/30 MP 0/0 Hu 71 $ 208 room=N
+-> l
+T 205 mode=game_loop           Aragorn the Wanderer(hum) F2@( 7, 9) HP 30/30 MP 0/0 Hu 71 $ 208 room=N
+-> e
+T 206 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 9) HP 30/30 MP 0/0 Hu 70 $ 208 room=.
+-> l
+T 207 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 9) HP 30/30 MP 0/0 Hu 70 $ 208 room=.
+-> e
+T 208 mode=shrine_mode         Aragorn the Wanderer(hum) F2@( 9, 9) HP 30/30 MP 0/0 Hu 69 $ 208 room=F
+-> p
+T 209 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 9) HP 30/32 MP 0/0 Hu 69 $ 208 room=.
+-> l
+T 210 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9, 9) HP 30/32 MP 0/0 Hu 69 $ 208 room=.
+-> e
+T 211 mode=altar_mode          Aragorn the Wanderer(hum) F2@(10, 9) HP 30/32 MP 0/0 Hu 68 $ 208 room=A
+-> pray
+T 212 mode=game_loop           Aragorn the Wanderer(hum) F2@(10, 9) HP 30/32 MP 0/0 Hu 68 $ 244 room=.
+-> l
+T 213 mode=game_loop           Aragorn the Wanderer(hum) F2@(10, 9) HP 30/32 MP 0/0 Hu 68 $ 244 room=.
+-> s
+T 214 mode=combat_mode         Aragorn the Wanderer(hum) F2@(10,10) HP 30/32 MP 0/0 Hu 67 $ 244 room=M vs Harpy(L1 HP28/28)
+-> a
+T 215 mode=combat_mode         Aragorn the Wanderer(hum) F2@(10,10) HP 29/32 MP 0/0 Hu 67 $ 244 room=M vs Harpy(L1 HP28/28)
+-> a
+T 216 mode=combat_mode         Aragorn the Wanderer(hum) F2@(10,10) HP 29/32 MP 0/0 Hu 67 $ 244 room=M vs Harpy(L1 HP28/28)
+-> a
+T 217 mode=combat_mode         Aragorn the Wanderer(hum) F2@(10,10) HP 29/32 MP 0/0 Hu 67 $ 244 room=M vs Harpy(L1 HP4/28)
+-> a
+T 218 mode=combat_victory      Aragorn the Wanderer(hum) F2@(10,10) HP 29/42 MP 0/0 Hu 67 $ 350 room=.
+-> back
+T 219 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,10) HP 29/42 MP 0/0 Hu 67 $ 350 room=.
+-> l
+T 220 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,10) HP 29/42 MP 0/0 Hu 67 $ 350 room=.
+-> s
+T 221 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,11) HP 29/42 MP 0/0 Hu 66 $ 350 room=.
+-> l
+T 222 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,11) HP 29/42 MP 0/0 Hu 66 $ 350 room=.
+-> s
+T 223 mode=chest_mode          Aragorn the Wanderer(hum) F2@(10,12) HP 30/42 MP 0/0 Hu 65 $ 350 room=C
+-> o
+T 224 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,12) HP 30/42 MP 0/0 Hu 65 $ 420 room=.
+-> l
+T 225 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,12) HP 30/42 MP 0/0 Hu 65 $ 420 room=.
+-> i
+T 226 mode=inventory           Aragorn the Wanderer(hum) F2@(10,12) HP 30/42 MP 0/0 Hu 65 $ 420 room=.
+-> u6
+T 227 mode=inventory           Aragorn the Wanderer(hum) F2@(10,12) HP 42/42 MP 0/0 Hu 65 $ 420 room=.
+-> x
+T 228 mode=game_loop           Aragorn the Wanderer(hum) F2@(10,12) HP 42/42 MP 0/0 Hu 65 $ 420 room=.
+-> w
+T 229 mode=garden_mode         Aragorn the Wanderer(hum) F2@( 9,12) HP 42/42 MP 0/0 Hu 64 $ 420 room=G
+-> h
+T 230 mode=game_loop           Aragorn the Wanderer(hum) F2@( 9,12) HP 42/42 MP 0/0 Hu 64 $ 420 room=.
+-> w
+T 231 mode=library_mode        Aragorn the Wanderer(hum) F2@( 8,12) HP 42/42 MP 0/0 Hu 63 $ 420 room=L
+-> r
+T 232 mode=library_read_decision_mode Aragorn the Wanderer(hum) F2@( 8,12) HP 42/42 MP 0/0 Hu 63 $ 420 room=L
+-> y
+T 233 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8,12) HP 42/42 MP 0/0 Hu 63 $ 470 room=.
+-> n
+T 234 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8,11) HP 42/42 MP 0/0 Hu 62 $ 470 room=.
+-> n
+T 235 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8,10) HP 42/42 MP 0/0 Hu 61 $ 470 room=.
+-> n
+T 236 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 9) HP 42/42 MP 0/0 Hu 60 $ 470 room=.
+-> n
+T 237 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 8) HP 42/42 MP 0/0 Hu 59 $ 470 room=.
+-> n
+T 238 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 7) HP 42/42 MP 0/0 Hu 58 $ 470 room=.
+-> n
+T 239 mode=pool_mode           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 57 $ 470 room=P
+-> dr
+T 240 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 57 $ 470 room=.
+-> i
+T 241 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 57 $ 470 room=.
+-> eat3
+T 242 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 63 $ 470 room=.
+-> eat1
+T 243 mode=inventory           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu100 $ 470 room=.
+-> x
+T 244 mode=game_loop           Aragorn the Wanderer(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu100 $ 470 room=.
+-> w
+T 245 mode=stairs_down_mode    Aragorn the Wanderer(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu 99 $ 470 room=D
+-> w
+T 246 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 6) HP 42/42 MP 0/0 Hu 98 $ 470 room=.
+-> w
+T 247 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 6) HP 42/42 MP 0/0 Hu 97 $ 470 room=.
+-> w
+T 248 mode=pool_mode           Aragorn the Wanderer(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 96 $ 470 room=P
+-> dr
+T 249 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 6) HP 42/42 MP 0/0 Hu 96 $ 470 room=.
+-> s
+T 250 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 7) HP 42/42 MP 0/0 Hu 95 $ 470 room=.
+-> w
+T 251 mode=altar_mode          Aragorn the Wanderer(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu 94 $ 470 room=A
+-> pray
+T 252 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 7) HP 42/42 MP 0/0 Hu100 $ 470 room=.
+-> n
+T 253 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 6) HP 42/42 MP 0/0 Hu 99 $ 470 room=.
+-> n
+T 254 mode=pool_mode           Aragorn the Wanderer(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 98 $ 470 room=P
+-> dr
+T 255 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 5) HP 42/42 MP 0/0 Hu 98 $ 470 room=.
+-> w
+T 256 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 5) HP 42/42 MP 0/0 Hu 97 $ 470 room=.
+-> w
+T 257 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 96 $ 470 room=.
+-> l
+T 258 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 5) HP 42/42 MP 0/0 Hu 96 $ 470 room=.
+-> s
+T 259 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 6) HP 42/42 MP 0/0 Hu 95 $ 470 room=.
+-> s
+T 260 mode=library_mode        Aragorn the Wanderer(hum) F2@( 1, 7) HP 42/42 MP 0/0 Hu 94 $ 470 room=L
+-> r
+T 261 mode=library_read_decision_mode Aragorn the Wanderer(hum) F2@( 1, 7) HP 42/42 MP 0/0 Hu 94 $ 470 room=L
+-> y
+T 262 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 7) HP 42/42 MP 0/0 Hu 94 $ 470 room=.
+-> n
+T 263 mode=game_loop           Aragorn the Wanderer(hum) F2@( 1, 6) HP 42/42 MP 0/0 Hu 93 $ 470 room=.
+-> e
+T 264 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 2, 6) HP 42/42 MP 0/0 Hu 92 $ 470 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 265 mode=combat_mode         Aragorn the Wanderer(hum) F2@( 2, 6) HP 42/42 MP 0/0 Hu 92 $ 470 room=M vs Giant Spider(L1 HP17/40)
+-> a
+T 266 mode=combat_victory      Aragorn the Wanderer(hum) F2@( 2, 6) HP 36/42 MP 0/0 Hu 92 $ 480 room=.
+-> back
+T 267 mode=game_loop           Aragorn the Wanderer(hum) F2@( 2, 6) HP 36/42 MP 0/0 Hu 92 $ 480 room=.
+-> e
+T 268 mode=game_loop           Aragorn the Wanderer(hum) F2@( 3, 6) HP 36/42 MP 0/0 Hu 91 $ 480 room=.
+-> e
+T 269 mode=game_loop           Aragorn the Wanderer(hum) F2@( 4, 6) HP 37/42 MP 0/0 Hu 90 $ 480 room=.
+-> e
+T 270 mode=game_loop           Aragorn the Wanderer(hum) F2@( 5, 6) HP 37/42 MP 0/0 Hu 89 $ 480 room=.
+-> e
+T 271 mode=game_loop           Aragorn the Wanderer(hum) F2@( 6, 6) HP 38/42 MP 0/0 Hu 88 $ 480 room=.
+-> e
+T 272 mode=stairs_down_mode    Aragorn the Wanderer(hum) F2@( 7, 6) HP 38/42 MP 0/0 Hu 87 $ 480 room=D
+-> d
+T 273 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> n
+T 274 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> n
+T 275 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> w
+T 276 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> w
+T 277 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> w
+T 278 mode=stairs_up_mode      Aragorn the Wanderer(hum) F3@( 1, 1) HP 38/42 MP 0/0 Hu 87 $ 480 room=U
+-> e
+T 279 mode=game_loop           Aragorn the Wanderer(hum) F3@( 2, 1) HP 39/42 MP 0/0 Hu 86 $ 480 room=.
+-> l
+T 280 mode=game_loop           Aragorn the Wanderer(hum) F3@( 2, 1) HP 39/42 MP 0/0 Hu 86 $ 480 room=.
+-> e
+T 281 mode=pool_mode           Aragorn the Wanderer(hum) F3@( 3, 1) HP 39/42 MP 0/0 Hu 85 $ 480 room=P
+-> dr
+T 282 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 1) HP 42/42 MP 0/0 Hu 85 $ 480 room=.
+-> l
+T 283 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 1) HP 42/42 MP 0/0 Hu 85 $ 480 room=.
+-> s
+T 284 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 2) HP 42/42 MP 0/0 Hu 84 $ 480 room=.
+-> l
+T 285 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 2) HP 42/42 MP 0/0 Hu 84 $ 480 room=.
+-> s
+T 286 mode=garden_mode         Aragorn the Wanderer(hum) F3@( 3, 3) HP 42/42 MP 0/0 Hu 83 $ 480 room=G
+-> h
+T 287 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 3) HP 42/42 MP 0/0 Hu 83 $ 480 room=.
+-> l
+T 288 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 3) HP 42/42 MP 0/0 Hu 83 $ 480 room=.
+-> s
+T 289 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 82 $ 480 room=.
+-> i
+T 290 mode=inventory           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 82 $ 480 room=.
+-> eat2
+T 291 mode=inventory           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 87 $ 480 room=.
+-> x
+T 292 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 87 $ 480 room=.
+-> l
+T 293 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 87 $ 480 room=.
+-> s
+T 294 mode=dungeon_mode        Aragorn the Wanderer(hum) F3@( 3, 5) HP 42/42 MP 0/0 Hu 86 $ 480 room=N
+-> u
+T 295 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 5) HP 42/42 MP 0/0 Hu 86 $ 480 room=N
+-> l
+T 296 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 5) HP 42/42 MP 0/0 Hu 86 $ 480 room=N
+-> w
+T 297 mode=game_loop           Aragorn the Wanderer(hum) F3@( 2, 5) HP 42/42 MP 0/0 Hu 85 $ 480 room=.
+-> w
+T 298 mode=chest_mode          Aragorn the Wanderer(hum) F3@( 1, 5) HP 42/42 MP 0/0 Hu 84 $ 480 room=C
+-> o
+T 299 mode=game_loop           Aragorn the Wanderer(hum) F3@( 1, 5) HP 42/42 MP 0/0 Hu 84 $ 480 room=.
+-> l
+T 300 mode=game_loop           Aragorn the Wanderer(hum) F3@( 1, 5) HP 42/42 MP 0/0 Hu 84 $ 480 room=.
+-> n
+T 301 mode=game_loop           Aragorn the Wanderer(hum) F3@( 1, 4) HP 42/42 MP 0/0 Hu 83 $ 480 room=.
+-> e
+T 302 mode=game_loop           Aragorn the Wanderer(hum) F3@( 2, 4) HP 42/42 MP 0/0 Hu 82 $ 480 room=.
+-> e
+T 303 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 81 $ 480 room=.
+-> e
+T 304 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 4) HP 42/42 MP 0/0 Hu 80 $ 480 room=.
+-> e
+T 305 mode=library_mode        Aragorn the Wanderer(hum) F3@( 5, 4) HP 42/42 MP 0/0 Hu 79 $ 480 room=L
+-> r
+T 306 mode=library_read_decision_mode Aragorn the Wanderer(hum) F3@( 5, 4) HP 42/42 MP 0/0 Hu 79 $ 480 room=L
+-> y
+T 307 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 4) HP 42/42 MP 0/0 Hu 79 $ 480 room=.
+-> s
+T 308 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 4) HP 42/42 MP 0/0 Hu 78 $ 480 room=.
+-> s
+T 309 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 4) HP 42/42 MP 0/0 Hu 77 $ 480 room=.
+-> s
+T 310 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 5) HP 42/42 MP 0/0 Hu 76 $ 480 room=.
+-> l
+T 311 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 5) HP 42/42 MP 0/0 Hu 76 $ 480 room=.
+-> w
+T 312 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 5) HP 42/42 MP 0/0 Hu 75 $ 480 room=.
+-> e
+T 313 mode=dungeon_mode        Aragorn the Wanderer(hum) F3@( 7, 5) HP 42/42 MP 0/0 Hu 74 $ 480 room=N
+-> u
+T 314 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 5) HP 42/42 MP 0/0 Hu 74 $ 480 room=N
+-> n
+T 315 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 4) HP 42/42 MP 0/0 Hu 73 $ 480 room=.
+-> w
+T 316 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 4) HP 42/42 MP 0/0 Hu 72 $ 480 room=.
+-> w
+T 317 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 4) HP 42/42 MP 0/0 Hu 71 $ 480 room=.
+-> w
+T 318 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 4) HP 42/42 MP 0/0 Hu 70 $ 480 room=.
+-> n
+T 319 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 3) HP 42/42 MP 0/0 Hu 69 $ 480 room=.
+-> n
+T 320 mode=altar_mode          Aragorn the Wanderer(hum) F3@( 4, 2) HP 42/42 MP 0/0 Hu 68 $ 480 room=A
+-> pray
+T 321 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 2) HP 42/42 MP 0/0 Hu 68 $ 480 room=.
+-> n
+T 322 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 1) HP 42/42 MP 0/0 Hu 67 $ 480 room=.
+-> w
+T 323 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 1) HP 42/42 MP 0/0 Hu 66 $ 480 room=.
+-> s
+T 324 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 2) HP 42/42 MP 0/0 Hu 65 $ 480 room=.
+-> s
+T 325 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 3) HP 42/42 MP 0/0 Hu 64 $ 480 room=.
+-> s
+T 326 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 42/42 MP 0/0 Hu 63 $ 480 room=.
+-> s
+T 327 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 5) HP 42/42 MP 0/0 Hu 62 $ 480 room=N
+-> e
+T 328 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 5) HP 42/42 MP 0/0 Hu 61 $ 480 room=.
+-> l
+T 329 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 5) HP 42/42 MP 0/0 Hu 61 $ 480 room=.
+-> e
+T 330 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 5) HP 42/42 MP 0/0 Hu 60 $ 480 room=.
+-> e
+T 331 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 5) HP 42/42 MP 0/0 Hu 59 $ 480 room=.
+-> e
+T 332 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 5) HP 42/42 MP 0/0 Hu 58 $ 480 room=N
+-> e
+T 333 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 5) HP 42/42 MP 0/0 Hu 57 $ 480 room=.
+-> l
+T 334 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 5) HP 42/42 MP 0/0 Hu 57 $ 480 room=.
+-> e
+T 335 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 5) HP 42/42 MP 0/0 Hu 56 $ 480 room=.
+-> l
+T 336 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 5) HP 42/42 MP 0/0 Hu 56 $ 480 room=.
+-> s
+T 337 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 6) HP 42/42 MP 0/0 Hu 55 $ 480 room=.
+-> l
+T 338 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 6) HP 42/42 MP 0/0 Hu 55 $ 480 room=.
+-> s
+T 339 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 7) HP 42/42 MP 0/0 Hu 54 $ 480 room=.
+-> l
+T 340 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 7) HP 42/42 MP 0/0 Hu 54 $ 480 room=.
+-> s
+T 341 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 8) HP 42/42 MP 0/0 Hu 53 $ 480 room=.
+-> l
+T 342 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 8) HP 42/42 MP 0/0 Hu 53 $ 480 room=.
+-> s
+T 343 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 9) HP 42/42 MP 0/0 Hu 52 $ 480 room=.
+-> l
+T 344 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 9) HP 42/42 MP 0/0 Hu 52 $ 480 room=.
+-> s
+T 345 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9,10) HP 42/42 MP 0/0 Hu 51 $ 480 room=.
+-> l
+T 346 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9,10) HP 42/42 MP 0/0 Hu 51 $ 480 room=.
+-> w
+T 347 mode=altar_mode          Aragorn the Wanderer(hum) F3@( 8,10) HP 42/42 MP 0/0 Hu 50 $ 480 room=A
+-> pray
+T 348 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,10) HP 42/42 MP 0/0 Hu 50 $ 523 room=.
+-> s
+T 349 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,11) HP 42/42 MP 0/0 Hu 49 $ 523 room=.
+-> i
+T 350 mode=inventory           Aragorn the Wanderer(hum) F3@( 8,11) HP 42/42 MP 0/0 Hu 49 $ 523 room=.
+-> eat1
+T 351 mode=inventory           Aragorn the Wanderer(hum) F3@( 8,11) HP 42/42 MP 0/0 Hu 99 $ 523 room=.
+-> x
+T 352 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,11) HP 42/42 MP 0/0 Hu 99 $ 523 room=.
+-> l
+T 353 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,11) HP 42/42 MP 0/0 Hu 99 $ 523 room=.
+-> s
+T 354 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 523 room=V
+-> b13
+T 355 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 513 room=V
+-> b4
+T 356 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 433 room=V
+-> b6
+T 357 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 403 room=V
+-> b6
+T 358 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 373 room=V
+-> b6
+T 359 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 343 room=V
+-> b6
+T 360 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 313 room=V
+-> b8
+T 361 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 308 room=V
+-> b8
+T 362 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 303 room=V
+-> b8
+T 363 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 298 room=V
+-> b8
+T 364 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 293 room=V
+-> b4
+T 365 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 233 room=V
+-> b4
+T 366 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 173 room=V
+-> id12
+T 367 mode=vendor_shop         Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 73 room=V
+-> x
+T 368 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 73 room=V
+-> l
+T 369 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,12) HP 42/42 MP 0/0 Hu 98 $ 73 room=V
+-> e
+T 370 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9,12) HP 42/42 MP 0/0 Hu 97 $ 73 room=.
+-> n
+T 371 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 9,11) HP 42/42 MP 0/0 Hu 96 $ 73 room=M vs Harpy(L2 HP28/28)
+-> a
+T 372 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 9,11) HP 42/42 MP 0/0 Hu 96 $ 73 room=M vs Harpy(L2 HP4/28)
+-> a
+T 373 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 9,11) HP 41/42 MP 0/0 Hu 96 $ 73 room=M vs Harpy(L2 HP4/28)
+-> a
+T 374 mode=combat_victory      Aragorn the Wanderer(hum) F3@( 9,11) HP 41/42 MP 0/0 Hu 96 $ 194 room=.
+-> back
+T 375 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9,11) HP 41/42 MP 0/0 Hu 96 $ 194 room=.
+-> e
+T 376 mode=game_loop           Aragorn the Wanderer(hum) F3@(10,11) HP 41/42 MP 0/0 Hu 95 $ 194 room=.
+-> e
+T 377 mode=game_loop           Aragorn the Wanderer(hum) F3@(11,11) HP 42/42 MP 0/0 Hu 94 $ 194 room=.
+-> e
+T 378 mode=chest_mode          Aragorn the Wanderer(hum) F3@(12,11) HP 42/42 MP 0/0 Hu 93 $ 194 room=C
+-> n
+T 379 mode=game_loop           Aragorn the Wanderer(hum) F3@(12,10) HP 42/42 MP 0/0 Hu 92 $ 194 room=.
+-> n
+T 380 mode=pool_mode           Aragorn the Wanderer(hum) F3@(12, 9) HP 42/42 MP 0/0 Hu 91 $ 194 room=P
+-> dr
+T 381 mode=game_loop           Aragorn the Wanderer(hum) F3@(12, 9) HP 42/42 MP 0/0 Hu 91 $ 194 room=.
+-> n
+T 382 mode=altar_mode          Aragorn the Wanderer(hum) F3@(12, 8) HP 42/42 MP 0/0 Hu 90 $ 194 room=A
+-> pray
+T 383 mode=game_loop           Aragorn the Wanderer(hum) F3@(12, 8) HP 42/42 MP 0/0 Hu100 $ 394 room=.
+-> w
+T 384 mode=game_loop           Aragorn the Wanderer(hum) F3@(11, 8) HP 42/42 MP 0/0 Hu 99 $ 394 room=.
+-> n
+T 385 mode=garden_mode         Aragorn the Wanderer(hum) F3@(11, 7) HP 42/42 MP 0/0 Hu 98 $ 394 room=G
+-> h
+T 386 mode=game_loop           Aragorn the Wanderer(hum) F3@(11, 7) HP 42/42 MP 0/0 Hu 98 $ 394 room=.
+-> w
+T 387 mode=combat_mode         Aragorn the Wanderer(hum) F3@(10, 7) HP 42/42 MP 0/0 Hu 97 $ 394 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 388 mode=combat_mode         Aragorn the Wanderer(hum) F3@(10, 7) HP 41/42 MP 0/0 Hu 97 $ 394 room=M vs Gnoll(L2 HP21/45)
+-> a
+T 389 mode=combat_mode         Aragorn the Wanderer(hum) F3@(10, 7) HP 40/42 MP 0/0 Hu 97 $ 394 room=M vs Gnoll(L2 HP21/45)
+-> a
+T 390 mode=combat_victory      Aragorn the Wanderer(hum) F3@(10, 7) HP 39/42 MP 0/0 Hu 97 $ 409 room=.
+-> back
+T 391 mode=game_loop           Aragorn the Wanderer(hum) F3@(10, 7) HP 39/42 MP 0/0 Hu 97 $ 409 room=.
+-> s
+T 392 mode=combat_mode         Aragorn the Wanderer(hum) F3@(10, 8) HP 39/42 MP 0/0 Hu 96 $ 409 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T 393 mode=combat_victory      Aragorn the Wanderer(hum) F3@(10, 8) HP 38/42 MP 0/0 Hu 96 $ 430 room=.
+-> back
+T 394 mode=game_loop           Aragorn the Wanderer(hum) F3@(10, 8) HP 38/42 MP 0/0 Hu 96 $ 430 room=.
+-> w
+T 395 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 8) HP 37/42 MP 0/0 Hu 95 $ 430 room=.
+-> n
+T 396 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 7) HP 35/42 MP 0/0 Hu 94 $ 430 room=.
+-> n
+T 397 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 6) HP 36/42 MP 0/0 Hu 93 $ 430 room=.
+-> n
+T 398 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 5) HP 36/42 MP 0/0 Hu 92 $ 430 room=.
+-> w
+T 399 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 5) HP 37/42 MP 0/0 Hu 91 $ 430 room=.
+-> w
+T 400 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 5) HP 37/42 MP 0/0 Hu 90 $ 430 room=N
+-> w
+T 401 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 5) HP 38/42 MP 0/0 Hu 89 $ 430 room=.
+-> w
+T 402 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 5) HP 38/42 MP 0/0 Hu 88 $ 430 room=.
+-> w
+T 403 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 5) HP 39/42 MP 0/0 Hu 87 $ 430 room=.
+-> w
+T 404 mode=dungeon_mode        Aragorn the Wanderer(hum) F3@( 3, 5) HP 39/42 MP 0/0 Hu 86 $ 430 room=N
+-> u
+T 405 mode=dungeon_unlocked_mode Aragorn the Wanderer(hum) F3@( 3, 5) HP 39/42 MP 0/0 Hu 86 $ 430 room=N
+-> r
+T 406 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 5) HP 39/42 MP 0/0 Hu 86 $ 430 room=N
+-> n
+T 407 mode=game_loop           Aragorn the Wanderer(hum) F3@( 3, 4) HP 40/42 MP 0/0 Hu 85 $ 430 room=.
+-> e
+T 408 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4, 4) HP 40/42 MP 0/0 Hu 84 $ 430 room=.
+-> e
+T 409 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5, 4) HP 40/42 MP 0/0 Hu 83 $ 430 room=.
+-> e
+T 410 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6, 4) HP 40/42 MP 0/0 Hu 82 $ 430 room=.
+-> e
+T 411 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 4) HP 41/42 MP 0/0 Hu 81 $ 430 room=.
+-> e
+T 412 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 4) HP 41/42 MP 0/0 Hu 80 $ 430 room=.
+-> n
+T 413 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 3) HP 41/42 MP 0/0 Hu 79 $ 430 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 414 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 3) HP 41/42 MP 0/0 Hu 79 $ 430 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 415 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 3) HP 40/42 MP 0/0 Hu 79 $ 430 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 416 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 3) HP 40/42 MP 0/0 Hu 79 $ 430 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 417 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 3) HP 39/42 MP 0/0 Hu 79 $ 430 room=M vs Gnoll(L2 HP9/32)
+-> a
+T 418 mode=combat_victory      Aragorn the Wanderer(hum) F3@( 8, 3) HP 38/52 MP 0/0 Hu 79 $ 442 room=.
+-> back
+T 419 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 3) HP 38/52 MP 0/0 Hu 79 $ 442 room=.
+-> n
+T 420 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 2) HP 38/52 MP 0/0 Hu 78 $ 442 room=.
+-> e
+T 421 mode=chest_mode          Aragorn the Wanderer(hum) F3@( 9, 2) HP 39/52 MP 0/0 Hu 77 $ 442 room=C
+-> s
+T 422 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 3) HP 39/52 MP 0/0 Hu 76 $ 442 room=.
+-> l
+T 423 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 3) HP 39/52 MP 0/0 Hu 76 $ 442 room=.
+-> s
+T 424 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 4) HP 39/52 MP 0/0 Hu 75 $ 442 room=.
+-> s
+T 425 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 5) HP 39/52 MP 0/0 Hu 74 $ 442 room=.
+-> s
+T 426 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 6) HP 40/52 MP 0/0 Hu 73 $ 442 room=.
+-> w
+T 427 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 6) HP 40/52 MP 0/0 Hu 72 $ 442 room=.
+-> i
+T 428 mode=inventory           Aragorn the Wanderer(hum) F3@( 8, 6) HP 40/52 MP 0/0 Hu 72 $ 442 room=.
+-> u6
+T 429 mode=inventory           Aragorn the Wanderer(hum) F3@( 8, 6) HP 52/52 MP 0/0 Hu 72 $ 442 room=.
+-> x
+T 430 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 6) HP 52/52 MP 0/0 Hu 72 $ 442 room=.
+-> s
+T 431 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 7) HP 52/52 MP 0/0 Hu 71 $ 442 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 432 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 8, 7) HP 52/52 MP 0/0 Hu 71 $ 442 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 433 mode=combat_victory      Aragorn the Wanderer(hum) F3@( 8, 7) HP 52/52 MP 0/0 Hu 71 $ 451 room=.
+-> back
+T 434 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 7) HP 52/52 MP 0/0 Hu 71 $ 451 room=.
+-> s
+T 435 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 8) HP 52/52 MP 0/0 Hu 70 $ 451 room=.
+-> s
+T 436 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu 69 $ 451 room=.
+-> i
+T 437 mode=inventory           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu 69 $ 451 room=.
+-> eat2
+T 438 mode=inventory           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu 76 $ 451 room=.
+-> eat1
+T 439 mode=inventory           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu100 $ 451 room=.
+-> x
+T 440 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu100 $ 451 room=.
+-> s
+T 441 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,10) HP 52/52 MP 0/0 Hu 99 $ 451 room=.
+-> w
+T 442 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7,10) HP 52/52 MP 0/0 Hu 98 $ 451 room=.
+-> s
+T 443 mode=combat_mode         Aragorn the Wanderer(hum) F3@( 7,11) HP 52/52 MP 0/0 Hu 97 $ 451 room=M vs Lichen(L2 HP10/10)
+-> a
+T 444 mode=combat_victory      Aragorn the Wanderer(hum) F3@( 7,11) HP 51/52 MP 0/0 Hu 97 $ 478 room=.
+-> back
+T 445 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7,11) HP 51/52 MP 0/0 Hu 97 $ 478 room=.
+-> e
+T 446 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,11) HP 51/52 MP 0/0 Hu 96 $ 478 room=.
+-> s
+T 447 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8,12) HP 52/52 MP 0/0 Hu 95 $ 478 room=V
+-> w
+T 448 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7,12) HP 52/52 MP 0/0 Hu 94 $ 478 room=.
+-> w
+T 449 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 93 $ 478 room=.
+-> l
+T 450 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 93 $ 478 room=.
+-> w
+T 451 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 92 $ 478 room=.
+-> i
+T 452 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 92 $ 478 room=.
+-> eat2
+T 453 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> x
+T 454 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> l
+T 455 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> s
+T 456 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 97 $ 478 room=.
+-> l
+T 457 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 97 $ 478 room=.
+-> w
+T 458 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 96 $ 478 room=.
+-> e
+T 459 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 95 $ 478 room=.
+-> e
+T 460 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 94 $ 478 room=.
+-> n
+T 461 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 93 $ 478 room=.
+-> w
+T 462 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 92 $ 478 room=.
+-> s
+T 463 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 91 $ 478 room=.
+-> w
+T 464 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 90 $ 478 room=.
+-> e
+T 465 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 89 $ 478 room=.
+-> e
+T 466 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 88 $ 478 room=.
+-> n
+T 467 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 87 $ 478 room=.
+-> w
+T 468 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 86 $ 478 room=.
+-> s
+T 469 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 85 $ 478 room=.
+-> w
+T 470 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 84 $ 478 room=.
+-> e
+T 471 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 83 $ 478 room=.
+-> e
+T 472 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 82 $ 478 room=.
+-> n
+T 473 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 81 $ 478 room=.
+-> w
+T 474 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 80 $ 478 room=.
+-> s
+T 475 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 79 $ 478 room=.
+-> w
+T 476 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 78 $ 478 room=.
+-> e
+T 477 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 77 $ 478 room=.
+-> e
+T 478 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 76 $ 478 room=.
+-> n
+T 479 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 75 $ 478 room=.
+-> w
+T 480 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 74 $ 478 room=.
+-> l
+T 481 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 74 $ 478 room=.
+-> s
+T 482 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 73 $ 478 room=.
+-> w
+T 483 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 72 $ 478 room=.
+-> e
+T 484 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 71 $ 478 room=.
+-> e
+T 485 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 70 $ 478 room=.
+-> n
+T 486 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 69 $ 478 room=.
+-> w
+T 487 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 68 $ 478 room=.
+-> s
+T 488 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 67 $ 478 room=.
+-> w
+T 489 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 66 $ 478 room=.
+-> e
+T 490 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 65 $ 478 room=.
+-> l
+T 491 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 65 $ 478 room=.
+-> e
+T 492 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 64 $ 478 room=.
+-> n
+T 493 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 63 $ 478 room=.
+-> w
+T 494 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 62 $ 478 room=.
+-> s
+T 495 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 61 $ 478 room=.
+-> w
+T 496 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 60 $ 478 room=.
+-> e
+T 497 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 59 $ 478 room=.
+-> e
+T 498 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 58 $ 478 room=.
+-> n
+T 499 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 57 $ 478 room=.
+-> w
+T 500 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 56 $ 478 room=.
+-> l
+T 501 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 56 $ 478 room=.
+-> s
+T 502 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 55 $ 478 room=.
+-> w
+T 503 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 54 $ 478 room=.
+-> e
+T 504 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 53 $ 478 room=.
+-> e
+T 505 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 52 $ 478 room=.
+-> n
+T 506 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 51 $ 478 room=.
+-> w
+T 507 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 50 $ 478 room=.
+-> s
+T 508 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 49 $ 478 room=.
+-> i
+T 509 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 49 $ 478 room=.
+-> eat1
+T 510 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 99 $ 478 room=.
+-> x
+T 511 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 99 $ 478 room=.
+-> w
+T 512 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> e
+T 513 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 97 $ 478 room=.
+-> e
+T 514 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 96 $ 478 room=.
+-> n
+T 515 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 95 $ 478 room=.
+-> w
+T 516 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 94 $ 478 room=.
+-> s
+T 517 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 93 $ 478 room=.
+-> w
+T 518 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 92 $ 478 room=.
+-> e
+T 519 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 91 $ 478 room=.
+-> e
+T 520 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 90 $ 478 room=.
+-> l
+T 521 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 90 $ 478 room=.
+-> n
+T 522 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 89 $ 478 room=.
+-> w
+T 523 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 88 $ 478 room=.
+-> s
+T 524 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 87 $ 478 room=.
+-> w
+T 525 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 86 $ 478 room=.
+-> e
+T 526 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 85 $ 478 room=.
+-> e
+T 527 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 84 $ 478 room=.
+-> n
+T 528 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 83 $ 478 room=.
+-> w
+T 529 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 82 $ 478 room=.
+-> s
+T 530 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 81 $ 478 room=.
+-> l
+T 531 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 81 $ 478 room=.
+-> w
+T 532 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 80 $ 478 room=.
+-> e
+T 533 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 79 $ 478 room=.
+-> e
+T 534 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 78 $ 478 room=.
+-> n
+T 535 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 77 $ 478 room=.
+-> w
+T 536 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 76 $ 478 room=.
+-> s
+T 537 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 75 $ 478 room=.
+-> w
+T 538 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 74 $ 478 room=.
+-> e
+T 539 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 73 $ 478 room=.
+-> e
+T 540 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 72 $ 478 room=.
+-> l
+T 541 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 72 $ 478 room=.
+-> n
+T 542 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 71 $ 478 room=.
+-> w
+T 543 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 70 $ 478 room=.
+-> s
+T 544 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 69 $ 478 room=.
+-> w
+T 545 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 68 $ 478 room=.
+-> e
+T 546 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 67 $ 478 room=.
+-> e
+T 547 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 66 $ 478 room=.
+-> n
+T 548 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 65 $ 478 room=.
+-> w
+T 549 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 64 $ 478 room=.
+-> s
+T 550 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 63 $ 478 room=.
+-> l
+T 551 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 63 $ 478 room=.
+-> w
+T 552 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 62 $ 478 room=.
+-> e
+T 553 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 61 $ 478 room=.
+-> e
+T 554 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 60 $ 478 room=.
+-> n
+T 555 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 59 $ 478 room=.
+-> w
+T 556 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 58 $ 478 room=.
+-> s
+T 557 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 57 $ 478 room=.
+-> w
+T 558 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 56 $ 478 room=.
+-> e
+T 559 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 55 $ 478 room=.
+-> e
+T 560 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 54 $ 478 room=.
+-> l
+T 561 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 54 $ 478 room=.
+-> n
+T 562 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 53 $ 478 room=.
+-> w
+T 563 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 52 $ 478 room=.
+-> s
+T 564 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 51 $ 478 room=.
+-> w
+T 565 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 50 $ 478 room=.
+-> e
+T 566 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 49 $ 478 room=.
+-> i
+T 567 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 49 $ 478 room=.
+-> eat1
+T 568 mode=inventory           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 99 $ 478 room=.
+-> x
+T 569 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 99 $ 478 room=.
+-> e
+T 570 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> l
+T 571 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 98 $ 478 room=.
+-> n
+T 572 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 97 $ 478 room=.
+-> w
+T 573 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,12) HP 52/52 MP 0/0 Hu 96 $ 478 room=.
+-> s
+T 574 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 95 $ 478 room=.
+-> w
+T 575 mode=game_loop           Aragorn the Wanderer(hum) F3@( 4,13) HP 52/52 MP 0/0 Hu 94 $ 478 room=.
+-> e
+T 576 mode=game_loop           Aragorn the Wanderer(hum) F3@( 5,13) HP 52/52 MP 0/0 Hu 93 $ 478 room=.
+-> e
+T 577 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,13) HP 52/52 MP 0/0 Hu 92 $ 478 room=.
+-> n
+T 578 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,12) HP 52/52 MP 0/0 Hu 91 $ 478 room=.
+-> n
+T 579 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,11) HP 52/52 MP 0/0 Hu 90 $ 478 room=.
+-> n
+T 580 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,10) HP 52/52 MP 0/0 Hu 89 $ 478 room=.
+-> l
+T 581 mode=game_loop           Aragorn the Wanderer(hum) F3@( 6,10) HP 52/52 MP 0/0 Hu 89 $ 478 room=.
+-> e
+T 582 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7,10) HP 52/52 MP 0/0 Hu 88 $ 478 room=.
+-> n
+T 583 mode=game_loop           Aragorn the Wanderer(hum) F3@( 7, 9) HP 52/52 MP 0/0 Hu 87 $ 478 room=.
+-> e
+T 584 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 9) HP 52/52 MP 0/0 Hu 86 $ 478 room=.
+-> n
+T 585 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 8) HP 52/52 MP 0/0 Hu 85 $ 478 room=.
+-> n
+T 586 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 7) HP 52/52 MP 0/0 Hu 84 $ 478 room=.
+-> n
+T 587 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 6) HP 52/52 MP 0/0 Hu 83 $ 478 room=.
+-> n
+T 588 mode=game_loop           Aragorn the Wanderer(hum) F3@( 8, 5) HP 52/52 MP 0/0 Hu 82 $ 478 room=.
+-> e
+T 589 mode=game_loop           Aragorn the Wanderer(hum) F3@( 9, 5) HP 52/52 MP 0/0 Hu 81 $ 478 room=.
+-> e
+T 590 mode=game_loop           Aragorn the Wanderer(hum) F3@(10, 5) HP 52/52 MP 0/0 Hu 80 $ 478 room=.
+-> l
+T 591 mode=game_loop           Aragorn the Wanderer(hum) F3@(10, 5) HP 52/52 MP 0/0 Hu 80 $ 478 room=.
+-> e
+T 592 mode=game_loop           Aragorn the Wanderer(hum) F3@(11, 5) HP 52/52 MP 0/0 Hu 79 $ 478 room=.
+-> l
+T 593 mode=game_loop           Aragorn the Wanderer(hum) F3@(11, 5) HP 52/52 MP 0/0 Hu 79 $ 478 room=.
+-> e
+T 594 mode=game_loop           Aragorn the Wanderer(hum) F3@(12, 5) HP 52/52 MP 0/0 Hu 78 $ 478 room=.
+-> e
+T 595 mode=game_loop           Aragorn the Wanderer(hum) F3@(13, 5) HP 52/52 MP 0/0 Hu 77 $ 478 room=.
+-> e
+T 596 mode=stairs_down_mode    Aragorn the Wanderer(hum) F3@(14, 5) HP 52/52 MP 0/0 Hu 76 $ 478 room=D
+-> d
+T 597 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> n
+T 598 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 599 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 600 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> n
+T 601 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> w
+T 602 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 603 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> n
+T 604 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> n
+T 605 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> n
+T 606 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> w
+T 607 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 608 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 609 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> e
+T 610 mode=stairs_up_mode      Aragorn the Wanderer(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 76 $ 478 room=U
+-> s
+T 611 mode=game_loop           Aragorn the Wanderer(hum) F4@( 1, 2) HP 52/52 MP 0/0 Hu 75 $ 478 room=.
+-> l
+T 612 mode=game_loop           Aragorn the Wanderer(hum) F4@( 1, 2) HP 52/52 MP 0/0 Hu 75 $ 478 room=.
+-> s
+T 613 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 52/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP52/52)
+-> a
+T 614 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 49/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP52/52)
+-> a
+T 615 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 46/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP30/52)
+-> a
+T 616 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 46/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP8/52)
+-> a
+T 617 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 43/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP8/52)
+-> a
+T 618 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 1, 3) HP 40/52 MP 0/0 Hu 74 $ 478 room=M vs Orc(L3 HP8/52)
+-> a
+T 619 mode=combat_victory      Aragorn the Wanderer(hum) F4@( 1, 3) HP 37/52 MP 0/0 Hu 74 $ 482 room=.
+-> back
+T 620 mode=game_loop           Aragorn the Wanderer(hum) F4@( 1, 3) HP 37/52 MP 0/0 Hu 74 $ 482 room=.
+-> i
+T 621 mode=inventory           Aragorn the Wanderer(hum) F4@( 1, 3) HP 37/52 MP 0/0 Hu 74 $ 482 room=.
+-> u9
+T 622 mode=inventory           Aragorn the Wanderer(hum) F4@( 1, 3) HP 52/52 MP 0/0 Hu 74 $ 482 room=.
+-> x
+T 623 mode=game_loop           Aragorn the Wanderer(hum) F4@( 1, 3) HP 52/52 MP 0/0 Hu 74 $ 482 room=.
+-> l
+T 624 mode=game_loop           Aragorn the Wanderer(hum) F4@( 1, 3) HP 52/52 MP 0/0 Hu 74 $ 482 room=.
+-> e
+T 625 mode=game_loop           Aragorn the Wanderer(hum) F4@( 2, 3) HP 52/52 MP 0/0 Hu 73 $ 482 room=.
+-> l
+T 626 mode=game_loop           Aragorn the Wanderer(hum) F4@( 2, 3) HP 52/52 MP 0/0 Hu 73 $ 482 room=.
+-> e
+T 627 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 3) HP 52/52 MP 0/0 Hu 72 $ 482 room=M vs Bugbear(L3 HP36/36)
+-> a
+T 628 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 3) HP 51/52 MP 0/0 Hu 72 $ 482 room=M vs Bugbear(L3 HP14/36)
+-> a
+T 629 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 3) HP 51/52 MP 0/0 Hu 72 $ 482 room=M vs Bugbear(L3 HP14/36)
+-> a
+T 630 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 3) HP 50/52 MP 0/0 Hu 72 $ 482 room=M vs Bugbear(L3 HP14/36)
+-> a
+T 631 mode=combat_victory      Aragorn the Wanderer(hum) F4@( 3, 3) HP 50/62 MP 0/0 Hu 72 $ 490 room=.
+-> back
+T 632 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 3) HP 50/62 MP 0/0 Hu 72 $ 490 room=.
+-> l
+T 633 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 3) HP 50/62 MP 0/0 Hu 72 $ 490 room=.
+-> s
+T 634 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 4) HP 50/62 MP 0/0 Hu 71 $ 490 room=.
+-> l
+T 635 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 4) HP 50/62 MP 0/0 Hu 71 $ 490 room=.
+-> e
+T 636 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 490 room=V
+-> r1
+T 637 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 262 room=V
+-> b12
+T 638 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 252 room=V
+-> b4
+T 639 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 172 room=V
+-> b5
+T 640 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 142 room=V
+-> id13
+T 641 mode=vendor_shop         Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 67 room=V
+-> x
+T 642 mode=game_loop           Aragorn the Wanderer(hum) F4@( 4, 4) HP 50/62 MP 0/0 Hu 70 $ 67 room=V
+-> w
+T 643 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 4) HP 50/62 MP 0/0 Hu 69 $ 67 room=.
+-> s
+T 644 mode=dungeon_mode        Aragorn the Wanderer(hum) F4@( 3, 5) HP 51/62 MP 0/0 Hu 68 $ 67 room=N
+-> u
+T 645 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 5) HP 51/62 MP 0/0 Hu 68 $ 67 room=N
+-> s
+T 646 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 6) HP 51/62 MP 0/0 Hu 67 $ 67 room=M vs Harpy(L3 HP29/29)
+-> a
+T 647 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 6) HP 51/62 MP 0/0 Hu 67 $ 67 room=M vs Harpy(L3 HP29/29)
+-> a
+T 648 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 6) HP 50/62 MP 0/0 Hu 67 $ 67 room=M vs Harpy(L3 HP5/29)
+-> a
+T 649 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 6) HP 50/62 MP 0/0 Hu 67 $ 67 room=M vs Harpy(L3 HP5/29)
+-> a
+T 650 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 6) HP 49/62 MP 0/0 Hu 67 $ 67 room=M vs Harpy(L3 HP5/29)
+-> a
+T 651 mode=combat_victory      Aragorn the Wanderer(hum) F4@( 3, 6) HP 49/62 MP 0/0 Hu 67 $ 71 room=.
+-> back
+T 652 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 6) HP 49/62 MP 0/0 Hu 67 $ 71 room=.
+-> i
+T 653 mode=inventory           Aragorn the Wanderer(hum) F4@( 3, 6) HP 49/62 MP 0/0 Hu 67 $ 71 room=.
+-> u6
+T 654 mode=inventory           Aragorn the Wanderer(hum) F4@( 3, 6) HP 62/62 MP 0/0 Hu 67 $ 71 room=.
+-> x
+T 655 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 6) HP 62/62 MP 0/0 Hu 67 $ 71 room=.
+-> l
+T 656 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 6) HP 62/62 MP 0/0 Hu 67 $ 71 room=.
+-> s
+T 657 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 62/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 658 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 62/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 659 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 61/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP10/33)
+-> a
+T 660 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 61/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP10/33)
+-> a
+T 661 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 60/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP10/33)
+-> a
+T 662 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 3, 7) HP 59/62 MP 0/0 Hu 66 $ 71 room=M vs Gnoll(L3 HP10/33)
+-> a
+T 663 mode=combat_victory      Aragorn the Wanderer(hum) F4@( 3, 7) HP 58/62 MP 0/0 Hu 66 $ 103 room=.
+-> back
+T 664 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 7) HP 58/62 MP 0/0 Hu 66 $ 103 room=.
+-> l
+T 665 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 7) HP 58/62 MP 0/0 Hu 66 $ 103 room=.
+-> n
+T 666 mode=game_loop           Aragorn the Wanderer(hum) F4@( 3, 6) HP 58/62 MP 0/0 Hu 65 $ 103 room=.
+-> e
+T 667 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 58/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 668 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 57/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 669 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 56/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 670 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 55/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 671 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 55/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 672 mode=combat_mode         Aragorn the Wanderer(hum) F4@( 4, 6) HP 54/62 MP 0/0 Hu 64 $ 103 room=M vs Gray Ooze(L3 HP10/36)
+-> f
+T 673 mode=flee_direction_mode Aragorn the Wanderer(hum) F4@( 4, 6) HP 53/62 MP 0/0 Hu 64 $ 103 room=M
+-> s
+T 674 mode=warp_mode           Aragorn the Wanderer(hum) F4@( 4, 7) HP 53/62 MP 0/0 Hu 64 $ 103 room=W
+-> y
+T 675 mode=game_loop           Aragorn the Wanderer(hum) F4@( 4, 7) HP 53/62 MP 0/0 Hu 64 $ 103 room=W
+-> i
+T 676 mode=inventory           Aragorn the Wanderer(hum) F4@( 4, 7) HP 53/62 MP 0/0 Hu 64 $ 103 room=W
+-> u9
+T 677 mode=inventory           Aragorn the Wanderer(hum) F4@( 4, 7) HP 62/62 MP 0/0 Hu 64 $ 103 room=W
+-> x
+T 678 mode=warp_mode           Aragorn the Wanderer(hum) F4@( 4, 7) HP 62/62 MP 0/0 Hu 64 $ 103 room=W
+-> y
+T 679 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu 64 $ 103 room=.
+-> i
+T 680 mode=inventory           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu 64 $ 103 room=.
+-> eat4
+T 681 mode=inventory           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu 69 $ 103 room=.
+-> eat1
+T 682 mode=inventory           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu100 $ 103 room=.
+-> x
+T 683 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu100 $ 103 room=.
+-> l
+T 684 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu100 $ 103 room=.
+-> s
+T 685 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,12) HP 62/62 MP 0/0 Hu 99 $ 203 room=.
+-> l
+T 686 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,12) HP 62/62 MP 0/0 Hu 99 $ 203 room=.
+-> e
+T 687 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,12) HP 62/62 MP 0/0 Hu 98 $ 203 room=.
+-> i
+T 688 mode=inventory           Aragorn the Wanderer(hum) F6@( 5,12) HP 62/62 MP 0/0 Hu 98 $ 203 room=.
+-> eat2
+T 689 mode=inventory           Aragorn the Wanderer(hum) F6@( 5,12) HP 62/62 MP 0/0 Hu100 $ 203 room=.
+-> x
+T 690 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,12) HP 62/62 MP 0/0 Hu100 $ 203 room=.
+-> e
+T 691 mode=game_loop           Aragorn the Wanderer(hum) F6@( 6,12) HP 62/62 MP 0/0 Hu 99 $ 203 room=.
+-> e
+T 692 mode=pool_mode           Aragorn the Wanderer(hum) F6@( 7,12) HP 62/62 MP 0/0 Hu 98 $ 203 room=P
+-> dr
+T 693 mode=game_loop           Aragorn the Wanderer(hum) F6@( 7,12) HP 62/62 MP 0/0 Hu 98 $ 203 room=.
+-> n
+T 694 mode=game_loop           Aragorn the Wanderer(hum) F6@( 7,11) HP 62/62 MP 0/0 Hu 97 $ 203 room=.
+-> e
+T 695 mode=game_loop           Aragorn the Wanderer(hum) F6@( 8,11) HP 62/62 MP 0/0 Hu 96 $ 203 room=.
+-> l
+T 696 mode=game_loop           Aragorn the Wanderer(hum) F6@( 8,11) HP 62/62 MP 0/0 Hu 96 $ 203 room=.
+-> e
+T 697 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,11) HP 62/62 MP 0/0 Hu 95 $ 203 room=.
+-> l
+T 698 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,11) HP 62/62 MP 0/0 Hu 95 $ 203 room=.
+-> n
+T 699 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu 94 $ 203 room=.
+-> i
+T 700 mode=inventory           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu 94 $ 203 room=.
+-> eat2
+T 701 mode=inventory           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu100 $ 203 room=.
+-> x
+T 702 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu100 $ 203 room=.
+-> l
+T 703 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu100 $ 203 room=.
+-> n
+T 704 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9, 9) HP 62/62 MP 0/0 Hu 99 $ 203 room=.
+-> l
+T 705 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9, 9) HP 62/62 MP 0/0 Hu 99 $ 203 room=.
+-> e
+T 706 mode=game_loop           Aragorn the Wanderer(hum) F6@(10, 9) HP 62/62 MP 0/0 Hu 98 $ 203 room=.
+-> w
+T 707 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9, 9) HP 62/62 MP 0/0 Hu 97 $ 203 room=.
+-> s
+T 708 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,10) HP 62/62 MP 0/0 Hu 96 $ 203 room=.
+-> s
+T 709 mode=game_loop           Aragorn the Wanderer(hum) F6@( 9,11) HP 62/62 MP 0/0 Hu 95 $ 203 room=.
+-> w
+T 710 mode=game_loop           Aragorn the Wanderer(hum) F6@( 8,11) HP 62/62 MP 0/0 Hu 94 $ 203 room=.
+-> w
+T 711 mode=game_loop           Aragorn the Wanderer(hum) F6@( 7,11) HP 62/62 MP 0/0 Hu 93 $ 203 room=.
+-> w
+T 712 mode=game_loop           Aragorn the Wanderer(hum) F6@( 6,11) HP 62/62 MP 0/0 Hu 92 $ 203 room=.
+-> w
+T 713 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,11) HP 62/62 MP 0/0 Hu 91 $ 203 room=.
+-> l
+T 714 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,11) HP 62/62 MP 0/0 Hu 91 $ 203 room=.
+-> n
+T 715 mode=chest_mode          Aragorn the Wanderer(hum) F6@( 5,10) HP 62/62 MP 0/0 Hu 90 $ 203 room=C
+-> o
+T 716 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,10) HP 17/62 MP 0/0 Hu 90 $ 203 room=.
+-> i
+T 717 mode=inventory           Aragorn the Wanderer(hum) F6@( 5,10) HP 17/62 MP 0/0 Hu 90 $ 203 room=.
+-> u9
+T 718 mode=inventory           Aragorn the Wanderer(hum) F6@( 5,10) HP 47/62 MP 0/0 Hu 90 $ 203 room=.
+-> u4
+T 719 mode=inventory           Aragorn the Wanderer(hum) F6@( 5,10) HP 62/62 MP 0/0 Hu 90 $ 203 room=.
+-> x
+T 720 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5,10) HP 62/62 MP 0/0 Hu 90 $ 203 room=.
+-> n
+T 721 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5, 9) HP 62/62 MP 0/0 Hu 89 $ 203 room=.
+-> n
+T 722 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5, 8) HP 62/62 MP 0/0 Hu 88 $ 203 room=.
+-> w
+T 723 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 8) HP 62/62 MP 0/0 Hu 87 $ 203 room=.
+-> l
+T 724 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 8) HP 62/62 MP 0/0 Hu 87 $ 203 room=.
+-> s
+T 725 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 9) HP 62/62 MP 0/0 Hu 86 $ 203 room=.
+-> l
+T 726 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 9) HP 62/62 MP 0/0 Hu 86 $ 203 room=.
+-> s
+T 727 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,10) HP 62/62 MP 0/0 Hu 85 $ 203 room=.
+-> l
+T 728 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,10) HP 62/62 MP 0/0 Hu 85 $ 203 room=.
+-> s
+T 729 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,11) HP 62/62 MP 0/0 Hu 84 $ 203 room=.
+-> s
+T 730 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4,12) HP 62/62 MP 0/0 Hu 83 $ 203 room=.
+-> w
+T 731 mode=chest_mode          Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=C
+-> o
+T 732 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=.
+-> i
+T 733 mode=inventory           Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=.
+-> e1
+T 734 mode=inventory           Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=.
+-> x
+T 735 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=.
+-> l
+T 736 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3,12) HP 62/62 MP 0/0 Hu 82 $ 203 room=.
+-> w
+T 737 mode=dungeon_mode        Aragorn the Wanderer(hum) F6@( 2,12) HP 62/62 MP 0/0 Hu 81 $ 203 room=N
+-> u
+T 738 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,12) HP 62/62 MP 0/0 Hu 81 $ 203 room=N
+-> l
+T 739 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,12) HP 62/62 MP 0/0 Hu 81 $ 203 room=N
+-> s
+T 740 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,13) HP 62/62 MP 0/0 Hu 80 $ 203 room=.
+-> l
+T 741 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,13) HP 62/62 MP 0/0 Hu 80 $ 203 room=.
+-> s
+T 742 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,14) HP 62/62 MP 0/0 Hu 79 $ 203 room=.
+-> l
+T 743 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,14) HP 62/62 MP 0/0 Hu 79 $ 203 room=.
+-> w
+T 744 mode=pool_mode           Aragorn the Wanderer(hum) F6@( 1,14) HP 62/62 MP 0/0 Hu 78 $ 203 room=P
+-> dr
+T 745 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,14) HP 62/62 MP 0/0 Hu 78 $ 203 room=.
+-> l
+T 746 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,14) HP 62/62 MP 0/0 Hu 78 $ 203 room=.
+-> s
+T 747 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,15) HP 62/62 MP 0/0 Hu 77 $ 203 room=.
+-> n
+T 748 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,14) HP 62/62 MP 0/0 Hu 76 $ 203 room=.
+-> n
+T 749 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,13) HP 62/62 MP 0/0 Hu 75 $ 203 room=.
+-> n
+T 750 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,12) HP 62/62 MP 0/0 Hu 74 $ 203 room=.
+-> n
+T 751 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1,11) HP 62/62 MP 0/0 Hu 73 $ 203 room=.
+-> e
+T 752 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,11) HP 62/62 MP 0/0 Hu 72 $ 203 room=.
+-> n
+T 753 mode=dungeon_mode        Aragorn the Wanderer(hum) F6@( 2,10) HP 62/62 MP 0/0 Hu 71 $ 203 room=N
+-> u
+T 754 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2,10) HP 62/62 MP 0/0 Hu 71 $ 203 room=N
+-> n
+T 755 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 9) HP 62/62 MP 0/0 Hu 70 $ 203 room=.
+-> n
+T 756 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 8) HP 62/62 MP 0/0 Hu 69 $ 203 room=.
+-> n
+T 757 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 7) HP 62/62 MP 0/0 Hu 68 $ 203 room=.
+-> l
+T 758 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 7) HP 62/62 MP 0/0 Hu 68 $ 203 room=.
+-> w
+T 759 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 62/62 MP 0/0 Hu 67 $ 203 room=M vs Myconid Shaman(L5 HP50/50)
+-> a
+T 760 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 61/62 MP 0/0 Hu 67 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> f
+T 761 mode=flee_direction_mode Aragorn the Wanderer(hum) F6@( 1, 7) HP 60/62 MP 0/0 Hu 67 $ 203 room=M
+-> s
+T 762 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 8) HP 60/62 MP 0/0 Hu 67 $ 203 room=.
+-> s
+T 763 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 9) HP 60/62 MP 0/0 Hu 66 $ 203 room=.
+-> e
+T 764 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 9) HP 60/62 MP 0/0 Hu 65 $ 203 room=.
+-> n
+T 765 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 8) HP 60/62 MP 0/0 Hu 64 $ 203 room=.
+-> n
+T 766 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 7) HP 61/62 MP 0/0 Hu 63 $ 203 room=.
+-> w
+T 767 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 61/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 768 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 60/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 769 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 59/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 770 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 58/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 771 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 57/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 772 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 56/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 773 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 55/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 774 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 1, 7) HP 54/62 MP 0/0 Hu 62 $ 203 room=M vs Myconid Shaman(L5 HP24/50)
+-> a
+T 775 mode=combat_victory      Aragorn the Wanderer(hum) F6@( 1, 7) HP 53/62 MP 0/0 Hu 62 $ 209 room=.
+-> back
+T 776 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 7) HP 53/62 MP 0/0 Hu 62 $ 209 room=.
+-> l
+T 777 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 7) HP 53/62 MP 0/0 Hu 62 $ 209 room=.
+-> n
+T 778 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 6) HP 53/62 MP 0/0 Hu 61 $ 209 room=.
+-> n
+T 779 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 5) HP 53/62 MP 0/0 Hu 60 $ 209 room=.
+-> l
+T 780 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 5) HP 53/62 MP 0/0 Hu 60 $ 209 room=.
+-> e
+T 781 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 5) HP 53/62 MP 0/0 Hu 59 $ 209 room=.
+-> e
+T 782 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3, 5) HP 53/62 MP 0/0 Hu 58 $ 209 room=.
+-> l
+T 783 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3, 5) HP 53/62 MP 0/0 Hu 58 $ 209 room=.
+-> e
+T 784 mode=chest_mode          Aragorn the Wanderer(hum) F6@( 4, 5) HP 53/62 MP 0/0 Hu 57 $ 209 room=C
+-> n
+T 785 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 4) HP 53/62 MP 0/0 Hu 56 $ 209 room=.
+-> l
+T 786 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 4) HP 53/62 MP 0/0 Hu 56 $ 209 room=.
+-> n
+T 787 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 3) HP 53/62 MP 0/0 Hu 55 $ 209 room=.
+-> l
+T 788 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 3) HP 53/62 MP 0/0 Hu 55 $ 209 room=.
+-> e
+T 789 mode=altar_mode          Aragorn the Wanderer(hum) F6@( 5, 3) HP 53/62 MP 0/0 Hu 54 $ 209 room=A
+-> pray
+T 790 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5, 3) HP 53/62 MP 0/0 Hu 54 $ 209 room=.
+-> s
+T 791 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 5, 4) HP 53/62 MP 0/0 Hu 53 $ 209 room=M vs Spore Puff(L5 HP20/20)
+-> a
+T 792 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 5, 4) HP 52/62 MP 0/0 Hu 53 $ 209 room=M vs Spore Puff(L5 HP20/20)
+-> a
+T 793 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 5, 4) HP 51/62 MP 0/0 Hu 53 $ 209 room=M vs Spore Puff(L5 HP20/20)
+-> a
+T 794 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 5, 4) HP 50/62 MP 0/0 Hu 53 $ 209 room=M vs Spore Puff(L5 HP20/20)
+-> a
+T 795 mode=combat_mode         Aragorn the Wanderer(hum) F6@( 5, 4) HP 49/62 MP 0/0 Hu 53 $ 209 room=M vs Spore Puff(L5 HP20/20)
+-> a
+T 796 mode=combat_victory      Aragorn the Wanderer(hum) F6@( 5, 4) HP 48/72 MP 0/0 Hu 53 $ 321 room=.
+-> back
+T 797 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5, 4) HP 48/72 MP 0/0 Hu 53 $ 321 room=.
+-> s
+T 798 mode=game_loop           Aragorn the Wanderer(hum) F6@( 5, 5) HP 48/72 MP 0/0 Hu 52 $ 321 room=.
+-> w
+T 799 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 5) HP 48/72 MP 0/0 Hu 51 $ 321 room=C
+-> n
+T 800 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 4) HP 48/72 MP 0/0 Hu 50 $ 321 room=.
+-> n
+T 801 mode=game_loop           Aragorn the Wanderer(hum) F6@( 4, 3) HP 48/72 MP 0/0 Hu 49 $ 321 room=.
+-> w
+T 802 mode=altar_mode          Aragorn the Wanderer(hum) F6@( 3, 3) HP 48/72 MP 0/0 Hu 48 $ 321 room=A
+-> pray
+T 803 mode=game_loop           Aragorn the Wanderer(hum) F6@( 3, 3) HP 72/72 MP 0/0 Hu 98 $ 321 room=.
+-> w
+T 804 mode=game_loop           Aragorn the Wanderer(hum) F6@( 2, 3) HP 72/72 MP 0/0 Hu 97 $ 321 room=.
+-> w
+T 805 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 3) HP 72/72 MP 0/0 Hu 96 $ 321 room=.
+-> l
+T 806 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 3) HP 72/72 MP 0/0 Hu 96 $ 321 room=.
+-> n
+T 807 mode=game_loop           Aragorn the Wanderer(hum) F6@( 1, 2) HP 72/72 MP 0/0 Hu 95 $ 321 room=.
+-> n
+T 808 mode=stairs_up_mode      Aragorn the Wanderer(hum) F6@( 1, 1) HP 72/72 MP 0/0 Hu 94 $ 321 room=U
+-> u
+T 809 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 94 $ 321 room=D
+-> e
+T 810 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 93 $ 321 room=.
+-> l
+T 811 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 93 $ 321 room=.
+-> w
+T 812 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 92 $ 321 room=D
+-> e
+T 813 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 91 $ 321 room=.
+-> w
+T 814 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 90 $ 321 room=D
+-> e
+T 815 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 89 $ 321 room=.
+-> w
+T 816 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 88 $ 321 room=D
+-> e
+T 817 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 87 $ 321 room=.
+-> w
+T 818 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 86 $ 321 room=D
+-> e
+T 819 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 85 $ 321 room=.
+-> w
+T 820 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 84 $ 321 room=D
+-> e
+T 821 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 83 $ 321 room=.
+-> w
+T 822 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 82 $ 321 room=D
+-> e
+T 823 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 81 $ 321 room=.
+-> w
+T 824 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 80 $ 321 room=D
+-> e
+T 825 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 79 $ 321 room=.
+-> w
+T 826 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 78 $ 321 room=D
+-> e
+T 827 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 77 $ 321 room=.
+-> w
+T 828 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 76 $ 321 room=D
+-> e
+T 829 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 75 $ 321 room=.
+-> w
+T 830 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 74 $ 321 room=D
+-> e
+T 831 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 73 $ 321 room=.
+-> w
+T 832 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 72 $ 321 room=D
+-> e
+T 833 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 71 $ 321 room=.
+-> w
+T 834 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 70 $ 321 room=D
+-> e
+T 835 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 69 $ 321 room=.
+-> w
+T 836 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 68 $ 321 room=D
+-> e
+T 837 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 67 $ 321 room=.
+-> w
+T 838 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 66 $ 321 room=D
+-> e
+T 839 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 65 $ 321 room=.
+-> w
+T 840 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 64 $ 321 room=D
+-> e
+T 841 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 63 $ 321 room=.
+-> w
+T 842 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 62 $ 321 room=D
+-> e
+T 843 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 61 $ 321 room=.
+-> w
+T 844 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 60 $ 321 room=D
+-> e
+T 845 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 59 $ 321 room=.
+-> w
+T 846 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 58 $ 321 room=D
+-> e
+T 847 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 57 $ 321 room=.
+-> w
+T 848 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 56 $ 321 room=D
+-> e
+T 849 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 55 $ 321 room=.
+-> w
+T 850 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 54 $ 321 room=D
+-> e
+T 851 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 53 $ 321 room=.
+-> w
+T 852 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 52 $ 321 room=D
+-> e
+T 853 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 51 $ 321 room=.
+-> w
+T 854 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 50 $ 321 room=D
+-> e
+T 855 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 49 $ 321 room=.
+-> w
+T 856 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 48 $ 321 room=D
+-> e
+T 857 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 47 $ 321 room=.
+-> w
+T 858 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 46 $ 321 room=D
+-> e
+T 859 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 45 $ 321 room=.
+-> w
+T 860 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 44 $ 321 room=D
+-> e
+T 861 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 43 $ 321 room=.
+-> w
+T 862 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 42 $ 321 room=D
+-> e
+T 863 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 41 $ 321 room=.
+-> w
+T 864 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 40 $ 321 room=D
+-> e
+T 865 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 39 $ 321 room=.
+-> w
+T 866 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 38 $ 321 room=D
+-> e
+T 867 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 37 $ 321 room=.
+-> w
+T 868 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 36 $ 321 room=D
+-> e
+T 869 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 35 $ 321 room=.
+-> w
+T 870 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 34 $ 321 room=D
+-> e
+T 871 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 33 $ 321 room=.
+-> w
+T 872 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 32 $ 321 room=D
+-> e
+T 873 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 31 $ 321 room=.
+-> w
+T 874 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 30 $ 321 room=D
+-> e
+T 875 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 29 $ 321 room=.
+-> w
+T 876 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 28 $ 321 room=D
+-> e
+T 877 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 27 $ 321 room=.
+-> w
+T 878 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 26 $ 321 room=D
+-> e
+T 879 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 25 $ 321 room=.
+-> w
+T 880 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 24 $ 321 room=D
+-> e
+T 881 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 23 $ 321 room=.
+-> w
+T 882 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 22 $ 321 room=D
+-> e
+T 883 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 21 $ 321 room=.
+-> w
+T 884 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 20 $ 321 room=D
+-> e
+T 885 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 19 $ 321 room=.
+-> w
+T 886 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 18 $ 321 room=D
+-> e
+T 887 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 17 $ 321 room=.
+-> w
+T 888 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 16 $ 321 room=D
+-> e
+T 889 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 15 $ 321 room=.
+-> w
+T 890 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 14 $ 321 room=D
+-> e
+T 891 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 13 $ 321 room=.
+-> w
+T 892 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 12 $ 321 room=D
+-> e
+T 893 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu 11 $ 321 room=.
+-> w
+T 894 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu 10 $ 321 room=D
+-> e
+T 895 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  9 $ 321 room=.
+-> w
+T 896 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu  8 $ 321 room=D
+-> e
+T 897 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  7 $ 321 room=.
+-> w
+T 898 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu  6 $ 321 room=D
+-> e
+T 899 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  5 $ 321 room=.
+-> w
+T 900 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu  4 $ 321 room=D
+-> e
+T 901 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  3 $ 321 room=.
+-> w
+T 902 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 72/72 MP 0/0 Hu  2 $ 321 room=D
+-> e
+T 903 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  1 $ 321 room=.
+-> w
+T 904 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 70/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 905 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 68/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 906 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 66/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 907 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 64/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 908 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 62/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 909 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 60/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 910 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 58/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 911 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 56/72 MP 0/0 Hu  0 $ 321 room=.
+-> i
+T 912 mode=inventory           Aragorn the Wanderer(hum) F5@(10, 7) HP 56/72 MP 0/0 Hu  0 $ 321 room=.
+-> u10
+T 913 mode=inventory           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  0 $ 321 room=.
+-> x
+T 914 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 915 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 70/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 916 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 68/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 917 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 66/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 918 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 64/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 919 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 62/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 920 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 60/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 921 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 58/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 922 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 56/72 MP 0/0 Hu  0 $ 321 room=.
+-> i
+T 923 mode=inventory           Aragorn the Wanderer(hum) F5@(10, 7) HP 56/72 MP 0/0 Hu  0 $ 321 room=.
+-> u10
+T 924 mode=inventory           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  0 $ 321 room=.
+-> x
+T 925 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 72/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 926 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 70/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 927 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 68/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 928 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 66/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 929 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 64/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 930 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 62/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 931 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 60/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 932 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 58/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 933 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 56/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 934 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 54/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 935 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 52/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 936 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 50/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 937 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 48/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 938 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 46/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 939 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 44/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 940 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 42/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 941 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 40/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 942 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 38/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 943 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 36/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 944 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 34/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 945 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 32/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 946 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 30/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 947 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 28/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 948 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 26/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 949 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 24/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 950 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 22/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 951 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 20/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 952 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 18/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 953 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 16/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 954 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 14/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 955 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 12/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 956 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 10/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 957 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 8/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 958 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 6/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 959 mode=game_loop           Aragorn the Wanderer(hum) F5@(10, 7) HP 4/72 MP 0/0 Hu  0 $ 321 room=.
+-> w
+T 960 mode=stairs_down_mode    Aragorn the Wanderer(hum) F5@( 9, 7) HP 2/72 MP 0/0 Hu  0 $ 321 room=D
+-> e
+T 961 mode=death_screen        Aragorn the Wanderer(hum) F5@(10, 7) HP 0/72 MP 0/0 Hu  0 $ 321 room=.
+
+=== run finished: turns=961 floor=5 hp=0/72 gold=321 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_hunt/00033_human.html
