@@ -1158,7 +1158,7 @@ class RunReport:
             in_bag = final_inv_counts.get(name, 0)
             total = bought + found
             used = max(0, total - in_bag)
-            status, color = _agg_status(name, in_bag, total)
+            item_status, color = _agg_status(name, in_bag, total)
             # Sprite: use the recorded category for the icon.
             cat = self.item_categories.get(name)
             sprite_cat = _category_to_sprite_cat(cat) if cat else None
@@ -1172,7 +1172,7 @@ class RunReport:
                 f"<td>{bought}</td>"
                 f"<td>{in_bag}</td>"
                 f"<td>{used}</td>"
-                f"<td style='color:{color};'>{status}</td></tr>"
+                f"<td style='color:{color};'>{item_status}</td></tr>"
             )
         items_total_rows = len(agg_rows)
 

@@ -289,9 +289,32 @@ def _equipped_obs(pc):
             "base_defense_bonus": getattr(it, "_base_defense_bonus", None),
             "upgrade_level": getattr(it, "upgrade_level", 0),
             "item_level": getattr(it, "level", 0),
+            # Blacksmith repair cost estimate -- 80% of the vendor
+            # formula. Exposed so smart_policy can refuse to enter
+            # the blacksmith repair option when broke (otherwise
+            # the handler logs 'Not enough gold' but stays in
+            # blacksmith_mode, and the policy re-issues the same
+            # key forever -- caught as stuck=loop on s=1234 dwarf
+            # F5: 850+ turns mashing '2' with 4g in pocket).
+            "repair_cost_est": _repair_cost_est(it),
         }
     return {"weapon": slot(pc.equipped_weapon),
             "armor":  slot(pc.equipped_armor)}
+
+
+def _repair_cost_est(item):
+    """Cheap recomputation of items.get_repair_cost() * 0.80 (the
+    blacksmith specialist discount). Returns 0 when the item is full
+    durability or lacks the inputs."""
+    max_d = getattr(item, "max_durability", 0) or 0
+    cur_d = getattr(item, "durability", 0) or 0
+    missing = max_d - cur_d
+    if missing <= 0:
+        return 0
+    value = getattr(item, "value", 0) or 0
+    level = getattr(item, "level", 0) or 0
+    cost_per_point = max(1, value // 50) + level
+    return max(1, int(missing * cost_per_point * 0.80))
 
 
 def _item_category(item):
@@ -2873,6 +2896,20 @@ def smart_policy(obs, rng, use_lantern=True):
             ]
             tiers = [tier for tier in tiers if tier]
             tiers = [tier for tier in tiers if tier]
+        # Shrunk filter: Zot's spell on bug-levels blocks stairs in
+        # BOTH directions ('the drop is lethal' / 'stairs impossibly
+        # tall'). Targeting D or U while shrunk burns the agent's
+        # turn budget on a stair tile the handler will reject. Strip
+        # both from the tiers so the wayfinder routes to monsters
+        # (Bug Queen drops the Growth Mushroom on defeat) and chests
+        # (one chest on each bug floor holds a guaranteed Mushroom
+        # backup). Caught as status=stuck on s=461 elf F8.
+        if is_shrunk:
+            tiers = [
+                tuple(t for t in tier if t not in ("D", "U"))
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
         # Grind-first filter: when the agent is under-levelled and the
         # floor still has reachable monsters AND they haven't met the
         # minimum kill count yet, strip D from the tiers so the
@@ -3736,6 +3773,23 @@ def smart_policy(obs, rng, use_lantern=True):
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
+        # Shrunk on a bug level: Zot's spell blocks descent ('You peer
+        # over the edge but the drop is lethal at your size!') and the
+        # handler stays in stairs_down_mode. Without this gate the
+        # policy mashes 'd' forever -- caught as status=stuck on
+        # s=461 elf F8 (176+ turns at HP 42/78). Walk off the D tile
+        # so the wayfinder can route to the Bug Queen / Growth
+        # Mushroom in game_loop. Same gate guards stairs_up_mode below.
+        if p.get("is_shrunk"):
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            for d in ("n", "s", "e", "w"):
+                if neighbors.get(d) not in ("#", None):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         # Retreat-after-warp: if a warp landed us on a floor deeper
         # than max_z_via_stairs, we DON'T want to descend further --
         # we want to walk off this D tile and find the U tile so we
@@ -3851,6 +3905,18 @@ def smart_policy(obs, rng, use_lantern=True):
             return "d"
         return "d"
     if mode == "stairs_up_mode":
+        # Shrunk on a bug level: ascent is also blocked ('the stairs
+        # are impossibly tall'). Walk off the U tile.
+        if p.get("is_shrunk"):
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            for d in ("n", "s", "e", "w"):
+                if neighbors.get(d) not in ("#", None):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         # Retreat-after-warp: ASCEND. The agent landed on a U tile
         # while pc.z > max_z_via_stairs, so going up is the goal.
         # The default policy below walks AWAY from U to avoid the
@@ -4046,20 +4112,28 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "blacksmith_mode":
         # Blacksmith repair is cheaper than vendors. Repair weapon then
         # armor, in priority order, only when the gear is actually worn
-        # ( <100% durability). Otherwise leave. Reforge (3/4) is a
-        # gamble that re-rolls stats -- skip it for now, the playtest
-        # value is risk-bounded repair coverage.
+        # ( <100% durability) AND we can afford it. The handler stays
+        # in blacksmith_mode on insufficient-gold (just logs 'Not
+        # enough gold') so an unguarded "1"/"2" return creates an
+        # infinite loop -- caught as status=stuck on s=1234 dwarf
+        # F5 (4g in pocket, 850+ turns mashing '2'). Reforge (3/4)
+        # is a gamble that re-rolls stats -- skip it for now, the
+        # playtest value is risk-bounded repair coverage.
+        gold = p.get("gold", 0)
         w = equipped.get("weapon")
         a = equipped.get("armor")
         w_worn = w and (w.get("durability") or 0) < (w.get("max_durability") or 1)
         a_worn = a and (a.get("durability") or 0) < (a.get("max_durability") or 1)
-        if w_worn and not w.get("is_sealed"):
+        w_can_pay = w_worn and gold >= (w.get("repair_cost_est") or 0)
+        a_can_pay = a_worn and gold >= (a.get("repair_cost_est") or 0)
+        if w_can_pay and not w.get("is_sealed"):
             return "1"
-        if a_worn and not a.get("is_sealed"):
+        if a_can_pay and not a.get("is_sealed"):
             return "2"
-        # Nothing to repair: handler doesn't auto-exit so we have to
-        # walk off. Step in any non-wall direction; on the next obs
-        # we'll be in game_loop and the wayfinder takes over.
+        # Nothing repairable that we can afford: handler doesn't
+        # auto-exit so we have to walk off. Step in any non-wall
+        # direction; on the next obs we'll be in game_loop and the
+        # wayfinder takes over.
         neighbors = obs.get("neighbors") or {}
         for d in ("n", "s", "e", "w"):
             if neighbors.get(d) not in ("#", None):
