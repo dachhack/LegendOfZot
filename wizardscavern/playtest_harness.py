@@ -3377,7 +3377,17 @@ def smart_policy(obs, rng, use_lantern=True):
             proposed = f"e{weapon_upgrade_slot}"
         if proposed is None and armor_upgrade_slot is not None:
             proposed = f"e{armor_upgrade_slot}"
-        if proposed is None and hunger < 80 and eat_slot:
+        if proposed is None and hunger < 50 and eat_slot:
+            # Threshold dropped 80 -> 50 to match the game_loop open-
+            # inventory trigger above (line 2499). Rations have 50
+            # nutrition, so eating at hunger >= 51 caps at 100 and
+            # wastes the surplus. Starvation audit on the 5000-turn
+            # grid: agents were restoring 4-8 hunger/turn (well above
+            # the 1/turn decay) but still spent 50-200 turns at
+            # hunger 0 -- they binge-ate at hunger 79 early (gaining
+            # only 21 per Ration), exhausted the starter stash, then
+            # had no food in the late-run drought. Tighter threshold
+            # stretches the food window proportionally.
             proposed = f"eat{eat_slot}"
         # Read safe identified scrolls -- one-shot beneficial effects
         # the agent's been hoarding. Skip teleport (random
