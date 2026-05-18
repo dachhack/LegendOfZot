@@ -278,6 +278,15 @@ class RunReport:
         self.hp_timeline = []  # [(turn, hp, max_hp)]
         self.mana_timeline = []  # [(turn, mana, max_mana)]
         self.hunger_timeline = []  # [(turn, hunger)]  -- hunger is 0-100
+        # Food / cooking accounting -- populated from log parsing in
+        # _categorise_log. Used by the per-run Food Economy report
+        # section so the playtester can spot agents wasting meat,
+        # starving with food in the bag, or skipping the cooking kit.
+        self.eat_events = []        # [(turn, food_name, hunger_gained)]
+        self.cook_events = []       # [(turn, meat_name)] per-piece cook log
+        self.cook_batches = []      # [(turn, count)] per kit-use summary
+        self.meat_rot_events = []   # [(turn, meat_name)] -- meat that spoiled in the bag
+        self.meat_drops_log = []    # [(turn, meat_name)] -- monster meat drop landings
         self.events = []  # [(turn, kind, detail)]
         self.recent_log = []  # rolling buffer of last 60 lines
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
@@ -550,6 +559,60 @@ class RunReport:
     def _categorise_log(self, turn, line, p):
         low = line.lower()
         floor = (p or {}).get("floor", 1)
+
+        # Food / cooking instrumentation. The game emits several
+        # different log shapes for eats and drops, so we match them
+        # all:
+        #   * Food.use (items.py:2824):
+        #     "You eat the {name}. Hunger restored by {N}."
+        #   * Meat.use cooked (items.py:2967):
+        #     "You ate a {descr} {monster} {cut}! Hunger restored by {N}."
+        #   * Meat.use raw (items.py:2957-2961):
+        #     "You gnaw on the raw {monster} {cut}." then next line
+        #     "Hunger restored by {N}." -- handle via fall-back.
+        #   * Cook batch (items.py:2991):
+        #     "Cooked N piece(s) of meat. It will stay fresh..."
+        #   * Cook single (items.py:2990):
+        #     "You cooked the {meat.name}!"
+        #   * Meat harvest (items.py:3147):
+        #     "You harvested some raw {monster} meat."
+        #   * Meat rot (items.py:3157):
+        #     "Your {monster} meat has gone rotten!"
+        m = re.match(r"you eat (?:the |a |an |some )?([^.!]+?)\.\s*hunger restored by (\d+)", line, re.IGNORECASE)
+        if m:
+            self.eat_events.append((turn, m.group(1).strip(), int(m.group(2))))
+        else:
+            m = re.match(r"you ate (?:a |an )?([^!]+)!\s*hunger restored by (\d+)", line, re.IGNORECASE)
+            if m:
+                # Format: "{descriptor} {monster_name} {cut}".
+                # Descriptors can be 1-3 words ('sinewy',
+                # 'barely palatable', 'tough and gamey'), so a
+                # naive first-word strip mis-normalises. Keep the
+                # full descriptor; the food table tolerates a few
+                # extra rows per monster in exchange for honest
+                # text.
+                self.eat_events.append((turn, "Cooked " + m.group(1).strip(), int(m.group(2))))
+            elif "hunger restored by" in low:
+                # Raw-meat fall-through: previous line had the gnaw
+                # description; this line just carries the N. Pull
+                # the count and tag as 'raw meat'.
+                m2 = re.search(r"hunger restored by (\d+)", line, re.IGNORECASE)
+                if m2:
+                    self.eat_events.append((turn, "Raw meat (gnawed)", int(m2.group(1))))
+        m = re.match(r"you cooked the ([^!]+)!", line, re.IGNORECASE)
+        if m:
+            self.cook_events.append((turn, m.group(1).strip()))
+        m = re.match(r"cooked (\d+) piece", line, re.IGNORECASE)
+        if m:
+            self.cook_batches.append((turn, int(m.group(1))))
+        # Meat harvest: counts as a 'found' item for the food table.
+        m = re.match(r"you harvested some raw ([\w '\-]+?) meat", line, re.IGNORECASE)
+        if m:
+            self.found_items.append((turn, floor, f"Raw {m.group(1).strip()} meat", "monster_drop"))
+        # Meat rot in inventory.
+        m = re.match(r"your ([^!]+) meat has gone rotten", line, re.IGNORECASE)
+        if m:
+            self.meat_rot_events.append((turn, f"{m.group(1).strip()} meat"))
 
         if "you gained" in low and "experience" in low:
             self.events.append((turn, "xp", line))
@@ -1164,6 +1227,7 @@ class RunReport:
         hp_chart = self._hp_chart_svg()
         mana_chart = self._mana_chart_svg()
         hunger_chart = self._hunger_chart_svg()
+        food_economy_section = self._food_economy_section_html()
 
         kills_total = sum(self.kills_by_floor.values())
         kills_by_floor_lines = "".join(
@@ -1580,6 +1644,7 @@ class RunReport:
             hp_chart=hp_chart,
             mana_chart=mana_chart,
             hunger_chart=hunger_chart,
+            food_economy_section=food_economy_section,
             kills_by_floor=kills_by_floor_lines or "<tr><td colspan='2'>no kills logged</td></tr>",
             kills_by_monster=kills_by_monster_lines or "<tr><td colspan='2'>—</td></tr>",
             items_lines=items_lines or "<tr><td colspan='7'>no items</td></tr>",
@@ -1617,6 +1682,109 @@ class RunReport:
         return self._timeline_chart_svg(
             self.mana_timeline, "#38bdf8", "Mana", with_max=True,
         )
+
+    def _food_economy_section_html(self):
+        """Render the Food & Cooking block for the Stats tab. Combines
+        hunger summary statistics, food-source totals (by item from
+        the items aggregator data already on self.buys / found_items),
+        cooking-kit usage, and meat-rot losses. User request:
+        'I'd love to add a report that details hunger, food
+        found/purchased, and cooking.'"""
+        # Hunger summary stats.
+        hunger_min = min((h for (_t, h) in self.hunger_timeline), default=None)
+        hunger_avg = (
+            sum(h for (_t, h) in self.hunger_timeline) / len(self.hunger_timeline)
+            if self.hunger_timeline else None
+        )
+        turns_starving = sum(1 for (_t, h) in self.hunger_timeline if h <= 30)
+        turns_zero = sum(1 for (_t, h) in self.hunger_timeline if h == 0)
+        # Eat events: count + total hunger restored, broken out by name.
+        from collections import Counter
+        eat_count = Counter()
+        eat_hunger = Counter()  # name -> total hunger restored
+        for (_t, name, gained) in self.eat_events:
+            eat_count[name] += 1
+            eat_hunger[name] += gained
+        total_eaten = sum(eat_count.values())
+        total_hunger_restored = sum(eat_hunger.values())
+        # Cooking summary.
+        cook_actions = len(self.cook_batches)
+        meats_cooked = sum(n for (_t, n) in self.cook_batches)
+        meats_rotted = len(self.meat_rot_events)
+        # Food acquisition: count by name + source from self.buys
+        # (vendor purchases) and self.found_items (chests / drops).
+        buys_by_name = Counter()
+        for (_t, _fl, name, _pr, c) in self.buys:
+            if "Ration" in name or "Jerky" in name or "Lembas" in name or "Sausage" in name:
+                buys_by_name[name] += c
+        found_by_name = Counter()
+        FOOD_TAGS = (
+            "Kebab", "Burger", "Filet", "Chops", "Steak",
+            "Nuggets", "Cold cuts", "Liver", "Brain", "Stew",
+            "Sausage", "Lembas", "Ration", "Jerky", "meat",
+        )
+        for (_t, _fl, name, src) in self.found_items:
+            if any(tag in name for tag in FOOD_TAGS):
+                found_by_name[name] += 1
+        # Render the section.
+        hunger_min_s = f"{hunger_min}" if hunger_min is not None else "—"
+        hunger_avg_s = f"{hunger_avg:.0f}" if hunger_avg is not None else "—"
+        all_names = sorted(
+            set(found_by_name) | set(buys_by_name) | set(eat_count),
+            key=lambda n: -(found_by_name.get(n, 0) + buys_by_name.get(n, 0) + eat_count.get(n, 0)),
+        )
+        # Cap to top 25 -- enough for the common cases (rations,
+        # jerky, iron rations, plus all monster-meat variants) and
+        # keeps the report from ballooning on long runs that ate
+        # 30+ unique cooked meats.
+        food_rows = "".join(
+            f"<tr><td>{html.escape(name)}</td>"
+            f"<td>{found_by_name.get(name, 0)}</td>"
+            f"<td>{buys_by_name.get(name, 0)}</td>"
+            f"<td>{eat_count.get(name, 0)}</td>"
+            f"<td>{eat_hunger.get(name, 0)}</td></tr>"
+            for name in all_names[:25]
+        )
+        if len(all_names) > 25:
+            food_rows += (
+                f"<tr><td colspan='5' class='muted'>… and {len(all_names) - 25} "
+                f"more food item(s) -- showing top 25 by activity</td></tr>"
+            )
+        if not food_rows:
+            food_rows = "<tr><td colspan='5' class='muted'>no food acquired or eaten</td></tr>"
+        starving_pct = (turns_starving / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
+        zero_pct = (turns_zero / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
+        cook_note = (
+            f"{cook_actions} kit use(s) → cooked {meats_cooked} piece(s)"
+            if cook_actions else "no cooking kit usage logged"
+        )
+        if meats_rotted:
+            cook_note += f" · <span style='color:#fb923c;'>{meats_rotted} meat stack(s) spoiled in bag</span>"
+        return f"""
+      <div class="chart-block">
+        <h3>Food &amp; Cooking</h3>
+        <div class="grid4">
+          <div class="stat"><span>Min hunger</span>
+            <span class="v" style="color:{'#f43f5e' if hunger_min is not None and hunger_min <= 5 else '#fde68a'};">{hunger_min_s}</span></div>
+          <div class="stat"><span>Avg hunger</span>
+            <span class="v">{hunger_avg_s}</span></div>
+          <div class="stat"><span>Turns in starve zone (&le;30)</span>
+            <span class="v">{turns_starving} <span class="muted" style="font-weight:normal;">({starving_pct:.0f}%)</span></span></div>
+          <div class="stat"><span>Turns at hunger 0</span>
+            <span class="v" style="color:{'#f43f5e' if turns_zero else '#fde68a'};">{turns_zero} <span class="muted" style="font-weight:normal;">({zero_pct:.0f}%)</span></span></div>
+          <div class="stat"><span>Food items eaten</span>
+            <span class="v">{total_eaten}</span></div>
+          <div class="stat"><span>Total hunger restored</span>
+            <span class="v">{total_hunger_restored}</span></div>
+          <div class="stat" style="grid-column: span 2;"><span>Cooking</span>
+            <span class="v" style="text-align:right;font-size:0.85em;">{cook_note}</span></div>
+        </div>
+        <table style="margin-top:10px;">
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Eaten</th><th>Hunger restored</th></tr>
+          {food_rows}
+        </table>
+      </div>
+"""
 
     def _hunger_chart_svg(self):
         # Hunger has a fixed 0-100 scale, so reuse the timeline helper
@@ -1979,6 +2147,7 @@ $sprite_styles
         <h3>Hunger over the run</h3>
         $hunger_chart
       </div>
+      $food_economy_section
     </div>
 
     <!-- Equipment + Inventory -->
