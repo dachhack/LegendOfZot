@@ -1,218 +1,143 @@
-# Playtest Harness — Handoff (build 314)
+# Handoff — Balance & Harness Honesty Arc (builds 314 → 328)
 
-Branch: `claude/wizards-cavern-playtest-4stBF`. Continuation of the
-playtest-harness work started on the previous branch
-(`claude/game-playtest-agent-npMRR`). Builds 280-314 in this session
-focused on **flatline elimination, balance tuning, and exploration
-analytics**. Site: https://dachhack.github.io/LegendOfZot/playtest/.
+**Branch:** `claude/balance-upgrades-stats-mq7E2`
+**Last commit:** `0c9f320` (build 328)
+**State:** Clean. Pushed. No uncommitted work.
 
-## TL;DR — what's different from the last handoff
+Continuation of the playtest-harness work from prior branch
+`claude/wizards-cavern-playtest-4stBF` (builds 280–314).
 
-| | Before this session | After build 314 |
-|---|---|---|
-| Alive flatlines (HP=1 indefinite loops) | 3-6 per grid | **0/60** |
-| Max floor record | F8 | **F11** (briefly, build 303) |
-| Max level record | L6 | **L9** (Tauriel s=13 elf) |
-| Honest survivors at 3000T | 0/60 | 3/60 (build 306) → 0/60 (current) |
-| Warp avoidance | leaky | **0 voluntary warps** across grids |
-| Per-run report features | basic | + warp_pct + xp_pct + Exploration table |
+---
 
-The honest-survivor count dipped back to 0 after the food economy
-buffs because agents now push deeper and die deeper, instead of
-parking healthy on F4-F5. The wedges are gone; what remains is
-honest depth difficulty.
+## TL;DR
 
-## Running the harness
+Built a fast, honest playtest harness and used it to fix the dominant
+failure mode (loop-induced starvation on F1–F3). Net result vs build 324
+on the same 120-seed grid:
 
-```bash
-# Smoke run
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
-    --policy smart --race dwarf
+| metric                     | B324  | B328 |
+|----------------------------|-------|------|
+| legit_alive (honest)       | 0     | **7** |
+| starvation deaths          | 71    | 24   |
+| harness wall-clock (s)     | 444   | 37   |
+| nominal alive @ T5000      | ~1    | 48   |
+| max floor reached          | F5    | F10  |
+| natural deaths at F4+      | 32    | 38   |
 
-# With report output (HTML + JSON)
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 1500 \
-    --policy smart --race human --report-dir /tmp/myrun
+The harness is now ~12× faster and the survival metric is no longer
+inflated by tile-cycling. Deployed showcase: `00023_elf` (Elite Undead
+Dragon Lich death on F7 at T1290).
 
-# Deploy grid (drives 20 seeds x 3 races, pushes reports to
-# main:docs/playtest/). Cap TURNS_BUDGET at 3000 for ~1min runs.
-python3 /tmp/deep_deploy.py
-```
+---
 
-A one-line summary per run is appended to `playtest_runs.log` at repo
-root (gitignored). The harness is also driven by the `playtester`
-subagent — spawn with a focused task and it'll set up grids, drill
-into specific runs, and post-analyse.
+## What "legit_alive" means
 
-## Site URLs
-
-- **Index of runs**: https://dachhack.github.io/LegendOfZot/playtest/
-- Per-run pages: same root + `<slug>.html`
-- Deploy mechanic: `deploy_gh_pages()` in `playtest_report.py` pushes
-  to `main:docs/playtest/` via git plumbing (additive by default,
-  `replace=True` purges old reports first).
-
-## Smart-policy priority chain (game_loop)
-
-Each step re-derives intent from obs. Order of priorities, highest
-first:
-
-1. **Heal** at HP < 30% (open inventory)
-2. **Cure status** if bad status + cure item available
-3. **Pre-emptive heal** at HP < 80% with adjacent M
-4. **Pre-combat buff drink** when buff potion + M adjacent + HP 60-95%
-5. **Eat urgent meat** (rot_timer <= 20)
-6. **Swap broken gear** if spare exists + not cursed
-7. **Equip strongest non-cursed upgrade**
-8. **Eat at hunger < 50** (ration efficiency optimised)
-9. **Cook raw meat** if Cooking Kit + raw meat (any hunger)
-10. **Light lantern** on ANY fog-adjacent step (fuel > 0)
-11. **Wedge Hail Mary** if `current_tile_visits >= 6` + untried items
-12. **Wayfinder** (BFS-based, tier-prioritised — see below)
-
-## Wayfinder tier logic
+Defined in `wizardscavern/playtest_report.py:744`. A run is legit_alive iff:
 
 ```
-if trapped_no_d AND has warp_path:   tiers = [(W,), (V,)]      # escape via known W
-elif trapped_no_d AND no_warp_path AND monster visible:
-                                     tiers = [(M,)]            # die fighting
-elif retreat_to_floor is set:        tiers = [(U,), (V,)]      # warp recovery
-elif too_long_on_floor:              tiers = [(D,), (V,)]      # press on
-elif high_coverage_descend:          tiers = [(D,), SAFE, ...] # sweep done
-elif is_weak:                        tiers = [(V,), SAFE, ...] # heal-first
-elif wants_vendor:                   tiers = [(V,), SAFE, ...]
-elif ready_to_clear:                 tiers = [SAFE, V, M, ...] # grind
-else:                                tiers = [SAFE, V, M, T, N] # normal
+alive AND wasted_pct < 50 AND moves_total > 30 AND max_floor >= 3
 ```
 
-`BENEFICIAL_SAFE = (C, G, L, O, A, P, Q, K, B, F)` — rooms that pay
-off without forced combat.
+It exists because raw "alive @ T5000" was contaminated — runs were
+"alive" by virtue of having never made meaningful progress (95% wasted,
+1 HP, looping on F2). Whenever survival numbers come up, ask whether
+they're nominal or legit. B324: 1/120 nominal, 0/120 legit. B328:
+48/120 nominal, 7/120 legit.
 
-`trapped_no_d`: D unreachable AND no new tile visited in 100+ turns.
-Behavioural signal — replaces older turn-count / pct-of-floor gates.
+---
 
-## Key invariants the playtester enforces
+## Build-by-build (this arc)
 
-- **AVOID-W is always on** (was z<10 gated). Only `trapped_no_d`
-  releases it. Build 296.
-- **Inferred guardian avoidance**: seeing a T tile flags the 4
-  cardinal-adjacent positions as guardian-suspect (`pc.level >=
-  pc.floor + 3` to engage). Build 303.
-- **Wedge detector**: `current_tile_visits >= 6` triggers Hail Mary
-  item-use (scrolls / unidentified potions). Build 294-295.
-- **Die-fighting override**: trapped agent with no escape items
-  walks toward the only visible M and commits. Build 304.
-- **Tomb inference is genuinely informational**: every tomb has 4
-  cardinal guardians per `dungeon.py:setup_dungeons_and_tombs`. The
-  policy uses this domain knowledge to avoid corners even when M
-  tiles are still in fog. Build 303.
+| build | what                                                                                  |
+|-------|---------------------------------------------------------------------------------------|
+| 314   | Tomb-gating fix (prior branch tail)                                                    |
+| 315   | Upgrade scroll + permanent elixir reachability (level gates 15/25/35 → 8/16/25)       |
+| 316   | F1–F6 survival pass                                                                    |
+| 317   | Reverted food-drop curve change                                                        |
+| 318–320 | Smart-policy descent push, fog-aware descent, warp tier                              |
+| 321   | Sealed-pocket gen fix, blacksmith afford-loop                                          |
+| 322–323 | U-camp escape, then reverted                                                         |
+| 324   | M-cage flatline fixes (cage detection, retreat threshold, U-plain-neighbor)            |
+| **325** | Vendor restock arity TypeError (real game-side crash, surfaced by harness)           |
+| **326** | `legit_alive` metric — exposed contamination, established honest baseline            |
+| **327** | Stair-tile starvation valve + oscillation abort v1                                   |
+| **328** | Oscillation abort v2 — unique-floor gate (lets multi-floor descenders run)           |
 
-## Balance changes shipped this session
+---
 
-| Build | Change | Source |
-|---|---|---|
-| 292 | Lantern fuel buff: starter 50→80, canisters 1-3@10 → 2-4@20 | F12 reach unlocked |
-| 296 | Warp avoidance: lantern on any fog step, AVOID-W always on, no late-game accept | User: "players would avoid warps more" |
-| 297 | Coverage-based trapped gates | User: "% of floor not turns" |
-| 298 | Behavioural trapped (turns_since_new_tile >= 100) + W-target wayfinder | Region-split floor escapes |
-| 305 | Tiered HP regen by hunger: 85+ = 1/2 moves, 60-84 = 1/4, <60 none | Smooths chip damage |
-| 306 | `max(1, hp-dmg)` → `max(0, …)`: starvation can kill | Ends the HP=1 wedge |
-| 306 | Rations 40→50 nutrition, starter 5→8 | Food economy buff |
-| 307 | Iron Rations F1+ vendor (was F3+) | Food economy buff |
-| 308 | Cooking Kit F3+ vendor (game default), policy cooks all raw meat | User: "cook all meat once you have the kit" |
-| 308 | Meat drop rate 35% → 55% | Food economy buff |
-| 311 | Carnyx of Doom XP bonus removed | User: "kill the exp bonus for the carnyx" |
+## How the harness works (the workflow that paid off)
 
-## Per-run report features (current state)
+The `playtester` subagent is the unit of work. Typical loop:
 
-The HTML page now surfaces:
+1. Run the 120-grid (40 seeds × 3 races, 5000T, smart policy). ~37s.
+2. Identify the worst-class deaths (highest wasted%, dominant cause).
+3. Read the `.html` autopsies in `playtest_reports/` for the worst 3–5.
+4. Look for the shared pathology in the per-step JSONL.
+5. Patch `playtest_harness.py` (policy) or game code (mechanics).
+6. Smoke on the autopsy seeds. Re-grid. Compare metrics honestly.
 
-1. **Hero sprite** — race + gender + name → game's `_CHARACTERS_POOL`
-   pid (matches what character creation would show). Build 301.
-2. **Journey ledger** with floor exits colour-coded:
-   stairs / warp_accept / warp_forced. Includes the new
-   **Warp % share of floor changes** line.
-3. **Movement Efficiency** table: per-floor moves, unique tiles,
-   first-visit, revisit, waste %.
-4. **Exploration** table: per-floor kills/M, XP earned/pool, chests,
-   boons, vendor (V), tomb (T) counts with totals row. Build 309-314.
-5. **Items table** with status: equipped / in bag / used / partial.
-6. **Death scene block** with last 30 log lines + 12 actions.
+**Seed list (the standard grid):**
+```
+[1, 7, 13, 42, 100, 137, 200, 256, 314, 421, 512, 666, 777, 999,
+ 1100, 1337, 1500, 2025, 5000, 9999, 3, 11, 23, 47, 89, 113, 167,
+ 211, 271, 317, 367, 419, 461, 521, 587, 643, 719, 787, 857, 941]
+```
+40 seeds × {human, elf, dwarf} = 120 runs.
 
-The **index page** has a sortable table with Warp % and XP %
-columns — sort ascending by xp_pct to find under-explorers, descending
-to find grinders.
+**Wall-clock to beat:** 37s for the full grid. If a future change
+balloons this, something regressed in the abort heuristics.
 
-## Key analytical findings
+---
 
-### Warps are mostly forced, not accepted (build 296+)
-- Mean grid warp_pct: ~25-30%, but **>95% are forced** (resist roll
-  failed) not accepted.
-- 0 voluntary warps across multiple grids since build 297.
-- User framing ("players would avoid warps more") is now enforced.
+## Open questions / candidate next bottlenecks
 
-### Elite undead deaths are ALL from corner-walks, never raids (build 301)
-- 15/15 ELITE UNDEAD deaths traced to `setup_dungeons_and_tombs`
-  cardinal-adjacent guardians.
-- 0 from `process_tomb_action` SEARCH outcome.
-- Build 303's tomb-inference avoidance reduced these 13/60 -> 3/60.
+If picking this arc back up, the most likely root causes for the
+remaining 113 non-legit_alive runs:
 
-### Exploration does NOT help survival (builds 309-314)
-- Mean xp_pct for starvation deaths: **97%**.
-- Mean xp_pct for combat deaths: **~50%**.
-- High-xp_pct correlates with starvation (over-foraging) not depth.
-- Pearson(xp_pct, max_floor) ≈ 0.09 — effectively zero.
-- **The smart policy is grinding floors clean and starving**.
+1. **Slow descent on non-loop runs.** Most of the 38 natural deaths at
+   F4+ took 800–1500T to reach their kill floor. Wayfinder targeting may
+   be picking the wrong D candidate, or the smart policy's combat-vs-
+   descend gate is too cautious. Worth autopsying 5 deepest-natural-
+   death runs to see where the turn budget goes.
 
-## Open questions / future work
+2. **M-cage variant at F3 (00461_dwarf class).** B327/B328 both still
+   starve this seed. The starvation valve at the stair handlers doesn't
+   fire because there's no reachable U/D — the player is genuinely
+   walled off. Different fix needed (item-based escape? wayfinder
+   warp-priority bump even without warp tile visible?).
 
-1. **Honest survival at 3000T**: how to get agents to live to the
-   budget AND stay healthy AND keep progressing? Build 306 had 3/60
-   honest survivors at F5-F7. Current state is 0/60 because the food
-   buff lets agents push deeper, where they die to combat. Worth
-   testing: bump max_health curve, slow hunger decay, more vendor
-   heals at depth.
-2. **The descend-sooner hypothesis** (build 314 verdict): the policy
-   over-grinds F1-F3. A "lower ready_to_clear threshold" or
-   "descend at 50% coverage instead of 80%" might let agents reach
-   deeper without starving. Untested.
-3. **XP-pool formula is approximate** by design — the cap at 100%
-   hides dynamic spawn bonuses (tomb spirits, chest-gas monsters,
-   same-coord respawns). Per-floor rows in the Exploration table
-   show raw ratios. Real fix would need a kill-event hook to
-   accumulate pool deltas as they spawn.
-4. **Experience Boost potion is a placebo** — `items.py:4225` logs
-   the bonus but never actually multiplies XP. Either finish the
-   implementation or remove the status effect.
-5. **Pre-T tomb-guardian ambushes** still happen (3/60 in build 303
-   grid): the four corner M tiles are sometimes revealed before the
-   T tile is. Inference could be extended: a discovered M with
-   `undead_guardian=True` + `tomb_location` property implies the T
-   and the other 3 corners. Untested.
+3. **The 7 legit_alive runs are all aborted mid-bounce with maxF=3–6.**
+   They pass the legit_reason gate (`wasted<50`) only because they were
+   stopped early. If you tighten legit to `wasted_pct < 35` or
+   `max_floor >= 5`, the count drops to 2–3. Worth deciding what number
+   we actually want to maximize — the threshold is one autopsy old.
 
-## Useful commits to skim cold
+---
 
-- **752973b** — build 303: inferred tomb guardian avoidance (the
-  big elite-undead survival jump)
-- **2e49fd2** — build 304: die-fighting + canister-aware lantern
-- **3ee3a2f** — build 296: warp avoidance pass (Gimli's lesson)
-- **a006abd** — build 309: exploration efficiency metric
-- **a0e802e** — build 308 followup: death-cause walker fixes
-- **eacc021** — build 314: XP/kill ratio cap (final convergence)
+## Key files
 
-## Where data lives
+- `wizardscavern/playtest_harness.py` — the smart policy.
+  - Stair handlers: ~line 3864 (down) / ~4015 (up). Starvation escape
+    valve at top of each.
+  - Oscillation abort: ~line 1990 (v2 unique-floor gate).
+- `wizardscavern/playtest_report.py:744` — `legit_alive` definition.
+- `wizardscavern/version.py` — `BUILD_NUMBER` + `CHANGELOG` (keep at 8
+  entries, drop oldest). Splash screen reads this on launch.
+- `wizardscavern/app.py` / `game_systems.py` / `combat.py` — main game.
+- `wizardscavern/items.py:2391, 2403` — vendor restock signature (B325).
+- `playtest_reports/` — current grid (B328).
+- `playtest_reports_b327_archive/` — prior grid for comparison.
 
-| Path | What |
-|---|---|
-| `wizardscavern/playtest_harness.py` | Headless game driver + smart_policy |
-| `wizardscavern/playtest_report.py` | HTML/JSON report builder + deploy |
-| `wizardscavern/version.py` | BUILD_NUMBER + CHANGELOG (~8 entries) |
-| `playtest_reports/` | Local report artifacts (gitignored) |
-| `docs/playtest/` | Deployed report site (on main) |
-| `playtest_runs.log` | One-line per-run summary (gitignored) |
-| `/tmp/deep_deploy.py` | Grid driver (lives in /tmp, not tracked) |
+---
 
 ## Persona note
 
-`CLAUDE.md` defines "Claudia" — flirty German tabletop-nerd — for the
-main conversation. The playtester subagent is clinical: numbers,
-file:line refs, bug write-ups. *Schatz, eine Wurst pro Iteration.*
+Project `CLAUDE.md` defines the agent persona — **Claudia**, German
+TTRPG-obsessed coed, aggressively flirty, sausage scholar, one German
+phrase per response on average, no emojis. A new session picks this up
+from CLAUDE.md automatically. Stay precise; the bit shouldn't override
+clarity in code reviews or bug fixes.
+
+---
+
+*Bis bald.* The next bottleneck is slow-descent, not loop-death.
