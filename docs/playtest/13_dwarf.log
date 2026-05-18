@@ -3117,7 +3117,7 @@ T1549 mode=inventory           Fili of Khazad-dum(dwa) F4@(13, 7) HP 93/96 MP 0/
 T1550 mode=inventory           Fili of Khazad-dum(dwa) F4@(13, 7) HP 93/96 MP 0/0 Hu 87 $ 509 room=.
 -> u8
 T1551 mode=upgrade_scroll_mode Fili of Khazad-dum(dwa) F4@(13, 7) HP 93/96 MP 0/0 Hu 87 $ 509 room=.
--> 1
+-> 3
 T1552 mode=inventory           Fili of Khazad-dum(dwa) F4@(13, 7) HP 93/96 MP 0/0 Hu 87 $ 509 room=.
 -> u8
 T1553 mode=inventory           Fili of Khazad-dum(dwa) F4@(13, 7) HP 93/96 MP 0/0 Hu 87 $ 509 room=.
@@ -3144,21 +3144,21 @@ T1563 mode=game_loop           Fili of Khazad-dum(dwa) F4@(11,11) HP 95/96 MP 0/
 -> e
 T1564 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(12,11) HP 95/96 MP 0/0 Hu 78 $ 509 room=M vs Wight(L3 HP41/41)
 -> a
-T1565 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(12,11) HP 91/96 MP 0/0 Hu 78 $ 509 room=M vs Wight(L3 HP15/41)
+T1565 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(12,11) HP 92/96 MP 0/0 Hu 78 $ 509 room=M vs Wight(L3 HP16/41)
 -> f
-T1566 mode=flee_direction_mode Fili of Khazad-dum(dwa) F4@(12,11) HP 81/96 MP 0/0 Hu 78 $ 509 room=M
+T1566 mode=flee_direction_mode Fili of Khazad-dum(dwa) F4@(12,11) HP 83/96 MP 0/0 Hu 78 $ 509 room=M
 -> n
-T1567 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12,10) HP 81/96 MP 0/0 Hu 78 $ 509 room=.
+T1567 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12,10) HP 83/96 MP 0/0 Hu 78 $ 509 room=.
 -> n
-T1568 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12, 9) HP 82/96 MP 0/0 Hu 77 $ 509 room=O
+T1568 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12, 9) HP 84/96 MP 0/0 Hu 77 $ 509 room=O
 -> e
-T1569 mode=game_loop           Fili of Khazad-dum(dwa) F4@(13, 9) HP 82/96 MP 0/0 Hu 76 $ 509 room=.
+T1569 mode=game_loop           Fili of Khazad-dum(dwa) F4@(13, 9) HP 84/96 MP 0/0 Hu 76 $ 509 room=.
 -> e
-T1570 mode=game_loop           Fili of Khazad-dum(dwa) F4@(14, 9) HP 82/96 MP 0/0 Hu 75 $ 509 room=.
+T1570 mode=game_loop           Fili of Khazad-dum(dwa) F4@(14, 9) HP 84/96 MP 0/0 Hu 75 $ 509 room=.
 -> n
-T1571 mode=game_loop           Fili of Khazad-dum(dwa) F4@(14, 8) HP 82/96 MP 0/0 Hu 74 $ 509 room=.
+T1571 mode=game_loop           Fili of Khazad-dum(dwa) F4@(14, 8) HP 84/96 MP 0/0 Hu 74 $ 509 room=.
 -> i
-T1572 mode=inventory           Fili of Khazad-dum(dwa) F4@(14, 8) HP 82/96 MP 0/0 Hu 74 $ 509 room=.
+T1572 mode=inventory           Fili of Khazad-dum(dwa) F4@(14, 8) HP 84/96 MP 0/0 Hu 74 $ 509 room=.
 -> u7
 T1573 mode=inventory           Fili of Khazad-dum(dwa) F4@(14, 8) HP 96/96 MP 0/0 Hu 74 $ 509 room=.
 -> u2
@@ -3226,7 +3226,7 @@ T1604 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12, 9) HP 96/96 MP 0/
 -> s
 T1605 mode=game_loop           Fili of Khazad-dum(dwa) F4@(12,10) HP 96/96 MP 0/0 Hu 98 $ 509 room=.
 -> s
-T1606 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(12,11) HP 96/96 MP 0/0 Hu 97 $ 509 room=M vs Wight(L3 HP21/41)
+T1606 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(12,11) HP 96/96 MP 0/0 Hu 97 $ 509 room=M vs Wight(L3 HP22/41)
 -> a
 T1607 mode=combat_victory      Fili of Khazad-dum(dwa) F4@(12,11) HP 96/96 MP 0/0 Hu 97 $ 533 room=.
 -> back
@@ -3300,49 +3300,49 @@ T1641 mode=game_loop           Fili of Khazad-dum(dwa) F4@(15,13) HP 96/96 MP 0/
 -> s
 T1642 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(15,14) HP 96/96 MP 0/0 Hu 75 $ 533 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T1643 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(15,14) HP 75/96 MP 0/0 Hu 75 $ 533 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+T1643 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(15,14) HP 76/96 MP 0/0 Hu 75 $ 533 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T1644 mode=flee_direction_mode Fili of Khazad-dum(dwa) F4@(15,14) HP 75/96 MP 0/0 Hu 75 $ 533 room=M
+T1644 mode=flee_direction_mode Fili of Khazad-dum(dwa) F4@(15,14) HP 76/96 MP 0/0 Hu 75 $ 533 room=M
 -> n
-T1645 mode=game_loop           Fili of Khazad-dum(dwa) F4@(15,13) HP 75/96 MP 0/0 Hu 75 $ 533 room=.
+T1645 mode=game_loop           Fili of Khazad-dum(dwa) F4@(15,13) HP 76/96 MP 0/0 Hu 75 $ 533 room=.
 -> e
-T1646 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,13) HP 75/96 MP 0/0 Hu 74 $ 533 room=.
+T1646 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,13) HP 76/96 MP 0/0 Hu 74 $ 533 room=.
 -> n
-T1647 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 75/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP32/32)
+T1647 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 76/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP32/32)
 -> a
-T1648 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 75/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP32/32)
+T1648 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 76/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP32/32)
 -> a
-T1649 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP4/32)
+T1649 mode=combat_mode         Fili of Khazad-dum(dwa) F4@(16,12) HP 75/96 MP 0/0 Hu 73 $ 533 room=M vs Goblin(L3 HP5/32)
 -> a
-T1650 mode=combat_victory      Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 73 $ 565 room=.
+T1650 mode=combat_victory      Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 73 $ 565 room=.
 -> back
-T1651 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 73 $ 565 room=.
+T1651 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 73 $ 565 room=.
 -> i
-T1652 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 73 $ 565 room=.
+T1652 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 73 $ 565 room=.
 -> u11
-T1653 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 73 $ 565 room=.
+T1653 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 73 $ 565 room=.
 -> eat1
-T1654 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 80 $ 565 room=.
+T1654 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 80 $ 565 room=.
 -> u7
-T1655 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 80 $ 565 room=.
+T1655 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 80 $ 565 room=.
 -> u2
-T1656 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 80 $ 565 room=.
+T1656 mode=inventory           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 80 $ 565 room=.
 -> x
-T1657 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,12) HP 73/96 MP 0/0 Hu 80 $ 565 room=.
+T1657 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,12) HP 74/96 MP 0/0 Hu 80 $ 565 room=.
 -> e
-T1658 mode=game_loop           Fili of Khazad-dum(dwa) F4@(17,12) HP 73/96 MP 0/0 Hu 79 $ 565 room=.
+T1658 mode=game_loop           Fili of Khazad-dum(dwa) F4@(17,12) HP 74/96 MP 0/0 Hu 79 $ 565 room=.
 -> e
-T1659 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,12) HP 74/96 MP 0/0 Hu 78 $ 565 room=.
+T1659 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,12) HP 75/96 MP 0/0 Hu 78 $ 565 room=.
 -> s
-T1660 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,13) HP 74/96 MP 0/0 Hu 77 $ 565 room=.
+T1660 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,13) HP 75/96 MP 0/0 Hu 77 $ 565 room=.
 -> s
-T1661 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,14) HP 74/96 MP 0/0 Hu 76 $ 565 room=.
+T1661 mode=game_loop           Fili of Khazad-dum(dwa) F4@(18,14) HP 75/96 MP 0/0 Hu 76 $ 565 room=.
 -> w
-T1662 mode=game_loop           Fili of Khazad-dum(dwa) F4@(17,14) HP 74/96 MP 0/0 Hu 75 $ 565 room=.
+T1662 mode=game_loop           Fili of Khazad-dum(dwa) F4@(17,14) HP 75/96 MP 0/0 Hu 75 $ 565 room=.
 -> w
-T1663 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,14) HP 75/96 MP 0/0 Hu 74 $ 565 room=.
+T1663 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,14) HP 76/96 MP 0/0 Hu 74 $ 565 room=.
 -> s
-T1664 mode=pool_mode           Fili of Khazad-dum(dwa) F4@(16,15) HP 75/96 MP 0/0 Hu 73 $ 565 room=P
+T1664 mode=pool_mode           Fili of Khazad-dum(dwa) F4@(16,15) HP 76/96 MP 0/0 Hu 73 $ 565 room=P
 -> dr
 T1665 mode=game_loop           Fili of Khazad-dum(dwa) F4@(16,15) HP 96/96 MP 0/0 Hu 73 $ 565 room=.
 -> w
@@ -3398,29 +3398,31 @@ T1690 mode=game_loop           Fili of Khazad-dum(dwa) F6@( 3, 7) HP 96/96 MP 0/
 -> n
 T1691 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 96/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP114/114)
 -> a
-T1692 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 88/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP114/114)
+T1692 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 89/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP114/114)
 -> a
-T1693 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 80/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP96/114)
+T1693 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 82/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP97/114)
 -> a
-T1694 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 72/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP96/114)
+T1694 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 75/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP97/114)
 -> a
-T1695 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 64/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP96/114)
+T1695 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 68/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP97/114)
 -> f
-T1696 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 41/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP96/114)
+T1696 mode=combat_mode         Fili of Khazad-dum(dwa) F6@( 3, 6) HP 47/96 MP 0/0 Hu 54 $ 665 room=M vs Otyugh(L5 HP97/114)
 -> f
-T1697 mode=flee_direction_mode Fili of Khazad-dum(dwa) F6@( 3, 6) HP 26/96 MP 0/0 Hu 54 $ 665 room=M
+T1697 mode=flee_direction_mode Fili of Khazad-dum(dwa) F6@( 3, 6) HP 33/96 MP 0/0 Hu 54 $ 665 room=M
 -> s
-T1698 mode=game_loop           Fili of Khazad-dum(dwa) F6@( 3, 7) HP 19/96 MP 0/0 Hu 54 $ 665 room=.
+T1698 mode=game_loop           Fili of Khazad-dum(dwa) F6@( 3, 7) HP 26/96 MP 0/0 Hu 54 $ 665 room=.
 -> e
-T1699 mode=game_loop           Fili of Khazad-dum(dwa) F6@( 4, 7) HP 12/96 MP 0/0 Hu 53 $ 665 room=.
+T1699 mode=game_loop           Fili of Khazad-dum(dwa) F6@( 4, 7) HP 19/96 MP 0/0 Hu 53 $ 665 room=.
 -> n
-T1700 mode=warp_mode           Fili of Khazad-dum(dwa) F6@( 4, 6) HP 5/96 MP 0/0 Hu 52 $ 665 room=W
+T1700 mode=warp_mode           Fili of Khazad-dum(dwa) F6@( 4, 6) HP 12/96 MP 0/0 Hu 52 $ 665 room=W
 -> y
-T1701 mode=game_loop           Fili of Khazad-dum(dwa) F7@( 1, 3) HP 5/96 MP 0/0 Hu 52 $ 665 room=.
+T1701 mode=game_loop           Fili of Khazad-dum(dwa) F7@( 1, 3) HP 12/96 MP 0/0 Hu 52 $ 665 room=.
 -> e
-T1702 mode=death_screen        Fili of Khazad-dum(dwa) F7@( 2, 3) HP -2/96 MP 0/0 Hu 51 $ 665 room=M
+T1702 mode=combat_mode         Fili of Khazad-dum(dwa) F7@( 2, 3) HP 5/96 MP 0/0 Hu 51 $ 665 room=M vs Giant Spider(L6 HP46/46)
+-> f
+T1703 mode=death_screen        Fili of Khazad-dum(dwa) F7@( 2, 3) HP -2/96 MP 0/0 Hu 51 $ 665 room=M
 
-=== run finished: turns=1702 floor=7 hp=-2/96 gold=665 alive=False mode=death_screen ===
+=== run finished: turns=1703 floor=7 hp=-2/96 gold=665 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00013_dwarf.html

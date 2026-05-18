@@ -1385,826 +1385,2640 @@ T 682 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 50/74 MP 0/0 
 T 683 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> u5
 T 684 mode=upgrade_scroll_mode Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
--> 1
+-> 2
 T 685 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> x
 T 686 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> i
 T 687 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
--> e1
-T 688 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> e4
-T 689 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
+T 688 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> x
-T 690 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
+T 689 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> i
-T 691 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
+T 690 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 19 $ 163 room=V
 -> eat1
-T 692 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 89 $ 163 room=V
+T 691 mode=inventory           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 89 $ 163 room=V
 -> x
+T 692 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 89 $ 163 room=V
+-> l
 T 693 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 89 $ 163 room=V
--> l
-T 694 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 89 $ 163 room=V
 -> e
-T 695 mode=garden_mode         Thorin Oakshield(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 88 $ 163 room=G
+T 694 mode=garden_mode         Thorin Oakshield(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 88 $ 163 room=G
 -> h
-T 696 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 88 $ 163 room=.
+T 695 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 1) HP 74/74 MP 0/0 Hu 88 $ 163 room=.
 -> e
-T 697 mode=pool_mode           Thorin Oakshield(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 163 room=P
+T 696 mode=pool_mode           Thorin Oakshield(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 163 room=P
 -> dr
-T 698 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 163 room=.
+T 697 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 163 room=.
 -> s
-T 699 mode=combat_mode         Thorin Oakshield(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=M vs Gray Ooze(L1 HP35/35)
+T 698 mode=combat_mode         Thorin Oakshield(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=M vs Gray Ooze(L1 HP35/35)
 -> a
-T 700 mode=combat_mode         Thorin Oakshield(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=M vs Gray Ooze(L1 HP6/35)
--> f
-T 701 mode=flee_direction_mode Thorin Oakshield(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=M
--> e
-T 702 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=.
--> l
-T 703 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=.
--> n
-T 704 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 74/74 MP 0/0 Hu 85 $ 163 room=M vs Bugbear(L1 HP55/55)
+T 699 mode=combat_mode         Thorin Oakshield(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 86 $ 163 room=M vs Gray Ooze(L1 HP7/35)
 -> a
-T 705 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 72/74 MP 0/0 Hu 85 $ 163 room=M vs Bugbear(L1 HP29/55)
--> a
-T 706 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 70/74 MP 0/0 Hu 85 $ 163 room=M vs Bugbear(L1 HP29/55)
--> a
-T 707 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 68/74 MP 0/0 Hu 85 $ 163 room=M vs Bugbear(L1 HP4/55)
--> a
-T 708 mode=combat_victory      Thorin Oakshield(dwa) F2@( 5, 1) HP 68/84 MP 0/0 Hu 85 $ 165 room=.
+T 700 mode=combat_victory      Thorin Oakshield(dwa) F2@( 4, 2) HP 74/84 MP 0/0 Hu 86 $ 177 room=.
 -> back
-T 709 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 1) HP 68/84 MP 0/0 Hu 85 $ 165 room=.
--> i
-T 710 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 1) HP 68/84 MP 0/0 Hu 85 $ 165 room=.
--> u6
-T 711 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 85 $ 165 room=.
--> x
-T 712 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 85 $ 165 room=.
--> i
-T 713 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 85 $ 165 room=.
--> u15
-T 714 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 85 $ 165 room=.
--> x
-T 715 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 85 $ 165 room=.
--> e
-T 716 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 1) HP 84/84 MP 0/0 Hu 84 $ 165 room=.
--> s
-T 717 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 84/84 MP 0/0 Hu 83 $ 165 room=.
+T 701 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 2) HP 74/84 MP 0/0 Hu 86 $ 177 room=.
 -> l
-T 718 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 84/84 MP 0/0 Hu 83 $ 165 room=.
--> e
-T 719 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 82 $ 165 room=.
--> l
-T 720 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 82 $ 165 room=.
+T 702 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 2) HP 74/84 MP 0/0 Hu 86 $ 177 room=.
 -> s
-T 721 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 81 $ 165 room=.
--> l
-T 722 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 81 $ 165 room=.
--> s
-T 723 mode=library_mode        Thorin Oakshield(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 80 $ 165 room=L
--> r
-T 724 mode=library_read_decision_mode Thorin Oakshield(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 80 $ 165 room=L
--> y
-T 725 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 80 $ 265 room=.
--> w
-T 726 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 79 $ 265 room=.
--> w
-T 727 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 78 $ 265 room=.
--> s
-T 728 mode=chest_mode          Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 77 $ 265 room=C
+T 703 mode=chest_mode          Thorin Oakshield(dwa) F2@( 4, 3) HP 74/84 MP 0/0 Hu 85 $ 177 room=C
 -> o
-T 729 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 77 $ 265 room=.
+T 704 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 74/84 MP 0/0 Hu 85 $ 237 room=.
 -> l
-T 730 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 77 $ 265 room=.
--> w
-T 731 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 5) HP 84/84 MP 0/0 Hu 76 $ 265 room=.
--> w
-T 732 mode=combat_mode         Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 75 $ 265 room=M vs Rust Monster(L1 HP18/18)
--> a
-T 733 mode=combat_victory      Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 75 $ 281 room=.
--> back
-T 734 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 75 $ 281 room=.
--> l
-T 735 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 75 $ 281 room=.
--> w
-T 736 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 74 $ 281 room=.
--> w
-T 737 mode=garden_mode         Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 73 $ 281 room=G
--> h
-T 738 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 73 $ 281 room=.
--> n
-T 739 mode=pool_mode           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 72 $ 281 room=P
--> dr
-T 740 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 72 $ 281 room=.
--> n
-T 741 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 71 $ 281 room=.
+T 705 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 74/84 MP 0/0 Hu 85 $ 237 room=.
 -> e
-T 742 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 281 room=.
--> e
-T 743 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 69 $ 281 room=.
--> e
-T 744 mode=chest_mode          Thorin Oakshield(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 68 $ 281 room=C
--> o
-T 745 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 68 $ 281 room=.
--> e
-T 746 mode=dungeon_mode        Thorin Oakshield(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 67 $ 281 room=N
+T 706 mode=dungeon_mode        Thorin Oakshield(dwa) F2@( 5, 3) HP 74/84 MP 0/0 Hu 84 $ 237 room=N
 -> u
-T 747 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 67 $ 281 room=N
+T 707 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 3) HP 74/84 MP 0/0 Hu 84 $ 237 room=N
+-> l
+T 708 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 3) HP 74/84 MP 0/0 Hu 84 $ 237 room=N
 -> s
-T 748 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 66 $ 281 room=.
+T 709 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 74/84 MP 0/0 Hu 83 $ 237 room=.
+-> l
+T 710 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 74/84 MP 0/0 Hu 83 $ 237 room=.
 -> s
-T 749 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 65 $ 281 room=.
--> w
-T 750 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 5) HP 84/84 MP 0/0 Hu 64 $ 281 room=.
--> w
-T 751 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 63 $ 281 room=.
--> w
-T 752 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 62 $ 281 room=.
--> w
-T 753 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 61 $ 281 room=.
--> n
-T 754 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 60 $ 281 room=.
--> n
-T 755 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 59 $ 281 room=.
--> n
-T 756 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 2) HP 84/84 MP 0/0 Hu 58 $ 281 room=.
--> e
-T 757 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 2) HP 84/84 MP 0/0 Hu 57 $ 281 room=.
--> s
-T 758 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 56 $ 281 room=.
--> e
-T 759 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 55 $ 281 room=.
--> s
-T 760 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 54 $ 281 room=.
--> s
-T 761 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 53 $ 281 room=.
--> w
-T 762 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 52 $ 281 room=.
--> w
-T 763 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 51 $ 281 room=.
--> n
-T 764 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 50 $ 281 room=.
--> n
-T 765 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 49 $ 281 room=.
+T 711 mode=chest_mode          Thorin Oakshield(dwa) F2@( 5, 5) HP 75/84 MP 0/0 Hu 82 $ 237 room=C
+-> o
+T 712 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 75/84 MP 0/0 Hu 82 $ 237 room=.
 -> i
-T 766 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 49 $ 281 room=.
--> eat3
-T 767 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 67 $ 281 room=.
--> eat1
-T 768 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu100 $ 281 room=.
--> x
-T 769 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu100 $ 281 room=.
--> e
-T 770 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 99 $ 281 room=.
--> e
-T 771 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 98 $ 281 room=.
--> s
-T 772 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 97 $ 281 room=.
--> s
-T 773 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 96 $ 281 room=.
--> e
-T 774 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 5) HP 84/84 MP 0/0 Hu 95 $ 281 room=.
--> e
-T 775 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 94 $ 281 room=.
--> n
-T 776 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 93 $ 281 room=.
--> e
-T 777 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 92 $ 281 room=.
--> e
-T 778 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 91 $ 281 room=.
--> n
-T 779 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 90 $ 281 room=.
--> e
-T 780 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 89 $ 281 room=.
--> w
-T 781 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 88 $ 281 room=.
--> n
-T 782 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 87 $ 281 room=.
--> w
-T 783 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 84/84 MP 0/0 Hu 86 $ 281 room=.
--> w
-T 784 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 85 $ 281 room=.
--> n
-T 785 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 84 $ 281 room=.
--> w
-T 786 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 1) HP 84/84 MP 0/0 Hu 83 $ 281 room=.
--> s
-T 787 mode=combat_mode         Thorin Oakshield(dwa) F2@( 4, 2) HP 84/84 MP 0/0 Hu 82 $ 281 room=M vs Gray Ooze(L1 HP6/35)
--> a
-T 788 mode=combat_victory      Thorin Oakshield(dwa) F2@( 4, 2) HP 84/84 MP 0/0 Hu 82 $ 289 room=.
--> back
-T 789 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 2) HP 84/84 MP 0/0 Hu 82 $ 289 room=.
--> s
-T 790 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 81 $ 289 room=.
--> w
-T 791 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 80 $ 289 room=.
--> s
-T 792 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 79 $ 289 room=.
--> s
-T 793 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 78 $ 289 room=.
--> w
-T 794 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 77 $ 289 room=.
--> w
-T 795 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 76 $ 289 room=.
--> n
-T 796 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 75 $ 289 room=.
--> n
-T 797 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 74 $ 289 room=.
--> e
-T 798 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 289 room=.
--> e
-T 799 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 72 $ 289 room=.
--> e
-T 800 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 71 $ 289 room=.
--> n
-T 801 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 2) HP 84/84 MP 0/0 Hu 70 $ 289 room=.
--> n
-T 802 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 1) HP 84/84 MP 0/0 Hu 69 $ 289 room=.
--> w
-T 803 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 1) HP 84/84 MP 0/0 Hu 68 $ 289 room=.
--> w
-T 804 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 84/84 MP 0/0 Hu 67 $ 289 room=V
--> s
-T 805 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 2) HP 84/84 MP 0/0 Hu 66 $ 289 room=.
--> w
-T 806 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 2) HP 84/84 MP 0/0 Hu 65 $ 289 room=.
--> s
-T 807 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 64 $ 289 room=.
--> e
-T 808 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 63 $ 289 room=.
--> e
-T 809 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 62 $ 289 room=.
--> i
-T 810 mode=inventory           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 62 $ 289 room=.
--> eat1
-T 811 mode=inventory           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu100 $ 289 room=.
+T 713 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 5) HP 75/84 MP 0/0 Hu 82 $ 237 room=.
 -> u7
-T 812 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu100 $ 289 room=.
+T 714 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
+-> x
+T 715 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
+-> i
+T 716 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
+-> e1
+T 717 mode=inventory           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
+-> x
+T 718 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
 -> l
-T 813 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu100 $ 289 room=.
--> s
-T 814 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 99 $ 289 room=.
--> s
-T 815 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 98 $ 289 room=.
--> s
-T 816 mode=dungeon_mode        Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 97 $ 289 room=N
--> u
-T 817 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 97 $ 289 room=N
--> s
-T 818 mode=pool_mode           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 96 $ 289 room=P
+T 719 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 82 $ 237 room=.
+-> w
+T 720 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 5) HP 84/84 MP 0/0 Hu 81 $ 237 room=.
+-> w
+T 721 mode=combat_mode         Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 80 $ 237 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 722 mode=combat_victory      Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 80 $ 247 room=.
+-> back
+T 723 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 80 $ 247 room=.
+-> l
+T 724 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 80 $ 247 room=.
+-> w
+T 725 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 79 $ 247 room=.
+-> w
+T 726 mode=garden_mode         Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 78 $ 247 room=G
+-> h
+T 727 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 78 $ 247 room=.
+-> n
+T 728 mode=pool_mode           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 77 $ 247 room=P
 -> dr
-T 819 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 96 $ 289 room=.
+T 729 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 77 $ 247 room=.
+-> n
+T 730 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 76 $ 247 room=.
+-> e
+T 731 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 75 $ 247 room=.
+-> e
+T 732 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 74 $ 247 room=.
+-> e
+T 733 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 73 $ 247 room=.
+-> e
+T 734 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 72 $ 247 room=N
+-> e
+T 735 mode=combat_mode         Thorin Oakshield(dwa) F2@( 6, 3) HP 84/84 MP 0/0 Hu 71 $ 247 room=M vs Harpy(L1 HP28/28)
+-> a
+T 736 mode=combat_mode         Thorin Oakshield(dwa) F2@( 6, 3) HP 83/84 MP 0/0 Hu 71 $ 247 room=M vs Harpy(L1 HP28/28)
+-> a
+T 737 mode=combat_victory      Thorin Oakshield(dwa) F2@( 6, 3) HP 82/84 MP 0/0 Hu 71 $ 363 room=.
+-> back
+T 738 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 3) HP 82/84 MP 0/0 Hu 71 $ 363 room=.
+-> s
+T 739 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 4) HP 82/84 MP 0/0 Hu 70 $ 363 room=.
+-> e
+T 740 mode=library_mode        Thorin Oakshield(dwa) F2@( 7, 4) HP 82/84 MP 0/0 Hu 69 $ 363 room=L
+-> r
+T 741 mode=library_read_decision_mode Thorin Oakshield(dwa) F2@( 7, 4) HP 82/84 MP 0/0 Hu 69 $ 363 room=L
+-> y
+T 742 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 4) HP 82/84 MP 0/0 Hu 69 $ 538 room=.
 -> l
-T 820 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 96 $ 289 room=.
--> e
-T 821 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 95 $ 289 room=B
--> 1
-T 822 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 95 $ 278 room=B
--> 2
-T 823 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 95 $ 273 room=B
--> w
-T 824 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 94 $ 273 room=.
+T 743 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 4) HP 82/84 MP 0/0 Hu 69 $ 538 room=.
 -> n
-T 825 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 93 $ 273 room=N
+T 744 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 74/84 MP 0/0 Hu 68 $ 538 room=.
 -> n
-T 826 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 92 $ 273 room=.
--> n
-T 827 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 91 $ 273 room=.
--> n
-T 828 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 90 $ 273 room=.
--> e
-T 829 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 89 $ 273 room=.
--> l
-T 830 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 89 $ 273 room=.
--> w
-T 831 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 88 $ 273 room=.
--> n
-T 832 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 87 $ 273 room=.
--> s
-T 833 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 86 $ 273 room=.
--> w
-T 834 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 85 $ 273 room=.
--> w
-T 835 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 84 $ 273 room=.
--> l
-T 836 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 84 $ 273 room=.
--> s
-T 837 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 83 $ 273 room=.
--> n
-T 838 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 82 $ 273 room=.
--> e
-T 839 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 81 $ 273 room=.
--> e
-T 840 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 80 $ 273 room=.
--> e
-T 841 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 79 $ 273 room=.
--> w
-T 842 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 78 $ 273 room=.
--> n
-T 843 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 77 $ 273 room=.
--> s
-T 844 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 76 $ 273 room=.
--> w
-T 845 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 75 $ 273 room=.
--> w
-T 846 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 74 $ 273 room=.
--> s
-T 847 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 73 $ 273 room=.
--> n
-T 848 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 72 $ 273 room=.
--> s
-T 849 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 71 $ 273 room=.
--> n
-T 850 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 70 $ 273 room=.
--> e
-T 851 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 69 $ 273 room=.
--> e
-T 852 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 68 $ 273 room=.
--> n
-T 853 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 67 $ 273 room=.
--> s
-T 854 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 66 $ 273 room=.
--> s
-T 855 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 65 $ 273 room=.
--> s
-T 856 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 64 $ 273 room=.
--> s
-T 857 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 63 $ 273 room=N
--> s
-T 858 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 62 $ 273 room=.
--> e
-T 859 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 61 $ 273 room=B
--> w
-T 860 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 60 $ 273 room=.
--> e
-T 861 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 59 $ 273 room=B
--> w
-T 862 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 58 $ 273 room=.
--> n
-T 863 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 57 $ 273 room=N
--> n
-T 864 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 56 $ 273 room=.
--> n
-T 865 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 55 $ 273 room=.
--> n
-T 866 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 54 $ 273 room=.
--> n
-T 867 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 53 $ 273 room=.
--> s
-T 868 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 52 $ 273 room=.
--> e
-T 869 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 51 $ 273 room=.
--> w
-T 870 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 50 $ 273 room=.
--> s
-T 871 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 49 $ 273 room=.
+T 745 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 67/84 MP 0/0 Hu 67 $ 538 room=.
 -> i
-T 872 mode=inventory           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 49 $ 273 room=.
--> eat1
-T 873 mode=inventory           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 99 $ 273 room=.
+T 746 mode=inventory           Thorin Oakshield(dwa) F2@( 7, 2) HP 67/84 MP 0/0 Hu 67 $ 538 room=.
+-> u7
+T 747 mode=inventory           Thorin Oakshield(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 67 $ 538 room=.
 -> x
-T 874 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 99 $ 273 room=.
--> s
-T 875 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 98 $ 273 room=.
--> s
-T 876 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 97 $ 273 room=N
--> s
-T 877 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 96 $ 273 room=.
--> e
-T 878 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 95 $ 273 room=B
+T 748 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 67 $ 538 room=.
 -> w
-T 879 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 94 $ 273 room=.
+T 749 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 76/84 MP 0/0 Hu 66 $ 538 room=.
+-> n
+T 750 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 1) HP 68/84 MP 0/0 Hu 65 $ 538 room=.
+-> s
+T 751 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 68/84 MP 0/0 Hu 64 $ 538 room=.
+-> s
+T 752 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 3) HP 69/84 MP 0/0 Hu 63 $ 538 room=.
 -> e
-T 880 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 93 $ 273 room=B
+T 753 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 3) HP 69/84 MP 0/0 Hu 62 $ 538 room=.
+-> n
+T 754 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 2) HP 69/84 MP 0/0 Hu 61 $ 538 room=.
 -> w
-T 881 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 92 $ 273 room=.
+T 755 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 2) HP 69/84 MP 0/0 Hu 60 $ 538 room=.
 -> n
-T 882 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 91 $ 273 room=N
--> n
-T 883 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 90 $ 273 room=.
--> n
-T 884 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 89 $ 273 room=.
--> n
-T 885 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 88 $ 273 room=.
--> e
-T 886 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 87 $ 273 room=.
+T 756 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 1) HP 69/84 MP 0/0 Hu 59 $ 538 room=.
 -> w
-T 887 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 86 $ 273 room=.
--> n
-T 888 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 85 $ 273 room=.
--> s
-T 889 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 84 $ 273 room=.
--> s
-T 890 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 83 $ 273 room=.
--> s
-T 891 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 82 $ 273 room=.
--> s
-T 892 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 81 $ 273 room=N
--> s
-T 893 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 80 $ 273 room=.
--> e
-T 894 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 79 $ 273 room=B
+T 757 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 69/84 MP 0/0 Hu 58 $ 538 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 758 mode=combat_mode         Thorin Oakshield(dwa) F2@( 5, 1) HP 69/84 MP 0/0 Hu 58 $ 538 room=M vs Gray Ooze(L1 HP4/35)
+-> a
+T 759 mode=combat_victory      Thorin Oakshield(dwa) F2@( 5, 1) HP 69/84 MP 0/0 Hu 58 $ 546 room=.
+-> back
+T 760 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 1) HP 69/84 MP 0/0 Hu 58 $ 546 room=.
 -> w
-T 895 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 78 $ 273 room=.
--> e
-T 896 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 77 $ 273 room=B
+T 761 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 1) HP 69/84 MP 0/0 Hu 57 $ 546 room=.
 -> w
-T 897 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 76 $ 273 room=.
--> n
-T 898 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 75 $ 273 room=N
--> n
-T 899 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 74 $ 273 room=.
--> n
-T 900 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 73 $ 273 room=.
--> n
-T 901 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 72 $ 273 room=.
+T 762 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 1) HP 69/84 MP 0/0 Hu 56 $ 546 room=.
 -> w
-T 902 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 71 $ 273 room=.
+T 763 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 1) HP 69/84 MP 0/0 Hu 55 $ 546 room=V
 -> w
-T 903 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 70 $ 273 room=.
+T 764 mode=stairs_up_mode      Thorin Oakshield(dwa) F2@( 1, 1) HP 69/84 MP 0/0 Hu 54 $ 546 room=U
 -> s
-T 904 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 69 $ 273 room=.
--> n
-T 905 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 68 $ 273 room=.
--> s
-T 906 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 67 $ 273 room=.
--> n
-T 907 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 66 $ 273 room=.
+T 765 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 2) HP 69/84 MP 0/0 Hu 53 $ 546 room=.
 -> e
-T 908 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 65 $ 273 room=.
--> e
-T 909 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 64 $ 273 room=.
--> n
-T 910 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 63 $ 273 room=.
+T 766 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 2) HP 69/84 MP 0/0 Hu 52 $ 546 room=.
 -> s
-T 911 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 62 $ 273 room=.
--> s
-T 912 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 61 $ 273 room=.
--> s
-T 913 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 60 $ 273 room=.
--> s
-T 914 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 59 $ 273 room=N
--> s
-T 915 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 58 $ 273 room=.
--> e
-T 916 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 57 $ 273 room=B
+T 767 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 3) HP 69/84 MP 0/0 Hu 51 $ 546 room=.
 -> w
-T 917 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 56 $ 273 room=.
--> e
-T 918 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 55 $ 273 room=B
--> w
-T 919 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 54 $ 273 room=.
--> n
-T 920 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 53 $ 273 room=N
--> n
-T 921 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 52 $ 273 room=.
--> n
-T 922 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 51 $ 273 room=.
--> n
-T 923 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 50 $ 273 room=.
--> e
-T 924 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 49 $ 273 room=.
+T 768 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 3) HP 69/84 MP 0/0 Hu 50 $ 546 room=.
+-> s
+T 769 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 69/84 MP 0/0 Hu 49 $ 546 room=.
 -> i
-T 925 mode=inventory           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 49 $ 273 room=.
--> eat1
-T 926 mode=inventory           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 99 $ 273 room=.
+T 770 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 4) HP 69/84 MP 0/0 Hu 49 $ 546 room=.
+-> u7
+T 771 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 49 $ 546 room=.
 -> x
-T 927 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 99 $ 273 room=.
--> w
-T 928 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 98 $ 273 room=.
--> n
-T 929 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 97 $ 273 room=.
--> s
-T 930 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 96 $ 273 room=.
--> w
-T 931 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 95 $ 273 room=.
--> w
-T 932 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 94 $ 273 room=.
--> s
-T 933 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 93 $ 273 room=.
--> n
-T 934 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 92 $ 273 room=.
--> e
-T 935 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 91 $ 273 room=.
--> e
-T 936 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 90 $ 273 room=.
--> s
-T 937 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 89 $ 273 room=.
--> s
-T 938 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 88 $ 273 room=.
--> s
-T 939 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 87 $ 273 room=N
--> s
-T 940 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 86 $ 273 room=.
--> e
-T 941 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 85 $ 273 room=B
--> w
-T 942 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 84 $ 273 room=.
--> e
-T 943 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 83 $ 273 room=B
--> w
-T 944 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 82 $ 273 room=.
--> n
-T 945 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 81 $ 273 room=N
--> n
-T 946 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 80 $ 273 room=.
--> n
-T 947 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 79 $ 273 room=.
--> n
-T 948 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 78 $ 273 room=.
--> w
-T 949 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 77 $ 273 room=.
--> w
-T 950 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 76 $ 273 room=.
--> s
-T 951 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 75 $ 273 room=.
--> n
-T 952 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 74 $ 273 room=.
--> s
-T 953 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 73 $ 273 room=.
--> n
-T 954 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 72 $ 273 room=.
--> e
-T 955 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 71 $ 273 room=.
--> e
-T 956 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 70 $ 273 room=.
--> n
-T 957 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 84/84 MP 0/0 Hu 69 $ 273 room=.
--> s
-T 958 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 68 $ 273 room=.
--> s
-T 959 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 67 $ 273 room=.
--> s
-T 960 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 66 $ 273 room=.
--> s
-T 961 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 65 $ 273 room=N
--> s
-T 962 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 64 $ 273 room=.
--> e
-T 963 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 63 $ 273 room=B
--> w
-T 964 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 62 $ 273 room=.
--> e
-T 965 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 61 $ 273 room=B
--> w
-T 966 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 60 $ 273 room=.
--> n
-T 967 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 59 $ 273 room=N
--> n
-T 968 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 58 $ 273 room=.
--> n
-T 969 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 57 $ 273 room=.
--> n
-T 970 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 56 $ 273 room=.
--> w
-T 971 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 55 $ 273 room=.
--> w
-T 972 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 54 $ 273 room=.
--> s
-T 973 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 53 $ 273 room=.
--> n
-T 974 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 52 $ 273 room=.
--> e
-T 975 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 51 $ 273 room=.
--> e
-T 976 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 50 $ 273 room=.
--> s
-T 977 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 49 $ 273 room=.
--> s
-T 978 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 48 $ 273 room=.
--> s
-T 979 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 47 $ 273 room=N
--> s
-T 980 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 46 $ 273 room=.
--> e
-T 981 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 45 $ 273 room=B
--> w
-T 982 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 44 $ 273 room=.
--> e
-T 983 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 43 $ 273 room=B
--> w
-T 984 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 42 $ 273 room=.
--> n
-T 985 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 41 $ 273 room=N
--> n
-T 986 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 40 $ 273 room=.
--> n
-T 987 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 39 $ 273 room=.
--> n
-T 988 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 38 $ 273 room=.
--> w
-T 989 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 37 $ 273 room=.
--> w
-T 990 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 36 $ 273 room=.
--> s
-T 991 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 35 $ 273 room=.
--> n
-T 992 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 34 $ 273 room=.
--> s
-T 993 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 33 $ 273 room=.
--> n
-T 994 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 32 $ 273 room=.
--> e
-T 995 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 31 $ 273 room=.
--> e
-T 996 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 30 $ 273 room=.
--> e
-T 997 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 29 $ 273 room=.
--> w
-T 998 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 28 $ 273 room=.
--> s
-T 999 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 27 $ 273 room=.
--> s
-T1000 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 26 $ 273 room=.
--> s
-T1001 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 25 $ 273 room=N
--> s
-T1002 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 24 $ 273 room=.
--> e
-T1003 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 23 $ 273 room=B
--> w
-T1004 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 22 $ 273 room=.
--> e
-T1005 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu 21 $ 273 room=B
--> w
-T1006 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu 20 $ 273 room=.
--> n
-T1007 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu 19 $ 273 room=N
--> n
-T1008 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu 18 $ 273 room=.
--> n
-T1009 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu 17 $ 273 room=.
--> n
-T1010 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 16 $ 273 room=.
--> e
-T1011 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 84/84 MP 0/0 Hu 15 $ 273 room=.
--> w
-T1012 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu 14 $ 273 room=.
--> w
-T1013 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu 13 $ 273 room=.
--> w
-T1014 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 12 $ 273 room=.
--> s
-T1015 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 84/84 MP 0/0 Hu 11 $ 273 room=.
--> n
-T1016 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 84/84 MP 0/0 Hu 10 $ 273 room=.
--> e
-T1017 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 84/84 MP 0/0 Hu  9 $ 273 room=.
--> e
-T1018 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 84/84 MP 0/0 Hu  8 $ 273 room=.
--> s
-T1019 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 84/84 MP 0/0 Hu  7 $ 273 room=.
--> s
-T1020 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu  6 $ 273 room=.
--> l
-T1021 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 84/84 MP 0/0 Hu  6 $ 273 room=.
--> s
-T1022 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 84/84 MP 0/0 Hu  5 $ 273 room=N
--> s
-T1023 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu  4 $ 273 room=.
--> e
-T1024 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu  3 $ 273 room=B
--> w
-T1025 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 84/84 MP 0/0 Hu  2 $ 273 room=.
--> e
-T1026 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 84/84 MP 0/0 Hu  1 $ 273 room=B
--> w
-T1027 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 82/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1028 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 80/84 MP 0/0 Hu  0 $ 273 room=N
--> n
-T1029 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 78/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1030 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 76/84 MP 0/0 Hu  0 $ 273 room=.
--> l
-T1031 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 76/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1032 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 74/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1033 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 72/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1034 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 70/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1035 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 68/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1036 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 66/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1037 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 64/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1038 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 62/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1039 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 60/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1040 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 58/84 MP 0/0 Hu  0 $ 273 room=.
--> l
-T1041 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 58/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1042 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 56/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1043 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 54/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1044 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 52/84 MP 0/0 Hu  0 $ 273 room=N
--> s
-T1045 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 50/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1046 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 48/84 MP 0/0 Hu  0 $ 273 room=B
--> w
-T1047 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 46/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1048 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 44/84 MP 0/0 Hu  0 $ 273 room=B
--> w
-T1049 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 42/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1050 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 40/84 MP 0/0 Hu  0 $ 273 room=N
--> l
-T1051 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 40/84 MP 0/0 Hu  0 $ 273 room=N
--> n
-T1052 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 38/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1053 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 36/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1054 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 34/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1055 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 32/84 MP 0/0 Hu  0 $ 273 room=.
+T 772 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 49 $ 546 room=.
 -> i
-T1056 mode=inventory           Thorin Oakshield(dwa) F5@( 7,11) HP 32/84 MP 0/0 Hu  0 $ 273 room=.
+T 773 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 49 $ 546 room=.
+-> eat1
+T 774 mode=inventory           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 84 $ 546 room=.
+-> x
+T 775 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 84 $ 546 room=.
+-> s
+T 776 mode=game_loop           Thorin Oakshield(dwa) F2@( 1, 5) HP 84/84 MP 0/0 Hu 83 $ 546 room=.
+-> e
+T 777 mode=game_loop           Thorin Oakshield(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 82 $ 546 room=.
+-> e
+T 778 mode=game_loop           Thorin Oakshield(dwa) F2@( 3, 5) HP 84/84 MP 0/0 Hu 81 $ 546 room=.
+-> e
+T 779 mode=game_loop           Thorin Oakshield(dwa) F2@( 4, 5) HP 84/84 MP 0/0 Hu 80 $ 546 room=.
+-> e
+T 780 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 5) HP 84/84 MP 0/0 Hu 79 $ 546 room=.
+-> n
+T 781 mode=game_loop           Thorin Oakshield(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 78 $ 546 room=.
+-> e
+T 782 mode=game_loop           Thorin Oakshield(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 77 $ 546 room=.
+-> e
+T 783 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 76 $ 546 room=.
+-> s
+T 784 mode=combat_mode         Thorin Oakshield(dwa) F2@( 7, 5) HP 84/84 MP 0/0 Hu 75 $ 546 room=M vs Cockatrice(L1 HP25/25)
+-> a
+T 785 mode=combat_victory      Thorin Oakshield(dwa) F2@( 7, 5) HP 84/84 MP 0/0 Hu 75 $ 564 room=.
+-> back
+T 786 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 5) HP 84/84 MP 0/0 Hu 75 $ 564 room=.
+-> l
+T 787 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 5) HP 84/84 MP 0/0 Hu 75 $ 564 room=.
+-> s
+T 788 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 6) HP 84/84 MP 0/0 Hu 74 $ 564 room=.
+-> l
+T 789 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 6) HP 84/84 MP 0/0 Hu 74 $ 564 room=.
+-> e
+T 790 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 6) HP 84/84 MP 0/0 Hu 73 $ 564 room=.
+-> l
+T 791 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 6) HP 84/84 MP 0/0 Hu 73 $ 564 room=.
+-> n
+T 792 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 5) HP 84/84 MP 0/0 Hu 72 $ 564 room=.
+-> s
+T 793 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 6) HP 84/84 MP 0/0 Hu 71 $ 564 room=.
+-> s
+T 794 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 84/84 MP 0/0 Hu 70 $ 564 room=M vs Goblin(L1 HP30/30)
+-> a
+T 795 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 70 $ 564 room=M vs Goblin(L1 HP30/30)
+-> a
+T 796 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 82/84 MP 0/0 Hu 70 $ 564 room=M vs Goblin(L1 HP30/30)
+-> a
+T 797 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 82/84 MP 0/0 Hu 70 $ 564 room=M vs Goblin(L1 HP30/30)
+-> f
+T 798 mode=flee_direction_mode Thorin Oakshield(dwa) F2@( 8, 7) HP 82/84 MP 0/0 Hu 70 $ 564 room=M
+-> n
+T 799 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 6) HP 82/84 MP 0/0 Hu 70 $ 564 room=.
+-> w
+T 800 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 6) HP 82/84 MP 0/0 Hu 69 $ 564 room=.
+-> n
+T 801 mode=game_loop           Thorin Oakshield(dwa) F2@( 7, 5) HP 82/84 MP 0/0 Hu 68 $ 564 room=.
+-> e
+T 802 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 5) HP 82/84 MP 0/0 Hu 67 $ 564 room=.
+-> s
+T 803 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 6) HP 83/84 MP 0/0 Hu 66 $ 564 room=.
+-> s
+T 804 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 564 room=M vs Goblin(L1 HP30/30)
+-> a
+T 805 mode=combat_mode         Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 564 room=M vs Goblin(L1 HP30/30)
+-> a
+T 806 mode=combat_victory      Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 572 room=.
+-> back
+T 807 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 572 room=.
+-> i
+T 808 mode=inventory           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 572 room=.
+-> u14
+T 809 mode=inventory           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 65 $ 572 room=.
+-> eat2
+T 810 mode=inventory           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu 72 $ 572 room=.
+-> eat1
+T 811 mode=inventory           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu100 $ 572 room=.
+-> x
+T 812 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu100 $ 572 room=.
+-> l
+T 813 mode=game_loop           Thorin Oakshield(dwa) F2@( 8, 7) HP 83/84 MP 0/0 Hu100 $ 572 room=.
+-> e
+T 814 mode=game_loop           Thorin Oakshield(dwa) F2@( 9, 7) HP 84/84 MP 0/0 Hu 99 $ 572 room=.
+-> l
+T 815 mode=game_loop           Thorin Oakshield(dwa) F2@( 9, 7) HP 84/84 MP 0/0 Hu 99 $ 572 room=.
+-> e
+T 816 mode=pool_mode           Thorin Oakshield(dwa) F2@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 572 room=P
+-> dr
+T 817 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 572 room=.
+-> l
+T 818 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 572 room=.
+-> s
+T 819 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 8) HP 84/84 MP 0/0 Hu 97 $ 572 room=.
+-> l
+T 820 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 8) HP 84/84 MP 0/0 Hu 97 $ 572 room=.
+-> e
+T 821 mode=chest_mode          Thorin Oakshield(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 96 $ 572 room=C
+-> o
+T 822 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 96 $ 572 room=.
+-> l
+T 823 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 96 $ 572 room=.
+-> e
+T 824 mode=stairs_down_mode    Thorin Oakshield(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 95 $ 572 room=D
+-> e
+T 825 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 8) HP 84/84 MP 0/0 Hu 94 $ 572 room=.
+-> l
+T 826 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 8) HP 84/84 MP 0/0 Hu 94 $ 572 room=.
+-> e
+T 827 mode=game_loop           Thorin Oakshield(dwa) F2@(14, 8) HP 84/84 MP 0/0 Hu 93 $ 572 room=.
+-> l
+T 828 mode=game_loop           Thorin Oakshield(dwa) F2@(14, 8) HP 84/84 MP 0/0 Hu 93 $ 572 room=.
+-> e
+T 829 mode=chest_mode          Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=C
+-> o
+T 830 mode=game_loop           Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=.
+-> i
+T 831 mode=inventory           Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=.
+-> e5
+T 832 mode=inventory           Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=.
+-> x
+T 833 mode=game_loop           Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=.
+-> l
+T 834 mode=game_loop           Thorin Oakshield(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 92 $ 572 room=.
+-> n
+T 835 mode=oracle_mode         Thorin Oakshield(dwa) F2@(15, 7) HP 84/84 MP 0/0 Hu 91 $ 572 room=O
+-> w
+T 836 mode=game_loop           Thorin Oakshield(dwa) F2@(14, 7) HP 84/84 MP 0/0 Hu 90 $ 572 room=.
+-> w
+T 837 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 7) HP 84/84 MP 0/0 Hu 89 $ 572 room=.
+-> s
+T 838 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 8) HP 84/84 MP 0/0 Hu 88 $ 572 room=.
+-> s
+T 839 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 9) HP 84/84 MP 0/0 Hu 87 $ 572 room=.
+-> l
+T 840 mode=game_loop           Thorin Oakshield(dwa) F2@(13, 9) HP 84/84 MP 0/0 Hu 87 $ 572 room=.
+-> s
+T 841 mode=chest_mode          Thorin Oakshield(dwa) F2@(13,10) HP 84/84 MP 0/0 Hu 86 $ 572 room=C
+-> o
+T 842 mode=game_loop           Thorin Oakshield(dwa) F2@(13,10) HP 84/84 MP 0/0 Hu 86 $ 572 room=.
+-> l
+T 843 mode=game_loop           Thorin Oakshield(dwa) F2@(13,10) HP 84/84 MP 0/0 Hu 86 $ 572 room=.
+-> w
+T 844 mode=library_mode        Thorin Oakshield(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 85 $ 572 room=L
+-> r
+T 845 mode=library_read_decision_mode Thorin Oakshield(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 85 $ 572 room=L
+-> y
+T 846 mode=game_loop           Thorin Oakshield(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 85 $ 572 room=.
+-> w
+T 847 mode=game_loop           Thorin Oakshield(dwa) F2@(11,10) HP 84/84 MP 0/0 Hu 84 $ 572 room=.
+-> n
+T 848 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 83 $ 572 room=M vs Cockatrice(L1 HP25/25)
+-> f
+T 849 mode=flee_direction_mode Thorin Oakshield(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 83 $ 572 room=M
+-> n
+T 850 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 83 $ 572 room=.
+-> n
+T 851 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 84/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP40/40)
+-> a
+T 852 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 84/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP12/40)
+-> a
+T 853 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 81/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP12/40)
+-> a
+T 854 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 72/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP18/40)
+-> a
+T 855 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 72/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP18/40)
+-> a
+T 856 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 63/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP24/40)
+-> f
+T 857 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 54/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP30/40)
+-> a
+T 858 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 51/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP30/40)
+-> a
+T 859 mode=combat_mode         Thorin Oakshield(dwa) F2@(11, 7) HP 42/84 MP 0/0 Hu 82 $ 572 room=M vs Wight(L1 HP8/40)
+-> a
+T 860 mode=combat_victory      Thorin Oakshield(dwa) F2@(11, 7) HP 39/84 MP 0/0 Hu 82 $ 580 room=.
+-> back
+T 861 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 7) HP 39/84 MP 0/0 Hu 82 $ 580 room=.
+-> n
+T 862 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 6) HP 39/84 MP 0/0 Hu 81 $ 580 room=.
+-> w
+T 863 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 6) HP 39/84 MP 0/0 Hu 80 $ 580 room=.
+-> i
+T 864 mode=inventory           Thorin Oakshield(dwa) F2@(10, 6) HP 39/84 MP 0/0 Hu 80 $ 580 room=.
+-> u9
+T 865 mode=inventory           Thorin Oakshield(dwa) F2@(10, 6) HP 84/84 MP 0/0 Hu 80 $ 580 room=.
+-> x
+T 866 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 6) HP 84/84 MP 0/0 Hu 80 $ 580 room=.
+-> s
+T 867 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 7) HP 84/84 MP 0/0 Hu 79 $ 580 room=.
+-> s
+T 868 mode=game_loop           Thorin Oakshield(dwa) F2@(10, 8) HP 84/84 MP 0/0 Hu 78 $ 580 room=.
+-> e
+T 869 mode=game_loop           Thorin Oakshield(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 77 $ 580 room=.
+-> e
+T 870 mode=stairs_down_mode    Thorin Oakshield(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 76 $ 580 room=D
+-> d
+T 871 mode=stairs_up_mode      Thorin Oakshield(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 76 $ 580 room=U
+-> w
+T 872 mode=stairs_up_mode      Thorin Oakshield(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 76 $ 580 room=U
+-> e
+T 873 mode=altar_mode          Thorin Oakshield(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 75 $ 580 room=A
+-> pray
+T 874 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 75 $ 580 room=.
+-> l
+T 875 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 75 $ 580 room=.
+-> e
+T 876 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 74 $ 580 room=.
+-> l
+T 877 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 74 $ 580 room=.
+-> s
+T 878 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 2) HP 84/84 MP 0/0 Hu 73 $ 580 room=.
+-> l
+T 879 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 2) HP 84/84 MP 0/0 Hu 73 $ 580 room=.
+-> s
+T 880 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 3) HP 84/84 MP 0/0 Hu 72 $ 580 room=.
+-> l
+T 881 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 3) HP 84/84 MP 0/0 Hu 72 $ 580 room=.
+-> s
+T 882 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 4) HP 84/84 MP 0/0 Hu 71 $ 580 room=.
+-> l
+T 883 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 4) HP 84/84 MP 0/0 Hu 71 $ 580 room=.
+-> s
+T 884 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 5) HP 84/84 MP 0/0 Hu 70 $ 580 room=.
+-> s
+T 885 mode=chest_mode          Thorin Oakshield(dwa) F3@( 3, 6) HP 84/84 MP 0/0 Hu 69 $ 580 room=C
+-> o
+T 886 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 6) HP 84/84 MP 0/0 Hu 69 $ 650 room=.
+-> w
+T 887 mode=combat_mode         Thorin Oakshield(dwa) F3@( 2, 6) HP 84/84 MP 0/0 Hu 68 $ 650 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 888 mode=combat_victory      Thorin Oakshield(dwa) F3@( 2, 6) HP 83/84 MP 0/0 Hu 68 $ 662 room=.
+-> back
+T 889 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 6) HP 83/84 MP 0/0 Hu 68 $ 662 room=.
+-> l
+T 890 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 6) HP 83/84 MP 0/0 Hu 68 $ 662 room=.
+-> w
+T 891 mode=combat_mode         Thorin Oakshield(dwa) F3@( 1, 6) HP 83/84 MP 0/0 Hu 67 $ 662 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 892 mode=combat_mode         Thorin Oakshield(dwa) F3@( 1, 6) HP 83/84 MP 0/0 Hu 67 $ 662 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 893 mode=combat_victory      Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 67 $ 665 room=.
+-> back
+T 894 mode=game_loop           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 67 $ 665 room=.
+-> i
+T 895 mode=inventory           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 67 $ 665 room=.
+-> u19
+T 896 mode=inventory           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 67 $ 665 room=.
+-> eat2
+T 897 mode=inventory           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 85 $ 665 room=.
+-> x
+T 898 mode=game_loop           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 85 $ 665 room=.
+-> l
+T 899 mode=game_loop           Thorin Oakshield(dwa) F3@( 1, 6) HP 82/84 MP 0/0 Hu 85 $ 665 room=.
+-> n
+T 900 mode=game_loop           Thorin Oakshield(dwa) F3@( 1, 5) HP 82/84 MP 0/0 Hu 84 $ 665 room=.
+-> e
+T 901 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 5) HP 82/84 MP 0/0 Hu 83 $ 665 room=.
+-> n
+T 902 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 4) HP 83/84 MP 0/0 Hu 82 $ 665 room=.
+-> n
+T 903 mode=combat_mode         Thorin Oakshield(dwa) F3@( 2, 3) HP 83/84 MP 0/0 Hu 81 $ 665 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 904 mode=combat_mode         Thorin Oakshield(dwa) F3@( 2, 3) HP 82/84 MP 0/0 Hu 81 $ 665 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 905 mode=combat_mode         Thorin Oakshield(dwa) F3@( 2, 3) HP 82/84 MP 0/0 Hu 81 $ 665 room=M vs Gnoll(L2 HP4/32)
+-> f
+T 906 mode=combat_mode         Thorin Oakshield(dwa) F3@( 2, 3) HP 81/84 MP 0/0 Hu 81 $ 665 room=M vs Gnoll(L2 HP4/32)
+-> a
+T 907 mode=combat_victory      Thorin Oakshield(dwa) F3@( 2, 3) HP 81/94 MP 0/0 Hu 81 $ 668 room=.
+-> back
+T 908 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 3) HP 81/94 MP 0/0 Hu 81 $ 668 room=.
+-> i
+T 909 mode=inventory           Thorin Oakshield(dwa) F3@( 2, 3) HP 81/94 MP 0/0 Hu 81 $ 668 room=.
+-> u9
+T 910 mode=inventory           Thorin Oakshield(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> x
+T 911 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> i
+T 912 mode=inventory           Thorin Oakshield(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> u18
+T 913 mode=inventory           Thorin Oakshield(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> x
+T 914 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> e
+T 915 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 3) HP 94/94 MP 0/0 Hu 80 $ 668 room=.
+-> n
+T 916 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 79 $ 668 room=.
+-> e
+T 917 mode=game_loop           Thorin Oakshield(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 78 $ 668 room=.
+-> e
+T 918 mode=game_loop           Thorin Oakshield(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 77 $ 668 room=.
+-> s
+T 919 mode=game_loop           Thorin Oakshield(dwa) F3@( 5, 3) HP 94/94 MP 0/0 Hu 76 $ 668 room=.
+-> e
+T 920 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 3) HP 94/94 MP 0/0 Hu 75 $ 668 room=.
+-> e
+T 921 mode=chest_mode          Thorin Oakshield(dwa) F3@( 7, 3) HP 94/94 MP 0/0 Hu 74 $ 668 room=C
+-> o
+T 922 mode=game_loop           Thorin Oakshield(dwa) F3@( 7, 3) HP 94/94 MP 0/0 Hu 74 $ 708 room=.
+-> e
+T 923 mode=chest_mode          Thorin Oakshield(dwa) F3@( 8, 3) HP 94/94 MP 0/0 Hu 73 $ 708 room=C
+-> o
+T 924 mode=game_loop           Thorin Oakshield(dwa) F3@( 8, 2) HP 94/94 MP 0/0 Hu 72 $ 708 room=.
+-> w
+T 925 mode=game_loop           Thorin Oakshield(dwa) F3@( 7, 2) HP 94/94 MP 0/0 Hu 71 $ 708 room=.
+-> n
+T 926 mode=game_loop           Thorin Oakshield(dwa) F3@( 7, 1) HP 94/94 MP 0/0 Hu 70 $ 708 room=.
+-> w
+T 927 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 1) HP 94/94 MP 0/0 Hu 69 $ 708 room=.
+-> s
+T 928 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 2) HP 94/94 MP 0/0 Hu 68 $ 708 room=.
+-> s
+T 929 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 3) HP 94/94 MP 0/0 Hu 67 $ 708 room=.
+-> s
+T 930 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 4) HP 94/94 MP 0/0 Hu 66 $ 708 room=.
+-> l
+T 931 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 4) HP 94/94 MP 0/0 Hu 66 $ 708 room=.
+-> s
+T 932 mode=pool_mode           Thorin Oakshield(dwa) F3@( 6, 5) HP 94/94 MP 0/0 Hu 65 $ 708 room=P
+-> dr
+T 933 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 5) HP 94/94 MP 0/0 Hu 65 $ 708 room=.
+-> l
+T 934 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 5) HP 94/94 MP 0/0 Hu 65 $ 708 room=.
+-> s
+T 935 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 6) HP 94/94 MP 0/0 Hu 64 $ 708 room=.
+-> l
+T 936 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 6) HP 94/94 MP 0/0 Hu 64 $ 708 room=.
+-> s
+T 937 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 7) HP 94/94 MP 0/0 Hu 63 $ 708 room=.
+-> l
+T 938 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 7) HP 94/94 MP 0/0 Hu 63 $ 708 room=.
+-> s
+T 939 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 8) HP 94/94 MP 0/0 Hu 62 $ 708 room=.
+-> l
+T 940 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 8) HP 94/94 MP 0/0 Hu 62 $ 708 room=.
+-> s
+T 941 mode=altar_mode          Thorin Oakshield(dwa) F3@( 6, 9) HP 94/94 MP 0/0 Hu 61 $ 708 room=A
+-> pray
+T 942 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 9) HP 94/94 MP 0/0 Hu 61 $ 708 room=.
+-> s
+T 943 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,10) HP 94/94 MP 0/0 Hu 60 $ 708 room=.
+-> l
+T 944 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,10) HP 94/94 MP 0/0 Hu 60 $ 708 room=.
+-> w
+T 945 mode=game_loop           Thorin Oakshield(dwa) F3@( 5,10) HP 94/94 MP 0/0 Hu 59 $ 708 room=.
+-> w
+T 946 mode=game_loop           Thorin Oakshield(dwa) F3@( 4,10) HP 94/94 MP 0/0 Hu 58 $ 708 room=.
+-> l
+T 947 mode=game_loop           Thorin Oakshield(dwa) F3@( 4,10) HP 94/94 MP 0/0 Hu 58 $ 708 room=.
+-> w
+T 948 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,10) HP 94/94 MP 0/0 Hu 57 $ 708 room=.
+-> w
+T 949 mode=garden_mode         Thorin Oakshield(dwa) F3@( 2,10) HP 94/94 MP 0/0 Hu 56 $ 708 room=G
+-> h
+T 950 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,10) HP 94/94 MP 0/0 Hu 56 $ 708 room=.
+-> n
+T 951 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 9) HP 94/94 MP 0/0 Hu 55 $ 708 room=.
+-> n
+T 952 mode=altar_mode          Thorin Oakshield(dwa) F3@( 2, 8) HP 94/94 MP 0/0 Hu 54 $ 708 room=A
+-> pray
+T 953 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 8) HP 94/96 MP 0/0 Hu 54 $ 908 room=.
+-> n
+T 954 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 7) HP 94/96 MP 0/0 Hu 53 $ 908 room=.
+-> n
+T 955 mode=game_loop           Thorin Oakshield(dwa) F3@( 2, 6) HP 94/96 MP 0/0 Hu 52 $ 908 room=.
+-> e
+T 956 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 6) HP 94/96 MP 0/0 Hu 51 $ 908 room=.
+-> s
+T 957 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 7) HP 94/96 MP 0/0 Hu 50 $ 908 room=.
+-> s
+T 958 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 8) HP 94/96 MP 0/0 Hu 49 $ 908 room=.
+-> i
+T 959 mode=inventory           Thorin Oakshield(dwa) F3@( 3, 8) HP 94/96 MP 0/0 Hu 49 $ 908 room=.
+-> eat2
+T 960 mode=inventory           Thorin Oakshield(dwa) F3@( 3, 8) HP 94/96 MP 0/0 Hu 71 $ 908 room=.
+-> eat1
+T 961 mode=inventory           Thorin Oakshield(dwa) F3@( 3, 8) HP 94/96 MP 0/0 Hu100 $ 908 room=.
+-> x
+T 962 mode=game_loop           Thorin Oakshield(dwa) F3@( 3, 8) HP 94/96 MP 0/0 Hu100 $ 908 room=.
+-> e
+T 963 mode=game_loop           Thorin Oakshield(dwa) F3@( 4, 8) HP 94/96 MP 0/0 Hu 99 $ 908 room=.
+-> e
+T 964 mode=game_loop           Thorin Oakshield(dwa) F3@( 5, 8) HP 95/96 MP 0/0 Hu 98 $ 908 room=.
+-> e
+T 965 mode=game_loop           Thorin Oakshield(dwa) F3@( 6, 8) HP 95/96 MP 0/0 Hu 97 $ 908 room=.
+-> e
+T 966 mode=game_loop           Thorin Oakshield(dwa) F3@( 7, 8) HP 96/96 MP 0/0 Hu 96 $ 908 room=.
+-> e
+T 967 mode=library_mode        Thorin Oakshield(dwa) F3@( 8, 8) HP 96/96 MP 0/0 Hu 95 $ 908 room=L
+-> r
+T 968 mode=library_read_decision_mode Thorin Oakshield(dwa) F3@( 8, 8) HP 96/96 MP 0/0 Hu 95 $ 908 room=L
+-> y
+T 969 mode=game_loop           Thorin Oakshield(dwa) F3@( 8, 8) HP 70/96 MP 0/0 Hu 95 $ 908 room=.
+-> l
+T 970 mode=game_loop           Thorin Oakshield(dwa) F3@( 8, 8) HP 70/96 MP 0/0 Hu 95 $ 908 room=.
+-> n
+T 971 mode=game_loop           Thorin Oakshield(dwa) F3@( 8, 7) HP 70/96 MP 0/0 Hu 94 $ 908 room=.
+-> e
+T 972 mode=game_loop           Thorin Oakshield(dwa) F3@( 9, 7) HP 71/96 MP 0/0 Hu 93 $ 908 room=.
+-> e
+T 973 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 7) HP 71/96 MP 0/0 Hu 92 $ 908 room=.
+-> e
+T 974 mode=garden_mode         Thorin Oakshield(dwa) F3@(11, 7) HP 72/96 MP 0/0 Hu 91 $ 908 room=G
+-> h
+T 975 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 7) HP 72/96 MP 0/0 Hu 91 $ 908 room=.
+-> n
+T 976 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 6) HP 72/96 MP 0/0 Hu 90 $ 908 room=.
+-> n
+T 977 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 5) HP 73/96 MP 0/0 Hu 89 $ 908 room=.
+-> n
+T 978 mode=chest_mode          Thorin Oakshield(dwa) F3@(11, 4) HP 73/96 MP 0/0 Hu 88 $ 908 room=C
+-> o
+T 979 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 4) HP 73/96 MP 0/0 Hu 88 $ 1008 room=.
+-> i
+T 980 mode=inventory           Thorin Oakshield(dwa) F3@(11, 4) HP 73/96 MP 0/0 Hu 88 $ 1008 room=.
+-> u9
+T 981 mode=inventory           Thorin Oakshield(dwa) F3@(11, 4) HP 96/96 MP 0/0 Hu 88 $ 1008 room=.
+-> x
+T 982 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 4) HP 96/96 MP 0/0 Hu 88 $ 1008 room=.
+-> l
+T 983 mode=game_loop           Thorin Oakshield(dwa) F3@(11, 4) HP 96/96 MP 0/0 Hu 88 $ 1008 room=.
+-> w
+T 984 mode=combat_mode         Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1008 room=M vs Kobold(L2 HP20/20)
+-> a
+T 985 mode=combat_victory      Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1017 room=.
+-> back
+T 986 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1017 room=.
+-> i
+T 987 mode=inventory           Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1017 room=.
+-> u17
+T 988 mode=inventory           Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1017 room=.
+-> x
+T 989 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 87 $ 1017 room=.
+-> n
+T 990 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 3) HP 96/96 MP 0/0 Hu 86 $ 1017 room=.
+-> n
+T 991 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 2) HP 96/96 MP 0/0 Hu 85 $ 1017 room=.
+-> l
+T 992 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 2) HP 96/96 MP 0/0 Hu 85 $ 1017 room=.
+-> n
+T 993 mode=combat_mode         Thorin Oakshield(dwa) F3@(10, 1) HP 96/96 MP 0/0 Hu 84 $ 1017 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 994 mode=combat_victory      Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> back
+T 995 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> i
+T 996 mode=inventory           Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> u18
+T 997 mode=inventory           Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> x
+T 998 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> l
+T 999 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 1) HP 95/96 MP 0/0 Hu 84 $ 1041 room=.
+-> w
+T1000 mode=game_loop           Thorin Oakshield(dwa) F3@( 9, 1) HP 95/96 MP 0/0 Hu 83 $ 1041 room=.
+-> s
+T1001 mode=game_loop           Thorin Oakshield(dwa) F3@( 9, 2) HP 95/96 MP 0/0 Hu 82 $ 1041 room=.
+-> s
+T1002 mode=game_loop           Thorin Oakshield(dwa) F3@( 9, 3) HP 95/96 MP 0/0 Hu 81 $ 1041 room=.
+-> s
+T1003 mode=game_loop           Thorin Oakshield(dwa) F3@( 9, 4) HP 96/96 MP 0/0 Hu 80 $ 1041 room=.
+-> e
+T1004 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 4) HP 96/96 MP 0/0 Hu 79 $ 1041 room=.
+-> s
+T1005 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 5) HP 96/96 MP 0/0 Hu 78 $ 1041 room=.
+-> s
+T1006 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 6) HP 96/96 MP 0/0 Hu 77 $ 1041 room=.
+-> s
+T1007 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 7) HP 96/96 MP 0/0 Hu 76 $ 1041 room=.
+-> s
+T1008 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 8) HP 96/96 MP 0/0 Hu 75 $ 1041 room=.
+-> s
+T1009 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 9) HP 96/96 MP 0/0 Hu 74 $ 1041 room=.
+-> l
+T1010 mode=game_loop           Thorin Oakshield(dwa) F3@(10, 9) HP 96/96 MP 0/0 Hu 74 $ 1041 room=.
+-> s
+T1011 mode=game_loop           Thorin Oakshield(dwa) F3@(10,10) HP 96/96 MP 0/0 Hu 73 $ 1041 room=.
+-> s
+T1012 mode=game_loop           Thorin Oakshield(dwa) F3@(10,11) HP 96/96 MP 0/0 Hu 72 $ 1041 room=.
+-> l
+T1013 mode=game_loop           Thorin Oakshield(dwa) F3@(10,11) HP 96/96 MP 0/0 Hu 72 $ 1041 room=.
+-> e
+T1014 mode=chest_mode          Thorin Oakshield(dwa) F3@(11,11) HP 96/96 MP 0/0 Hu 71 $ 1041 room=C
+-> o
+T1015 mode=game_loop           Thorin Oakshield(dwa) F3@(11,11) HP 96/96 MP 0/0 Hu 71 $ 1041 room=.
+-> l
+T1016 mode=game_loop           Thorin Oakshield(dwa) F3@(11,11) HP 96/96 MP 0/0 Hu 71 $ 1041 room=.
+-> e
+T1017 mode=game_loop           Thorin Oakshield(dwa) F3@(12,11) HP 96/96 MP 0/0 Hu 70 $ 1041 room=.
+-> l
+T1018 mode=game_loop           Thorin Oakshield(dwa) F3@(12,11) HP 96/96 MP 0/0 Hu 70 $ 1041 room=.
+-> s
+T1019 mode=game_loop           Thorin Oakshield(dwa) F3@(12,12) HP 96/96 MP 0/0 Hu 69 $ 1041 room=.
+-> w
+T1020 mode=game_loop           Thorin Oakshield(dwa) F3@(11,12) HP 96/96 MP 0/0 Hu 68 $ 1041 room=.
+-> w
+T1021 mode=game_loop           Thorin Oakshield(dwa) F3@(10,12) HP 96/96 MP 0/0 Hu 67 $ 1041 room=.
+-> l
+T1022 mode=game_loop           Thorin Oakshield(dwa) F3@(10,12) HP 96/96 MP 0/0 Hu 67 $ 1041 room=.
+-> n
+T1023 mode=game_loop           Thorin Oakshield(dwa) F3@(10,11) HP 96/96 MP 0/0 Hu 66 $ 1041 room=.
+-> w
+T1024 mode=game_loop           Thorin Oakshield(dwa) F3@( 9,11) HP 96/96 MP 0/0 Hu 65 $ 1041 room=.
+-> w
+T1025 mode=dungeon_mode        Thorin Oakshield(dwa) F3@( 8,11) HP 96/96 MP 0/0 Hu 64 $ 1041 room=N
+-> u
+T1026 mode=dungeon_unlocked_mode Thorin Oakshield(dwa) F3@( 8,11) HP 96/96 MP 0/0 Hu 64 $ 1041 room=N
+-> r
+T1027 mode=game_loop           Thorin Oakshield(dwa) F3@( 8,11) HP 96/96 MP 0/0 Hu 64 $ 1041 room=N
+-> w
+T1028 mode=game_loop           Thorin Oakshield(dwa) F3@( 7,11) HP 96/96 MP 0/0 Hu 63 $ 1041 room=.
+-> n
+T1029 mode=game_loop           Thorin Oakshield(dwa) F3@( 7,10) HP 96/96 MP 0/0 Hu 62 $ 1041 room=.
+-> w
+T1030 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,10) HP 96/96 MP 0/0 Hu 61 $ 1041 room=.
+-> w
+T1031 mode=game_loop           Thorin Oakshield(dwa) F3@( 5,10) HP 96/96 MP 0/0 Hu 60 $ 1041 room=.
+-> w
+T1032 mode=game_loop           Thorin Oakshield(dwa) F3@( 4,10) HP 96/96 MP 0/0 Hu 59 $ 1041 room=.
+-> w
+T1033 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,10) HP 96/96 MP 0/0 Hu 58 $ 1041 room=.
+-> w
+T1034 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,10) HP 96/96 MP 0/0 Hu 57 $ 1041 room=.
+-> s
+T1035 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,11) HP 96/96 MP 0/0 Hu 56 $ 1041 room=.
+-> s
+T1036 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,12) HP 96/96 MP 0/0 Hu 55 $ 1041 room=.
+-> s
+T1037 mode=library_mode        Thorin Oakshield(dwa) F3@( 2,13) HP 96/96 MP 0/0 Hu 54 $ 1041 room=L
+-> r
+T1038 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,13) HP 96/96 MP 0/0 Hu 54 $ 1041 room=.
+-> l
+T1039 mode=game_loop           Thorin Oakshield(dwa) F3@( 2,13) HP 96/96 MP 0/0 Hu 54 $ 1041 room=.
+-> e
+T1040 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,13) HP 96/96 MP 0/0 Hu 53 $ 1041 room=.
+-> l
+T1041 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,13) HP 96/96 MP 0/0 Hu 53 $ 1041 room=.
+-> s
+T1042 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,14) HP 96/96 MP 0/0 Hu 52 $ 1041 room=.
+-> l
+T1043 mode=game_loop           Thorin Oakshield(dwa) F3@( 3,14) HP 96/96 MP 0/0 Hu 52 $ 1041 room=.
+-> e
+T1044 mode=game_loop           Thorin Oakshield(dwa) F3@( 4,14) HP 96/96 MP 0/0 Hu 51 $ 1041 room=.
+-> e
+T1045 mode=game_loop           Thorin Oakshield(dwa) F3@( 5,14) HP 96/96 MP 0/0 Hu 50 $ 1041 room=.
+-> l
+T1046 mode=game_loop           Thorin Oakshield(dwa) F3@( 5,14) HP 96/96 MP 0/0 Hu 50 $ 1041 room=.
+-> e
+T1047 mode=pool_mode           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 49 $ 1041 room=P
+-> dr
+T1048 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 49 $ 1041 room=.
+-> i
+T1049 mode=inventory           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 49 $ 1041 room=.
+-> eat2
+T1050 mode=inventory           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 67 $ 1041 room=.
+-> x
+T1051 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 67 $ 1041 room=.
+-> l
+T1052 mode=game_loop           Thorin Oakshield(dwa) F3@( 6,14) HP 96/96 MP 0/0 Hu 67 $ 1041 room=.
+-> e
+T1053 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 1041 room=V
+-> r4
+T1054 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 999 room=V
+-> b11
+T1055 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 969 room=V
+-> b11
+T1056 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 954 room=V
+-> b11
+T1057 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 944 room=V
+-> b7
+T1058 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 914 room=V
+-> b7
+T1059 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 884 room=V
+-> b7
+T1060 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 854 room=V
+-> b9
+T1061 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 849 room=V
+-> b9
+T1062 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 844 room=V
+-> b9
+T1063 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 839 room=V
+-> b7
+T1064 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 689 room=V
+-> b5
+T1065 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 569 room=V
+-> b1
+T1066 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 289 room=V
+-> b2
+T1067 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 179 room=V
+-> id17
+T1068 mode=vendor_shop         Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> x
+T1069 mode=game_loop           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> i
+T1070 mode=inventory           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> e1
+T1071 mode=inventory           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> e7
+T1072 mode=inventory           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> x
+T1073 mode=game_loop           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> l
+T1074 mode=game_loop           Thorin Oakshield(dwa) F3@( 7,14) HP 96/96 MP 0/0 Hu 66 $ 79 room=V
+-> e
+T1075 mode=stairs_down_mode    Thorin Oakshield(dwa) F3@( 8,14) HP 96/96 MP 0/0 Hu 65 $ 79 room=D
+-> d
+T1076 mode=stairs_up_mode      Thorin Oakshield(dwa) F4@( 1, 1) HP 96/96 MP 0/0 Hu 65 $ 79 room=U
+-> w
+T1077 mode=stairs_up_mode      Thorin Oakshield(dwa) F4@( 1, 1) HP 96/96 MP 0/0 Hu 65 $ 79 room=U
+-> s
+T1078 mode=stairs_up_mode      Thorin Oakshield(dwa) F4@( 1, 1) HP 96/96 MP 0/0 Hu 65 $ 79 room=U
+-> s
+T1079 mode=stairs_up_mode      Thorin Oakshield(dwa) F4@( 1, 1) HP 96/96 MP 0/0 Hu 65 $ 79 room=U
+-> s
+T1080 mode=stairs_up_mode      Thorin Oakshield(dwa) F4@( 1, 1) HP 96/96 MP 0/0 Hu 65 $ 79 room=U
+-> e
+T1081 mode=warp_mode           Thorin Oakshield(dwa) F4@( 2, 1) HP 96/96 MP 0/0 Hu 64 $ 79 room=W
+-> y
+T1082 mode=game_loop           Thorin Oakshield(dwa) F4@( 2, 1) HP 96/96 MP 0/0 Hu 64 $ 79 room=W
+-> l
+T1083 mode=game_loop           Thorin Oakshield(dwa) F4@( 2, 1) HP 96/96 MP 0/0 Hu 64 $ 79 room=W
+-> e
+T1084 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 63 $ 79 room=.
+-> l
+T1085 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 63 $ 79 room=.
+-> s
+T1086 mode=chest_mode          Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 62 $ 79 room=C
+-> n
+T1087 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 61 $ 79 room=.
+-> s
+T1088 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 60 $ 79 room=C
+-> l
+T1089 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 60 $ 79 room=C
+-> n
+T1090 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 59 $ 79 room=.
+-> s
+T1091 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 58 $ 79 room=C
+-> n
+T1092 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 57 $ 79 room=.
+-> s
+T1093 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 56 $ 79 room=C
+-> n
+T1094 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 1) HP 96/96 MP 0/0 Hu 55 $ 79 room=.
+-> s
+T1095 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 54 $ 79 room=C
+-> e
+T1096 mode=combat_mode         Thorin Oakshield(dwa) F4@( 4, 2) HP 96/96 MP 0/0 Hu 53 $ 79 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> f
+T1097 mode=combat_mode         Thorin Oakshield(dwa) F4@( 4, 2) HP 72/96 MP 0/0 Hu 53 $ 79 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> f
+T1098 mode=combat_mode         Thorin Oakshield(dwa) F4@( 4, 2) HP 48/96 MP 0/0 Hu 53 $ 79 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> f
+T1099 mode=flee_direction_mode Thorin Oakshield(dwa) F4@( 4, 2) HP 48/96 MP 0/0 Hu 53 $ 79 room=M
+-> w
+T1100 mode=game_loop           Thorin Oakshield(dwa) F4@( 3, 2) HP 48/96 MP 0/0 Hu 53 $ 79 room=C
+-> i
+T1101 mode=inventory           Thorin Oakshield(dwa) F4@( 3, 2) HP 48/96 MP 0/0 Hu 53 $ 79 room=C
+-> u12
+T1102 mode=inventory           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 53 $ 79 room=C
 -> u6
-T1057 mode=inventory           Thorin Oakshield(dwa) F5@( 7,11) HP 62/84 MP 0/0 Hu  0 $ 273 room=.
+T1103 mode=upgrade_scroll_mode Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 53 $ 79 room=C
+-> 1
+T1104 mode=inventory           Thorin Oakshield(dwa) F4@( 3, 2) HP 96/96 MP 0/0 Hu 53 $ 79 room=C
+-> u4
+T1105 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 8) HP 96/96 MP 0/0 Hu 53 $ 79 room=.
+-> l
+T1106 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 8) HP 96/96 MP 0/0 Hu 53 $ 79 room=.
+-> s
+T1107 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 9) HP 96/96 MP 0/0 Hu 52 $ 79 room=.
+-> l
+T1108 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 9) HP 96/96 MP 0/0 Hu 52 $ 79 room=.
+-> w
+T1109 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 9) HP 96/96 MP 0/0 Hu 51 $ 79 room=.
+-> n
+T1110 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 8) HP 96/96 MP 0/0 Hu 50 $ 79 room=.
+-> l
+T1111 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 8) HP 96/96 MP 0/0 Hu 50 $ 79 room=.
+-> n
+T1112 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 7) HP 96/96 MP 0/0 Hu 49 $ 79 room=.
+-> n
+T1113 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 6) HP 96/96 MP 0/0 Hu 48 $ 79 room=.
+-> e
+T1114 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 6) HP 96/96 MP 0/0 Hu 47 $ 79 room=.
+-> n
+T1115 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 5) HP 96/96 MP 0/0 Hu 46 $ 79 room=.
+-> w
+T1116 mode=chest_mode          Thorin Oakshield(dwa) F5@(18, 5) HP 96/96 MP 0/0 Hu 45 $ 79 room=C
+-> o
+T1117 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 5) HP 96/96 MP 0/0 Hu 45 $ 149 room=.
+-> n
+T1118 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 96/96 MP 0/0 Hu 44 $ 149 room=.
+-> l
+T1119 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 96/96 MP 0/0 Hu 44 $ 149 room=.
+-> w
+T1120 mode=pool_mode           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu 43 $ 149 room=P
+-> dr
+T1121 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 9/96 MP 0/0 Hu 43 $ 149 room=.
+-> i
+T1122 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 9/96 MP 0/0 Hu 43 $ 149 room=.
+-> u12
+T1123 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 39/96 MP 0/0 Hu 43 $ 149 room=.
+-> u3
+T1124 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 69/96 MP 0/0 Hu 43 $ 149 room=.
 -> x
-T1058 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 62/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1059 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 60/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1060 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 58/84 MP 0/0 Hu  0 $ 273 room=.
+T1125 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 69/96 MP 0/0 Hu 43 $ 149 room=.
+-> i
+T1126 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 69/96 MP 0/0 Hu 43 $ 149 room=.
+-> u12
+T1127 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu 43 $ 149 room=.
+-> x
+T1128 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu 43 $ 149 room=.
+-> i
+T1129 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu 43 $ 149 room=.
+-> eat4
+T1130 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu 58 $ 149 room=.
+-> eat1
+T1131 mode=inventory           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu100 $ 149 room=.
+-> x
+T1132 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu100 $ 149 room=.
 -> l
-T1061 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 58/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1062 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 56/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1063 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 54/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1064 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 52/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1065 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 50/84 MP 0/0 Hu  0 $ 273 room=.
+T1133 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 96/96 MP 0/0 Hu100 $ 149 room=.
 -> n
-T1066 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 48/84 MP 0/0 Hu  0 $ 273 room=.
+T1134 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 3) HP 96/96 MP 0/0 Hu 99 $ 149 room=.
+-> e
+T1135 mode=combat_mode         Thorin Oakshield(dwa) F5@(18, 3) HP 96/96 MP 0/0 Hu 98 $ 149 room=M vs Rust Monster(L4 HP20/20)
+-> a
+T1136 mode=combat_victory      Thorin Oakshield(dwa) F5@(18, 3) HP 96/96 MP 0/0 Hu 98 $ 164 room=.
+-> back
+T1137 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 3) HP 96/96 MP 0/0 Hu 98 $ 164 room=.
 -> s
-T1067 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 46/84 MP 0/0 Hu  0 $ 273 room=.
+T1138 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 96/96 MP 0/0 Hu 97 $ 164 room=.
+-> s
+T1139 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 5) HP 96/96 MP 0/0 Hu 96 $ 164 room=.
+-> e
+T1140 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 5) HP 96/96 MP 0/0 Hu 95 $ 164 room=.
+-> s
+T1141 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 6) HP 96/96 MP 0/0 Hu 94 $ 164 room=.
+-> s
+T1142 mode=combat_mode         Thorin Oakshield(dwa) F5@(19, 7) HP 96/96 MP 0/0 Hu 93 $ 164 room=M vs Stirge(L4 HP6/6)
+-> a
+T1143 mode=combat_mode         Thorin Oakshield(dwa) F5@(19, 7) HP 95/96 MP 0/0 Hu 93 $ 164 room=M vs Stirge(L4 HP6/6)
+-> a
+T1144 mode=combat_mode         Thorin Oakshield(dwa) F5@(19, 7) HP 91/96 MP 0/0 Hu 93 $ 164 room=M vs Stirge(L4 HP6/6)
+-> a
+T1145 mode=combat_mode         Thorin Oakshield(dwa) F5@(19, 7) HP 91/96 MP 0/0 Hu 93 $ 164 room=M vs Stirge(L4 HP6/6)
+-> a
+T1146 mode=combat_victory      Thorin Oakshield(dwa) F5@(19, 7) HP 91/106 MP 0/0 Hu 93 $ 299 room=.
+-> back
+T1147 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 7) HP 91/106 MP 0/0 Hu 93 $ 299 room=.
+-> i
+T1148 mode=inventory           Thorin Oakshield(dwa) F5@(19, 7) HP 91/106 MP 0/0 Hu 93 $ 299 room=.
+-> u12
+T1149 mode=inventory           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 93 $ 299 room=.
+-> x
+T1150 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 93 $ 299 room=.
+-> i
+T1151 mode=inventory           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 93 $ 299 room=.
+-> u20
+T1152 mode=inventory           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 93 $ 299 room=.
+-> x
+T1153 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 93 $ 299 room=.
+-> w
+T1154 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 7) HP 106/106 MP 0/0 Hu 92 $ 299 room=.
 -> n
-T1068 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 44/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1069 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 42/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1070 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 40/84 MP 0/0 Hu  0 $ 273 room=.
+T1155 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 6) HP 106/106 MP 0/0 Hu 91 $ 299 room=.
+-> n
+T1156 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 5) HP 106/106 MP 0/0 Hu 90 $ 299 room=.
+-> n
+T1157 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 106/106 MP 0/0 Hu 89 $ 299 room=.
+-> w
+T1158 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 106/106 MP 0/0 Hu 88 $ 299 room=.
+-> w
+T1159 mode=chest_mode          Thorin Oakshield(dwa) F5@(16, 4) HP 106/106 MP 0/0 Hu 87 $ 299 room=C
+-> o
+T1160 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 4) HP 106/106 MP 0/0 Hu 87 $ 299 room=.
 -> l
-T1071 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 40/84 MP 0/0 Hu  0 $ 273 room=.
+T1161 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 4) HP 106/106 MP 0/0 Hu 87 $ 299 room=.
 -> s
-T1072 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 38/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1073 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 36/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1074 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 34/84 MP 0/0 Hu  0 $ 273 room=N
--> s
-T1075 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 32/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1076 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 30/84 MP 0/0 Hu  0 $ 273 room=B
--> w
-T1077 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 28/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1078 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 26/84 MP 0/0 Hu  0 $ 273 room=B
--> w
-T1079 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 24/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1080 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 22/84 MP 0/0 Hu  0 $ 273 room=N
+T1162 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 5) HP 106/106 MP 0/0 Hu 86 $ 299 room=.
 -> l
-T1081 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 22/84 MP 0/0 Hu  0 $ 273 room=N
--> n
-T1082 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 20/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1083 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 18/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1084 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 16/84 MP 0/0 Hu  0 $ 273 room=.
--> n
-T1085 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 14/84 MP 0/0 Hu  0 $ 273 room=.
+T1163 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 5) HP 106/106 MP 0/0 Hu 86 $ 299 room=.
 -> s
-T1086 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 12/84 MP 0/0 Hu  0 $ 273 room=.
--> e
-T1087 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 10/84 MP 0/0 Hu  0 $ 273 room=.
--> w
-T1088 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 8/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1089 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 6/84 MP 0/0 Hu  0 $ 273 room=.
--> s
-T1090 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 4/84 MP 0/0 Hu  0 $ 273 room=.
+T1164 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 6) HP 106/106 MP 0/0 Hu 85 $ 299 room=.
 -> l
-T1091 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 4/84 MP 0/0 Hu  0 $ 273 room=.
+T1165 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 6) HP 106/106 MP 0/0 Hu 85 $ 299 room=.
 -> s
-T1092 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 2/84 MP 0/0 Hu  0 $ 273 room=N
+T1166 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 7) HP 106/106 MP 0/0 Hu 84 $ 299 room=.
+-> l
+T1167 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 7) HP 106/106 MP 0/0 Hu 84 $ 299 room=.
+-> w
+T1168 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 7) HP 106/106 MP 0/0 Hu 83 $ 299 room=.
+-> l
+T1169 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 7) HP 106/106 MP 0/0 Hu 83 $ 299 room=.
 -> s
-T1093 mode=death_screen        Thorin Oakshield(dwa) F5@( 7,16) HP 0/84 MP 0/0 Hu  0 $ 273 room=.
+T1170 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 8) HP 106/106 MP 0/0 Hu 82 $ 299 room=.
+-> l
+T1171 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 8) HP 106/106 MP 0/0 Hu 82 $ 299 room=.
+-> w
+T1172 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 8) HP 106/106 MP 0/0 Hu 81 $ 299 room=.
+-> l
+T1173 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 8) HP 106/106 MP 0/0 Hu 81 $ 299 room=.
+-> s
+T1174 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 9) HP 106/106 MP 0/0 Hu 80 $ 299 room=.
+-> l
+T1175 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 9) HP 106/106 MP 0/0 Hu 80 $ 299 room=.
+-> w
+T1176 mode=game_loop           Thorin Oakshield(dwa) F5@(13, 9) HP 106/106 MP 0/0 Hu 79 $ 299 room=.
+-> w
+T1177 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 78 $ 299 room=.
+-> l
+T1178 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 78 $ 299 room=.
+-> s
+T1179 mode=game_loop           Thorin Oakshield(dwa) F5@(12,10) HP 106/106 MP 0/0 Hu 77 $ 299 room=.
+-> s
+T1180 mode=game_loop           Thorin Oakshield(dwa) F5@(12,11) HP 106/106 MP 0/0 Hu 76 $ 299 room=.
+-> n
+T1181 mode=game_loop           Thorin Oakshield(dwa) F5@(12,10) HP 106/106 MP 0/0 Hu 75 $ 299 room=.
+-> n
+T1182 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 74 $ 299 room=.
+-> w
+T1183 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 73 $ 299 room=.
+-> l
+T1184 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 73 $ 299 room=.
+-> n
+T1185 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 106/106 MP 0/0 Hu 72 $ 299 room=.
+-> l
+T1186 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 106/106 MP 0/0 Hu 72 $ 299 room=.
+-> n
+T1187 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 106/106 MP 0/0 Hu 71 $ 299 room=.
+-> l
+T1188 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 106/106 MP 0/0 Hu 71 $ 299 room=.
+-> e
+T1189 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 7) HP 106/106 MP 0/0 Hu 70 $ 299 room=.
+-> l
+T1190 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 7) HP 106/106 MP 0/0 Hu 70 $ 299 room=.
+-> n
+T1191 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 6) HP 106/106 MP 0/0 Hu 69 $ 299 room=.
+-> n
+T1192 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 5) HP 106/106 MP 0/0 Hu 68 $ 299 room=.
+-> n
+T1193 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 4) HP 106/106 MP 0/0 Hu 67 $ 299 room=.
+-> w
+T1194 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 4) HP 106/106 MP 0/0 Hu 66 $ 299 room=.
+-> l
+T1195 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 4) HP 106/106 MP 0/0 Hu 66 $ 299 room=.
+-> s
+T1196 mode=altar_mode          Thorin Oakshield(dwa) F5@(11, 5) HP 106/106 MP 0/0 Hu 65 $ 299 room=A
+-> pray
+T1197 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 5) HP 106/106 MP 0/0 Hu 65 $ 299 room=.
+-> s
+T1198 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 6) HP 106/106 MP 0/0 Hu 64 $ 299 room=.
+-> w
+T1199 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 6) HP 106/106 MP 0/0 Hu 63 $ 299 room=.
+-> w
+T1200 mode=dungeon_mode        Thorin Oakshield(dwa) F5@( 9, 6) HP 106/106 MP 0/0 Hu 62 $ 299 room=N
+-> u
+T1201 mode=dungeon_unlocked_mode Thorin Oakshield(dwa) F5@( 9, 6) HP 106/106 MP 0/0 Hu 62 $ 299 room=N
+-> r
+T1202 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 6) HP 106/106 MP 0/0 Hu 62 $ 520 room=N
+-> n
+T1203 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 106/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP43/43)
+-> a
+T1204 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 106/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1205 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 105/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1206 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 104/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1207 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 104/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1208 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 103/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1209 mode=combat_mode         Thorin Oakshield(dwa) F5@( 9, 5) HP 102/106 MP 0/0 Hu 61 $ 520 room=M vs Displacer Beast(L4 HP16/43)
+-> a
+T1210 mode=combat_victory      Thorin Oakshield(dwa) F5@( 9, 5) HP 102/106 MP 0/0 Hu 61 $ 560 room=.
+-> back
+T1211 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 5) HP 102/106 MP 0/0 Hu 61 $ 560 room=.
+-> n
+T1212 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 4) HP 102/106 MP 0/0 Hu 60 $ 560 room=.
+-> n
+T1213 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 3) HP 102/106 MP 0/0 Hu 59 $ 560 room=.
+-> l
+T1214 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 3) HP 102/106 MP 0/0 Hu 59 $ 560 room=.
+-> e
+T1215 mode=dungeon_mode        Thorin Oakshield(dwa) F5@(10, 3) HP 102/106 MP 0/0 Hu 58 $ 560 room=N
+-> u
+T1216 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 3) HP 102/106 MP 0/0 Hu 58 $ 560 room=N
+-> l
+T1217 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 3) HP 102/106 MP 0/0 Hu 58 $ 560 room=N
+-> e
+T1218 mode=altar_mode          Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu 57 $ 560 room=A
+-> pray
+T1219 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu 57 $ 560 room=.
+-> n
+T1220 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 2) HP 102/106 MP 0/0 Hu 56 $ 560 room=.
+-> e
+T1221 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 2) HP 102/106 MP 0/0 Hu 55 $ 560 room=.
+-> s
+T1222 mode=combat_mode         Thorin Oakshield(dwa) F5@(12, 3) HP 102/106 MP 0/0 Hu 54 $ 560 room=M vs Slime Mold(L4 HP17/17)
+-> a
+T1223 mode=combat_victory      Thorin Oakshield(dwa) F5@(12, 3) HP 102/106 MP 0/0 Hu 54 $ 570 room=.
+-> back
+T1224 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 3) HP 102/106 MP 0/0 Hu 54 $ 570 room=.
+-> s
+T1225 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 4) HP 102/106 MP 0/0 Hu 53 $ 570 room=.
+-> s
+T1226 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 5) HP 102/106 MP 0/0 Hu 52 $ 570 room=.
+-> w
+T1227 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 5) HP 102/106 MP 0/0 Hu 51 $ 570 room=.
+-> n
+T1228 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 4) HP 102/106 MP 0/0 Hu 50 $ 570 room=.
+-> n
+T1229 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu 49 $ 570 room=.
+-> i
+T1230 mode=inventory           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu 49 $ 570 room=.
+-> eat3
+T1231 mode=inventory           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu 67 $ 570 room=.
+-> eat1
+T1232 mode=inventory           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu100 $ 570 room=.
+-> x
+T1233 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 3) HP 102/106 MP 0/0 Hu100 $ 570 room=.
+-> n
+T1234 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 2) HP 102/106 MP 0/0 Hu 99 $ 570 room=.
+-> e
+T1235 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 2) HP 103/106 MP 0/0 Hu 98 $ 570 room=.
+-> s
+T1236 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 3) HP 103/106 MP 0/0 Hu 97 $ 570 room=.
+-> s
+T1237 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 4) HP 104/106 MP 0/0 Hu 96 $ 570 room=.
+-> s
+T1238 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 5) HP 104/106 MP 0/0 Hu 95 $ 570 room=.
+-> s
+T1239 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 6) HP 105/106 MP 0/0 Hu 94 $ 570 room=.
+-> s
+T1240 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 7) HP 105/106 MP 0/0 Hu 93 $ 570 room=.
+-> w
+T1241 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> s
+T1242 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 106/106 MP 0/0 Hu 91 $ 570 room=.
+-> s
+T1243 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 90 $ 570 room=.
+-> w
+T1244 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 89 $ 570 room=.
+-> s
+T1245 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 106/106 MP 0/0 Hu 88 $ 570 room=.
+-> w
+T1246 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 106/106 MP 0/0 Hu 87 $ 570 room=.
+-> s
+T1247 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 86 $ 570 room=.
+-> s
+T1248 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,12) HP 106/106 MP 0/0 Hu 85 $ 570 room=.
+-> w
+T1249 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 106/106 MP 0/0 Hu 84 $ 570 room=.
+-> w
+T1250 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 106/106 MP 0/0 Hu 83 $ 570 room=.
+-> w
+T1251 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 106/106 MP 0/0 Hu 82 $ 570 room=.
+-> w
+T1252 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 81 $ 570 room=.
+-> w
+T1253 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 106/106 MP 0/0 Hu 80 $ 570 room=.
+-> w
+T1254 mode=game_loop           Thorin Oakshield(dwa) F5@( 3,12) HP 106/106 MP 0/0 Hu 79 $ 570 room=.
+-> w
+T1255 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,12) HP 106/106 MP 0/0 Hu 78 $ 570 room=.
+-> n
+T1256 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,11) HP 106/106 MP 0/0 Hu 77 $ 570 room=.
+-> w
+T1257 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,11) HP 106/106 MP 0/0 Hu 76 $ 570 room=.
+-> s
+T1258 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,12) HP 106/106 MP 0/0 Hu 75 $ 570 room=.
+-> s
+T1259 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,13) HP 106/106 MP 0/0 Hu 74 $ 570 room=.
+-> s
+T1260 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,14) HP 106/106 MP 0/0 Hu 73 $ 570 room=.
+-> s
+T1261 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,15) HP 106/106 MP 0/0 Hu 72 $ 570 room=.
+-> e
+T1262 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,15) HP 106/106 MP 0/0 Hu 71 $ 570 room=.
+-> s
+T1263 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,16) HP 106/106 MP 0/0 Hu 70 $ 570 room=.
+-> w
+T1264 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,16) HP 106/106 MP 0/0 Hu 69 $ 570 room=.
+-> n
+T1265 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,15) HP 106/106 MP 0/0 Hu 68 $ 570 room=.
+-> n
+T1266 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,14) HP 106/106 MP 0/0 Hu 67 $ 570 room=.
+-> n
+T1267 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,13) HP 106/106 MP 0/0 Hu 66 $ 570 room=.
+-> n
+T1268 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,12) HP 106/106 MP 0/0 Hu 65 $ 570 room=.
+-> e
+T1269 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,12) HP 106/106 MP 0/0 Hu 64 $ 570 room=.
+-> e
+T1270 mode=game_loop           Thorin Oakshield(dwa) F5@( 3,12) HP 106/106 MP 0/0 Hu 63 $ 570 room=.
+-> e
+T1271 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 106/106 MP 0/0 Hu 62 $ 570 room=.
+-> e
+T1272 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 61 $ 570 room=.
+-> e
+T1273 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 106/106 MP 0/0 Hu 60 $ 570 room=.
+-> e
+T1274 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 106/106 MP 0/0 Hu 59 $ 570 room=.
+-> e
+T1275 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 106/106 MP 0/0 Hu 58 $ 570 room=.
+-> n
+T1276 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 106/106 MP 0/0 Hu 57 $ 570 room=.
+-> e
+T1277 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 56 $ 570 room=.
+-> s
+T1278 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,12) HP 106/106 MP 0/0 Hu 55 $ 570 room=.
+-> n
+T1279 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 54 $ 570 room=.
+-> n
+T1280 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 106/106 MP 0/0 Hu 53 $ 570 room=.
+-> e
+T1281 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 106/106 MP 0/0 Hu 52 $ 570 room=.
+-> n
+T1282 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 51 $ 570 room=.
+-> e
+T1283 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 50 $ 570 room=.
+-> e
+T1284 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 49 $ 570 room=.
+-> i
+T1285 mode=inventory           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 49 $ 570 room=.
+-> eat1
+T1286 mode=inventory           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 99 $ 570 room=.
+-> x
+T1287 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 99 $ 570 room=.
+-> e
+T1288 mode=game_loop           Thorin Oakshield(dwa) F5@(13, 9) HP 106/106 MP 0/0 Hu 98 $ 570 room=.
+-> e
+T1289 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 9) HP 106/106 MP 0/0 Hu 97 $ 570 room=.
+-> n
+T1290 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 8) HP 106/106 MP 0/0 Hu 96 $ 570 room=.
+-> e
+T1291 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 8) HP 106/106 MP 0/0 Hu 95 $ 570 room=.
+-> n
+T1292 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 7) HP 106/106 MP 0/0 Hu 94 $ 570 room=.
+-> e
+T1293 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 7) HP 106/106 MP 0/0 Hu 93 $ 570 room=.
+-> n
+T1294 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 6) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> n
+T1295 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 5) HP 106/106 MP 0/0 Hu 91 $ 570 room=.
+-> n
+T1296 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 4) HP 106/106 MP 0/0 Hu 90 $ 570 room=.
+-> e
+T1297 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 106/106 MP 0/0 Hu 89 $ 570 room=.
+-> e
+T1298 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 106/106 MP 0/0 Hu 88 $ 570 room=.
+-> s
+T1299 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 5) HP 106/106 MP 0/0 Hu 87 $ 570 room=.
+-> s
+T1300 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 6) HP 106/106 MP 0/0 Hu 86 $ 570 room=.
+-> s
+T1301 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 7) HP 106/106 MP 0/0 Hu 85 $ 570 room=.
+-> s
+T1302 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 8) HP 106/106 MP 0/0 Hu 84 $ 570 room=.
+-> s
+T1303 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 9) HP 106/106 MP 0/0 Hu 83 $ 570 room=.
+-> e
+T1304 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 9) HP 106/106 MP 0/0 Hu 82 $ 570 room=.
+-> n
+T1305 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 8) HP 106/106 MP 0/0 Hu 81 $ 570 room=.
+-> n
+T1306 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 7) HP 106/106 MP 0/0 Hu 80 $ 570 room=.
+-> n
+T1307 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 6) HP 106/106 MP 0/0 Hu 79 $ 570 room=.
+-> n
+T1308 mode=game_loop           Thorin Oakshield(dwa) F5@(19, 5) HP 106/106 MP 0/0 Hu 78 $ 570 room=.
+-> w
+T1309 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 5) HP 106/106 MP 0/0 Hu 77 $ 570 room=.
+-> n
+T1310 mode=game_loop           Thorin Oakshield(dwa) F5@(18, 4) HP 106/106 MP 0/0 Hu 76 $ 570 room=.
+-> w
+T1311 mode=game_loop           Thorin Oakshield(dwa) F5@(17, 4) HP 106/106 MP 0/0 Hu 75 $ 570 room=.
+-> w
+T1312 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 4) HP 106/106 MP 0/0 Hu 74 $ 570 room=.
+-> s
+T1313 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 5) HP 106/106 MP 0/0 Hu 73 $ 570 room=.
+-> s
+T1314 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 6) HP 106/106 MP 0/0 Hu 72 $ 570 room=.
+-> s
+T1315 mode=game_loop           Thorin Oakshield(dwa) F5@(16, 7) HP 106/106 MP 0/0 Hu 71 $ 570 room=.
+-> w
+T1316 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 7) HP 106/106 MP 0/0 Hu 70 $ 570 room=.
+-> s
+T1317 mode=game_loop           Thorin Oakshield(dwa) F5@(15, 8) HP 106/106 MP 0/0 Hu 69 $ 570 room=.
+-> w
+T1318 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 8) HP 106/106 MP 0/0 Hu 68 $ 570 room=.
+-> s
+T1319 mode=game_loop           Thorin Oakshield(dwa) F5@(14, 9) HP 106/106 MP 0/0 Hu 67 $ 570 room=.
+-> w
+T1320 mode=game_loop           Thorin Oakshield(dwa) F5@(13, 9) HP 106/106 MP 0/0 Hu 66 $ 570 room=.
+-> w
+T1321 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 106/106 MP 0/0 Hu 65 $ 570 room=.
+-> w
+T1322 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 64 $ 570 room=.
+-> w
+T1323 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 63 $ 570 room=.
+-> s
+T1324 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 106/106 MP 0/0 Hu 62 $ 570 room=.
+-> w
+T1325 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 106/106 MP 0/0 Hu 61 $ 570 room=.
+-> s
+T1326 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 60 $ 570 room=.
+-> w
+T1327 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 106/106 MP 0/0 Hu 59 $ 570 room=.
+-> s
+T1328 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 106/106 MP 0/0 Hu 58 $ 570 room=.
+-> w
+T1329 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 106/106 MP 0/0 Hu 57 $ 570 room=.
+-> w
+T1330 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 106/106 MP 0/0 Hu 56 $ 570 room=.
+-> w
+T1331 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 55 $ 570 room=.
+-> n
+T1332 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,11) HP 106/106 MP 0/0 Hu 54 $ 570 room=.
+-> w
+T1333 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,11) HP 106/106 MP 0/0 Hu 53 $ 570 room=.
+-> s
+T1334 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 106/106 MP 0/0 Hu 52 $ 570 room=.
+-> s
+T1335 mode=stairs_down_mode    Thorin Oakshield(dwa) F5@( 4,13) HP 106/106 MP 0/0 Hu 51 $ 570 room=D
+-> n
+T1336 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 106/106 MP 0/0 Hu 50 $ 570 room=.
+-> e
+T1337 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 49 $ 570 room=.
+-> i
+T1338 mode=inventory           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 49 $ 570 room=.
+-> eat1
+T1339 mode=inventory           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 99 $ 570 room=.
+-> x
+T1340 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/106 MP 0/0 Hu 99 $ 570 room=.
+-> e
+T1341 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 106/106 MP 0/0 Hu 98 $ 570 room=.
+-> e
+T1342 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 106/106 MP 0/0 Hu 97 $ 570 room=.
+-> e
+T1343 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 106/106 MP 0/0 Hu 96 $ 570 room=.
+-> n
+T1344 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 106/106 MP 0/0 Hu 95 $ 570 room=.
+-> e
+T1345 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 94 $ 570 room=.
+-> s
+T1346 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,12) HP 106/106 MP 0/0 Hu 93 $ 570 room=.
+-> n
+T1347 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> i
+T1348 mode=inventory           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> u10
+T1349 mode=inventory           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> x
+T1350 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 92 $ 570 room=.
+-> n
+T1351 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 106/106 MP 0/0 Hu 91 $ 570 room=.
+-> e
+T1352 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 106/106 MP 0/0 Hu 90 $ 570 room=.
+-> n
+T1353 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 89 $ 570 room=.
+-> e
+T1354 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 88 $ 570 room=.
+-> n
+T1355 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 106/106 MP 0/0 Hu 87 $ 570 room=.
+-> n
+T1356 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 106/106 MP 0/0 Hu 86 $ 570 room=.
+-> e
+T1357 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 7) HP 106/106 MP 0/0 Hu 85 $ 570 room=.
+-> n
+T1358 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 6) HP 106/106 MP 0/0 Hu 84 $ 570 room=.
+-> n
+T1359 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 5) HP 106/106 MP 0/0 Hu 83 $ 570 room=.
+-> n
+T1360 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 4) HP 106/106 MP 0/0 Hu 82 $ 570 room=.
+-> n
+T1361 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 3) HP 106/106 MP 0/0 Hu 81 $ 570 room=.
+-> n
+T1362 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 2) HP 106/106 MP 0/0 Hu 80 $ 570 room=.
+-> w
+T1363 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 2) HP 106/106 MP 0/0 Hu 79 $ 570 room=.
+-> s
+T1364 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 3) HP 106/106 MP 0/0 Hu 78 $ 570 room=.
+-> s
+T1365 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 4) HP 106/106 MP 0/0 Hu 77 $ 570 room=.
+-> w
+T1366 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 4) HP 106/106 MP 0/0 Hu 76 $ 570 room=.
+-> n
+T1367 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 3) HP 106/106 MP 0/0 Hu 75 $ 570 room=N
+-> w
+T1368 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 3) HP 106/106 MP 0/0 Hu 74 $ 570 room=.
+-> n
+T1369 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 2) HP 106/106 MP 0/0 Hu 73 $ 570 room=.
+-> w
+T1370 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 2) HP 106/106 MP 0/0 Hu 72 $ 570 room=.
+-> s
+T1371 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 3) HP 106/106 MP 0/0 Hu 71 $ 570 room=.
+-> w
+T1372 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 3) HP 106/106 MP 0/0 Hu 70 $ 570 room=.
+-> w
+T1373 mode=chest_mode          Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 69 $ 570 room=C
+-> o
+T1374 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 68 $ 570 room=B
+-> 1
+T1375 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 68 $ 477 room=B
+-> 2
+T1376 mode=blacksmith_mode     Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 68 $ 415 room=B
+-> s
+T1377 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 67 $ 415 room=.
+-> w
+T1378 mode=game_loop           Thorin Oakshield(dwa) F5@( 5, 3) HP 106/106 MP 0/0 Hu 66 $ 415 room=.
+-> w
+T1379 mode=game_loop           Thorin Oakshield(dwa) F5@( 4, 3) HP 106/106 MP 0/0 Hu 65 $ 415 room=.
+-> n
+T1380 mode=game_loop           Thorin Oakshield(dwa) F5@( 4, 2) HP 106/106 MP 0/0 Hu 64 $ 415 room=.
+-> e
+T1381 mode=game_loop           Thorin Oakshield(dwa) F5@( 5, 2) HP 106/106 MP 0/0 Hu 63 $ 415 room=.
+-> e
+T1382 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 62 $ 415 room=B
+-> s
+T1383 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 61 $ 415 room=.
+-> e
+T1384 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 3) HP 106/106 MP 0/0 Hu 60 $ 415 room=.
+-> e
+T1385 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 3) HP 106/106 MP 0/0 Hu 59 $ 415 room=.
+-> n
+T1386 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 2) HP 106/106 MP 0/0 Hu 58 $ 415 room=.
+-> w
+T1387 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 2) HP 106/106 MP 0/0 Hu 57 $ 415 room=.
+-> w
+T1388 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 56 $ 415 room=B
+-> s
+T1389 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 55 $ 415 room=.
+-> e
+T1390 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 3) HP 106/106 MP 0/0 Hu 54 $ 415 room=.
+-> e
+T1391 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 3) HP 106/106 MP 0/0 Hu 53 $ 415 room=.
+-> n
+T1392 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 2) HP 106/106 MP 0/0 Hu 52 $ 415 room=.
+-> w
+T1393 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 2) HP 106/106 MP 0/0 Hu 51 $ 415 room=.
+-> n
+T1394 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 1) HP 106/106 MP 0/0 Hu 50 $ 415 room=.
+-> e
+T1395 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 1) HP 106/106 MP 0/0 Hu 49 $ 415 room=.
+-> i
+T1396 mode=inventory           Thorin Oakshield(dwa) F5@( 8, 1) HP 106/106 MP 0/0 Hu 49 $ 415 room=.
+-> eat1
+T1397 mode=inventory           Thorin Oakshield(dwa) F5@( 8, 1) HP 106/106 MP 0/0 Hu 99 $ 415 room=.
+-> x
+T1398 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 1) HP 106/106 MP 0/0 Hu 99 $ 415 room=.
+-> s
+T1399 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 2) HP 106/106 MP 0/0 Hu 98 $ 415 room=.
+-> s
+T1400 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 3) HP 106/106 MP 0/0 Hu 97 $ 415 room=.
+-> w
+T1401 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 3) HP 106/106 MP 0/0 Hu 96 $ 415 room=.
+-> w
+T1402 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 95 $ 415 room=.
+-> s
+T1403 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 415 room=V
+-> b10
+T1404 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 385 room=V
+-> b10
+T1405 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 370 room=V
+-> b10
+T1406 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 360 room=V
+-> b5
+T1407 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 330 room=V
+-> b5
+T1408 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 300 room=V
+-> b5
+T1409 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 270 room=V
+-> b8
+T1410 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 265 room=V
+-> b8
+T1411 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 260 room=V
+-> b8
+T1412 mode=vendor_shop         Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 255 room=V
+-> x
+T1413 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 94 $ 255 room=V
+-> s
+T1414 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6, 5) HP 106/106 MP 0/0 Hu 93 $ 255 room=M vs Rust Monster(L4 HP20/20)
+-> a
+T1415 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6, 5) HP 106/106 MP 0/0 Hu 93 $ 255 room=M vs Rust Monster(L4 HP20/20)
+-> a
+T1416 mode=combat_victory      Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> back
+T1417 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> i
+T1418 mode=inventory           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> u22
+T1419 mode=inventory           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> x
+T1420 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> l
+T1421 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> l
+T1422 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 5) HP 105/106 MP 0/0 Hu 93 $ 295 room=.
+-> s
+T1423 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 6) HP 105/106 MP 0/0 Hu 92 $ 295 room=.
+-> l
+T1424 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 6) HP 105/106 MP 0/0 Hu 92 $ 295 room=.
+-> s
+T1425 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 7) HP 106/106 MP 0/0 Hu 91 $ 295 room=.
+-> l
+T1426 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 7) HP 106/106 MP 0/0 Hu 91 $ 295 room=.
+-> s
+T1427 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 8) HP 106/106 MP 0/0 Hu 90 $ 295 room=.
+-> s
+T1428 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 9) HP 106/106 MP 0/0 Hu 89 $ 295 room=.
+-> s
+T1429 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,10) HP 106/106 MP 0/0 Hu 88 $ 295 room=.
+-> l
+T1430 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,10) HP 106/106 MP 0/0 Hu 88 $ 295 room=.
+-> l
+T1431 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,10) HP 106/106 MP 0/0 Hu 88 $ 295 room=.
+-> n
+T1432 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 9) HP 106/106 MP 0/0 Hu 87 $ 295 room=.
+-> e
+T1433 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 9) HP 106/106 MP 0/0 Hu 86 $ 295 room=.
+-> n
+T1434 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 8) HP 106/106 MP 0/0 Hu 85 $ 295 room=.
+-> w
+T1435 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 8) HP 106/106 MP 0/0 Hu 84 $ 295 room=.
+-> n
+T1436 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 7) HP 106/106 MP 0/0 Hu 83 $ 295 room=.
+-> n
+T1437 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 6) HP 106/106 MP 0/0 Hu 82 $ 295 room=.
+-> n
+T1438 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 5) HP 106/106 MP 0/0 Hu 81 $ 295 room=.
+-> n
+T1439 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 80 $ 295 room=V
+-> l
+T1440 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 4) HP 106/106 MP 0/0 Hu 80 $ 295 room=V
+-> n
+T1441 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 79 $ 295 room=.
+-> n
+T1442 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 2) HP 106/106 MP 0/0 Hu 78 $ 295 room=B
+-> w
+T1443 mode=game_loop           Thorin Oakshield(dwa) F5@( 5, 2) HP 106/106 MP 0/0 Hu 77 $ 295 room=.
+-> l
+T1444 mode=game_loop           Thorin Oakshield(dwa) F5@( 5, 2) HP 106/106 MP 0/0 Hu 77 $ 295 room=.
+-> w
+T1445 mode=game_loop           Thorin Oakshield(dwa) F5@( 4, 2) HP 106/106 MP 0/0 Hu 76 $ 295 room=.
+-> w
+T1446 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 2) HP 106/106 MP 0/0 Hu 75 $ 295 room=.
+-> l
+T1447 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 2) HP 106/106 MP 0/0 Hu 75 $ 295 room=.
+-> n
+T1448 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 1) HP 106/106 MP 0/0 Hu 74 $ 295 room=.
+-> l
+T1449 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 1) HP 106/106 MP 0/0 Hu 74 $ 295 room=.
+-> s
+T1450 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 2) HP 106/106 MP 0/0 Hu 73 $ 295 room=.
+-> s
+T1451 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 3) HP 106/106 MP 0/0 Hu 72 $ 295 room=.
+-> w
+T1452 mode=game_loop           Thorin Oakshield(dwa) F5@( 2, 3) HP 106/106 MP 0/0 Hu 71 $ 295 room=.
+-> l
+T1453 mode=game_loop           Thorin Oakshield(dwa) F5@( 2, 3) HP 106/106 MP 0/0 Hu 71 $ 295 room=.
+-> s
+T1454 mode=altar_mode          Thorin Oakshield(dwa) F5@( 2, 4) HP 106/106 MP 0/0 Hu 70 $ 295 room=A
+-> pray
+T1455 mode=game_loop           Thorin Oakshield(dwa) F5@( 2, 4) HP 106/106 MP 0/0 Hu 70 $ 295 room=.
+-> s
+T1456 mode=game_loop           Thorin Oakshield(dwa) F5@( 2, 5) HP 106/106 MP 0/0 Hu 69 $ 295 room=.
+-> w
+T1457 mode=game_loop           Thorin Oakshield(dwa) F5@( 1, 5) HP 106/106 MP 0/0 Hu 68 $ 295 room=.
+-> n
+T1458 mode=game_loop           Thorin Oakshield(dwa) F5@( 1, 4) HP 106/106 MP 0/0 Hu 67 $ 295 room=.
+-> n
+T1459 mode=game_loop           Thorin Oakshield(dwa) F5@( 1, 3) HP 106/106 MP 0/0 Hu 66 $ 295 room=.
+-> e
+T1460 mode=game_loop           Thorin Oakshield(dwa) F5@( 2, 3) HP 106/106 MP 0/0 Hu 65 $ 295 room=.
+-> e
+T1461 mode=game_loop           Thorin Oakshield(dwa) F5@( 3, 3) HP 106/106 MP 0/0 Hu 64 $ 295 room=.
+-> e
+T1462 mode=game_loop           Thorin Oakshield(dwa) F5@( 4, 3) HP 106/106 MP 0/0 Hu 63 $ 295 room=.
+-> e
+T1463 mode=game_loop           Thorin Oakshield(dwa) F5@( 5, 3) HP 106/106 MP 0/0 Hu 62 $ 295 room=.
+-> e
+T1464 mode=game_loop           Thorin Oakshield(dwa) F5@( 6, 3) HP 106/106 MP 0/0 Hu 61 $ 295 room=.
+-> e
+T1465 mode=game_loop           Thorin Oakshield(dwa) F5@( 7, 3) HP 106/106 MP 0/0 Hu 60 $ 295 room=.
+-> e
+T1466 mode=game_loop           Thorin Oakshield(dwa) F5@( 8, 3) HP 106/106 MP 0/0 Hu 59 $ 295 room=.
+-> e
+T1467 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 3) HP 106/106 MP 0/0 Hu 58 $ 295 room=.
+-> s
+T1468 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 4) HP 106/106 MP 0/0 Hu 57 $ 295 room=.
+-> s
+T1469 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 5) HP 106/106 MP 0/0 Hu 56 $ 295 room=.
+-> s
+T1470 mode=game_loop           Thorin Oakshield(dwa) F5@( 9, 6) HP 106/106 MP 0/0 Hu 55 $ 295 room=N
+-> e
+T1471 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 6) HP 106/106 MP 0/0 Hu 54 $ 295 room=.
+-> s
+T1472 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 7) HP 106/106 MP 0/0 Hu 53 $ 295 room=.
+-> e
+T1473 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 106/106 MP 0/0 Hu 52 $ 295 room=.
+-> s
+T1474 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 106/106 MP 0/0 Hu 51 $ 295 room=.
+-> s
+T1475 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 106/106 MP 0/0 Hu 50 $ 295 room=.
+-> w
+T1476 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 49 $ 295 room=.
+-> i
+T1477 mode=inventory           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 49 $ 295 room=.
+-> eat4
+T1478 mode=inventory           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu 67 $ 295 room=.
+-> eat1
+T1479 mode=inventory           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu100 $ 295 room=.
+-> x
+T1480 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 106/106 MP 0/0 Hu100 $ 295 room=.
+-> s
+T1481 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 106/106 MP 0/0 Hu 99 $ 295 room=.
+-> w
+T1482 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 106/106 MP 0/0 Hu 98 $ 295 room=.
+-> s
+T1483 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 106/106 MP 0/0 Hu 97 $ 295 room=.
+-> w
+T1484 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 106/106 MP 0/0 Hu 96 $ 295 room=.
+-> s
+T1485 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 106/106 MP 0/0 Hu 95 $ 295 room=.
+-> w
+T1486 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 106/106 MP 0/0 Hu 94 $ 295 room=.
+-> w
+T1487 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 106/106 MP 0/0 Hu 93 $ 295 room=.
+-> s
+T1488 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,13) HP 106/106 MP 0/0 Hu 92 $ 295 room=.
+-> e
+T1489 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 106/106 MP 0/0 Hu 91 $ 295 room=.
+-> s
+T1490 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 106/106 MP 0/0 Hu 90 $ 295 room=.
+-> w
+T1491 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6,14) HP 106/106 MP 0/0 Hu 89 $ 295 room=M vs Wight(L4 HP43/43)
+-> a
+T1492 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6,14) HP 106/106 MP 0/0 Hu 89 $ 295 room=M vs Wight(L4 HP43/43)
+-> f
+T1493 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6,14) HP 104/106 MP 0/0 Hu 89 $ 295 room=M vs Wight(L4 HP43/43)
+-> a
+T1494 mode=combat_mode         Thorin Oakshield(dwa) F5@( 6,14) HP 104/106 MP 0/0 Hu 89 $ 295 room=M vs Wight(L4 HP12/43)
+-> a
+T1495 mode=combat_victory      Thorin Oakshield(dwa) F5@( 6,14) HP 103/116 MP 0/0 Hu 89 $ 310 room=.
+-> back
+T1496 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,14) HP 103/116 MP 0/0 Hu 89 $ 310 room=.
+-> w
+T1497 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,14) HP 103/116 MP 0/0 Hu 88 $ 310 room=.
+-> n
+T1498 mode=chest_mode          Thorin Oakshield(dwa) F5@( 5,13) HP 104/116 MP 0/0 Hu 87 $ 310 room=C
+-> o
+T1499 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 104/116 MP 0/0 Hu 87 $ 310 room=.
+-> e
+T1500 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,13) HP 104/116 MP 0/0 Hu 86 $ 310 room=.
+-> n
+T1501 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 105/116 MP 0/0 Hu 85 $ 310 room=.
+-> e
+T1502 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 105/116 MP 0/0 Hu 84 $ 310 room=.
+-> s
+T1503 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 105/116 MP 0/0 Hu 83 $ 310 room=.
+-> s
+T1504 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 105/116 MP 0/0 Hu 82 $ 310 room=.
+-> w
+T1505 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,14) HP 106/116 MP 0/0 Hu 81 $ 310 room=.
+-> w
+T1506 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,14) HP 106/116 MP 0/0 Hu 80 $ 310 room=.
+-> n
+T1507 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 106/116 MP 0/0 Hu 79 $ 310 room=.
+-> n
+T1508 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 106/116 MP 0/0 Hu 78 $ 310 room=.
+-> e
+T1509 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 107/116 MP 0/0 Hu 77 $ 310 room=.
+-> e
+T1510 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 107/116 MP 0/0 Hu 76 $ 310 room=.
+-> s
+T1511 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 107/116 MP 0/0 Hu 75 $ 310 room=.
+-> s
+T1512 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 107/116 MP 0/0 Hu 74 $ 310 room=.
+-> w
+T1513 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,14) HP 108/116 MP 0/0 Hu 73 $ 310 room=.
+-> w
+T1514 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,14) HP 108/116 MP 0/0 Hu 72 $ 310 room=.
+-> n
+T1515 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 108/116 MP 0/0 Hu 71 $ 310 room=.
+-> n
+T1516 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 108/116 MP 0/0 Hu 70 $ 310 room=.
+-> e
+T1517 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 109/116 MP 0/0 Hu 69 $ 310 room=.
+-> e
+T1518 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 109/116 MP 0/0 Hu 68 $ 310 room=.
+-> s
+T1519 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 109/116 MP 0/0 Hu 67 $ 310 room=.
+-> s
+T1520 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 109/116 MP 0/0 Hu 66 $ 310 room=.
+-> w
+T1521 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,14) HP 110/116 MP 0/0 Hu 65 $ 310 room=.
+-> s
+T1522 mode=warp_mode           Thorin Oakshield(dwa) F5@( 6,15) HP 110/116 MP 0/0 Hu 64 $ 310 room=W
+-> y
+T1523 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,15) HP 110/116 MP 0/0 Hu 64 $ 310 room=W
+-> s
+T1524 mode=shrine_mode         Thorin Oakshield(dwa) F5@( 6,16) HP 110/116 MP 0/0 Hu 63 $ 310 room=F
+-> p
+T1525 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,16) HP 110/116 MP 0/0 Hu 63 $ 310 room=.
+-> w
+T1526 mode=combat_mode         Thorin Oakshield(dwa) F5@( 5,16) HP 110/116 MP 0/0 Hu 62 $ 310 room=M vs Kobold(L4 HP9/9)
+-> a
+T1527 mode=combat_mode         Thorin Oakshield(dwa) F5@( 5,16) HP 110/116 MP 0/0 Hu 62 $ 310 room=M vs Kobold(L4 HP9/9)
+-> a
+T1528 mode=combat_mode         Thorin Oakshield(dwa) F5@( 5,16) HP 109/116 MP 0/0 Hu 62 $ 310 room=M vs Kobold(L4 HP9/9)
+-> a
+T1529 mode=combat_mode         Thorin Oakshield(dwa) F5@( 5,16) HP 108/116 MP 0/0 Hu 62 $ 310 room=M vs Kobold(L4 HP9/9)
+-> a
+T1530 mode=combat_victory      Thorin Oakshield(dwa) F5@( 5,16) HP 108/116 MP 0/0 Hu 62 $ 355 room=.
+-> back
+T1531 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,16) HP 108/116 MP 0/0 Hu 62 $ 355 room=.
+-> i
+T1532 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 108/116 MP 0/0 Hu 62 $ 355 room=.
+-> u14
+T1533 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 62 $ 355 room=.
+-> x
+T1534 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 62 $ 355 room=.
+-> i
+T1535 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 62 $ 355 room=.
+-> u23
+T1536 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 62 $ 355 room=.
+-> eat3
+T1537 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 77 $ 355 room=.
+-> eat1
+T1538 mode=inventory           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu100 $ 355 room=.
+-> x
+T1539 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu100 $ 355 room=.
+-> e
+T1540 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,16) HP 116/116 MP 0/0 Hu 99 $ 355 room=.
+-> e
+T1541 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 116/116 MP 0/0 Hu 98 $ 355 room=.
+-> n
+T1542 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 116/116 MP 0/0 Hu 97 $ 355 room=.
+-> e
+T1543 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,15) HP 116/116 MP 0/0 Hu 96 $ 355 room=.
+-> e
+T1544 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 95 $ 355 room=.
+-> s
+T1545 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,16) HP 116/116 MP 0/0 Hu 94 $ 355 room=.
+-> w
+T1546 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 116/116 MP 0/0 Hu 93 $ 355 room=.
+-> w
+T1547 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 116/116 MP 0/0 Hu 92 $ 355 room=.
+-> n
+T1548 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 116/116 MP 0/0 Hu 91 $ 355 room=.
+-> e
+T1549 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,15) HP 116/116 MP 0/0 Hu 90 $ 355 room=.
+-> e
+T1550 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 89 $ 355 room=.
+-> s
+T1551 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,16) HP 116/116 MP 0/0 Hu 88 $ 355 room=.
+-> w
+T1552 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 116/116 MP 0/0 Hu 87 $ 355 room=.
+-> w
+T1553 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 116/116 MP 0/0 Hu 86 $ 355 room=.
+-> w
+T1554 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,16) HP 116/116 MP 0/0 Hu 85 $ 355 room=.
+-> w
+T1555 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,16) HP 116/116 MP 0/0 Hu 84 $ 355 room=.
+-> e
+T1556 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,16) HP 116/116 MP 0/0 Hu 83 $ 355 room=.
+-> e
+T1557 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 116/116 MP 0/0 Hu 82 $ 355 room=.
+-> e
+T1558 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 116/116 MP 0/0 Hu 81 $ 355 room=.
+-> e
+T1559 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,16) HP 116/116 MP 0/0 Hu 80 $ 355 room=.
+-> n
+T1560 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 79 $ 355 room=.
+-> e
+T1561 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 78 $ 355 room=.
+-> s
+T1562 mode=garden_mode         Thorin Oakshield(dwa) F5@(10,16) HP 116/116 MP 0/0 Hu 77 $ 355 room=G
+-> h
+T1563 mode=game_loop           Thorin Oakshield(dwa) F5@(10,16) HP 116/116 MP 0/0 Hu 77 $ 355 room=.
+-> n
+T1564 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 76 $ 355 room=.
+-> e
+T1565 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 116/116 MP 0/0 Hu 75 $ 355 room=.
+-> e
+T1566 mode=library_mode        Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 74 $ 355 room=L
+-> r
+T1567 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 74 $ 355 room=.
+-> s
+T1568 mode=chest_mode          Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 73 $ 355 room=C
+-> o
+T1569 mode=game_loop           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 73 $ 355 room=.
+-> i
+T1570 mode=inventory           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 73 $ 355 room=.
+-> e7
+T1571 mode=inventory           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 73 $ 355 room=.
+-> x
+T1572 mode=game_loop           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 73 $ 355 room=.
+-> e
+T1573 mode=game_loop           Thorin Oakshield(dwa) F5@(13,16) HP 116/116 MP 0/0 Hu 72 $ 355 room=.
+-> e
+T1574 mode=pool_mode           Thorin Oakshield(dwa) F5@(14,16) HP 116/116 MP 0/0 Hu 71 $ 355 room=P
+-> dr
+T1575 mode=game_loop           Thorin Oakshield(dwa) F5@(14,16) HP 116/116 MP 0/0 Hu 71 $ 355 room=.
+-> e
+T1576 mode=library_mode        Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 70 $ 355 room=L
+-> r
+T1577 mode=library_read_decision_mode Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 70 $ 355 room=L
+-> y
+T1578 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 70 $ 655 room=.
+-> e
+T1579 mode=chest_mode          Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu 69 $ 655 room=C
+-> o
+T1580 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 68 $ 655 room=.
+-> n
+T1581 mode=game_loop           Thorin Oakshield(dwa) F5@(15,15) HP 116/116 MP 0/0 Hu 67 $ 655 room=.
+-> e
+T1582 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu 66 $ 655 room=.
+-> e
+T1583 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 65 $ 655 room=.
+-> s
+T1584 mode=combat_mode         Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 64 $ 655 room=M vs Crawling Claw(L4 HP5/5)
+-> a
+T1585 mode=combat_victory      Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 64 $ 675 room=.
+-> back
+T1586 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 64 $ 675 room=.
+-> i
+T1587 mode=inventory           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 64 $ 675 room=.
+-> u25
+T1588 mode=inventory           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 64 $ 675 room=.
+-> eat2
+T1589 mode=inventory           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 82 $ 675 room=.
+-> x
+T1590 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 82 $ 675 room=.
+-> w
+T1591 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu 81 $ 675 room=.
+-> w
+T1592 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 80 $ 675 room=.
+-> n
+T1593 mode=game_loop           Thorin Oakshield(dwa) F5@(15,15) HP 116/116 MP 0/0 Hu 79 $ 675 room=.
+-> e
+T1594 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu 78 $ 675 room=.
+-> e
+T1595 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 77 $ 675 room=.
+-> s
+T1596 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 76 $ 675 room=.
+-> e
+T1597 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu 75 $ 675 room=.
+-> e
+T1598 mode=game_loop           Thorin Oakshield(dwa) F5@(19,16) HP 116/116 MP 0/0 Hu 74 $ 675 room=.
+-> n
+T1599 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 73 $ 675 room=.
+-> w
+T1600 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 72 $ 675 room=.
+-> w
+T1601 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 71 $ 675 room=.
+-> w
+T1602 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu 70 $ 675 room=.
+-> s
+T1603 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu 69 $ 675 room=.
+-> e
+T1604 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 68 $ 675 room=.
+-> e
+T1605 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu 67 $ 675 room=.
+-> n
+T1606 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 66 $ 675 room=.
+-> e
+T1607 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 65 $ 675 room=.
+-> n
+T1608 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 64 $ 675 room=.
+-> n
+T1609 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 63 $ 675 room=.
+-> n
+T1610 mode=chest_mode          Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 62 $ 675 room=C
+-> o
+T1611 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 62 $ 825 room=.
+-> n
+T1612 mode=game_loop           Thorin Oakshield(dwa) F5@(19,11) HP 116/116 MP 0/0 Hu 61 $ 825 room=.
+-> s
+T1613 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 60 $ 825 room=.
+-> w
+T1614 mode=pool_mode           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 59 $ 825 room=P
+-> dr
+T1615 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 59 $ 825 room=.
+-> w
+T1616 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 58 $ 825 room=.
+-> s
+T1617 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 57 $ 825 room=.
+-> w
+T1618 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 56 $ 825 room=.
+-> s
+T1619 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 55 $ 825 room=.
+-> e
+T1620 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 54 $ 825 room=.
+-> e
+T1621 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 116/116 MP 0/0 Hu 53 $ 825 room=.
+-> e
+T1622 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 52 $ 825 room=.
+-> n
+T1623 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 51 $ 825 room=.
+-> w
+T1624 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 116/116 MP 0/0 Hu 50 $ 825 room=.
+-> n
+T1625 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> i
+T1626 mode=inventory           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> eat1
+T1627 mode=inventory           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> x
+T1628 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> w
+T1629 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 98 $ 825 room=.
+-> s
+T1630 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 97 $ 825 room=.
+-> w
+T1631 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 96 $ 825 room=.
+-> s
+T1632 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 95 $ 825 room=.
+-> e
+T1633 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 94 $ 825 room=.
+-> s
+T1634 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 93 $ 825 room=.
+-> s
+T1635 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 92 $ 825 room=.
+-> e
+T1636 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu 91 $ 825 room=.
+-> n
+T1637 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 90 $ 825 room=.
+-> n
+T1638 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 116/116 MP 0/0 Hu 89 $ 825 room=.
+-> w
+T1639 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 88 $ 825 room=.
+-> w
+T1640 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 87 $ 825 room=.
+-> n
+T1641 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 86 $ 825 room=.
+-> n
+T1642 mode=game_loop           Thorin Oakshield(dwa) F5@(16,12) HP 116/116 MP 0/0 Hu 85 $ 825 room=.
+-> e
+T1643 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 84 $ 825 room=.
+-> s
+T1644 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 83 $ 825 room=.
+-> s
+T1645 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 82 $ 825 room=.
+-> w
+T1646 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 81 $ 825 room=.
+-> n
+T1647 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 80 $ 825 room=.
+-> n
+T1648 mode=game_loop           Thorin Oakshield(dwa) F5@(16,12) HP 116/116 MP 0/0 Hu 79 $ 825 room=.
+-> e
+T1649 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 78 $ 825 room=.
+-> s
+T1650 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 77 $ 825 room=.
+-> e
+T1651 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 116/116 MP 0/0 Hu 76 $ 825 room=.
+-> n
+T1652 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 75 $ 825 room=.
+-> e
+T1653 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 74 $ 825 room=.
+-> s
+T1654 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 73 $ 825 room=.
+-> s
+T1655 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 72 $ 825 room=.
+-> w
+T1656 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 116/116 MP 0/0 Hu 71 $ 825 room=.
+-> w
+T1657 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 70 $ 825 room=.
+-> w
+T1658 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 69 $ 825 room=.
+-> n
+T1659 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 68 $ 825 room=.
+-> n
+T1660 mode=game_loop           Thorin Oakshield(dwa) F5@(16,12) HP 116/116 MP 0/0 Hu 67 $ 825 room=.
+-> e
+T1661 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 66 $ 825 room=.
+-> s
+T1662 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 65 $ 825 room=.
+-> s
+T1663 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 64 $ 825 room=.
+-> w
+T1664 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 63 $ 825 room=.
+-> n
+T1665 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 62 $ 825 room=.
+-> w
+T1666 mode=game_loop           Thorin Oakshield(dwa) F5@(15,13) HP 116/116 MP 0/0 Hu 61 $ 825 room=.
+-> s
+T1667 mode=game_loop           Thorin Oakshield(dwa) F5@(15,14) HP 116/116 MP 0/0 Hu 60 $ 825 room=.
+-> s
+T1668 mode=game_loop           Thorin Oakshield(dwa) F5@(15,15) HP 116/116 MP 0/0 Hu 59 $ 825 room=.
+-> s
+T1669 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 58 $ 825 room=.
+-> w
+T1670 mode=game_loop           Thorin Oakshield(dwa) F5@(14,16) HP 116/116 MP 0/0 Hu 57 $ 825 room=.
+-> w
+T1671 mode=game_loop           Thorin Oakshield(dwa) F5@(13,16) HP 116/116 MP 0/0 Hu 56 $ 825 room=.
+-> w
+T1672 mode=game_loop           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 55 $ 825 room=.
+-> n
+T1673 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 54 $ 825 room=.
+-> n
+T1674 mode=game_loop           Thorin Oakshield(dwa) F5@(12,14) HP 116/116 MP 0/0 Hu 53 $ 825 room=.
+-> w
+T1675 mode=game_loop           Thorin Oakshield(dwa) F5@(11,14) HP 116/116 MP 0/0 Hu 52 $ 825 room=.
+-> s
+T1676 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 116/116 MP 0/0 Hu 51 $ 825 room=.
+-> w
+T1677 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 50 $ 825 room=.
+-> w
+T1678 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> i
+T1679 mode=inventory           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> eat1
+T1680 mode=inventory           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> x
+T1681 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> w
+T1682 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,15) HP 116/116 MP 0/0 Hu 98 $ 825 room=.
+-> w
+T1683 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 116/116 MP 0/0 Hu 97 $ 825 room=.
+-> n
+T1684 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 116/116 MP 0/0 Hu 96 $ 825 room=.
+-> e
+T1685 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,14) HP 116/116 MP 0/0 Hu 95 $ 825 room=.
+-> e
+T1686 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,14) HP 116/116 MP 0/0 Hu 94 $ 825 room=.
+-> s
+T1687 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 93 $ 825 room=.
+-> e
+T1688 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 92 $ 825 room=.
+-> e
+T1689 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 116/116 MP 0/0 Hu 91 $ 825 room=.
+-> e
+T1690 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 90 $ 825 room=.
+-> n
+T1691 mode=game_loop           Thorin Oakshield(dwa) F5@(12,14) HP 116/116 MP 0/0 Hu 89 $ 825 room=.
+-> w
+T1692 mode=game_loop           Thorin Oakshield(dwa) F5@(11,14) HP 116/116 MP 0/0 Hu 88 $ 825 room=.
+-> s
+T1693 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 116/116 MP 0/0 Hu 87 $ 825 room=.
+-> w
+T1694 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 86 $ 825 room=.
+-> w
+T1695 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 85 $ 825 room=.
+-> w
+T1696 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,15) HP 116/116 MP 0/0 Hu 84 $ 825 room=.
+-> s
+T1697 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,16) HP 116/116 MP 0/0 Hu 83 $ 825 room=.
+-> w
+T1698 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,16) HP 116/116 MP 0/0 Hu 82 $ 825 room=.
+-> n
+T1699 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 116/116 MP 0/0 Hu 81 $ 825 room=.
+-> n
+T1700 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 116/116 MP 0/0 Hu 80 $ 825 room=.
+-> n
+T1701 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 116/116 MP 0/0 Hu 79 $ 825 room=.
+-> n
+T1702 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 78 $ 825 room=.
+-> e
+T1703 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 77 $ 825 room=.
+-> n
+T1704 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 76 $ 825 room=.
+-> e
+T1705 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 75 $ 825 room=.
+-> n
+T1706 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 74 $ 825 room=.
+-> e
+T1707 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 73 $ 825 room=.
+-> n
+T1708 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 72 $ 825 room=.
+-> e
+T1709 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 71 $ 825 room=.
+-> e
+T1710 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 116/116 MP 0/0 Hu 70 $ 825 room=.
+-> s
+T1711 mode=game_loop           Thorin Oakshield(dwa) F5@(12,10) HP 116/116 MP 0/0 Hu 69 $ 825 room=.
+-> s
+T1712 mode=game_loop           Thorin Oakshield(dwa) F5@(12,11) HP 116/116 MP 0/0 Hu 68 $ 825 room=.
+-> n
+T1713 mode=game_loop           Thorin Oakshield(dwa) F5@(12,10) HP 116/116 MP 0/0 Hu 67 $ 825 room=.
+-> n
+T1714 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 9) HP 116/116 MP 0/0 Hu 66 $ 825 room=.
+-> w
+T1715 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 65 $ 825 room=.
+-> w
+T1716 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 64 $ 825 room=.
+-> s
+T1717 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 63 $ 825 room=.
+-> w
+T1718 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 62 $ 825 room=.
+-> s
+T1719 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 61 $ 825 room=.
+-> w
+T1720 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 60 $ 825 room=.
+-> s
+T1721 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 59 $ 825 room=.
+-> w
+T1722 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 58 $ 825 room=.
+-> w
+T1723 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 116/116 MP 0/0 Hu 57 $ 825 room=.
+-> w
+T1724 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 116/116 MP 0/0 Hu 56 $ 825 room=.
+-> n
+T1725 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,11) HP 116/116 MP 0/0 Hu 55 $ 825 room=.
+-> w
+T1726 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,11) HP 116/116 MP 0/0 Hu 54 $ 825 room=.
+-> s
+T1727 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 116/116 MP 0/0 Hu 53 $ 825 room=.
+-> w
+T1728 mode=game_loop           Thorin Oakshield(dwa) F5@( 3,12) HP 116/116 MP 0/0 Hu 52 $ 825 room=.
+-> n
+T1729 mode=game_loop           Thorin Oakshield(dwa) F5@( 3,11) HP 116/116 MP 0/0 Hu 51 $ 825 room=.
+-> w
+T1730 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,11) HP 116/116 MP 0/0 Hu 50 $ 825 room=.
+-> s
+T1731 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,12) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> i
+T1732 mode=inventory           Thorin Oakshield(dwa) F5@( 2,12) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> eat1
+T1733 mode=inventory           Thorin Oakshield(dwa) F5@( 2,12) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> x
+T1734 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,12) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> w
+T1735 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,12) HP 116/116 MP 0/0 Hu 98 $ 825 room=.
+-> n
+T1736 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,11) HP 116/116 MP 0/0 Hu 97 $ 825 room=.
+-> s
+T1737 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,12) HP 116/116 MP 0/0 Hu 96 $ 825 room=.
+-> s
+T1738 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,13) HP 116/116 MP 0/0 Hu 95 $ 825 room=.
+-> s
+T1739 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,14) HP 116/116 MP 0/0 Hu 94 $ 825 room=.
+-> s
+T1740 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,15) HP 116/116 MP 0/0 Hu 93 $ 825 room=.
+-> e
+T1741 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,15) HP 116/116 MP 0/0 Hu 92 $ 825 room=.
+-> s
+T1742 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,16) HP 116/116 MP 0/0 Hu 91 $ 825 room=.
+-> w
+T1743 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,16) HP 116/116 MP 0/0 Hu 90 $ 825 room=.
+-> n
+T1744 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,15) HP 116/116 MP 0/0 Hu 89 $ 825 room=.
+-> n
+T1745 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,14) HP 116/116 MP 0/0 Hu 88 $ 825 room=.
+-> n
+T1746 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,13) HP 116/116 MP 0/0 Hu 87 $ 825 room=.
+-> n
+T1747 mode=game_loop           Thorin Oakshield(dwa) F5@( 1,12) HP 116/116 MP 0/0 Hu 86 $ 825 room=.
+-> e
+T1748 mode=game_loop           Thorin Oakshield(dwa) F5@( 2,12) HP 116/116 MP 0/0 Hu 85 $ 825 room=.
+-> e
+T1749 mode=game_loop           Thorin Oakshield(dwa) F5@( 3,12) HP 116/116 MP 0/0 Hu 84 $ 825 room=.
+-> e
+T1750 mode=game_loop           Thorin Oakshield(dwa) F5@( 4,12) HP 116/116 MP 0/0 Hu 83 $ 825 room=.
+-> e
+T1751 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,12) HP 116/116 MP 0/0 Hu 82 $ 825 room=.
+-> e
+T1752 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 116/116 MP 0/0 Hu 81 $ 825 room=.
+-> e
+T1753 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 80 $ 825 room=.
+-> e
+T1754 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 79 $ 825 room=.
+-> n
+T1755 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 78 $ 825 room=.
+-> e
+T1756 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 77 $ 825 room=.
+-> s
+T1757 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,12) HP 116/116 MP 0/0 Hu 76 $ 825 room=.
+-> n
+T1758 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 75 $ 825 room=.
+-> n
+T1759 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 74 $ 825 room=.
+-> e
+T1760 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 73 $ 825 room=.
+-> n
+T1761 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 72 $ 825 room=.
+-> e
+T1762 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 71 $ 825 room=.
+-> n
+T1763 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 116/116 MP 0/0 Hu 70 $ 825 room=.
+-> n
+T1764 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 116/116 MP 0/0 Hu 69 $ 825 room=.
+-> e
+T1765 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 7) HP 116/116 MP 0/0 Hu 68 $ 825 room=.
+-> n
+T1766 mode=game_loop           Thorin Oakshield(dwa) F5@(12, 6) HP 116/116 MP 0/0 Hu 67 $ 825 room=.
+-> w
+T1767 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 6) HP 116/116 MP 0/0 Hu 66 $ 825 room=.
+-> w
+T1768 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 6) HP 116/116 MP 0/0 Hu 65 $ 825 room=.
+-> s
+T1769 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 7) HP 116/116 MP 0/0 Hu 64 $ 825 room=.
+-> e
+T1770 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 116/116 MP 0/0 Hu 63 $ 825 room=.
+-> s
+T1771 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 116/116 MP 0/0 Hu 62 $ 825 room=.
+-> s
+T1772 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 61 $ 825 room=.
+-> w
+T1773 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 60 $ 825 room=.
+-> s
+T1774 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 59 $ 825 room=.
+-> w
+T1775 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 58 $ 825 room=.
+-> s
+T1776 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 57 $ 825 room=.
+-> w
+T1777 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 56 $ 825 room=.
+-> s
+T1778 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 55 $ 825 room=.
+-> e
+T1779 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,12) HP 116/116 MP 0/0 Hu 54 $ 825 room=.
+-> n
+T1780 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 53 $ 825 room=.
+-> n
+T1781 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 52 $ 825 room=.
+-> e
+T1782 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 51 $ 825 room=.
+-> n
+T1783 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 50 $ 825 room=.
+-> e
+T1784 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> i
+T1785 mode=inventory           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> eat1
+T1786 mode=inventory           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> x
+T1787 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 99 $ 825 room=.
+-> n
+T1788 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 116/116 MP 0/0 Hu 98 $ 825 room=.
+-> n
+T1789 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 116/116 MP 0/0 Hu 97 $ 825 room=.
+-> n
+T1790 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 6) HP 116/116 MP 0/0 Hu 96 $ 825 room=.
+-> n
+T1791 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 5) HP 116/116 MP 0/0 Hu 95 $ 825 room=.
+-> w
+T1792 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 5) HP 116/116 MP 0/0 Hu 94 $ 825 room=.
+-> s
+T1793 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 6) HP 116/116 MP 0/0 Hu 93 $ 825 room=.
+-> s
+T1794 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 7) HP 116/116 MP 0/0 Hu 92 $ 825 room=.
+-> e
+T1795 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 7) HP 116/116 MP 0/0 Hu 91 $ 825 room=.
+-> s
+T1796 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 8) HP 116/116 MP 0/0 Hu 90 $ 825 room=.
+-> s
+T1797 mode=game_loop           Thorin Oakshield(dwa) F5@(11, 9) HP 116/116 MP 0/0 Hu 89 $ 825 room=.
+-> w
+T1798 mode=game_loop           Thorin Oakshield(dwa) F5@(10, 9) HP 116/116 MP 0/0 Hu 88 $ 825 room=.
+-> s
+T1799 mode=game_loop           Thorin Oakshield(dwa) F5@(10,10) HP 116/116 MP 0/0 Hu 87 $ 825 room=.
+-> w
+T1800 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,10) HP 116/116 MP 0/0 Hu 86 $ 825 room=.
+-> s
+T1801 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,11) HP 116/116 MP 0/0 Hu 85 $ 825 room=.
+-> w
+T1802 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 84 $ 825 room=.
+-> s
+T1803 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 83 $ 825 room=.
+-> w
+T1804 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 82 $ 825 room=.
+-> s
+T1805 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 116/116 MP 0/0 Hu 81 $ 825 room=.
+-> s
+T1806 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 116/116 MP 0/0 Hu 80 $ 825 room=.
+-> w
+T1807 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,14) HP 116/116 MP 0/0 Hu 79 $ 825 room=.
+-> n
+T1808 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,13) HP 116/116 MP 0/0 Hu 78 $ 825 room=.
+-> n
+T1809 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,12) HP 116/116 MP 0/0 Hu 77 $ 825 room=.
+-> e
+T1810 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 76 $ 825 room=.
+-> e
+T1811 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,12) HP 116/116 MP 0/0 Hu 75 $ 825 room=.
+-> n
+T1812 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,11) HP 116/116 MP 0/0 Hu 74 $ 825 room=.
+-> w
+T1813 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,11) HP 116/116 MP 0/0 Hu 73 $ 825 room=.
+-> s
+T1814 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,12) HP 116/116 MP 0/0 Hu 72 $ 825 room=.
+-> s
+T1815 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 116/116 MP 0/0 Hu 71 $ 825 room=.
+-> s
+T1816 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 116/116 MP 0/0 Hu 70 $ 825 room=.
+-> s
+T1817 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,15) HP 116/116 MP 0/0 Hu 69 $ 825 room=.
+-> e
+T1818 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,15) HP 116/116 MP 0/0 Hu 68 $ 825 room=.
+-> e
+T1819 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 116/116 MP 0/0 Hu 67 $ 825 room=.
+-> e
+T1820 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 116/116 MP 0/0 Hu 66 $ 825 room=.
+-> e
+T1821 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 116/116 MP 0/0 Hu 65 $ 825 room=.
+-> e
+T1822 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 64 $ 825 room=.
+-> n
+T1823 mode=game_loop           Thorin Oakshield(dwa) F5@(12,14) HP 116/116 MP 0/0 Hu 63 $ 825 room=.
+-> n
+T1824 mode=game_loop           Thorin Oakshield(dwa) F5@(12,13) HP 116/116 MP 0/0 Hu 62 $ 825 room=.
+-> s
+T1825 mode=game_loop           Thorin Oakshield(dwa) F5@(12,14) HP 116/116 MP 0/0 Hu 61 $ 825 room=.
+-> e
+T1826 mode=game_loop           Thorin Oakshield(dwa) F5@(13,14) HP 116/116 MP 0/0 Hu 60 $ 825 room=.
+-> s
+T1827 mode=game_loop           Thorin Oakshield(dwa) F5@(13,15) HP 116/116 MP 0/0 Hu 59 $ 825 room=.
+-> w
+T1828 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 116/116 MP 0/0 Hu 58 $ 825 room=.
+-> s
+T1829 mode=game_loop           Thorin Oakshield(dwa) F5@(12,16) HP 116/116 MP 0/0 Hu 57 $ 825 room=.
+-> e
+T1830 mode=game_loop           Thorin Oakshield(dwa) F5@(13,16) HP 116/116 MP 0/0 Hu 56 $ 825 room=.
+-> e
+T1831 mode=game_loop           Thorin Oakshield(dwa) F5@(14,16) HP 116/116 MP 0/0 Hu 55 $ 825 room=.
+-> e
+T1832 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 116/116 MP 0/0 Hu 54 $ 825 room=.
+-> e
+T1833 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu 53 $ 825 room=.
+-> e
+T1834 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 52 $ 825 room=.
+-> n
+T1835 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 51 $ 825 room=.
+-> n
+T1836 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 50 $ 825 room=.
+-> n
+T1837 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 49 $ 825 room=.
+-> w
+T1838 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 116/116 MP 0/0 Hu 48 $ 825 room=.
+-> s
+T1839 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 47 $ 825 room=.
+-> s
+T1840 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu 46 $ 825 room=.
+-> s
+T1841 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu 45 $ 825 room=.
+-> e
+T1842 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu 44 $ 825 room=.
+-> e
+T1843 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu 43 $ 825 room=.
+-> n
+T1844 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 42 $ 825 room=.
+-> e
+T1845 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 41 $ 825 room=.
+-> s
+T1846 mode=game_loop           Thorin Oakshield(dwa) F5@(19,16) HP 116/116 MP 0/0 Hu 40 $ 825 room=.
+-> n
+T1847 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 39 $ 825 room=.
+-> n
+T1848 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 38 $ 825 room=.
+-> w
+T1849 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 116/116 MP 0/0 Hu 37 $ 825 room=.
+-> w
+T1850 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 36 $ 825 room=.
+-> s
+T1851 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 35 $ 825 room=.
+-> e
+T1852 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 34 $ 825 room=.
+-> s
+T1853 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu 33 $ 825 room=.
+-> e
+T1854 mode=game_loop           Thorin Oakshield(dwa) F5@(19,16) HP 116/116 MP 0/0 Hu 32 $ 825 room=.
+-> n
+T1855 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 31 $ 825 room=.
+-> n
+T1856 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 30 $ 825 room=.
+-> n
+T1857 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 29 $ 825 room=.
+-> w
+T1858 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 116/116 MP 0/0 Hu 28 $ 825 room=.
+-> w
+T1859 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 27 $ 825 room=.
+-> n
+T1860 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu 26 $ 825 room=.
+-> e
+T1861 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu 25 $ 825 room=.
+-> e
+T1862 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 24 $ 825 room=.
+-> s
+T1863 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 23 $ 825 room=.
+-> w
+T1864 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 116/116 MP 0/0 Hu 22 $ 825 room=.
+-> w
+T1865 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu 21 $ 825 room=.
+-> s
+T1866 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu 20 $ 825 room=.
+-> w
+T1867 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 116/116 MP 0/0 Hu 19 $ 825 room=.
+-> s
+T1868 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu 18 $ 825 room=.
+-> e
+T1869 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu 17 $ 825 room=.
+-> e
+T1870 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 116/116 MP 0/0 Hu 16 $ 825 room=.
+-> e
+T1871 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 116/116 MP 0/0 Hu 15 $ 825 room=.
+-> n
+T1872 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 116/116 MP 0/0 Hu 14 $ 825 room=.
+-> w
+T1873 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 116/116 MP 0/0 Hu 13 $ 825 room=.
+-> n
+T1874 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 116/116 MP 0/0 Hu 12 $ 825 room=.
+-> e
+T1875 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 116/116 MP 0/0 Hu 11 $ 825 room=.
+-> n
+T1876 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 116/116 MP 0/0 Hu 10 $ 825 room=.
+-> w
+T1877 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 116/116 MP 0/0 Hu  9 $ 825 room=.
+-> w
+T1878 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 116/116 MP 0/0 Hu  8 $ 825 room=.
+-> s
+T1879 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 116/116 MP 0/0 Hu  7 $ 825 room=.
+-> s
+T1880 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 116/116 MP 0/0 Hu  6 $ 825 room=.
+-> s
+T1881 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 116/116 MP 0/0 Hu  5 $ 825 room=.
+-> w
+T1882 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 116/116 MP 0/0 Hu  4 $ 825 room=.
+-> s
+T1883 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 116/116 MP 0/0 Hu  3 $ 825 room=.
+-> e
+T1884 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 116/116 MP 0/0 Hu  2 $ 825 room=.
+-> e
+T1885 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 116/116 MP 0/0 Hu  1 $ 825 room=.
+-> n
+T1886 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 114/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1887 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 112/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1888 mode=game_loop           Thorin Oakshield(dwa) F5@(17,14) HP 110/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1889 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 108/116 MP 0/0 Hu  0 $ 825 room=.
+-> e
+T1890 mode=game_loop           Thorin Oakshield(dwa) F5@(18,13) HP 106/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1891 mode=game_loop           Thorin Oakshield(dwa) F5@(18,14) HP 104/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1892 mode=game_loop           Thorin Oakshield(dwa) F5@(18,15) HP 102/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1893 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 100/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1894 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 98/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1895 mode=game_loop           Thorin Oakshield(dwa) F5@(17,15) HP 96/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1896 mode=game_loop           Thorin Oakshield(dwa) F5@(16,15) HP 94/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1897 mode=game_loop           Thorin Oakshield(dwa) F5@(16,14) HP 92/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1898 mode=game_loop           Thorin Oakshield(dwa) F5@(16,13) HP 90/116 MP 0/0 Hu  0 $ 825 room=.
+-> e
+T1899 mode=game_loop           Thorin Oakshield(dwa) F5@(17,13) HP 88/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1900 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 86/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1901 mode=game_loop           Thorin Oakshield(dwa) F5@(16,12) HP 84/116 MP 0/0 Hu  0 $ 825 room=.
+-> e
+T1902 mode=game_loop           Thorin Oakshield(dwa) F5@(17,12) HP 82/116 MP 0/0 Hu  0 $ 825 room=.
+-> e
+T1903 mode=game_loop           Thorin Oakshield(dwa) F5@(18,12) HP 80/116 MP 0/0 Hu  0 $ 825 room=.
+-> e
+T1904 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 78/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1905 mode=game_loop           Thorin Oakshield(dwa) F5@(19,11) HP 76/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1906 mode=game_loop           Thorin Oakshield(dwa) F5@(19,12) HP 74/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1907 mode=game_loop           Thorin Oakshield(dwa) F5@(19,13) HP 72/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1908 mode=game_loop           Thorin Oakshield(dwa) F5@(19,14) HP 70/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1909 mode=game_loop           Thorin Oakshield(dwa) F5@(19,15) HP 68/116 MP 0/0 Hu  0 $ 825 room=.
+-> s
+T1910 mode=game_loop           Thorin Oakshield(dwa) F5@(19,16) HP 66/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1911 mode=game_loop           Thorin Oakshield(dwa) F5@(18,16) HP 64/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1912 mode=game_loop           Thorin Oakshield(dwa) F5@(17,16) HP 62/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1913 mode=game_loop           Thorin Oakshield(dwa) F5@(16,16) HP 60/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1914 mode=game_loop           Thorin Oakshield(dwa) F5@(15,16) HP 58/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1915 mode=game_loop           Thorin Oakshield(dwa) F5@(14,16) HP 56/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1916 mode=game_loop           Thorin Oakshield(dwa) F5@(13,16) HP 54/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1917 mode=game_loop           Thorin Oakshield(dwa) F5@(13,15) HP 52/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1918 mode=game_loop           Thorin Oakshield(dwa) F5@(12,15) HP 50/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1919 mode=game_loop           Thorin Oakshield(dwa) F5@(11,15) HP 48/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1920 mode=game_loop           Thorin Oakshield(dwa) F5@(10,15) HP 46/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1921 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,15) HP 44/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1922 mode=game_loop           Thorin Oakshield(dwa) F5@( 9,14) HP 42/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1923 mode=game_loop           Thorin Oakshield(dwa) F5@( 8,14) HP 40/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1924 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,14) HP 38/116 MP 0/0 Hu  0 $ 825 room=.
+-> n
+T1925 mode=game_loop           Thorin Oakshield(dwa) F5@( 7,13) HP 36/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1926 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,13) HP 34/116 MP 0/0 Hu  0 $ 825 room=.
+-> i
+T1927 mode=inventory           Thorin Oakshield(dwa) F5@( 6,13) HP 34/116 MP 0/0 Hu  0 $ 825 room=.
+-> u15
+T1928 mode=inventory           Thorin Oakshield(dwa) F5@( 6,13) HP 84/116 MP 0/0 Hu  0 $ 825 room=.
+-> u4
+T1929 mode=inventory           Thorin Oakshield(dwa) F5@( 6,13) HP 114/116 MP 0/0 Hu  0 $ 825 room=.
+-> x
+T1930 mode=game_loop           Thorin Oakshield(dwa) F5@( 6,13) HP 114/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1931 mode=game_loop           Thorin Oakshield(dwa) F5@( 5,13) HP 112/116 MP 0/0 Hu  0 $ 825 room=.
+-> w
+T1932 mode=stairs_down_mode    Thorin Oakshield(dwa) F5@( 4,13) HP 110/116 MP 0/0 Hu  0 $ 825 room=D
+-> d
+T1933 mode=stairs_up_mode      Thorin Oakshield(dwa) F6@( 1, 1) HP 110/116 MP 0/0 Hu  0 $ 825 room=U
+-> s
+T1934 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 108/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> a
+T1935 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 108/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> a
+T1936 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 107/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> a
+T1937 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 107/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> a
+T1938 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 106/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> f
+T1939 mode=flee_direction_mode Thorin Oakshield(dwa) F6@( 1, 2) HP 106/116 MP 0/0 Hu  0 $ 925 room=M
+-> n
+T1940 mode=stairs_up_mode      Thorin Oakshield(dwa) F6@( 1, 1) HP 106/116 MP 0/0 Hu  0 $ 925 room=U
+-> s
+T1941 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 104/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP48/48)
+-> a
+T1942 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 103/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP15/48)
+-> a
+T1943 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 102/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP15/48)
+-> a
+T1944 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 97/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP15/48)
+-> a
+T1945 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 2) HP 92/116 MP 0/0 Hu  0 $ 925 room=M vs Gelatinous Cube(L5 HP15/48)
+-> a
+T1946 mode=combat_victory      Thorin Oakshield(dwa) F6@( 1, 2) HP 88/116 MP 0/0 Hu  0 $ 955 room=.
+-> back
+T1947 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 88/116 MP 0/0 Hu  0 $ 955 room=.
+-> i
+T1948 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 2) HP 88/116 MP 0/0 Hu  0 $ 955 room=.
+-> u15
+T1949 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu  0 $ 955 room=.
+-> x
+T1950 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu  0 $ 955 room=.
+-> i
+T1951 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu  0 $ 955 room=.
+-> u22
+T1952 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu  0 $ 955 room=.
+-> eat1
+T1953 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu 18 $ 955 room=.
+-> x
+T1954 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 116/116 MP 0/0 Hu 18 $ 955 room=.
+-> s
+T1955 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 3) HP 112/116 MP 0/0 Hu 17 $ 955 room=.
+-> s
+T1956 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 4) HP 108/116 MP 0/0 Hu 16 $ 955 room=.
+-> s
+T1957 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 5) HP 104/116 MP 0/0 Hu 15 $ 955 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1958 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 5) HP 103/116 MP 0/0 Hu 15 $ 955 room=M vs Giant Spider(L5 HP13/44)
+-> a
+T1959 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 5) HP 103/116 MP 0/0 Hu 15 $ 955 room=M vs Giant Spider(L5 HP13/44)
+-> a
+T1960 mode=combat_mode         Thorin Oakshield(dwa) F6@( 1, 5) HP 102/116 MP 0/0 Hu 15 $ 955 room=M vs Giant Spider(L5 HP13/44)
+-> a
+T1961 mode=combat_victory      Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 15 $ 997 room=.
+-> back
+T1962 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 15 $ 997 room=.
+-> i
+T1963 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 15 $ 997 room=.
+-> u22
+T1964 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 15 $ 997 room=.
+-> eat1
+T1965 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 18 $ 997 room=.
+-> u13
+T1966 mode=inventory           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 18 $ 997 room=.
+-> x
+T1967 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/126 MP 0/0 Hu 18 $ 997 room=.
+-> e
+T1968 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 5) HP 101/126 MP 0/0 Hu 17 $ 997 room=.
+-> n
+T1969 mode=pool_mode           Thorin Oakshield(dwa) F6@( 2, 4) HP 101/126 MP 0/0 Hu 16 $ 997 room=P
+-> dr
+T1970 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 4) HP 101/128 MP 0/0 Hu 16 $ 997 room=.
+-> n
+T1971 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 3) HP 101/128 MP 0/0 Hu 15 $ 997 room=.
+-> w
+T1972 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 3) HP 101/128 MP 0/0 Hu 14 $ 997 room=.
+-> s
+T1973 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 4) HP 101/128 MP 0/0 Hu 13 $ 997 room=.
+-> s
+T1974 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 5) HP 101/128 MP 0/0 Hu 12 $ 997 room=.
+-> s
+T1975 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 6) HP 101/128 MP 0/0 Hu 11 $ 997 room=.
+-> s
+T1976 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 7) HP 101/128 MP 0/0 Hu 10 $ 997 room=.
+-> e
+T1977 mode=combat_mode         Thorin Oakshield(dwa) F6@( 2, 7) HP 101/128 MP 0/0 Hu  9 $ 997 room=M vs UNDEAD SPECTER(L5 HP87/87)
+-> f
+T1978 mode=flee_direction_mode Thorin Oakshield(dwa) F6@( 2, 7) HP 88/128 MP 0/0 Hu  9 $ 997 room=M
+-> w
+T1979 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 7) HP 88/128 MP 0/0 Hu  9 $ 997 room=.
+-> n
+T1980 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 6) HP 88/128 MP 0/0 Hu  8 $ 997 room=.
+-> n
+T1981 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 5) HP 88/128 MP 0/0 Hu  7 $ 997 room=.
+-> n
+T1982 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 4) HP 88/128 MP 0/0 Hu  6 $ 997 room=.
+-> e
+T1983 mode=fey_garden_mode     Thorin Oakshield(dwa) F6@( 2, 4) HP 88/128 MP 0/0 Hu  5 $ 997 room=G
+-> h
+T1984 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 4) HP 88/128 MP 0/0 Hu  5 $ 997 room=.
+-> n
+T1985 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 3) HP 88/128 MP 0/0 Hu  4 $ 997 room=.
+-> w
+T1986 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 3) HP 88/128 MP 0/0 Hu  3 $ 997 room=.
+-> n
+T1987 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 88/128 MP 0/0 Hu  2 $ 997 room=.
+-> n
+T1988 mode=stairs_up_mode      Thorin Oakshield(dwa) F6@( 1, 1) HP 88/128 MP 0/0 Hu  1 $ 997 room=U
+-> s
+T1989 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 86/128 MP 0/0 Hu  0 $ 997 room=.
+-> e
+T1990 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 2) HP 84/128 MP 0/0 Hu  0 $ 997 room=.
+-> s
+T1991 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 3) HP 82/128 MP 0/0 Hu  0 $ 997 room=.
+-> s
+T1992 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 4) HP 80/128 MP 0/0 Hu  0 $ 997 room=.
+-> w
+T1993 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 4) HP 78/128 MP 0/0 Hu  0 $ 997 room=.
+-> n
+T1994 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 3) HP 76/128 MP 0/0 Hu  0 $ 997 room=.
+-> n
+T1995 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 2) HP 74/128 MP 0/0 Hu  0 $ 997 room=.
+-> e
+T1996 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 2) HP 72/128 MP 0/0 Hu  0 $ 997 room=.
+-> s
+T1997 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 3) HP 70/128 MP 0/0 Hu  0 $ 997 room=.
+-> s
+T1998 mode=game_loop           Thorin Oakshield(dwa) F6@( 2, 4) HP 68/128 MP 0/0 Hu  0 $ 997 room=.
+-> w
+T1999 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 4) HP 66/128 MP 0/0 Hu  0 $ 997 room=.
+-> n
+T2000 mode=game_loop           Thorin Oakshield(dwa) F6@( 1, 3) HP 64/128 MP 0/0 Hu  0 $ 997 room=.
 
-=== run finished: turns=1093 floor=5 hp=0/84 gold=273 alive=False mode=death_screen ===
-    status=dead
+=== run finished: turns=2000 floor=6 hp=64/128 gold=997 alive=True mode=game_loop ===
+    status=alive
 
 >>> Report: /tmp/pt_hunt/00587_dwarf.html

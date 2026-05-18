@@ -503,7 +503,7 @@ T 242 mode=inventory           Galadhrim Star-eyed(elf) F1@(11,10) HP 33/38 MP 0
 T 243 mode=inventory           Galadhrim Star-eyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 73 $ 183 room=V
 -> u5
 T 244 mode=upgrade_scroll_mode Galadhrim Star-eyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 73 $ 183 room=V
--> 1
+-> 2
 T 245 mode=inventory           Galadhrim Star-eyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 73 $ 183 room=V
 -> x
 T 246 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 73 $ 183 room=V
@@ -782,11 +782,11 @@ T 382 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 2) HP 38/38 MP 0
 -> s
 T 383 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 38/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP40/40)
 -> a
-T 384 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 38/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP18/40)
+T 384 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 38/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP19/40)
 -> a
-T 385 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 33/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP18/40)
+T 385 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 33/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP19/40)
 -> a
-T 386 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 28/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP18/40)
+T 386 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(11, 3) HP 28/38 MP 0/0 Hu 92 $ 302 room=M vs Wight(L1 HP19/40)
 -> a
 T 387 mode=combat_victory      Galadhrim Star-eyed(elf) F2@(11, 3) HP 28/38 MP 0/0 Hu 92 $ 308 room=.
 -> back
@@ -820,7 +820,7 @@ T 401 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 7, 5) HP 38/38 MP 0
 -> e
 T 402 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 81 $ 308 room=M vs Giant Spider(L1 HP40/40)
 -> a
-T 403 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 81 $ 308 room=M vs Giant Spider(L1 HP18/40)
+T 403 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 81 $ 308 room=M vs Giant Spider(L1 HP19/40)
 -> a
 T 404 mode=combat_victory      Galadhrim Star-eyed(elf) F2@( 8, 5) HP 31/38 MP 0/0 Hu 81 $ 324 room=.
 -> back
@@ -1032,7 +1032,7 @@ T 507 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(13,14) HP 38/38 MP 0
 -> a
 T 508 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(13,14) HP 33/38 MP 0/0 Hu 80 $ 109 room=M vs Wight(L1 HP40/40)
 -> a
-T 509 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(13,14) HP 33/38 MP 0/0 Hu 80 $ 109 room=M vs Wight(L1 HP17/40)
+T 509 mode=combat_mode         Galadhrim Star-eyed(elf) F2@(13,14) HP 33/38 MP 0/0 Hu 80 $ 109 room=M vs Wight(L1 HP18/40)
 -> a
 T 510 mode=combat_victory      Galadhrim Star-eyed(elf) F2@(13,14) HP 33/48 MP 0/0 Hu 80 $ 123 room=.
 -> back
@@ -1090,7 +1090,7 @@ T 536 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 48/48 MP 0
 -> w
 T 537 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 7) HP 48/48 MP 0/0 Hu 64 $ 123 room=M vs Skeleton(L1 HP25/25)
 -> a
-T 538 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 7) HP 47/48 MP 0/0 Hu 64 $ 123 room=M vs Skeleton(L1 HP1/25)
+T 538 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 7) HP 47/48 MP 0/0 Hu 64 $ 123 room=M vs Skeleton(L1 HP2/25)
 -> a
 T 539 mode=combat_victory      Galadhrim Star-eyed(elf) F2@( 9, 7) HP 46/48 MP 0/0 Hu 64 $ 141 room=.
 -> back
@@ -1186,9 +1186,9 @@ T 584 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 48/48 MP 0
 -> a
 T 585 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 45/48 MP 0/0 Hu 87 $ 157 room=M vs Orc(L1 HP50/50)
 -> a
-T 586 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 42/48 MP 0/0 Hu 87 $ 157 room=M vs Orc(L1 HP28/50)
+T 586 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 42/48 MP 0/0 Hu 87 $ 157 room=M vs Orc(L1 HP29/50)
 -> a
-T 587 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 39/48 MP 0/0 Hu 87 $ 157 room=M vs Orc(L1 HP6/50)
+T 587 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 4, 2) HP 39/48 MP 0/0 Hu 87 $ 157 room=M vs Orc(L1 HP8/50)
 -> a
 T 588 mode=combat_victory      Galadhrim Star-eyed(elf) F2@( 4, 2) HP 39/48 MP 0/0 Hu 87 $ 159 room=.
 -> back
@@ -1366,15 +1366,15 @@ T 674 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 48/48 MP 0
 -> a
 T 675 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 45/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP50/50)
 -> a
-T 676 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 42/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP28/50)
+T 676 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 42/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP29/50)
 -> a
-T 677 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 39/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP28/50)
+T 677 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 39/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP29/50)
 -> a
-T 678 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 36/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP6/50)
+T 678 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 36/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP8/50)
 -> a
-T 679 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 33/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP6/50)
+T 679 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 33/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP8/50)
 -> a
-T 680 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 30/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP6/50)
+T 680 mode=combat_mode         Galadhrim Star-eyed(elf) F2@( 9, 9) HP 30/48 MP 0/0 Hu 72 $ 179 room=M vs Orc(L1 HP8/50)
 -> a
 T 681 mode=combat_victory      Galadhrim Star-eyed(elf) F2@( 9, 9) HP 30/48 MP 0/0 Hu 72 $ 185 room=.
 -> back
@@ -1490,7 +1490,7 @@ T 736 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 4, 3) HP 47/48 MP 0
 -> a
 T 737 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 4, 3) HP 46/48 MP 0/0 Hu 73 $ 195 room=M vs Gray Ooze(L2 HP35/35)
 -> a
-T 738 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 4, 3) HP 46/48 MP 0/0 Hu 73 $ 195 room=M vs Gray Ooze(L2 HP9/35)
+T 738 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 4, 3) HP 46/48 MP 0/0 Hu 73 $ 195 room=M vs Gray Ooze(L2 HP10/35)
 -> a
 T 739 mode=combat_victory      Galadhrim Star-eyed(elf) F3@( 4, 3) HP 46/48 MP 0/0 Hu 73 $ 198 room=.
 -> back
@@ -2578,9 +2578,9 @@ T1280 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,12) HP 58/58 MP 0
 -> s
 T1281 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 58/58 MP 0/0 Hu 83 $ 272 room=M vs UNDEAD SKELETON(L0 HP31/31)
 -> a
-T1282 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 58/58 MP 0/0 Hu 83 $ 272 room=M vs UNDEAD SKELETON(L0 HP6/31)
+T1282 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 58/58 MP 0/0 Hu 83 $ 272 room=M vs UNDEAD SKELETON(L0 HP7/31)
 -> a
-T1283 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 55/58 MP 0/0 Hu 83 $ 272 room=M vs UNDEAD SKELETON(L0 HP6/31)
+T1283 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 55/58 MP 0/0 Hu 83 $ 272 room=M vs UNDEAD SKELETON(L0 HP7/31)
 -> a
 T1284 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18,13) HP 52/58 MP 0/0 Hu 83 $ 277 room=.
 -> back
@@ -2596,919 +2596,797 @@ T1289 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,14) HP 52/58 MP 0
 -> s
 T1290 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 277 room=M vs Skeleton(L0 HP25/25)
 -> a
-T1291 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 282 room=.
--> back
-T1292 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 282 room=.
--> s
-T1293 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 282 room=M vs Giant Rat(L0 HP22/22)
+T1291 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 277 room=M vs Skeleton(L0 HP1/25)
 -> a
-T1294 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 287 room=.
+T1292 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 282 room=.
 -> back
-T1295 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 287 room=.
--> l
+T1293 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,15) HP 52/58 MP 0/0 Hu 81 $ 282 room=.
+-> s
+T1294 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 282 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T1295 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 287 room=.
+-> back
 T1296 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 287 room=.
+-> l
+T1297 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,16) HP 52/58 MP 0/0 Hu 80 $ 287 room=.
 -> e
-T1297 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,16) HP 53/58 MP 0/0 Hu 79 $ 287 room=.
+T1298 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,16) HP 53/58 MP 0/0 Hu 79 $ 287 room=.
 -> n
-T1298 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,15) HP 53/58 MP 0/0 Hu 78 $ 287 room=M vs Stirge(L0 HP6/6)
+T1299 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,15) HP 53/58 MP 0/0 Hu 78 $ 287 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T1299 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(19,15) HP 52/58 MP 0/0 Hu 78 $ 297 room=.
+T1300 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(19,15) HP 53/58 MP 0/0 Hu 78 $ 292 room=.
 -> back
-T1300 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,15) HP 52/58 MP 0/0 Hu 78 $ 297 room=.
+T1301 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,15) HP 53/58 MP 0/0 Hu 78 $ 292 room=.
 -> n
-T1301 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,14) HP 52/58 MP 0/0 Hu 77 $ 297 room=M vs Slime Mold(L0 HP15/15)
+T1302 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,14) HP 53/58 MP 0/0 Hu 77 $ 292 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T1302 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(19,14) HP 51/58 MP 0/0 Hu 77 $ 302 room=.
+T1303 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(19,14) HP 52/58 MP 0/0 Hu 77 $ 299 room=.
 -> back
-T1303 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,14) HP 51/58 MP 0/0 Hu 77 $ 302 room=.
+T1304 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,14) HP 52/58 MP 0/0 Hu 77 $ 299 room=.
 -> n
-T1304 mode=pool_mode           Galadhrim Star-eyed(elf) F1@(19,13) HP 51/58 MP 0/0 Hu 76 $ 302 room=P
+T1305 mode=pool_mode           Galadhrim Star-eyed(elf) F1@(19,13) HP 52/58 MP 0/0 Hu 76 $ 299 room=P
 -> dr
-T1305 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,13) HP 58/58 MP 0/0 Hu 76 $ 302 room=.
--> n
-T1306 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,12) HP 58/58 MP 0/0 Hu 75 $ 302 room=M vs UNDEAD SKELETON(L0 HP31/31)
--> a
-T1307 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,12) HP 55/58 MP 0/0 Hu 75 $ 302 room=M vs UNDEAD SKELETON(L0 HP31/31)
--> a
-T1308 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19,12) HP 55/58 MP 0/0 Hu 75 $ 302 room=M vs UNDEAD SKELETON(L0 HP7/31)
+T1306 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,13) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
+-> w
+T1307 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18,13) HP 58/58 MP 0/0 Hu 75 $ 299 room=. vs POLTERGEIST(L1 HP40/40)
 -> f
-T1309 mode=flee_direction_mode Galadhrim Star-eyed(elf) F1@(19,12) HP 52/58 MP 0/0 Hu 75 $ 302 room=M
+T1308 mode=flee_direction_mode Galadhrim Star-eyed(elf) F1@(18,13) HP 58/58 MP 0/0 Hu 75 $ 299 room=.
 -> n
-T1310 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,11) HP 52/58 MP 0/0 Hu 75 $ 302 room=.
+T1309 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,12) HP 58/58 MP 0/0 Hu 75 $ 299 room=T
 -> n
-T1311 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19,10) HP 52/58 MP 0/0 Hu 74 $ 302 room=.
+T1310 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18,11) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
+-> w
+T1311 mode=game_loop           Galadhrim Star-eyed(elf) F1@(17,11) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
+-> w
+T1312 mode=game_loop           Galadhrim Star-eyed(elf) F1@(16,11) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
+-> w
+T1313 mode=game_loop           Galadhrim Star-eyed(elf) F1@(15,11) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> n
-T1312 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19, 9) HP 52/58 MP 0/0 Hu 73 $ 302 room=.
--> n
-T1313 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19, 8) HP 52/58 MP 0/0 Hu 72 $ 302 room=.
--> n
-T1314 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19, 7) HP 53/58 MP 0/0 Hu 71 $ 302 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T1315 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(19, 7) HP 53/58 MP 0/0 Hu 71 $ 302 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T1316 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(19, 7) HP 53/58 MP 0/0 Hu 71 $ 312 room=.
--> back
-T1317 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19, 7) HP 53/58 MP 0/0 Hu 71 $ 312 room=.
--> n
-T1318 mode=garden_mode         Galadhrim Star-eyed(elf) F1@(19, 6) HP 53/58 MP 0/0 Hu 70 $ 312 room=G
--> h
-T1319 mode=game_loop           Galadhrim Star-eyed(elf) F1@(19, 6) HP 53/58 MP 0/0 Hu 70 $ 312 room=.
+T1314 mode=game_loop           Galadhrim Star-eyed(elf) F1@(15,10) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> w
-T1320 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18, 6) HP 53/58 MP 0/0 Hu 69 $ 312 room=M vs Spore Puff(L0 HP18/18)
--> a
-T1321 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(18, 6) HP 52/58 MP 0/0 Hu 69 $ 312 room=M vs Spore Puff(L0 HP18/18)
--> a
-T1322 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(18, 6) HP 52/58 MP 0/0 Hu 69 $ 315 room=.
--> back
-T1323 mode=game_loop           Galadhrim Star-eyed(elf) F1@(18, 6) HP 52/58 MP 0/0 Hu 69 $ 315 room=.
+T1315 mode=game_loop           Galadhrim Star-eyed(elf) F1@(14,10) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
 -> w
-T1324 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(17, 6) HP 52/58 MP 0/0 Hu 68 $ 315 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T1325 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(17, 6) HP 51/58 MP 0/0 Hu 68 $ 315 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T1326 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(17, 6) HP 51/58 MP 0/0 Hu 68 $ 316 room=.
--> back
-T1327 mode=game_loop           Galadhrim Star-eyed(elf) F1@(17, 6) HP 51/58 MP 0/0 Hu 68 $ 316 room=.
+T1316 mode=game_loop           Galadhrim Star-eyed(elf) F1@(13,10) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
+-> w
+T1317 mode=game_loop           Galadhrim Star-eyed(elf) F1@(12,10) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
+-> w
+T1318 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,10) HP 58/58 MP 0/0 Hu 66 $ 299 room=V
 -> s
-T1328 mode=combat_mode         Galadhrim Star-eyed(elf) F1@(17, 7) HP 52/58 MP 0/0 Hu 67 $ 316 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T1329 mode=combat_victory      Galadhrim Star-eyed(elf) F1@(17, 7) HP 52/58 MP 0/0 Hu 67 $ 325 room=.
--> back
-T1330 mode=game_loop           Galadhrim Star-eyed(elf) F1@(17, 7) HP 52/58 MP 0/0 Hu 67 $ 325 room=.
+T1319 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,11) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
 -> s
-T1331 mode=game_loop           Galadhrim Star-eyed(elf) F1@(17, 8) HP 52/58 MP 0/0 Hu 66 $ 325 room=.
--> w
-T1332 mode=game_loop           Galadhrim Star-eyed(elf) F1@(16, 8) HP 52/58 MP 0/0 Hu 65 $ 325 room=.
--> w
-T1333 mode=game_loop           Galadhrim Star-eyed(elf) F1@(15, 8) HP 52/58 MP 0/0 Hu 64 $ 325 room=.
+T1320 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,12) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
 -> s
-T1334 mode=game_loop           Galadhrim Star-eyed(elf) F1@(15, 9) HP 53/58 MP 0/0 Hu 63 $ 325 room=N
--> s
-T1335 mode=game_loop           Galadhrim Star-eyed(elf) F1@(15,10) HP 53/58 MP 0/0 Hu 62 $ 325 room=.
--> w
-T1336 mode=game_loop           Galadhrim Star-eyed(elf) F1@(14,10) HP 53/58 MP 0/0 Hu 61 $ 325 room=.
--> w
-T1337 mode=game_loop           Galadhrim Star-eyed(elf) F1@(13,10) HP 53/58 MP 0/0 Hu 60 $ 325 room=.
--> w
-T1338 mode=game_loop           Galadhrim Star-eyed(elf) F1@(12,10) HP 53/58 MP 0/0 Hu 59 $ 325 room=.
--> w
-T1339 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,10) HP 53/58 MP 0/0 Hu 58 $ 325 room=V
--> s
-T1340 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,11) HP 53/58 MP 0/0 Hu 57 $ 325 room=.
--> s
-T1341 mode=game_loop           Galadhrim Star-eyed(elf) F1@(11,12) HP 53/58 MP 0/0 Hu 56 $ 325 room=.
--> s
-T1342 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F1@(11,13) HP 53/58 MP 0/0 Hu 55 $ 325 room=D
+T1321 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F1@(11,13) HP 58/58 MP 0/0 Hu 63 $ 299 room=D
 -> d
-T1343 mode=stairs_up_mode      Galadhrim Star-eyed(elf) F2@( 1, 1) HP 53/58 MP 0/0 Hu 55 $ 325 room=U
+T1322 mode=stairs_up_mode      Galadhrim Star-eyed(elf) F2@( 1, 1) HP 58/58 MP 0/0 Hu 63 $ 299 room=U
 -> s
-T1344 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 1, 2) HP 53/58 MP 0/0 Hu 54 $ 325 room=.
+T1323 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 1, 2) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
 -> s
-T1345 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 1, 3) HP 53/58 MP 0/0 Hu 53 $ 325 room=.
+T1324 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 1, 3) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
 -> e
-T1346 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 2, 3) HP 53/58 MP 0/0 Hu 52 $ 325 room=.
+T1325 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 2, 3) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
 -> s
-T1347 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 2, 4) HP 53/58 MP 0/0 Hu 51 $ 325 room=N
+T1326 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 2, 4) HP 58/58 MP 0/0 Hu 59 $ 299 room=N
 -> e
-T1348 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 3, 4) HP 53/58 MP 0/0 Hu 50 $ 325 room=.
+T1327 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 3, 4) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
 -> e
-T1349 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 53/58 MP 0/0 Hu 49 $ 325 room=.
+T1328 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
+-> e
+T1329 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 4) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
+-> n
+T1330 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 3) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
+-> n
+T1331 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 2) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
+-> n
+T1332 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 1) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> w
+T1333 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 1) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> s
+T1334 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 2) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> s
+T1335 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 3) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> s
+T1336 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> i
-T1350 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 53/58 MP 0/0 Hu 49 $ 325 room=.
--> u6
-T1351 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
--> x
-T1352 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
--> i
-T1353 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1337 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> eat2
-T1354 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
+T1338 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
 -> eat1
-T1355 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu100 $ 325 room=.
+T1339 mode=inventory           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu100 $ 299 room=.
 -> x
-T1356 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu100 $ 325 room=.
+T1340 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu100 $ 299 room=.
 -> e
-T1357 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 4) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1341 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 4) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> n
-T1358 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 3) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
--> n
-T1359 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 2) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
--> n
-T1360 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 1) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
+T1342 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 3) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
+-> e
+T1343 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 3) HP 58/58 MP 0/0 Hu 97 $ 299 room=.
+-> s
+T1344 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 4) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
+-> s
+T1345 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 5) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
+-> e
+T1346 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 7, 5) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
+-> e
+T1347 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 5) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
+-> s
+T1348 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 6) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
+-> s
+T1349 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 7) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
+-> e
+T1350 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
+-> s
+T1351 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
+-> s
+T1352 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
+-> e
+T1353 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
+-> s
+T1354 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
+-> s
+T1355 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
+-> e
+T1356 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
+-> e
+T1357 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 83 $ 299 room=.
+-> e
+T1358 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
+-> s
+T1359 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 81 $ 299 room=.
 -> w
-T1361 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 1) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
+T1360 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
 -> s
-T1362 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 2) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
--> s
-T1363 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 3) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
--> s
-T1364 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 4, 4) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
+T1361 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
 -> e
-T1365 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 4) HP 58/58 MP 0/0 Hu 91 $ 325 room=.
+T1362 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
+-> s
+T1363 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
+-> s
+T1364 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
+-> s
+T1365 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 75 $ 299 room=O
 -> n
-T1366 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 5, 3) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
--> e
-T1367 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 3) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
--> s
-T1368 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 4) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
--> s
-T1369 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 6, 5) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
--> e
-T1370 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 7, 5) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
--> e
-T1371 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 5) HP 58/58 MP 0/0 Hu 85 $ 325 room=.
--> s
-T1372 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 6) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
--> s
-T1373 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 7) HP 58/58 MP 0/0 Hu 83 $ 325 room=.
--> e
-T1374 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
--> s
-T1375 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
--> s
-T1376 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
--> e
-T1377 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
--> s
-T1378 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
--> s
-T1379 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
--> e
-T1380 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
--> e
-T1381 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
--> e
-T1382 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
--> s
-T1383 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
--> e
-T1384 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
--> e
-T1385 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
+T1366 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
 -> n
-T1386 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
--> e
-T1387 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 69 $ 325 room=D
--> w
-T1388 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
--> s
-T1389 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
--> s
-T1390 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
--> w
-T1391 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
+T1367 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
 -> n
-T1392 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
--> w
-T1393 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 63 $ 325 room=.
+T1368 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
 -> n
-T1394 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
--> w
-T1395 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 61 $ 325 room=.
+T1369 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> n
-T1396 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
+T1370 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
+-> w
+T1371 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
+-> w
+T1372 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
+-> w
+T1373 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
 -> n
-T1397 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
+T1374 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
 -> e
-T1398 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13, 9) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
--> w
-T1399 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
--> w
-T1400 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
--> s
-T1401 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 55 $ 325 room=.
--> s
-T1402 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
+T1375 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
 -> e
-T1403 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1376 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
+-> s
+T1377 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
 -> e
-T1404 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1378 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
 -> s
-T1405 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 51 $ 325 room=.
+T1379 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
 -> s
-T1406 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 50 $ 325 room=.
+T1380 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
+-> e
+T1381 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 59 $ 299 room=.
+-> n
+T1382 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
+-> e
+T1383 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
+-> n
+T1384 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
+-> e
+T1385 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 55 $ 299 room=D
 -> w
-T1407 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1386 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
+-> s
+T1387 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> s
+T1388 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> e
+T1389 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,13) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> l
+T1390 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,13) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> n
+T1391 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,12) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> n
+T1392 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 49 $ 299 room=D
+-> w
+T1393 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 48 $ 299 room=.
 -> i
-T1408 mode=inventory           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1394 mode=inventory           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 48 $ 299 room=.
 -> eat1
-T1409 mode=inventory           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1395 mode=inventory           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
 -> x
-T1410 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
--> n
-T1411 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
--> n
-T1412 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
--> e
-T1413 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
+T1396 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
 -> s
-T1414 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
--> s
-T1415 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
--> s
-T1416 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
--> s
-T1417 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
--> s
-T1418 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 91 $ 325 room=O
--> n
-T1419 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
--> n
-T1420 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
--> n
-T1421 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
--> n
-T1422 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
--> n
-T1423 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
+T1397 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 97 $ 299 room=.
 -> w
-T1424 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 85 $ 325 room=.
--> s
-T1425 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
+T1398 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
 -> w
-T1426 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 83 $ 325 room=.
+T1399 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
 -> n
-T1427 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
+T1400 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
+-> w
+T1401 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
+-> w
+T1402 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
 -> n
-T1428 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
+T1403 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
 -> n
-T1429 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
+T1404 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
+-> e
+T1405 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
+-> s
+T1406 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
+-> s
+T1407 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
+-> e
+T1408 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
+-> s
+T1409 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
+-> s
+T1410 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
 -> w
-T1430 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
--> s
-T1431 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
--> s
-T1432 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
--> e
-T1433 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
--> e
-T1434 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
--> e
-T1435 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
--> s
-T1436 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
--> e
-T1437 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
--> e
-T1438 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
+T1411 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 83 $ 299 room=.
 -> n
-T1439 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
--> e
-T1440 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 69 $ 325 room=D
--> w
-T1441 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
--> s
-T1442 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
--> e
-T1443 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,12) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
--> s
-T1444 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,13) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
--> l
-T1445 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,13) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
--> e
-T1446 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,13) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
--> l
-T1447 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,13) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
+T1412 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
 -> n
-T1448 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,12) HP 58/58 MP 0/0 Hu 63 $ 325 room=.
--> n
-T1449 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,11) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
--> w
-T1450 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 61 $ 325 room=D
--> w
-T1451 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
--> s
-T1452 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
+T1413 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 81 $ 299 room=.
 -> e
-T1453 mode=game_loop           Galadhrim Star-eyed(elf) F2@(16,12) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
+T1414 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
+-> s
+T1415 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
 -> e
-T1454 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,12) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
+T1416 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
+-> e
+T1417 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
 -> n
-T1455 mode=game_loop           Galadhrim Star-eyed(elf) F2@(17,11) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
+T1418 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
+-> e
+T1419 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 75 $ 299 room=D
 -> w
-T1456 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 55 $ 325 room=D
--> w
-T1457 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
+T1420 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
 -> s
-T1458 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1421 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
 -> s
-T1459 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1422 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
 -> w
-T1460 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 51 $ 325 room=.
+T1423 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> n
-T1461 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 50 $ 325 room=.
+T1424 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> w
-T1462 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1425 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
+-> n
+T1426 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
+-> w
+T1427 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
+-> s
+T1428 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
+-> s
+T1429 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
+-> e
+T1430 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
+-> n
+T1431 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
+-> n
+T1432 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
+-> w
+T1433 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
+-> s
+T1434 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
+-> w
+T1435 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 59 $ 299 room=.
+-> n
+T1436 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
+-> w
+T1437 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
+-> n
+T1438 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
+-> e
+T1439 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
+-> n
+T1440 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
+-> w
+T1441 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> n
+T1442 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> w
+T1443 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> s
+T1444 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> n
+T1445 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> i
-T1463 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1446 mode=inventory           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> eat1
-T1464 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1447 mode=inventory           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> x
-T1465 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1448 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> n
-T1466 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
--> w
-T1467 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
--> w
-T1468 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
--> w
-T1469 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
+T1449 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
+-> e
+T1450 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 97 $ 299 room=.
+-> s
+T1451 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
+-> s
+T1452 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
+-> s
+T1453 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
+-> s
+T1454 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
+-> e
+T1455 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
+-> e
+T1456 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
+-> e
+T1457 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
+-> s
+T1458 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
+-> s
+T1459 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
+-> e
+T1460 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
 -> n
-T1470 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
+T1461 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
 -> e
-T1471 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
--> e
-T1472 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
--> s
-T1473 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 91 $ 325 room=.
--> e
-T1474 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
--> s
-T1475 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
--> e
-T1476 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
--> e
-T1477 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
+T1462 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
 -> n
-T1478 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
+T1463 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
 -> e
-T1479 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 85 $ 325 room=D
+T1464 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 83 $ 299 room=D
 -> w
-T1480 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
+T1465 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
 -> s
-T1481 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 83 $ 325 room=.
+T1466 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 81 $ 299 room=.
 -> w
-T1482 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
+T1467 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
 -> s
-T1483 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
+T1468 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
 -> w
-T1484 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
+T1469 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
 -> n
-T1485 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
+T1470 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
 -> n
-T1486 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
+T1471 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
 -> w
-T1487 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
+T1472 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 75 $ 299 room=.
 -> n
-T1488 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
+T1473 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
 -> w
-T1489 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
+T1474 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
 -> s
-T1490 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
+T1475 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
 -> w
-T1491 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
+T1476 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> n
-T1492 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
+T1477 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> n
-T1493 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
+T1478 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
 -> w
-T1494 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
+T1479 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
 -> n
-T1495 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
+T1480 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
 -> e
-T1496 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
+T1481 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
 -> n
-T1497 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
+T1482 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
 -> n
-T1498 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
+T1483 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
 -> w
-T1499 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
+T1484 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
 -> s
-T1500 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
+T1485 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
 -> s
-T1501 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 63 $ 325 room=.
+T1486 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
 -> s
-T1502 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
+T1487 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
 -> e
-T1503 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 61 $ 325 room=.
+T1488 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 59 $ 299 room=.
 -> s
-T1504 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
+T1489 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
 -> s
-T1505 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
+T1490 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
 -> e
-T1506 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
+T1491 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
 -> e
-T1507 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
+T1492 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
 -> e
-T1508 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
+T1493 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
 -> s
-T1509 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 55 $ 325 room=.
+T1494 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
 -> w
-T1510 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
+T1495 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
 -> s
-T1511 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1496 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
 -> e
-T1512 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1497 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
 -> s
-T1513 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 51 $ 325 room=.
--> s
-T1514 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 50 $ 325 room=.
--> s
-T1515 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 49 $ 325 room=O
+T1498 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> i
-T1516 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 49 $ 325 room=O
+T1499 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> eat1
-T1517 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 99 $ 325 room=O
+T1500 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> x
-T1518 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 99 $ 325 room=O
+T1501 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
+-> s
+T1502 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
+-> s
+T1503 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 97 $ 299 room=O
 -> n
-T1519 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
+T1504 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
 -> n
-T1520 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
+T1505 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
 -> n
-T1521 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
+T1506 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
 -> n
-T1522 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
+T1507 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
 -> n
-T1523 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
+T1508 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
 -> w
-T1524 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
+T1509 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
 -> s
-T1525 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
+T1510 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
 -> w
-T1526 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 91 $ 325 room=.
+T1511 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
 -> n
-T1527 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
+T1512 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
 -> n
-T1528 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
+T1513 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
 -> w
-T1529 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
+T1514 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
 -> s
-T1530 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
+T1515 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
 -> n
-T1531 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
+T1516 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
 -> n
-T1532 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 85 $ 325 room=.
+T1517 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 83 $ 299 room=.
 -> w
-T1533 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
+T1518 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
 -> n
-T1534 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 83 $ 325 room=.
+T1519 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 81 $ 299 room=.
 -> e
-T1535 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
+T1520 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
 -> n
-T1536 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
+T1521 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
 -> n
-T1537 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
+T1522 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
 -> n
-T1538 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 5) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
+T1523 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 5) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
 -> w
-T1539 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 5) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
+T1524 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 5) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
 -> s
-T1540 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
+T1525 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 75 $ 299 room=.
 -> s
-T1541 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
+T1526 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
 -> s
-T1542 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
+T1527 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
 -> s
-T1543 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
+T1528 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
 -> e
-T1544 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
+T1529 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> s
-T1545 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
--> s
-T1546 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
--> e
-T1547 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
--> e
-T1548 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
--> e
-T1549 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
--> s
-T1550 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
+T1530 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> l
-T1551 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
+T1531 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> s
-T1552 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
--> s
-T1553 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
--> s
-T1554 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
--> s
-T1555 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 63 $ 325 room=O
--> n
-T1556 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
--> n
-T1557 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 61 $ 325 room=.
--> n
-T1558 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
--> n
-T1559 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
--> n
-T1560 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
--> l
-T1561 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
--> w
-T1562 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
--> w
-T1563 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
--> n
-T1564 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 55 $ 325 room=.
+T1532 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
 -> e
-T1565 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
+T1533 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
+-> e
+T1534 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
+-> e
+T1535 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
+-> s
+T1536 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
+-> s
+T1537 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
+-> s
+T1538 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
+-> s
+T1539 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
+-> s
+T1540 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 61 $ 299 room=O
+-> l
+T1541 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 61 $ 299 room=O
 -> n
-T1566 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1542 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
+-> n
+T1543 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 59 $ 299 room=.
+-> n
+T1544 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
+-> n
+T1545 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
+-> n
+T1546 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
 -> w
-T1567 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1547 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
 -> w
-T1568 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 51 $ 325 room=.
--> s
-T1569 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 50 $ 325 room=.
--> s
-T1570 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1548 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
+-> n
+T1549 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> e
+T1550 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> l
+T1551 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> n
+T1552 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> w
+T1553 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> w
+T1554 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> i
-T1571 mode=inventory           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1555 mode=inventory           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> eat1
-T1572 mode=inventory           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1556 mode=inventory           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> x
-T1573 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
--> e
-T1574 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
--> e
-T1575 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
--> e
-T1576 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
+T1557 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> s
-T1577 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
--> w
-T1578 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
--> w
-T1579 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
--> n
-T1580 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
+T1558 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
+-> s
+T1559 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 97 $ 299 room=.
+-> e
+T1560 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
 -> l
-T1581 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
+T1561 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
 -> e
-T1582 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 91 $ 325 room=.
+T1562 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
 -> e
-T1583 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
+T1563 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
 -> s
-T1584 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
+T1564 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
+-> w
+T1565 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
+-> w
+T1566 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
+-> n
+T1567 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
 -> e
-T1585 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
--> s
-T1586 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
+T1568 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
 -> e
-T1587 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
--> n
-T1588 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 85 $ 325 room=.
--> n
-T1589 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
--> e
-T1590 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 83 $ 325 room=D
--> w
-T1591 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
+T1569 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
 -> s
-T1592 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
--> w
-T1593 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
--> s
-T1594 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
--> w
-T1595 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
--> n
-T1596 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
--> n
-T1597 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
--> w
-T1598 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
--> w
-T1599 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
--> w
-T1600 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
+T1570 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
 -> l
-T1601 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
+T1571 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
+-> e
+T1572 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
+-> s
+T1573 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
+-> e
+T1574 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,13) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
 -> n
-T1602 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
--> e
-T1603 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
+T1575 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 83 $ 299 room=.
 -> n
-T1604 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
+T1576 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
 -> e
-T1605 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
+T1577 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 81 $ 299 room=D
+-> w
+T1578 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
 -> s
-T1606 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
--> s
-T1607 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
--> e
-T1608 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
--> s
-T1609 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
--> s
-T1610 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
+T1579 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
+-> w
+T1580 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
 -> l
-T1611 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
+T1581 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
 -> s
-T1612 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 63 $ 325 room=.
--> s
-T1613 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
--> s
-T1614 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 61 $ 325 room=O
--> n
-T1615 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
--> n
-T1616 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
--> n
-T1617 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
--> n
-T1618 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
--> n
-T1619 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
+T1582 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
 -> w
-T1620 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 55 $ 325 room=.
--> s
-T1621 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
--> s
-T1622 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1583 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
+-> n
+T1584 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 75 $ 299 room=.
+-> n
+T1585 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
+-> w
+T1586 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
+-> w
+T1587 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
+-> w
+T1588 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
+-> n
+T1589 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
 -> e
-T1623 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1590 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,10) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
 -> n
-T1624 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 51 $ 325 room=.
+T1591 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11, 9) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
+-> e
+T1592 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12, 9) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
+-> s
+T1593 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,10) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
+-> s
+T1594 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
+-> e
+T1595 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
+-> s
+T1596 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
+-> s
+T1597 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
+-> s
+T1598 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
+-> s
+T1599 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
+-> s
+T1600 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,16) HP 58/58 MP 0/0 Hu 59 $ 299 room=O
 -> n
-T1625 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 50 $ 325 room=.
+T1601 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,15) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
+-> n
+T1602 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,14) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
+-> n
+T1603 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
+-> n
+T1604 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
+-> n
+T1605 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
 -> w
-T1626 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1606 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> s
+T1607 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> s
+T1608 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> e
+T1609 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> n
+T1610 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> i
-T1627 mode=inventory           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 49 $ 325 room=.
+T1611 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 49 $ 299 room=.
 -> eat1
-T1628 mode=inventory           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1612 mode=inventory           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
 -> x
-T1629 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 99 $ 325 room=.
+T1613 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 99 $ 299 room=.
+-> n
+T1614 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 98 $ 299 room=.
 -> w
-T1630 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 98 $ 325 room=.
--> s
-T1631 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 97 $ 325 room=.
--> e
-T1632 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 96 $ 325 room=.
--> s
-T1633 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 95 $ 325 room=.
--> e
-T1634 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 94 $ 325 room=.
--> n
-T1635 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 93 $ 325 room=.
--> n
-T1636 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 92 $ 325 room=.
+T1615 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 97 $ 299 room=.
 -> w
-T1637 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 91 $ 325 room=.
+T1616 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 96 $ 299 room=.
 -> s
-T1638 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 90 $ 325 room=.
+T1617 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 95 $ 299 room=.
+-> e
+T1618 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 94 $ 299 room=.
+-> s
+T1619 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 93 $ 299 room=.
+-> e
+T1620 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 92 $ 299 room=.
+-> n
+T1621 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 91 $ 299 room=.
+-> n
+T1622 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 90 $ 299 room=.
 -> w
-T1639 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 89 $ 325 room=.
--> n
-T1640 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 88 $ 325 room=.
+T1623 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 89 $ 299 room=.
+-> s
+T1624 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 88 $ 299 room=.
 -> w
-T1641 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 87 $ 325 room=.
+T1625 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,12) HP 58/58 MP 0/0 Hu 87 $ 299 room=.
 -> n
-T1642 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 86 $ 325 room=.
--> n
-T1643 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 85 $ 325 room=.
+T1626 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 86 $ 299 room=.
 -> w
-T1644 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 84 $ 325 room=.
+T1627 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 85 $ 299 room=.
 -> n
-T1645 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 83 $ 325 room=.
--> e
-T1646 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 82 $ 325 room=.
+T1628 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 84 $ 299 room=.
 -> n
-T1647 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 81 $ 325 room=.
+T1629 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 83 $ 299 room=.
 -> w
-T1648 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 80 $ 325 room=.
+T1630 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 82 $ 299 room=.
 -> n
-T1649 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 79 $ 325 room=.
+T1631 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 81 $ 299 room=.
 -> e
-T1650 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 78 $ 325 room=.
+T1632 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 8) HP 58/58 MP 0/0 Hu 80 $ 299 room=.
 -> n
-T1651 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 5) HP 58/58 MP 0/0 Hu 77 $ 325 room=.
+T1633 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 7) HP 58/58 MP 0/0 Hu 79 $ 299 room=.
 -> w
-T1652 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 5) HP 58/58 MP 0/0 Hu 76 $ 325 room=.
--> w
-T1653 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 5) HP 58/58 MP 0/0 Hu 75 $ 325 room=.
--> s
-T1654 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 6) HP 58/58 MP 0/0 Hu 74 $ 325 room=.
--> s
-T1655 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 7) HP 58/58 MP 0/0 Hu 73 $ 325 room=.
--> e
-T1656 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 72 $ 325 room=.
--> s
-T1657 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 71 $ 325 room=.
--> s
-T1658 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 70 $ 325 room=.
--> e
-T1659 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
--> s
-T1660 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 68 $ 325 room=.
--> s
-T1661 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 67 $ 325 room=.
--> e
-T1662 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 66 $ 325 room=.
--> e
-T1663 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 65 $ 325 room=.
--> e
-T1664 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 64 $ 325 room=.
--> s
-T1665 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 63 $ 325 room=.
--> e
-T1666 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 62 $ 325 room=.
--> s
-T1667 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 61 $ 325 room=.
--> w
-T1668 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 60 $ 325 room=.
--> w
-T1669 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 59 $ 325 room=.
+T1634 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 78 $ 299 room=.
 -> n
-T1670 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 58 $ 325 room=.
--> n
-T1671 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 57 $ 325 room=.
+T1635 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 6) HP 58/58 MP 0/0 Hu 77 $ 299 room=.
 -> e
-T1672 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 56 $ 325 room=.
+T1636 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 6) HP 58/58 MP 0/0 Hu 76 $ 299 room=.
+-> n
+T1637 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 5) HP 58/58 MP 0/0 Hu 75 $ 299 room=.
+-> w
+T1638 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 5) HP 58/58 MP 0/0 Hu 74 $ 299 room=.
+-> w
+T1639 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 5) HP 58/58 MP 0/0 Hu 73 $ 299 room=.
 -> s
-T1673 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 55 $ 325 room=.
+T1640 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 6) HP 58/58 MP 0/0 Hu 72 $ 299 room=.
+-> s
+T1641 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 8, 7) HP 58/58 MP 0/0 Hu 71 $ 299 room=.
 -> e
-T1674 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 54 $ 325 room=.
+T1642 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 7) HP 58/58 MP 0/0 Hu 70 $ 299 room=.
+-> s
+T1643 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 8) HP 58/58 MP 0/0 Hu 69 $ 299 room=.
+-> s
+T1644 mode=game_loop           Galadhrim Star-eyed(elf) F2@( 9, 9) HP 58/58 MP 0/0 Hu 68 $ 299 room=.
 -> e
-T1675 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 53 $ 325 room=.
+T1645 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10, 9) HP 58/58 MP 0/0 Hu 67 $ 299 room=.
+-> s
+T1646 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,10) HP 58/58 MP 0/0 Hu 66 $ 299 room=.
+-> s
+T1647 mode=game_loop           Galadhrim Star-eyed(elf) F2@(10,11) HP 58/58 MP 0/0 Hu 65 $ 299 room=.
+-> e
+T1648 mode=game_loop           Galadhrim Star-eyed(elf) F2@(11,11) HP 58/58 MP 0/0 Hu 64 $ 299 room=.
+-> e
+T1649 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 63 $ 299 room=.
+-> e
+T1650 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 62 $ 299 room=.
+-> s
+T1651 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 61 $ 299 room=.
+-> e
+T1652 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 60 $ 299 room=.
+-> s
+T1653 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,13) HP 58/58 MP 0/0 Hu 59 $ 299 room=.
+-> w
+T1654 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,13) HP 58/58 MP 0/0 Hu 58 $ 299 room=.
+-> w
+T1655 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,13) HP 58/58 MP 0/0 Hu 57 $ 299 room=.
 -> n
-T1676 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 52 $ 325 room=.
+T1656 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,12) HP 58/58 MP 0/0 Hu 56 $ 299 room=.
+-> n
+T1657 mode=game_loop           Galadhrim Star-eyed(elf) F2@(12,11) HP 58/58 MP 0/0 Hu 55 $ 299 room=.
 -> e
-T1677 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 51 $ 325 room=D
+T1658 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,11) HP 58/58 MP 0/0 Hu 54 $ 299 room=.
+-> s
+T1659 mode=game_loop           Galadhrim Star-eyed(elf) F2@(13,12) HP 58/58 MP 0/0 Hu 53 $ 299 room=.
+-> e
+T1660 mode=game_loop           Galadhrim Star-eyed(elf) F2@(14,12) HP 58/58 MP 0/0 Hu 52 $ 299 room=.
+-> e
+T1661 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,12) HP 58/58 MP 0/0 Hu 51 $ 299 room=.
+-> n
+T1662 mode=game_loop           Galadhrim Star-eyed(elf) F2@(15,11) HP 58/58 MP 0/0 Hu 50 $ 299 room=.
+-> e
+T1663 mode=stairs_down_mode    Galadhrim Star-eyed(elf) F2@(16,11) HP 58/58 MP 0/0 Hu 49 $ 299 room=D
 -> d
-T1678 mode=stairs_up_mode      Galadhrim Star-eyed(elf) F3@( 1, 1) HP 58/58 MP 0/0 Hu 51 $ 325 room=U
+T1664 mode=stairs_up_mode      Galadhrim Star-eyed(elf) F3@( 1, 1) HP 58/58 MP 0/0 Hu 49 $ 299 room=U
 -> s
-T1679 mode=tomb_mode           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 50 $ 325 room=T
+T1665 mode=tomb_mode           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 48 $ 299 room=T
 -> p
-T1680 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 50 $ 325 room=T
+T1666 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 48 $ 299 room=T
 -> w
-T1681 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 50 $ 325 room=T
+T1667 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 1, 2) HP 58/58 MP 0/0 Hu 48 $ 299 room=T
 -> e
-T1682 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 58/58 MP 0/0 Hu 49 $ 325 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
+T1668 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 58/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
 -> a
-T1683 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 34/58 MP 0/0 Hu 49 $ 325 room=M vs ELITE UNDEAD WRAITH(L3 HP86/104)
+T1669 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 36/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP87/104)
 -> a
-T1684 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 10/58 MP 0/0 Hu 49 $ 325 room=M vs ELITE UNDEAD WRAITH(L3 HP68/104)
+T1670 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 36/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1671 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 36/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1672 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 14/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
 -> i
-T1685 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 10/58 MP 0/0 Hu 49 $ 325 room=M
+T1673 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 14/58 MP 0/0 Hu 47 $ 299 room=M
 -> u2
-T1686 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 40/58 MP 0/0 Hu 49 $ 325 room=M
+T1674 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 44/58 MP 0/0 Hu 47 $ 299 room=M
 -> x
-T1687 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 40/58 MP 0/0 Hu 49 $ 325 room=M vs ELITE UNDEAD WRAITH(L3 HP68/104)
+T1675 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 44/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
 -> a
-T1688 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 16/58 MP 0/0 Hu 49 $ 325 room=M vs ELITE UNDEAD WRAITH(L3 HP50/104)
+T1676 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 22/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> i
+T1677 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 22/58 MP 0/0 Hu 47 $ 299 room=M
+-> u2
+T1678 mode=inventory           Galadhrim Star-eyed(elf) F3@( 2, 2) HP 52/58 MP 0/0 Hu 47 $ 299 room=M
+-> x
+T1679 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 52/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1680 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 52/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1681 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 52/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1682 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 52/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP70/104)
+-> a
+T1683 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 30/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP53/104)
+-> a
+T1684 mode=combat_mode         Galadhrim Star-eyed(elf) F3@( 2, 2) HP 8/58 MP 0/0 Hu 47 $ 299 room=M vs ELITE UNDEAD WRAITH(L3 HP36/104)
 -> f
-T1689 mode=flee_direction_mode Galadhrim Star-eyed(elf) F3@( 2, 2) HP 16/58 MP 0/0 Hu 49 $ 325 room=M
--> n
-T1690 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 2, 1) HP 16/58 MP 0/0 Hu 49 $ 325 room=.
--> e
-T1691 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 1) HP 16/58 MP 0/0 Hu 48 $ 325 room=.
--> s
-T1692 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 16/58 MP 0/0 Hu 47 $ 325 room=.
--> s
-T1693 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 16/58 MP 0/0 Hu 46 $ 325 room=.
--> s
-T1694 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 45 $ 325 room=.
--> s
-T1695 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 5) HP 16/58 MP 0/0 Hu 44 $ 325 room=.
--> n
-T1696 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 43 $ 325 room=.
--> w
-T1697 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 2, 4) HP 16/58 MP 0/0 Hu 42 $ 325 room=.
--> e
-T1698 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 41 $ 325 room=.
--> n
-T1699 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 16/58 MP 0/0 Hu 40 $ 325 room=.
--> n
-T1700 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 16/58 MP 0/0 Hu 39 $ 325 room=.
--> e
-T1701 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 2) HP 16/58 MP 0/0 Hu 38 $ 325 room=.
--> s
-T1702 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 3) HP 16/58 MP 0/0 Hu 37 $ 325 room=.
--> e
-T1703 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 3) HP 16/58 MP 0/0 Hu 36 $ 325 room=.
--> s
-T1704 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 4) HP 16/58 MP 0/0 Hu 35 $ 325 room=.
--> s
-T1705 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 5) HP 16/58 MP 0/0 Hu 34 $ 325 room=.
--> n
-T1706 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 4) HP 16/58 MP 0/0 Hu 33 $ 325 room=.
--> n
-T1707 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 3) HP 16/58 MP 0/0 Hu 32 $ 325 room=.
--> w
-T1708 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 3) HP 16/58 MP 0/0 Hu 31 $ 325 room=.
--> n
-T1709 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 2) HP 16/58 MP 0/0 Hu 30 $ 325 room=.
--> w
-T1710 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 16/58 MP 0/0 Hu 29 $ 325 room=.
--> s
-T1711 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 16/58 MP 0/0 Hu 28 $ 325 room=.
--> s
-T1712 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 27 $ 325 room=.
--> w
-T1713 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 2, 4) HP 16/58 MP 0/0 Hu 26 $ 325 room=.
--> e
-T1714 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 25 $ 325 room=.
--> s
-T1715 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 5) HP 16/58 MP 0/0 Hu 24 $ 325 room=.
--> n
-T1716 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 16/58 MP 0/0 Hu 23 $ 325 room=.
--> n
-T1717 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 16/58 MP 0/0 Hu 22 $ 325 room=.
--> n
-T1718 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 16/58 MP 0/0 Hu 21 $ 325 room=.
--> e
-T1719 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 2) HP 16/58 MP 0/0 Hu 20 $ 325 room=.
--> s
-T1720 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 3) HP 16/58 MP 0/0 Hu 19 $ 325 room=.
--> e
-T1721 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 3) HP 16/58 MP 0/0 Hu 18 $ 325 room=.
--> s
-T1722 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 4) HP 16/58 MP 0/0 Hu 17 $ 325 room=.
--> s
-T1723 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 5) HP 16/58 MP 0/0 Hu 16 $ 325 room=.
--> n
-T1724 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 4) HP 16/58 MP 0/0 Hu 15 $ 325 room=.
--> n
-T1725 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 3) HP 16/58 MP 0/0 Hu 14 $ 325 room=.
--> w
-T1726 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 3) HP 16/58 MP 0/0 Hu 13 $ 325 room=.
--> w
-T1727 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 16/58 MP 0/0 Hu 12 $ 325 room=.
--> n
-T1728 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 16/58 MP 0/0 Hu 11 $ 325 room=.
--> e
-T1729 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 2) HP 16/58 MP 0/0 Hu 10 $ 325 room=.
--> e
-T1730 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 2) HP 16/58 MP 0/0 Hu  9 $ 325 room=C
--> e
-T1731 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 6, 2) HP 16/58 MP 0/0 Hu  8 $ 325 room=.
--> n
-T1732 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 6, 1) HP 16/58 MP 0/0 Hu  7 $ 325 room=.
--> e
-T1733 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 7, 1) HP 16/58 MP 0/0 Hu  6 $ 325 room=.
--> w
-T1734 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 6, 1) HP 16/58 MP 0/0 Hu  5 $ 325 room=.
--> s
-T1735 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 6, 2) HP 16/58 MP 0/0 Hu  4 $ 325 room=.
--> w
-T1736 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 2) HP 16/58 MP 0/0 Hu  3 $ 325 room=C
--> s
-T1737 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 5, 3) HP 16/58 MP 0/0 Hu  2 $ 325 room=.
--> w
-T1738 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 3) HP 16/58 MP 0/0 Hu  1 $ 325 room=.
--> n
-T1739 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 4, 2) HP 14/58 MP 0/0 Hu  0 $ 325 room=.
--> w
-T1740 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 2) HP 12/58 MP 0/0 Hu  0 $ 325 room=.
--> s
-T1741 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 3) HP 10/58 MP 0/0 Hu  0 $ 325 room=.
--> s
-T1742 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 8/58 MP 0/0 Hu  0 $ 325 room=.
--> s
-T1743 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 5) HP 6/58 MP 0/0 Hu  0 $ 325 room=.
--> n
-T1744 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 3, 4) HP 4/58 MP 0/0 Hu  0 $ 325 room=.
--> w
-T1745 mode=game_loop           Galadhrim Star-eyed(elf) F3@( 2, 4) HP 2/58 MP 0/0 Hu  0 $ 325 room=.
--> e
-T1746 mode=death_screen        Galadhrim Star-eyed(elf) F3@( 3, 4) HP 0/58 MP 0/0 Hu  0 $ 325 room=.
+T1685 mode=death_screen        Galadhrim Star-eyed(elf) F3@( 2, 2) HP -14/58 MP 0/0 Hu 47 $ 299 room=M
 
-=== run finished: turns=1746 floor=3 hp=0/58 gold=325 alive=False mode=death_screen ===
+=== run finished: turns=1685 floor=3 hp=-14/58 gold=299 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/01337_elf.html

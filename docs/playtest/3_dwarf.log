@@ -2038,7 +2038,7 @@ T1010 mode=inventory           Thror Stonefoot(dwa) F3@(16, 1) HP 48/72 MP 0/0 H
 T1011 mode=inventory           Thror Stonefoot(dwa) F3@(16, 1) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
 -> u4
 T1012 mode=upgrade_scroll_mode Thror Stonefoot(dwa) F3@(16, 1) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
--> 1
+-> 4
 T1013 mode=inventory           Thror Stonefoot(dwa) F3@(16, 1) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
 -> x
 T1014 mode=game_loop           Thror Stonefoot(dwa) F3@(16, 1) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
@@ -2125,749 +2125,797 @@ T1054 mode=combat_mode         Thror Stonefoot(dwa) F3@( 5,13) HP 68/72 MP 0/0 H
 -> a
 T1055 mode=combat_mode         Thror Stonefoot(dwa) F3@( 5,13) HP 67/72 MP 0/0 Hu 96 $ 228 room=M vs Goblin(L2 HP31/31)
 -> a
-T1056 mode=combat_mode         Thror Stonefoot(dwa) F3@( 5,13) HP 66/72 MP 0/0 Hu 96 $ 228 room=M vs Goblin(L2 HP31/31)
+T1056 mode=combat_mode         Thror Stonefoot(dwa) F3@( 5,13) HP 66/72 MP 0/0 Hu 96 $ 228 room=M vs Goblin(L2 HP4/31)
 -> f
 T1057 mode=flee_direction_mode Thror Stonefoot(dwa) F3@( 5,13) HP 66/72 MP 0/0 Hu 96 $ 228 room=M
 -> e
 T1058 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,13) HP 66/72 MP 0/0 Hu 96 $ 228 room=.
--> i
-T1059 mode=inventory           Thror Stonefoot(dwa) F3@( 6,13) HP 66/72 MP 0/0 Hu 96 $ 228 room=.
--> u5
-T1060 mode=inventory           Thror Stonefoot(dwa) F3@( 6,13) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> x
-T1061 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,13) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> i
-T1062 mode=inventory           Thror Stonefoot(dwa) F3@( 6,13) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> e3
-T1063 mode=inventory           Thror Stonefoot(dwa) F3@( 6,13) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> x
-T1064 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,13) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> e
-T1065 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,13) HP 72/72 MP 0/0 Hu 95 $ 228 room=.
--> n
-T1066 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,12) HP 72/72 MP 0/0 Hu 94 $ 228 room=.
--> n
-T1067 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,11) HP 72/72 MP 0/0 Hu 93 $ 228 room=.
--> e
-T1068 mode=game_loop           Thror Stonefoot(dwa) F3@( 8,11) HP 72/72 MP 0/0 Hu 92 $ 228 room=.
--> n
-T1069 mode=game_loop           Thror Stonefoot(dwa) F3@( 8,10) HP 72/72 MP 0/0 Hu 91 $ 228 room=.
--> n
-T1070 mode=game_loop           Thror Stonefoot(dwa) F3@( 8, 9) HP 72/72 MP 0/0 Hu 90 $ 228 room=.
--> l
-T1071 mode=game_loop           Thror Stonefoot(dwa) F3@( 8, 9) HP 72/72 MP 0/0 Hu 90 $ 228 room=.
--> w
-T1072 mode=game_loop           Thror Stonefoot(dwa) F3@( 7, 9) HP 72/72 MP 0/0 Hu 89 $ 228 room=.
--> w
-T1073 mode=game_loop           Thror Stonefoot(dwa) F3@( 6, 9) HP 72/72 MP 0/0 Hu 88 $ 228 room=.
--> n
-T1074 mode=game_loop           Thror Stonefoot(dwa) F3@( 6, 8) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
--> w
-T1075 mode=game_loop           Thror Stonefoot(dwa) F3@( 5, 8) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
--> w
-T1076 mode=game_loop           Thror Stonefoot(dwa) F3@( 4, 8) HP 72/72 MP 0/0 Hu 85 $ 228 room=.
--> w
-T1077 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 8) HP 72/72 MP 0/0 Hu 84 $ 228 room=.
--> n
-T1078 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 7) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
--> l
-T1079 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 7) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
--> n
-T1080 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 6) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
--> l
-T1081 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 6) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
--> n
-T1082 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 5) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
--> l
-T1083 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 5) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
--> n
-T1084 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 4) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
--> l
-T1085 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 4) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
--> n
-T1086 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 3) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
--> l
-T1087 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 3) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
--> n
-T1088 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 2) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
--> l
-T1089 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 2) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
--> w
-T1090 mode=chest_mode          Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 77 $ 228 room=C
--> o
-T1091 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
--> l
-T1092 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
--> n
-T1093 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 1) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
--> l
-T1094 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 1) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
--> w
-T1095 mode=stairs_up_mode      Thror Stonefoot(dwa) F3@( 1, 1) HP 72/72 MP 0/0 Hu 75 $ 228 room=U
--> u
-T1096 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 75 $ 228 room=D
--> w
-T1097 mode=tomb_mode           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 74 $ 228 room=T
--> p
-T1098 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 74 $ 228 room=T
--> e
-T1099 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 73 $ 228 room=D
--> w
-T1100 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 72 $ 228 room=T
--> e
-T1101 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 71 $ 228 room=D
--> w
-T1102 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 70 $ 228 room=T
--> e
-T1103 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 69 $ 228 room=D
--> w
-T1104 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 68 $ 228 room=T
--> e
-T1105 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 67 $ 228 room=D
--> w
-T1106 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 66 $ 228 room=T
--> e
-T1107 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 65 $ 228 room=D
--> w
-T1108 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 64 $ 228 room=T
--> n
-T1109 mode=combat_mode         Thror Stonefoot(dwa) F2@( 5,13) HP 72/72 MP 0/0 Hu 63 $ 228 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> s
+T1059 mode=combat_mode         Thror Stonefoot(dwa) F3@( 6,14) HP 66/72 MP 0/0 Hu 95 $ 228 room=M vs Slime Mold(L2 HP16/16)
 -> f
-T1110 mode=flee_direction_mode Thror Stonefoot(dwa) F2@( 5,13) HP 67/72 MP 0/0 Hu 63 $ 228 room=M
+T1060 mode=combat_mode         Thror Stonefoot(dwa) F3@( 6,14) HP 66/72 MP 0/0 Hu 95 $ 228 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T1061 mode=combat_victory      Thror Stonefoot(dwa) F3@( 6,14) HP 66/72 MP 0/0 Hu 95 $ 252 room=.
+-> back
+T1062 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,14) HP 66/72 MP 0/0 Hu 95 $ 252 room=.
+-> l
+T1063 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,14) HP 66/72 MP 0/0 Hu 95 $ 252 room=.
 -> n
-T1111 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 67/72 MP 0/0 Hu 63 $ 228 room=.
+T1064 mode=game_loop           Thror Stonefoot(dwa) F3@( 6,13) HP 67/72 MP 0/0 Hu 94 $ 252 room=.
 -> e
-T1112 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 67/72 MP 0/0 Hu 62 $ 228 room=.
+T1065 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,13) HP 67/72 MP 0/0 Hu 93 $ 252 room=.
 -> n
-T1113 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 67/72 MP 0/0 Hu 61 $ 228 room=.
+T1066 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,12) HP 68/72 MP 0/0 Hu 92 $ 252 room=.
+-> n
+T1067 mode=game_loop           Thror Stonefoot(dwa) F3@( 7,11) HP 68/72 MP 0/0 Hu 91 $ 252 room=.
 -> e
-T1114 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 67/72 MP 0/0 Hu 60 $ 228 room=.
+T1068 mode=game_loop           Thror Stonefoot(dwa) F3@( 8,11) HP 69/72 MP 0/0 Hu 90 $ 252 room=.
 -> n
-T1115 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 67/72 MP 0/0 Hu 59 $ 228 room=.
+T1069 mode=game_loop           Thror Stonefoot(dwa) F3@( 8,10) HP 69/72 MP 0/0 Hu 89 $ 252 room=.
+-> n
+T1070 mode=game_loop           Thror Stonefoot(dwa) F3@( 8, 9) HP 70/72 MP 0/0 Hu 88 $ 252 room=.
+-> l
+T1071 mode=game_loop           Thror Stonefoot(dwa) F3@( 8, 9) HP 70/72 MP 0/0 Hu 88 $ 252 room=.
 -> w
-T1116 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 67/72 MP 0/0 Hu 58 $ 228 room=.
--> n
-T1117 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 67/72 MP 0/0 Hu 57 $ 228 room=.
+T1072 mode=game_loop           Thror Stonefoot(dwa) F3@( 7, 9) HP 70/72 MP 0/0 Hu 87 $ 252 room=.
 -> w
-T1118 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 67/72 MP 0/0 Hu 56 $ 228 room=.
--> s
-T1119 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 67/72 MP 0/0 Hu 55 $ 228 room=.
--> s
-T1120 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 67/72 MP 0/0 Hu 54 $ 228 room=.
--> s
-T1121 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 67/72 MP 0/0 Hu 53 $ 228 room=.
--> e
-T1122 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 67/72 MP 0/0 Hu 52 $ 228 room=.
+T1073 mode=game_loop           Thror Stonefoot(dwa) F3@( 6, 9) HP 71/72 MP 0/0 Hu 86 $ 252 room=.
 -> n
-T1123 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 67/72 MP 0/0 Hu 51 $ 228 room=.
+T1074 mode=game_loop           Thror Stonefoot(dwa) F3@( 6, 8) HP 71/72 MP 0/0 Hu 85 $ 252 room=.
+-> w
+T1075 mode=game_loop           Thror Stonefoot(dwa) F3@( 5, 8) HP 71/72 MP 0/0 Hu 84 $ 252 room=.
+-> w
+T1076 mode=game_loop           Thror Stonefoot(dwa) F3@( 4, 8) HP 71/72 MP 0/0 Hu 83 $ 252 room=.
+-> w
+T1077 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 8) HP 72/72 MP 0/0 Hu 82 $ 252 room=.
 -> n
-T1124 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 67/72 MP 0/0 Hu 50 $ 228 room=.
+T1078 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 7) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
+-> l
+T1079 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 7) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
+-> n
+T1080 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 6) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
+-> l
+T1081 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 6) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
+-> n
+T1082 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 5) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
+-> l
+T1083 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 5) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
+-> n
+T1084 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 4) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
+-> l
+T1085 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 4) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
+-> n
+T1086 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 3) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
+-> l
+T1087 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 3) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
+-> n
+T1088 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 2) HP 72/72 MP 0/0 Hu 76 $ 252 room=.
+-> l
+T1089 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 2) HP 72/72 MP 0/0 Hu 76 $ 252 room=.
+-> w
+T1090 mode=chest_mode          Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 75 $ 252 room=C
+-> s
+T1091 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 3) HP 72/72 MP 0/0 Hu 74 $ 252 room=.
+-> s
+T1092 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 4) HP 72/72 MP 0/0 Hu 73 $ 252 room=.
 -> e
-T1125 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 67/72 MP 0/0 Hu 49 $ 228 room=.
+T1093 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 4) HP 72/72 MP 0/0 Hu 72 $ 252 room=.
+-> n
+T1094 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 3) HP 72/72 MP 0/0 Hu 71 $ 252 room=.
+-> n
+T1095 mode=game_loop           Thror Stonefoot(dwa) F3@( 3, 2) HP 72/72 MP 0/0 Hu 70 $ 252 room=.
+-> w
+T1096 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 69 $ 252 room=C
+-> l
+T1097 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 2) HP 72/72 MP 0/0 Hu 69 $ 252 room=C
+-> n
+T1098 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 1) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
+-> l
+T1099 mode=game_loop           Thror Stonefoot(dwa) F3@( 2, 1) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
+-> w
+T1100 mode=stairs_up_mode      Thror Stonefoot(dwa) F3@( 1, 1) HP 72/72 MP 0/0 Hu 67 $ 252 room=U
+-> u
+T1101 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 67 $ 252 room=D
+-> w
+T1102 mode=tomb_mode           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 66 $ 252 room=T
+-> p
+T1103 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 66 $ 252 room=T
+-> e
+T1104 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 65 $ 252 room=D
+-> w
+T1105 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 64 $ 252 room=T
+-> e
+T1106 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 63 $ 252 room=D
+-> w
+T1107 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 62 $ 252 room=T
+-> e
+T1108 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 61 $ 252 room=D
+-> w
+T1109 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 60 $ 252 room=T
+-> e
+T1110 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 59 $ 252 room=D
+-> w
+T1111 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 58 $ 252 room=T
+-> e
+T1112 mode=stairs_down_mode    Thror Stonefoot(dwa) F2@( 6,14) HP 72/72 MP 0/0 Hu 57 $ 252 room=D
+-> w
+T1113 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,14) HP 72/72 MP 0/0 Hu 56 $ 252 room=T
+-> n
+T1114 mode=combat_mode         Thror Stonefoot(dwa) F2@( 5,13) HP 72/72 MP 0/0 Hu 55 $ 252 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T1115 mode=flee_direction_mode Thror Stonefoot(dwa) F2@( 5,13) HP 71/72 MP 0/0 Hu 55 $ 252 room=M
+-> n
+T1116 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 71/72 MP 0/0 Hu 55 $ 252 room=.
+-> n
+T1117 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 71/72 MP 0/0 Hu 54 $ 252 room=.
+-> e
+T1118 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 71/72 MP 0/0 Hu 53 $ 252 room=.
+-> e
+T1119 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 71/72 MP 0/0 Hu 52 $ 252 room=.
+-> n
+T1120 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 71/72 MP 0/0 Hu 51 $ 252 room=.
+-> w
+T1121 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 71/72 MP 0/0 Hu 50 $ 252 room=.
+-> n
+T1122 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 71/72 MP 0/0 Hu 49 $ 252 room=.
 -> i
-T1126 mode=inventory           Thror Stonefoot(dwa) F2@( 7,10) HP 67/72 MP 0/0 Hu 49 $ 228 room=.
--> u5
-T1127 mode=inventory           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
--> x
-T1128 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
--> i
-T1129 mode=inventory           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1123 mode=inventory           Thror Stonefoot(dwa) F2@( 6, 9) HP 71/72 MP 0/0 Hu 49 $ 252 room=.
 -> eat3
-T1130 mode=inventory           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 52 $ 228 room=.
+T1124 mode=inventory           Thror Stonefoot(dwa) F2@( 6, 9) HP 71/72 MP 0/0 Hu 52 $ 252 room=.
 -> eat1
-T1131 mode=inventory           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
+T1125 mode=inventory           Thror Stonefoot(dwa) F2@( 6, 9) HP 71/72 MP 0/0 Hu 87 $ 252 room=.
 -> x
-T1132 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
--> n
-T1133 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
+T1126 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 71/72 MP 0/0 Hu 87 $ 252 room=.
 -> w
-T1134 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 85 $ 228 room=.
--> n
-T1135 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 84 $ 228 room=.
+T1127 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 71/72 MP 0/0 Hu 86 $ 252 room=.
 -> w
-T1136 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
+T1128 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 85 $ 252 room=.
 -> n
-T1137 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
+T1129 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 84 $ 252 room=.
+-> e
+T1130 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 83 $ 252 room=.
+-> n
+T1131 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 82 $ 252 room=.
+-> n
+T1132 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
+-> e
+T1133 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
+-> n
+T1134 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
+-> n
+T1135 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
+-> n
+T1136 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
 -> w
-T1138 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
+T1137 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 76 $ 252 room=.
+-> n
+T1138 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 75 $ 252 room=.
+-> n
+T1139 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 74 $ 252 room=.
+-> w
+T1140 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 73 $ 252 room=.
 -> s
-T1139 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
+T1141 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 72 $ 252 room=.
 -> s
-T1140 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
--> e
-T1141 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
+T1142 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 71 $ 252 room=.
 -> s
-T1142 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
+T1143 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 70 $ 252 room=.
+-> e
+T1144 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 69 $ 252 room=.
+-> e
+T1145 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
 -> s
-T1143 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
+T1146 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 67 $ 252 room=.
+-> w
+T1147 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 66 $ 252 room=.
 -> s
-T1144 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 75 $ 228 room=.
--> e
-T1145 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 74 $ 228 room=.
--> e
-T1146 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 73 $ 228 room=.
--> n
-T1147 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 72 $ 228 room=.
+T1148 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 65 $ 252 room=.
+-> s
+T1149 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 64 $ 252 room=.
 -> w
-T1148 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 71 $ 228 room=.
--> n
-T1149 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 70 $ 228 room=.
--> n
-T1150 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 69 $ 228 room=.
+T1150 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 63 $ 252 room=.
 -> w
-T1151 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 68 $ 228 room=.
--> w
-T1152 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 67 $ 228 room=.
+T1151 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 62 $ 252 room=.
 -> n
-T1153 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 66 $ 228 room=.
--> n
-T1154 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 65 $ 228 room=.
--> w
-T1155 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 64 $ 228 room=.
--> n
-T1156 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 63 $ 228 room=.
+T1152 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 61 $ 252 room=.
 -> e
-T1157 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 62 $ 228 room=.
+T1153 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 60 $ 252 room=.
 -> e
-T1158 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 61 $ 228 room=.
+T1154 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 59 $ 252 room=.
 -> e
-T1159 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 60 $ 228 room=.
+T1155 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 58 $ 252 room=.
 -> n
-T1160 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 59 $ 228 room=.
+T1156 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 57 $ 252 room=.
+-> w
+T1157 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 56 $ 252 room=.
 -> n
-T1161 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 58 $ 228 room=.
+T1158 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 55 $ 252 room=.
 -> n
-T1162 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 57 $ 228 room=.
--> e
-T1163 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 3) HP 72/72 MP 0/0 Hu 56 $ 228 room=.
--> w
-T1164 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 55 $ 228 room=.
--> w
-T1165 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 54 $ 228 room=.
--> w
-T1166 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 53 $ 228 room=.
--> w
-T1167 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 3) HP 72/72 MP 0/0 Hu 52 $ 228 room=.
+T1159 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 54 $ 252 room=.
 -> n
-T1168 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 2) HP 72/72 MP 0/0 Hu 51 $ 228 room=.
--> e
-T1169 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 50 $ 228 room=.
--> e
-T1170 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1160 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 53 $ 252 room=.
+-> n
+T1161 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 52 $ 252 room=.
+-> w
+T1162 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 51 $ 252 room=.
+-> w
+T1163 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 50 $ 252 room=.
+-> w
+T1164 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> i
-T1171 mode=inventory           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1165 mode=inventory           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> eat1
-T1172 mode=inventory           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
+T1166 mode=inventory           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> x
-T1173 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
--> s
-T1174 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 98 $ 228 room=.
--> e
-T1175 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 97 $ 228 room=.
--> e
-T1176 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 3) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
+T1167 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> w
-T1177 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 95 $ 228 room=.
--> s
-T1178 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 94 $ 228 room=.
--> s
-T1179 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 93 $ 228 room=.
--> w
-T1180 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 92 $ 228 room=.
--> n
-T1181 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 91 $ 228 room=.
--> w
-T1182 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 90 $ 228 room=.
--> n
-T1183 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 89 $ 228 room=.
--> n
-T1184 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 88 $ 228 room=.
--> w
-T1185 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 2) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
--> s
-T1186 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 3) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
--> n
-T1187 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 2) HP 72/72 MP 0/0 Hu 85 $ 228 room=.
--> n
-T1188 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 84 $ 228 room=.
+T1168 mode=stairs_up_mode      Thror Stonefoot(dwa) F2@( 1, 1) HP 72/72 MP 0/0 Hu 98 $ 252 room=U
 -> e
-T1189 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
--> e
-T1190 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
--> s
-T1191 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
+T1169 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 97 $ 252 room=.
 -> w
-T1192 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
--> s
-T1193 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
--> s
-T1194 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
+T1170 mode=stairs_up_mode      Thror Stonefoot(dwa) F2@( 1, 1) HP 72/72 MP 0/0 Hu 96 $ 252 room=U
 -> e
-T1195 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
+T1171 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 95 $ 252 room=.
+-> e
+T1172 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 94 $ 252 room=.
+-> e
+T1173 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 93 $ 252 room=.
+-> e
+T1174 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 92 $ 252 room=.
+-> s
+T1175 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 91 $ 252 room=.
+-> w
+T1176 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 90 $ 252 room=.
+-> s
+T1177 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 89 $ 252 room=.
+-> e
+T1178 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 88 $ 252 room=.
+-> s
+T1179 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 87 $ 252 room=.
+-> e
+T1180 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 86 $ 252 room=.
+-> s
+T1181 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 85 $ 252 room=.
+-> s
+T1182 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 84 $ 252 room=.
+-> w
+T1183 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 83 $ 252 room=.
+-> s
+T1184 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 82 $ 252 room=.
+-> s
+T1185 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
+-> s
+T1186 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
+-> s
+T1187 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
+-> e
+T1188 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
+-> e
+T1189 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
+-> s
+T1190 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 76 $ 252 room=.
+-> w
+T1191 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 75 $ 252 room=.
+-> s
+T1192 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 74 $ 252 room=.
+-> e
+T1193 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 73 $ 252 room=.
+-> w
+T1194 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 72 $ 252 room=.
+-> w
+T1195 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 71 $ 252 room=.
 -> n
-T1196 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
+T1196 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 70 $ 252 room=.
+-> e
+T1197 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 69 $ 252 room=.
 -> n
-T1197 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 75 $ 228 room=.
+T1198 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
 -> w
-T1198 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 74 $ 228 room=.
+T1199 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 67 $ 252 room=.
 -> n
-T1199 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 73 $ 228 room=.
+T1200 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 66 $ 252 room=.
 -> w
-T1200 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 72 $ 228 room=.
+T1201 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 65 $ 252 room=.
 -> w
-T1201 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 71 $ 228 room=.
--> w
-T1202 mode=stairs_up_mode      Thror Stonefoot(dwa) F2@( 1, 1) HP 72/72 MP 0/0 Hu 70 $ 228 room=U
--> e
-T1203 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 1) HP 72/72 MP 0/0 Hu 69 $ 228 room=.
--> e
-T1204 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 68 $ 228 room=.
--> e
-T1205 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 67 $ 228 room=.
--> s
-T1206 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 66 $ 228 room=.
--> e
-T1207 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 65 $ 228 room=.
--> s
-T1208 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 64 $ 228 room=.
--> e
-T1209 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 63 $ 228 room=.
--> s
-T1210 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 62 $ 228 room=.
--> s
-T1211 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 61 $ 228 room=.
--> w
-T1212 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 60 $ 228 room=.
+T1202 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 64 $ 252 room=.
 -> n
-T1213 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 59 $ 228 room=.
+T1203 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 63 $ 252 room=.
+-> n
+T1204 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 62 $ 252 room=.
+-> e
+T1205 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 61 $ 252 room=.
+-> n
+T1206 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 60 $ 252 room=.
 -> w
-T1214 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 58 $ 228 room=.
--> n
-T1215 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 57 $ 228 room=.
--> n
-T1216 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 56 $ 228 room=.
--> e
-T1217 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 55 $ 228 room=.
--> s
-T1218 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 54 $ 228 room=.
--> s
-T1219 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 53 $ 228 room=.
--> e
-T1220 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 52 $ 228 room=.
--> n
-T1221 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 51 $ 228 room=.
--> e
-T1222 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 3) HP 72/72 MP 0/0 Hu 50 $ 228 room=.
+T1207 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 59 $ 252 room=.
 -> w
-T1223 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1208 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 6) HP 72/72 MP 0/0 Hu 58 $ 252 room=N
+-> w
+T1209 mode=game_loop           Thror Stonefoot(dwa) F2@( 1, 6) HP 72/72 MP 0/0 Hu 57 $ 252 room=.
+-> s
+T1210 mode=game_loop           Thror Stonefoot(dwa) F2@( 1, 7) HP 72/72 MP 0/0 Hu 56 $ 252 room=.
+-> n
+T1211 mode=game_loop           Thror Stonefoot(dwa) F2@( 1, 6) HP 72/72 MP 0/0 Hu 55 $ 252 room=.
+-> s
+T1212 mode=game_loop           Thror Stonefoot(dwa) F2@( 1, 7) HP 72/72 MP 0/0 Hu 54 $ 252 room=.
+-> n
+T1213 mode=game_loop           Thror Stonefoot(dwa) F2@( 1, 6) HP 72/72 MP 0/0 Hu 53 $ 252 room=.
+-> e
+T1214 mode=game_loop           Thror Stonefoot(dwa) F2@( 2, 6) HP 72/72 MP 0/0 Hu 52 $ 252 room=N
+-> e
+T1215 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 51 $ 252 room=.
+-> s
+T1216 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 50 $ 252 room=.
+-> e
+T1217 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> i
-T1224 mode=inventory           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1218 mode=inventory           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> eat1
-T1225 mode=inventory           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
+T1219 mode=inventory           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> x
-T1226 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
--> w
-T1227 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 98 $ 228 room=.
--> w
-T1228 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 97 $ 228 room=.
--> n
-T1229 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
+T1220 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> e
-T1230 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 95 $ 228 room=.
--> n
-T1231 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 94 $ 228 room=.
+T1221 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 98 $ 252 room=.
+-> s
+T1222 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 97 $ 252 room=.
 -> w
-T1232 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 93 $ 228 room=.
+T1223 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 96 $ 252 room=.
+-> s
+T1224 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 95 $ 252 room=.
 -> w
-T1233 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 1) HP 72/72 MP 0/0 Hu 92 $ 228 room=.
--> s
-T1234 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 2) HP 72/72 MP 0/0 Hu 91 $ 228 room=.
+T1225 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 94 $ 252 room=.
+-> n
+T1226 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 93 $ 252 room=.
+-> n
+T1227 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 92 $ 252 room=.
+-> n
+T1228 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 91 $ 252 room=.
 -> e
-T1235 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 90 $ 228 room=.
+T1229 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 90 $ 252 room=.
 -> s
-T1236 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 89 $ 228 room=.
--> s
-T1237 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 88 $ 228 room=.
+T1230 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 89 $ 252 room=.
 -> e
-T1238 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
+T1231 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 88 $ 252 room=.
 -> n
-T1239 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
+T1232 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 87 $ 252 room=.
 -> n
-T1240 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 85 $ 228 room=.
+T1233 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 86 $ 252 room=.
 -> n
-T1241 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 84 $ 228 room=.
+T1234 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 85 $ 252 room=.
+-> n
+T1235 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 84 $ 252 room=.
+-> e
+T1236 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 83 $ 252 room=.
+-> s
+T1237 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 82 $ 252 room=.
+-> s
+T1238 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
 -> w
-T1242 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
--> s
-T1243 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
--> s
-T1244 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
--> e
-T1245 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
+T1239 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
 -> n
-T1246 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
+T1240 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
 -> n
-T1247 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
+T1241 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
 -> w
-T1248 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
--> s
-T1249 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
--> s
-T1250 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 75 $ 228 room=.
--> s
-T1251 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 4) HP 72/72 MP 0/0 Hu 74 $ 228 room=.
--> e
-T1252 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 73 $ 228 room=.
--> s
-T1253 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 72 $ 228 room=.
--> s
-T1254 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 71 $ 228 room=.
--> e
-T1255 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 70 $ 228 room=.
--> s
-T1256 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 69 $ 228 room=.
+T1242 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 3) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
 -> w
-T1257 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 68 $ 228 room=.
--> s
-T1258 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 67 $ 228 room=.
--> s
-T1259 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 66 $ 228 room=.
--> e
-T1260 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 65 $ 228 room=.
--> s
-T1261 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 64 $ 228 room=.
--> e
-T1262 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 63 $ 228 room=.
--> s
-T1263 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 62 $ 228 room=.
--> w
-T1264 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 61 $ 228 room=.
--> s
-T1265 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 60 $ 228 room=.
--> e
-T1266 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 59 $ 228 room=.
--> w
-T1267 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 58 $ 228 room=.
--> w
-T1268 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 57 $ 228 room=.
+T1243 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 3) HP 72/72 MP 0/0 Hu 76 $ 252 room=.
 -> n
-T1269 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 56 $ 228 room=.
+T1244 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 2) HP 72/72 MP 0/0 Hu 75 $ 252 room=.
 -> e
-T1270 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 55 $ 228 room=.
+T1245 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 2) HP 72/72 MP 0/0 Hu 74 $ 252 room=.
 -> n
-T1271 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 54 $ 228 room=.
+T1246 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 1) HP 72/72 MP 0/0 Hu 73 $ 252 room=.
 -> e
-T1272 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 53 $ 228 room=.
--> n
-T1273 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 72/72 MP 0/0 Hu 52 $ 228 room=.
+T1247 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 1) HP 72/72 MP 0/0 Hu 72 $ 252 room=.
+-> s
+T1248 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 2) HP 72/72 MP 0/0 Hu 71 $ 252 room=.
+-> s
+T1249 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 3) HP 72/72 MP 0/0 Hu 70 $ 252 room=.
+-> e
+T1250 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 3) HP 72/72 MP 0/0 Hu 69 $ 252 room=.
+-> s
+T1251 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
+-> s
+T1252 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 67 $ 252 room=.
+-> s
+T1253 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 66 $ 252 room=.
+-> s
+T1254 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 65 $ 252 room=.
 -> w
-T1274 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 51 $ 228 room=.
+T1255 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 64 $ 252 room=.
+-> s
+T1256 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 63 $ 252 room=.
+-> s
+T1257 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 62 $ 252 room=.
+-> e
+T1258 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 61 $ 252 room=.
+-> s
+T1259 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 60 $ 252 room=.
 -> w
-T1275 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 50 $ 228 room=.
+T1260 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 59 $ 252 room=.
+-> s
+T1261 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 58 $ 252 room=.
+-> s
+T1262 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 57 $ 252 room=.
+-> e
+T1263 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 56 $ 252 room=.
+-> e
+T1264 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 55 $ 252 room=.
 -> n
-T1276 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1265 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 54 $ 252 room=.
+-> w
+T1266 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 53 $ 252 room=.
+-> w
+T1267 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 52 $ 252 room=.
+-> s
+T1268 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 51 $ 252 room=.
+-> e
+T1269 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 50 $ 252 room=.
+-> e
+T1270 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> i
-T1277 mode=inventory           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1271 mode=inventory           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
 -> eat1
-T1278 mode=inventory           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
+T1272 mode=inventory           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> x
-T1279 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 99 $ 228 room=.
--> e
-T1280 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 98 $ 228 room=.
--> e
-T1281 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 72/72 MP 0/0 Hu 97 $ 228 room=.
--> s
-T1282 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 72/72 MP 0/0 Hu 96 $ 228 room=.
--> w
-T1283 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 95 $ 228 room=.
--> w
-T1284 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 94 $ 228 room=.
--> w
-T1285 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 93 $ 228 room=.
--> w
-T1286 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 92 $ 228 room=.
+T1273 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 99 $ 252 room=.
 -> n
-T1287 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 91 $ 228 room=.
--> e
-T1288 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 90 $ 228 room=.
--> e
-T1289 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 89 $ 228 room=.
+T1274 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 98 $ 252 room=.
+-> w
+T1275 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 97 $ 252 room=.
 -> n
-T1290 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 88 $ 228 room=.
+T1276 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 96 $ 252 room=.
+-> w
+T1277 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 95 $ 252 room=.
+-> s
+T1278 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 94 $ 252 room=.
+-> s
+T1279 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 93 $ 252 room=.
 -> e
-T1291 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 87 $ 228 room=.
+T1280 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 92 $ 252 room=.
 -> n
-T1292 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 86 $ 228 room=.
--> w
-T1293 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 85 $ 228 room=.
--> w
-T1294 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 84 $ 228 room=.
--> w
-T1295 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 72/72 MP 0/0 Hu 83 $ 228 room=.
--> s
-T1296 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 82 $ 228 room=.
+T1281 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 91 $ 252 room=.
 -> e
-T1297 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 81 $ 228 room=.
--> s
-T1298 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 80 $ 228 room=.
+T1282 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 90 $ 252 room=.
+-> n
+T1283 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 89 $ 252 room=.
 -> w
-T1299 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 79 $ 228 room=.
+T1284 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 88 $ 252 room=.
+-> w
+T1285 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 87 $ 252 room=.
+-> n
+T1286 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 86 $ 252 room=.
+-> w
+T1287 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 85 $ 252 room=.
+-> w
+T1288 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 84 $ 252 room=.
+-> n
+T1289 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 83 $ 252 room=.
+-> e
+T1290 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 82 $ 252 room=.
+-> e
+T1291 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 81 $ 252 room=.
+-> e
+T1292 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 80 $ 252 room=.
+-> e
+T1293 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 72/72 MP 0/0 Hu 79 $ 252 room=.
+-> e
+T1294 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 72/72 MP 0/0 Hu 78 $ 252 room=.
+-> n
+T1295 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 7) HP 72/72 MP 0/0 Hu 77 $ 252 room=.
+-> w
+T1296 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 7) HP 72/72 MP 0/0 Hu 76 $ 252 room=N
+-> n
+T1297 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 6) HP 72/72 MP 0/0 Hu 75 $ 252 room=.
+-> w
+T1298 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 74 $ 252 room=.
+-> w
+T1299 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 73 $ 252 room=.
 -> s
-T1300 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
+T1300 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 72 $ 252 room=.
+-> s
+T1301 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 71 $ 252 room=.
+-> w
+T1302 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 70 $ 252 room=.
+-> s
+T1303 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 69 $ 252 room=.
+-> e
+T1304 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 68 $ 252 room=.
+-> s
+T1305 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 67 $ 252 room=.
+-> s
+T1306 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 66 $ 252 room=.
+-> e
+T1307 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 65 $ 252 room=.
+-> e
+T1308 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 64 $ 252 room=.
+-> s
+T1309 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 63 $ 252 room=.
+-> w
+T1310 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 62 $ 252 room=.
 -> l
-T1301 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 78 $ 228 room=.
--> e
-T1302 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 77 $ 228 room=.
--> e
-T1303 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 76 $ 228 room=.
--> e
-T1304 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 75 $ 228 room=.
--> s
-T1305 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 74 $ 228 room=.
--> s
-T1306 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 73 $ 228 room=.
--> s
-T1307 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 72 $ 228 room=.
--> e
-T1308 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 71 $ 228 room=.
+T1311 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 62 $ 252 room=.
+-> w
+T1312 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 61 $ 252 room=.
 -> n
-T1309 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 70 $ 228 room=.
+T1313 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 60 $ 252 room=.
+-> e
+T1314 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 59 $ 252 room=.
+-> e
+T1315 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 58 $ 252 room=.
+-> s
+T1316 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 57 $ 252 room=.
+-> w
+T1317 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 56 $ 252 room=.
+-> w
+T1318 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 55 $ 252 room=.
 -> n
-T1310 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 69 $ 228 room=.
+T1319 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 54 $ 252 room=.
+-> e
+T1320 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 53 $ 252 room=.
 -> l
-T1311 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 69 $ 228 room=.
--> w
-T1312 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 68 $ 228 room=.
--> w
-T1313 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 67 $ 228 room=.
+T1321 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 53 $ 252 room=.
 -> n
-T1314 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 66 $ 228 room=.
--> e
-T1315 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 65 $ 228 room=.
--> e
-T1316 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 72/72 MP 0/0 Hu 64 $ 228 room=.
--> s
-T1317 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 63 $ 228 room=.
--> s
-T1318 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 62 $ 228 room=.
--> s
-T1319 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 61 $ 228 room=.
+T1322 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 52 $ 252 room=.
 -> w
-T1320 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 60 $ 228 room=.
+T1323 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 51 $ 252 room=.
+-> n
+T1324 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 50 $ 252 room=.
+-> n
+T1325 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 49 $ 252 room=.
+-> w
+T1326 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 48 $ 252 room=.
+-> n
+T1327 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 47 $ 252 room=.
+-> w
+T1328 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 46 $ 252 room=.
+-> s
+T1329 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 45 $ 252 room=.
+-> s
+T1330 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 44 $ 252 room=.
 -> l
-T1321 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 60 $ 228 room=.
+T1331 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 44 $ 252 room=.
+-> e
+T1332 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 43 $ 252 room=.
+-> e
+T1333 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 42 $ 252 room=.
+-> s
+T1334 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 41 $ 252 room=.
+-> e
+T1335 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 40 $ 252 room=.
 -> n
-T1322 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 59 $ 228 room=.
+T1336 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 39 $ 252 room=.
+-> n
+T1337 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 38 $ 252 room=.
+-> n
+T1338 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 37 $ 252 room=.
 -> w
-T1323 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 58 $ 228 room=.
--> s
-T1324 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,12) HP 72/72 MP 0/0 Hu 57 $ 228 room=.
--> n
-T1325 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 72/72 MP 0/0 Hu 56 $ 228 room=.
--> n
-T1326 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 72/72 MP 0/0 Hu 55 $ 228 room=.
--> e
-T1327 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 54 $ 228 room=.
--> s
-T1328 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 72/72 MP 0/0 Hu 53 $ 228 room=.
--> s
-T1329 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 72/72 MP 0/0 Hu 52 $ 228 room=.
--> e
-T1330 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 51 $ 228 room=.
+T1339 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 36 $ 252 room=.
+-> w
+T1340 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 35 $ 252 room=.
 -> l
-T1331 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 72/72 MP 0/0 Hu 51 $ 228 room=.
--> n
-T1332 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 72/72 MP 0/0 Hu 50 $ 228 room=.
--> n
-T1333 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 72/72 MP 0/0 Hu 49 $ 228 room=.
+T1341 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 35 $ 252 room=.
+-> s
+T1342 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 34 $ 252 room=.
+-> s
+T1343 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 33 $ 252 room=.
 -> w
-T1334 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 72/72 MP 0/0 Hu 48 $ 228 room=.
+T1344 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 32 $ 252 room=.
 -> n
-T1335 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 47 $ 228 room=.
--> w
-T1336 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 72/72 MP 0/0 Hu 46 $ 228 room=.
--> w
-T1337 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 72/72 MP 0/0 Hu 45 $ 228 room=.
--> w
-T1338 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 72/72 MP 0/0 Hu 44 $ 228 room=.
+T1345 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 31 $ 252 room=.
 -> n
-T1339 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 43 $ 228 room=.
+T1346 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 30 $ 252 room=.
 -> e
-T1340 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 42 $ 228 room=.
+T1347 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 29 $ 252 room=.
+-> e
+T1348 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 28 $ 252 room=.
+-> n
+T1349 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 27 $ 252 room=.
+-> e
+T1350 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 26 $ 252 room=.
 -> l
-T1341 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 42 $ 228 room=.
+T1351 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 26 $ 252 room=.
+-> s
+T1352 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 25 $ 252 room=.
+-> s
+T1353 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 24 $ 252 room=.
+-> s
+T1354 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 72/72 MP 0/0 Hu 23 $ 252 room=.
 -> e
-T1342 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 41 $ 228 room=.
+T1355 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 72/72 MP 0/0 Hu 22 $ 252 room=.
 -> e
-T1343 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 40 $ 228 room=.
+T1356 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 9) HP 72/72 MP 0/0 Hu 21 $ 252 room=.
 -> n
-T1344 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 39 $ 228 room=.
+T1357 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 72/72 MP 0/0 Hu 20 $ 252 room=.
 -> w
-T1345 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 38 $ 228 room=.
+T1358 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 72/72 MP 0/0 Hu 19 $ 252 room=.
 -> w
-T1346 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 37 $ 228 room=.
--> n
-T1347 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 36 $ 228 room=.
--> e
-T1348 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 35 $ 228 room=.
--> e
-T1349 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 34 $ 228 room=.
--> e
-T1350 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 6) HP 72/72 MP 0/0 Hu 33 $ 228 room=.
+T1359 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 18 $ 252 room=.
+-> w
+T1360 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 17 $ 252 room=.
 -> l
-T1351 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 6) HP 72/72 MP 0/0 Hu 33 $ 228 room=.
--> s
-T1352 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 7) HP 72/72 MP 0/0 Hu 32 $ 228 room=N
+T1361 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 17 $ 252 room=.
 -> w
-T1353 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 31 $ 228 room=.
--> s
-T1354 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu 30 $ 228 room=.
--> w
-T1355 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 29 $ 228 room=.
--> w
-T1356 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 28 $ 228 room=.
+T1362 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 16 $ 252 room=.
 -> n
-T1357 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 27 $ 228 room=.
+T1363 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 15 $ 252 room=.
 -> n
-T1358 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 26 $ 228 room=.
+T1364 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 14 $ 252 room=.
 -> e
-T1359 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 25 $ 228 room=.
+T1365 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 13 $ 252 room=.
 -> e
-T1360 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 24 $ 228 room=.
+T1366 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 12 $ 252 room=.
+-> s
+T1367 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 11 $ 252 room=.
+-> w
+T1368 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 10 $ 252 room=.
+-> s
+T1369 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu  9 $ 252 room=.
+-> w
+T1370 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu  8 $ 252 room=.
 -> l
-T1361 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 24 $ 228 room=.
--> s
-T1362 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu 23 $ 228 room=.
+T1371 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu  8 $ 252 room=.
 -> w
-T1363 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu 22 $ 228 room=.
--> s
-T1364 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 72/72 MP 0/0 Hu 21 $ 228 room=.
--> w
-T1365 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 72/72 MP 0/0 Hu 20 $ 228 room=.
--> w
-T1366 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu 19 $ 228 room=.
+T1372 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 72/72 MP 0/0 Hu  7 $ 252 room=.
 -> n
-T1367 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu 18 $ 228 room=.
+T1373 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 72/72 MP 0/0 Hu  6 $ 252 room=.
 -> e
-T1368 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu 17 $ 228 room=.
+T1374 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 72/72 MP 0/0 Hu  5 $ 252 room=.
 -> n
-T1369 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu 16 $ 228 room=.
+T1375 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 72/72 MP 0/0 Hu  4 $ 252 room=.
 -> e
-T1370 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 15 $ 228 room=.
+T1376 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu  3 $ 252 room=.
+-> e
+T1377 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu  2 $ 252 room=.
+-> n
+T1378 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu  1 $ 252 room=.
+-> n
+T1379 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 70/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1380 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 68/72 MP 0/0 Hu  0 $ 252 room=.
 -> l
-T1371 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu 15 $ 228 room=.
+T1381 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 68/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1382 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 66/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1383 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 64/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1384 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 62/72 MP 0/0 Hu  0 $ 252 room=.
 -> e
-T1372 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 72/72 MP 0/0 Hu 14 $ 228 room=.
--> n
-T1373 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 5) HP 72/72 MP 0/0 Hu 13 $ 228 room=.
--> n
-T1374 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 4) HP 72/72 MP 0/0 Hu 12 $ 228 room=.
+T1385 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 60/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1386 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 58/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1387 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 56/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1388 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 54/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1389 mode=game_loop           Thror Stonefoot(dwa) F2@( 9, 8) HP 52/72 MP 0/0 Hu  0 $ 252 room=.
+-> i
+T1390 mode=inventory           Thror Stonefoot(dwa) F2@( 9, 8) HP 52/72 MP 0/0 Hu  0 $ 252 room=.
+-> u6
+T1391 mode=inventory           Thror Stonefoot(dwa) F2@( 9, 8) HP 72/72 MP 0/0 Hu  0 $ 252 room=.
+-> x
+T1392 mode=game_loop           Thror Stonefoot(dwa) F2@( 9, 8) HP 72/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1375 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 4) HP 72/72 MP 0/0 Hu 11 $ 228 room=.
+T1393 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 70/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1376 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 5) HP 72/72 MP 0/0 Hu 10 $ 228 room=.
+T1394 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 9) HP 68/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1395 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 66/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1396 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 64/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1377 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 72/72 MP 0/0 Hu  9 $ 228 room=.
+T1397 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 62/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1378 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 72/72 MP 0/0 Hu  8 $ 228 room=.
--> e
-T1379 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 72/72 MP 0/0 Hu  7 $ 228 room=.
--> s
-T1380 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu  6 $ 228 room=.
+T1398 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 60/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1399 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 58/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1400 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 56/72 MP 0/0 Hu  0 $ 252 room=.
 -> l
-T1381 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 72/72 MP 0/0 Hu  6 $ 228 room=.
--> e
-T1382 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 72/72 MP 0/0 Hu  5 $ 228 room=.
--> e
-T1383 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 72/72 MP 0/0 Hu  4 $ 228 room=.
--> e
-T1384 mode=game_loop           Thror Stonefoot(dwa) F2@( 9, 8) HP 72/72 MP 0/0 Hu  3 $ 228 room=.
+T1401 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 56/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1402 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 54/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1403 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 52/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1385 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 8) HP 72/72 MP 0/0 Hu  2 $ 228 room=.
--> s
-T1386 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 9) HP 72/72 MP 0/0 Hu  1 $ 228 room=.
+T1404 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 50/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1405 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 48/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1406 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 46/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1407 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 44/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1387 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 70/72 MP 0/0 Hu  0 $ 228 room=.
+T1408 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 42/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1388 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 68/72 MP 0/0 Hu  0 $ 228 room=.
+T1409 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 40/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1389 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 66/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1390 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 64/72 MP 0/0 Hu  0 $ 228 room=.
+T1410 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 38/72 MP 0/0 Hu  0 $ 252 room=.
 -> l
-T1391 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 64/72 MP 0/0 Hu  0 $ 228 room=.
--> w
-T1392 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,11) HP 62/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1393 mode=game_loop           Thror Stonefoot(dwa) F2@( 5,10) HP 60/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1394 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 58/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1395 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 56/72 MP 0/0 Hu  0 $ 228 room=.
--> w
-T1396 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 54/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1397 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 52/72 MP 0/0 Hu  0 $ 228 room=.
+T1411 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 38/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1412 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 36/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1413 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 34/72 MP 0/0 Hu  0 $ 252 room=.
 -> e
-T1398 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 50/72 MP 0/0 Hu  0 $ 228 room=.
+T1414 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 32/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1415 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 30/72 MP 0/0 Hu  0 $ 252 room=.
 -> n
-T1399 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 48/72 MP 0/0 Hu  0 $ 228 room=.
+T1416 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 28/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1400 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 46/72 MP 0/0 Hu  0 $ 228 room=.
+T1417 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 26/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1418 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 24/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1419 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 22/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1420 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 20/72 MP 0/0 Hu  0 $ 252 room=.
+-> i
+T1421 mode=inventory           Thror Stonefoot(dwa) F2@( 3, 6) HP 20/72 MP 0/0 Hu  0 $ 252 room=.
+-> u6
+T1422 mode=inventory           Thror Stonefoot(dwa) F2@( 3, 6) HP 50/72 MP 0/0 Hu  0 $ 252 room=.
+-> x
+T1423 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 50/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1424 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 48/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1425 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 46/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1426 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 44/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1427 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 42/72 MP 0/0 Hu  0 $ 252 room=.
+-> w
+T1428 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 40/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1429 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 38/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1430 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 36/72 MP 0/0 Hu  0 $ 252 room=.
 -> l
-T1401 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 46/72 MP 0/0 Hu  0 $ 228 room=.
--> w
-T1402 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 44/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1403 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 42/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1404 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 40/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1405 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 38/72 MP 0/0 Hu  0 $ 228 room=.
+T1431 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 36/72 MP 0/0 Hu  0 $ 252 room=.
 -> e
-T1406 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 36/72 MP 0/0 Hu  0 $ 228 room=.
+T1432 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 34/72 MP 0/0 Hu  0 $ 252 room=.
 -> e
-T1407 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 9) HP 34/72 MP 0/0 Hu  0 $ 228 room=.
+T1433 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 32/72 MP 0/0 Hu  0 $ 252 room=.
 -> n
-T1408 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 8) HP 32/72 MP 0/0 Hu  0 $ 228 room=.
--> w
-T1409 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 30/72 MP 0/0 Hu  0 $ 228 room=.
--> w
-T1410 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 28/72 MP 0/0 Hu  0 $ 228 room=.
+T1434 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 30/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1435 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 28/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1436 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 7) HP 26/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1437 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 8) HP 24/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1438 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 8) HP 22/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1439 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 20/72 MP 0/0 Hu  0 $ 252 room=.
+-> s
+T1440 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 18/72 MP 0/0 Hu  0 $ 252 room=.
 -> l
-T1411 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 28/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1412 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 26/72 MP 0/0 Hu  0 $ 228 room=.
--> n
-T1413 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 6) HP 24/72 MP 0/0 Hu  0 $ 228 room=.
--> e
-T1414 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 6) HP 22/72 MP 0/0 Hu  0 $ 228 room=.
+T1441 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,10) HP 18/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1415 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 20/72 MP 0/0 Hu  0 $ 228 room=.
+T1442 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,11) HP 16/72 MP 0/0 Hu  0 $ 252 room=.
 -> s
-T1416 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 8) HP 18/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1417 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 9) HP 16/72 MP 0/0 Hu  0 $ 228 room=.
+T1443 mode=game_loop           Thror Stonefoot(dwa) F2@( 7,12) HP 14/72 MP 0/0 Hu  0 $ 252 room=.
 -> w
-T1418 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 9) HP 14/72 MP 0/0 Hu  0 $ 228 room=.
+T1444 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,12) HP 12/72 MP 0/0 Hu  0 $ 252 room=.
 -> n
-T1419 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 8) HP 12/72 MP 0/0 Hu  0 $ 228 room=.
+T1445 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,11) HP 10/72 MP 0/0 Hu  0 $ 252 room=.
 -> n
-T1420 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 10/72 MP 0/0 Hu  0 $ 228 room=.
--> l
-T1421 mode=game_loop           Thror Stonefoot(dwa) F2@( 3, 7) HP 10/72 MP 0/0 Hu  0 $ 228 room=.
--> e
-T1422 mode=game_loop           Thror Stonefoot(dwa) F2@( 4, 7) HP 8/72 MP 0/0 Hu  0 $ 228 room=.
--> e
-T1423 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 7) HP 6/72 MP 0/0 Hu  0 $ 228 room=.
+T1446 mode=game_loop           Thror Stonefoot(dwa) F2@( 6,10) HP 8/72 MP 0/0 Hu  0 $ 252 room=.
 -> n
-T1424 mode=game_loop           Thror Stonefoot(dwa) F2@( 5, 6) HP 4/72 MP 0/0 Hu  0 $ 228 room=.
+T1447 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 9) HP 6/72 MP 0/0 Hu  0 $ 252 room=.
 -> e
-T1425 mode=game_loop           Thror Stonefoot(dwa) F2@( 6, 6) HP 2/72 MP 0/0 Hu  0 $ 228 room=.
--> s
-T1426 mode=death_screen        Thror Stonefoot(dwa) F2@( 6, 7) HP 0/72 MP 0/0 Hu  0 $ 228 room=.
+T1448 mode=game_loop           Thror Stonefoot(dwa) F2@( 7, 9) HP 4/72 MP 0/0 Hu  0 $ 252 room=.
+-> e
+T1449 mode=game_loop           Thror Stonefoot(dwa) F2@( 8, 9) HP 2/72 MP 0/0 Hu  0 $ 252 room=.
+-> n
+T1450 mode=death_screen        Thror Stonefoot(dwa) F2@( 8, 8) HP 0/72 MP 0/0 Hu  0 $ 252 room=.
 
-=== run finished: turns=1426 floor=2 hp=0/72 gold=228 alive=False mode=death_screen ===
+=== run finished: turns=1450 floor=2 hp=0/72 gold=252 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00003_dwarf.html

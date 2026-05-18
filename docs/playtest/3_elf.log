@@ -608,7 +608,7 @@ T 295 mode=inventory           Maeglin Star-eyed(elf) F3@(12,16) HP 27/38 MP 0/0
 T 296 mode=inventory           Maeglin Star-eyed(elf) F3@(12,16) HP 38/38 MP 0/0 Hu 80 $ 170 room=V
 -> u4
 T 297 mode=upgrade_scroll_mode Maeglin Star-eyed(elf) F3@(12,16) HP 38/38 MP 0/0 Hu 80 $ 170 room=V
--> 1
+-> 2
 T 298 mode=inventory           Maeglin Star-eyed(elf) F3@(12,16) HP 38/38 MP 0/0 Hu 80 $ 170 room=V
 -> x
 T 299 mode=game_loop           Maeglin Star-eyed(elf) F3@(12,16) HP 38/38 MP 0/0 Hu 80 $ 170 room=V
@@ -645,7 +645,7 @@ T 314 mode=game_loop           Maeglin Star-eyed(elf) F3@(14,15) HP 38/38 MP 0/0
 -> n
 T 315 mode=combat_mode         Maeglin Star-eyed(elf) F3@(14,14) HP 38/38 MP 0/0 Hu 74 $ 320 room=M vs Bugbear(L2 HP35/35)
 -> a
-T 316 mode=combat_mode         Maeglin Star-eyed(elf) F3@(14,14) HP 36/38 MP 0/0 Hu 74 $ 320 room=M vs Bugbear(L2 HP14/35)
+T 316 mode=combat_mode         Maeglin Star-eyed(elf) F3@(14,14) HP 36/38 MP 0/0 Hu 74 $ 320 room=M vs Bugbear(L2 HP15/35)
 -> f
 T 317 mode=flee_direction_mode Maeglin Star-eyed(elf) F3@(14,14) HP 36/38 MP 0/0 Hu 74 $ 320 room=M
 -> n
@@ -805,7 +805,7 @@ T 394 mode=game_loop           Maeglin Star-eyed(elf) F3@(16,14) HP 38/38 MP 0/0
 -> w
 T 395 mode=game_loop           Maeglin Star-eyed(elf) F3@(15,14) HP 38/38 MP 0/0 Hu 71 $ 320 room=.
 -> w
-T 396 mode=combat_mode         Maeglin Star-eyed(elf) F3@(14,14) HP 38/38 MP 0/0 Hu 70 $ 320 room=M vs Bugbear(L2 HP14/35)
+T 396 mode=combat_mode         Maeglin Star-eyed(elf) F3@(14,14) HP 38/38 MP 0/0 Hu 70 $ 320 room=M vs Bugbear(L2 HP15/35)
 -> a
 T 397 mode=combat_victory      Maeglin Star-eyed(elf) F3@(14,14) HP 37/38 MP 0/0 Hu 70 $ 341 room=.
 -> back
@@ -1183,7 +1183,7 @@ T 583 mode=game_loop           Maeglin Star-eyed(elf) F4@(15, 4) HP 48/48 MP 0/0
 -> e
 T 584 mode=combat_mode         Maeglin Star-eyed(elf) F4@(16, 4) HP 48/48 MP 0/0 Hu 61 $ 156 room=M vs Gnoll(L3 HP33/33)
 -> a
-T 585 mode=combat_mode         Maeglin Star-eyed(elf) F4@(16, 4) HP 48/48 MP 0/0 Hu 61 $ 156 room=M vs Gnoll(L3 HP11/33)
+T 585 mode=combat_mode         Maeglin Star-eyed(elf) F4@(16, 4) HP 48/48 MP 0/0 Hu 61 $ 156 room=M vs Gnoll(L3 HP12/33)
 -> a
 T 586 mode=combat_victory      Maeglin Star-eyed(elf) F4@(16, 4) HP 47/48 MP 0/0 Hu 61 $ 192 room=.
 -> back
@@ -1263,7 +1263,7 @@ T 623 mode=game_loop           Maeglin Star-eyed(elf) F4@( 8, 8) HP 48/48 MP 0/0
 -> w
 T 624 mode=combat_mode         Maeglin Star-eyed(elf) F4@( 7, 8) HP 48/48 MP 0/0 Hu 87 $ 196 room=M vs Cockatrice(L3 HP26/26)
 -> a
-T 625 mode=combat_mode         Maeglin Star-eyed(elf) F4@( 7, 8) HP 48/48 MP 0/0 Hu 87 $ 196 room=M vs Cockatrice(L3 HP4/26)
+T 625 mode=combat_mode         Maeglin Star-eyed(elf) F4@( 7, 8) HP 48/48 MP 0/0 Hu 87 $ 196 room=M vs Cockatrice(L3 HP5/26)
 -> a
 T 626 mode=combat_victory      Maeglin Star-eyed(elf) F4@( 7, 8) HP 48/58 MP 0/0 Hu 87 $ 212 room=.
 -> back
@@ -1379,7 +1379,7 @@ T 681 mode=game_loop           Maeglin Star-eyed(elf) F4@(11,10) HP 58/58 MP 0/0
 -> s
 T 682 mode=combat_mode         Maeglin Star-eyed(elf) F4@(11,11) HP 58/58 MP 0/0 Hu 64 $ 212 room=M vs Zombie(L3 HP37/37)
 -> a
-T 683 mode=combat_mode         Maeglin Star-eyed(elf) F4@(11,11) HP 57/58 MP 0/0 Hu 64 $ 212 room=M vs Zombie(L3 HP12/37)
+T 683 mode=combat_mode         Maeglin Star-eyed(elf) F4@(11,11) HP 57/58 MP 0/0 Hu 64 $ 212 room=M vs Zombie(L3 HP13/37)
 -> a
 T 684 mode=combat_victory      Maeglin Star-eyed(elf) F4@(11,11) HP 57/58 MP 0/0 Hu 64 $ 248 room=.
 -> back
@@ -1539,11 +1539,11 @@ T 761 mode=game_loop           Maeglin Star-eyed(elf) F5@( 3, 2) HP 58/58 MP 0/0
 -> n
 T 762 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 58/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP34/34)
 -> a
-T 763 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 57/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP12/34)
+T 763 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 57/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP13/34)
 -> a
-T 764 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 56/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP12/34)
+T 764 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 56/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP13/34)
 -> a
-T 765 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 55/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP12/34)
+T 765 mode=combat_mode         Maeglin Star-eyed(elf) F5@( 3, 1) HP 55/58 MP 0/0 Hu 93 $ 248 room=M vs Gnoll(L4 HP13/34)
 -> a
 T 766 mode=combat_victory      Maeglin Star-eyed(elf) F5@( 3, 1) HP 55/58 MP 0/0 Hu 93 $ 268 room=.
 -> back
