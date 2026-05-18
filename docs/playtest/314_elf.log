@@ -15,178 +15,178 @@ T   3 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 1, 1) HP 28/28
 T   4 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
   Inventory closed.
 -> e
-T   5 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP30/30)
+T   5 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=M vs Goblin(L0 HP30/30)
   Hehehe! Galadhrim the Pathfinder The Novice? Goblin gonna bash you good!
   The Goblin strikes first!
 -> a
-T   6 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP30/30)
+T   6 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu100 $ 290 room=M vs Goblin(L0 HP30/30)
   Ouch! Goblin hit Galadhrim the Pathfinder!
   You took 1 damage!
   You missed the evil Goblin!
 -> a
-T   7 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 26/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP10/30)
+T   7 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 26/28 MP 0/0 Hu100 $ 290 room=M vs Goblin(L0 HP10/30)
   Ouch! Goblin hit Galadhrim the Pathfinder!
   You took 1 damage!
   You hit the evil Goblin!
   Goblin took 20 damage.
 -> a
-T   8 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP10/30)
+T   8 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu100 $ 290 room=M vs Goblin(L0 HP10/30)
 -> a
-T   9 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP10/30)
+T   9 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu100 $ 290 room=M vs Goblin(L0 HP10/30)
 -> a
-T  10 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 24/28 MP 0/0 Hu 99 $ 350 room=.
+T  10 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 24/28 MP 0/0 Hu100 $ 350 room=.
 -> back
-T  11 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 24/28 MP 0/0 Hu 99 $ 350 room=.
+T  11 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 1) HP 24/28 MP 0/0 Hu100 $ 350 room=.
 -> e
-T  12 mode=tomb_mode           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 98 $ 350 room=T
+T  12 mode=tomb_mode           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 99 $ 350 room=T
 -> p
-T  13 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 98 $ 350 room=T
+T  13 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 99 $ 350 room=T
 -> l
-T  14 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 98 $ 350 room=T
+T  14 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 1) HP 24/28 MP 0/0 Hu 99 $ 350 room=T
 -> s
-T  15 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 97 $ 350 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+T  15 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 98 $ 350 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
 -> f
-T  16 mode=flee_direction_mode Galadhrim the Pathfinder(elf) F1@( 3, 2) HP 21/28 MP 0/0 Hu 97 $ 350 room=M
+T  16 mode=flee_direction_mode Galadhrim the Pathfinder(elf) F1@( 3, 2) HP 21/28 MP 0/0 Hu 98 $ 350 room=M
 -> s
-T  17 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 21/28 MP 0/0 Hu 97 $ 350 room=.
+T  17 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 21/28 MP 0/0 Hu 98 $ 350 room=.
 -> i
-T  18 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 21/28 MP 0/0 Hu 97 $ 350 room=.
+T  18 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 21/28 MP 0/0 Hu 98 $ 350 room=.
 -> u3
-T  19 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=.
+T  19 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> x
-T  20 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=.
+T  20 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> l
-T  21 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=.
+T  21 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> w
-T  22 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 96 $ 350 room=.
+T  22 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> l
-T  23 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 96 $ 350 room=.
+T  23 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> w
-T  24 mode=chest_mode          Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 95 $ 350 room=C
+T  24 mode=chest_mode          Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=C
 -> o
-T  25 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 95 $ 350 room=.
+T  25 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=.
 -> l
-T  26 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 95 $ 350 room=.
+T  26 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 350 room=.
 -> s
-T  27 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP25/25)
+T  27 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  28 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP25/25)
+T  28 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  29 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP25/25)
+T  29 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  30 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP25/25)
+T  30 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  31 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP25/25)
+T  31 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  32 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP6/25)
+T  32 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP6/25)
 -> a
-T  33 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP6/25)
+T  33 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP6/25)
 -> a
-T  34 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 94 $ 350 room=M vs Skeleton(L0 HP6/25)
+T  34 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 96 $ 350 room=M vs Skeleton(L0 HP6/25)
 -> a
-T  35 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 94 $ 352 room=.
+T  35 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 96 $ 352 room=.
 -> back
-T  36 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 94 $ 352 room=.
+T  36 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 1, 4) HP 24/28 MP 0/0 Hu 96 $ 352 room=.
 -> e
-T  37 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 4) HP 24/28 MP 0/0 Hu 93 $ 352 room=.
+T  37 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 4) HP 24/28 MP 0/0 Hu 96 $ 352 room=.
 -> n
-T  38 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 25/28 MP 0/0 Hu 92 $ 352 room=.
+T  38 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 2, 3) HP 25/28 MP 0/0 Hu 95 $ 352 room=.
 -> e
-T  39 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 25/28 MP 0/0 Hu 91 $ 352 room=.
+T  39 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 3, 3) HP 25/28 MP 0/0 Hu 94 $ 352 room=.
 -> e
-T  40 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 90 $ 352 room=.
+T  40 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 93 $ 352 room=.
 -> l
-T  41 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 90 $ 352 room=.
+T  41 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 93 $ 352 room=.
 -> e
-T  42 mode=altar_mode          Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 89 $ 352 room=A
+T  42 mode=altar_mode          Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 93 $ 352 room=A
 -> pray
-T  43 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 89 $ 352 room=.
+T  43 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 93 $ 352 room=.
 -> l
-T  44 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 89 $ 352 room=.
+T  44 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 5, 3) HP 26/28 MP 0/0 Hu 93 $ 352 room=.
 -> e
-T  45 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 88 $ 352 room=M vs Rust Monster(L0 HP18/18)
+T  45 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 92 $ 352 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  46 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 88 $ 352 room=M vs Rust Monster(L0 HP18/18)
+T  46 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 92 $ 352 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  47 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 88 $ 352 room=M vs Rust Monster(L0 HP18/18)
+T  47 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 26/28 MP 0/0 Hu 92 $ 352 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  48 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 25/28 MP 0/0 Hu 88 $ 352 room=M vs Rust Monster(L0 HP18/18)
+T  48 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 25/28 MP 0/0 Hu 92 $ 352 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  49 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 24/28 MP 0/0 Hu 88 $ 352 room=M vs Rust Monster(L0 HP18/18)
+T  49 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 24/28 MP 0/0 Hu 92 $ 352 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  50 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 88 $ 354 room=.
+T  50 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 92 $ 354 room=.
 -> back
-T  51 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 88 $ 354 room=.
+T  51 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 92 $ 354 room=.
 -> i
-T  52 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 88 $ 354 room=.
+T  52 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 23/28 MP 0/0 Hu 92 $ 354 room=.
 -> u3
-T  53 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  53 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> x
-T  54 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  54 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> i
-T  55 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  55 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> u7
-T  56 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  56 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> x
-T  57 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  57 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> l
-T  58 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 88 $ 354 room=.
+T  58 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 354 room=.
 -> s
-T  59 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 87 $ 354 room=.
+T  59 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 91 $ 354 room=.
 -> s
-T  60 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 86 $ 354 room=.
+T  60 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 91 $ 354 room=.
 -> l
-T  61 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 86 $ 354 room=.
+T  61 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 91 $ 354 room=.
 -> s
-T  62 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 354 room=M vs Lichen(L0 HP10/10)
+T  62 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 90 $ 354 room=M vs Lichen(L0 HP10/10)
 -> a
-T  63 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 457 room=.
+T  63 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 90 $ 457 room=.
 -> back
-T  64 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 457 room=.
+T  64 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 90 $ 457 room=.
 -> l
-T  65 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 457 room=.
+T  65 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 90 $ 457 room=.
 -> e
-T  66 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 457 room=M vs Stirge(L0 HP6/6)
+T  66 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 457 room=M vs Stirge(L0 HP6/6)
 -> a
-T  67 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  67 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> back
-T  68 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  68 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> i
-T  69 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  69 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> u8
-T  70 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  70 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> x
-T  71 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  71 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> l
-T  72 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 84 $ 464 room=.
+T  72 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=.
 -> e
-T  73 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 83 $ 464 room=M vs Spore Puff(L0 HP18/18)
+T  73 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 89 $ 464 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  74 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 464 room=M vs Spore Puff(L0 HP18/18)
+T  74 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 464 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  75 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 464 room=M vs Spore Puff(L0 HP18/18)
+T  75 mode=combat_mode         Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 464 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  76 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 468 room=.
+T  76 mode=combat_victory      Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 468 room=.
 -> back
-T  77 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 468 room=.
+T  77 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 468 room=.
 -> i
-T  78 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 468 room=.
+T  78 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 468 room=.
 -> e1
-T  79 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 468 room=.
+T  79 mode=inventory           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 468 room=.
 -> x
-T  80 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 83 $ 468 room=.
+T  80 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 89 $ 468 room=.
 -> e
-T  81 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 9, 6) HP 27/28 MP 0/0 Hu 82 $ 468 room=.
+T  81 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 9, 6) HP 27/28 MP 0/0 Hu 88 $ 468 room=.
 -> l
-T  82 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 9, 6) HP 27/28 MP 0/0 Hu 82 $ 468 room=.
+T  82 mode=game_loop           Galadhrim the Pathfinder(elf) F1@( 9, 6) HP 27/28 MP 0/0 Hu 88 $ 468 room=.
 -> n
-T  83 mode=library_mode        Galadhrim the Pathfinder(elf) F1@( 9, 5) HP 27/28 MP 0/0 Hu 81 $ 468 room=L
+T  83 mode=library_mode        Galadhrim the Pathfinder(elf) F1@( 9, 5) HP 28/28 MP 0/0 Hu 87 $ 468 room=L
 -> r
-T  84 mode=library_read_decision_mode Galadhrim the Pathfinder(elf) F1@( 9, 5) HP 27/28 MP 0/0 Hu 81 $ 468 room=L
+T  84 mode=library_read_decision_mode Galadhrim the Pathfinder(elf) F1@( 9, 5) HP 28/28 MP 0/0 Hu 87 $ 468 room=L
 -> y
-T  85 mode=death_screen        Galadhrim the Pathfinder(elf) F1@( 9, 5) HP -5/28 MP 0/0 Hu 81 $ 468 room=L
+T  85 mode=death_screen        Galadhrim the Pathfinder(elf) F1@( 9, 5) HP -4/28 MP 0/0 Hu 87 $ 468 room=L
 
-=== run finished: turns=85 floor=1 hp=-5/28 gold=468 alive=False mode=death_screen ===
+=== run finished: turns=85 floor=1 hp=-4/28 gold=468 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00314_elf.html

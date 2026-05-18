@@ -5,9 +5,9 @@ T   1 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 1) HP 20/28 MP 0/
   The lantern reveals 7 nearby rooms!
   Lantern fuel remaining: 79
 -> s
-T   2 mode=chest_mode          Maeglin Moonsinger(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu 99 $ 290 room=C
+T   2 mode=chest_mode          Maeglin Moonsinger(elf) F1@( 1, 2) HP 20/28 MP 0/0 Hu100 $ 290 room=C
 -> s
-T   3 mode=altar_mode          Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 98 $ 290 room=A
+T   3 mode=altar_mode          Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 99 $ 290 room=A
   [Well-fed] +1 HP
   You enter a sacred chamber...
   The altar shifts and changes - stone to gold to smoke. Reality seems... negotiable here.
@@ -17,238 +17,238 @@ T   3 mode=altar_mode          Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/
   Pray to claim a blessing, or sacrifice to deepen your piety.
   (Visit an Oracle to gauge your standing with the gods.)
 -> pray
-T   4 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 98 $ 290 room=.
+T   4 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 99 $ 290 room=.
   ? You pray to Loki the Trickster.
   The Trickster pokes your dexterity! +1.
   
   The altar crumbles to dust, its divine power spent.
 -> i
-T   5 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 98 $ 290 room=.
+T   5 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 3) HP 21/28 MP 0/0 Hu 99 $ 290 room=.
 -> u3
-T   6 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 290 room=.
+T   6 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
   Removed Minor Healing Potion from inventory.
 -> x
-T   7 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 290 room=.
+T   7 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
 -> l
-T   8 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 290 room=.
+T   8 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
 -> s
-T   9 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 290 room=M vs Kobold(L0 HP8/8)
+T   9 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Kobold(L0 HP8/8)
 -> a
-T  10 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  10 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> back
-T  11 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  11 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> i
-T  12 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  12 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> u9
-T  13 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  13 mode=inventory           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> x
-T  14 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  14 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> l
-T  15 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 97 $ 447 room=.
+T  15 mode=game_loop           Maeglin Moonsinger(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=.
 -> e
-T  16 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 96 $ 447 room=M vs Bat(L0 HP12/12)
+T  16 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=M vs Bat(L0 HP12/12)
 -> a
-T  17 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 96 $ 447 room=M vs Bat(L0 HP12/12)
+T  17 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 98 $ 447 room=M vs Bat(L0 HP12/12)
 -> a
-T  18 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 447 room=M vs Bat(L0 HP12/12)
+T  18 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 447 room=M vs Bat(L0 HP12/12)
 -> a
-T  19 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 453 room=.
+T  19 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 453 room=.
 -> back
-T  20 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 453 room=.
+T  20 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 453 room=.
 -> i
-T  21 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 453 room=.
+T  21 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 453 room=.
 -> u10
-T  22 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 453 room=.
+T  22 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 453 room=.
 -> x
-T  23 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 453 room=.
+T  23 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 98 $ 453 room=.
 -> n
-T  24 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 453 room=M vs Sewer Rat(L0 HP10/10)
+T  24 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 453 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  25 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  25 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> back
-T  26 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  26 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> i
-T  27 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  27 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> u11
-T  28 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  28 mode=inventory           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> x
-T  29 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  29 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> l
-T  30 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 95 $ 460 room=.
+T  30 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 460 room=.
 -> n
-T  31 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 94 $ 460 room=.
+T  31 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 460 room=.
 -> l
-T  32 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 94 $ 460 room=.
+T  32 mode=game_loop           Maeglin Moonsinger(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 460 room=.
 -> e
-T  33 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 93 $ 460 room=.
+T  33 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 96 $ 460 room=.
 -> e
-T  34 mode=chest_mode          Maeglin Moonsinger(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 92 $ 460 room=C
+T  34 mode=chest_mode          Maeglin Moonsinger(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 460 room=C
 -> w
-T  35 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 91 $ 460 room=.
+T  35 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 94 $ 460 room=.
 -> s
-T  36 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 90 $ 460 room=.
+T  36 mode=game_loop           Maeglin Moonsinger(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 460 room=.
 -> e
-T  37 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 460 room=M vs Rust Monster(L0 HP18/18)
+T  37 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 460 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  38 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 469 room=.
+T  38 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 469 room=.
 -> back
-T  39 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 469 room=.
+T  39 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 469 room=.
 -> i
-T  40 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 469 room=.
+T  40 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 469 room=.
 -> u12
-T  41 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 469 room=.
+T  41 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 469 room=.
 -> x
-T  42 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 89 $ 469 room=.
+T  42 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 93 $ 469 room=.
 -> s
-T  43 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 469 room=M vs Bat(L0 HP12/12)
+T  43 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 469 room=M vs Bat(L0 HP12/12)
 -> a
-T  44 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 88 $ 469 room=M vs Bat(L0 HP12/12)
+T  44 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 469 room=M vs Bat(L0 HP12/12)
 -> a
-T  45 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 88 $ 479 room=.
+T  45 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 92 $ 479 room=.
 -> back
-T  46 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 88 $ 479 room=.
+T  46 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 92 $ 479 room=.
 -> i
-T  47 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 88 $ 479 room=.
+T  47 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 92 $ 479 room=.
 -> u4
-T  48 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 479 room=.
+T  48 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
 -> x
-T  49 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 479 room=.
+T  49 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
 -> i
-T  50 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 479 room=.
--> e2
-T  51 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 479 room=.
--> x
-T  52 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 88 $ 479 room=.
--> e
-T  53 mode=game_loop           Maeglin Moonsinger(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 87 $ 479 room=.
--> e
-T  54 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 86 $ 479 room=.
--> l
-T  55 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 86 $ 479 room=.
--> s
-T  56 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 85 $ 479 room=M vs Kobold(L0 HP20/20)
--> a
-T  57 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 85 $ 486 room=.
--> back
-T  58 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 85 $ 486 room=.
--> l
-T  59 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 85 $ 486 room=.
--> e
-T  60 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 84 $ 486 room=.
--> e
-T  61 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  62 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  63 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 27/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> f
-T  64 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 24/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> f
-T  65 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 20/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> f
-T  66 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 16/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> f
-T  67 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 83 $ 486 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  68 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 83 $ 494 room=.
--> back
-T  69 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 83 $ 494 room=.
--> i
-T  70 mode=inventory           Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 83 $ 494 room=.
--> u4
-T  71 mode=inventory           Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 83 $ 494 room=.
--> x
-T  72 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 83 $ 494 room=.
--> n
-T  73 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 4) HP 28/28 MP 0/0 Hu 82 $ 494 room=M vs Spore Puff(L0 HP18/18)
--> a
-T  74 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 82 $ 501 room=.
--> back
-T  75 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 82 $ 501 room=.
--> w
-T  76 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 81 $ 501 room=.
--> w
-T  77 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 27/28 MP 0/0 Hu 80 $ 501 room=.
--> n
-T  78 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 79 $ 501 room=.
--> n
-T  79 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 78 $ 501 room=.
--> e
-T  80 mode=library_mode        Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 77 $ 501 room=L
--> r
-T  81 mode=library_read_decision_mode Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 77 $ 501 room=L
--> y
-T  82 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 77 $ 551 room=.
--> l
-T  83 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 77 $ 551 room=.
--> n
-T  84 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 1) HP 28/28 MP 0/0 Hu 76 $ 551 room=.
--> w
-T  85 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 75 $ 551 room=M vs Stirge(L0 HP6/6)
--> a
-T  86 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
--> back
-T  87 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
--> i
-T  88 mode=inventory           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
+T  50 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
 -> u13
-T  89 mode=inventory           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
--> eat3
-T  90 mode=inventory           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 88 $ 555 room=.
+T  51 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
+-> e2
+T  52 mode=inventory           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
 -> x
-T  91 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 88 $ 555 room=.
+T  53 mode=game_loop           Maeglin Moonsinger(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 479 room=.
+-> e
+T  54 mode=game_loop           Maeglin Moonsinger(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 91 $ 479 room=.
+-> e
+T  55 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 91 $ 479 room=.
 -> l
-T  92 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 88 $ 555 room=.
+T  56 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 91 $ 479 room=.
+-> s
+T  57 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 90 $ 479 room=M vs Kobold(L0 HP20/20)
+-> a
+T  58 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 90 $ 486 room=.
+-> back
+T  59 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 90 $ 486 room=.
+-> l
+T  60 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 90 $ 486 room=.
+-> e
+T  61 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 486 room=.
+-> e
+T  62 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  63 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  64 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 27/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  65 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 24/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  66 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 20/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  67 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 16/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  68 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 89 $ 486 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  69 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 89 $ 494 room=.
+-> back
+T  70 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 89 $ 494 room=.
+-> i
+T  71 mode=inventory           Maeglin Moonsinger(elf) F1@( 8, 5) HP 15/28 MP 0/0 Hu 89 $ 494 room=.
+-> u4
+T  72 mode=inventory           Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 89 $ 494 room=.
+-> x
+T  73 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 89 $ 494 room=.
+-> n
+T  74 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 8, 4) HP 28/28 MP 0/0 Hu 88 $ 494 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  75 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 88 $ 501 room=.
+-> back
+T  76 mode=game_loop           Maeglin Moonsinger(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 88 $ 501 room=.
 -> w
-T  93 mode=dungeon_mode        Maeglin Moonsinger(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 87 $ 555 room=N
+T  77 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 87 $ 501 room=.
+-> w
+T  78 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 86 $ 501 room=.
+-> n
+T  79 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 86 $ 501 room=.
+-> n
+T  80 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 85 $ 501 room=.
+-> e
+T  81 mode=library_mode        Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 84 $ 501 room=L
+-> r
+T  82 mode=library_read_decision_mode Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 84 $ 501 room=L
+-> y
+T  83 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 84 $ 551 room=.
+-> l
+T  84 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 84 $ 551 room=.
+-> n
+T  85 mode=game_loop           Maeglin Moonsinger(elf) F1@( 7, 1) HP 28/28 MP 0/0 Hu 84 $ 551 room=.
+-> w
+T  86 mode=combat_mode         Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 551 room=M vs Stirge(L0 HP6/6)
+-> a
+T  87 mode=combat_victory      Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> back
+T  88 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> i
+T  89 mode=inventory           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> u14
+T  90 mode=inventory           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> x
+T  91 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> l
+T  92 mode=game_loop           Maeglin Moonsinger(elf) F1@( 6, 1) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+-> w
+T  93 mode=dungeon_mode        Maeglin Moonsinger(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=N
 -> u
-T  94 mode=game_loop           Maeglin Moonsinger(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 87 $ 555 room=N
+T  94 mode=game_loop           Maeglin Moonsinger(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=N
 -> w
-T  95 mode=stairs_down_mode    Maeglin Moonsinger(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 86 $ 555 room=D
+T  95 mode=stairs_down_mode    Maeglin Moonsinger(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=D
 -> d
-T  96 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 86 $ 555 room=U
+T  96 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=U
 -> n
-T  97 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 86 $ 555 room=U
+T  97 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=U
 -> e
-T  98 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 85 $ 555 room=.
+T  98 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 81 $ 555 room=.
 -> l
-T  99 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 85 $ 555 room=.
+T  99 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 81 $ 555 room=.
 -> s
-T 100 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 84 $ 555 room=.
+T 100 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 80 $ 555 room=.
 -> l
-T 101 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 84 $ 555 room=.
+T 101 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 80 $ 555 room=.
 -> w
-T 102 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 83 $ 555 room=C
+T 102 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 79 $ 555 room=C
 -> o
-T 103 mode=game_loop           Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 83 $ 555 room=.
+T 103 mode=game_loop           Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 79 $ 555 room=.
 -> n
-T 104 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 82 $ 555 room=U
+T 104 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 79 $ 555 room=U
 -> s
-T 105 mode=game_loop           Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 81 $ 555 room=.
+T 105 mode=game_loop           Maeglin Moonsinger(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 555 room=.
 -> n
-T 106 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 80 $ 555 room=U
+T 106 mode=stairs_up_mode      Maeglin Moonsinger(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 555 room=U
 -> e
-T 107 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 79 $ 555 room=.
+T 107 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 77 $ 555 room=.
 -> s
-T 108 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 78 $ 555 room=.
+T 108 mode=game_loop           Maeglin Moonsinger(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 76 $ 555 room=.
 -> e
-T 109 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 77 $ 555 room=.
+T 109 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
 -> l
-T 110 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 77 $ 555 room=.
+T 110 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
 -> s
-T 111 mode=pool_mode           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 76 $ 555 room=P
+T 111 mode=pool_mode           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 555 room=P
 -> dr
-T 112 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 76 $ 555 room=.
+T 112 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
 -> l
-T 113 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 76 $ 555 room=.
+T 113 mode=game_loop           Maeglin Moonsinger(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
 -> e
-T 114 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 75 $ 555 room=.
+T 114 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 74 $ 555 room=.
 -> n
-T 115 mode=pool_mode           Maeglin Moonsinger(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 74 $ 555 room=P
+T 115 mode=pool_mode           Maeglin Moonsinger(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 73 $ 555 room=P
 -> dr
-T 116 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 74 $ 555 room=.
+T 116 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 73 $ 555 room=.
 -> n
-T 117 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 73 $ 555 room=.
+T 117 mode=game_loop           Maeglin Moonsinger(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 72 $ 555 room=.
 -> e
 T 118 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 72 $ 555 room=.
 -> e
@@ -256,2215 +256,619 @@ T 119 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 1) HP 28/28 MP 0/
 -> e
 T 120 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 1) HP 28/28 MP 0/0 Hu 70 $ 555 room=.
 -> e
-T 121 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 1) HP 28/28 MP 0/0 Hu 69 $ 555 room=.
+T 121 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 1) HP 28/28 MP 0/0 Hu 70 $ 555 room=.
 -> e
-T 122 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 1) HP 28/28 MP 0/0 Hu 68 $ 555 room=.
+T 122 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 1) HP 28/28 MP 0/0 Hu 69 $ 555 room=.
 -> l
-T 123 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 1) HP 28/28 MP 0/0 Hu 68 $ 555 room=.
+T 123 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 1) HP 28/28 MP 0/0 Hu 69 $ 555 room=.
 -> e
-T 124 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 1) HP 28/28 MP 0/0 Hu 67 $ 555 room=.
+T 124 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 1) HP 28/28 MP 0/0 Hu 68 $ 555 room=.
 -> s
-T 125 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 28/28 MP 0/0 Hu 66 $ 555 room=.
+T 125 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 28/28 MP 0/0 Hu 68 $ 555 room=.
 -> l
-T 126 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 28/28 MP 0/0 Hu 66 $ 555 room=.
+T 126 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 28/28 MP 0/0 Hu 68 $ 555 room=.
 -> s
-T 127 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 65 $ 555 room=.
+T 127 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 67 $ 555 room=.
 -> l
-T 128 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 65 $ 555 room=.
+T 128 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 67 $ 555 room=.
 -> s
-T 129 mode=garden_mode         Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 64 $ 555 room=G
+T 129 mode=garden_mode         Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 66 $ 555 room=G
 -> h
-T 130 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 64 $ 555 room=.
+T 130 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 66 $ 555 room=.
 -> l
-T 131 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 64 $ 555 room=.
+T 131 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 66 $ 555 room=.
 -> w
-T 132 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 4) HP 28/28 MP 0/0 Hu 63 $ 555 room=.
+T 132 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 4) HP 28/28 MP 0/0 Hu 65 $ 555 room=.
 -> w
-T 133 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 8, 4) HP 28/28 MP 0/0 Hu 62 $ 555 room=C
+T 133 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 8, 4) HP 28/28 MP 0/0 Hu 65 $ 555 room=C
 -> w
-T 134 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 61 $ 555 room=.
+T 134 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 64 $ 555 room=.
 -> l
-T 135 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 61 $ 555 room=.
+T 135 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 64 $ 555 room=.
 -> s
-T 136 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 555 room=V
+T 136 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 655 room=V
 -> b15
-T 137 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 525 room=V
+T 137 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 625 room=V
 -> b15
-T 138 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 510 room=V
+T 138 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 610 room=V
 -> b15
-T 139 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 500 room=V
+T 139 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 600 room=V
 -> b4
-T 140 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 450 room=V
+T 140 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 550 room=V
 -> b4
-T 141 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 400 room=V
+T 141 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 500 room=V
 -> b4
-T 142 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 370 room=V
+T 142 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 470 room=V
 -> b4
-T 143 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 340 room=V
+T 143 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 440 room=V
 -> b4
-T 144 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 310 room=V
+T 144 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 410 room=V
 -> b4
-T 145 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 280 room=V
+T 145 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 380 room=V
+-> b7
+T 146 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 230 room=V
 -> b3
-T 146 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 220 room=V
--> b5
-T 147 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 180 room=V
+T 147 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 170 room=V
 -> id9
-T 148 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 130 room=V
--> id10
-T 149 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 80 room=V
+T 148 mode=vendor_shop         Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 120 room=V
 -> x
-T 150 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 80 room=V
+T 149 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 120 room=V
 -> l
-T 151 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 60 $ 80 room=V
+T 150 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 28/28 MP 0/0 Hu 63 $ 120 room=V
 -> e
-T 152 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 28/28 MP 0/0 Hu 59 $ 80 room=.
+T 151 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 28/28 MP 0/0 Hu 63 $ 120 room=.
 -> l
-T 153 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 28/28 MP 0/0 Hu 59 $ 80 room=.
+T 152 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 28/28 MP 0/0 Hu 63 $ 120 room=.
 -> s
-T 154 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 28/28 MP 0/0 Hu 58 $ 80 room=.
+T 153 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 28/28 MP 0/0 Hu 62 $ 120 room=.
 -> e
-T 155 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 6) HP 28/28 MP 0/0 Hu 57 $ 80 room=.
+T 154 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 6) HP 28/28 MP 0/0 Hu 61 $ 120 room=.
 -> e
-T 156 mode=garden_mode         Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 56 $ 80 room=G
+T 155 mode=garden_mode         Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 61 $ 120 room=G
 -> h
-T 157 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 56 $ 80 room=.
+T 156 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 61 $ 120 room=.
 -> l
-T 158 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 56 $ 80 room=.
+T 157 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 61 $ 120 room=.
 -> n
-T 159 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 28/28 MP 0/0 Hu 55 $ 80 room=M vs Cockatrice(L1 HP25/25)
+T 158 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 28/28 MP 0/0 Hu 60 $ 120 room=M vs Cockatrice(L1 HP25/25)
 -> a
-T 160 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 27/28 MP 0/0 Hu 55 $ 80 room=M vs Cockatrice(L1 HP6/25)
+T 159 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 27/28 MP 0/0 Hu 60 $ 120 room=M vs Cockatrice(L1 HP6/25)
 -> a
-T 161 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 26/28 MP 0/0 Hu 55 $ 80 room=M vs Cockatrice(L1 HP6/25)
+T 160 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 26/28 MP 0/0 Hu 60 $ 120 room=M vs Cockatrice(L1 HP6/25)
 -> f
-T 162 mode=flee_direction_mode Maeglin Moonsinger(elf) F2@(10, 5) HP 26/28 MP 0/0 Hu 55 $ 80 room=M
+T 161 mode=flee_direction_mode Maeglin Moonsinger(elf) F2@(10, 5) HP 26/28 MP 0/0 Hu 60 $ 120 room=M
 -> n
-T 163 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 26/28 MP 0/0 Hu 55 $ 80 room=.
+T 162 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 26/28 MP 0/0 Hu 60 $ 120 room=.
 -> i
-T 164 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 26/28 MP 0/0 Hu 55 $ 80 room=.
+T 163 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 26/28 MP 0/0 Hu 60 $ 120 room=.
 -> u5
-T 165 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
+T 164 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 60 $ 120 room=.
 -> u4
-T 166 mode=foresight_direction_mode Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
--> n
-T 167 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
--> u4
-T 168 mode=upgrade_scroll_mode Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
+T 165 mode=upgrade_scroll_mode Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 60 $ 120 room=.
 -> 2
-T 169 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
+T 166 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 60 $ 120 room=.
 -> x
-T 170 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 55 $ 80 room=.
+T 167 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 60 $ 120 room=.
 -> e
-T 171 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 54 $ 80 room=.
+T 168 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 59 $ 120 room=.
 -> s
-T 172 mode=shrine_mode         Maeglin Moonsinger(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 53 $ 80 room=F
+T 169 mode=shrine_mode         Maeglin Moonsinger(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 58 $ 120 room=F
 -> p
-T 173 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 53 $ 80 room=.
--> e
-T 174 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 5) HP 28/28 MP 0/0 Hu 52 $ 80 room=.
--> n
-T 175 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 51 $ 80 room=.
--> e
-T 176 mode=chest_mode          Maeglin Moonsinger(elf) F2@(13, 4) HP 28/28 MP 0/0 Hu 50 $ 80 room=C
+T 170 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 58 $ 120 room=.
+-> s
+T 171 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 58 $ 120 room=.
+-> l
+T 172 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 58 $ 120 room=.
+-> w
+T 173 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 57 $ 120 room=.
+-> s
+T 174 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 28/28 MP 0/0 Hu 56 $ 120 room=.
+-> s
+T 175 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 28/28 MP 0/0 Hu 56 $ 120 room=.
+-> s
+T 176 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 120 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 177 mode=combat_victory      Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 228 room=.
+-> back
+T 178 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 228 room=.
+-> l
+T 179 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 228 room=.
+-> w
+T 180 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 28/28 MP 0/0 Hu 54 $ 228 room=.
+-> l
+T 181 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 28/28 MP 0/0 Hu 54 $ 228 room=.
+-> s
+T 182 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 9,10) HP 28/28 MP 0/0 Hu 54 $ 228 room=C
 -> o
-T 177 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 28/28 MP 0/0 Hu 50 $ 230 room=.
+T 183 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,10) HP 28/28 MP 0/0 Hu 54 $ 258 room=.
 -> s
-T 178 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 49 $ 230 room=.
--> i
-T 179 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 49 $ 230 room=.
--> eat4
-T 180 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 64 $ 230 room=.
--> x
-T 181 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 64 $ 230 room=.
--> l
-T 182 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 64 $ 230 room=.
--> s
-T 183 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 6) HP 28/28 MP 0/0 Hu 63 $ 230 room=.
--> n
-T 184 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 28/28 MP 0/0 Hu 62 $ 230 room=.
--> w
-T 185 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 5) HP 28/28 MP 0/0 Hu 61 $ 230 room=.
--> w
-T 186 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 60 $ 230 room=.
--> s
-T 187 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 59 $ 230 room=.
--> l
-T 188 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 59 $ 230 room=.
--> s
-T 189 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 7) HP 28/28 MP 0/0 Hu 58 $ 230 room=.
--> w
-T 190 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 28/28 MP 0/0 Hu 57 $ 230 room=.
--> s
-T 191 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 28/28 MP 0/0 Hu 56 $ 230 room=.
--> s
-T 192 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 230 room=M vs Kobold(L1 HP20/20)
+T 184 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 28/28 MP 0/0 Hu 53 $ 258 room=M vs Giant Spider(L1 HP40/40)
 -> a
-T 193 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 27/28 MP 0/0 Hu 55 $ 230 room=M vs Kobold(L1 HP20/20)
+T 185 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 53 $ 258 room=M vs Giant Spider(L1 HP20/40)
 -> a
-T 194 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 230 room=M vs Kobold(L1 HP20/20)
--> a
-T 195 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 230 room=M vs Kobold(L1 HP20/20)
+T 186 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 53 $ 258 room=M vs Giant Spider(L1 HP20/40)
 -> f
-T 196 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 230 room=M vs Kobold(L1 HP20/20)
--> a
-T 197 mode=combat_victory      Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 342 room=.
--> back
-T 198 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 342 room=.
--> i
-T 199 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 9) HP 26/28 MP 0/0 Hu 55 $ 342 room=.
--> u6
-T 200 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 342 room=.
--> x
-T 201 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 342 room=.
--> i
-T 202 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 342 room=.
--> u15
-T 203 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 55 $ 342 room=.
--> eat4
-T 204 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 70 $ 342 room=.
--> x
-T 205 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 70 $ 342 room=.
--> l
-T 206 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 70 $ 342 room=.
--> w
-T 207 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 28/28 MP 0/0 Hu 69 $ 342 room=.
--> l
-T 208 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 28/28 MP 0/0 Hu 69 $ 342 room=.
+T 187 mode=flee_direction_mode Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 53 $ 258 room=M
 -> s
-T 209 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 9,10) HP 28/28 MP 0/0 Hu 68 $ 342 room=C
+T 188 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 9,12) HP 21/28 MP 0/0 Hu 53 $ 258 room=C
 -> o
-T 210 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,10) HP 16/28 MP 0/0 Hu 68 $ 342 room=.
--> w
-T 211 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,10) HP 16/28 MP 0/0 Hu 67 $ 342 room=.
--> n
-T 212 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 16/28 MP 0/0 Hu 66 $ 342 room=.
--> w
-T 213 mode=library_mode        Maeglin Moonsinger(elf) F2@( 7, 9) HP 16/28 MP 0/0 Hu 65 $ 342 room=L
--> r
-T 214 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 9) HP 16/28 MP 0/0 Hu 65 $ 342 room=.
--> n
-T 215 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 8) HP 17/28 MP 0/0 Hu 64 $ 342 room=.
--> n
-T 216 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 7) HP 17/28 MP 0/0 Hu 63 $ 342 room=.
--> e
-T 217 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 17/28 MP 0/0 Hu 62 $ 342 room=.
--> s
-T 218 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 8) HP 17/28 MP 0/0 Hu 61 $ 342 room=.
--> s
-T 219 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 18/28 MP 0/0 Hu 60 $ 342 room=.
--> s
-T 220 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,10) HP 18/28 MP 0/0 Hu 59 $ 342 room=.
--> s
-T 221 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 58 $ 342 room=.
+T 189 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,12) HP 21/28 MP 0/0 Hu 53 $ 258 room=.
 -> i
-T 222 mode=inventory           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 58 $ 342 room=.
--> eat4
-T 223 mode=inventory           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 76 $ 342 room=.
--> x
-T 224 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 76 $ 342 room=.
--> i
-T 225 mode=inventory           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 76 $ 342 room=.
--> eat4
-T 226 mode=inventory           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 88 $ 342 room=.
--> u4
-T 227 mode=inventory           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 88 $ 342 room=.
--> x
-T 228 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 18/28 MP 0/0 Hu 88 $ 342 room=.
--> s
-T 229 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,12) HP 18/28 MP 0/0 Hu 87 $ 342 room=.
--> l
-T 230 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,12) HP 18/28 MP 0/0 Hu 87 $ 342 room=.
--> e
-T 231 mode=chest_mode          Maeglin Moonsinger(elf) F2@( 9,12) HP 19/28 MP 0/0 Hu 86 $ 342 room=C
--> w
-T 232 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,12) HP 19/28 MP 0/0 Hu 85 $ 342 room=.
--> n
-T 233 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 19/28 MP 0/0 Hu 84 $ 342 room=.
--> n
-T 234 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,10) HP 19/28 MP 0/0 Hu 83 $ 342 room=.
--> n
-T 235 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 20/28 MP 0/0 Hu 82 $ 342 room=.
--> n
-T 236 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 8) HP 20/28 MP 0/0 Hu 81 $ 342 room=.
--> n
-T 237 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 20/28 MP 0/0 Hu 80 $ 342 room=.
--> n
-T 238 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 20/28 MP 0/0 Hu 79 $ 342 room=.
--> n
-T 239 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 21/28 MP 0/0 Hu 78 $ 342 room=.
--> n
-T 240 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 4) HP 21/28 MP 0/0 Hu 77 $ 342 room=C
--> w
-T 241 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 21/28 MP 0/0 Hu 76 $ 342 room=.
--> n
-T 242 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 21/28 MP 0/0 Hu 75 $ 342 room=.
--> w
-T 243 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 3) HP 22/28 MP 0/0 Hu 74 $ 342 room=.
--> w
-T 244 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 3) HP 22/28 MP 0/0 Hu 73 $ 342 room=.
--> n
-T 245 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 22/28 MP 0/0 Hu 72 $ 342 room=M vs Harpy(L1 HP28/28)
--> a
-T 246 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 21/28 MP 0/0 Hu 72 $ 342 room=M vs Harpy(L1 HP7/28)
--> a
-T 247 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 12/28 MP 0/0 Hu 72 $ 342 room=M vs Harpy(L1 HP7/28)
--> a
-T 248 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 3/28 MP 0/0 Hu 72 $ 342 room=M vs Harpy(L1 HP7/28)
--> f
-T 249 mode=flee_direction_mode Maeglin Moonsinger(elf) F2@( 5, 2) HP 2/28 MP 0/0 Hu 72 $ 342 room=M
--> n
-T 250 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 1) HP 2/28 MP 0/0 Hu 72 $ 342 room=.
--> e
-T 251 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 1) HP 2/28 MP 0/0 Hu 71 $ 342 room=.
--> e
-T 252 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 1) HP 3/28 MP 0/0 Hu 70 $ 342 room=.
--> s
-T 253 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 2) HP 3/28 MP 0/0 Hu 69 $ 342 room=.
--> s
-T 254 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 3/28 MP 0/0 Hu 68 $ 342 room=.
--> s
-T 255 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 3/28 MP 0/0 Hu 67 $ 342 room=.
--> e
-T 256 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 4) HP 4/28 MP 0/0 Hu 66 $ 342 room=C
--> e
-T 257 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 4) HP 4/28 MP 0/0 Hu 65 $ 342 room=.
--> e
-T 258 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 4/28 MP 0/0 Hu 64 $ 342 room=.
--> e
-T 259 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 4/28 MP 0/0 Hu 63 $ 342 room=.
--> e
-T 260 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 5/28 MP 0/0 Hu 62 $ 342 room=.
--> e
-T 261 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu 61 $ 342 room=.
--> n
-T 262 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 5/28 MP 0/0 Hu 60 $ 342 room=.
--> e
-T 263 mode=game_loop           Maeglin Moonsinger(elf) F2@(14, 3) HP 5/28 MP 0/0 Hu 59 $ 342 room=.
--> w
-T 264 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 5/28 MP 0/0 Hu 58 $ 342 room=.
--> n
-T 265 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 2) HP 5/28 MP 0/0 Hu 57 $ 342 room=.
--> s
-T 266 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 5/28 MP 0/0 Hu 56 $ 342 room=.
--> s
-T 267 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu 55 $ 342 room=.
--> w
-T 268 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 5/28 MP 0/0 Hu 54 $ 342 room=.
--> s
-T 269 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 5) HP 5/28 MP 0/0 Hu 53 $ 342 room=.
--> e
-T 270 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 5/28 MP 0/0 Hu 52 $ 342 room=.
--> s
-T 271 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 6) HP 5/28 MP 0/0 Hu 51 $ 342 room=.
--> n
-T 272 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 5/28 MP 0/0 Hu 50 $ 342 room=.
--> n
-T 273 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu 49 $ 342 room=.
--> i
-T 274 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu 49 $ 342 room=.
--> eat4
-T 275 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu 67 $ 342 room=.
--> eat1
-T 276 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu100 $ 342 room=.
--> x
-T 277 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 5/28 MP 0/0 Hu100 $ 342 room=.
--> w
-T 278 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 5/28 MP 0/0 Hu 99 $ 342 room=.
--> w
-T 279 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 6/28 MP 0/0 Hu 98 $ 342 room=.
--> n
-T 280 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 3) HP 6/28 MP 0/0 Hu 97 $ 342 room=.
--> w
-T 281 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 7/28 MP 0/0 Hu 96 $ 342 room=.
--> n
-T 282 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 7/28 MP 0/0 Hu 95 $ 342 room=.
--> w
-T 283 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 2) HP 8/28 MP 0/0 Hu 94 $ 342 room=.
--> n
-T 284 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 1) HP 8/28 MP 0/0 Hu 93 $ 342 room=.
--> w
-T 285 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 1) HP 9/28 MP 0/0 Hu 92 $ 342 room=.
--> s
-T 286 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 2) HP 9/28 MP 0/0 Hu 91 $ 342 room=.
--> w
-T 287 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 2) HP 10/28 MP 0/0 Hu 90 $ 342 room=.
--> s
-T 288 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 10/28 MP 0/0 Hu 89 $ 342 room=.
--> s
-T 289 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 11/28 MP 0/0 Hu 88 $ 342 room=.
--> s
-T 290 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 11/28 MP 0/0 Hu 87 $ 342 room=V
--> e
-T 291 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 12/28 MP 0/0 Hu 86 $ 342 room=.
--> s
-T 292 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 12/28 MP 0/0 Hu 85 $ 342 room=.
--> w
-T 293 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 6) HP 12/28 MP 0/0 Hu 84 $ 342 room=.
--> s
-T 294 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 7) HP 12/28 MP 0/0 Hu 83 $ 342 room=.
--> s
-T 295 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 8) HP 13/28 MP 0/0 Hu 82 $ 342 room=.
--> s
-T 296 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 9) HP 13/28 MP 0/0 Hu 81 $ 342 room=.
--> e
-T 297 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 13/28 MP 0/0 Hu 80 $ 342 room=.
--> n
-T 298 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 8) HP 13/28 MP 0/0 Hu 79 $ 342 room=.
--> e
-T 299 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 8) HP 14/28 MP 0/0 Hu 78 $ 342 room=.
--> e
-T 300 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 14/28 MP 0/0 Hu 77 $ 342 room=.
--> l
-T 301 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 14/28 MP 0/0 Hu 77 $ 342 room=.
--> n
-T 302 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 14/28 MP 0/0 Hu 76 $ 342 room=.
--> n
-T 303 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 14/28 MP 0/0 Hu 75 $ 342 room=.
--> n
-T 304 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 15/28 MP 0/0 Hu 74 $ 342 room=M vs Cockatrice(L1 HP6/25)
--> a
-T 305 mode=combat_victory      Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 74 $ 358 room=.
--> back
-T 306 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 74 $ 358 room=.
--> i
-T 307 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 74 $ 358 room=.
--> u9
-T 308 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 74 $ 358 room=.
--> eat4
-T 309 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 92 $ 358 room=.
--> x
-T 310 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 92 $ 358 room=.
--> l
-T 311 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 14/38 MP 0/0 Hu 92 $ 358 room=.
--> w
-T 312 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 5) HP 14/38 MP 0/0 Hu 91 $ 358 room=.
--> s
-T 313 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 6) HP 15/38 MP 0/0 Hu 90 $ 358 room=.
--> s
-T 314 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 7) HP 15/38 MP 0/0 Hu 89 $ 358 room=.
--> e
-T 315 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 16/38 MP 0/0 Hu 88 $ 358 room=.
--> s
-T 316 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 16/38 MP 0/0 Hu 87 $ 358 room=.
--> w
-T 317 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 8) HP 17/38 MP 0/0 Hu 86 $ 358 room=.
--> s
-T 318 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 17/38 MP 0/0 Hu 85 $ 358 room=.
--> e
-T 319 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 17/38 MP 0/0 Hu 84 $ 358 room=.
--> e
-T 320 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 9) HP 17/38 MP 0/0 Hu 83 $ 358 room=.
--> l
-T 321 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 9) HP 17/38 MP 0/0 Hu 83 $ 358 room=.
--> w
-T 322 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 18/38 MP 0/0 Hu 82 $ 358 room=.
--> n
-T 323 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 18/38 MP 0/0 Hu 81 $ 358 room=.
--> n
-T 324 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 18/38 MP 0/0 Hu 80 $ 358 room=.
--> e
-T 325 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 7) HP 18/38 MP 0/0 Hu 79 $ 358 room=.
--> n
-T 326 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 19/38 MP 0/0 Hu 78 $ 358 room=.
--> n
-T 327 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 19/38 MP 0/0 Hu 77 $ 358 room=.
--> n
-T 328 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 19/38 MP 0/0 Hu 76 $ 358 room=.
--> w
-T 329 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 19/38 MP 0/0 Hu 75 $ 358 room=.
--> s
-T 330 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 20/38 MP 0/0 Hu 74 $ 358 room=.
--> l
-T 331 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 20/38 MP 0/0 Hu 74 $ 358 room=.
--> w
-T 332 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 5) HP 20/38 MP 0/0 Hu 73 $ 358 room=.
--> w
-T 333 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 20/38 MP 0/0 Hu 72 $ 358 room=.
--> s
-T 334 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 20/38 MP 0/0 Hu 71 $ 358 room=.
--> s
-T 335 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 21/38 MP 0/0 Hu 70 $ 358 room=.
--> e
-T 336 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 7) HP 21/38 MP 0/0 Hu 69 $ 358 room=.
--> s
-T 337 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 8) HP 21/38 MP 0/0 Hu 68 $ 358 room=.
--> s
-T 338 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 21/38 MP 0/0 Hu 67 $ 358 room=.
--> e
-T 339 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 22/38 MP 0/0 Hu 66 $ 358 room=.
--> e
-T 340 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 9) HP 22/38 MP 0/0 Hu 65 $ 358 room=.
--> l
-T 341 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 9) HP 22/38 MP 0/0 Hu 65 $ 358 room=.
--> s
-T 342 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 358 room=M vs Kobold(L1 HP8/8)
--> a
-T 343 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 358 room=M vs Kobold(L1 HP8/8)
--> a
-T 344 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 358 room=M vs Kobold(L1 HP8/8)
--> a
-T 345 mode=combat_victory      Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 372 room=.
--> back
-T 346 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 372 room=.
--> i
-T 347 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 372 room=.
--> u9
-T 348 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 64 $ 372 room=.
--> eat4
-T 349 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu 79 $ 372 room=.
--> eat1
-T 350 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu100 $ 372 room=.
--> x
-T 351 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu100 $ 372 room=.
--> l
-T 352 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 22/38 MP 0/0 Hu100 $ 372 room=.
--> e
-T 353 mode=game_loop           Maeglin Moonsinger(elf) F2@(12,10) HP 23/38 MP 0/0 Hu 99 $ 372 room=.
--> l
-T 354 mode=game_loop           Maeglin Moonsinger(elf) F2@(12,10) HP 23/38 MP 0/0 Hu 99 $ 372 room=.
--> e
-T 355 mode=game_loop           Maeglin Moonsinger(elf) F2@(13,10) HP 23/38 MP 0/0 Hu 98 $ 372 room=.
--> n
-T 356 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 9) HP 24/38 MP 0/0 Hu 97 $ 372 room=.
--> e
-T 357 mode=game_loop           Maeglin Moonsinger(elf) F2@(14, 9) HP 24/38 MP 0/0 Hu 96 $ 372 room=.
--> e
-T 358 mode=library_mode        Maeglin Moonsinger(elf) F2@(15, 9) HP 25/38 MP 0/0 Hu 95 $ 372 room=L
--> r
-T 359 mode=library_read_decision_mode Maeglin Moonsinger(elf) F2@(15, 9) HP 25/38 MP 0/0 Hu 95 $ 372 room=L
--> y
-T 360 mode=game_loop           Maeglin Moonsinger(elf) F2@(15, 9) HP 25/38 MP 0/0 Hu 95 $ 372 room=.
--> l
-T 361 mode=game_loop           Maeglin Moonsinger(elf) F2@(15, 9) HP 25/38 MP 0/0 Hu 95 $ 372 room=.
--> s
-T 362 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,10) HP 25/38 MP 0/0 Hu 94 $ 372 room=.
--> s
-T 363 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,11) HP 26/38 MP 0/0 Hu 93 $ 372 room=.
--> l
-T 364 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,11) HP 26/38 MP 0/0 Hu 93 $ 372 room=.
--> s
-T 365 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,12) HP 26/38 MP 0/0 Hu 92 $ 372 room=.
--> s
-T 366 mode=stairs_down_mode    Maeglin Moonsinger(elf) F2@(15,13) HP 27/38 MP 0/0 Hu 91 $ 372 room=D
--> d
-T 367 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 27/38 MP 0/0 Hu 91 $ 372 room=U
--> n
-T 368 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 27/38 MP 0/0 Hu 91 $ 372 room=U
--> e
-T 369 mode=dungeon_mode        Maeglin Moonsinger(elf) F3@( 2, 1) HP 27/38 MP 0/0 Hu 90 $ 372 room=N
--> u
-T 370 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 27/38 MP 0/0 Hu 90 $ 372 room=N
--> l
-T 371 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 27/38 MP 0/0 Hu 90 $ 372 room=N
--> e
-T 372 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 1) HP 28/38 MP 0/0 Hu 89 $ 372 room=.
--> e
-T 373 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 28/38 MP 0/0 Hu 88 $ 372 room=.
--> l
-T 374 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 28/38 MP 0/0 Hu 88 $ 372 room=.
--> s
-T 375 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 2) HP 29/38 MP 0/0 Hu 87 $ 372 room=.
--> l
-T 376 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 2) HP 29/38 MP 0/0 Hu 87 $ 372 room=.
--> e
-T 377 mode=altar_mode          Maeglin Moonsinger(elf) F3@( 5, 2) HP 29/38 MP 0/0 Hu 86 $ 372 room=A
--> pray
-T 378 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 2) HP 38/38 MP 0/0 Hu100 $ 372 room=.
--> n
-T 379 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 1) HP 38/38 MP 0/0 Hu 99 $ 372 room=.
--> s
-T 380 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 2) HP 38/38 MP 0/0 Hu 98 $ 372 room=.
--> n
-T 381 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 1) HP 38/38 MP 0/0 Hu 97 $ 372 room=.
--> w
-T 382 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 38/38 MP 0/0 Hu 96 $ 372 room=.
--> w
-T 383 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 1) HP 38/38 MP 0/0 Hu 95 $ 372 room=.
--> w
-T 384 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 372 room=N
--> w
-T 385 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 372 room=U
--> e
-T 386 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 372 room=N
--> s
-T 387 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 38/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP31/31)
--> a
-T 388 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 37/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP31/31)
--> a
-T 389 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 36/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP31/31)
--> a
-T 390 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 35/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP31/31)
--> a
-T 391 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 34/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP9/31)
--> a
-T 392 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 34/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP9/31)
--> a
-T 393 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 2) HP 33/38 MP 0/0 Hu 91 $ 372 room=M vs Goblin(L2 HP9/31)
--> a
-T 394 mode=combat_victory      Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> back
-T 395 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> i
-T 396 mode=inventory           Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> u10
-T 397 mode=inventory           Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> x
-T 398 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> l
-T 399 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 2) HP 32/38 MP 0/0 Hu 91 $ 396 room=.
--> n
-T 400 mode=dungeon_mode        Maeglin Moonsinger(elf) F3@( 2, 1) HP 32/38 MP 0/0 Hu 90 $ 396 room=N
--> u
-T 401 mode=dungeon_unlocked_mode Maeglin Moonsinger(elf) F3@( 2, 1) HP 32/38 MP 0/0 Hu 90 $ 396 room=N
--> r
-T 402 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 32/38 MP 0/0 Hu 90 $ 615 room=N
--> e
-T 403 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 1) HP 33/38 MP 0/0 Hu 89 $ 615 room=.
--> e
-T 404 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 33/38 MP 0/0 Hu 88 $ 615 room=.
--> s
-T 405 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 2) HP 34/38 MP 0/0 Hu 87 $ 615 room=.
--> e
-T 406 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 2) HP 34/38 MP 0/0 Hu 86 $ 615 room=.
--> n
-T 407 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 1) HP 35/38 MP 0/0 Hu 85 $ 615 room=.
--> s
-T 408 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 2) HP 35/38 MP 0/0 Hu 84 $ 615 room=.
--> n
-T 409 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 1) HP 35/38 MP 0/0 Hu 83 $ 615 room=.
--> w
-T 410 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 35/38 MP 0/0 Hu 82 $ 615 room=.
--> w
-T 411 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 1) HP 36/38 MP 0/0 Hu 81 $ 615 room=.
--> w
-T 412 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 36/38 MP 0/0 Hu 80 $ 615 room=N
--> s
-T 413 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 2) HP 36/38 MP 0/0 Hu 79 $ 615 room=.
--> s
-T 414 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 3) HP 36/38 MP 0/0 Hu 78 $ 615 room=.
--> l
-T 415 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 3) HP 36/38 MP 0/0 Hu 78 $ 615 room=.
--> s
-T 416 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 4) HP 37/38 MP 0/0 Hu 77 $ 615 room=M vs Crawling Claw(L2 HP5/5)
--> a
-T 417 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 2, 4) HP 36/38 MP 0/0 Hu 77 $ 615 room=M vs Crawling Claw(L2 HP5/5)
--> a
-T 418 mode=combat_victory      Maeglin Moonsinger(elf) F3@( 2, 4) HP 36/38 MP 0/0 Hu 77 $ 639 room=.
--> back
-T 419 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 4) HP 36/38 MP 0/0 Hu 77 $ 639 room=.
--> l
-T 420 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 4) HP 36/38 MP 0/0 Hu 77 $ 639 room=.
--> w
-T 421 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 4) HP 36/38 MP 0/0 Hu 76 $ 639 room=.
--> l
-T 422 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 4) HP 36/38 MP 0/0 Hu 76 $ 639 room=.
--> s
-T 423 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 5) HP 36/38 MP 0/0 Hu 75 $ 639 room=.
--> s
-T 424 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 6) HP 36/38 MP 0/0 Hu 74 $ 639 room=.
--> s
-T 425 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 7) HP 37/38 MP 0/0 Hu 73 $ 639 room=.
--> s
-T 426 mode=chest_mode          Maeglin Moonsinger(elf) F3@( 1, 8) HP 37/38 MP 0/0 Hu 72 $ 639 room=C
--> n
-T 427 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 7) HP 37/38 MP 0/0 Hu 71 $ 639 room=.
--> n
-T 428 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 6) HP 37/38 MP 0/0 Hu 70 $ 639 room=.
--> e
-T 429 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 6) HP 38/38 MP 0/0 Hu 69 $ 639 room=.
--> l
-T 430 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 6) HP 38/38 MP 0/0 Hu 69 $ 639 room=.
--> e
-T 431 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 6) HP 38/38 MP 0/0 Hu 68 $ 639 room=.
--> l
-T 432 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 6) HP 38/38 MP 0/0 Hu 68 $ 639 room=.
--> s
-T 433 mode=altar_mode          Maeglin Moonsinger(elf) F3@( 3, 7) HP 38/38 MP 0/0 Hu 67 $ 639 room=A
--> pray
-T 434 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 7) HP 38/38 MP 0/0 Hu 67 $ 639 room=.
--> l
-T 435 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 7) HP 38/38 MP 0/0 Hu 67 $ 639 room=.
--> e
-T 436 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 38/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP31/31)
--> a
-T 437 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 37/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 438 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 37/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 439 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 36/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 440 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 35/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 441 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 34/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 442 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 66 $ 639 room=M vs Goblin(L2 HP8/31)
--> a
-T 443 mode=combat_victory      Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 66 $ 669 room=.
--> back
-T 444 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 66 $ 669 room=.
--> i
-T 445 mode=inventory           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 66 $ 669 room=.
--> u11
-T 446 mode=inventory           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 66 $ 669 room=.
--> eat4
-T 447 mode=inventory           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 73 $ 669 room=.
--> x
-T 448 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 73 $ 669 room=.
--> l
-T 449 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 7) HP 33/38 MP 0/0 Hu 73 $ 669 room=.
--> s
-T 450 mode=garden_mode         Maeglin Moonsinger(elf) F3@( 4, 8) HP 33/38 MP 0/0 Hu 72 $ 669 room=G
--> h
-T 451 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 8) HP 33/38 MP 0/0 Hu 72 $ 669 room=.
--> l
-T 452 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 8) HP 33/38 MP 0/0 Hu 72 $ 669 room=.
--> w
-T 453 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 8) HP 33/38 MP 0/0 Hu 71 $ 669 room=.
--> w
-T 454 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 8) HP 33/38 MP 0/0 Hu 70 $ 669 room=.
--> w
-T 455 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 8) HP 34/38 MP 0/0 Hu 69 $ 669 room=C
--> n
-T 456 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 7) HP 34/38 MP 0/0 Hu 68 $ 669 room=.
--> n
-T 457 mode=game_loop           Maeglin Moonsinger(elf) F3@( 1, 6) HP 34/38 MP 0/0 Hu 67 $ 669 room=.
--> e
-T 458 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 6) HP 34/38 MP 0/0 Hu 66 $ 669 room=.
--> e
-T 459 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 6) HP 35/38 MP 0/0 Hu 65 $ 669 room=.
--> e
-T 460 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 6) HP 35/38 MP 0/0 Hu 64 $ 669 room=.
--> e
-T 461 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 6) HP 35/38 MP 0/0 Hu 63 $ 669 room=.
--> l
-T 462 mode=game_loop           Maeglin Moonsinger(elf) F3@( 5, 6) HP 35/38 MP 0/0 Hu 63 $ 669 room=.
--> e
-T 463 mode=game_loop           Maeglin Moonsinger(elf) F3@( 6, 6) HP 35/38 MP 0/0 Hu 62 $ 669 room=.
--> l
-T 464 mode=game_loop           Maeglin Moonsinger(elf) F3@( 6, 6) HP 35/38 MP 0/0 Hu 62 $ 669 room=.
--> e
-T 465 mode=game_loop           Maeglin Moonsinger(elf) F3@( 7, 6) HP 36/38 MP 0/0 Hu 61 $ 669 room=.
--> l
-T 466 mode=game_loop           Maeglin Moonsinger(elf) F3@( 7, 6) HP 36/38 MP 0/0 Hu 61 $ 669 room=.
--> e
-T 467 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 6) HP 36/38 MP 0/0 Hu 60 $ 669 room=.
--> l
-T 468 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 6) HP 36/38 MP 0/0 Hu 60 $ 669 room=.
--> e
-T 469 mode=library_mode        Maeglin Moonsinger(elf) F3@( 9, 6) HP 36/38 MP 0/0 Hu 59 $ 669 room=L
--> r
-T 470 mode=library_read_decision_mode Maeglin Moonsinger(elf) F3@( 9, 6) HP 36/38 MP 0/0 Hu 59 $ 669 room=L
--> y
-T 471 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 6) HP 36/38 MP 0/0 Hu 59 $ 844 room=.
--> s
-T 472 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 7) HP 28/38 MP 0/0 Hu 58 $ 844 room=.
--> e
-T 473 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 7) HP 20/38 MP 0/0 Hu 57 $ 844 room=.
--> e
-T 474 mode=chest_mode          Maeglin Moonsinger(elf) F3@(11, 7) HP 12/38 MP 0/0 Hu 56 $ 844 room=C
--> s
-T 475 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 4/38 MP 0/0 Hu 55 $ 844 room=.
--> l
-T 476 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 4/38 MP 0/0 Hu 55 $ 844 room=.
--> e
-T 477 mode=pool_mode           Maeglin Moonsinger(elf) F3@(12, 8) HP 4/38 MP 0/0 Hu 54 $ 844 room=P
--> e
-T 478 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 8) HP 4/38 MP 0/0 Hu 53 $ 844 room=M vs Gray Ooze(L2 HP35/35)
--> f
-T 479 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 8) HP 3/38 MP 0/0 Hu 53 $ 844 room=M vs Gray Ooze(L2 HP35/35)
--> f
-T 480 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 8) HP 2/38 MP 0/0 Hu 53 $ 844 room=M vs Gray Ooze(L2 HP35/35)
--> f
-T 481 mode=flee_direction_mode Maeglin Moonsinger(elf) F3@(13, 8) HP 2/38 MP 0/0 Hu 53 $ 844 room=M
--> w
-T 482 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 2/38 MP 0/0 Hu 53 $ 844 room=P
--> l
-T 483 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 2/38 MP 0/0 Hu 53 $ 844 room=P
--> s
-T 484 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 2/38 MP 0/0 Hu 52 $ 844 room=.
--> s
-T 485 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 844 room=V
--> r3
-T 486 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 801 room=V
--> b11
-T 487 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 771 room=V
--> b11
-T 488 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 756 room=V
--> b11
-T 489 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 746 room=V
--> b5
-T 490 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 716 room=V
--> b5
-T 491 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 686 room=V
--> b5
-T 492 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 656 room=V
--> b9
-T 493 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 651 room=V
--> b9
-T 494 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 646 room=V
--> b9
-T 495 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 641 room=V
--> b9
-T 496 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 636 room=V
--> b5
-T 497 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 486 room=V
--> b4
-T 498 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 406 room=V
--> b1
-T 499 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 156 room=V
--> id8
-T 500 mode=vendor_shop         Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 81 room=V
--> x
-T 501 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 81 room=V
--> i
-T 502 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 2/38 MP 0/0 Hu 51 $ 81 room=V
+T 190 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,12) HP 21/28 MP 0/0 Hu 53 $ 258 room=.
 -> u6
-T 503 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 32/38 MP 0/0 Hu 51 $ 81 room=V
--> u2
-T 504 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
+T 191 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,12) HP 28/28 MP 0/0 Hu 53 $ 258 room=.
+-> x
+T 192 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,12) HP 28/28 MP 0/0 Hu 53 $ 258 room=.
+-> w
+T 193 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,12) HP 28/28 MP 0/0 Hu 53 $ 258 room=.
+-> n
+T 194 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 28/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 195 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 28/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 196 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 197 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 14/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 198 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 7/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> i
+T 199 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 7/28 MP 0/0 Hu 52 $ 258 room=M
 -> u3
-T 505 mode=upgrade_scroll_mode Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> 3
-T 506 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
+T 200 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 28/28 MP 0/0 Hu 52 $ 258 room=M
 -> x
-T 507 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> i
-T 508 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> e1
-T 509 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> x
-T 510 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> l
-T 511 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 51 $ 81 room=V
--> e
-T 512 mode=pool_mode           Maeglin Moonsinger(elf) F3@(13,10) HP 38/38 MP 0/0 Hu 50 $ 81 room=P
--> dr
-T 513 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,10) HP 38/38 MP 0/0 Hu 50 $ 81 room=.
--> l
-T 514 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,10) HP 38/38 MP 0/0 Hu 50 $ 81 room=.
--> s
-T 515 mode=tomb_mode           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu 49 $ 81 room=T
--> p
-T 516 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu 49 $ 81 room=T
--> i
-T 517 mode=inventory           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu 49 $ 81 room=T
--> eat4
-T 518 mode=inventory           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu 56 $ 81 room=T
--> eat1
-T 519 mode=inventory           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu100 $ 81 room=T
--> x
-T 520 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu100 $ 81 room=T
--> l
-T 521 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu100 $ 81 room=T
--> n
-T 522 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,10) HP 38/38 MP 0/0 Hu 99 $ 81 room=.
--> s
-T 523 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,11) HP 38/38 MP 0/0 Hu 98 $ 81 room=T
--> n
-T 524 mode=game_loop           Maeglin Moonsinger(elf) F3@(13,10) HP 38/38 MP 0/0 Hu 97 $ 81 room=.
--> w
-T 525 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 38/38 MP 0/0 Hu 96 $ 81 room=V
--> n
-T 526 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 38/38 MP 0/0 Hu 95 $ 81 room=.
--> w
-T 527 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 38/38 MP 0/0 Hu 94 $ 81 room=.
--> l
-T 528 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 38/38 MP 0/0 Hu 94 $ 81 room=.
--> w
-T 529 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 38/38 MP 0/0 Hu 93 $ 81 room=.
--> w
-T 530 mode=dungeon_mode        Maeglin Moonsinger(elf) F3@( 9, 9) HP 38/38 MP 0/0 Hu 92 $ 81 room=N
--> u
-T 531 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 38/38 MP 0/0 Hu 92 $ 81 room=N
--> s
-T 532 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 38/38 MP 0/0 Hu 91 $ 81 room=.
--> s
-T 533 mode=chest_mode          Maeglin Moonsinger(elf) F3@( 9,11) HP 38/38 MP 0/0 Hu 90 $ 81 room=C
--> o
-T 534 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 38/38 MP 0/0 Hu 90 $ 81 room=.
--> e
-T 535 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 38/38 MP 0/0 Hu 89 $ 81 room=.
--> l
-T 536 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 38/38 MP 0/0 Hu 89 $ 81 room=.
--> e
-T 537 mode=chest_mode          Maeglin Moonsinger(elf) F3@(11,11) HP 38/38 MP 0/0 Hu 88 $ 81 room=C
--> o
-T 538 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 38/38 MP 0/0 Hu 88 $ 161 room=.
--> s
-T 539 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 38/38 MP 0/0 Hu 87 $ 161 room=.
--> w
-T 540 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 38/38 MP 0/0 Hu 86 $ 161 room=.
--> s
-T 541 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 38/38 MP 0/0 Hu 85 $ 161 room=.
--> n
-T 542 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 38/38 MP 0/0 Hu 84 $ 161 room=.
--> n
-T 543 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 38/38 MP 0/0 Hu 83 $ 161 room=.
--> w
-T 544 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 38/38 MP 0/0 Hu 82 $ 161 room=.
--> n
-T 545 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 38/38 MP 0/0 Hu 81 $ 161 room=.
--> w
-T 546 mode=library_mode        Maeglin Moonsinger(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 80 $ 161 room=L
--> r
-T 547 mode=library_read_decision_mode Maeglin Moonsinger(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 80 $ 161 room=L
--> y
-T 548 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 80 $ 161 room=.
--> s
-T 549 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 38/38 MP 0/0 Hu 79 $ 161 room=.
--> n
-T 550 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 78 $ 161 room=.
--> n
-T 551 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 38/38 MP 0/0 Hu 77 $ 161 room=.
--> e
-T 552 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 38/38 MP 0/0 Hu 76 $ 161 room=N
--> s
-T 553 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 38/38 MP 0/0 Hu 75 $ 161 room=.
--> s
-T 554 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 38/38 MP 0/0 Hu 74 $ 161 room=.
--> e
-T 555 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 38/38 MP 0/0 Hu 73 $ 161 room=.
--> s
-T 556 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 38/38 MP 0/0 Hu 72 $ 161 room=.
--> s
-T 557 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 38/38 MP 0/0 Hu 71 $ 161 room=.
--> n
-T 558 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 38/38 MP 0/0 Hu 70 $ 161 room=.
--> e
-T 559 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 38/38 MP 0/0 Hu 69 $ 161 room=.
--> n
-T 560 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 38/38 MP 0/0 Hu 68 $ 161 room=.
--> n
-T 561 mode=combat_mode         Maeglin Moonsinger(elf) F3@(11,10) HP 38/38 MP 0/0 Hu 67 $ 161 room=M vs Giant Rat(L2 HP22/22)
+T 201 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 28/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
 -> a
-T 562 mode=combat_victory      Maeglin Moonsinger(elf) F3@(11,10) HP 37/48 MP 0/0 Hu 67 $ 188 room=.
+T 202 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 203 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 204 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> f
+T 205 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 9,11) HP 21/28 MP 0/0 Hu 52 $ 258 room=M vs Giant Spider(L1 HP20/40)
+-> a
+T 206 mode=combat_victory      Maeglin Moonsinger(elf) F2@( 9,11) HP 14/38 MP 0/0 Hu 52 $ 270 room=.
 -> back
-T 563 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 37/48 MP 0/0 Hu 67 $ 188 room=.
--> w
-T 564 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 37/48 MP 0/0 Hu 66 $ 188 room=.
--> s
-T 565 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 37/48 MP 0/0 Hu 65 $ 188 room=.
--> s
-T 566 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 37/48 MP 0/0 Hu 64 $ 188 room=.
--> s
-T 567 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 38/48 MP 0/0 Hu 63 $ 188 room=.
+T 207 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,11) HP 14/38 MP 0/0 Hu 52 $ 270 room=.
 -> i
-T 568 mode=inventory           Maeglin Moonsinger(elf) F3@(10,13) HP 38/48 MP 0/0 Hu 63 $ 188 room=.
+T 208 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 14/38 MP 0/0 Hu 52 $ 270 room=.
 -> u6
-T 569 mode=inventory           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
+T 209 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 52 $ 270 room=.
 -> x
-T 570 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> l
-T 571 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> n
-T 572 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 62 $ 188 room=.
--> e
-T 573 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
--> n
-T 574 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 60 $ 188 room=.
--> n
-T 575 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 59 $ 188 room=.
--> n
-T 576 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 58 $ 188 room=.
--> w
-T 577 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> s
-T 578 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> s
-T 579 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 55 $ 188 room=.
--> s
-T 580 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> l
-T 581 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> s
-T 582 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 53 $ 188 room=.
--> n
-T 583 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 52 $ 188 room=.
--> e
-T 584 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 51 $ 188 room=.
--> n
-T 585 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 50 $ 188 room=.
--> n
-T 586 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
+T 210 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 52 $ 270 room=.
 -> i
-T 587 mode=inventory           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
--> eat1
-T 588 mode=inventory           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu100 $ 188 room=.
+T 211 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 52 $ 270 room=.
+-> u18
+T 212 mode=inventory           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 52 $ 270 room=.
 -> x
-T 589 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu100 $ 188 room=.
--> e
-T 590 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 99 $ 188 room=V
--> l
-T 591 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 99 $ 188 room=V
--> n
-T 592 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 98 $ 188 room=.
+T 213 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 52 $ 270 room=.
 -> w
-T 593 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 97 $ 188 room=.
+T 214 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 38/38 MP 0/0 Hu 51 $ 270 room=.
+-> n
+T 215 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,10) HP 38/38 MP 0/0 Hu 51 $ 270 room=.
+-> n
+T 216 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 38/38 MP 0/0 Hu 50 $ 270 room=.
 -> w
-T 594 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 96 $ 188 room=.
--> s
-T 595 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 95 $ 188 room=.
--> s
-T 596 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 94 $ 188 room=.
--> s
-T 597 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 93 $ 188 room=.
--> s
-T 598 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 92 $ 188 room=.
--> n
-T 599 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 91 $ 188 room=.
--> e
-T 600 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 90 $ 188 room=.
--> l
-T 601 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 90 $ 188 room=.
--> n
-T 602 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 89 $ 188 room=.
--> w
-T 603 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 88 $ 188 room=.
--> n
-T 604 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 87 $ 188 room=.
--> n
-T 605 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 86 $ 188 room=.
--> e
-T 606 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 85 $ 188 room=.
--> s
-T 607 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
--> s
-T 608 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 83 $ 188 room=.
--> s
-T 609 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 82 $ 188 room=.
--> w
-T 610 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 81 $ 188 room=.
--> l
-T 611 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 81 $ 188 room=.
--> s
-T 612 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 80 $ 188 room=.
--> n
-T 613 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 79 $ 188 room=.
--> n
-T 614 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 78 $ 188 room=.
--> n
-T 615 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 77 $ 188 room=.
--> e
-T 616 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 76 $ 188 room=.
--> s
-T 617 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 75 $ 188 room=.
--> s
-T 618 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> w
-T 619 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 73 $ 188 room=.
--> s
-T 620 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 72 $ 188 room=.
--> l
-T 621 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 72 $ 188 room=.
--> n
-T 622 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 71 $ 188 room=.
--> n
-T 623 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 70 $ 188 room=.
--> n
-T 624 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 69 $ 188 room=.
--> e
-T 625 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 68 $ 188 room=.
--> s
-T 626 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 67 $ 188 room=.
--> s
-T 627 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 66 $ 188 room=.
--> w
-T 628 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> s
-T 629 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 64 $ 188 room=.
--> n
-T 630 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> l
-T 631 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> n
-T 632 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 62 $ 188 room=.
--> e
-T 633 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
--> s
-T 634 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 60 $ 188 room=.
--> n
-T 635 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 59 $ 188 room=.
--> n
-T 636 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 58 $ 188 room=.
--> n
-T 637 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> w
-T 638 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> s
-T 639 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 55 $ 188 room=.
--> s
-T 640 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> l
-T 641 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> s
-T 642 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 53 $ 188 room=.
--> s
-T 643 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 52 $ 188 room=.
--> n
-T 644 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 51 $ 188 room=.
--> e
-T 645 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 50 $ 188 room=.
--> n
-T 646 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
+T 217 mode=library_mode        Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 49 $ 270 room=L
+-> r
+T 218 mode=library_read_decision_mode Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 49 $ 270 room=L
+-> y
+T 219 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 9) HP 1/38 MP 0/0 Hu 49 $ 370 room=.
 -> i
-T 647 mode=inventory           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
--> eat1
-T 648 mode=inventory           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
+T 220 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 9) HP 1/38 MP 0/0 Hu 49 $ 370 room=.
+-> u6
+T 221 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 9) HP 31/38 MP 0/0 Hu 49 $ 370 room=.
+-> u3
+T 222 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
 -> x
-T 649 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
--> n
-T 650 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 83 $ 188 room=.
--> l
-T 651 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 83 $ 188 room=.
--> n
-T 652 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 82 $ 188 room=.
--> w
-T 653 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 81 $ 188 room=.
--> s
-T 654 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 80 $ 188 room=.
--> s
-T 655 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 79 $ 188 room=.
--> s
-T 656 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 78 $ 188 room=.
--> s
-T 657 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 77 $ 188 room=.
--> n
-T 658 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 76 $ 188 room=.
--> e
-T 659 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 75 $ 188 room=.
--> n
-T 660 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> l
-T 661 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> w
-T 662 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 73 $ 188 room=.
--> w
-T 663 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 72 $ 188 room=.
--> n
-T 664 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 71 $ 188 room=.
--> w
-T 665 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 70 $ 188 room=.
--> s
-T 666 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 69 $ 188 room=.
--> n
-T 667 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 68 $ 188 room=.
--> n
-T 668 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 67 $ 188 room=.
--> e
-T 669 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 66 $ 188 room=N
--> n
-T 670 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 8) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> l
-T 671 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 8) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> n
-T 672 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 7) HP 48/48 MP 0/0 Hu 64 $ 188 room=.
--> e
-T 673 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 7) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> e
-T 674 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 62 $ 188 room=C
--> e
-T 675 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
--> l
-T 676 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
--> n
-T 677 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 6) HP 48/48 MP 0/0 Hu 60 $ 188 room=.
--> w
-T 678 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 6) HP 48/48 MP 0/0 Hu 59 $ 188 room=.
--> s
-T 679 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 58 $ 188 room=C
--> s
-T 680 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> l
-T 681 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> s
-T 682 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> s
-T 683 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 55 $ 188 room=.
--> s
-T 684 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> s
-T 685 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 53 $ 188 room=.
--> w
-T 686 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 52 $ 188 room=.
--> s
-T 687 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 51 $ 188 room=.
--> n
-T 688 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 50 $ 188 room=.
--> n
-T 689 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
+T 223 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
 -> i
-T 690 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 188 room=.
--> eat1
-T 691 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
+T 224 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
+-> eat4
+T 225 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 62 $ 370 room=.
 -> x
-T 692 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
+T 226 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 62 $ 370 room=.
+-> n
+T 227 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 8) HP 38/38 MP 0/0 Hu 62 $ 370 room=.
+-> n
+T 228 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 7) HP 38/38 MP 0/0 Hu 61 $ 370 room=.
+-> n
+T 229 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 6) HP 38/38 MP 0/0 Hu 60 $ 370 room=.
+-> n
+T 230 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 38/38 MP 0/0 Hu 60 $ 370 room=V
+-> n
+T 231 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 59 $ 370 room=.
 -> e
-T 693 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 83 $ 188 room=.
--> s
-T 694 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 82 $ 188 room=.
--> n
-T 695 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 81 $ 188 room=.
--> n
-T 696 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 80 $ 188 room=.
--> n
-T 697 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 79 $ 188 room=.
--> n
-T 698 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 78 $ 188 room=.
+T 232 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 58 $ 370 room=C
 -> e
-T 699 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 77 $ 188 room=P
--> s
-T 700 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 76 $ 188 room=.
+T 233 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 4) HP 38/38 MP 0/0 Hu 57 $ 370 room=.
+-> e
+T 234 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 57 $ 370 room=.
+-> e
+T 235 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 56 $ 370 room=.
+-> e
+T 236 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 38/38 MP 0/0 Hu 55 $ 370 room=.
+-> e
+T 237 mode=chest_mode          Maeglin Moonsinger(elf) F2@(13, 4) HP 38/38 MP 0/0 Hu 55 $ 370 room=C
+-> n
+T 238 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 38/38 MP 0/0 Hu 54 $ 370 room=.
 -> l
-T 701 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 76 $ 188 room=.
--> s
-T 702 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 75 $ 188 room=V
--> w
-T 703 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> s
-T 704 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 73 $ 188 room=.
--> s
-T 705 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 72 $ 188 room=.
--> w
-T 706 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 71 $ 188 room=.
--> s
-T 707 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 70 $ 188 room=.
--> n
-T 708 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 69 $ 188 room=.
--> n
-T 709 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 68 $ 188 room=.
+T 239 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 38/38 MP 0/0 Hu 54 $ 370 room=.
 -> e
-T 710 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 67 $ 188 room=.
--> l
-T 711 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 67 $ 188 room=.
--> s
-T 712 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 66 $ 188 room=.
--> n
-T 713 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> n
-T 714 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 64 $ 188 room=.
+T 240 mode=game_loop           Maeglin Moonsinger(elf) F2@(14, 3) HP 38/38 MP 0/0 Hu 53 $ 370 room=.
 -> w
-T 715 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
+T 241 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 38/38 MP 0/0 Hu 53 $ 370 room=.
+-> n
+T 242 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 2) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> s
-T 716 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 62 $ 188 room=.
+T 243 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 38/38 MP 0/0 Hu 51 $ 370 room=.
 -> s
-T 717 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
+T 244 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 4) HP 38/38 MP 0/0 Hu 50 $ 370 room=C
 -> s
-T 718 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 60 $ 188 room=.
--> n
-T 719 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 59 $ 188 room=.
--> e
-T 720 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 58 $ 188 room=.
--> l
-T 721 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 58 $ 188 room=.
--> n
-T 722 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> n
-T 723 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> e
-T 724 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 55 $ 188 room=V
--> n
-T 725 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> n
-T 726 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 53 $ 188 room=P
--> n
-T 727 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 52 $ 188 room=.
--> n
-T 728 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 6) HP 48/48 MP 0/0 Hu 51 $ 188 room=.
--> w
-T 729 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 6) HP 48/48 MP 0/0 Hu 50 $ 188 room=.
+T 245 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 38/38 MP 0/0 Hu 50 $ 370 room=.
 -> s
-T 730 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 49 $ 188 room=C
+T 246 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
 -> i
-T 731 mode=inventory           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 49 $ 188 room=C
--> eat1
-T 732 mode=inventory           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 99 $ 188 room=C
+T 247 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
+-> eat4
+T 248 mode=inventory           Maeglin Moonsinger(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 62 $ 370 room=.
 -> x
-T 733 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 99 $ 188 room=C
--> s
-T 734 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 98 $ 188 room=.
--> s
-T 735 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 97 $ 188 room=.
--> s
-T 736 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 96 $ 188 room=.
--> s
-T 737 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 95 $ 188 room=.
--> s
-T 738 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 94 $ 188 room=.
+T 249 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 62 $ 370 room=.
+-> n
+T 250 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 5) HP 38/38 MP 0/0 Hu 61 $ 370 room=.
 -> w
-T 739 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 93 $ 188 room=.
+T 251 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 5) HP 38/38 MP 0/0 Hu 61 $ 370 room=.
+-> w
+T 252 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 38/38 MP 0/0 Hu 60 $ 370 room=.
 -> s
-T 740 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 92 $ 188 room=.
+T 253 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 59 $ 370 room=.
+-> s
+T 254 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 7) HP 38/38 MP 0/0 Hu 59 $ 370 room=.
+-> w
+T 255 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 38/38 MP 0/0 Hu 58 $ 370 room=.
+-> s
+T 256 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 38/38 MP 0/0 Hu 57 $ 370 room=.
+-> s
+T 257 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 38/38 MP 0/0 Hu 56 $ 370 room=.
+-> w
+T 258 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 38/38 MP 0/0 Hu 56 $ 370 room=.
+-> s
+T 259 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,10) HP 38/38 MP 0/0 Hu 55 $ 370 room=.
+-> s
+T 260 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 54 $ 370 room=.
+-> s
+T 261 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9,12) HP 38/38 MP 0/0 Hu 54 $ 370 room=.
+-> w
+T 262 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,12) HP 38/38 MP 0/0 Hu 53 $ 370 room=.
 -> l
-T 741 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 92 $ 188 room=.
+T 263 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,12) HP 38/38 MP 0/0 Hu 53 $ 370 room=.
 -> n
-T 742 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 91 $ 188 room=.
+T 264 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,11) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> n
-T 743 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 90 $ 188 room=.
--> w
-T 744 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 89 $ 188 room=.
+T 265 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8,10) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> n
-T 745 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 88 $ 188 room=.
--> w
-T 746 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 87 $ 188 room=.
--> s
-T 747 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 86 $ 188 room=.
+T 266 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 9) HP 38/38 MP 0/0 Hu 51 $ 370 room=.
 -> n
-T 748 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 85 $ 188 room=.
+T 267 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 8) HP 38/38 MP 0/0 Hu 50 $ 370 room=.
 -> n
-T 749 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 84 $ 188 room=.
--> e
-T 750 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 83 $ 188 room=N
--> l
-T 751 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 83 $ 188 room=N
--> s
-T 752 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 82 $ 188 room=.
--> s
-T 753 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 81 $ 188 room=.
--> e
-T 754 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 80 $ 188 room=.
--> s
-T 755 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 79 $ 188 room=.
--> s
-T 756 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 78 $ 188 room=.
--> n
-T 757 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 77 $ 188 room=.
--> e
-T 758 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 76 $ 188 room=.
--> n
-T 759 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 75 $ 188 room=.
--> n
-T 760 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> l
-T 761 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 74 $ 188 room=.
--> e
-T 762 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 73 $ 188 room=V
--> n
-T 763 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 72 $ 188 room=.
--> w
-T 764 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 71 $ 188 room=.
--> n
-T 765 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 70 $ 188 room=.
--> w
-T 766 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 8) HP 48/48 MP 0/0 Hu 69 $ 188 room=.
--> s
-T 767 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 68 $ 188 room=.
--> s
-T 768 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 67 $ 188 room=.
--> s
-T 769 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 66 $ 188 room=.
--> s
-T 770 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> l
-T 771 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 65 $ 188 room=.
--> s
-T 772 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 64 $ 188 room=.
--> n
-T 773 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 63 $ 188 room=.
--> e
-T 774 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 62 $ 188 room=.
--> n
-T 775 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 61 $ 188 room=.
--> n
-T 776 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 60 $ 188 room=.
--> w
-T 777 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 59 $ 188 room=.
--> s
-T 778 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 58 $ 188 room=.
--> s
-T 779 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 57 $ 188 room=.
--> s
-T 780 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> l
-T 781 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 56 $ 188 room=.
--> n
-T 782 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 55 $ 188 room=.
--> e
-T 783 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 54 $ 188 room=.
--> n
-T 784 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 53 $ 188 room=.
--> n
-T 785 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 52 $ 188 room=.
--> n
-T 786 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 51 $ 188 room=.
--> e
-T 787 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 50 $ 188 room=.
--> s
-T 788 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 49 $ 188 room=V
+T 268 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
 -> i
-T 789 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 49 $ 188 room=V
--> eat1
-T 790 mode=inventory           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 99 $ 188 room=V
+T 269 mode=inventory           Maeglin Moonsinger(elf) F2@( 8, 7) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
+-> eat4
+T 270 mode=inventory           Maeglin Moonsinger(elf) F2@( 8, 7) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> x
-T 791 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 99 $ 188 room=V
+T 271 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> n
-T 792 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 98 $ 188 room=.
+T 272 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 38/38 MP 0/0 Hu 52 $ 370 room=.
 -> n
-T 793 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 97 $ 188 room=P
--> e
-T 794 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 96 $ 188 room=M vs Gray Ooze(L2 HP35/35)
+T 273 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 51 $ 370 room=.
+-> n
+T 274 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 50 $ 370 room=C
+-> w
+T 275 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 50 $ 370 room=.
+-> n
+T 276 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
+-> i
+T 277 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 49 $ 370 room=.
+-> eat4
+T 278 mode=inventory           Maeglin Moonsinger(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 64 $ 370 room=.
+-> x
+T 279 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 64 $ 370 room=.
+-> w
+T 280 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 3) HP 38/38 MP 0/0 Hu 63 $ 370 room=.
+-> w
+T 281 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 3) HP 38/38 MP 0/0 Hu 63 $ 370 room=.
+-> n
+T 282 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 62 $ 370 room=M vs Bugbear(L1 HP35/35)
 -> a
-T 795 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 96 $ 188 room=M vs Gray Ooze(L2 HP6/35)
+T 283 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 37/38 MP 0/0 Hu 62 $ 370 room=M vs Bugbear(L1 HP16/35)
 -> a
-T 796 mode=combat_victory      Maeglin Moonsinger(elf) F3@(13, 8) HP 47/48 MP 0/0 Hu 96 $ 191 room=.
+T 284 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 370 room=M vs Bugbear(L1 HP16/35)
+-> a
+T 285 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 370 room=M vs Bugbear(L1 HP16/35)
+-> a
+T 286 mode=combat_victory      Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
 -> back
-T 797 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 8) HP 47/48 MP 0/0 Hu 96 $ 191 room=.
--> n
-T 798 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 47/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP45/45)
+T 287 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
+-> i
+T 288 mode=inventory           Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
+-> u14
+T 289 mode=inventory           Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
+-> u4
+T 290 mode=inventory           Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
+-> x
+T 291 mode=game_loop           Maeglin Moonsinger(elf) F2@( 5, 2) HP 36/38 MP 0/0 Hu 62 $ 380 room=.
+-> e
+T 292 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 6, 2) HP 36/38 MP 0/0 Hu 61 $ 380 room=M vs Myconid Shaman(L1 HP45/45)
 -> a
-T 799 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 45/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP45/45)
+T 293 mode=combat_mode         Maeglin Moonsinger(elf) F2@( 6, 2) HP 35/38 MP 0/0 Hu 61 $ 380 room=M vs Myconid Shaman(L1 HP14/45)
 -> a
-T 800 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 43/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 801 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 41/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> f
-T 802 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 41/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 803 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 39/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 804 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 37/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 805 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 37/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 806 mode=combat_mode         Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 191 room=M vs Gnoll(L2 HP18/45)
--> a
-T 807 mode=combat_victory      Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 215 room=.
+T 294 mode=combat_victory      Maeglin Moonsinger(elf) F2@( 6, 2) HP 35/38 MP 0/0 Hu 61 $ 382 room=.
 -> back
-T 808 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 215 room=.
--> i
-T 809 mode=inventory           Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 215 room=.
--> u10
-T 810 mode=inventory           Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 215 room=.
--> x
-T 811 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 7) HP 35/48 MP 0/0 Hu 95 $ 215 room=.
--> w
-T 812 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 36/48 MP 0/0 Hu 94 $ 215 room=.
+T 295 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 2) HP 35/38 MP 0/0 Hu 61 $ 382 room=.
 -> n
-T 813 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 6) HP 36/48 MP 0/0 Hu 93 $ 215 room=.
+T 296 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 1) HP 35/38 MP 0/0 Hu 60 $ 382 room=.
+-> e
+T 297 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 1) HP 35/38 MP 0/0 Hu 60 $ 382 room=.
+-> e
+T 298 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 1) HP 35/38 MP 0/0 Hu 59 $ 382 room=.
+-> s
+T 299 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 2) HP 35/38 MP 0/0 Hu 58 $ 382 room=.
 -> w
-T 814 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 6) HP 37/48 MP 0/0 Hu 92 $ 215 room=.
--> s
-T 815 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 37/48 MP 0/0 Hu 91 $ 215 room=C
--> s
-T 816 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 38/48 MP 0/0 Hu 90 $ 215 room=.
--> s
-T 817 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 38/48 MP 0/0 Hu 89 $ 215 room=.
--> s
-T 818 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 39/48 MP 0/0 Hu 88 $ 215 room=.
--> s
-T 819 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 39/48 MP 0/0 Hu 87 $ 215 room=.
--> s
-T 820 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 40/48 MP 0/0 Hu 86 $ 215 room=.
+T 300 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 2) HP 35/38 MP 0/0 Hu 58 $ 382 room=.
 -> l
-T 821 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 40/48 MP 0/0 Hu 86 $ 215 room=.
--> w
-T 822 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 40/48 MP 0/0 Hu 85 $ 215 room=.
+T 301 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 2) HP 35/38 MP 0/0 Hu 58 $ 382 room=.
 -> s
-T 823 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 40/48 MP 0/0 Hu 84 $ 215 room=.
--> n
-T 824 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 40/48 MP 0/0 Hu 83 $ 215 room=.
--> n
-T 825 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 41/48 MP 0/0 Hu 82 $ 215 room=.
--> w
-T 826 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 41/48 MP 0/0 Hu 81 $ 215 room=.
--> w
-T 827 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 41/48 MP 0/0 Hu 80 $ 215 room=.
--> n
-T 828 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 41/48 MP 0/0 Hu 79 $ 215 room=.
+T 302 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 35/38 MP 0/0 Hu 57 $ 382 room=.
+-> s
+T 303 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 35/38 MP 0/0 Hu 56 $ 382 room=.
 -> e
-T 829 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 42/48 MP 0/0 Hu 78 $ 215 room=.
--> n
-T 830 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 42/48 MP 0/0 Hu 77 $ 215 room=N
--> l
-T 831 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 42/48 MP 0/0 Hu 77 $ 215 room=N
+T 304 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 4) HP 35/38 MP 0/0 Hu 56 $ 382 room=C
+-> s
+T 305 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 35/38 MP 0/0 Hu 55 $ 382 room=.
+-> s
+T 306 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 35/38 MP 0/0 Hu 54 $ 382 room=.
 -> e
-T 832 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 42/48 MP 0/0 Hu 76 $ 215 room=.
--> s
-T 833 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 42/48 MP 0/0 Hu 75 $ 215 room=.
--> s
-T 834 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 43/48 MP 0/0 Hu 74 $ 215 room=.
--> s
-T 835 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 43/48 MP 0/0 Hu 73 $ 215 room=.
--> s
-T 836 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 43/48 MP 0/0 Hu 72 $ 215 room=.
--> n
-T 837 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 43/48 MP 0/0 Hu 71 $ 215 room=.
+T 307 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 6) HP 35/38 MP 0/0 Hu 53 $ 382 room=.
 -> e
-T 838 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 44/48 MP 0/0 Hu 70 $ 215 room=.
+T 308 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 35/38 MP 0/0 Hu 53 $ 382 room=.
 -> n
-T 839 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 44/48 MP 0/0 Hu 69 $ 215 room=.
--> w
-T 840 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 44/48 MP 0/0 Hu 68 $ 215 room=.
--> l
-T 841 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 44/48 MP 0/0 Hu 68 $ 215 room=.
--> w
-T 842 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 44/48 MP 0/0 Hu 67 $ 215 room=.
--> w
-T 843 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 45/48 MP 0/0 Hu 66 $ 215 room=.
--> n
-T 844 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 45/48 MP 0/0 Hu 65 $ 215 room=.
--> n
-T 845 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 45/48 MP 0/0 Hu 64 $ 215 room=.
--> e
-T 846 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 45/48 MP 0/0 Hu 63 $ 215 room=N
--> s
-T 847 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 46/48 MP 0/0 Hu 62 $ 215 room=.
--> s
-T 848 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 46/48 MP 0/0 Hu 61 $ 215 room=.
--> e
-T 849 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 46/48 MP 0/0 Hu 60 $ 215 room=.
--> s
-T 850 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 46/48 MP 0/0 Hu 59 $ 215 room=.
--> l
-T 851 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 46/48 MP 0/0 Hu 59 $ 215 room=.
--> s
-T 852 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 46/48 MP 0/0 Hu 58 $ 215 room=.
--> n
-T 853 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 46/48 MP 0/0 Hu 57 $ 215 room=.
--> e
-T 854 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 46/48 MP 0/0 Hu 56 $ 215 room=.
--> n
-T 855 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 46/48 MP 0/0 Hu 55 $ 215 room=.
--> w
-T 856 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 46/48 MP 0/0 Hu 54 $ 215 room=.
--> w
-T 857 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 46/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T 858 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 46/48 MP 0/0 Hu 52 $ 215 room=.
--> n
-T 859 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 46/48 MP 0/0 Hu 51 $ 215 room=N
--> w
-T 860 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 46/48 MP 0/0 Hu 50 $ 215 room=.
--> l
-T 861 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 46/48 MP 0/0 Hu 50 $ 215 room=.
--> s
-T 862 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 46/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T 863 mode=inventory           Maeglin Moonsinger(elf) F3@( 8,10) HP 46/48 MP 0/0 Hu 49 $ 215 room=.
--> eat2
-T 864 mode=inventory           Maeglin Moonsinger(elf) F3@( 8,10) HP 46/48 MP 0/0 Hu 71 $ 215 room=.
--> eat1
-T 865 mode=inventory           Maeglin Moonsinger(elf) F3@( 8,10) HP 46/48 MP 0/0 Hu100 $ 215 room=.
--> x
-T 866 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 46/48 MP 0/0 Hu100 $ 215 room=.
--> s
-T 867 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 46/48 MP 0/0 Hu 99 $ 215 room=.
--> e
-T 868 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 47/48 MP 0/0 Hu 98 $ 215 room=.
--> e
-T 869 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 47/48 MP 0/0 Hu 97 $ 215 room=.
--> s
-T 870 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> l
-T 871 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> s
-T 872 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> n
-T 873 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 94 $ 215 room=.
--> e
-T 874 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 93 $ 215 room=.
--> n
-T 875 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 92 $ 215 room=.
--> n
-T 876 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 91 $ 215 room=.
--> n
-T 877 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 90 $ 215 room=.
--> w
-T 878 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 89 $ 215 room=.
--> s
-T 879 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 88 $ 215 room=.
--> s
-T 880 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> l
-T 881 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> s
-T 882 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 86 $ 215 room=.
--> s
-T 883 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 85 $ 215 room=.
--> n
-T 884 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 84 $ 215 room=.
--> e
-T 885 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 83 $ 215 room=.
--> n
-T 886 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 82 $ 215 room=.
--> n
-T 887 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 81 $ 215 room=.
--> n
-T 888 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 80 $ 215 room=.
--> w
-T 889 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 79 $ 215 room=.
--> s
-T 890 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> l
-T 891 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> s
-T 892 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> s
-T 893 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 76 $ 215 room=.
--> s
-T 894 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 75 $ 215 room=.
--> n
-T 895 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 74 $ 215 room=.
--> e
-T 896 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 73 $ 215 room=.
--> n
-T 897 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 72 $ 215 room=.
--> n
-T 898 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 71 $ 215 room=.
--> n
-T 899 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 70 $ 215 room=.
--> e
-T 900 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> l
-T 901 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> s
-T 902 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 68 $ 215 room=V
--> n
-T 903 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 67 $ 215 room=.
--> n
-T 904 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 66 $ 215 room=P
--> e
-T 905 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 65 $ 215 room=.
--> n
-T 906 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 7) HP 48/48 MP 0/0 Hu 64 $ 215 room=.
--> w
-T 907 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 63 $ 215 room=.
--> n
-T 908 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 6) HP 48/48 MP 0/0 Hu 62 $ 215 room=.
--> w
-T 909 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 6) HP 48/48 MP 0/0 Hu 61 $ 215 room=.
--> s
-T 910 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 60 $ 215 room=C
--> l
-T 911 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 60 $ 215 room=C
--> s
-T 912 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> s
-T 913 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 58 $ 215 room=.
--> s
-T 914 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 57 $ 215 room=.
--> s
-T 915 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 56 $ 215 room=.
--> s
-T 916 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 55 $ 215 room=.
--> w
-T 917 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 54 $ 215 room=.
--> s
-T 918 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T 919 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 52 $ 215 room=.
--> n
-T 920 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> l
-T 921 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> e
-T 922 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 50 $ 215 room=.
--> s
-T 923 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T 924 mode=inventory           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> eat1
-T 925 mode=inventory           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> x
-T 926 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> n
-T 927 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 98 $ 215 room=.
--> n
-T 928 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 97 $ 215 room=.
--> n
-T 929 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> w
-T 930 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> l
-T 931 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> s
-T 932 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 94 $ 215 room=.
--> s
-T 933 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 93 $ 215 room=.
--> s
-T 934 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 92 $ 215 room=.
--> s
-T 935 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 91 $ 215 room=.
--> n
-T 936 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 90 $ 215 room=.
--> e
-T 937 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 89 $ 215 room=.
--> n
-T 938 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 88 $ 215 room=.
--> n
-T 939 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> e
-T 940 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 86 $ 215 room=V
--> l
-T 941 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 86 $ 215 room=V
--> n
-T 942 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 85 $ 215 room=.
--> n
-T 943 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 84 $ 215 room=P
--> w
-T 944 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 83 $ 215 room=.
--> s
-T 945 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 82 $ 215 room=.
--> s
-T 946 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 81 $ 215 room=.
--> s
-T 947 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 80 $ 215 room=.
--> s
-T 948 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 79 $ 215 room=.
--> w
-T 949 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> s
-T 950 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> l
-T 951 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> n
-T 952 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 76 $ 215 room=.
--> n
-T 953 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 75 $ 215 room=.
--> e
-T 954 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 74 $ 215 room=.
--> s
-T 955 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 73 $ 215 room=.
--> n
-T 956 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 72 $ 215 room=.
--> n
-T 957 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 71 $ 215 room=.
--> e
-T 958 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 70 $ 215 room=V
--> n
-T 959 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> n
-T 960 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 68 $ 215 room=P
--> l
-T 961 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 68 $ 215 room=P
--> e
-T 962 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 67 $ 215 room=.
--> n
-T 963 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 7) HP 48/48 MP 0/0 Hu 66 $ 215 room=.
--> w
-T 964 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 65 $ 215 room=.
--> w
-T 965 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 64 $ 215 room=C
--> s
-T 966 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 63 $ 215 room=.
--> s
-T 967 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 62 $ 215 room=.
--> s
-T 968 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 61 $ 215 room=.
--> s
-T 969 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 60 $ 215 room=.
--> s
-T 970 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> l
-T 971 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> w
-T 972 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 58 $ 215 room=.
--> s
-T 973 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 57 $ 215 room=.
--> n
-T 974 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 56 $ 215 room=.
--> n
-T 975 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 55 $ 215 room=.
--> e
-T 976 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 54 $ 215 room=.
--> s
-T 977 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T 978 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 52 $ 215 room=.
--> n
-T 979 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> w
-T 980 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 50 $ 215 room=.
--> s
-T 981 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T 982 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> eat1
-T 983 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> x
-T 984 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> s
-T 985 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 98 $ 215 room=.
--> s
-T 986 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 97 $ 215 room=.
--> n
-T 987 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> e
-T 988 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> n
-T 989 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 94 $ 215 room=.
--> w
-T 990 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 93 $ 215 room=.
--> n
-T 991 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 92 $ 215 room=.
--> w
-T 992 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 91 $ 215 room=.
--> s
-T 993 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 90 $ 215 room=.
--> w
-T 994 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 89 $ 215 room=.
--> n
-T 995 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 88 $ 215 room=.
--> n
-T 996 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> e
-T 997 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 86 $ 215 room=N
--> s
-T 998 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 85 $ 215 room=.
--> s
-T 999 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 84 $ 215 room=.
--> e
-T1000 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 83 $ 215 room=.
--> s
-T1001 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 82 $ 215 room=.
--> s
-T1002 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 81 $ 215 room=.
--> n
-T1003 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 80 $ 215 room=.
--> e
-T1004 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 79 $ 215 room=.
--> n
-T1005 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> n
-T1006 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> e
-T1007 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 76 $ 215 room=V
--> n
-T1008 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 75 $ 215 room=.
--> w
-T1009 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 74 $ 215 room=.
--> w
-T1010 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 73 $ 215 room=.
--> s
-T1011 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 72 $ 215 room=.
--> s
-T1012 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 71 $ 215 room=.
--> s
-T1013 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 70 $ 215 room=.
--> s
-T1014 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> n
-T1015 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 68 $ 215 room=.
--> e
-T1016 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 67 $ 215 room=.
--> n
-T1017 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 66 $ 215 room=.
--> n
-T1018 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 65 $ 215 room=.
--> e
-T1019 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 64 $ 215 room=V
--> n
-T1020 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 63 $ 215 room=.
--> w
-T1021 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 62 $ 215 room=.
--> w
-T1022 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 61 $ 215 room=.
--> s
-T1023 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 60 $ 215 room=.
--> s
-T1024 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> s
-T1025 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 58 $ 215 room=.
--> s
-T1026 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 57 $ 215 room=.
--> n
-T1027 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 56 $ 215 room=.
--> e
-T1028 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 55 $ 215 room=.
--> n
-T1029 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 54 $ 215 room=.
--> n
-T1030 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T1031 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 52 $ 215 room=.
--> w
-T1032 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> s
-T1033 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 50 $ 215 room=.
--> s
-T1034 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T1035 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> eat1
-T1036 mode=inventory           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> x
-T1037 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> s
-T1038 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 98 $ 215 room=.
--> s
-T1039 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 97 $ 215 room=.
--> n
-T1040 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> e
-T1041 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> n
-T1042 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 94 $ 215 room=.
--> w
-T1043 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 93 $ 215 room=.
--> w
-T1044 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 92 $ 215 room=.
--> w
-T1045 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 91 $ 215 room=.
--> n
-T1046 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 90 $ 215 room=.
--> n
-T1047 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 89 $ 215 room=.
--> e
-T1048 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 88 $ 215 room=N
--> s
-T1049 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> s
-T1050 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 86 $ 215 room=.
--> e
-T1051 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 85 $ 215 room=.
--> s
-T1052 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 84 $ 215 room=.
--> s
-T1053 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 83 $ 215 room=.
--> n
-T1054 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 82 $ 215 room=.
--> e
-T1055 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 81 $ 215 room=.
--> n
-T1056 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 80 $ 215 room=.
--> n
-T1057 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 79 $ 215 room=.
--> n
-T1058 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> e
-T1059 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> s
-T1060 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 76 $ 215 room=V
--> n
-T1061 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 75 $ 215 room=.
--> n
-T1062 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 74 $ 215 room=P
--> n
-T1063 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 73 $ 215 room=.
--> n
-T1064 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 6) HP 48/48 MP 0/0 Hu 72 $ 215 room=.
--> w
-T1065 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 6) HP 48/48 MP 0/0 Hu 71 $ 215 room=.
--> s
-T1066 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 70 $ 215 room=C
--> s
-T1067 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 8) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> s
-T1068 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 68 $ 215 room=.
--> s
-T1069 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 67 $ 215 room=.
--> s
-T1070 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 66 $ 215 room=.
--> s
-T1071 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 65 $ 215 room=.
--> w
-T1072 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 64 $ 215 room=.
--> s
-T1073 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 63 $ 215 room=.
--> n
-T1074 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 62 $ 215 room=.
--> n
-T1075 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 61 $ 215 room=.
--> n
-T1076 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 60 $ 215 room=.
--> n
-T1077 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> w
-T1078 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 58 $ 215 room=N
--> s
-T1079 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 57 $ 215 room=.
--> s
-T1080 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 56 $ 215 room=.
--> e
-T1081 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 55 $ 215 room=.
--> s
-T1082 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 54 $ 215 room=.
--> s
-T1083 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T1084 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 52 $ 215 room=.
--> e
-T1085 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> n
-T1086 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 50 $ 215 room=.
--> n
-T1087 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T1088 mode=inventory           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> eat1
-T1089 mode=inventory           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> x
-T1090 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> e
-T1091 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 98 $ 215 room=V
--> n
-T1092 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 97 $ 215 room=.
--> w
-T1093 mode=game_loop           Maeglin Moonsinger(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 96 $ 215 room=.
--> w
-T1094 mode=game_loop           Maeglin Moonsinger(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 95 $ 215 room=.
--> s
-T1095 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 94 $ 215 room=.
--> s
-T1096 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 93 $ 215 room=.
--> s
-T1097 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 92 $ 215 room=.
--> s
-T1098 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 91 $ 215 room=.
--> n
-T1099 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 90 $ 215 room=.
--> e
-T1100 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 89 $ 215 room=.
--> n
-T1101 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 88 $ 215 room=.
--> w
-T1102 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 87 $ 215 room=.
--> n
-T1103 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 86 $ 215 room=.
--> w
-T1104 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 85 $ 215 room=.
--> s
-T1105 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 84 $ 215 room=.
--> w
-T1106 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 83 $ 215 room=.
--> n
-T1107 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 82 $ 215 room=.
--> n
-T1108 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 81 $ 215 room=.
--> e
-T1109 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 80 $ 215 room=N
--> s
-T1110 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 79 $ 215 room=.
--> s
-T1111 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 78 $ 215 room=.
--> e
-T1112 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 77 $ 215 room=.
--> s
-T1113 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 76 $ 215 room=.
--> s
-T1114 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 75 $ 215 room=.
--> n
-T1115 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 74 $ 215 room=.
--> e
-T1116 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 73 $ 215 room=.
--> n
-T1117 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 72 $ 215 room=.
--> w
-T1118 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 71 $ 215 room=.
--> n
-T1119 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 70 $ 215 room=.
--> w
-T1120 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 69 $ 215 room=.
--> s
-T1121 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 68 $ 215 room=.
--> w
-T1122 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,11) HP 48/48 MP 0/0 Hu 67 $ 215 room=.
--> n
-T1123 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8,10) HP 48/48 MP 0/0 Hu 66 $ 215 room=.
--> n
-T1124 mode=game_loop           Maeglin Moonsinger(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 65 $ 215 room=.
--> e
-T1125 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 64 $ 215 room=N
--> s
-T1126 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,10) HP 48/48 MP 0/0 Hu 63 $ 215 room=.
--> s
-T1127 mode=game_loop           Maeglin Moonsinger(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 62 $ 215 room=.
--> e
-T1128 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 61 $ 215 room=.
--> s
-T1129 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 60 $ 215 room=.
--> s
-T1130 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,13) HP 48/48 MP 0/0 Hu 59 $ 215 room=.
--> n
-T1131 mode=game_loop           Maeglin Moonsinger(elf) F3@(10,12) HP 48/48 MP 0/0 Hu 58 $ 215 room=.
--> e
-T1132 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,12) HP 48/48 MP 0/0 Hu 57 $ 215 room=.
--> n
-T1133 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,11) HP 48/48 MP 0/0 Hu 56 $ 215 room=.
--> n
-T1134 mode=game_loop           Maeglin Moonsinger(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 55 $ 215 room=.
--> e
-T1135 mode=game_loop           Maeglin Moonsinger(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 54 $ 215 room=V
--> n
-T1136 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 53 $ 215 room=.
--> n
-T1137 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 8) HP 48/48 MP 0/0 Hu 52 $ 215 room=P
--> n
-T1138 mode=game_loop           Maeglin Moonsinger(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 51 $ 215 room=.
--> e
-T1139 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 7) HP 48/48 MP 0/0 Hu 50 $ 215 room=.
--> s
-T1140 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> i
-T1141 mode=inventory           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 49 $ 215 room=.
--> eat1
-T1142 mode=inventory           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> x
-T1143 mode=game_loop           Maeglin Moonsinger(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 99 $ 215 room=.
--> e
-T1144 mode=combat_mode         Maeglin Moonsinger(elf) F3@(14, 8) HP 48/48 MP 0/0 Hu 98 $ 215 room=M vs Skeleton(L2 HP26/26)
--> f
-T1145 mode=combat_mode         Maeglin Moonsinger(elf) F3@(14, 8) HP 47/48 MP 0/0 Hu 98 $ 215 room=M vs Skeleton(L2 HP26/26)
+T 309 mode=combat_mode         Maeglin Moonsinger(elf) F2@(10, 5) HP 35/38 MP 0/0 Hu 52 $ 382 room=M vs Cockatrice(L1 HP6/25)
 -> a
-T1146 mode=combat_victory      Maeglin Moonsinger(elf) F3@(14, 8) HP 46/48 MP 0/0 Hu 98 $ 242 room=.
+T 310 mode=combat_victory      Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 52 $ 402 room=.
 -> back
-T1147 mode=game_loop           Maeglin Moonsinger(elf) F3@(14, 8) HP 46/48 MP 0/0 Hu 98 $ 242 room=.
--> e
-T1148 mode=combat_mode         Maeglin Moonsinger(elf) F3@(15, 8) HP 46/48 MP 0/0 Hu 97 $ 242 room=M vs Wight(L2 HP40/40)
--> a
-T1149 mode=combat_mode         Maeglin Moonsinger(elf) F3@(15, 8) HP 41/48 MP 0/0 Hu 97 $ 242 room=M vs Wight(L2 HP40/40)
--> a
-T1150 mode=combat_mode         Maeglin Moonsinger(elf) F3@(15, 8) HP 36/48 MP 0/0 Hu 97 $ 242 room=M vs Wight(L2 HP14/40)
--> a
-T1151 mode=combat_victory      Maeglin Moonsinger(elf) F3@(15, 8) HP 36/48 MP 0/0 Hu 97 $ 269 room=.
--> back
-T1152 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 8) HP 36/48 MP 0/0 Hu 97 $ 269 room=.
--> l
-T1153 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 8) HP 36/48 MP 0/0 Hu 97 $ 269 room=.
--> s
-T1154 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 9) HP 37/48 MP 0/0 Hu 96 $ 269 room=.
--> s
-T1155 mode=game_loop           Maeglin Moonsinger(elf) F3@(15,10) HP 37/48 MP 0/0 Hu 95 $ 269 room=.
--> s
-T1156 mode=pool_mode           Maeglin Moonsinger(elf) F3@(15,11) HP 38/48 MP 0/0 Hu 94 $ 269 room=P
--> dr
-T1157 mode=game_loop           Maeglin Moonsinger(elf) F3@(15,11) HP 48/48 MP 0/0 Hu 94 $ 269 room=.
--> e
-T1158 mode=game_loop           Maeglin Moonsinger(elf) F3@(16,11) HP 48/48 MP 0/0 Hu 93 $ 269 room=.
--> e
-T1159 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,11) HP 48/48 MP 0/0 Hu 92 $ 269 room=.
--> l
-T1160 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,11) HP 48/48 MP 0/0 Hu 92 $ 269 room=.
--> s
-T1161 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 91 $ 269 room=.
--> l
-T1162 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 91 $ 269 room=.
--> s
-T1163 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 90 $ 269 room=.
--> l
-T1164 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 90 $ 269 room=.
--> s
-T1165 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 89 $ 269 room=.
--> l
-T1166 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 89 $ 269 room=.
--> e
-T1167 mode=chest_mode          Maeglin Moonsinger(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 88 $ 269 room=C
--> o
-T1168 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 88 $ 269 room=.
+T 311 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 52 $ 402 room=.
 -> i
-T1169 mode=inventory           Maeglin Moonsinger(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 88 $ 269 room=.
--> e4
-T1170 mode=inventory           Maeglin Moonsinger(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 88 $ 269 room=.
+T 312 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 52 $ 402 room=.
+-> u14
+T 313 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 52 $ 402 room=.
 -> x
-T1171 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 88 $ 269 room=.
+T 314 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 52 $ 402 room=.
 -> e
-T1172 mode=game_loop           Maeglin Moonsinger(elf) F3@(19,14) HP 48/48 MP 0/0 Hu 87 $ 269 room=.
--> s
-T1173 mode=game_loop           Maeglin Moonsinger(elf) F3@(19,15) HP 48/48 MP 0/0 Hu 86 $ 269 room=.
--> s
-T1174 mode=combat_mode         Maeglin Moonsinger(elf) F3@(19,16) HP 48/48 MP 0/0 Hu 85 $ 269 room=M vs Giant Centipede(L2 HP16/16)
+T 315 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 5) HP 34/38 MP 0/0 Hu 51 $ 402 room=.
+-> e
+T 316 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 5) HP 34/38 MP 0/0 Hu 51 $ 402 room=.
+-> n
+T 317 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 34/38 MP 0/0 Hu 50 $ 402 room=.
+-> n
+T 318 mode=combat_mode         Maeglin Moonsinger(elf) F2@(12, 3) HP 34/38 MP 0/0 Hu 49 $ 402 room=M vs Sewer Rat(L1 HP10/10)
 -> a
-T1175 mode=combat_victory      Maeglin Moonsinger(elf) F3@(19,16) HP 47/58 MP 0/0 Hu 85 $ 290 room=.
+T 319 mode=combat_mode         Maeglin Moonsinger(elf) F2@(12, 3) HP 33/38 MP 0/0 Hu 49 $ 402 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 320 mode=combat_mode         Maeglin Moonsinger(elf) F2@(12, 3) HP 32/38 MP 0/0 Hu 49 $ 402 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 321 mode=combat_victory      Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 49 $ 406 room=.
 -> back
-T1176 mode=game_loop           Maeglin Moonsinger(elf) F3@(19,16) HP 47/58 MP 0/0 Hu 85 $ 290 room=.
+T 322 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 49 $ 406 room=.
 -> i
-T1177 mode=inventory           Maeglin Moonsinger(elf) F3@(19,16) HP 47/58 MP 0/0 Hu 85 $ 290 room=.
--> u11
-T1178 mode=inventory           Maeglin Moonsinger(elf) F3@(19,16) HP 47/58 MP 0/0 Hu 85 $ 290 room=.
+T 323 mode=inventory           Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 49 $ 406 room=.
+-> u15
+T 324 mode=inventory           Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 49 $ 406 room=.
+-> eat4
+T 325 mode=inventory           Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 67 $ 406 room=.
 -> x
-T1179 mode=game_loop           Maeglin Moonsinger(elf) F3@(19,16) HP 47/58 MP 0/0 Hu 85 $ 290 room=.
--> w
-T1180 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,16) HP 44/58 MP 0/0 Hu 84 $ 290 room=.
--> n
-T1181 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,15) HP 41/58 MP 0/0 Hu 83 $ 290 room=.
--> n
-T1182 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,14) HP 38/58 MP 0/0 Hu 82 $ 290 room=.
--> n
-T1183 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,13) HP 39/58 MP 0/0 Hu 81 $ 290 room=.
--> n
-T1184 mode=game_loop           Maeglin Moonsinger(elf) F3@(18,12) HP 39/58 MP 0/0 Hu 80 $ 290 room=.
--> w
-T1185 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,12) HP 39/58 MP 0/0 Hu 79 $ 290 room=.
--> n
-T1186 mode=game_loop           Maeglin Moonsinger(elf) F3@(17,11) HP 39/58 MP 0/0 Hu 78 $ 290 room=.
--> w
-T1187 mode=game_loop           Maeglin Moonsinger(elf) F3@(16,11) HP 40/58 MP 0/0 Hu 77 $ 290 room=.
--> w
-T1188 mode=game_loop           Maeglin Moonsinger(elf) F3@(15,11) HP 40/58 MP 0/0 Hu 76 $ 290 room=.
--> n
-T1189 mode=game_loop           Maeglin Moonsinger(elf) F3@(15,10) HP 40/58 MP 0/0 Hu 75 $ 290 room=.
--> n
-T1190 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 9) HP 40/58 MP 0/0 Hu 74 $ 290 room=.
--> n
-T1191 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 8) HP 41/58 MP 0/0 Hu 73 $ 290 room=.
+T 326 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 3) HP 31/38 MP 0/0 Hu 67 $ 406 room=.
 -> e
-T1192 mode=game_loop           Maeglin Moonsinger(elf) F3@(16, 8) HP 41/58 MP 0/0 Hu 72 $ 290 room=.
+T 327 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 31/38 MP 0/0 Hu 67 $ 406 room=.
 -> n
-T1193 mode=garden_mode         Maeglin Moonsinger(elf) F3@(16, 7) HP 41/58 MP 0/0 Hu 71 $ 290 room=G
--> h
-T1194 mode=game_loop           Maeglin Moonsinger(elf) F3@(16, 7) HP 41/58 MP 0/0 Hu 71 $ 290 room=.
--> w
-T1195 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 7) HP 41/58 MP 0/0 Hu 70 $ 290 room=.
--> n
-T1196 mode=game_loop           Maeglin Moonsinger(elf) F3@(15, 6) HP 42/58 MP 0/0 Hu 69 $ 290 room=.
+T 328 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 2) HP 31/38 MP 0/0 Hu 66 $ 406 room=.
+-> s
+T 329 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 31/38 MP 0/0 Hu 65 $ 406 room=.
 -> e
-T1197 mode=stairs_down_mode    Maeglin Moonsinger(elf) F3@(16, 6) HP 42/58 MP 0/0 Hu 68 $ 290 room=D
+T 330 mode=game_loop           Maeglin Moonsinger(elf) F2@(14, 3) HP 32/38 MP 0/0 Hu 64 $ 406 room=.
+-> l
+T 331 mode=game_loop           Maeglin Moonsinger(elf) F2@(14, 3) HP 32/38 MP 0/0 Hu 64 $ 406 room=.
+-> w
+T 332 mode=game_loop           Maeglin Moonsinger(elf) F2@(13, 3) HP 32/38 MP 0/0 Hu 64 $ 406 room=.
+-> w
+T 333 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 3) HP 32/38 MP 0/0 Hu 63 $ 406 room=.
+-> w
+T 334 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 3) HP 32/38 MP 0/0 Hu 62 $ 406 room=.
+-> w
+T 335 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 33/38 MP 0/0 Hu 62 $ 406 room=.
+-> n
+T 336 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 2) HP 33/38 MP 0/0 Hu 61 $ 406 room=.
+-> w
+T 337 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 2) HP 33/38 MP 0/0 Hu 60 $ 406 room=.
+-> w
+T 338 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 2) HP 33/38 MP 0/0 Hu 60 $ 406 room=.
+-> n
+T 339 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 1) HP 33/38 MP 0/0 Hu 59 $ 406 room=.
+-> w
+T 340 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 1) HP 33/38 MP 0/0 Hu 58 $ 406 room=.
+-> l
+T 341 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 1) HP 33/38 MP 0/0 Hu 58 $ 406 room=.
+-> w
+T 342 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 1) HP 33/38 MP 0/0 Hu 57 $ 406 room=.
+-> s
+T 343 mode=game_loop           Maeglin Moonsinger(elf) F2@( 6, 2) HP 33/38 MP 0/0 Hu 57 $ 406 room=.
+-> e
+T 344 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 2) HP 33/38 MP 0/0 Hu 56 $ 406 room=.
+-> s
+T 345 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 3) HP 33/38 MP 0/0 Hu 55 $ 406 room=.
+-> s
+T 346 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 4) HP 33/38 MP 0/0 Hu 55 $ 406 room=.
+-> s
+T 347 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 5) HP 33/38 MP 0/0 Hu 54 $ 406 room=V
+-> e
+T 348 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 33/38 MP 0/0 Hu 53 $ 406 room=.
+-> e
+T 349 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 5) HP 33/38 MP 0/0 Hu 53 $ 406 room=.
+-> e
+T 350 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 33/38 MP 0/0 Hu 52 $ 406 room=.
+-> l
+T 351 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 33/38 MP 0/0 Hu 52 $ 406 room=.
+-> n
+T 352 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 33/38 MP 0/0 Hu 51 $ 406 room=.
+-> n
+T 353 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 3) HP 33/38 MP 0/0 Hu 50 $ 406 room=.
+-> e
+T 354 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 3) HP 33/38 MP 0/0 Hu 50 $ 406 room=.
+-> e
+T 355 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 3) HP 33/38 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T 356 mode=inventory           Maeglin Moonsinger(elf) F2@(12, 3) HP 33/38 MP 0/0 Hu 49 $ 406 room=.
+-> eat4
+T 357 mode=inventory           Maeglin Moonsinger(elf) F2@(12, 3) HP 33/38 MP 0/0 Hu 67 $ 406 room=.
+-> x
+T 358 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 3) HP 33/38 MP 0/0 Hu 67 $ 406 room=.
+-> s
+T 359 mode=game_loop           Maeglin Moonsinger(elf) F2@(12, 4) HP 33/38 MP 0/0 Hu 66 $ 406 room=.
+-> w
+T 360 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 33/38 MP 0/0 Hu 66 $ 406 room=.
+-> l
+T 361 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 4) HP 33/38 MP 0/0 Hu 66 $ 406 room=.
+-> w
+T 362 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 4) HP 33/38 MP 0/0 Hu 65 $ 406 room=.
+-> s
+T 363 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 5) HP 34/38 MP 0/0 Hu 64 $ 406 room=.
+-> s
+T 364 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 6) HP 34/38 MP 0/0 Hu 64 $ 406 room=.
+-> e
+T 365 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 6) HP 34/38 MP 0/0 Hu 63 $ 406 room=.
+-> s
+T 366 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 7) HP 34/38 MP 0/0 Hu 62 $ 406 room=.
+-> w
+T 367 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 7) HP 35/38 MP 0/0 Hu 61 $ 406 room=.
+-> s
+T 368 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 35/38 MP 0/0 Hu 61 $ 406 room=.
+-> s
+T 369 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 35/38 MP 0/0 Hu 60 $ 406 room=.
+-> w
+T 370 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 35/38 MP 0/0 Hu 59 $ 406 room=.
+-> l
+T 371 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 9) HP 35/38 MP 0/0 Hu 59 $ 406 room=.
+-> n
+T 372 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 8) HP 35/38 MP 0/0 Hu 59 $ 406 room=.
+-> n
+T 373 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 7) HP 35/38 MP 0/0 Hu 58 $ 406 room=.
+-> n
+T 374 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 6) HP 35/38 MP 0/0 Hu 57 $ 406 room=.
+-> n
+T 375 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 5) HP 35/38 MP 0/0 Hu 57 $ 406 room=.
+-> w
+T 376 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 5) HP 35/38 MP 0/0 Hu 56 $ 406 room=.
+-> s
+T 377 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 6) HP 35/38 MP 0/0 Hu 55 $ 406 room=.
+-> s
+T 378 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 7) HP 35/38 MP 0/0 Hu 54 $ 406 room=.
+-> w
+T 379 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 7) HP 35/38 MP 0/0 Hu 54 $ 406 room=.
+-> s
+T 380 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 8) HP 35/38 MP 0/0 Hu 53 $ 406 room=.
+-> l
+T 381 mode=game_loop           Maeglin Moonsinger(elf) F2@( 7, 8) HP 35/38 MP 0/0 Hu 53 $ 406 room=.
+-> e
+T 382 mode=game_loop           Maeglin Moonsinger(elf) F2@( 8, 8) HP 35/38 MP 0/0 Hu 52 $ 406 room=.
+-> e
+T 383 mode=game_loop           Maeglin Moonsinger(elf) F2@( 9, 8) HP 35/38 MP 0/0 Hu 52 $ 406 room=.
+-> e
+T 384 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 35/38 MP 0/0 Hu 51 $ 406 room=.
+-> i
+T 385 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 8) HP 35/38 MP 0/0 Hu 51 $ 406 room=.
+-> eat5
+T 386 mode=inventory           Maeglin Moonsinger(elf) F2@(10, 8) HP 35/38 MP 0/0 Hu 63 $ 406 room=.
+-> x
+T 387 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 8) HP 35/38 MP 0/0 Hu 63 $ 406 room=.
+-> s
+T 388 mode=game_loop           Maeglin Moonsinger(elf) F2@(10, 9) HP 35/38 MP 0/0 Hu 62 $ 406 room=.
+-> e
+T 389 mode=game_loop           Maeglin Moonsinger(elf) F2@(11, 9) HP 35/38 MP 0/0 Hu 62 $ 406 room=.
+-> s
+T 390 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 35/38 MP 0/0 Hu 61 $ 406 room=M vs Bugbear(L1 HP55/55)
+-> a
+T 391 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 32/38 MP 0/0 Hu 61 $ 406 room=M vs Bugbear(L1 HP35/55)
+-> a
+T 392 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 29/38 MP 0/0 Hu 61 $ 406 room=M vs Bugbear(L1 HP35/55)
+-> a
+T 393 mode=combat_mode         Maeglin Moonsinger(elf) F2@(11,10) HP 26/38 MP 0/0 Hu 61 $ 406 room=M vs Bugbear(L1 HP15/55)
+-> a
+T 394 mode=combat_victory      Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> back
+T 395 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> i
+T 396 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> u13
+T 397 mode=inventory           Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> x
+T 398 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> l
+T 399 mode=game_loop           Maeglin Moonsinger(elf) F2@(11,10) HP 23/38 MP 0/0 Hu 61 $ 412 room=.
+-> e
+T 400 mode=game_loop           Maeglin Moonsinger(elf) F2@(12,10) HP 24/38 MP 0/0 Hu 60 $ 412 room=.
+-> l
+T 401 mode=game_loop           Maeglin Moonsinger(elf) F2@(12,10) HP 24/38 MP 0/0 Hu 60 $ 412 room=.
+-> e
+T 402 mode=game_loop           Maeglin Moonsinger(elf) F2@(13,10) HP 24/38 MP 0/0 Hu 59 $ 412 room=.
+-> e
+T 403 mode=game_loop           Maeglin Moonsinger(elf) F2@(14,10) HP 24/38 MP 0/0 Hu 59 $ 412 room=.
+-> i
+T 404 mode=inventory           Maeglin Moonsinger(elf) F2@(14,10) HP 24/38 MP 0/0 Hu 59 $ 412 room=.
+-> eat5
+T 405 mode=inventory           Maeglin Moonsinger(elf) F2@(14,10) HP 24/38 MP 0/0 Hu 77 $ 412 room=.
+-> x
+T 406 mode=game_loop           Maeglin Moonsinger(elf) F2@(14,10) HP 24/38 MP 0/0 Hu 77 $ 412 room=.
+-> e
+T 407 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,10) HP 24/38 MP 0/0 Hu 76 $ 412 room=.
+-> l
+T 408 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,10) HP 24/38 MP 0/0 Hu 76 $ 412 room=.
+-> s
+T 409 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,11) HP 24/38 MP 0/0 Hu 75 $ 412 room=.
+-> l
+T 410 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,11) HP 24/38 MP 0/0 Hu 75 $ 412 room=.
+-> l
+T 411 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,11) HP 24/38 MP 0/0 Hu 75 $ 412 room=.
+-> s
+T 412 mode=game_loop           Maeglin Moonsinger(elf) F2@(15,12) HP 24/38 MP 0/0 Hu 75 $ 412 room=.
+-> s
+T 413 mode=stairs_down_mode    Maeglin Moonsinger(elf) F2@(15,13) HP 25/38 MP 0/0 Hu 74 $ 412 room=D
 -> d
-T1198 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1199 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1200 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1201 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1202 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
+T 414 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 25/38 MP 0/0 Hu 74 $ 412 room=U
+-> s
+T 415 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 25/38 MP 0/0 Hu 74 $ 412 room=U
 -> n
-T1203 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1204 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1205 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> n
-T1206 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> n
-T1207 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> n
-T1208 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
--> w
-T1209 mode=stairs_up_mode      Maeglin Moonsinger(elf) F4@( 1, 1) HP 42/58 MP 0/0 Hu 68 $ 290 room=U
+T 416 mode=stairs_up_mode      Maeglin Moonsinger(elf) F3@( 1, 1) HP 25/38 MP 0/0 Hu 74 $ 412 room=U
 -> e
-T1210 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 1) HP 42/58 MP 0/0 Hu 67 $ 290 room=.
--> s
-T1211 mode=chest_mode          Maeglin Moonsinger(elf) F4@( 2, 2) HP 42/58 MP 0/0 Hu 66 $ 290 room=C
--> o
-T1212 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 2) HP 42/58 MP 0/0 Hu 66 $ 400 room=.
--> s
-T1213 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 3) HP 43/58 MP 0/0 Hu 65 $ 400 room=.
--> s
-T1214 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 4) HP 43/58 MP 0/0 Hu 64 $ 400 room=.
--> w
-T1215 mode=game_loop           Maeglin Moonsinger(elf) F4@( 1, 4) HP 43/58 MP 0/0 Hu 63 $ 400 room=.
--> s
-T1216 mode=game_loop           Maeglin Moonsinger(elf) F4@( 1, 5) HP 43/58 MP 0/0 Hu 62 $ 400 room=.
+T 417 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 25/38 MP 0/0 Hu 73 $ 412 room=.
+-> l
+T 418 mode=game_loop           Maeglin Moonsinger(elf) F3@( 2, 1) HP 25/38 MP 0/0 Hu 73 $ 412 room=.
 -> e
-T1217 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 5) HP 44/58 MP 0/0 Hu 61 $ 400 room=.
--> s
-T1218 mode=garden_mode         Maeglin Moonsinger(elf) F4@( 2, 6) HP 44/58 MP 0/0 Hu 60 $ 400 room=G
--> h
-T1219 mode=game_loop           Maeglin Moonsinger(elf) F4@( 2, 6) HP 44/58 MP 0/0 Hu 60 $ 400 room=.
+T 419 mode=game_loop           Maeglin Moonsinger(elf) F3@( 3, 1) HP 25/38 MP 0/0 Hu 73 $ 412 room=.
 -> e
-T1220 mode=game_loop           Maeglin Moonsinger(elf) F4@( 3, 6) HP 44/58 MP 0/0 Hu 59 $ 400 room=.
--> n
-T1221 mode=game_loop           Maeglin Moonsinger(elf) F4@( 3, 5) HP 44/58 MP 0/0 Hu 58 $ 400 room=.
--> n
-T1222 mode=combat_mode         Maeglin Moonsinger(elf) F4@( 3, 4) HP 44/58 MP 0/0 Hu 57 $ 400 room=M vs UNDEAD WRAITH(L3 HP100/100)
+T 420 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 25/38 MP 0/0 Hu 72 $ 412 room=.
+-> l
+T 421 mode=game_loop           Maeglin Moonsinger(elf) F3@( 4, 1) HP 25/38 MP 0/0 Hu 72 $ 412 room=.
+-> s
+T 422 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 2) HP 26/38 MP 0/0 Hu 71 $ 412 room=M vs Giant Spider(L2 HP40/40)
 -> a
-T1223 mode=combat_mode         Maeglin Moonsinger(elf) F4@( 3, 4) HP 19/58 MP 0/0 Hu 57 $ 400 room=M vs UNDEAD WRAITH(L3 HP78/100)
+T 423 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 2) HP 19/38 MP 0/0 Hu 71 $ 412 room=M vs Giant Spider(L2 HP20/40)
 -> a
-T1224 mode=death_screen        Maeglin Moonsinger(elf) F4@( 3, 4) HP -6/58 MP 0/0 Hu 57 $ 400 room=M
+T 424 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 2) HP 12/38 MP 0/0 Hu 71 $ 412 room=M vs Giant Spider(L2 HP20/40)
+-> a
+T 425 mode=combat_mode         Maeglin Moonsinger(elf) F3@( 4, 2) HP 5/38 MP 0/0 Hu 71 $ 412 room=M vs Giant Spider(L2 HP20/40)
+-> f
+T 426 mode=death_screen        Maeglin Moonsinger(elf) F3@( 4, 2) HP -2/38 MP 0/0 Hu 71 $ 412 room=M
 
-=== run finished: turns=1224 floor=4 hp=-6/58 gold=400 alive=False mode=death_screen ===
+=== run finished: turns=426 floor=3 hp=-2/38 gold=412 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00857_elf.html

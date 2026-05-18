@@ -5,10 +5,10 @@ T   1 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0
   The lantern reveals 6 nearby rooms!
   Lantern fuel remaining: 79
 -> e
-T   2 mode=library_mode        Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=L
+T   2 mode=library_mode        Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=L
   Ancient tomes line the dusty shelves. You could search for useful grimoires here.
 -> r
-T   3 mode=library_read_decision_mode Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=L
+T   3 mode=library_read_decision_mode Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=L
   You begin searching through the dusty tomes...
   You found a grimoire!
   You examine the tome...
@@ -16,7 +16,7 @@ It appears to be a Level 1 grimoire.
 
   Do you want to attempt to read this grimoire? (y/n)
 -> y
-T   4 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 340 room=.
+T   4 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 340 room=.
   You carefully open the grimoire and attempt to decipher its ancient text...
   Success! You deciphered the grimoire and extracted the spell!
   The unidentified spell has been added to your inventory. Take it to a vendor to identify it.
@@ -24,781 +24,939 @@ T   4 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0
   Reward: 50 gold!
   The library's knowledge has been exhausted. The shelves are now empty.
 -> e
-T   5 mode=pool_mode           Hama the Stalwart(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 340 room=P
+T   5 mode=pool_mode           Hama the Stalwart(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 340 room=P
   
   Will you drink from the basin?
 -> dr
-T   6 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 18/30 MP 0/0 Hu 98 $ 340 room=.
+T   6 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 18/30 MP 0/0 Hu 99 $ 340 room=.
 -> l
-T   7 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 18/30 MP 0/0 Hu 98 $ 340 room=.
+T   7 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 18/30 MP 0/0 Hu 99 $ 340 room=.
 -> s
-T   8 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 12/30 MP 0/0 Hu 97 $ 340 room=.
+T   8 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 12/30 MP 0/0 Hu 98 $ 340 room=.
 -> i
-T   9 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 12/30 MP 0/0 Hu 97 $ 340 room=.
+T   9 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 12/30 MP 0/0 Hu 98 $ 340 room=.
 -> u3
-T  10 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 340 room=.
+T  10 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 340 room=.
 -> x
-T  11 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 340 room=.
+T  11 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 340 room=.
 -> n
-T  12 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 25/30 MP 0/0 Hu 96 $ 340 room=.
+T  12 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 25/30 MP 0/0 Hu 98 $ 340 room=.
 -> s
-T  13 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 19/30 MP 0/0 Hu 95 $ 340 room=.
+T  13 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 19/30 MP 0/0 Hu 97 $ 340 room=.
 -> i
-T  14 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 19/30 MP 0/0 Hu 95 $ 340 room=.
+T  14 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 19/30 MP 0/0 Hu 97 $ 340 room=.
 -> u3
-T  15 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 95 $ 340 room=.
+T  15 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 340 room=.
 -> x
-T  16 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 95 $ 340 room=.
+T  16 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 340 room=.
 -> n
-T  17 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 25/30 MP 0/0 Hu 94 $ 340 room=.
+T  17 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 25/30 MP 0/0 Hu 96 $ 340 room=.
 -> w
-T  18 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 25/30 MP 0/0 Hu 93 $ 340 room=.
+T  18 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 25/30 MP 0/0 Hu 96 $ 340 room=.
 -> w
-T  19 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 26/30 MP 0/0 Hu 92 $ 340 room=E
+T  19 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 26/30 MP 0/0 Hu 95 $ 340 room=E
 -> e
-T  20 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 26/30 MP 0/0 Hu 91 $ 340 room=.
+T  20 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 26/30 MP 0/0 Hu 94 $ 340 room=.
 -> e
-T  21 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 90 $ 340 room=.
+T  21 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 93 $ 340 room=.
 -> s
-T  22 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 89 $ 340 room=.
+T  22 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 93 $ 340 room=.
 -> s
-T  23 mode=combat_mode         Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 88 $ 340 room=M vs Kobold(L0 HP8/8)
+T  23 mode=combat_mode         Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 92 $ 340 room=M vs Kobold(L0 HP8/8)
 -> a
-T  24 mode=combat_mode         Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 88 $ 340 room=M vs Kobold(L0 HP8/8)
+T  24 mode=combat_mode         Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 92 $ 340 room=M vs Kobold(L0 HP8/8)
 -> a
-T  25 mode=combat_victory      Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 88 $ 474 room=.
+T  25 mode=combat_victory      Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 92 $ 474 room=.
 -> back
-T  26 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 88 $ 474 room=.
+T  26 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 92 $ 474 room=.
 -> i
-T  27 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 88 $ 474 room=.
+T  27 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 92 $ 474 room=.
 -> u3
-T  28 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  28 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> x
-T  29 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  29 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> i
-T  30 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  30 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> u8
-T  31 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  31 mode=inventory           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> x
-T  32 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  32 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> l
-T  33 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 474 room=.
+T  33 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 474 room=.
 -> s
-T  34 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 87 $ 474 room=.
+T  34 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 91 $ 474 room=.
 -> l
-T  35 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 87 $ 474 room=.
+T  35 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 91 $ 474 room=.
 -> e
-T  36 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 86 $ 474 room=.
+T  36 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 91 $ 474 room=.
 -> e
-T  37 mode=altar_mode          Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 85 $ 474 room=A
+T  37 mode=altar_mode          Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 90 $ 474 room=A
 -> pray
-T  38 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 85 $ 474 room=.
+T  38 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 90 $ 474 room=.
 -> l
-T  39 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 85 $ 474 room=.
+T  39 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 90 $ 474 room=.
 -> e
-T  40 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 84 $ 474 room=M vs Goblin(L0 HP12/12)
+T  40 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 474 room=M vs Goblin(L0 HP12/12)
 -> a
-T  41 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 84 $ 474 room=M vs Goblin(L0 HP12/12)
+T  41 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 474 room=M vs Goblin(L0 HP12/12)
 -> a
-T  42 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 84 $ 576 room=.
+T  42 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 576 room=.
 -> back
-T  43 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 84 $ 576 room=.
+T  43 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 576 room=.
 -> l
-T  44 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 84 $ 576 room=.
+T  44 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 576 room=.
 -> s
-T  45 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 83 $ 576 room=M vs Sewer Rat(L0 HP10/10)
+T  45 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 89 $ 576 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  46 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 576 room=M vs Sewer Rat(L0 HP10/10)
+T  46 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 576 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  47 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 584 room=.
+T  47 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 584 room=.
 -> back
-T  48 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 584 room=.
+T  48 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 584 room=.
 -> i
-T  49 mode=inventory           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 584 room=.
+T  49 mode=inventory           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 584 room=.
 -> u9
-T  50 mode=inventory           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 584 room=.
+T  50 mode=inventory           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 584 room=.
 -> x
-T  51 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 83 $ 584 room=.
+T  51 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 29/30 MP 0/0 Hu 89 $ 584 room=.
 -> w
-T  52 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 29/30 MP 0/0 Hu 82 $ 584 room=M vs Goblin(L0 HP30/30)
+T  52 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 29/30 MP 0/0 Hu 88 $ 584 room=M vs Goblin(L0 HP30/30)
 -> a
-T  53 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 28/30 MP 0/0 Hu 82 $ 584 room=M vs Goblin(L0 HP30/30)
+T  53 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 28/30 MP 0/0 Hu 88 $ 584 room=M vs Goblin(L0 HP30/30)
 -> a
-T  54 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 27/30 MP 0/0 Hu 82 $ 584 room=M vs Goblin(L0 HP10/30)
+T  54 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 27/30 MP 0/0 Hu 88 $ 584 room=M vs Goblin(L0 HP10/30)
 -> a
-T  55 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 82 $ 584 room=M vs Goblin(L0 HP10/30)
+T  55 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 88 $ 584 room=M vs Goblin(L0 HP10/30)
 -> a
-T  56 mode=combat_victory      Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 82 $ 586 room=.
+T  56 mode=combat_victory      Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 88 $ 586 room=.
 -> back
-T  57 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 82 $ 586 room=.
+T  57 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 88 $ 586 room=.
 -> i
-T  58 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 82 $ 586 room=.
+T  58 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 26/30 MP 0/0 Hu 88 $ 586 room=.
 -> u3
-T  59 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 586 room=.
+T  59 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 586 room=.
 -> x
-T  60 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 586 room=.
+T  60 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 586 room=.
 -> i
-T  61 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 586 room=.
+T  61 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 586 room=.
 -> u9
-T  62 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 586 room=.
+T  62 mode=inventory           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 586 room=.
 -> x
-T  63 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 586 room=.
+T  63 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 586 room=.
 -> n
-T  64 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 81 $ 586 room=.
+T  64 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 87 $ 586 room=.
 -> w
-T  65 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 80 $ 586 room=.
+T  65 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 86 $ 586 room=.
 -> w
-T  66 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 79 $ 586 room=.
+T  66 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 86 $ 586 room=.
 -> n
-T  67 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 78 $ 586 room=.
+T  67 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 85 $ 586 room=.
 -> e
-T  68 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 77 $ 586 room=.
+T  68 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 84 $ 586 room=.
 -> e
-T  69 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 76 $ 586 room=M vs Slime Mold(L0 HP15/15)
+T  69 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 84 $ 586 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T  70 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 76 $ 586 room=M vs Slime Mold(L0 HP15/15)
+T  70 mode=combat_mode         Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 84 $ 586 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T  71 mode=combat_victory      Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 76 $ 595 room=.
+T  71 mode=combat_victory      Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 84 $ 595 room=.
 -> back
-T  72 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 76 $ 595 room=.
+T  72 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 84 $ 595 room=.
 -> s
-T  73 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 75 $ 595 room=.
+T  73 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 83 $ 595 room=.
 -> s
-T  74 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 74 $ 595 room=.
+T  74 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 82 $ 595 room=.
 -> e
-T  75 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 73 $ 595 room=.
+T  75 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 82 $ 595 room=.
 -> n
-T  76 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 72 $ 595 room=.
+T  76 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 81 $ 595 room=.
 -> n
-T  77 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 71 $ 595 room=M vs Spore Puff(L0 HP18/18)
+T  77 mode=combat_mode         Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 80 $ 595 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  78 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 71 $ 601 room=.
+T  78 mode=combat_victory      Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 80 $ 601 room=.
 -> back
-T  79 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 71 $ 601 room=.
+T  79 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 80 $ 601 room=.
 -> n
-T  80 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 70 $ 601 room=.
+T  80 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 79 $ 601 room=.
 -> l
-T  81 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 70 $ 601 room=.
+T  81 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 79 $ 601 room=.
 -> e
-T  82 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 69 $ 601 room=M vs Sewer Rat(L0 HP10/10)
+T  82 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 79 $ 601 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  83 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 69 $ 601 room=M vs Sewer Rat(L0 HP10/10)
+T  83 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 79 $ 601 room=M vs Sewer Rat(L0 HP10/10)
 -> f
-T  84 mode=flee_direction_mode Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 69 $ 601 room=M
+T  84 mode=flee_direction_mode Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 79 $ 601 room=M
 -> w
-T  85 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 29/30 MP 0/0 Hu 69 $ 601 room=.
+T  85 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 29/30 MP 0/0 Hu 79 $ 601 room=.
 -> s
-T  86 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 29/30 MP 0/0 Hu 68 $ 601 room=.
+T  86 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 29/30 MP 0/0 Hu 78 $ 601 room=.
 -> w
-T  87 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 67 $ 601 room=.
+T  87 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 77 $ 601 room=.
 -> s
-T  88 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 66 $ 601 room=.
+T  88 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 29/30 MP 0/0 Hu 77 $ 601 room=.
 -> s
-T  89 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 65 $ 601 room=.
+T  89 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 76 $ 601 room=.
 -> e
-T  90 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 64 $ 601 room=.
+T  90 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 75 $ 601 room=.
 -> n
-T  91 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 63 $ 601 room=.
+T  91 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 75 $ 601 room=.
 -> n
-T  92 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 62 $ 601 room=.
+T  92 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 74 $ 601 room=.
 -> n
-T  93 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 61 $ 601 room=.
+T  93 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 73 $ 601 room=.
 -> e
-T  94 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 60 $ 601 room=M vs Sewer Rat(L0 HP10/10)
+T  94 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 72 $ 601 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  95 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 60 $ 601 room=M vs Sewer Rat(L0 HP10/10)
+T  95 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 72 $ 601 room=M vs Sewer Rat(L0 HP10/10)
 -> f
-T  96 mode=flee_direction_mode Hama the Stalwart(hum) F1@( 7, 2) HP 28/30 MP 0/0 Hu 60 $ 601 room=M
+T  96 mode=flee_direction_mode Hama the Stalwart(hum) F1@( 7, 2) HP 28/30 MP 0/0 Hu 72 $ 601 room=M
 -> w
-T  97 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 26/30 MP 0/0 Hu 60 $ 601 room=.
+T  97 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 26/30 MP 0/0 Hu 72 $ 601 room=.
 -> s
-T  98 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 24/30 MP 0/0 Hu 59 $ 601 room=.
+T  98 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 24/30 MP 0/0 Hu 72 $ 601 room=.
 -> w
-T  99 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 24/30 MP 0/0 Hu 58 $ 601 room=.
+T  99 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 24/30 MP 0/0 Hu 71 $ 601 room=.
 -> s
-T 100 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 24/30 MP 0/0 Hu 57 $ 601 room=.
+T 100 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 24/30 MP 0/0 Hu 70 $ 601 room=.
 -> s
-T 101 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 24/30 MP 0/0 Hu 56 $ 601 room=.
+T 101 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 25/30 MP 0/0 Hu 70 $ 601 room=.
 -> e
-T 102 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 24/30 MP 0/0 Hu 55 $ 601 room=.
+T 102 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 25/30 MP 0/0 Hu 69 $ 601 room=.
 -> n
-T 103 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 24/30 MP 0/0 Hu 54 $ 601 room=.
+T 103 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 25/30 MP 0/0 Hu 68 $ 601 room=.
 -> n
-T 104 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 24/30 MP 0/0 Hu 53 $ 601 room=.
+T 104 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 25/30 MP 0/0 Hu 68 $ 601 room=.
 -> w
-T 105 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 24/30 MP 0/0 Hu 52 $ 601 room=.
+T 105 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 26/30 MP 0/0 Hu 67 $ 601 room=.
 -> s
-T 106 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 24/30 MP 0/0 Hu 51 $ 601 room=.
+T 106 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 26/30 MP 0/0 Hu 66 $ 601 room=.
 -> w
-T 107 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 24/30 MP 0/0 Hu 50 $ 601 room=.
+T 107 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 26/30 MP 0/0 Hu 65 $ 601 room=.
 -> w
-T 108 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 49 $ 601 room=.
+T 108 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 65 $ 601 room=.
+-> n
+T 109 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 64 $ 601 room=.
+-> n
+T 110 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 63 $ 601 room=.
+-> n
+T 111 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 63 $ 601 room=.
+-> w
+T 112 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 62 $ 601 room=.
+-> w
+T 113 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 28/30 MP 0/0 Hu 61 $ 601 room=E
+-> e
+T 114 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 61 $ 601 room=.
+-> w
+T 115 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 28/30 MP 0/0 Hu 60 $ 601 room=E
+-> e
+T 116 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 59 $ 601 room=.
+-> e
+T 117 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 58 $ 601 room=.
+-> s
+T 118 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 58 $ 601 room=.
+-> s
+T 119 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 57 $ 601 room=.
+-> s
+T 120 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 56 $ 601 room=.
+-> e
+T 121 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 56 $ 601 room=.
+-> e
+T 122 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 55 $ 601 room=.
+-> s
+T 123 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 28/30 MP 0/0 Hu 54 $ 601 room=.
+-> e
+T 124 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 54 $ 601 room=.
+-> n
+T 125 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 28/30 MP 0/0 Hu 53 $ 601 room=.
+-> n
+T 126 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 28/30 MP 0/0 Hu 52 $ 601 room=.
+-> w
+T 127 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 28/30 MP 0/0 Hu 51 $ 601 room=.
+-> s
+T 128 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 51 $ 601 room=.
+-> w
+T 129 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 50 $ 601 room=.
+-> w
+T 130 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 49 $ 601 room=.
 -> i
-T 109 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 49 $ 601 room=.
+T 131 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 49 $ 601 room=.
 -> eat3
-T 110 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 56 $ 601 room=.
+T 132 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 56 $ 601 room=.
 -> x
-T 111 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 56 $ 601 room=.
+T 133 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 56 $ 601 room=.
 -> n
-T 112 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 24/30 MP 0/0 Hu 55 $ 601 room=.
+T 134 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 56 $ 601 room=.
 -> n
-T 113 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 24/30 MP 0/0 Hu 54 $ 601 room=.
+T 135 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 55 $ 601 room=.
 -> n
-T 114 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 24/30 MP 0/0 Hu 53 $ 601 room=.
+T 136 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 54 $ 601 room=.
 -> w
-T 115 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 24/30 MP 0/0 Hu 52 $ 601 room=.
+T 137 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 54 $ 601 room=.
 -> w
-T 116 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 24/30 MP 0/0 Hu 51 $ 601 room=E
+T 138 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 28/30 MP 0/0 Hu 53 $ 601 room=E
 -> e
-T 117 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 24/30 MP 0/0 Hu 50 $ 601 room=.
+T 139 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 52 $ 601 room=.
 -> w
-T 118 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 24/30 MP 0/0 Hu 49 $ 601 room=E
+T 140 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 28/30 MP 0/0 Hu 51 $ 601 room=E
+-> e
+T 141 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 51 $ 601 room=.
+-> e
+T 142 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 50 $ 601 room=.
+-> s
+T 143 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 49 $ 601 room=.
 -> i
-T 119 mode=inventory           Hama the Stalwart(hum) F1@( 1, 1) HP 24/30 MP 0/0 Hu 49 $ 601 room=E
+T 144 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 49 $ 601 room=.
 -> eat3
-T 120 mode=inventory           Hama the Stalwart(hum) F1@( 1, 1) HP 24/30 MP 0/0 Hu 64 $ 601 room=E
+T 145 mode=inventory           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 64 $ 601 room=.
 -> x
-T 121 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 24/30 MP 0/0 Hu 64 $ 601 room=E
--> e
-T 122 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 24/30 MP 0/0 Hu 63 $ 601 room=.
--> e
-T 123 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 24/30 MP 0/0 Hu 62 $ 601 room=.
+T 146 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 64 $ 601 room=.
 -> s
-T 124 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 24/30 MP 0/0 Hu 61 $ 601 room=.
+T 147 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 64 $ 601 room=.
 -> s
-T 125 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 25/30 MP 0/0 Hu 60 $ 601 room=.
--> s
-T 126 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 59 $ 601 room=.
+T 148 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 63 $ 601 room=.
 -> e
-T 127 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 58 $ 601 room=.
--> e
-T 128 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 25/30 MP 0/0 Hu 57 $ 601 room=.
--> s
-T 129 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 25/30 MP 0/0 Hu 56 $ 601 room=.
--> e
-T 130 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 25/30 MP 0/0 Hu 55 $ 601 room=.
+T 149 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 62 $ 601 room=.
 -> n
-T 131 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 25/30 MP 0/0 Hu 54 $ 601 room=.
+T 150 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 29/30 MP 0/0 Hu 62 $ 601 room=.
+-> e
+T 151 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 61 $ 601 room=.
+-> e
+T 152 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 29/30 MP 0/0 Hu 60 $ 601 room=.
 -> n
-T 132 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 25/30 MP 0/0 Hu 53 $ 601 room=.
--> w
-T 133 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 25/30 MP 0/0 Hu 52 $ 601 room=.
--> s
-T 134 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 25/30 MP 0/0 Hu 51 $ 601 room=.
--> w
-T 135 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 50 $ 601 room=.
--> w
-T 136 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 49 $ 601 room=.
--> i
-T 137 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 49 $ 601 room=.
--> eat3
-T 138 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 61 $ 601 room=.
--> eat1
-T 139 mode=inventory           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu100 $ 601 room=.
--> x
-T 140 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu100 $ 601 room=.
--> n
-T 141 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 25/30 MP 0/0 Hu 99 $ 601 room=.
--> n
-T 142 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 26/30 MP 0/0 Hu 98 $ 601 room=.
--> n
-T 143 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 26/30 MP 0/0 Hu 97 $ 601 room=.
--> w
-T 144 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 27/30 MP 0/0 Hu 96 $ 601 room=.
--> w
-T 145 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 27/30 MP 0/0 Hu 95 $ 601 room=E
+T 153 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 29/30 MP 0/0 Hu 59 $ 601 room=.
 -> e
-T 146 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 28/30 MP 0/0 Hu 94 $ 601 room=.
--> w
-T 147 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 28/30 MP 0/0 Hu 93 $ 601 room=E
--> e
-T 148 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 92 $ 601 room=.
--> e
-T 149 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 91 $ 601 room=.
--> s
-T 150 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 90 $ 601 room=.
--> s
-T 151 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 601 room=.
--> s
-T 152 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 88 $ 601 room=.
--> e
-T 153 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 87 $ 601 room=.
--> n
-T 154 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 86 $ 601 room=.
--> e
-T 155 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 85 $ 601 room=.
--> e
-T 156 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 84 $ 601 room=.
--> n
-T 157 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 83 $ 601 room=.
--> e
-T 158 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 601 room=M vs Sewer Rat(L0 HP10/10)
+T 154 mode=combat_mode         Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 601 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 159 mode=combat_victory      Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
+T 155 mode=combat_victory      Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
 -> back
-T 160 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
+T 156 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
 -> i
-T 161 mode=inventory           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
--> u7
-T 162 mode=inventory           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
+T 157 mode=inventory           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
+-> u8
+T 158 mode=inventory           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
 -> x
-T 163 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
+T 159 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
 -> l
-T 164 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 82 $ 609 room=.
+T 160 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 59 $ 609 room=.
 -> n
-T 165 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 81 $ 609 room=.
+T 161 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 58 $ 609 room=.
 -> s
-T 166 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 80 $ 609 room=.
+T 162 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 29/30 MP 0/0 Hu 57 $ 609 room=.
 -> e
-T 167 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 30/30 MP 0/0 Hu 79 $ 609 room=M vs Spore Puff(L0 HP18/18)
+T 163 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 29/30 MP 0/0 Hu 57 $ 609 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 168 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 29/30 MP 0/0 Hu 79 $ 609 room=M vs Spore Puff(L0 HP18/18)
+T 164 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 28/30 MP 0/0 Hu 57 $ 609 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 169 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 28/30 MP 0/0 Hu 79 $ 609 room=M vs Spore Puff(L0 HP18/18)
+T 165 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 2) HP 27/30 MP 0/0 Hu 57 $ 609 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 170 mode=combat_victory      Hama the Stalwart(hum) F1@( 8, 2) HP 27/30 MP 0/0 Hu 79 $ 616 room=.
+T 166 mode=combat_victory      Hama the Stalwart(hum) F1@( 8, 2) HP 26/30 MP 0/0 Hu 57 $ 612 room=.
 -> back
-T 171 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 27/30 MP 0/0 Hu 79 $ 616 room=.
+T 167 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 26/30 MP 0/0 Hu 57 $ 612 room=.
 -> l
-T 172 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 27/30 MP 0/0 Hu 79 $ 616 room=.
+T 168 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 26/30 MP 0/0 Hu 57 $ 612 room=.
 -> e
-T 173 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 27/30 MP 0/0 Hu 78 $ 616 room=.
+T 169 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 26/30 MP 0/0 Hu 56 $ 612 room=.
 -> l
-T 174 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 27/30 MP 0/0 Hu 78 $ 616 room=.
+T 170 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 26/30 MP 0/0 Hu 56 $ 612 room=.
 -> s
-T 175 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 77 $ 616 room=.
+T 171 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 26/30 MP 0/0 Hu 55 $ 612 room=.
 -> s
-T 176 mode=combat_mode         Hama the Stalwart(hum) F1@( 9, 4) HP 27/30 MP 0/0 Hu 76 $ 616 room=M vs Goblin(L0 HP30/30)
+T 172 mode=combat_mode         Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 55 $ 612 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 177 mode=combat_mode         Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 76 $ 616 room=M vs Goblin(L0 HP10/30)
+T 173 mode=combat_mode         Hama the Stalwart(hum) F1@( 9, 4) HP 25/30 MP 0/0 Hu 55 $ 612 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 178 mode=combat_victory      Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 76 $ 619 room=.
+T 174 mode=combat_victory      Hama the Stalwart(hum) F1@( 9, 4) HP 25/30 MP 0/0 Hu 55 $ 613 room=.
 -> back
-T 179 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 76 $ 619 room=.
--> i
-T 180 mode=inventory           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 76 $ 619 room=.
--> u7
-T 181 mode=inventory           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 76 $ 619 room=.
--> eat2
-T 182 mode=inventory           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 83 $ 619 room=.
--> x
-T 183 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 83 $ 619 room=.
+T 175 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 25/30 MP 0/0 Hu 55 $ 613 room=.
 -> l
-T 184 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 26/30 MP 0/0 Hu 83 $ 619 room=.
+T 176 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 25/30 MP 0/0 Hu 55 $ 613 room=.
 -> e
-T 185 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 27/30 MP 0/0 Hu 82 $ 619 room=.
+T 177 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 25/30 MP 0/0 Hu 54 $ 613 room=.
 -> e
-T 186 mode=pool_mode           Hama the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 619 room=P
+T 178 mode=pool_mode           Hama the Stalwart(hum) F1@(11, 4) HP 25/30 MP 0/0 Hu 53 $ 613 room=P
 -> dr
-T 187 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 855 room=.
+T 179 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 30/30 MP 0/0 Hu 53 $ 613 room=.
 -> l
-T 188 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 27/30 MP 0/0 Hu 81 $ 855 room=.
+T 180 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 30/30 MP 0/0 Hu 53 $ 613 room=.
 -> e
-T 189 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 27/30 MP 0/0 Hu 80 $ 855 room=.
+T 181 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 30/30 MP 0/0 Hu 52 $ 613 room=.
 -> l
-T 190 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 27/30 MP 0/0 Hu 80 $ 855 room=.
+T 182 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 30/30 MP 0/0 Hu 52 $ 613 room=.
 -> n
-T 191 mode=combat_mode         Hama the Stalwart(hum) F1@(12, 3) HP 27/30 MP 0/0 Hu 79 $ 855 room=M vs Kobold(L0 HP8/8)
+T 183 mode=combat_mode         Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 613 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T 192 mode=combat_victory      Hama the Stalwart(hum) F1@(12, 3) HP 26/30 MP 0/0 Hu 79 $ 964 room=.
+T 184 mode=combat_victory      Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
 -> back
-T 193 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 26/30 MP 0/0 Hu 79 $ 964 room=.
+T 185 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
+-> i
+T 186 mode=inventory           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
+-> u8
+T 187 mode=inventory           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
+-> x
+T 188 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
 -> l
-T 194 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 26/30 MP 0/0 Hu 79 $ 964 room=.
+T 189 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 52 $ 718 room=.
 -> e
-T 195 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 27/30 MP 0/0 Hu 78 $ 964 room=.
+T 190 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 30/30 MP 0/0 Hu 51 $ 718 room=.
 -> w
-T 196 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 27/30 MP 0/0 Hu 77 $ 964 room=.
+T 191 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 30/30 MP 0/0 Hu 50 $ 718 room=.
 -> w
-T 197 mode=combat_mode         Hama the Stalwart(hum) F1@(11, 3) HP 27/30 MP 0/0 Hu 76 $ 964 room=M vs Skeleton(L0 HP25/25)
+T 192 mode=combat_mode         Hama the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 50 $ 718 room=M vs Skeleton(L0 HP25/25)
 -> a
-T 198 mode=combat_mode         Hama the Stalwart(hum) F1@(11, 3) HP 27/30 MP 0/0 Hu 76 $ 964 room=M vs Skeleton(L0 HP6/25)
+T 193 mode=combat_mode         Hama the Stalwart(hum) F1@(11, 3) HP 30/30 MP 0/0 Hu 50 $ 718 room=M vs Skeleton(L0 HP6/25)
 -> a
-T 199 mode=combat_victory      Hama the Stalwart(hum) F1@(11, 3) HP 26/30 MP 0/0 Hu 76 $ 974 room=.
+T 194 mode=combat_victory      Hama the Stalwart(hum) F1@(11, 3) HP 29/30 MP 0/0 Hu 50 $ 728 room=.
 -> back
-T 200 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 26/30 MP 0/0 Hu 76 $ 974 room=.
+T 195 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 29/30 MP 0/0 Hu 50 $ 728 room=.
 -> s
-T 201 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 26/30 MP 0/0 Hu 75 $ 974 room=.
+T 196 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 49 $ 728 room=.
+-> i
+T 197 mode=inventory           Hama the Stalwart(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 49 $ 728 room=.
+-> eat2
+T 198 mode=inventory           Hama the Stalwart(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 67 $ 728 room=.
+-> x
+T 199 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 29/30 MP 0/0 Hu 67 $ 728 room=.
 -> e
-T 202 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 27/30 MP 0/0 Hu 74 $ 974 room=.
+T 200 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 29/30 MP 0/0 Hu 66 $ 728 room=.
 -> s
-T 203 mode=combat_mode         Hama the Stalwart(hum) F1@(12, 5) HP 27/30 MP 0/0 Hu 73 $ 974 room=M vs Crawling Claw(L0 HP5/5)
+T 201 mode=combat_mode         Hama the Stalwart(hum) F1@(12, 5) HP 29/30 MP 0/0 Hu 66 $ 728 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T 204 mode=combat_victory      Hama the Stalwart(hum) F1@(12, 5) HP 26/30 MP 0/0 Hu 73 $ 980 room=.
+T 202 mode=combat_victory      Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
 -> back
-T 205 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 26/30 MP 0/0 Hu 73 $ 980 room=.
+T 203 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
+-> i
+T 204 mode=inventory           Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
+-> u8
+T 205 mode=inventory           Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
+-> x
+T 206 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
 -> l
-T 206 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 26/30 MP 0/0 Hu 73 $ 980 room=.
+T 207 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 28/30 MP 0/0 Hu 66 $ 734 room=.
 -> e
-T 207 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 26/30 MP 0/0 Hu 72 $ 980 room=.
+T 208 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 28/30 MP 0/0 Hu 65 $ 734 room=.
 -> l
-T 208 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 26/30 MP 0/0 Hu 72 $ 980 room=.
+T 209 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 28/30 MP 0/0 Hu 65 $ 734 room=.
 -> s
-T 209 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 26/30 MP 0/0 Hu 71 $ 980 room=.
+T 210 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 29/30 MP 0/0 Hu 64 $ 734 room=.
 -> l
-T 210 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 26/30 MP 0/0 Hu 71 $ 980 room=.
--> l
-T 211 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 26/30 MP 0/0 Hu 71 $ 980 room=.
+T 211 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 29/30 MP 0/0 Hu 64 $ 734 room=.
 -> e
-T 212 mode=library_mode        Hama the Stalwart(hum) F1@(14, 6) HP 27/30 MP 0/0 Hu 70 $ 980 room=L
+T 212 mode=library_mode        Hama the Stalwart(hum) F1@(14, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=L
 -> r
-T 213 mode=library_read_decision_mode Hama the Stalwart(hum) F1@(14, 6) HP 27/30 MP 0/0 Hu 70 $ 980 room=L
+T 213 mode=library_read_decision_mode Hama the Stalwart(hum) F1@(14, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=L
 -> y
-T 214 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 27/30 MP 0/0 Hu 70 $ 980 room=.
+T 214 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=.
 -> l
-T 215 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 27/30 MP 0/0 Hu 70 $ 980 room=.
+T 215 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=.
 -> e
-T 216 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 27/30 MP 0/0 Hu 69 $ 980 room=.
+T 216 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=.
 -> l
-T 217 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 27/30 MP 0/0 Hu 69 $ 980 room=.
+T 217 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 29/30 MP 0/0 Hu 63 $ 734 room=.
 -> n
-T 218 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 27/30 MP 0/0 Hu 68 $ 980 room=.
+T 218 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 29/30 MP 0/0 Hu 62 $ 734 room=.
 -> e
-T 219 mode=dungeon_mode        Hama the Stalwart(hum) F1@(16, 5) HP 27/30 MP 0/0 Hu 67 $ 980 room=N
+T 219 mode=dungeon_mode        Hama the Stalwart(hum) F1@(16, 5) HP 30/30 MP 0/0 Hu 61 $ 734 room=N
 -> u
-T 220 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 27/30 MP 0/0 Hu 67 $ 980 room=N
+T 220 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 30/30 MP 0/0 Hu 61 $ 734 room=N
 -> l
-T 221 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 27/30 MP 0/0 Hu 67 $ 980 room=N
+T 221 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 30/30 MP 0/0 Hu 61 $ 734 room=N
 -> n
-T 222 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 28/30 MP 0/0 Hu 66 $ 980 room=M vs Sewer Rat(L0 HP10/10)
+T 222 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 30/30 MP 0/0 Hu 61 $ 734 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 223 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 27/30 MP 0/0 Hu 66 $ 980 room=M vs Sewer Rat(L0 HP10/10)
+T 223 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 29/30 MP 0/0 Hu 61 $ 734 room=M vs Sewer Rat(L0 HP10/10)
 -> f
-T 224 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 26/30 MP 0/0 Hu 66 $ 980 room=M vs Sewer Rat(L0 HP10/10)
+T 224 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 28/30 MP 0/0 Hu 61 $ 734 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 225 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 25/30 MP 0/0 Hu 66 $ 980 room=M vs Sewer Rat(L0 HP10/10)
+T 225 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 27/30 MP 0/0 Hu 61 $ 734 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 226 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 24/30 MP 0/0 Hu 66 $ 980 room=M vs Sewer Rat(L0 HP10/10)
+T 226 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 4) HP 26/30 MP 0/0 Hu 61 $ 734 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 227 mode=combat_victory      Hama the Stalwart(hum) F1@(16, 4) HP 24/40 MP 0/0 Hu 66 $ 988 room=.
+T 227 mode=combat_victory      Hama the Stalwart(hum) F1@(16, 4) HP 26/40 MP 0/0 Hu 61 $ 742 room=.
 -> back
-T 228 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 24/40 MP 0/0 Hu 66 $ 988 room=.
+T 228 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 26/40 MP 0/0 Hu 61 $ 742 room=.
 -> e
-T 229 mode=game_loop           Hama the Stalwart(hum) F1@(17, 4) HP 24/40 MP 0/0 Hu 65 $ 988 room=.
+T 229 mode=game_loop           Hama the Stalwart(hum) F1@(17, 4) HP 26/40 MP 0/0 Hu 60 $ 742 room=.
 -> e
-T 230 mode=garden_mode         Hama the Stalwart(hum) F1@(18, 4) HP 24/40 MP 0/0 Hu 64 $ 988 room=G
+T 230 mode=garden_mode         Hama the Stalwart(hum) F1@(18, 4) HP 26/40 MP 0/0 Hu 59 $ 742 room=G
 -> h
-T 231 mode=game_loop           Hama the Stalwart(hum) F1@(18, 4) HP 24/40 MP 0/0 Hu 64 $ 988 room=.
+T 231 mode=game_loop           Hama the Stalwart(hum) F1@(18, 4) HP 26/40 MP 0/0 Hu 59 $ 742 room=.
 -> s
-T 232 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 24/40 MP 0/0 Hu 63 $ 988 room=.
+T 232 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 26/40 MP 0/0 Hu 59 $ 742 room=.
 -> l
-T 233 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 24/40 MP 0/0 Hu 63 $ 988 room=.
+T 233 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 26/40 MP 0/0 Hu 59 $ 742 room=.
 -> s
-T 234 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 6) HP 25/40 MP 0/0 Hu 62 $ 988 room=M vs Lichen(L0 HP10/10)
+T 234 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 6) HP 26/40 MP 0/0 Hu 58 $ 742 room=M vs Lichen(L0 HP10/10)
 -> a
-T 235 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 6) HP 24/40 MP 0/0 Hu 62 $ 988 room=M vs Lichen(L0 HP10/10)
+T 235 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 6) HP 25/40 MP 0/0 Hu 58 $ 742 room=M vs Lichen(L0 HP10/10)
 -> a
-T 236 mode=combat_victory      Hama the Stalwart(hum) F1@(18, 6) HP 24/40 MP 0/0 Hu 62 $ 995 room=.
+T 236 mode=combat_victory      Hama the Stalwart(hum) F1@(18, 6) HP 25/40 MP 0/0 Hu 58 $ 749 room=.
 -> back
-T 237 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 24/40 MP 0/0 Hu 62 $ 995 room=.
+T 237 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 25/40 MP 0/0 Hu 58 $ 749 room=.
 -> l
-T 238 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 24/40 MP 0/0 Hu 62 $ 995 room=.
+T 238 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 25/40 MP 0/0 Hu 58 $ 749 room=.
 -> s
-T 239 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 7) HP 24/40 MP 0/0 Hu 61 $ 995 room=M vs Spore Puff(L0 HP18/18)
+T 239 mode=combat_mode         Hama the Stalwart(hum) F1@(18, 7) HP 25/40 MP 0/0 Hu 57 $ 749 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 240 mode=combat_victory      Hama the Stalwart(hum) F1@(18, 7) HP 23/40 MP 0/0 Hu 61 $ 1004 room=.
+T 240 mode=combat_victory      Hama the Stalwart(hum) F1@(18, 7) HP 24/40 MP 0/0 Hu 57 $ 751 room=.
 -> back
-T 241 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 23/40 MP 0/0 Hu 61 $ 1004 room=.
+T 241 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 24/40 MP 0/0 Hu 57 $ 751 room=.
 -> l
-T 242 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 23/40 MP 0/0 Hu 61 $ 1004 room=.
+T 242 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 24/40 MP 0/0 Hu 57 $ 751 room=.
 -> w
-T 243 mode=combat_mode         Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 60 $ 1004 room=M vs Kobold(L0 HP20/20)
+T 243 mode=combat_mode         Hama the Stalwart(hum) F1@(17, 7) HP 24/40 MP 0/0 Hu 56 $ 751 room=M vs Skeleton(L0 HP25/25)
 -> a
-T 244 mode=combat_victory      Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 60 $ 1009 room=.
--> back
-T 245 mode=game_loop           Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 60 $ 1009 room=.
--> l
-T 246 mode=game_loop           Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 60 $ 1009 room=.
--> w
-T 247 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 7) HP 23/40 MP 0/0 Hu 59 $ 1009 room=M vs Crawling Claw(L0 HP5/5)
+T 244 mode=combat_mode         Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 56 $ 751 room=M vs Skeleton(L0 HP25/25)
 -> a
-T 248 mode=combat_victory      Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 59 $ 1010 room=.
--> back
-T 249 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 59 $ 1010 room=.
--> i
-T 250 mode=inventory           Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 59 $ 1010 room=.
--> u7
-T 251 mode=inventory           Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 59 $ 1010 room=.
--> eat1
-T 252 mode=inventory           Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 77 $ 1010 room=.
--> x
-T 253 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 22/40 MP 0/0 Hu 77 $ 1010 room=.
--> s
-T 254 mode=chest_mode          Hama the Stalwart(hum) F1@(16, 8) HP 22/40 MP 0/0 Hu 76 $ 1010 room=C
--> e
-T 255 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 22/40 MP 0/0 Hu 75 $ 1010 room=.
--> s
-T 256 mode=game_loop           Hama the Stalwart(hum) F1@(17, 9) HP 22/40 MP 0/0 Hu 74 $ 1010 room=.
--> w
-T 257 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 9) HP 23/40 MP 0/0 Hu 73 $ 1010 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 258 mode=combat_victory      Hama the Stalwart(hum) F1@(16, 9) HP 23/40 MP 0/0 Hu 73 $ 1015 room=.
--> back
-T 259 mode=game_loop           Hama the Stalwart(hum) F1@(16, 9) HP 23/40 MP 0/0 Hu 73 $ 1015 room=.
--> w
-T 260 mode=combat_mode         Hama the Stalwart(hum) F1@(15, 9) HP 23/40 MP 0/0 Hu 72 $ 1015 room=M vs Lichen(L0 HP10/10)
+T 245 mode=combat_mode         Hama the Stalwart(hum) F1@(17, 7) HP 22/40 MP 0/0 Hu 56 $ 751 room=M vs Skeleton(L0 HP6/25)
 -> f
-T 261 mode=flee_direction_mode Hama the Stalwart(hum) F1@(15, 9) HP 23/40 MP 0/0 Hu 72 $ 1015 room=M
+T 246 mode=flee_direction_mode Hama the Stalwart(hum) F1@(17, 7) HP 22/40 MP 0/0 Hu 56 $ 751 room=M
 -> e
-T 262 mode=game_loop           Hama the Stalwart(hum) F1@(16, 9) HP 23/40 MP 0/0 Hu 72 $ 1015 room=.
--> n
-T 263 mode=game_loop           Hama the Stalwart(hum) F1@(16, 8) HP 23/40 MP 0/0 Hu 71 $ 1015 room=C
--> n
-T 264 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 23/40 MP 0/0 Hu 70 $ 1015 room=.
--> w
-T 265 mode=game_loop           Hama the Stalwart(hum) F1@(15, 7) HP 24/40 MP 0/0 Hu 69 $ 1015 room=.
--> n
-T 266 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 24/40 MP 0/0 Hu 68 $ 1015 room=.
--> w
-T 267 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 24/40 MP 0/0 Hu 67 $ 1015 room=.
--> w
-T 268 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 24/40 MP 0/0 Hu 66 $ 1015 room=.
--> n
-T 269 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 25/40 MP 0/0 Hu 65 $ 1015 room=.
--> w
-T 270 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 25/40 MP 0/0 Hu 64 $ 1015 room=.
+T 247 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 22/40 MP 0/0 Hu 56 $ 751 room=.
+-> s
+T 248 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 22/40 MP 0/0 Hu 56 $ 751 room=.
 -> l
-T 271 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 25/40 MP 0/0 Hu 64 $ 1015 room=.
--> n
-T 272 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 25/40 MP 0/0 Hu 63 $ 1015 room=.
--> n
-T 273 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 25/40 MP 0/0 Hu 62 $ 1015 room=.
+T 249 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 22/40 MP 0/0 Hu 56 $ 751 room=.
 -> e
-T 274 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 26/40 MP 0/0 Hu 61 $ 1015 room=.
+T 250 mode=chest_mode          Hama the Stalwart(hum) F1@(19, 8) HP 22/40 MP 0/0 Hu 55 $ 751 room=C
 -> w
-T 275 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 26/40 MP 0/0 Hu 60 $ 1015 room=.
+T 251 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 22/40 MP 0/0 Hu 54 $ 751 room=.
 -> w
-T 276 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 26/40 MP 0/0 Hu 59 $ 1015 room=.
--> s
-T 277 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 26/40 MP 0/0 Hu 58 $ 1015 room=.
--> e
-T 278 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 26/40 MP 0/0 Hu 57 $ 1015 room=.
--> s
-T 279 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 26/40 MP 0/0 Hu 56 $ 1015 room=.
--> e
-T 280 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 26/40 MP 0/0 Hu 55 $ 1015 room=.
+T 252 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 22/40 MP 0/0 Hu 54 $ 751 room=.
 -> l
-T 281 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 26/40 MP 0/0 Hu 55 $ 1015 room=.
--> s
-T 282 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 26/40 MP 0/0 Hu 54 $ 1015 room=.
+T 253 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 22/40 MP 0/0 Hu 54 $ 751 room=.
+-> w
+T 254 mode=chest_mode          Hama the Stalwart(hum) F1@(16, 8) HP 22/40 MP 0/0 Hu 53 $ 751 room=C
 -> e
-T 283 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 26/40 MP 0/0 Hu 53 $ 1015 room=.
+T 255 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 22/40 MP 0/0 Hu 52 $ 751 room=.
 -> s
-T 284 mode=combat_mode         Hama the Stalwart(hum) F1@(14, 7) HP 26/40 MP 0/0 Hu 52 $ 1015 room=M vs Lichen(L0 HP10/10)
--> a
-T 285 mode=combat_victory      Hama the Stalwart(hum) F1@(14, 7) HP 25/40 MP 0/0 Hu 52 $ 1025 room=.
--> back
-T 286 mode=game_loop           Hama the Stalwart(hum) F1@(14, 7) HP 25/40 MP 0/0 Hu 52 $ 1025 room=.
--> e
-T 287 mode=game_loop           Hama the Stalwart(hum) F1@(15, 7) HP 25/40 MP 0/0 Hu 51 $ 1025 room=.
+T 256 mode=game_loop           Hama the Stalwart(hum) F1@(17, 9) HP 22/40 MP 0/0 Hu 52 $ 751 room=.
 -> n
-T 288 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 25/40 MP 0/0 Hu 50 $ 1025 room=.
+T 257 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 22/40 MP 0/0 Hu 51 $ 751 room=.
 -> e
-T 289 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 25/40 MP 0/0 Hu 49 $ 1025 room=M vs Goblin(L0 HP30/30)
--> a
-T 290 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 49 $ 1025 room=M vs Goblin(L0 HP10/30)
--> a
-T 291 mode=combat_victory      Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
--> back
-T 292 mode=game_loop           Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
+T 258 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 22/40 MP 0/0 Hu 50 $ 751 room=.
+-> n
+T 259 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 22/40 MP 0/0 Hu 49 $ 751 room=.
 -> i
-T 293 mode=inventory           Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
--> u7
-T 294 mode=inventory           Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
+T 260 mode=inventory           Hama the Stalwart(hum) F1@(18, 7) HP 22/40 MP 0/0 Hu 49 $ 751 room=.
 -> eat1
-T 295 mode=inventory           Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 56 $ 1030 room=.
+T 261 mode=inventory           Hama the Stalwart(hum) F1@(18, 7) HP 22/40 MP 0/0 Hu 67 $ 751 room=.
 -> x
-T 296 mode=game_loop           Hama the Stalwart(hum) F1@(16, 6) HP 24/40 MP 0/0 Hu 56 $ 1030 room=.
+T 262 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 22/40 MP 0/0 Hu 67 $ 751 room=.
 -> n
-T 297 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 24/40 MP 0/0 Hu 55 $ 1030 room=N
+T 263 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 22/40 MP 0/0 Hu 67 $ 751 room=.
+-> n
+T 264 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 22/40 MP 0/0 Hu 66 $ 751 room=.
+-> n
+T 265 mode=game_loop           Hama the Stalwart(hum) F1@(18, 4) HP 22/40 MP 0/0 Hu 65 $ 751 room=.
 -> w
-T 298 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 24/40 MP 0/0 Hu 54 $ 1030 room=.
+T 266 mode=game_loop           Hama the Stalwart(hum) F1@(17, 4) HP 23/40 MP 0/0 Hu 65 $ 751 room=.
+-> w
+T 267 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 23/40 MP 0/0 Hu 64 $ 751 room=.
 -> s
-T 299 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 24/40 MP 0/0 Hu 53 $ 1030 room=.
+T 268 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 23/40 MP 0/0 Hu 63 $ 751 room=N
 -> w
-T 300 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 24/40 MP 0/0 Hu 52 $ 1030 room=.
+T 269 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 23/40 MP 0/0 Hu 63 $ 751 room=.
+-> s
+T 270 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 24/40 MP 0/0 Hu 62 $ 751 room=.
 -> l
-T 301 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 24/40 MP 0/0 Hu 52 $ 1030 room=.
+T 271 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 24/40 MP 0/0 Hu 62 $ 751 room=.
 -> w
-T 302 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 24/40 MP 0/0 Hu 51 $ 1030 room=.
--> n
-T 303 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 24/40 MP 0/0 Hu 50 $ 1030 room=.
+T 272 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 24/40 MP 0/0 Hu 61 $ 751 room=.
 -> w
-T 304 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
--> i
-T 305 mode=inventory           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 49 $ 1030 room=.
--> eat1
-T 306 mode=inventory           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 61 $ 1030 room=.
--> x
-T 307 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 61 $ 1030 room=.
+T 273 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 24/40 MP 0/0 Hu 60 $ 751 room=.
 -> n
-T 308 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 24/40 MP 0/0 Hu 60 $ 1030 room=.
+T 274 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 24/40 MP 0/0 Hu 60 $ 751 room=.
+-> w
+T 275 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 59 $ 751 room=.
 -> n
-T 309 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 24/40 MP 0/0 Hu 59 $ 1030 room=.
+T 276 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 24/40 MP 0/0 Hu 58 $ 751 room=.
+-> n
+T 277 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 24/40 MP 0/0 Hu 58 $ 751 room=.
 -> e
-T 310 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 24/40 MP 0/0 Hu 58 $ 1030 room=.
+T 278 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 24/40 MP 0/0 Hu 57 $ 751 room=.
+-> w
+T 279 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 24/40 MP 0/0 Hu 56 $ 751 room=.
+-> w
+T 280 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 24/40 MP 0/0 Hu 56 $ 751 room=.
 -> l
-T 311 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 24/40 MP 0/0 Hu 58 $ 1030 room=.
--> w
-T 312 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 24/40 MP 0/0 Hu 57 $ 1030 room=.
--> w
-T 313 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 24/40 MP 0/0 Hu 56 $ 1030 room=.
+T 281 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 24/40 MP 0/0 Hu 56 $ 751 room=.
 -> s
-T 314 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 24/40 MP 0/0 Hu 55 $ 1030 room=.
--> w
-T 315 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 24/40 MP 0/0 Hu 54 $ 1030 room=.
--> w
-T 316 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 24/40 MP 0/0 Hu 53 $ 1030 room=.
--> n
-T 317 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 24/40 MP 0/0 Hu 52 $ 1030 room=.
--> w
-T 318 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 24/40 MP 0/0 Hu 51 $ 1030 room=M vs Kobold(L0 HP20/20)
+T 282 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 24/40 MP 0/0 Hu 55 $ 751 room=.
+-> e
+T 283 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 24/40 MP 0/0 Hu 54 $ 751 room=.
+-> s
+T 284 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 24/40 MP 0/0 Hu 53 $ 751 room=.
+-> e
+T 285 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 24/40 MP 0/0 Hu 53 $ 751 room=.
+-> s
+T 286 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 24/40 MP 0/0 Hu 52 $ 751 room=.
+-> e
+T 287 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 24/40 MP 0/0 Hu 51 $ 751 room=.
+-> s
+T 288 mode=combat_mode         Hama the Stalwart(hum) F1@(14, 7) HP 24/40 MP 0/0 Hu 51 $ 751 room=M vs Zombie(L0 HP35/35)
 -> a
-T 319 mode=combat_victory      Hama the Stalwart(hum) F1@( 8, 3) HP 23/40 MP 0/0 Hu 51 $ 1039 room=.
+T 289 mode=combat_mode         Hama the Stalwart(hum) F1@(14, 7) HP 23/40 MP 0/0 Hu 51 $ 751 room=M vs Zombie(L0 HP35/35)
+-> a
+T 290 mode=combat_mode         Hama the Stalwart(hum) F1@(14, 7) HP 22/40 MP 0/0 Hu 51 $ 751 room=M vs Zombie(L0 HP14/35)
+-> a
+T 291 mode=combat_victory      Hama the Stalwart(hum) F1@(14, 7) HP 22/40 MP 0/0 Hu 51 $ 760 room=.
 -> back
-T 320 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 23/40 MP 0/0 Hu 51 $ 1039 room=.
+T 292 mode=game_loop           Hama the Stalwart(hum) F1@(14, 7) HP 22/40 MP 0/0 Hu 51 $ 760 room=.
+-> e
+T 293 mode=game_loop           Hama the Stalwart(hum) F1@(15, 7) HP 22/40 MP 0/0 Hu 50 $ 760 room=.
+-> n
+T 294 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 22/40 MP 0/0 Hu 49 $ 760 room=.
+-> i
+T 295 mode=inventory           Hama the Stalwart(hum) F1@(15, 6) HP 22/40 MP 0/0 Hu 49 $ 760 room=.
+-> eat1
+T 296 mode=inventory           Hama the Stalwart(hum) F1@(15, 6) HP 22/40 MP 0/0 Hu 61 $ 760 room=.
+-> x
+T 297 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 22/40 MP 0/0 Hu 61 $ 760 room=.
+-> n
+T 298 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 22/40 MP 0/0 Hu 61 $ 760 room=.
+-> e
+T 299 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 22/40 MP 0/0 Hu 60 $ 760 room=N
+-> s
+T 300 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 22/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 301 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 22/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 302 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 21/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 303 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 20/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 304 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 19/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 305 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 18/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP6/8)
+-> a
+T 306 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 17/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP4/8)
+-> a
+T 307 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 16/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP4/8)
+-> a
+T 308 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 15/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP4/8)
+-> a
+T 309 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 15/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP2/8)
+-> a
+T 310 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 14/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP2/8)
+-> a
+T 311 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 13/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP2/8)
+-> a
+T 312 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 12/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP2/8)
+-> a
+T 313 mode=combat_mode         Hama the Stalwart(hum) F1@(16, 6) HP 11/40 MP 0/0 Hu 59 $ 760 room=M vs Kobold(L0 HP2/8)
+-> f
+T 314 mode=flee_direction_mode Hama the Stalwart(hum) F1@(16, 6) HP 10/40 MP 0/0 Hu 59 $ 760 room=M
+-> n
+T 315 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 10/40 MP 0/0 Hu 59 $ 760 room=N
+-> n
+T 316 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 10/40 MP 0/0 Hu 58 $ 760 room=.
+-> e
+T 317 mode=game_loop           Hama the Stalwart(hum) F1@(17, 4) HP 10/40 MP 0/0 Hu 58 $ 760 room=.
+-> e
+T 318 mode=game_loop           Hama the Stalwart(hum) F1@(18, 4) HP 10/40 MP 0/0 Hu 57 $ 760 room=.
+-> s
+T 319 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 10/40 MP 0/0 Hu 56 $ 760 room=.
+-> s
+T 320 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 10/40 MP 0/0 Hu 56 $ 760 room=.
 -> l
-T 321 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 23/40 MP 0/0 Hu 51 $ 1039 room=.
--> n
-T 322 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 23/40 MP 0/0 Hu 50 $ 1039 room=.
+T 321 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 10/40 MP 0/0 Hu 56 $ 760 room=.
 -> e
-T 323 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 23/40 MP 0/0 Hu 49 $ 1039 room=.
+T 322 mode=game_loop           Hama the Stalwart(hum) F1@(19, 6) HP 10/40 MP 0/0 Hu 55 $ 760 room=.
+-> w
+T 323 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 10/40 MP 0/0 Hu 54 $ 760 room=.
 -> s
-T 324 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 23/40 MP 0/0 Hu 48 $ 1039 room=.
+T 324 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 10/40 MP 0/0 Hu 54 $ 760 room=.
 -> s
-T 325 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 23/40 MP 0/0 Hu 47 $ 1039 room=.
+T 325 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 10/40 MP 0/0 Hu 53 $ 760 room=.
+-> w
+T 326 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 52 $ 760 room=.
+-> w
+T 327 mode=game_loop           Hama the Stalwart(hum) F1@(16, 8) HP 10/40 MP 0/0 Hu 51 $ 760 room=C
 -> e
-T 326 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 23/40 MP 0/0 Hu 46 $ 1039 room=.
--> e
-T 327 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 23/40 MP 0/0 Hu 45 $ 1039 room=.
+T 328 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 51 $ 760 room=.
+-> s
+T 329 mode=game_loop           Hama the Stalwart(hum) F1@(17, 9) HP 10/40 MP 0/0 Hu 50 $ 760 room=.
 -> n
-T 328 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 23/40 MP 0/0 Hu 44 $ 1039 room=.
+T 330 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 49 $ 760 room=.
+-> i
+T 331 mode=inventory           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 49 $ 760 room=.
+-> eat1
+T 332 mode=inventory           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 61 $ 760 room=.
+-> x
+T 333 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 10/40 MP 0/0 Hu 61 $ 760 room=.
 -> e
-T 329 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 23/40 MP 0/0 Hu 43 $ 1039 room=.
--> e
-T 330 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 23/40 MP 0/0 Hu 42 $ 1039 room=.
+T 334 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 10/40 MP 0/0 Hu 61 $ 760 room=.
+-> n
+T 335 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 10/40 MP 0/0 Hu 60 $ 760 room=.
+-> n
+T 336 mode=game_loop           Hama the Stalwart(hum) F1@(18, 6) HP 10/40 MP 0/0 Hu 59 $ 760 room=.
+-> n
+T 337 mode=game_loop           Hama the Stalwart(hum) F1@(18, 5) HP 10/40 MP 0/0 Hu 59 $ 760 room=.
+-> n
+T 338 mode=game_loop           Hama the Stalwart(hum) F1@(18, 4) HP 10/40 MP 0/0 Hu 58 $ 760 room=.
+-> w
+T 339 mode=game_loop           Hama the Stalwart(hum) F1@(17, 4) HP 10/40 MP 0/0 Hu 57 $ 760 room=.
+-> w
+T 340 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 10/40 MP 0/0 Hu 56 $ 760 room=.
 -> l
-T 331 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 23/40 MP 0/0 Hu 42 $ 1039 room=.
+T 341 mode=game_loop           Hama the Stalwart(hum) F1@(16, 4) HP 10/40 MP 0/0 Hu 56 $ 760 room=.
+-> s
+T 342 mode=game_loop           Hama the Stalwart(hum) F1@(16, 5) HP 10/40 MP 0/0 Hu 56 $ 760 room=N
 -> w
-T 332 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 23/40 MP 0/0 Hu 41 $ 1039 room=.
+T 343 mode=game_loop           Hama the Stalwart(hum) F1@(15, 5) HP 10/40 MP 0/0 Hu 55 $ 760 room=.
 -> s
-T 333 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 23/40 MP 0/0 Hu 40 $ 1039 room=.
--> s
-T 334 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 23/40 MP 0/0 Hu 39 $ 1039 room=.
--> e
-T 335 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 23/40 MP 0/0 Hu 38 $ 1039 room=.
--> s
-T 336 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 23/40 MP 0/0 Hu 37 $ 1039 room=.
--> e
-T 337 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 23/40 MP 0/0 Hu 36 $ 1039 room=.
--> e
-T 338 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 23/40 MP 0/0 Hu 35 $ 1039 room=.
--> e
-T 339 mode=game_loop           Hama the Stalwart(hum) F1@(16, 6) HP 23/40 MP 0/0 Hu 34 $ 1039 room=.
--> s
-T 340 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 23/40 MP 0/0 Hu 33 $ 1039 room=.
+T 344 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 10/40 MP 0/0 Hu 54 $ 760 room=.
+-> w
+T 345 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 10/40 MP 0/0 Hu 54 $ 760 room=.
+-> w
+T 346 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 10/40 MP 0/0 Hu 53 $ 760 room=.
+-> n
+T 347 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 10/40 MP 0/0 Hu 52 $ 760 room=.
+-> w
+T 348 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 10/40 MP 0/0 Hu 52 $ 760 room=.
+-> n
+T 349 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 10/40 MP 0/0 Hu 51 $ 760 room=.
+-> n
+T 350 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 10/40 MP 0/0 Hu 50 $ 760 room=.
 -> l
-T 341 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 23/40 MP 0/0 Hu 33 $ 1039 room=.
--> s
-T 342 mode=game_loop           Hama the Stalwart(hum) F1@(16, 8) HP 23/40 MP 0/0 Hu 32 $ 1039 room=C
+T 351 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 10/40 MP 0/0 Hu 50 $ 760 room=.
 -> e
-T 343 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 23/40 MP 0/0 Hu 31 $ 1039 room=.
+T 352 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 10/40 MP 0/0 Hu 49 $ 760 room=.
+-> w
+T 353 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 10/40 MP 0/0 Hu 49 $ 760 room=.
+-> w
+T 354 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 10/40 MP 0/0 Hu 48 $ 760 room=.
+-> s
+T 355 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 10/40 MP 0/0 Hu 47 $ 760 room=.
+-> w
+T 356 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 10/40 MP 0/0 Hu 47 $ 760 room=.
+-> w
+T 357 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 10/40 MP 0/0 Hu 46 $ 760 room=.
 -> n
-T 344 mode=game_loop           Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 30 $ 1039 room=.
--> e
-T 345 mode=game_loop           Hama the Stalwart(hum) F1@(18, 7) HP 23/40 MP 0/0 Hu 29 $ 1039 room=.
--> s
-T 346 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 23/40 MP 0/0 Hu 28 $ 1039 room=.
+T 358 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 10/40 MP 0/0 Hu 45 $ 760 room=.
+-> n
+T 359 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 10/40 MP 0/0 Hu 45 $ 760 room=.
+-> w
+T 360 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 10/40 MP 0/0 Hu 44 $ 760 room=.
 -> l
-T 347 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 23/40 MP 0/0 Hu 28 $ 1039 room=.
--> e
-T 348 mode=chest_mode          Hama the Stalwart(hum) F1@(19, 8) HP 23/40 MP 0/0 Hu 27 $ 1039 room=C
+T 361 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 10/40 MP 0/0 Hu 44 $ 760 room=.
 -> w
-T 349 mode=game_loop           Hama the Stalwart(hum) F1@(18, 8) HP 23/40 MP 0/0 Hu 26 $ 1039 room=.
+T 362 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 10/40 MP 0/0 Hu 43 $ 760 room=.
+-> n
+T 363 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 1) HP 10/40 MP 0/0 Hu 42 $ 760 room=.
+-> s
+T 364 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 10/40 MP 0/0 Hu 42 $ 760 room=.
 -> w
-T 350 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 23/40 MP 0/0 Hu 25 $ 1039 room=.
+T 365 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 10/40 MP 0/0 Hu 41 $ 760 room=.
+-> s
+T 366 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 10/40 MP 0/0 Hu 40 $ 760 room=.
+-> s
+T 367 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 4) HP 10/40 MP 0/0 Hu 40 $ 760 room=.
+-> s
+T 368 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 5) HP 10/40 MP 0/0 Hu 39 $ 760 room=.
+-> w
+T 369 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 5) HP 10/40 MP 0/0 Hu 38 $ 760 room=.
+-> n
+T 370 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 10/40 MP 0/0 Hu 38 $ 760 room=.
 -> l
-T 351 mode=game_loop           Hama the Stalwart(hum) F1@(17, 8) HP 23/40 MP 0/0 Hu 25 $ 1039 room=.
+T 371 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 10/40 MP 0/0 Hu 38 $ 760 room=.
 -> n
-T 352 mode=game_loop           Hama the Stalwart(hum) F1@(17, 7) HP 23/40 MP 0/0 Hu 24 $ 1039 room=.
--> w
-T 353 mode=game_loop           Hama the Stalwart(hum) F1@(16, 7) HP 23/40 MP 0/0 Hu 23 $ 1039 room=.
--> n
-T 354 mode=game_loop           Hama the Stalwart(hum) F1@(16, 6) HP 23/40 MP 0/0 Hu 22 $ 1039 room=.
--> w
-T 355 mode=game_loop           Hama the Stalwart(hum) F1@(15, 6) HP 23/40 MP 0/0 Hu 21 $ 1039 room=.
--> w
-T 356 mode=game_loop           Hama the Stalwart(hum) F1@(14, 6) HP 23/40 MP 0/0 Hu 20 $ 1039 room=.
--> w
-T 357 mode=game_loop           Hama the Stalwart(hum) F1@(13, 6) HP 23/40 MP 0/0 Hu 19 $ 1039 room=.
--> n
-T 358 mode=game_loop           Hama the Stalwart(hum) F1@(13, 5) HP 23/40 MP 0/0 Hu 18 $ 1039 room=.
--> w
-T 359 mode=game_loop           Hama the Stalwart(hum) F1@(12, 5) HP 23/40 MP 0/0 Hu 17 $ 1039 room=.
--> n
-T 360 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 23/40 MP 0/0 Hu 16 $ 1039 room=.
--> l
-T 361 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 23/40 MP 0/0 Hu 16 $ 1039 room=.
--> n
-T 362 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 23/40 MP 0/0 Hu 15 $ 1039 room=.
+T 372 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 10/40 MP 0/0 Hu 37 $ 760 room=.
 -> e
-T 363 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 23/40 MP 0/0 Hu 14 $ 1039 room=.
--> w
-T 364 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 23/40 MP 0/0 Hu 13 $ 1039 room=.
--> w
-T 365 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 23/40 MP 0/0 Hu 12 $ 1039 room=.
--> s
-T 366 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 23/40 MP 0/0 Hu 11 $ 1039 room=.
--> w
-T 367 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 23/40 MP 0/0 Hu 10 $ 1039 room=.
--> w
-T 368 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 23/40 MP 0/0 Hu  9 $ 1039 room=.
+T 373 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 10/40 MP 0/0 Hu 36 $ 760 room=.
 -> n
-T 369 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 23/40 MP 0/0 Hu  8 $ 1039 room=.
--> w
-T 370 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 23/40 MP 0/0 Hu  7 $ 1039 room=.
--> l
-T 371 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 23/40 MP 0/0 Hu  7 $ 1039 room=.
--> n
-T 372 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 23/40 MP 0/0 Hu  6 $ 1039 room=.
--> w
-T 373 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 23/40 MP 0/0 Hu  5 $ 1039 room=.
--> n
-T 374 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 1) HP 23/40 MP 0/0 Hu  4 $ 1039 room=.
--> s
-T 375 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 23/40 MP 0/0 Hu  3 $ 1039 room=.
--> w
-T 376 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 23/40 MP 0/0 Hu  2 $ 1039 room=.
--> s
-T 377 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 23/40 MP 0/0 Hu  1 $ 1039 room=.
--> w
-T 378 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 21/40 MP 0/0 Hu  0 $ 1039 room=.
--> s
-T 379 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 4) HP 19/40 MP 0/0 Hu  0 $ 1039 room=.
--> w
-T 380 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 17/40 MP 0/0 Hu  0 $ 1039 room=.
--> l
-T 381 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 17/40 MP 0/0 Hu  0 $ 1039 room=.
--> n
-T 382 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 15/40 MP 0/0 Hu  0 $ 1039 room=.
--> w
-T 383 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 13/40 MP 0/0 Hu  0 $ 1039 room=.
--> n
-T 384 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 11/40 MP 0/0 Hu  0 $ 1039 room=.
--> n
-T 385 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 9/40 MP 0/0 Hu  0 $ 1039 room=.
--> w
-T 386 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 7/40 MP 0/0 Hu  0 $ 1039 room=.
--> w
-T 387 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 5/40 MP 0/0 Hu  0 $ 1039 room=E
+T 374 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 10/40 MP 0/0 Hu 35 $ 760 room=.
 -> e
-T 388 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 3/40 MP 0/0 Hu  0 $ 1039 room=.
+T 375 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 10/40 MP 0/0 Hu 35 $ 760 room=.
 -> e
-T 389 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 1/40 MP 0/0 Hu  0 $ 1039 room=.
+T 376 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 10/40 MP 0/0 Hu 34 $ 760 room=.
+-> e
+T 377 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 10/40 MP 0/0 Hu 33 $ 760 room=.
 -> s
-T 390 mode=death_screen        Hama the Stalwart(hum) F1@( 3, 2) HP 0/40 MP 0/0 Hu  0 $ 1039 room=.
+T 378 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 10/40 MP 0/0 Hu 33 $ 760 room=.
+-> s
+T 379 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 10/40 MP 0/0 Hu 32 $ 760 room=.
+-> e
+T 380 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 10/40 MP 0/0 Hu 31 $ 760 room=.
+-> l
+T 381 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 10/40 MP 0/0 Hu 31 $ 760 room=.
+-> e
+T 382 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 10/40 MP 0/0 Hu 31 $ 760 room=.
+-> n
+T 383 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 10/40 MP 0/0 Hu 30 $ 760 room=.
+-> e
+T 384 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 10/40 MP 0/0 Hu 29 $ 760 room=.
+-> e
+T 385 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 10/40 MP 0/0 Hu 28 $ 760 room=.
+-> w
+T 386 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 10/40 MP 0/0 Hu 28 $ 760 room=.
+-> s
+T 387 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 10/40 MP 0/0 Hu 27 $ 760 room=.
+-> w
+T 388 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 10/40 MP 0/0 Hu 26 $ 760 room=.
+-> n
+T 389 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 10/40 MP 0/0 Hu 26 $ 760 room=.
+-> s
+T 390 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 10/40 MP 0/0 Hu 25 $ 760 room=.
+-> l
+T 391 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 10/40 MP 0/0 Hu 25 $ 760 room=.
+-> w
+T 392 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 10/40 MP 0/0 Hu 24 $ 760 room=.
+-> w
+T 393 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 10/40 MP 0/0 Hu 24 $ 760 room=.
+-> n
+T 394 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 10/40 MP 0/0 Hu 23 $ 760 room=.
+-> w
+T 395 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 10/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 396 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 9/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP8/8)
+-> f
+T 397 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 9/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP8/8)
+-> a
+T 398 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 8/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP6/8)
+-> a
+T 399 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 8/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP6/8)
+-> a
+T 400 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 7/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP6/8)
+-> a
+T 401 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 6/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP4/8)
+-> a
+T 402 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 5/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP4/8)
+-> a
+T 403 mode=combat_mode         Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 22 $ 760 room=M vs Kobold(L0 HP2/8)
+-> a
+T 404 mode=combat_victory      Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> back
+T 405 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> i
+T 406 mode=inventory           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> u4
+T 407 mode=inventory           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> eat1
+T 408 mode=inventory           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 37 $ 920 room=.
+-> x
+T 409 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 37 $ 920 room=.
+-> n
+T 410 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu 36 $ 920 room=.
+-> l
+T 411 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu 36 $ 920 room=.
+-> e
+T 412 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 4/40 MP 0/0 Hu 36 $ 920 room=.
+-> s
+T 413 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 4/40 MP 0/0 Hu 35 $ 920 room=.
+-> s
+T 414 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 4/40 MP 0/0 Hu 34 $ 920 room=.
+-> e
+T 415 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 4/40 MP 0/0 Hu 34 $ 920 room=.
+-> e
+T 416 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 4/40 MP 0/0 Hu 33 $ 920 room=.
+-> n
+T 417 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 4/40 MP 0/0 Hu 32 $ 920 room=.
+-> e
+T 418 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 4/40 MP 0/0 Hu 32 $ 920 room=.
+-> e
+T 419 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 4/40 MP 0/0 Hu 31 $ 920 room=.
+-> w
+T 420 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 4/40 MP 0/0 Hu 30 $ 920 room=.
+-> l
+T 421 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 4/40 MP 0/0 Hu 30 $ 920 room=.
+-> s
+T 422 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 4/40 MP 0/0 Hu 29 $ 920 room=.
+-> w
+T 423 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 4/40 MP 0/0 Hu 29 $ 920 room=.
+-> n
+T 424 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 4/40 MP 0/0 Hu 28 $ 920 room=.
+-> s
+T 425 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 4/40 MP 0/0 Hu 27 $ 920 room=.
+-> w
+T 426 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 4/40 MP 0/0 Hu 27 $ 920 room=.
+-> w
+T 427 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 4/40 MP 0/0 Hu 26 $ 920 room=.
+-> n
+T 428 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 4/40 MP 0/0 Hu 25 $ 920 room=.
+-> n
+T 429 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 2) HP 4/40 MP 0/0 Hu 25 $ 920 room=.
+-> w
+T 430 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu 24 $ 920 room=.
+-> l
+T 431 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu 24 $ 920 room=.
+-> s
+T 432 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu 23 $ 920 room=.
+-> n
+T 433 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> w
+T 434 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 4/40 MP 0/0 Hu 22 $ 920 room=.
+-> w
+T 435 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 4/40 MP 0/0 Hu 21 $ 920 room=.
+-> s
+T 436 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 4/40 MP 0/0 Hu 20 $ 920 room=.
+-> w
+T 437 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 4/40 MP 0/0 Hu 20 $ 920 room=.
+-> w
+T 438 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 4/40 MP 0/0 Hu 19 $ 920 room=.
+-> s
+T 439 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 4) HP 4/40 MP 0/0 Hu 18 $ 920 room=.
+-> w
+T 440 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 4/40 MP 0/0 Hu 18 $ 920 room=.
+-> l
+T 441 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 4) HP 4/40 MP 0/0 Hu 18 $ 920 room=.
+-> n
+T 442 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 4/40 MP 0/0 Hu 17 $ 920 room=.
+-> n
+T 443 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 4/40 MP 0/0 Hu 16 $ 920 room=.
+-> n
+T 444 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 4/40 MP 0/0 Hu 15 $ 920 room=.
+-> w
+T 445 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 4/40 MP 0/0 Hu 15 $ 920 room=.
+-> w
+T 446 mode=game_loop           Hama the Stalwart(hum) F1@( 1, 1) HP 4/40 MP 0/0 Hu 14 $ 920 room=E
+-> e
+T 447 mode=game_loop           Hama the Stalwart(hum) F1@( 2, 1) HP 4/40 MP 0/0 Hu 13 $ 920 room=.
+-> e
+T 448 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 1) HP 4/40 MP 0/0 Hu 13 $ 920 room=.
+-> s
+T 449 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 2) HP 4/40 MP 0/0 Hu 12 $ 920 room=.
+-> s
+T 450 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 4/40 MP 0/0 Hu 11 $ 920 room=.
+-> l
+T 451 mode=game_loop           Hama the Stalwart(hum) F1@( 3, 3) HP 4/40 MP 0/0 Hu 11 $ 920 room=.
+-> e
+T 452 mode=game_loop           Hama the Stalwart(hum) F1@( 4, 3) HP 4/40 MP 0/0 Hu 11 $ 920 room=.
+-> e
+T 453 mode=game_loop           Hama the Stalwart(hum) F1@( 5, 3) HP 4/40 MP 0/0 Hu 10 $ 920 room=.
+-> e
+T 454 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 3) HP 4/40 MP 0/0 Hu  9 $ 920 room=.
+-> n
+T 455 mode=game_loop           Hama the Stalwart(hum) F1@( 6, 2) HP 4/40 MP 0/0 Hu  8 $ 920 room=.
+-> e
+T 456 mode=game_loop           Hama the Stalwart(hum) F1@( 7, 2) HP 4/40 MP 0/0 Hu  8 $ 920 room=.
+-> e
+T 457 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 2) HP 4/40 MP 0/0 Hu  7 $ 920 room=.
+-> s
+T 458 mode=game_loop           Hama the Stalwart(hum) F1@( 8, 3) HP 4/40 MP 0/0 Hu  6 $ 920 room=.
+-> e
+T 459 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 3) HP 4/40 MP 0/0 Hu  6 $ 920 room=.
+-> s
+T 460 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 4/40 MP 0/0 Hu  5 $ 920 room=.
+-> l
+T 461 mode=game_loop           Hama the Stalwart(hum) F1@( 9, 4) HP 4/40 MP 0/0 Hu  5 $ 920 room=.
+-> e
+T 462 mode=game_loop           Hama the Stalwart(hum) F1@(10, 4) HP 4/40 MP 0/0 Hu  4 $ 920 room=.
+-> e
+T 463 mode=game_loop           Hama the Stalwart(hum) F1@(11, 4) HP 4/40 MP 0/0 Hu  4 $ 920 room=.
+-> n
+T 464 mode=game_loop           Hama the Stalwart(hum) F1@(11, 3) HP 4/40 MP 0/0 Hu  3 $ 920 room=.
+-> e
+T 465 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 4/40 MP 0/0 Hu  2 $ 920 room=.
+-> e
+T 466 mode=game_loop           Hama the Stalwart(hum) F1@(13, 3) HP 4/40 MP 0/0 Hu  1 $ 920 room=.
+-> w
+T 467 mode=game_loop           Hama the Stalwart(hum) F1@(12, 3) HP 4/40 MP 0/0 Hu  1 $ 920 room=.
+-> s
+T 468 mode=game_loop           Hama the Stalwart(hum) F1@(12, 4) HP 2/40 MP 0/0 Hu  0 $ 920 room=.
+-> w
+T 469 mode=death_screen        Hama the Stalwart(hum) F1@(11, 4) HP 0/40 MP 0/0 Hu  0 $ 920 room=.
 
-=== run finished: turns=390 floor=1 hp=0/40 gold=1039 alive=False mode=death_screen ===
+=== run finished: turns=469 floor=1 hp=0/40 gold=920 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00200_human.html

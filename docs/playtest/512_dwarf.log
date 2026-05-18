@@ -5,1248 +5,1508 @@ T   1 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 1) HP 60/64 MP 0/0 
   The lantern reveals 9 nearby rooms!
   Lantern fuel remaining: 79
 -> s
-T   2 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+T   2 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 60/64 MP 0/0 Hu100 $ 290 room=M vs Crawling Claw(L0 HP5/5)
   A Crawling Claw (Level 0) appears! A severed hand scuttles across the floor with malicious intent.
   You seize the initiative!
 -> a
-T   3 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+T   3 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 59/64 MP 0/0 Hu100 $ 290 room=M vs Crawling Claw(L0 HP5/5)
   You missed the evil Crawling Claw!
   Ouch! Crawling Claw hit Durin Anvilheart!
   You took 1 damage!
 -> a
-T   4 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+T   4 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu100 $ 290 room=M vs Crawling Claw(L0 HP5/5)
   You missed the evil Crawling Claw!
   Ouch! Crawling Claw hit Durin Anvilheart!
   You took 1 damage!
 -> a
-T   5 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+T   5 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu100 $ 290 room=M vs Crawling Claw(L0 HP5/5)
   You missed the evil Crawling Claw!
   Crawling Claw missed Durin Anvilheart!
 -> a
-T   6 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 343 room=.
+T   6 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu100 $ 343 room=.
   You found 3 gold.
    ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
   Reward: 50 gold!
 -> back
-T   7 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 343 room=.
+T   7 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu100 $ 343 room=.
 -> l
-T   8 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu 99 $ 343 room=.
+T   8 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 2) HP 58/64 MP 0/0 Hu100 $ 343 room=.
 -> e
-T   9 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 59/64 MP 0/0 Hu 98 $ 343 room=.
+T   9 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 59/64 MP 0/0 Hu 99 $ 343 room=.
 -> l
-T  10 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 59/64 MP 0/0 Hu 98 $ 343 room=.
+T  10 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 59/64 MP 0/0 Hu 99 $ 343 room=.
 -> n
-T  11 mode=combat_mode         Durin Anvilheart(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 97 $ 343 room=M vs Zombie(L0 HP35/35)
+T  11 mode=combat_mode         Durin Anvilheart(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 98 $ 343 room=M vs Zombie(L0 HP35/35)
 -> f
-T  12 mode=flee_direction_mode Durin Anvilheart(dwa) F1@( 2, 1) HP 58/64 MP 0/0 Hu 97 $ 343 room=M
+T  12 mode=flee_direction_mode Durin Anvilheart(dwa) F1@( 2, 1) HP 58/64 MP 0/0 Hu 98 $ 343 room=M
 -> s
-T  13 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 58/64 MP 0/0 Hu 97 $ 343 room=.
+T  13 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 2) HP 58/64 MP 0/0 Hu 98 $ 343 room=.
 -> s
-T  14 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 96 $ 343 room=.
+T  14 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 98 $ 343 room=.
 -> l
-T  15 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 96 $ 343 room=.
+T  15 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 59/64 MP 0/0 Hu 98 $ 343 room=.
 -> s
-T  16 mode=combat_mode         Durin Anvilheart(dwa) F1@( 2, 4) HP 59/64 MP 0/0 Hu 95 $ 343 room=M vs Sewer Rat(L0 HP10/10)
+T  16 mode=combat_mode         Durin Anvilheart(dwa) F1@( 2, 4) HP 59/64 MP 0/0 Hu 97 $ 343 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  17 mode=combat_victory      Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 95 $ 349 room=.
+T  17 mode=combat_victory      Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 97 $ 349 room=.
 -> back
-T  18 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 95 $ 349 room=.
+T  18 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 97 $ 349 room=.
 -> l
-T  19 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 95 $ 349 room=.
+T  19 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 4) HP 58/64 MP 0/0 Hu 97 $ 349 room=.
 -> e
-T  20 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 94 $ 349 room=M vs Sewer Rat(L0 HP10/10)
+T  20 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 96 $ 349 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T  21 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 94 $ 359 room=.
+T  21 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 96 $ 359 room=.
 -> back
-T  22 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 94 $ 359 room=.
+T  22 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 96 $ 359 room=.
 -> l
-T  23 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 94 $ 359 room=.
+T  23 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 96 $ 359 room=.
 -> s
-T  24 mode=chest_mode          Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 93 $ 359 room=C
+T  24 mode=chest_mode          Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 96 $ 359 room=C
 -> o
-T  25 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 93 $ 369 room=.
+T  25 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 96 $ 369 room=.
 -> l
-T  26 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 93 $ 369 room=.
+T  26 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 5) HP 59/64 MP 0/0 Hu 96 $ 369 room=.
 -> e
-T  27 mode=garden_mode         Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 92 $ 369 room=G
+T  27 mode=garden_mode         Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 95 $ 369 room=G
 -> h
-T  28 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 92 $ 369 room=.
+T  28 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 95 $ 369 room=.
 -> l
-T  29 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 92 $ 369 room=.
+T  29 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 95 $ 369 room=.
 -> s
-T  30 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 91 $ 369 room=M vs Crawling Claw(L0 HP5/5)
+T  30 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 94 $ 369 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T  31 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 91 $ 376 room=.
+T  31 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 94 $ 376 room=.
 -> back
-T  32 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 91 $ 376 room=.
+T  32 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 94 $ 376 room=.
 -> l
-T  33 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 91 $ 376 room=.
+T  33 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 94 $ 376 room=.
 -> s
-T  34 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 90 $ 376 room=M vs Kobold(L0 HP8/8)
+T  34 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 93 $ 376 room=M vs Kobold(L0 HP8/8)
 -> a
-T  35 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 90 $ 384 room=.
+T  35 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=.
 -> back
-T  36 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 90 $ 384 room=.
+T  36 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=.
 -> l
-T  37 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 90 $ 384 room=.
+T  37 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=.
 -> w
-T  38 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 89 $ 384 room=M vs Skeleton(L0 HP25/25)
+T  38 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  39 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 89 $ 384 room=M vs Skeleton(L0 HP25/25)
+T  39 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  40 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 89 $ 384 room=M vs Skeleton(L0 HP25/25)
+T  40 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 61/64 MP 0/0 Hu 93 $ 384 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  41 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 60/64 MP 0/0 Hu 89 $ 384 room=M vs Skeleton(L0 HP1/25)
+T  41 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 7) HP 60/64 MP 0/0 Hu 93 $ 384 room=M vs Skeleton(L0 HP1/25)
 -> a
-T  42 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 7) HP 59/64 MP 0/0 Hu 89 $ 386 room=.
+T  42 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 7) HP 59/64 MP 0/0 Hu 93 $ 386 room=.
 -> back
-T  43 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 7) HP 59/64 MP 0/0 Hu 89 $ 386 room=.
+T  43 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 7) HP 59/64 MP 0/0 Hu 93 $ 386 room=.
 -> n
-T  44 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 60/64 MP 0/0 Hu 88 $ 386 room=M vs Rust Monster(L0 HP18/18)
+T  44 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 60/64 MP 0/0 Hu 92 $ 386 room=M vs Rust Monster(L0 HP18/18)
 -> f
-T  45 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 60/64 MP 0/0 Hu 88 $ 386 room=M vs Rust Monster(L0 HP18/18)
+T  45 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 60/64 MP 0/0 Hu 92 $ 386 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  46 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 88 $ 386 room=M vs Rust Monster(L0 HP18/18)
+T  46 mode=combat_mode         Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 92 $ 386 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  47 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 88 $ 394 room=.
+T  47 mode=combat_victory      Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 92 $ 394 room=.
 -> back
-T  48 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 88 $ 394 room=.
--> w
-T  49 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 6) HP 59/64 MP 0/0 Hu 87 $ 394 room=.
--> n
-T  50 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 5) HP 60/64 MP 0/0 Hu 86 $ 394 room=.
--> w
-T  51 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 5) HP 60/64 MP 0/0 Hu 85 $ 394 room=M vs Spore Puff(L0 HP18/18)
--> a
-T  52 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 5) HP 60/64 MP 0/0 Hu 85 $ 402 room=.
--> back
-T  53 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 5) HP 60/64 MP 0/0 Hu 85 $ 402 room=.
--> n
-T  54 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 60/64 MP 0/0 Hu 84 $ 402 room=M vs Skeleton(L0 HP25/25)
--> a
-T  55 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 59/64 MP 0/0 Hu 84 $ 402 room=M vs Skeleton(L0 HP25/25)
--> a
-T  56 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 58/64 MP 0/0 Hu 84 $ 402 room=M vs Skeleton(L0 HP1/25)
--> a
-T  57 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 57/64 MP 0/0 Hu 84 $ 402 room=M vs Skeleton(L0 HP1/25)
--> a
-T  58 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 4) HP 57/64 MP 0/0 Hu 84 $ 411 room=.
--> back
-T  59 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 4) HP 57/64 MP 0/0 Hu 84 $ 411 room=.
--> n
-T  60 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 3) HP 57/64 MP 0/0 Hu 83 $ 411 room=.
--> e
-T  61 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 58/64 MP 0/0 Hu 82 $ 411 room=.
--> e
-T  62 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 3) HP 58/64 MP 0/0 Hu 81 $ 411 room=.
--> e
-T  63 mode=altar_mode          Durin Anvilheart(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 80 $ 411 room=A
--> pray
-T  64 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 80 $ 456 room=.
--> n
-T  65 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 2) HP 58/64 MP 0/0 Hu 79 $ 456 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  66 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 2) HP 57/64 MP 0/0 Hu 79 $ 456 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  67 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 2) HP 57/64 MP 0/0 Hu 79 $ 559 room=.
--> back
-T  68 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 57/64 MP 0/0 Hu 79 $ 559 room=.
+T  48 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 92 $ 394 room=.
 -> i
-T  69 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 57/64 MP 0/0 Hu 79 $ 559 room=.
+T  49 mode=inventory           Durin Anvilheart(dwa) F1@( 3, 6) HP 59/64 MP 0/0 Hu 92 $ 394 room=.
 -> u3
-T  70 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 79 $ 559 room=.
+T  50 mode=inventory           Durin Anvilheart(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 92 $ 394 room=.
 -> x
-T  71 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 79 $ 559 room=.
+T  51 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 92 $ 394 room=.
 -> i
-T  72 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 79 $ 559 room=.
+T  52 mode=inventory           Durin Anvilheart(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 92 $ 394 room=.
 -> u9
-T  73 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 79 $ 559 room=.
--> eat3
-T  74 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 85 $ 559 room=.
+T  53 mode=inventory           Durin Anvilheart(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 92 $ 394 room=.
 -> x
-T  75 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 85 $ 559 room=.
--> l
-T  76 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 64/64 MP 0/0 Hu 85 $ 559 room=.
--> n
-T  77 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 84 $ 559 room=M vs Zombie(L0 HP35/35)
--> a
-T  78 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 84 $ 559 room=M vs Zombie(L0 HP9/35)
--> a
-T  79 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 84 $ 660 room=.
--> back
-T  80 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 84 $ 660 room=.
--> l
-T  81 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 1) HP 64/64 MP 0/0 Hu 84 $ 660 room=.
--> e
-T  82 mode=game_loop           Durin Anvilheart(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 83 $ 660 room=.
--> s
-T  83 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 64/64 MP 0/0 Hu 82 $ 660 room=M vs Kobold(L0 HP8/8)
--> a
-T  84 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 82 $ 660 room=M vs Kobold(L0 HP8/8)
--> a
-T  85 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 62/64 MP 0/0 Hu 82 $ 660 room=M vs Kobold(L0 HP8/8)
--> a
-T  86 mode=combat_victory      Durin Anvilheart(dwa) F1@( 5, 2) HP 62/64 MP 0/0 Hu 82 $ 668 room=.
--> back
-T  87 mode=game_loop           Durin Anvilheart(dwa) F1@( 5, 2) HP 62/64 MP 0/0 Hu 82 $ 668 room=.
--> e
-T  88 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 62/64 MP 0/0 Hu 81 $ 668 room=.
--> e
-T  89 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  90 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  91 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  92 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 61/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  93 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  94 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  95 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  96 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 59/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  97 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 58/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  98 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 57/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T  99 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 56/64 MP 0/0 Hu 80 $ 668 room=M vs Bat(L0 HP12/12)
--> a
-T 100 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 80 $ 675 room=.
--> back
-T 101 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 80 $ 675 room=.
--> i
-T 102 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 80 $ 675 room=.
--> u3
-T 103 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 80 $ 675 room=.
--> x
-T 104 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 80 $ 675 room=.
--> s
-T 105 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 79 $ 675 room=.
--> e
-T 106 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 78 $ 675 room=D
--> s
-T 107 mode=library_mode        Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 77 $ 675 room=L
--> r
-T 108 mode=library_read_decision_mode Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 77 $ 675 room=L
--> y
-T 109 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 77 $ 725 room=.
--> s
-T 110 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 76 $ 725 room=.
+T  54 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 92 $ 394 room=.
 -> w
-T 111 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 725 room=V
+T  55 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 6) HP 64/64 MP 0/0 Hu 91 $ 394 room=.
+-> n
+T  56 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 91 $ 394 room=.
+-> w
+T  57 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 5) HP 64/64 MP 0/0 Hu 90 $ 394 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  58 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 5) HP 64/64 MP 0/0 Hu 90 $ 502 room=.
+-> back
+T  59 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 5) HP 64/64 MP 0/0 Hu 90 $ 502 room=.
+-> n
+T  60 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 64/64 MP 0/0 Hu 89 $ 502 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  61 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 63/64 MP 0/0 Hu 89 $ 502 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  62 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 62/64 MP 0/0 Hu 89 $ 502 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  63 mode=combat_mode         Durin Anvilheart(dwa) F1@( 1, 4) HP 61/64 MP 0/0 Hu 89 $ 502 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  64 mode=combat_victory      Durin Anvilheart(dwa) F1@( 1, 4) HP 61/64 MP 0/0 Hu 89 $ 511 room=.
+-> back
+T  65 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 4) HP 61/64 MP 0/0 Hu 89 $ 511 room=.
+-> n
+T  66 mode=game_loop           Durin Anvilheart(dwa) F1@( 1, 3) HP 61/64 MP 0/0 Hu 89 $ 511 room=.
+-> e
+T  67 mode=game_loop           Durin Anvilheart(dwa) F1@( 2, 3) HP 62/64 MP 0/0 Hu 88 $ 511 room=.
+-> e
+T  68 mode=game_loop           Durin Anvilheart(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 87 $ 511 room=.
+-> e
+T  69 mode=altar_mode          Durin Anvilheart(dwa) F1@( 4, 3) HP 63/64 MP 0/0 Hu 86 $ 511 room=A
+-> pray
+T  70 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 3) HP 63/64 MP 0/0 Hu 86 $ 556 room=.
+-> n
+T  71 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 2) HP 63/64 MP 0/0 Hu 86 $ 556 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  72 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 556 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  73 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> back
+T  74 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> i
+T  75 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> u10
+T  76 mode=inventory           Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> x
+T  77 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> l
+T  78 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 86 $ 659 room=.
+-> n
+T  79 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 85 $ 659 room=M vs Zombie(L0 HP35/35)
+-> a
+T  80 mode=combat_mode         Durin Anvilheart(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 85 $ 659 room=M vs Zombie(L0 HP9/35)
+-> a
+T  81 mode=combat_victory      Durin Anvilheart(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 85 $ 660 room=.
+-> back
+T  82 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 85 $ 660 room=.
+-> l
+T  83 mode=game_loop           Durin Anvilheart(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 85 $ 660 room=.
+-> e
+T  84 mode=game_loop           Durin Anvilheart(dwa) F1@( 5, 1) HP 63/64 MP 0/0 Hu 84 $ 660 room=.
+-> s
+T  85 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 84 $ 660 room=M vs Kobold(L0 HP8/8)
+-> a
+T  86 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 62/64 MP 0/0 Hu 84 $ 660 room=M vs Kobold(L0 HP8/8)
+-> a
+T  87 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5, 2) HP 61/64 MP 0/0 Hu 84 $ 660 room=M vs Kobold(L0 HP8/8)
+-> a
+T  88 mode=combat_victory      Durin Anvilheart(dwa) F1@( 5, 2) HP 61/64 MP 0/0 Hu 84 $ 668 room=.
+-> back
+T  89 mode=game_loop           Durin Anvilheart(dwa) F1@( 5, 2) HP 61/64 MP 0/0 Hu 84 $ 668 room=.
+-> e
+T  90 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 61/64 MP 0/0 Hu 83 $ 668 room=.
+-> e
+T  91 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  92 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  93 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  94 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 61/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  95 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  96 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  97 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 60/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  98 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 59/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T  99 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 58/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T 100 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 57/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T 101 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 2) HP 56/64 MP 0/0 Hu 82 $ 668 room=M vs Bat(L0 HP12/12)
+-> a
+T 102 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 82 $ 675 room=.
+-> back
+T 103 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 82 $ 675 room=.
+-> i
+T 104 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 2) HP 55/74 MP 0/0 Hu 82 $ 675 room=.
+-> u3
+T 105 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 82 $ 675 room=.
+-> x
+T 106 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 82 $ 675 room=.
+-> s
+T 107 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 82 $ 675 room=.
+-> e
+T 108 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 81 $ 675 room=D
+-> s
+T 109 mode=library_mode        Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 80 $ 675 room=L
+-> r
+T 110 mode=library_read_decision_mode Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 80 $ 675 room=L
+-> y
+T 111 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 80 $ 725 room=.
+-> s
+T 112 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 79 $ 725 room=.
+-> w
+T 113 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 725 room=V
 -> r1
-T 112 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 688 room=V
+T 114 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 688 room=V
 -> r2
-T 113 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 651 room=V
+T 115 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 651 room=V
 -> b14
-T 114 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 621 room=V
+T 116 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 621 room=V
 -> b14
-T 115 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 611 room=V
+T 117 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 611 room=V
 -> b5
-T 116 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 581 room=V
+T 118 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 581 room=V
 -> b5
-T 117 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 551 room=V
+T 119 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 551 room=V
 -> b5
-T 118 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 521 room=V
+T 120 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 521 room=V
 -> b5
-T 119 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 491 room=V
+T 121 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 491 room=V
 -> b6
-T 120 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 461 room=V
+T 122 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 461 room=V
 -> b6
-T 121 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 311 room=V
+T 123 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 311 room=V
 -> b6
-T 122 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 281 room=V
+T 124 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 281 room=V
 -> b6
-T 123 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 231 room=V
+T 125 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 231 room=V
 -> b2
-T 124 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 171 room=V
+T 126 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 171 room=V
 -> id10
-T 125 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 146 room=V
+T 127 mode=vendor_shop         Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 146 room=V
 -> x
-T 126 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 146 room=V
+T 128 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 146 room=V
 -> i
-T 127 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 146 room=V
+T 129 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 146 room=V
 -> e1
-T 128 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 146 room=V
+T 130 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 146 room=V
 -> x
-T 129 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 75 $ 146 room=V
+T 131 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 79 $ 146 room=V
 -> n
-T 130 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 74 $ 146 room=M vs Sewer Rat(L0 HP10/10)
+T 132 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 78 $ 146 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 131 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 74 $ 249 room=.
+T 133 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 78 $ 249 room=.
 -> back
-T 132 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 74 $ 249 room=.
+T 134 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 78 $ 249 room=.
 -> n
-T 133 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 73 $ 249 room=.
+T 135 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 77 $ 249 room=.
 -> w
-T 134 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 72 $ 249 room=M vs Giant Rat(L0 HP22/22)
+T 136 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 77 $ 249 room=M vs Giant Rat(L0 HP22/22)
 -> f
-T 135 mode=flee_direction_mode Durin Anvilheart(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 72 $ 249 room=M
+T 137 mode=flee_direction_mode Durin Anvilheart(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 77 $ 249 room=M
 -> n
-T 136 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 72 $ 249 room=.
+T 138 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 77 $ 249 room=.
 -> e
-T 137 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 71 $ 249 room=.
+T 139 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 76 $ 249 room=.
 -> e
-T 138 mode=combat_mode         Durin Anvilheart(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 70 $ 249 room=M vs Kobold(L0 HP20/20)
+T 140 mode=combat_mode         Durin Anvilheart(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 75 $ 249 room=M vs Kobold(L0 HP20/20)
 -> a
-T 139 mode=combat_victory      Durin Anvilheart(dwa) F1@( 8, 2) HP 73/74 MP 0/0 Hu 70 $ 258 room=.
+T 141 mode=combat_victory      Durin Anvilheart(dwa) F1@( 8, 2) HP 73/74 MP 0/0 Hu 75 $ 258 room=.
 -> back
-T 140 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 2) HP 73/74 MP 0/0 Hu 70 $ 258 room=.
+T 142 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 2) HP 73/74 MP 0/0 Hu 75 $ 258 room=.
 -> n
-T 141 mode=combat_mode         Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 69 $ 258 room=M vs Giant Centipede(L0 HP15/15)
+T 143 mode=combat_mode         Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 258 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 142 mode=combat_victory      Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 69 $ 267 room=.
+T 144 mode=combat_victory      Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> back
-T 143 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 69 $ 267 room=.
+T 145 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> i
-T 144 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 69 $ 267 room=.
--> u15
-T 145 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 69 $ 267 room=.
--> eat3
 T 146 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
--> eat1
-T 147 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+-> u17
+T 147 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> u8
-T 148 mode=upgrade_scroll_mode Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+T 148 mode=upgrade_scroll_mode Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> 1
-T 149 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+T 149 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> u9
-T 150 mode=identify_scroll_mode Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+T 150 mode=identify_scroll_mode Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> 1
-T 151 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+T 151 mode=inventory           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> x
-T 152 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu100 $ 267 room=.
+T 152 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 1) HP 73/74 MP 0/0 Hu 75 $ 267 room=.
 -> w
-T 153 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 99 $ 267 room=.
+T 153 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 1) HP 73/74 MP 0/0 Hu 74 $ 267 room=.
 -> w
-T 154 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 1) HP 74/74 MP 0/0 Hu 98 $ 267 room=.
+T 154 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 1) HP 73/74 MP 0/0 Hu 73 $ 267 room=.
 -> s
-T 155 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 97 $ 267 room=.
+T 155 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 72 $ 267 room=.
 -> e
-T 156 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 96 $ 267 room=.
+T 156 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 72 $ 267 room=.
 -> s
-T 157 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 95 $ 267 room=.
+T 157 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 71 $ 267 room=.
 -> e
-T 158 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 94 $ 267 room=D
+T 158 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 70 $ 267 room=D
 -> e
-T 159 mode=shrine_mode         Durin Anvilheart(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 93 $ 267 room=F
+T 159 mode=shrine_mode         Durin Anvilheart(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 70 $ 267 room=F
 -> p
-T 160 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 93 $ 267 room=.
+T 160 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 3) HP 74/74 MP 0/0 Hu 70 $ 267 room=.
 -> s
-T 161 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 74/74 MP 0/0 Hu 92 $ 267 room=M vs Giant Centipede(L0 HP15/15)
+T 161 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 74/74 MP 0/0 Hu 69 $ 267 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 162 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 92 $ 267 room=M vs Giant Centipede(L0 HP15/15)
+T 162 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 69 $ 267 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 163 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 92 $ 267 room=M vs Giant Centipede(L0 HP15/15)
+T 163 mode=combat_mode         Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 69 $ 267 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 164 mode=combat_victory      Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 92 $ 270 room=.
+T 164 mode=combat_victory      Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 69 $ 270 room=.
 -> back
-T 165 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 92 $ 270 room=.
+T 165 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 4) HP 73/74 MP 0/0 Hu 69 $ 270 room=.
 -> e
-T 166 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 4) HP 73/74 MP 0/0 Hu 91 $ 270 room=M vs Giant Centipede(L0 HP15/15)
+T 166 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 4) HP 73/74 MP 0/0 Hu 68 $ 270 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 167 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 4) HP 72/74 MP 0/0 Hu 91 $ 270 room=M vs Giant Centipede(L0 HP15/15)
+T 167 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 4) HP 72/74 MP 0/0 Hu 68 $ 270 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 168 mode=combat_victory      Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 91 $ 277 room=.
+T 168 mode=combat_victory      Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 68 $ 277 room=.
 -> back
-T 169 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 91 $ 277 room=.
+T 169 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 68 $ 277 room=.
 -> l
-T 170 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 91 $ 277 room=.
+T 170 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 4) HP 71/74 MP 0/0 Hu 68 $ 277 room=.
 -> n
-T 171 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 72/74 MP 0/0 Hu 90 $ 277 room=M vs Goblin(L0 HP12/12)
+T 171 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 71/74 MP 0/0 Hu 68 $ 277 room=M vs Goblin(L0 HP12/12)
 -> a
-T 172 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 71/74 MP 0/0 Hu 90 $ 277 room=M vs Goblin(L0 HP12/12)
+T 172 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 70/74 MP 0/0 Hu 68 $ 277 room=M vs Goblin(L0 HP12/12)
 -> a
-T 173 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 70/74 MP 0/0 Hu 90 $ 277 room=M vs Goblin(L0 HP12/12)
+T 173 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 69/74 MP 0/0 Hu 68 $ 277 room=M vs Goblin(L0 HP12/12)
 -> a
-T 174 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 70/74 MP 0/0 Hu 90 $ 277 room=M vs Goblin(L0 HP12/12)
+T 174 mode=combat_mode         Durin Anvilheart(dwa) F1@(10, 3) HP 69/74 MP 0/0 Hu 68 $ 277 room=M vs Goblin(L0 HP12/12)
 -> a
-T 175 mode=combat_victory      Durin Anvilheart(dwa) F1@(10, 3) HP 69/74 MP 0/0 Hu 90 $ 283 room=.
+T 175 mode=combat_victory      Durin Anvilheart(dwa) F1@(10, 3) HP 68/74 MP 0/0 Hu 68 $ 283 room=.
 -> back
-T 176 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 69/74 MP 0/0 Hu 90 $ 283 room=.
+T 176 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 68/74 MP 0/0 Hu 68 $ 283 room=.
 -> i
-T 177 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 69/74 MP 0/0 Hu 90 $ 283 room=.
+T 177 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 68/74 MP 0/0 Hu 68 $ 283 room=.
 -> u4
-T 178 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
+T 178 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
 -> x
-T 179 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
+T 179 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
 -> i
-T 180 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
--> u12
-T 181 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
+T 180 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
+-> u15
+T 181 mode=inventory           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
 -> x
-T 182 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
+T 182 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
 -> l
-T 183 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 283 room=.
+T 183 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 283 room=.
 -> e
-T 184 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 74/74 MP 0/0 Hu 89 $ 283 room=M vs Zombie(L0 HP35/35)
+T 184 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 74/74 MP 0/0 Hu 67 $ 283 room=M vs Zombie(L0 HP35/35)
 -> a
-T 185 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 73/74 MP 0/0 Hu 89 $ 283 room=M vs Zombie(L0 HP35/35)
+T 185 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 73/74 MP 0/0 Hu 67 $ 283 room=M vs Zombie(L0 HP35/35)
 -> a
-T 186 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 72/74 MP 0/0 Hu 89 $ 283 room=M vs Zombie(L0 HP7/35)
+T 186 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 72/74 MP 0/0 Hu 67 $ 283 room=M vs Zombie(L0 HP7/35)
 -> a
-T 187 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 89 $ 283 room=M vs Zombie(L0 HP7/35)
+T 187 mode=combat_mode         Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 67 $ 283 room=M vs Zombie(L0 HP7/35)
 -> a
-T 188 mode=combat_victory      Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 89 $ 290 room=.
+T 188 mode=combat_victory      Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 67 $ 290 room=.
 -> back
-T 189 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 89 $ 290 room=.
+T 189 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 3) HP 71/74 MP 0/0 Hu 67 $ 290 room=.
 -> s
-T 190 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 4) HP 71/74 MP 0/0 Hu 88 $ 290 room=.
+T 190 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 4) HP 71/74 MP 0/0 Hu 66 $ 290 room=.
 -> e
-T 191 mode=combat_mode         Durin Anvilheart(dwa) F1@(12, 4) HP 72/74 MP 0/0 Hu 87 $ 290 room=M vs Crawling Claw(L0 HP5/5)
+T 191 mode=combat_mode         Durin Anvilheart(dwa) F1@(12, 4) HP 71/74 MP 0/0 Hu 65 $ 290 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T 192 mode=combat_victory      Durin Anvilheart(dwa) F1@(12, 4) HP 71/74 MP 0/0 Hu 87 $ 291 room=.
+T 192 mode=combat_victory      Durin Anvilheart(dwa) F1@(12, 4) HP 70/74 MP 0/0 Hu 65 $ 291 room=.
 -> back
-T 193 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 4) HP 71/74 MP 0/0 Hu 87 $ 291 room=.
+T 193 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 4) HP 70/74 MP 0/0 Hu 65 $ 291 room=.
 -> l
-T 194 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 4) HP 71/74 MP 0/0 Hu 87 $ 291 room=.
+T 194 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 4) HP 70/74 MP 0/0 Hu 65 $ 291 room=.
 -> e
-T 195 mode=combat_mode         Durin Anvilheart(dwa) F1@(13, 4) HP 71/74 MP 0/0 Hu 86 $ 291 room=M vs Spore Puff(L0 HP18/18)
+T 195 mode=combat_mode         Durin Anvilheart(dwa) F1@(13, 4) HP 70/74 MP 0/0 Hu 65 $ 291 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 196 mode=combat_mode         Durin Anvilheart(dwa) F1@(13, 4) HP 71/74 MP 0/0 Hu 86 $ 291 room=M vs Spore Puff(L0 HP18/18)
+T 196 mode=combat_mode         Durin Anvilheart(dwa) F1@(13, 4) HP 70/74 MP 0/0 Hu 65 $ 291 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T 197 mode=combat_victory      Durin Anvilheart(dwa) F1@(13, 4) HP 71/74 MP 0/0 Hu 86 $ 295 room=.
+T 197 mode=combat_victory      Durin Anvilheart(dwa) F1@(13, 4) HP 70/74 MP 0/0 Hu 65 $ 295 room=.
 -> back
-T 198 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 4) HP 71/74 MP 0/0 Hu 86 $ 295 room=.
+T 198 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 4) HP 70/74 MP 0/0 Hu 65 $ 295 room=.
 -> l
-T 199 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 4) HP 71/74 MP 0/0 Hu 86 $ 295 room=.
+T 199 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 4) HP 70/74 MP 0/0 Hu 65 $ 295 room=.
 -> n
-T 200 mode=dungeon_mode        Durin Anvilheart(dwa) F1@(13, 3) HP 72/74 MP 0/0 Hu 85 $ 295 room=N
+T 200 mode=dungeon_mode        Durin Anvilheart(dwa) F1@(13, 3) HP 71/74 MP 0/0 Hu 64 $ 295 room=N
 -> u
-T 201 mode=dungeon_unlocked_mode Durin Anvilheart(dwa) F1@(13, 3) HP 72/74 MP 0/0 Hu 85 $ 295 room=N
+T 201 mode=dungeon_unlocked_mode Durin Anvilheart(dwa) F1@(13, 3) HP 71/74 MP 0/0 Hu 64 $ 295 room=N
 -> r
-T 202 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 3) HP 72/74 MP 0/0 Hu 85 $ 589 room=N
+T 202 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 3) HP 71/74 MP 0/0 Hu 64 $ 589 room=N
 -> l
-T 203 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 3) HP 72/74 MP 0/0 Hu 85 $ 589 room=N
+T 203 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 3) HP 71/74 MP 0/0 Hu 64 $ 589 room=N
 -> e
-T 204 mode=combat_mode         Durin Anvilheart(dwa) F1@(14, 3) HP 72/74 MP 0/0 Hu 84 $ 589 room=M vs Slime Mold(L0 HP15/15)
+T 204 mode=combat_mode         Durin Anvilheart(dwa) F1@(14, 3) HP 71/74 MP 0/0 Hu 63 $ 589 room=M vs Slime Mold(L0 HP15/15)
 -> f
-T 205 mode=flee_direction_mode Durin Anvilheart(dwa) F1@(14, 3) HP 71/74 MP 0/0 Hu 84 $ 589 room=M
+T 205 mode=flee_direction_mode Durin Anvilheart(dwa) F1@(14, 3) HP 70/74 MP 0/0 Hu 63 $ 589 room=M
 -> s
-T 206 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 4) HP 71/74 MP 0/0 Hu 84 $ 589 room=.
+T 206 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 4) HP 70/74 MP 0/0 Hu 63 $ 589 room=.
 -> l
-T 207 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 4) HP 71/74 MP 0/0 Hu 84 $ 589 room=.
+T 207 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 4) HP 70/74 MP 0/0 Hu 63 $ 589 room=.
 -> s
-T 208 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 5) HP 71/74 MP 0/0 Hu 83 $ 589 room=.
+T 208 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 5) HP 70/74 MP 0/0 Hu 63 $ 589 room=.
 -> s
-T 209 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 71/74 MP 0/0 Hu 82 $ 589 room=.
+T 209 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 70/74 MP 0/0 Hu 62 $ 589 room=.
 -> l
-T 210 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 71/74 MP 0/0 Hu 82 $ 589 room=.
+T 210 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 70/74 MP 0/0 Hu 62 $ 589 room=.
 -> l
-T 211 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 71/74 MP 0/0 Hu 82 $ 589 room=.
+T 211 mode=game_loop           Durin Anvilheart(dwa) F1@(14, 6) HP 70/74 MP 0/0 Hu 62 $ 589 room=.
 -> w
-T 212 mode=chest_mode          Durin Anvilheart(dwa) F1@(13, 6) HP 72/74 MP 0/0 Hu 81 $ 589 room=C
+T 212 mode=chest_mode          Durin Anvilheart(dwa) F1@(13, 6) HP 71/74 MP 0/0 Hu 61 $ 589 room=C
 -> o
-T 213 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 6) HP 72/74 MP 0/0 Hu 81 $ 589 room=.
+T 213 mode=game_loop           Durin Anvilheart(dwa) F1@(13, 6) HP 71/74 MP 0/0 Hu 61 $ 589 room=.
 -> w
-T 214 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 6) HP 72/74 MP 0/0 Hu 80 $ 589 room=.
+T 214 mode=game_loop           Durin Anvilheart(dwa) F1@(12, 6) HP 71/74 MP 0/0 Hu 61 $ 589 room=.
 -> w
-T 215 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 6) HP 72/74 MP 0/0 Hu 79 $ 589 room=.
+T 215 mode=game_loop           Durin Anvilheart(dwa) F1@(11, 6) HP 71/74 MP 0/0 Hu 60 $ 589 room=.
 -> w
-T 216 mode=pool_mode           Durin Anvilheart(dwa) F1@(10, 6) HP 72/74 MP 0/0 Hu 78 $ 589 room=P
+T 216 mode=pool_mode           Durin Anvilheart(dwa) F1@(10, 6) HP 71/74 MP 0/0 Hu 59 $ 589 room=P
 -> dr
-T 217 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 6) HP 13/74 MP 0/0 Hu 78 $ 589 room=.
+T 217 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 6) HP 12/74 MP 0/0 Hu 59 $ 589 room=.
 -> i
-T 218 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 13/74 MP 0/0 Hu 78 $ 589 room=.
+T 218 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 12/74 MP 0/0 Hu 59 $ 589 room=.
 -> u4
-T 219 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 43/74 MP 0/0 Hu 78 $ 589 room=.
+T 219 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 42/74 MP 0/0 Hu 59 $ 589 room=.
 -> u1
-T 220 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 73/74 MP 0/0 Hu 78 $ 589 room=.
+T 220 mode=inventory           Durin Anvilheart(dwa) F1@(10, 6) HP 72/74 MP 0/0 Hu 59 $ 589 room=.
 -> x
-T 221 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 6) HP 73/74 MP 0/0 Hu 78 $ 589 room=.
+T 221 mode=game_loop           Durin Anvilheart(dwa) F1@(10, 6) HP 72/74 MP 0/0 Hu 59 $ 589 room=.
 -> w
-T 222 mode=library_mode        Durin Anvilheart(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 77 $ 589 room=L
+T 222 mode=library_mode        Durin Anvilheart(dwa) F1@( 9, 6) HP 72/74 MP 0/0 Hu 58 $ 589 room=L
 -> r
-T 223 mode=library_read_decision_mode Durin Anvilheart(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 77 $ 589 room=L
+T 223 mode=library_read_decision_mode Durin Anvilheart(dwa) F1@( 9, 6) HP 72/74 MP 0/0 Hu 58 $ 589 room=L
 -> y
-T 224 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 77 $ 589 room=.
+T 224 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 6) HP 72/74 MP 0/0 Hu 58 $ 589 room=.
 -> w
-T 225 mode=altar_mode          Durin Anvilheart(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 76 $ 589 room=A
+T 225 mode=altar_mode          Durin Anvilheart(dwa) F1@( 8, 6) HP 72/74 MP 0/0 Hu 58 $ 589 room=A
 -> pray
-T 226 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 76 $ 589 room=.
+T 226 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 6) HP 72/74 MP 0/0 Hu 58 $ 589 room=.
 -> w
-T 227 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 75 $ 589 room=M vs Giant Centipede(L0 HP15/15)
+T 227 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 6) HP 72/74 MP 0/0 Hu 57 $ 589 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 228 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 75 $ 589 room=M vs Giant Centipede(L0 HP15/15)
+T 228 mode=combat_mode         Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 589 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 229 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 75 $ 594 room=.
+T 229 mode=combat_victory      Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 594 room=.
 -> back
-T 230 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 75 $ 594 room=.
+T 230 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 594 room=.
 -> i
-T 231 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 75 $ 594 room=.
--> u14
-T 232 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 75 $ 594 room=.
--> eat3
-T 233 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 81 $ 594 room=.
+T 231 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 594 room=.
+-> u17
+T 232 mode=inventory           Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 594 room=.
 -> x
-T 234 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 81 $ 594 room=.
+T 233 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 71/74 MP 0/0 Hu 57 $ 594 room=.
 -> w
-T 235 mode=chest_mode          Durin Anvilheart(dwa) F1@( 6, 6) HP 73/74 MP 0/0 Hu 80 $ 594 room=C
+T 234 mode=chest_mode          Durin Anvilheart(dwa) F1@( 6, 6) HP 71/74 MP 0/0 Hu 56 $ 594 room=C
 -> o
-T 236 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 6) HP 73/74 MP 0/0 Hu 80 $ 669 room=.
+T 235 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 6) HP 71/74 MP 0/0 Hu 56 $ 669 room=.
 -> s
-T 237 mode=pool_mode           Durin Anvilheart(dwa) F1@( 6, 7) HP 73/74 MP 0/0 Hu 79 $ 669 room=P
+T 236 mode=pool_mode           Durin Anvilheart(dwa) F1@( 6, 7) HP 71/74 MP 0/0 Hu 56 $ 669 room=P
 -> dr
-T 238 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 7) HP 73/74 MP 0/0 Hu 79 $ 725 room=.
+T 237 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 7) HP 71/74 MP 0/0 Hu 56 $ 725 room=.
 -> l
-T 239 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 7) HP 73/74 MP 0/0 Hu 79 $ 725 room=.
+T 238 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 7) HP 71/74 MP 0/0 Hu 56 $ 725 room=.
 -> s
-T 240 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 8) HP 73/74 MP 0/0 Hu 78 $ 725 room=.
+T 239 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 8) HP 71/74 MP 0/0 Hu 55 $ 725 room=.
 -> l
-T 241 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 8) HP 73/74 MP 0/0 Hu 78 $ 725 room=.
--> s
-T 242 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 9) HP 74/74 MP 0/0 Hu 77 $ 725 room=.
+T 240 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 8) HP 71/74 MP 0/0 Hu 55 $ 725 room=.
 -> l
-T 243 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 9) HP 74/74 MP 0/0 Hu 77 $ 725 room=.
+T 241 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 8) HP 71/74 MP 0/0 Hu 55 $ 725 room=.
 -> s
-T 244 mode=chest_mode          Durin Anvilheart(dwa) F1@( 6,10) HP 74/74 MP 0/0 Hu 76 $ 725 room=C
+T 242 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 9) HP 71/74 MP 0/0 Hu 54 $ 725 room=.
+-> l
+T 243 mode=game_loop           Durin Anvilheart(dwa) F1@( 6, 9) HP 71/74 MP 0/0 Hu 54 $ 725 room=.
+-> s
+T 244 mode=chest_mode          Durin Anvilheart(dwa) F1@( 6,10) HP 71/74 MP 0/0 Hu 54 $ 725 room=C
 -> o
-T 245 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,10) HP 74/74 MP 0/0 Hu 76 $ 745 room=.
+T 245 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,10) HP 71/74 MP 0/0 Hu 54 $ 745 room=.
 -> l
-T 246 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,10) HP 74/74 MP 0/0 Hu 76 $ 745 room=.
+T 246 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,10) HP 71/74 MP 0/0 Hu 54 $ 745 room=.
 -> w
-T 247 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,10) HP 74/74 MP 0/0 Hu 75 $ 745 room=.
+T 247 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,10) HP 71/74 MP 0/0 Hu 53 $ 745 room=.
 -> l
-T 248 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,10) HP 74/74 MP 0/0 Hu 75 $ 745 room=.
+T 248 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,10) HP 71/74 MP 0/0 Hu 53 $ 745 room=.
 -> s
-T 249 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,11) HP 74/74 MP 0/0 Hu 74 $ 745 room=.
+T 249 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,11) HP 71/74 MP 0/0 Hu 52 $ 745 room=.
 -> s
-T 250 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 73 $ 745 room=M vs Giant Rat(L0 HP22/22)
+T 250 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5,12) HP 71/74 MP 0/0 Hu 51 $ 745 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 251 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 73 $ 745 room=M vs Giant Rat(L0 HP22/22)
+T 251 mode=combat_mode         Durin Anvilheart(dwa) F1@( 5,12) HP 70/74 MP 0/0 Hu 51 $ 745 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 252 mode=combat_victory      Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 73 $ 746 room=.
+T 252 mode=combat_victory      Durin Anvilheart(dwa) F1@( 5,12) HP 70/74 MP 0/0 Hu 51 $ 746 room=.
 -> back
-T 253 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 73 $ 746 room=.
+T 253 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,12) HP 70/74 MP 0/0 Hu 51 $ 746 room=.
 -> i
-T 254 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 73 $ 746 room=.
--> u15
-T 255 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 73 $ 746 room=.
--> eat3
-T 256 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 85 $ 746 room=.
+T 254 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 70/74 MP 0/0 Hu 51 $ 746 room=.
+-> u4
+T 255 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=.
 -> x
-T 257 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,12) HP 73/74 MP 0/0 Hu 85 $ 746 room=.
+T 256 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=.
+-> i
+T 257 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=.
+-> u19
+T 258 mode=inventory           Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=.
+-> x
+T 259 mode=game_loop           Durin Anvilheart(dwa) F1@( 5,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=.
 -> e
-T 258 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 746 room=M vs Lichen(L0 HP10/10)
+T 260 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=M vs Lichen(L0 HP10/10)
 -> a
-T 259 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 746 room=M vs Lichen(L0 HP10/10)
+T 261 mode=combat_mode         Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 746 room=M vs Lichen(L0 HP10/10)
 -> a
-T 260 mode=combat_victory      Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
+T 262 mode=combat_victory      Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
 -> back
-T 261 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
+T 263 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
 -> i
-T 262 mode=inventory           Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
--> u15
-T 263 mode=inventory           Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
+T 264 mode=inventory           Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
+-> u20
+T 265 mode=inventory           Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
 -> x
-T 264 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
+T 266 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
 -> l
-T 265 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 73/74 MP 0/0 Hu 84 $ 749 room=.
+T 267 mode=game_loop           Durin Anvilheart(dwa) F1@( 6,12) HP 74/74 MP 0/0 Hu 51 $ 749 room=.
 -> e
-T 266 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,12) HP 73/74 MP 0/0 Hu 83 $ 749 room=.
+T 268 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,12) HP 74/74 MP 0/0 Hu 50 $ 749 room=.
 -> l
-T 267 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,12) HP 73/74 MP 0/0 Hu 83 $ 749 room=.
+T 269 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,12) HP 74/74 MP 0/0 Hu 50 $ 749 room=.
 -> n
-T 268 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,11) HP 73/74 MP 0/0 Hu 82 $ 749 room=.
+T 270 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 49 $ 749 room=.
+-> i
+T 271 mode=inventory           Durin Anvilheart(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 49 $ 749 room=.
+-> eat3
+T 272 mode=inventory           Durin Anvilheart(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 55 $ 749 room=.
+-> x
+T 273 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 55 $ 749 room=.
 -> l
-T 269 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,11) HP 73/74 MP 0/0 Hu 82 $ 749 room=.
+T 274 mode=game_loop           Durin Anvilheart(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 55 $ 749 room=.
 -> e
-T 270 mode=game_loop           Durin Anvilheart(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 81 $ 749 room=.
--> l
-T 271 mode=game_loop           Durin Anvilheart(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 81 $ 749 room=.
+T 275 mode=game_loop           Durin Anvilheart(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 55 $ 749 room=.
 -> e
-T 272 mode=garden_mode         Durin Anvilheart(dwa) F1@( 9,11) HP 74/74 MP 0/0 Hu 80 $ 749 room=G
+T 276 mode=garden_mode         Durin Anvilheart(dwa) F1@( 9,11) HP 74/74 MP 0/0 Hu 54 $ 749 room=G
 -> h
-T 273 mode=game_loop           Durin Anvilheart(dwa) F1@( 9,11) HP 74/74 MP 0/0 Hu 80 $ 749 room=.
+T 277 mode=game_loop           Durin Anvilheart(dwa) F1@( 9,11) HP 74/74 MP 0/0 Hu 54 $ 749 room=.
 -> e
-T 274 mode=game_loop           Durin Anvilheart(dwa) F1@(10,11) HP 74/74 MP 0/0 Hu 79 $ 749 room=.
+T 278 mode=game_loop           Durin Anvilheart(dwa) F1@(10,11) HP 74/74 MP 0/0 Hu 53 $ 749 room=.
 -> e
-T 275 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 78 $ 749 room=M vs Crawling Claw(L0 HP5/5)
+T 279 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 53 $ 749 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T 276 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 78 $ 759 room=.
+T 280 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
 -> back
-T 277 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 78 $ 759 room=.
--> l
-T 278 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 78 $ 759 room=.
--> e
-T 279 mode=chest_mode          Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 77 $ 759 room=C
--> o
-T 280 mode=game_loop           Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 77 $ 779 room=.
--> l
-T 281 mode=game_loop           Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 77 $ 779 room=.
--> s
-T 282 mode=game_loop           Durin Anvilheart(dwa) F1@(12,12) HP 73/74 MP 0/0 Hu 76 $ 779 room=.
--> w
-T 283 mode=game_loop           Durin Anvilheart(dwa) F1@(11,12) HP 73/74 MP 0/0 Hu 75 $ 779 room=.
--> s
-T 284 mode=pool_mode           Durin Anvilheart(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 74 $ 779 room=P
--> dr
-T 285 mode=game_loop           Durin Anvilheart(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 74 $ 779 room=.
--> s
-T 286 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 73 $ 779 room=.
--> l
-T 287 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 73 $ 779 room=.
--> s
-T 288 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,15) HP 74/74 MP 0/0 Hu 72 $ 779 room=M vs Goblin(L0 HP30/30)
--> a
-T 289 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 72 $ 779 room=M vs Goblin(L0 HP3/30)
--> a
-T 290 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 72 $ 783 room=.
--> back
-T 291 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 72 $ 783 room=.
--> l
-T 292 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 72 $ 783 room=.
--> s
-T 293 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 71 $ 783 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 294 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 71 $ 789 room=.
--> back
-T 295 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 71 $ 789 room=.
+T 281 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
 -> i
-T 296 mode=inventory           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 71 $ 789 room=.
--> u16
-T 297 mode=inventory           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 71 $ 789 room=.
--> eat3
-T 298 mode=inventory           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 78 $ 789 room=.
+T 282 mode=inventory           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
+-> u20
+T 283 mode=inventory           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
 -> x
-T 299 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 78 $ 789 room=.
+T 284 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
 -> l
-T 300 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 78 $ 789 room=.
+T 285 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 73/74 MP 0/0 Hu 53 $ 759 room=.
+-> e
+T 286 mode=chest_mode          Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 52 $ 759 room=C
+-> o
+T 287 mode=game_loop           Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 52 $ 779 room=.
 -> l
-T 301 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 78 $ 789 room=.
--> w
-T 302 mode=game_loop           Durin Anvilheart(dwa) F1@(10,16) HP 73/74 MP 0/0 Hu 77 $ 789 room=.
--> n
-T 303 mode=game_loop           Durin Anvilheart(dwa) F1@(10,15) HP 73/74 MP 0/0 Hu 76 $ 789 room=.
+T 288 mode=game_loop           Durin Anvilheart(dwa) F1@(12,11) HP 73/74 MP 0/0 Hu 52 $ 779 room=.
 -> s
-T 304 mode=game_loop           Durin Anvilheart(dwa) F1@(10,16) HP 74/74 MP 0/0 Hu 75 $ 789 room=.
--> n
-T 305 mode=game_loop           Durin Anvilheart(dwa) F1@(10,15) HP 74/74 MP 0/0 Hu 74 $ 789 room=.
--> e
-T 306 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 74/74 MP 0/0 Hu 73 $ 789 room=.
--> n
-T 307 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 72 $ 789 room=.
--> n
-T 308 mode=game_loop           Durin Anvilheart(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 71 $ 789 room=.
--> n
-T 309 mode=game_loop           Durin Anvilheart(dwa) F1@(11,12) HP 74/74 MP 0/0 Hu 70 $ 789 room=.
--> n
-T 310 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 69 $ 789 room=.
+T 289 mode=game_loop           Durin Anvilheart(dwa) F1@(12,12) HP 73/74 MP 0/0 Hu 51 $ 779 room=.
+-> w
+T 290 mode=game_loop           Durin Anvilheart(dwa) F1@(11,12) HP 73/74 MP 0/0 Hu 50 $ 779 room=.
 -> l
-T 311 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 69 $ 789 room=.
--> w
-T 312 mode=game_loop           Durin Anvilheart(dwa) F1@(10,11) HP 74/74 MP 0/0 Hu 68 $ 789 room=.
--> n
-T 313 mode=game_loop           Durin Anvilheart(dwa) F1@(10,10) HP 74/74 MP 0/0 Hu 67 $ 789 room=.
--> w
-T 314 mode=game_loop           Durin Anvilheart(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 66 $ 789 room=.
--> n
-T 315 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 65 $ 789 room=.
--> w
-T 316 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 64 $ 789 room=.
--> w
-T 317 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 63 $ 789 room=.
--> n
-T 318 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 62 $ 789 room=.
--> n
-T 319 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 61 $ 789 room=.
--> n
-T 320 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 60 $ 789 room=.
+T 291 mode=game_loop           Durin Anvilheart(dwa) F1@(11,12) HP 73/74 MP 0/0 Hu 50 $ 779 room=.
+-> s
+T 292 mode=pool_mode           Durin Anvilheart(dwa) F1@(11,13) HP 73/74 MP 0/0 Hu 50 $ 779 room=P
+-> dr
+T 293 mode=game_loop           Durin Anvilheart(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 50 $ 779 room=.
+-> s
+T 294 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 49 $ 779 room=.
+-> i
+T 295 mode=inventory           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 49 $ 779 room=.
+-> eat3
+T 296 mode=inventory           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 67 $ 779 room=.
+-> x
+T 297 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 67 $ 779 room=.
 -> l
-T 321 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 60 $ 789 room=.
+T 298 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 67 $ 779 room=.
+-> s
+T 299 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,15) HP 74/74 MP 0/0 Hu 66 $ 779 room=M vs Goblin(L0 HP30/30)
+-> a
+T 300 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 66 $ 779 room=M vs Goblin(L0 HP3/30)
+-> a
+T 301 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 66 $ 783 room=.
+-> back
+T 302 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 66 $ 783 room=.
+-> l
+T 303 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 66 $ 783 room=.
+-> s
+T 304 mode=combat_mode         Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 783 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 305 mode=combat_victory      Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> back
+T 306 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> i
+T 307 mode=inventory           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> u20
+T 308 mode=inventory           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> x
+T 309 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> l
+T 310 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> l
+T 311 mode=game_loop           Durin Anvilheart(dwa) F1@(11,16) HP 73/74 MP 0/0 Hu 66 $ 789 room=.
+-> w
+T 312 mode=game_loop           Durin Anvilheart(dwa) F1@(10,16) HP 73/74 MP 0/0 Hu 65 $ 789 room=.
 -> n
-T 322 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 59 $ 789 room=V
+T 313 mode=game_loop           Durin Anvilheart(dwa) F1@(10,15) HP 73/74 MP 0/0 Hu 64 $ 789 room=.
+-> s
+T 314 mode=game_loop           Durin Anvilheart(dwa) F1@(10,16) HP 74/74 MP 0/0 Hu 64 $ 789 room=.
 -> n
-T 323 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 58 $ 789 room=.
--> n
-T 324 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 57 $ 789 room=.
+T 315 mode=game_loop           Durin Anvilheart(dwa) F1@(10,15) HP 74/74 MP 0/0 Hu 63 $ 789 room=.
 -> e
-T 325 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 56 $ 789 room=D
+T 316 mode=game_loop           Durin Anvilheart(dwa) F1@(11,15) HP 74/74 MP 0/0 Hu 62 $ 789 room=.
+-> n
+T 317 mode=game_loop           Durin Anvilheart(dwa) F1@(11,14) HP 74/74 MP 0/0 Hu 61 $ 789 room=.
+-> n
+T 318 mode=game_loop           Durin Anvilheart(dwa) F1@(11,13) HP 74/74 MP 0/0 Hu 61 $ 789 room=.
+-> n
+T 319 mode=game_loop           Durin Anvilheart(dwa) F1@(11,12) HP 74/74 MP 0/0 Hu 60 $ 789 room=.
+-> n
+T 320 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 59 $ 789 room=.
+-> l
+T 321 mode=game_loop           Durin Anvilheart(dwa) F1@(11,11) HP 74/74 MP 0/0 Hu 59 $ 789 room=.
+-> w
+T 322 mode=game_loop           Durin Anvilheart(dwa) F1@(10,11) HP 74/74 MP 0/0 Hu 59 $ 789 room=.
+-> n
+T 323 mode=game_loop           Durin Anvilheart(dwa) F1@(10,10) HP 74/74 MP 0/0 Hu 58 $ 789 room=.
+-> w
+T 324 mode=game_loop           Durin Anvilheart(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 57 $ 789 room=.
+-> n
+T 325 mode=game_loop           Durin Anvilheart(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 57 $ 789 room=.
+-> w
+T 326 mode=game_loop           Durin Anvilheart(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 56 $ 789 room=.
+-> w
+T 327 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 55 $ 789 room=.
+-> n
+T 328 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 54 $ 789 room=.
+-> n
+T 329 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 54 $ 789 room=.
+-> n
+T 330 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 53 $ 789 room=.
+-> l
+T 331 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 53 $ 789 room=.
+-> n
+T 332 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 52 $ 789 room=V
+-> n
+T 333 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 52 $ 789 room=.
+-> n
+T 334 mode=game_loop           Durin Anvilheart(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 51 $ 789 room=.
+-> e
+T 335 mode=stairs_down_mode    Durin Anvilheart(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 50 $ 789 room=D
 -> d
-T 326 mode=stairs_up_mode      Durin Anvilheart(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 56 $ 789 room=U
+T 336 mode=stairs_up_mode      Durin Anvilheart(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 50 $ 789 room=U
 -> n
-T 327 mode=stairs_up_mode      Durin Anvilheart(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 56 $ 789 room=U
+T 337 mode=stairs_up_mode      Durin Anvilheart(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 50 $ 789 room=U
 -> s
-T 328 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 55 $ 789 room=.
+T 338 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 50 $ 789 room=.
 -> l
-T 329 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 55 $ 789 room=.
+T 339 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 50 $ 789 room=.
 -> s
-T 330 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 54 $ 789 room=M vs Myconid Shaman(L1 HP45/45)
+T 340 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 49 $ 789 room=M vs Myconid Shaman(L1 HP45/45)
 -> a
-T 331 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 73/74 MP 0/0 Hu 54 $ 789 room=M vs Myconid Shaman(L1 HP19/45)
+T 341 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 73/74 MP 0/0 Hu 49 $ 789 room=M vs Myconid Shaman(L1 HP19/45)
 -> a
-T 332 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 72/74 MP 0/0 Hu 54 $ 789 room=M vs Myconid Shaman(L1 HP19/45)
--> a
-T 333 mode=combat_mode         Durin Anvilheart(dwa) F2@( 1, 3) HP 71/74 MP 0/0 Hu 54 $ 789 room=M vs Myconid Shaman(L1 HP19/45)
--> a
-T 334 mode=combat_victory      Durin Anvilheart(dwa) F2@( 1, 3) HP 71/84 MP 0/0 Hu 54 $ 799 room=.
+T 342 mode=combat_victory      Durin Anvilheart(dwa) F2@( 1, 3) HP 73/84 MP 0/0 Hu 49 $ 803 room=.
 -> back
-T 335 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 71/84 MP 0/0 Hu 54 $ 799 room=.
--> l
-T 336 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 71/84 MP 0/0 Hu 54 $ 799 room=.
--> s
-T 337 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 4) HP 71/84 MP 0/0 Hu 53 $ 799 room=.
--> l
-T 338 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 4) HP 71/84 MP 0/0 Hu 53 $ 799 room=.
--> e
-T 339 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 71/84 MP 0/0 Hu 52 $ 799 room=.
--> l
-T 340 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 71/84 MP 0/0 Hu 52 $ 799 room=.
--> e
-T 341 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 71/84 MP 0/0 Hu 51 $ 799 room=.
--> l
-T 342 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 71/84 MP 0/0 Hu 51 $ 799 room=.
--> e
-T 343 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 71/84 MP 0/0 Hu 50 $ 799 room=.
--> l
-T 344 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 71/84 MP 0/0 Hu 50 $ 799 room=.
--> e
-T 345 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 71/84 MP 0/0 Hu 49 $ 799 room=.
+T 343 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 73/84 MP 0/0 Hu 49 $ 803 room=.
 -> i
-T 346 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 71/84 MP 0/0 Hu 49 $ 799 room=.
+T 344 mode=inventory           Durin Anvilheart(dwa) F2@( 1, 3) HP 73/84 MP 0/0 Hu 49 $ 803 room=.
 -> u4
-T 347 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 49 $ 799 room=.
+T 345 mode=inventory           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 49 $ 803 room=.
 -> x
-T 348 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 49 $ 799 room=.
+T 346 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 49 $ 803 room=.
 -> i
-T 349 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 49 $ 799 room=.
+T 347 mode=inventory           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 49 $ 803 room=.
 -> eat1
-T 350 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 67 $ 799 room=.
+T 348 mode=inventory           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 55 $ 803 room=.
 -> x
-T 351 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 67 $ 799 room=.
+T 349 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 55 $ 803 room=.
 -> l
-T 352 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 67 $ 799 room=.
+T 350 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 55 $ 803 room=.
+-> s
+T 351 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 54 $ 803 room=.
+-> l
+T 352 mode=game_loop           Durin Anvilheart(dwa) F2@( 1, 4) HP 84/84 MP 0/0 Hu 54 $ 803 room=.
 -> e
-T 353 mode=dungeon_mode        Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 66 $ 799 room=N
+T 353 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 84/84 MP 0/0 Hu 53 $ 803 room=.
+-> l
+T 354 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 84/84 MP 0/0 Hu 53 $ 803 room=.
+-> e
+T 355 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 53 $ 803 room=.
+-> l
+T 356 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 53 $ 803 room=.
+-> e
+T 357 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 84/84 MP 0/0 Hu 52 $ 803 room=.
+-> l
+T 358 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 84/84 MP 0/0 Hu 52 $ 803 room=.
+-> e
+T 359 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 51 $ 803 room=.
+-> l
+T 360 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 51 $ 803 room=.
+-> e
+T 361 mode=dungeon_mode        Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 51 $ 803 room=N
 -> u
-T 354 mode=dungeon_unlocked_mode Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 66 $ 799 room=N
+T 362 mode=dungeon_unlocked_mode Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 51 $ 803 room=N
 -> r
-T 355 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 66 $ 959 room=N
+T 363 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 51 $ 1000 room=N
 -> l
-T 356 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 66 $ 959 room=N
+T 364 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 51 $ 1000 room=N
 -> s
-T 357 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 5) HP 84/84 MP 0/0 Hu 65 $ 959 room=.
+T 365 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 5) HP 84/84 MP 0/0 Hu 50 $ 1000 room=.
 -> l
-T 358 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 5) HP 84/84 MP 0/0 Hu 65 $ 959 room=.
+T 366 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 5) HP 84/84 MP 0/0 Hu 50 $ 1000 room=.
 -> s
-T 359 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 64 $ 959 room=.
--> l
-T 360 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 64 $ 959 room=.
--> s
-T 361 mode=oracle_mode         Durin Anvilheart(dwa) F2@( 6, 7) HP 84/84 MP 0/0 Hu 63 $ 959 room=O
--> w
-T 362 mode=combat_mode         Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 62 $ 959 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 363 mode=combat_victory      Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 62 $ 973 room=.
--> back
-T 364 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 62 $ 973 room=.
+T 367 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 49 $ 1000 room=.
 -> i
-T 365 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 62 $ 973 room=.
--> u13
-T 366 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 62 $ 973 room=.
+T 368 mode=inventory           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 49 $ 1000 room=.
 -> eat1
-T 367 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 80 $ 973 room=.
+T 369 mode=inventory           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 55 $ 1000 room=.
 -> x
-T 368 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 80 $ 973 room=.
+T 370 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 55 $ 1000 room=.
+-> l
+T 371 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 6) HP 84/84 MP 0/0 Hu 55 $ 1000 room=.
 -> s
-T 369 mode=tomb_mode           Durin Anvilheart(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 79 $ 973 room=T
+T 372 mode=oracle_mode         Durin Anvilheart(dwa) F2@( 6, 7) HP 84/84 MP 0/0 Hu 55 $ 1000 room=O
+-> w
+T 373 mode=combat_mode         Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 54 $ 1000 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 374 mode=combat_victory      Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 54 $ 1020 room=.
+-> back
+T 375 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 54 $ 1020 room=.
+-> s
+T 376 mode=tomb_mode           Durin Anvilheart(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 53 $ 1020 room=T
 -> p
-T 370 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 79 $ 973 room=T
+T 377 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 8) HP 84/84 MP 0/0 Hu 53 $ 1020 room=T
 -> n
-T 371 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 78 $ 973 room=.
+T 378 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 7) HP 84/84 MP 0/0 Hu 52 $ 1020 room=.
 -> n
-T 372 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 6) HP 84/84 MP 0/0 Hu 77 $ 973 room=.
+T 379 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 6) HP 84/84 MP 0/0 Hu 52 $ 1020 room=.
 -> w
-T 373 mode=garden_mode         Durin Anvilheart(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 76 $ 973 room=G
+T 380 mode=garden_mode         Durin Anvilheart(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 51 $ 1020 room=G
 -> h
-T 374 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 76 $ 973 room=.
+T 381 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 6) HP 84/84 MP 0/0 Hu 51 $ 1020 room=.
 -> w
-T 375 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 6) HP 84/84 MP 0/0 Hu 75 $ 973 room=.
+T 382 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 6) HP 84/84 MP 0/0 Hu 50 $ 1020 room=.
 -> w
-T 376 mode=library_mode        Durin Anvilheart(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 74 $ 973 room=L
+T 383 mode=library_mode        Durin Anvilheart(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 50 $ 1020 room=L
 -> r
-T 377 mode=library_read_decision_mode Durin Anvilheart(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 74 $ 973 room=L
+T 384 mode=library_read_decision_mode Durin Anvilheart(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 50 $ 1020 room=L
 -> y
-T 378 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 6) HP 58/84 MP 0/0 Hu 74 $ 1073 room=.
+T 385 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 6) HP 84/84 MP 0/0 Hu 50 $ 1020 room=.
 -> n
-T 379 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 5) HP 58/84 MP 0/0 Hu 73 $ 1073 room=.
--> n
-T 380 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 58/84 MP 0/0 Hu 72 $ 1073 room=.
--> e
-T 381 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 58/84 MP 0/0 Hu 71 $ 1073 room=.
--> e
-T 382 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 59/84 MP 0/0 Hu 70 $ 1073 room=.
--> e
-T 383 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 59/84 MP 0/0 Hu 69 $ 1073 room=.
+T 386 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 49 $ 1020 room=.
 -> i
-T 384 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 59/84 MP 0/0 Hu 69 $ 1073 room=.
--> u4
-T 385 mode=inventory           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 69 $ 1073 room=.
+T 387 mode=inventory           Durin Anvilheart(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 49 $ 1020 room=.
+-> eat1
+T 388 mode=inventory           Durin Anvilheart(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 61 $ 1020 room=.
 -> x
-T 386 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 69 $ 1073 room=.
+T 389 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 5) HP 84/84 MP 0/0 Hu 61 $ 1020 room=.
+-> n
+T 390 mode=game_loop           Durin Anvilheart(dwa) F2@( 2, 4) HP 84/84 MP 0/0 Hu 60 $ 1020 room=.
 -> e
-T 387 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 68 $ 1073 room=N
+T 391 mode=game_loop           Durin Anvilheart(dwa) F2@( 3, 4) HP 84/84 MP 0/0 Hu 60 $ 1020 room=.
 -> e
-T 388 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 67 $ 1073 room=.
+T 392 mode=game_loop           Durin Anvilheart(dwa) F2@( 4, 4) HP 84/84 MP 0/0 Hu 59 $ 1020 room=.
 -> e
-T 389 mode=game_loop           Durin Anvilheart(dwa) F2@( 8, 4) HP 84/84 MP 0/0 Hu 66 $ 1073 room=.
+T 393 mode=game_loop           Durin Anvilheart(dwa) F2@( 5, 4) HP 84/84 MP 0/0 Hu 58 $ 1020 room=.
 -> e
-T 390 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 65 $ 1073 room=.
+T 394 mode=game_loop           Durin Anvilheart(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 57 $ 1020 room=N
+-> e
+T 395 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 57 $ 1020 room=.
+-> e
+T 396 mode=game_loop           Durin Anvilheart(dwa) F2@( 8, 4) HP 84/84 MP 0/0 Hu 56 $ 1020 room=.
+-> e
+T 397 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 55 $ 1020 room=.
 -> l
-T 391 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 65 $ 1073 room=.
+T 398 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 55 $ 1020 room=.
 -> e
-T 392 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 64 $ 1073 room=.
+T 399 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 55 $ 1020 room=.
 -> l
-T 393 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 64 $ 1073 room=.
+T 400 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 55 $ 1020 room=.
 -> e
-T 394 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 4) HP 84/84 MP 0/0 Hu 63 $ 1073 room=.
+T 401 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 4) HP 84/84 MP 0/0 Hu 54 $ 1020 room=.
 -> e
-T 395 mode=altar_mode          Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 62 $ 1073 room=A
+T 402 mode=altar_mode          Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 53 $ 1020 room=A
 -> pray
-T 396 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 62 $ 1073 room=.
+T 403 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 53 $ 1020 room=.
 -> l
-T 397 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 62 $ 1073 room=.
+T 404 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 4) HP 84/84 MP 0/0 Hu 53 $ 1020 room=.
 -> s
-T 398 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 5) HP 84/84 MP 0/0 Hu 61 $ 1073 room=.
+T 405 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 5) HP 84/84 MP 0/0 Hu 53 $ 1020 room=.
 -> s
-T 399 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP40/40)
+T 406 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 52 $ 1020 room=M vs Crawling Claw(L1 HP5/5)
 -> a
-T 400 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP15/40)
--> a
-T 401 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 78/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP15/40)
--> a
-T 402 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 72/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP15/40)
--> a
-T 403 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 72/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP15/40)
--> a
-T 404 mode=combat_mode         Durin Anvilheart(dwa) F2@(12, 6) HP 72/84 MP 0/0 Hu 60 $ 1073 room=M vs Giant Spider(L1 HP15/40)
--> a
-T 405 mode=combat_victory      Durin Anvilheart(dwa) F2@(12, 6) HP 66/84 MP 0/0 Hu 60 $ 1089 room=.
+T 407 mode=combat_victory      Durin Anvilheart(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 52 $ 1024 room=.
 -> back
-T 406 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 6) HP 66/84 MP 0/0 Hu 60 $ 1089 room=.
+T 408 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 6) HP 84/84 MP 0/0 Hu 52 $ 1024 room=.
 -> s
-T 407 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 7) HP 66/84 MP 0/0 Hu 59 $ 1089 room=.
+T 409 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 7) HP 84/84 MP 0/0 Hu 51 $ 1024 room=.
 -> l
-T 408 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 7) HP 66/84 MP 0/0 Hu 59 $ 1089 room=.
+T 410 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 7) HP 84/84 MP 0/0 Hu 51 $ 1024 room=.
 -> s
-T 409 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 66/84 MP 0/0 Hu 58 $ 1089 room=.
--> l
-T 410 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 66/84 MP 0/0 Hu 58 $ 1089 room=.
--> s
-T 411 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 66/84 MP 0/0 Hu 57 $ 1089 room=.
--> l
-T 412 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 66/84 MP 0/0 Hu 57 $ 1089 room=.
--> s
-T 413 mode=chest_mode          Durin Anvilheart(dwa) F2@(12,10) HP 66/84 MP 0/0 Hu 56 $ 1089 room=C
--> s
-T 414 mode=game_loop           Durin Anvilheart(dwa) F2@(12,11) HP 66/84 MP 0/0 Hu 55 $ 1089 room=.
+T 411 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 50 $ 1024 room=.
 -> i
-T 415 mode=inventory           Durin Anvilheart(dwa) F2@(12,11) HP 66/84 MP 0/0 Hu 55 $ 1089 room=.
--> u5
-T 416 mode=inventory           Durin Anvilheart(dwa) F2@(12,11) HP 84/84 MP 0/0 Hu 55 $ 1089 room=.
+T 412 mode=inventory           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 50 $ 1024 room=.
+-> eat3
+T 413 mode=inventory           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=.
 -> x
-T 417 mode=game_loop           Durin Anvilheart(dwa) F2@(12,11) HP 84/84 MP 0/0 Hu 55 $ 1089 room=.
--> s
-T 418 mode=combat_mode         Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 54 $ 1089 room=M vs Slime Mold(L1 HP15/15)
--> a
-T 419 mode=combat_mode         Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 54 $ 1089 room=M vs Slime Mold(L1 HP15/15)
--> a
-T 420 mode=combat_victory      Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 54 $ 1099 room=.
--> back
-T 421 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 54 $ 1099 room=.
--> s
-T 422 mode=game_loop           Durin Anvilheart(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 53 $ 1099 room=.
--> s
-T 423 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 52 $ 1099 room=.
+T 414 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=.
 -> l
-T 424 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 52 $ 1099 room=.
+T 415 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=.
 -> w
-T 425 mode=chest_mode          Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 51 $ 1099 room=C
--> o
-T 426 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 51 $ 1099 room=.
--> l
-T 427 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 51 $ 1099 room=.
--> s
-T 428 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 50 $ 1099 room=M vs Zombie(L1 HP35/35)
--> a
-T 429 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 83/84 MP 0/0 Hu 50 $ 1099 room=M vs Zombie(L1 HP35/35)
--> f
-T 430 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 83/84 MP 0/0 Hu 50 $ 1099 room=M
--> s
-T 431 mode=garden_mode         Durin Anvilheart(dwa) F2@(11,16) HP 83/84 MP 0/0 Hu 50 $ 1099 room=G
+T 416 mode=garden_mode         Durin Anvilheart(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=G
 -> h
-T 432 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 83/84 MP 0/0 Hu 50 $ 1099 room=.
+T 417 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=.
 -> l
-T 433 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 83/84 MP 0/0 Hu 50 $ 1099 room=.
+T 418 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 8) HP 84/84 MP 0/0 Hu 68 $ 1024 room=.
+-> s
+T 419 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 67 $ 1024 room=.
 -> e
-T 434 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 83/84 MP 0/0 Hu 49 $ 1099 room=.
--> i
-T 435 mode=inventory           Durin Anvilheart(dwa) F2@(12,16) HP 83/84 MP 0/0 Hu 49 $ 1099 room=.
--> eat1
-T 436 mode=inventory           Durin Anvilheart(dwa) F2@(12,16) HP 83/84 MP 0/0 Hu 61 $ 1099 room=.
--> x
-T 437 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 83/84 MP 0/0 Hu 61 $ 1099 room=.
--> n
-T 438 mode=pool_mode           Durin Anvilheart(dwa) F2@(12,15) HP 83/84 MP 0/0 Hu 60 $ 1099 room=P
--> dr
-T 439 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 60 $ 1099 room=.
+T 420 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 66 $ 1024 room=.
 -> l
-T 440 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 60 $ 1099 room=.
--> e
-T 441 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 59 $ 1099 room=M vs Bugbear(L1 HP55/55)
+T 421 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 66 $ 1024 room=.
+-> s
+T 422 mode=chest_mode          Durin Anvilheart(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 66 $ 1024 room=C
+-> s
+T 423 mode=game_loop           Durin Anvilheart(dwa) F2@(12,11) HP 84/84 MP 0/0 Hu 65 $ 1024 room=.
+-> s
+T 424 mode=combat_mode         Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1024 room=M vs Stirge(L1 HP6/6)
 -> a
-T 442 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1099 room=M vs Bugbear(L1 HP55/55)
--> a
-T 443 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1099 room=M vs Bugbear(L1 HP30/55)
--> a
-T 444 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1099 room=M vs Bugbear(L1 HP5/55)
--> a
-T 445 mode=combat_victory      Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1101 room=.
+T 425 mode=combat_victory      Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
 -> back
-T 446 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1101 room=.
+T 426 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
 -> i
-T 447 mode=inventory           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1101 room=.
--> u13
-T 448 mode=inventory           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 59 $ 1101 room=.
--> eat1
-T 449 mode=inventory           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 77 $ 1101 room=.
+T 427 mode=inventory           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
+-> u16
+T 428 mode=inventory           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
 -> x
-T 450 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 77 $ 1101 room=.
+T 429 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
+-> s
+T 430 mode=game_loop           Durin Anvilheart(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 64 $ 1038 room=.
+-> s
+T 431 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 63 $ 1038 room=.
+-> l
+T 432 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 63 $ 1038 room=.
+-> w
+T 433 mode=chest_mode          Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 62 $ 1038 room=C
 -> e
-T 451 mode=pool_mode           Durin Anvilheart(dwa) F2@(14,15) HP 82/84 MP 0/0 Hu 76 $ 1101 room=P
+T 434 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 61 $ 1038 room=.
+-> s
+T 435 mode=pool_mode           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 61 $ 1038 room=P
 -> dr
-T 452 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 71/84 MP 0/0 Hu 76 $ 1101 room=.
--> s
-T 453 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 66/84 MP 0/0 Hu 75 $ 1101 room=.
+T 436 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 61 $ 1038 room=.
+-> l
+T 437 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 61 $ 1038 room=.
 -> e
-T 454 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 61/84 MP 0/0 Hu 74 $ 1101 room=.
--> e
-T 455 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 57/84 MP 0/0 Hu 73 $ 1101 room=.
--> i
-T 456 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 57/84 MP 0/0 Hu 73 $ 1101 room=.
--> u6
-T 457 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 73 $ 1101 room=.
--> x
-T 458 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 73 $ 1101 room=.
--> w
-T 459 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 79/84 MP 0/0 Hu 72 $ 1101 room=.
--> e
-T 460 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 79/84 MP 0/0 Hu 71 $ 1101 room=.
--> w
-T 461 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 79/84 MP 0/0 Hu 70 $ 1101 room=.
--> w
-T 462 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 80/84 MP 0/0 Hu 69 $ 1101 room=.
--> w
-T 463 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 80/84 MP 0/0 Hu 68 $ 1101 room=.
--> w
-T 464 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 80/84 MP 0/0 Hu 67 $ 1101 room=.
--> n
-T 465 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 80/84 MP 0/0 Hu 66 $ 1101 room=.
--> e
-T 466 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 81/84 MP 0/0 Hu 65 $ 1101 room=.
--> e
-T 467 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 81/84 MP 0/0 Hu 64 $ 1101 room=.
--> s
-T 468 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 81/84 MP 0/0 Hu 63 $ 1101 room=.
--> e
-T 469 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 62 $ 1101 room=.
--> e
-T 470 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 82/84 MP 0/0 Hu 61 $ 1101 room=.
--> w
-T 471 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 82/84 MP 0/0 Hu 60 $ 1101 room=.
--> e
-T 472 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 82/84 MP 0/0 Hu 59 $ 1101 room=.
--> w
-T 473 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 82/84 MP 0/0 Hu 58 $ 1101 room=.
--> w
-T 474 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 82/84 MP 0/0 Hu 57 $ 1101 room=.
--> w
-T 475 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 82/84 MP 0/0 Hu 56 $ 1101 room=.
--> n
-T 476 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 82/84 MP 0/0 Hu 55 $ 1101 room=.
--> e
-T 477 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 82/84 MP 0/0 Hu 54 $ 1101 room=.
--> s
-T 478 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 82/84 MP 0/0 Hu 53 $ 1101 room=.
--> e
-T 479 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 82/84 MP 0/0 Hu 52 $ 1101 room=.
--> e
-T 480 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 82/84 MP 0/0 Hu 51 $ 1101 room=.
--> w
-T 481 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 82/84 MP 0/0 Hu 50 $ 1101 room=.
--> e
-T 482 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 82/84 MP 0/0 Hu 49 $ 1101 room=.
--> w
-T 483 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 82/84 MP 0/0 Hu 48 $ 1101 room=.
--> w
-T 484 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 82/84 MP 0/0 Hu 47 $ 1101 room=.
--> w
-T 485 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 82/84 MP 0/0 Hu 46 $ 1101 room=.
--> w
-T 486 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 82/84 MP 0/0 Hu 45 $ 1101 room=.
--> w
-T 487 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 82/84 MP 0/0 Hu 44 $ 1101 room=.
--> w
-T 488 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 82/84 MP 0/0 Hu 43 $ 1101 room=.
--> n
-T 489 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 82/84 MP 0/0 Hu 42 $ 1101 room=.
--> e
-T 490 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 82/84 MP 0/0 Hu 41 $ 1101 room=M vs Zombie(L1 HP35/35)
+T 438 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 60 $ 1038 room=M vs Goblin(L1 HP12/12)
 -> a
-T 491 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 41 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 492 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 41 $ 1101 room=M
+T 439 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 60 $ 1038 room=M vs Goblin(L1 HP12/12)
+-> a
+T 440 mode=combat_mode         Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 60 $ 1038 room=M vs Goblin(L1 HP12/12)
+-> a
+T 441 mode=combat_victory      Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 60 $ 1054 room=.
+-> back
+T 442 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 60 $ 1054 room=.
+-> l
+T 443 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 60 $ 1054 room=.
+-> e
+T 444 mode=pool_mode           Durin Anvilheart(dwa) F2@(14,15) HP 83/84 MP 0/0 Hu 59 $ 1054 room=P
+-> dr
+T 445 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 83/84 MP 0/0 Hu 59 $ 1054 room=.
+-> l
+T 446 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 83/84 MP 0/0 Hu 59 $ 1054 room=.
+-> s
+T 447 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 83/84 MP 0/0 Hu 59 $ 1054 room=.
+-> l
+T 448 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 83/84 MP 0/0 Hu 59 $ 1054 room=.
+-> e
+T 449 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 83/84 MP 0/0 Hu 58 $ 1054 room=.
+-> e
+T 450 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 83/84 MP 0/0 Hu 57 $ 1054 room=.
+-> w
+T 451 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 83/84 MP 0/0 Hu 57 $ 1054 room=.
+-> e
+T 452 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 83/84 MP 0/0 Hu 56 $ 1054 room=.
+-> w
+T 453 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 83/84 MP 0/0 Hu 55 $ 1054 room=.
+-> w
+T 454 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 83/84 MP 0/0 Hu 54 $ 1054 room=.
 -> n
-T 493 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 81/84 MP 0/0 Hu 41 $ 1101 room=.
+T 455 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 83/84 MP 0/0 Hu 54 $ 1054 room=.
+-> w
+T 456 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 83/84 MP 0/0 Hu 53 $ 1054 room=.
+-> s
+T 457 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 83/84 MP 0/0 Hu 52 $ 1054 room=.
+-> w
+T 458 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 83/84 MP 0/0 Hu 52 $ 1054 room=.
+-> w
+T 459 mode=garden_mode         Durin Anvilheart(dwa) F2@(11,16) HP 83/84 MP 0/0 Hu 51 $ 1054 room=G
+-> h
+T 460 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 83/84 MP 0/0 Hu 51 $ 1054 room=.
+-> w
+T 461 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 83/84 MP 0/0 Hu 50 $ 1054 room=.
+-> n
+T 462 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 83/84 MP 0/0 Hu 50 $ 1054 room=.
+-> e
+T 463 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 83/84 MP 0/0 Hu 49 $ 1054 room=M vs Bugbear(L1 HP55/55)
+-> a
+T 464 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 49 $ 1054 room=M vs Bugbear(L1 HP30/55)
+-> a
+T 465 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 49 $ 1054 room=M vs Bugbear(L1 HP30/55)
+-> a
+T 466 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 49 $ 1054 room=M vs Bugbear(L1 HP30/55)
+-> a
+T 467 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 49 $ 1054 room=M vs Bugbear(L1 HP5/55)
+-> a
+T 468 mode=combat_victory      Durin Anvilheart(dwa) F2@(11,15) HP 79/84 MP 0/0 Hu 49 $ 1072 room=.
+-> back
+T 469 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 79/84 MP 0/0 Hu 49 $ 1072 room=.
 -> i
-T 494 mode=inventory           Durin Anvilheart(dwa) F2@(11,14) HP 81/84 MP 0/0 Hu 41 $ 1101 room=.
--> e3
-T 495 mode=inventory           Durin Anvilheart(dwa) F2@(11,14) HP 81/84 MP 0/0 Hu 41 $ 1101 room=.
+T 470 mode=inventory           Durin Anvilheart(dwa) F2@(11,15) HP 79/84 MP 0/0 Hu 49 $ 1072 room=.
+-> u4
+T 471 mode=inventory           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
 -> x
-T 496 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 81/84 MP 0/0 Hu 41 $ 1101 room=.
--> e
-T 497 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 81/84 MP 0/0 Hu 40 $ 1101 room=.
--> s
-T 498 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 81/84 MP 0/0 Hu 39 $ 1101 room=.
--> s
-T 499 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 81/84 MP 0/0 Hu 38 $ 1101 room=.
--> e
-T 500 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 81/84 MP 0/0 Hu 37 $ 1101 room=.
--> e
-T 501 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 81/84 MP 0/0 Hu 36 $ 1101 room=.
--> e
-T 502 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 35 $ 1101 room=.
--> e
-T 503 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 81/84 MP 0/0 Hu 34 $ 1101 room=.
--> w
-T 504 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 33 $ 1101 room=.
--> e
-T 505 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 81/84 MP 0/0 Hu 32 $ 1101 room=.
--> w
-T 506 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 31 $ 1101 room=.
--> w
-T 507 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 81/84 MP 0/0 Hu 30 $ 1101 room=.
--> w
-T 508 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 81/84 MP 0/0 Hu 29 $ 1101 room=.
--> w
-T 509 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 81/84 MP 0/0 Hu 28 $ 1101 room=.
--> w
-T 510 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 81/84 MP 0/0 Hu 27 $ 1101 room=.
--> w
-T 511 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu 26 $ 1101 room=.
--> n
-T 512 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu 25 $ 1101 room=.
--> e
-T 513 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 24 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 514 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 24 $ 1101 room=M
--> n
-T 515 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 81/84 MP 0/0 Hu 24 $ 1101 room=.
--> e
-T 516 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 81/84 MP 0/0 Hu 23 $ 1101 room=.
--> s
-T 517 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 81/84 MP 0/0 Hu 22 $ 1101 room=.
--> s
-T 518 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 81/84 MP 0/0 Hu 21 $ 1101 room=.
--> e
-T 519 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 81/84 MP 0/0 Hu 20 $ 1101 room=.
--> e
-T 520 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 81/84 MP 0/0 Hu 19 $ 1101 room=.
--> e
-T 521 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 18 $ 1101 room=.
--> e
-T 522 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 81/84 MP 0/0 Hu 17 $ 1101 room=.
--> w
-T 523 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 16 $ 1101 room=.
--> e
-T 524 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 81/84 MP 0/0 Hu 15 $ 1101 room=.
--> w
-T 525 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 81/84 MP 0/0 Hu 14 $ 1101 room=.
--> w
-T 526 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 81/84 MP 0/0 Hu 13 $ 1101 room=.
--> n
-T 527 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 81/84 MP 0/0 Hu 12 $ 1101 room=.
--> w
-T 528 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 81/84 MP 0/0 Hu 11 $ 1101 room=.
--> s
-T 529 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 81/84 MP 0/0 Hu 10 $ 1101 room=.
--> w
-T 530 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 81/84 MP 0/0 Hu  9 $ 1101 room=.
--> l
-T 531 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 81/84 MP 0/0 Hu  9 $ 1101 room=.
--> w
-T 532 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 81/84 MP 0/0 Hu  8 $ 1101 room=.
--> w
-T 533 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu  7 $ 1101 room=.
--> n
-T 534 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu  6 $ 1101 room=.
--> e
-T 535 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu  5 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 536 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 80/84 MP 0/0 Hu  5 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 537 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 80/84 MP 0/0 Hu  5 $ 1101 room=M
--> n
-T 538 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 80/84 MP 0/0 Hu  5 $ 1101 room=.
--> e
-T 539 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 80/84 MP 0/0 Hu  4 $ 1101 room=.
--> s
-T 540 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 80/84 MP 0/0 Hu  3 $ 1101 room=.
--> l
-T 541 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 80/84 MP 0/0 Hu  3 $ 1101 room=.
--> s
-T 542 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 80/84 MP 0/0 Hu  2 $ 1101 room=.
--> e
-T 543 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 80/84 MP 0/0 Hu  1 $ 1101 room=.
--> e
-T 544 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 78/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 545 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 76/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 546 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 74/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 547 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 72/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 548 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 70/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 549 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 68/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 550 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 66/84 MP 0/0 Hu  0 $ 1101 room=.
--> l
-T 551 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 66/84 MP 0/0 Hu  0 $ 1101 room=.
--> n
-T 552 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 64/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 553 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 62/84 MP 0/0 Hu  0 $ 1101 room=.
--> s
-T 554 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 60/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 555 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 58/84 MP 0/0 Hu  0 $ 1101 room=.
--> n
-T 556 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 56/84 MP 0/0 Hu  0 $ 1101 room=.
+T 472 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
 -> i
-T 557 mode=inventory           Durin Anvilheart(dwa) F2@(12,15) HP 56/84 MP 0/0 Hu  0 $ 1101 room=.
--> u5
-T 558 mode=inventory           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu  0 $ 1101 room=.
+T 473 mode=inventory           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
+-> u16
+T 474 mode=inventory           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
+-> eat1
+T 475 mode=inventory           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
 -> x
-T 559 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu  0 $ 1101 room=.
+T 476 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
+-> e
+T 477 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 66 $ 1072 room=.
+-> i
+T 478 mode=inventory           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 66 $ 1072 room=.
+-> eat2
+T 479 mode=inventory           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 84 $ 1072 room=.
+-> x
+T 480 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 84 $ 1072 room=.
+-> s
+T 481 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 83 $ 1072 room=.
+-> e
+T 482 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 83 $ 1072 room=.
+-> e
+T 483 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 82 $ 1072 room=.
+-> e
+T 484 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 81 $ 1072 room=.
+-> e
+T 485 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 81 $ 1072 room=.
+-> w
+T 486 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 80 $ 1072 room=.
+-> e
+T 487 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 79 $ 1072 room=.
+-> i
+T 488 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 79 $ 1072 room=.
+-> eat2
+T 489 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 91 $ 1072 room=.
+-> x
+T 490 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 91 $ 1072 room=.
+-> w
+T 491 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 91 $ 1072 room=.
+-> w
+T 492 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 90 $ 1072 room=.
+-> w
+T 493 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 89 $ 1072 room=.
 -> n
-T 560 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 82/84 MP 0/0 Hu  0 $ 1101 room=.
+T 494 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 88 $ 1072 room=.
+-> e
+T 495 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 88 $ 1072 room=.
+-> s
+T 496 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 87 $ 1072 room=.
+-> e
+T 497 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 86 $ 1072 room=.
+-> e
+T 498 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 86 $ 1072 room=.
+-> w
+T 499 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 85 $ 1072 room=.
+-> e
+T 500 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 84 $ 1072 room=.
+-> w
+T 501 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 84 $ 1072 room=.
+-> w
+T 502 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 83 $ 1072 room=.
+-> n
+T 503 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 82 $ 1072 room=.
+-> w
+T 504 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 81 $ 1072 room=.
+-> s
+T 505 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 81 $ 1072 room=.
+-> w
+T 506 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 80 $ 1072 room=.
+-> w
+T 507 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/84 MP 0/0 Hu 79 $ 1072 room=.
+-> w
+T 508 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/84 MP 0/0 Hu 79 $ 1072 room=.
+-> n
+T 509 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/84 MP 0/0 Hu 78 $ 1072 room=.
+-> e
+T 510 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 77 $ 1072 room=.
+-> n
+T 511 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 77 $ 1072 room=C
+-> e
+T 512 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 76 $ 1072 room=.
+-> s
+T 513 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 75 $ 1072 room=.
+-> s
+T 514 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 74 $ 1072 room=.
+-> e
+T 515 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 74 $ 1072 room=.
+-> e
+T 516 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 73 $ 1072 room=.
+-> e
+T 517 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 72 $ 1072 room=.
+-> e
+T 518 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 72 $ 1072 room=.
+-> w
+T 519 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 71 $ 1072 room=.
+-> e
+T 520 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 70 $ 1072 room=.
+-> w
+T 521 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 70 $ 1072 room=.
+-> w
+T 522 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 69 $ 1072 room=.
+-> n
+T 523 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 68 $ 1072 room=.
+-> w
+T 524 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
+-> s
+T 525 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
+-> w
+T 526 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 66 $ 1072 room=.
+-> w
+T 527 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/84 MP 0/0 Hu 65 $ 1072 room=.
+-> w
+T 528 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/84 MP 0/0 Hu 65 $ 1072 room=.
+-> n
+T 529 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/84 MP 0/0 Hu 64 $ 1072 room=.
+-> e
+T 530 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 63 $ 1072 room=.
+-> n
+T 531 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 63 $ 1072 room=C
+-> e
+T 532 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 62 $ 1072 room=.
+-> s
+T 533 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 61 $ 1072 room=.
+-> s
+T 534 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
+-> e
+T 535 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
+-> e
+T 536 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 59 $ 1072 room=.
+-> e
+T 537 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 58 $ 1072 room=.
+-> e
+T 538 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 58 $ 1072 room=.
+-> w
+T 539 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 57 $ 1072 room=.
+-> e
+T 540 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
 -> l
-T 561 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 82/84 MP 0/0 Hu  0 $ 1101 room=.
+T 541 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
 -> w
-T 562 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 80/84 MP 0/0 Hu  0 $ 1101 room=.
+T 542 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
+-> i
+T 543 mode=inventory           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
+-> eat1
+T 544 mode=inventory           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 63 $ 1072 room=.
+-> x
+T 545 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 63 $ 1072 room=.
+-> w
+T 546 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 62 $ 1072 room=.
+-> n
+T 547 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 61 $ 1072 room=.
+-> w
+T 548 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
 -> s
-T 563 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 78/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 564 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 77/84 MP 0/0 Hu  0 $ 1101 room=M
--> s
-T 565 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 77/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 566 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 75/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 567 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 73/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 568 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 71/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 569 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 69/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 570 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 67/84 MP 0/0 Hu  0 $ 1101 room=.
+T 549 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
+-> w
+T 550 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 59 $ 1072 room=.
 -> l
-T 571 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 67/84 MP 0/0 Hu  0 $ 1101 room=.
+T 551 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 59 $ 1072 room=.
 -> w
-T 572 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 65/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 573 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 63/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 574 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 61/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 575 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 59/84 MP 0/0 Hu  0 $ 1101 room=.
+T 552 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/84 MP 0/0 Hu 58 $ 1072 room=.
 -> n
-T 576 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 57/84 MP 0/0 Hu  0 $ 1101 room=.
+T 553 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 58 $ 1072 room=.
 -> w
-T 577 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 55/84 MP 0/0 Hu  0 $ 1101 room=.
+T 554 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/84 MP 0/0 Hu 57 $ 1072 room=.
 -> s
-T 578 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 53/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 579 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 51/84 MP 0/0 Hu  0 $ 1101 room=.
+T 555 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
 -> n
-T 580 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 49/84 MP 0/0 Hu  0 $ 1101 room=.
+T 556 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
+-> s
+T 557 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/84 MP 0/0 Hu 55 $ 1072 room=.
+-> e
+T 558 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/84 MP 0/0 Hu 54 $ 1072 room=.
+-> e
+T 559 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 53 $ 1072 room=.
+-> e
+T 560 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 53 $ 1072 room=.
 -> l
-T 581 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 49/84 MP 0/0 Hu  0 $ 1101 room=.
--> n
-T 582 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 47/84 MP 0/0 Hu  0 $ 1101 room=.
+T 561 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 53 $ 1072 room=.
+-> e
+T 562 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 52 $ 1072 room=.
+-> e
+T 563 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 51 $ 1072 room=.
+-> e
+T 564 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 51 $ 1072 room=.
 -> w
-T 583 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 45/84 MP 0/0 Hu  0 $ 1101 room=.
--> s
-T 584 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 43/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 585 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 43/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 586 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 43/84 MP 0/0 Hu  0 $ 1101 room=M
--> s
-T 587 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 43/84 MP 0/0 Hu  0 $ 1101 room=.
+T 565 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 50 $ 1072 room=.
 -> e
-T 588 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 41/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 589 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 39/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 590 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 37/84 MP 0/0 Hu  0 $ 1101 room=.
+T 566 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
+-> i
+T 567 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 49 $ 1072 room=.
+-> eat1
+T 568 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
+-> x
+T 569 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
+-> w
+T 570 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
 -> l
-T 591 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 37/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 592 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 35/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 593 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 33/84 MP 0/0 Hu  0 $ 1101 room=.
+T 571 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/84 MP 0/0 Hu 67 $ 1072 room=.
 -> w
-T 594 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 31/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 595 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 29/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 596 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 27/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 597 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 25/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 598 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 23/84 MP 0/0 Hu  0 $ 1101 room=.
+T 572 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 66 $ 1072 room=.
 -> n
-T 599 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 21/84 MP 0/0 Hu  0 $ 1101 room=.
+T 573 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 65 $ 1072 room=.
 -> w
-T 600 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 19/84 MP 0/0 Hu  0 $ 1101 room=.
+T 574 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 64 $ 1072 room=.
+-> s
+T 575 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 64 $ 1072 room=.
+-> w
+T 576 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 63 $ 1072 room=.
+-> n
+T 577 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 62 $ 1072 room=.
+-> n
+T 578 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 62 $ 1072 room=.
+-> n
+T 579 mode=game_loop           Durin Anvilheart(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 61 $ 1072 room=.
+-> n
+T 580 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
 -> l
-T 601 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 19/84 MP 0/0 Hu  0 $ 1101 room=.
--> s
-T 602 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 17/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 603 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 15/84 MP 0/0 Hu  0 $ 1101 room=.
--> w
-T 604 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 13/84 MP 0/0 Hu  0 $ 1101 room=.
+T 581 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
 -> n
-T 605 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 11/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 606 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 9/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 607 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 9/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 608 mode=combat_mode         Durin Anvilheart(dwa) F2@(11,15) HP 8/84 MP 0/0 Hu  0 $ 1101 room=M vs Zombie(L1 HP35/35)
--> f
-T 609 mode=flee_direction_mode Durin Anvilheart(dwa) F2@(11,15) HP 8/84 MP 0/0 Hu  0 $ 1101 room=M
+T 582 mode=game_loop           Durin Anvilheart(dwa) F2@(12,11) HP 84/84 MP 0/0 Hu 60 $ 1072 room=.
 -> n
-T 610 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 8/84 MP 0/0 Hu  0 $ 1101 room=.
+T 583 mode=game_loop           Durin Anvilheart(dwa) F2@(12,10) HP 84/84 MP 0/0 Hu 59 $ 1072 room=C
+-> n
+T 584 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 84/84 MP 0/0 Hu 58 $ 1072 room=.
+-> n
+T 585 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 8) HP 84/84 MP 0/0 Hu 57 $ 1072 room=.
+-> n
+T 586 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 7) HP 84/84 MP 0/0 Hu 57 $ 1072 room=.
+-> w
+T 587 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 7) HP 84/84 MP 0/0 Hu 56 $ 1072 room=.
+-> w
+T 588 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 7) HP 84/84 MP 0/0 Hu 55 $ 1072 room=.
+-> w
+T 589 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 7) HP 84/84 MP 0/0 Hu 55 $ 1072 room=.
+-> w
+T 590 mode=game_loop           Durin Anvilheart(dwa) F2@( 8, 7) HP 84/84 MP 0/0 Hu 54 $ 1072 room=.
 -> l
-T 611 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 8/84 MP 0/0 Hu  0 $ 1101 room=.
--> e
-T 612 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 6/84 MP 0/0 Hu  0 $ 1101 room=.
+T 591 mode=game_loop           Durin Anvilheart(dwa) F2@( 8, 7) HP 84/84 MP 0/0 Hu 54 $ 1072 room=.
+-> w
+T 592 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 7) HP 84/84 MP 0/0 Hu 53 $ 1072 room=.
 -> s
-T 613 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 4/84 MP 0/0 Hu  0 $ 1101 room=.
+T 593 mode=library_mode        Durin Anvilheart(dwa) F2@( 7, 8) HP 84/84 MP 0/0 Hu 53 $ 1072 room=L
+-> r
+T 594 mode=library_read_decision_mode Durin Anvilheart(dwa) F2@( 7, 8) HP 84/84 MP 0/0 Hu 53 $ 1072 room=L
+-> y
+T 595 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 8) HP 84/82 MP 0/0 Hu 53 $ 1172 room=.
 -> s
-T 614 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 2/84 MP 0/0 Hu  0 $ 1101 room=.
+T 596 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 9) HP 84/82 MP 0/0 Hu 52 $ 1172 room=.
+-> l
+T 597 mode=game_loop           Durin Anvilheart(dwa) F2@( 7, 9) HP 84/82 MP 0/0 Hu 52 $ 1172 room=.
+-> s
+T 598 mode=game_loop           Durin Anvilheart(dwa) F2@( 7,10) HP 84/82 MP 0/0 Hu 51 $ 1172 room=.
+-> s
+T 599 mode=chest_mode          Durin Anvilheart(dwa) F2@( 7,11) HP 84/82 MP 0/0 Hu 50 $ 1172 room=C
+-> o
+T 600 mode=game_loop           Durin Anvilheart(dwa) F2@( 7,10) HP 84/82 MP 0/0 Hu 50 $ 1172 room=.
+-> l
+T 601 mode=game_loop           Durin Anvilheart(dwa) F2@( 7,10) HP 84/82 MP 0/0 Hu 50 $ 1172 room=.
 -> e
-T 615 mode=death_screen        Durin Anvilheart(dwa) F2@(13,16) HP 0/84 MP 0/0 Hu  0 $ 1101 room=.
+T 602 mode=game_loop           Durin Anvilheart(dwa) F2@( 8,10) HP 84/82 MP 0/0 Hu 49 $ 1172 room=.
+-> n
+T 603 mode=game_loop           Durin Anvilheart(dwa) F2@( 8, 9) HP 84/82 MP 0/0 Hu 48 $ 1172 room=.
+-> e
+T 604 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 9) HP 84/82 MP 0/0 Hu 48 $ 1172 room=.
+-> n
+T 605 mode=game_loop           Durin Anvilheart(dwa) F2@( 9, 8) HP 84/82 MP 0/0 Hu 47 $ 1172 room=.
+-> e
+T 606 mode=game_loop           Durin Anvilheart(dwa) F2@(10, 8) HP 84/82 MP 0/0 Hu 46 $ 1172 room=.
+-> e
+T 607 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 8) HP 84/82 MP 0/0 Hu 46 $ 1172 room=.
+-> s
+T 608 mode=game_loop           Durin Anvilheart(dwa) F2@(11, 9) HP 84/82 MP 0/0 Hu 45 $ 1172 room=.
+-> e
+T 609 mode=game_loop           Durin Anvilheart(dwa) F2@(12, 9) HP 84/82 MP 0/0 Hu 44 $ 1172 room=.
+-> s
+T 610 mode=game_loop           Durin Anvilheart(dwa) F2@(12,10) HP 84/82 MP 0/0 Hu 43 $ 1172 room=C
+-> l
+T 611 mode=game_loop           Durin Anvilheart(dwa) F2@(12,10) HP 84/82 MP 0/0 Hu 43 $ 1172 room=C
+-> s
+T 612 mode=game_loop           Durin Anvilheart(dwa) F2@(12,11) HP 84/82 MP 0/0 Hu 43 $ 1172 room=.
+-> s
+T 613 mode=game_loop           Durin Anvilheart(dwa) F2@(12,12) HP 84/82 MP 0/0 Hu 42 $ 1172 room=.
+-> s
+T 614 mode=game_loop           Durin Anvilheart(dwa) F2@(12,13) HP 84/82 MP 0/0 Hu 41 $ 1172 room=.
+-> s
+T 615 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 84/82 MP 0/0 Hu 41 $ 1172 room=.
+-> s
+T 616 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/82 MP 0/0 Hu 40 $ 1172 room=.
+-> s
+T 617 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 39 $ 1172 room=.
+-> e
+T 618 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu 39 $ 1172 room=.
+-> e
+T 619 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu 38 $ 1172 room=.
+-> e
+T 620 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 37 $ 1172 room=.
+-> l
+T 621 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 37 $ 1172 room=.
+-> e
+T 622 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu 36 $ 1172 room=.
+-> w
+T 623 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 36 $ 1172 room=.
+-> e
+T 624 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu 35 $ 1172 room=.
+-> w
+T 625 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 34 $ 1172 room=.
+-> w
+T 626 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu 34 $ 1172 room=.
+-> n
+T 627 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/82 MP 0/0 Hu 33 $ 1172 room=.
+-> w
+T 628 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/82 MP 0/0 Hu 32 $ 1172 room=.
+-> s
+T 629 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu 32 $ 1172 room=.
+-> w
+T 630 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 31 $ 1172 room=.
+-> l
+T 631 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 31 $ 1172 room=.
+-> n
+T 632 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/82 MP 0/0 Hu 30 $ 1172 room=.
+-> w
+T 633 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/82 MP 0/0 Hu 29 $ 1172 room=.
+-> s
+T 634 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/82 MP 0/0 Hu 29 $ 1172 room=.
+-> w
+T 635 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/82 MP 0/0 Hu 28 $ 1172 room=.
+-> n
+T 636 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/82 MP 0/0 Hu 27 $ 1172 room=.
+-> s
+T 637 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/82 MP 0/0 Hu 27 $ 1172 room=.
+-> n
+T 638 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/82 MP 0/0 Hu 26 $ 1172 room=.
+-> e
+T 639 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/82 MP 0/0 Hu 25 $ 1172 room=.
+-> s
+T 640 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/82 MP 0/0 Hu 25 $ 1172 room=.
+-> l
+T 641 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/82 MP 0/0 Hu 25 $ 1172 room=.
+-> e
+T 642 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 24 $ 1172 room=.
+-> e
+T 643 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu 23 $ 1172 room=.
+-> e
+T 644 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu 22 $ 1172 room=.
+-> e
+T 645 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 22 $ 1172 room=.
+-> e
+T 646 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu 21 $ 1172 room=.
+-> w
+T 647 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 20 $ 1172 room=.
+-> e
+T 648 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu 20 $ 1172 room=.
+-> w
+T 649 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu 19 $ 1172 room=.
+-> w
+T 650 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu 18 $ 1172 room=.
+-> l
+T 651 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu 18 $ 1172 room=.
+-> w
+T 652 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu 18 $ 1172 room=.
+-> n
+T 653 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/82 MP 0/0 Hu 17 $ 1172 room=.
+-> w
+T 654 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/82 MP 0/0 Hu 16 $ 1172 room=.
+-> s
+T 655 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 15 $ 1172 room=.
+-> w
+T 656 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/82 MP 0/0 Hu 15 $ 1172 room=.
+-> n
+T 657 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 84/82 MP 0/0 Hu 14 $ 1172 room=.
+-> w
+T 658 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/82 MP 0/0 Hu 13 $ 1172 room=.
+-> s
+T 659 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/82 MP 0/0 Hu 13 $ 1172 room=.
+-> n
+T 660 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/82 MP 0/0 Hu 12 $ 1172 room=.
+-> l
+T 661 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 84/82 MP 0/0 Hu 12 $ 1172 room=.
+-> s
+T 662 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 84/82 MP 0/0 Hu 11 $ 1172 room=.
+-> e
+T 663 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 84/82 MP 0/0 Hu 11 $ 1172 room=.
+-> e
+T 664 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu 10 $ 1172 room=.
+-> e
+T 665 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu  9 $ 1172 room=.
+-> e
+T 666 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu  8 $ 1172 room=.
+-> e
+T 667 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu  8 $ 1172 room=.
+-> e
+T 668 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu  7 $ 1172 room=.
+-> w
+T 669 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu  6 $ 1172 room=.
+-> e
+T 670 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu  6 $ 1172 room=.
+-> l
+T 671 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 84/82 MP 0/0 Hu  6 $ 1172 room=.
+-> w
+T 672 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 84/82 MP 0/0 Hu  5 $ 1172 room=.
+-> w
+T 673 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 84/82 MP 0/0 Hu  4 $ 1172 room=.
+-> w
+T 674 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 84/82 MP 0/0 Hu  4 $ 1172 room=.
+-> w
+T 675 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 84/82 MP 0/0 Hu  3 $ 1172 room=.
+-> n
+T 676 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 84/82 MP 0/0 Hu  2 $ 1172 room=.
+-> e
+T 677 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 84/82 MP 0/0 Hu  1 $ 1172 room=.
+-> e
+T 678 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 84/82 MP 0/0 Hu  1 $ 1172 room=.
+-> s
+T 679 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 82/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 680 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 80/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 681 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 80/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 682 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 78/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 683 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 76/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 684 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 74/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 685 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 72/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 686 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 70/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 687 mode=game_loop           Durin Anvilheart(dwa) F2@(14,15) HP 68/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 688 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 66/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 689 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 64/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 690 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 62/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 691 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 62/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 692 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 60/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 693 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 58/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 694 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 56/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 695 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 54/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 696 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 52/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 697 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 50/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 698 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 48/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 699 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 46/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 700 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 44/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 701 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 44/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 702 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 42/82 MP 0/0 Hu  0 $ 1172 room=.
+-> i
+T 703 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 42/82 MP 0/0 Hu  0 $ 1172 room=.
+-> u4
+T 704 mode=inventory           Durin Anvilheart(dwa) F2@(16,16) HP 72/82 MP 0/0 Hu  0 $ 1172 room=.
+-> x
+T 705 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 72/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 706 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 70/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 707 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 68/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 708 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 66/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 709 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 64/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 710 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 62/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 711 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 62/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 712 mode=game_loop           Durin Anvilheart(dwa) F2@(13,15) HP 60/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 713 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 58/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 714 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 56/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 715 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 54/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 716 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 52/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 717 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 50/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 718 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 48/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 719 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 46/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 720 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 44/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 721 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 44/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 722 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 42/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 723 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 40/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 724 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 38/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 725 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 36/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 726 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 34/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 727 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 32/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 728 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 30/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 729 mode=game_loop           Durin Anvilheart(dwa) F2@(16,16) HP 28/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 730 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 26/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 731 mode=game_loop           Durin Anvilheart(dwa) F2@(15,16) HP 26/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 732 mode=game_loop           Durin Anvilheart(dwa) F2@(14,16) HP 24/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 733 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 22/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 734 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 20/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 735 mode=game_loop           Durin Anvilheart(dwa) F2@(11,16) HP 18/82 MP 0/0 Hu  0 $ 1172 room=.
+-> w
+T 736 mode=game_loop           Durin Anvilheart(dwa) F2@(10,16) HP 16/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 737 mode=game_loop           Durin Anvilheart(dwa) F2@(10,15) HP 14/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 738 mode=game_loop           Durin Anvilheart(dwa) F2@(11,15) HP 12/82 MP 0/0 Hu  0 $ 1172 room=.
+-> n
+T 739 mode=game_loop           Durin Anvilheart(dwa) F2@(11,14) HP 10/82 MP 0/0 Hu  0 $ 1172 room=C
+-> e
+T 740 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 8/82 MP 0/0 Hu  0 $ 1172 room=.
+-> l
+T 741 mode=game_loop           Durin Anvilheart(dwa) F2@(12,14) HP 8/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 742 mode=game_loop           Durin Anvilheart(dwa) F2@(12,15) HP 6/82 MP 0/0 Hu  0 $ 1172 room=.
+-> s
+T 743 mode=game_loop           Durin Anvilheart(dwa) F2@(12,16) HP 4/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 744 mode=game_loop           Durin Anvilheart(dwa) F2@(13,16) HP 2/82 MP 0/0 Hu  0 $ 1172 room=.
+-> e
+T 745 mode=death_screen        Durin Anvilheart(dwa) F2@(14,16) HP 0/82 MP 0/0 Hu  0 $ 1172 room=.
 
-=== run finished: turns=615 floor=2 hp=0/84 gold=1101 alive=False mode=death_screen ===
+=== run finished: turns=745 floor=2 hp=0/82 gold=1172 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00512_dwarf.html

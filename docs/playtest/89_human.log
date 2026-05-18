@@ -5,11 +5,11 @@ T   1 mode=game_loop           Forlong Oakheart(hum) F1@( 1, 1) HP 30/30 MP 0/0 
   The lantern reveals 8 nearby rooms!
   Lantern fuel remaining: 79
 -> s
-T   2 mode=combat_mode         Forlong Oakheart(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Slime Mold(L0 HP15/15)
+T   2 mode=combat_mode         Forlong Oakheart(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu100 $ 290 room=M vs Slime Mold(L0 HP15/15)
   A Slime Mold (Level 0) appears! A gelatinous blob quivers menacingly.
   The Slime Mold strikes first!
 -> a
-T   3 mode=combat_victory      Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 344 room=.
+T   3 mode=combat_victory      Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu100 $ 344 room=.
   Forlong Oakheart is now affected by Slime Mold's Weakness!
    The Slime Mold covers you in sticky slime!
   You feel weakened!
@@ -22,29 +22,29 @@ T   3 mode=combat_victory      Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 
    ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
   Reward: 50 gold!
 -> back
-T   4 mode=game_loop           Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 344 room=.
+T   4 mode=game_loop           Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu100 $ 344 room=.
 -> l
-T   5 mode=game_loop           Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu 99 $ 344 room=.
+T   5 mode=game_loop           Forlong Oakheart(hum) F1@( 1, 2) HP 29/30 MP 0/0 Hu100 $ 344 room=.
 -> e
-T   6 mode=pool_mode           Forlong Oakheart(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 344 room=P
+T   6 mode=pool_mode           Forlong Oakheart(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 99 $ 344 room=P
 -> dr
-T   7 mode=game_loop           Forlong Oakheart(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 98 $ 344 room=.
+T   7 mode=game_loop           Forlong Oakheart(hum) F1@( 2, 2) HP 29/30 MP 0/0 Hu 99 $ 344 room=.
 -> n
-T   8 mode=combat_mode         Forlong Oakheart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 97 $ 344 room=M vs Spore Puff(L0 HP18/18)
+T   8 mode=combat_mode         Forlong Oakheart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 344 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T   9 mode=combat_mode         Forlong Oakheart(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 97 $ 344 room=M vs Spore Puff(L0 HP18/18)
+T   9 mode=combat_mode         Forlong Oakheart(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=M vs Spore Puff(L0 HP18/18)
 -> f
-T  10 mode=flee_direction_mode Forlong Oakheart(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 97 $ 344 room=M
+T  10 mode=flee_direction_mode Forlong Oakheart(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=M
 -> e
-T  11 mode=chest_mode          Forlong Oakheart(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 97 $ 344 room=C
+T  11 mode=chest_mode          Forlong Oakheart(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=C
 -> o
-T  12 mode=game_loop           Forlong Oakheart(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 97 $ 344 room=.
+T  12 mode=game_loop           Forlong Oakheart(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=.
 -> e
-T  13 mode=library_mode        Forlong Oakheart(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 96 $ 344 room=L
+T  13 mode=library_mode        Forlong Oakheart(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=L
 -> r
-T  14 mode=library_read_decision_mode Forlong Oakheart(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 96 $ 344 room=L
+T  14 mode=library_read_decision_mode Forlong Oakheart(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 98 $ 344 room=L
 -> y
-T  15 mode=death_screen        Forlong Oakheart(hum) F1@( 4, 1) HP -2/30 MP 0/0 Hu 96 $ 344 room=L
+T  15 mode=death_screen        Forlong Oakheart(hum) F1@( 4, 1) HP -2/30 MP 0/0 Hu 98 $ 344 room=L
 
 === run finished: turns=15 floor=1 hp=-2/30 gold=344 alive=False mode=death_screen ===
     status=dead

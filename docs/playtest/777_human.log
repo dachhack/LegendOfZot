@@ -5,7 +5,7 @@ T   1 mode=game_loop           Isildur of Arnor(hum) F1@( 1, 1) HP 30/30 MP 0/0 
   The lantern reveals 12 nearby rooms!
   Lantern fuel remaining: 79
 -> e
-T   2 mode=tomb_mode           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=T
+T   2 mode=tomb_mode           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=T
   
   ===============================
          Ancient Tomb
@@ -20,125 +20,137 @@ T   2 mode=tomb_mode           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 
   P - Pay your respects (Safe)
   
 -> p
-T   3 mode=game_loop           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=T
+T   3 mode=game_loop           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=T
 -> l
-T   4 mode=game_loop           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=T
+T   4 mode=game_loop           Isildur of Arnor(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=T
 -> e
-T   5 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
+T   5 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
 -> a
-T   6 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
+T   6 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
 -> a
-T   7 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
+T   7 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
 -> a
-T   8 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
+T   8 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
 -> a
-T   9 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 98 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
+T   9 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
 -> a
-T  10 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 98 $ 347 room=.
+T  10 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 99 $ 347 room=.
 -> back
-T  11 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 98 $ 347 room=.
+T  11 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 99 $ 347 room=.
 -> l
-T  12 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 98 $ 347 room=.
+T  12 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 99 $ 347 room=.
 -> s
-T  13 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 97 $ 347 room=M vs Giant Rat(L0 HP22/22)
+T  13 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 2) HP 28/30 MP 0/0 Hu 98 $ 347 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T  14 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 97 $ 354 room=.
+T  14 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 98 $ 354 room=.
 -> back
-T  15 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 97 $ 354 room=.
--> l
-T  16 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 97 $ 354 room=.
--> e
-T  17 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 2) HP 28/30 MP 0/0 Hu 96 $ 354 room=M vs Goblin(L0 HP30/30)
--> f
-T  18 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 2) HP 28/30 MP 0/0 Hu 96 $ 354 room=M
--> n
-T  19 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 96 $ 354 room=.
--> e
-T  20 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 28/30 MP 0/0 Hu 95 $ 354 room=M vs Skeleton(L0 HP25/25)
--> a
-T  21 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 95 $ 354 room=M vs Skeleton(L0 HP25/25)
--> a
-T  22 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 95 $ 354 room=M vs Skeleton(L0 HP25/25)
--> a
-T  23 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 26/30 MP 0/0 Hu 95 $ 354 room=M vs Skeleton(L0 HP6/25)
--> a
-T  24 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 25/30 MP 0/0 Hu 95 $ 354 room=M vs Skeleton(L0 HP6/25)
--> f
-T  25 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 1) HP 25/30 MP 0/0 Hu 95 $ 354 room=M
--> w
-T  26 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 1) HP 25/30 MP 0/0 Hu 95 $ 354 room=.
--> s
-T  27 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 2) HP 26/30 MP 0/0 Hu 94 $ 354 room=M vs Goblin(L0 HP30/30)
--> f
-T  28 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 2) HP 26/30 MP 0/0 Hu 94 $ 354 room=M
--> w
-T  29 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 26/30 MP 0/0 Hu 94 $ 354 room=.
--> s
-T  30 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 93 $ 354 room=.
--> l
-T  31 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 93 $ 354 room=.
--> s
-T  32 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 92 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  33 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 92 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  34 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 92 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  35 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 363 room=.
--> back
-T  36 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 363 room=.
--> l
-T  37 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 363 room=.
--> e
-T  38 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 4) HP 24/30 MP 0/0 Hu 91 $ 363 room=M vs Skeleton(L0 HP25/25)
--> f
-T  39 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 4) HP 24/30 MP 0/0 Hu 91 $ 363 room=M
--> w
-T  40 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 91 $ 363 room=.
--> s
-T  41 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 90 $ 363 room=.
--> l
-T  42 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 5) HP 25/30 MP 0/0 Hu 90 $ 363 room=.
--> e
-T  43 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 5) HP 25/30 MP 0/0 Hu 89 $ 363 room=M vs Kobold(L0 HP8/8)
--> a
-T  44 mode=combat_victory      Isildur of Arnor(hum) F1@( 4, 5) HP 25/30 MP 0/0 Hu 89 $ 370 room=.
--> back
-T  45 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 25/30 MP 0/0 Hu 89 $ 370 room=.
+T  15 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 98 $ 354 room=.
 -> i
-T  46 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 25/30 MP 0/0 Hu 89 $ 370 room=.
+T  16 mode=inventory           Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 98 $ 354 room=.
 -> u3
-T  47 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  17 mode=inventory           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> x
-T  48 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  18 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> i
-T  49 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  19 mode=inventory           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> u9
-T  50 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  20 mode=inventory           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> x
-T  51 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  21 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> l
-T  52 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 89 $ 370 room=.
+T  22 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
 -> e
-T  53 mode=pool_mode           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 370 room=P
--> dr
-T  54 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 88 $ 370 room=.
--> l
-T  55 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 88 $ 370 room=.
--> i
-T  56 mode=inventory           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 88 $ 370 room=.
--> u3
-T  57 mode=inventory           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 370 room=.
--> x
-T  58 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 88 $ 370 room=.
--> s
-T  59 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 6) HP 20/30 MP 0/0 Hu 87 $ 370 room=M vs Giant Rat(L0 HP22/22)
+T  23 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=M vs Goblin(L0 HP30/30)
 -> f
-T  60 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 6) HP 10/30 MP 0/0 Hu 87 $ 370 room=M
+T  24 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 98 $ 354 room=M
+-> n
+T  25 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 98 $ 354 room=.
+-> e
+T  26 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 30/30 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  27 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 29/30 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  28 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 29/30 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  29 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 28/30 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  30 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP6/25)
+-> f
+T  31 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 97 $ 354 room=M
+-> w
+T  32 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 97 $ 354 room=.
 -> s
-T  61 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 7) HP 0/30 MP 0/0 Hu 87 $ 370 room=.
+T  33 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 2) HP 27/30 MP 0/0 Hu 96 $ 354 room=M vs Goblin(L0 HP30/30)
+-> f
+T  34 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 2) HP 27/30 MP 0/0 Hu 96 $ 354 room=M
+-> w
+T  35 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 2) HP 27/30 MP 0/0 Hu 96 $ 354 room=.
+-> s
+T  36 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 96 $ 354 room=.
+-> l
+T  37 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 3) HP 28/30 MP 0/0 Hu 96 $ 354 room=.
+-> s
+T  38 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  39 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  40 mode=combat_mode         Isildur of Arnor(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  41 mode=combat_victory      Isildur of Arnor(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 95 $ 363 room=.
+-> back
+T  42 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 95 $ 363 room=.
+-> l
+T  43 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 95 $ 363 room=.
+-> e
+T  44 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 4) HP 26/30 MP 0/0 Hu 94 $ 363 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  45 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 4, 4) HP 26/30 MP 0/0 Hu 94 $ 363 room=M
+-> w
+T  46 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 94 $ 363 room=.
+-> s
+T  47 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 5) HP 26/30 MP 0/0 Hu 93 $ 363 room=.
+-> l
+T  48 mode=game_loop           Isildur of Arnor(hum) F1@( 3, 5) HP 26/30 MP 0/0 Hu 93 $ 363 room=.
+-> e
+T  49 mode=combat_mode         Isildur of Arnor(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 93 $ 363 room=M vs Kobold(L0 HP8/8)
+-> a
+T  50 mode=combat_victory      Isildur of Arnor(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> back
+T  51 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> i
+T  52 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 27/30 MP 0/0 Hu 93 $ 370 room=.
+-> u3
+T  53 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> x
+T  54 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> i
+T  55 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> u9
+T  56 mode=inventory           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> x
+T  57 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> l
+T  58 mode=game_loop           Isildur of Arnor(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 370 room=.
+-> e
+T  59 mode=pool_mode           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 370 room=P
+-> dr
+T  60 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 92 $ 370 room=.
+-> l
+T  61 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 92 $ 370 room=.
+-> i
+T  62 mode=inventory           Isildur of Arnor(hum) F1@( 5, 5) HP 10/30 MP 0/0 Hu 92 $ 370 room=.
+-> u3
+T  63 mode=inventory           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> x
+T  64 mode=game_loop           Isildur of Arnor(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 370 room=.
+-> s
+T  65 mode=combat_mode         Isildur of Arnor(hum) F1@( 5, 6) HP 20/30 MP 0/0 Hu 91 $ 370 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T  66 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 6) HP 10/30 MP 0/0 Hu 91 $ 370 room=M
+-> s
+T  67 mode=flee_direction_mode Isildur of Arnor(hum) F1@( 5, 7) HP 0/30 MP 0/0 Hu 91 $ 370 room=.
 
-=== run finished: turns=61 floor=1 hp=0/30 gold=370 alive=False mode=flee_direction_mode ===
+=== run finished: turns=67 floor=1 hp=0/30 gold=370 alive=False mode=flee_direction_mode ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00777_human.html
