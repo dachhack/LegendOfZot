@@ -2597,11 +2597,30 @@ def smart_policy(obs, rng, use_lantern=True):
         #    Vault Keeper Wraith on the same floor).
         # turns_since_new_tile measures actual progress: while the
         # agent keeps reaching new tiles via walking + lantern
-        # reveals, no escape valve. Once stuck, fire after 100T.
+        # reveals, no escape valve.
+        #
+        # User asked agents to avoid warps unless absolutely
+        # necessary, so this gate now requires THREE conditions:
+        #   1. D is unreachable on the discovered map.
+        #   2. reach_pct >= 90% -- the agent has walked nearly all
+        #      reachable tiles, so further wandering won't reveal
+        #      a hidden path to D via lantern. Without this, the
+        #      old 100T-since-new gate fired on small starting
+        #      pockets where the agent could still uncover ground
+        #      via short detours.
+        #   3. turns_since_new >= 200 -- doubled from 100T to give
+        #      a real exploration budget. Was popping the warp valve
+        #      on agents who'd just paused for a long fight, eaten
+        #      from inventory, or done some other non-movement work.
+        # If ALL three fire, the floor is a genuine warp-only island
+        # (region-split layout) and warping is the only way out.
+        # 159-seed grid before tightening: 35% of floor changes were
+        # warps (194 forced + 35 accepted of 647 transitions).
         turns_since_new = obs.get("turns_since_new_tile") or 0
         trapped_no_d = (
             (not d_avoid_reachable)
-            and (turns_since_new >= 100)
+            and reach_pct_avoid >= 90
+            and turns_since_new >= 200
         )
         # Cornered detection: agent's ONLY walkable cardinal
         # neighbour is an M tile (the rest are walls). Without this
@@ -3686,18 +3705,32 @@ def smart_policy(obs, rng, use_lantern=True):
         # which the harness mapped to game_loop while leaving the
         # player on the monster's tile -- Finrod the elf took
         # consecutive 24-dmg Wraith hits between failed flees.
-        # Prefer non-recent walkable directions so the agent
-        # doesn't try to flee back through the same tile that just
-        # spawned the fight. Fall back to 'c' (cancel flee and
+        # Prefer non-recent SAFE (non-hazard) walkable directions
+        # so the agent doesn't flee back through the same tile that
+        # just spawned the fight AND doesn't trade combat for a
+        # warp / second monster. Fall back to 'c' (cancel flee and
         # stand to fight) if no walkable direction exists.
+        # User-flagged: 28 of the first-warp triggers across the
+        # 159-seed grid came from flee_direction_mode -- the agent
+        # bolted from one M into a W next door.
         neighbors = obs.get("neighbors") or {}
         recent = set(obs.get("recent_step_set") or [])
+        HAZARD = ("M", "W")
+        # Pass 1: non-recent, non-hazard, non-wall.
         for d in ("n", "s", "e", "w"):
             if d in recent:
                 continue
             t = neighbors.get(d)
-            if t not in ("#", None):
+            if t and t not in HAZARD and t != "#":
                 return d
+        # Pass 2: drop the recent filter but keep hazard avoidance.
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t and t not in HAZARD and t != "#":
+                return d
+        # Pass 3: any non-wall direction (including hazards). A
+        # warp landing or a fresh monster fight is still better
+        # than another round against the current attacker.
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t not in ("#", None):
@@ -3952,19 +3985,33 @@ def smart_policy(obs, rng, use_lantern=True):
         blocked = set(obs.get("blocked_directions") or [])
         recent_steps_chest = set(obs.get("recent_step_set") or [])
         def _walk_off_chest():
-            # Prefer non-recent, non-blocked, non-wall directions
-            # first -- without this the agent bounces between two
-            # adjacent chest tiles forever, since the for-loop
-            # always returned 'n' if it was walkable. Thranduil the
-            # Twice-Born (elf seed 9001) burned 2720 turns at HP=1
-            # oscillating n/s between two stacked chests.
+            # Prefer non-recent, non-blocked, non-wall, NON-HAZARD
+            # directions first. Without the hazard filter the agent
+            # was walking off chests onto adjacent W (warp) tiles --
+            # 13 first-warp triggers across the 159-seed grid came
+            # from chest_mode. Walls vs hazards swap is intentional:
+            # bumping a wall wastes 1 turn, stepping on W wastes
+            # 100-200T of warp recovery.
+            # Also avoid bouncing between two adjacent chest tiles
+            # forever (Thranduil seed 9001 burned 2720 turns at
+            # HP=1 oscillating n/s between two stacked chests).
+            HAZARD_OFF = ("M", "W")
             for d in ("n", "s", "e", "w"):
                 if d in blocked or d in recent_steps_chest:
                     continue
                 t = neighbors.get(d)
-                if t != "#":
+                if t and t not in HAZARD_OFF and t != "#":
                     return d
-            # Fall back to any non-blocked, non-wall direction.
+            # Drop recent filter, keep hazard + wall filter.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in HAZARD_OFF and t != "#":
+                    return d
+            # Last resort: any non-blocked non-wall direction
+            # (accepts hazards rather than oscillating off-chest
+            # forever).
             for d in ("n", "s", "e", "w"):
                 if d in blocked:
                     continue
@@ -4212,13 +4259,19 @@ def smart_policy(obs, rng, use_lantern=True):
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
         turns_since_new_warp = obs.get("turns_since_new_tile") or 0
+        reach_pct_warp = (obs.get("tile_coverage") or {}).get("reach_pct", 0)
         if starving or hp_pct < 0.20:
             return "y"
-        # Behavioral trapped gate (same shape as trapped_no_d in
-        # game_loop): D unreachable AND no new tile visited in
-        # 100+ turns means the wayfinder is bouncing on the island
-        # without progress. Accept the warp as escape.
-        if not d_reachable and turns_since_new_warp >= 100:
+        # Mirror the tightened trapped_no_d in game_loop: only
+        # ACCEPT the warp when the agent is genuinely stuck on a
+        # warp-only fragment of the floor (D unreachable, nearly all
+        # reachable tiles already walked, no new tile in 200T).
+        # Otherwise resist -- the resist roll fails ~60% of the
+        # time, but the cost asymmetry (warp = 100-200T recovery vs
+        # walking around) favours the gamble.
+        if (not d_reachable
+                and reach_pct_warp >= 90
+                and turns_since_new_warp >= 200):
             return "n"
         return "y"
     if mode == "altar_mode":
@@ -4378,13 +4431,17 @@ def smart_policy(obs, rng, use_lantern=True):
         toward whatever target the game_loop would pick (D, beneficial,
         vendor) so the agent doesn't immediately step back. Falls
         through to any non-recent walkable neighbour, then any walkable
-        neighbour, then any direction."""
+        neighbour, then any direction.
+
+        The fallback path skips hazards (M / W) until exhausted, so a
+        feature-room exit doesn't dump the agent onto an adjacent warp
+        tile when a plain corridor is also available."""
         fp = obs.get("feature_paths") or {}
         ms = obs.get("nearest_monster_path")
         fs = obs.get("frontier_step")
         nb = obs.get("neighbors") or {}
         rs = set(obs.get("recent_step_set") or [])
-        AVOID_TILES = {"#"}
+        HAZARD_OFF = ("M", "W")
         # Try BFS-routed targets in roughly the game_loop priority.
         for cand in (
             fp.get("D"), fp.get("V"), fp.get("C"), fp.get("G"),
@@ -4398,15 +4455,24 @@ def smart_policy(obs, rng, use_lantern=True):
                 # the main wayfinder uses.
                 if d not in rs:
                     return d
-        # Fallback: any non-recent walkable direction (SE-biased).
+        # Fallback: non-recent, non-hazard walkable direction
+        # (SE-biased). User-flagged warps slipping in via _step_away
+        # callers (oracle / war_room / taxidermist / alchemist).
         for d in ("e", "s", "w", "n"):
             if d in rs:
                 continue
-            if nb.get(d) in AVOID_TILES:
-                continue
-            return d
+            t = nb.get(d)
+            if t and t not in HAZARD_OFF and t != "#":
+                return d
+        # Drop the recent filter, keep hazard avoidance.
         for d in ("e", "s", "w", "n"):
-            if nb.get(d) not in AVOID_TILES:
+            t = nb.get(d)
+            if t and t not in HAZARD_OFF and t != "#":
+                return d
+        # Last resort: any non-wall neighbour, even a hazard.
+        for d in ("e", "s", "w", "n"):
+            t = nb.get(d)
+            if t and t != "#":
                 return d
         return rng.choice(["n", "s", "e", "w"])
 
