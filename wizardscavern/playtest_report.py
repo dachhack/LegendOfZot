@@ -215,6 +215,74 @@ class SpriteRegistry:
         return "\n".join(rules)
 
 
+_MEAT_CUTS = (
+    "burger", "chops", "cold cuts", "filet", "kebab",
+    "nuggets", "roast", "skewer", "steak",
+)
+
+
+def _normalize_meat_name(raw, cooked):
+    """Drop leading descriptor words and lowercase the cut so cook
+    log entries (`Cooked Kobold Cold cuts`) and eat log entries
+    (`Cooked sinewy Kobold cold cuts`) hash to the same key in the
+    food-economy table.
+
+    Strategy: find the trailing cut suffix from a known list (the
+    monster_meat table in items.py:2716+ has 9 cut shapes), then
+    take the word(s) immediately before it as the monster name --
+    everything before that is descriptor and gets dropped. This is
+    more robust than the earlier 'first capitalised word' heuristic
+    which mis-grouped two-word cooked-meat names where the cut
+    itself was capitalised (cook log emits {cut.capitalize()} so
+    'Cooked Gnoll Burger' looks like a two-word monster name)."""
+    raw = raw.strip()
+    low = raw.lower()
+    cut_found = None
+    body_end = len(raw)
+    for cand in _MEAT_CUTS:
+        # Match the cut as a trailing word boundary so 'cold cuts'
+        # wins over 'cuts'.
+        if low.endswith(" " + cand) or low == cand:
+            cut_found = cand
+            body_end = len(raw) - (len(cand) + (1 if low != cand else 0))
+            break
+    if cut_found is None:
+        # No known cut suffix -- this is the 'You harvested some
+        # raw X meat' case (cut == 'meat') or a sausage / lembas
+        # path. Fall back to identifying the first capitalised
+        # word as the monster name.
+        parts = raw.split()
+        monster_idx = next(
+            (i for i, w in enumerate(parts) if w and w[0].isupper()),
+            0,
+        )
+        monster = parts[monster_idx] if monster_idx < len(parts) else raw
+        if (monster_idx + 1 < len(parts)
+                and parts[monster_idx + 1]
+                and parts[monster_idx + 1][0].isupper()):
+            monster += " " + parts[monster_idx + 1]
+            cut_start = monster_idx + 2
+        else:
+            cut_start = monster_idx + 1
+        cut = " ".join(parts[cut_start:]).lower()
+        prefix = "Cooked " if cooked else "Raw "
+        return f"{prefix}{monster} {cut}".rstrip()
+    body = raw[:body_end].strip()
+    # The monster name is the trailing word(s) of `body`. Take the
+    # last 1-2 capitalised words; everything before is descriptor.
+    body_parts = body.split()
+    cap_run_start = len(body_parts)
+    for i in range(len(body_parts) - 1, -1, -1):
+        w = body_parts[i]
+        if w and w[0].isupper():
+            cap_run_start = i
+        else:
+            break
+    monster = " ".join(body_parts[cap_run_start:]).strip() or body
+    prefix = "Cooked " if cooked else "Raw "
+    return f"{prefix}{monster} {cut_found}"
+
+
 def _detect_loop_period(actions, min_matches=12):
     """Given a list of action strings, return the cycle period
     (1, 2, 3, or 4) if at least `min_matches` of them fit a tight
@@ -585,13 +653,19 @@ class RunReport:
             m = re.match(r"you ate (?:a |an )?([^!]+)!\s*hunger restored by (\d+)", line, re.IGNORECASE)
             if m:
                 # Format: "{descriptor} {monster_name} {cut}".
-                # Descriptors can be 1-3 words ('sinewy',
-                # 'barely palatable', 'tough and gamey'), so a
-                # naive first-word strip mis-normalises. Keep the
-                # full descriptor; the food table tolerates a few
-                # extra rows per monster in exchange for honest
-                # text.
-                self.eat_events.append((turn, "Cooked " + m.group(1).strip(), int(m.group(2))))
+                # Descriptors are 1-3 lowercase words ('sinewy',
+                # 'barely palatable', 'tough and gamey'). Strip
+                # them by taking everything from the first
+                # capitalised word onward, then lowercase the cut
+                # so 'Cold cuts' and 'cold cuts' merge into one
+                # row. The cook log emits "Cooked X Y" where Y is
+                # cut.capitalize(), so the same normalisation
+                # produces a matching key.
+                self.eat_events.append((
+                    turn,
+                    _normalize_meat_name(m.group(1).strip(), cooked=True),
+                    int(m.group(2)),
+                ))
             elif "hunger restored by" in low:
                 # Raw-meat fall-through: previous line had the gnaw
                 # description; this line just carries the N. Pull
@@ -601,7 +675,16 @@ class RunReport:
                     self.eat_events.append((turn, "Raw meat (gnawed)", int(m2.group(1))))
         m = re.match(r"you cooked the ([^!]+)!", line, re.IGNORECASE)
         if m:
-            self.cook_events.append((turn, m.group(1).strip()))
+            # Cook log shape: 'You cooked the Cooked {Monster} {Cut}'
+            # (items.py:2932 renames the meat to 'Cooked {M} {Cut}'
+            # via cut.capitalize() BEFORE this log fires). Strip the
+            # outer 'Cooked ' so the captured group is just the
+            # monster+cut, then re-prefix via _normalize_meat_name
+            # to match the cooked-eat key shape.
+            raw = m.group(1).strip()
+            if raw.lower().startswith("cooked "):
+                raw = raw[len("cooked "):]
+            self.cook_events.append((turn, _normalize_meat_name(raw, cooked=True)))
         m = re.match(r"cooked (\d+) piece", line, re.IGNORECASE)
         if m:
             self.cook_batches.append((turn, int(m.group(1))))
@@ -1711,6 +1794,11 @@ class RunReport:
         cook_actions = len(self.cook_batches)
         meats_cooked = sum(n for (_t, n) in self.cook_batches)
         meats_rotted = len(self.meat_rot_events)
+        # Per-name cook counts (keyed via _normalize_meat_name so
+        # cook events and cooked-eat events hash to the same row).
+        cook_by_name = Counter()
+        for (_t, name) in self.cook_events:
+            cook_by_name[name] += 1
         # Food acquisition: count by name + source from self.buys
         # (vendor purchases) and self.found_items (chests / drops).
         buys_by_name = Counter()
@@ -1730,8 +1818,9 @@ class RunReport:
         hunger_min_s = f"{hunger_min}" if hunger_min is not None else "—"
         hunger_avg_s = f"{hunger_avg:.0f}" if hunger_avg is not None else "—"
         all_names = sorted(
-            set(found_by_name) | set(buys_by_name) | set(eat_count),
-            key=lambda n: -(found_by_name.get(n, 0) + buys_by_name.get(n, 0) + eat_count.get(n, 0)),
+            set(found_by_name) | set(buys_by_name) | set(cook_by_name) | set(eat_count),
+            key=lambda n: -(found_by_name.get(n, 0) + buys_by_name.get(n, 0)
+                            + cook_by_name.get(n, 0) + eat_count.get(n, 0)),
         )
         # Cap to top 25 -- enough for the common cases (rations,
         # jerky, iron rations, plus all monster-meat variants) and
@@ -1741,17 +1830,18 @@ class RunReport:
             f"<tr><td>{html.escape(name)}</td>"
             f"<td>{found_by_name.get(name, 0)}</td>"
             f"<td>{buys_by_name.get(name, 0)}</td>"
+            f"<td>{cook_by_name.get(name, 0)}</td>"
             f"<td>{eat_count.get(name, 0)}</td>"
             f"<td>{eat_hunger.get(name, 0)}</td></tr>"
             for name in all_names[:25]
         )
         if len(all_names) > 25:
             food_rows += (
-                f"<tr><td colspan='5' class='muted'>… and {len(all_names) - 25} "
+                f"<tr><td colspan='6' class='muted'>… and {len(all_names) - 25} "
                 f"more food item(s) -- showing top 25 by activity</td></tr>"
             )
         if not food_rows:
-            food_rows = "<tr><td colspan='5' class='muted'>no food acquired or eaten</td></tr>"
+            food_rows = "<tr><td colspan='6' class='muted'>no food acquired or eaten</td></tr>"
         starving_pct = (turns_starving / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
         zero_pct = (turns_zero / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
         cook_note = (
@@ -1780,7 +1870,7 @@ class RunReport:
             <span class="v" style="text-align:right;font-size:0.85em;">{cook_note}</span></div>
         </div>
         <table style="margin-top:10px;">
-          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Eaten</th><th>Hunger restored</th></tr>
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Cooked</th><th>Eaten</th><th>Hunger restored</th></tr>
           {food_rows}
         </table>
       </div>

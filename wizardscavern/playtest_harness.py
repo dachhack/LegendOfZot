@@ -298,8 +298,30 @@ def _equipped_obs(pc):
             # F5: 850+ turns mashing '2' with 4g in pocket).
             "repair_cost_est": _repair_cost_est(it),
         }
-    return {"weapon": slot(pc.equipped_weapon),
-            "armor":  slot(pc.equipped_armor)}
+    out = {"weapon": slot(pc.equipped_weapon),
+           "armor":  slot(pc.equipped_armor)}
+    # Gear-only 1-based slot index of each equipped item in the
+    # sorted-inventory-filtered-to-(Weapon|Armor) view -- the same
+    # ordering process_upgrade_scroll_action builds its menu from
+    # (items.py:2123-2127). Exposed here because obs.inventory gets
+    # filter-narrowed when gs.inventory_filter is set ('use' /
+    # 'equip' / 'eat'), so an in-mode scroll picker can't always
+    # walk obs.inventory to find the equipped slot.
+    from .characters import get_sorted_inventory
+    gear_only = [
+        i for i in get_sorted_inventory(pc.inventory)
+        if isinstance(i, (Weapon, Armor))
+    ]
+    weapon_gear_idx = None
+    armor_gear_idx = None
+    for idx, item in enumerate(gear_only, 1):
+        if item is pc.equipped_weapon and weapon_gear_idx is None:
+            weapon_gear_idx = idx
+        if item is pc.equipped_armor and armor_gear_idx is None:
+            armor_gear_idx = idx
+    out["weapon_gear_idx"] = weapon_gear_idx
+    out["armor_gear_idx"] = armor_gear_idx
+    return out
 
 
 def _repair_cost_est(item):
@@ -3674,33 +3696,53 @@ def smart_policy(obs, rng, use_lantern=True):
         # consumes the scroll). Cancel rather than walk junk slots.
         if last_us and last_us.isdigit():
             return "c"
-        gear_idx = 0
-        equipped_idx = None
-        equipped_upg = 0
-        equipped_cat = None
-        for entry in inv:
-            if entry["category"] not in ("weapon", "armor"):
-                continue
-            gear_idx += 1
-            if entry.get("equipped"):
-                # Prefer weapon over armor when both are equipped --
-                # weapon-bonus scales kill speed; armor only soaks.
-                if entry["category"] == "weapon":
-                    equipped_idx = gear_idx
-                    equipped_upg = entry.get("upgrade_level", 0)
-                    equipped_cat = "weapon"
-                    break
-                if equipped_idx is None:
-                    equipped_idx = gear_idx
-                    equipped_upg = entry.get("upgrade_level", 0)
-                    equipped_cat = "armor"
-        # Weapon already at this scroll's cap -- cancel and hold the
-        # scroll for a higher tier. (If only armor is equipped and
-        # IT is at the cap, same deal.)
-        if equipped_idx is not None and equipped_upg >= scroll_cap:
+        # Collect BOTH equipped weapon and armor slots. Earlier policy
+        # always picked weapon when both were equipped, so an agent
+        # with 6 scrolls and a Longsword + Splint Armor ended up with
+        # 2 weapon upgrades and 0 armor upgrades (s=857 human
+        # Erkenbrand the Tall: weapon got 2 upgrades, armor got 0).
+        # Round-robin instead: pick whichever piece has the lower
+        # upgrade level so both gear slots scale together. Weapon
+        # wins ties because attack scales kill speed (which
+        # compresses every other survival metric) more than armor
+        # soak does -- but only by a tiebreak, not as a hard rule.
+        #
+        # NB: in upgrade_scroll_mode the harness still applies the
+        # 'use' inventory filter, so obs.inventory hides Weapon/Armor
+        # entries entirely. We can't walk it for the gear index here
+        # -- pull the equipped_*_gear_idx fields off obs.player.equipped
+        # instead (computed off the unfiltered sorted view).
+        eq_weapon_idx = equipped.get("weapon_gear_idx")
+        eq_armor_idx = equipped.get("armor_gear_idx")
+        eq_weapon_upg = (equipped.get("weapon") or {}).get("upgrade_level", 0)
+        eq_armor_upg = (equipped.get("armor") or {}).get("upgrade_level", 0)
+        # Decide which slot to upgrade. Skip a slot whose item is
+        # already at the scroll's cap (the handler keeps the scroll
+        # but errors silently). If both at cap, cancel and save the
+        # scroll for a stronger tier.
+        wpn_eligible = eq_weapon_idx is not None and eq_weapon_upg < scroll_cap
+        arm_eligible = eq_armor_idx is not None and eq_armor_upg < scroll_cap
+        if not wpn_eligible and not arm_eligible:
             return "c"
-        if equipped_idx is not None and equipped_idx <= 9:
-            return str(equipped_idx)
+        # Routing rule: weapon priority by default (attack scales
+        # kill speed, which compresses every other survival metric)
+        # but let armor catch up when it's lagging by 2+ levels.
+        # On a 6-scroll budget that produces roughly a 4 weapon /
+        # 2 armor split, which mirrors the user's intuition that
+        # the equipped armor should also be getting some upgrades.
+        ARMOR_CATCHUP_GAP = 2
+        chosen_idx = None
+        if wpn_eligible and arm_eligible:
+            if eq_weapon_upg - eq_armor_upg >= ARMOR_CATCHUP_GAP:
+                chosen_idx = eq_armor_idx
+            else:
+                chosen_idx = eq_weapon_idx
+        elif wpn_eligible:
+            chosen_idx = eq_weapon_idx
+        else:
+            chosen_idx = eq_armor_idx
+        if chosen_idx is not None and chosen_idx <= 9:
+            return str(chosen_idx)
         return "1"
 
     if mode == "foresight_direction_mode":
