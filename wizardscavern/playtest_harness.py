@@ -1973,15 +1973,24 @@ class PlaytestSession:
             self._last_floor = pc_after.z
             self.floor_arrival_turn = self.turn
             # Record this floor change in the oscillation tracker.
-            # Prune entries older than 300T from the deque so the
-            # detector only fires on RECENT bounce patterns, not
-            # legitimate descent across many floors over a long run.
-            self._floor_changes_recent.append(self.turn)
+            # Prune entries older than 300T so the detector fires on
+            # RECENT bounce patterns, not legitimate descent across
+            # many floors over a long run. Build-327 v1 used a plain
+            # len>=5 trigger, which cut off real progressors like
+            # 00023_elf reaching F7 with 7+ floor changes in normal
+            # descent. v2 refines: abort ONLY when 5+ changes AND <=2
+            # unique floors in the window. F1<->F2 ping-pong: 2 unique
+            # -> abort. F1->F2->F3->F4->F5->F6: 6 unique -> let it run.
+            # F2<->F3 after F1 falls out of window: window slides, F1
+            # prunes away, unique drops to 2, abort fires correctly.
+            self._floor_changes_recent.append((self.turn, pc_after.z))
             while (self._floor_changes_recent
-                   and self._floor_changes_recent[0] < self.turn - 300):
+                   and self._floor_changes_recent[0][0] < self.turn - 300):
                 self._floor_changes_recent.popleft()
             if len(self._floor_changes_recent) >= 5:
-                self._oscillation_aborted = True
+                unique_floors = {z for _t, z in self._floor_changes_recent}
+                if len(unique_floors) <= 2:
+                    self._oscillation_aborted = True
             # Clear the recent-position history on floor change so the
             # anti-backtrack guard doesn't try to avoid a tile that's
             # no longer reachable (different floor).
