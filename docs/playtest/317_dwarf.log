@@ -4055,730 +4055,1278 @@ T2018 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0
 T2019 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 59 $ 103 room=T
 -> n
 T2020 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 59 $ 103 room=U
--> s
-T2021 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 58 $ 103 room=T
+-> u
+T2021 mode=stairs_down_mode    Gimli of Khazad-dum(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 59 $ 103 room=D
 -> n
-T2022 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 57 $ 103 room=U
--> s
-T2023 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=T
--> n
-T2024 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 56 $ 103 room=U
--> s
-T2025 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 55 $ 103 room=T
--> n
-T2026 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 54 $ 103 room=U
--> s
-T2027 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 54 $ 103 room=T
--> n
-T2028 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 53 $ 103 room=U
--> s
-T2029 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=T
--> n
-T2030 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 52 $ 103 room=U
--> s
-T2031 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 51 $ 103 room=T
--> n
-T2032 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 50 $ 103 room=U
--> s
-T2033 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> i
-T2034 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> eat1
-T2035 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu100 $ 103 room=T
--> x
-T2036 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu100 $ 103 room=T
--> n
-T2037 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu100 $ 103 room=U
--> s
-T2038 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=T
--> n
-T2039 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 98 $ 103 room=U
--> s
-T2040 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 98 $ 103 room=T
--> n
-T2041 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 97 $ 103 room=U
--> s
-T2042 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 96 $ 103 room=T
--> n
-T2043 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 96 $ 103 room=U
--> s
-T2044 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 95 $ 103 room=T
--> n
-T2045 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 94 $ 103 room=U
--> s
-T2046 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 93 $ 103 room=T
--> n
-T2047 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 93 $ 103 room=U
--> s
-T2048 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 92 $ 103 room=T
--> n
-T2049 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 91 $ 103 room=U
--> s
-T2050 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 91 $ 103 room=T
--> n
-T2051 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 90 $ 103 room=U
--> s
-T2052 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 89 $ 103 room=T
--> n
-T2053 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 89 $ 103 room=U
--> s
-T2054 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 88 $ 103 room=T
--> n
-T2055 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 87 $ 103 room=U
--> s
-T2056 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 86 $ 103 room=T
--> n
-T2057 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 86 $ 103 room=U
--> s
-T2058 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 85 $ 103 room=T
--> n
-T2059 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 84 $ 103 room=U
--> s
-T2060 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 84 $ 103 room=T
--> n
-T2061 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 83 $ 103 room=U
--> s
-T2062 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=T
--> n
-T2063 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 82 $ 103 room=U
--> s
-T2064 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 81 $ 103 room=T
--> n
-T2065 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 80 $ 103 room=U
--> s
-T2066 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 79 $ 103 room=T
--> n
-T2067 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 79 $ 103 room=U
--> s
-T2068 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 78 $ 103 room=T
--> n
-T2069 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 77 $ 103 room=U
--> s
-T2070 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=T
--> n
-T2071 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 76 $ 103 room=U
--> s
-T2072 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 75 $ 103 room=T
--> n
-T2073 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 75 $ 103 room=U
--> s
-T2074 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 74 $ 103 room=T
--> n
-T2075 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 103 room=U
--> s
-T2076 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 72 $ 103 room=T
--> n
-T2077 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 72 $ 103 room=U
--> s
-T2078 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 71 $ 103 room=T
--> n
-T2079 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 70 $ 103 room=U
--> s
-T2080 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 70 $ 103 room=T
--> n
-T2081 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 69 $ 103 room=U
--> s
-T2082 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 68 $ 103 room=T
--> n
-T2083 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 68 $ 103 room=U
--> s
-T2084 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 67 $ 103 room=T
--> n
-T2085 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 66 $ 103 room=U
--> s
-T2086 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=T
--> n
-T2087 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 65 $ 103 room=U
--> s
-T2088 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 64 $ 103 room=T
--> n
-T2089 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 63 $ 103 room=U
--> s
-T2090 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 63 $ 103 room=T
--> n
-T2091 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 62 $ 103 room=U
--> s
-T2092 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=T
--> n
-T2093 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 61 $ 103 room=U
--> s
-T2094 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 60 $ 103 room=T
--> n
-T2095 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 59 $ 103 room=U
--> s
-T2096 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 58 $ 103 room=T
--> n
-T2097 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 58 $ 103 room=U
--> s
-T2098 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 57 $ 103 room=T
--> n
-T2099 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 56 $ 103 room=U
--> s
-T2100 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=T
--> n
-T2101 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 55 $ 103 room=U
--> s
-T2102 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 54 $ 103 room=T
--> n
-T2103 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 54 $ 103 room=U
--> s
-T2104 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 53 $ 103 room=T
--> n
-T2105 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 52 $ 103 room=U
--> s
-T2106 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 51 $ 103 room=T
--> n
-T2107 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 51 $ 103 room=U
--> s
-T2108 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 50 $ 103 room=T
--> n
-T2109 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 49 $ 103 room=U
--> s
-T2110 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> i
-T2111 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> eat1
-T2112 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 84 $ 103 room=T
--> x
-T2113 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 84 $ 103 room=T
--> n
-T2114 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 83 $ 103 room=U
--> s
-T2115 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=T
--> n
-T2116 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 82 $ 103 room=U
--> s
-T2117 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 81 $ 103 room=T
--> n
-T2118 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 80 $ 103 room=U
--> s
-T2119 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 79 $ 103 room=T
--> n
-T2120 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 79 $ 103 room=U
--> s
-T2121 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 78 $ 103 room=T
--> n
-T2122 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 77 $ 103 room=U
--> s
-T2123 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=T
--> n
-T2124 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 76 $ 103 room=U
--> s
-T2125 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 75 $ 103 room=T
--> n
-T2126 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 75 $ 103 room=U
--> s
-T2127 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 74 $ 103 room=T
--> n
-T2128 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 73 $ 103 room=U
--> s
-T2129 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 72 $ 103 room=T
--> n
-T2130 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 72 $ 103 room=U
--> s
-T2131 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 71 $ 103 room=T
--> n
-T2132 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 70 $ 103 room=U
--> s
-T2133 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 70 $ 103 room=T
--> n
-T2134 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 69 $ 103 room=U
--> s
-T2135 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 68 $ 103 room=T
--> n
-T2136 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 68 $ 103 room=U
--> s
-T2137 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 67 $ 103 room=T
--> n
-T2138 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 66 $ 103 room=U
--> s
-T2139 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=T
--> n
-T2140 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 65 $ 103 room=U
--> s
-T2141 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 64 $ 103 room=T
--> n
-T2142 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 63 $ 103 room=U
--> s
-T2143 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 63 $ 103 room=T
--> n
-T2144 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 62 $ 103 room=U
--> s
-T2145 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=T
--> n
-T2146 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 61 $ 103 room=U
--> s
-T2147 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 60 $ 103 room=T
--> n
-T2148 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 59 $ 103 room=U
--> s
-T2149 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 58 $ 103 room=T
--> n
-T2150 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 58 $ 103 room=U
--> s
-T2151 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 57 $ 103 room=T
--> n
-T2152 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 56 $ 103 room=U
--> s
-T2153 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=T
--> n
-T2154 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 55 $ 103 room=U
--> s
-T2155 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 54 $ 103 room=T
--> n
-T2156 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 54 $ 103 room=U
--> s
-T2157 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 53 $ 103 room=T
--> n
-T2158 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 52 $ 103 room=U
--> s
-T2159 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 51 $ 103 room=T
--> n
-T2160 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 51 $ 103 room=U
--> s
-T2161 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 50 $ 103 room=T
--> n
-T2162 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 49 $ 103 room=U
--> s
-T2163 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> i
-T2164 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=T
--> eat1
-T2165 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=T
--> x
-T2166 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=T
--> n
-T2167 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 98 $ 103 room=U
--> s
-T2168 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 97 $ 103 room=T
--> n
-T2169 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 97 $ 103 room=U
--> s
-T2170 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 96 $ 103 room=T
--> l
-T2171 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 96 $ 103 room=T
--> l
-T2172 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 96 $ 103 room=T
+T2022 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 58 $ 103 room=U
 -> e
-T2173 mode=combat_mode         Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 95 $ 103 room=M vs UNDEAD SKELETON(L2 HP31/31)
--> a
-T2174 mode=combat_mode         Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 67/74 MP 0/0 Hu 95 $ 103 room=M vs UNDEAD SKELETON(L2 HP31/31)
--> a
-T2175 mode=combat_mode         Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 60/74 MP 0/0 Hu 95 $ 103 room=M vs UNDEAD SKELETON(L2 HP31/31)
--> a
-T2176 mode=combat_mode         Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 53/74 MP 0/0 Hu 95 $ 103 room=M vs UNDEAD SKELETON(L2 HP6/31)
--> a
-T2177 mode=combat_victory      Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 53/74 MP 0/0 Hu 95 $ 109 room=.
--> back
-T2178 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 53/74 MP 0/0 Hu 95 $ 109 room=.
--> l
-T2179 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 2, 2) HP 53/74 MP 0/0 Hu 95 $ 109 room=.
--> e
-T2180 mode=library_mode        Gimli of Khazad-dum(dwa) F3@( 3, 2) HP 53/74 MP 0/0 Hu 94 $ 109 room=L
--> r
-T2181 mode=library_read_decision_mode Gimli of Khazad-dum(dwa) F3@( 3, 2) HP 53/74 MP 0/0 Hu 94 $ 109 room=L
--> y
-T2182 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 3, 2) HP 53/74 MP 0/0 Hu 94 $ 109 room=.
--> l
-T2183 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 3, 2) HP 53/74 MP 0/0 Hu 94 $ 109 room=.
--> e
-T2184 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 4, 2) HP 54/74 MP 0/0 Hu 94 $ 109 room=.
--> l
-T2185 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 4, 2) HP 54/74 MP 0/0 Hu 94 $ 109 room=.
+T2023 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 57 $ 103 room=V
 -> s
-T2186 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 4, 3) HP 54/74 MP 0/0 Hu 93 $ 109 room=.
--> l
-T2187 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 4, 3) HP 54/74 MP 0/0 Hu 93 $ 109 room=.
--> e
-T2188 mode=library_mode        Gimli of Khazad-dum(dwa) F3@( 5, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=L
--> r
-T2189 mode=library_read_decision_mode Gimli of Khazad-dum(dwa) F3@( 5, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=L
--> y
-T2190 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 5, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=.
--> l
-T2191 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 5, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=.
--> e
-T2192 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=.
--> l
-T2193 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 3) HP 55/74 MP 0/0 Hu 92 $ 109 room=.
--> e
-T2194 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 7, 3) HP 56/74 MP 0/0 Hu 91 $ 109 room=.
--> l
-T2195 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 7, 3) HP 56/74 MP 0/0 Hu 91 $ 109 room=.
--> e
-T2196 mode=altar_mode          Gimli of Khazad-dum(dwa) F3@( 8, 3) HP 56/74 MP 0/0 Hu 90 $ 109 room=A
--> pray
-T2197 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 3) HP 56/74 MP 0/0 Hu 90 $ 115 room=.
--> l
-T2198 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 3) HP 56/74 MP 0/0 Hu 90 $ 115 room=.
--> n
-T2199 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 2) HP 57/74 MP 0/0 Hu 90 $ 115 room=.
--> i
-T2200 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 8, 2) HP 57/74 MP 0/0 Hu 90 $ 115 room=.
--> u7
-T2201 mode=inventory           Gimli of Khazad-dum(dwa) F3@( 8, 2) HP 74/74 MP 0/0 Hu 90 $ 115 room=.
--> x
-T2202 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 2) HP 74/74 MP 0/0 Hu 90 $ 115 room=.
--> n
-T2203 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 1) HP 74/74 MP 0/0 Hu 89 $ 115 room=.
--> l
-T2204 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 1) HP 74/74 MP 0/0 Hu 89 $ 115 room=.
+T2024 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> s
+T2025 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
 -> w
-T2205 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 115 room=V
--> r2
-T2206 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 71 room=V
--> b13
-T2207 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 41 room=V
--> b13
-T2208 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 26 room=V
--> b13
-T2209 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 16 room=V
--> b14
-T2210 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 11 room=V
--> b14
-T2211 mode=vendor_shop         Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 6 room=V
--> x
-T2212 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 88 $ 6 room=V
--> w
-T2213 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 1) HP 74/74 MP 0/0 Hu 87 $ 6 room=.
+T2026 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
 -> s
-T2214 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 2) HP 74/74 MP 0/0 Hu 87 $ 6 room=.
+T2027 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
 -> s
-T2215 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 3) HP 74/74 MP 0/0 Hu 86 $ 6 room=.
--> s
-T2216 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 6, 4) HP 74/74 MP 0/0 Hu 85 $ 6 room=.
+T2028 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
 -> e
-T2217 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 7, 4) HP 74/74 MP 0/0 Hu 85 $ 6 room=.
--> e
-T2218 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 4) HP 74/74 MP 0/0 Hu 84 $ 6 room=.
+T2029 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 53 $ 103 room=.
 -> n
-T2219 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 8, 3) HP 74/74 MP 0/0 Hu 83 $ 6 room=.
+T2030 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> n
+T2031 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> w
+T2032 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> s
+T2033 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> s
+T2034 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> i
+T2035 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> eat1
+T2036 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu100 $ 103 room=.
+-> x
+T2037 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 74/74 MP 0/0 Hu100 $ 103 room=.
 -> e
-T2220 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 3) HP 74/74 MP 0/0 Hu 83 $ 6 room=.
--> l
-T2221 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 3) HP 74/74 MP 0/0 Hu 83 $ 6 room=.
--> l
-T2222 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 3) HP 74/74 MP 0/0 Hu 83 $ 6 room=.
--> s
-T2223 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 4) HP 74/74 MP 0/0 Hu 82 $ 6 room=.
--> l
-T2224 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 4) HP 74/74 MP 0/0 Hu 82 $ 6 room=.
--> s
-T2225 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 5) HP 74/74 MP 0/0 Hu 81 $ 6 room=.
--> l
-T2226 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 5) HP 74/74 MP 0/0 Hu 81 $ 6 room=.
--> s
-T2227 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 6) HP 74/74 MP 0/0 Hu 80 $ 6 room=.
--> l
-T2228 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 6) HP 74/74 MP 0/0 Hu 80 $ 6 room=.
--> s
-T2229 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 7) HP 74/74 MP 0/0 Hu 80 $ 6 room=.
--> l
-T2230 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 7) HP 74/74 MP 0/0 Hu 80 $ 6 room=.
--> s
-T2231 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 8) HP 74/74 MP 0/0 Hu 79 $ 6 room=.
--> l
-T2232 mode=game_loop           Gimli of Khazad-dum(dwa) F3@( 9, 8) HP 74/74 MP 0/0 Hu 79 $ 6 room=.
+T2038 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu100 $ 103 room=.
+-> n
+T2039 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> n
+T2040 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 98 $ 103 room=.
 -> e
-T2233 mode=pool_mode           Gimli of Khazad-dum(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 78 $ 6 room=P
+T2041 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 3, 3) HP 74/74 MP 0/0 Hu 98 $ 103 room=.
+-> e
+T2042 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 3) HP 74/74 MP 0/0 Hu 97 $ 103 room=.
+-> s
+T2043 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 96 $ 103 room=.
+-> n
+T2044 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 3) HP 74/74 MP 0/0 Hu 96 $ 103 room=.
+-> n
+T2045 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 2) HP 74/74 MP 0/0 Hu 95 $ 103 room=.
+-> e
+T2046 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 5, 2) HP 74/74 MP 0/0 Hu 94 $ 103 room=.
+-> e
+T2047 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6, 2) HP 74/74 MP 0/0 Hu 93 $ 103 room=.
+-> e
+T2048 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 2) HP 74/74 MP 0/0 Hu 93 $ 103 room=.
+-> e
+T2049 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 2) HP 74/74 MP 0/0 Hu 92 $ 103 room=.
+-> e
+T2050 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 91 $ 103 room=.
+-> s
+T2051 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 91 $ 103 room=.
+-> e
+T2052 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 90 $ 103 room=.
+-> n
+T2053 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 89 $ 103 room=.
+-> n
+T2054 mode=warp_mode           Gimli of Khazad-dum(dwa) F2@(10, 1) HP 74/74 MP 0/0 Hu 89 $ 103 room=W
+-> y
+T2055 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 1) HP 74/74 MP 0/0 Hu 89 $ 103 room=W
+-> e
+T2056 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 88 $ 103 room=.
+-> s
+T2057 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 87 $ 103 room=.
+-> s
+T2058 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 86 $ 103 room=.
+-> w
+T2059 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 86 $ 103 room=.
+-> n
+T2060 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 85 $ 103 room=.
+-> w
+T2061 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> w
+T2062 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 2) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> n
+T2063 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 1) HP 74/74 MP 0/0 Hu 83 $ 103 room=P
+-> e
+T2064 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 1) HP 74/74 MP 0/0 Hu 82 $ 103 room=.
+-> s
+T2065 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=.
+-> e
+T2066 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 81 $ 103 room=.
+-> e
+T2067 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 80 $ 103 room=.
+-> s
+T2068 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 79 $ 103 room=.
+-> w
+T2069 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 79 $ 103 room=.
+-> w
+T2070 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 78 $ 103 room=.
+-> n
+T2071 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=.
+-> e
+T2072 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=.
+-> e
+T2073 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 76 $ 103 room=.
+-> s
+T2074 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 75 $ 103 room=.
+-> w
+T2075 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 75 $ 103 room=.
+-> w
+T2076 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 74 $ 103 room=.
+-> n
+T2077 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 73 $ 103 room=.
+-> e
+T2078 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 72 $ 103 room=.
+-> e
+T2079 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 72 $ 103 room=.
+-> s
+T2080 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 71 $ 103 room=.
+-> w
+T2081 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 70 $ 103 room=.
+-> w
+T2082 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 70 $ 103 room=.
+-> n
+T2083 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 69 $ 103 room=.
+-> e
+T2084 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 68 $ 103 room=.
+-> e
+T2085 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 68 $ 103 room=.
+-> s
+T2086 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 67 $ 103 room=.
+-> w
+T2087 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 66 $ 103 room=.
+-> w
+T2088 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 65 $ 103 room=.
+-> n
+T2089 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=.
+-> e
+T2090 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 64 $ 103 room=.
+-> e
+T2091 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 63 $ 103 room=.
+-> s
+T2092 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 63 $ 103 room=.
+-> w
+T2093 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 62 $ 103 room=.
+-> w
+T2094 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 61 $ 103 room=.
+-> n
+T2095 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=.
+-> e
+T2096 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 60 $ 103 room=.
+-> e
+T2097 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 59 $ 103 room=.
+-> s
+T2098 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 58 $ 103 room=.
+-> w
+T2099 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 58 $ 103 room=.
+-> w
+T2100 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 57 $ 103 room=.
+-> n
+T2101 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> e
+T2102 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> e
+T2103 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
+-> s
+T2104 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
+-> w
+T2105 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
+-> w
+T2106 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 53 $ 103 room=.
+-> n
+T2107 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> e
+T2108 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> e
+T2109 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> s
+T2110 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> w
+T2111 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> i
+T2112 mode=inventory           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> eat1
+T2113 mode=inventory           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> x
+T2114 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> w
+T2115 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> n
+T2116 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 83 $ 103 room=.
+-> e
+T2117 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=.
+-> e
+T2118 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=.
+-> s
+T2119 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 81 $ 103 room=.
+-> w
+T2120 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 80 $ 103 room=.
+-> w
+T2121 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 79 $ 103 room=.
+-> n
+T2122 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 79 $ 103 room=.
+-> e
+T2123 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 78 $ 103 room=.
+-> e
+T2124 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=.
+-> s
+T2125 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 77 $ 103 room=.
+-> w
+T2126 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 76 $ 103 room=.
+-> w
+T2127 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 75 $ 103 room=.
+-> n
+T2128 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 75 $ 103 room=.
+-> e
+T2129 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 74 $ 103 room=.
+-> e
+T2130 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 73 $ 103 room=.
+-> s
+T2131 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 72 $ 103 room=.
+-> w
+T2132 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 72 $ 103 room=.
+-> w
+T2133 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 71 $ 103 room=.
+-> n
+T2134 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 70 $ 103 room=.
+-> e
+T2135 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 70 $ 103 room=.
+-> e
+T2136 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 69 $ 103 room=.
+-> s
+T2137 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 68 $ 103 room=.
+-> w
+T2138 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 68 $ 103 room=.
+-> w
+T2139 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 67 $ 103 room=.
+-> n
+T2140 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 66 $ 103 room=.
+-> e
+T2141 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=.
+-> e
+T2142 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=.
+-> s
+T2143 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 64 $ 103 room=.
+-> w
+T2144 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 63 $ 103 room=.
+-> w
+T2145 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 63 $ 103 room=.
+-> n
+T2146 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 62 $ 103 room=.
+-> e
+T2147 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=.
+-> e
+T2148 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=.
+-> s
+T2149 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 60 $ 103 room=.
+-> w
+T2150 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 59 $ 103 room=.
+-> w
+T2151 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 58 $ 103 room=.
+-> n
+T2152 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 58 $ 103 room=.
+-> e
+T2153 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 57 $ 103 room=.
+-> e
+T2154 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> s
+T2155 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> w
+T2156 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
+-> w
+T2157 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
+-> n
+T2158 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
+-> e
+T2159 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 53 $ 103 room=.
+-> e
+T2160 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> s
+T2161 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> w
+T2162 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> w
+T2163 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> n
+T2164 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> i
+T2165 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> eat1
+T2166 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> x
+T2167 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> e
+T2168 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> e
+T2169 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 98 $ 103 room=.
+-> s
+T2170 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 97 $ 103 room=.
+-> w
+T2171 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 97 $ 103 room=.
+-> w
+T2172 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 96 $ 103 room=.
+-> n
+T2173 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 95 $ 103 room=.
+-> e
+T2174 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 94 $ 103 room=.
+-> e
+T2175 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 94 $ 103 room=.
+-> s
+T2176 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 93 $ 103 room=.
+-> w
+T2177 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 92 $ 103 room=.
+-> w
+T2178 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 92 $ 103 room=.
+-> n
+T2179 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 91 $ 103 room=.
+-> e
+T2180 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 90 $ 103 room=.
+-> e
+T2181 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 90 $ 103 room=.
+-> s
+T2182 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 89 $ 103 room=.
+-> w
+T2183 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 88 $ 103 room=.
+-> w
+T2184 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 87 $ 103 room=.
+-> n
+T2185 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 87 $ 103 room=.
+-> e
+T2186 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 86 $ 103 room=.
+-> e
+T2187 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 85 $ 103 room=.
+-> s
+T2188 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 85 $ 103 room=.
+-> w
+T2189 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 84 $ 103 room=.
+-> w
+T2190 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 83 $ 103 room=.
+-> n
+T2191 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 83 $ 103 room=.
+-> e
+T2192 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 82 $ 103 room=.
+-> e
+T2193 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 103 room=.
+-> s
+T2194 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 80 $ 103 room=.
+-> w
+T2195 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 80 $ 103 room=.
+-> w
+T2196 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 79 $ 103 room=.
+-> n
+T2197 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 78 $ 103 room=.
+-> e
+T2198 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 78 $ 103 room=.
+-> e
+T2199 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 77 $ 103 room=.
+-> s
+T2200 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 76 $ 103 room=.
+-> w
+T2201 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 76 $ 103 room=.
+-> w
+T2202 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 75 $ 103 room=.
+-> n
+T2203 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 74 $ 103 room=.
+-> e
+T2204 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 73 $ 103 room=.
+-> e
+T2205 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 73 $ 103 room=.
+-> s
+T2206 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 72 $ 103 room=.
+-> w
+T2207 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 71 $ 103 room=.
+-> w
+T2208 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 71 $ 103 room=.
+-> n
+T2209 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 70 $ 103 room=.
+-> e
+T2210 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 69 $ 103 room=.
+-> e
+T2211 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 69 $ 103 room=.
+-> s
+T2212 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 68 $ 103 room=.
+-> w
+T2213 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 67 $ 103 room=.
+-> w
+T2214 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 66 $ 103 room=.
+-> n
+T2215 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 66 $ 103 room=.
+-> e
+T2216 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 65 $ 103 room=.
+-> e
+T2217 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 64 $ 103 room=.
+-> s
+T2218 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 64 $ 103 room=.
+-> w
+T2219 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 63 $ 103 room=.
+-> w
+T2220 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 62 $ 103 room=.
+-> n
+T2221 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 62 $ 103 room=.
+-> e
+T2222 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 61 $ 103 room=.
+-> e
+T2223 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 60 $ 103 room=.
+-> s
+T2224 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 59 $ 103 room=.
+-> w
+T2225 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 59 $ 103 room=.
+-> w
+T2226 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 58 $ 103 room=.
+-> n
+T2227 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 57 $ 103 room=.
+-> e
+T2228 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 57 $ 103 room=.
+-> e
+T2229 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 56 $ 103 room=.
+-> s
+T2230 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
+-> l
+T2231 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
+-> w
+T2232 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 55 $ 103 room=.
+-> w
+T2233 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 54 $ 103 room=.
+-> n
+T2234 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 2) HP 74/74 MP 0/0 Hu 53 $ 103 room=.
+-> e
+T2235 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> e
+T2236 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> l
+T2237 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 52 $ 103 room=.
+-> s
+T2238 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 51 $ 103 room=.
+-> w
+T2239 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 3) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> w
+T2240 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> l
+T2241 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 50 $ 103 room=.
+-> s
+T2242 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> i
+T2243 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 49 $ 103 room=.
+-> eat1
+T2244 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> x
+T2245 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 99 $ 103 room=.
+-> s
+T2246 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 5) HP 74/74 MP 0/0 Hu 98 $ 103 room=.
+-> s
+T2247 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 6) HP 74/74 MP 0/0 Hu 98 $ 103 room=.
+-> e
+T2248 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 6) HP 74/74 MP 0/0 Hu 97 $ 103 room=N
+-> e
+T2249 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 6) HP 74/74 MP 0/0 Hu 96 $ 103 room=.
+-> s
+T2250 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 95 $ 103 room=.
+-> l
+T2251 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 95 $ 103 room=.
+-> s
+T2252 mode=library_mode        Gimli of Khazad-dum(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 95 $ 103 room=L
+-> r
+T2253 mode=library_read_decision_mode Gimli of Khazad-dum(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 95 $ 103 room=L
+-> y
+T2254 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 95 $ 178 room=.
+-> l
+T2255 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 95 $ 178 room=.
+-> s
+T2256 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 66/74 MP 0/0 Hu 94 $ 178 room=.
+-> l
+T2257 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 66/74 MP 0/0 Hu 94 $ 178 room=.
+-> e
+T2258 mode=pool_mode           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 59/74 MP 0/0 Hu 93 $ 178 room=P
 -> dr
-T2234 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 78 $ 6 room=.
--> l
-T2235 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(10, 8) HP 74/74 MP 0/0 Hu 78 $ 6 room=.
--> e
-T2236 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu 78 $ 6 room=.
--> l
-T2237 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu 78 $ 6 room=.
--> e
-T2238 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(12, 8) HP 74/74 MP 0/0 Hu 77 $ 6 room=.
--> l
-T2239 mode=game_loop           Gimli of Khazad-dum(dwa) F3@(12, 8) HP 74/74 MP 0/0 Hu 77 $ 6 room=.
--> e
-T2240 mode=stairs_down_mode    Gimli of Khazad-dum(dwa) F3@(13, 8) HP 74/74 MP 0/0 Hu 76 $ 6 room=D
--> d
-T2241 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F4@( 1, 1) HP 74/74 MP 0/0 Hu 76 $ 6 room=U
--> n
-T2242 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F4@( 1, 1) HP 74/74 MP 0/0 Hu 76 $ 6 room=U
--> e
-T2243 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 1) HP 74/74 MP 0/0 Hu 76 $ 6 room=.
--> l
-T2244 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 1) HP 74/74 MP 0/0 Hu 76 $ 6 room=.
--> s
-T2245 mode=altar_mode          Gimli of Khazad-dum(dwa) F4@( 2, 2) HP 74/74 MP 0/0 Hu 75 $ 6 room=A
--> pray
-T2246 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 2) HP 74/74 MP 0/0 Hu100 $ 6 room=.
--> s
-T2247 mode=library_mode        Gimli of Khazad-dum(dwa) F4@( 2, 3) HP 74/74 MP 0/0 Hu 99 $ 6 room=L
--> r
-T2248 mode=library_read_decision_mode Gimli of Khazad-dum(dwa) F4@( 2, 3) HP 74/74 MP 0/0 Hu 99 $ 6 room=L
--> y
-T2249 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 3) HP 74/74 MP 0/0 Hu 99 $ 6 room=.
--> w
-T2250 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 1, 3) HP 74/74 MP 0/0 Hu 98 $ 6 room=.
--> n
-T2251 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 3) HP 74/74 MP 0/0 Hu 98 $ 6 room=.
--> e
-T2252 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 1, 3) HP 74/74 MP 0/0 Hu 97 $ 6 room=.
--> n
-T2253 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 1, 2) HP 74/74 MP 0/0 Hu 96 $ 6 room=.
--> n
-T2254 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F4@( 1, 1) HP 74/74 MP 0/0 Hu 96 $ 6 room=U
--> e
-T2255 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 2, 1) HP 74/74 MP 0/0 Hu 95 $ 6 room=.
--> e
-T2256 mode=altar_mode          Gimli of Khazad-dum(dwa) F4@( 3, 1) HP 74/74 MP 0/0 Hu 94 $ 6 room=A
--> pray
-T2257 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 3, 1) HP 74/74 MP 0/0 Hu 94 $ 206 room=.
--> e
-T2258 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 4, 1) HP 74/74 MP 0/0 Hu 94 $ 206 room=.
--> e
-T2259 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 5, 1) HP 74/74 MP 0/0 Hu 93 $ 206 room=.
--> e
-T2260 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 6, 1) HP 74/74 MP 0/0 Hu 92 $ 206 room=.
--> e
-T2261 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 7, 1) HP 74/74 MP 0/0 Hu 91 $ 206 room=.
--> e
-T2262 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 1) HP 74/74 MP 0/0 Hu 91 $ 206 room=.
--> e
-T2263 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 9, 1) HP 74/74 MP 0/0 Hu 90 $ 206 room=.
--> e
-T2264 mode=game_loop           Gimli of Khazad-dum(dwa) F4@(10, 1) HP 74/74 MP 0/0 Hu 89 $ 206 room=.
--> s
-T2265 mode=game_loop           Gimli of Khazad-dum(dwa) F4@(10, 2) HP 74/74 MP 0/0 Hu 89 $ 206 room=.
--> w
-T2266 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 9, 2) HP 74/74 MP 0/0 Hu 88 $ 206 room=.
--> s
-T2267 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 9, 3) HP 74/74 MP 0/0 Hu 87 $ 206 room=.
--> w
-T2268 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 3) HP 74/74 MP 0/0 Hu 87 $ 206 room=.
--> n
-T2269 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 2) HP 74/74 MP 0/0 Hu 86 $ 206 room=.
--> w
-T2270 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 7, 2) HP 74/74 MP 0/0 Hu 85 $ 206 room=.
--> w
-T2271 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 6, 2) HP 74/74 MP 0/0 Hu 84 $ 206 room=.
--> n
-T2272 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 6, 1) HP 74/74 MP 0/0 Hu 84 $ 206 room=.
--> e
-T2273 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 7, 1) HP 74/74 MP 0/0 Hu 83 $ 206 room=.
--> e
-T2274 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 1) HP 74/74 MP 0/0 Hu 82 $ 206 room=.
--> s
-T2275 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 2) HP 74/74 MP 0/0 Hu 82 $ 206 room=.
--> s
-T2276 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 8, 3) HP 74/74 MP 0/0 Hu 81 $ 206 room=.
--> e
-T2277 mode=game_loop           Gimli of Khazad-dum(dwa) F4@( 9, 3) HP 74/74 MP 0/0 Hu 80 $ 206 room=.
--> e
-T2278 mode=warp_mode           Gimli of Khazad-dum(dwa) F4@(10, 3) HP 74/74 MP 0/0 Hu 80 $ 206 room=W
--> y
-T2279 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 7, 9) HP 74/74 MP 0/0 Hu 80 $ 206 room=.
--> n
-T2280 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 7, 8) HP 74/74 MP 0/0 Hu 79 $ 306 room=.
--> w
-T2281 mode=chest_mode          Gimli of Khazad-dum(dwa) F6@( 6, 8) HP 74/74 MP 0/0 Hu 78 $ 306 room=C
--> o
-T2282 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 6, 8) HP 74/74 MP 0/0 Hu 78 $ 306 room=.
--> w
-T2283 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5, 8) HP 74/74 MP 0/0 Hu 77 $ 306 room=.
--> n
-T2284 mode=blacksmith_mode     Gimli of Khazad-dum(dwa) F6@( 5, 7) HP 74/74 MP 0/0 Hu 77 $ 306 room=B
--> 2
-T2285 mode=blacksmith_mode     Gimli of Khazad-dum(dwa) F6@( 5, 7) HP 74/74 MP 0/0 Hu 77 $ 266 room=B
--> s
-T2286 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5, 8) HP 74/74 MP 0/0 Hu 76 $ 266 room=.
--> s
-T2287 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5, 9) HP 74/74 MP 0/0 Hu 75 $ 266 room=.
--> s
-T2288 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5,10) HP 74/74 MP 0/0 Hu 75 $ 266 room=.
--> s
-T2289 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5,11) HP 74/74 MP 0/0 Hu 74 $ 266 room=.
--> e
-T2290 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@( 6,11) HP 74/74 MP 0/0 Hu 73 $ 266 room=M vs Hardened Kobold(L5 HP12/12)
--> f
-T2291 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@( 6,11) HP 73/74 MP 0/0 Hu 73 $ 266 room=M
--> w
-T2292 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5,11) HP 73/74 MP 0/0 Hu 73 $ 266 room=.
--> n
-T2293 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5,10) HP 73/74 MP 0/0 Hu 73 $ 266 room=.
--> n
-T2294 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5, 9) HP 73/74 MP 0/0 Hu 72 $ 266 room=.
--> n
-T2295 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 5, 8) HP 73/74 MP 0/0 Hu 71 $ 266 room=.
--> e
-T2296 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 6, 8) HP 74/74 MP 0/0 Hu 70 $ 266 room=.
--> e
-T2297 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 7, 8) HP 74/74 MP 0/0 Hu 70 $ 266 room=.
--> s
-T2298 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 7, 9) HP 74/74 MP 0/0 Hu 69 $ 266 room=.
--> e
-T2299 mode=game_loop           Gimli of Khazad-dum(dwa) F6@( 8, 9) HP 74/74 MP 0/0 Hu 68 $ 266 room=.
--> n
-T2300 mode=warp_mode           Gimli of Khazad-dum(dwa) F6@( 8, 8) HP 74/74 MP 0/0 Hu 68 $ 266 room=W
--> y
-T2301 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 8) HP 74/74 MP 0/0 Hu 68 $ 266 room=.
--> n
-T2302 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 7) HP 74/74 MP 0/0 Hu 67 $ 266 room=.
--> e
-T2303 mode=garden_mode         Gimli of Khazad-dum(dwa) F7@(18, 7) HP 74/74 MP 0/0 Hu 66 $ 266 room=G
--> h
-T2304 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 7) HP 74/74 MP 0/0 Hu 66 $ 266 room=.
--> s
-T2305 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 8) HP 74/74 MP 0/0 Hu 66 $ 266 room=.
--> s
-T2306 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 9) HP 74/74 MP 0/0 Hu 65 $ 266 room=.
--> s
-T2307 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18,10) HP 74/74 MP 0/0 Hu 64 $ 266 room=.
--> e
-T2308 mode=combat_mode         Gimli of Khazad-dum(dwa) F7@(19,10) HP 74/74 MP 0/0 Hu 63 $ 266 room=M vs Giant Spider(L6 HP46/46)
--> f
-T2309 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F7@(19,10) HP 64/74 MP 0/0 Hu 63 $ 266 room=M
--> w
-T2310 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18,10) HP 64/74 MP 0/0 Hu 63 $ 266 room=.
+T2259 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 24/74 MP 0/0 Hu 93 $ 178 room=.
 -> i
-T2311 mode=inventory           Gimli of Khazad-dum(dwa) F7@(18,10) HP 64/74 MP 0/0 Hu 63 $ 266 room=.
--> u8
-T2312 mode=inventory           Gimli of Khazad-dum(dwa) F7@(18,10) HP 74/74 MP 0/0 Hu 63 $ 266 room=.
+T2260 mode=inventory           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 24/74 MP 0/0 Hu 93 $ 178 room=.
+-> u7
+T2261 mode=inventory           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 54/74 MP 0/0 Hu 93 $ 178 room=.
+-> u1
+T2262 mode=inventory           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 54/74 MP 0/0 Hu 93 $ 178 room=.
 -> x
-T2313 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18,10) HP 74/74 MP 0/0 Hu 63 $ 266 room=.
--> n
-T2314 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 9) HP 74/74 MP 0/0 Hu 63 $ 266 room=.
--> n
-T2315 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 8) HP 74/74 MP 0/0 Hu 62 $ 266 room=.
+T2263 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 54/74 MP 0/0 Hu 93 $ 178 room=.
+-> l
+T2264 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 54/74 MP 0/0 Hu 93 $ 178 room=.
 -> w
-T2316 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 8) HP 74/74 MP 0/0 Hu 61 $ 266 room=.
+T2265 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 46/74 MP 0/0 Hu 93 $ 178 room=.
+-> w
+T2266 mode=pool_mode           Gimli of Khazad-dum(dwa) F2@(10, 9) HP 39/74 MP 0/0 Hu 92 $ 178 room=P
 -> n
-T2317 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 7) HP 74/74 MP 0/0 Hu 61 $ 266 room=.
+T2267 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 8) HP 39/74 MP 0/0 Hu 91 $ 178 room=.
 -> e
-T2318 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 7) HP 74/74 MP 0/0 Hu 60 $ 266 room=.
--> s
-T2319 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 8) HP 74/74 MP 0/0 Hu 59 $ 266 room=.
--> s
-T2320 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 9) HP 74/74 MP 0/0 Hu 59 $ 266 room=.
--> s
-T2321 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18,10) HP 74/74 MP 0/0 Hu 58 $ 266 room=.
+T2268 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 40/74 MP 0/0 Hu 91 $ 178 room=.
+-> n
+T2269 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 40/74 MP 0/0 Hu 90 $ 178 room=.
 -> e
-T2322 mode=combat_mode         Gimli of Khazad-dum(dwa) F7@(19,10) HP 74/74 MP 0/0 Hu 57 $ 266 room=M vs Giant Spider(L6 HP46/46)
--> f
-T2323 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F7@(19,10) HP 74/74 MP 0/0 Hu 57 $ 266 room=M
--> w
-T2324 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18,10) HP 74/74 MP 0/0 Hu 57 $ 266 room=.
--> n
-T2325 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 9) HP 74/74 MP 0/0 Hu 56 $ 266 room=.
--> n
-T2326 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 8) HP 74/74 MP 0/0 Hu 56 $ 266 room=.
--> n
-T2327 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 7) HP 74/74 MP 0/0 Hu 55 $ 266 room=.
--> w
-T2328 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 7) HP 74/74 MP 0/0 Hu 54 $ 266 room=.
--> s
-T2329 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 8) HP 74/74 MP 0/0 Hu 54 $ 266 room=.
--> s
-T2330 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 9) HP 74/74 MP 0/0 Hu 53 $ 266 room=.
+T2270 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 7) HP 41/74 MP 0/0 Hu 89 $ 178 room=.
 -> e
-T2331 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 9) HP 74/74 MP 0/0 Hu 52 $ 266 room=.
+T2271 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(13, 7) HP 41/74 MP 0/0 Hu 88 $ 178 room=.
+-> e
+T2272 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(14, 7) HP 42/74 MP 0/0 Hu 88 $ 178 room=.
+-> e
+T2273 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(15, 7) HP 42/74 MP 0/0 Hu 87 $ 178 room=.
+-> l
+T2274 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(15, 7) HP 42/74 MP 0/0 Hu 87 $ 178 room=.
+-> e
+T2275 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(16, 7) HP 43/74 MP 0/0 Hu 86 $ 178 room=.
+-> s
+T2276 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(16, 8) HP 43/74 MP 0/0 Hu 86 $ 178 room=.
+-> s
+T2277 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(16, 9) HP 44/74 MP 0/0 Hu 85 $ 178 room=.
+-> s
+T2278 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(16,10) HP 44/74 MP 0/0 Hu 84 $ 178 room=.
+-> e
+T2279 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(17,10) HP 44/74 MP 0/0 Hu 84 $ 178 room=.
 -> n
-T2332 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 8) HP 74/74 MP 0/0 Hu 52 $ 266 room=.
+T2280 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(17, 9) HP 44/74 MP 0/0 Hu 83 $ 178 room=C
 -> n
-T2333 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(18, 7) HP 74/74 MP 0/0 Hu 51 $ 266 room=.
+T2281 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(17, 8) HP 45/74 MP 0/0 Hu 82 $ 178 room=.
+-> n
+T2282 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(17, 7) HP 45/74 MP 0/0 Hu 81 $ 178 room=.
 -> w
-T2334 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(17, 7) HP 74/74 MP 0/0 Hu 50 $ 266 room=.
+T2283 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(16, 7) HP 45/74 MP 0/0 Hu 81 $ 178 room=.
 -> w
-T2335 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(16, 7) HP 74/74 MP 0/0 Hu 49 $ 266 room=.
+T2284 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(15, 7) HP 45/74 MP 0/0 Hu 80 $ 178 room=.
+-> w
+T2285 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(14, 7) HP 46/74 MP 0/0 Hu 79 $ 178 room=.
+-> w
+T2286 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(13, 7) HP 46/74 MP 0/0 Hu 79 $ 178 room=.
+-> w
+T2287 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 7) HP 46/74 MP 0/0 Hu 78 $ 178 room=.
+-> w
+T2288 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 46/74 MP 0/0 Hu 77 $ 178 room=.
+-> s
+T2289 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 47/74 MP 0/0 Hu 77 $ 178 room=.
+-> s
+T2290 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 47/74 MP 0/0 Hu 76 $ 178 room=.
+-> s
+T2291 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 47/74 MP 0/0 Hu 75 $ 178 room=.
+-> l
+T2292 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 47/74 MP 0/0 Hu 75 $ 178 room=.
+-> s
+T2293 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 47/74 MP 0/0 Hu 74 $ 178 room=.
+-> l
+T2294 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 47/74 MP 0/0 Hu 74 $ 178 room=.
+-> w
+T2295 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 48/74 MP 0/0 Hu 74 $ 178 room=.
+-> l
+T2296 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 48/74 MP 0/0 Hu 74 $ 178 room=.
+-> s
+T2297 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 48/74 MP 0/0 Hu 73 $ 178 room=.
+-> s
+T2298 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 48/74 MP 0/0 Hu 72 $ 178 room=.
+-> s
+T2299 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 48/74 MP 0/0 Hu 72 $ 178 room=.
+-> w
+T2300 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 49/74 MP 0/0 Hu 71 $ 178 room=.
+-> w
+T2301 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 49/74 MP 0/0 Hu 70 $ 178 room=.
+-> n
+T2302 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 49/74 MP 0/0 Hu 70 $ 178 room=.
+-> e
+T2303 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 49/74 MP 0/0 Hu 69 $ 178 room=.
+-> e
+T2304 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 50/74 MP 0/0 Hu 68 $ 178 room=.
+-> n
+T2305 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 50/74 MP 0/0 Hu 67 $ 178 room=.
+-> n
+T2306 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 50/74 MP 0/0 Hu 67 $ 178 room=.
+-> e
+T2307 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 50/74 MP 0/0 Hu 66 $ 178 room=.
+-> n
+T2308 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 51/74 MP 0/0 Hu 65 $ 178 room=.
+-> n
+T2309 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 51/74 MP 0/0 Hu 65 $ 178 room=.
+-> e
+T2310 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(12, 9) HP 51/74 MP 0/0 Hu 64 $ 178 room=.
+-> w
+T2311 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 51/74 MP 0/0 Hu 63 $ 178 room=.
+-> n
+T2312 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 52/74 MP 0/0 Hu 63 $ 178 room=.
+-> n
+T2313 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 52/74 MP 0/0 Hu 62 $ 178 room=.
+-> n
+T2314 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 6) HP 52/74 MP 0/0 Hu 61 $ 178 room=.
+-> n
+T2315 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 5) HP 52/74 MP 0/0 Hu 60 $ 178 room=.
+-> w
+T2316 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 5) HP 53/74 MP 0/0 Hu 60 $ 178 room=.
+-> s
+T2317 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 6) HP 53/74 MP 0/0 Hu 59 $ 178 room=N
+-> w
+T2318 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 6) HP 53/74 MP 0/0 Hu 58 $ 178 room=.
+-> w
+T2319 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 6) HP 53/74 MP 0/0 Hu 58 $ 178 room=.
+-> n
+T2320 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 5) HP 53/74 MP 0/0 Hu 57 $ 178 room=.
+-> e
+T2321 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 5) HP 53/74 MP 0/0 Hu 56 $ 178 room=.
+-> n
+T2322 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 4) HP 53/74 MP 0/0 Hu 56 $ 178 room=.
+-> w
+T2323 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 4) HP 53/74 MP 0/0 Hu 55 $ 178 room=.
+-> n
+T2324 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 3) HP 53/74 MP 0/0 Hu 54 $ 178 room=.
+-> n
+T2325 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 2) HP 53/74 MP 0/0 Hu 53 $ 178 room=.
+-> w
+T2326 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 2) HP 53/74 MP 0/0 Hu 53 $ 178 room=.
+-> w
+T2327 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6, 2) HP 53/74 MP 0/0 Hu 52 $ 178 room=.
+-> w
+T2328 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 5, 2) HP 53/74 MP 0/0 Hu 51 $ 178 room=.
+-> w
+T2329 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 2) HP 53/74 MP 0/0 Hu 51 $ 178 room=.
+-> s
+T2330 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 3) HP 53/74 MP 0/0 Hu 50 $ 178 room=.
+-> w
+T2331 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 3, 3) HP 53/74 MP 0/0 Hu 49 $ 178 room=.
 -> i
-T2336 mode=inventory           Gimli of Khazad-dum(dwa) F7@(16, 7) HP 74/74 MP 0/0 Hu 49 $ 266 room=.
+T2332 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 3, 3) HP 53/74 MP 0/0 Hu 49 $ 178 room=.
 -> eat1
-T2337 mode=inventory           Gimli of Khazad-dum(dwa) F7@(16, 7) HP 74/74 MP 0/0 Hu100 $ 266 room=.
+T2333 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 3, 3) HP 53/74 MP 0/0 Hu 99 $ 178 room=.
 -> x
-T2338 mode=game_loop           Gimli of Khazad-dum(dwa) F7@(16, 7) HP 74/74 MP 0/0 Hu100 $ 266 room=.
+T2334 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 3, 3) HP 53/74 MP 0/0 Hu 99 $ 178 room=.
 -> w
-T2339 mode=warp_mode           Gimli of Khazad-dum(dwa) F7@(15, 7) HP 74/74 MP 0/0 Hu100 $ 266 room=W
--> y
-T2340 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 74/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
+T2335 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 53/74 MP 0/0 Hu 99 $ 178 room=.
+-> s
+T2336 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 54/74 MP 0/0 Hu 98 $ 178 room=.
+-> s
+T2337 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 54/74 MP 0/0 Hu 97 $ 178 room=.
+-> w
+T2338 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 55/74 MP 0/0 Hu 96 $ 178 room=.
+-> n
+T2339 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 55/74 MP 0/0 Hu 96 $ 178 room=.
+-> n
+T2340 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 56/74 MP 0/0 Hu 95 $ 178 room=.
+-> e
+T2341 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 56/74 MP 0/0 Hu 94 $ 178 room=.
+-> s
+T2342 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 57/74 MP 0/0 Hu 94 $ 178 room=.
+-> s
+T2343 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 57/74 MP 0/0 Hu 93 $ 178 room=.
+-> w
+T2344 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 58/74 MP 0/0 Hu 92 $ 178 room=.
+-> n
+T2345 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 58/74 MP 0/0 Hu 92 $ 178 room=.
+-> n
+T2346 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 59/74 MP 0/0 Hu 91 $ 178 room=.
+-> e
+T2347 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 59/74 MP 0/0 Hu 90 $ 178 room=.
+-> s
+T2348 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 60/74 MP 0/0 Hu 89 $ 178 room=.
+-> s
+T2349 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 60/74 MP 0/0 Hu 89 $ 178 room=.
+-> w
+T2350 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 61/74 MP 0/0 Hu 88 $ 178 room=.
+-> n
+T2351 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 61/74 MP 0/0 Hu 87 $ 178 room=.
+-> n
+T2352 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 62/74 MP 0/0 Hu 87 $ 178 room=.
+-> e
+T2353 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 62/74 MP 0/0 Hu 86 $ 178 room=.
+-> s
+T2354 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 63/74 MP 0/0 Hu 85 $ 178 room=.
+-> s
+T2355 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 63/74 MP 0/0 Hu 85 $ 178 room=.
+-> w
+T2356 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 63/74 MP 0/0 Hu 84 $ 178 room=.
+-> s
+T2357 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 6) HP 63/74 MP 0/0 Hu 83 $ 178 room=.
+-> n
+T2358 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 64/74 MP 0/0 Hu 82 $ 178 room=.
+-> n
+T2359 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 64/74 MP 0/0 Hu 82 $ 178 room=.
+-> n
+T2360 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 64/74 MP 0/0 Hu 81 $ 178 room=.
+-> e
+T2361 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 64/74 MP 0/0 Hu 80 $ 178 room=.
+-> s
+T2362 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 65/74 MP 0/0 Hu 80 $ 178 room=.
+-> s
+T2363 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 65/74 MP 0/0 Hu 79 $ 178 room=.
+-> w
+T2364 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 65/74 MP 0/0 Hu 78 $ 178 room=.
+-> s
+T2365 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 6) HP 65/74 MP 0/0 Hu 78 $ 178 room=.
+-> n
+T2366 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 66/74 MP 0/0 Hu 77 $ 178 room=.
+-> n
+T2367 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 66/74 MP 0/0 Hu 76 $ 178 room=.
+-> n
+T2368 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 66/74 MP 0/0 Hu 75 $ 178 room=.
+-> e
+T2369 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 3) HP 66/74 MP 0/0 Hu 75 $ 178 room=.
+-> s
+T2370 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 4) HP 67/74 MP 0/0 Hu 74 $ 178 room=.
+-> s
+T2371 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 67/74 MP 0/0 Hu 73 $ 178 room=.
+-> e
+T2372 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 3, 5) HP 67/74 MP 0/0 Hu 73 $ 178 room=.
+-> w
+T2373 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 5) HP 67/74 MP 0/0 Hu 72 $ 178 room=.
+-> w
+T2374 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 5) HP 68/74 MP 0/0 Hu 71 $ 178 room=.
+-> n
+T2375 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 4) HP 68/74 MP 0/0 Hu 71 $ 178 room=.
+-> n
+T2376 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 1, 3) HP 68/74 MP 0/0 Hu 70 $ 178 room=.
+-> n
+T2377 mode=stairs_down_mode    Gimli of Khazad-dum(dwa) F2@( 1, 2) HP 68/74 MP 0/0 Hu 69 $ 178 room=D
+-> n
+T2378 mode=stairs_up_mode      Gimli of Khazad-dum(dwa) F2@( 1, 1) HP 69/74 MP 0/0 Hu 68 $ 178 room=U
+-> e
+T2379 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 1) HP 69/74 MP 0/0 Hu 68 $ 178 room=V
+-> s
+T2380 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 2, 2) HP 69/74 MP 0/0 Hu 67 $ 178 room=.
+-> e
+T2381 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 3, 2) HP 69/74 MP 0/0 Hu 66 $ 178 room=.
+-> e
+T2382 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 4, 2) HP 70/74 MP 0/0 Hu 66 $ 178 room=.
+-> e
+T2383 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 5, 2) HP 70/74 MP 0/0 Hu 65 $ 178 room=.
+-> e
+T2384 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6, 2) HP 70/74 MP 0/0 Hu 64 $ 178 room=.
+-> e
+T2385 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 2) HP 70/74 MP 0/0 Hu 64 $ 178 room=.
+-> e
+T2386 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 2) HP 71/74 MP 0/0 Hu 63 $ 178 room=.
+-> s
+T2387 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 3) HP 71/74 MP 0/0 Hu 62 $ 178 room=.
+-> s
+T2388 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 4) HP 71/74 MP 0/0 Hu 61 $ 178 room=.
+-> s
+T2389 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 5) HP 71/74 MP 0/0 Hu 61 $ 178 room=.
+-> s
+T2390 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 6) HP 72/74 MP 0/0 Hu 60 $ 178 room=.
+-> e
+T2391 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9, 6) HP 72/74 MP 0/0 Hu 59 $ 178 room=.
+-> e
+T2392 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 6) HP 72/74 MP 0/0 Hu 59 $ 178 room=N
+-> e
+T2393 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 6) HP 72/74 MP 0/0 Hu 58 $ 178 room=.
+-> s
+T2394 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 7) HP 72/74 MP 0/0 Hu 57 $ 178 room=.
+-> s
+T2395 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 8) HP 72/74 MP 0/0 Hu 57 $ 178 room=.
+-> s
+T2396 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 72/74 MP 0/0 Hu 56 $ 178 room=.
+-> s
+T2397 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 72/74 MP 0/0 Hu 55 $ 178 room=.
+-> s
+T2398 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 72/74 MP 0/0 Hu 54 $ 178 room=.
+-> w
+T2399 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 72/74 MP 0/0 Hu 54 $ 178 room=.
+-> s
+T2400 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 72/74 MP 0/0 Hu 53 $ 178 room=.
+-> s
+T2401 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 72/74 MP 0/0 Hu 52 $ 178 room=.
+-> w
+T2402 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 72/74 MP 0/0 Hu 52 $ 178 room=.
+-> s
+T2403 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 72/74 MP 0/0 Hu 51 $ 178 room=.
+-> e
+T2404 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 72/74 MP 0/0 Hu 50 $ 178 room=.
+-> n
+T2405 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 72/74 MP 0/0 Hu 50 $ 178 room=.
+-> n
+T2406 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 72/74 MP 0/0 Hu 49 $ 178 room=.
+-> i
+T2407 mode=inventory           Gimli of Khazad-dum(dwa) F2@(10,12) HP 72/74 MP 0/0 Hu 49 $ 178 room=.
+-> eat1
+T2408 mode=inventory           Gimli of Khazad-dum(dwa) F2@(10,12) HP 72/74 MP 0/0 Hu 99 $ 178 room=.
+-> x
+T2409 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 72/74 MP 0/0 Hu 99 $ 178 room=.
+-> n
+T2410 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 72/74 MP 0/0 Hu 98 $ 178 room=.
+-> w
+T2411 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,11) HP 73/74 MP 0/0 Hu 97 $ 178 room=.
+-> w
+T2412 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 73/74 MP 0/0 Hu 97 $ 178 room=.
+-> s
+T2413 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,12) HP 74/74 MP 0/0 Hu 96 $ 178 room=.
+-> s
+T2414 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 95 $ 178 room=.
+-> s
+T2415 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 95 $ 178 room=.
+-> e
+T2416 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 94 $ 178 room=.
+-> n
+T2417 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 93 $ 178 room=.
+-> e
+T2418 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 93 $ 178 room=.
+-> n
+T2419 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 74/74 MP 0/0 Hu 92 $ 178 room=.
+-> n
+T2420 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 74/74 MP 0/0 Hu 91 $ 178 room=.
+-> w
+T2421 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,11) HP 74/74 MP 0/0 Hu 90 $ 178 room=.
+-> w
+T2422 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 74/74 MP 0/0 Hu 90 $ 178 room=.
+-> s
+T2423 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,12) HP 74/74 MP 0/0 Hu 89 $ 178 room=.
+-> s
+T2424 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 88 $ 178 room=.
+-> s
+T2425 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 88 $ 178 room=.
+-> e
+T2426 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 87 $ 178 room=.
+-> n
+T2427 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 86 $ 178 room=.
+-> e
+T2428 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 86 $ 178 room=.
+-> n
+T2429 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 74/74 MP 0/0 Hu 85 $ 178 room=.
+-> w
+T2430 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,12) HP 74/74 MP 0/0 Hu 84 $ 178 room=.
+-> w
+T2431 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,12) HP 74/74 MP 0/0 Hu 83 $ 178 room=.
+-> s
+T2432 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 83 $ 178 room=.
+-> s
+T2433 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 82 $ 178 room=.
+-> e
+T2434 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 81 $ 178 room=.
+-> e
+T2435 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 74/74 MP 0/0 Hu 81 $ 178 room=.
+-> n
+T2436 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 80 $ 178 room=.
+-> w
+T2437 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 79 $ 178 room=.
+-> n
+T2438 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,12) HP 74/74 MP 0/0 Hu 79 $ 178 room=.
+-> w
+T2439 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,12) HP 74/74 MP 0/0 Hu 78 $ 178 room=.
+-> s
+T2440 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 77 $ 178 room=.
+-> s
+T2441 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 76 $ 178 room=.
+-> e
+T2442 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 76 $ 178 room=.
+-> e
+T2443 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 74/74 MP 0/0 Hu 75 $ 178 room=.
+-> n
+T2444 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 74 $ 178 room=.
+-> w
+T2445 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 74 $ 178 room=.
+-> w
+T2446 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 73 $ 178 room=.
+-> s
+T2447 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 72 $ 178 room=.
+-> e
+T2448 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 72 $ 178 room=.
+-> e
+T2449 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 74/74 MP 0/0 Hu 71 $ 178 room=.
+-> n
+T2450 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 70 $ 178 room=.
+-> w
+T2451 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 69 $ 178 room=.
+-> w
+T2452 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 69 $ 178 room=.
+-> s
+T2453 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 68 $ 178 room=.
+-> e
+T2454 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 67 $ 178 room=.
+-> s
+T2455 mode=chest_mode          Gimli of Khazad-dum(dwa) F2@( 9,15) HP 74/74 MP 0/0 Hu 67 $ 178 room=C
+-> o
+T2456 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,15) HP 74/74 MP 0/0 Hu 67 $ 178 room=.
+-> w
+T2457 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 66 $ 178 room=.
+-> w
+T2458 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 65 $ 178 room=.
+-> n
+T2459 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 65 $ 178 room=.
+-> w
+T2460 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 64 $ 178 room=.
+-> n
+T2461 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 63 $ 178 room=M vs Stirge(L1 HP6/6)
+-> a
+T2462 mode=combat_victory      Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 63 $ 186 room=.
+-> back
+T2463 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 63 $ 186 room=.
+-> n
+T2464 mode=altar_mode          Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 62 $ 186 room=A
+-> pray
+T2465 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 62 $ 186 room=.
+-> e
+T2466 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,12) HP 74/74 MP 0/0 Hu 62 $ 186 room=.
+-> s
+T2467 mode=chest_mode          Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 61 $ 186 room=C
+-> o
+T2468 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 61 $ 186 room=.
+-> i
+T2469 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 61 $ 186 room=.
+-> e1
+T2470 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 61 $ 186 room=.
+-> x
+T2471 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 61 $ 186 room=.
+-> s
+T2472 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 60 $ 186 room=.
+-> s
+T2473 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 60 $ 186 room=.
+-> s
+T2474 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 59 $ 186 room=.
+-> n
+T2475 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 58 $ 186 room=.
+-> w
+T2476 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 58 $ 186 room=.
+-> n
+T2477 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 57 $ 186 room=.
+-> e
+T2478 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 56 $ 186 room=.
+-> n
+T2479 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 55 $ 186 room=.
+-> e
+T2480 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 74/74 MP 0/0 Hu 55 $ 186 room=.
+-> s
+T2481 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 54 $ 186 room=.
+-> s
+T2482 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 53 $ 186 room=.
+-> w
+T2483 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 53 $ 186 room=.
+-> w
+T2484 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 52 $ 186 room=.
+-> n
+T2485 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 51 $ 186 room=.
+-> n
+T2486 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 51 $ 186 room=.
+-> n
+T2487 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 50 $ 186 room=.
+-> e
+T2488 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,12) HP 74/74 MP 0/0 Hu 49 $ 186 room=.
+-> s
+T2489 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 48 $ 186 room=.
+-> s
+T2490 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 48 $ 186 room=.
+-> s
+T2491 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 47 $ 186 room=.
+-> w
+T2492 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 46 $ 186 room=.
+-> n
+T2493 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 46 $ 186 room=.
+-> n
+T2494 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 45 $ 186 room=.
+-> n
+T2495 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 44 $ 186 room=.
+-> e
+T2496 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,12) HP 74/74 MP 0/0 Hu 44 $ 186 room=.
+-> s
+T2497 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 43 $ 186 room=.
+-> s
+T2498 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 42 $ 186 room=.
+-> s
+T2499 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 41 $ 186 room=.
+-> w
+T2500 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 41 $ 186 room=.
+-> n
+T2501 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 40 $ 186 room=.
+-> n
+T2502 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 39 $ 186 room=.
+-> e
+T2503 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 39 $ 186 room=.
+-> s
+T2504 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 38 $ 186 room=.
+-> s
+T2505 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 37 $ 186 room=.
+-> w
+T2506 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 37 $ 186 room=.
+-> n
+T2507 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 36 $ 186 room=.
+-> w
+T2508 mode=chest_mode          Gimli of Khazad-dum(dwa) F2@( 5,14) HP 74/74 MP 0/0 Hu 35 $ 186 room=C
+-> e
+T2509 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 34 $ 186 room=.
+-> n
+T2510 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 34 $ 186 room=.
+-> n
+T2511 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 33 $ 186 room=.
+-> n
+T2512 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,11) HP 74/74 MP 0/0 Hu 32 $ 186 room=.
+-> n
+T2513 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,10) HP 74/74 MP 0/0 Hu 32 $ 186 room=.
+-> n
+T2514 mode=chest_mode          Gimli of Khazad-dum(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 31 $ 186 room=C
+-> o
+T2515 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 31 $ 226 room=.
+-> n
+T2516 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 30 $ 226 room=.
+-> e
+T2517 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 30 $ 226 room=.
+-> s
+T2518 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 9) HP 74/74 MP 0/0 Hu 29 $ 226 room=.
+-> s
+T2519 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,10) HP 74/74 MP 0/0 Hu 28 $ 226 room=.
+-> w
+T2520 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,10) HP 74/74 MP 0/0 Hu 27 $ 226 room=.
+-> s
+T2521 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,11) HP 74/74 MP 0/0 Hu 27 $ 226 room=.
+-> s
+T2522 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 74/74 MP 0/0 Hu 26 $ 226 room=.
+-> s
+T2523 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 25 $ 226 room=.
+-> s
+T2524 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 25 $ 226 room=.
+-> s
+T2525 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 24 $ 226 room=.
+-> e
+T2526 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 23 $ 226 room=.
+-> s
+T2527 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 23 $ 226 room=.
+-> n
+T2528 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 22 $ 226 room=.
+-> n
+T2529 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 21 $ 226 room=.
+-> n
+T2530 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 20 $ 226 room=.
+-> w
+T2531 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 74/74 MP 0/0 Hu 20 $ 226 room=.
+-> s
+T2532 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 74/74 MP 0/0 Hu 19 $ 226 room=.
+-> s
+T2533 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 74/74 MP 0/0 Hu 18 $ 226 room=.
+-> e
+T2534 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 74/74 MP 0/0 Hu 18 $ 226 room=.
+-> n
+T2535 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 17 $ 226 room=.
+-> e
+T2536 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 74/74 MP 0/0 Hu 16 $ 226 room=.
+-> s
+T2537 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 16 $ 226 room=.
+-> e
+T2538 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,15) HP 74/74 MP 0/0 Hu 15 $ 226 room=.
+-> n
+T2539 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 74/74 MP 0/0 Hu 14 $ 226 room=.
+-> e
+T2540 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 74/74 MP 0/0 Hu 13 $ 226 room=.
+-> n
+T2541 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 74/74 MP 0/0 Hu 13 $ 226 room=.
+-> w
+T2542 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 74/74 MP 0/0 Hu 12 $ 226 room=.
+-> n
+T2543 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,12) HP 74/74 MP 0/0 Hu 11 $ 226 room=.
+-> e
+T2544 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 74/74 MP 0/0 Hu 11 $ 226 room=.
+-> n
+T2545 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 74/74 MP 0/0 Hu 10 $ 226 room=.
+-> n
+T2546 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@(10,10) HP 74/74 MP 0/0 Hu  9 $ 226 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T2547 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@(10,10) HP 64/74 MP 0/0 Hu  9 $ 226 room=M vs Giant Spider(L1 HP13/40)
+-> a
+T2548 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@(10,10) HP 64/74 MP 0/0 Hu  9 $ 226 room=M vs Giant Spider(L1 HP13/40)
 -> f
-T2341 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 73/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
+T2549 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F2@(10,10) HP 64/74 MP 0/0 Hu  9 $ 226 room=M
+-> n
+T2550 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10, 9) HP 64/74 MP 0/0 Hu  9 $ 226 room=P
+-> e
+T2551 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11, 9) HP 64/74 MP 0/0 Hu  9 $ 226 room=.
+-> s
+T2552 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 64/74 MP 0/0 Hu  8 $ 226 room=.
+-> s
+T2553 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 64/74 MP 0/0 Hu  7 $ 226 room=.
+-> w
+T2554 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 64/74 MP 0/0 Hu  6 $ 226 room=.
+-> s
+T2555 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 64/74 MP 0/0 Hu  6 $ 226 room=.
+-> s
+T2556 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 64/74 MP 0/0 Hu  5 $ 226 room=.
+-> s
+T2557 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 64/74 MP 0/0 Hu  4 $ 226 room=.
+-> w
+T2558 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 64/74 MP 0/0 Hu  4 $ 226 room=.
+-> s
+T2559 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,15) HP 64/74 MP 0/0 Hu  3 $ 226 room=.
+-> w
+T2560 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 64/74 MP 0/0 Hu  2 $ 226 room=.
+-> w
+T2561 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 64/74 MP 0/0 Hu  2 $ 226 room=.
+-> w
+T2562 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 64/74 MP 0/0 Hu  1 $ 226 room=.
+-> n
+T2563 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 62/74 MP 0/0 Hu  0 $ 226 room=.
+-> w
+T2564 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 5,14) HP 60/74 MP 0/0 Hu  0 $ 226 room=C
+-> s
+T2565 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 5,15) HP 58/74 MP 0/0 Hu  0 $ 226 room=.
+-> e
+T2566 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 56/74 MP 0/0 Hu  0 $ 226 room=.
+-> e
+T2567 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 54/74 MP 0/0 Hu  0 $ 226 room=.
+-> e
+T2568 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 52/74 MP 0/0 Hu  0 $ 226 room=.
+-> n
+T2569 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 50/74 MP 0/0 Hu  0 $ 226 room=.
+-> w
+T2570 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 48/74 MP 0/0 Hu  0 $ 226 room=.
+-> n
+T2571 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 46/74 MP 0/0 Hu  0 $ 226 room=.
+-> e
+T2572 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 44/74 MP 0/0 Hu  0 $ 226 room=.
+-> n
+T2573 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,12) HP 42/74 MP 0/0 Hu  0 $ 226 room=.
+-> n
+T2574 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 40/74 MP 0/0 Hu  0 $ 226 room=.
+-> i
+T2575 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 40/74 MP 0/0 Hu  0 $ 226 room=.
+-> u8
+T2576 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 65/74 MP 0/0 Hu  0 $ 226 room=.
+-> x
+T2577 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,11) HP 65/74 MP 0/0 Hu  0 $ 226 room=.
+-> e
+T2578 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,11) HP 63/74 MP 0/0 Hu  0 $ 226 room=.
+-> n
+T2579 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 9,10) HP 61/74 MP 0/0 Hu  0 $ 226 room=M vs Stirge(L1 HP6/6)
+-> a
+T2580 mode=combat_victory      Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu  0 $ 234 room=.
+-> back
+T2581 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu  0 $ 234 room=.
+-> i
+T2582 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu  0 $ 234 room=.
+-> u12
+T2583 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu  0 $ 234 room=.
+-> eat1
+T2584 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu 18 $ 234 room=.
+-> x
+T2585 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 60/74 MP 0/0 Hu 18 $ 234 room=.
+-> e
+T2586 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@(10,10) HP 60/74 MP 0/0 Hu 17 $ 234 room=M vs Giant Spider(L1 HP13/40)
+-> a
+T2587 mode=combat_victory      Gimli of Khazad-dum(dwa) F2@(10,10) HP 60/74 MP 0/0 Hu 17 $ 242 room=.
+-> back
+T2588 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,10) HP 60/74 MP 0/0 Hu 17 $ 242 room=.
+-> e
+T2589 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 60/74 MP 0/0 Hu 17 $ 242 room=.
+-> s
+T2590 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 60/74 MP 0/0 Hu 16 $ 242 room=.
+-> w
+T2591 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 60/74 MP 0/0 Hu 15 $ 242 room=.
+-> s
+T2592 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 60/74 MP 0/0 Hu 15 $ 242 room=.
+-> s
+T2593 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 60/74 MP 0/0 Hu 14 $ 242 room=.
+-> w
+T2594 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 60/74 MP 0/0 Hu 13 $ 242 room=.
+-> w
+T2595 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,13) HP 60/74 MP 0/0 Hu 12 $ 242 room=.
+-> s
+T2596 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,14) HP 60/74 MP 0/0 Hu 12 $ 242 room=.
+-> e
+T2597 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 60/74 MP 0/0 Hu 11 $ 242 room=.
+-> e
+T2598 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 60/74 MP 0/0 Hu 10 $ 242 room=.
+-> n
+T2599 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 60/74 MP 0/0 Hu 10 $ 242 room=.
+-> n
+T2600 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,12) HP 60/74 MP 0/0 Hu  9 $ 242 room=.
+-> w
+T2601 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,12) HP 60/74 MP 0/0 Hu  8 $ 242 room=.
+-> s
+T2602 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 60/74 MP 0/0 Hu  8 $ 242 room=.
+-> s
+T2603 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 60/74 MP 0/0 Hu  7 $ 242 room=.
+-> s
+T2604 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,15) HP 60/74 MP 0/0 Hu  6 $ 242 room=.
+-> w
+T2605 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 60/74 MP 0/0 Hu  5 $ 242 room=.
+-> w
+T2606 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 60/74 MP 0/0 Hu  5 $ 242 room=.
+-> s
+T2607 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,16) HP 60/74 MP 0/0 Hu  4 $ 242 room=.
+-> n
+T2608 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 60/74 MP 0/0 Hu  3 $ 242 room=.
+-> w
+T2609 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 60/74 MP 0/0 Hu  3 $ 242 room=.
+-> n
+T2610 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 60/74 MP 0/0 Hu  2 $ 242 room=.
+-> n
+T2611 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 60/74 MP 0/0 Hu  1 $ 242 room=.
+-> e
+T2612 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 60/74 MP 0/0 Hu  1 $ 242 room=.
+-> s
+T2613 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 58/74 MP 0/0 Hu  0 $ 242 room=.
+-> s
+T2614 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 56/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2615 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,15) HP 54/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2616 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 52/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2617 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 50/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2618 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,13) HP 48/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2619 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,12) HP 46/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2620 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 44/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2621 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 5,12) HP 42/74 MP 0/0 Hu  0 $ 242 room=M vs Gray Ooze(L1 HP35/35)
 -> f
-T2342 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 71/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2343 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 69/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2344 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 65/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2345 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 65/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2346 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 61/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2347 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 61/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2348 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 57/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2349 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 57/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2350 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 56/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2351 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 56/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2352 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 51/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2353 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 47/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2354 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 47/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2355 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 43/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2356 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 43/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2357 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 39/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2358 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 39/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2359 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 38/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2360 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 38/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2361 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 34/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2362 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 34/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2363 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 30/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2364 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 30/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2365 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 27/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2366 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 27/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2367 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 26/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2368 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 26/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2369 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 25/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2370 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 25/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2371 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 24/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2372 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 24/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2373 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 22/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2374 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 18/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2375 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 18/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2376 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 14/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2377 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 14/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2378 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 9/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2379 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F6@(18,11) HP 5/74 MP 0/0 Hu100 $ 266 room=M
--> c
-T2380 mode=combat_mode         Gimli of Khazad-dum(dwa) F6@(18,11) HP 5/74 MP 0/0 Hu100 $ 266 room=M vs Ochre Jelly(L5 HP57/57)
--> f
-T2381 mode=death_screen        Gimli of Khazad-dum(dwa) F6@(18,11) HP 0/74 MP 0/0 Hu100 $ 266 room=M
+T2622 mode=flee_direction_mode Gimli of Khazad-dum(dwa) F2@( 5,12) HP 42/74 MP 0/0 Hu  0 $ 242 room=M
+-> e
+T2623 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,12) HP 42/74 MP 0/0 Hu  0 $ 242 room=.
+-> s
+T2624 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,13) HP 40/74 MP 0/0 Hu  0 $ 242 room=.
+-> s
+T2625 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 6,14) HP 38/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2626 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,14) HP 36/74 MP 0/0 Hu  0 $ 242 room=.
+-> s
+T2627 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 34/74 MP 0/0 Hu  0 $ 242 room=.
+-> s
+T2628 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,16) HP 32/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2629 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,15) HP 30/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2630 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,15) HP 28/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2631 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,15) HP 26/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2632 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,14) HP 24/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2633 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,14) HP 22/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2634 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,13) HP 20/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2635 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,13) HP 18/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2636 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,12) HP 16/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2637 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,11) HP 14/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2638 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,11) HP 12/74 MP 0/0 Hu  0 $ 242 room=.
+-> e
+T2639 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,11) HP 10/74 MP 0/0 Hu  0 $ 242 room=.
+-> n
+T2640 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(11,10) HP 8/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2641 mode=game_loop           Gimli of Khazad-dum(dwa) F2@(10,10) HP 6/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2642 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 9,10) HP 4/74 MP 0/0 Hu  0 $ 242 room=.
+-> w
+T2643 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 8,10) HP 2/74 MP 0/0 Hu  0 $ 242 room=M vs Bat(L1 HP12/12)
+-> a
+T2644 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/74 MP 0/0 Hu  0 $ 242 room=M vs Bat(L1 HP12/12)
+-> a
+T2645 mode=combat_victory      Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu  0 $ 258 room=.
+-> back
+T2646 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu  0 $ 258 room=.
+-> i
+T2647 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu  0 $ 258 room=.
+-> u12
+T2648 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu  0 $ 258 room=.
+-> eat1
+T2649 mode=inventory           Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu 13 $ 258 room=.
+-> x
+T2650 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8,10) HP 1/84 MP 0/0 Hu 13 $ 258 room=.
+-> w
+T2651 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7,10) HP 1/84 MP 0/0 Hu 13 $ 258 room=.
+-> n
+T2652 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 7, 9) HP 1/84 MP 0/0 Hu 12 $ 258 room=.
+-> e
+T2653 mode=game_loop           Gimli of Khazad-dum(dwa) F2@( 8, 9) HP 1/84 MP 0/0 Hu 11 $ 258 room=.
+-> n
+T2654 mode=combat_mode         Gimli of Khazad-dum(dwa) F2@( 8, 8) HP 1/84 MP 0/0 Hu 10 $ 258 room=M vs Kobold(L1 HP20/20)
+-> a
+T2655 mode=death_screen        Gimli of Khazad-dum(dwa) F2@( 8, 8) HP 0/84 MP 0/0 Hu 10 $ 258 room=M
 
-=== run finished: turns=2381 floor=6 hp=0/74 gold=266 alive=False mode=death_screen ===
+=== run finished: turns=2655 floor=2 hp=0/84 gold=258 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00317_dwarf.html
