@@ -246,6 +246,42 @@ class Floor:
                 if not found_alt:
                     raise ValueError(f"{COLOR_YELLOW}Could not find a valid floor cell for forced placement of '{forced_placement_char}'.{COLOR_RESET}")
 
+        # Reserve a plain '.' neighbor for U. Build-323 forensics found
+        # 2/60 5000T runs (s999_human, s512_human) where U landed with
+        # only feature-tile neighbors (M, T) -- the agent's BFS treats
+        # M and W as opaque (BLOCK_TRANSIT) and feature tiles like T
+        # auto-open modes that loop back to U, producing infinite
+        # U <-> T ping-pong until starvation. Locking ONE adjacent
+        # floor cell to plain '.' guarantees U always has a real
+        # walkable escape route. Only applies on subsequent floors
+        # (forced_placement_char='U'); F1 entrance ('E') is fine
+        # because the start tile already opens exploration.
+        if forced_placement_char == 'U' and forced_placement_coords:
+            ur, uc = forced_placement_coords
+            # If the forced placement fell back to an alternate cell,
+            # ur/uc may not match; find U's actual coords by scanning.
+            if not (0 <= ur < self.rows and 0 <= uc < self.cols
+                    and self.grid[ur][uc] is not None
+                    and self.grid[ur][uc].room_type == 'U'):
+                for rr in range(self.rows):
+                    for cc in range(self.cols):
+                        if (self.grid[rr][cc] is not None
+                                and self.grid[rr][cc].room_type == 'U'):
+                            ur, uc = rr, cc
+                            break
+                    else:
+                        continue
+                    break
+            for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                nr, nc = ur + dr, uc + dc
+                if (0 <= nr < self.rows and 0 <= nc < self.cols
+                        and self.grid[nr][nc] is None
+                        and carved_layout_grid[nr][nc] == floor_char):
+                    self.grid[nr][nc] = Room(floor_char)
+                    if (nr, nc) in available_floor_cells_for_random:
+                        available_floor_cells_for_random.remove((nr, nc))
+                    break
+
         # Place explicitly required_chars (U,V) into distinct *random* available floor cells
         random.shuffle(available_floor_cells_for_random)
 

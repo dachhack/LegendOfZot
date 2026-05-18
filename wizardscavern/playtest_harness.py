@@ -733,6 +733,15 @@ class PlaytestSession:
         # because of this.
         self.floor_arrival_turn = 0
         self._last_floor = 0
+        # Floors where the M-cage escape fired in stairs_up_mode --
+        # agent's BFS-reachable region was tiny vs walkable area
+        # because M tiles wall them in. Build-323 forensics found
+        # s999_human bouncing F1<->F2 8x before starving because
+        # the M-cage ascent broke the in-mode loop but the wayfinder
+        # kept re-descending to the same trap. Game_loop policy
+        # consults this set to drop D from the priority tier when
+        # the next floor down is known M-caged.
+        self.m_caged_floors = set()
         # Per-floor exploration totals, snapshotted on first arrival.
         # User-requested: 'evaluate exp + treasure left on each level
         # to see if better exploring would help with survival.' For
@@ -859,6 +868,26 @@ class PlaytestSession:
         if getattr(self, "_last_snapshot_floor", None) != pc.z:
             self._snapshot_floor_totals(pc.z)
             self._last_snapshot_floor = pc.z
+        # M-cage detection: agent has been on this floor 75+ turns
+        # but visited <=5 distinct tiles total -- they're stuck on a
+        # tiny island bounded by M tiles (which block their BFS).
+        # Must fire BEFORE the stairs_up_mode M-cage ascent (100T
+        # threshold) so the flag is set when the agent leaves, and
+        # the next F1->F2 descent attempt gets refused. Uses
+        # `visited` (cumulative tile-set) rather than the transient
+        # `reachable` BFS count: a navigable floor where the agent
+        # currently stands on a U tile next to M walls shows
+        # reachable=3 even with 30+ tiles already explored. visited
+        # only grows when the agent stands somewhere new; if it
+        # stays <=5 after 75T, the trap is real (seed=999 case).
+        if (self.turn - self.floor_arrival_turn) > 75:
+            visited = len(self.visited_tiles_this_floor)
+            walkable = sum(
+                1 for r in floor.grid for c in r
+                if c.room_type != floor.wall_char
+            )
+            if 0 < visited <= 5 and walkable > visited * 5:
+                self.m_caged_floors.add(pc.z)
         # log_lines is capped at 16 — if our pointer is past the end the
         # log was rotated and we just take everything that's left.
         if self._log_pointer > len(gs.log_lines):
@@ -913,6 +942,7 @@ class PlaytestSession:
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "blocked_directions": sorted(self.blocked_directions),
+            "m_caged_floors": sorted(self.m_caged_floors),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
             # The policy refuses to step into these unless over-levelled.
@@ -1949,7 +1979,7 @@ class PlaytestSession:
         if mode != "combat_victory" and gs.prompt_cntl == "combat_victory":
             self.kills_on_floor += 1
         # Retreat give-up: if we've been retreat-active on this floor
-        # for more than 800 turns without resolving (no floor change
+        # for more than 400 turns without resolving (no floor change
         # back to <= max_z_via_stairs), bank current depth as the
         # new max so the retreat flag clears and the agent resumes
         # normal play. Faramir the Brave (human seed 12345) reached
@@ -1957,8 +1987,11 @@ class PlaytestSession:
         # couldn't find an unreachable U for 1500+ turns -- retreat
         # mode trapped him in the wander loop. Banking max_z = 1
         # lets him drop retreat and try to descend normally instead.
+        # Build-323 forensics found s1100_dwarf (warped F1->F3 at
+        # T207, died T893 starvation, retreat held the whole time)
+        # missed the 800T threshold by 114T. Dropped 800 -> 400.
         if (pc_after.z > self.max_z_via_stairs
-                and (self.turn - self.floor_arrival_turn) > 800):
+                and (self.turn - self.floor_arrival_turn) > 400):
             self.max_z_via_stairs = pc_after.z
         # Track current-floor coverage for the policy's descent gate.
         xy_after = (pc_after.x, pc_after.y)
@@ -2564,6 +2597,15 @@ def smart_policy(obs, rng, use_lantern=True):
             avoid_set.add("M")
         if (is_weak or early_floor) and not trapped_no_d:
             avoid_set.add("W")
+        # M-caged floor avoidance: if the floor below this one was
+        # previously flagged as M-caged (agent's BFS-reachable region
+        # was tiny vs walkable, they escaped via stairs_up_mode
+        # ascent), don't re-descend into the same trap. Build-323:
+        # s999_human bounced F1<->F2 8x before starving because the
+        # ascent broke the in-mode loop but D kept pulling them back.
+        _avoid_pc_z = p.get("floor", 1) - 1
+        if (_avoid_pc_z + 1) in set(obs.get("m_caged_floors") or []):
+            avoid_set.add("D")
         # Avoid D while under-levelled and the floor's grind isn't
         # done. Without this, an agent who walked OFF the D tile
         # (stairs_down_mode's step-off branch) gets pulled BACK onto
@@ -3820,6 +3862,29 @@ def smart_policy(obs, rng, use_lantern=True):
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
+        # M-caged-floor refusal: if the next floor down is flagged
+        # M-caged (we ascended out of it earlier because its
+        # reachable region was tiny), DO NOT descend back into it.
+        # Step off D instead. Without this, the game_loop avoid_set
+        # only blocks the wayfinder from TARGETING D, but the agent
+        # can still end up on a D tile via frontier_step or other
+        # paths, then this handler returns 'd' regardless and the
+        # bounce restarts.
+        _sd_pc_z = (p.get("floor", 1) - 1)
+        if (_sd_pc_z + 1) in set(obs.get("m_caged_floors") or []):
+            neighbors = obs.get("neighbors") or {}
+            recent_sd = set(obs.get("recent_step_set") or [])
+            for d in ("n", "s", "e", "w"):
+                if d in recent_sd:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W", "D"):
+                    return d
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W", "D"):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         # Retreat-after-warp: if a warp landed us on a floor deeper
         # than max_z_via_stairs, we DON'T want to descend further --
         # we want to walk off this D tile and find the U tile so we
@@ -3942,6 +4007,23 @@ def smart_policy(obs, rng, use_lantern=True):
         # ping-pong's opposite -- the trip back through familiar
         # territory.
         if obs.get("retreat_to_floor") is not None:
+            return "u"
+        # M-cage escape: agent's BFS-reachable region (M/W blocked)
+        # is tiny vs the floor's walkable count -- they're stuck on
+        # a corridor walled off by M tiles. Build-323 forensics found
+        # s999_human (T972 starved on F2 U, reachable=3 of 100
+        # walkable) and s512_human (T873 starved, reachable=3 of
+        # 154) cycling U <-> reserved-. tile because U auto-opens
+        # stairs_up_mode every step onto it, blocking any "path
+        # through U to engage adjacent M" plan. Force ascent only
+        # when there's clearly no escape via this floor.
+        cov = obs.get("tile_coverage") or {}
+        reachable = cov.get("reachable", 0)
+        walkable = cov.get("walkable", 0)
+        turns_on_floor = obs.get("turns_on_floor") or 0
+        if (reachable > 0 and reachable < 10
+                and walkable > reachable * 3
+                and turns_on_floor > 100):
             return "u"
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
         # landing tile is the U). Confirming would immediately bounce
