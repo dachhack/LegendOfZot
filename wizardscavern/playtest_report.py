@@ -1279,19 +1279,24 @@ class RunReport:
         # on this page and emits a single dedup'd <style> block.
         sprites = SpriteRegistry()
 
-        # Player sprite: mirror the IN-GAME character pick. The game's
-        # generate_player_sprite_html (sprite_data.py:182) seeds the
-        # pool with (race, gender, character_name) so a fresh
-        # character gets a stable-but-unique look that matches what
-        # they'd see launching this seed in the actual game. The
-        # playtest report previously used (race, name) which produced
-        # a DIFFERENT sprite for the same hero, breaking the visual
-        # link between reports and live runs. User-flagged: "use the
-        # race to sprite assignments in the game for the playtest."
+        # Player sprite: mirror the IN-GAME character-creation picker.
+        # app.py:5852 uses get_race_pool(race) to show only race-
+        # appropriate portraits during character creation. The report
+        # previously seeded from the FULL _CHARACTERS_POOL, so a
+        # dwarf hero could show an elf-looking avatar, etc. -- user
+        # flagged: 'The player sprites don't match the races outlined
+        # by the in game sprite picker.' Now we filter by race first
+        # so the same (race, gender, name) seed produces a portrait
+        # the actual character-creation screen would have offered.
         try:
-            from .sprites import characters as _csprites, get_generic_variant
+            from .sprites.characters import (
+                _CHARACTERS_POOL as _full_pool,
+                get_race_pool,
+            )
+            from .sprites import get_generic_variant
+            pool = get_race_pool(self.race) or _full_pool
             pid = get_generic_variant(
-                _csprites._CHARACTERS_POOL,
+                pool,
                 seed=(self.race, self.gender, self.name),
             )
             self.player_sprite_pid = pid
