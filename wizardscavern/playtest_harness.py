@@ -4717,6 +4717,13 @@ def main(argv=None):
                              "directory to a gh-pages branch of this repo "
                              "via a worktree. Idempotent and additive: each "
                              "run accumulates onto the branch.")
+    parser.add_argument("--replace", action="store_true",
+                        help="With --deploy, purge the existing remote "
+                             "docs/playtest/ tree before overlaying the "
+                             "current report dir. Use this when you want "
+                             "the deployed grid to reflect ONLY the current "
+                             "batch (no stale runs from prior builds). "
+                             "Without --replace, deploys are additive.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
@@ -4860,9 +4867,10 @@ def main(argv=None):
                 repo_root = _os.path.dirname(
                     _os.path.dirname(_os.path.abspath(__file__))
                 )
-                url = deploy_gh_pages(out_dir, repo_root)
+                url = deploy_gh_pages(out_dir, repo_root, replace=args.replace)
                 if url:
-                    print(f">>> Deployed to gh-pages branch ({url})")
+                    mode_label = "replace" if args.replace else "additive"
+                    print(f">>> Deployed to gh-pages branch ({mode_label}, {url})")
                 else:
                     print(">>> Deploy skipped (no changes).")
             except Exception as e:
