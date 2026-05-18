@@ -217,7 +217,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Eowyn the Wanderer, the human</h1>
-      <p class="muted">non-binary adventurer · seed 7 · started 2026-05-18T15:49:46+00:00</p>
+      <p class="muted">non-binary adventurer · seed 7 · started 2026-05-18T16:33:41+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -351,7 +351,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T147: F1 — encountered <span class='sprite sprite-p0010' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 1</li><li>T453: F3 — encountered <span class='sprite sprite-p0010' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 3</li><li>T964: F2 — encountered <span class='sprite sprite-p0025' style='width:24px;height:24px'></span> <strong>UNDEAD SKELETON</strong> → tomb suspected on Floor 2</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 269 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T465–T733</td><td>269</td><td>game_loop</td><td><code>ns</code></td><td>period 2</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 269 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T465–T733</td><td>269</td><td>stairs_down_mode</td><td><code>ns</code></td><td>period 2</td></tr></table>
       
         <div class="death-banner">
           
@@ -360,7 +360,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T1136: You arrive at (1, 1) on Depth 3.</li><li>T1136: You are STARVING! Lost 2 HP from hunger!</li><li>T1140: You found a passage leading down!</li><li>T1140: Descending deeper! Depth 3!</li><li>T1140: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1140: You arrive at (1, 1) on Depth 3.</li><li>T1140: You are STARVING! Lost 2 HP from hunger!</li><li>T1141: A Cockatrice (Level 2) appears! A rooster-dragon hybrid with a petrifying gaze.</li><li>T1141: The Cockatrice strikes first!</li><li>T1142: Ouch! Cockatrice hit Eowyn the Wanderer!</li><li>T1142: You took 1 damage!</li><li>T1142: Eowyn the Wanderer is now affected by Cockatrice&#x27;s Slow!</li><li>T1142:  The Cockatrice begins turning your flesh to stone!</li><li>T1142: You missed the evil Cockatrice!</li><li>T1144: A Cockatrice (Level 2) appears! A rooster-dragon hybrid with a petrifying gaze.</li><li>T1144: The Cockatrice strikes first!</li><li>T1144: Ouch! Cockatrice hit Eowyn the Wanderer!</li><li>T1144: You took 1 damage!</li><li>T1144: Eowyn the Wanderer is now affected by Cockatrice&#x27;s Slow!</li><li>T1144:  The Cockatrice begins turning your flesh to stone!</li><li>T1144: You missed the evil Cockatrice!</li><li>T1144: You hit the evil Cockatrice!</li><li>T1144: Cockatrice took 22 damage.</li><li>T1145: Cockatrice missed Eowyn the Wanderer!</li><li>T1145: You defeated the Cockatrice!</li><li>T1145: The cockatrice turns to stone itself. Ironic.</li><li>T1145: You gained 32 experience.</li><li>T1145: You found 9 gold.</li><li>T1147: You collapse from starvation...</li><li>T1147: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T1136 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1137 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1138 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1139 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1140 <span class='mode'>chest_mode</span>: <code>e</code></li><li>T1141 <span class='mode'>combat_mode</span>: <code>n</code></li><li>T1142 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1143 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1144 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1145 <span class='mode'>combat_victory</span>: <code>a</code></li><li>T1146 <span class='mode'>game_loop</span>: <code>back</code></li><li>T1147 <span class='mode'>death_screen</span>: <code>w</code></li></ol>
+        <ol class="actions"><li>T1136 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1137 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1138 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1139 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1140 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1141 <span class='mode'>chest_mode</span>: <code>n</code></li><li>T1142 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1143 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1144 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1145 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T1146 <span class='mode'>combat_victory</span>: <code>back</code></li><li>T1147 <span class='mode'>game_loop</span>: <code>w</code></li></ol>
         
     </div>
 
@@ -370,10 +370,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 5 total · 0 accepted, 0 forced).</p>
-      <ul><li>T345: F1 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T474: F3 ↑ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T1075: F2 ↑ F1 <span style='color:#94a3b8;'>(other)</span></li><li>T1076: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T1128: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 20%</strong>
+        (1 warp / 5 total · 0 accepted, 1 forced).</p>
+      <ul><li>T345: F1 ↓ F3 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T474: F3 ↑ F2 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T1075: F2 ↑ F1 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T1076: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T1128: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 65%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

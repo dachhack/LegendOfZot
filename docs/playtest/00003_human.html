@@ -209,7 +209,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Gilraen the Stalwart, the human</h1>
-      <p class="muted">non-binary adventurer · seed 3 · started 2026-05-18T15:49:46+00:00</p>
+      <p class="muted">non-binary adventurer · seed 3 · started 2026-05-18T16:33:41+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -343,7 +343,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T35: F1 — encountered <span class='sprite sprite-p0008' style='width:24px;height:24px'></span> <strong>Zombie</strong> → tomb suspected on Floor 1</li><li>T306: F3 — encountered <span class='sprite sprite-p0017' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 3</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes</h2><p class='muted'>None — the agent never wedged in a tight cycle for 50+ turns.</p>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 66 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T297–T362</td><td>66</td><td>stairs_up_mode</td><td><code>fwe</code></td><td>period 3</td></tr></table>
       
         <div class="death-banner">
           
@@ -352,7 +352,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T352: Ouch! Skeleton hit Gilraen the Stalwart!</li><li>T352: You took 1 damage!</li><li>T352: You successfully broke away from combat!</li><li>T352: Choose a direction to flee (n/s/e/w):</li><li>T352: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T352: You are STARVING! Lost 2 HP from hunger!</li><li>T352: A Skeleton (Level 2) appears! Rattling bones form a reanimated skeleton. It was practicing a TikTok before you barged in.</li><li>T352: You seize the initiative!</li><li>T356: Skeleton missed Gilraen the Stalwart!</li><li>T356: You successfully broke away from combat!</li><li>T356: Choose a direction to flee (n/s/e/w):</li><li>T356: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T356: You are STARVING! Lost 2 HP from hunger!</li><li>T356: A Skeleton (Level 2) appears! Rattling bones form a reanimated skeleton. It was practicing a TikTok before you barged in.</li><li>T356: You seize the initiative!</li><li>T356: Flee failed! The monster blocks your escape.</li><li>T356: Ouch! Skeleton hit Gilraen the Stalwart!</li><li>T356: You took 1 damage!</li><li>T356: The Skeleton strikes first!</li><li>T360: Choose a direction to flee (n/s/e/w):</li><li>T360: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T360: You are STARVING! Lost 2 HP from hunger!</li><li>T360: A Skeleton (Level 2) appears! Rattling bones form a reanimated skeleton. It was practicing a TikTok before you barged in.</li><li>T360: The Skeleton strikes first!</li><li>T360: Skeleton missed Gilraen the Stalwart!</li><li>T360: You successfully broke away from combat!</li><li>T360: Ouch! Skeleton hit Gilraen the Stalwart!</li><li>T360: You took 1 damage!</li><li>T362: You collapse from starvation...</li><li>T362: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T351 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T352 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T353 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T354 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T355 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T356 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T357 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T358 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T359 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T360 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T361 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T362 <span class='mode'>death_screen</span>: <code>e</code></li></ol>
+        <ol class="actions"><li>T351 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T352 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T353 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T354 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T355 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T356 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T357 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T358 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T359 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T360 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T361 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T362 <span class='mode'>stairs_up_mode</span>: <code>e</code></li></ol>
         
     </div>
 
@@ -362,10 +362,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T63: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T304: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T63: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T304: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 38%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

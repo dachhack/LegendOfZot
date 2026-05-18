@@ -216,7 +216,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Isildur the Wise, the human</h1>
-      <p class="muted">non-binary adventurer · seed 11 · started 2026-05-18T15:49:47+00:00</p>
+      <p class="muted">non-binary adventurer · seed 11 · started 2026-05-18T16:33:42+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -350,7 +350,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T13: F1 — encountered <span class='sprite sprite-p0006' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 1</li><li>T128: F2 — encountered <span class='sprite sprite-p0006' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 2</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (2 · 167 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T543–T632</td><td>90</td><td>game_loop</td><td><code>n</code></td><td>period 1</td></tr><tr><td>T421–T497</td><td>77</td><td>game_loop</td><td><code>ns</code></td><td>period 2</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (2 · 167 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T543–T632</td><td>90</td><td>game_loop</td><td><code>n</code></td><td>period 1</td></tr><tr><td>T421–T497</td><td>77</td><td>stairs_up_mode</td><td><code>ns</code></td><td>period 2</td></tr></table>
       
         <div class="death-banner">
           
@@ -359,7 +359,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T652: Isildur the Wise drinks Minor Healing Potion and recovers 30 HP!</li><li>T652: Removed Minor Healing Potion from inventory.</li><li>T653: Inventory closed.</li><li>T656: You are STARVING! Lost 2 HP from hunger!</li><li>T656: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T656: Isildur the Wise drinks Minor Healing Potion and recovers 30 HP!</li><li>T656: Removed Minor Healing Potion from inventory.</li><li>T656: Inventory closed.</li><li>T660: You are STARVING! Lost 2 HP from hunger!</li><li>T660: Isildur the Wise drinks Minor Healing Potion and recovers 30 HP!</li><li>T660: Removed Minor Healing Potion from inventory.</li><li>T660: Inventory closed.</li><li>T660: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T664: Isildur the Wise drinks Minor Healing Potion and recovers 30 HP!</li><li>T664: Removed Minor Healing Potion from inventory.</li><li>T664: Inventory closed.</li><li>T664: You are STARVING! Lost 2 HP from hunger!</li><li>T664: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T668: You are STARVING! Lost 2 HP from hunger!</li><li>T668: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T671: You light your Lantern...</li><li>T671: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T671: Lantern fuel remaining: 22</li><li>T672: You are STARVING! Lost 2 HP from hunger!</li><li>T672: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T672: You light your Lantern...</li><li>T672: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T672: Lantern fuel remaining: 22</li><li>T674: You collapse from starvation...</li><li>T674: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T663 <span class='mode'>game_loop</span>: <code>s</code></li><li>T664 <span class='mode'>game_loop</span>: <code>e</code></li><li>T665 <span class='mode'>game_loop</span>: <code>w</code></li><li>T666 <span class='mode'>game_loop</span>: <code>s</code></li><li>T667 <span class='mode'>game_loop</span>: <code>s</code></li><li>T668 <span class='mode'>game_loop</span>: <code>n</code></li><li>T669 <span class='mode'>game_loop</span>: <code>n</code></li><li>T670 <span class='mode'>game_loop</span>: <code>n</code></li><li>T671 <span class='mode'>game_loop</span>: <code>l</code></li><li>T672 <span class='mode'>game_loop</span>: <code>n</code></li><li>T673 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T674 <span class='mode'>death_screen</span>: <code>s</code></li></ol>
+        <ol class="actions"><li>T663 <span class='mode'>game_loop</span>: <code>s</code></li><li>T664 <span class='mode'>game_loop</span>: <code>e</code></li><li>T665 <span class='mode'>game_loop</span>: <code>w</code></li><li>T666 <span class='mode'>game_loop</span>: <code>s</code></li><li>T667 <span class='mode'>game_loop</span>: <code>s</code></li><li>T668 <span class='mode'>game_loop</span>: <code>n</code></li><li>T669 <span class='mode'>game_loop</span>: <code>n</code></li><li>T670 <span class='mode'>game_loop</span>: <code>n</code></li><li>T671 <span class='mode'>game_loop</span>: <code>l</code></li><li>T672 <span class='mode'>game_loop</span>: <code>n</code></li><li>T673 <span class='mode'>game_loop</span>: <code>n</code></li><li>T674 <span class='mode'>stairs_up_mode</span>: <code>s</code></li></ol>
         
     </div>
 
@@ -369,10 +369,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T60: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T271: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T60: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T271: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 82%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

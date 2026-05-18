@@ -206,7 +206,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Forlong II, the human</h1>
-      <p class="muted">non-binary adventurer · seed 1 · started 2026-05-18T15:49:46+00:00</p>
+      <p class="muted">non-binary adventurer · seed 1 · started 2026-05-18T16:33:41+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -340,7 +340,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T5: F1 — encountered <span class='sprite sprite-p0003' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 1</li><li>T366: F2 — encountered <span class='sprite sprite-p0014' style='width:24px;height:24px'></span> <strong>ELITE UNDEAD SKELETON</strong> → tomb suspected on Floor 2</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 53 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T389–T441</td><td>53</td><td>game_loop</td><td><code>ewe</code></td><td>period 3</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 53 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T389–T441</td><td>53</td><td>stairs_up_mode</td><td><code>ewe</code></td><td>period 3</td></tr></table>
       
         <div class="death-banner">
           <span class='sprite sprite-p0014' style='width:64px;height:64px'></span>
@@ -349,7 +349,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T1261: You light your Lantern...</li><li>T1261: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1261: Lantern fuel remaining: 8</li><li>T1263: Ouch!  ELITE UNDEAD SKELETON hit Forlong II!</li><li>T1263: You took 4 damage!</li><li>T1264: The  ELITE UNDEAD SKELETON strikes first!</li><li>T1264:  ELITE UNDEAD SKELETON missed Forlong II!</li><li>T1264: You successfully broke away from combat!</li><li>T1264: Choose a direction to flee (n/s/e/w):</li><li>T1264: This tomb lies empty and silent. Nothing remains.</li><li>T1264: You light your Lantern...</li><li>T1264: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1264: Lantern fuel remaining: 8</li><li>T1264: You are STARVING! Lost 2 HP from hunger!</li><li>T1264: A  ELITE UNDEAD SKELETON (Level 2) appears! An elite undead guardian -- the tomb&#x27;s true keeper!</li><li>T1264: Ouch!  ELITE UNDEAD SKELETON hit Forlong II!</li><li>T1264: You took 4 damage!</li><li>T1265: You hit a wall!</li><li>T1268: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1268: Lantern fuel remaining: 8</li><li>T1268: You are STARVING! Lost 2 HP from hunger!</li><li>T1268: A  ELITE UNDEAD SKELETON (Level 2) appears! An elite undead guardian -- the tomb&#x27;s true keeper!</li><li>T1268: The  ELITE UNDEAD SKELETON strikes first!</li><li>T1268: Ouch!  ELITE UNDEAD SKELETON hit Forlong II!</li><li>T1268: You took 4 damage!</li><li>T1268: You successfully broke away from combat!</li><li>T1268: Choose a direction to flee (n/s/e/w):</li><li>T1268: This tomb lies empty and silent. Nothing remains.</li><li>T1268: You hit a wall!</li><li>T1269: You were defeated by the  ELITE UNDEAD SKELETON...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T1258 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T1259 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T1260 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1261 <span class='mode'>game_loop</span>: <code>l</code></li><li>T1262 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T1263 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T1264 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1265 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1266 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1267 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1268 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T1269 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        <ol class="actions"><li>T1258 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1259 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T1260 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T1261 <span class='mode'>game_loop</span>: <code>l</code></li><li>T1262 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1263 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T1264 <span class='mode'>flee_direction_mode</span>: <code>w</code></li><li>T1265 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1266 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1267 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1268 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1269 <span class='mode'>combat_mode</span>: <code>f</code></li></ol>
         
     </div>
 
@@ -359,10 +359,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 1 total · 0 accepted, 0 forced).</p>
-      <ul><li>T280: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T280: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 85%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

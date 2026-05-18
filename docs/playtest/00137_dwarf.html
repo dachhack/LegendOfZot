@@ -207,7 +207,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Dain Coalbeard, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 137 · started 2026-05-18T15:49:59+00:00</p>
+      <p class="muted">non-binary adventurer · seed 137 · started 2026-05-18T16:33:56+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -350,7 +350,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T856: You light your Lantern...</li><li>T856: The lantern reveals 10 nearby rooms!</li><li>T856: Lantern fuel remaining: 20</li><li>T858: The lantern reveals 7 nearby rooms!</li><li>T858: Lantern fuel remaining: 19</li><li>T860: You hit a wall!</li><li>T860: You are STARVING! Lost 2 HP from hunger!</li><li>T860: You light your Lantern...</li><li>T860: The lantern reveals 10 nearby rooms!</li><li>T860: Lantern fuel remaining: 20</li><li>T860: The lantern reveals 7 nearby rooms!</li><li>T860: Lantern fuel remaining: 19</li><li>T860: Lantern fuel remaining: 18</li><li>T862: The lantern reveals 4 nearby rooms!</li><li>T862: Lantern fuel remaining: 17</li><li>T864: You are STARVING! Lost 2 HP from hunger!</li><li>T864: You light your Lantern...</li><li>T864: The lantern reveals 7 nearby rooms!</li><li>T864: Lantern fuel remaining: 19</li><li>T864: Lantern fuel remaining: 18</li><li>T864: The lantern reveals 4 nearby rooms!</li><li>T864: Lantern fuel remaining: 17</li><li>T864: Lantern fuel remaining: 16</li><li>T865: A basin of water fills this chamber...</li><li>T865: The water has curious properties...</li><li>T865:  You study the water carefully, but something feels... unclear.</li><li>T865:    This looks safe - possibly beneficial.</li><li>T865: Will you drink from the basin?</li><li>T866: You collapse from starvation...</li><li>T866: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T855 <span class='mode'>game_loop</span>: <code>e</code></li><li>T856 <span class='mode'>game_loop</span>: <code>l</code></li><li>T857 <span class='mode'>game_loop</span>: <code>s</code></li><li>T858 <span class='mode'>game_loop</span>: <code>l</code></li><li>T859 <span class='mode'>game_loop</span>: <code>s</code></li><li>T860 <span class='mode'>game_loop</span>: <code>l</code></li><li>T861 <span class='mode'>game_loop</span>: <code>e</code></li><li>T862 <span class='mode'>game_loop</span>: <code>l</code></li><li>T863 <span class='mode'>game_loop</span>: <code>e</code></li><li>T864 <span class='mode'>game_loop</span>: <code>l</code></li><li>T865 <span class='mode'>pool_mode</span>: <code>e</code></li><li>T866 <span class='mode'>pool_mode</span>: <code>n</code></li></ol>
+        <ol class="actions"><li>T855 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T856 <span class='mode'>game_loop</span>: <code>l</code></li><li>T857 <span class='mode'>game_loop</span>: <code>s</code></li><li>T858 <span class='mode'>game_loop</span>: <code>l</code></li><li>T859 <span class='mode'>game_loop</span>: <code>s</code></li><li>T860 <span class='mode'>game_loop</span>: <code>l</code></li><li>T861 <span class='mode'>game_loop</span>: <code>e</code></li><li>T862 <span class='mode'>game_loop</span>: <code>l</code></li><li>T863 <span class='mode'>game_loop</span>: <code>e</code></li><li>T864 <span class='mode'>game_loop</span>: <code>l</code></li><li>T865 <span class='mode'>game_loop</span>: <code>e</code></li><li>T866 <span class='mode'>pool_mode</span>: <code>n</code></li></ol>
         
     </div>
 
@@ -360,10 +360,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T326: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T850: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 50%</strong>
+        (1 warp / 2 total · 1 accepted, 0 forced).</p>
+      <ul><li>T326: F1 ↓ F2 <span style='color:#fb923c;'>(warp accepted)</span></li><li>T850: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 93%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

@@ -200,7 +200,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Legolas the Bowyer, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-18T15:50:25+00:00</p>
+      <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-18T16:34:23+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -334,7 +334,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T318: F2 — encountered <span class='sprite sprite-p0004' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 2</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 200 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T11–T210</td><td>200</td><td>game_loop</td><td><code>sen</code></td><td>period 3</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 200 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T11–T210</td><td>200</td><td>stairs_down_mode</td><td><code>sen</code></td><td>period 3</td></tr></table>
       
         <div class="death-banner">
           
@@ -343,7 +343,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T600: This dungeon is locked. A monster on this floor holds the key.</li><li>T600: Legolas the Bowyer drinks Minor Healing Potion and recovers 6 HP!</li><li>T600: Removed Minor Healing Potion from inventory.</li><li>T600: Inventory closed.</li><li>T600: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T601: You light your Lantern...</li><li>T601: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T601: Lantern fuel remaining: 54</li><li>T604: This dungeon is locked. A monster on this floor holds the key.</li><li>T604: You are STARVING! Lost 2 HP from hunger!</li><li>T604: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T604: You light your Lantern...</li><li>T604: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T604: Lantern fuel remaining: 54</li><li>T605: You see stairs leading downwards. Press &#x27;d&#x27; to descend.</li><li>T606: You begin to descend the stairs.</li><li>T606: You found a passage leading down!</li><li>T606: Descending deeper! Depth 3!</li><li>T606: You arrive at (1, 1) on Depth 3.</li><li>T608: You are STARVING! Lost 2 HP from hunger!</li><li>T608: You see stairs leading downwards. Press &#x27;d&#x27; to descend.</li><li>T608: You begin to descend the stairs.</li><li>T608: You found a passage leading down!</li><li>T608: Descending deeper! Depth 3!</li><li>T608: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T608: You arrive at (1, 1) on Depth 3.</li><li>T608: Descending deeper! Depth 4!</li><li>T608: You arrive at (1, 1) on Depth 4.</li><li>T609: You collapse from starvation...</li><li>T609: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T598 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T599 <span class='mode'>game_loop</span>: <code>e</code></li><li>T600 <span class='mode'>game_loop</span>: <code>e</code></li><li>T601 <span class='mode'>game_loop</span>: <code>l</code></li><li>T602 <span class='mode'>game_loop</span>: <code>s</code></li><li>T603 <span class='mode'>game_loop</span>: <code>s</code></li><li>T604 <span class='mode'>game_loop</span>: <code>w</code></li><li>T605 <span class='mode'>stairs_down_mode</span>: <code>s</code></li><li>T606 <span class='mode'>stairs_up_mode</span>: <code>d</code></li><li>T607 <span class='mode'>stairs_down_mode</span>: <code>e</code></li><li>T608 <span class='mode'>stairs_up_mode</span>: <code>d</code></li><li>T609 <span class='mode'>death_screen</span>: <code>s</code></li></ol>
+        <ol class="actions"><li>T598 <span class='mode'>game_loop</span>: <code>w</code></li><li>T599 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T600 <span class='mode'>game_loop</span>: <code>e</code></li><li>T601 <span class='mode'>game_loop</span>: <code>l</code></li><li>T602 <span class='mode'>game_loop</span>: <code>s</code></li><li>T603 <span class='mode'>game_loop</span>: <code>s</code></li><li>T604 <span class='mode'>game_loop</span>: <code>w</code></li><li>T605 <span class='mode'>game_loop</span>: <code>s</code></li><li>T606 <span class='mode'>stairs_down_mode</span>: <code>d</code></li><li>T607 <span class='mode'>stairs_up_mode</span>: <code>e</code></li><li>T608 <span class='mode'>stairs_down_mode</span>: <code>d</code></li><li>T609 <span class='mode'>stairs_up_mode</span>: <code>s</code></li></ol>
         
     </div>
 
@@ -353,10 +353,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 3 total · 0 accepted, 0 forced).</p>
-      <ul><li>T306: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T606: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T608: F3 ↓ F4 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T306: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T606: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T608: F3 ↓ F4 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 98%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

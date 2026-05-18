@@ -212,7 +212,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Durin Deepdelver, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 47 · started 2026-05-18T15:49:53+00:00</p>
+      <p class="muted">non-binary adventurer · seed 47 · started 2026-05-18T16:33:49+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -355,7 +355,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T716: Flee failed! The monster blocks your escape.</li><li>T716: Ouch!  ELITE UNDEAD WRAITH hit Durin Deepdelver!</li><li>T716: You took 24 damage!</li><li>T717:  ELITE UNDEAD WRAITH missed Durin Deepdelver!</li><li>T720: You successfully broke away from combat!</li><li>T720: Choose a direction to flee (n/s/e/w):</li><li>T720: You decide to stand and fight!</li><li>T720: Flee failed! The monster blocks your escape.</li><li>T720:  ELITE UNDEAD WRAITH missed Durin Deepdelver!</li><li>T724: You successfully broke away from combat!</li><li>T724: Choose a direction to flee (n/s/e/w):</li><li>T724: You decide to stand and fight!</li><li>T724: Flee failed! The monster blocks your escape.</li><li>T724:  ELITE UNDEAD WRAITH missed Durin Deepdelver!</li><li>T728: Choose a direction to flee (n/s/e/w):</li><li>T728: You decide to stand and fight!</li><li>T728: You successfully broke away from combat!</li><li>T732: Choose a direction to flee (n/s/e/w):</li><li>T732: You decide to stand and fight!</li><li>T732: You successfully broke away from combat!</li><li>T734: Flee failed! The monster blocks your escape.</li><li>T734: Ouch!  ELITE UNDEAD WRAITH hit Durin Deepdelver!</li><li>T734: You took 24 damage!</li><li>T736: You decide to stand and fight!</li><li>T736: You successfully broke away from combat!</li><li>T736: Choose a direction to flee (n/s/e/w):</li><li>T736: Flee failed! The monster blocks your escape.</li><li>T736: Ouch!  ELITE UNDEAD WRAITH hit Durin Deepdelver!</li><li>T736: You took 24 damage!</li><li>T739: You were defeated...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T728 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T729 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T730 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T731 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T732 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T733 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T734 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T735 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T736 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T737 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T738 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T739 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        <ol class="actions"><li>T728 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T729 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T730 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T731 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T732 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T733 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T734 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T735 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T736 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T737 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T738 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T739 <span class='mode'>combat_mode</span>: <code>f</code></li></ol>
         
     </div>
 
@@ -365,10 +365,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T301: F1 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T657: F3 ↓ F4 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 50%</strong>
+        (1 warp / 2 total · 0 accepted, 1 forced).</p>
+      <ul><li>T301: F1 ↓ F3 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T657: F3 ↓ F4 <span style='color:#a78bfa;'>(Scroll of Descent)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 72%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

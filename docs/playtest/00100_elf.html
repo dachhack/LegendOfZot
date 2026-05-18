@@ -217,7 +217,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Celeborn Silver-tongued, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 100 · started 2026-05-18T15:49:57+00:00</p>
+      <p class="muted">non-binary adventurer · seed 100 · started 2026-05-18T16:33:53+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -360,7 +360,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T884: You light your Lantern...</li><li>T884: The lantern reveals 3 nearby rooms!</li><li>T884: Lantern fuel remaining: 2</li><li>T884: [Well-fed] +1 HP</li><li>T888: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T888: [Sated] +1 HP</li><li>T888: This dungeon is locked. A monster on this floor holds the key.</li><li>T888: You eat the Rations. Hunger restored by 50.</li><li>T888: (3 remaining)</li><li>T888: Inventory closed.</li><li>T888: You light your Lantern...</li><li>T888: The lantern reveals 3 nearby rooms!</li><li>T888: Lantern fuel remaining: 2</li><li>T888: [Well-fed] +1 HP</li><li>T891: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T891: Lantern fuel remaining: 1</li><li>T892: Inventory closed.</li><li>T892: You light your Lantern...</li><li>T892: The lantern reveals 3 nearby rooms!</li><li>T892: Lantern fuel remaining: 2</li><li>T892: [Well-fed] +1 HP</li><li>T892: This dungeon is locked. A monster on this floor holds the key.</li><li>T892: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T892: Lantern fuel remaining: 1</li><li>T892: A  ELITE UNDEAD WRAITH (Level 3) appears! An elite undead guardian -- the tomb&#x27;s true keeper!</li><li>T892: The  ELITE UNDEAD WRAITH strikes first!</li><li>T893: Ouch!  ELITE UNDEAD WRAITH hit Celeborn Silver-tongued!</li><li>T893: You took 27 damage!</li><li>T893: Flee failed! The monster blocks your escape.</li><li>T893: You were defeated...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T882 <span class='mode'>game_loop</span>: <code>s</code></li><li>T883 <span class='mode'>game_loop</span>: <code>e</code></li><li>T884 <span class='mode'>game_loop</span>: <code>n</code></li><li>T885 <span class='mode'>game_loop</span>: <code>n</code></li><li>T886 <span class='mode'>game_loop</span>: <code>e</code></li><li>T887 <span class='mode'>game_loop</span>: <code>w</code></li><li>T888 <span class='mode'>game_loop</span>: <code>s</code></li><li>T889 <span class='mode'>game_loop</span>: <code>s</code></li><li>T890 <span class='mode'>game_loop</span>: <code>w</code></li><li>T891 <span class='mode'>game_loop</span>: <code>l</code></li><li>T892 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T893 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        <ol class="actions"><li>T882 <span class='mode'>game_loop</span>: <code>s</code></li><li>T883 <span class='mode'>game_loop</span>: <code>e</code></li><li>T884 <span class='mode'>game_loop</span>: <code>n</code></li><li>T885 <span class='mode'>game_loop</span>: <code>n</code></li><li>T886 <span class='mode'>game_loop</span>: <code>e</code></li><li>T887 <span class='mode'>game_loop</span>: <code>w</code></li><li>T888 <span class='mode'>game_loop</span>: <code>s</code></li><li>T889 <span class='mode'>game_loop</span>: <code>s</code></li><li>T890 <span class='mode'>game_loop</span>: <code>w</code></li><li>T891 <span class='mode'>game_loop</span>: <code>l</code></li><li>T892 <span class='mode'>game_loop</span>: <code>s</code></li><li>T893 <span class='mode'>combat_mode</span>: <code>f</code></li></ol>
         
     </div>
 
@@ -370,10 +370,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 4 total · 0 accepted, 0 forced).</p>
-      <ul><li>T119: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T325: F2 ↑ F1 <span style='color:#94a3b8;'>(other)</span></li><li>T326: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T655: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 25%</strong>
+        (1 warp / 4 total · 0 accepted, 1 forced).</p>
+      <ul><li>T119: F1 ↓ F2 <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T325: F2 ↑ F1 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T326: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T655: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 78%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

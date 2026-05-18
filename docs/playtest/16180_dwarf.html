@@ -221,7 +221,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Fili the Mighty, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 16180 · started 2026-05-18T15:50:34+00:00</p>
+      <p class="muted">non-binary adventurer · seed 16180 · started 2026-05-18T16:34:31+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -364,7 +364,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T396:  The Giant Spider shoots sticky webbing at you!</li><li>T396: You are caught in sticky webbing!</li><li>T396: You are stuck in a web and cannot attack!</li><li>T400: Ouch! Giant Spider hit Fili the Mighty!</li><li>T400: You took 9 damage!</li><li>T400: Fili the Mighty is now affected by Giant Spider&#x27;s Web!</li><li>T400:  The Giant Spider shoots sticky webbing at you!</li><li>T400: You are caught in sticky webbing!</li><li>T400: You are stuck in a web and cannot attack!</li><li>T400: Giant Spider missed Fili the Mighty!</li><li>T400: Flee failed! The monster blocks your escape.</li><li>T401: Fili the Mighty is no longer affected by Giant Spider&#x27;s Web.</li><li>T402: You successfully broke away from combat!</li><li>T402: Choose a direction to flee (n/s/e/w):</li><li>T403: A Myconid Shaman (Level 1) appears! A hunched, robed figure made entirely of interlocking mushroom caps. It raises a staff tipped with a pulsing spore sac.</li><li>T403: The Myconid Shaman strikes first!</li><li>T404:  The Giant Spider shoots sticky webbing at you!</li><li>T404: You are caught in sticky webbing!</li><li>T404: Flee failed! The monster blocks your escape.</li><li>T404: Giant Spider missed Fili the Mighty!</li><li>T404: Ouch! Giant Spider hit Fili the Mighty!</li><li>T404: You took 9 damage!</li><li>T404: Fili the Mighty is now affected by Giant Spider&#x27;s Web!</li><li>T404: You successfully broke away from combat!</li><li>T404: Choose a direction to flee (n/s/e/w):</li><li>T404: A Myconid Shaman (Level 1) appears! A hunched, robed figure made entirely of interlocking mushroom caps. It raises a staff tipped with a pulsing spore sac.</li><li>T404: The Myconid Shaman strikes first!</li><li>T404: Ouch! Myconid Shaman hit Fili the Mighty!</li><li>T404: You took 3 damage!</li><li>T404: You were defeated by the Myconid Shaman...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T393 <span class='mode'>combat_mode</span>: <code>n</code></li><li>T394 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T395 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T396 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T397 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T398 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T399 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T400 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T401 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T402 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T403 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T404 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        <ol class="actions"><li>T393 <span class='mode'>game_loop</span>: <code>n</code></li><li>T394 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T395 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T396 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T397 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T398 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T399 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T400 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T401 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T402 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T403 <span class='mode'>flee_direction_mode</span>: <code>e</code></li><li>T404 <span class='mode'>combat_mode</span>: <code>f</code></li></ol>
         
     </div>
 
@@ -374,10 +374,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 1 total · 0 accepted, 0 forced).</p>
-      <ul><li>T315: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T315: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 41%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

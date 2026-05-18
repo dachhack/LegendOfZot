@@ -225,7 +225,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Fili the Stout, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 27182 · started 2026-05-18T15:50:35+00:00</p>
+      <p class="muted">non-binary adventurer · seed 27182 · started 2026-05-18T16:34:33+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -359,7 +359,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T24: F1 — encountered <span class='sprite sprite-p0008' style='width:24px;height:24px'></span> <strong>Zombie</strong> → tomb suspected on Floor 1</li><li>T625: F3 — encountered <span class='sprite sprite-p0008' style='width:24px;height:24px'></span> <strong>Zombie</strong> → tomb suspected on Floor 3</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 632 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T803–T1434</td><td>632</td><td>game_loop</td><td><code>s</code></td><td>period 1</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (1 · 632 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T803–T1434</td><td>632</td><td>stairs_up_mode</td><td><code>s</code></td><td>period 1</td></tr></table>
       
         <div class="death-banner">
           
@@ -368,7 +368,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T1392: Type &#x27;df&#x27; or tap Drink Full to heal to max.</li><li>T1392: Inventory closed.</li><li>T1396: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1396: You are STARVING! Lost 2 HP from hunger!</li><li>T1396: Fili the Stout drinks Minor Healing Potion and recovers 30 HP!</li><li>T1396: Removed Minor Healing Potion from inventory.</li><li>T1396: Type &#x27;df&#x27; or tap Drink Full to heal to max.</li><li>T1396: Inventory closed.</li><li>T1400: Removed Minor Healing Potion from inventory.</li><li>T1400: Inventory closed.</li><li>T1400: You are STARVING! Lost 2 HP from hunger!</li><li>T1400: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1404: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1404: You are STARVING! Lost 2 HP from hunger!</li><li>T1408: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1408: You are STARVING! Lost 2 HP from hunger!</li><li>T1412: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1412: You are STARVING! Lost 2 HP from hunger!</li><li>T1416: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1416: You are STARVING! Lost 2 HP from hunger!</li><li>T1420: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1420: You are STARVING! Lost 2 HP from hunger!</li><li>T1424: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1424: You are STARVING! Lost 2 HP from hunger!</li><li>T1428: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1428: You are STARVING! Lost 2 HP from hunger!</li><li>T1432: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T1432: You are STARVING! Lost 2 HP from hunger!</li><li>T1434: You collapse from starvation...</li><li>T1434: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T1423 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1424 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T1425 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1426 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T1427 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1428 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T1429 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1430 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T1431 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1432 <span class='mode'>stairs_up_mode</span>: <code>n</code></li><li>T1433 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1434 <span class='mode'>death_screen</span>: <code>n</code></li></ol>
+        <ol class="actions"><li>T1423 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1424 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1425 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1426 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1427 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1428 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1429 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1430 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1431 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1432 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1433 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T1434 <span class='mode'>game_loop</span>: <code>n</code></li></ol>
         
     </div>
 
@@ -378,10 +378,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 3 total · 0 accepted, 0 forced).</p>
-      <ul><li>T187: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T511: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T829: F3 ↓ F4 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T187: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T511: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T829: F3 ↓ F4 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 69%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

@@ -215,7 +215,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Fili the Cup-Bearer, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 1500 · started 2026-05-18T15:50:27+00:00</p>
+      <p class="muted">non-binary adventurer · seed 1500 · started 2026-05-18T16:34:24+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -358,7 +358,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T1584: Lantern fuel remaining: 10</li><li>T1584: You are STARVING! Lost 2 HP from hunger!</li><li>T1584: You light your Lantern...</li><li>T1584: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1584: Lantern fuel remaining: 9</li><li>T1588: You are STARVING! Lost 2 HP from hunger!</li><li>T1588: You light your Lantern...</li><li>T1588: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1588: Lantern fuel remaining: 9</li><li>T1591: Lantern fuel remaining: 8</li><li>T1592: You light your Lantern...</li><li>T1592: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1592: Lantern fuel remaining: 9</li><li>T1592: You are STARVING! Lost 2 HP from hunger!</li><li>T1592: Lantern fuel remaining: 8</li><li>T1596: You are STARVING! Lost 2 HP from hunger!</li><li>T1596: You light your Lantern...</li><li>T1596: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1596: Lantern fuel remaining: 8</li><li>T1600: You are STARVING! Lost 2 HP from hunger!</li><li>T1600: You light your Lantern...</li><li>T1600: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1600: Lantern fuel remaining: 8</li><li>T1601: Lantern fuel remaining: 7</li><li>T1604: You are STARVING! Lost 2 HP from hunger!</li><li>T1604: You light your Lantern...</li><li>T1604: The lantern shines brightly, but reveals no new rooms nearby.</li><li>T1604: Lantern fuel remaining: 7</li><li>T1604: You collapse from starvation...</li><li>T1604: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T1593 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1594 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1595 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1596 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1597 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1598 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1599 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1600 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1601 <span class='mode'>game_loop</span>: <code>l</code></li><li>T1602 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1603 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1604 <span class='mode'>death_screen</span>: <code>n</code></li></ol>
+        <ol class="actions"><li>T1593 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1594 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1595 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1596 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1597 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1598 <span class='mode'>game_loop</span>: <code>s</code></li><li>T1599 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1600 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1601 <span class='mode'>game_loop</span>: <code>l</code></li><li>T1602 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1603 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1604 <span class='mode'>game_loop</span>: <code>n</code></li></ol>
         
     </div>
 
@@ -368,10 +368,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T201: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T1154: F2 ↑ F1 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 50%</strong>
+        (1 warp / 2 total · 0 accepted, 1 forced).</p>
+      <ul><li>T201: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T1154: F2 ↑ F1 <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 86%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

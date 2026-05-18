@@ -206,7 +206,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Galadriel the Quenya-tongued, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 31415 · started 2026-05-18T15:50:35+00:00</p>
+      <p class="muted">non-binary adventurer · seed 31415 · started 2026-05-18T16:34:33+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -349,7 +349,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T232: Lichen missed Galadriel the Quenya-tongued!</li><li>T232: You missed the evil Lichen!</li><li>T232: Ouch! Lichen hit Galadriel the Quenya-tongued!</li><li>T232: You took 1 damage!</li><li>T232: You successfully broke away from combat!</li><li>T232: Choose a direction to flee (n/s/e/w):</li><li>T232: [Well-fed] +1 HP</li><li>T236: You see stairs leading upwards. Press &#x27;u&#x27; to ascend.</li><li>T236: You light your Lantern...</li><li>T236: The lantern reveals 6 nearby rooms!</li><li>T236: Lantern fuel remaining: 66</li><li>T236: A Lichen (Level 1) appears! A slow and menacing living amalgam of fungus and plant. Like nature but mean.</li><li>T236: The Lichen strikes first!</li><li>T236: Lichen missed Galadriel the Quenya-tongued!</li><li>T236: You missed the evil Lichen!</li><li>T236: Ouch! Lichen hit Galadriel the Quenya-tongued!</li><li>T236: You took 1 damage!</li><li>T236: You successfully broke away from combat!</li><li>T236: Choose a direction to flee (n/s/e/w):</li><li>T236: [Well-fed] +1 HP</li><li>T238: A basin of water fills this chamber...</li><li>T238: The water has curious properties...</li><li>T238:  You study the water carefully, but something feels... unclear.</li><li>T238:    Fortune favors the bold... or does it?</li><li>T238: Will you drink from the basin?</li><li>T239: You drink deeply from the basin...</li><li>T239:  It was the Tainted Well! </li><li>T239:  The water explodes with dark energy!</li><li>T239: You took 33 damage!</li><li>T239: The explosion was fatal...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T228 <span class='mode'>game_loop</span>: <code>n</code></li><li>T229 <span class='mode'>game_loop</span>: <code>n</code></li><li>T230 <span class='mode'>game_loop</span>: <code>e</code></li><li>T231 <span class='mode'>game_loop</span>: <code>w</code></li><li>T232 <span class='mode'>stairs_up_mode</span>: <code>w</code></li><li>T233 <span class='mode'>game_loop</span>: <code>s</code></li><li>T234 <span class='mode'>game_loop</span>: <code>s</code></li><li>T235 <span class='mode'>game_loop</span>: <code>s</code></li><li>T236 <span class='mode'>game_loop</span>: <code>e</code></li><li>T237 <span class='mode'>game_loop</span>: <code>e</code></li><li>T238 <span class='mode'>pool_mode</span>: <code>s</code></li><li>T239 <span class='mode'>pool_mode</span>: <code>dr</code></li></ol>
+        <ol class="actions"><li>T228 <span class='mode'>flee_direction_mode</span>: <code>n</code></li><li>T229 <span class='mode'>game_loop</span>: <code>n</code></li><li>T230 <span class='mode'>game_loop</span>: <code>e</code></li><li>T231 <span class='mode'>game_loop</span>: <code>w</code></li><li>T232 <span class='mode'>game_loop</span>: <code>w</code></li><li>T233 <span class='mode'>stairs_up_mode</span>: <code>s</code></li><li>T234 <span class='mode'>game_loop</span>: <code>s</code></li><li>T235 <span class='mode'>game_loop</span>: <code>s</code></li><li>T236 <span class='mode'>game_loop</span>: <code>e</code></li><li>T237 <span class='mode'>game_loop</span>: <code>e</code></li><li>T238 <span class='mode'>game_loop</span>: <code>s</code></li><li>T239 <span class='mode'>pool_mode</span>: <code>dr</code></li></ol>
         
     </div>
 
@@ -359,10 +359,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: 0%</strong>
         (0 warp / 1 total · 0 accepted, 0 forced).</p>
-      <ul><li>T69: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li></ul>
+      <ul><li>T69: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 84%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

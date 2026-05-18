@@ -205,7 +205,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Thranduil Moonsinger, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 11 · started 2026-05-18T15:49:48+00:00</p>
+      <p class="muted">non-binary adventurer · seed 11 · started 2026-05-18T16:33:43+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -348,7 +348,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T156: Ouch!  ELITE UNDEAD SKELETON hit Thranduil Moonsinger!</li><li>T156: You took 4 damage!</li><li>T160: You took 4 damage!</li><li>T160: You successfully broke away from combat!</li><li>T160: Choose a direction to flee (n/s/e/w):</li><li>T160: You decide to stand and fight!</li><li>T160: Flee failed! The monster blocks your escape.</li><li>T160: Ouch!  ELITE UNDEAD SKELETON hit Thranduil Moonsinger!</li><li>T164: You took 4 damage!</li><li>T164: Flee failed! The monster blocks your escape.</li><li>T164: Ouch!  ELITE UNDEAD SKELETON hit Thranduil Moonsinger!</li><li>T164: You successfully broke away from combat!</li><li>T164: Choose a direction to flee (n/s/e/w):</li><li>T164: You decide to stand and fight!</li><li>T167:  ELITE UNDEAD SKELETON missed Thranduil Moonsinger!</li><li>T168: Ouch!  ELITE UNDEAD SKELETON hit Thranduil Moonsinger!</li><li>T168: You took 4 damage!</li><li>T168: You successfully broke away from combat!</li><li>T168: Choose a direction to flee (n/s/e/w):</li><li>T168: You decide to stand and fight!</li><li>T168: Flee failed! The monster blocks your escape.</li><li>T168:  ELITE UNDEAD SKELETON missed Thranduil Moonsinger!</li><li>T172: Choose a direction to flee (n/s/e/w):</li><li>T172: You decide to stand and fight!</li><li>T172: Flee failed! The monster blocks your escape.</li><li>T172:  ELITE UNDEAD SKELETON missed Thranduil Moonsinger!</li><li>T172: Ouch!  ELITE UNDEAD SKELETON hit Thranduil Moonsinger!</li><li>T172: You took 4 damage!</li><li>T172: You successfully broke away from combat!</li><li>T172: You were defeated...</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T161 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T162 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T163 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T164 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T165 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T166 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T167 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T168 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T169 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T170 <span class='mode'>combat_mode</span>: <code>c</code></li><li>T171 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T172 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        <ol class="actions"><li>T161 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T162 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T163 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T164 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T165 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T166 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T167 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T168 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T169 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T170 <span class='mode'>flee_direction_mode</span>: <code>c</code></li><li>T171 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T172 <span class='mode'>combat_mode</span>: <code>f</code></li></ol>
         
     </div>
 
@@ -358,10 +358,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 2 total · 0 accepted, 0 forced).</p>
-      <ul><li>T50: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T55: F2 ↑ F1 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 50%</strong>
+        (1 warp / 2 total · 0 accepted, 1 forced).</p>
+      <ul><li>T50: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T55: F2 ↑ F1 <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 0%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on

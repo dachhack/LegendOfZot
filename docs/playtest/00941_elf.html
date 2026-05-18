@@ -228,7 +228,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Voronwe Stareyed, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 941 · started 2026-05-18T15:50:22+00:00</p>
+      <p class="muted">non-binary adventurer · seed 941 · started 2026-05-18T16:34:20+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -362,7 +362,7 @@ th { color: #94a3b8; font-weight: normal; }
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list"><li>T1358: F4 — encountered <span class='sprite sprite-p0035' style='width:24px;height:24px'></span> <strong>UNDEAD WRAITH</strong> → tomb suspected on Floor 4</li><li>T1451: F6 — encountered <span class='sprite sprite-p0036' style='width:24px;height:24px'></span> <strong>ELITE UNDEAD LICH</strong> → tomb suspected on Floor 6</li></ul>
-      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (2 · 206 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T1062–T1182</td><td>121</td><td>game_loop</td><td><code>six</code></td><td>period 3</td></tr><tr><td>T911–T995</td><td>85</td><td>shrine_mode</td><td><code>nee</code></td><td>period 3</td></tr></table>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes (2 · 206 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T1062–T1182</td><td>121</td><td>inventory</td><td><code>six</code></td><td>period 3</td></tr><tr><td>T911–T995</td><td>85</td><td>game_loop</td><td><code>nee</code></td><td>period 3</td></tr></table>
       
         <div class="death-banner">
           
@@ -371,7 +371,7 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Last 30 log lines</h3>
         <ol class="log"><li>T1612: Try finding a Scroll of Greater Upgrade (floor 5+)</li><li>T1612: Upgrade cancelled.</li><li>T1612: Inventory closed.</li><li>T1612: You are STARVING! Lost 2 HP from hunger!</li><li>T1612: A dung beetle in a leather apron looks up from its workbench.</li><li>T1612: &quot;Bring me trophies from the hive! I can make something beautiful!&quot;</li><li>T1613: === Scroll of Upgrade ===</li><li>T1613: This scroll can upgrade items up to +3</li><li>T1613: Choose an item to upgrade:</li><li>T1613:   1. Tempered Halberd of Thunder (+3) - MAX for this scroll</li><li>T1613:   2. Morningstar</li><li>T1613:   3. Mace</li><li>T1613:   4. Dagger</li><li>T1616:   2. Morningstar</li><li>T1616:   3. Mace</li><li>T1616:   4. Dagger</li><li>T1616:   5. Short Sword</li><li>T1616:   6. Ring Mail</li><li>T1616:   7. Studded Leather</li><li>T1616:   8. Leather Armor</li><li>T1616: Enter number to upgrade, or &#x27;c&#x27; to cancel.</li><li>T1616: This item is already at +3!</li><li>T1616: You need a stronger scroll to go beyond +3.</li><li>T1616: Try finding a Scroll of Greater Upgrade (floor 5+)</li><li>T1616: Upgrade cancelled.</li><li>T1616: Inventory closed.</li><li>T1616: A dung beetle in a leather apron looks up from its workbench.</li><li>T1616: &quot;Bring me trophies from the hive! I can make something beautiful!&quot;</li><li>T1617: You collapse from starvation...</li><li>T1617: You were defeated by status effects upon entering the new room... Game Over!</li></ol>
         <h3>Last actions</h3>
-        <ol class="actions"><li>T1606 <span class='mode'>upgrade_scroll_mode</span>: <code>1</code></li><li>T1607 <span class='mode'>inventory</span>: <code>c</code></li><li>T1608 <span class='mode'>game_loop</span>: <code>x</code></li><li>T1609 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1610 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1611 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1612 <span class='mode'>inventory</span>: <code>i</code></li><li>T1613 <span class='mode'>upgrade_scroll_mode</span>: <code>u10</code></li><li>T1614 <span class='mode'>upgrade_scroll_mode</span>: <code>1</code></li><li>T1615 <span class='mode'>inventory</span>: <code>c</code></li><li>T1616 <span class='mode'>game_loop</span>: <code>x</code></li><li>T1617 <span class='mode'>death_screen</span>: <code>w</code></li></ol>
+        <ol class="actions"><li>T1606 <span class='mode'>upgrade_scroll_mode</span>: <code>1</code></li><li>T1607 <span class='mode'>upgrade_scroll_mode</span>: <code>c</code></li><li>T1608 <span class='mode'>inventory</span>: <code>x</code></li><li>T1609 <span class='mode'>game_loop</span>: <code>e</code></li><li>T1610 <span class='mode'>game_loop</span>: <code>n</code></li><li>T1611 <span class='mode'>game_loop</span>: <code>w</code></li><li>T1612 <span class='mode'>game_loop</span>: <code>i</code></li><li>T1613 <span class='mode'>inventory</span>: <code>u10</code></li><li>T1614 <span class='mode'>upgrade_scroll_mode</span>: <code>1</code></li><li>T1615 <span class='mode'>upgrade_scroll_mode</span>: <code>c</code></li><li>T1616 <span class='mode'>inventory</span>: <code>x</code></li><li>T1617 <span class='mode'>game_loop</span>: <code>w</code></li></ol>
         
     </div>
 
@@ -381,10 +381,11 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
-        <strong>Warp share of floor changes: 0%</strong>
-        (0 warp / 9 total · 0 accepted, 0 forced).</p>
-      <ul><li>T185: F1 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T372: F3 ↑ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T903: F2 ↑ F1 <span style='color:#94a3b8;'>(other)</span></li><li>T904: F1 ↓ F2 <span style='color:#94a3b8;'>(other)</span></li><li>T935: F2 ↓ F3 <span style='color:#94a3b8;'>(other)</span></li><li>T1281: F3 ↓ F4 <span style='color:#94a3b8;'>(other)</span></li><li>T1400: F4 ↓ F6 <span style='color:#94a3b8;'>(other)</span></li><li>T1489: F6 ↓ F7 <span style='color:#94a3b8;'>(other)</span></li><li>T1494: F7 ↓ F9 <span style='color:#94a3b8;'>(other)</span></li></ul>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 44%</strong>
+        (4 warp / 9 total · 0 accepted, 4 forced).</p>
+      <ul><li>T185: F1 ↓ F3 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T372: F3 ↑ F2 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T903: F2 ↑ F1 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T904: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T935: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T1281: F3 ↓ F4 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T1400: F4 ↓ F6 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T1489: F6 ↓ F7 <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T1494: F7 ↓ F9 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 68%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on
