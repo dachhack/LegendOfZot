@@ -1467,8 +1467,23 @@ class PlaytestSession:
                     continue
                 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
                     nx, ny = x + dx, y + dy
-                    if 0 <= nx < floor.cols and 0 <= ny < floor.rows:
-                        out.add((nx, ny))
+                    if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                        continue
+                    # If the candidate tile is already discovered AND
+                    # not an M tile, it definitely isn't a guardian
+                    # spawn. Skip. Caught on s=941 dwarf F1 at T404:
+                    # the agent stood adjacent to a D tile that
+                    # happened to neighbour a discovered T -- the
+                    # blanket 'every adjacent to T is suspected'
+                    # rule flagged the D as a guardian, the policy
+                    # refused 'w' onto D and stayed wedged for
+                    # 1700+ turns at full HP. Now: discovered non-M
+                    # tiles (D, U, ., features, etc.) are safe.
+                    ncell = floor.grid[ny][nx]
+                    if self.fog_of_war and ncell.discovered:
+                        if ncell.room_type != "M":
+                            continue
+                    out.add((nx, ny))
         return sorted(out)
 
     def _inferred_guardian_dirs_obs(self):
@@ -2738,8 +2753,9 @@ def smart_policy(obs, rng, use_lantern=True):
         # 159-seed grid before tightening: 35% of floor changes were
         # warps (194 forced + 35 accepted of 647 transitions).
         turns_since_new = obs.get("turns_since_new_tile") or 0
+        turns_on_floor_avoid = obs.get("turns_on_floor") or 0
         # trapped_no_d: D unreachable + agent has exhausted exploration.
-        # Two firing paths:
+        # Three firing paths:
         #   1. Standard: swept >= 80% of reachable tiles AND no new
         #      tile in 200T. (Eased from reach_pct >= 90; build-329
         #      audit caught s=88 dwarf stuck at reach_pct=85% for
@@ -2750,11 +2766,18 @@ def smart_policy(obs, rng, use_lantern=True):
         #      stays low because BFS discovers new fog-tiles
         #      faster than the agent walks to them, but the agent
         #      is functionally idle anyway.
+        #   3. Long-floor: 600T on the same floor with no D found.
+        #      Catches s=317 elf 3220T F3 with 402 kills -- agent
+        #      kept revealing 1 new tile every 200T (so ts_new
+        #      never hit 500) while D stayed unreachable in a
+        #      different region. The 600T floor budget is generous
+        #      vs the avg 130-160 moves a productive floor takes.
         trapped_no_d = (
             (not d_avoid_reachable)
             and (
                 (reach_pct_avoid >= 80 and turns_since_new >= 200)
                 or (turns_since_new >= 500)
+                or (turns_on_floor_avoid >= 600)
             )
         )
         # Cornered detection: agent's ONLY walkable cardinal
@@ -4507,14 +4530,17 @@ def smart_policy(obs, rng, use_lantern=True):
         # time, but the cost asymmetry (warp = 100-200T recovery vs
         # walking around) favours the gamble.
         # Mirror the tightened trapped_no_d in game_loop: ACCEPT the
-        # warp when the agent is genuinely stuck. Two firing paths
+        # warp when the agent is genuinely stuck. Three firing paths
         # (matched to the game_loop gate exactly):
         #   1. reach_pct >= 80% AND no new tile in 200T
         #   2. no new tile in 500T regardless of reach_pct
+        #   3. 600T on the current floor with no D found
+        turns_on_floor_warp = obs.get("turns_on_floor") or 0
         if (not d_reachable
                 and (
                     (reach_pct_warp >= 80 and turns_since_new_warp >= 200)
                     or (turns_since_new_warp >= 500)
+                    or (turns_on_floor_warp >= 600)
                 )):
             return "n"
         return "y"
