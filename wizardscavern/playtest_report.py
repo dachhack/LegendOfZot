@@ -774,7 +774,8 @@ class RunReport:
     # ------------------------------------------------------------------
     # Finalising
     # ------------------------------------------------------------------
-    def finalize(self, final_obs, gs_log_lines, turns):
+    def finalize(self, final_obs, gs_log_lines, turns,
+                 early_terminate_reason=None):
         p = final_obs.get("player") or {}
         alive = final_obs.get("alive")
         # Grab a snapshot of the final log buffer (in addition to
@@ -807,8 +808,16 @@ class RunReport:
             self.death_cause = self._derive_death_cause()
         # Three-state classification: dead beats stuck beats alive.
         # Stuck only fires when the agent is still alive but has
-        # clearly stopped progressing (see _classify_status).
-        self.status, self.status_reason = self._classify_status(turns)
+        # clearly stopped progressing (see _classify_status). The
+        # early_terminate_reason short-circuit is for runs the
+        # harness break-stopped because no D/U/W/escape-scroll
+        # path exists -- these are objectively stuck even though
+        # the agent might still have full HP and food.
+        if early_terminate_reason and alive:
+            self.status = "stuck"
+            self.status_reason = early_terminate_reason
+        else:
+            self.status, self.status_reason = self._classify_status(turns)
         # Scan the whole run for mid-run loop episodes the agent
         # eventually escaped. These don't change status (the run
         # ended fine) but signal a softlock the harness's anti-

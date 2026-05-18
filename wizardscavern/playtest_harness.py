@@ -732,6 +732,19 @@ class PlaytestSession:
         self.wedge_count = {}   # z -> number of times marked
         self._WEDGE_EXPIRY_TURNS = 500
         self._WEDGE_PERMANENT_AFTER = 3
+        # Early-termination flag for runs the agent CAN'T escape:
+        # no D / U / W reachable on this floor, no Scroll of
+        # Teleport / Descent in the bag, and 1500+ turns burned
+        # walking the same tile set. The agent isn't dying (food +
+        # full HP) but it can't make any further progress either --
+        # continuing the loop just wastes harness CPU. Detected via
+        # _is_truly_trapped() each step; the main loop breaks when
+        # set. Caught on s=16180 human 3791T on F3 (region-split
+        # entered via stairs down, 22 tiles visited, 0 kills out
+        # of 16 monsters because all M were in the unreachable
+        # region, no escape items in bag).
+        self.early_terminated = False
+        self.early_terminate_reason = None
         # Per-floor walkable-tile coverage: set of (x, y) the player
         # has stood on for the current floor. Reset on descent. Used
         # by the policy's tile-coverage descent gate to leave a floor
@@ -758,6 +771,17 @@ class PlaytestSession:
         # alternating two unidentified scrolls that both refused to
         # consume out of combat.
         self.wedge_attempted_actions = set()
+        # Floor-scoped Hail-Mary tracker. wedge_attempted_actions
+        # above resets on EVERY MOVE (per-tile episode), so a
+        # 5-tile bounce loop re-tries the same unidentified potion
+        # on every tile -- 100 moves = 100 inventory opens. This
+        # set persists across moves on the same floor: once we've
+        # tried a slot's escape item, we don't keep re-trying it
+        # until the floor changes. Caught on s=16180 human F3:
+        # unidentified Healing Potion in slot 6 not consumed at
+        # full HP (game: 'Already at full health!'), agent
+        # re-tried u6 on every tile of a 22-tile bounce for 3800T.
+        self.wedge_tried_this_floor = set()
         # Blocked-directions tracker. When the agent issues a
         # cardinal-direction action (n/s/e/w from game_loop or a
         # flee/move-accepting mode) and the position doesn't change,
@@ -1075,6 +1099,11 @@ class PlaytestSession:
             "floor_totals": dict(self.floor_totals),
             "turns_since_new_tile": self.turn - self.last_new_tile_turn,
             "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
+            # Floor-scoped Hail-Mary tracker. The policy unions
+            # this with wedge_attempted_actions when deciding
+            # which slots to try -- prevents re-trying a dud
+            # potion / scroll on every tile of a bounce loop.
+            "wedge_tried_this_floor": sorted(self.wedge_tried_this_floor),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -2155,6 +2184,10 @@ class PlaytestSession:
             self.floor_visit_count = {}
             self.last_new_tile_turn = self.turn
             self.wedge_attempted_actions = set()
+            # Reset the floor-scoped Hail-Mary tracker too -- fresh
+            # floor means fresh items worth trying (new scrolls
+            # picked up, different vendor stock).
+            self.wedge_tried_this_floor = set()
             # Fresh floor, fresh walls to discover.
             self.blocked_directions = set()
             # Reset per-floor kill counter so the grind-first descent
@@ -2202,6 +2235,11 @@ class PlaytestSession:
             self.wedge_attempted_actions = set()
         elif cur_visits >= 6 and isinstance(action, str) and action.startswith("u"):
             self.wedge_attempted_actions.add(action)
+            # Also remember it at floor scope so a bounce loop
+            # across 5 tiles doesn't re-try the same dud item on
+            # every tile (s=16180 human burned 3800T on F3 re-
+            # trying an unidentified Healing Potion at full HP).
+            self.wedge_tried_this_floor.add(action)
         # Maintain blocked_directions: when a cardinal-move action
         # fails to change position, that direction is a wall from the
         # current tile. Cleared on any successful move.
@@ -2238,7 +2276,56 @@ class PlaytestSession:
     def is_done(self):
         return (gs.game_should_quit
                 or gs.prompt_cntl == "death_screen"
-                or not gs.player_character.is_alive())
+                or not gs.player_character.is_alive()
+                or self.early_terminated)
+
+    def is_truly_trapped(self, obs):
+        """Detect the unreachable-corner case where the agent has
+        no algorithmic escape: no D / U on this floor's reachable
+        region, no warp, no Teleport / Descent scroll in inventory,
+        and has burned 1500+ turns since the last new tile without
+        progress. Returning True flips early_terminated and lets
+        is_done() break the main loop -- saves 3000+ wasted turns
+        per stuck-but-not-dead run.
+
+        Conservative gates so we never short-circuit a run that
+        could still progress:
+          - turns_on_floor >= 1500
+          - turns_since_new_tile >= 800
+          - reach_pct >= 90 (we've fully explored the region)
+          - feature_paths has neither D nor U
+          - nearest_warp_path is None
+          - inventory has no identified Scroll of Teleport or
+            Scroll of Descent (the two scrolls that move the
+            player off the current tile / floor)
+        """
+        if obs is None:
+            return False
+        turns_on_floor = obs.get("turns_on_floor") or 0
+        if turns_on_floor < 1500:
+            return False
+        turns_since_new = obs.get("turns_since_new_tile") or 0
+        if turns_since_new < 800:
+            return False
+        cov = obs.get("tile_coverage") or {}
+        if (cov.get("reach_pct") or 0) < 90:
+            return False
+        feature_paths = obs.get("feature_paths") or {}
+        if (feature_paths.get("D") or {}).get("first_step"):
+            return False
+        if (feature_paths.get("U") or {}).get("first_step"):
+            return False
+        if obs.get("nearest_warp_path") is not None:
+            return False
+        ESCAPE_SCROLLS = {"teleport", "descent"}
+        for entry in obs.get("inventory") or []:
+            if entry.get("category") != "scroll":
+                continue
+            if not entry.get("is_identified"):
+                continue
+            if entry.get("scroll_type") in ESCAPE_SCROLLS:
+                return False
+        return True
 
 
 # ----------------------------------------------------------------------
@@ -2584,7 +2671,10 @@ def smart_policy(obs, rng, use_lantern=True):
         # item twice in a row.
         current_tile_visits = obs.get("current_tile_visits") or 0
         wedged = current_tile_visits >= 6
-        attempted_already = set(obs.get("wedge_attempted_actions") or [])
+        attempted_already = (
+            set(obs.get("wedge_attempted_actions") or [])
+            | set(obs.get("wedge_tried_this_floor") or [])
+        )
         WEDGE_SKIP_SCROLL_TRIGGER = {"spell_scroll", "vendor_restock"}
         untried_scroll = any(
             e["category"] == "scroll"
@@ -3687,7 +3777,10 @@ def smart_policy(obs, rng, use_lantern=True):
                     break
         current_tile_visits_iv = obs.get("current_tile_visits") or 0
         wedged_iv = current_tile_visits_iv >= 6
-        wedge_attempted = set(obs.get("wedge_attempted_actions") or [])
+        wedge_attempted = (
+            set(obs.get("wedge_attempted_actions") or [])
+            | set(obs.get("wedge_tried_this_floor") or [])
+        )
         WEDGE_SKIP_SCROLL_TYPES = {"spell_scroll", "vendor_restock"}
         if proposed is None and wedged_iv:
             for entry in inv:
@@ -5112,6 +5205,19 @@ def main(argv=None):
         print(_summarise(obs, args.jsonl))
         if sess.last_error:
             print(f"  ! {sess.last_error}", file=sys.stderr)
+        # Early-stop genuinely unsalvageable runs (no D/U/W
+        # reachable + no escape scrolls + 1500+ turns on this
+        # floor). Continuing would just burn harness CPU for no
+        # signal. See PlaytestSession.is_truly_trapped.
+        if not sess.early_terminated and sess.is_truly_trapped(obs):
+            sess.early_terminated = True
+            sess.early_terminate_reason = (
+                f"no escape (F{obs['player']['floor']}, "
+                f"{obs.get('turns_on_floor', 0)}T on floor, "
+                f"reach {(obs.get('tile_coverage') or {}).get('reach_pct', 0):.0f}%)"
+            )
+            print(f"  ! early-terminate: {sess.early_terminate_reason}",
+                  file=sys.stderr)
 
     # Final summary
     p = obs["player"]
@@ -5150,7 +5256,10 @@ def main(argv=None):
     # game_state, but we don't want a bad git config to break runs.
     if report is not None:
         from .playtest_report import write_report, write_index, deploy_gh_pages
-        report.finalize(obs, gs.log_lines, sess.turn)
+        report.finalize(
+            obs, gs.log_lines, sess.turn,
+            early_terminate_reason=sess.early_terminate_reason,
+        )
         # Surface the 3-state classification (alive / dead / stuck) in
         # the run-end console output so smoke-test loops can see it
         # without scraping the HTML.
