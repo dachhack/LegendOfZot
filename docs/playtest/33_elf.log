@@ -1191,420 +1191,902 @@ T 586 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 1, 2) HP 28/2
 T 587 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F4@( 1, 1) HP 28/28 MP 0/0 Hu 70 $ 632 room=U
 -> u
 T 588 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 28/28 MP 0/0 Hu 70 $ 632 room=D
--> n
-T 589 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 632 room=.
--> l
-T 590 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 632 room=.
--> w
-T 591 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
--> l
-T 592 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
--> n
-T 593 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
--> n
-T 594 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 28/28 MP 0/0 Hu 67 $ 632 room=.
--> n
-T 595 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 66 $ 632 room=U
--> u
-T 596 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F2@( 5, 6) HP 28/28 MP 0/0 Hu 66 $ 632 room=D
 -> d
-T 597 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 28/28 MP 0/0 Hu 66 $ 632 room=U
+T 589 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F4@( 1, 1) HP 28/28 MP 0/0 Hu 70 $ 632 room=U
 -> s
-T 598 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+T 590 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 1, 2) HP 28/28 MP 0/0 Hu 69 $ 632 room=.
 -> e
-T 599 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+T 591 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 2, 2) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
 -> l
-T 600 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+T 592 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 2, 2) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
 -> e
-T 601 mode=library_mode        Elrond the Quenya-tongued(elf) F3@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 632 room=L
--> r
-T 602 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 632 room=.
+T 593 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 3, 2) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
 -> l
-T 603 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 632 room=.
+T 594 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 3, 2) HP 28/28 MP 0/0 Hu 68 $ 632 room=.
+-> e
+T 595 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4, 2) HP 28/28 MP 0/0 Hu 67 $ 632 room=.
+-> l
+T 596 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4, 2) HP 28/28 MP 0/0 Hu 67 $ 632 room=.
+-> e
+T 597 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5, 2) HP 28/28 MP 0/0 Hu 66 $ 632 room=.
+-> l
+T 598 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5, 2) HP 28/28 MP 0/0 Hu 66 $ 632 room=.
+-> e
+T 599 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+-> l
+T 600 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+-> e
+T 601 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+-> l
+T 602 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 2) HP 28/28 MP 0/0 Hu 65 $ 632 room=.
+-> e
+T 603 mode=altar_mode          Elrond the Quenya-tongued(elf) F4@( 8, 2) HP 28/28 MP 0/0 Hu 64 $ 632 room=A
+-> pray
+T 604 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 2) HP 28/28 MP 0/0 Hu100 $ 632 room=.
 -> s
-T 604 mode=tomb_mode           Elrond the Quenya-tongued(elf) F3@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 632 room=T
--> p
-T 605 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 632 room=T
+T 605 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 3) HP 28/28 MP 0/0 Hu 99 $ 632 room=.
 -> l
-T 606 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 632 room=T
--> n
-T 607 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 2) HP 28/28 MP 0/0 Hu 63 $ 632 room=.
--> e
-T 608 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 2) HP 28/28 MP 0/0 Hu 62 $ 632 room=.
--> l
-T 609 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 2) HP 28/28 MP 0/0 Hu 62 $ 632 room=.
--> n
-T 610 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 28/28 MP 0/0 Hu 61 $ 632 room=.
--> l
-T 611 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 28/28 MP 0/0 Hu 61 $ 632 room=.
--> e
-T 612 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 1) HP 28/28 MP 0/0 Hu 61 $ 632 room=.
--> e
-T 613 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 1) HP 28/28 MP 0/0 Hu 60 $ 632 room=.
--> e
-T 614 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 1) HP 28/28 MP 0/0 Hu 59 $ 632 room=.
--> e
-T 615 mode=chest_mode          Elrond the Quenya-tongued(elf) F3@( 8, 1) HP 28/28 MP 0/0 Hu 58 $ 632 room=C
--> o
-T 616 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 1) HP 28/28 MP 0/0 Hu 58 $ 672 room=.
+T 606 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 3) HP 28/28 MP 0/0 Hu 99 $ 632 room=.
 -> s
-T 617 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@( 8, 2) HP 28/28 MP 0/0 Hu 58 $ 672 room=M vs Spore Puff(L2 HP18/18)
--> a
-T 618 mode=combat_victory      Elrond the Quenya-tongued(elf) F3@( 8, 2) HP 27/28 MP 0/0 Hu 58 $ 699 room=.
--> back
-T 619 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 2) HP 27/28 MP 0/0 Hu 58 $ 699 room=.
--> s
-T 620 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 3) HP 27/28 MP 0/0 Hu 57 $ 699 room=.
+T 607 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 4) HP 28/28 MP 0/0 Hu 99 $ 632 room=.
+-> l
+T 608 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 4) HP 28/28 MP 0/0 Hu 99 $ 632 room=.
 -> w
-T 621 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 3) HP 27/28 MP 0/0 Hu 56 $ 699 room=.
--> l
-T 622 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 3) HP 27/28 MP 0/0 Hu 56 $ 699 room=.
--> w
-T 623 mode=library_mode        Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 27/28 MP 0/0 Hu 56 $ 699 room=L
--> r
-T 624 mode=library_read_decision_mode Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 27/28 MP 0/0 Hu 56 $ 699 room=L
--> y
-T 625 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 27/28 MP 0/0 Hu 56 $ 749 room=.
--> l
-T 626 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 27/28 MP 0/0 Hu 56 $ 749 room=.
+T 609 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 4) HP 28/28 MP 0/0 Hu 98 $ 632 room=.
 -> s
-T 627 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 4) HP 27/28 MP 0/0 Hu 55 $ 749 room=.
--> l
-T 628 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 4) HP 27/28 MP 0/0 Hu 55 $ 749 room=.
--> s
-T 629 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 27/28 MP 0/0 Hu 54 $ 749 room=.
--> l
-T 630 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 27/28 MP 0/0 Hu 54 $ 749 room=.
--> s
-T 631 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 6) HP 27/28 MP 0/0 Hu 54 $ 749 room=.
--> l
-T 632 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 6) HP 27/28 MP 0/0 Hu 54 $ 749 room=.
--> s
-T 633 mode=chest_mode          Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=C
--> o
-T 634 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=.
--> i
-T 635 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=.
--> e3
-T 636 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=.
--> x
-T 637 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=.
--> l
-T 638 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 7) HP 27/28 MP 0/0 Hu 53 $ 749 room=.
--> w
-T 639 mode=chest_mode          Elrond the Quenya-tongued(elf) F3@( 5, 7) HP 27/28 MP 0/0 Hu 52 $ 749 room=C
--> o
-T 640 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 7) HP 27/28 MP 0/0 Hu 52 $ 749 room=.
--> n
-T 641 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 6) HP 27/28 MP 0/0 Hu 51 $ 749 room=.
--> n
-T 642 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 5) HP 27/28 MP 0/0 Hu 51 $ 749 room=.
--> n
-T 643 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@( 5, 4) HP 27/28 MP 0/0 Hu 50 $ 749 room=M vs Lichen(L2 HP10/10)
--> f
-T 644 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F3@( 5, 4) HP 27/28 MP 0/0 Hu 50 $ 749 room=M
--> n
-T 645 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 3) HP 27/28 MP 0/0 Hu 50 $ 749 room=.
--> e
-T 646 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 27/28 MP 0/0 Hu 49 $ 749 room=.
--> e
-T 647 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 3) HP 27/28 MP 0/0 Hu 49 $ 749 room=.
--> e
-T 648 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 3) HP 27/28 MP 0/0 Hu 48 $ 749 room=.
--> e
-T 649 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 3) HP 27/28 MP 0/0 Hu 47 $ 749 room=.
--> l
-T 650 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 3) HP 27/28 MP 0/0 Hu 47 $ 749 room=.
--> e
-T 651 mode=pool_mode           Elrond the Quenya-tongued(elf) F3@(10, 3) HP 27/28 MP 0/0 Hu 47 $ 749 room=P
--> dr
-T 652 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(10, 3) HP 27/28 MP 0/0 Hu 47 $ 808 room=.
--> l
-T 653 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(10, 3) HP 27/28 MP 0/0 Hu 47 $ 808 room=.
--> n
-T 654 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@(10, 2) HP 27/28 MP 0/0 Hu 46 $ 808 room=M vs Wight(L2 HP40/40)
--> a
-T 655 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@(10, 2) HP 23/28 MP 0/0 Hu 46 $ 808 room=M vs Wight(L2 HP17/40)
--> a
-T 656 mode=combat_victory      Elrond the Quenya-tongued(elf) F3@(10, 2) HP 23/28 MP 0/0 Hu 46 $ 835 room=.
--> back
-T 657 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(10, 2) HP 23/28 MP 0/0 Hu 46 $ 835 room=.
--> n
-T 658 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(10, 1) HP 23/28 MP 0/0 Hu 45 $ 835 room=.
--> e
-T 659 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(11, 1) HP 23/28 MP 0/0 Hu 44 $ 835 room=.
--> l
-T 660 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(11, 1) HP 23/28 MP 0/0 Hu 44 $ 835 room=.
--> s
-T 661 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(11, 2) HP 23/28 MP 0/0 Hu 44 $ 835 room=.
--> l
-T 662 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(11, 2) HP 23/28 MP 0/0 Hu 44 $ 835 room=.
--> s
-T 663 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(11, 3) HP 23/28 MP 0/0 Hu 43 $ 835 room=.
--> w
-T 664 mode=game_loop           Elrond the Quenya-tongued(elf) F3@(10, 3) HP 23/28 MP 0/0 Hu 42 $ 835 room=.
--> w
-T 665 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 3) HP 23/28 MP 0/0 Hu 42 $ 835 room=.
--> w
-T 666 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 3) HP 23/28 MP 0/0 Hu 41 $ 835 room=.
--> w
-T 667 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 3) HP 23/28 MP 0/0 Hu 40 $ 835 room=.
--> s
-T 668 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 4) HP 23/28 MP 0/0 Hu 40 $ 835 room=.
--> s
-T 669 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 5) HP 23/28 MP 0/0 Hu 39 $ 835 room=.
--> e
-T 670 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 23/28 MP 0/0 Hu 38 $ 835 room=M vs Lichen(L2 HP10/10)
--> a
-T 671 mode=combat_victory      Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 23/38 MP 0/0 Hu 38 $ 850 room=.
--> back
-T 672 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 23/38 MP 0/0 Hu 38 $ 850 room=.
--> i
-T 673 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 23/38 MP 0/0 Hu 38 $ 850 room=.
--> u6
-T 674 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 38 $ 850 room=.
--> x
-T 675 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 38 $ 850 room=.
--> i
-T 676 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 38 $ 850 room=.
--> u10
-T 677 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 38 $ 850 room=.
--> eat1
-T 678 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 56 $ 850 room=.
--> x
-T 679 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 56 $ 850 room=.
--> s
-T 680 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 6) HP 38/38 MP 0/0 Hu 55 $ 850 room=.
--> s
-T 681 mode=garden_mode         Elrond the Quenya-tongued(elf) F3@( 8, 7) HP 38/38 MP 0/0 Hu 55 $ 850 room=G
+T 610 mode=garden_mode         Elrond the Quenya-tongued(elf) F4@( 7, 5) HP 28/28 MP 0/0 Hu 97 $ 632 room=G
 -> h
-T 682 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 7) HP 38/38 MP 0/0 Hu 55 $ 850 room=.
--> l
-T 683 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 7) HP 38/38 MP 0/0 Hu 55 $ 850 room=.
--> e
-T 684 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 54 $ 850 room=M vs Zombie(L2 HP36/36)
+T 611 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 5) HP 28/28 MP 0/0 Hu 97 $ 632 room=.
+-> s
+T 612 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 28/28 MP 0/0 Hu 97 $ 632 room=M vs Sewer Rat(L3 HP11/11)
 -> a
-T 685 mode=combat_mode         Elrond the Quenya-tongued(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 54 $ 850 room=M vs Zombie(L2 HP10/36)
--> a
-T 686 mode=combat_victory      Elrond the Quenya-tongued(elf) F3@( 9, 7) HP 37/38 MP 0/0 Hu 54 $ 874 room=.
+T 613 mode=combat_victory      Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 27/28 MP 0/0 Hu 97 $ 648 room=.
 -> back
-T 687 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 7) HP 37/38 MP 0/0 Hu 54 $ 874 room=.
--> n
-T 688 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 6) HP 37/38 MP 0/0 Hu 53 $ 874 room=.
--> s
-T 689 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 7) HP 37/38 MP 0/0 Hu 53 $ 874 room=.
--> s
-T 690 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 9, 8) HP 37/38 MP 0/0 Hu 52 $ 874 room=.
--> w
-T 691 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 8) HP 37/38 MP 0/0 Hu 51 $ 874 room=.
--> n
-T 692 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 7) HP 37/38 MP 0/0 Hu 51 $ 874 room=.
--> n
-T 693 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 6) HP 37/38 MP 0/0 Hu 50 $ 874 room=.
--> n
-T 694 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 8, 5) HP 37/38 MP 0/0 Hu 49 $ 874 room=.
--> w
-T 695 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 7, 5) HP 37/38 MP 0/0 Hu 48 $ 874 room=.
--> w
-T 696 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 37/38 MP 0/0 Hu 48 $ 874 room=.
--> w
-T 697 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 5) HP 37/38 MP 0/0 Hu 47 $ 874 room=.
--> w
-T 698 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 5) HP 37/38 MP 0/0 Hu 46 $ 874 room=.
--> w
-T 699 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 5) HP 37/38 MP 0/0 Hu 46 $ 874 room=.
--> w
-T 700 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 37/38 MP 0/0 Hu 45 $ 874 room=D
--> n
-T 701 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 37/38 MP 0/0 Hu 44 $ 874 room=.
--> w
-T 702 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 44 $ 874 room=.
--> s
-T 703 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 5) HP 37/38 MP 0/0 Hu 43 $ 874 room=.
--> n
-T 704 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 42 $ 874 room=.
--> n
-T 705 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 37/38 MP 0/0 Hu 41 $ 874 room=.
--> n
-T 706 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 37/38 MP 0/0 Hu 41 $ 874 room=.
--> e
-T 707 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 37/38 MP 0/0 Hu 40 $ 874 room=.
--> n
-T 708 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 37/38 MP 0/0 Hu 39 $ 874 room=.
--> w
-T 709 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 37/38 MP 0/0 Hu 39 $ 874 room=U
--> s
-T 710 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 37/38 MP 0/0 Hu 38 $ 874 room=.
--> s
-T 711 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 37/38 MP 0/0 Hu 37 $ 874 room=.
--> s
-T 712 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 37 $ 874 room=.
--> s
-T 713 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 5) HP 37/38 MP 0/0 Hu 36 $ 874 room=.
--> e
-T 714 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 37/38 MP 0/0 Hu 35 $ 874 room=D
--> n
-T 715 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 37/38 MP 0/0 Hu 34 $ 874 room=.
--> w
-T 716 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 34 $ 874 room=.
--> n
-T 717 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 37/38 MP 0/0 Hu 33 $ 874 room=.
--> n
-T 718 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 37/38 MP 0/0 Hu 32 $ 874 room=.
--> n
-T 719 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 37/38 MP 0/0 Hu 32 $ 874 room=U
--> e
-T 720 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 37/38 MP 0/0 Hu 31 $ 874 room=.
--> s
-T 721 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 37/38 MP 0/0 Hu 30 $ 874 room=.
--> n
-T 722 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 37/38 MP 0/0 Hu 30 $ 874 room=.
--> e
-T 723 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 1) HP 37/38 MP 0/0 Hu 29 $ 874 room=.
--> e
-T 724 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 37/38 MP 0/0 Hu 28 $ 874 room=.
--> s
-T 725 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 2) HP 37/38 MP 0/0 Hu 27 $ 874 room=.
--> n
-T 726 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 37/38 MP 0/0 Hu 27 $ 874 room=.
--> e
-T 727 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 1) HP 37/38 MP 0/0 Hu 26 $ 874 room=.
--> e
-T 728 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 1) HP 37/38 MP 0/0 Hu 25 $ 874 room=.
--> s
-T 729 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 2) HP 37/38 MP 0/0 Hu 25 $ 874 room=.
--> s
-T 730 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 37/38 MP 0/0 Hu 24 $ 874 room=.
--> s
-T 731 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 4) HP 37/38 MP 0/0 Hu 23 $ 874 room=.
--> s
-T 732 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 37/38 MP 0/0 Hu 23 $ 874 room=.
--> w
-T 733 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 5) HP 37/38 MP 0/0 Hu 22 $ 874 room=.
--> w
-T 734 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 5) HP 37/38 MP 0/0 Hu 21 $ 874 room=.
--> w
-T 735 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 5) HP 37/38 MP 0/0 Hu 20 $ 874 room=.
--> w
-T 736 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 37/38 MP 0/0 Hu 20 $ 874 room=D
--> n
-T 737 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 37/38 MP 0/0 Hu 19 $ 874 room=.
--> w
-T 738 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 18 $ 874 room=.
--> s
-T 739 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 5) HP 37/38 MP 0/0 Hu 18 $ 874 room=.
--> n
-T 740 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu 17 $ 874 room=.
--> n
-T 741 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 37/38 MP 0/0 Hu 16 $ 874 room=.
--> n
-T 742 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 37/38 MP 0/0 Hu 16 $ 874 room=.
--> n
-T 743 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 37/38 MP 0/0 Hu 15 $ 874 room=U
--> e
-T 744 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 37/38 MP 0/0 Hu 14 $ 874 room=.
--> s
-T 745 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 37/38 MP 0/0 Hu 13 $ 874 room=.
--> n
-T 746 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 37/38 MP 0/0 Hu 13 $ 874 room=.
--> e
-T 747 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 1) HP 37/38 MP 0/0 Hu 12 $ 874 room=.
--> e
-T 748 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 37/38 MP 0/0 Hu 11 $ 874 room=.
--> s
-T 749 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 2) HP 37/38 MP 0/0 Hu 11 $ 874 room=.
--> n
-T 750 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 37/38 MP 0/0 Hu 10 $ 874 room=.
--> e
-T 751 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 1) HP 37/38 MP 0/0 Hu  9 $ 874 room=.
--> e
-T 752 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 1) HP 37/38 MP 0/0 Hu  9 $ 874 room=.
--> s
-T 753 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 2) HP 37/38 MP 0/0 Hu  8 $ 874 room=.
--> s
-T 754 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 37/38 MP 0/0 Hu  7 $ 874 room=.
--> s
-T 755 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 4) HP 37/38 MP 0/0 Hu  6 $ 874 room=.
--> s
-T 756 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 37/38 MP 0/0 Hu  6 $ 874 room=.
--> w
-T 757 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 5) HP 37/38 MP 0/0 Hu  5 $ 874 room=.
--> w
-T 758 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 5) HP 37/38 MP 0/0 Hu  4 $ 874 room=.
--> w
-T 759 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 5) HP 37/38 MP 0/0 Hu  4 $ 874 room=.
--> w
-T 760 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 37/38 MP 0/0 Hu  3 $ 874 room=D
--> n
-T 761 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 4) HP 37/38 MP 0/0 Hu  2 $ 874 room=.
--> w
-T 762 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 37/38 MP 0/0 Hu  2 $ 874 room=.
--> s
-T 763 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 5) HP 37/38 MP 0/0 Hu  1 $ 874 room=.
--> n
-T 764 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 4) HP 35/38 MP 0/0 Hu  0 $ 874 room=.
--> n
-T 765 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 3) HP 33/38 MP 0/0 Hu  0 $ 874 room=.
--> n
-T 766 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 1, 2) HP 31/38 MP 0/0 Hu  0 $ 874 room=.
--> n
-T 767 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F3@( 1, 1) HP 29/38 MP 0/0 Hu  0 $ 874 room=U
--> e
-T 768 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 27/38 MP 0/0 Hu  0 $ 874 room=.
--> s
-T 769 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 25/38 MP 0/0 Hu  0 $ 874 room=.
+T 614 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 27/28 MP 0/0 Hu 97 $ 648 room=.
 -> i
-T 770 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 25/38 MP 0/0 Hu  0 $ 874 room=.
--> u6
-T 771 mode=inventory           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 38/38 MP 0/0 Hu  0 $ 874 room=.
+T 615 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 27/28 MP 0/0 Hu 97 $ 648 room=.
+-> u7
+T 616 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 27/28 MP 0/0 Hu 97 $ 648 room=.
 -> x
-T 772 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 2) HP 38/38 MP 0/0 Hu  0 $ 874 room=.
--> n
-T 773 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 2, 1) HP 36/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 774 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 1) HP 34/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 775 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 32/38 MP 0/0 Hu  0 $ 874 room=.
+T 617 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 6) HP 27/28 MP 0/0 Hu 97 $ 648 room=.
 -> s
-T 776 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 2) HP 30/38 MP 0/0 Hu  0 $ 874 room=.
--> n
-T 777 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 1) HP 28/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 778 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 1) HP 26/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 779 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 1) HP 24/38 MP 0/0 Hu  0 $ 874 room=.
--> s
-T 780 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 2) HP 22/38 MP 0/0 Hu  0 $ 874 room=.
--> s
-T 781 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 3) HP 20/38 MP 0/0 Hu  0 $ 874 room=.
--> s
-T 782 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 4) HP 18/38 MP 0/0 Hu  0 $ 874 room=.
--> s
-T 783 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 6, 5) HP 16/38 MP 0/0 Hu  0 $ 874 room=.
--> w
-T 784 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 5, 5) HP 14/38 MP 0/0 Hu  0 $ 874 room=.
--> w
-T 785 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 4, 5) HP 12/38 MP 0/0 Hu  0 $ 874 room=.
--> w
-T 786 mode=game_loop           Elrond the Quenya-tongued(elf) F3@( 3, 5) HP 10/38 MP 0/0 Hu  0 $ 874 room=.
--> w
-T 787 mode=stairs_down_mode    Elrond the Quenya-tongued(elf) F3@( 2, 5) HP 8/38 MP 0/0 Hu  0 $ 874 room=D
--> d
-T 788 mode=stairs_up_mode      Elrond the Quenya-tongued(elf) F4@( 1, 1) HP 8/38 MP 0/0 Hu  0 $ 874 room=U
--> s
-T 789 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 1, 2) HP 6/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 790 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 2, 2) HP 4/38 MP 0/0 Hu  0 $ 874 room=.
+T 618 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 7) HP 27/28 MP 0/0 Hu 96 $ 648 room=.
 -> l
-T 791 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 2, 2) HP 4/38 MP 0/0 Hu  0 $ 874 room=.
--> e
-T 792 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 3, 2) HP 2/38 MP 0/0 Hu  0 $ 874 room=.
+T 619 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 7) HP 27/28 MP 0/0 Hu 96 $ 648 room=.
+-> w
+T 620 mode=chest_mode          Elrond the Quenya-tongued(elf) F4@( 6, 7) HP 28/28 MP 0/0 Hu 95 $ 648 room=C
+-> o
+T 621 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6, 7) HP 28/28 MP 0/0 Hu 95 $ 728 room=.
 -> l
-T 793 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 3, 2) HP 2/38 MP 0/0 Hu  0 $ 874 room=.
+T 622 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6, 7) HP 28/28 MP 0/0 Hu 95 $ 728 room=.
+-> w
+T 623 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5, 7) HP 28/28 MP 0/0 Hu 94 $ 728 room=.
+-> l
+T 624 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5, 7) HP 28/28 MP 0/0 Hu 94 $ 728 room=.
+-> s
+T 625 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5, 8) HP 28/28 MP 0/0 Hu 94 $ 728 room=.
+-> w
+T 626 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4, 8) HP 28/28 MP 0/0 Hu 93 $ 728 room=.
+-> s
+T 627 mode=dungeon_mode        Elrond the Quenya-tongued(elf) F4@( 4, 9) HP 28/28 MP 0/0 Hu 92 $ 728 room=N
+-> u
+T 628 mode=dungeon_unlocked_mode Elrond the Quenya-tongued(elf) F4@( 4, 9) HP 28/28 MP 0/0 Hu 92 $ 728 room=N
+-> r
+T 629 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4, 9) HP 28/28 MP 0/0 Hu 92 $ 728 room=N
+-> l
+T 630 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4, 9) HP 28/28 MP 0/0 Hu 92 $ 728 room=N
+-> s
+T 631 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 4,10) HP 28/28 MP 0/0 Hu 92 $ 728 room=.
 -> e
-T 794 mode=death_screen        Elrond the Quenya-tongued(elf) F4@( 4, 2) HP 0/38 MP 0/0 Hu  0 $ 874 room=.
+T 632 mode=chest_mode          Elrond the Quenya-tongued(elf) F4@( 5,10) HP 28/28 MP 0/0 Hu 91 $ 728 room=C
+-> o
+T 633 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5,10) HP 28/28 MP 0/0 Hu 91 $ 728 room=.
+-> i
+T 634 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 5,10) HP 28/28 MP 0/0 Hu 91 $ 728 room=.
+-> e1
+T 635 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 5,10) HP 28/28 MP 0/0 Hu 91 $ 728 room=.
+-> x
+T 636 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 5,10) HP 28/28 MP 0/0 Hu 91 $ 728 room=.
+-> e
+T 637 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6,10) HP 28/28 MP 0/0 Hu 90 $ 728 room=.
+-> n
+T 638 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 6, 9) HP 28/28 MP 0/0 Hu 90 $ 728 room=.
+-> e
+T 639 mode=chest_mode          Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/28 MP 0/0 Hu 89 $ 728 room=C
+-> o
+T 640 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/28 MP 0/0 Hu 89 $ 728 room=.
+-> n
+T 641 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 28/28 MP 0/0 Hu 88 $ 728 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T 642 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 27/28 MP 0/0 Hu 88 $ 728 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T 643 mode=combat_victory      Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 27/38 MP 0/0 Hu 88 $ 752 room=.
+-> back
+T 644 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 27/38 MP 0/0 Hu 88 $ 752 room=.
+-> i
+T 645 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 27/38 MP 0/0 Hu 88 $ 752 room=.
+-> u7
+T 646 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> x
+T 647 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> i
+T 648 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> u11
+T 649 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> x
+T 650 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> l
+T 651 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 38/38 MP 0/0 Hu 88 $ 752 room=.
+-> e
+T 652 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 8) HP 38/38 MP 0/0 Hu 87 $ 752 room=.
+-> e
+T 653 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 8) HP 38/38 MP 0/0 Hu 87 $ 752 room=.
+-> l
+T 654 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 8) HP 38/38 MP 0/0 Hu 87 $ 752 room=.
+-> e
+T 655 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 8) HP 38/38 MP 0/0 Hu 86 $ 752 room=.
+-> l
+T 656 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 8) HP 38/38 MP 0/0 Hu 86 $ 752 room=.
+-> n
+T 657 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 7) HP 38/38 MP 0/0 Hu 85 $ 752 room=.
+-> l
+T 658 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 7) HP 38/38 MP 0/0 Hu 85 $ 752 room=.
+-> n
+T 659 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 6) HP 38/38 MP 0/0 Hu 85 $ 752 room=.
+-> l
+T 660 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 6) HP 38/38 MP 0/0 Hu 85 $ 752 room=.
+-> e
+T 661 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 6) HP 38/38 MP 0/0 Hu 84 $ 752 room=.
+-> l
+T 662 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 6) HP 38/38 MP 0/0 Hu 84 $ 752 room=.
+-> s
+T 663 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 7) HP 38/38 MP 0/0 Hu 83 $ 752 room=.
+-> s
+T 664 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 8) HP 38/38 MP 0/0 Hu 83 $ 752 room=.
+-> e
+T 665 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 8) HP 38/38 MP 0/0 Hu 82 $ 752 room=.
+-> l
+T 666 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 8) HP 38/38 MP 0/0 Hu 82 $ 752 room=.
+-> e
+T 667 mode=altar_mode          Elrond the Quenya-tongued(elf) F4@(13, 8) HP 38/38 MP 0/0 Hu 81 $ 752 room=A
+-> pray
+T 668 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(13, 8) HP 38/38 MP 0/0 Hu 81 $ 752 room=.
+-> s
+T 669 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(13, 9) HP 38/38 MP 0/0 Hu 80 $ 752 room=.
+-> s
+T 670 mode=library_mode        Elrond the Quenya-tongued(elf) F4@(13,10) HP 38/38 MP 0/0 Hu 80 $ 752 room=L
+-> r
+T 671 mode=library_read_decision_mode Elrond the Quenya-tongued(elf) F4@(13,10) HP 38/38 MP 0/0 Hu 80 $ 752 room=L
+-> y
+T 672 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(13,10) HP 38/38 MP 0/0 Hu 80 $ 802 room=.
+-> l
+T 673 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(13,10) HP 38/38 MP 0/0 Hu 80 $ 802 room=.
+-> e
+T 674 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(14,10) HP 38/38 MP 0/0 Hu 79 $ 802 room=.
+-> l
+T 675 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(14,10) HP 38/38 MP 0/0 Hu 79 $ 802 room=.
+-> e
+T 676 mode=chest_mode          Elrond the Quenya-tongued(elf) F4@(15,10) HP 38/38 MP 0/0 Hu 78 $ 802 room=C
+-> o
+T 677 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,10) HP 7/38 MP 0/0 Hu 78 $ 802 room=.
+-> l
+T 678 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,10) HP 7/38 MP 0/0 Hu 78 $ 802 room=.
+-> s
+T 679 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,11) HP 7/38 MP 0/0 Hu 78 $ 802 room=.
+-> s
+T 680 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,12) HP 7/38 MP 0/0 Hu 77 $ 802 room=.
+-> l
+T 681 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,12) HP 7/38 MP 0/0 Hu 77 $ 802 room=.
+-> s
+T 682 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,13) HP 7/38 MP 0/0 Hu 76 $ 802 room=.
+-> l
+T 683 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,13) HP 7/38 MP 0/0 Hu 76 $ 802 room=.
+-> w
+T 684 mode=chest_mode          Elrond the Quenya-tongued(elf) F4@(14,13) HP 8/38 MP 0/0 Hu 76 $ 802 room=C
+-> n
+T 685 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(14,12) HP 8/38 MP 0/0 Hu 75 $ 802 room=.
+-> n
+T 686 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(14,11) HP 8/38 MP 0/0 Hu 74 $ 802 room=.
+-> n
+T 687 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(14,10) HP 8/38 MP 0/0 Hu 73 $ 802 room=.
+-> e
+T 688 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,10) HP 9/38 MP 0/0 Hu 73 $ 802 room=.
+-> s
+T 689 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,11) HP 9/38 MP 0/0 Hu 72 $ 802 room=.
+-> s
+T 690 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,12) HP 9/38 MP 0/0 Hu 71 $ 802 room=.
+-> s
+T 691 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(15,13) HP 9/38 MP 0/0 Hu 71 $ 802 room=.
+-> e
+T 692 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(16,13) HP 10/38 MP 0/0 Hu 70 $ 802 room=.
+-> l
+T 693 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(16,13) HP 10/38 MP 0/0 Hu 70 $ 802 room=.
+-> e
+T 694 mode=pool_mode           Elrond the Quenya-tongued(elf) F4@(17,13) HP 10/38 MP 0/0 Hu 69 $ 802 room=P
+-> n
+T 695 mode=warp_mode           Elrond the Quenya-tongued(elf) F4@(17,12) HP 10/38 MP 0/0 Hu 69 $ 802 room=W
+-> y
+T 696 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 10/38 MP 0/0 Hu 69 $ 802 room=.
+-> l
+T 697 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 10/38 MP 0/0 Hu 69 $ 802 room=.
+-> s
+T 698 mode=pool_mode           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 10/38 MP 0/0 Hu 68 $ 902 room=P
+-> s
+T 699 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 11/38 MP 0/0 Hu 67 $ 902 room=.
+-> l
+T 700 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 11/38 MP 0/0 Hu 67 $ 902 room=.
+-> s
+T 701 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 11/38 MP 0/0 Hu 66 $ 902 room=.
+-> n
+T 702 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 11/38 MP 0/0 Hu 66 $ 902 room=.
+-> w
+T 703 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 11/38 MP 0/0 Hu 65 $ 902 room=.
+-> l
+T 704 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 11/38 MP 0/0 Hu 65 $ 902 room=.
+-> n
+T 705 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 12/38 MP 0/0 Hu 64 $ 902 room=.
+-> l
+T 706 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 12/38 MP 0/0 Hu 64 $ 902 room=.
+-> n
+T 707 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 12/38 MP 0/0 Hu 64 $ 902 room=.
+-> w
+T 708 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 12/38 MP 0/0 Hu 63 $ 902 room=.
+-> s
+T 709 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 12/38 MP 0/0 Hu 62 $ 902 room=.
+-> e
+T 710 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 62 $ 902 room=.
+-> s
+T 711 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 61 $ 902 room=.
+-> e
+T 712 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 60 $ 902 room=.
+-> s
+T 713 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 59 $ 902 room=.
+-> n
+T 714 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 59 $ 902 room=.
+-> n
+T 715 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 58 $ 902 room=P
+-> w
+T 716 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 57 $ 902 room=.
+-> s
+T 717 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 57 $ 902 room=.
+-> e
+T 718 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 56 $ 902 room=.
+-> s
+T 719 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> n
+T 720 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> n
+T 721 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 54 $ 902 room=P
+-> n
+T 722 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 13/38 MP 0/0 Hu 53 $ 902 room=.
+-> w
+T 723 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 52 $ 902 room=.
+-> s
+T 724 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 52 $ 902 room=.
+-> s
+T 725 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 51 $ 902 room=.
+-> e
+T 726 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 50 $ 902 room=.
+-> s
+T 727 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 50 $ 902 room=.
+-> n
+T 728 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T 729 mode=inventory           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat2
+T 730 mode=inventory           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 61 $ 902 room=.
+-> x
+T 731 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 61 $ 902 room=.
+-> n
+T 732 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 60 $ 902 room=P
+-> w
+T 733 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 60 $ 902 room=.
+-> s
+T 734 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 59 $ 902 room=.
+-> e
+T 735 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 58 $ 902 room=.
+-> s
+T 736 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 57 $ 902 room=.
+-> n
+T 737 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 57 $ 902 room=.
+-> n
+T 738 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 56 $ 902 room=P
+-> n
+T 739 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> w
+T 740 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> s
+T 741 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 54 $ 902 room=.
+-> w
+T 742 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 13/38 MP 0/0 Hu 53 $ 902 room=.
+-> n
+T 743 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 13/38 MP 0/0 Hu 53 $ 902 room=.
+-> e
+T 744 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 52 $ 902 room=.
+-> e
+T 745 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 13/38 MP 0/0 Hu 51 $ 902 room=.
+-> s
+T 746 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 50 $ 902 room=P
+-> w
+T 747 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 50 $ 902 room=.
+-> s
+T 748 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T 749 mode=inventory           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat2
+T 750 mode=inventory           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 61 $ 902 room=.
+-> x
+T 751 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 61 $ 902 room=.
+-> e
+T 752 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 60 $ 902 room=.
+-> s
+T 753 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 60 $ 902 room=.
+-> n
+T 754 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 59 $ 902 room=.
+-> n
+T 755 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 58 $ 902 room=P
+-> w
+T 756 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 58 $ 902 room=.
+-> n
+T 757 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 57 $ 902 room=.
+-> e
+T 758 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 13/38 MP 0/0 Hu 56 $ 902 room=.
+-> w
+T 759 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> w
+T 760 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 13/38 MP 0/0 Hu 55 $ 902 room=.
+-> s
+T 761 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 13/38 MP 0/0 Hu 54 $ 902 room=.
+-> e
+T 762 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 53 $ 902 room=.
+-> s
+T 763 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 53 $ 902 room=.
+-> e
+T 764 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 52 $ 902 room=.
+-> s
+T 765 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 51 $ 902 room=.
+-> n
+T 766 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 51 $ 902 room=.
+-> n
+T 767 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 13/38 MP 0/0 Hu 50 $ 902 room=P
+-> w
+T 768 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T 769 mode=inventory           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat1
+T 770 mode=inventory           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 99 $ 902 room=.
+-> x
+T 771 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 99 $ 902 room=.
+-> n
+T 772 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 13/38 MP 0/0 Hu 98 $ 902 room=.
+-> w
+T 773 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 14/38 MP 0/0 Hu 98 $ 902 room=.
+-> s
+T 774 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 14/38 MP 0/0 Hu 97 $ 902 room=.
+-> n
+T 775 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 15/38 MP 0/0 Hu 96 $ 902 room=.
+-> s
+T 776 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 15/38 MP 0/0 Hu 96 $ 902 room=.
+-> e
+T 777 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 16/38 MP 0/0 Hu 95 $ 902 room=.
+-> s
+T 778 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 16/38 MP 0/0 Hu 94 $ 902 room=.
+-> e
+T 779 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 17/38 MP 0/0 Hu 94 $ 902 room=.
+-> s
+T 780 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 17/38 MP 0/0 Hu 93 $ 902 room=.
+-> n
+T 781 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 18/38 MP 0/0 Hu 92 $ 902 room=.
+-> n
+T 782 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 18/38 MP 0/0 Hu 91 $ 902 room=P
+-> w
+T 783 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 19/38 MP 0/0 Hu 91 $ 902 room=.
+-> w
+T 784 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 19/38 MP 0/0 Hu 90 $ 902 room=.
+-> s
+T 785 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 20/38 MP 0/0 Hu 89 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 786 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 13/38 MP 0/0 Hu 89 $ 902 room=M
+-> e
+T 787 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 89 $ 902 room=.
+-> e
+T 788 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 89 $ 902 room=.
+-> s
+T 789 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 14/38 MP 0/0 Hu 88 $ 902 room=.
+-> n
+T 790 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 14/38 MP 0/0 Hu 87 $ 902 room=.
+-> n
+T 791 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 15/38 MP 0/0 Hu 87 $ 902 room=P
+-> n
+T 792 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 15/38 MP 0/0 Hu 86 $ 902 room=.
+-> w
+T 793 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 16/38 MP 0/0 Hu 85 $ 902 room=.
+-> w
+T 794 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 16/38 MP 0/0 Hu 84 $ 902 room=.
+-> s
+T 795 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 16/38 MP 0/0 Hu 84 $ 902 room=.
+-> e
+T 796 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 16/38 MP 0/0 Hu 83 $ 902 room=.
+-> s
+T 797 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 17/38 MP 0/0 Hu 82 $ 902 room=.
+-> e
+T 798 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 17/38 MP 0/0 Hu 82 $ 902 room=.
+-> s
+T 799 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 17/38 MP 0/0 Hu 81 $ 902 room=.
+-> n
+T 800 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 17/38 MP 0/0 Hu 80 $ 902 room=.
+-> n
+T 801 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 18/38 MP 0/0 Hu 80 $ 902 room=P
+-> n
+T 802 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 18/38 MP 0/0 Hu 79 $ 902 room=.
+-> w
+T 803 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 18/38 MP 0/0 Hu 78 $ 902 room=.
+-> s
+T 804 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 18/38 MP 0/0 Hu 77 $ 902 room=.
+-> s
+T 805 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 19/38 MP 0/0 Hu 77 $ 902 room=.
+-> e
+T 806 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 19/38 MP 0/0 Hu 76 $ 902 room=.
+-> s
+T 807 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 19/38 MP 0/0 Hu 75 $ 902 room=.
+-> n
+T 808 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 19/38 MP 0/0 Hu 75 $ 902 room=.
+-> n
+T 809 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 20/38 MP 0/0 Hu 74 $ 902 room=P
+-> n
+T 810 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 20/38 MP 0/0 Hu 73 $ 902 room=.
+-> w
+T 811 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 20/38 MP 0/0 Hu 73 $ 902 room=.
+-> s
+T 812 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 20/38 MP 0/0 Hu 72 $ 902 room=.
+-> s
+T 813 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 21/38 MP 0/0 Hu 71 $ 902 room=.
+-> e
+T 814 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 21/38 MP 0/0 Hu 70 $ 902 room=.
+-> s
+T 815 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 21/38 MP 0/0 Hu 70 $ 902 room=.
+-> n
+T 816 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 21/38 MP 0/0 Hu 69 $ 902 room=.
+-> n
+T 817 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 22/38 MP 0/0 Hu 68 $ 902 room=P
+-> n
+T 818 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 22/38 MP 0/0 Hu 68 $ 902 room=.
+-> w
+T 819 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 22/38 MP 0/0 Hu 67 $ 902 room=.
+-> s
+T 820 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 22/38 MP 0/0 Hu 66 $ 902 room=.
+-> w
+T 821 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 23/38 MP 0/0 Hu 66 $ 902 room=.
+-> s
+T 822 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 23/38 MP 0/0 Hu 65 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 823 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 16/38 MP 0/0 Hu 65 $ 902 room=M
+-> e
+T 824 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 16/38 MP 0/0 Hu 65 $ 902 room=.
+-> e
+T 825 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 16/38 MP 0/0 Hu 64 $ 902 room=.
+-> s
+T 826 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 16/38 MP 0/0 Hu 63 $ 902 room=.
+-> n
+T 827 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 17/38 MP 0/0 Hu 63 $ 902 room=.
+-> n
+T 828 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 17/38 MP 0/0 Hu 62 $ 902 room=P
+-> n
+T 829 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 17/38 MP 0/0 Hu 61 $ 902 room=.
+-> w
+T 830 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 17/38 MP 0/0 Hu 61 $ 902 room=.
+-> s
+T 831 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 18/38 MP 0/0 Hu 60 $ 902 room=.
+-> w
+T 832 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 18/38 MP 0/0 Hu 59 $ 902 room=.
+-> n
+T 833 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 18/38 MP 0/0 Hu 59 $ 902 room=.
+-> e
+T 834 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 18/38 MP 0/0 Hu 58 $ 902 room=.
+-> e
+T 835 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 18/38 MP 0/0 Hu 57 $ 902 room=.
+-> s
+T 836 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 18/38 MP 0/0 Hu 56 $ 902 room=P
+-> w
+T 837 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 18/38 MP 0/0 Hu 56 $ 902 room=.
+-> s
+T 838 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 18/38 MP 0/0 Hu 55 $ 902 room=.
+-> e
+T 839 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 18/38 MP 0/0 Hu 54 $ 902 room=.
+-> s
+T 840 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 18/38 MP 0/0 Hu 54 $ 902 room=.
+-> n
+T 841 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 18/38 MP 0/0 Hu 53 $ 902 room=.
+-> n
+T 842 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 18/38 MP 0/0 Hu 52 $ 902 room=P
+-> n
+T 843 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 18/38 MP 0/0 Hu 52 $ 902 room=.
+-> w
+T 844 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 18/38 MP 0/0 Hu 51 $ 902 room=.
+-> w
+T 845 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 18/38 MP 0/0 Hu 50 $ 902 room=.
+-> s
+T 846 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 18/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T 847 mode=inventory           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 18/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat1
+T 848 mode=inventory           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 18/38 MP 0/0 Hu 99 $ 902 room=.
+-> x
+T 849 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 18/38 MP 0/0 Hu 99 $ 902 room=.
+-> e
+T 850 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 18/38 MP 0/0 Hu 99 $ 902 room=.
+-> s
+T 851 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 19/38 MP 0/0 Hu 98 $ 902 room=.
+-> e
+T 852 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 19/38 MP 0/0 Hu 97 $ 902 room=.
+-> s
+T 853 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 20/38 MP 0/0 Hu 97 $ 902 room=.
+-> n
+T 854 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 20/38 MP 0/0 Hu 96 $ 902 room=.
+-> n
+T 855 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 21/38 MP 0/0 Hu 95 $ 902 room=P
+-> w
+T 856 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 21/38 MP 0/0 Hu 95 $ 902 room=.
+-> s
+T 857 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 22/38 MP 0/0 Hu 94 $ 902 room=.
+-> w
+T 858 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 22/38 MP 0/0 Hu 93 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 859 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 8/38 MP 0/0 Hu 93 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 860 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 1/38 MP 0/0 Hu 93 $ 902 room=M
+-> n
+T 861 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 1/38 MP 0/0 Hu 93 $ 902 room=.
+-> n
+T 862 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 2/38 MP 0/0 Hu 92 $ 902 room=.
+-> e
+T 863 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 2/38 MP 0/0 Hu 92 $ 902 room=.
+-> e
+T 864 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 3/38 MP 0/0 Hu 91 $ 902 room=.
+-> s
+T 865 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 3/38 MP 0/0 Hu 90 $ 902 room=P
+-> s
+T 866 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 4/38 MP 0/0 Hu 90 $ 902 room=.
+-> w
+T 867 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 4/38 MP 0/0 Hu 89 $ 902 room=.
+-> n
+T 868 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 5/38 MP 0/0 Hu 88 $ 902 room=.
+-> w
+T 869 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 5/38 MP 0/0 Hu 88 $ 902 room=.
+-> n
+T 870 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 6/38 MP 0/0 Hu 87 $ 902 room=.
+-> e
+T 871 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 6/38 MP 0/0 Hu 86 $ 902 room=.
+-> e
+T 872 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 7/38 MP 0/0 Hu 85 $ 902 room=.
+-> s
+T 873 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 7/38 MP 0/0 Hu 85 $ 902 room=P
+-> s
+T 874 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 7/38 MP 0/0 Hu 84 $ 902 room=.
+-> s
+T 875 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 7/38 MP 0/0 Hu 83 $ 902 room=.
+-> n
+T 876 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 8/38 MP 0/0 Hu 83 $ 902 room=.
+-> w
+T 877 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 8/38 MP 0/0 Hu 82 $ 902 room=.
+-> n
+T 878 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 8/38 MP 0/0 Hu 81 $ 902 room=.
+-> w
+T 879 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 8/38 MP 0/0 Hu 81 $ 902 room=.
+-> n
+T 880 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 9/38 MP 0/0 Hu 80 $ 902 room=.
+-> e
+T 881 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 9/38 MP 0/0 Hu 79 $ 902 room=.
+-> e
+T 882 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 9/38 MP 0/0 Hu 78 $ 902 room=.
+-> s
+T 883 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 9/38 MP 0/0 Hu 78 $ 902 room=P
+-> w
+T 884 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 10/38 MP 0/0 Hu 77 $ 902 room=.
+-> w
+T 885 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 10/38 MP 0/0 Hu 76 $ 902 room=.
+-> n
+T 886 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 10/38 MP 0/0 Hu 76 $ 902 room=.
+-> e
+T 887 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 10/38 MP 0/0 Hu 75 $ 902 room=.
+-> e
+T 888 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 11/38 MP 0/0 Hu 74 $ 902 room=.
+-> s
+T 889 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 11/38 MP 0/0 Hu 74 $ 902 room=P
+-> w
+T 890 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 11/38 MP 0/0 Hu 73 $ 902 room=.
+-> s
+T 891 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 11/38 MP 0/0 Hu 72 $ 902 room=.
+-> e
+T 892 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 12/38 MP 0/0 Hu 71 $ 902 room=.
+-> s
+T 893 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 12/38 MP 0/0 Hu 71 $ 902 room=.
+-> n
+T 894 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 12/38 MP 0/0 Hu 70 $ 902 room=.
+-> n
+T 895 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 12/38 MP 0/0 Hu 69 $ 902 room=P
+-> w
+T 896 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 13/38 MP 0/0 Hu 69 $ 902 room=.
+-> s
+T 897 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 13/38 MP 0/0 Hu 68 $ 902 room=.
+-> e
+T 898 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 13/38 MP 0/0 Hu 67 $ 902 room=.
+-> s
+T 899 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 13/38 MP 0/0 Hu 67 $ 902 room=.
+-> n
+T 900 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 14/38 MP 0/0 Hu 66 $ 902 room=.
+-> l
+T 901 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 14/38 MP 0/0 Hu 66 $ 902 room=.
+-> n
+T 902 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 14/38 MP 0/0 Hu 65 $ 902 room=P
+-> w
+T 903 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 14/38 MP 0/0 Hu 64 $ 902 room=.
+-> n
+T 904 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 14/38 MP 0/0 Hu 64 $ 902 room=.
+-> e
+T 905 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 15/38 MP 0/0 Hu 63 $ 902 room=.
+-> w
+T 906 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 15/38 MP 0/0 Hu 62 $ 902 room=.
+-> w
+T 907 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 15/38 MP 0/0 Hu 62 $ 902 room=.
+-> s
+T 908 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 15/38 MP 0/0 Hu 61 $ 902 room=.
+-> e
+T 909 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 16/38 MP 0/0 Hu 60 $ 902 room=.
+-> s
+T 910 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 16/38 MP 0/0 Hu 60 $ 902 room=.
+-> l
+T 911 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 16/38 MP 0/0 Hu 60 $ 902 room=.
+-> e
+T 912 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 16/38 MP 0/0 Hu 59 $ 902 room=.
+-> s
+T 913 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 16/38 MP 0/0 Hu 58 $ 902 room=.
+-> n
+T 914 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 16/38 MP 0/0 Hu 57 $ 902 room=.
+-> n
+T 915 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 16/38 MP 0/0 Hu 57 $ 902 room=P
+-> n
+T 916 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 56 $ 902 room=.
+-> w
+T 917 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 16/38 MP 0/0 Hu 55 $ 902 room=.
+-> w
+T 918 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 16/38 MP 0/0 Hu 55 $ 902 room=.
+-> s
+T 919 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 16/38 MP 0/0 Hu 54 $ 902 room=.
+-> e
+T 920 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 16/38 MP 0/0 Hu 53 $ 902 room=.
+-> l
+T 921 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 16/38 MP 0/0 Hu 53 $ 902 room=.
+-> s
+T 922 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 16/38 MP 0/0 Hu 53 $ 902 room=.
+-> e
+T 923 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 16/38 MP 0/0 Hu 52 $ 902 room=.
+-> s
+T 924 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 16/38 MP 0/0 Hu 51 $ 902 room=.
+-> n
+T 925 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 16/38 MP 0/0 Hu 50 $ 902 room=.
+-> n
+T 926 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 16/38 MP 0/0 Hu 50 $ 902 room=P
+-> n
+T 927 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T 928 mode=inventory           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat1
+T 929 mode=inventory           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 99 $ 902 room=.
+-> x
+T 930 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 99 $ 902 room=.
+-> l
+T 931 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 16/38 MP 0/0 Hu 99 $ 902 room=.
+-> w
+T 932 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 16/38 MP 0/0 Hu 98 $ 902 room=.
+-> s
+T 933 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 17/38 MP 0/0 Hu 98 $ 902 room=.
+-> w
+T 934 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 17/38 MP 0/0 Hu 97 $ 902 room=.
+-> n
+T 935 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 18/38 MP 0/0 Hu 96 $ 902 room=.
+-> e
+T 936 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 18/38 MP 0/0 Hu 96 $ 902 room=.
+-> e
+T 937 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 19/38 MP 0/0 Hu 95 $ 902 room=.
+-> s
+T 938 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 19/38 MP 0/0 Hu 94 $ 902 room=P
+-> s
+T 939 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 20/38 MP 0/0 Hu 93 $ 902 room=.
+-> s
+T 940 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 20/38 MP 0/0 Hu 93 $ 902 room=.
+-> l
+T 941 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 20/38 MP 0/0 Hu 93 $ 902 room=.
+-> n
+T 942 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 21/38 MP 0/0 Hu 92 $ 902 room=.
+-> w
+T 943 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 21/38 MP 0/0 Hu 91 $ 902 room=.
+-> w
+T 944 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 22/38 MP 0/0 Hu 91 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 945 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 22/38 MP 0/0 Hu 91 $ 902 room=M
+-> n
+T 946 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 22/38 MP 0/0 Hu 91 $ 902 room=.
+-> e
+T 947 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 22/38 MP 0/0 Hu 90 $ 902 room=.
+-> n
+T 948 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 23/38 MP 0/0 Hu 89 $ 902 room=.
+-> e
+T 949 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 23/38 MP 0/0 Hu 89 $ 902 room=.
+-> s
+T 950 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 24/38 MP 0/0 Hu 88 $ 902 room=P
+-> l
+T 951 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 24/38 MP 0/0 Hu 88 $ 902 room=P
+-> s
+T 952 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 24/38 MP 0/0 Hu 87 $ 902 room=.
+-> s
+T 953 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 25/38 MP 0/0 Hu 86 $ 902 room=.
+-> n
+T 954 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 25/38 MP 0/0 Hu 86 $ 902 room=.
+-> w
+T 955 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 26/38 MP 0/0 Hu 85 $ 902 room=.
+-> n
+T 956 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 26/38 MP 0/0 Hu 84 $ 902 room=.
+-> n
+T 957 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 26/38 MP 0/0 Hu 84 $ 902 room=.
+-> e
+T 958 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 26/38 MP 0/0 Hu 83 $ 902 room=.
+-> s
+T 959 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 27/38 MP 0/0 Hu 82 $ 902 room=P
+-> s
+T 960 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 27/38 MP 0/0 Hu 82 $ 902 room=.
+-> l
+T 961 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 27/38 MP 0/0 Hu 82 $ 902 room=.
+-> w
+T 962 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 27/38 MP 0/0 Hu 81 $ 902 room=.
+-> n
+T 963 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 27/38 MP 0/0 Hu 80 $ 902 room=.
+-> n
+T 964 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 28/38 MP 0/0 Hu 79 $ 902 room=.
+-> w
+T 965 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 28/38 MP 0/0 Hu 79 $ 902 room=.
+-> s
+T 966 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 28/38 MP 0/0 Hu 78 $ 902 room=.
+-> s
+T 967 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 28/38 MP 0/0 Hu 77 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 968 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 28/38 MP 0/0 Hu 77 $ 902 room=M
+-> e
+T 969 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 28/38 MP 0/0 Hu 77 $ 902 room=.
+-> e
+T 970 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 29/38 MP 0/0 Hu 77 $ 902 room=.
+-> l
+T 971 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 29/38 MP 0/0 Hu 77 $ 902 room=.
+-> s
+T 972 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 29/38 MP 0/0 Hu 76 $ 902 room=.
+-> n
+T 973 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 29/38 MP 0/0 Hu 75 $ 902 room=.
+-> n
+T 974 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 29/38 MP 0/0 Hu 75 $ 902 room=P
+-> n
+T 975 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 30/38 MP 0/0 Hu 74 $ 902 room=.
+-> w
+T 976 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 30/38 MP 0/0 Hu 73 $ 902 room=.
+-> s
+T 977 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 30/38 MP 0/0 Hu 72 $ 902 room=.
+-> w
+T 978 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 30/38 MP 0/0 Hu 72 $ 902 room=.
+-> s
+T 979 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 31/38 MP 0/0 Hu 71 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 980 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 24/38 MP 0/0 Hu 71 $ 902 room=M
+-> e
+T 981 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 24/38 MP 0/0 Hu 71 $ 902 room=.
+-> e
+T 982 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 24/38 MP 0/0 Hu 70 $ 902 room=.
+-> s
+T 983 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 24/38 MP 0/0 Hu 70 $ 902 room=.
+-> n
+T 984 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 24/38 MP 0/0 Hu 69 $ 902 room=.
+-> n
+T 985 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 2) HP 25/38 MP 0/0 Hu 68 $ 902 room=P
+-> n
+T 986 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 1) HP 25/38 MP 0/0 Hu 68 $ 902 room=.
+-> w
+T 987 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 25/38 MP 0/0 Hu 67 $ 902 room=.
+-> s
+T 988 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 25/38 MP 0/0 Hu 66 $ 902 room=.
+-> s
+T 989 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 26/38 MP 0/0 Hu 65 $ 902 room=.
+-> w
+T 990 mode=combat_mode         Elrond the Quenya-tongued(elf) F6@(16, 3) HP 26/38 MP 0/0 Hu 65 $ 902 room=M vs Minotaur(L5 HP67/67)
+-> f
+T 991 mode=flee_direction_mode Elrond the Quenya-tongued(elf) F6@(16, 3) HP 26/38 MP 0/0 Hu 65 $ 902 room=M
+-> n
+T 992 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 2) HP 26/38 MP 0/0 Hu 65 $ 902 room=.
+-> n
+T 993 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(16, 1) HP 26/38 MP 0/0 Hu 64 $ 902 room=.
+-> e
+T 994 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 1) HP 26/38 MP 0/0 Hu 63 $ 902 room=.
+-> s
+T 995 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 2) HP 27/38 MP 0/0 Hu 63 $ 902 room=.
+-> s
+T 996 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(17, 3) HP 27/38 MP 0/0 Hu 62 $ 902 room=.
+-> e
+T 997 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 3) HP 27/38 MP 0/0 Hu 61 $ 902 room=.
+-> s
+T 998 mode=game_loop           Elrond the Quenya-tongued(elf) F6@(18, 4) HP 27/38 MP 0/0 Hu 61 $ 902 room=.
+-> s
+T 999 mode=warp_mode           Elrond the Quenya-tongued(elf) F6@(18, 5) HP 28/38 MP 0/0 Hu 60 $ 902 room=W
+-> y
+T1000 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12,13) HP 28/38 MP 0/0 Hu 60 $ 902 room=.
+-> n
+T1001 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12,12) HP 28/38 MP 0/0 Hu 59 $ 902 room=.
+-> n
+T1002 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12,11) HP 28/38 MP 0/0 Hu 58 $ 902 room=.
+-> n
+T1003 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12,10) HP 28/38 MP 0/0 Hu 58 $ 902 room=.
+-> n
+T1004 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 9) HP 28/38 MP 0/0 Hu 57 $ 902 room=.
+-> n
+T1005 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 8) HP 28/38 MP 0/0 Hu 56 $ 902 room=.
+-> n
+T1006 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 7) HP 28/38 MP 0/0 Hu 56 $ 902 room=.
+-> w
+T1007 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 7) HP 28/38 MP 0/0 Hu 55 $ 902 room=.
+-> n
+T1008 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 6) HP 28/38 MP 0/0 Hu 54 $ 902 room=.
+-> w
+T1009 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 6) HP 28/38 MP 0/0 Hu 54 $ 902 room=.
+-> s
+T1010 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 7) HP 28/38 MP 0/0 Hu 53 $ 902 room=.
+-> w
+T1011 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 7) HP 28/38 MP 0/0 Hu 52 $ 902 room=.
+-> s
+T1012 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 8) HP 28/38 MP 0/0 Hu 51 $ 902 room=.
+-> w
+T1013 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 8) HP 28/38 MP 0/0 Hu 51 $ 902 room=.
+-> w
+T1014 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 8) HP 28/38 MP 0/0 Hu 50 $ 902 room=.
+-> s
+T1015 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/38 MP 0/0 Hu 49 $ 902 room=.
+-> i
+T1016 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/38 MP 0/0 Hu 49 $ 902 room=.
+-> eat1
+T1017 mode=inventory           Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/38 MP 0/0 Hu 99 $ 902 room=.
+-> x
+T1018 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 7, 9) HP 28/38 MP 0/0 Hu 99 $ 902 room=.
+-> e
+T1019 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 8, 9) HP 28/38 MP 0/0 Hu 99 $ 902 room=.
+-> e
+T1020 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 9) HP 29/38 MP 0/0 Hu 98 $ 902 room=.
+-> n
+T1021 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 8) HP 29/38 MP 0/0 Hu 97 $ 902 room=.
+-> n
+T1022 mode=game_loop           Elrond the Quenya-tongued(elf) F4@( 9, 7) HP 30/38 MP 0/0 Hu 97 $ 902 room=.
+-> e
+T1023 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 7) HP 30/38 MP 0/0 Hu 96 $ 902 room=.
+-> n
+T1024 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(10, 6) HP 31/38 MP 0/0 Hu 95 $ 902 room=.
+-> e
+T1025 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 6) HP 31/38 MP 0/0 Hu 94 $ 902 room=.
+-> s
+T1026 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 7) HP 32/38 MP 0/0 Hu 94 $ 902 room=.
+-> s
+T1027 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(11, 8) HP 32/38 MP 0/0 Hu 93 $ 902 room=.
+-> e
+T1028 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 8) HP 33/38 MP 0/0 Hu 92 $ 902 room=.
+-> n
+T1029 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(12, 7) HP 33/38 MP 0/0 Hu 92 $ 902 room=.
+-> e
+T1030 mode=game_loop           Elrond the Quenya-tongued(elf) F4@(13, 7) HP 34/38 MP 0/0 Hu 91 $ 902 room=.
+-> e
+T1031 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@(14, 7) HP 34/38 MP 0/0 Hu 90 $ 902 room=M vs Troll(L3 HP70/70)
+-> a
+T1032 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@(14, 7) HP 25/38 MP 0/0 Hu 90 $ 902 room=M vs Troll(L3 HP43/70)
+-> a
+T1033 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@(14, 7) HP 16/38 MP 0/0 Hu 90 $ 902 room=M vs Troll(L3 HP43/70)
+-> a
+T1034 mode=combat_mode         Elrond the Quenya-tongued(elf) F4@(14, 7) HP 7/38 MP 0/0 Hu 90 $ 902 room=M vs Troll(L3 HP16/70)
+-> f
+T1035 mode=death_screen        Elrond the Quenya-tongued(elf) F4@(14, 7) HP -2/38 MP 0/0 Hu 90 $ 902 room=M
 
-=== run finished: turns=794 floor=4 hp=0/38 gold=874 alive=False mode=death_screen ===
+=== run finished: turns=1035 floor=4 hp=-2/38 gold=902 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00033_elf.html

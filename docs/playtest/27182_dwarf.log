@@ -2743,326 +2743,1962 @@ T1362 mode=combat_mode         Fili the Stout(dwa) F6@(19,13) HP 34/104 MP 0/0 H
 T1363 mode=combat_mode         Fili the Stout(dwa) F6@(19,13) HP 34/104 MP 0/0 Hu 83 $ 320 room=M vs Displacer Beast(L5 HP21/45)
 -> a
 T1364 mode=combat_mode         Fili the Stout(dwa) F6@(19,13) HP 33/104 MP 0/0 Hu 83 $ 320 room=M vs Displacer Beast(L5 HP21/45)
--> a
-T1365 mode=combat_victory      Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
--> back
-T1366 mode=game_loop           Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
+-> f
+T1365 mode=flee_direction_mode Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 320 room=M
+-> n
+T1366 mode=game_loop           Fili the Stout(dwa) F6@(19,12) HP 32/104 MP 0/0 Hu 83 $ 320 room=.
+-> n
+T1367 mode=game_loop           Fili the Stout(dwa) F6@(19,11) HP 32/104 MP 0/0 Hu 83 $ 320 room=.
+-> n
+T1368 mode=game_loop           Fili the Stout(dwa) F6@(19,10) HP 33/104 MP 0/0 Hu 82 $ 320 room=.
+-> n
+T1369 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 33/104 MP 0/0 Hu 81 $ 320 room=.
+-> n
+T1370 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 320 room=V
+-> b12
+T1371 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 290 room=V
+-> b12
+T1372 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 275 room=V
+-> b12
+T1373 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 265 room=V
+-> b6
+T1374 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 205 room=V
+-> b6
+T1375 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 145 room=V
+-> b6
+T1376 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 85 room=V
+-> b10
+T1377 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 80 room=V
+-> b10
+T1378 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 75 room=V
+-> b10
+T1379 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 70 room=V
+-> x
+T1380 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 70 room=V
 -> i
-T1367 mode=inventory           Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
--> u20
-T1368 mode=inventory           Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
+T1381 mode=inventory           Fili the Stout(dwa) F6@(19, 8) HP 33/104 MP 0/0 Hu 80 $ 70 room=V
+-> u8
+T1382 mode=inventory           Fili the Stout(dwa) F6@(19, 8) HP 93/104 MP 0/0 Hu 80 $ 70 room=V
+-> u2
+T1383 mode=inventory           Fili the Stout(dwa) F6@(19, 8) HP 104/104 MP 0/0 Hu 80 $ 70 room=V
 -> x
-T1369 mode=game_loop           Fili the Stout(dwa) F6@(19,13) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
--> s
-T1370 mode=game_loop           Fili the Stout(dwa) F6@(19,14) HP 32/104 MP 0/0 Hu 83 $ 356 room=.
--> s
-T1371 mode=game_loop           Fili the Stout(dwa) F6@(19,15) HP 33/104 MP 0/0 Hu 82 $ 356 room=.
--> s
-T1372 mode=game_loop           Fili the Stout(dwa) F6@(19,16) HP 33/104 MP 0/0 Hu 81 $ 356 room=.
--> w
-T1373 mode=chest_mode          Fili the Stout(dwa) F6@(18,16) HP 33/104 MP 0/0 Hu 80 $ 356 room=C
--> e
-T1374 mode=game_loop           Fili the Stout(dwa) F6@(19,16) HP 33/104 MP 0/0 Hu 80 $ 356 room=.
+T1384 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 104/104 MP 0/0 Hu 80 $ 70 room=V
 -> n
-T1375 mode=game_loop           Fili the Stout(dwa) F6@(19,15) HP 34/104 MP 0/0 Hu 79 $ 356 room=.
--> n
-T1376 mode=game_loop           Fili the Stout(dwa) F6@(19,14) HP 34/104 MP 0/0 Hu 78 $ 356 room=.
--> n
-T1377 mode=game_loop           Fili the Stout(dwa) F6@(19,13) HP 34/104 MP 0/0 Hu 78 $ 356 room=.
--> n
-T1378 mode=game_loop           Fili the Stout(dwa) F6@(19,12) HP 34/104 MP 0/0 Hu 77 $ 356 room=.
--> n
-T1379 mode=game_loop           Fili the Stout(dwa) F6@(19,11) HP 35/104 MP 0/0 Hu 76 $ 356 room=.
--> n
-T1380 mode=game_loop           Fili the Stout(dwa) F6@(19,10) HP 35/104 MP 0/0 Hu 76 $ 356 room=.
--> n
-T1381 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 35/104 MP 0/0 Hu 75 $ 356 room=.
--> n
-T1382 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 356 room=V
--> b11
-T1383 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 326 room=V
--> b11
-T1384 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 311 room=V
--> b11
-T1385 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 301 room=V
--> b6
-T1386 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 241 room=V
--> b6
-T1387 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 181 room=V
--> b6
-T1388 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 121 room=V
--> b6
-T1389 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 61 room=V
--> b8
-T1390 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 56 room=V
--> b8
-T1391 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 51 room=V
--> b8
-T1392 mode=vendor_shop         Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 46 room=V
--> x
-T1393 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 35/104 MP 0/0 Hu 74 $ 46 room=V
--> n
-T1394 mode=garden_mode         Fili the Stout(dwa) F6@(19, 7) HP 36/104 MP 0/0 Hu 73 $ 46 room=G
+T1385 mode=garden_mode         Fili the Stout(dwa) F6@(19, 7) HP 104/104 MP 0/0 Hu 80 $ 70 room=G
 -> h
-T1395 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 36/104 MP 0/0 Hu 73 $ 46 room=.
+T1386 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 104/104 MP 0/0 Hu 80 $ 70 room=.
 -> n
-T1396 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 36/104 MP 0/0 Hu 73 $ 46 room=.
+T1387 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 104/104 MP 0/0 Hu 79 $ 70 room=.
 -> n
-T1397 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 36/104 MP 0/0 Hu 72 $ 46 room=.
+T1388 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 104/104 MP 0/0 Hu 78 $ 70 room=.
 -> n
-T1398 mode=pool_mode           Fili the Stout(dwa) F6@(19, 4) HP 36/104 MP 0/0 Hu 71 $ 46 room=P
--> s
-T1399 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 37/104 MP 0/0 Hu 71 $ 46 room=.
+T1389 mode=pool_mode           Fili the Stout(dwa) F6@(19, 4) HP 104/104 MP 0/0 Hu 78 $ 70 room=P
+-> dr
+T1390 mode=game_loop           Fili the Stout(dwa) F6@(19, 4) HP 104/108 MP 0/0 Hu 78 $ 70 room=.
 -> w
-T1400 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 37/104 MP 0/0 Hu 70 $ 46 room=.
+T1391 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 104/108 MP 0/0 Hu 77 $ 70 room=.
 -> s
-T1401 mode=warp_mode           Fili the Stout(dwa) F6@(18, 6) HP 37/104 MP 0/0 Hu 69 $ 46 room=W
+T1392 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 104/108 MP 0/0 Hu 76 $ 70 room=.
+-> s
+T1393 mode=warp_mode           Fili the Stout(dwa) F6@(18, 6) HP 104/108 MP 0/0 Hu 76 $ 70 room=W
 -> y
-T1402 mode=game_loop           Fili the Stout(dwa) F6@(18, 6) HP 37/104 MP 0/0 Hu 69 $ 46 room=W
--> s
-T1403 mode=game_loop           Fili the Stout(dwa) F6@(18, 7) HP 37/104 MP 0/0 Hu 69 $ 46 room=.
--> e
-T1404 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 38/104 MP 0/0 Hu 68 $ 46 room=.
+T1394 mode=combat_mode         Fili the Stout(dwa) F4@(10,13) HP 104/108 MP 0/0 Hu 76 $ 70 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
+-> f
+T1395 mode=flee_direction_mode Fili the Stout(dwa) F4@(10,13) HP 84/108 MP 0/0 Hu 76 $ 70 room=M
 -> n
-T1405 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 38/104 MP 0/0 Hu 67 $ 46 room=.
--> n
-T1406 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 38/104 MP 0/0 Hu 66 $ 46 room=.
--> n
-T1407 mode=game_loop           Fili the Stout(dwa) F6@(19, 4) HP 38/104 MP 0/0 Hu 66 $ 46 room=P
--> w
-T1408 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 39/104 MP 0/0 Hu 65 $ 46 room=.
--> s
-T1409 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 39/104 MP 0/0 Hu 64 $ 46 room=.
--> w
-T1410 mode=library_mode        Fili the Stout(dwa) F6@(17, 5) HP 39/104 MP 0/0 Hu 64 $ 46 room=L
--> r
-T1411 mode=library_read_decision_mode Fili the Stout(dwa) F6@(17, 5) HP 39/104 MP 0/0 Hu 64 $ 46 room=L
--> y
-T1412 mode=game_loop           Fili the Stout(dwa) F6@(17, 5) HP 39/104 MP 0/0 Hu 64 $ 46 room=.
--> w
-T1413 mode=game_loop           Fili the Stout(dwa) F6@(16, 5) HP 39/104 MP 0/0 Hu 63 $ 46 room=.
--> e
-T1414 mode=game_loop           Fili the Stout(dwa) F6@(17, 5) HP 40/104 MP 0/0 Hu 62 $ 46 room=.
--> n
-T1415 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 40/104 MP 0/0 Hu 62 $ 46 room=.
--> e
-T1416 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 40/104 MP 0/0 Hu 61 $ 46 room=.
--> e
-T1417 mode=game_loop           Fili the Stout(dwa) F6@(19, 4) HP 40/104 MP 0/0 Hu 60 $ 46 room=P
--> s
-T1418 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 40/104 MP 0/0 Hu 59 $ 46 room=.
--> w
-T1419 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 40/104 MP 0/0 Hu 59 $ 46 room=.
--> w
-T1420 mode=game_loop           Fili the Stout(dwa) F6@(17, 5) HP 40/104 MP 0/0 Hu 58 $ 46 room=.
--> n
-T1421 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 40/104 MP 0/0 Hu 57 $ 46 room=.
--> n
-T1422 mode=dungeon_mode        Fili the Stout(dwa) F6@(17, 3) HP 40/104 MP 0/0 Hu 57 $ 46 room=N
--> u
-T1423 mode=game_loop           Fili the Stout(dwa) F6@(17, 3) HP 40/104 MP 0/0 Hu 57 $ 46 room=N
--> s
-T1424 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 40/104 MP 0/0 Hu 56 $ 46 room=.
--> e
-T1425 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 40/104 MP 0/0 Hu 55 $ 46 room=.
--> s
-T1426 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 40/104 MP 0/0 Hu 55 $ 46 room=.
--> e
-T1427 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 40/104 MP 0/0 Hu 54 $ 46 room=.
--> s
-T1428 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 40/104 MP 0/0 Hu 53 $ 46 room=.
--> s
-T1429 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 40/104 MP 0/0 Hu 52 $ 46 room=.
--> s
-T1430 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 40/104 MP 0/0 Hu 52 $ 46 room=V
--> s
-T1431 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 40/104 MP 0/0 Hu 51 $ 46 room=.
--> w
-T1432 mode=game_loop           Fili the Stout(dwa) F6@(18, 9) HP 40/104 MP 0/0 Hu 50 $ 46 room=.
--> w
-T1433 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 40/104 MP 0/0 Hu 50 $ 46 room=.
--> w
-T1434 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 40/104 MP 0/0 Hu 49 $ 46 room=.
+T1396 mode=game_loop           Fili the Stout(dwa) F4@(10,12) HP 84/108 MP 0/0 Hu 76 $ 70 room=.
 -> i
-T1435 mode=inventory           Fili the Stout(dwa) F6@(16, 9) HP 40/104 MP 0/0 Hu 49 $ 46 room=.
+T1397 mode=inventory           Fili the Stout(dwa) F4@(10,12) HP 84/108 MP 0/0 Hu 76 $ 70 room=.
 -> u8
-T1436 mode=inventory           Fili the Stout(dwa) F6@(16, 9) HP 100/104 MP 0/0 Hu 49 $ 46 room=.
+T1398 mode=inventory           Fili the Stout(dwa) F4@(10,12) HP 108/108 MP 0/0 Hu 76 $ 70 room=.
 -> x
-T1437 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 100/104 MP 0/0 Hu 49 $ 46 room=.
+T1399 mode=game_loop           Fili the Stout(dwa) F4@(10,12) HP 108/108 MP 0/0 Hu 76 $ 70 room=.
+-> e
+T1400 mode=game_loop           Fili the Stout(dwa) F4@(11,12) HP 108/108 MP 0/0 Hu 75 $ 70 room=P
+-> s
+T1401 mode=game_loop           Fili the Stout(dwa) F4@(11,13) HP 108/108 MP 0/0 Hu 74 $ 70 room=.
+-> s
+T1402 mode=game_loop           Fili the Stout(dwa) F4@(11,14) HP 108/108 MP 0/0 Hu 73 $ 70 room=.
+-> w
+T1403 mode=garden_mode         Fili the Stout(dwa) F4@(10,14) HP 108/108 MP 0/0 Hu 73 $ 70 room=G
+-> h
+T1404 mode=game_loop           Fili the Stout(dwa) F4@(10,14) HP 108/108 MP 0/0 Hu 73 $ 70 room=.
+-> e
+T1405 mode=game_loop           Fili the Stout(dwa) F4@(11,14) HP 108/108 MP 0/0 Hu 72 $ 70 room=.
+-> s
+T1406 mode=game_loop           Fili the Stout(dwa) F4@(11,15) HP 108/108 MP 0/0 Hu 71 $ 70 room=.
+-> s
+T1407 mode=combat_mode         Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 70 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T1408 mode=combat_victory      Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 110 room=.
+-> back
+T1409 mode=game_loop           Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 110 room=.
 -> i
-T1438 mode=inventory           Fili the Stout(dwa) F6@(16, 9) HP 100/104 MP 0/0 Hu 49 $ 46 room=.
+T1410 mode=inventory           Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 110 room=.
+-> u20
+T1411 mode=inventory           Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 110 room=.
+-> x
+T1412 mode=game_loop           Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 71 $ 110 room=.
+-> w
+T1413 mode=game_loop           Fili the Stout(dwa) F4@(10,16) HP 108/108 MP 0/0 Hu 70 $ 110 room=.
+-> e
+T1414 mode=game_loop           Fili the Stout(dwa) F4@(11,16) HP 108/108 MP 0/0 Hu 69 $ 110 room=.
+-> n
+T1415 mode=game_loop           Fili the Stout(dwa) F4@(11,15) HP 108/108 MP 0/0 Hu 69 $ 110 room=.
+-> n
+T1416 mode=game_loop           Fili the Stout(dwa) F4@(11,14) HP 108/108 MP 0/0 Hu 68 $ 110 room=.
+-> n
+T1417 mode=game_loop           Fili the Stout(dwa) F4@(11,13) HP 108/108 MP 0/0 Hu 67 $ 110 room=.
+-> n
+T1418 mode=game_loop           Fili the Stout(dwa) F4@(11,12) HP 108/108 MP 0/0 Hu 66 $ 110 room=P
+-> e
+T1419 mode=game_loop           Fili the Stout(dwa) F4@(12,12) HP 108/108 MP 0/0 Hu 66 $ 110 room=.
+-> e
+T1420 mode=game_loop           Fili the Stout(dwa) F4@(13,12) HP 108/108 MP 0/0 Hu 65 $ 110 room=.
+-> e
+T1421 mode=stairs_down_mode    Fili the Stout(dwa) F4@(14,12) HP 108/108 MP 0/0 Hu 64 $ 110 room=D
+-> d
+T1422 mode=stairs_up_mode      Fili the Stout(dwa) F5@( 1, 1) HP 108/108 MP 0/0 Hu 64 $ 110 room=U
+-> s
+T1423 mode=game_loop           Fili the Stout(dwa) F5@( 1, 2) HP 108/108 MP 0/0 Hu 64 $ 110 room=.
+-> e
+T1424 mode=game_loop           Fili the Stout(dwa) F5@( 2, 2) HP 108/108 MP 0/0 Hu 63 $ 110 room=.
+-> s
+T1425 mode=game_loop           Fili the Stout(dwa) F5@( 2, 3) HP 108/108 MP 0/0 Hu 62 $ 110 room=.
+-> s
+T1426 mode=game_loop           Fili the Stout(dwa) F5@( 2, 4) HP 108/108 MP 0/0 Hu 62 $ 110 room=.
+-> e
+T1427 mode=game_loop           Fili the Stout(dwa) F5@( 3, 4) HP 108/108 MP 0/0 Hu 61 $ 110 room=.
+-> n
+T1428 mode=game_loop           Fili the Stout(dwa) F5@( 3, 3) HP 108/108 MP 0/0 Hu 60 $ 110 room=.
+-> e
+T1429 mode=game_loop           Fili the Stout(dwa) F5@( 4, 3) HP 108/108 MP 0/0 Hu 59 $ 110 room=.
+-> e
+T1430 mode=game_loop           Fili the Stout(dwa) F5@( 5, 3) HP 108/108 MP 0/0 Hu 59 $ 110 room=.
+-> e
+T1431 mode=game_loop           Fili the Stout(dwa) F5@( 6, 3) HP 108/108 MP 0/0 Hu 58 $ 110 room=V
+-> s
+T1432 mode=game_loop           Fili the Stout(dwa) F5@( 6, 4) HP 108/108 MP 0/0 Hu 57 $ 110 room=.
+-> s
+T1433 mode=game_loop           Fili the Stout(dwa) F5@( 6, 5) HP 108/108 MP 0/0 Hu 57 $ 110 room=.
+-> s
+T1434 mode=game_loop           Fili the Stout(dwa) F5@( 6, 6) HP 108/108 MP 0/0 Hu 56 $ 110 room=.
+-> s
+T1435 mode=game_loop           Fili the Stout(dwa) F5@( 6, 7) HP 108/108 MP 0/0 Hu 55 $ 110 room=.
+-> e
+T1436 mode=game_loop           Fili the Stout(dwa) F5@( 7, 7) HP 108/108 MP 0/0 Hu 55 $ 110 room=.
+-> e
+T1437 mode=game_loop           Fili the Stout(dwa) F5@( 8, 7) HP 108/108 MP 0/0 Hu 54 $ 110 room=.
+-> e
+T1438 mode=game_loop           Fili the Stout(dwa) F5@( 9, 7) HP 108/108 MP 0/0 Hu 53 $ 110 room=.
+-> e
+T1439 mode=game_loop           Fili the Stout(dwa) F5@(10, 7) HP 108/108 MP 0/0 Hu 52 $ 110 room=.
+-> s
+T1440 mode=altar_mode          Fili the Stout(dwa) F5@(10, 8) HP 108/108 MP 0/0 Hu 52 $ 110 room=A
+-> pray
+T1441 mode=game_loop           Fili the Stout(dwa) F5@(10, 8) HP 108/108 MP 0/0 Hu 52 $ 110 room=.
+-> w
+T1442 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 108/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1443 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 107/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1444 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 107/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1445 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 106/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1446 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 105/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1447 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 105/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP37/37)
+-> a
+T1448 mode=combat_mode         Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 110 room=M vs Bugbear(L4 HP9/37)
+-> a
+T1449 mode=combat_victory      Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 140 room=.
+-> back
+T1450 mode=game_loop           Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 140 room=.
+-> i
+T1451 mode=inventory           Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 140 room=.
+-> u21
+T1452 mode=inventory           Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 140 room=.
+-> x
+T1453 mode=game_loop           Fili the Stout(dwa) F5@( 9, 8) HP 104/108 MP 0/0 Hu 51 $ 140 room=.
+-> n
+T1454 mode=game_loop           Fili the Stout(dwa) F5@( 9, 7) HP 104/108 MP 0/0 Hu 50 $ 140 room=.
+-> w
+T1455 mode=game_loop           Fili the Stout(dwa) F5@( 8, 7) HP 104/108 MP 0/0 Hu 50 $ 140 room=.
+-> w
+T1456 mode=game_loop           Fili the Stout(dwa) F5@( 7, 7) HP 104/108 MP 0/0 Hu 49 $ 140 room=.
+-> i
+T1457 mode=inventory           Fili the Stout(dwa) F5@( 7, 7) HP 104/108 MP 0/0 Hu 49 $ 140 room=.
 -> eat4
-T1439 mode=inventory           Fili the Stout(dwa) F6@(16, 9) HP 100/104 MP 0/0 Hu 67 $ 46 room=.
+T1458 mode=inventory           Fili the Stout(dwa) F5@( 7, 7) HP 104/108 MP 0/0 Hu 67 $ 140 room=.
 -> x
-T1440 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 100/104 MP 0/0 Hu 67 $ 46 room=.
--> s
-T1441 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 100/104 MP 0/0 Hu 66 $ 46 room=.
--> w
-T1442 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 100/104 MP 0/0 Hu 66 $ 46 room=.
--> w
-T1443 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 100/104 MP 0/0 Hu 65 $ 46 room=.
--> w
-T1444 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 101/104 MP 0/0 Hu 64 $ 46 room=.
--> w
-T1445 mode=game_loop           Fili the Stout(dwa) F6@(12,10) HP 101/104 MP 0/0 Hu 63 $ 46 room=.
+T1459 mode=game_loop           Fili the Stout(dwa) F5@( 7, 7) HP 104/108 MP 0/0 Hu 67 $ 140 room=.
 -> n
-T1446 mode=game_loop           Fili the Stout(dwa) F6@(12, 9) HP 101/104 MP 0/0 Hu 63 $ 46 room=.
+T1460 mode=game_loop           Fili the Stout(dwa) F5@( 7, 6) HP 104/108 MP 0/0 Hu 66 $ 140 room=.
 -> n
-T1447 mode=game_loop           Fili the Stout(dwa) F6@(12, 8) HP 101/104 MP 0/0 Hu 62 $ 46 room=.
+T1461 mode=game_loop           Fili the Stout(dwa) F5@( 7, 5) HP 104/108 MP 0/0 Hu 66 $ 140 room=.
 -> n
-T1448 mode=game_loop           Fili the Stout(dwa) F6@(12, 7) HP 102/104 MP 0/0 Hu 61 $ 46 room=.
--> w
-T1449 mode=game_loop           Fili the Stout(dwa) F6@(11, 7) HP 102/104 MP 0/0 Hu 61 $ 46 room=.
+T1462 mode=game_loop           Fili the Stout(dwa) F5@( 7, 4) HP 104/108 MP 0/0 Hu 65 $ 140 room=.
+-> e
+T1463 mode=game_loop           Fili the Stout(dwa) F5@( 8, 4) HP 105/108 MP 0/0 Hu 64 $ 140 room=.
 -> s
-T1450 mode=game_loop           Fili the Stout(dwa) F6@(11, 8) HP 102/104 MP 0/0 Hu 60 $ 46 room=.
--> w
-T1451 mode=game_loop           Fili the Stout(dwa) F6@(10, 8) HP 102/104 MP 0/0 Hu 59 $ 46 room=.
+T1464 mode=game_loop           Fili the Stout(dwa) F5@( 8, 5) HP 105/108 MP 0/0 Hu 63 $ 140 room=.
 -> s
-T1452 mode=game_loop           Fili the Stout(dwa) F6@(10, 9) HP 102/104 MP 0/0 Hu 59 $ 46 room=C
+T1465 mode=game_loop           Fili the Stout(dwa) F5@( 8, 6) HP 105/108 MP 0/0 Hu 63 $ 140 room=.
 -> s
-T1453 mode=game_loop           Fili the Stout(dwa) F6@(10,10) HP 102/104 MP 0/0 Hu 58 $ 46 room=.
+T1466 mode=game_loop           Fili the Stout(dwa) F5@( 8, 7) HP 105/108 MP 0/0 Hu 62 $ 140 room=.
 -> e
-T1454 mode=game_loop           Fili the Stout(dwa) F6@(11,10) HP 102/104 MP 0/0 Hu 57 $ 46 room=.
+T1467 mode=game_loop           Fili the Stout(dwa) F5@( 9, 7) HP 106/108 MP 0/0 Hu 61 $ 140 room=.
+-> s
+T1468 mode=game_loop           Fili the Stout(dwa) F5@( 9, 8) HP 106/108 MP 0/0 Hu 61 $ 140 room=.
 -> e
-T1455 mode=game_loop           Fili the Stout(dwa) F6@(12,10) HP 102/104 MP 0/0 Hu 56 $ 46 room=.
--> e
-T1456 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 102/104 MP 0/0 Hu 56 $ 46 room=.
--> e
-T1457 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 102/104 MP 0/0 Hu 55 $ 46 room=.
--> e
-T1458 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 102/104 MP 0/0 Hu 54 $ 46 room=.
+T1469 mode=game_loop           Fili the Stout(dwa) F5@(10, 8) HP 106/108 MP 0/0 Hu 60 $ 140 room=.
 -> n
-T1459 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 102/104 MP 0/0 Hu 54 $ 46 room=.
--> e
-T1460 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 102/104 MP 0/0 Hu 53 $ 46 room=.
--> e
-T1461 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 102/104 MP 0/0 Hu 52 $ 46 room=.
--> s
-T1462 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 102/104 MP 0/0 Hu 52 $ 46 room=.
--> w
-T1463 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 102/104 MP 0/0 Hu 51 $ 46 room=.
--> w
-T1464 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 102/104 MP 0/0 Hu 50 $ 46 room=.
+T1470 mode=game_loop           Fili the Stout(dwa) F5@(10, 7) HP 106/108 MP 0/0 Hu 59 $ 140 room=.
 -> n
-T1465 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 102/104 MP 0/0 Hu 49 $ 46 room=.
+T1471 mode=game_loop           Fili the Stout(dwa) F5@(10, 6) HP 106/108 MP 0/0 Hu 59 $ 140 room=.
+-> s
+T1472 mode=game_loop           Fili the Stout(dwa) F5@(10, 7) HP 106/108 MP 0/0 Hu 58 $ 140 room=.
+-> w
+T1473 mode=game_loop           Fili the Stout(dwa) F5@( 9, 7) HP 106/108 MP 0/0 Hu 57 $ 140 room=.
+-> s
+T1474 mode=game_loop           Fili the Stout(dwa) F5@( 9, 8) HP 106/108 MP 0/0 Hu 56 $ 140 room=.
+-> e
+T1475 mode=game_loop           Fili the Stout(dwa) F5@(10, 8) HP 106/108 MP 0/0 Hu 56 $ 140 room=.
+-> s
+T1476 mode=chest_mode          Fili the Stout(dwa) F5@(10, 9) HP 106/108 MP 0/0 Hu 55 $ 140 room=C
+-> o
+T1477 mode=game_loop           Fili the Stout(dwa) F5@(10, 9) HP 70/108 MP 0/0 Hu 55 $ 140 room=.
+-> s
+T1478 mode=game_loop           Fili the Stout(dwa) F5@(10,10) HP 70/108 MP 0/0 Hu 54 $ 140 room=.
+-> w
+T1479 mode=game_loop           Fili the Stout(dwa) F5@( 9,10) HP 70/108 MP 0/0 Hu 54 $ 140 room=.
+-> w
+T1480 mode=game_loop           Fili the Stout(dwa) F5@( 8,10) HP 70/108 MP 0/0 Hu 53 $ 140 room=.
+-> w
+T1481 mode=game_loop           Fili the Stout(dwa) F5@( 7,10) HP 70/108 MP 0/0 Hu 52 $ 140 room=.
+-> s
+T1482 mode=garden_mode         Fili the Stout(dwa) F5@( 7,11) HP 70/108 MP 0/0 Hu 52 $ 140 room=G
+-> h
+T1483 mode=game_loop           Fili the Stout(dwa) F5@( 7,11) HP 70/108 MP 0/0 Hu 52 $ 140 room=.
+-> s
+T1484 mode=game_loop           Fili the Stout(dwa) F5@( 7,12) HP 70/108 MP 0/0 Hu 51 $ 140 room=.
+-> e
+T1485 mode=chest_mode          Fili the Stout(dwa) F5@( 8,12) HP 70/108 MP 0/0 Hu 50 $ 140 room=C
+-> o
+T1486 mode=game_loop           Fili the Stout(dwa) F5@( 8,12) HP 70/108 MP 0/0 Hu 50 $ 140 room=.
+-> e
+T1487 mode=game_loop           Fili the Stout(dwa) F5@( 9,12) HP 70/108 MP 0/0 Hu 49 $ 140 room=.
 -> i
-T1466 mode=inventory           Fili the Stout(dwa) F6@(15, 9) HP 102/104 MP 0/0 Hu 49 $ 46 room=.
--> eat1
-T1467 mode=inventory           Fili the Stout(dwa) F6@(15, 9) HP 102/104 MP 0/0 Hu100 $ 46 room=.
+T1488 mode=inventory           Fili the Stout(dwa) F5@( 9,12) HP 70/108 MP 0/0 Hu 49 $ 140 room=.
+-> u10
+T1489 mode=inventory           Fili the Stout(dwa) F5@( 9,12) HP 108/108 MP 0/0 Hu 49 $ 140 room=.
 -> x
-T1468 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 102/104 MP 0/0 Hu100 $ 46 room=.
+T1490 mode=game_loop           Fili the Stout(dwa) F5@( 9,12) HP 108/108 MP 0/0 Hu 49 $ 140 room=.
+-> i
+T1491 mode=inventory           Fili the Stout(dwa) F5@( 9,12) HP 108/108 MP 0/0 Hu 49 $ 140 room=.
+-> eat4
+T1492 mode=inventory           Fili the Stout(dwa) F5@( 9,12) HP 108/108 MP 0/0 Hu 61 $ 140 room=.
+-> x
+T1493 mode=game_loop           Fili the Stout(dwa) F5@( 9,12) HP 108/108 MP 0/0 Hu 61 $ 140 room=.
+-> n
+T1494 mode=game_loop           Fili the Stout(dwa) F5@( 9,11) HP 108/108 MP 0/0 Hu 61 $ 140 room=.
+-> n
+T1495 mode=game_loop           Fili the Stout(dwa) F5@( 9,10) HP 108/108 MP 0/0 Hu 60 $ 140 room=.
 -> e
-T1469 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 102/104 MP 0/0 Hu100 $ 46 room=.
+T1496 mode=game_loop           Fili the Stout(dwa) F5@(10,10) HP 108/108 MP 0/0 Hu 59 $ 140 room=.
+-> n
+T1497 mode=game_loop           Fili the Stout(dwa) F5@(10, 9) HP 108/108 MP 0/0 Hu 59 $ 140 room=.
 -> e
-T1470 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 103/104 MP 0/0 Hu 99 $ 46 room=.
--> s
-T1471 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 103/104 MP 0/0 Hu 98 $ 46 room=.
--> w
-T1472 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 104/104 MP 0/0 Hu 98 $ 46 room=.
--> s
-T1473 mode=game_loop           Fili the Stout(dwa) F6@(16,11) HP 104/104 MP 0/0 Hu 97 $ 46 room=.
--> s
-T1474 mode=game_loop           Fili the Stout(dwa) F6@(16,12) HP 104/104 MP 0/0 Hu 96 $ 46 room=.
--> w
-T1475 mode=game_loop           Fili the Stout(dwa) F6@(15,12) HP 104/104 MP 0/0 Hu 96 $ 46 room=.
--> s
-T1476 mode=game_loop           Fili the Stout(dwa) F6@(15,13) HP 104/104 MP 0/0 Hu 95 $ 46 room=.
--> e
-T1477 mode=warp_mode           Fili the Stout(dwa) F6@(16,13) HP 104/104 MP 0/0 Hu 94 $ 46 room=W
--> y
-T1478 mode=game_loop           Fili the Stout(dwa) F6@(16,13) HP 104/104 MP 0/0 Hu 94 $ 46 room=W
--> s
-T1479 mode=warp_mode           Fili the Stout(dwa) F6@(16,14) HP 104/104 MP 0/0 Hu 93 $ 46 room=W
--> y
-T1480 mode=library_mode        Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 93 $ 46 room=L
+T1498 mode=library_mode        Fili the Stout(dwa) F5@(11, 9) HP 108/108 MP 0/0 Hu 58 $ 140 room=L
 -> r
-T1481 mode=library_read_decision_mode Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 93 $ 46 room=L
+T1499 mode=library_read_decision_mode Fili the Stout(dwa) F5@(11, 9) HP 108/108 MP 0/0 Hu 58 $ 140 room=L
 -> y
-T1482 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 93 $ 346 room=.
+T1500 mode=game_loop           Fili the Stout(dwa) F5@(11, 9) HP 108/108 MP 0/0 Hu 58 $ 140 room=.
 -> n
-T1483 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 104/104 MP 0/0 Hu 93 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
--> f
-T1484 mode=flee_direction_mode Fili the Stout(dwa) F7@(17, 2) HP 104/104 MP 0/0 Hu 93 $ 346 room=M
--> s
-T1485 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 93 $ 346 room=.
+T1501 mode=game_loop           Fili the Stout(dwa) F5@(12, 9) HP 108/108 MP 0/0 Hu 57 $ 140 room=.
 -> e
-T1486 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 104/104 MP 0/0 Hu 92 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1487 mode=flee_direction_mode Fili the Stout(dwa) F7@(18, 3) HP 104/104 MP 0/0 Hu 92 $ 346 room=M
--> w
-T1488 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 92 $ 346 room=.
+T1502 mode=game_loop           Fili the Stout(dwa) F5@(13, 9) HP 108/108 MP 0/0 Hu 57 $ 140 room=.
 -> s
-T1489 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 92 $ 346 room=.
+T1503 mode=game_loop           Fili the Stout(dwa) F5@(13, 8) HP 108/108 MP 0/0 Hu 56 $ 140 room=.
+-> s
+T1504 mode=game_loop           Fili the Stout(dwa) F5@(13, 9) HP 108/108 MP 0/0 Hu 55 $ 140 room=.
+-> s
+T1505 mode=warp_mode           Fili the Stout(dwa) F5@(13,10) HP 108/108 MP 0/0 Hu 54 $ 140 room=W
+-> y
+T1506 mode=game_loop           Fili the Stout(dwa) F6@(12, 7) HP 108/108 MP 0/0 Hu 54 $ 140 room=.
 -> e
-T1490 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 104/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1491 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 70/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1492 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 70/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1493 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 36/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
+T1507 mode=game_loop           Fili the Stout(dwa) F6@(13, 7) HP 108/108 MP 0/0 Hu 54 $ 140 room=.
+-> s
+T1508 mode=chest_mode          Fili the Stout(dwa) F6@(13, 8) HP 108/108 MP 0/0 Hu 53 $ 140 room=C
+-> n
+T1509 mode=game_loop           Fili the Stout(dwa) F6@(13, 7) HP 108/108 MP 0/0 Hu 52 $ 140 room=.
+-> s
+T1510 mode=game_loop           Fili the Stout(dwa) F6@(13, 8) HP 108/108 MP 0/0 Hu 52 $ 140 room=C
+-> s
+T1511 mode=game_loop           Fili the Stout(dwa) F6@(13, 9) HP 108/108 MP 0/0 Hu 51 $ 140 room=.
+-> s
+T1512 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 108/108 MP 0/0 Hu 50 $ 140 room=.
+-> e
+T1513 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 108/108 MP 0/0 Hu 50 $ 140 room=.
+-> e
+T1514 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 108/108 MP 0/0 Hu 49 $ 140 room=.
 -> i
-T1494 mode=inventory           Fili the Stout(dwa) F7@(18, 3) HP 36/104 MP 0/0 Hu 91 $ 346 room=M
--> u2
-T1495 mode=inventory           Fili the Stout(dwa) F7@(18, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=M
+T1515 mode=inventory           Fili the Stout(dwa) F6@(15,10) HP 108/108 MP 0/0 Hu 49 $ 140 room=.
+-> eat1
+T1516 mode=inventory           Fili the Stout(dwa) F6@(15,10) HP 108/108 MP 0/0 Hu100 $ 140 room=.
 -> x
-T1496 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1497 mode=flee_direction_mode Fili the Stout(dwa) F7@(18, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=M
--> w
-T1498 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=.
--> e
-T1499 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1500 mode=flee_direction_mode Fili the Stout(dwa) F7@(18, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=M
--> w
-T1501 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 96/104 MP 0/0 Hu 91 $ 346 room=.
--> n
-T1502 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 97/104 MP 0/0 Hu 90 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
--> f
-T1503 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 55/104 MP 0/0 Hu 90 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
--> f
-T1504 mode=flee_direction_mode Fili the Stout(dwa) F7@(17, 2) HP 13/104 MP 0/0 Hu 90 $ 346 room=M
+T1517 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 108/108 MP 0/0 Hu100 $ 140 room=.
 -> s
-T1505 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 13/104 MP 0/0 Hu 90 $ 346 room=.
+T1518 mode=game_loop           Fili the Stout(dwa) F6@(15,11) HP 108/108 MP 0/0 Hu 99 $ 140 room=.
+-> s
+T1519 mode=game_loop           Fili the Stout(dwa) F6@(15,12) HP 108/108 MP 0/0 Hu 98 $ 140 room=.
+-> e
+T1520 mode=game_loop           Fili the Stout(dwa) F6@(16,12) HP 108/108 MP 0/0 Hu 98 $ 140 room=.
+-> n
+T1521 mode=game_loop           Fili the Stout(dwa) F6@(16,11) HP 108/108 MP 0/0 Hu 97 $ 140 room=.
+-> n
+T1522 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 108/108 MP 0/0 Hu 96 $ 140 room=.
+-> n
+T1523 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 108/108 MP 0/0 Hu 96 $ 140 room=.
+-> n
+T1524 mode=game_loop           Fili the Stout(dwa) F6@(16, 8) HP 108/108 MP 0/0 Hu 95 $ 140 room=.
+-> w
+T1525 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 108/108 MP 0/0 Hu 94 $ 140 room=.
+-> n
+T1526 mode=game_loop           Fili the Stout(dwa) F6@(15, 7) HP 108/108 MP 0/0 Hu 94 $ 140 room=.
+-> s
+T1527 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 108/108 MP 0/0 Hu 93 $ 140 room=.
+-> s
+T1528 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 108/108 MP 0/0 Hu 92 $ 140 room=.
+-> s
+T1529 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 108/108 MP 0/0 Hu 91 $ 140 room=.
+-> s
+T1530 mode=game_loop           Fili the Stout(dwa) F6@(15,11) HP 108/108 MP 0/0 Hu 91 $ 140 room=.
+-> s
+T1531 mode=game_loop           Fili the Stout(dwa) F6@(15,12) HP 108/108 MP 0/0 Hu 90 $ 140 room=.
+-> e
+T1532 mode=game_loop           Fili the Stout(dwa) F6@(16,12) HP 108/108 MP 0/0 Hu 89 $ 140 room=.
+-> n
+T1533 mode=game_loop           Fili the Stout(dwa) F6@(16,11) HP 108/108 MP 0/0 Hu 89 $ 140 room=.
+-> n
+T1534 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 108/108 MP 0/0 Hu 88 $ 140 room=.
+-> e
+T1535 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 108/108 MP 0/0 Hu 87 $ 140 room=.
+-> n
+T1536 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 108/108 MP 0/0 Hu 87 $ 140 room=.
+-> w
+T1537 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 108/108 MP 0/0 Hu 86 $ 140 room=.
+-> w
+T1538 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 108/108 MP 0/0 Hu 85 $ 140 room=.
+-> n
+T1539 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 108/108 MP 0/0 Hu 84 $ 140 room=.
+-> e
+T1540 mode=game_loop           Fili the Stout(dwa) F6@(16, 8) HP 108/108 MP 0/0 Hu 84 $ 140 room=.
+-> s
+T1541 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 108/108 MP 0/0 Hu 83 $ 140 room=.
+-> e
+T1542 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 108/108 MP 0/0 Hu 82 $ 140 room=.
+-> e
+T1543 mode=game_loop           Fili the Stout(dwa) F6@(18, 9) HP 108/108 MP 0/0 Hu 82 $ 140 room=.
+-> e
+T1544 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 108/108 MP 0/0 Hu 81 $ 140 room=.
+-> n
+T1545 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 108/108 MP 0/0 Hu 80 $ 140 room=V
+-> n
+T1546 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 108/108 MP 0/0 Hu 80 $ 140 room=.
+-> n
+T1547 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 108/108 MP 0/0 Hu 79 $ 140 room=.
+-> n
+T1548 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 108/108 MP 0/0 Hu 78 $ 140 room=.
+-> w
+T1549 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 108/108 MP 0/0 Hu 77 $ 140 room=.
+-> n
+T1550 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 108/108 MP 0/0 Hu 77 $ 140 room=.
+-> w
+T1551 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 108/108 MP 0/0 Hu 76 $ 140 room=.
+-> n
+T1552 mode=dungeon_mode        Fili the Stout(dwa) F6@(17, 3) HP 108/108 MP 0/0 Hu 75 $ 140 room=N
+-> u
+T1553 mode=game_loop           Fili the Stout(dwa) F6@(17, 3) HP 108/108 MP 0/0 Hu 75 $ 140 room=N
+-> s
+T1554 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 108/108 MP 0/0 Hu 75 $ 140 room=.
+-> s
+T1555 mode=library_mode        Fili the Stout(dwa) F6@(17, 5) HP 108/108 MP 0/0 Hu 74 $ 140 room=L
+-> r
+T1556 mode=library_read_decision_mode Fili the Stout(dwa) F6@(17, 5) HP 108/108 MP 0/0 Hu 74 $ 140 room=L
+-> y
+T1557 mode=game_loop           Fili the Stout(dwa) F6@(17, 5) HP 108/108 MP 0/0 Hu 74 $ 140 room=.
+-> e
+T1558 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 100/108 MP 0/0 Hu 73 $ 140 room=.
+-> n
+T1559 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 92/108 MP 0/0 Hu 73 $ 140 room=.
+-> e
+T1560 mode=game_loop           Fili the Stout(dwa) F6@(19, 4) HP 84/108 MP 0/0 Hu 72 $ 140 room=.
+-> s
+T1561 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 77/108 MP 0/0 Hu 71 $ 140 room=.
+-> s
+T1562 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 77/108 MP 0/0 Hu 70 $ 140 room=.
+-> s
+T1563 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 77/108 MP 0/0 Hu 70 $ 140 room=.
+-> w
+T1564 mode=game_loop           Fili the Stout(dwa) F6@(18, 7) HP 77/108 MP 0/0 Hu 69 $ 140 room=.
+-> e
+T1565 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 78/108 MP 0/0 Hu 68 $ 140 room=.
+-> s
+T1566 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 78/108 MP 0/0 Hu 68 $ 140 room=V
+-> s
+T1567 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 78/108 MP 0/0 Hu 67 $ 140 room=.
+-> w
+T1568 mode=game_loop           Fili the Stout(dwa) F6@(18, 9) HP 78/108 MP 0/0 Hu 66 $ 140 room=.
+-> w
+T1569 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 79/108 MP 0/0 Hu 66 $ 140 room=.
+-> w
+T1570 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 79/108 MP 0/0 Hu 65 $ 140 room=.
+-> w
+T1571 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 79/108 MP 0/0 Hu 64 $ 140 room=.
+-> n
+T1572 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 79/108 MP 0/0 Hu 63 $ 140 room=.
+-> e
+T1573 mode=game_loop           Fili the Stout(dwa) F6@(16, 8) HP 80/108 MP 0/0 Hu 63 $ 140 room=.
+-> s
+T1574 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 80/108 MP 0/0 Hu 62 $ 140 room=.
+-> e
+T1575 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 80/108 MP 0/0 Hu 61 $ 140 room=.
+-> s
+T1576 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 80/108 MP 0/0 Hu 61 $ 140 room=.
+-> w
+T1577 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 81/108 MP 0/0 Hu 60 $ 140 room=.
+-> s
+T1578 mode=game_loop           Fili the Stout(dwa) F6@(16,11) HP 81/108 MP 0/0 Hu 59 $ 140 room=.
+-> s
+T1579 mode=game_loop           Fili the Stout(dwa) F6@(16,12) HP 81/108 MP 0/0 Hu 59 $ 140 room=.
+-> w
+T1580 mode=game_loop           Fili the Stout(dwa) F6@(15,12) HP 81/108 MP 0/0 Hu 58 $ 140 room=.
+-> s
+T1581 mode=game_loop           Fili the Stout(dwa) F6@(15,13) HP 81/108 MP 0/0 Hu 57 $ 140 room=.
+-> e
+T1582 mode=warp_mode           Fili the Stout(dwa) F6@(16,13) HP 81/108 MP 0/0 Hu 56 $ 140 room=W
+-> y
+T1583 mode=game_loop           Fili the Stout(dwa) F4@(11, 2) HP 81/108 MP 0/0 Hu 56 $ 140 room=.
+-> w
+T1584 mode=game_loop           Fili the Stout(dwa) F4@(10, 2) HP 81/108 MP 0/0 Hu 56 $ 140 room=.
+-> w
+T1585 mode=game_loop           Fili the Stout(dwa) F4@( 9, 2) HP 81/108 MP 0/0 Hu 55 $ 140 room=.
+-> w
+T1586 mode=game_loop           Fili the Stout(dwa) F4@( 8, 2) HP 81/108 MP 0/0 Hu 54 $ 140 room=.
+-> w
+T1587 mode=game_loop           Fili the Stout(dwa) F4@( 7, 2) HP 81/108 MP 0/0 Hu 54 $ 140 room=.
+-> s
+T1588 mode=game_loop           Fili the Stout(dwa) F4@( 7, 3) HP 81/108 MP 0/0 Hu 53 $ 140 room=.
+-> w
+T1589 mode=game_loop           Fili the Stout(dwa) F4@( 6, 3) HP 81/108 MP 0/0 Hu 52 $ 140 room=.
+-> s
+T1590 mode=game_loop           Fili the Stout(dwa) F4@( 6, 4) HP 81/108 MP 0/0 Hu 52 $ 140 room=.
+-> s
+T1591 mode=game_loop           Fili the Stout(dwa) F4@( 6, 5) HP 81/108 MP 0/0 Hu 51 $ 140 room=.
+-> w
+T1592 mode=game_loop           Fili the Stout(dwa) F4@( 5, 5) HP 81/108 MP 0/0 Hu 50 $ 140 room=.
+-> s
+T1593 mode=game_loop           Fili the Stout(dwa) F4@( 5, 6) HP 81/108 MP 0/0 Hu 49 $ 140 room=.
 -> i
-T1506 mode=inventory           Fili the Stout(dwa) F7@(17, 3) HP 13/104 MP 0/0 Hu 90 $ 346 room=.
--> u8
-T1507 mode=inventory           Fili the Stout(dwa) F7@(17, 3) HP 73/104 MP 0/0 Hu 90 $ 346 room=.
--> u2
-T1508 mode=inventory           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 90 $ 346 room=.
+T1594 mode=inventory           Fili the Stout(dwa) F4@( 5, 6) HP 81/108 MP 0/0 Hu 49 $ 140 room=.
+-> eat1
+T1595 mode=inventory           Fili the Stout(dwa) F4@( 5, 6) HP 81/108 MP 0/0 Hu100 $ 140 room=.
 -> x
-T1509 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 90 $ 346 room=.
--> w
-T1510 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 104/104 MP 0/0 Hu 90 $ 346 room=.
--> n
-T1511 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 104/104 MP 0/0 Hu 89 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
--> f
-T1512 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 62/104 MP 0/0 Hu 89 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
--> f
-T1513 mode=flee_direction_mode Fili the Stout(dwa) F7@(17, 2) HP 62/104 MP 0/0 Hu 89 $ 346 room=M
+T1596 mode=game_loop           Fili the Stout(dwa) F4@( 5, 6) HP 81/108 MP 0/0 Hu100 $ 140 room=.
 -> s
-T1514 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=.
+T1597 mode=game_loop           Fili the Stout(dwa) F4@( 5, 7) HP 81/108 MP 0/0 Hu100 $ 140 room=.
 -> e
-T1515 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1516 mode=combat_mode         Fili the Stout(dwa) F7@(18, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=M vs UNDEAD VAMPIRE(L6 HP137/137)
--> f
-T1517 mode=flee_direction_mode Fili the Stout(dwa) F7@(18, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=M
--> w
-T1518 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=.
+T1598 mode=game_loop           Fili the Stout(dwa) F4@( 6, 7) HP 82/108 MP 0/0 Hu 99 $ 140 room=.
+-> e
+T1599 mode=game_loop           Fili the Stout(dwa) F4@( 7, 7) HP 82/108 MP 0/0 Hu 98 $ 140 room=.
 -> s
-T1519 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=.
+T1600 mode=game_loop           Fili the Stout(dwa) F4@( 7, 8) HP 83/108 MP 0/0 Hu 98 $ 140 room=.
+-> e
+T1601 mode=game_loop           Fili the Stout(dwa) F4@( 8, 8) HP 83/108 MP 0/0 Hu 97 $ 140 room=C
 -> s
-T1520 mode=game_loop           Fili the Stout(dwa) F7@(17, 3) HP 62/104 MP 0/0 Hu 89 $ 346 room=.
+T1602 mode=game_loop           Fili the Stout(dwa) F4@( 8, 9) HP 84/108 MP 0/0 Hu 96 $ 140 room=.
+-> s
+T1603 mode=game_loop           Fili the Stout(dwa) F4@( 8,10) HP 84/108 MP 0/0 Hu 96 $ 140 room=.
+-> s
+T1604 mode=game_loop           Fili the Stout(dwa) F4@( 8,11) HP 85/108 MP 0/0 Hu 95 $ 140 room=.
+-> e
+T1605 mode=game_loop           Fili the Stout(dwa) F4@( 9,11) HP 85/108 MP 0/0 Hu 94 $ 140 room=.
+-> e
+T1606 mode=game_loop           Fili the Stout(dwa) F4@(10,11) HP 86/108 MP 0/0 Hu 93 $ 140 room=.
+-> s
+T1607 mode=game_loop           Fili the Stout(dwa) F4@(10,12) HP 86/108 MP 0/0 Hu 93 $ 140 room=.
+-> e
+T1608 mode=game_loop           Fili the Stout(dwa) F4@(11,12) HP 87/108 MP 0/0 Hu 92 $ 140 room=P
+-> e
+T1609 mode=game_loop           Fili the Stout(dwa) F4@(12,12) HP 87/108 MP 0/0 Hu 91 $ 140 room=.
+-> e
+T1610 mode=game_loop           Fili the Stout(dwa) F4@(13,12) HP 88/108 MP 0/0 Hu 91 $ 140 room=.
+-> e
+T1611 mode=stairs_down_mode    Fili the Stout(dwa) F4@(14,12) HP 88/108 MP 0/0 Hu 90 $ 140 room=D
+-> d
+T1612 mode=stairs_up_mode      Fili the Stout(dwa) F5@( 1, 1) HP 88/108 MP 0/0 Hu 90 $ 140 room=U
+-> s
+T1613 mode=game_loop           Fili the Stout(dwa) F5@( 1, 2) HP 89/108 MP 0/0 Hu 89 $ 140 room=.
+-> e
+T1614 mode=game_loop           Fili the Stout(dwa) F5@( 2, 2) HP 89/108 MP 0/0 Hu 89 $ 140 room=.
+-> s
+T1615 mode=game_loop           Fili the Stout(dwa) F5@( 2, 3) HP 90/108 MP 0/0 Hu 88 $ 140 room=.
+-> e
+T1616 mode=game_loop           Fili the Stout(dwa) F5@( 3, 3) HP 90/108 MP 0/0 Hu 87 $ 140 room=.
+-> e
+T1617 mode=game_loop           Fili the Stout(dwa) F5@( 4, 3) HP 91/108 MP 0/0 Hu 86 $ 140 room=.
+-> e
+T1618 mode=game_loop           Fili the Stout(dwa) F5@( 5, 3) HP 91/108 MP 0/0 Hu 86 $ 140 room=.
+-> e
+T1619 mode=game_loop           Fili the Stout(dwa) F5@( 6, 3) HP 92/108 MP 0/0 Hu 85 $ 140 room=V
+-> s
+T1620 mode=game_loop           Fili the Stout(dwa) F5@( 6, 4) HP 92/108 MP 0/0 Hu 84 $ 140 room=.
+-> s
+T1621 mode=game_loop           Fili the Stout(dwa) F5@( 6, 5) HP 92/108 MP 0/0 Hu 84 $ 140 room=.
+-> s
+T1622 mode=game_loop           Fili the Stout(dwa) F5@( 6, 6) HP 92/108 MP 0/0 Hu 83 $ 140 room=.
+-> s
+T1623 mode=game_loop           Fili the Stout(dwa) F5@( 6, 7) HP 93/108 MP 0/0 Hu 82 $ 140 room=.
+-> e
+T1624 mode=game_loop           Fili the Stout(dwa) F5@( 7, 7) HP 93/108 MP 0/0 Hu 82 $ 140 room=.
+-> e
+T1625 mode=game_loop           Fili the Stout(dwa) F5@( 8, 7) HP 93/108 MP 0/0 Hu 81 $ 140 room=.
+-> e
+T1626 mode=game_loop           Fili the Stout(dwa) F5@( 9, 7) HP 93/108 MP 0/0 Hu 80 $ 140 room=.
+-> s
+T1627 mode=game_loop           Fili the Stout(dwa) F5@( 9, 8) HP 94/108 MP 0/0 Hu 79 $ 140 room=.
+-> e
+T1628 mode=game_loop           Fili the Stout(dwa) F5@(10, 8) HP 94/108 MP 0/0 Hu 79 $ 140 room=.
+-> s
+T1629 mode=game_loop           Fili the Stout(dwa) F5@(10, 9) HP 94/108 MP 0/0 Hu 78 $ 140 room=.
+-> s
+T1630 mode=game_loop           Fili the Stout(dwa) F5@(10,10) HP 94/108 MP 0/0 Hu 77 $ 140 room=.
+-> e
+T1631 mode=warp_mode           Fili the Stout(dwa) F5@(11,10) HP 95/108 MP 0/0 Hu 77 $ 140 room=W
+-> y
+T1632 mode=pool_mode           Fili the Stout(dwa) F6@( 3,16) HP 95/108 MP 0/0 Hu 77 $ 140 room=P
+-> dr
+T1633 mode=game_loop           Fili the Stout(dwa) F6@( 3,16) HP 108/108 MP 0/0 Hu 77 $ 140 room=.
 -> n
-T1521 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 63/104 MP 0/0 Hu 88 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+T1634 mode=chest_mode          Fili the Stout(dwa) F6@( 3,15) HP 108/108 MP 0/0 Hu 76 $ 140 room=C
+-> o
+T1635 mode=game_loop           Fili the Stout(dwa) F6@( 3,15) HP 108/108 MP 0/0 Hu 76 $ 140 room=.
+-> w
+T1636 mode=game_loop           Fili the Stout(dwa) F6@( 2,15) HP 108/108 MP 0/0 Hu 75 $ 140 room=.
+-> s
+T1637 mode=game_loop           Fili the Stout(dwa) F6@( 2,16) HP 108/108 MP 0/0 Hu 75 $ 140 room=.
+-> n
+T1638 mode=game_loop           Fili the Stout(dwa) F6@( 2,15) HP 108/108 MP 0/0 Hu 74 $ 140 room=.
+-> n
+T1639 mode=game_loop           Fili the Stout(dwa) F6@( 2,14) HP 108/108 MP 0/0 Hu 73 $ 140 room=.
+-> w
+T1640 mode=game_loop           Fili the Stout(dwa) F6@( 1,14) HP 108/108 MP 0/0 Hu 72 $ 140 room=.
+-> s
+T1641 mode=game_loop           Fili the Stout(dwa) F6@( 1,15) HP 108/108 MP 0/0 Hu 72 $ 140 room=.
+-> n
+T1642 mode=game_loop           Fili the Stout(dwa) F6@( 1,14) HP 108/108 MP 0/0 Hu 71 $ 140 room=.
+-> n
+T1643 mode=game_loop           Fili the Stout(dwa) F6@( 1,13) HP 108/108 MP 0/0 Hu 70 $ 140 room=.
+-> e
+T1644 mode=game_loop           Fili the Stout(dwa) F6@( 2,13) HP 108/108 MP 0/0 Hu 70 $ 140 room=.
+-> s
+T1645 mode=game_loop           Fili the Stout(dwa) F6@( 2,14) HP 108/108 MP 0/0 Hu 69 $ 140 room=.
+-> s
+T1646 mode=game_loop           Fili the Stout(dwa) F6@( 2,15) HP 108/108 MP 0/0 Hu 68 $ 140 room=.
+-> e
+T1647 mode=game_loop           Fili the Stout(dwa) F6@( 3,15) HP 108/108 MP 0/0 Hu 68 $ 140 room=.
+-> e
+T1648 mode=game_loop           Fili the Stout(dwa) F6@( 4,15) HP 108/108 MP 0/0 Hu 67 $ 140 room=.
+-> n
+T1649 mode=game_loop           Fili the Stout(dwa) F6@( 4,14) HP 108/108 MP 0/0 Hu 66 $ 140 room=.
+-> n
+T1650 mode=library_mode        Fili the Stout(dwa) F6@( 4,13) HP 108/108 MP 0/0 Hu 65 $ 140 room=L
+-> r
+T1651 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 108/108 MP 0/0 Hu 65 $ 140 room=.
+-> w
+T1652 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 108/108 MP 0/0 Hu 65 $ 140 room=.
+-> s
+T1653 mode=game_loop           Fili the Stout(dwa) F6@( 3,14) HP 108/108 MP 0/0 Hu 64 $ 140 room=.
+-> w
+T1654 mode=game_loop           Fili the Stout(dwa) F6@( 2,14) HP 108/108 MP 0/0 Hu 63 $ 140 room=.
+-> n
+T1655 mode=game_loop           Fili the Stout(dwa) F6@( 2,13) HP 108/108 MP 0/0 Hu 63 $ 140 room=.
+-> n
+T1656 mode=game_loop           Fili the Stout(dwa) F6@( 2,12) HP 108/108 MP 0/0 Hu 62 $ 140 room=.
+-> n
+T1657 mode=game_loop           Fili the Stout(dwa) F6@( 2,11) HP 108/108 MP 0/0 Hu 61 $ 140 room=.
+-> n
+T1658 mode=game_loop           Fili the Stout(dwa) F6@( 2,10) HP 108/108 MP 0/0 Hu 61 $ 140 room=.
+-> n
+T1659 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 108/108 MP 0/0 Hu 60 $ 140 room=.
+-> w
+T1660 mode=game_loop           Fili the Stout(dwa) F6@( 1, 9) HP 108/108 MP 0/0 Hu 59 $ 140 room=.
+-> n
+T1661 mode=game_loop           Fili the Stout(dwa) F6@( 1, 8) HP 108/108 MP 0/0 Hu 58 $ 140 room=.
+-> e
+T1662 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 108/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP135/135)
+-> a
+T1663 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 102/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP110/135)
+-> a
+T1664 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 96/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP85/135)
+-> a
+T1665 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 90/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP85/135)
+-> a
+T1666 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 84/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP60/135)
+-> a
+T1667 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 78/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP35/135)
+-> a
+T1668 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 72/108 MP 0/0 Hu 58 $ 140 room=M vs Hill Giant(L5 HP10/135)
 -> f
-T1522 mode=combat_mode         Fili the Stout(dwa) F7@(17, 2) HP 63/104 MP 0/0 Hu 88 $ 346 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+T1669 mode=flee_direction_mode Fili the Stout(dwa) F6@( 2, 8) HP 72/108 MP 0/0 Hu 58 $ 140 room=M
+-> s
+T1670 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 72/108 MP 0/0 Hu 58 $ 140 room=.
+-> s
+T1671 mode=game_loop           Fili the Stout(dwa) F6@( 2,10) HP 72/108 MP 0/0 Hu 57 $ 140 room=.
+-> s
+T1672 mode=game_loop           Fili the Stout(dwa) F6@( 2,11) HP 72/108 MP 0/0 Hu 56 $ 140 room=.
+-> s
+T1673 mode=game_loop           Fili the Stout(dwa) F6@( 2,12) HP 72/108 MP 0/0 Hu 56 $ 140 room=.
+-> s
+T1674 mode=game_loop           Fili the Stout(dwa) F6@( 2,13) HP 72/108 MP 0/0 Hu 55 $ 140 room=.
+-> e
+T1675 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 72/108 MP 0/0 Hu 54 $ 140 room=.
+-> e
+T1676 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 72/108 MP 0/0 Hu 54 $ 140 room=.
+-> s
+T1677 mode=game_loop           Fili the Stout(dwa) F6@( 4,14) HP 72/108 MP 0/0 Hu 53 $ 140 room=.
+-> w
+T1678 mode=game_loop           Fili the Stout(dwa) F6@( 3,14) HP 72/108 MP 0/0 Hu 52 $ 140 room=.
+-> w
+T1679 mode=game_loop           Fili the Stout(dwa) F6@( 2,14) HP 72/108 MP 0/0 Hu 51 $ 140 room=.
+-> n
+T1680 mode=game_loop           Fili the Stout(dwa) F6@( 2,13) HP 72/108 MP 0/0 Hu 51 $ 140 room=.
+-> e
+T1681 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 72/108 MP 0/0 Hu 50 $ 140 room=.
+-> e
+T1682 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 72/108 MP 0/0 Hu 49 $ 140 room=.
+-> i
+T1683 mode=inventory           Fili the Stout(dwa) F6@( 4,13) HP 72/108 MP 0/0 Hu 49 $ 140 room=.
+-> eat1
+T1684 mode=inventory           Fili the Stout(dwa) F6@( 4,13) HP 72/108 MP 0/0 Hu100 $ 140 room=.
+-> x
+T1685 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 72/108 MP 0/0 Hu100 $ 140 room=.
+-> s
+T1686 mode=game_loop           Fili the Stout(dwa) F6@( 4,14) HP 72/108 MP 0/0 Hu100 $ 140 room=.
+-> w
+T1687 mode=game_loop           Fili the Stout(dwa) F6@( 3,14) HP 73/108 MP 0/0 Hu 99 $ 140 room=.
+-> s
+T1688 mode=game_loop           Fili the Stout(dwa) F6@( 3,15) HP 73/108 MP 0/0 Hu 98 $ 140 room=.
+-> s
+T1689 mode=game_loop           Fili the Stout(dwa) F6@( 3,16) HP 74/108 MP 0/0 Hu 98 $ 140 room=.
+-> w
+T1690 mode=game_loop           Fili the Stout(dwa) F6@( 2,16) HP 74/108 MP 0/0 Hu 97 $ 140 room=.
+-> n
+T1691 mode=game_loop           Fili the Stout(dwa) F6@( 2,15) HP 75/108 MP 0/0 Hu 96 $ 140 room=.
+-> n
+T1692 mode=game_loop           Fili the Stout(dwa) F6@( 2,14) HP 75/108 MP 0/0 Hu 95 $ 140 room=.
+-> n
+T1693 mode=game_loop           Fili the Stout(dwa) F6@( 2,13) HP 76/108 MP 0/0 Hu 95 $ 140 room=.
+-> e
+T1694 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 76/108 MP 0/0 Hu 94 $ 140 room=.
+-> e
+T1695 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 77/108 MP 0/0 Hu 93 $ 140 room=.
+-> e
+T1696 mode=game_loop           Fili the Stout(dwa) F6@( 5,13) HP 77/108 MP 0/0 Hu 93 $ 140 room=.
+-> n
+T1697 mode=game_loop           Fili the Stout(dwa) F6@( 5,12) HP 78/108 MP 0/0 Hu 92 $ 140 room=.
+-> w
+T1698 mode=garden_mode         Fili the Stout(dwa) F6@( 4,12) HP 78/108 MP 0/0 Hu 91 $ 140 room=G
+-> h
+T1699 mode=game_loop           Fili the Stout(dwa) F6@( 4,12) HP 78/108 MP 0/0 Hu 91 $ 140 room=.
+-> n
+T1700 mode=game_loop           Fili the Stout(dwa) F6@( 4,11) HP 79/108 MP 0/0 Hu 91 $ 140 room=.
+-> w
+T1701 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 79/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP61/61)
+-> a
+T1702 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 78/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP61/61)
+-> a
+T1703 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 78/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP32/61)
+-> a
+T1704 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 77/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP32/61)
+-> a
+T1705 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 77/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP32/61)
+-> a
+T1706 mode=combat_mode         Fili the Stout(dwa) F6@( 3,11) HP 76/108 MP 0/0 Hu 90 $ 140 room=M vs Bugbear(L5 HP3/61)
+-> a
+T1707 mode=combat_victory      Fili the Stout(dwa) F6@( 3,11) HP 76/118 MP 0/0 Hu 90 $ 152 room=.
+-> back
+T1708 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 76/118 MP 0/0 Hu 90 $ 152 room=.
+-> i
+T1709 mode=inventory           Fili the Stout(dwa) F6@( 3,11) HP 76/118 MP 0/0 Hu 90 $ 152 room=.
+-> u20
+T1710 mode=inventory           Fili the Stout(dwa) F6@( 3,11) HP 76/118 MP 0/0 Hu 90 $ 152 room=.
+-> x
+T1711 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 76/118 MP 0/0 Hu 90 $ 152 room=.
+-> s
+T1712 mode=game_loop           Fili the Stout(dwa) F6@( 3,12) HP 77/118 MP 0/0 Hu 89 $ 152 room=.
+-> s
+T1713 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 77/118 MP 0/0 Hu 88 $ 152 room=.
+-> e
+T1714 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 78/118 MP 0/0 Hu 88 $ 152 room=.
+-> e
+T1715 mode=game_loop           Fili the Stout(dwa) F6@( 5,13) HP 78/118 MP 0/0 Hu 87 $ 152 room=.
+-> n
+T1716 mode=game_loop           Fili the Stout(dwa) F6@( 5,12) HP 79/118 MP 0/0 Hu 86 $ 152 room=.
+-> w
+T1717 mode=game_loop           Fili the Stout(dwa) F6@( 4,12) HP 79/118 MP 0/0 Hu 86 $ 152 room=.
+-> n
+T1718 mode=game_loop           Fili the Stout(dwa) F6@( 4,11) HP 80/118 MP 0/0 Hu 85 $ 152 room=.
+-> w
+T1719 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 80/118 MP 0/0 Hu 84 $ 152 room=.
+-> s
+T1720 mode=game_loop           Fili the Stout(dwa) F6@( 3,12) HP 80/118 MP 0/0 Hu 84 $ 152 room=.
+-> s
+T1721 mode=game_loop           Fili the Stout(dwa) F6@( 3,13) HP 80/118 MP 0/0 Hu 83 $ 152 room=.
+-> e
+T1722 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 81/118 MP 0/0 Hu 82 $ 152 room=.
+-> e
+T1723 mode=game_loop           Fili the Stout(dwa) F6@( 5,13) HP 81/118 MP 0/0 Hu 81 $ 152 room=.
+-> n
+T1724 mode=game_loop           Fili the Stout(dwa) F6@( 5,12) HP 81/118 MP 0/0 Hu 81 $ 152 room=.
+-> e
+T1725 mode=game_loop           Fili the Stout(dwa) F6@( 6,12) HP 81/118 MP 0/0 Hu 80 $ 152 room=.
+-> e
+T1726 mode=game_loop           Fili the Stout(dwa) F6@( 7,12) HP 82/118 MP 0/0 Hu 79 $ 152 room=.
+-> e
+T1727 mode=combat_mode         Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 152 room=M vs Hardened Lichen(L5 HP15/15)
+-> a
+T1728 mode=combat_victory      Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 176 room=.
+-> back
+T1729 mode=game_loop           Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 176 room=.
+-> i
+T1730 mode=inventory           Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 176 room=.
+-> u21
+T1731 mode=inventory           Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 176 room=.
+-> x
+T1732 mode=game_loop           Fili the Stout(dwa) F6@( 8,12) HP 82/118 MP 0/0 Hu 79 $ 176 room=.
+-> n
+T1733 mode=game_loop           Fili the Stout(dwa) F6@( 8,11) HP 82/118 MP 0/0 Hu 78 $ 176 room=.
+-> n
+T1734 mode=game_loop           Fili the Stout(dwa) F6@( 8,10) HP 82/118 MP 0/0 Hu 77 $ 176 room=.
+-> n
+T1735 mode=blacksmith_mode     Fili the Stout(dwa) F6@( 8, 9) HP 83/118 MP 0/0 Hu 77 $ 176 room=B
+-> s
+T1736 mode=game_loop           Fili the Stout(dwa) F6@( 8,10) HP 83/118 MP 0/0 Hu 76 $ 176 room=.
+-> e
+T1737 mode=chest_mode          Fili the Stout(dwa) F6@( 9,10) HP 83/118 MP 0/0 Hu 75 $ 176 room=C
+-> o
+T1738 mode=game_loop           Fili the Stout(dwa) F6@( 9,10) HP 83/118 MP 0/0 Hu 75 $ 286 room=.
+-> n
+T1739 mode=game_loop           Fili the Stout(dwa) F6@( 9, 9) HP 83/118 MP 0/0 Hu 74 $ 286 room=.
+-> e
+T1740 mode=game_loop           Fili the Stout(dwa) F6@(10, 9) HP 84/118 MP 0/0 Hu 74 $ 286 room=C
+-> e
+T1741 mode=game_loop           Fili the Stout(dwa) F6@(11, 9) HP 84/118 MP 0/0 Hu 73 $ 286 room=.
+-> s
+T1742 mode=game_loop           Fili the Stout(dwa) F6@(11,10) HP 84/118 MP 0/0 Hu 72 $ 286 room=.
+-> e
+T1743 mode=game_loop           Fili the Stout(dwa) F6@(12,10) HP 84/118 MP 0/0 Hu 72 $ 286 room=.
+-> e
+T1744 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 85/118 MP 0/0 Hu 71 $ 286 room=.
+-> e
+T1745 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 85/118 MP 0/0 Hu 70 $ 286 room=.
+-> e
+T1746 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 85/118 MP 0/0 Hu 70 $ 286 room=.
+-> n
+T1747 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 85/118 MP 0/0 Hu 69 $ 286 room=.
+-> e
+T1748 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 86/118 MP 0/0 Hu 68 $ 286 room=.
+-> e
+T1749 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 86/118 MP 0/0 Hu 67 $ 286 room=.
+-> e
+T1750 mode=game_loop           Fili the Stout(dwa) F6@(18, 9) HP 86/118 MP 0/0 Hu 67 $ 286 room=.
+-> e
+T1751 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 86/118 MP 0/0 Hu 66 $ 286 room=.
+-> n
+T1752 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 87/118 MP 0/0 Hu 65 $ 286 room=V
+-> n
+T1753 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 87/118 MP 0/0 Hu 65 $ 286 room=.
+-> n
+T1754 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 87/118 MP 0/0 Hu 64 $ 286 room=.
+-> n
+T1755 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 87/118 MP 0/0 Hu 63 $ 286 room=.
+-> n
+T1756 mode=game_loop           Fili the Stout(dwa) F6@(19, 4) HP 88/118 MP 0/0 Hu 63 $ 286 room=.
+-> w
+T1757 mode=game_loop           Fili the Stout(dwa) F6@(18, 4) HP 88/118 MP 0/0 Hu 62 $ 286 room=.
+-> w
+T1758 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 88/118 MP 0/0 Hu 61 $ 286 room=.
+-> n
+T1759 mode=dungeon_mode        Fili the Stout(dwa) F6@(17, 3) HP 88/118 MP 0/0 Hu 60 $ 286 room=N
+-> u
+T1760 mode=dungeon_unlocked_mode Fili the Stout(dwa) F6@(17, 3) HP 88/118 MP 0/0 Hu 60 $ 286 room=N
+-> r
+T1761 mode=game_loop           Fili the Stout(dwa) F6@(17, 3) HP 88/118 MP 0/0 Hu 60 $ 406 room=N
+-> s
+T1762 mode=game_loop           Fili the Stout(dwa) F6@(17, 4) HP 89/118 MP 0/0 Hu 60 $ 406 room=.
+-> s
+T1763 mode=game_loop           Fili the Stout(dwa) F6@(17, 5) HP 89/118 MP 0/0 Hu 59 $ 406 room=.
+-> e
+T1764 mode=game_loop           Fili the Stout(dwa) F6@(18, 5) HP 89/118 MP 0/0 Hu 58 $ 406 room=.
+-> e
+T1765 mode=game_loop           Fili the Stout(dwa) F6@(19, 5) HP 89/118 MP 0/0 Hu 58 $ 406 room=.
+-> s
+T1766 mode=game_loop           Fili the Stout(dwa) F6@(19, 6) HP 89/118 MP 0/0 Hu 57 $ 406 room=.
+-> s
+T1767 mode=game_loop           Fili the Stout(dwa) F6@(19, 7) HP 89/118 MP 0/0 Hu 56 $ 406 room=.
+-> s
+T1768 mode=game_loop           Fili the Stout(dwa) F6@(19, 8) HP 89/118 MP 0/0 Hu 56 $ 406 room=V
+-> s
+T1769 mode=game_loop           Fili the Stout(dwa) F6@(19, 9) HP 89/118 MP 0/0 Hu 55 $ 406 room=.
+-> s
+T1770 mode=game_loop           Fili the Stout(dwa) F6@(19,10) HP 89/118 MP 0/0 Hu 54 $ 406 room=.
+-> w
+T1771 mode=game_loop           Fili the Stout(dwa) F6@(18,10) HP 89/118 MP 0/0 Hu 53 $ 406 room=.
+-> w
+T1772 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 89/118 MP 0/0 Hu 53 $ 406 room=.
+-> w
+T1773 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 89/118 MP 0/0 Hu 52 $ 406 room=.
+-> n
+T1774 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 89/118 MP 0/0 Hu 51 $ 406 room=.
+-> w
+T1775 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 89/118 MP 0/0 Hu 51 $ 406 room=.
+-> n
+T1776 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 89/118 MP 0/0 Hu 50 $ 406 room=.
+-> n
+T1777 mode=game_loop           Fili the Stout(dwa) F6@(15, 7) HP 89/118 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T1778 mode=inventory           Fili the Stout(dwa) F6@(15, 7) HP 89/118 MP 0/0 Hu 49 $ 406 room=.
+-> u10
+T1779 mode=inventory           Fili the Stout(dwa) F6@(15, 7) HP 118/118 MP 0/0 Hu 49 $ 406 room=.
+-> x
+T1780 mode=game_loop           Fili the Stout(dwa) F6@(15, 7) HP 118/118 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T1781 mode=inventory           Fili the Stout(dwa) F6@(15, 7) HP 118/118 MP 0/0 Hu 49 $ 406 room=.
+-> eat4
+T1782 mode=inventory           Fili the Stout(dwa) F6@(15, 7) HP 118/118 MP 0/0 Hu 67 $ 406 room=.
+-> x
+T1783 mode=game_loop           Fili the Stout(dwa) F6@(15, 7) HP 118/118 MP 0/0 Hu 67 $ 406 room=.
+-> s
+T1784 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 118/118 MP 0/0 Hu 67 $ 406 room=.
+-> w
+T1785 mode=game_loop           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 66 $ 406 room=.
+-> w
+T1786 mode=game_loop           Fili the Stout(dwa) F6@(13, 8) HP 118/118 MP 0/0 Hu 65 $ 406 room=C
+-> s
+T1787 mode=game_loop           Fili the Stout(dwa) F6@(13, 9) HP 118/118 MP 0/0 Hu 64 $ 406 room=.
+-> w
+T1788 mode=game_loop           Fili the Stout(dwa) F6@(12, 9) HP 118/118 MP 0/0 Hu 64 $ 406 room=.
+-> s
+T1789 mode=game_loop           Fili the Stout(dwa) F6@(12,10) HP 118/118 MP 0/0 Hu 63 $ 406 room=.
+-> e
+T1790 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 118/118 MP 0/0 Hu 62 $ 406 room=.
+-> e
+T1791 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 118/118 MP 0/0 Hu 62 $ 406 room=.
+-> e
+T1792 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 118/118 MP 0/0 Hu 61 $ 406 room=.
+-> n
+T1793 mode=game_loop           Fili the Stout(dwa) F6@(15, 9) HP 118/118 MP 0/0 Hu 60 $ 406 room=.
+-> w
+T1794 mode=game_loop           Fili the Stout(dwa) F6@(14, 9) HP 118/118 MP 0/0 Hu 60 $ 406 room=.
+-> n
+T1795 mode=game_loop           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 59 $ 406 room=.
+-> w
+T1796 mode=game_loop           Fili the Stout(dwa) F6@(13, 8) HP 118/118 MP 0/0 Hu 58 $ 406 room=C
+-> s
+T1797 mode=game_loop           Fili the Stout(dwa) F6@(13, 9) HP 118/118 MP 0/0 Hu 57 $ 406 room=.
+-> s
+T1798 mode=game_loop           Fili the Stout(dwa) F6@(13,10) HP 118/118 MP 0/0 Hu 57 $ 406 room=.
+-> e
+T1799 mode=game_loop           Fili the Stout(dwa) F6@(14,10) HP 118/118 MP 0/0 Hu 56 $ 406 room=.
+-> e
+T1800 mode=game_loop           Fili the Stout(dwa) F6@(15,10) HP 118/118 MP 0/0 Hu 55 $ 406 room=.
+-> e
+T1801 mode=game_loop           Fili the Stout(dwa) F6@(16,10) HP 118/118 MP 0/0 Hu 55 $ 406 room=.
+-> e
+T1802 mode=game_loop           Fili the Stout(dwa) F6@(17,10) HP 118/118 MP 0/0 Hu 54 $ 406 room=.
+-> e
+T1803 mode=fey_garden_mode     Fili the Stout(dwa) F6@(18,10) HP 118/118 MP 0/0 Hu 53 $ 406 room=G
+-> h
+T1804 mode=game_loop           Fili the Stout(dwa) F6@(18,10) HP 118/118 MP 0/0 Hu 53 $ 406 room=.
+-> n
+T1805 mode=game_loop           Fili the Stout(dwa) F6@(18, 9) HP 118/118 MP 0/0 Hu 53 $ 406 room=.
+-> w
+T1806 mode=game_loop           Fili the Stout(dwa) F6@(17, 9) HP 118/118 MP 0/0 Hu 52 $ 406 room=.
+-> w
+T1807 mode=game_loop           Fili the Stout(dwa) F6@(16, 9) HP 118/118 MP 0/0 Hu 51 $ 406 room=.
+-> n
+T1808 mode=game_loop           Fili the Stout(dwa) F6@(16, 8) HP 118/118 MP 0/0 Hu 50 $ 406 room=.
+-> w
+T1809 mode=game_loop           Fili the Stout(dwa) F6@(15, 8) HP 118/118 MP 0/0 Hu 50 $ 406 room=.
+-> w
+T1810 mode=game_loop           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T1811 mode=inventory           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 49 $ 406 room=.
+-> eat4
+T1812 mode=inventory           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 67 $ 406 room=.
+-> x
+T1813 mode=game_loop           Fili the Stout(dwa) F6@(14, 8) HP 118/118 MP 0/0 Hu 67 $ 406 room=.
+-> w
+T1814 mode=game_loop           Fili the Stout(dwa) F6@(13, 8) HP 118/118 MP 0/0 Hu 66 $ 406 room=C
+-> s
+T1815 mode=game_loop           Fili the Stout(dwa) F6@(13, 9) HP 118/118 MP 0/0 Hu 66 $ 406 room=.
+-> w
+T1816 mode=game_loop           Fili the Stout(dwa) F6@(12, 9) HP 118/118 MP 0/0 Hu 65 $ 406 room=.
+-> s
+T1817 mode=game_loop           Fili the Stout(dwa) F6@(12,10) HP 118/118 MP 0/0 Hu 64 $ 406 room=.
+-> s
+T1818 mode=game_loop           Fili the Stout(dwa) F6@(12,11) HP 118/118 MP 0/0 Hu 64 $ 406 room=.
+-> w
+T1819 mode=game_loop           Fili the Stout(dwa) F6@(11,11) HP 118/118 MP 0/0 Hu 63 $ 406 room=.
+-> n
+T1820 mode=game_loop           Fili the Stout(dwa) F6@(11,10) HP 118/118 MP 0/0 Hu 62 $ 406 room=.
+-> w
+T1821 mode=game_loop           Fili the Stout(dwa) F6@(10,10) HP 118/118 MP 0/0 Hu 61 $ 406 room=.
+-> n
+T1822 mode=game_loop           Fili the Stout(dwa) F6@(10, 9) HP 118/118 MP 0/0 Hu 61 $ 406 room=C
+-> w
+T1823 mode=game_loop           Fili the Stout(dwa) F6@( 9, 9) HP 118/118 MP 0/0 Hu 60 $ 406 room=.
+-> s
+T1824 mode=game_loop           Fili the Stout(dwa) F6@( 9,10) HP 118/118 MP 0/0 Hu 59 $ 406 room=.
+-> s
+T1825 mode=altar_mode          Fili the Stout(dwa) F6@( 9,11) HP 118/118 MP 0/0 Hu 59 $ 406 room=A
+-> pray
+T1826 mode=game_loop           Fili the Stout(dwa) F6@( 9,11) HP 118/118 MP 0/0 Hu 59 $ 441 room=.
+-> w
+T1827 mode=game_loop           Fili the Stout(dwa) F6@( 8,11) HP 118/118 MP 0/0 Hu 58 $ 441 room=.
+-> s
+T1828 mode=game_loop           Fili the Stout(dwa) F6@( 8,12) HP 118/118 MP 0/0 Hu 57 $ 441 room=.
+-> w
+T1829 mode=game_loop           Fili the Stout(dwa) F6@( 7,12) HP 118/118 MP 0/0 Hu 57 $ 441 room=.
+-> w
+T1830 mode=game_loop           Fili the Stout(dwa) F6@( 6,12) HP 118/118 MP 0/0 Hu 56 $ 441 room=.
+-> w
+T1831 mode=game_loop           Fili the Stout(dwa) F6@( 5,12) HP 118/118 MP 0/0 Hu 55 $ 441 room=.
+-> s
+T1832 mode=game_loop           Fili the Stout(dwa) F6@( 5,13) HP 118/118 MP 0/0 Hu 54 $ 441 room=.
+-> w
+T1833 mode=game_loop           Fili the Stout(dwa) F6@( 4,13) HP 118/118 MP 0/0 Hu 54 $ 441 room=.
+-> n
+T1834 mode=game_loop           Fili the Stout(dwa) F6@( 4,12) HP 118/118 MP 0/0 Hu 53 $ 441 room=.
+-> n
+T1835 mode=game_loop           Fili the Stout(dwa) F6@( 4,11) HP 118/118 MP 0/0 Hu 52 $ 441 room=.
+-> w
+T1836 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 118/118 MP 0/0 Hu 52 $ 441 room=.
+-> n
+T1837 mode=game_loop           Fili the Stout(dwa) F6@( 3,10) HP 118/118 MP 0/0 Hu 51 $ 441 room=.
+-> w
+T1838 mode=game_loop           Fili the Stout(dwa) F6@( 2,10) HP 118/118 MP 0/0 Hu 50 $ 441 room=.
+-> n
+T1839 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 118/118 MP 0/0 Hu 50 $ 441 room=.
+-> n
+T1840 mode=combat_mode         Fili the Stout(dwa) F6@( 2, 8) HP 118/118 MP 0/0 Hu 49 $ 441 room=M vs Hill Giant(L5 HP10/135)
+-> a
+T1841 mode=combat_victory      Fili the Stout(dwa) F6@( 2, 8) HP 112/118 MP 0/0 Hu 49 $ 459 room=.
+-> back
+T1842 mode=game_loop           Fili the Stout(dwa) F6@( 2, 8) HP 112/118 MP 0/0 Hu 49 $ 459 room=.
+-> i
+T1843 mode=inventory           Fili the Stout(dwa) F6@( 2, 8) HP 112/118 MP 0/0 Hu 49 $ 459 room=.
+-> eat1
+T1844 mode=inventory           Fili the Stout(dwa) F6@( 2, 8) HP 112/118 MP 0/0 Hu100 $ 459 room=.
+-> x
+T1845 mode=game_loop           Fili the Stout(dwa) F6@( 2, 8) HP 112/118 MP 0/0 Hu100 $ 459 room=.
+-> w
+T1846 mode=game_loop           Fili the Stout(dwa) F6@( 1, 8) HP 112/118 MP 0/0 Hu 99 $ 459 room=.
+-> s
+T1847 mode=game_loop           Fili the Stout(dwa) F6@( 1, 9) HP 113/118 MP 0/0 Hu 98 $ 459 room=.
+-> n
+T1848 mode=game_loop           Fili the Stout(dwa) F6@( 1, 8) HP 113/118 MP 0/0 Hu 98 $ 459 room=.
+-> n
+T1849 mode=combat_mode         Fili the Stout(dwa) F6@( 1, 7) HP 114/118 MP 0/0 Hu 97 $ 459 room=M vs Hardened Sewer Rat(L5 HP15/15)
+-> a
+T1850 mode=combat_victory      Fili the Stout(dwa) F6@( 1, 7) HP 113/128 MP 0/0 Hu 97 $ 495 room=.
+-> back
+T1851 mode=game_loop           Fili the Stout(dwa) F6@( 1, 7) HP 113/128 MP 0/0 Hu 97 $ 495 room=.
+-> i
+T1852 mode=inventory           Fili the Stout(dwa) F6@( 1, 7) HP 113/128 MP 0/0 Hu 97 $ 495 room=.
+-> u19
+T1853 mode=inventory           Fili the Stout(dwa) F6@( 1, 7) HP 113/128 MP 0/0 Hu 97 $ 495 room=.
+-> x
+T1854 mode=game_loop           Fili the Stout(dwa) F6@( 1, 7) HP 113/128 MP 0/0 Hu 97 $ 495 room=.
+-> e
+T1855 mode=game_loop           Fili the Stout(dwa) F6@( 2, 7) HP 113/128 MP 0/0 Hu 96 $ 495 room=.
+-> s
+T1856 mode=game_loop           Fili the Stout(dwa) F6@( 2, 8) HP 114/128 MP 0/0 Hu 96 $ 495 room=.
+-> s
+T1857 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 114/128 MP 0/0 Hu 95 $ 495 room=.
+-> s
+T1858 mode=game_loop           Fili the Stout(dwa) F6@( 2,10) HP 115/128 MP 0/0 Hu 94 $ 495 room=.
+-> e
+T1859 mode=game_loop           Fili the Stout(dwa) F6@( 3,10) HP 115/128 MP 0/0 Hu 94 $ 495 room=.
+-> s
+T1860 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 116/128 MP 0/0 Hu 93 $ 495 room=.
+-> l
+T1861 mode=game_loop           Fili the Stout(dwa) F6@( 3,11) HP 116/128 MP 0/0 Hu 93 $ 495 room=.
+-> e
+T1862 mode=game_loop           Fili the Stout(dwa) F6@( 4,11) HP 116/128 MP 0/0 Hu 92 $ 495 room=.
+-> l
+T1863 mode=game_loop           Fili the Stout(dwa) F6@( 4,11) HP 116/128 MP 0/0 Hu 92 $ 495 room=.
+-> n
+T1864 mode=game_loop           Fili the Stout(dwa) F6@( 4,10) HP 117/128 MP 0/0 Hu 91 $ 495 room=.
+-> l
+T1865 mode=game_loop           Fili the Stout(dwa) F6@( 4,10) HP 117/128 MP 0/0 Hu 91 $ 495 room=.
+-> n
+T1866 mode=shrine_mode         Fili the Stout(dwa) F6@( 4, 9) HP 117/128 MP 0/0 Hu 91 $ 495 room=F
+-> p
+T1867 mode=game_loop           Fili the Stout(dwa) F6@( 4, 9) HP 117/128 MP 0/0 Hu 91 $ 495 room=.
+-> l
+T1868 mode=game_loop           Fili the Stout(dwa) F6@( 4, 9) HP 117/128 MP 0/0 Hu 91 $ 495 room=.
+-> w
+T1869 mode=game_loop           Fili the Stout(dwa) F6@( 3, 9) HP 118/128 MP 0/0 Hu 90 $ 495 room=.
+-> l
+T1870 mode=game_loop           Fili the Stout(dwa) F6@( 3, 9) HP 118/128 MP 0/0 Hu 90 $ 495 room=.
+-> l
+T1871 mode=game_loop           Fili the Stout(dwa) F6@( 3, 9) HP 118/128 MP 0/0 Hu 90 $ 495 room=.
+-> s
+T1872 mode=game_loop           Fili the Stout(dwa) F6@( 3,10) HP 118/128 MP 0/0 Hu 89 $ 495 room=.
+-> w
+T1873 mode=game_loop           Fili the Stout(dwa) F6@( 2,10) HP 119/128 MP 0/0 Hu 89 $ 495 room=.
+-> n
+T1874 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 119/128 MP 0/0 Hu 88 $ 495 room=.
+-> w
+T1875 mode=game_loop           Fili the Stout(dwa) F6@( 1, 9) HP 120/128 MP 0/0 Hu 87 $ 495 room=.
+-> n
+T1876 mode=game_loop           Fili the Stout(dwa) F6@( 1, 8) HP 120/128 MP 0/0 Hu 87 $ 495 room=.
+-> n
+T1877 mode=game_loop           Fili the Stout(dwa) F6@( 1, 7) HP 121/128 MP 0/0 Hu 86 $ 495 room=.
+-> e
+T1878 mode=game_loop           Fili the Stout(dwa) F6@( 2, 7) HP 121/128 MP 0/0 Hu 85 $ 495 room=.
+-> s
+T1879 mode=game_loop           Fili the Stout(dwa) F6@( 2, 8) HP 121/128 MP 0/0 Hu 84 $ 495 room=.
+-> s
+T1880 mode=game_loop           Fili the Stout(dwa) F6@( 2, 9) HP 121/128 MP 0/0 Hu 84 $ 495 room=.
+-> e
+T1881 mode=game_loop           Fili the Stout(dwa) F6@( 3, 9) HP 122/128 MP 0/0 Hu 83 $ 495 room=.
+-> e
+T1882 mode=game_loop           Fili the Stout(dwa) F6@( 4, 9) HP 122/128 MP 0/0 Hu 82 $ 495 room=.
+-> e
+T1883 mode=game_loop           Fili the Stout(dwa) F6@( 5, 9) HP 122/128 MP 0/0 Hu 82 $ 495 room=.
+-> e
+T1884 mode=game_loop           Fili the Stout(dwa) F6@( 6, 9) HP 122/128 MP 0/0 Hu 81 $ 495 room=.
+-> l
+T1885 mode=game_loop           Fili the Stout(dwa) F6@( 6, 9) HP 122/128 MP 0/0 Hu 81 $ 495 room=.
+-> e
+T1886 mode=game_loop           Fili the Stout(dwa) F6@( 7, 9) HP 123/128 MP 0/0 Hu 80 $ 495 room=.
+-> l
+T1887 mode=game_loop           Fili the Stout(dwa) F6@( 7, 9) HP 123/128 MP 0/0 Hu 80 $ 495 room=.
+-> n
+T1888 mode=stairs_down_mode    Fili the Stout(dwa) F6@( 7, 8) HP 123/128 MP 0/0 Hu 80 $ 495 room=D
+-> d
+T1889 mode=stairs_up_mode      Fili the Stout(dwa) F7@( 1, 1) HP 123/128 MP 0/0 Hu 80 $ 495 room=U
+-> n
+T1890 mode=stairs_up_mode      Fili the Stout(dwa) F7@( 1, 1) HP 123/128 MP 0/0 Hu 80 $ 495 room=U
+-> s
+T1891 mode=game_loop           Fili the Stout(dwa) F7@( 1, 2) HP 123/128 MP 0/0 Hu 79 $ 495 room=.
+-> l
+T1892 mode=game_loop           Fili the Stout(dwa) F7@( 1, 2) HP 123/128 MP 0/0 Hu 79 $ 495 room=.
+-> s
+T1893 mode=game_loop           Fili the Stout(dwa) F7@( 1, 3) HP 123/128 MP 0/0 Hu 78 $ 495 room=.
+-> l
+T1894 mode=game_loop           Fili the Stout(dwa) F7@( 1, 3) HP 123/128 MP 0/0 Hu 78 $ 495 room=.
+-> e
+T1895 mode=game_loop           Fili the Stout(dwa) F7@( 2, 3) HP 124/128 MP 0/0 Hu 77 $ 495 room=.
+-> l
+T1896 mode=game_loop           Fili the Stout(dwa) F7@( 2, 3) HP 124/128 MP 0/0 Hu 77 $ 495 room=.
+-> e
+T1897 mode=game_loop           Fili the Stout(dwa) F7@( 3, 3) HP 124/128 MP 0/0 Hu 77 $ 495 room=.
+-> e
+T1898 mode=game_loop           Fili the Stout(dwa) F7@( 4, 3) HP 124/128 MP 0/0 Hu 76 $ 495 room=.
+-> e
+T1899 mode=game_loop           Fili the Stout(dwa) F7@( 5, 3) HP 124/128 MP 0/0 Hu 75 $ 495 room=.
+-> e
+T1900 mode=garden_mode         Fili the Stout(dwa) F7@( 6, 3) HP 125/128 MP 0/0 Hu 75 $ 495 room=G
+-> h
+T1901 mode=game_loop           Fili the Stout(dwa) F7@( 6, 3) HP 125/128 MP 0/0 Hu 75 $ 495 room=.
+-> n
+T1902 mode=game_loop           Fili the Stout(dwa) F7@( 6, 2) HP 125/128 MP 0/0 Hu 74 $ 495 room=.
+-> w
+T1903 mode=game_loop           Fili the Stout(dwa) F7@( 5, 2) HP 125/128 MP 0/0 Hu 73 $ 495 room=.
+-> w
+T1904 mode=game_loop           Fili the Stout(dwa) F7@( 4, 2) HP 125/128 MP 0/0 Hu 73 $ 495 room=.
+-> s
+T1905 mode=game_loop           Fili the Stout(dwa) F7@( 4, 3) HP 126/128 MP 0/0 Hu 72 $ 495 room=.
+-> e
+T1906 mode=game_loop           Fili the Stout(dwa) F7@( 5, 3) HP 126/128 MP 0/0 Hu 71 $ 495 room=.
+-> e
+T1907 mode=game_loop           Fili the Stout(dwa) F7@( 6, 3) HP 126/128 MP 0/0 Hu 70 $ 495 room=.
+-> n
+T1908 mode=game_loop           Fili the Stout(dwa) F7@( 6, 2) HP 126/128 MP 0/0 Hu 70 $ 495 room=.
+-> w
+T1909 mode=game_loop           Fili the Stout(dwa) F7@( 5, 2) HP 127/128 MP 0/0 Hu 69 $ 495 room=.
+-> n
+T1910 mode=game_loop           Fili the Stout(dwa) F7@( 5, 1) HP 127/128 MP 0/0 Hu 68 $ 495 room=.
+-> e
+T1911 mode=game_loop           Fili the Stout(dwa) F7@( 6, 1) HP 127/128 MP 0/0 Hu 68 $ 495 room=.
+-> e
+T1912 mode=game_loop           Fili the Stout(dwa) F7@( 7, 1) HP 127/128 MP 0/0 Hu 67 $ 495 room=.
+-> s
+T1913 mode=combat_mode         Fili the Stout(dwa) F7@( 7, 2) HP 128/128 MP 0/0 Hu 66 $ 495 room=M vs Basilisk(L6 HP59/59)
+-> a
+T1914 mode=combat_mode         Fili the Stout(dwa) F7@( 7, 2) HP 127/128 MP 0/0 Hu 66 $ 495 room=M vs Basilisk(L6 HP36/59)
+-> a
+T1915 mode=combat_mode         Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 495 room=M vs Basilisk(L6 HP13/59)
+-> a
+T1916 mode=combat_mode         Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 495 room=M vs Basilisk(L6 HP13/59)
+-> a
+T1917 mode=combat_victory      Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> back
+T1918 mode=game_loop           Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> i
+T1919 mode=inventory           Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> u20
+T1920 mode=inventory           Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> x
+T1921 mode=game_loop           Fili the Stout(dwa) F7@( 7, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> e
+T1922 mode=game_loop           Fili the Stout(dwa) F7@( 8, 2) HP 126/128 MP 0/0 Hu 66 $ 537 room=.
+-> s
+T1923 mode=combat_mode         Fili the Stout(dwa) F7@( 8, 3) HP 126/128 MP 0/0 Hu 65 $ 537 room=M vs Displacer Beast(L6 HP47/47)
+-> a
+T1924 mode=combat_mode         Fili the Stout(dwa) F7@( 8, 3) HP 125/128 MP 0/0 Hu 65 $ 537 room=M vs Displacer Beast(L6 HP47/47)
+-> a
+T1925 mode=combat_mode         Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 537 room=M vs Displacer Beast(L6 HP22/47)
+-> a
+T1926 mode=combat_victory      Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 579 room=.
+-> back
+T1927 mode=game_loop           Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 579 room=.
+-> i
+T1928 mode=inventory           Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 579 room=.
+-> u21
+T1929 mode=inventory           Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 579 room=.
+-> x
+T1930 mode=game_loop           Fili the Stout(dwa) F7@( 8, 3) HP 124/128 MP 0/0 Hu 65 $ 579 room=.
+-> e
+T1931 mode=altar_mode          Fili the Stout(dwa) F7@( 9, 3) HP 124/128 MP 0/0 Hu 64 $ 579 room=A
+-> pray
+T1932 mode=game_loop           Fili the Stout(dwa) F7@( 9, 3) HP 128/128 MP 0/0 Hu100 $ 579 room=.
+-> e
+T1933 mode=chest_mode          Fili the Stout(dwa) F7@(10, 3) HP 128/128 MP 0/0 Hu 99 $ 579 room=C
+-> w
+T1934 mode=game_loop           Fili the Stout(dwa) F7@( 9, 3) HP 128/128 MP 0/0 Hu 99 $ 579 room=.
+-> s
+T1935 mode=blacksmith_mode     Fili the Stout(dwa) F7@( 9, 4) HP 128/128 MP 0/0 Hu 98 $ 579 room=B
+-> 1
+T1936 mode=blacksmith_mode     Fili the Stout(dwa) F7@( 9, 4) HP 128/128 MP 0/0 Hu 98 $ 234 room=B
+-> n
+T1937 mode=game_loop           Fili the Stout(dwa) F7@( 9, 3) HP 128/128 MP 0/0 Hu 97 $ 234 room=.
+-> n
+T1938 mode=game_loop           Fili the Stout(dwa) F7@( 9, 2) HP 128/128 MP 0/0 Hu 97 $ 234 room=.
+-> n
+T1939 mode=game_loop           Fili the Stout(dwa) F7@( 9, 1) HP 128/128 MP 0/0 Hu 96 $ 234 room=.
+-> e
+T1940 mode=game_loop           Fili the Stout(dwa) F7@(10, 1) HP 128/128 MP 0/0 Hu 95 $ 234 room=.
+-> e
+T1941 mode=game_loop           Fili the Stout(dwa) F7@(11, 1) HP 128/128 MP 0/0 Hu 95 $ 234 room=.
+-> e
+T1942 mode=game_loop           Fili the Stout(dwa) F7@(12, 1) HP 128/128 MP 0/0 Hu 94 $ 234 room=.
+-> s
+T1943 mode=game_loop           Fili the Stout(dwa) F7@(12, 2) HP 128/128 MP 0/0 Hu 93 $ 234 room=.
+-> w
+T1944 mode=game_loop           Fili the Stout(dwa) F7@(11, 2) HP 128/128 MP 0/0 Hu 92 $ 234 room=.
+-> w
+T1945 mode=game_loop           Fili the Stout(dwa) F7@(10, 2) HP 128/128 MP 0/0 Hu 92 $ 234 room=.
+-> s
+T1946 mode=game_loop           Fili the Stout(dwa) F7@(10, 3) HP 128/128 MP 0/0 Hu 91 $ 234 room=C
+-> w
+T1947 mode=game_loop           Fili the Stout(dwa) F7@( 9, 3) HP 128/128 MP 0/0 Hu 90 $ 234 room=.
+-> s
+T1948 mode=game_loop           Fili the Stout(dwa) F7@( 9, 4) HP 128/128 MP 0/0 Hu 90 $ 234 room=B
+-> e
+T1949 mode=game_loop           Fili the Stout(dwa) F7@(10, 4) HP 128/128 MP 0/0 Hu 89 $ 234 room=.
+-> s
+T1950 mode=game_loop           Fili the Stout(dwa) F7@(10, 5) HP 128/128 MP 0/0 Hu 88 $ 234 room=.
+-> s
+T1951 mode=combat_mode         Fili the Stout(dwa) F7@(10, 6) HP 128/128 MP 0/0 Hu 88 $ 234 room=M vs Myconid Shaman(L6 HP52/52)
+-> a
+T1952 mode=combat_mode         Fili the Stout(dwa) F7@(10, 6) HP 127/128 MP 0/0 Hu 88 $ 234 room=M vs Myconid Shaman(L6 HP22/52)
+-> a
+T1953 mode=combat_victory      Fili the Stout(dwa) F7@(10, 6) HP 126/138 MP 0/0 Hu 88 $ 255 room=.
+-> back
+T1954 mode=game_loop           Fili the Stout(dwa) F7@(10, 6) HP 126/138 MP 0/0 Hu 88 $ 255 room=.
+-> s
+T1955 mode=game_loop           Fili the Stout(dwa) F7@(10, 7) HP 126/138 MP 0/0 Hu 87 $ 255 room=.
+-> e
+T1956 mode=game_loop           Fili the Stout(dwa) F7@(11, 7) HP 127/138 MP 0/0 Hu 86 $ 255 room=.
+-> s
+T1957 mode=game_loop           Fili the Stout(dwa) F7@(11, 8) HP 127/138 MP 0/0 Hu 85 $ 255 room=.
+-> e
+T1958 mode=game_loop           Fili the Stout(dwa) F7@(12, 8) HP 128/138 MP 0/0 Hu 85 $ 255 room=.
+-> n
+T1959 mode=game_loop           Fili the Stout(dwa) F7@(12, 7) HP 128/138 MP 0/0 Hu 84 $ 255 room=.
+-> e
+T1960 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 128/138 MP 0/0 Hu 83 $ 255 room=.
+-> e
+T1961 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 128/138 MP 0/0 Hu 83 $ 255 room=.
+-> s
+T1962 mode=game_loop           Fili the Stout(dwa) F7@(14, 8) HP 129/138 MP 0/0 Hu 82 $ 255 room=.
+-> w
+T1963 mode=combat_mode         Fili the Stout(dwa) F7@(13, 8) HP 129/138 MP 0/0 Hu 81 $ 255 room=M vs Hardened Lichen(L6 HP16/16)
+-> a
+T1964 mode=combat_mode         Fili the Stout(dwa) F7@(13, 8) HP 128/138 MP 0/0 Hu 81 $ 255 room=M vs Hardened Lichen(L6 HP16/16)
+-> a
+T1965 mode=combat_victory      Fili the Stout(dwa) F7@(13, 8) HP 127/138 MP 0/0 Hu 81 $ 304 room=.
+-> back
+T1966 mode=game_loop           Fili the Stout(dwa) F7@(13, 8) HP 127/138 MP 0/0 Hu 81 $ 304 room=.
+-> w
+T1967 mode=game_loop           Fili the Stout(dwa) F7@(12, 8) HP 127/138 MP 0/0 Hu 81 $ 304 room=.
+-> n
+T1968 mode=game_loop           Fili the Stout(dwa) F7@(12, 7) HP 127/138 MP 0/0 Hu 80 $ 304 room=.
+-> e
+T1969 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 128/138 MP 0/0 Hu 79 $ 304 room=.
+-> e
+T1970 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 128/138 MP 0/0 Hu 78 $ 304 room=.
+-> s
+T1971 mode=game_loop           Fili the Stout(dwa) F7@(14, 8) HP 128/138 MP 0/0 Hu 78 $ 304 room=.
+-> e
+T1972 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 128/138 MP 0/0 Hu 77 $ 304 room=.
+-> s
+T1973 mode=game_loop           Fili the Stout(dwa) F7@(15, 9) HP 129/138 MP 0/0 Hu 76 $ 304 room=.
+-> s
+T1974 mode=game_loop           Fili the Stout(dwa) F7@(15,10) HP 129/138 MP 0/0 Hu 76 $ 304 room=.
+-> s
+T1975 mode=game_loop           Fili the Stout(dwa) F7@(15,11) HP 129/138 MP 0/0 Hu 75 $ 304 room=.
+-> e
+T1976 mode=combat_mode         Fili the Stout(dwa) F7@(16,11) HP 129/138 MP 0/0 Hu 74 $ 304 room=M vs Troll(L6 HP78/78)
+-> a
+T1977 mode=combat_mode         Fili the Stout(dwa) F7@(16,11) HP 129/138 MP 0/0 Hu 74 $ 304 room=M vs Troll(L6 HP51/78)
+-> a
+T1978 mode=combat_mode         Fili the Stout(dwa) F7@(16,11) HP 124/138 MP 0/0 Hu 74 $ 304 room=M vs Troll(L6 HP51/78)
+-> a
+T1979 mode=combat_mode         Fili the Stout(dwa) F7@(16,11) HP 119/138 MP 0/0 Hu 74 $ 304 room=M vs Troll(L6 HP24/78)
 -> f
-T1523 mode=death_screen        Fili the Stout(dwa) F7@(17, 2) HP -21/104 MP 0/0 Hu 88 $ 346 room=M
+T1980 mode=combat_mode         Fili the Stout(dwa) F7@(16,11) HP 114/138 MP 0/0 Hu 74 $ 304 room=M vs Troll(L6 HP24/78)
+-> a
+T1981 mode=combat_victory      Fili the Stout(dwa) F7@(16,11) HP 109/138 MP 0/0 Hu 74 $ 353 room=.
+-> back
+T1982 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 109/138 MP 0/0 Hu 74 $ 353 room=.
+-> i
+T1983 mode=inventory           Fili the Stout(dwa) F7@(16,11) HP 109/138 MP 0/0 Hu 74 $ 353 room=.
+-> u21
+T1984 mode=inventory           Fili the Stout(dwa) F7@(16,11) HP 109/138 MP 0/0 Hu 74 $ 353 room=.
+-> x
+T1985 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 109/138 MP 0/0 Hu 74 $ 353 room=.
+-> s
+T1986 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 110/138 MP 0/0 Hu 74 $ 353 room=.
+-> e
+T1987 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 110/138 MP 0/0 Hu 73 $ 353 room=N
+-> e
+T1988 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 110/138 MP 0/0 Hu 72 $ 353 room=.
+-> n
+T1989 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 110/138 MP 0/0 Hu 71 $ 353 room=.
+-> e
+T1990 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 111/138 MP 0/0 Hu 71 $ 353 room=.
+-> n
+T1991 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 111/138 MP 0/0 Hu 70 $ 353 room=.
+-> s
+T1992 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 111/138 MP 0/0 Hu 69 $ 353 room=.
+-> n
+T1993 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 111/138 MP 0/0 Hu 69 $ 353 room=.
+-> s
+T1994 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 112/138 MP 0/0 Hu 68 $ 353 room=.
+-> w
+T1995 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 112/138 MP 0/0 Hu 67 $ 353 room=.
+-> s
+T1996 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 112/138 MP 0/0 Hu 67 $ 353 room=.
+-> w
+T1997 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 112/138 MP 0/0 Hu 66 $ 353 room=N
+-> s
+T1998 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 113/138 MP 0/0 Hu 65 $ 353 room=M vs Otyugh(L6 HP78/118)
+-> a
+T1999 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 108/138 MP 0/0 Hu 65 $ 353 room=M vs Otyugh(L6 HP57/118)
+-> f
+T2000 mode=flee_direction_mode Fili the Stout(dwa) F7@(17,13) HP 108/138 MP 0/0 Hu 65 $ 353 room=M
+-> e
+T2001 mode=game_loop           Fili the Stout(dwa) F7@(18,13) HP 108/138 MP 0/0 Hu 65 $ 353 room=.
+-> e
+T2002 mode=game_loop           Fili the Stout(dwa) F7@(19,13) HP 108/138 MP 0/0 Hu 64 $ 353 room=T
+-> w
+T2003 mode=game_loop           Fili the Stout(dwa) F7@(18,13) HP 108/138 MP 0/0 Hu 64 $ 353 room=.
+-> s
+T2004 mode=combat_mode         Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 353 room=M vs Gnoll(L6 HP9/37)
+-> a
+T2005 mode=combat_victory      Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 381 room=.
+-> back
+T2006 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 381 room=.
+-> i
+T2007 mode=inventory           Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 381 room=.
+-> u22
+T2008 mode=inventory           Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 381 room=.
+-> x
+T2009 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 108/138 MP 0/0 Hu 63 $ 381 room=.
+-> s
+T2010 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 109/138 MP 0/0 Hu 62 $ 381 room=.
+-> e
+T2011 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 109/138 MP 0/0 Hu 62 $ 381 room=.
+-> s
+T2012 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 109/138 MP 0/0 Hu 61 $ 381 room=.
+-> w
+T2013 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 109/138 MP 0/0 Hu 60 $ 381 room=.
+-> n
+T2014 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 110/138 MP 0/0 Hu 60 $ 381 room=.
+-> w
+T2015 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 110/138 MP 0/0 Hu 59 $ 381 room=.
+-> w
+T2016 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 110/138 MP 0/0 Hu 58 $ 381 room=.
+-> n
+T2017 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 110/138 MP 0/0 Hu 57 $ 381 room=.
+-> n
+T2018 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 110/138 MP 0/0 Hu 57 $ 381 room=.
+-> n
+T2019 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 110/138 MP 0/0 Hu 56 $ 381 room=.
+-> e
+T2020 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 110/138 MP 0/0 Hu 55 $ 381 room=N
+-> e
+T2021 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 110/138 MP 0/0 Hu 55 $ 381 room=.
+-> i
+T2022 mode=inventory           Fili the Stout(dwa) F7@(18,12) HP 110/138 MP 0/0 Hu 55 $ 381 room=.
+-> eat4
+T2023 mode=inventory           Fili the Stout(dwa) F7@(18,12) HP 110/138 MP 0/0 Hu 67 $ 381 room=.
+-> x
+T2024 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 110/138 MP 0/0 Hu 67 $ 381 room=.
+-> n
+T2025 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 110/138 MP 0/0 Hu 66 $ 381 room=.
+-> e
+T2026 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 110/138 MP 0/0 Hu 65 $ 381 room=.
+-> n
+T2027 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 110/138 MP 0/0 Hu 65 $ 381 room=.
+-> s
+T2028 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 111/138 MP 0/0 Hu 64 $ 381 room=.
+-> n
+T2029 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 111/138 MP 0/0 Hu 63 $ 381 room=.
+-> s
+T2030 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 111/138 MP 0/0 Hu 62 $ 381 room=.
+-> w
+T2031 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 111/138 MP 0/0 Hu 62 $ 381 room=.
+-> s
+T2032 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 112/138 MP 0/0 Hu 61 $ 381 room=.
+-> w
+T2033 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 112/138 MP 0/0 Hu 60 $ 381 room=N
+-> w
+T2034 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 112/138 MP 0/0 Hu 60 $ 381 room=.
+-> s
+T2035 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 112/138 MP 0/0 Hu 59 $ 381 room=.
+-> s
+T2036 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 112/138 MP 0/0 Hu 58 $ 381 room=.
+-> s
+T2037 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 112/138 MP 0/0 Hu 58 $ 381 room=.
+-> e
+T2038 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 112/138 MP 0/0 Hu 57 $ 381 room=.
+-> e
+T2039 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 112/138 MP 0/0 Hu 56 $ 381 room=.
+-> e
+T2040 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 112/138 MP 0/0 Hu 55 $ 381 room=.
+-> s
+T2041 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 112/138 MP 0/0 Hu 55 $ 381 room=.
+-> w
+T2042 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 112/138 MP 0/0 Hu 54 $ 381 room=.
+-> n
+T2043 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 112/138 MP 0/0 Hu 53 $ 381 room=.
+-> w
+T2044 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 112/138 MP 0/0 Hu 53 $ 381 room=.
+-> w
+T2045 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 112/138 MP 0/0 Hu 52 $ 381 room=.
+-> n
+T2046 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 112/138 MP 0/0 Hu 51 $ 381 room=.
+-> n
+T2047 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 112/138 MP 0/0 Hu 51 $ 381 room=.
+-> i
+T2048 mode=inventory           Fili the Stout(dwa) F7@(16,13) HP 112/138 MP 0/0 Hu 51 $ 381 room=.
+-> eat2
+T2049 mode=inventory           Fili the Stout(dwa) F7@(16,13) HP 112/138 MP 0/0 Hu 69 $ 381 room=.
+-> x
+T2050 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 112/138 MP 0/0 Hu 69 $ 381 room=.
+-> n
+T2051 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 112/138 MP 0/0 Hu 68 $ 381 room=.
+-> e
+T2052 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 112/138 MP 0/0 Hu 67 $ 381 room=N
+-> e
+T2053 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 112/138 MP 0/0 Hu 66 $ 381 room=.
+-> n
+T2054 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 113/138 MP 0/0 Hu 66 $ 381 room=.
+-> e
+T2055 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 113/138 MP 0/0 Hu 65 $ 381 room=.
+-> n
+T2056 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 113/138 MP 0/0 Hu 64 $ 381 room=.
+-> s
+T2057 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 113/138 MP 0/0 Hu 64 $ 381 room=.
+-> n
+T2058 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 114/138 MP 0/0 Hu 63 $ 381 room=.
+-> s
+T2059 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 114/138 MP 0/0 Hu 62 $ 381 room=.
+-> w
+T2060 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 114/138 MP 0/0 Hu 62 $ 381 room=.
+-> s
+T2061 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 114/138 MP 0/0 Hu 61 $ 381 room=.
+-> w
+T2062 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 115/138 MP 0/0 Hu 60 $ 381 room=N
+-> w
+T2063 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 115/138 MP 0/0 Hu 59 $ 381 room=.
+-> s
+T2064 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 115/138 MP 0/0 Hu 59 $ 381 room=.
+-> e
+T2065 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 115/138 MP 0/0 Hu 58 $ 381 room=M vs Otyugh(L6 HP57/118)
+-> a
+T2066 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 110/138 MP 0/0 Hu 58 $ 381 room=M vs Otyugh(L6 HP36/118)
+-> a
+T2067 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 105/138 MP 0/0 Hu 58 $ 381 room=M vs Otyugh(L6 HP15/118)
+-> f
+T2068 mode=flee_direction_mode Fili the Stout(dwa) F7@(17,13) HP 93/138 MP 0/0 Hu 58 $ 381 room=M
+-> e
+T2069 mode=game_loop           Fili the Stout(dwa) F7@(18,13) HP 86/138 MP 0/0 Hu 58 $ 381 room=.
+-> s
+T2070 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 79/138 MP 0/0 Hu 57 $ 381 room=.
+-> s
+T2071 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 72/138 MP 0/0 Hu 57 $ 381 room=.
+-> e
+T2072 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 65/138 MP 0/0 Hu 56 $ 381 room=.
+-> s
+T2073 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 58/138 MP 0/0 Hu 55 $ 381 room=.
+-> w
+T2074 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 58/138 MP 0/0 Hu 55 $ 381 room=.
+-> n
+T2075 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 58/138 MP 0/0 Hu 54 $ 381 room=.
+-> n
+T2076 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 58/138 MP 0/0 Hu 53 $ 381 room=.
+-> s
+T2077 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 58/138 MP 0/0 Hu 52 $ 381 room=.
+-> e
+T2078 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 58/138 MP 0/0 Hu 52 $ 381 room=.
+-> s
+T2079 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 58/138 MP 0/0 Hu 51 $ 381 room=.
+-> w
+T2080 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 58/138 MP 0/0 Hu 50 $ 381 room=.
+-> n
+T2081 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 58/138 MP 0/0 Hu 50 $ 381 room=.
+-> n
+T2082 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 58/138 MP 0/0 Hu 49 $ 381 room=.
+-> i
+T2083 mode=inventory           Fili the Stout(dwa) F7@(18,14) HP 58/138 MP 0/0 Hu 49 $ 381 room=.
+-> eat1
+T2084 mode=inventory           Fili the Stout(dwa) F7@(18,14) HP 58/138 MP 0/0 Hu 67 $ 381 room=.
+-> x
+T2085 mode=game_loop           Fili the Stout(dwa) F7@(18,14) HP 58/138 MP 0/0 Hu 67 $ 381 room=.
+-> s
+T2086 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 58/138 MP 0/0 Hu 66 $ 381 room=.
+-> e
+T2087 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 58/138 MP 0/0 Hu 66 $ 381 room=.
+-> s
+T2088 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 58/138 MP 0/0 Hu 65 $ 381 room=.
+-> w
+T2089 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 59/138 MP 0/0 Hu 64 $ 381 room=.
+-> n
+T2090 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 59/138 MP 0/0 Hu 63 $ 381 room=.
+-> w
+T2091 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 59/138 MP 0/0 Hu 63 $ 381 room=.
+-> w
+T2092 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 59/138 MP 0/0 Hu 62 $ 381 room=.
+-> n
+T2093 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 60/138 MP 0/0 Hu 61 $ 381 room=.
+-> n
+T2094 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 60/138 MP 0/0 Hu 61 $ 381 room=.
+-> n
+T2095 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 60/138 MP 0/0 Hu 60 $ 381 room=.
+-> e
+T2096 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 60/138 MP 0/0 Hu 59 $ 381 room=N
+-> e
+T2097 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 60/138 MP 0/0 Hu 59 $ 381 room=.
+-> n
+T2098 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 60/138 MP 0/0 Hu 58 $ 381 room=.
+-> e
+T2099 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 60/138 MP 0/0 Hu 57 $ 381 room=.
+-> n
+T2100 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 60/138 MP 0/0 Hu 56 $ 381 room=.
+-> s
+T2101 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 60/138 MP 0/0 Hu 56 $ 381 room=.
+-> n
+T2102 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 60/138 MP 0/0 Hu 55 $ 381 room=.
+-> s
+T2103 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 60/138 MP 0/0 Hu 54 $ 381 room=.
+-> w
+T2104 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 60/138 MP 0/0 Hu 54 $ 381 room=.
+-> w
+T2105 mode=game_loop           Fili the Stout(dwa) F7@(17,11) HP 60/138 MP 0/0 Hu 53 $ 381 room=.
+-> w
+T2106 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 60/138 MP 0/0 Hu 52 $ 381 room=.
+-> w
+T2107 mode=game_loop           Fili the Stout(dwa) F7@(15,11) HP 60/138 MP 0/0 Hu 52 $ 381 room=.
+-> n
+T2108 mode=game_loop           Fili the Stout(dwa) F7@(15,10) HP 60/138 MP 0/0 Hu 51 $ 381 room=.
+-> n
+T2109 mode=game_loop           Fili the Stout(dwa) F7@(15, 9) HP 60/138 MP 0/0 Hu 50 $ 381 room=.
+-> n
+T2110 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 60/138 MP 0/0 Hu 49 $ 381 room=.
+-> i
+T2111 mode=inventory           Fili the Stout(dwa) F7@(15, 8) HP 60/138 MP 0/0 Hu 49 $ 381 room=.
+-> eat1
+T2112 mode=inventory           Fili the Stout(dwa) F7@(15, 8) HP 60/138 MP 0/0 Hu 71 $ 381 room=.
+-> x
+T2113 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 60/138 MP 0/0 Hu 71 $ 381 room=.
+-> w
+T2114 mode=game_loop           Fili the Stout(dwa) F7@(14, 8) HP 60/138 MP 0/0 Hu 71 $ 381 room=.
+-> w
+T2115 mode=game_loop           Fili the Stout(dwa) F7@(13, 8) HP 60/138 MP 0/0 Hu 70 $ 381 room=.
+-> n
+T2116 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 60/138 MP 0/0 Hu 69 $ 381 room=.
+-> e
+T2117 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 61/138 MP 0/0 Hu 69 $ 381 room=.
+-> e
+T2118 mode=game_loop           Fili the Stout(dwa) F7@(15, 7) HP 61/138 MP 0/0 Hu 68 $ 381 room=.
+-> s
+T2119 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 61/138 MP 0/0 Hu 67 $ 381 room=.
+-> s
+T2120 mode=game_loop           Fili the Stout(dwa) F7@(15, 9) HP 61/138 MP 0/0 Hu 67 $ 381 room=.
+-> s
+T2121 mode=game_loop           Fili the Stout(dwa) F7@(15,10) HP 62/138 MP 0/0 Hu 66 $ 381 room=.
+-> s
+T2122 mode=game_loop           Fili the Stout(dwa) F7@(15,11) HP 62/138 MP 0/0 Hu 65 $ 381 room=.
+-> e
+T2123 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 62/138 MP 0/0 Hu 64 $ 381 room=.
+-> e
+T2124 mode=fey_garden_mode     Fili the Stout(dwa) F7@(17,11) HP 62/138 MP 0/0 Hu 64 $ 381 room=G
+-> h
+T2125 mode=game_loop           Fili the Stout(dwa) F7@(17,11) HP 62/138 MP 0/0 Hu 64 $ 381 room=.
+-> s
+T2126 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 63/138 MP 0/0 Hu 63 $ 381 room=N
+-> e
+T2127 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 63/138 MP 0/0 Hu 62 $ 381 room=.
+-> n
+T2128 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 63/138 MP 0/0 Hu 62 $ 381 room=.
+-> e
+T2129 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 63/138 MP 0/0 Hu 61 $ 381 room=.
+-> n
+T2130 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 64/138 MP 0/0 Hu 60 $ 381 room=.
+-> s
+T2131 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 64/138 MP 0/0 Hu 60 $ 381 room=.
+-> n
+T2132 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 64/138 MP 0/0 Hu 59 $ 381 room=.
+-> s
+T2133 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 64/138 MP 0/0 Hu 58 $ 381 room=.
+-> w
+T2134 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 64/138 MP 0/0 Hu 57 $ 381 room=.
+-> s
+T2135 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 64/138 MP 0/0 Hu 57 $ 381 room=.
+-> w
+T2136 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 64/138 MP 0/0 Hu 56 $ 381 room=N
+-> n
+T2137 mode=game_loop           Fili the Stout(dwa) F7@(17,11) HP 64/138 MP 0/0 Hu 55 $ 381 room=.
+-> w
+T2138 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 64/138 MP 0/0 Hu 55 $ 381 room=.
+-> s
+T2139 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 64/138 MP 0/0 Hu 54 $ 381 room=.
+-> s
+T2140 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 64/138 MP 0/0 Hu 53 $ 381 room=.
+-> s
+T2141 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 64/138 MP 0/0 Hu 53 $ 381 room=.
+-> s
+T2142 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 64/138 MP 0/0 Hu 52 $ 381 room=.
+-> e
+T2143 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 64/138 MP 0/0 Hu 51 $ 381 room=.
+-> e
+T2144 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 64/138 MP 0/0 Hu 50 $ 381 room=.
+-> e
+T2145 mode=game_loop           Fili the Stout(dwa) F7@(19,15) HP 64/138 MP 0/0 Hu 50 $ 381 room=.
+-> s
+T2146 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 64/138 MP 0/0 Hu 49 $ 381 room=.
+-> i
+T2147 mode=inventory           Fili the Stout(dwa) F7@(19,16) HP 64/138 MP 0/0 Hu 49 $ 381 room=.
+-> eat1
+T2148 mode=inventory           Fili the Stout(dwa) F7@(19,16) HP 64/138 MP 0/0 Hu 79 $ 381 room=.
+-> x
+T2149 mode=game_loop           Fili the Stout(dwa) F7@(19,16) HP 64/138 MP 0/0 Hu 79 $ 381 room=.
+-> w
+T2150 mode=game_loop           Fili the Stout(dwa) F7@(18,16) HP 64/138 MP 0/0 Hu 78 $ 381 room=.
+-> n
+T2151 mode=game_loop           Fili the Stout(dwa) F7@(18,15) HP 64/138 MP 0/0 Hu 78 $ 381 room=.
+-> w
+T2152 mode=game_loop           Fili the Stout(dwa) F7@(17,15) HP 64/138 MP 0/0 Hu 77 $ 381 room=.
+-> w
+T2153 mode=game_loop           Fili the Stout(dwa) F7@(16,15) HP 65/138 MP 0/0 Hu 76 $ 381 room=.
+-> n
+T2154 mode=game_loop           Fili the Stout(dwa) F7@(16,14) HP 65/138 MP 0/0 Hu 76 $ 381 room=.
+-> n
+T2155 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 65/138 MP 0/0 Hu 75 $ 381 room=.
+-> n
+T2156 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 65/138 MP 0/0 Hu 74 $ 381 room=.
+-> e
+T2157 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 66/138 MP 0/0 Hu 73 $ 381 room=N
+-> e
+T2158 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 66/138 MP 0/0 Hu 73 $ 381 room=.
+-> n
+T2159 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 66/138 MP 0/0 Hu 72 $ 381 room=.
+-> e
+T2160 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 66/138 MP 0/0 Hu 71 $ 381 room=.
+-> n
+T2161 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 67/138 MP 0/0 Hu 71 $ 381 room=.
+-> s
+T2162 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 67/138 MP 0/0 Hu 70 $ 381 room=.
+-> n
+T2163 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 67/138 MP 0/0 Hu 69 $ 381 room=.
+-> s
+T2164 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 67/138 MP 0/0 Hu 69 $ 381 room=.
+-> w
+T2165 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 68/138 MP 0/0 Hu 68 $ 381 room=.
+-> s
+T2166 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 68/138 MP 0/0 Hu 67 $ 381 room=.
+-> w
+T2167 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 68/138 MP 0/0 Hu 66 $ 381 room=N
+-> w
+T2168 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 68/138 MP 0/0 Hu 66 $ 381 room=.
+-> n
+T2169 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 69/138 MP 0/0 Hu 65 $ 381 room=.
+-> e
+T2170 mode=game_loop           Fili the Stout(dwa) F7@(17,11) HP 69/138 MP 0/0 Hu 64 $ 381 room=.
+-> e
+T2171 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 69/138 MP 0/0 Hu 64 $ 381 room=.
+-> s
+T2172 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 69/138 MP 0/0 Hu 63 $ 381 room=.
+-> w
+T2173 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 70/138 MP 0/0 Hu 62 $ 381 room=N
+-> s
+T2174 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 70/138 MP 0/0 Hu 62 $ 381 room=M vs Otyugh(L6 HP15/118)
+-> a
+T2175 mode=combat_mode         Fili the Stout(dwa) F7@(17,13) HP 65/138 MP 0/0 Hu 62 $ 381 room=M vs Otyugh(L6 HP15/118)
+-> a
+T2176 mode=combat_victory      Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 62 $ 416 room=.
+-> back
+T2177 mode=game_loop           Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 62 $ 416 room=.
+-> i
+T2178 mode=inventory           Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 62 $ 416 room=.
+-> u18
+T2179 mode=inventory           Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 62 $ 416 room=.
+-> x
+T2180 mode=game_loop           Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 62 $ 416 room=.
+-> w
+T2181 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 65/148 MP 0/0 Hu 61 $ 416 room=.
+-> n
+T2182 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 65/148 MP 0/0 Hu 60 $ 416 room=.
+-> n
+T2183 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 65/148 MP 0/0 Hu 59 $ 416 room=.
+-> e
+T2184 mode=game_loop           Fili the Stout(dwa) F7@(17,11) HP 65/148 MP 0/0 Hu 59 $ 416 room=.
+-> s
+T2185 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 65/148 MP 0/0 Hu 58 $ 416 room=N
+-> e
+T2186 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 65/148 MP 0/0 Hu 57 $ 416 room=.
+-> n
+T2187 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 65/148 MP 0/0 Hu 57 $ 416 room=.
+-> e
+T2188 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 65/148 MP 0/0 Hu 56 $ 416 room=.
+-> n
+T2189 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 65/148 MP 0/0 Hu 55 $ 416 room=.
+-> s
+T2190 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 65/148 MP 0/0 Hu 55 $ 416 room=.
+-> n
+T2191 mode=game_loop           Fili the Stout(dwa) F7@(19,10) HP 65/148 MP 0/0 Hu 54 $ 416 room=.
+-> s
+T2192 mode=game_loop           Fili the Stout(dwa) F7@(19,11) HP 65/148 MP 0/0 Hu 53 $ 416 room=.
+-> w
+T2193 mode=game_loop           Fili the Stout(dwa) F7@(18,11) HP 65/148 MP 0/0 Hu 52 $ 416 room=.
+-> s
+T2194 mode=game_loop           Fili the Stout(dwa) F7@(18,12) HP 65/148 MP 0/0 Hu 52 $ 416 room=.
+-> w
+T2195 mode=game_loop           Fili the Stout(dwa) F7@(17,12) HP 65/148 MP 0/0 Hu 51 $ 416 room=N
+-> s
+T2196 mode=game_loop           Fili the Stout(dwa) F7@(17,13) HP 65/148 MP 0/0 Hu 50 $ 416 room=.
+-> w
+T2197 mode=game_loop           Fili the Stout(dwa) F7@(16,13) HP 65/148 MP 0/0 Hu 50 $ 416 room=.
+-> n
+T2198 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 65/148 MP 0/0 Hu 49 $ 416 room=.
+-> i
+T2199 mode=inventory           Fili the Stout(dwa) F7@(16,12) HP 65/148 MP 0/0 Hu 49 $ 416 room=.
+-> eat1
+T2200 mode=inventory           Fili the Stout(dwa) F7@(16,12) HP 65/148 MP 0/0 Hu 67 $ 416 room=.
+-> x
+T2201 mode=game_loop           Fili the Stout(dwa) F7@(16,12) HP 65/148 MP 0/0 Hu 67 $ 416 room=.
+-> n
+T2202 mode=game_loop           Fili the Stout(dwa) F7@(16,11) HP 65/148 MP 0/0 Hu 66 $ 416 room=.
+-> w
+T2203 mode=game_loop           Fili the Stout(dwa) F7@(15,11) HP 65/148 MP 0/0 Hu 66 $ 416 room=.
+-> n
+T2204 mode=game_loop           Fili the Stout(dwa) F7@(15,10) HP 65/148 MP 0/0 Hu 65 $ 416 room=.
+-> n
+T2205 mode=game_loop           Fili the Stout(dwa) F7@(15, 9) HP 66/148 MP 0/0 Hu 64 $ 416 room=.
+-> n
+T2206 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 66/148 MP 0/0 Hu 63 $ 416 room=.
+-> n
+T2207 mode=game_loop           Fili the Stout(dwa) F7@(15, 7) HP 66/148 MP 0/0 Hu 63 $ 416 room=.
+-> w
+T2208 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 66/148 MP 0/0 Hu 62 $ 416 room=.
+-> w
+T2209 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 67/148 MP 0/0 Hu 61 $ 416 room=.
+-> w
+T2210 mode=game_loop           Fili the Stout(dwa) F7@(12, 7) HP 67/148 MP 0/0 Hu 61 $ 416 room=.
+-> s
+T2211 mode=game_loop           Fili the Stout(dwa) F7@(12, 8) HP 67/148 MP 0/0 Hu 60 $ 416 room=.
+-> s
+T2212 mode=game_loop           Fili the Stout(dwa) F7@(12, 9) HP 67/148 MP 0/0 Hu 59 $ 416 room=.
+-> s
+T2213 mode=altar_mode          Fili the Stout(dwa) F7@(12,10) HP 67/148 MP 0/0 Hu 59 $ 416 room=A
+-> pray
+T2214 mode=game_loop           Fili the Stout(dwa) F7@(12,10) HP 67/148 MP 0/0 Hu 59 $ 416 room=.
+-> w
+T2215 mode=game_loop           Fili the Stout(dwa) F7@(11,10) HP 67/148 MP 0/0 Hu 58 $ 416 room=.
+-> s
+T2216 mode=chest_mode          Fili the Stout(dwa) F7@(11,11) HP 67/148 MP 0/0 Hu 57 $ 416 room=C
+-> o
+T2217 mode=game_loop           Fili the Stout(dwa) F7@(11,11) HP 67/148 MP 0/0 Hu 57 $ 416 room=.
+-> s
+T2218 mode=game_loop           Fili the Stout(dwa) F7@(11,12) HP 67/148 MP 0/0 Hu 56 $ 416 room=.
+-> s
+T2219 mode=warp_mode           Fili the Stout(dwa) F7@(11,13) HP 67/148 MP 0/0 Hu 56 $ 416 room=W
+-> y
+T2220 mode=game_loop           Fili the Stout(dwa) F7@(11,13) HP 67/148 MP 0/0 Hu 56 $ 416 room=W
+-> s
+T2221 mode=game_loop           Fili the Stout(dwa) F7@(11,14) HP 67/148 MP 0/0 Hu 55 $ 416 room=.
+-> e
+T2222 mode=game_loop           Fili the Stout(dwa) F7@(12,14) HP 67/148 MP 0/0 Hu 54 $ 416 room=.
+-> e
+T2223 mode=game_loop           Fili the Stout(dwa) F7@(13,14) HP 67/148 MP 0/0 Hu 54 $ 416 room=.
+-> n
+T2224 mode=chest_mode          Fili the Stout(dwa) F7@(13,13) HP 67/148 MP 0/0 Hu 53 $ 416 room=C
+-> o
+T2225 mode=game_loop           Fili the Stout(dwa) F7@(13,13) HP 67/148 MP 0/0 Hu 53 $ 416 room=.
+-> w
+T2226 mode=game_loop           Fili the Stout(dwa) F7@(12,13) HP 67/148 MP 0/0 Hu 52 $ 416 room=.
+-> n
+T2227 mode=game_loop           Fili the Stout(dwa) F7@(12,12) HP 67/148 MP 0/0 Hu 52 $ 416 room=.
+-> n
+T2228 mode=dungeon_mode        Fili the Stout(dwa) F7@(12,11) HP 67/148 MP 0/0 Hu 51 $ 416 room=N
+-> u
+T2229 mode=game_loop           Fili the Stout(dwa) F7@(12,11) HP 67/148 MP 0/0 Hu 51 $ 416 room=N
+-> n
+T2230 mode=game_loop           Fili the Stout(dwa) F7@(12,10) HP 67/148 MP 0/0 Hu 50 $ 416 room=.
+-> l
+T2231 mode=game_loop           Fili the Stout(dwa) F7@(12,10) HP 67/148 MP 0/0 Hu 50 $ 416 room=.
+-> n
+T2232 mode=game_loop           Fili the Stout(dwa) F7@(12, 9) HP 67/148 MP 0/0 Hu 49 $ 416 room=.
+-> l
+T2233 mode=game_loop           Fili the Stout(dwa) F7@(12, 9) HP 67/148 MP 0/0 Hu 49 $ 416 room=.
+-> n
+T2234 mode=game_loop           Fili the Stout(dwa) F7@(12, 8) HP 67/148 MP 0/0 Hu 49 $ 416 room=.
+-> w
+T2235 mode=game_loop           Fili the Stout(dwa) F7@(11, 8) HP 67/148 MP 0/0 Hu 48 $ 416 room=.
+-> l
+T2236 mode=game_loop           Fili the Stout(dwa) F7@(11, 8) HP 67/148 MP 0/0 Hu 48 $ 416 room=.
+-> s
+T2237 mode=garden_mode         Fili the Stout(dwa) F7@(11, 9) HP 67/148 MP 0/0 Hu 47 $ 416 room=G
+-> h
+T2238 mode=game_loop           Fili the Stout(dwa) F7@(11, 9) HP 67/148 MP 0/0 Hu 47 $ 416 room=.
+-> s
+T2239 mode=game_loop           Fili the Stout(dwa) F7@(11,10) HP 67/148 MP 0/0 Hu 47 $ 416 room=.
+-> l
+T2240 mode=game_loop           Fili the Stout(dwa) F7@(11,10) HP 67/148 MP 0/0 Hu 47 $ 416 room=.
+-> l
+T2241 mode=game_loop           Fili the Stout(dwa) F7@(11,10) HP 67/148 MP 0/0 Hu 47 $ 416 room=.
+-> s
+T2242 mode=game_loop           Fili the Stout(dwa) F7@(11,11) HP 67/148 MP 0/0 Hu 46 $ 416 room=.
+-> l
+T2243 mode=game_loop           Fili the Stout(dwa) F7@(11,11) HP 67/148 MP 0/0 Hu 46 $ 416 room=.
+-> s
+T2244 mode=game_loop           Fili the Stout(dwa) F7@(11,12) HP 67/148 MP 0/0 Hu 45 $ 416 room=.
+-> e
+T2245 mode=game_loop           Fili the Stout(dwa) F7@(12,12) HP 67/148 MP 0/0 Hu 45 $ 416 room=.
+-> l
+T2246 mode=game_loop           Fili the Stout(dwa) F7@(12,12) HP 67/148 MP 0/0 Hu 45 $ 416 room=.
+-> s
+T2247 mode=game_loop           Fili the Stout(dwa) F7@(12,13) HP 67/148 MP 0/0 Hu 44 $ 416 room=.
+-> s
+T2248 mode=game_loop           Fili the Stout(dwa) F7@(12,14) HP 67/148 MP 0/0 Hu 43 $ 416 room=.
+-> s
+T2249 mode=game_loop           Fili the Stout(dwa) F7@(12,15) HP 67/148 MP 0/0 Hu 42 $ 416 room=.
+-> w
+T2250 mode=game_loop           Fili the Stout(dwa) F7@(11,15) HP 67/148 MP 0/0 Hu 42 $ 416 room=.
+-> l
+T2251 mode=game_loop           Fili the Stout(dwa) F7@(11,15) HP 67/148 MP 0/0 Hu 42 $ 416 room=.
+-> s
+T2252 mode=game_loop           Fili the Stout(dwa) F7@(11,16) HP 67/148 MP 0/0 Hu 41 $ 416 room=.
+-> l
+T2253 mode=game_loop           Fili the Stout(dwa) F7@(11,16) HP 67/148 MP 0/0 Hu 41 $ 416 room=.
+-> w
+T2254 mode=game_loop           Fili the Stout(dwa) F7@(10,16) HP 67/148 MP 0/0 Hu 40 $ 416 room=.
+-> n
+T2255 mode=game_loop           Fili the Stout(dwa) F7@(10,15) HP 67/148 MP 0/0 Hu 40 $ 416 room=.
+-> w
+T2256 mode=game_loop           Fili the Stout(dwa) F7@( 9,15) HP 67/148 MP 0/0 Hu 39 $ 416 room=.
+-> l
+T2257 mode=game_loop           Fili the Stout(dwa) F7@( 9,15) HP 67/148 MP 0/0 Hu 39 $ 416 room=.
+-> n
+T2258 mode=game_loop           Fili the Stout(dwa) F7@( 9,14) HP 67/148 MP 0/0 Hu 38 $ 416 room=.
+-> l
+T2259 mode=game_loop           Fili the Stout(dwa) F7@( 9,14) HP 67/148 MP 0/0 Hu 38 $ 416 room=.
+-> n
+T2260 mode=game_loop           Fili the Stout(dwa) F7@( 9,13) HP 67/148 MP 0/0 Hu 38 $ 416 room=.
+-> n
+T2261 mode=game_loop           Fili the Stout(dwa) F7@( 9,12) HP 67/148 MP 0/0 Hu 37 $ 416 room=.
+-> n
+T2262 mode=game_loop           Fili the Stout(dwa) F7@( 9,11) HP 67/148 MP 0/0 Hu 36 $ 416 room=.
+-> w
+T2263 mode=game_loop           Fili the Stout(dwa) F7@( 8,11) HP 67/148 MP 0/0 Hu 35 $ 416 room=.
+-> n
+T2264 mode=game_loop           Fili the Stout(dwa) F7@( 8,10) HP 67/148 MP 0/0 Hu 35 $ 416 room=.
+-> n
+T2265 mode=chest_mode          Fili the Stout(dwa) F7@( 8, 9) HP 67/148 MP 0/0 Hu 34 $ 416 room=C
+-> o
+T2266 mode=game_loop           Fili the Stout(dwa) F7@( 8, 9) HP 67/148 MP 0/0 Hu 34 $ 536 room=.
+-> w
+T2267 mode=game_loop           Fili the Stout(dwa) F7@( 7, 9) HP 67/148 MP 0/0 Hu 33 $ 536 room=.
+-> e
+T2268 mode=game_loop           Fili the Stout(dwa) F7@( 8, 9) HP 67/148 MP 0/0 Hu 33 $ 536 room=.
+-> e
+T2269 mode=game_loop           Fili the Stout(dwa) F7@( 9, 9) HP 67/148 MP 0/0 Hu 32 $ 536 room=.
+-> n
+T2270 mode=game_loop           Fili the Stout(dwa) F7@( 9, 8) HP 67/148 MP 0/0 Hu 31 $ 536 room=.
+-> n
+T2271 mode=game_loop           Fili the Stout(dwa) F7@( 9, 7) HP 67/148 MP 0/0 Hu 31 $ 536 room=.
+-> e
+T2272 mode=game_loop           Fili the Stout(dwa) F7@(10, 7) HP 67/148 MP 0/0 Hu 30 $ 536 room=.
+-> e
+T2273 mode=game_loop           Fili the Stout(dwa) F7@(11, 7) HP 67/148 MP 0/0 Hu 29 $ 536 room=.
+-> e
+T2274 mode=game_loop           Fili the Stout(dwa) F7@(12, 7) HP 67/148 MP 0/0 Hu 28 $ 536 room=.
+-> e
+T2275 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 67/148 MP 0/0 Hu 28 $ 536 room=.
+-> e
+T2276 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 67/148 MP 0/0 Hu 27 $ 536 room=.
+-> e
+T2277 mode=game_loop           Fili the Stout(dwa) F7@(15, 7) HP 67/148 MP 0/0 Hu 26 $ 536 room=.
+-> s
+T2278 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 67/148 MP 0/0 Hu 26 $ 536 room=.
+-> w
+T2279 mode=game_loop           Fili the Stout(dwa) F7@(14, 8) HP 67/148 MP 0/0 Hu 25 $ 536 room=.
+-> w
+T2280 mode=game_loop           Fili the Stout(dwa) F7@(13, 8) HP 67/148 MP 0/0 Hu 24 $ 536 room=.
+-> n
+T2281 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 67/148 MP 0/0 Hu 24 $ 536 room=.
+-> i
+T2282 mode=inventory           Fili the Stout(dwa) F7@(13, 7) HP 67/148 MP 0/0 Hu 24 $ 536 room=.
+-> u11
+T2283 mode=inventory           Fili the Stout(dwa) F7@(13, 7) HP 92/148 MP 0/0 Hu 24 $ 536 room=.
+-> u4
+T2284 mode=upgrade_scroll_mode Fili the Stout(dwa) F7@(13, 7) HP 92/148 MP 0/0 Hu 24 $ 536 room=.
+-> 1
+T2285 mode=inventory           Fili the Stout(dwa) F7@(13, 7) HP 92/148 MP 0/0 Hu 24 $ 536 room=.
+-> x
+T2286 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 92/148 MP 0/0 Hu 24 $ 536 room=.
+-> e
+T2287 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 92/148 MP 0/0 Hu 23 $ 536 room=.
+-> e
+T2288 mode=game_loop           Fili the Stout(dwa) F7@(15, 7) HP 92/148 MP 0/0 Hu 22 $ 536 room=.
+-> e
+T2289 mode=game_loop           Fili the Stout(dwa) F7@(16, 7) HP 92/148 MP 0/0 Hu 21 $ 536 room=.
+-> e
+T2290 mode=game_loop           Fili the Stout(dwa) F7@(17, 7) HP 92/148 MP 0/0 Hu 21 $ 536 room=.
+-> e
+T2291 mode=game_loop           Fili the Stout(dwa) F7@(18, 7) HP 92/148 MP 0/0 Hu 20 $ 536 room=.
+-> n
+T2292 mode=game_loop           Fili the Stout(dwa) F7@(18, 6) HP 92/148 MP 0/0 Hu 19 $ 536 room=.
+-> w
+T2293 mode=warp_mode           Fili the Stout(dwa) F7@(17, 6) HP 92/148 MP 0/0 Hu 19 $ 536 room=W
+-> y
+T2294 mode=game_loop           Fili the Stout(dwa) F7@(17, 6) HP 92/148 MP 0/0 Hu 19 $ 536 room=W
+-> s
+T2295 mode=game_loop           Fili the Stout(dwa) F7@(17, 7) HP 92/148 MP 0/0 Hu 18 $ 536 room=.
+-> w
+T2296 mode=game_loop           Fili the Stout(dwa) F7@(16, 7) HP 92/148 MP 0/0 Hu 17 $ 536 room=.
+-> w
+T2297 mode=game_loop           Fili the Stout(dwa) F7@(15, 7) HP 92/148 MP 0/0 Hu 17 $ 536 room=.
+-> s
+T2298 mode=game_loop           Fili the Stout(dwa) F7@(15, 8) HP 92/148 MP 0/0 Hu 16 $ 536 room=.
+-> w
+T2299 mode=game_loop           Fili the Stout(dwa) F7@(14, 8) HP 92/148 MP 0/0 Hu 15 $ 536 room=.
+-> n
+T2300 mode=game_loop           Fili the Stout(dwa) F7@(14, 7) HP 92/148 MP 0/0 Hu 14 $ 536 room=.
+-> w
+T2301 mode=game_loop           Fili the Stout(dwa) F7@(13, 7) HP 92/148 MP 0/0 Hu 14 $ 536 room=.
+-> n
+T2302 mode=game_loop           Fili the Stout(dwa) F7@(13, 6) HP 92/148 MP 0/0 Hu 13 $ 536 room=.
+-> n
+T2303 mode=game_loop           Fili the Stout(dwa) F7@(13, 5) HP 92/148 MP 0/0 Hu 12 $ 536 room=.
+-> n
+T2304 mode=warp_mode           Fili the Stout(dwa) F7@(13, 4) HP 92/148 MP 0/0 Hu 12 $ 536 room=W
+-> y
+T2305 mode=game_loop           Fili the Stout(dwa) F6@(10,10) HP 92/148 MP 0/0 Hu 12 $ 536 room=.
+-> n
+T2306 mode=game_loop           Fili the Stout(dwa) F6@(10, 9) HP 92/148 MP 0/0 Hu 11 $ 536 room=C
+-> w
+T2307 mode=game_loop           Fili the Stout(dwa) F6@( 9, 9) HP 92/148 MP 0/0 Hu 10 $ 536 room=.
+-> w
+T2308 mode=game_loop           Fili the Stout(dwa) F6@( 8, 9) HP 92/148 MP 0/0 Hu 10 $ 536 room=B
+-> w
+T2309 mode=game_loop           Fili the Stout(dwa) F6@( 7, 9) HP 92/148 MP 0/0 Hu  9 $ 536 room=.
+-> n
+T2310 mode=stairs_down_mode    Fili the Stout(dwa) F6@( 7, 8) HP 92/148 MP 0/0 Hu  8 $ 536 room=D
+-> d
+T2311 mode=stairs_up_mode      Fili the Stout(dwa) F7@( 1, 1) HP 92/148 MP 0/0 Hu  8 $ 536 room=U
+-> s
+T2312 mode=game_loop           Fili the Stout(dwa) F7@( 1, 2) HP 92/148 MP 0/0 Hu  7 $ 536 room=.
+-> e
+T2313 mode=game_loop           Fili the Stout(dwa) F7@( 2, 2) HP 92/148 MP 0/0 Hu  7 $ 536 room=.
+-> e
+T2314 mode=game_loop           Fili the Stout(dwa) F7@( 3, 2) HP 92/148 MP 0/0 Hu  6 $ 536 room=.
+-> e
+T2315 mode=game_loop           Fili the Stout(dwa) F7@( 4, 2) HP 92/148 MP 0/0 Hu  5 $ 536 room=.
+-> e
+T2316 mode=game_loop           Fili the Stout(dwa) F7@( 5, 2) HP 92/148 MP 0/0 Hu  5 $ 536 room=.
+-> e
+T2317 mode=game_loop           Fili the Stout(dwa) F7@( 6, 2) HP 92/148 MP 0/0 Hu  4 $ 536 room=.
+-> e
+T2318 mode=game_loop           Fili the Stout(dwa) F7@( 7, 2) HP 92/148 MP 0/0 Hu  3 $ 536 room=.
+-> e
+T2319 mode=game_loop           Fili the Stout(dwa) F7@( 8, 2) HP 92/148 MP 0/0 Hu  3 $ 536 room=.
+-> s
+T2320 mode=game_loop           Fili the Stout(dwa) F7@( 8, 3) HP 92/148 MP 0/0 Hu  2 $ 536 room=.
+-> e
+T2321 mode=game_loop           Fili the Stout(dwa) F7@( 9, 3) HP 92/148 MP 0/0 Hu  1 $ 536 room=.
+-> s
+T2322 mode=game_loop           Fili the Stout(dwa) F7@( 9, 4) HP 90/148 MP 0/0 Hu  0 $ 536 room=B
+-> e
+T2323 mode=game_loop           Fili the Stout(dwa) F7@(10, 4) HP 88/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2324 mode=game_loop           Fili the Stout(dwa) F7@(10, 5) HP 86/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2325 mode=game_loop           Fili the Stout(dwa) F7@(10, 6) HP 84/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2326 mode=game_loop           Fili the Stout(dwa) F7@(10, 7) HP 82/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2327 mode=game_loop           Fili the Stout(dwa) F7@(10, 8) HP 80/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2328 mode=game_loop           Fili the Stout(dwa) F7@(10, 9) HP 78/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2329 mode=game_loop           Fili the Stout(dwa) F7@(10,10) HP 76/148 MP 0/0 Hu  0 $ 536 room=.
+-> w
+T2330 mode=pool_mode           Fili the Stout(dwa) F7@( 9,10) HP 74/148 MP 0/0 Hu  0 $ 536 room=P
+-> n
+T2331 mode=game_loop           Fili the Stout(dwa) F7@( 9, 9) HP 72/148 MP 0/0 Hu  0 $ 536 room=.
+-> w
+T2332 mode=game_loop           Fili the Stout(dwa) F7@( 8, 9) HP 70/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2333 mode=game_loop           Fili the Stout(dwa) F7@( 8,10) HP 68/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2334 mode=game_loop           Fili the Stout(dwa) F7@( 8,11) HP 66/148 MP 0/0 Hu  0 $ 536 room=.
+-> e
+T2335 mode=game_loop           Fili the Stout(dwa) F7@( 9,11) HP 64/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2336 mode=game_loop           Fili the Stout(dwa) F7@( 9,12) HP 62/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2337 mode=game_loop           Fili the Stout(dwa) F7@( 9,13) HP 60/148 MP 0/0 Hu  0 $ 536 room=.
+-> s
+T2338 mode=game_loop           Fili the Stout(dwa) F7@( 9,14) HP 58/148 MP 0/0 Hu  0 $ 536 room=.
+-> w
+T2339 mode=game_loop           Fili the Stout(dwa) F7@( 8,14) HP 56/148 MP 0/0 Hu  0 $ 536 room=.
+-> w
+T2340 mode=chest_mode          Fili the Stout(dwa) F7@( 7,14) HP 54/148 MP 0/0 Hu  0 $ 536 room=C
+-> o
+T2341 mode=death_screen        Fili the Stout(dwa) F7@( 7,14) HP -5/148 MP 0/0 Hu  0 $ 536 room=C
 
-=== run finished: turns=1523 floor=7 hp=-21/104 gold=346 alive=False mode=death_screen ===
+=== run finished: turns=2341 floor=7 hp=-5/148 gold=536 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/27182_dwarf.html

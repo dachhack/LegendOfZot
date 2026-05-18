@@ -2945,1764 +2945,454 @@ T1463 mode=inventory           Aragorn of Arnor(hum) F2@(18,16) HP 50/50 MP 0/0 
 T1464 mode=game_loop           Aragorn of Arnor(hum) F2@(18,16) HP 50/50 MP 0/0 Hu 59 $ 901 room=.
 -> l
 T1465 mode=game_loop           Aragorn of Arnor(hum) F2@(18,16) HP 50/50 MP 0/0 Hu 59 $ 901 room=.
--> e
-T1466 mode=game_loop           Aragorn of Arnor(hum) F2@(19,16) HP 50/50 MP 0/0 Hu 58 $ 901 room=.
+-> n
+T1466 mode=garden_mode         Aragorn of Arnor(hum) F2@(18,15) HP 50/50 MP 0/0 Hu 58 $ 901 room=G
+-> h
+T1467 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 50/50 MP 0/0 Hu 58 $ 901 room=.
 -> l
-T1467 mode=game_loop           Aragorn of Arnor(hum) F2@(19,16) HP 50/50 MP 0/0 Hu 58 $ 901 room=.
--> n
-T1468 mode=altar_mode          Aragorn of Arnor(hum) F2@(19,15) HP 50/50 MP 0/0 Hu 57 $ 901 room=A
+T1468 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 50/50 MP 0/0 Hu 58 $ 901 room=.
+-> e
+T1469 mode=altar_mode          Aragorn of Arnor(hum) F2@(19,15) HP 50/50 MP 0/0 Hu 57 $ 901 room=A
 -> pray
-T1469 mode=game_loop           Aragorn of Arnor(hum) F2@(19,15) HP 50/50 MP 0/0 Hu 57 $ 901 room=.
+T1470 mode=game_loop           Aragorn of Arnor(hum) F2@(19,15) HP 50/50 MP 0/0 Hu 57 $ 901 room=.
+-> s
+T1471 mode=game_loop           Aragorn of Arnor(hum) F2@(19,16) HP 50/50 MP 0/0 Hu 57 $ 901 room=.
 -> n
-T1470 mode=game_loop           Aragorn of Arnor(hum) F2@(19,14) HP 50/50 MP 0/0 Hu 57 $ 901 room=.
+T1472 mode=game_loop           Aragorn of Arnor(hum) F2@(19,15) HP 50/50 MP 0/0 Hu 56 $ 901 room=.
 -> n
-T1471 mode=game_loop           Aragorn of Arnor(hum) F2@(19,13) HP 50/50 MP 0/0 Hu 56 $ 901 room=.
--> w
-T1472 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 55 $ 901 room=.
--> w
-T1473 mode=game_loop           Aragorn of Arnor(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 54 $ 901 room=.
+T1473 mode=game_loop           Aragorn of Arnor(hum) F2@(19,14) HP 50/50 MP 0/0 Hu 55 $ 901 room=.
+-> n
+T1474 mode=game_loop           Aragorn of Arnor(hum) F2@(19,13) HP 50/50 MP 0/0 Hu 54 $ 901 room=.
 -> l
-T1474 mode=game_loop           Aragorn of Arnor(hum) F2@(17,13) HP 50/50 MP 0/0 Hu 54 $ 901 room=.
+T1475 mode=game_loop           Aragorn of Arnor(hum) F2@(19,13) HP 50/50 MP 0/0 Hu 54 $ 901 room=.
+-> w
+T1476 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 50/50 MP 0/0 Hu 54 $ 901 room=.
 -> n
-T1475 mode=pool_mode           Aragorn of Arnor(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 54 $ 901 room=P
+T1477 mode=game_loop           Aragorn of Arnor(hum) F2@(18,12) HP 50/50 MP 0/0 Hu 53 $ 901 room=.
+-> w
+T1478 mode=pool_mode           Aragorn of Arnor(hum) F2@(17,12) HP 50/50 MP 0/0 Hu 52 $ 901 room=P
 -> dr
-T1476 mode=game_loop           Aragorn of Arnor(hum) F2@(17,12) HP 50/54 MP 0/0 Hu 54 $ 901 room=.
--> n
-T1477 mode=game_loop           Aragorn of Arnor(hum) F2@(17,11) HP 50/54 MP 0/0 Hu 53 $ 901 room=.
--> w
-T1478 mode=combat_mode         Aragorn of Arnor(hum) F2@(16,11) HP 50/54 MP 0/0 Hu 52 $ 901 room=M vs Slime Mold(L1 HP15/15)
--> a
-T1479 mode=combat_victory      Aragorn of Arnor(hum) F2@(16,11) HP 50/54 MP 0/0 Hu 52 $ 907 room=.
--> back
-T1480 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 50/54 MP 0/0 Hu 52 $ 907 room=.
+T1479 mode=game_loop           Aragorn of Arnor(hum) F2@(17,12) HP 50/54 MP 0/0 Hu 52 $ 901 room=.
 -> s
-T1481 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 50/54 MP 0/0 Hu 52 $ 907 room=.
+T1480 mode=game_loop           Aragorn of Arnor(hum) F2@(17,13) HP 50/54 MP 0/0 Hu 52 $ 901 room=.
 -> w
-T1482 mode=game_loop           Aragorn of Arnor(hum) F2@(15,12) HP 50/54 MP 0/0 Hu 51 $ 907 room=.
--> w
-T1483 mode=combat_mode         Aragorn of Arnor(hum) F2@(14,12) HP 50/54 MP 0/0 Hu 50 $ 907 room=M vs Kobold(L1 HP8/8)
--> a
-T1484 mode=combat_victory      Aragorn of Arnor(hum) F2@(14,12) HP 50/54 MP 0/0 Hu 50 $ 923 room=.
--> back
-T1485 mode=game_loop           Aragorn of Arnor(hum) F2@(14,12) HP 50/54 MP 0/0 Hu 50 $ 923 room=.
+T1481 mode=game_loop           Aragorn of Arnor(hum) F2@(16,13) HP 50/54 MP 0/0 Hu 51 $ 901 room=.
 -> n
-T1486 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 50/54 MP 0/0 Hu 50 $ 923 room=.
+T1482 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 50/54 MP 0/0 Hu 50 $ 901 room=.
 -> w
-T1487 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 50/54 MP 0/0 Hu 49 $ 923 room=.
+T1483 mode=game_loop           Aragorn of Arnor(hum) F2@(15,12) HP 50/54 MP 0/0 Hu 50 $ 901 room=.
+-> n
+T1484 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 50/54 MP 0/0 Hu 49 $ 901 room=.
 -> i
-T1488 mode=inventory           Aragorn of Arnor(hum) F2@(13,11) HP 50/54 MP 0/0 Hu 49 $ 923 room=.
+T1485 mode=inventory           Aragorn of Arnor(hum) F2@(15,11) HP 50/54 MP 0/0 Hu 49 $ 901 room=.
 -> eat1
-T1489 mode=inventory           Aragorn of Arnor(hum) F2@(13,11) HP 50/54 MP 0/0 Hu 99 $ 923 room=.
+T1486 mode=inventory           Aragorn of Arnor(hum) F2@(15,11) HP 50/54 MP 0/0 Hu 99 $ 901 room=.
 -> x
-T1490 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 50/54 MP 0/0 Hu 99 $ 923 room=.
--> w
-T1491 mode=game_loop           Aragorn of Arnor(hum) F2@(12,11) HP 50/54 MP 0/0 Hu 98 $ 923 room=.
+T1487 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 50/54 MP 0/0 Hu 99 $ 901 room=.
 -> n
-T1492 mode=altar_mode          Aragorn of Arnor(hum) F2@(12,10) HP 51/54 MP 0/0 Hu 97 $ 923 room=A
--> pray
-T1493 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 51/54 MP 0/0 Hu 97 $ 929 room=.
--> n
-T1494 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 51/54 MP 0/0 Hu 97 $ 929 room=.
--> e
-T1495 mode=altar_mode          Aragorn of Arnor(hum) F2@(13, 9) HP 52/54 MP 0/0 Hu 96 $ 929 room=A
--> pray
-T1496 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 52/54 MP 0/0 Hu 96 $ 929 room=.
--> e
-T1497 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 52/54 MP 0/0 Hu 95 $ 929 room=.
--> s
-T1498 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 53/54 MP 0/0 Hu 95 $ 929 room=.
--> s
-T1499 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 53/54 MP 0/0 Hu 94 $ 929 room=.
--> w
-T1500 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 54/54 MP 0/0 Hu 93 $ 929 room=.
--> n
-T1501 mode=combat_mode         Aragorn of Arnor(hum) F2@(13,10) HP 54/54 MP 0/0 Hu 93 $ 929 room=M vs Orc(L1 HP50/50)
+T1488 mode=warp_mode           Aragorn of Arnor(hum) F2@(15,10) HP 50/54 MP 0/0 Hu 98 $ 901 room=W
+-> y
+T1489 mode=combat_mode         Aragorn of Arnor(hum) F4@( 4, 5) HP 50/54 MP 0/0 Hu 98 $ 901 room=M vs Giant Centipede(L3 HP16/16)
 -> a
-T1502 mode=combat_mode         Aragorn of Arnor(hum) F2@(13,10) HP 49/54 MP 0/0 Hu 93 $ 929 room=M vs Orc(L1 HP28/50)
+T1490 mode=combat_mode         Aragorn of Arnor(hum) F4@( 4, 5) HP 50/54 MP 0/0 Hu 98 $ 901 room=M vs Giant Centipede(L3 HP16/16)
 -> a
-T1503 mode=combat_mode         Aragorn of Arnor(hum) F2@(13,10) HP 44/54 MP 0/0 Hu 93 $ 929 room=M vs Orc(L1 HP28/50)
--> a
-T1504 mode=combat_mode         Aragorn of Arnor(hum) F2@(13,10) HP 39/54 MP 0/0 Hu 93 $ 929 room=M vs Orc(L1 HP28/50)
--> a
-T1505 mode=combat_mode         Aragorn of Arnor(hum) F2@(13,10) HP 39/54 MP 0/0 Hu 93 $ 929 room=M vs Orc(L1 HP6/50)
--> a
-T1506 mode=combat_victory      Aragorn of Arnor(hum) F2@(13,10) HP 39/64 MP 0/0 Hu 93 $ 943 room=.
+T1491 mode=combat_victory      Aragorn of Arnor(hum) F4@( 4, 5) HP 49/64 MP 0/0 Hu 98 $ 921 room=.
 -> back
-T1507 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 39/64 MP 0/0 Hu 93 $ 943 room=.
+T1492 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 49/64 MP 0/0 Hu 98 $ 921 room=.
 -> i
-T1508 mode=inventory           Aragorn of Arnor(hum) F2@(13,10) HP 39/64 MP 0/0 Hu 93 $ 943 room=.
+T1493 mode=inventory           Aragorn of Arnor(hum) F4@( 4, 5) HP 49/64 MP 0/0 Hu 98 $ 921 room=.
 -> u9
-T1509 mode=inventory           Aragorn of Arnor(hum) F2@(13,10) HP 39/64 MP 0/0 Hu 93 $ 943 room=.
+T1494 mode=inventory           Aragorn of Arnor(hum) F4@( 4, 5) HP 49/64 MP 0/0 Hu 98 $ 921 room=.
 -> x
-T1510 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 39/64 MP 0/0 Hu 93 $ 943 room=.
--> w
-T1511 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 39/64 MP 0/0 Hu 92 $ 943 room=.
+T1495 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 49/64 MP 0/0 Hu 98 $ 921 room=.
 -> n
-T1512 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 40/64 MP 0/0 Hu 91 $ 943 room=.
--> e
-T1513 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 40/64 MP 0/0 Hu 90 $ 943 room=.
--> e
-T1514 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 41/64 MP 0/0 Hu 90 $ 943 room=.
--> s
-T1515 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 41/64 MP 0/0 Hu 89 $ 943 room=.
--> s
-T1516 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 42/64 MP 0/0 Hu 88 $ 943 room=.
--> s
-T1517 mode=game_loop           Aragorn of Arnor(hum) F2@(14,12) HP 42/64 MP 0/0 Hu 88 $ 943 room=.
--> e
-T1518 mode=game_loop           Aragorn of Arnor(hum) F2@(15,12) HP 43/64 MP 0/0 Hu 87 $ 943 room=.
--> e
-T1519 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 43/64 MP 0/0 Hu 86 $ 943 room=.
+T1496 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 50/64 MP 0/0 Hu 97 $ 921 room=.
 -> n
-T1520 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 44/64 MP 0/0 Hu 86 $ 943 room=.
--> w
-T1521 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 44/64 MP 0/0 Hu 85 $ 943 room=.
--> w
-T1522 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 44/64 MP 0/0 Hu 84 $ 943 room=.
+T1497 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 3) HP 50/64 MP 0/0 Hu 97 $ 921 room=.
 -> n
-T1523 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 44/64 MP 0/0 Hu 83 $ 943 room=.
+T1498 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 2) HP 51/64 MP 0/0 Hu 96 $ 921 room=.
+-> e
+T1499 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 2) HP 51/64 MP 0/0 Hu 95 $ 921 room=.
 -> n
-T1524 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 45/64 MP 0/0 Hu 83 $ 943 room=.
+T1500 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 1) HP 52/64 MP 0/0 Hu 95 $ 921 room=.
 -> w
-T1525 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 45/64 MP 0/0 Hu 82 $ 943 room=.
--> w
-T1526 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 45/64 MP 0/0 Hu 81 $ 943 room=.
+T1501 mode=oracle_mode         Aragorn of Arnor(hum) F4@( 4, 1) HP 52/64 MP 0/0 Hu 94 $ 921 room=O
+-> e
+T1502 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 1) HP 53/64 MP 0/0 Hu 93 $ 921 room=.
 -> s
-T1527 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 45/64 MP 0/0 Hu 81 $ 943 room=.
--> e
-T1528 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 46/64 MP 0/0 Hu 80 $ 943 room=.
--> e
-T1529 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 46/64 MP 0/0 Hu 79 $ 943 room=.
--> s
-T1530 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 46/64 MP 0/0 Hu 79 $ 943 room=.
--> e
-T1531 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 46/64 MP 0/0 Hu 78 $ 943 room=.
--> e
-T1532 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 47/64 MP 0/0 Hu 77 $ 943 room=.
--> e
-T1533 mode=game_loop           Aragorn of Arnor(hum) F2@(17,11) HP 47/64 MP 0/0 Hu 76 $ 943 room=.
--> s
-T1534 mode=game_loop           Aragorn of Arnor(hum) F2@(17,12) HP 47/64 MP 0/0 Hu 76 $ 943 room=.
+T1503 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 2) HP 53/64 MP 0/0 Hu 93 $ 921 room=.
 -> w
-T1535 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 47/64 MP 0/0 Hu 75 $ 943 room=.
+T1504 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 2) HP 54/64 MP 0/0 Hu 92 $ 921 room=.
+-> s
+T1505 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 3) HP 54/64 MP 0/0 Hu 91 $ 921 room=.
+-> s
+T1506 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 55/64 MP 0/0 Hu 90 $ 921 room=.
+-> s
+T1507 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 55/64 MP 0/0 Hu 90 $ 921 room=.
+-> e
+T1508 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 5) HP 56/64 MP 0/0 Hu 89 $ 921 room=.
+-> e
+T1509 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 5) HP 56/64 MP 0/0 Hu 88 $ 921 room=.
+-> s
+T1510 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 57/64 MP 0/0 Hu 88 $ 921 room=.
+-> e
+T1511 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 6) HP 57/64 MP 0/0 Hu 87 $ 921 room=.
+-> e
+T1512 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 6) HP 58/64 MP 0/0 Hu 86 $ 921 room=.
+-> s
+T1513 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 58/64 MP 0/0 Hu 86 $ 921 room=.
 -> w
-T1536 mode=game_loop           Aragorn of Arnor(hum) F2@(15,12) HP 48/64 MP 0/0 Hu 74 $ 943 room=.
+T1514 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 59/64 MP 0/0 Hu 85 $ 921 room=.
+-> w
+T1515 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 59/64 MP 0/0 Hu 84 $ 921 room=.
 -> n
-T1537 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 48/64 MP 0/0 Hu 74 $ 943 room=.
--> w
-T1538 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 48/64 MP 0/0 Hu 73 $ 943 room=.
--> s
-T1539 mode=game_loop           Aragorn of Arnor(hum) F2@(14,12) HP 48/64 MP 0/0 Hu 72 $ 943 room=.
--> n
-T1540 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 49/64 MP 0/0 Hu 72 $ 943 room=.
--> n
-T1541 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 49/64 MP 0/0 Hu 71 $ 943 room=.
+T1516 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 59/64 MP 0/0 Hu 83 $ 921 room=.
 -> e
-T1542 mode=warp_mode           Aragorn of Arnor(hum) F2@(15,10) HP 49/64 MP 0/0 Hu 70 $ 943 room=W
--> y
-T1543 mode=game_loop           Aragorn of Arnor(hum) F2@(15,10) HP 49/64 MP 0/0 Hu 70 $ 943 room=W
--> s
-T1544 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 49/64 MP 0/0 Hu 69 $ 943 room=.
--> e
-T1545 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 50/64 MP 0/0 Hu 69 $ 943 room=.
--> s
-T1546 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 50/64 MP 0/0 Hu 68 $ 943 room=.
--> s
-T1547 mode=game_loop           Aragorn of Arnor(hum) F2@(16,13) HP 50/64 MP 0/0 Hu 67 $ 943 room=.
--> e
-T1548 mode=game_loop           Aragorn of Arnor(hum) F2@(17,13) HP 50/64 MP 0/0 Hu 67 $ 943 room=.
--> e
-T1549 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 51/64 MP 0/0 Hu 66 $ 943 room=.
--> s
-T1550 mode=game_loop           Aragorn of Arnor(hum) F2@(18,14) HP 51/64 MP 0/0 Hu 65 $ 943 room=.
--> s
-T1551 mode=garden_mode         Aragorn of Arnor(hum) F2@(18,15) HP 51/64 MP 0/0 Hu 65 $ 943 room=G
--> h
-T1552 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 51/64 MP 0/0 Hu 65 $ 943 room=.
--> w
-T1553 mode=dungeon_mode        Aragorn of Arnor(hum) F2@(17,15) HP 51/64 MP 0/0 Hu 64 $ 943 room=N
--> u
-T1554 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 51/64 MP 0/0 Hu 64 $ 943 room=N
--> w
-T1555 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 52/64 MP 0/0 Hu 63 $ 943 room=.
--> s
-T1556 mode=game_loop           Aragorn of Arnor(hum) F2@(16,16) HP 52/64 MP 0/0 Hu 62 $ 943 room=.
--> e
-T1557 mode=game_loop           Aragorn of Arnor(hum) F2@(17,16) HP 52/64 MP 0/0 Hu 62 $ 943 room=.
--> e
-T1558 mode=game_loop           Aragorn of Arnor(hum) F2@(18,16) HP 52/64 MP 0/0 Hu 61 $ 943 room=.
+T1517 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 6) HP 59/64 MP 0/0 Hu 83 $ 921 room=.
 -> n
-T1559 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 53/64 MP 0/0 Hu 60 $ 943 room=.
--> w
-T1560 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 53/64 MP 0/0 Hu 60 $ 943 room=N
--> w
-T1561 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 53/64 MP 0/0 Hu 59 $ 943 room=.
--> s
-T1562 mode=game_loop           Aragorn of Arnor(hum) F2@(16,16) HP 53/64 MP 0/0 Hu 58 $ 943 room=.
--> e
-T1563 mode=game_loop           Aragorn of Arnor(hum) F2@(17,16) HP 53/64 MP 0/0 Hu 58 $ 943 room=.
--> e
-T1564 mode=game_loop           Aragorn of Arnor(hum) F2@(18,16) HP 53/64 MP 0/0 Hu 57 $ 943 room=.
--> n
-T1565 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 53/64 MP 0/0 Hu 56 $ 943 room=.
--> w
-T1566 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 53/64 MP 0/0 Hu 55 $ 943 room=N
--> w
-T1567 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 53/64 MP 0/0 Hu 55 $ 943 room=.
--> w
-T1568 mode=library_mode        Aragorn of Arnor(hum) F2@(15,15) HP 53/64 MP 0/0 Hu 54 $ 943 room=L
--> r
-T1569 mode=library_read_decision_mode Aragorn of Arnor(hum) F2@(15,15) HP 53/64 MP 0/0 Hu 54 $ 943 room=L
--> y
-T1570 mode=game_loop           Aragorn of Arnor(hum) F2@(15,15) HP 53/64 MP 0/0 Hu 54 $ 943 room=.
--> e
-T1571 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 53/64 MP 0/0 Hu 53 $ 943 room=.
--> s
-T1572 mode=game_loop           Aragorn of Arnor(hum) F2@(16,16) HP 53/64 MP 0/0 Hu 53 $ 943 room=.
--> e
-T1573 mode=game_loop           Aragorn of Arnor(hum) F2@(17,16) HP 53/64 MP 0/0 Hu 52 $ 943 room=.
--> n
-T1574 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 53/64 MP 0/0 Hu 51 $ 943 room=N
--> e
-T1575 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 53/64 MP 0/0 Hu 51 $ 943 room=.
--> n
-T1576 mode=game_loop           Aragorn of Arnor(hum) F2@(18,14) HP 53/64 MP 0/0 Hu 50 $ 943 room=.
--> n
-T1577 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 53/64 MP 0/0 Hu 49 $ 943 room=.
--> i
-T1578 mode=inventory           Aragorn of Arnor(hum) F2@(18,13) HP 53/64 MP 0/0 Hu 49 $ 943 room=.
--> eat2
-T1579 mode=inventory           Aragorn of Arnor(hum) F2@(18,13) HP 53/64 MP 0/0 Hu 59 $ 943 room=.
--> x
-T1580 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 53/64 MP 0/0 Hu 59 $ 943 room=.
--> n
-T1581 mode=game_loop           Aragorn of Arnor(hum) F2@(18,12) HP 53/64 MP 0/0 Hu 58 $ 943 room=.
--> w
-T1582 mode=game_loop           Aragorn of Arnor(hum) F2@(17,12) HP 53/64 MP 0/0 Hu 58 $ 943 room=.
--> n
-T1583 mode=game_loop           Aragorn of Arnor(hum) F2@(17,11) HP 53/64 MP 0/0 Hu 57 $ 943 room=.
--> w
-T1584 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 53/64 MP 0/0 Hu 56 $ 943 room=.
--> w
-T1585 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 53/64 MP 0/0 Hu 56 $ 943 room=.
--> w
-T1586 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 53/64 MP 0/0 Hu 55 $ 943 room=.
--> n
-T1587 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 53/64 MP 0/0 Hu 54 $ 943 room=.
--> w
-T1588 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 53/64 MP 0/0 Hu 54 $ 943 room=.
--> w
-T1589 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 53/64 MP 0/0 Hu 53 $ 943 room=.
--> n
-T1590 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 53/64 MP 0/0 Hu 52 $ 943 room=.
--> e
-T1591 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 53/64 MP 0/0 Hu 51 $ 943 room=.
--> e
-T1592 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 53/64 MP 0/0 Hu 51 $ 943 room=.
--> s
-T1593 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 53/64 MP 0/0 Hu 50 $ 943 room=.
--> w
-T1594 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 53/64 MP 0/0 Hu 49 $ 943 room=.
--> i
-T1595 mode=inventory           Aragorn of Arnor(hum) F2@(13,10) HP 53/64 MP 0/0 Hu 49 $ 943 room=.
--> eat1
-T1596 mode=inventory           Aragorn of Arnor(hum) F2@(13,10) HP 53/64 MP 0/0 Hu 99 $ 943 room=.
--> x
-T1597 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 53/64 MP 0/0 Hu 99 $ 943 room=.
--> w
-T1598 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 53/64 MP 0/0 Hu 99 $ 943 room=.
--> n
-T1599 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 54/64 MP 0/0 Hu 98 $ 943 room=.
--> e
-T1600 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 54/64 MP 0/0 Hu 97 $ 943 room=.
--> e
-T1601 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 55/64 MP 0/0 Hu 97 $ 943 room=.
--> s
-T1602 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 55/64 MP 0/0 Hu 96 $ 943 room=.
--> w
-T1603 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 56/64 MP 0/0 Hu 95 $ 943 room=.
--> w
-T1604 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 56/64 MP 0/0 Hu 94 $ 943 room=.
--> n
-T1605 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 57/64 MP 0/0 Hu 94 $ 943 room=.
--> w
-T1606 mode=combat_mode         Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 943 room=M vs Sewer Rat(L1 HP10/10)
--> a
-T1607 mode=combat_victory      Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 949 room=.
--> back
-T1608 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 949 room=.
--> i
-T1609 mode=inventory           Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 949 room=.
--> u9
-T1610 mode=inventory           Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 949 room=.
--> x
-T1611 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 57/64 MP 0/0 Hu 93 $ 949 room=.
--> w
-T1612 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 58/64 MP 0/0 Hu 92 $ 949 room=.
--> s
-T1613 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 58/64 MP 0/0 Hu 92 $ 949 room=.
--> e
-T1614 mode=game_loop           Aragorn of Arnor(hum) F2@(11,10) HP 59/64 MP 0/0 Hu 91 $ 949 room=.
--> e
-T1615 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 59/64 MP 0/0 Hu 90 $ 949 room=.
--> e
-T1616 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 60/64 MP 0/0 Hu 90 $ 949 room=.
--> n
-T1617 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 60/64 MP 0/0 Hu 89 $ 949 room=.
--> w
-T1618 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 61/64 MP 0/0 Hu 88 $ 949 room=.
--> w
-T1619 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 61/64 MP 0/0 Hu 87 $ 949 room=.
--> w
-T1620 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 62/64 MP 0/0 Hu 87 $ 949 room=.
--> s
-T1621 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 62/64 MP 0/0 Hu 86 $ 949 room=.
--> e
-T1622 mode=game_loop           Aragorn of Arnor(hum) F2@(11,10) HP 63/64 MP 0/0 Hu 85 $ 949 room=.
--> e
-T1623 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 63/64 MP 0/0 Hu 85 $ 949 room=.
--> s
-T1624 mode=game_loop           Aragorn of Arnor(hum) F2@(12,11) HP 63/64 MP 0/0 Hu 84 $ 949 room=.
--> e
-T1625 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 63/64 MP 0/0 Hu 83 $ 949 room=.
--> n
-T1626 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 64/64 MP 0/0 Hu 83 $ 949 room=.
--> n
-T1627 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 64/64 MP 0/0 Hu 82 $ 949 room=.
--> w
-T1628 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 81 $ 949 room=.
--> w
-T1629 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 80 $ 949 room=.
--> w
-T1630 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 80 $ 949 room=.
--> s
-T1631 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 79 $ 949 room=.
--> s
-T1632 mode=game_loop           Aragorn of Arnor(hum) F2@(10,11) HP 64/64 MP 0/0 Hu 78 $ 949 room=.
--> s
-T1633 mode=game_loop           Aragorn of Arnor(hum) F2@(10,12) HP 64/64 MP 0/0 Hu 78 $ 949 room=.
--> w
-T1634 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 77 $ 949 room=.
--> n
-T1635 mode=pool_mode           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 76 $ 949 room=P
--> dr
-T1636 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 76 $ 949 room=.
--> n
-T1637 mode=pool_mode           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 76 $ 949 room=P
--> dr
-T1638 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 76 $ 949 room=.
--> e
-T1639 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 75 $ 949 room=.
--> n
-T1640 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 74 $ 949 room=.
--> w
-T1641 mode=garden_mode         Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 73 $ 949 room=G
--> h
-T1642 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 73 $ 949 room=.
--> n
-T1643 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 73 $ 949 room=.
--> w
-T1644 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 8) HP 64/64 MP 0/0 Hu 72 $ 949 room=.
--> s
-T1645 mode=chest_mode          Aragorn of Arnor(hum) F2@( 8, 9) HP 64/64 MP 0/0 Hu 71 $ 949 room=C
--> n
-T1646 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 8) HP 64/64 MP 0/0 Hu 71 $ 949 room=.
--> n
-T1647 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 7) HP 64/64 MP 0/0 Hu 70 $ 949 room=.
--> n
-T1648 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 6) HP 64/64 MP 0/0 Hu 69 $ 949 room=.
--> w
-T1649 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 6) HP 64/64 MP 0/0 Hu 69 $ 949 room=.
--> w
-T1650 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 6) HP 64/64 MP 0/0 Hu 68 $ 949 room=.
--> s
-T1651 mode=stairs_down_mode    Aragorn of Arnor(hum) F2@( 6, 7) HP 64/64 MP 0/0 Hu 67 $ 949 room=D
--> n
-T1652 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 6) HP 64/64 MP 0/0 Hu 66 $ 949 room=.
--> w
-T1653 mode=game_loop           Aragorn of Arnor(hum) F2@( 5, 6) HP 64/64 MP 0/0 Hu 66 $ 949 room=.
--> w
-T1654 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 6) HP 64/64 MP 0/0 Hu 65 $ 949 room=.
--> s
-T1655 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 7) HP 64/64 MP 0/0 Hu 64 $ 949 room=.
--> s
-T1656 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 8) HP 64/64 MP 0/0 Hu 64 $ 949 room=.
--> e
-T1657 mode=game_loop           Aragorn of Arnor(hum) F2@( 5, 8) HP 64/64 MP 0/0 Hu 63 $ 949 room=.
--> n
-T1658 mode=game_loop           Aragorn of Arnor(hum) F2@( 5, 7) HP 64/64 MP 0/0 Hu 62 $ 949 room=.
--> e
-T1659 mode=stairs_down_mode    Aragorn of Arnor(hum) F2@( 6, 7) HP 64/64 MP 0/0 Hu 62 $ 949 room=D
--> n
-T1660 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 6) HP 64/64 MP 0/0 Hu 61 $ 949 room=.
--> e
-T1661 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 6) HP 64/64 MP 0/0 Hu 60 $ 949 room=.
--> e
-T1662 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 6) HP 64/64 MP 0/0 Hu 59 $ 949 room=.
--> s
-T1663 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 7) HP 64/64 MP 0/0 Hu 59 $ 949 room=.
--> e
-T1664 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 58 $ 949 room=.
--> s
-T1665 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 57 $ 949 room=.
--> s
-T1666 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 57 $ 949 room=.
--> s
-T1667 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 56 $ 949 room=.
--> s
-T1668 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 55 $ 949 room=.
--> s
-T1669 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 55 $ 949 room=.
--> e
-T1670 mode=game_loop           Aragorn of Arnor(hum) F2@(10,12) HP 64/64 MP 0/0 Hu 54 $ 949 room=.
--> n
-T1671 mode=game_loop           Aragorn of Arnor(hum) F2@(10,11) HP 64/64 MP 0/0 Hu 53 $ 949 room=.
--> n
-T1672 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 52 $ 949 room=.
--> n
-T1673 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 52 $ 949 room=.
--> e
-T1674 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 51 $ 949 room=.
--> e
-T1675 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 50 $ 949 room=.
--> s
-T1676 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 64/64 MP 0/0 Hu 50 $ 949 room=.
--> s
-T1677 mode=game_loop           Aragorn of Arnor(hum) F2@(12,11) HP 64/64 MP 0/0 Hu 49 $ 949 room=.
--> i
-T1678 mode=inventory           Aragorn of Arnor(hum) F2@(12,11) HP 64/64 MP 0/0 Hu 49 $ 949 room=.
--> eat2
-T1679 mode=inventory           Aragorn of Arnor(hum) F2@(12,11) HP 64/64 MP 0/0 Hu 61 $ 949 room=.
--> x
-T1680 mode=game_loop           Aragorn of Arnor(hum) F2@(12,11) HP 64/64 MP 0/0 Hu 61 $ 949 room=.
--> e
-T1681 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 64/64 MP 0/0 Hu 60 $ 949 room=.
--> n
-T1682 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 64/64 MP 0/0 Hu 60 $ 949 room=.
--> n
-T1683 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 64/64 MP 0/0 Hu 59 $ 949 room=.
--> w
-T1684 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 58 $ 949 room=.
--> w
-T1685 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 57 $ 949 room=.
--> w
-T1686 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 57 $ 949 room=.
--> s
-T1687 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 56 $ 949 room=.
--> s
-T1688 mode=game_loop           Aragorn of Arnor(hum) F2@(10,11) HP 64/64 MP 0/0 Hu 55 $ 949 room=.
--> w
-T1689 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 55 $ 949 room=.
--> s
-T1690 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 54 $ 949 room=.
--> e
-T1691 mode=game_loop           Aragorn of Arnor(hum) F2@(10,12) HP 64/64 MP 0/0 Hu 53 $ 949 room=.
--> n
-T1692 mode=game_loop           Aragorn of Arnor(hum) F2@(10,11) HP 64/64 MP 0/0 Hu 53 $ 949 room=.
--> n
-T1693 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 52 $ 949 room=.
--> n
-T1694 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 51 $ 949 room=.
--> w
-T1695 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 50 $ 949 room=.
--> s
-T1696 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 50 $ 949 room=.
--> s
-T1697 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 49 $ 949 room=.
--> i
-T1698 mode=inventory           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 49 $ 949 room=.
--> eat1
-T1699 mode=inventory           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 99 $ 949 room=.
--> x
-T1700 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 99 $ 949 room=.
--> s
-T1701 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 98 $ 949 room=.
--> w
-T1702 mode=combat_mode         Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 98 $ 949 room=M vs Spore Puff(L1 HP18/18)
--> a
-T1703 mode=combat_victory      Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 98 $ 1209 room=.
--> back
-T1704 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 98 $ 1209 room=.
--> s
-T1705 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,13) HP 64/64 MP 0/0 Hu 97 $ 1209 room=.
--> w
-T1706 mode=combat_mode         Aragorn of Arnor(hum) F2@( 7,13) HP 64/64 MP 0/0 Hu 96 $ 1209 room=M vs Spore Puff(L1 HP18/18)
--> f
-T1707 mode=flee_direction_mode Aragorn of Arnor(hum) F2@( 7,13) HP 64/64 MP 0/0 Hu 96 $ 1209 room=M
--> e
-T1708 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,13) HP 64/64 MP 0/0 Hu 96 $ 1209 room=.
--> n
-T1709 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 96 $ 1209 room=.
--> e
-T1710 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 95 $ 1209 room=.
--> n
-T1711 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 94 $ 1209 room=.
--> n
-T1712 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 93 $ 1209 room=.
--> n
-T1713 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 93 $ 1209 room=.
--> w
-T1714 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 9) HP 64/64 MP 0/0 Hu 92 $ 1209 room=C
--> w
-T1715 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 9) HP 64/64 MP 0/0 Hu 91 $ 1209 room=.
--> s
-T1716 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,10) HP 64/64 MP 0/0 Hu 91 $ 1209 room=.
--> w
-T1717 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,10) HP 64/64 MP 0/0 Hu 90 $ 1209 room=.
--> w
-T1718 mode=chest_mode          Aragorn of Arnor(hum) F2@( 5,10) HP 64/64 MP 0/0 Hu 89 $ 1209 room=C
--> e
-T1719 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,10) HP 64/64 MP 0/0 Hu 89 $ 1209 room=.
--> n
-T1720 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 9) HP 64/64 MP 0/0 Hu 88 $ 1209 room=.
--> e
-T1721 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 9) HP 64/64 MP 0/0 Hu 87 $ 1209 room=.
--> s
-T1722 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,10) HP 64/64 MP 0/0 Hu 86 $ 1209 room=.
--> e
-T1723 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,10) HP 64/64 MP 0/0 Hu 86 $ 1209 room=.
--> e
-T1724 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 85 $ 1209 room=.
--> s
-T1725 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 84 $ 1209 room=.
--> s
-T1726 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 84 $ 1209 room=.
--> w
-T1727 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 83 $ 1209 room=.
--> w
-T1728 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,12) HP 64/64 MP 0/0 Hu 82 $ 1209 room=.
--> w
-T1729 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,12) HP 64/64 MP 0/0 Hu 82 $ 1209 room=.
--> w
-T1730 mode=chest_mode          Aragorn of Arnor(hum) F2@( 5,12) HP 64/64 MP 0/0 Hu 81 $ 1209 room=C
+T1518 mode=chest_mode          Aragorn of Arnor(hum) F4@( 7, 5) HP 60/64 MP 0/0 Hu 82 $ 921 room=C
 -> o
-T1731 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,12) HP 64/64 MP 0/0 Hu 81 $ 1209 room=.
--> n
-T1732 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,11) HP 64/64 MP 0/0 Hu 80 $ 1209 room=.
+T1519 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 5) HP 60/64 MP 0/0 Hu 82 $ 1021 room=.
 -> w
-T1733 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,11) HP 64/64 MP 0/0 Hu 79 $ 1209 room=.
+T1520 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 5) HP 60/64 MP 0/0 Hu 81 $ 1021 room=.
+-> n
+T1521 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 60/64 MP 0/0 Hu 81 $ 1021 room=.
+-> n
+T1522 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 60/64 MP 0/0 Hu 80 $ 1021 room=.
+-> e
+T1523 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 3) HP 61/64 MP 0/0 Hu 79 $ 1021 room=.
 -> s
-T1734 mode=garden_mode         Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 79 $ 1209 room=G
--> h
-T1735 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 79 $ 1209 room=.
--> s
-T1736 mode=chest_mode          Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 78 $ 1209 room=C
--> o
-T1737 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 78 $ 1289 room=.
--> w
-T1738 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 77 $ 1289 room=.
--> n
-T1739 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 77 $ 1289 room=.
--> s
-T1740 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 76 $ 1289 room=.
--> w
-T1741 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,13) HP 64/64 MP 0/0 Hu 75 $ 1289 room=.
--> s
-T1742 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,14) HP 64/64 MP 0/0 Hu 75 $ 1289 room=.
--> e
-T1743 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 74 $ 1289 room=.
--> e
-T1744 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 73 $ 1289 room=.
--> n
-T1745 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 72 $ 1289 room=.
--> e
-T1746 mode=library_mode        Aragorn of Arnor(hum) F2@( 5,13) HP 64/64 MP 0/0 Hu 72 $ 1289 room=L
--> r
-T1747 mode=library_read_decision_mode Aragorn of Arnor(hum) F2@( 5,13) HP 64/64 MP 0/0 Hu 72 $ 1289 room=L
--> y
-T1748 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,13) HP 64/64 MP 0/0 Hu 72 $ 1289 room=.
--> n
-T1749 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,12) HP 64/64 MP 0/0 Hu 71 $ 1289 room=.
--> e
-T1750 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,12) HP 64/64 MP 0/0 Hu 70 $ 1289 room=.
--> e
-T1751 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,12) HP 64/64 MP 0/0 Hu 70 $ 1289 room=.
--> e
-T1752 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 69 $ 1289 room=.
--> e
-T1753 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> i
-T1754 mode=inventory           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> u6
-T1755 mode=upgrade_scroll_mode Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> 1
-T1756 mode=inventory           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> x
-T1757 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,12) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> n
-T1758 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,11) HP 64/64 MP 0/0 Hu 68 $ 1289 room=.
--> w
-T1759 mode=oracle_mode         Aragorn of Arnor(hum) F2@( 8,11) HP 64/64 MP 0/0 Hu 67 $ 1289 room=O
--> n
-T1760 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,10) HP 64/64 MP 0/0 Hu 66 $ 1289 room=.
--> n
-T1761 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 9) HP 64/64 MP 0/0 Hu 65 $ 1289 room=C
--> e
-T1762 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 65 $ 1289 room=.
--> e
-T1763 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 64 $ 1289 room=.
--> s
-T1764 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 63 $ 1289 room=.
--> e
-T1765 mode=game_loop           Aragorn of Arnor(hum) F2@(11,10) HP 64/64 MP 0/0 Hu 63 $ 1289 room=.
--> n
-T1766 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 62 $ 1289 room=.
--> e
-T1767 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 61 $ 1289 room=.
--> e
-T1768 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 64/64 MP 0/0 Hu 61 $ 1289 room=.
--> e
-T1769 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 64/64 MP 0/0 Hu 60 $ 1289 room=.
--> s
-T1770 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 64/64 MP 0/0 Hu 59 $ 1289 room=.
--> s
-T1771 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 64/64 MP 0/0 Hu 58 $ 1289 room=.
--> w
-T1772 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 64/64 MP 0/0 Hu 58 $ 1289 room=.
--> n
-T1773 mode=game_loop           Aragorn of Arnor(hum) F2@(13,10) HP 64/64 MP 0/0 Hu 57 $ 1289 room=.
--> n
-T1774 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 64/64 MP 0/0 Hu 56 $ 1289 room=.
--> w
-T1775 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 56 $ 1289 room=.
--> w
-T1776 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 55 $ 1289 room=.
--> w
-T1777 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 54 $ 1289 room=.
--> w
-T1778 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 54 $ 1289 room=.
--> n
-T1779 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 53 $ 1289 room=.
--> n
-T1780 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 52 $ 1289 room=.
--> e
-T1781 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 7) HP 64/64 MP 0/0 Hu 51 $ 1289 room=.
--> s
-T1782 mode=combat_mode         Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 51 $ 1289 room=M vs Cockatrice(L1 HP25/25)
+T1524 mode=combat_mode         Aragorn of Arnor(hum) F4@( 7, 4) HP 61/64 MP 0/0 Hu 79 $ 1021 room=M vs Spore Puff(L3 HP19/19)
 -> a
-T1783 mode=combat_mode         Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 51 $ 1289 room=M vs Cockatrice(L1 HP1/25)
--> a
-T1784 mode=combat_victory      Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 51 $ 1303 room=.
+T1525 mode=combat_victory      Aragorn of Arnor(hum) F4@( 7, 4) HP 61/64 MP 0/0 Hu 79 $ 1053 room=.
 -> back
-T1785 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 51 $ 1303 room=.
+T1526 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 4) HP 61/64 MP 0/0 Hu 79 $ 1053 room=.
 -> s
-T1786 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 50 $ 1303 room=.
+T1527 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 5) HP 61/64 MP 0/0 Hu 78 $ 1053 room=.
+-> w
+T1528 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 5) HP 61/64 MP 0/0 Hu 77 $ 1053 room=.
+-> s
+T1529 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 62/64 MP 0/0 Hu 76 $ 1053 room=.
+-> s
+T1530 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 62/64 MP 0/0 Hu 76 $ 1053 room=.
 -> e
-T1787 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 49 $ 1303 room=.
--> i
-T1788 mode=inventory           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 49 $ 1303 room=.
--> eat1
-T1789 mode=inventory           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 99 $ 1303 room=.
--> x
-T1790 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 99 $ 1303 room=.
--> s
-T1791 mode=game_loop           Aragorn of Arnor(hum) F2@(11,10) HP 64/64 MP 0/0 Hu 99 $ 1303 room=.
--> w
-T1792 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 98 $ 1303 room=.
--> w
-T1793 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 97 $ 1303 room=.
--> n
-T1794 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 97 $ 1303 room=.
--> n
-T1795 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 96 $ 1303 room=.
--> n
-T1796 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 95 $ 1303 room=.
--> w
-T1797 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 7) HP 64/64 MP 0/0 Hu 94 $ 1303 room=.
--> n
-T1798 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 6) HP 64/64 MP 0/0 Hu 94 $ 1303 room=.
+T1531 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 62/64 MP 0/0 Hu 75 $ 1053 room=.
 -> e
-T1799 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 6) HP 64/64 MP 0/0 Hu 93 $ 1303 room=.
+T1532 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 62/64 MP 0/0 Hu 74 $ 1053 room=.
+-> n
+T1533 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 6) HP 63/64 MP 0/0 Hu 74 $ 1053 room=.
+-> w
+T1534 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 6) HP 63/64 MP 0/0 Hu 73 $ 1053 room=.
+-> w
+T1535 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 63/64 MP 0/0 Hu 72 $ 1053 room=.
 -> s
-T1800 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 92 $ 1303 room=.
--> s
-T1801 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 92 $ 1303 room=.
+T1536 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 63/64 MP 0/0 Hu 72 $ 1053 room=.
 -> e
-T1802 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 91 $ 1303 room=.
--> n
-T1803 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 7) HP 64/64 MP 0/0 Hu 90 $ 1303 room=.
--> s
-T1804 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 90 $ 1303 room=.
--> s
-T1805 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 89 $ 1303 room=.
--> w
-T1806 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 9) HP 64/64 MP 0/0 Hu 88 $ 1303 room=.
--> n
-T1807 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 8) HP 64/64 MP 0/0 Hu 87 $ 1303 room=.
--> n
-T1808 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 87 $ 1303 room=.
--> w
-T1809 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 7) HP 64/64 MP 0/0 Hu 86 $ 1303 room=.
--> n
-T1810 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 6) HP 64/64 MP 0/0 Hu 85 $ 1303 room=.
--> w
-T1811 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 6) HP 64/64 MP 0/0 Hu 85 $ 1303 room=.
--> s
-T1812 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 7) HP 64/64 MP 0/0 Hu 84 $ 1303 room=.
--> w
-T1813 mode=stairs_down_mode    Aragorn of Arnor(hum) F2@( 6, 7) HP 64/64 MP 0/0 Hu 83 $ 1303 room=D
--> n
-T1814 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 6) HP 64/64 MP 0/0 Hu 83 $ 1303 room=.
--> w
-T1815 mode=game_loop           Aragorn of Arnor(hum) F2@( 5, 6) HP 64/64 MP 0/0 Hu 82 $ 1303 room=.
--> w
-T1816 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 6) HP 64/64 MP 0/0 Hu 81 $ 1303 room=.
--> s
-T1817 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 7) HP 64/64 MP 0/0 Hu 80 $ 1303 room=.
--> s
-T1818 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 8) HP 64/64 MP 0/0 Hu 80 $ 1303 room=.
--> s
-T1819 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 9) HP 64/64 MP 0/0 Hu 79 $ 1303 room=.
--> s
-T1820 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,10) HP 64/64 MP 0/0 Hu 78 $ 1303 room=.
--> s
-T1821 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,11) HP 64/64 MP 0/0 Hu 78 $ 1303 room=.
+T1537 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 71 $ 1053 room=.
 -> e
-T1822 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,11) HP 64/64 MP 0/0 Hu 77 $ 1303 room=.
--> s
-T1823 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,12) HP 64/64 MP 0/0 Hu 76 $ 1303 room=.
--> s
-T1824 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,13) HP 64/64 MP 0/0 Hu 76 $ 1303 room=.
--> w
-T1825 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 75 $ 1303 room=.
--> s
-T1826 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 74 $ 1303 room=.
--> w
-T1827 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 73 $ 1303 room=.
--> w
-T1828 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,14) HP 64/64 MP 0/0 Hu 73 $ 1303 room=.
+T1538 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 70 $ 1053 room=.
 -> n
-T1829 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,13) HP 64/64 MP 0/0 Hu 72 $ 1303 room=.
+T1539 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 69 $ 1053 room=.
 -> e
-T1830 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 71 $ 1303 room=.
--> n
-T1831 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 71 $ 1303 room=.
+T1540 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 69 $ 1053 room=.
 -> e
-T1832 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 70 $ 1303 room=.
--> s
-T1833 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 69 $ 1303 room=.
--> s
-T1834 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 69 $ 1303 room=.
+T1541 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 6) HP 64/64 MP 0/0 Hu 68 $ 1053 room=.
+-> n
+T1542 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 67 $ 1053 room=.
 -> w
-T1835 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 68 $ 1303 room=.
+T1543 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 67 $ 1053 room=.
 -> n
-T1836 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 67 $ 1303 room=.
--> n
-T1837 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 66 $ 1303 room=.
--> e
-T1838 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 66 $ 1303 room=.
--> s
-T1839 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 65 $ 1303 room=.
--> s
-T1840 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 64 $ 1303 room=.
+T1544 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 66 $ 1053 room=.
 -> w
-T1841 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 64 $ 1303 room=.
--> w
-T1842 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,14) HP 64/64 MP 0/0 Hu 63 $ 1303 room=.
--> n
-T1843 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,13) HP 64/64 MP 0/0 Hu 62 $ 1303 room=.
--> e
-T1844 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 62 $ 1303 room=.
--> n
-T1845 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 61 $ 1303 room=.
--> e
-T1846 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 60 $ 1303 room=.
--> s
-T1847 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 59 $ 1303 room=.
--> s
-T1848 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 59 $ 1303 room=.
--> w
-T1849 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 58 $ 1303 room=.
--> w
-T1850 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,14) HP 64/64 MP 0/0 Hu 57 $ 1303 room=.
--> n
-T1851 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,13) HP 64/64 MP 0/0 Hu 57 $ 1303 room=.
--> e
-T1852 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 56 $ 1303 room=.
--> n
-T1853 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 55 $ 1303 room=.
--> e
-T1854 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 55 $ 1303 room=.
--> s
-T1855 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 54 $ 1303 room=.
--> s
-T1856 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 53 $ 1303 room=.
--> w
-T1857 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,14) HP 64/64 MP 0/0 Hu 52 $ 1303 room=.
--> w
-T1858 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,14) HP 64/64 MP 0/0 Hu 52 $ 1303 room=.
--> n
-T1859 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,13) HP 64/64 MP 0/0 Hu 51 $ 1303 room=.
--> e
-T1860 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,13) HP 64/64 MP 0/0 Hu 50 $ 1303 room=.
--> n
-T1861 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,12) HP 64/64 MP 0/0 Hu 50 $ 1303 room=.
--> e
-T1862 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 49 $ 1303 room=.
--> i
-T1863 mode=inventory           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 49 $ 1303 room=.
--> eat1
-T1864 mode=inventory           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 99 $ 1303 room=.
--> x
-T1865 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,12) HP 64/64 MP 0/0 Hu 99 $ 1303 room=.
--> s
-T1866 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,13) HP 64/64 MP 0/0 Hu 98 $ 1303 room=.
--> s
-T1867 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,14) HP 64/64 MP 0/0 Hu 98 $ 1303 room=.
--> e
-T1868 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,14) HP 64/64 MP 0/0 Hu 97 $ 1303 room=.
--> n
-T1869 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,13) HP 64/64 MP 0/0 Hu 96 $ 1303 room=.
--> n
-T1870 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,12) HP 64/64 MP 0/0 Hu 95 $ 1303 room=.
--> e
-T1871 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,12) HP 64/64 MP 0/0 Hu 95 $ 1303 room=.
--> e
-T1872 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,12) HP 64/64 MP 0/0 Hu 94 $ 1303 room=.
--> e
-T1873 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,12) HP 64/64 MP 0/0 Hu 93 $ 1303 room=.
--> n
-T1874 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,11) HP 64/64 MP 0/0 Hu 93 $ 1303 room=O
--> n
-T1875 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,10) HP 64/64 MP 0/0 Hu 92 $ 1303 room=.
--> n
-T1876 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 9) HP 64/64 MP 0/0 Hu 91 $ 1303 room=C
--> w
-T1877 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 9) HP 64/64 MP 0/0 Hu 91 $ 1303 room=.
--> s
-T1878 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,10) HP 64/64 MP 0/0 Hu 90 $ 1303 room=.
--> w
-T1879 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,10) HP 64/64 MP 0/0 Hu 89 $ 1303 room=.
--> w
-T1880 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,10) HP 64/64 MP 0/0 Hu 88 $ 1303 room=C
--> w
-T1881 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,10) HP 64/64 MP 0/0 Hu 88 $ 1303 room=.
--> n
-T1882 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 9) HP 64/64 MP 0/0 Hu 87 $ 1303 room=.
--> n
-T1883 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 8) HP 64/64 MP 0/0 Hu 86 $ 1303 room=.
--> n
-T1884 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 7) HP 64/64 MP 0/0 Hu 86 $ 1303 room=.
--> n
-T1885 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 6) HP 64/64 MP 0/0 Hu 85 $ 1303 room=.
--> w
-T1886 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 6) HP 64/64 MP 0/0 Hu 84 $ 1303 room=.
--> s
-T1887 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1303 room=V
+T1545 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 1053 room=V
+-> b15
+T1546 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 1023 room=V
+-> b15
+T1547 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 1008 room=V
+-> b15
+T1548 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 998 room=V
+-> b5
+T1549 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 918 room=V
+-> b6
+T1550 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 888 room=V
+-> b6
+T1551 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 858 room=V
+-> b6
+T1552 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 828 room=V
+-> b6
+T1553 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 798 room=V
+-> b6
+T1554 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 768 room=V
 -> b10
-T1888 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1273 room=V
+T1555 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 763 room=V
 -> b10
-T1889 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1258 room=V
+T1556 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 758 room=V
 -> b10
-T1890 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1248 room=V
--> b5
-T1891 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1218 room=V
--> b5
-T1892 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1188 room=V
--> b5
-T1893 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1158 room=V
--> b5
-T1894 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1128 room=V
--> b6
-T1895 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1123 room=V
--> b6
-T1896 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1118 room=V
--> b6
-T1897 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1113 room=V
--> b6
-T1898 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 1108 room=V
--> b5
-T1899 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 958 room=V
+T1557 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 753 room=V
+-> b10
+T1558 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 748 room=V
+-> b7
+T1559 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 598 room=V
 -> b4
-T1900 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 888 room=V
+T1560 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 468 room=V
+-> b4
+T1561 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 398 room=V
+-> b4
+T1562 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 198 room=V
 -> b3
-T1901 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 838 room=V
--> id10
-T1902 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 738 room=V
--> id11
-T1903 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 663 room=V
--> id12
-T1904 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 588 room=V
--> id13
-T1905 mode=vendor_shop         Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 538 room=V
+T1563 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 168 room=V
+-> id7
+T1564 mode=vendor_shop         Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 68 room=V
 -> x
-T1906 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 538 room=V
+T1565 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 68 room=V
 -> i
-T1907 mode=inventory           Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 538 room=V
+T1566 mode=inventory           Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 68 room=V
 -> e4
-T1908 mode=inventory           Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 538 room=V
+T1567 mode=inventory           Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 68 room=V
 -> x
-T1909 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 538 room=V
--> w
-T1910 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 83 $ 538 room=.
--> l
-T1911 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 83 $ 538 room=.
--> l
-T1912 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 83 $ 538 room=.
--> n
-T1913 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 6) HP 64/64 MP 0/0 Hu 82 $ 538 room=.
--> l
-T1914 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 6) HP 64/64 MP 0/0 Hu 82 $ 538 room=.
--> n
-T1915 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 5) HP 64/64 MP 0/0 Hu 81 $ 538 room=.
--> l
-T1916 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 5) HP 64/64 MP 0/0 Hu 81 $ 538 room=.
--> w
-T1917 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 5) HP 64/64 MP 0/0 Hu 81 $ 538 room=.
--> l
-T1918 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 5) HP 64/64 MP 0/0 Hu 81 $ 538 room=.
--> n
-T1919 mode=shrine_mode         Aragorn of Arnor(hum) F2@( 1, 4) HP 64/64 MP 0/0 Hu 80 $ 538 room=F
--> p
-T1920 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 4) HP 64/64 MP 0/0 Hu 80 $ 538 room=.
--> l
-T1921 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 4) HP 64/64 MP 0/0 Hu 80 $ 538 room=.
--> n
-T1922 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 3) HP 64/64 MP 0/0 Hu 79 $ 538 room=.
--> n
-T1923 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 2) HP 64/64 MP 0/0 Hu 79 $ 538 room=.
--> n
-T1924 mode=stairs_up_mode      Aragorn of Arnor(hum) F2@( 1, 1) HP 64/64 MP 0/0 Hu 78 $ 538 room=U
--> u
-T1925 mode=stairs_down_mode    Aragorn of Arnor(hum) F1@(15,14) HP 64/64 MP 0/0 Hu 78 $ 538 room=D
--> d
-T1926 mode=stairs_up_mode      Aragorn of Arnor(hum) F2@( 1, 1) HP 64/64 MP 0/0 Hu 78 $ 538 room=U
+T1568 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 65 $ 68 room=V
 -> s
-T1927 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 2) HP 64/64 MP 0/0 Hu 77 $ 538 room=.
--> e
-T1928 mode=chest_mode          Aragorn of Arnor(hum) F2@( 2, 2) HP 64/64 MP 0/0 Hu 77 $ 538 room=C
--> o
-T1929 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 2) HP 64/64 MP 0/0 Hu 77 $ 538 room=.
--> l
-T1930 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 2) HP 64/64 MP 0/0 Hu 77 $ 538 room=.
+T1569 mode=stairs_down_mode    Aragorn of Arnor(hum) F4@( 8, 5) HP 64/64 MP 0/0 Hu 65 $ 68 room=D
+-> s
+T1570 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 64 $ 68 room=.
+-> s
+T1571 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 63 $ 68 room=.
+-> w
+T1572 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 62 $ 68 room=.
 -> n
-T1931 mode=combat_mode         Aragorn of Arnor(hum) F2@( 2, 1) HP 64/64 MP 0/0 Hu 76 $ 538 room=M vs Goblin(L1 HP30/30)
+T1573 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 6) HP 64/64 MP 0/0 Hu 62 $ 68 room=.
+-> n
+T1574 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 5) HP 64/64 MP 0/0 Hu 61 $ 68 room=.
+-> n
+T1575 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 4) HP 64/64 MP 0/0 Hu 60 $ 68 room=.
+-> n
+T1576 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 3) HP 64/64 MP 0/0 Hu 60 $ 68 room=.
+-> w
+T1577 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 64/64 MP 0/0 Hu 59 $ 68 room=.
+-> s
+T1578 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 64/64 MP 0/0 Hu 58 $ 68 room=.
+-> s
+T1579 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 5) HP 64/64 MP 0/0 Hu 58 $ 68 room=.
+-> s
+T1580 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 64/64 MP 0/0 Hu 57 $ 68 room=.
+-> s
+T1581 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 64/64 MP 0/0 Hu 56 $ 68 room=.
+-> e
+T1582 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 55 $ 68 room=.
+-> e
+T1583 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 55 $ 68 room=.
+-> e
+T1584 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 54 $ 68 room=M vs Crawling Claw(L3 HP5/5)
 -> a
-T1932 mode=combat_mode         Aragorn of Arnor(hum) F2@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 538 room=M vs Goblin(L1 HP4/30)
--> a
-T1933 mode=combat_victory      Aragorn of Arnor(hum) F2@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 540 room=.
+T1585 mode=combat_victory      Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 54 $ 76 room=.
 -> back
-T1934 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 540 room=.
--> l
-T1935 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 540 room=.
--> e
-T1936 mode=combat_mode         Aragorn of Arnor(hum) F2@( 3, 1) HP 63/64 MP 0/0 Hu 75 $ 540 room=M vs Lichen(L1 HP10/10)
--> a
-T1937 mode=combat_mode         Aragorn of Arnor(hum) F2@( 3, 1) HP 62/64 MP 0/0 Hu 75 $ 540 room=M vs Lichen(L1 HP10/10)
--> a
-T1938 mode=combat_mode         Aragorn of Arnor(hum) F2@( 3, 1) HP 61/64 MP 0/0 Hu 75 $ 540 room=M vs Lichen(L1 HP10/10)
--> a
-T1939 mode=combat_mode         Aragorn of Arnor(hum) F2@( 3, 1) HP 61/64 MP 0/0 Hu 75 $ 540 room=M vs Lichen(L1 HP10/10)
--> f
-T1940 mode=combat_mode         Aragorn of Arnor(hum) F2@( 3, 1) HP 60/64 MP 0/0 Hu 75 $ 540 room=M vs Lichen(L1 HP10/10)
--> a
-T1941 mode=combat_victory      Aragorn of Arnor(hum) F2@( 3, 1) HP 60/64 MP 0/0 Hu 75 $ 550 room=.
--> back
-T1942 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 1) HP 60/64 MP 0/0 Hu 75 $ 550 room=.
--> s
-T1943 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 2) HP 60/64 MP 0/0 Hu 74 $ 550 room=.
--> l
-T1944 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 2) HP 60/64 MP 0/0 Hu 74 $ 550 room=.
+T1586 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 54 $ 76 room=.
 -> n
-T1945 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 1) HP 60/64 MP 0/0 Hu 74 $ 550 room=.
--> s
-T1946 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 2) HP 61/64 MP 0/0 Hu 73 $ 550 room=.
+T1587 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 53 $ 76 room=.
+-> e
+T1588 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 6) HP 64/64 MP 0/0 Hu 53 $ 76 room=.
+-> n
+T1589 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 52 $ 76 room=.
 -> w
-T1947 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 2) HP 61/64 MP 0/0 Hu 72 $ 550 room=.
--> w
-T1948 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 2) HP 61/64 MP 0/0 Hu 72 $ 550 room=.
+T1590 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 51 $ 76 room=.
+-> n
+T1591 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 51 $ 76 room=.
+-> e
+T1592 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 4) HP 64/64 MP 0/0 Hu 50 $ 76 room=.
 -> s
-T1949 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 3) HP 61/64 MP 0/0 Hu 71 $ 550 room=.
--> s
-T1950 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 4) HP 62/64 MP 0/0 Hu 70 $ 550 room=.
--> s
-T1951 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 5) HP 62/64 MP 0/0 Hu 70 $ 550 room=.
--> s
-T1952 mode=game_loop           Aragorn of Arnor(hum) F2@( 1, 6) HP 62/64 MP 0/0 Hu 69 $ 550 room=.
--> e
-T1953 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 6) HP 62/64 MP 0/0 Hu 68 $ 550 room=.
--> s
-T1954 mode=game_loop           Aragorn of Arnor(hum) F2@( 2, 7) HP 63/64 MP 0/0 Hu 67 $ 550 room=.
--> e
-T1955 mode=game_loop           Aragorn of Arnor(hum) F2@( 3, 7) HP 63/64 MP 0/0 Hu 67 $ 550 room=V
--> e
-T1956 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 7) HP 63/64 MP 0/0 Hu 66 $ 550 room=.
--> s
-T1957 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 8) HP 63/64 MP 0/0 Hu 65 $ 550 room=.
--> s
-T1958 mode=game_loop           Aragorn of Arnor(hum) F2@( 4, 9) HP 64/64 MP 0/0 Hu 65 $ 550 room=.
--> s
-T1959 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,10) HP 64/64 MP 0/0 Hu 64 $ 550 room=.
--> l
-T1960 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,10) HP 64/64 MP 0/0 Hu 64 $ 550 room=.
--> w
-T1961 mode=garden_mode         Aragorn of Arnor(hum) F2@( 3,10) HP 64/64 MP 0/0 Hu 63 $ 550 room=G
--> h
-T1962 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,10) HP 64/64 MP 0/0 Hu 63 $ 550 room=.
--> w
-T1963 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,10) HP 64/64 MP 0/0 Hu 63 $ 550 room=.
--> l
-T1964 mode=game_loop           Aragorn of Arnor(hum) F2@( 2,10) HP 64/64 MP 0/0 Hu 63 $ 550 room=.
--> e
-T1965 mode=game_loop           Aragorn of Arnor(hum) F2@( 3,10) HP 64/64 MP 0/0 Hu 62 $ 550 room=.
--> e
-T1966 mode=game_loop           Aragorn of Arnor(hum) F2@( 4,10) HP 64/64 MP 0/0 Hu 61 $ 550 room=.
--> e
-T1967 mode=game_loop           Aragorn of Arnor(hum) F2@( 5,10) HP 64/64 MP 0/0 Hu 60 $ 550 room=C
--> e
-T1968 mode=game_loop           Aragorn of Arnor(hum) F2@( 6,10) HP 64/64 MP 0/0 Hu 60 $ 550 room=.
--> e
-T1969 mode=game_loop           Aragorn of Arnor(hum) F2@( 7,10) HP 64/64 MP 0/0 Hu 59 $ 550 room=.
--> e
-T1970 mode=game_loop           Aragorn of Arnor(hum) F2@( 8,10) HP 64/64 MP 0/0 Hu 58 $ 550 room=.
--> e
-T1971 mode=game_loop           Aragorn of Arnor(hum) F2@( 9,10) HP 64/64 MP 0/0 Hu 58 $ 550 room=.
--> e
-T1972 mode=game_loop           Aragorn of Arnor(hum) F2@(10,10) HP 64/64 MP 0/0 Hu 57 $ 550 room=.
--> e
-T1973 mode=game_loop           Aragorn of Arnor(hum) F2@(11,10) HP 64/64 MP 0/0 Hu 56 $ 550 room=.
--> e
-T1974 mode=game_loop           Aragorn of Arnor(hum) F2@(12,10) HP 64/64 MP 0/0 Hu 56 $ 550 room=.
--> s
-T1975 mode=game_loop           Aragorn of Arnor(hum) F2@(12,11) HP 64/64 MP 0/0 Hu 55 $ 550 room=.
--> e
-T1976 mode=game_loop           Aragorn of Arnor(hum) F2@(13,11) HP 64/64 MP 0/0 Hu 54 $ 550 room=.
--> e
-T1977 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 64/64 MP 0/0 Hu 53 $ 550 room=.
--> s
-T1978 mode=game_loop           Aragorn of Arnor(hum) F2@(14,12) HP 64/64 MP 0/0 Hu 53 $ 550 room=.
--> e
-T1979 mode=game_loop           Aragorn of Arnor(hum) F2@(15,12) HP 64/64 MP 0/0 Hu 52 $ 550 room=.
--> e
-T1980 mode=game_loop           Aragorn of Arnor(hum) F2@(16,12) HP 64/64 MP 0/0 Hu 51 $ 550 room=.
--> s
-T1981 mode=game_loop           Aragorn of Arnor(hum) F2@(16,13) HP 64/64 MP 0/0 Hu 51 $ 550 room=.
--> e
-T1982 mode=game_loop           Aragorn of Arnor(hum) F2@(17,13) HP 64/64 MP 0/0 Hu 50 $ 550 room=.
--> e
-T1983 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu 49 $ 550 room=.
+T1593 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 49 $ 76 room=.
 -> i
-T1984 mode=inventory           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu 49 $ 550 room=.
--> eat1
-T1985 mode=inventory           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu100 $ 550 room=.
--> u9
-T1986 mode=upgrade_scroll_mode Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu100 $ 550 room=.
+T1594 mode=inventory           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 49 $ 76 room=.
+-> eat4
+T1595 mode=inventory           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 55 $ 76 room=.
+-> u10
+T1596 mode=inventory           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 55 $ 76 room=.
+-> u7
+T1597 mode=upgrade_scroll_mode Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 55 $ 76 room=.
 -> 1
-T1987 mode=inventory           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu100 $ 550 room=.
+T1598 mode=inventory           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 55 $ 76 room=.
 -> x
-T1988 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu100 $ 550 room=.
+T1599 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 55 $ 76 room=.
 -> s
-T1989 mode=game_loop           Aragorn of Arnor(hum) F2@(18,14) HP 64/64 MP 0/0 Hu100 $ 550 room=.
+T1600 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 6) HP 64/64 MP 0/0 Hu 54 $ 76 room=.
+-> w
+T1601 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 54 $ 76 room=.
 -> s
-T1990 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 64/64 MP 0/0 Hu 99 $ 550 room=.
+T1602 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 53 $ 76 room=.
 -> w
-T1991 mode=dungeon_mode        Aragorn of Arnor(hum) F2@(17,15) HP 64/64 MP 0/0 Hu 98 $ 550 room=N
--> u
-T1992 mode=dungeon_unlocked_mode Aragorn of Arnor(hum) F2@(17,15) HP 64/64 MP 0/0 Hu 98 $ 550 room=N
--> r
-T1993 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 64/64 MP 0/0 Hu 98 $ 550 room=N
+T1603 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 52 $ 76 room=.
+-> n
+T1604 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 52 $ 76 room=.
 -> w
-T1994 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 64/64 MP 0/0 Hu 97 $ 550 room=.
--> w
-T1995 mode=game_loop           Aragorn of Arnor(hum) F2@(15,15) HP 64/64 MP 0/0 Hu 97 $ 550 room=.
+T1605 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 6) HP 64/64 MP 0/0 Hu 51 $ 76 room=.
 -> s
-T1996 mode=combat_mode         Aragorn of Arnor(hum) F2@(15,16) HP 64/64 MP 0/0 Hu 96 $ 550 room=M vs Gray Ooze(L1 HP35/35)
--> a
-T1997 mode=combat_mode         Aragorn of Arnor(hum) F2@(15,16) HP 63/64 MP 0/0 Hu 96 $ 550 room=M vs Gray Ooze(L1 HP7/35)
--> a
-T1998 mode=combat_mode         Aragorn of Arnor(hum) F2@(15,16) HP 63/64 MP 0/0 Hu 96 $ 550 room=M vs Gray Ooze(L1 HP7/35)
--> a
-T1999 mode=combat_victory      Aragorn of Arnor(hum) F2@(15,16) HP 63/64 MP 0/0 Hu 96 $ 566 room=.
--> back
-T2000 mode=game_loop           Aragorn of Arnor(hum) F2@(15,16) HP 63/64 MP 0/0 Hu 96 $ 566 room=.
--> w
-T2001 mode=dungeon_mode        Aragorn of Arnor(hum) F2@(14,16) HP 63/64 MP 0/0 Hu 95 $ 566 room=N
--> u
-T2002 mode=dungeon_unlocked_mode Aragorn of Arnor(hum) F2@(14,16) HP 63/64 MP 0/0 Hu 95 $ 566 room=N
--> r
-T2003 mode=game_loop           Aragorn of Arnor(hum) F2@(14,16) HP 63/64 MP 0/0 Hu 95 $ 566 room=N
--> e
-T2004 mode=game_loop           Aragorn of Arnor(hum) F2@(15,16) HP 64/64 MP 0/0 Hu 95 $ 566 room=.
--> e
-T2005 mode=game_loop           Aragorn of Arnor(hum) F2@(16,16) HP 64/64 MP 0/0 Hu 94 $ 566 room=.
--> n
-T2006 mode=game_loop           Aragorn of Arnor(hum) F2@(16,15) HP 64/64 MP 0/0 Hu 93 $ 566 room=.
--> e
-T2007 mode=game_loop           Aragorn of Arnor(hum) F2@(17,15) HP 64/64 MP 0/0 Hu 93 $ 566 room=N
--> e
-T2008 mode=game_loop           Aragorn of Arnor(hum) F2@(18,15) HP 64/64 MP 0/0 Hu 92 $ 566 room=.
--> n
-T2009 mode=game_loop           Aragorn of Arnor(hum) F2@(18,14) HP 64/64 MP 0/0 Hu 91 $ 566 room=.
--> n
-T2010 mode=game_loop           Aragorn of Arnor(hum) F2@(18,13) HP 64/64 MP 0/0 Hu 90 $ 566 room=.
--> n
-T2011 mode=game_loop           Aragorn of Arnor(hum) F2@(18,12) HP 64/64 MP 0/0 Hu 90 $ 566 room=.
--> w
-T2012 mode=game_loop           Aragorn of Arnor(hum) F2@(17,12) HP 64/64 MP 0/0 Hu 89 $ 566 room=.
--> n
-T2013 mode=game_loop           Aragorn of Arnor(hum) F2@(17,11) HP 64/64 MP 0/0 Hu 88 $ 566 room=.
--> w
-T2014 mode=game_loop           Aragorn of Arnor(hum) F2@(16,11) HP 64/64 MP 0/0 Hu 88 $ 566 room=.
--> w
-T2015 mode=game_loop           Aragorn of Arnor(hum) F2@(15,11) HP 64/64 MP 0/0 Hu 87 $ 566 room=.
--> w
-T2016 mode=game_loop           Aragorn of Arnor(hum) F2@(14,11) HP 64/64 MP 0/0 Hu 86 $ 566 room=.
--> n
-T2017 mode=game_loop           Aragorn of Arnor(hum) F2@(14,10) HP 64/64 MP 0/0 Hu 86 $ 566 room=.
--> n
-T2018 mode=game_loop           Aragorn of Arnor(hum) F2@(14, 9) HP 64/64 MP 0/0 Hu 85 $ 566 room=.
--> w
-T2019 mode=game_loop           Aragorn of Arnor(hum) F2@(13, 9) HP 64/64 MP 0/0 Hu 84 $ 566 room=.
--> w
-T2020 mode=game_loop           Aragorn of Arnor(hum) F2@(12, 9) HP 64/64 MP 0/0 Hu 83 $ 566 room=.
--> w
-T2021 mode=game_loop           Aragorn of Arnor(hum) F2@(11, 9) HP 64/64 MP 0/0 Hu 83 $ 566 room=.
--> w
-T2022 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 9) HP 64/64 MP 0/0 Hu 82 $ 566 room=.
--> n
-T2023 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 8) HP 64/64 MP 0/0 Hu 81 $ 566 room=.
--> n
-T2024 mode=game_loop           Aragorn of Arnor(hum) F2@(10, 7) HP 64/64 MP 0/0 Hu 81 $ 566 room=.
--> w
-T2025 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 7) HP 64/64 MP 0/0 Hu 80 $ 566 room=.
--> n
-T2026 mode=game_loop           Aragorn of Arnor(hum) F2@( 9, 6) HP 64/64 MP 0/0 Hu 79 $ 566 room=.
--> w
-T2027 mode=game_loop           Aragorn of Arnor(hum) F2@( 8, 6) HP 64/64 MP 0/0 Hu 79 $ 566 room=.
--> w
-T2028 mode=game_loop           Aragorn of Arnor(hum) F2@( 7, 6) HP 64/64 MP 0/0 Hu 78 $ 566 room=.
--> w
-T2029 mode=game_loop           Aragorn of Arnor(hum) F2@( 6, 6) HP 64/64 MP 0/0 Hu 77 $ 566 room=.
+T1606 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 50 $ 76 room=.
 -> s
-T2030 mode=stairs_down_mode    Aragorn of Arnor(hum) F2@( 6, 7) HP 64/64 MP 0/0 Hu 76 $ 566 room=D
--> d
-T2031 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
--> n
-T2032 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
--> n
-T2033 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
--> n
-T2034 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
+T1607 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 8) HP 64/64 MP 0/0 Hu 50 $ 76 room=.
 -> w
-T2035 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
--> w
-T2036 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=U
--> e
-T2037 mode=combat_mode         Aragorn of Arnor(hum) F3@( 2, 1) HP 64/64 MP 0/0 Hu 76 $ 566 room=M vs Crawling Claw(L2 HP5/5)
--> a
-T2038 mode=combat_victory      Aragorn of Arnor(hum) F3@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 575 room=.
--> back
-T2039 mode=game_loop           Aragorn of Arnor(hum) F3@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 575 room=.
+T1608 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu 49 $ 76 room=.
 -> i
-T2040 mode=inventory           Aragorn of Arnor(hum) F3@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 575 room=.
--> e1
-T2041 mode=inventory           Aragorn of Arnor(hum) F3@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 575 room=.
--> x
-T2042 mode=game_loop           Aragorn of Arnor(hum) F3@( 2, 1) HP 63/64 MP 0/0 Hu 76 $ 575 room=.
--> e
-T2043 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 1) HP 63/64 MP 0/0 Hu 75 $ 575 room=.
--> e
-T2044 mode=game_loop           Aragorn of Arnor(hum) F3@( 4, 1) HP 63/64 MP 0/0 Hu 74 $ 575 room=.
--> s
-T2045 mode=game_loop           Aragorn of Arnor(hum) F3@( 4, 2) HP 63/64 MP 0/0 Hu 74 $ 575 room=.
--> w
-T2046 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 2) HP 64/64 MP 0/0 Hu 73 $ 575 room=.
--> w
-T2047 mode=combat_mode         Aragorn of Arnor(hum) F3@( 2, 2) HP 64/64 MP 0/0 Hu 72 $ 575 room=M vs UNDEAD SKELETON(L2 HP31/31)
--> a
-T2048 mode=combat_mode         Aragorn of Arnor(hum) F3@( 2, 2) HP 64/64 MP 0/0 Hu 72 $ 575 room=M vs UNDEAD SKELETON(L2 HP5/31)
--> f
-T2049 mode=flee_direction_mode Aragorn of Arnor(hum) F3@( 2, 2) HP 64/64 MP 0/0 Hu 72 $ 575 room=M
--> n
-T2050 mode=game_loop           Aragorn of Arnor(hum) F3@( 2, 1) HP 64/64 MP 0/0 Hu 72 $ 575 room=.
--> w
-T2051 mode=stairs_up_mode      Aragorn of Arnor(hum) F3@( 1, 1) HP 64/64 MP 0/0 Hu 72 $ 575 room=U
--> e
-T2052 mode=game_loop           Aragorn of Arnor(hum) F3@( 2, 1) HP 64/64 MP 0/0 Hu 71 $ 575 room=.
--> e
-T2053 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 1) HP 64/64 MP 0/0 Hu 70 $ 575 room=.
--> e
-T2054 mode=game_loop           Aragorn of Arnor(hum) F3@( 4, 1) HP 64/64 MP 0/0 Hu 69 $ 575 room=.
--> s
-T2055 mode=game_loop           Aragorn of Arnor(hum) F3@( 4, 2) HP 64/64 MP 0/0 Hu 69 $ 575 room=.
--> w
-T2056 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 2) HP 64/64 MP 0/0 Hu 68 $ 575 room=.
--> s
-T2057 mode=combat_mode         Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 575 room=M vs Bat(L2 HP12/12)
--> a
-T2058 mode=combat_victory      Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=.
--> back
-T2059 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=.
--> i
-T2060 mode=inventory           Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=.
--> u20
-T2061 mode=inventory           Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=.
--> x
-T2062 mode=game_loop           Aragorn of Arnor(hum) F3@( 3, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=.
--> e
-T2063 mode=stairs_down_mode    Aragorn of Arnor(hum) F3@( 4, 3) HP 64/64 MP 0/0 Hu 67 $ 596 room=D
--> d
-T2064 mode=stairs_up_mode      Aragorn of Arnor(hum) F4@( 1, 1) HP 64/64 MP 0/0 Hu 67 $ 596 room=U
--> e
-T2065 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 1) HP 64/64 MP 0/0 Hu 66 $ 596 room=.
--> s
-T2066 mode=combat_mode         Aragorn of Arnor(hum) F4@( 2, 2) HP 64/64 MP 0/0 Hu 65 $ 596 room=M vs Owlbear(L3 HP50/50)
--> a
-T2067 mode=combat_mode         Aragorn of Arnor(hum) F4@( 2, 2) HP 61/64 MP 0/0 Hu 65 $ 596 room=M vs Owlbear(L3 HP27/50)
--> a
-T2068 mode=combat_mode         Aragorn of Arnor(hum) F4@( 2, 2) HP 58/64 MP 0/0 Hu 65 $ 596 room=M vs Owlbear(L3 HP4/50)
--> f
-T2069 mode=combat_mode         Aragorn of Arnor(hum) F4@( 2, 2) HP 55/64 MP 0/0 Hu 65 $ 596 room=M vs Owlbear(L3 HP4/50)
--> a
-T2070 mode=combat_victory      Aragorn of Arnor(hum) F4@( 2, 2) HP 55/74 MP 0/0 Hu 65 $ 728 room=.
--> back
-T2071 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 2) HP 55/74 MP 0/0 Hu 65 $ 728 room=.
--> i
-T2072 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 2) HP 55/74 MP 0/0 Hu 65 $ 728 room=.
--> u8
-T2073 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> x
-T2074 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> i
-T2075 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> u20
-T2076 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> x
-T2077 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> e
-T2078 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 2) HP 74/74 MP 0/0 Hu 65 $ 728 room=.
--> n
-T2079 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 1) HP 74/74 MP 0/0 Hu 64 $ 728 room=M vs Giant Centipede(L3 HP16/16)
--> a
-T2080 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 1) HP 74/74 MP 0/0 Hu 64 $ 728 room=M vs Giant Centipede(L3 HP16/16)
--> a
-T2081 mode=combat_victory      Aragorn of Arnor(hum) F4@( 3, 1) HP 73/74 MP 0/0 Hu 64 $ 764 room=.
--> back
-T2082 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 1) HP 73/74 MP 0/0 Hu 64 $ 764 room=.
--> i
-T2083 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 1) HP 73/74 MP 0/0 Hu 64 $ 764 room=.
--> u21
-T2084 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 1) HP 73/74 MP 0/0 Hu 64 $ 764 room=.
--> x
-T2085 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 1) HP 73/74 MP 0/0 Hu 64 $ 764 room=.
--> e
-T2086 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 1) HP 70/74 MP 0/0 Hu 63 $ 764 room=.
--> w
-T2087 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 1) HP 67/74 MP 0/0 Hu 62 $ 764 room=.
--> w
-T2088 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 1) HP 64/74 MP 0/0 Hu 62 $ 764 room=.
--> s
-T2089 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 2) HP 65/74 MP 0/0 Hu 61 $ 764 room=.
--> e
-T2090 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 2) HP 65/74 MP 0/0 Hu 60 $ 764 room=.
--> s
-T2091 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 3) HP 65/74 MP 0/0 Hu 60 $ 764 room=.
--> s
-T2092 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 65/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP41/41)
--> a
-T2093 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 65/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP41/41)
--> a
-T2094 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 65/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP41/41)
--> a
-T2095 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 58/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP41/41)
--> a
-T2096 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 51/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP16/41)
--> a
-T2097 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 4) HP 51/74 MP 0/0 Hu 59 $ 764 room=M vs Giant Spider(L3 HP16/41)
--> a
-T2098 mode=combat_victory      Aragorn of Arnor(hum) F4@( 3, 4) HP 51/74 MP 0/0 Hu 59 $ 768 room=.
--> back
-T2099 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 4) HP 51/74 MP 0/0 Hu 59 $ 768 room=.
--> i
-T2100 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 4) HP 51/74 MP 0/0 Hu 59 $ 768 room=.
--> u8
-T2101 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 59 $ 768 room=.
--> x
-T2102 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 59 $ 768 room=.
--> i
-T2103 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 59 $ 768 room=.
--> u22
-T2104 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 59 $ 768 room=.
--> x
-T2105 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 59 $ 768 room=.
--> e
-T2106 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 74/74 MP 0/0 Hu 58 $ 768 room=.
--> n
-T2107 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 3) HP 74/74 MP 0/0 Hu 58 $ 768 room=.
--> e
-T2108 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 3) HP 74/74 MP 0/0 Hu 57 $ 768 room=.
--> s
-T2109 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 4) HP 74/74 MP 0/0 Hu 56 $ 768 room=.
--> e
-T2110 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 74/74 MP 0/0 Hu 55 $ 768 room=.
--> n
-T2111 mode=garden_mode         Aragorn of Arnor(hum) F4@( 6, 3) HP 74/74 MP 0/0 Hu 55 $ 768 room=G
--> h
-T2112 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 74/74 MP 0/0 Hu 55 $ 768 room=.
--> s
-T2113 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 74/74 MP 0/0 Hu 54 $ 768 room=.
--> n
-T2114 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 74/74 MP 0/0 Hu 53 $ 768 room=.
--> w
-T2115 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 3) HP 74/74 MP 0/0 Hu 53 $ 768 room=.
--> s
-T2116 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 4) HP 74/74 MP 0/0 Hu 52 $ 768 room=.
--> w
-T2117 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 74/74 MP 0/0 Hu 51 $ 768 room=.
--> w
-T2118 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 51 $ 768 room=.
--> w
-T2119 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 4) HP 74/74 MP 0/0 Hu 50 $ 768 room=.
--> s
-T2120 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 768 room=.
--> i
-T2121 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 768 room=.
--> eat4
-T2122 mode=inventory           Aragorn of Arnor(hum) F4@( 2, 5) HP 74/74 MP 0/0 Hu 62 $ 768 room=.
--> x
-T2123 mode=game_loop           Aragorn of Arnor(hum) F4@( 2, 5) HP 74/74 MP 0/0 Hu 62 $ 768 room=.
--> e
-T2124 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 5) HP 74/74 MP 0/0 Hu 61 $ 768 room=.
--> e
-T2125 mode=altar_mode          Aragorn of Arnor(hum) F4@( 4, 5) HP 74/74 MP 0/0 Hu 61 $ 768 room=A
--> pray
-T2126 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 74/74 MP 0/0 Hu 61 $ 968 room=.
--> n
-T2127 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 74/74 MP 0/0 Hu 60 $ 968 room=.
--> e
-T2128 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 4) HP 74/74 MP 0/0 Hu 59 $ 968 room=.
--> n
-T2129 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 3) HP 74/74 MP 0/0 Hu 59 $ 968 room=.
--> w
-T2130 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 3) HP 74/74 MP 0/0 Hu 58 $ 968 room=.
--> w
-T2131 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 3) HP 74/74 MP 0/0 Hu 57 $ 968 room=.
--> s
-T2132 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 4) HP 74/74 MP 0/0 Hu 57 $ 968 room=.
--> s
-T2133 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 5) HP 74/74 MP 0/0 Hu 56 $ 968 room=.
--> e
-T2134 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 74/74 MP 0/0 Hu 55 $ 968 room=.
--> s
-T2135 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 6) HP 74/74 MP 0/0 Hu 54 $ 968 room=.
--> w
-T2136 mode=combat_mode         Aragorn of Arnor(hum) F4@( 3, 6) HP 74/74 MP 0/0 Hu 54 $ 968 room=M vs Bat(L3 HP13/13)
--> a
-T2137 mode=combat_victory      Aragorn of Arnor(hum) F4@( 3, 6) HP 73/74 MP 0/0 Hu 54 $ 972 room=.
--> back
-T2138 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 6) HP 73/74 MP 0/0 Hu 54 $ 972 room=.
--> i
-T2139 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 6) HP 73/74 MP 0/0 Hu 54 $ 972 room=.
--> u22
-T2140 mode=inventory           Aragorn of Arnor(hum) F4@( 3, 6) HP 73/74 MP 0/0 Hu 54 $ 972 room=.
--> x
-T2141 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 6) HP 73/74 MP 0/0 Hu 54 $ 972 room=.
--> s
-T2142 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 7) HP 73/74 MP 0/0 Hu 53 $ 972 room=.
--> e
-T2143 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 7) HP 73/74 MP 0/0 Hu 52 $ 972 room=.
--> e
-T2144 mode=combat_mode         Aragorn of Arnor(hum) F4@( 5, 7) HP 73/74 MP 0/0 Hu 52 $ 972 room=M vs Giant Spider(L3 HP41/41)
--> a
-T2145 mode=combat_mode         Aragorn of Arnor(hum) F4@( 5, 7) HP 66/74 MP 0/0 Hu 52 $ 972 room=M vs Giant Spider(L3 HP16/41)
--> a
-T2146 mode=combat_victory      Aragorn of Arnor(hum) F4@( 5, 7) HP 66/74 MP 0/0 Hu 52 $ 1004 room=.
--> back
-T2147 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 7) HP 66/74 MP 0/0 Hu 52 $ 1004 room=.
--> i
-T2148 mode=inventory           Aragorn of Arnor(hum) F4@( 5, 7) HP 66/74 MP 0/0 Hu 52 $ 1004 room=.
--> u8
-T2149 mode=inventory           Aragorn of Arnor(hum) F4@( 5, 7) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
--> x
-T2150 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 7) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
--> i
-T2151 mode=inventory           Aragorn of Arnor(hum) F4@( 5, 7) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
--> u23
-T2152 mode=inventory           Aragorn of Arnor(hum) F4@( 5, 7) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
--> x
-T2153 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 7) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
--> s
-T2154 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 8) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
--> s
-T2155 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 9) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
--> s
-T2156 mode=chest_mode          Aragorn of Arnor(hum) F4@( 5,10) HP 74/74 MP 0/0 Hu 50 $ 1004 room=C
--> o
-T2157 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,10) HP 74/74 MP 0/0 Hu 50 $ 1154 room=.
--> s
-T2158 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,11) HP 74/74 MP 0/0 Hu 49 $ 1154 room=.
--> i
-T2159 mode=inventory           Aragorn of Arnor(hum) F4@( 5,11) HP 74/74 MP 0/0 Hu 49 $ 1154 room=.
--> eat4
-T2160 mode=inventory           Aragorn of Arnor(hum) F4@( 5,11) HP 74/74 MP 0/0 Hu 62 $ 1154 room=.
--> x
-T2161 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,11) HP 74/74 MP 0/0 Hu 62 $ 1154 room=.
--> w
-T2162 mode=warp_mode           Aragorn of Arnor(hum) F4@( 4,11) HP 74/74 MP 0/0 Hu 61 $ 1154 room=W
--> y
-T2163 mode=game_loop           Aragorn of Arnor(hum) F4@( 4,11) HP 74/74 MP 0/0 Hu 61 $ 1154 room=W
--> n
-T2164 mode=chest_mode          Aragorn of Arnor(hum) F4@( 4,10) HP 74/74 MP 0/0 Hu 60 $ 1154 room=C
--> o
-T2165 mode=game_loop           Aragorn of Arnor(hum) F4@( 4,10) HP 51/74 MP 0/0 Hu 60 $ 1154 room=.
--> w
-T2166 mode=game_loop           Aragorn of Arnor(hum) F4@( 3,10) HP 51/74 MP 0/0 Hu 60 $ 1154 room=.
--> e
-T2167 mode=game_loop           Aragorn of Arnor(hum) F4@( 4,10) HP 51/74 MP 0/0 Hu 59 $ 1154 room=.
--> e
-T2168 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,10) HP 51/74 MP 0/0 Hu 58 $ 1154 room=.
--> n
-T2169 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 9) HP 51/74 MP 0/0 Hu 58 $ 1154 room=.
--> e
-T2170 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 9) HP 51/74 MP 0/0 Hu 57 $ 1154 room=.
--> s
-T2171 mode=game_loop           Aragorn of Arnor(hum) F4@( 6,10) HP 51/74 MP 0/0 Hu 56 $ 1154 room=.
--> e
-T2172 mode=game_loop           Aragorn of Arnor(hum) F4@( 7,10) HP 51/74 MP 0/0 Hu 56 $ 1154 room=.
--> e
-T2173 mode=stairs_down_mode    Aragorn of Arnor(hum) F4@( 8,10) HP 51/74 MP 0/0 Hu 55 $ 1154 room=D
--> d
-T2174 mode=stairs_up_mode      Aragorn of Arnor(hum) F5@( 1, 1) HP 51/74 MP 0/0 Hu 55 $ 1154 room=U
--> e
-T2175 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 1) HP 51/74 MP 0/0 Hu 54 $ 1154 room=.
--> s
-T2176 mode=combat_mode         Aragorn of Arnor(hum) F5@( 2, 2) HP 51/74 MP 0/0 Hu 53 $ 1154 room=M vs Spore Puff(L4 HP20/20)
--> a
-T2177 mode=combat_victory      Aragorn of Arnor(hum) F5@( 2, 2) HP 51/84 MP 0/0 Hu 53 $ 1164 room=.
--> back
-T2178 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 2) HP 51/84 MP 0/0 Hu 53 $ 1164 room=.
--> w
-T2179 mode=combat_mode         Aragorn of Arnor(hum) F5@( 1, 2) HP 51/84 MP 0/0 Hu 53 $ 1164 room=M vs Gray Ooze(L4 HP37/37)
--> a
-T2180 mode=combat_mode         Aragorn of Arnor(hum) F5@( 1, 2) HP 51/84 MP 0/0 Hu 53 $ 1164 room=M vs Gray Ooze(L4 HP9/37)
--> a
-T2181 mode=combat_mode         Aragorn of Arnor(hum) F5@( 1, 2) HP 50/84 MP 0/0 Hu 53 $ 1164 room=M vs Gray Ooze(L4 HP9/37)
--> a
-T2182 mode=combat_victory      Aragorn of Arnor(hum) F5@( 1, 2) HP 50/84 MP 0/0 Hu 53 $ 1209 room=.
--> back
-T2183 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 2) HP 50/84 MP 0/0 Hu 53 $ 1209 room=.
--> s
-T2184 mode=altar_mode          Aragorn of Arnor(hum) F5@( 1, 3) HP 50/84 MP 0/0 Hu 52 $ 1209 room=A
--> pray
-T2185 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 3) HP 50/84 MP 0/0 Hu 52 $ 1209 room=.
--> e
-T2186 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 3) HP 50/84 MP 0/0 Hu 51 $ 1209 room=.
--> e
-T2187 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 3) HP 50/84 MP 0/0 Hu 51 $ 1209 room=.
--> s
-T2188 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 4) HP 50/84 MP 0/0 Hu 50 $ 1209 room=.
--> w
-T2189 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 50/84 MP 0/0 Hu 49 $ 1209 room=.
--> i
-T2190 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 4) HP 50/84 MP 0/0 Hu 49 $ 1209 room=.
--> u8
-T2191 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 4) HP 75/84 MP 0/0 Hu 49 $ 1209 room=.
--> u2
-T2192 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 4) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> x
-T2193 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> i
-T2194 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 4) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> eat4
-T2195 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 4) HP 84/84 MP 0/0 Hu 55 $ 1209 room=.
--> x
-T2196 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 84/84 MP 0/0 Hu 55 $ 1209 room=.
--> w
-T2197 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 4) HP 84/84 MP 0/0 Hu 55 $ 1209 room=.
--> s
-T2198 mode=chest_mode          Aragorn of Arnor(hum) F5@( 1, 5) HP 84/84 MP 0/0 Hu 54 $ 1209 room=C
--> o
-T2199 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 5) HP 84/84 MP 0/0 Hu 54 $ 1209 room=.
--> s
-T2200 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 6) HP 84/84 MP 0/0 Hu 53 $ 1209 room=.
--> s
-T2201 mode=warp_mode           Aragorn of Arnor(hum) F5@( 1, 7) HP 84/84 MP 0/0 Hu 52 $ 1209 room=W
--> y
-T2202 mode=game_loop           Aragorn of Arnor(hum) F4@( 3, 7) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> e
-T2203 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 7) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> e
-T2204 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 7) HP 84/84 MP 0/0 Hu 51 $ 1209 room=.
--> s
-T2205 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 8) HP 84/84 MP 0/0 Hu 50 $ 1209 room=.
--> s
-T2206 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 9) HP 84/84 MP 0/0 Hu 50 $ 1209 room=.
--> s
-T2207 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,10) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> i
-T2208 mode=inventory           Aragorn of Arnor(hum) F4@( 5,10) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> eat4
-T2209 mode=inventory           Aragorn of Arnor(hum) F4@( 5,10) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> x
-T2210 mode=game_loop           Aragorn of Arnor(hum) F4@( 5,10) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> e
-T2211 mode=game_loop           Aragorn of Arnor(hum) F4@( 6,10) HP 84/84 MP 0/0 Hu 51 $ 1209 room=.
--> e
-T2212 mode=game_loop           Aragorn of Arnor(hum) F4@( 7,10) HP 84/84 MP 0/0 Hu 51 $ 1209 room=.
--> e
-T2213 mode=stairs_down_mode    Aragorn of Arnor(hum) F4@( 8,10) HP 84/84 MP 0/0 Hu 50 $ 1209 room=D
--> d
-T2214 mode=stairs_up_mode      Aragorn of Arnor(hum) F5@( 1, 1) HP 84/84 MP 0/0 Hu 50 $ 1209 room=U
--> s
-T2215 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 2) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> i
-T2216 mode=inventory           Aragorn of Arnor(hum) F5@( 1, 2) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> eat4
-T2217 mode=inventory           Aragorn of Arnor(hum) F5@( 1, 2) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> x
-T2218 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 2) HP 84/84 MP 0/0 Hu 52 $ 1209 room=.
--> e
-T2219 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 2) HP 84/84 MP 0/0 Hu 51 $ 1209 room=.
--> n
-T2220 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 1) HP 84/84 MP 0/0 Hu 51 $ 1209 room=.
--> e
-T2221 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 1) HP 84/84 MP 0/0 Hu 50 $ 1209 room=.
--> s
-T2222 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 2) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> i
-T2223 mode=inventory           Aragorn of Arnor(hum) F5@( 3, 2) HP 84/84 MP 0/0 Hu 49 $ 1209 room=.
--> eat4
-T2224 mode=inventory           Aragorn of Arnor(hum) F5@( 3, 2) HP 84/84 MP 0/0 Hu 67 $ 1209 room=.
--> x
-T2225 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 2) HP 84/84 MP 0/0 Hu 67 $ 1209 room=.
--> e
-T2226 mode=altar_mode          Aragorn of Arnor(hum) F5@( 4, 2) HP 84/84 MP 0/0 Hu 67 $ 1209 room=A
--> pray
-T2227 mode=game_loop           Aragorn of Arnor(hum) F5@( 4, 2) HP 84/86 MP 0/0 Hu 67 $ 1209 room=.
--> n
-T2228 mode=game_loop           Aragorn of Arnor(hum) F5@( 4, 1) HP 84/86 MP 0/0 Hu 66 $ 1209 room=.
--> e
-T2229 mode=game_loop           Aragorn of Arnor(hum) F5@( 5, 1) HP 84/86 MP 0/0 Hu 65 $ 1209 room=.
--> e
-T2230 mode=combat_mode         Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1209 room=M vs Giant Centipede(L4 HP17/17)
--> a
-T2231 mode=combat_victory      Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1239 room=.
--> back
-T2232 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1239 room=.
--> i
-T2233 mode=inventory           Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1239 room=.
--> u21
-T2234 mode=inventory           Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1239 room=.
--> x
-T2235 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 1) HP 84/86 MP 0/0 Hu 65 $ 1239 room=.
--> s
-T2236 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 2) HP 85/86 MP 0/0 Hu 64 $ 1239 room=.
--> s
-T2237 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 3) HP 85/86 MP 0/0 Hu 63 $ 1239 room=.
--> n
-T2238 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 2) HP 85/86 MP 0/0 Hu 62 $ 1239 room=.
--> w
-T2239 mode=game_loop           Aragorn of Arnor(hum) F5@( 5, 2) HP 85/86 MP 0/0 Hu 62 $ 1239 room=.
--> n
-T2240 mode=game_loop           Aragorn of Arnor(hum) F5@( 5, 1) HP 86/86 MP 0/0 Hu 61 $ 1239 room=.
--> e
-T2241 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 1) HP 86/86 MP 0/0 Hu 60 $ 1239 room=.
--> e
-T2242 mode=game_loop           Aragorn of Arnor(hum) F5@( 7, 1) HP 86/86 MP 0/0 Hu 60 $ 1239 room=.
--> w
-T2243 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 1) HP 86/86 MP 0/0 Hu 59 $ 1239 room=.
--> s
-T2244 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 2) HP 86/86 MP 0/0 Hu 58 $ 1239 room=.
--> w
-T2245 mode=game_loop           Aragorn of Arnor(hum) F5@( 5, 2) HP 86/86 MP 0/0 Hu 58 $ 1239 room=.
--> w
-T2246 mode=game_loop           Aragorn of Arnor(hum) F5@( 4, 2) HP 86/86 MP 0/0 Hu 57 $ 1239 room=.
--> w
-T2247 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 2) HP 86/86 MP 0/0 Hu 56 $ 1239 room=.
--> s
-T2248 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 3) HP 86/86 MP 0/0 Hu 55 $ 1239 room=.
--> s
-T2249 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 4) HP 86/86 MP 0/0 Hu 55 $ 1239 room=.
--> w
-T2250 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 86/86 MP 0/0 Hu 54 $ 1239 room=.
--> w
-T2251 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 4) HP 86/86 MP 0/0 Hu 53 $ 1239 room=.
--> s
-T2252 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 5) HP 86/86 MP 0/0 Hu 53 $ 1239 room=.
--> s
-T2253 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 6) HP 86/86 MP 0/0 Hu 52 $ 1239 room=.
--> e
-T2254 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 6) HP 86/86 MP 0/0 Hu 51 $ 1239 room=.
--> n
-T2255 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 5) HP 86/86 MP 0/0 Hu 51 $ 1239 room=.
--> n
-T2256 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 86/86 MP 0/0 Hu 50 $ 1239 room=.
--> n
-T2257 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 3) HP 86/86 MP 0/0 Hu 49 $ 1239 room=.
--> i
-T2258 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 3) HP 86/86 MP 0/0 Hu 49 $ 1239 room=.
--> eat4
-T2259 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 3) HP 86/86 MP 0/0 Hu 55 $ 1239 room=.
--> x
-T2260 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 3) HP 86/86 MP 0/0 Hu 55 $ 1239 room=.
--> n
-T2261 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 2) HP 86/86 MP 0/0 Hu 54 $ 1239 room=.
--> e
-T2262 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 2) HP 86/86 MP 0/0 Hu 54 $ 1239 room=.
--> s
-T2263 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 3) HP 86/86 MP 0/0 Hu 53 $ 1239 room=.
--> s
-T2264 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 4) HP 86/86 MP 0/0 Hu 52 $ 1239 room=.
--> w
-T2265 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 4) HP 86/86 MP 0/0 Hu 52 $ 1239 room=.
--> s
-T2266 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 5) HP 86/86 MP 0/0 Hu 51 $ 1239 room=.
--> s
-T2267 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 6) HP 86/86 MP 0/0 Hu 50 $ 1239 room=.
--> s
-T2268 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 7) HP 86/86 MP 0/0 Hu 50 $ 1239 room=.
--> s
-T2269 mode=dungeon_mode        Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu 49 $ 1239 room=N
--> u
-T2270 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu 49 $ 1239 room=N
--> i
-T2271 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu 49 $ 1239 room=N
+T1609 mode=inventory           Aragorn of Arnor(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu 49 $ 76 room=.
 -> eat1
-T2272 mode=inventory           Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu100 $ 1239 room=N
+T1610 mode=inventory           Aragorn of Arnor(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu100 $ 76 room=.
 -> x
-T2273 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu100 $ 1239 room=N
--> s
-T2274 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 9) HP 86/86 MP 0/0 Hu 99 $ 1239 room=.
+T1611 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu100 $ 76 room=.
+-> n
+T1612 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 64/64 MP 0/0 Hu 99 $ 76 room=.
+-> n
+T1613 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 6) HP 64/64 MP 0/0 Hu 98 $ 76 room=.
 -> w
-T2275 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 9) HP 86/86 MP 0/0 Hu 98 $ 1239 room=.
+T1614 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 6) HP 64/64 MP 0/0 Hu 98 $ 76 room=.
 -> n
-T2276 mode=pool_mode           Aragorn of Arnor(hum) F5@( 1, 8) HP 86/86 MP 0/0 Hu 98 $ 1239 room=P
--> dr
-T2277 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 8) HP 86/86 MP 0/0 Hu 98 $ 1239 room=.
+T1615 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 5) HP 64/64 MP 0/0 Hu 97 $ 76 room=.
+-> w
+T1616 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 5) HP 64/64 MP 0/0 Hu 96 $ 76 room=.
+-> n
+T1617 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 4) HP 64/64 MP 0/0 Hu 96 $ 76 room=.
+-> n
+T1618 mode=game_loop           Aragorn of Arnor(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu 95 $ 76 room=.
+-> e
+T1619 mode=chest_mode          Aragorn of Arnor(hum) F4@( 5, 3) HP 64/64 MP 0/0 Hu 94 $ 76 room=C
+-> n
+T1620 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 2) HP 64/64 MP 0/0 Hu 94 $ 76 room=.
+-> e
+T1621 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 2) HP 64/64 MP 0/0 Hu 93 $ 76 room=.
 -> s
-T2278 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 9) HP 86/86 MP 0/0 Hu 97 $ 1239 room=.
+T1622 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 64/64 MP 0/0 Hu 92 $ 76 room=.
+-> s
+T1623 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 64/64 MP 0/0 Hu 91 $ 76 room=.
+-> e
+T1624 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 4) HP 64/64 MP 0/0 Hu 91 $ 76 room=.
 -> n
-T2279 mode=game_loop           Aragorn of Arnor(hum) F5@( 1, 8) HP 86/86 MP 0/0 Hu 96 $ 1239 room=.
+T1625 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 3) HP 64/64 MP 0/0 Hu 90 $ 76 room=.
+-> n
+T1626 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 2) HP 64/64 MP 0/0 Hu 89 $ 76 room=.
+-> w
+T1627 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 2) HP 64/64 MP 0/0 Hu 89 $ 76 room=.
+-> s
+T1628 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 3) HP 64/64 MP 0/0 Hu 88 $ 76 room=.
+-> s
+T1629 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 4) HP 64/64 MP 0/0 Hu 87 $ 76 room=.
+-> s
+T1630 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 5) HP 64/64 MP 0/0 Hu 87 $ 76 room=.
+-> w
+T1631 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 5) HP 64/64 MP 0/0 Hu 86 $ 76 room=.
+-> s
+T1632 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 6) HP 64/64 MP 0/0 Hu 85 $ 76 room=.
+-> s
+T1633 mode=game_loop           Aragorn of Arnor(hum) F4@( 5, 7) HP 64/64 MP 0/0 Hu 84 $ 76 room=.
 -> e
-T2280 mode=game_loop           Aragorn of Arnor(hum) F5@( 2, 8) HP 86/86 MP 0/0 Hu 96 $ 1239 room=N
+T1634 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 7) HP 64/64 MP 0/0 Hu 84 $ 76 room=.
+-> s
+T1635 mode=game_loop           Aragorn of Arnor(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu 83 $ 76 room=.
 -> e
-T2281 mode=game_loop           Aragorn of Arnor(hum) F5@( 3, 8) HP 86/86 MP 0/0 Hu 95 $ 1239 room=.
--> e
-T2282 mode=game_loop           Aragorn of Arnor(hum) F5@( 4, 8) HP 86/86 MP 0/0 Hu 94 $ 1239 room=.
--> e
-T2283 mode=game_loop           Aragorn of Arnor(hum) F5@( 5, 8) HP 86/86 MP 0/0 Hu 94 $ 1239 room=.
--> e
-T2284 mode=game_loop           Aragorn of Arnor(hum) F5@( 6, 8) HP 86/86 MP 0/0 Hu 93 $ 1239 room=.
--> e
-T2285 mode=warp_mode           Aragorn of Arnor(hum) F5@( 7, 8) HP 86/86 MP 0/0 Hu 92 $ 1239 room=W
--> y
-T2286 mode=game_loop           Aragorn of Arnor(hum) F5@( 7, 8) HP 86/86 MP 0/0 Hu 92 $ 1239 room=W
--> e
-T2287 mode=game_loop           Aragorn of Arnor(hum) F5@( 8, 8) HP 86/86 MP 0/0 Hu 91 $ 1239 room=.
--> e
-T2288 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 86/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP59/59)
--> a
-T2289 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 86/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP34/59)
+T1636 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 8) HP 64/64 MP 0/0 Hu 82 $ 76 room=.
+-> s
+T1637 mode=combat_mode         Aragorn of Arnor(hum) F4@( 7, 9) HP 64/64 MP 0/0 Hu 82 $ 76 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
 -> f
-T2290 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 83/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP34/59)
--> a
-T2291 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 83/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP34/59)
--> a
-T2292 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 80/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP34/59)
--> a
-T2293 mode=combat_mode         Aragorn of Arnor(hum) F5@( 9, 8) HP 77/86 MP 0/0 Hu 91 $ 1239 room=M vs Bugbear(L4 HP9/59)
--> a
-T2294 mode=combat_victory      Aragorn of Arnor(hum) F5@( 9, 8) HP 74/86 MP 0/0 Hu 91 $ 1284 room=.
--> back
-T2295 mode=game_loop           Aragorn of Arnor(hum) F5@( 9, 8) HP 74/86 MP 0/0 Hu 91 $ 1284 room=.
--> e
-T2296 mode=chest_mode          Aragorn of Arnor(hum) F5@(10, 8) HP 74/86 MP 0/0 Hu 90 $ 1284 room=C
--> o
-T2297 mode=game_loop           Aragorn of Arnor(hum) F5@(10, 8) HP 74/111 MP 0/0 Hu 90 $ 1284 room=.
--> n
-T2298 mode=library_mode        Aragorn of Arnor(hum) F5@(10, 7) HP 75/111 MP 0/0 Hu 89 $ 1284 room=L
--> r
-T2299 mode=library_read_decision_mode Aragorn of Arnor(hum) F5@(10, 7) HP 75/111 MP 0/0 Hu 89 $ 1284 room=L
--> y
-T2300 mode=game_loop           Aragorn of Arnor(hum) F5@(10, 7) HP 75/111 MP 0/0 Hu 89 $ 1284 room=.
--> w
-T2301 mode=game_loop           Aragorn of Arnor(hum) F5@( 9, 7) HP 75/111 MP 0/0 Hu 89 $ 1284 room=.
--> w
-T2302 mode=game_loop           Aragorn of Arnor(hum) F5@( 8, 7) HP 76/111 MP 0/0 Hu 88 $ 1284 room=.
--> s
-T2303 mode=game_loop           Aragorn of Arnor(hum) F5@( 8, 8) HP 76/111 MP 0/0 Hu 87 $ 1284 room=.
--> e
-T2304 mode=game_loop           Aragorn of Arnor(hum) F5@( 9, 8) HP 77/111 MP 0/0 Hu 87 $ 1284 room=.
--> e
-T2305 mode=game_loop           Aragorn of Arnor(hum) F5@(10, 8) HP 77/111 MP 0/0 Hu 86 $ 1284 room=.
--> e
-T2306 mode=game_loop           Aragorn of Arnor(hum) F5@(11, 8) HP 78/111 MP 0/0 Hu 85 $ 1284 room=.
--> s
-T2307 mode=warp_mode           Aragorn of Arnor(hum) F5@(11, 9) HP 78/111 MP 0/0 Hu 84 $ 1284 room=W
--> y
-T2308 mode=pool_mode           Aragorn of Arnor(hum) F7@(13,12) HP 78/111 MP 0/0 Hu 84 $ 1284 room=P
--> dr
-T2309 mode=game_loop           Aragorn of Arnor(hum) F7@(13,12) HP 78/117 MP 0/0 Hu 84 $ 1284 room=.
--> s
-T2310 mode=game_loop           Aragorn of Arnor(hum) F7@(13,13) HP 78/117 MP 0/0 Hu 84 $ 1384 room=.
--> w
-T2311 mode=game_loop           Aragorn of Arnor(hum) F7@(12,13) HP 78/117 MP 0/0 Hu 83 $ 1384 room=.
--> n
-T2312 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 79/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2313 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 79/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2314 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 78/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2315 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 78/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2316 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 77/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2317 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 76/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2318 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 76/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2319 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 75/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2320 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 74/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> f
-T2321 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 73/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2322 mode=combat_mode         Aragorn of Arnor(hum) F7@(12,12) HP 72/117 MP 0/0 Hu 82 $ 1384 room=M vs Hardened Bat(L6 HP19/19)
--> a
-T2323 mode=combat_victory      Aragorn of Arnor(hum) F7@(12,12) HP 72/127 MP 0/0 Hu 82 $ 1391 room=.
--> back
-T2324 mode=game_loop           Aragorn of Arnor(hum) F7@(12,12) HP 72/127 MP 0/0 Hu 82 $ 1391 room=.
+T1638 mode=combat_mode         Aragorn of Arnor(hum) F4@( 7, 9) HP 12/64 MP 0/0 Hu 82 $ 76 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
 -> i
-T2325 mode=inventory           Aragorn of Arnor(hum) F7@(12,12) HP 72/127 MP 0/0 Hu 82 $ 1391 room=.
+T1639 mode=inventory           Aragorn of Arnor(hum) F4@( 7, 9) HP 12/64 MP 0/0 Hu 82 $ 76 room=M
+-> u2
+T1640 mode=inventory           Aragorn of Arnor(hum) F4@( 7, 9) HP 64/64 MP 0/0 Hu 82 $ 76 room=M
+-> x
+T1641 mode=combat_mode         Aragorn of Arnor(hum) F4@( 7, 9) HP 64/64 MP 0/0 Hu 82 $ 76 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
+-> f
+T1642 mode=flee_direction_mode Aragorn of Arnor(hum) F4@( 7, 9) HP 38/64 MP 0/0 Hu 82 $ 76 room=M
+-> n
+T1643 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 8) HP 38/64 MP 0/0 Hu 82 $ 76 room=.
+-> i
+T1644 mode=inventory           Aragorn of Arnor(hum) F4@( 7, 8) HP 38/64 MP 0/0 Hu 82 $ 76 room=.
 -> u8
-T2326 mode=inventory           Aragorn of Arnor(hum) F7@(12,12) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
+T1645 mode=inventory           Aragorn of Arnor(hum) F4@( 7, 8) HP 64/64 MP 0/0 Hu 82 $ 76 room=.
 -> x
-T2327 mode=game_loop           Aragorn of Arnor(hum) F7@(12,12) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
--> i
-T2328 mode=inventory           Aragorn of Arnor(hum) F7@(12,12) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
--> e6
-T2329 mode=inventory           Aragorn of Arnor(hum) F7@(12,12) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
--> x
-T2330 mode=game_loop           Aragorn of Arnor(hum) F7@(12,12) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
--> n
-T2331 mode=warp_mode           Aragorn of Arnor(hum) F7@(12,11) HP 97/127 MP 0/0 Hu 82 $ 1391 room=W
--> y
-T2332 mode=game_loop           Aragorn of Arnor(hum) F8@( 4, 3) HP 97/127 MP 0/0 Hu 82 $ 1391 room=.
--> n
-T2333 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 97/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP145/145)
+T1646 mode=game_loop           Aragorn of Arnor(hum) F4@( 7, 8) HP 64/64 MP 0/0 Hu 82 $ 76 room=.
+-> e
+T1647 mode=combat_mode         Aragorn of Arnor(hum) F4@( 8, 8) HP 64/64 MP 0/0 Hu 81 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
 -> a
-T2334 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 83/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP145/145)
--> a
-T2335 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 83/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP145/145)
--> a
-T2336 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 69/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP122/145)
--> a
-T2337 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 69/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP122/145)
--> a
-T2338 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 55/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP99/145)
--> a
-T2339 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 41/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP99/145)
--> a
-T2340 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 41/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP99/145)
--> a
-T2341 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 41/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP76/145)
--> a
-T2342 mode=combat_mode         Aragorn of Arnor(hum) F8@( 4, 2) HP 27/127 MP 0/0 Hu 81 $ 1391 room=M vs Hill Giant(L7 HP53/145)
+T1648 mode=combat_mode         Aragorn of Arnor(hum) F4@( 8, 8) HP 42/64 MP 0/0 Hu 81 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
 -> f
-T2343 mode=death_screen        Aragorn of Arnor(hum) F8@( 4, 2) HP -1/127 MP 0/0 Hu 81 $ 1391 room=M
+T1649 mode=flee_direction_mode Aragorn of Arnor(hum) F4@( 8, 8) HP 20/64 MP 0/0 Hu 81 $ 76 room=M
+-> n
+T1650 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 20/64 MP 0/0 Hu 81 $ 76 room=.
+-> i
+T1651 mode=inventory           Aragorn of Arnor(hum) F4@( 8, 7) HP 20/64 MP 0/0 Hu 81 $ 76 room=.
+-> u8
+T1652 mode=inventory           Aragorn of Arnor(hum) F4@( 8, 7) HP 50/64 MP 0/0 Hu 81 $ 76 room=.
+-> u4
+T1653 mode=inventory           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 81 $ 76 room=.
+-> x
+T1654 mode=game_loop           Aragorn of Arnor(hum) F4@( 8, 7) HP 64/64 MP 0/0 Hu 81 $ 76 room=.
+-> e
+T1655 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 80 $ 76 room=.
+-> n
+T1656 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 80 $ 76 room=.
+-> n
+T1657 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 79 $ 76 room=.
+-> n
+T1658 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 78 $ 76 room=.
+-> e
+T1659 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 4) HP 64/64 MP 0/0 Hu 77 $ 76 room=.
+-> s
+T1660 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 5) HP 64/64 MP 0/0 Hu 77 $ 76 room=.
+-> s
+T1661 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 6) HP 64/64 MP 0/0 Hu 76 $ 76 room=.
+-> w
+T1662 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 75 $ 76 room=.
+-> s
+T1663 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 75 $ 76 room=.
+-> s
+T1664 mode=chest_mode          Aragorn of Arnor(hum) F4@( 9, 8) HP 64/64 MP 0/0 Hu 74 $ 76 room=C
+-> o
+T1665 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 8) HP 64/64 MP 0/0 Hu 74 $ 76 room=.
+-> s
+T1666 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 64/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T1667 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 42/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T1668 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 20/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> i
+T1669 mode=inventory           Aragorn of Arnor(hum) F4@( 9, 9) HP 20/64 MP 0/0 Hu 73 $ 76 room=M
+-> u4
+T1670 mode=inventory           Aragorn of Arnor(hum) F4@( 9, 9) HP 50/64 MP 0/0 Hu 73 $ 76 room=M
+-> x
+T1671 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 50/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> a
+T1672 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 28/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP66/87)
+-> i
+T1673 mode=inventory           Aragorn of Arnor(hum) F4@( 9, 9) HP 28/64 MP 0/0 Hu 73 $ 76 room=M
+-> u4
+T1674 mode=inventory           Aragorn of Arnor(hum) F4@( 9, 9) HP 58/64 MP 0/0 Hu 73 $ 76 room=M
+-> u1
+T1675 mode=inventory           Aragorn of Arnor(hum) F4@( 9, 9) HP 58/64 MP 0/0 Hu 73 $ 76 room=M
+-> x
+T1676 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 58/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP66/87)
+-> a
+T1677 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 58/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP66/87)
+-> a
+T1678 mode=combat_mode         Aragorn of Arnor(hum) F4@( 9, 9) HP 58/64 MP 0/0 Hu 73 $ 76 room=M vs UNDEAD SPECTER(L3 HP45/87)
+-> f
+T1679 mode=flee_direction_mode Aragorn of Arnor(hum) F4@( 9, 9) HP 46/64 MP 0/0 Hu 73 $ 76 room=M
+-> n
+T1680 mode=game_loop           Aragorn of Arnor(hum) F4@( 9, 8) HP 46/64 MP 0/0 Hu 73 $ 76 room=.
+-> e
+T1681 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 8) HP 46/64 MP 0/0 Hu 73 $ 76 room=.
+-> s
+T1682 mode=game_loop           Aragorn of Arnor(hum) F4@(10, 9) HP 46/64 MP 0/0 Hu 72 $ 76 room=.
+-> s
+T1683 mode=game_loop           Aragorn of Arnor(hum) F4@(10,10) HP 46/64 MP 0/0 Hu 71 $ 76 room=.
+-> s
+T1684 mode=game_loop           Aragorn of Arnor(hum) F4@(10,11) HP 47/64 MP 0/0 Hu 70 $ 76 room=.
+-> e
+T1685 mode=game_loop           Aragorn of Arnor(hum) F4@(11,11) HP 47/64 MP 0/0 Hu 70 $ 76 room=.
+-> s
+T1686 mode=combat_mode         Aragorn of Arnor(hum) F4@(11,12) HP 47/64 MP 0/0 Hu 69 $ 76 room=M vs UNDEAD WRAITH(L3 HP100/100)
+-> a
+T1687 mode=combat_mode         Aragorn of Arnor(hum) F4@(11,12) HP 22/64 MP 0/0 Hu 69 $ 76 room=M vs UNDEAD WRAITH(L3 HP100/100)
+-> a
+T1688 mode=death_screen        Aragorn of Arnor(hum) F4@(11,12) HP -3/64 MP 0/0 Hu 69 $ 76 room=M
 
-=== run finished: turns=2343 floor=8 hp=-1/127 gold=1391 alive=False mode=death_screen ===
+=== run finished: turns=1688 floor=4 hp=-3/64 gold=76 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00317_human.html

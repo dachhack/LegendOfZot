@@ -2749,1630 +2749,1688 @@ T1365 mode=chest_mode          Glorfindel Whitepetal(elf) F2@( 2, 3) HP 40/40 MP
 T1366 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
 -> l
 T1367 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> s
-T1368 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> l
-T1369 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> s
-T1370 mode=chest_mode          Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=C
+-> w
+T1368 mode=chest_mode          Glorfindel Whitepetal(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 93 $ 556 room=C
 -> o
-T1371 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 29/40 MP 0/0 Hu 92 $ 556 room=.
+T1369 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 29/40 MP 0/0 Hu 93 $ 556 room=.
 -> l
-T1372 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 29/40 MP 0/0 Hu 92 $ 556 room=.
+T1370 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 29/40 MP 0/0 Hu 93 $ 556 room=.
+-> i
+T1371 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 29/40 MP 0/0 Hu 93 $ 556 room=.
+-> u5
+T1372 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> x
+T1373 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> e
+T1374 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
 -> s
-T1373 mode=dungeon_mode        Glorfindel Whitepetal(elf) F2@( 2, 6) HP 29/40 MP 0/0 Hu 92 $ 556 room=N
+T1375 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> s
+T1376 mode=chest_mode          Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=C
+-> o
+T1377 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> s
+T1378 mode=dungeon_mode        Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
 -> u
-T1374 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 29/40 MP 0/0 Hu 92 $ 556 room=N
+T1379 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
+-> n
+T1380 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> w
+T1381 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> e
+T1382 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> n
+T1383 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> s
+T1384 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> s
+T1385 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 86 $ 556 room=N
+-> n
+T1386 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> w
+T1387 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> e
+T1388 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> n
+T1389 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> s
+T1390 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> s
+T1391 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 82 $ 556 room=N
+-> n
+T1392 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> w
+T1393 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> e
+T1394 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> n
+T1395 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> s
+T1396 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> s
+T1397 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 78 $ 556 room=N
+-> n
+T1398 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> w
+T1399 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> e
+T1400 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> n
+T1401 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> s
+T1402 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> s
+T1403 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 73 $ 556 room=N
+-> n
+T1404 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> w
+T1405 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> e
+T1406 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> n
+T1407 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> s
+T1408 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> s
+T1409 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 69 $ 556 room=N
+-> n
+T1410 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> w
+T1411 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> e
+T1412 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> n
+T1413 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> s
+T1414 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> s
+T1415 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 65 $ 556 room=N
+-> n
+T1416 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> w
+T1417 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> e
+T1418 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> n
+T1419 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> s
+T1420 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> s
+T1421 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 61 $ 556 room=N
+-> n
+T1422 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> w
+T1423 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> e
+T1424 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> n
+T1425 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> s
+T1426 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> s
+T1427 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 57 $ 556 room=N
+-> n
+T1428 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> w
+T1429 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
+-> e
+T1430 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
+-> n
+T1431 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> s
+T1432 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> s
+T1433 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 52 $ 556 room=N
+-> n
+T1434 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
+-> w
+T1435 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
+-> e
+T1436 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> n
+T1437 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> s
+T1438 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> i
+T1439 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1440 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> x
+T1441 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> s
+T1442 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 98 $ 556 room=N
+-> n
+T1443 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> w
+T1444 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
+-> e
+T1445 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> n
+T1446 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> s
+T1447 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> s
+T1448 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 94 $ 556 room=N
+-> n
+T1449 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> w
+T1450 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> e
+T1451 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> n
+T1452 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> s
+T1453 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> s
+T1454 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
+-> n
+T1455 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> w
+T1456 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> e
+T1457 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> n
+T1458 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> s
+T1459 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> s
+T1460 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 86 $ 556 room=N
+-> n
+T1461 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> w
+T1462 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> e
+T1463 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> n
+T1464 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> s
+T1465 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> s
+T1466 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
+-> n
+T1467 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> w
+T1468 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> e
+T1469 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> n
+T1470 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> s
+T1471 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> s
+T1472 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 77 $ 556 room=N
+-> n
+T1473 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> w
+T1474 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> e
+T1475 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> n
+T1476 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> s
+T1477 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> s
+T1478 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 73 $ 556 room=N
+-> n
+T1479 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> w
+T1480 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> e
+T1481 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> n
+T1482 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> s
+T1483 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> s
+T1484 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 69 $ 556 room=N
+-> n
+T1485 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> w
+T1486 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> e
+T1487 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> n
+T1488 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> s
+T1489 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> s
+T1490 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 65 $ 556 room=N
+-> n
+T1491 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> w
+T1492 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> e
+T1493 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> n
+T1494 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> s
+T1495 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> s
+T1496 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 60 $ 556 room=N
+-> n
+T1497 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> w
+T1498 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> e
+T1499 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> n
+T1500 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> s
+T1501 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> s
+T1502 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 56 $ 556 room=N
+-> n
+T1503 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> w
+T1504 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
+-> e
+T1505 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> n
+T1506 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> s
+T1507 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> s
+T1508 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 52 $ 556 room=N
+-> n
+T1509 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
+-> w
+T1510 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
+-> e
+T1511 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> n
+T1512 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> i
+T1513 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1514 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> x
+T1515 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> s
+T1516 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> s
+T1517 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 98 $ 556 room=N
+-> n
+T1518 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
+-> w
+T1519 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> e
+T1520 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> n
+T1521 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> s
+T1522 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> s
+T1523 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 94 $ 556 room=N
+-> n
+T1524 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> w
+T1525 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> e
+T1526 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> n
+T1527 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> s
+T1528 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> s
+T1529 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 556 room=N
+-> n
+T1530 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> w
+T1531 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> e
+T1532 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> n
+T1533 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> s
+T1534 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> s
+T1535 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 85 $ 556 room=N
+-> n
+T1536 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> w
+T1537 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> e
+T1538 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> n
+T1539 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> s
+T1540 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> s
+T1541 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
+-> n
+T1542 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> w
+T1543 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> e
+T1544 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> n
+T1545 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> s
+T1546 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> s
+T1547 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 77 $ 556 room=N
+-> n
+T1548 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> w
+T1549 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> e
+T1550 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> n
+T1551 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> s
+T1552 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> s
+T1553 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 73 $ 556 room=N
+-> n
+T1554 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> w
+T1555 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> e
+T1556 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> n
+T1557 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> s
+T1558 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> s
+T1559 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
+-> n
+T1560 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> w
+T1561 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> e
+T1562 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> n
+T1563 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> s
+T1564 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> s
+T1565 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 64 $ 556 room=N
+-> n
+T1566 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> w
+T1567 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> e
+T1568 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> n
+T1569 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> s
+T1570 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
 -> l
-T1375 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 29/40 MP 0/0 Hu 92 $ 556 room=N
--> i
-T1376 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 29/40 MP 0/0 Hu 92 $ 556 room=N
--> u5
-T1377 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 92 $ 556 room=N
--> x
-T1378 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 92 $ 556 room=N
--> n
-T1379 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> w
-T1380 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> e
-T1381 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> n
-T1382 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> s
-T1383 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> s
-T1384 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 87 $ 556 room=N
--> n
-T1385 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> w
-T1386 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> e
-T1387 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> n
-T1388 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> s
-T1389 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> s
-T1390 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 83 $ 556 room=N
--> n
-T1391 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> w
-T1392 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> e
-T1393 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> n
-T1394 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> s
-T1395 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> s
-T1396 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 79 $ 556 room=N
--> n
-T1397 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> w
-T1398 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> e
-T1399 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> n
-T1400 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> s
-T1401 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> s
-T1402 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 75 $ 556 room=N
--> n
-T1403 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> w
-T1404 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> e
-T1405 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> n
-T1406 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> s
-T1407 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> s
-T1408 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 71 $ 556 room=N
--> n
-T1409 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> w
-T1410 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> e
-T1411 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> n
-T1412 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> s
-T1413 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> s
-T1414 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 66 $ 556 room=N
--> n
-T1415 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> w
-T1416 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> e
-T1417 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> n
-T1418 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> s
-T1419 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> s
-T1420 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 62 $ 556 room=N
--> n
-T1421 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> w
-T1422 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> e
-T1423 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> n
-T1424 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> s
-T1425 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> s
-T1426 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 58 $ 556 room=N
--> n
-T1427 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> w
-T1428 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> e
-T1429 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> n
-T1430 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> s
-T1431 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> s
-T1432 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 54 $ 556 room=N
--> n
-T1433 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> w
-T1434 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> e
-T1435 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> n
-T1436 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> s
-T1437 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> s
-T1438 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 50 $ 556 room=N
--> n
-T1439 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1440 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1441 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1442 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> w
-T1443 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> e
-T1444 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> n
-T1445 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> s
-T1446 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> s
-T1447 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 556 room=N
--> n
-T1448 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> w
-T1449 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> e
-T1450 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> n
-T1451 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> s
-T1452 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> s
-T1453 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 91 $ 556 room=N
--> n
-T1454 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> w
-T1455 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> e
-T1456 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> n
-T1457 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> s
-T1458 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> s
-T1459 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 87 $ 556 room=N
--> n
-T1460 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> w
-T1461 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> e
-T1462 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> n
-T1463 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> s
-T1464 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> s
-T1465 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 83 $ 556 room=N
--> n
-T1466 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> w
-T1467 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> e
-T1468 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> n
-T1469 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> s
-T1470 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> s
-T1471 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 79 $ 556 room=N
--> n
-T1472 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> w
-T1473 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> e
-T1474 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> n
-T1475 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> s
-T1476 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> s
-T1477 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 74 $ 556 room=N
--> n
-T1478 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> w
-T1479 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> e
-T1480 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> n
-T1481 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> s
-T1482 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> s
-T1483 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 70 $ 556 room=N
--> n
-T1484 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> w
-T1485 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> e
-T1486 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> n
-T1487 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> s
-T1488 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> s
-T1489 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 66 $ 556 room=N
--> n
-T1490 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> w
-T1491 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> e
-T1492 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> n
-T1493 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> s
-T1494 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> s
-T1495 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 62 $ 556 room=N
--> n
-T1496 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> w
-T1497 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> e
-T1498 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> n
-T1499 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> s
-T1500 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> s
-T1501 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 58 $ 556 room=N
--> n
-T1502 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> w
-T1503 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> e
-T1504 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> n
-T1505 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> s
-T1506 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> s
-T1507 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 53 $ 556 room=N
--> n
-T1508 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> w
-T1509 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> e
-T1510 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> n
-T1511 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> s
-T1512 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> s
-T1513 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 49 $ 556 room=N
--> i
-T1514 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 49 $ 556 room=N
--> eat1
-T1515 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 99 $ 556 room=N
--> x
-T1516 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 99 $ 556 room=N
--> n
-T1517 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> w
-T1518 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> e
-T1519 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> n
-T1520 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> s
-T1521 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> s
-T1522 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 556 room=N
--> n
-T1523 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> w
-T1524 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> e
-T1525 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> n
-T1526 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> s
-T1527 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> s
-T1528 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 91 $ 556 room=N
--> n
-T1529 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> w
-T1530 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> e
-T1531 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> n
-T1532 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> s
-T1533 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> s
-T1534 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 87 $ 556 room=N
--> n
-T1535 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> w
-T1536 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> e
-T1537 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> n
-T1538 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> s
-T1539 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> s
-T1540 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 82 $ 556 room=N
--> n
-T1541 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> w
-T1542 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> e
-T1543 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> n
-T1544 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> s
-T1545 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> s
-T1546 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 78 $ 556 room=N
--> n
-T1547 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> w
-T1548 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> e
-T1549 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> n
-T1550 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> s
-T1551 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> s
-T1552 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 74 $ 556 room=N
--> n
-T1553 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> w
-T1554 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> e
-T1555 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> n
-T1556 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> s
-T1557 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> s
-T1558 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 70 $ 556 room=N
--> n
-T1559 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> w
-T1560 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> e
-T1561 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> n
-T1562 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> s
-T1563 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> s
-T1564 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 66 $ 556 room=N
--> n
-T1565 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> w
-T1566 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> e
-T1567 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> n
-T1568 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> s
-T1569 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> s
-T1570 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 61 $ 556 room=N
--> n
 T1571 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> w
-T1572 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> e
+-> s
+T1572 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 60 $ 556 room=N
+-> n
 T1573 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> n
-T1574 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> s
+-> w
+T1574 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> e
 T1575 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> s
-T1576 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 57 $ 556 room=N
 -> n
+T1576 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> s
 T1577 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> w
-T1578 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> e
+-> s
+T1578 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 56 $ 556 room=N
+-> n
 T1579 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> n
-T1580 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> s
-T1581 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> s
-T1582 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 53 $ 556 room=N
--> n
-T1583 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
 -> w
-T1584 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> e
-T1585 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> n
-T1586 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> s
-T1587 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> s
-T1588 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 49 $ 556 room=N
--> i
-T1589 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 49 $ 556 room=N
--> eat1
-T1590 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 99 $ 556 room=N
--> x
-T1591 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 99 $ 556 room=N
--> n
-T1592 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> w
-T1593 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> e
-T1594 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> n
-T1595 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> s
-T1596 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> s
-T1597 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 556 room=N
--> n
-T1598 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> w
-T1599 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> e
-T1600 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> n
-T1601 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> s
-T1602 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> s
-T1603 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
--> n
-T1604 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> w
-T1605 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> e
-T1606 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> n
-T1607 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> s
-T1608 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> s
-T1609 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 86 $ 556 room=N
--> n
-T1610 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> w
-T1611 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> e
-T1612 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> n
-T1613 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> s
-T1614 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> s
-T1615 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 82 $ 556 room=N
--> n
-T1616 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> w
-T1617 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> e
-T1618 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> n
-T1619 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> s
-T1620 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> s
-T1621 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 78 $ 556 room=N
--> n
-T1622 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> w
-T1623 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> e
-T1624 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> n
-T1625 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> s
-T1626 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> s
-T1627 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 74 $ 556 room=N
--> n
-T1628 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> w
-T1629 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> e
-T1630 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> n
-T1631 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> s
-T1632 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> s
-T1633 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 69 $ 556 room=N
--> n
-T1634 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> w
-T1635 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> e
-T1636 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> n
-T1637 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> s
-T1638 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> s
-T1639 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 65 $ 556 room=N
--> n
-T1640 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> w
-T1641 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> e
-T1642 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> n
-T1643 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> s
-T1644 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> s
-T1645 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 61 $ 556 room=N
--> n
-T1646 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> w
-T1647 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> e
-T1648 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> n
-T1649 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> s
-T1650 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> s
-T1651 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 57 $ 556 room=N
--> n
-T1652 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> w
-T1653 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> e
-T1654 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> n
-T1655 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> s
-T1656 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> s
-T1657 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 53 $ 556 room=N
--> n
-T1658 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> w
-T1659 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> e
-T1660 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> n
-T1661 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> s
-T1662 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1663 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1664 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1665 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> s
-T1666 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 98 $ 556 room=N
--> n
-T1667 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> w
-T1668 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> e
-T1669 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> n
-T1670 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> s
-T1671 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> s
-T1672 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 94 $ 556 room=N
--> n
-T1673 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> w
-T1674 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> e
-T1675 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> n
-T1676 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> s
-T1677 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> s
-T1678 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
--> n
-T1679 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> w
-T1680 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> e
-T1681 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> n
-T1682 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> s
-T1683 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> s
-T1684 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 86 $ 556 room=N
--> n
-T1685 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> w
-T1686 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> e
-T1687 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> n
-T1688 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> s
-T1689 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> s
-T1690 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 82 $ 556 room=N
--> n
-T1691 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> w
-T1692 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> e
-T1693 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> n
-T1694 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> s
-T1695 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> s
-T1696 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 77 $ 556 room=N
--> n
-T1697 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> w
-T1698 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> e
-T1699 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> n
-T1700 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> s
-T1701 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> s
-T1702 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 73 $ 556 room=N
--> n
-T1703 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> w
-T1704 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> e
-T1705 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> n
-T1706 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> s
-T1707 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> s
-T1708 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 69 $ 556 room=N
--> n
-T1709 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> w
-T1710 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> e
-T1711 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> n
-T1712 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> s
-T1713 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> s
-T1714 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 65 $ 556 room=N
--> n
-T1715 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> w
-T1716 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> e
-T1717 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> n
-T1718 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> s
-T1719 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> s
-T1720 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 61 $ 556 room=N
--> n
-T1721 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> w
-T1722 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> e
-T1723 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> n
-T1724 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> s
-T1725 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> s
-T1726 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 56 $ 556 room=N
--> n
-T1727 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> w
-T1728 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> e
-T1729 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> n
-T1730 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> s
-T1731 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> s
-T1732 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 52 $ 556 room=N
--> n
-T1733 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> w
-T1734 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> e
-T1735 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> n
-T1736 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1737 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1738 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1739 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> s
-T1740 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> s
-T1741 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 98 $ 556 room=N
--> n
-T1742 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> w
-T1743 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> e
-T1744 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> n
-T1745 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> s
-T1746 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> s
-T1747 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 94 $ 556 room=N
--> n
-T1748 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> w
-T1749 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> e
-T1750 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> n
-T1751 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> s
-T1752 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> s
-T1753 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 90 $ 556 room=N
--> n
-T1754 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> w
-T1755 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> e
-T1756 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> n
-T1757 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> s
-T1758 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> s
-T1759 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 85 $ 556 room=N
--> n
-T1760 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> w
-T1761 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> e
-T1762 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> n
-T1763 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> s
-T1764 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> s
-T1765 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
--> n
-T1766 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> w
-T1767 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> e
-T1768 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> n
-T1769 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> s
-T1770 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> s
-T1771 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 77 $ 556 room=N
--> n
-T1772 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> w
-T1773 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> e
-T1774 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> n
-T1775 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> s
-T1776 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> s
-T1777 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 73 $ 556 room=N
--> n
-T1778 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> w
-T1779 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> e
-T1780 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> n
-T1781 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> s
-T1782 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> s
-T1783 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 69 $ 556 room=N
--> n
-T1784 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> w
-T1785 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> e
-T1786 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> n
-T1787 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> s
-T1788 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> s
-T1789 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 64 $ 556 room=N
--> n
-T1790 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> w
-T1791 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> e
-T1792 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> n
-T1793 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> s
-T1794 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> s
-T1795 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 60 $ 556 room=N
--> n
-T1796 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> w
-T1797 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> e
-T1798 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> n
-T1799 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> s
-T1800 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> s
-T1801 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 56 $ 556 room=N
--> n
-T1802 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> w
-T1803 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> e
-T1804 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> n
-T1805 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> s
-T1806 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> s
-T1807 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 52 $ 556 room=N
--> n
-T1808 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> w
-T1809 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> e
-T1810 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> n
-T1811 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1812 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1813 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1814 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> s
-T1815 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> s
-T1816 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 98 $ 556 room=N
--> n
-T1817 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> w
-T1818 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> e
-T1819 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> n
-T1820 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> s
-T1821 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> s
-T1822 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
--> n
-T1823 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> w
-T1824 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> e
-T1825 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> n
-T1826 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> s
-T1827 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> s
-T1828 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 556 room=N
--> n
-T1829 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> w
-T1830 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> e
-T1831 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> n
-T1832 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> s
-T1833 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> s
-T1834 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 85 $ 556 room=N
--> n
-T1835 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> w
-T1836 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> e
-T1837 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> n
-T1838 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> s
-T1839 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> s
-T1840 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
--> n
-T1841 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> w
-T1842 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> e
-T1843 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> n
-T1844 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> s
-T1845 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> s
-T1846 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 77 $ 556 room=N
--> n
-T1847 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> w
-T1848 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> e
-T1849 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> n
-T1850 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> s
-T1851 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> s
-T1852 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 72 $ 556 room=N
--> n
-T1853 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> w
-T1854 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> e
-T1855 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> n
-T1856 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> s
-T1857 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> s
-T1858 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
--> n
-T1859 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> w
-T1860 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> e
-T1861 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> n
-T1862 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> s
-T1863 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> s
-T1864 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 64 $ 556 room=N
--> n
-T1865 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> w
-T1866 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> e
-T1867 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> n
-T1868 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> s
-T1869 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> s
-T1870 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 60 $ 556 room=N
--> n
-T1871 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> w
-T1872 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> e
-T1873 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> n
-T1874 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> s
-T1875 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> s
-T1876 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 56 $ 556 room=N
--> n
-T1877 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> w
-T1878 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> e
-T1879 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> n
-T1880 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> s
-T1881 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> s
-T1882 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 51 $ 556 room=N
--> n
-T1883 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> w
-T1884 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> e
-T1885 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1886 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1887 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1888 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> n
-T1889 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> s
-T1890 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> s
-T1891 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 97 $ 556 room=N
--> n
-T1892 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
--> w
-T1893 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> e
-T1894 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> n
-T1895 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> s
-T1896 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> s
-T1897 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
--> n
-T1898 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> w
-T1899 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> e
-T1900 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> n
-T1901 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> s
-T1902 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> s
-T1903 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 556 room=N
--> n
-T1904 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> w
-T1905 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> e
-T1906 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> n
-T1907 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> s
-T1908 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> s
-T1909 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 85 $ 556 room=N
--> n
-T1910 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> w
-T1911 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> e
-T1912 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> n
-T1913 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> s
-T1914 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> s
-T1915 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 80 $ 556 room=N
--> n
-T1916 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
--> w
-T1917 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> e
-T1918 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> n
-T1919 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> s
-T1920 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> s
-T1921 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 76 $ 556 room=N
--> n
-T1922 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
--> w
-T1923 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> e
-T1924 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> n
-T1925 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> s
-T1926 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> s
-T1927 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 72 $ 556 room=N
--> n
-T1928 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> w
-T1929 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> e
-T1930 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> n
-T1931 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> s
-T1932 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> s
-T1933 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
--> n
-T1934 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> w
-T1935 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> e
-T1936 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> n
-T1937 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> s
-T1938 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> s
-T1939 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 64 $ 556 room=N
--> n
-T1940 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> w
-T1941 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> e
-T1942 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> n
-T1943 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> s
-T1944 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> s
-T1945 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 59 $ 556 room=N
--> n
-T1946 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
--> w
-T1947 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> e
-T1948 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> n
-T1949 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> s
-T1950 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> s
-T1951 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 55 $ 556 room=N
--> n
-T1952 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
--> w
-T1953 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> e
-T1954 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> n
-T1955 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> s
-T1956 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> s
-T1957 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 51 $ 556 room=N
--> n
-T1958 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> w
-T1959 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> e
-T1960 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> i
-T1961 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> eat1
-T1962 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> x
-T1963 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
--> n
-T1964 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> s
-T1965 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
--> s
-T1966 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 97 $ 556 room=N
--> n
-T1967 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
--> w
-T1968 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> e
-T1969 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
--> n
-T1970 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
--> s
-T1971 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
--> s
-T1972 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
--> n
-T1973 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
--> w
-T1974 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> e
-T1975 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
--> n
-T1976 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
--> s
-T1977 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
--> s
-T1978 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 88 $ 556 room=N
--> n
-T1979 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
--> w
-T1980 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
--> e
-T1981 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> n
-T1982 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
--> s
-T1983 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
--> s
-T1984 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 84 $ 556 room=N
--> n
-T1985 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
--> w
-T1986 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
--> e
-T1987 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
--> n
-T1988 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> s
-T1989 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
--> s
-T1990 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 80 $ 556 room=N
--> n
-T1991 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> w
-T1992 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
--> e
-T1993 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
--> n
-T1994 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> s
-T1995 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
--> s
-T1996 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 76 $ 556 room=N
--> n
-T1997 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
--> w
-T1998 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> e
-T1999 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
--> n
-T2000 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
--> s
-T2001 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
--> s
-T2002 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 72 $ 556 room=N
--> n
-T2003 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
--> w
-T2004 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> e
-T2005 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
--> n
-T2006 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
--> s
-T2007 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
--> s
-T2008 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 67 $ 556 room=N
--> n
-T2009 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
--> w
-T2010 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
--> e
-T2011 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> n
-T2012 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
--> s
-T2013 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
--> s
-T2014 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 63 $ 556 room=N
--> n
-T2015 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
--> w
-T2016 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
--> e
-T2017 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
--> n
-T2018 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> s
-T2019 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
--> s
-T2020 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 59 $ 556 room=N
--> n
-T2021 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> w
-T2022 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
--> e
-T2023 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
--> n
-T2024 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> s
-T2025 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
--> s
-T2026 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 55 $ 556 room=N
--> n
-T2027 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
--> w
-T2028 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> e
-T2029 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
--> n
-T2030 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
--> s
-T2031 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
--> s
-T2032 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 51 $ 556 room=N
--> n
-T2033 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
--> w
-T2034 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> e
-T2035 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
--> n
-T2036 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 48 $ 556 room=.
--> s
-T2037 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 47 $ 556 room=.
--> s
-T2038 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 46 $ 556 room=N
--> n
-T2039 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 46 $ 556 room=.
--> w
-T2040 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 45 $ 556 room=.
--> e
-T2041 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 44 $ 556 room=.
--> n
-T2042 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 44 $ 556 room=.
--> s
-T2043 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 43 $ 556 room=.
--> s
-T2044 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 42 $ 556 room=N
--> n
-T2045 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 42 $ 556 room=.
--> w
-T2046 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 41 $ 556 room=.
--> e
-T2047 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 40 $ 556 room=.
--> n
-T2048 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 39 $ 556 room=.
--> s
-T2049 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 39 $ 556 room=.
--> s
-T2050 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 38 $ 556 room=N
--> n
-T2051 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 37 $ 556 room=.
--> w
-T2052 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 37 $ 556 room=.
--> e
-T2053 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 36 $ 556 room=.
--> n
-T2054 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 35 $ 556 room=.
--> s
-T2055 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 35 $ 556 room=.
--> s
-T2056 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 34 $ 556 room=N
--> n
-T2057 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 33 $ 556 room=.
--> w
-T2058 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 32 $ 556 room=.
--> e
-T2059 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 32 $ 556 room=.
--> n
-T2060 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 31 $ 556 room=.
--> s
-T2061 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 30 $ 556 room=.
--> s
-T2062 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 30 $ 556 room=N
--> w
-T2063 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 40/40 MP 0/0 Hu 29 $ 556 room=M vs Goblin(L1 HP12/12)
--> a
-T2064 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 39/40 MP 0/0 Hu 29 $ 556 room=M vs Goblin(L1 HP12/12)
--> a
-T2065 mode=combat_victory      Glorfindel Whitepetal(elf) F2@( 1, 6) HP 39/50 MP 0/0 Hu 29 $ 570 room=.
--> back
-T2066 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 39/50 MP 0/0 Hu 29 $ 570 room=.
--> i
-T2067 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 39/50 MP 0/0 Hu 29 $ 570 room=.
--> u5
-T2068 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
--> x
-T2069 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
--> i
-T2070 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
--> u11
-T2071 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
--> eat1
-T2072 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 36 $ 570 room=.
--> x
-T2073 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 36 $ 570 room=.
+T1580 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
 -> l
-T2074 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 36 $ 570 room=.
--> n
-T2075 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 35 $ 570 room=.
--> s
-T2076 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 35 $ 570 room=.
--> n
-T2077 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 34 $ 570 room=.
+T1581 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
 -> e
-T2078 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 33 $ 570 room=.
+T1582 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
 -> n
-T2079 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 32 $ 570 room=.
+T1583 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
 -> s
-T2080 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 32 $ 570 room=.
+T1584 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
 -> s
-T2081 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 31 $ 570 room=N
+T1585 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 52 $ 556 room=N
+-> n
+T1586 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
 -> w
-T2082 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 30 $ 570 room=.
+T1587 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> e
+T1588 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
 -> n
-T2083 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 30 $ 570 room=.
--> n
-T2084 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 29 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2085 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 29 $ 570 room=M
--> n
-T2086 mode=chest_mode          Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 29 $ 570 room=C
--> o
-T2087 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
+T1589 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
 -> i
-T2088 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
--> e4
-T2089 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
+T1590 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1591 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
 -> x
-T2090 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 29 $ 570 room=.
+T1592 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
 -> s
-T2091 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 28 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2092 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 28 $ 570 room=M
--> e
-T2093 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 28 $ 570 room=.
+T1593 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
 -> s
-T2094 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 28 $ 570 room=.
--> s
-T2095 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 27 $ 570 room=N
+T1594 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 97 $ 556 room=N
+-> n
+T1595 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
 -> w
-T2096 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 26 $ 570 room=.
--> n
-T2097 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 25 $ 570 room=.
--> n
-T2098 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 25 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2099 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 25 $ 570 room=M
--> n
-T2100 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 25 $ 570 room=.
--> s
-T2101 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 24 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2102 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu 24 $ 570 room=M
+T1596 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
 -> e
-T2103 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 35/50 MP 0/0 Hu 24 $ 570 room=.
+T1597 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> n
+T1598 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> s
+T1599 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> s
+T1600 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
+-> l
+T1601 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
+-> n
+T1602 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> w
+T1603 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> e
+T1604 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> n
+T1605 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> s
+T1606 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> s
+T1607 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 556 room=N
+-> n
+T1608 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> w
+T1609 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> e
+T1610 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> l
+T1611 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> n
+T1612 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> s
+T1613 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> s
+T1614 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 85 $ 556 room=N
+-> n
+T1615 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> w
+T1616 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> e
+T1617 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> n
+T1618 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> s
+T1619 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> s
+T1620 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
+-> l
+T1621 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 81 $ 556 room=N
+-> n
+T1622 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> w
+T1623 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> e
+T1624 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> n
+T1625 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> s
+T1626 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> s
+T1627 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 76 $ 556 room=N
+-> n
+T1628 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> w
+T1629 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> e
+T1630 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> l
+T1631 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> n
+T1632 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> s
+T1633 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> s
+T1634 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 72 $ 556 room=N
+-> n
+T1635 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> w
+T1636 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> e
+T1637 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> n
+T1638 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> s
+T1639 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> s
+T1640 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
+-> l
+T1641 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
+-> n
+T1642 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> w
+T1643 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> e
+T1644 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> n
+T1645 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> s
+T1646 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> s
+T1647 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 64 $ 556 room=N
+-> n
+T1648 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> w
+T1649 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> e
+T1650 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> l
+T1651 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> n
+T1652 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> s
+T1653 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> s
+T1654 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 60 $ 556 room=N
+-> n
+T1655 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> w
+T1656 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> e
+T1657 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> n
+T1658 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> s
+T1659 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> s
+T1660 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 55 $ 556 room=N
+-> n
+T1661 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
+-> w
+T1662 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> e
+T1663 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> n
+T1664 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> s
+T1665 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
+-> s
+T1666 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 51 $ 556 room=N
+-> n
+T1667 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
+-> w
+T1668 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> e
+T1669 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
 -> i
-T2104 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 35/50 MP 0/0 Hu 24 $ 570 room=.
+T1670 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1671 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> x
+T1672 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> n
+T1673 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> s
+T1674 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> s
+T1675 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 97 $ 556 room=N
+-> n
+T1676 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> w
+T1677 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> e
+T1678 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> n
+T1679 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> s
+T1680 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> s
+T1681 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 93 $ 556 room=N
+-> n
+T1682 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> w
+T1683 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> e
+T1684 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> n
+T1685 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> s
+T1686 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> s
+T1687 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 89 $ 556 room=N
+-> n
+T1688 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> w
+T1689 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> e
+T1690 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> n
+T1691 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> s
+T1692 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> s
+T1693 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 84 $ 556 room=N
+-> n
+T1694 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> w
+T1695 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> e
+T1696 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> n
+T1697 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> s
+T1698 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> s
+T1699 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 80 $ 556 room=N
+-> n
+T1700 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> w
+T1701 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> e
+T1702 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> n
+T1703 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> s
+T1704 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> s
+T1705 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 76 $ 556 room=N
+-> n
+T1706 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> w
+T1707 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> e
+T1708 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> n
+T1709 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> s
+T1710 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> s
+T1711 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 72 $ 556 room=N
+-> n
+T1712 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> w
+T1713 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> e
+T1714 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> n
+T1715 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> s
+T1716 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> s
+T1717 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 68 $ 556 room=N
+-> n
+T1718 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> w
+T1719 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> e
+T1720 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> n
+T1721 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> s
+T1722 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> s
+T1723 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 63 $ 556 room=N
+-> n
+T1724 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> w
+T1725 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> e
+T1726 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> n
+T1727 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> s
+T1728 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> s
+T1729 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 59 $ 556 room=N
+-> n
+T1730 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> w
+T1731 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> e
+T1732 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> n
+T1733 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> s
+T1734 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> s
+T1735 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 55 $ 556 room=N
+-> n
+T1736 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> w
+T1737 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> e
+T1738 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> n
+T1739 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
+-> s
+T1740 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
+-> s
+T1741 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 51 $ 556 room=N
+-> n
+T1742 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> w
+T1743 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> i
+T1744 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1745 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> x
+T1746 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> e
+T1747 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> n
+T1748 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> s
+T1749 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
+-> s
+T1750 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 97 $ 556 room=N
+-> n
+T1751 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> w
+T1752 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> e
+T1753 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> n
+T1754 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> s
+T1755 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> s
+T1756 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 92 $ 556 room=N
+-> n
+T1757 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 92 $ 556 room=.
+-> w
+T1758 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> e
+T1759 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> n
+T1760 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> s
+T1761 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> s
+T1762 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 88 $ 556 room=N
+-> n
+T1763 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 556 room=.
+-> w
+T1764 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> e
+T1765 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> n
+T1766 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> s
+T1767 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> s
+T1768 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 84 $ 556 room=N
+-> n
+T1769 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> w
+T1770 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> e
+T1771 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> n
+T1772 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> s
+T1773 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> s
+T1774 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 80 $ 556 room=N
+-> n
+T1775 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> w
+T1776 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> e
+T1777 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> n
+T1778 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> s
+T1779 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> s
+T1780 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 76 $ 556 room=N
+-> n
+T1781 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> w
+T1782 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> e
+T1783 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> n
+T1784 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> s
+T1785 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> s
+T1786 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 71 $ 556 room=N
+-> n
+T1787 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 71 $ 556 room=.
+-> w
+T1788 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> e
+T1789 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> n
+T1790 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> s
+T1791 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> s
+T1792 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 67 $ 556 room=N
+-> n
+T1793 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 67 $ 556 room=.
+-> w
+T1794 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> e
+T1795 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> n
+T1796 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> s
+T1797 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> s
+T1798 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 63 $ 556 room=N
+-> n
+T1799 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> w
+T1800 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> e
+T1801 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> n
+T1802 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> s
+T1803 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> s
+T1804 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 59 $ 556 room=N
+-> n
+T1805 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> w
+T1806 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> e
+T1807 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> n
+T1808 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 56 $ 556 room=.
+-> s
+T1809 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 55 $ 556 room=.
+-> s
+T1810 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 55 $ 556 room=N
+-> n
+T1811 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 54 $ 556 room=.
+-> w
+T1812 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> e
+T1813 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 53 $ 556 room=.
+-> n
+T1814 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 52 $ 556 room=.
+-> s
+T1815 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 51 $ 556 room=.
+-> s
+T1816 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 50 $ 556 room=N
+-> n
+T1817 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 50 $ 556 room=.
+-> w
+T1818 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> i
+T1819 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 49 $ 556 room=.
+-> eat1
+T1820 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> x
+T1821 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 99 $ 556 room=.
+-> e
+T1822 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> n
+T1823 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 98 $ 556 room=.
+-> s
+T1824 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 97 $ 556 room=.
+-> s
+T1825 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 96 $ 556 room=N
+-> n
+T1826 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 96 $ 556 room=.
+-> w
+T1827 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 95 $ 556 room=.
+-> e
+T1828 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 94 $ 556 room=.
+-> n
+T1829 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> s
+T1830 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 93 $ 556 room=.
+-> s
+T1831 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 92 $ 556 room=N
+-> n
+T1832 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> w
+T1833 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 91 $ 556 room=.
+-> e
+T1834 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 90 $ 556 room=.
+-> n
+T1835 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> s
+T1836 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 89 $ 556 room=.
+-> s
+T1837 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 88 $ 556 room=N
+-> n
+T1838 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 87 $ 556 room=.
+-> w
+T1839 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> e
+T1840 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 86 $ 556 room=.
+-> n
+T1841 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 85 $ 556 room=.
+-> s
+T1842 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 84 $ 556 room=.
+-> s
+T1843 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 84 $ 556 room=N
+-> n
+T1844 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 83 $ 556 room=.
+-> w
+T1845 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> e
+T1846 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 82 $ 556 room=.
+-> n
+T1847 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 81 $ 556 room=.
+-> s
+T1848 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 556 room=.
+-> s
+T1849 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 79 $ 556 room=N
+-> n
+T1850 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 79 $ 556 room=.
+-> w
+T1851 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 78 $ 556 room=.
+-> e
+T1852 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> n
+T1853 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 556 room=.
+-> s
+T1854 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 76 $ 556 room=.
+-> s
+T1855 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 75 $ 556 room=N
+-> n
+T1856 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 75 $ 556 room=.
+-> w
+T1857 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 74 $ 556 room=.
+-> e
+T1858 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 556 room=.
+-> n
+T1859 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> s
+T1860 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 72 $ 556 room=.
+-> s
+T1861 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 71 $ 556 room=N
+-> n
+T1862 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> w
+T1863 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 70 $ 556 room=.
+-> e
+T1864 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 69 $ 556 room=.
+-> n
+T1865 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> s
+T1866 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 68 $ 556 room=.
+-> s
+T1867 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 67 $ 556 room=N
+-> n
+T1868 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 556 room=.
+-> w
+T1869 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> e
+T1870 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 65 $ 556 room=.
+-> n
+T1871 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 64 $ 556 room=.
+-> s
+T1872 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 63 $ 556 room=.
+-> s
+T1873 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 63 $ 556 room=N
+-> n
+T1874 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 62 $ 556 room=.
+-> w
+T1875 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> e
+T1876 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 61 $ 556 room=.
+-> n
+T1877 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 60 $ 556 room=.
+-> s
+T1878 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 59 $ 556 room=.
+-> s
+T1879 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 40/40 MP 0/0 Hu 58 $ 556 room=N
+-> n
+T1880 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/40 MP 0/0 Hu 58 $ 556 room=.
+-> w
+T1881 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 40/40 MP 0/0 Hu 57 $ 556 room=.
+-> n
+T1882 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 40/40 MP 0/0 Hu 56 $ 556 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T1883 mode=combat_victory      Glorfindel Whitepetal(elf) F2@( 1, 4) HP 40/50 MP 0/0 Hu 56 $ 566 room=.
+-> back
+T1884 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 40/50 MP 0/0 Hu 56 $ 566 room=.
+-> i
+T1885 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 40/50 MP 0/0 Hu 56 $ 566 room=.
 -> u6
-T2105 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 24 $ 570 room=.
+T1886 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> x
-T2106 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 24 $ 570 room=.
--> s
-T2107 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 23 $ 570 room=.
--> s
-T2108 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 23 $ 570 room=N
--> w
-T2109 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 22 $ 570 room=.
--> n
-T2110 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 21 $ 570 room=.
--> n
-T2111 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 21 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2112 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 21 $ 570 room=M
--> n
-T2113 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 21 $ 570 room=.
--> s
-T2114 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 20 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2115 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 20 $ 570 room=M
--> e
-T2116 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 20 $ 570 room=.
--> s
-T2117 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 19 $ 570 room=.
--> w
-T2118 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 18 $ 570 room=.
--> s
-T2119 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 18 $ 570 room=.
--> e
-T2120 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 17 $ 570 room=N
--> n
-T2121 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 16 $ 570 room=.
--> n
-T2122 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 16 $ 570 room=.
--> w
-T2123 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 15 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2124 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu 15 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2125 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu 15 $ 570 room=M
--> n
-T2126 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 35/50 MP 0/0 Hu 15 $ 570 room=.
+T1887 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> i
-T2127 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 35/50 MP 0/0 Hu 15 $ 570 room=.
--> u6
-T2128 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 15 $ 570 room=.
+T1888 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> u13
+T1889 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> e1
+T1890 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> x
-T2129 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 15 $ 570 room=.
+T1891 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> n
+T1892 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> s
-T2130 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 14 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2131 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 14 $ 570 room=M
--> s
-T2132 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 14 $ 570 room=.
+T1893 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 55 $ 566 room=.
 -> e
-T2133 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 14 $ 570 room=.
+T1894 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
+-> s
+T1895 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
+-> s
+T1896 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 53 $ 566 room=N
 -> n
-T2134 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 13 $ 570 room=.
--> s
-T2135 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 12 $ 570 room=.
--> s
-T2136 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 11 $ 570 room=N
+T1897 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 52 $ 566 room=.
 -> w
-T2137 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 11 $ 570 room=.
+T1898 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
 -> n
-T2138 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 10 $ 570 room=.
+T1899 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
 -> n
-T2139 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  9 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2140 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  9 $ 570 room=M
--> n
-T2141 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  9 $ 570 room=.
+T1900 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 50 $ 566 room=.
 -> s
-T2142 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  9 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2143 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  9 $ 570 room=M
--> e
-T2144 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu  9 $ 570 room=.
--> s
-T2145 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu  8 $ 570 room=.
--> s
-T2146 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu  7 $ 570 room=N
--> w
-T2147 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu  7 $ 570 room=.
--> n
-T2148 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu  6 $ 570 room=.
--> n
-T2149 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  5 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2150 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  5 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2151 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu  5 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2152 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu  5 $ 570 room=M
--> n
-T2153 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 35/50 MP 0/0 Hu  5 $ 570 room=.
+T1901 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
 -> i
-T2154 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 35/50 MP 0/0 Hu  5 $ 570 room=.
--> u6
-T2155 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  5 $ 570 room=.
+T1902 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
+-> eat2
+T1903 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
 -> x
-T2156 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  5 $ 570 room=.
--> s
-T2157 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  4 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2158 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu  4 $ 570 room=M
+T1904 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
 -> e
-T2159 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 35/50 MP 0/0 Hu  4 $ 570 room=.
+T1905 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
 -> s
-T2160 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 35/50 MP 0/0 Hu  4 $ 570 room=.
+T1906 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 60 $ 566 room=.
 -> s
-T2161 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 35/50 MP 0/0 Hu  3 $ 570 room=N
+T1907 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 59 $ 566 room=N
+-> n
+T1908 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 59 $ 566 room=.
 -> w
-T2162 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 35/50 MP 0/0 Hu  2 $ 570 room=.
+T1909 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 58 $ 566 room=.
 -> n
-T2163 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 35/50 MP 0/0 Hu  2 $ 570 room=.
+T1910 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 57 $ 566 room=.
 -> n
-T2164 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu  1 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2165 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 35/50 MP 0/0 Hu  1 $ 570 room=M
--> n
-T2166 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 35/50 MP 0/0 Hu  1 $ 570 room=.
+T1911 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> s
-T2167 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 33/50 MP 0/0 Hu  0 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2168 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 33/50 MP 0/0 Hu  0 $ 570 room=M
+T1912 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
 -> e
-T2169 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 33/50 MP 0/0 Hu  0 $ 570 room=.
+T1913 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 55 $ 566 room=.
 -> s
-T2170 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 31/50 MP 0/0 Hu  0 $ 570 room=.
+T1914 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
 -> s
-T2171 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 29/50 MP 0/0 Hu  0 $ 570 room=N
+T1915 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 54 $ 566 room=N
+-> n
+T1916 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 53 $ 566 room=.
 -> w
-T2172 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 6) HP 27/50 MP 0/0 Hu  0 $ 570 room=.
+T1917 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 52 $ 566 room=.
 -> n
-T2173 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 25/50 MP 0/0 Hu  0 $ 570 room=.
+T1918 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 52 $ 566 room=.
 -> n
-T2174 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 23/50 MP 0/0 Hu  0 $ 570 room=M vs Wight(L1 HP40/40)
--> f
-T2175 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 4) HP 14/50 MP 0/0 Hu  0 $ 570 room=M
--> n
-T2176 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 14/50 MP 0/0 Hu  0 $ 570 room=.
+T1919 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
 -> s
-T2177 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 4) HP 12/50 MP 0/0 Hu  0 $ 570 room=M vs Wight(L1 HP40/40)
+T1920 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 50 $ 566 room=.
+-> e
+T1921 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
+-> i
+T1922 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
+-> eat1
+T1923 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 99 $ 566 room=.
+-> x
+T1924 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 99 $ 566 room=.
+-> s
+T1925 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 99 $ 566 room=.
+-> w
+T1926 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 98 $ 566 room=.
+-> n
+T1927 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 97 $ 566 room=.
+-> n
+T1928 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 97 $ 566 room=.
+-> s
+T1929 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 96 $ 566 room=.
+-> e
+T1930 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 95 $ 566 room=.
+-> s
+T1931 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 95 $ 566 room=.
+-> s
+T1932 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 94 $ 566 room=N
+-> n
+T1933 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 93 $ 566 room=.
+-> w
+T1934 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 92 $ 566 room=.
+-> n
+T1935 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 92 $ 566 room=.
+-> n
+T1936 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 91 $ 566 room=.
+-> s
+T1937 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 90 $ 566 room=.
+-> e
+T1938 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 90 $ 566 room=.
+-> s
+T1939 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 89 $ 566 room=.
+-> w
+T1940 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 88 $ 566 room=.
+-> n
+T1941 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 88 $ 566 room=.
+-> n
+T1942 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 87 $ 566 room=.
+-> s
+T1943 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 86 $ 566 room=.
+-> e
+T1944 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 85 $ 566 room=.
+-> s
+T1945 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 85 $ 566 room=.
+-> w
+T1946 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 84 $ 566 room=.
+-> n
+T1947 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 566 room=.
+-> n
+T1948 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 83 $ 566 room=.
+-> s
+T1949 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 82 $ 566 room=.
+-> e
+T1950 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 81 $ 566 room=.
+-> s
+T1951 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 81 $ 566 room=.
+-> w
+T1952 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 80 $ 566 room=.
+-> n
+T1953 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 79 $ 566 room=.
+-> n
+T1954 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 78 $ 566 room=.
+-> s
+T1955 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 78 $ 566 room=.
+-> e
+T1956 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 77 $ 566 room=.
+-> s
+T1957 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 76 $ 566 room=.
+-> s
+T1958 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 76 $ 566 room=N
+-> n
+T1959 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 75 $ 566 room=.
+-> w
+T1960 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 74 $ 566 room=.
+-> n
+T1961 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 74 $ 566 room=.
+-> n
+T1962 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 73 $ 566 room=.
+-> s
+T1963 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 72 $ 566 room=.
+-> e
+T1964 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 71 $ 566 room=.
+-> s
+T1965 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 71 $ 566 room=.
+-> s
+T1966 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 70 $ 566 room=N
+-> n
+T1967 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 69 $ 566 room=.
+-> w
+T1968 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 69 $ 566 room=.
+-> n
+T1969 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 68 $ 566 room=.
+-> n
+T1970 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 67 $ 566 room=.
+-> s
+T1971 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 67 $ 566 room=.
+-> e
+T1972 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 66 $ 566 room=.
+-> s
+T1973 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 65 $ 566 room=.
+-> s
+T1974 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 64 $ 566 room=N
+-> n
+T1975 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 64 $ 566 room=.
+-> w
+T1976 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 63 $ 566 room=.
+-> n
+T1977 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 62 $ 566 room=.
+-> n
+T1978 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 62 $ 566 room=.
+-> s
+T1979 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
+-> e
+T1980 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 60 $ 566 room=.
+-> s
+T1981 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 60 $ 566 room=.
+-> w
+T1982 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 59 $ 566 room=.
+-> n
+T1983 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 58 $ 566 room=.
+-> n
+T1984 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 57 $ 566 room=.
+-> s
+T1985 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 57 $ 566 room=.
+-> e
+T1986 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> s
+T1987 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 55 $ 566 room=.
+-> s
+T1988 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 55 $ 566 room=N
+-> n
+T1989 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
+-> w
+T1990 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 53 $ 566 room=.
+-> n
+T1991 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 53 $ 566 room=.
+-> n
+T1992 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 52 $ 566 room=.
+-> s
+T1993 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
+-> e
+T1994 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 50 $ 566 room=.
+-> s
+T1995 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 50 $ 566 room=.
+-> s
+T1996 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 49 $ 566 room=N
+-> i
+T1997 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 49 $ 566 room=N
+-> eat1
+T1998 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 99 $ 566 room=N
+-> x
+T1999 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 99 $ 566 room=N
+-> n
+T2000 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 98 $ 566 room=.
+-> w
+T2001 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 98 $ 566 room=.
+-> n
+T2002 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 97 $ 566 room=.
+-> n
+T2003 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 96 $ 566 room=.
+-> s
+T2004 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 96 $ 566 room=.
+-> e
+T2005 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 95 $ 566 room=.
+-> s
+T2006 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 94 $ 566 room=.
+-> s
+T2007 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 93 $ 566 room=N
+-> n
+T2008 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 93 $ 566 room=.
+-> w
+T2009 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 92 $ 566 room=.
+-> n
+T2010 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 91 $ 566 room=.
+-> n
+T2011 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 91 $ 566 room=.
+-> s
+T2012 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 90 $ 566 room=.
+-> e
+T2013 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 89 $ 566 room=.
+-> s
+T2014 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 89 $ 566 room=.
+-> w
+T2015 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 88 $ 566 room=.
+-> n
+T2016 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 87 $ 566 room=.
+-> n
+T2017 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 86 $ 566 room=.
+-> s
+T2018 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 86 $ 566 room=.
+-> e
+T2019 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 85 $ 566 room=.
+-> s
+T2020 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 84 $ 566 room=.
+-> s
+T2021 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 84 $ 566 room=N
+-> n
+T2022 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 83 $ 566 room=.
+-> w
+T2023 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 82 $ 566 room=.
+-> n
+T2024 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 82 $ 566 room=.
+-> n
+T2025 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 81 $ 566 room=.
+-> s
+T2026 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 80 $ 566 room=.
+-> e
+T2027 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 79 $ 566 room=.
+-> s
+T2028 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 79 $ 566 room=.
+-> s
+T2029 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 78 $ 566 room=N
+-> n
+T2030 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 77 $ 566 room=.
+-> w
+T2031 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 77 $ 566 room=.
+-> n
+T2032 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 76 $ 566 room=.
+-> n
+T2033 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 75 $ 566 room=.
+-> s
+T2034 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 75 $ 566 room=.
+-> e
+T2035 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 74 $ 566 room=.
+-> s
+T2036 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 73 $ 566 room=.
+-> s
+T2037 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 72 $ 566 room=N
+-> n
+T2038 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 72 $ 566 room=.
+-> w
+T2039 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 71 $ 566 room=.
+-> n
+T2040 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 70 $ 566 room=.
+-> n
+T2041 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 70 $ 566 room=.
+-> s
+T2042 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 69 $ 566 room=.
+-> e
+T2043 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 68 $ 566 room=.
+-> s
+T2044 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 68 $ 566 room=.
+-> s
+T2045 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 67 $ 566 room=N
+-> n
+T2046 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 66 $ 566 room=.
+-> w
+T2047 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 65 $ 566 room=.
+-> n
+T2048 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 65 $ 566 room=.
+-> n
+T2049 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 64 $ 566 room=.
+-> s
+T2050 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 63 $ 566 room=.
+-> e
+T2051 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 63 $ 566 room=.
+-> s
+T2052 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 62 $ 566 room=.
+-> w
+T2053 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
+-> n
+T2054 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 61 $ 566 room=.
+-> n
+T2055 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 60 $ 566 room=.
+-> s
+T2056 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 59 $ 566 room=.
+-> e
+T2057 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 58 $ 566 room=.
+-> s
+T2058 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 58 $ 566 room=.
+-> s
+T2059 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 57 $ 566 room=N
+-> n
+T2060 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> w
+T2061 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 56 $ 566 room=.
+-> n
+T2062 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 55 $ 566 room=.
+-> n
+T2063 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
+-> s
+T2064 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 54 $ 566 room=.
+-> e
+T2065 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 53 $ 566 room=.
+-> s
+T2066 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 52 $ 566 room=.
+-> w
+T2067 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
+-> n
+T2068 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 51 $ 566 room=.
+-> n
+T2069 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 50 $ 566 room=.
+-> s
+T2070 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
+-> e
+T2071 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 49 $ 566 room=.
+-> s
+T2072 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 48 $ 566 room=.
+-> s
+T2073 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 47 $ 566 room=N
+-> n
+T2074 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 47 $ 566 room=.
+-> w
+T2075 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 46 $ 566 room=.
+-> n
+T2076 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 45 $ 566 room=.
+-> n
+T2077 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 44 $ 566 room=.
+-> s
+T2078 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 44 $ 566 room=.
+-> e
+T2079 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 43 $ 566 room=.
+-> s
+T2080 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 42 $ 566 room=.
+-> s
+T2081 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 42 $ 566 room=N
+-> n
+T2082 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 41 $ 566 room=.
+-> w
+T2083 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 40 $ 566 room=.
+-> n
+T2084 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 40 $ 566 room=.
+-> n
+T2085 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 39 $ 566 room=.
+-> s
+T2086 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 38 $ 566 room=.
+-> e
+T2087 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 37 $ 566 room=.
+-> s
+T2088 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 37 $ 566 room=.
+-> s
+T2089 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 36 $ 566 room=N
+-> n
+T2090 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 35 $ 566 room=.
+-> w
+T2091 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 35 $ 566 room=.
+-> n
+T2092 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 34 $ 566 room=.
+-> n
+T2093 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 33 $ 566 room=.
+-> s
+T2094 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 33 $ 566 room=.
+-> e
+T2095 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 32 $ 566 room=.
+-> s
+T2096 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 31 $ 566 room=.
+-> w
+T2097 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 30 $ 566 room=.
+-> s
+T2098 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 30 $ 566 room=M vs Wight(L1 HP40/40)
 -> f
-T2178 mode=death_screen        Glorfindel Whitepetal(elf) F2@( 1, 4) HP -6/50 MP 0/0 Hu  0 $ 570 room=M
+T2099 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 30 $ 566 room=M
+-> e
+T2100 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 30 $ 566 room=N
+-> n
+T2101 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 29 $ 566 room=.
+-> n
+T2102 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 28 $ 566 room=.
+-> w
+T2103 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 28 $ 566 room=.
+-> n
+T2104 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 27 $ 566 room=.
+-> s
+T2105 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 26 $ 566 room=.
+-> s
+T2106 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 26 $ 566 room=.
+-> s
+T2107 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 25 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2108 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 25 $ 566 room=M
+-> e
+T2109 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 25 $ 566 room=N
+-> n
+T2110 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 24 $ 566 room=.
+-> n
+T2111 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 23 $ 566 room=.
+-> w
+T2112 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 23 $ 566 room=.
+-> n
+T2113 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 22 $ 566 room=.
+-> s
+T2114 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 21 $ 566 room=.
+-> s
+T2115 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 21 $ 566 room=.
+-> e
+T2116 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 20 $ 566 room=.
+-> n
+T2117 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 19 $ 566 room=.
+-> s
+T2118 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 19 $ 566 room=.
+-> s
+T2119 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 18 $ 566 room=N
+-> w
+T2120 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 17 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2121 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 17 $ 566 room=M
+-> n
+T2122 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 17 $ 566 room=.
+-> n
+T2123 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 16 $ 566 room=.
+-> n
+T2124 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu 16 $ 566 room=.
+-> s
+T2125 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 15 $ 566 room=.
+-> e
+T2126 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 14 $ 566 room=.
+-> s
+T2127 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 14 $ 566 room=.
+-> w
+T2128 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu 13 $ 566 room=.
+-> s
+T2129 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 12 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2130 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu 12 $ 566 room=M
+-> e
+T2131 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu 12 $ 566 room=N
+-> n
+T2132 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu 12 $ 566 room=.
+-> n
+T2133 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu 11 $ 566 room=.
+-> w
+T2134 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu 10 $ 566 room=.
+-> n
+T2135 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  9 $ 566 room=.
+-> s
+T2136 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  9 $ 566 room=.
+-> s
+T2137 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu  8 $ 566 room=.
+-> e
+T2138 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu  7 $ 566 room=.
+-> n
+T2139 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu  7 $ 566 room=.
+-> s
+T2140 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu  6 $ 566 room=.
+-> s
+T2141 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu  5 $ 566 room=N
+-> w
+T2142 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 50/50 MP 0/0 Hu  5 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2143 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 36/50 MP 0/0 Hu  5 $ 566 room=M
+-> n
+T2144 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 36/50 MP 0/0 Hu  5 $ 566 room=.
+-> i
+T2145 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 36/50 MP 0/0 Hu  5 $ 566 room=.
+-> u6
+T2146 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu  5 $ 566 room=.
+-> x
+T2147 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 50/50 MP 0/0 Hu  5 $ 566 room=.
+-> n
+T2148 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  4 $ 566 room=.
+-> n
+T2149 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  3 $ 566 room=.
+-> s
+T2150 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 50/50 MP 0/0 Hu  2 $ 566 room=.
+-> e
+T2151 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 50/50 MP 0/0 Hu  2 $ 566 room=.
+-> s
+T2152 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 50/50 MP 0/0 Hu  1 $ 566 room=.
+-> w
+T2153 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 48/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2154 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 46/50 MP 0/0 Hu  0 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2155 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 46/50 MP 0/0 Hu  0 $ 566 room=M
+-> e
+T2156 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 46/50 MP 0/0 Hu  0 $ 566 room=N
+-> n
+T2157 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 44/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2158 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 42/50 MP 0/0 Hu  0 $ 566 room=.
+-> w
+T2159 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 40/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2160 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 38/50 MP 0/0 Hu  0 $ 566 room=.
+-> i
+T2161 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 38/50 MP 0/0 Hu  0 $ 566 room=.
+-> u6
+T2162 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  0 $ 566 room=.
+-> x
+T2163 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2164 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 48/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2165 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 46/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2166 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 44/50 MP 0/0 Hu  0 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2167 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 44/50 MP 0/0 Hu  0 $ 566 room=M
+-> e
+T2168 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 44/50 MP 0/0 Hu  0 $ 566 room=N
+-> n
+T2169 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 42/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2170 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 40/50 MP 0/0 Hu  0 $ 566 room=.
+-> w
+T2171 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 38/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2172 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 36/50 MP 0/0 Hu  0 $ 566 room=.
+-> i
+T2173 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 36/50 MP 0/0 Hu  0 $ 566 room=.
+-> u6
+T2174 mode=inventory           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  0 $ 566 room=.
+-> x
+T2175 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 50/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2176 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 48/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2177 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 46/50 MP 0/0 Hu  0 $ 566 room=.
+-> e
+T2178 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 44/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2179 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 42/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2180 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 40/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2181 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 38/50 MP 0/0 Hu  0 $ 566 room=N
+-> i
+T2182 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 38/50 MP 0/0 Hu  0 $ 566 room=N
+-> u6
+T2183 mode=inventory           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu  0 $ 566 room=N
+-> x
+T2184 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 50/50 MP 0/0 Hu  0 $ 566 room=N
+-> w
+T2185 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 48/50 MP 0/0 Hu  0 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2186 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 34/50 MP 0/0 Hu  0 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2187 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 34/50 MP 0/0 Hu  0 $ 566 room=M
+-> n
+T2188 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 34/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2189 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 32/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2190 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 30/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2191 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 28/50 MP 0/0 Hu  0 $ 566 room=.
+-> e
+T2192 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 26/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2193 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 24/50 MP 0/0 Hu  0 $ 566 room=.
+-> w
+T2194 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 22/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2195 mode=combat_mode         Glorfindel Whitepetal(elf) F2@( 1, 6) HP 20/50 MP 0/0 Hu  0 $ 566 room=M vs Wight(L1 HP40/40)
+-> f
+T2196 mode=flee_direction_mode Glorfindel Whitepetal(elf) F2@( 1, 6) HP 20/50 MP 0/0 Hu  0 $ 566 room=M
+-> e
+T2197 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 6) HP 20/50 MP 0/0 Hu  0 $ 566 room=N
+-> n
+T2198 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 18/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2199 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 16/50 MP 0/0 Hu  0 $ 566 room=.
+-> w
+T2200 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 14/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2201 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 3) HP 12/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2202 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 4) HP 10/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2203 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 1, 5) HP 8/50 MP 0/0 Hu  0 $ 566 room=.
+-> e
+T2204 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 6/50 MP 0/0 Hu  0 $ 566 room=.
+-> n
+T2205 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 4) HP 4/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2206 mode=game_loop           Glorfindel Whitepetal(elf) F2@( 2, 5) HP 2/50 MP 0/0 Hu  0 $ 566 room=.
+-> s
+T2207 mode=death_screen        Glorfindel Whitepetal(elf) F2@( 2, 6) HP 0/50 MP 0/0 Hu  0 $ 566 room=N
 
-=== run finished: turns=2178 floor=2 hp=-6/50 gold=570 alive=False mode=death_screen ===
+=== run finished: turns=2207 floor=2 hp=0/50 gold=566 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/08128_elf.html

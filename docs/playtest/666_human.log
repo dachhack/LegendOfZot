@@ -2251,118 +2251,332 @@ T1116 mode=game_loop           Isildur the Bold(hum) F3@(14,16) HP 64/64 MP 0/0 
 T1117 mode=game_loop           Isildur the Bold(hum) F3@(14,16) HP 64/64 MP 0/0 Hu 79 $ 982 room=.
 -> e
 T1118 mode=stairs_down_mode    Isildur the Bold(hum) F3@(15,16) HP 64/64 MP 0/0 Hu 78 $ 982 room=D
--> w
-T1119 mode=game_loop           Isildur the Bold(hum) F3@(14,16) HP 64/64 MP 0/0 Hu 77 $ 982 room=.
+-> d
+T1119 mode=stairs_up_mode      Isildur the Bold(hum) F4@( 1, 1) HP 64/64 MP 0/0 Hu 78 $ 982 room=U
+-> s
+T1120 mode=stairs_up_mode      Isildur the Bold(hum) F4@( 1, 1) HP 64/64 MP 0/0 Hu 78 $ 982 room=U
 -> n
-T1120 mode=combat_mode         Isildur the Bold(hum) F3@(14,15) HP 64/64 MP 0/0 Hu 76 $ 982 room=M vs Slime Mold(L2 HP16/16)
--> a
-T1121 mode=combat_victory      Isildur the Bold(hum) F3@(14,15) HP 64/64 MP 0/0 Hu 76 $ 1256 room=.
--> back
-T1122 mode=game_loop           Isildur the Bold(hum) F3@(14,15) HP 64/64 MP 0/0 Hu 76 $ 1256 room=.
--> l
-T1123 mode=game_loop           Isildur the Bold(hum) F3@(14,15) HP 64/64 MP 0/0 Hu 76 $ 1256 room=.
+T1121 mode=stairs_up_mode      Isildur the Bold(hum) F4@( 1, 1) HP 64/64 MP 0/0 Hu 78 $ 982 room=U
 -> e
-T1124 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 1256 room=V
--> r1
-T1125 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 988 room=V
--> b15
-T1126 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 958 room=V
--> b15
-T1127 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 943 room=V
--> b15
-T1128 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 933 room=V
--> b8
-T1129 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 903 room=V
--> b8
-T1130 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 873 room=V
--> b8
-T1131 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 843 room=V
--> b8
-T1132 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 813 room=V
--> b12
-T1133 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 808 room=V
--> b12
-T1134 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 803 room=V
--> b10
-T1135 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 653 room=V
--> b5
-T1136 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 533 room=V
--> b5
-T1137 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 433 room=V
--> b6
-T1138 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 333 room=V
--> b6
-T1139 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 253 room=V
--> id16
-T1140 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 178 room=V
--> id17
-T1141 mode=vendor_shop         Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 128 room=V
--> x
-T1142 mode=game_loop           Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 128 room=V
--> l
-T1143 mode=game_loop           Isildur the Bold(hum) F3@(15,15) HP 64/64 MP 0/0 Hu 76 $ 128 room=V
--> e
-T1144 mode=garden_mode         Isildur the Bold(hum) F3@(16,15) HP 64/64 MP 0/0 Hu 75 $ 128 room=G
--> h
-T1145 mode=game_loop           Isildur the Bold(hum) F3@(16,15) HP 64/64 MP 0/0 Hu 75 $ 128 room=.
--> l
-T1146 mode=game_loop           Isildur the Bold(hum) F3@(16,15) HP 64/64 MP 0/0 Hu 75 $ 128 room=.
--> n
-T1147 mode=dungeon_mode        Isildur the Bold(hum) F3@(16,14) HP 64/64 MP 0/0 Hu 74 $ 128 room=N
--> u
-T1148 mode=dungeon_unlocked_mode Isildur the Bold(hum) F3@(16,14) HP 64/64 MP 0/0 Hu 74 $ 128 room=N
--> r
-T1149 mode=game_loop           Isildur the Bold(hum) F3@(16,14) HP 64/64 MP 0/0 Hu 74 $ 259 room=N
--> l
-T1150 mode=game_loop           Isildur the Bold(hum) F3@(16,14) HP 64/64 MP 0/0 Hu 74 $ 259 room=N
--> e
-T1151 mode=game_loop           Isildur the Bold(hum) F3@(17,14) HP 64/64 MP 0/0 Hu 74 $ 259 room=.
--> e
-T1152 mode=altar_mode          Isildur the Bold(hum) F3@(18,14) HP 64/64 MP 0/0 Hu 73 $ 259 room=A
+T1122 mode=altar_mode          Isildur the Bold(hum) F4@( 2, 1) HP 64/64 MP 0/0 Hu 77 $ 982 room=A
 -> pray
-T1153 mode=game_loop           Isildur the Bold(hum) F3@(18,14) HP 64/66 MP 0/0 Hu 73 $ 459 room=.
+T1123 mode=game_loop           Isildur the Bold(hum) F4@( 2, 1) HP 64/64 MP 0/0 Hu100 $ 1182 room=.
+-> l
+T1124 mode=game_loop           Isildur the Bold(hum) F4@( 2, 1) HP 64/64 MP 0/0 Hu100 $ 1182 room=.
 -> s
-T1154 mode=game_loop           Isildur the Bold(hum) F3@(18,15) HP 64/66 MP 0/0 Hu 72 $ 459 room=.
--> s
-T1155 mode=game_loop           Isildur the Bold(hum) F3@(18,16) HP 64/66 MP 0/0 Hu 72 $ 459 room=.
+T1125 mode=game_loop           Isildur the Bold(hum) F4@( 2, 2) HP 64/64 MP 0/0 Hu 99 $ 1182 room=.
+-> l
+T1126 mode=game_loop           Isildur the Bold(hum) F4@( 2, 2) HP 64/64 MP 0/0 Hu 99 $ 1182 room=.
 -> e
-T1156 mode=pool_mode           Isildur the Bold(hum) F3@(19,16) HP 64/66 MP 0/0 Hu 71 $ 459 room=P
+T1127 mode=game_loop           Isildur the Bold(hum) F4@( 3, 2) HP 64/64 MP 0/0 Hu 99 $ 1182 room=.
+-> l
+T1128 mode=game_loop           Isildur the Bold(hum) F4@( 3, 2) HP 64/64 MP 0/0 Hu 99 $ 1182 room=.
+-> e
+T1129 mode=pool_mode           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 98 $ 1182 room=P
 -> dr
-T1157 mode=game_loop           Isildur the Bold(hum) F3@(19,16) HP 64/66 MP 0/0 Hu 71 $ 459 room=.
+T1130 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 98 $ 1459 room=.
+-> l
+T1131 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 98 $ 1459 room=.
+-> s
+T1132 mode=chest_mode          Isildur the Bold(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu 97 $ 1459 room=C
+-> o
+T1133 mode=game_loop           Isildur the Bold(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu 97 $ 1569 room=.
+-> e
+T1134 mode=game_loop           Isildur the Bold(hum) F4@( 5, 3) HP 64/64 MP 0/0 Hu 97 $ 1569 room=.
+-> n
+T1135 mode=game_loop           Isildur the Bold(hum) F4@( 5, 2) HP 64/64 MP 0/0 Hu 96 $ 1569 room=.
+-> e
+T1136 mode=chest_mode          Isildur the Bold(hum) F4@( 6, 2) HP 64/64 MP 0/0 Hu 95 $ 1569 room=C
+-> e
+T1137 mode=game_loop           Isildur the Bold(hum) F4@( 7, 2) HP 64/64 MP 0/0 Hu 95 $ 1569 room=.
+-> s
+T1138 mode=game_loop           Isildur the Bold(hum) F4@( 7, 3) HP 64/64 MP 0/0 Hu 94 $ 1569 room=.
+-> s
+T1139 mode=game_loop           Isildur the Bold(hum) F4@( 7, 4) HP 64/64 MP 0/0 Hu 93 $ 1569 room=.
 -> w
-T1158 mode=game_loop           Isildur the Bold(hum) F3@(18,16) HP 65/66 MP 0/0 Hu 70 $ 459 room=.
--> w
-T1159 mode=combat_mode         Isildur the Bold(hum) F3@(17,16) HP 65/66 MP 0/0 Hu 69 $ 459 room=M vs Sewer Rat(L2 HP10/10)
+T1140 mode=game_loop           Isildur the Bold(hum) F4@( 6, 4) HP 64/64 MP 0/0 Hu 92 $ 1569 room=.
+-> s
+T1141 mode=dungeon_mode        Isildur the Bold(hum) F4@( 6, 5) HP 64/64 MP 0/0 Hu 92 $ 1569 room=N
+-> u
+T1142 mode=game_loop           Isildur the Bold(hum) F4@( 6, 5) HP 64/64 MP 0/0 Hu 92 $ 1569 room=N
+-> e
+T1143 mode=game_loop           Isildur the Bold(hum) F4@( 7, 5) HP 64/64 MP 0/0 Hu 91 $ 1569 room=.
+-> e
+T1144 mode=combat_mode         Isildur the Bold(hum) F4@( 8, 5) HP 64/64 MP 0/0 Hu 90 $ 1569 room=M vs Kobold(L3 HP21/21)
 -> a
-T1160 mode=combat_victory      Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1145 mode=combat_mode         Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1569 room=M vs Kobold(L3 HP21/21)
+-> a
+T1146 mode=combat_victory      Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
 -> back
-T1161 mode=game_loop           Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1147 mode=game_loop           Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
 -> i
-T1162 mode=inventory           Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
--> u22
-T1163 mode=inventory           Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1148 mode=inventory           Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
 -> u14
-T1164 mode=upgrade_scroll_mode Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
--> 1
-T1165 mode=inventory           Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1149 mode=inventory           Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
 -> x
-T1166 mode=game_loop           Isildur the Bold(hum) F3@(17,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1150 mode=game_loop           Isildur the Bold(hum) F4@( 8, 5) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
+-> n
+T1151 mode=game_loop           Isildur the Bold(hum) F4@( 8, 4) HP 63/64 MP 0/0 Hu 90 $ 1851 room=.
+-> w
+T1152 mode=game_loop           Isildur the Bold(hum) F4@( 7, 4) HP 64/64 MP 0/0 Hu 89 $ 1851 room=.
+-> n
+T1153 mode=game_loop           Isildur the Bold(hum) F4@( 7, 3) HP 64/64 MP 0/0 Hu 88 $ 1851 room=.
 -> e
-T1167 mode=game_loop           Isildur the Bold(hum) F3@(18,16) HP 64/66 MP 0/0 Hu 69 $ 465 room=.
+T1154 mode=game_loop           Isildur the Bold(hum) F4@( 8, 3) HP 64/64 MP 0/0 Hu 88 $ 1851 room=.
+-> s
+T1155 mode=game_loop           Isildur the Bold(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 87 $ 1851 room=.
+-> s
+T1156 mode=game_loop           Isildur the Bold(hum) F4@( 8, 5) HP 64/64 MP 0/0 Hu 86 $ 1851 room=.
+-> e
+T1157 mode=game_loop           Isildur the Bold(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 85 $ 1851 room=.
 -> n
-T1168 mode=game_loop           Isildur the Bold(hum) F3@(18,15) HP 64/66 MP 0/0 Hu 68 $ 465 room=.
--> n
-T1169 mode=game_loop           Isildur the Bold(hum) F3@(18,14) HP 65/66 MP 0/0 Hu 67 $ 465 room=.
+T1158 mode=game_loop           Isildur the Bold(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 85 $ 1851 room=.
+-> e
+T1159 mode=game_loop           Isildur the Bold(hum) F4@(10, 4) HP 64/64 MP 0/0 Hu 84 $ 1851 room=.
 -> w
-T1170 mode=game_loop           Isildur the Bold(hum) F3@(17,14) HP 65/66 MP 0/0 Hu 67 $ 465 room=.
+T1160 mode=game_loop           Isildur the Bold(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 83 $ 1851 room=.
 -> w
-T1171 mode=game_loop           Isildur the Bold(hum) F3@(16,14) HP 65/66 MP 0/0 Hu 66 $ 465 room=N
+T1161 mode=game_loop           Isildur the Bold(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 83 $ 1851 room=.
+-> s
+T1162 mode=game_loop           Isildur the Bold(hum) F4@( 8, 5) HP 64/64 MP 0/0 Hu 82 $ 1851 room=.
+-> e
+T1163 mode=game_loop           Isildur the Bold(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 81 $ 1851 room=.
+-> s
+T1164 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 81 $ 1851 room=.
+-> w
+T1165 mode=game_loop           Isildur the Bold(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 80 $ 1851 room=.
+-> w
+T1166 mode=game_loop           Isildur the Bold(hum) F4@( 7, 6) HP 64/64 MP 0/0 Hu 79 $ 1851 room=.
+-> s
+T1167 mode=game_loop           Isildur the Bold(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 78 $ 1851 room=.
+-> w
+T1168 mode=game_loop           Isildur the Bold(hum) F4@( 6, 7) HP 64/64 MP 0/0 Hu 78 $ 1851 room=.
+-> s
+T1169 mode=game_loop           Isildur the Bold(hum) F4@( 6, 8) HP 64/64 MP 0/0 Hu 77 $ 1851 room=.
+-> e
+T1170 mode=game_loop           Isildur the Bold(hum) F4@( 7, 8) HP 64/64 MP 0/0 Hu 76 $ 1851 room=.
 -> n
-T1172 mode=pool_mode           Isildur the Bold(hum) F3@(16,13) HP 65/66 MP 0/0 Hu 65 $ 465 room=P
--> dr
-T1173 mode=death_screen        Isildur the Bold(hum) F3@(16,13) HP -11/66 MP 0/0 Hu 65 $ 465 room=P
+T1171 mode=game_loop           Isildur the Bold(hum) F4@( 7, 7) HP 64/64 MP 0/0 Hu 76 $ 1851 room=.
+-> n
+T1172 mode=game_loop           Isildur the Bold(hum) F4@( 7, 6) HP 64/64 MP 0/0 Hu 75 $ 1851 room=.
+-> e
+T1173 mode=game_loop           Isildur the Bold(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 74 $ 1851 room=.
+-> e
+T1174 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 74 $ 1851 room=.
+-> s
+T1175 mode=combat_mode         Isildur the Bold(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 73 $ 1851 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T1176 mode=combat_mode         Isildur the Bold(hum) F4@( 9, 7) HP 63/64 MP 0/0 Hu 73 $ 1851 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T1177 mode=combat_mode         Isildur the Bold(hum) F4@( 9, 7) HP 62/64 MP 0/0 Hu 73 $ 1851 room=M vs Gray Ooze(L3 HP10/36)
+-> a
+T1178 mode=combat_mode         Isildur the Bold(hum) F4@( 9, 7) HP 61/64 MP 0/0 Hu 73 $ 1851 room=M vs Gray Ooze(L3 HP10/36)
+-> f
+T1179 mode=flee_direction_mode Isildur the Bold(hum) F4@( 9, 7) HP 61/64 MP 0/0 Hu 73 $ 1851 room=M
+-> n
+T1180 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 61/64 MP 0/0 Hu 73 $ 1851 room=.
+-> n
+T1181 mode=game_loop           Isildur the Bold(hum) F4@( 9, 5) HP 61/64 MP 0/0 Hu 72 $ 1851 room=.
+-> n
+T1182 mode=game_loop           Isildur the Bold(hum) F4@( 9, 4) HP 61/64 MP 0/0 Hu 71 $ 1851 room=.
+-> e
+T1183 mode=game_loop           Isildur the Bold(hum) F4@(10, 4) HP 61/64 MP 0/0 Hu 71 $ 1851 room=.
+-> w
+T1184 mode=game_loop           Isildur the Bold(hum) F4@( 9, 4) HP 62/64 MP 0/0 Hu 70 $ 1851 room=.
+-> w
+T1185 mode=game_loop           Isildur the Bold(hum) F4@( 8, 4) HP 62/64 MP 0/0 Hu 69 $ 1851 room=.
+-> n
+T1186 mode=game_loop           Isildur the Bold(hum) F4@( 8, 3) HP 62/64 MP 0/0 Hu 69 $ 1851 room=.
+-> w
+T1187 mode=game_loop           Isildur the Bold(hum) F4@( 7, 3) HP 62/64 MP 0/0 Hu 68 $ 1851 room=.
+-> s
+T1188 mode=game_loop           Isildur the Bold(hum) F4@( 7, 4) HP 63/64 MP 0/0 Hu 67 $ 1851 room=.
+-> s
+T1189 mode=game_loop           Isildur the Bold(hum) F4@( 7, 5) HP 63/64 MP 0/0 Hu 67 $ 1851 room=.
+-> s
+T1190 mode=game_loop           Isildur the Bold(hum) F4@( 7, 6) HP 63/64 MP 0/0 Hu 66 $ 1851 room=.
+-> e
+T1191 mode=game_loop           Isildur the Bold(hum) F4@( 8, 6) HP 63/64 MP 0/0 Hu 65 $ 1851 room=.
+-> e
+T1192 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 64 $ 1851 room=.
+-> n
+T1193 mode=game_loop           Isildur the Bold(hum) F4@( 9, 5) HP 64/64 MP 0/0 Hu 64 $ 1851 room=.
+-> n
+T1194 mode=game_loop           Isildur the Bold(hum) F4@( 9, 4) HP 64/64 MP 0/0 Hu 63 $ 1851 room=.
+-> w
+T1195 mode=game_loop           Isildur the Bold(hum) F4@( 8, 4) HP 64/64 MP 0/0 Hu 62 $ 1851 room=.
+-> n
+T1196 mode=game_loop           Isildur the Bold(hum) F4@( 8, 3) HP 64/64 MP 0/0 Hu 62 $ 1851 room=.
+-> w
+T1197 mode=game_loop           Isildur the Bold(hum) F4@( 7, 3) HP 64/64 MP 0/0 Hu 61 $ 1851 room=.
+-> s
+T1198 mode=game_loop           Isildur the Bold(hum) F4@( 7, 4) HP 64/64 MP 0/0 Hu 60 $ 1851 room=.
+-> s
+T1199 mode=game_loop           Isildur the Bold(hum) F4@( 7, 5) HP 64/64 MP 0/0 Hu 60 $ 1851 room=.
+-> s
+T1200 mode=game_loop           Isildur the Bold(hum) F4@( 7, 6) HP 64/64 MP 0/0 Hu 59 $ 1851 room=.
+-> e
+T1201 mode=game_loop           Isildur the Bold(hum) F4@( 8, 6) HP 64/64 MP 0/0 Hu 58 $ 1851 room=.
+-> e
+T1202 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 64/64 MP 0/0 Hu 57 $ 1851 room=.
+-> e
+T1203 mode=game_loop           Isildur the Bold(hum) F4@(10, 6) HP 64/64 MP 0/0 Hu 57 $ 1851 room=.
+-> s
+T1204 mode=game_loop           Isildur the Bold(hum) F4@(10, 7) HP 64/64 MP 0/0 Hu 56 $ 1851 room=.
+-> w
+T1205 mode=combat_mode         Isildur the Bold(hum) F4@( 9, 7) HP 64/64 MP 0/0 Hu 55 $ 1851 room=M vs Gray Ooze(L3 HP10/36)
+-> a
+T1206 mode=combat_victory      Isildur the Bold(hum) F4@( 9, 7) HP 63/64 MP 0/0 Hu 55 $ 1883 room=.
+-> back
+T1207 mode=game_loop           Isildur the Bold(hum) F4@( 9, 7) HP 63/64 MP 0/0 Hu 55 $ 1883 room=.
+-> n
+T1208 mode=game_loop           Isildur the Bold(hum) F4@( 9, 6) HP 63/64 MP 0/0 Hu 55 $ 1883 room=.
+-> w
+T1209 mode=game_loop           Isildur the Bold(hum) F4@( 8, 6) HP 63/64 MP 0/0 Hu 54 $ 1883 room=.
+-> w
+T1210 mode=game_loop           Isildur the Bold(hum) F4@( 7, 6) HP 63/64 MP 0/0 Hu 53 $ 1883 room=.
+-> s
+T1211 mode=game_loop           Isildur the Bold(hum) F4@( 7, 7) HP 63/64 MP 0/0 Hu 53 $ 1883 room=.
+-> w
+T1212 mode=game_loop           Isildur the Bold(hum) F4@( 6, 7) HP 63/64 MP 0/0 Hu 52 $ 1883 room=.
+-> n
+T1213 mode=game_loop           Isildur the Bold(hum) F4@( 6, 6) HP 63/64 MP 0/0 Hu 51 $ 1883 room=.
+-> n
+T1214 mode=game_loop           Isildur the Bold(hum) F4@( 6, 5) HP 63/64 MP 0/0 Hu 50 $ 1883 room=N
+-> w
+T1215 mode=game_loop           Isildur the Bold(hum) F4@( 5, 5) HP 63/64 MP 0/0 Hu 50 $ 1883 room=.
+-> s
+T1216 mode=game_loop           Isildur the Bold(hum) F4@( 5, 6) HP 63/64 MP 0/0 Hu 49 $ 1883 room=.
+-> i
+T1217 mode=inventory           Isildur the Bold(hum) F4@( 5, 6) HP 63/64 MP 0/0 Hu 49 $ 1883 room=.
+-> eat2
+T1218 mode=inventory           Isildur the Bold(hum) F4@( 5, 6) HP 63/64 MP 0/0 Hu 64 $ 1883 room=.
+-> x
+T1219 mode=game_loop           Isildur the Bold(hum) F4@( 5, 6) HP 63/64 MP 0/0 Hu 64 $ 1883 room=.
+-> n
+T1220 mode=game_loop           Isildur the Bold(hum) F4@( 5, 5) HP 63/64 MP 0/0 Hu 63 $ 1883 room=.
+-> w
+T1221 mode=game_loop           Isildur the Bold(hum) F4@( 4, 5) HP 63/64 MP 0/0 Hu 63 $ 1883 room=.
+-> n
+T1222 mode=game_loop           Isildur the Bold(hum) F4@( 4, 4) HP 63/64 MP 0/0 Hu 62 $ 1883 room=.
+-> n
+T1223 mode=game_loop           Isildur the Bold(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu 61 $ 1883 room=.
+-> n
+T1224 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 61 $ 1883 room=.
+-> w
+T1225 mode=game_loop           Isildur the Bold(hum) F4@( 3, 2) HP 64/64 MP 0/0 Hu 60 $ 1883 room=.
+-> w
+T1226 mode=game_loop           Isildur the Bold(hum) F4@( 2, 2) HP 64/64 MP 0/0 Hu 59 $ 1883 room=.
+-> s
+T1227 mode=game_loop           Isildur the Bold(hum) F4@( 2, 3) HP 64/64 MP 0/0 Hu 58 $ 1883 room=.
+-> w
+T1228 mode=garden_mode         Isildur the Bold(hum) F4@( 1, 3) HP 64/64 MP 0/0 Hu 58 $ 1883 room=G
+-> h
+T1229 mode=game_loop           Isildur the Bold(hum) F4@( 1, 3) HP 64/64 MP 0/0 Hu 58 $ 1883 room=.
+-> s
+T1230 mode=chest_mode          Isildur the Bold(hum) F4@( 1, 4) HP 64/64 MP 0/0 Hu 57 $ 1883 room=C
+-> o
+T1231 mode=game_loop           Isildur the Bold(hum) F4@( 1, 4) HP 64/64 MP 0/0 Hu 57 $ 1943 room=.
+-> s
+T1232 mode=game_loop           Isildur the Bold(hum) F4@( 1, 5) HP 64/64 MP 0/0 Hu 56 $ 1943 room=.
+-> e
+T1233 mode=game_loop           Isildur the Bold(hum) F4@( 2, 5) HP 64/64 MP 0/0 Hu 56 $ 1943 room=.
+-> s
+T1234 mode=game_loop           Isildur the Bold(hum) F4@( 2, 6) HP 64/64 MP 0/0 Hu 55 $ 1943 room=.
+-> w
+T1235 mode=warp_mode           Isildur the Bold(hum) F4@( 1, 6) HP 64/64 MP 0/0 Hu 54 $ 1943 room=W
+-> y
+T1236 mode=game_loop           Isildur the Bold(hum) F4@( 1, 6) HP 64/64 MP 0/0 Hu 54 $ 1943 room=W
+-> n
+T1237 mode=game_loop           Isildur the Bold(hum) F4@( 1, 5) HP 64/64 MP 0/0 Hu 54 $ 1943 room=.
+-> n
+T1238 mode=game_loop           Isildur the Bold(hum) F4@( 1, 4) HP 64/64 MP 0/0 Hu 53 $ 1943 room=.
+-> n
+T1239 mode=game_loop           Isildur the Bold(hum) F4@( 1, 3) HP 64/64 MP 0/0 Hu 52 $ 1943 room=.
+-> e
+T1240 mode=game_loop           Isildur the Bold(hum) F4@( 2, 3) HP 64/64 MP 0/0 Hu 51 $ 1943 room=.
+-> n
+T1241 mode=game_loop           Isildur the Bold(hum) F4@( 2, 2) HP 64/64 MP 0/0 Hu 51 $ 1943 room=.
+-> e
+T1242 mode=game_loop           Isildur the Bold(hum) F4@( 3, 2) HP 64/64 MP 0/0 Hu 50 $ 1943 room=.
+-> e
+T1243 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 49 $ 1943 room=.
+-> i
+T1244 mode=inventory           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu 49 $ 1943 room=.
+-> eat1
+T1245 mode=inventory           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu100 $ 1943 room=.
+-> x
+T1246 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 64/64 MP 0/0 Hu100 $ 1943 room=.
+-> s
+T1247 mode=game_loop           Isildur the Bold(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu100 $ 1943 room=.
+-> s
+T1248 mode=game_loop           Isildur the Bold(hum) F4@( 4, 4) HP 64/64 MP 0/0 Hu 99 $ 1943 room=.
+-> s
+T1249 mode=game_loop           Isildur the Bold(hum) F4@( 4, 5) HP 64/64 MP 0/0 Hu 98 $ 1943 room=.
+-> e
+T1250 mode=game_loop           Isildur the Bold(hum) F4@( 5, 5) HP 64/64 MP 0/0 Hu 98 $ 1943 room=.
+-> e
+T1251 mode=game_loop           Isildur the Bold(hum) F4@( 6, 5) HP 64/64 MP 0/0 Hu 97 $ 1943 room=N
+-> n
+T1252 mode=game_loop           Isildur the Bold(hum) F4@( 6, 4) HP 64/64 MP 0/0 Hu 96 $ 1943 room=.
+-> w
+T1253 mode=game_loop           Isildur the Bold(hum) F4@( 5, 4) HP 64/64 MP 0/0 Hu 95 $ 1943 room=.
+-> w
+T1254 mode=game_loop           Isildur the Bold(hum) F4@( 4, 4) HP 64/64 MP 0/0 Hu 95 $ 1943 room=.
+-> n
+T1255 mode=game_loop           Isildur the Bold(hum) F4@( 4, 3) HP 64/64 MP 0/0 Hu 94 $ 1943 room=.
+-> e
+T1256 mode=game_loop           Isildur the Bold(hum) F4@( 5, 3) HP 64/64 MP 0/0 Hu 93 $ 1943 room=.
+-> e
+T1257 mode=stairs_down_mode    Isildur the Bold(hum) F4@( 6, 3) HP 64/64 MP 0/0 Hu 93 $ 1943 room=D
+-> n
+T1258 mode=game_loop           Isildur the Bold(hum) F4@( 6, 2) HP 64/64 MP 0/0 Hu 92 $ 1943 room=C
+-> w
+T1259 mode=game_loop           Isildur the Bold(hum) F4@( 5, 2) HP 64/64 MP 0/0 Hu 91 $ 1943 room=.
+-> n
+T1260 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 64/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T1261 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 64/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP41/60)
+-> a
+T1262 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 64/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP41/60)
+-> a
+T1263 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 49/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP22/60)
+-> a
+T1264 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 34/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP22/60)
+-> a
+T1265 mode=combat_mode         Isildur the Bold(hum) F4@( 5, 1) HP 19/64 MP 0/0 Hu 91 $ 1943 room=M vs Gargoyle(L3 HP22/60)
+-> f
+T1266 mode=flee_direction_mode Isildur the Bold(hum) F4@( 5, 1) HP 4/64 MP 0/0 Hu 91 $ 1943 room=M
+-> w
+T1267 mode=game_loop           Isildur the Bold(hum) F4@( 4, 1) HP 4/64 MP 0/0 Hu 91 $ 1943 room=.
+-> s
+T1268 mode=game_loop           Isildur the Bold(hum) F4@( 4, 2) HP 4/64 MP 0/0 Hu 90 $ 1943 room=.
+-> s
+T1269 mode=game_loop           Isildur the Bold(hum) F4@( 4, 3) HP 5/64 MP 0/0 Hu 89 $ 1943 room=.
+-> e
+T1270 mode=game_loop           Isildur the Bold(hum) F4@( 5, 3) HP 5/64 MP 0/0 Hu 88 $ 1943 room=.
+-> e
+T1271 mode=stairs_down_mode    Isildur the Bold(hum) F4@( 6, 3) HP 6/64 MP 0/0 Hu 88 $ 1943 room=D
+-> d
+T1272 mode=stairs_up_mode      Isildur the Bold(hum) F5@( 1, 1) HP 6/64 MP 0/0 Hu 88 $ 1943 room=U
+-> e
+T1273 mode=combat_mode         Isildur the Bold(hum) F5@( 2, 1) HP 6/64 MP 0/0 Hu 87 $ 1943 room=M vs Ogre(L4 HP83/83)
+-> f
+T1274 mode=flee_direction_mode Isildur the Bold(hum) F5@( 2, 1) HP 6/64 MP 0/0 Hu 87 $ 1943 room=M
+-> w
+T1275 mode=stairs_up_mode      Isildur the Bold(hum) F5@( 1, 1) HP 6/64 MP 0/0 Hu 87 $ 1943 room=U
+-> e
+T1276 mode=combat_mode         Isildur the Bold(hum) F5@( 2, 1) HP 7/64 MP 0/0 Hu 86 $ 1943 room=M vs Ogre(L4 HP83/83)
+-> f
+T1277 mode=flee_direction_mode Isildur the Bold(hum) F5@( 2, 1) HP 7/64 MP 0/0 Hu 86 $ 1943 room=M
+-> w
+T1278 mode=stairs_up_mode      Isildur the Bold(hum) F5@( 1, 1) HP 7/64 MP 0/0 Hu 86 $ 1943 room=U
+-> e
+T1279 mode=combat_mode         Isildur the Bold(hum) F5@( 2, 1) HP 7/64 MP 0/0 Hu 86 $ 1943 room=M vs Ogre(L4 HP83/83)
+-> f
+T1280 mode=death_screen        Isildur the Bold(hum) F5@( 2, 1) HP -1/64 MP 0/0 Hu 86 $ 1943 room=M
 
-=== run finished: turns=1173 floor=3 hp=-11/66 gold=465 alive=False mode=death_screen ===
+=== run finished: turns=1280 floor=5 hp=-1/64 gold=1943 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00666_human.html

@@ -1076,1836 +1076,1828 @@ T 529 mode=warp_mode           Dain Coalbeard(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu
 T 530 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/64 MP 0/0 Hu 62 $ 778 room=.
 -> l
 T 531 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/64 MP 0/0 Hu 62 $ 778 room=.
--> s
-T 532 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 64/64 MP 0/0 Hu 62 $ 778 room=.
--> l
-T 533 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 64/64 MP 0/0 Hu 62 $ 778 room=.
--> s
-T 534 mode=chest_mode          Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 61 $ 778 room=C
--> o
-T 535 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 61 $ 848 room=.
--> l
-T 536 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 61 $ 848 room=.
 -> e
-T 537 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 60 $ 848 room=.
--> e
-T 538 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 60 $ 848 room=.
--> e
-T 539 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 59 $ 848 room=.
--> e
-T 540 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 58 $ 848 room=.
--> e
-T 541 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 57 $ 848 room=.
--> e
-T 542 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 57 $ 848 room=.
--> l
-T 543 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 57 $ 848 room=.
--> e
-T 544 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 64/64 MP 0/0 Hu 56 $ 848 room=D
--> w
-T 545 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 55 $ 848 room=.
--> n
-T 546 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 55 $ 848 room=.
--> l
-T 547 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 55 $ 848 room=.
--> s
-T 548 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 54 $ 848 room=.
--> w
-T 549 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 53 $ 848 room=.
--> w
-T 550 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 53 $ 848 room=.
--> w
-T 551 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 52 $ 848 room=.
--> w
-T 552 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 51 $ 848 room=.
--> n
-T 553 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 64/64 MP 0/0 Hu 50 $ 848 room=.
--> n
-T 554 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 64/64 MP 0/0 Hu 50 $ 848 room=.
--> w
-T 555 mode=altar_mode          Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 49 $ 848 room=A
+T 532 mode=altar_mode          Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 62 $ 778 room=A
 -> pray
-T 556 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 99 $ 848 room=.
--> w
-T 557 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/64 MP 0/0 Hu 98 $ 848 room=.
--> w
-T 558 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 98 $ 848 room=.
+T 533 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu100 $ 778 room=.
 -> l
-T 559 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 98 $ 848 room=.
--> n
-T 560 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 64/64 MP 0/0 Hu 97 $ 848 room=.
+T 534 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu100 $ 778 room=.
 -> s
-T 561 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 96 $ 848 room=.
+T 535 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 64/64 MP 0/0 Hu 99 $ 778 room=.
+-> l
+T 536 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 64/64 MP 0/0 Hu 99 $ 778 room=.
 -> s
-T 562 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 96 $ 848 room=M vs Goblin(L1 HP30/30)
+T 537 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 98 $ 778 room=.
+-> l
+T 538 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 98 $ 778 room=.
+-> w
+T 539 mode=chest_mode          Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 98 $ 778 room=C
+-> o
+T 540 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 98 $ 858 room=.
+-> w
+T 541 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 64/64 MP 0/0 Hu 97 $ 858 room=M vs Giant Rat(L1 HP22/22)
 -> a
-T 563 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 848 room=M vs Goblin(L1 HP5/30)
+T 542 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 63/64 MP 0/0 Hu 97 $ 858 room=M vs Giant Rat(L1 HP22/22)
 -> a
-T 564 mode=combat_victory      Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 956 room=.
+T 543 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 858 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 544 mode=combat_victory      Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 964 room=.
 -> back
-T 565 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 956 room=.
+T 545 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 964 room=.
 -> i
-T 566 mode=inventory           Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 956 room=.
+T 546 mode=inventory           Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 964 room=.
 -> u8
-T 567 mode=inventory           Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 956 room=.
+T 547 mode=inventory           Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 964 room=.
 -> x
-T 568 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 63/64 MP 0/0 Hu 96 $ 956 room=.
--> s
-T 569 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 63/64 MP 0/0 Hu 95 $ 956 room=M vs Giant Spider(L1 HP40/40)
+T 548 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 62/64 MP 0/0 Hu 97 $ 964 room=.
+-> n
+T 549 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 62/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP50/50)
+-> a
+T 550 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 60/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP50/50)
+-> a
+T 551 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 58/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP50/50)
 -> f
-T 570 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 63/64 MP 0/0 Hu 95 $ 956 room=M vs Giant Spider(L1 HP40/40)
+T 552 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 56/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP50/50)
 -> a
-T 571 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 63/64 MP 0/0 Hu 95 $ 956 room=M vs Giant Spider(L1 HP40/40)
+T 553 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 54/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP50/50)
 -> a
-T 572 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 63/64 MP 0/0 Hu 95 $ 956 room=M vs Giant Spider(L1 HP17/40)
+T 554 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 52/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP28/50)
 -> a
-T 573 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 58/64 MP 0/0 Hu 95 $ 956 room=M vs Giant Spider(L1 HP17/40)
+T 555 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 50/64 MP 0/0 Hu 96 $ 964 room=M vs Orc(L1 HP28/50)
 -> f
-T 574 mode=flee_direction_mode Dain Coalbeard(dwa) F2@( 1,16) HP 58/64 MP 0/0 Hu 95 $ 956 room=M
--> e
-T 575 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 58/64 MP 0/0 Hu 95 $ 956 room=.
+T 556 mode=flee_direction_mode Dain Coalbeard(dwa) F2@( 1,15) HP 50/64 MP 0/0 Hu 96 $ 964 room=M
 -> n
-T 576 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 59/64 MP 0/0 Hu 94 $ 956 room=.
--> e
-T 577 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 59/64 MP 0/0 Hu 93 $ 956 room=.
--> n
-T 578 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 60/64 MP 0/0 Hu 93 $ 956 room=.
--> w
-T 579 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 60/64 MP 0/0 Hu 92 $ 956 room=.
--> w
-T 580 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 61/64 MP 0/0 Hu 91 $ 956 room=.
--> s
-T 581 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 61/64 MP 0/0 Hu 91 $ 956 room=.
--> e
-T 582 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 62/64 MP 0/0 Hu 90 $ 956 room=.
--> e
-T 583 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 62/64 MP 0/0 Hu 89 $ 956 room=.
--> n
-T 584 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 63/64 MP 0/0 Hu 89 $ 956 room=.
--> w
-T 585 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 63/64 MP 0/0 Hu 88 $ 956 room=.
--> w
-T 586 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 87 $ 956 room=.
--> s
-T 587 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 86 $ 956 room=.
--> e
-T 588 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 64/64 MP 0/0 Hu 86 $ 956 room=.
--> s
-T 589 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 85 $ 956 room=.
--> w
-T 590 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 64/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 591 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 59/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 592 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 59/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 593 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 54/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 594 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 49/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 595 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 44/64 MP 0/0 Hu 84 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> f
-T 596 mode=flee_direction_mode Dain Coalbeard(dwa) F2@( 1,16) HP 44/64 MP 0/0 Hu 84 $ 956 room=M
--> n
-T 597 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 44/64 MP 0/0 Hu 84 $ 956 room=.
+T 557 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 50/64 MP 0/0 Hu 96 $ 964 room=.
 -> i
-T 598 mode=inventory           Dain Coalbeard(dwa) F2@( 1,15) HP 44/64 MP 0/0 Hu 84 $ 956 room=.
+T 558 mode=inventory           Dain Coalbeard(dwa) F2@( 1,14) HP 50/64 MP 0/0 Hu 96 $ 964 room=.
 -> u4
-T 599 mode=inventory           Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 84 $ 956 room=.
+T 559 mode=inventory           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 96 $ 964 room=.
 -> x
-T 600 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 84 $ 956 room=.
+T 560 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 96 $ 964 room=.
+-> l
+T 561 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 96 $ 964 room=.
 -> n
-T 601 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 84 $ 956 room=.
+T 562 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 64/64 MP 0/0 Hu 95 $ 964 room=.
+-> s
+T 563 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 95 $ 964 room=.
+-> e
+T 564 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/64 MP 0/0 Hu 94 $ 964 room=.
+-> e
+T 565 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 93 $ 964 room=.
+-> e
+T 566 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 64/64 MP 0/0 Hu 93 $ 964 room=.
+-> s
+T 567 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 64/64 MP 0/0 Hu 92 $ 964 room=.
+-> s
+T 568 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 91 $ 964 room=.
+-> e
+T 569 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 91 $ 964 room=.
+-> e
+T 570 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 90 $ 964 room=.
+-> e
+T 571 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 89 $ 964 room=.
+-> e
+T 572 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 88 $ 964 room=.
+-> l
+T 573 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 88 $ 964 room=.
+-> e
+T 574 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 64/64 MP 0/0 Hu 88 $ 964 room=D
+-> w
+T 575 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 87 $ 964 room=.
 -> n
-T 602 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 64/64 MP 0/0 Hu 84 $ 956 room=.
--> e
-T 603 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/64 MP 0/0 Hu 83 $ 956 room=.
--> e
-T 604 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 82 $ 956 room=.
+T 576 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 86 $ 964 room=.
+-> l
+T 577 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 86 $ 964 room=.
 -> s
-T 605 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 64/64 MP 0/0 Hu 82 $ 956 room=.
--> e
-T 606 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 64/64 MP 0/0 Hu 81 $ 956 room=.
+T 578 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 86 $ 964 room=.
+-> w
+T 579 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 85 $ 964 room=.
+-> w
+T 580 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 84 $ 964 room=.
+-> w
+T 581 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 84 $ 964 room=.
+-> w
+T 582 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 83 $ 964 room=.
+-> w
+T 583 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 82 $ 964 room=.
+-> w
+T 584 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 81 $ 964 room=.
 -> n
-T 607 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 64/64 MP 0/0 Hu 80 $ 956 room=.
--> s
-T 608 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 64/64 MP 0/0 Hu 79 $ 956 room=.
--> s
-T 609 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 79 $ 956 room=.
+T 585 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 64/64 MP 0/0 Hu 81 $ 964 room=.
 -> w
-T 610 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 78 $ 956 room=.
--> n
-T 611 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 64/64 MP 0/0 Hu 77 $ 956 room=.
--> n
-T 612 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/64 MP 0/0 Hu 77 $ 956 room=.
--> e
-T 613 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 64/64 MP 0/0 Hu 76 $ 956 room=.
--> s
-T 614 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 64/64 MP 0/0 Hu 75 $ 956 room=.
--> s
-T 615 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 75 $ 956 room=.
--> e
-T 616 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 74 $ 956 room=.
--> e
-T 617 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 73 $ 956 room=.
--> e
-T 618 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 72 $ 956 room=.
--> e
-T 619 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 72 $ 956 room=.
--> n
-T 620 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 71 $ 956 room=.
--> s
-T 621 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 70 $ 956 room=.
--> n
-T 622 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 64/64 MP 0/0 Hu 70 $ 956 room=.
--> s
-T 623 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/64 MP 0/0 Hu 69 $ 956 room=.
--> w
-T 624 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/64 MP 0/0 Hu 68 $ 956 room=.
--> w
-T 625 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/64 MP 0/0 Hu 68 $ 956 room=.
--> w
-T 626 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/64 MP 0/0 Hu 67 $ 956 room=.
--> w
-T 627 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 64/64 MP 0/0 Hu 66 $ 956 room=.
--> w
-T 628 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 64/64 MP 0/0 Hu 65 $ 956 room=.
--> w
-T 629 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 64/64 MP 0/0 Hu 65 $ 956 room=.
--> w
-T 630 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 64/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
+T 586 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 64/64 MP 0/0 Hu 80 $ 964 room=M vs Orc(L1 HP28/50)
 -> a
-T 631 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 59/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
+T 587 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 62/64 MP 0/0 Hu 80 $ 964 room=M vs Orc(L1 HP6/50)
 -> a
-T 632 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 54/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
+T 588 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,15) HP 62/64 MP 0/0 Hu 80 $ 964 room=M vs Orc(L1 HP6/50)
 -> a
-T 633 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 49/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 634 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 44/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 635 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 39/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 636 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 39/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 637 mode=combat_mode         Dain Coalbeard(dwa) F2@( 1,16) HP 34/64 MP 0/0 Hu 64 $ 956 room=M vs Giant Spider(L1 HP17/40)
--> a
-T 638 mode=combat_victory      Dain Coalbeard(dwa) F2@( 1,16) HP 34/74 MP 0/0 Hu 64 $ 962 room=.
+T 589 mode=combat_victory      Dain Coalbeard(dwa) F2@( 1,15) HP 60/74 MP 0/0 Hu 80 $ 974 room=.
 -> back
-T 639 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 34/74 MP 0/0 Hu 64 $ 962 room=.
--> n
-T 640 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 34/74 MP 0/0 Hu 63 $ 962 room=.
--> n
-T 641 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 34/74 MP 0/0 Hu 63 $ 962 room=.
--> e
-T 642 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 34/74 MP 0/0 Hu 62 $ 962 room=.
--> e
-T 643 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 35/74 MP 0/0 Hu 61 $ 962 room=.
--> e
-T 644 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 35/74 MP 0/0 Hu 61 $ 962 room=.
+T 590 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 60/74 MP 0/0 Hu 80 $ 974 room=.
 -> s
-T 645 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 35/74 MP 0/0 Hu 60 $ 962 room=.
--> w
-T 646 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 35/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T 647 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 35/74 MP 0/0 Hu 58 $ 962 room=.
--> w
-T 648 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 35/74 MP 0/0 Hu 58 $ 962 room=.
--> w
-T 649 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 35/74 MP 0/0 Hu 57 $ 962 room=.
+T 591 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 60/74 MP 0/0 Hu 79 $ 974 room=.
 -> n
-T 650 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 35/74 MP 0/0 Hu 56 $ 962 room=.
+T 592 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 60/74 MP 0/0 Hu 79 $ 974 room=.
 -> n
-T 651 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 35/74 MP 0/0 Hu 56 $ 962 room=.
+T 593 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 60/74 MP 0/0 Hu 78 $ 974 room=.
 -> e
-T 652 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 55 $ 962 room=.
--> s
-T 653 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 35/74 MP 0/0 Hu 54 $ 962 room=.
--> s
-T 654 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 35/74 MP 0/0 Hu 54 $ 962 room=.
+T 594 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 61/74 MP 0/0 Hu 77 $ 974 room=.
 -> e
-T 655 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 35/74 MP 0/0 Hu 53 $ 962 room=.
+T 595 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 61/74 MP 0/0 Hu 77 $ 974 room=.
+-> s
+T 596 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 61/74 MP 0/0 Hu 76 $ 974 room=.
+-> s
+T 597 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 61/74 MP 0/0 Hu 75 $ 974 room=.
+-> e
+T 598 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 62/74 MP 0/0 Hu 74 $ 974 room=.
+-> e
+T 599 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 62/74 MP 0/0 Hu 74 $ 974 room=.
+-> e
+T 600 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 62/74 MP 0/0 Hu 73 $ 974 room=.
+-> e
+T 601 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 62/74 MP 0/0 Hu 72 $ 974 room=.
+-> e
+T 602 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 63/74 MP 0/0 Hu 72 $ 974 room=.
 -> n
-T 656 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 35/74 MP 0/0 Hu 52 $ 962 room=.
+T 603 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 63/74 MP 0/0 Hu 71 $ 974 room=.
+-> s
+T 604 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 63/74 MP 0/0 Hu 70 $ 974 room=.
 -> n
-T 657 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 35/74 MP 0/0 Hu 51 $ 962 room=.
+T 605 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 63/74 MP 0/0 Hu 70 $ 974 room=.
+-> s
+T 606 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 64/74 MP 0/0 Hu 69 $ 974 room=.
 -> w
-T 658 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 51 $ 962 room=.
+T 607 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 64/74 MP 0/0 Hu 68 $ 974 room=.
 -> w
-T 659 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 35/74 MP 0/0 Hu 50 $ 962 room=.
+T 608 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 64/74 MP 0/0 Hu 67 $ 974 room=.
+-> w
+T 609 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 64/74 MP 0/0 Hu 67 $ 974 room=.
+-> w
+T 610 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 65/74 MP 0/0 Hu 66 $ 974 room=.
+-> w
+T 611 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 65/74 MP 0/0 Hu 65 $ 974 room=.
 -> n
-T 660 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 35/74 MP 0/0 Hu 49 $ 962 room=.
+T 612 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 65/74 MP 0/0 Hu 65 $ 974 room=.
+-> n
+T 613 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 65/74 MP 0/0 Hu 64 $ 974 room=.
+-> e
+T 614 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 66/74 MP 0/0 Hu 63 $ 974 room=.
+-> s
+T 615 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 66/74 MP 0/0 Hu 63 $ 974 room=.
+-> s
+T 616 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 66/74 MP 0/0 Hu 62 $ 974 room=.
+-> w
+T 617 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 66/74 MP 0/0 Hu 61 $ 974 room=.
+-> n
+T 618 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 67/74 MP 0/0 Hu 60 $ 974 room=.
+-> n
+T 619 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 67/74 MP 0/0 Hu 60 $ 974 room=.
+-> w
+T 620 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 67/74 MP 0/0 Hu 59 $ 974 room=.
+-> s
+T 621 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 67/74 MP 0/0 Hu 58 $ 974 room=.
+-> s
+T 622 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 67/74 MP 0/0 Hu 58 $ 974 room=.
+-> e
+T 623 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 67/74 MP 0/0 Hu 57 $ 974 room=.
+-> e
+T 624 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 67/74 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 625 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 67/74 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 626 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 67/74 MP 0/0 Hu 55 $ 974 room=.
+-> e
+T 627 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 67/74 MP 0/0 Hu 54 $ 974 room=.
+-> e
+T 628 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 67/74 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 629 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 67/74 MP 0/0 Hu 53 $ 974 room=D
+-> w
+T 630 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 67/74 MP 0/0 Hu 52 $ 974 room=.
+-> n
+T 631 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 67/74 MP 0/0 Hu 51 $ 974 room=.
+-> s
+T 632 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 67/74 MP 0/0 Hu 51 $ 974 room=.
+-> w
+T 633 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 67/74 MP 0/0 Hu 50 $ 974 room=.
+-> w
+T 634 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 67/74 MP 0/0 Hu 49 $ 974 room=.
 -> i
-T 661 mode=inventory           Dain Coalbeard(dwa) F2@( 1,13) HP 35/74 MP 0/0 Hu 49 $ 962 room=.
+T 635 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 67/74 MP 0/0 Hu 49 $ 974 room=.
+-> u4
+T 636 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
+-> x
+T 637 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
+-> i
+T 638 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> eat2
-T 662 mode=inventory           Dain Coalbeard(dwa) F2@( 1,13) HP 35/74 MP 0/0 Hu 56 $ 962 room=.
+T 639 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 61 $ 974 room=.
 -> x
-T 663 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 35/74 MP 0/0 Hu 56 $ 962 room=.
--> s
-T 664 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 35/74 MP 0/0 Hu 56 $ 962 room=.
--> s
-T 665 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 35/74 MP 0/0 Hu 55 $ 962 room=.
--> e
-T 666 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 35/74 MP 0/0 Hu 54 $ 962 room=.
--> s
-T 667 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 35/74 MP 0/0 Hu 54 $ 962 room=.
+T 640 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 61 $ 974 room=.
 -> w
-T 668 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 35/74 MP 0/0 Hu 53 $ 962 room=.
+T 641 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 61 $ 974 room=.
+-> w
+T 642 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 60 $ 974 room=.
+-> w
+T 643 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 59 $ 974 room=.
+-> w
+T 644 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
 -> n
-T 669 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 35/74 MP 0/0 Hu 52 $ 962 room=.
--> n
-T 670 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 35/74 MP 0/0 Hu 51 $ 962 room=.
--> n
-T 671 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 35/74 MP 0/0 Hu 51 $ 962 room=.
--> s
-T 672 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 35/74 MP 0/0 Hu 50 $ 962 room=.
+T 645 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
 -> e
-T 673 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 49 $ 962 room=.
+T 646 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 57 $ 974 room=.
+-> e
+T 647 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 56 $ 974 room=.
+-> s
+T 648 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 649 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 55 $ 974 room=.
+-> e
+T 650 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 54 $ 974 room=.
+-> e
+T 651 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 54 $ 974 room=.
+-> e
+T 652 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 653 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 74/74 MP 0/0 Hu 52 $ 974 room=D
+-> w
+T 654 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
+-> n
+T 655 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
+-> s
+T 656 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 50 $ 974 room=.
+-> w
+T 657 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> i
-T 674 mode=inventory           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 49 $ 962 room=.
+T 658 mode=inventory           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> eat1
-T 675 mode=inventory           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 99 $ 962 room=.
+T 659 mode=inventory           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> x
-T 676 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 35/74 MP 0/0 Hu 99 $ 962 room=.
--> s
-T 677 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 35/74 MP 0/0 Hu 99 $ 962 room=.
--> e
-T 678 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 36/74 MP 0/0 Hu 98 $ 962 room=.
--> s
-T 679 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 36/74 MP 0/0 Hu 97 $ 962 room=.
+T 660 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> w
-T 680 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 37/74 MP 0/0 Hu 97 $ 962 room=.
+T 661 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> w
-T 681 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 37/74 MP 0/0 Hu 96 $ 962 room=.
--> n
-T 682 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 38/74 MP 0/0 Hu 95 $ 962 room=.
--> n
-T 683 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 38/74 MP 0/0 Hu 94 $ 962 room=.
--> e
-T 684 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 39/74 MP 0/0 Hu 94 $ 962 room=.
--> s
-T 685 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 39/74 MP 0/0 Hu 93 $ 962 room=.
--> e
-T 686 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 40/74 MP 0/0 Hu 92 $ 962 room=.
--> n
-T 687 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 40/74 MP 0/0 Hu 92 $ 962 room=.
--> e
-T 688 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 41/74 MP 0/0 Hu 91 $ 962 room=.
--> s
-T 689 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 41/74 MP 0/0 Hu 90 $ 962 room=.
--> s
-T 690 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 42/74 MP 0/0 Hu 90 $ 962 room=.
+T 662 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 98 $ 974 room=.
 -> w
-T 691 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 42/74 MP 0/0 Hu 89 $ 962 room=.
--> w
-T 692 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 43/74 MP 0/0 Hu 88 $ 962 room=.
+T 663 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 97 $ 974 room=.
 -> n
-T 693 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 43/74 MP 0/0 Hu 87 $ 962 room=.
--> n
-T 694 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 44/74 MP 0/0 Hu 87 $ 962 room=.
--> e
-T 695 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 44/74 MP 0/0 Hu 86 $ 962 room=.
--> e
-T 696 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 45/74 MP 0/0 Hu 85 $ 962 room=.
--> s
-T 697 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 45/74 MP 0/0 Hu 85 $ 962 room=.
+T 664 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 97 $ 974 room=.
 -> w
-T 698 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 45/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T 699 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 45/74 MP 0/0 Hu 83 $ 962 room=.
+T 665 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 96 $ 974 room=.
 -> n
-T 700 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 46/74 MP 0/0 Hu 83 $ 962 room=.
+T 666 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 95 $ 974 room=.
+-> e
+T 667 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 94 $ 974 room=.
 -> w
-T 701 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 46/74 MP 0/0 Hu 82 $ 962 room=.
--> n
-T 702 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 46/74 MP 0/0 Hu 81 $ 962 room=.
--> s
-T 703 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 46/74 MP 0/0 Hu 80 $ 962 room=.
--> s
-T 704 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 47/74 MP 0/0 Hu 80 $ 962 room=.
--> s
-T 705 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 47/74 MP 0/0 Hu 79 $ 962 room=.
--> e
-T 706 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 47/74 MP 0/0 Hu 78 $ 962 room=.
--> n
-T 707 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 47/74 MP 0/0 Hu 78 $ 962 room=.
--> n
-T 708 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 48/74 MP 0/0 Hu 77 $ 962 room=.
+T 668 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 94 $ 974 room=.
 -> w
-T 709 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 48/74 MP 0/0 Hu 76 $ 962 room=.
--> s
-T 710 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 48/74 MP 0/0 Hu 76 $ 962 room=.
--> s
-T 711 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 48/74 MP 0/0 Hu 75 $ 962 room=.
--> e
-T 712 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 49/74 MP 0/0 Hu 74 $ 962 room=.
--> e
-T 713 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 49/74 MP 0/0 Hu 73 $ 962 room=.
+T 669 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 93 $ 974 room=.
+-> w
+T 670 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 92 $ 974 room=.
 -> n
-T 714 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 49/74 MP 0/0 Hu 73 $ 962 room=.
--> e
-T 715 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 49/74 MP 0/0 Hu 72 $ 962 room=.
+T 671 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 92 $ 974 room=.
 -> s
-T 716 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 50/74 MP 0/0 Hu 71 $ 962 room=.
+T 672 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 91 $ 974 room=.
+-> s
+T 673 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 90 $ 974 room=.
 -> e
-T 717 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 50/74 MP 0/0 Hu 71 $ 962 room=.
+T 674 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 90 $ 974 room=.
 -> e
-T 718 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 50/74 MP 0/0 Hu 70 $ 962 room=.
+T 675 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 89 $ 974 room=.
 -> e
-T 719 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 50/74 MP 0/0 Hu 69 $ 962 room=.
--> e
-T 720 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 51/74 MP 0/0 Hu 69 $ 962 room=.
+T 676 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 88 $ 974 room=.
+-> s
+T 677 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 87 $ 974 room=.
+-> w
+T 678 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 87 $ 974 room=.
+-> w
+T 679 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 86 $ 974 room=.
+-> w
+T 680 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 85 $ 974 room=.
 -> n
-T 721 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 51/74 MP 0/0 Hu 68 $ 962 room=.
--> s
-T 722 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 51/74 MP 0/0 Hu 67 $ 962 room=.
--> w
-T 723 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 51/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T 724 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 52/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T 725 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 52/74 MP 0/0 Hu 65 $ 962 room=.
--> w
-T 726 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 52/74 MP 0/0 Hu 64 $ 962 room=.
+T 681 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 85 $ 974 room=.
 -> n
-T 727 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 52/74 MP 0/0 Hu 64 $ 962 room=.
+T 682 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 84 $ 974 room=.
 -> n
-T 728 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 53/74 MP 0/0 Hu 63 $ 962 room=.
--> w
-T 729 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 53/74 MP 0/0 Hu 62 $ 962 room=.
+T 683 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
 -> s
-T 730 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 53/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T 731 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 53/74 MP 0/0 Hu 61 $ 962 room=.
--> n
-T 732 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 54/74 MP 0/0 Hu 60 $ 962 room=.
--> w
-T 733 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 54/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T 734 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 54/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T 735 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 54/74 MP 0/0 Hu 58 $ 962 room=.
+T 684 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
 -> e
-T 736 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 54/74 MP 0/0 Hu 57 $ 962 room=.
+T 685 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> e
-T 737 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 54/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T 738 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 54/74 MP 0/0 Hu 56 $ 962 room=.
--> n
-T 739 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 54/74 MP 0/0 Hu 55 $ 962 room=.
+T 686 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 81 $ 974 room=.
+-> e
+T 687 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 80 $ 974 room=.
+-> s
+T 688 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 80 $ 974 room=.
+-> s
+T 689 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 79 $ 974 room=.
 -> w
-T 740 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 54/74 MP 0/0 Hu 55 $ 962 room=.
--> l
-T 741 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 54/74 MP 0/0 Hu 55 $ 962 room=.
+T 690 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 78 $ 974 room=.
 -> w
-T 742 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 54/74 MP 0/0 Hu 54 $ 962 room=.
--> s
-T 743 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 54/74 MP 0/0 Hu 53 $ 962 room=.
--> s
-T 744 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 54/74 MP 0/0 Hu 52 $ 962 room=.
--> e
-T 745 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 54/74 MP 0/0 Hu 52 $ 962 room=.
+T 691 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 78 $ 974 room=.
+-> w
+T 692 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 77 $ 974 room=.
 -> n
-T 746 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 54/74 MP 0/0 Hu 51 $ 962 room=.
+T 693 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 76 $ 974 room=.
+-> n
+T 694 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 76 $ 974 room=.
 -> e
-T 747 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 54/74 MP 0/0 Hu 50 $ 962 room=.
+T 695 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 75 $ 974 room=.
 -> s
-T 748 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 54/74 MP 0/0 Hu 50 $ 962 room=.
+T 696 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 74 $ 974 room=.
 -> e
-T 749 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 54/74 MP 0/0 Hu 49 $ 962 room=.
+T 697 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 73 $ 974 room=.
+-> s
+T 698 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 73 $ 974 room=.
+-> e
+T 699 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 72 $ 974 room=.
+-> e
+T 700 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 71 $ 974 room=.
+-> e
+T 701 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 71 $ 974 room=.
+-> e
+T 702 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 70 $ 974 room=.
+-> e
+T 703 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 69 $ 974 room=.
+-> n
+T 704 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 69 $ 974 room=.
+-> s
+T 705 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 68 $ 974 room=.
+-> w
+T 706 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 67 $ 974 room=.
+-> w
+T 707 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 66 $ 974 room=.
+-> w
+T 708 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 66 $ 974 room=.
+-> w
+T 709 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 65 $ 974 room=.
+-> n
+T 710 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 64 $ 974 room=.
+-> w
+T 711 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 64 $ 974 room=.
+-> w
+T 712 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 63 $ 974 room=.
+-> n
+T 713 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 62 $ 974 room=.
+-> w
+T 714 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 62 $ 974 room=.
+-> s
+T 715 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 61 $ 974 room=.
+-> s
+T 716 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 60 $ 974 room=.
+-> e
+T 717 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 59 $ 974 room=.
+-> e
+T 718 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 59 $ 974 room=.
+-> e
+T 719 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
+-> e
+T 720 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 57 $ 974 room=.
+-> e
+T 721 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 57 $ 974 room=.
+-> e
+T 722 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 723 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 55 $ 974 room=.
+-> e
+T 724 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 74/74 MP 0/0 Hu 55 $ 974 room=D
+-> w
+T 725 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 54 $ 974 room=.
+-> n
+T 726 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 727 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 52 $ 974 room=.
+-> w
+T 728 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 52 $ 974 room=.
+-> w
+T 729 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
+-> w
+T 730 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 50 $ 974 room=.
+-> w
+T 731 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 50 $ 974 room=.
+-> n
+T 732 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> i
-T 750 mode=inventory           Dain Coalbeard(dwa) F2@( 4,16) HP 54/74 MP 0/0 Hu 49 $ 962 room=.
+T 733 mode=inventory           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> eat1
-T 751 mode=inventory           Dain Coalbeard(dwa) F2@( 4,16) HP 54/74 MP 0/0 Hu 99 $ 962 room=.
+T 734 mode=inventory           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> x
-T 752 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 54/74 MP 0/0 Hu 99 $ 962 room=.
--> n
-T 753 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 54/74 MP 0/0 Hu 98 $ 962 room=.
--> n
-T 754 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 55/74 MP 0/0 Hu 98 $ 962 room=.
+T 735 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> w
-T 755 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 55/74 MP 0/0 Hu 97 $ 962 room=.
--> s
-T 756 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 56/74 MP 0/0 Hu 96 $ 962 room=.
--> s
-T 757 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 56/74 MP 0/0 Hu 95 $ 962 room=.
+T 736 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 98 $ 974 room=.
 -> w
-T 758 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 57/74 MP 0/0 Hu 95 $ 962 room=.
+T 737 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 98 $ 974 room=.
+-> w
+T 738 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 97 $ 974 room=.
 -> n
-T 759 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 57/74 MP 0/0 Hu 94 $ 962 room=.
+T 739 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 96 $ 974 room=.
 -> n
-T 760 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 58/74 MP 0/0 Hu 93 $ 962 room=.
+T 740 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 95 $ 974 room=.
 -> l
-T 761 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 58/74 MP 0/0 Hu 93 $ 962 room=.
+T 741 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 95 $ 974 room=.
+-> s
+T 742 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 95 $ 974 room=.
+-> e
+T 743 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 94 $ 974 room=.
+-> e
+T 744 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 93 $ 974 room=.
+-> s
+T 745 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 93 $ 974 room=.
 -> w
-T 762 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 58/74 MP 0/0 Hu 93 $ 962 room=.
+T 746 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 92 $ 974 room=.
+-> s
+T 747 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 91 $ 974 room=.
+-> w
+T 748 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 91 $ 974 room=.
 -> n
-T 763 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 59/74 MP 0/0 Hu 92 $ 962 room=.
--> s
-T 764 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 59/74 MP 0/0 Hu 91 $ 962 room=.
--> s
-T 765 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 60/74 MP 0/0 Hu 91 $ 962 room=.
--> s
-T 766 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 60/74 MP 0/0 Hu 90 $ 962 room=.
--> e
-T 767 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 61/74 MP 0/0 Hu 89 $ 962 room=.
+T 749 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 90 $ 974 room=.
 -> n
-T 768 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 61/74 MP 0/0 Hu 88 $ 962 room=.
--> e
-T 769 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 62/74 MP 0/0 Hu 88 $ 962 room=.
--> s
-T 770 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 62/74 MP 0/0 Hu 87 $ 962 room=.
+T 750 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 89 $ 974 room=.
 -> l
-T 771 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 62/74 MP 0/0 Hu 87 $ 962 room=.
+T 751 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 89 $ 974 room=.
 -> e
-T 772 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 63/74 MP 0/0 Hu 86 $ 962 room=.
--> n
-T 773 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 63/74 MP 0/0 Hu 86 $ 962 room=.
--> n
-T 774 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 64/74 MP 0/0 Hu 85 $ 962 room=.
--> w
-T 775 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 64/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T 776 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 64/74 MP 0/0 Hu 84 $ 962 room=.
+T 752 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 88 $ 974 room=.
+-> e
+T 753 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 88 $ 974 room=.
 -> s
-T 777 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 64/74 MP 0/0 Hu 83 $ 962 room=.
+T 754 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 87 $ 974 room=.
+-> e
+T 755 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 86 $ 974 room=.
+-> s
+T 756 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 86 $ 974 room=.
 -> w
-T 778 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 65/74 MP 0/0 Hu 82 $ 962 room=.
+T 757 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 85 $ 974 room=.
+-> w
+T 758 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 84 $ 974 room=.
 -> n
-T 779 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 65/74 MP 0/0 Hu 81 $ 962 room=.
--> n
-T 780 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 65/74 MP 0/0 Hu 81 $ 962 room=.
+T 759 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 84 $ 974 room=.
+-> e
+T 760 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
 -> l
-T 781 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 65/74 MP 0/0 Hu 81 $ 962 room=.
--> s
-T 782 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 65/74 MP 0/0 Hu 80 $ 962 room=.
--> e
-T 783 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 66/74 MP 0/0 Hu 79 $ 962 room=.
--> e
-T 784 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 66/74 MP 0/0 Hu 79 $ 962 room=.
--> e
-T 785 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 66/74 MP 0/0 Hu 78 $ 962 room=.
--> s
-T 786 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 66/74 MP 0/0 Hu 77 $ 962 room=.
--> s
-T 787 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 67/74 MP 0/0 Hu 77 $ 962 room=.
+T 761 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
+-> n
+T 762 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> w
-T 788 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 67/74 MP 0/0 Hu 76 $ 962 room=.
+T 763 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 81 $ 974 room=.
 -> w
-T 789 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 67/74 MP 0/0 Hu 75 $ 962 room=.
--> w
-T 790 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 67/74 MP 0/0 Hu 74 $ 962 room=.
+T 764 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 81 $ 974 room=.
+-> s
+T 765 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 80 $ 974 room=.
+-> e
+T 766 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 79 $ 974 room=.
+-> s
+T 767 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 79 $ 974 room=.
+-> e
+T 768 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 78 $ 974 room=.
+-> n
+T 769 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 77 $ 974 room=.
+-> n
+T 770 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 77 $ 974 room=.
 -> l
-T 791 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 67/74 MP 0/0 Hu 74 $ 962 room=.
--> n
-T 792 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 68/74 MP 0/0 Hu 74 $ 962 room=.
--> n
-T 793 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 68/74 MP 0/0 Hu 73 $ 962 room=.
+T 771 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 77 $ 974 room=.
 -> e
-T 794 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 68/74 MP 0/0 Hu 72 $ 962 room=.
+T 772 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 76 $ 974 room=.
 -> s
-T 795 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 68/74 MP 0/0 Hu 72 $ 962 room=.
+T 773 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 75 $ 974 room=.
 -> s
-T 796 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 69/74 MP 0/0 Hu 71 $ 962 room=.
+T 774 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 74 $ 974 room=.
 -> e
-T 797 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 69/74 MP 0/0 Hu 70 $ 962 room=.
+T 775 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 74 $ 974 room=.
 -> e
-T 798 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 69/74 MP 0/0 Hu 70 $ 962 room=.
+T 776 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 73 $ 974 room=.
 -> e
-T 799 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 69/74 MP 0/0 Hu 69 $ 962 room=.
+T 777 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 72 $ 974 room=.
 -> e
-T 800 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 70/74 MP 0/0 Hu 68 $ 962 room=.
+T 778 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 72 $ 974 room=.
+-> n
+T 779 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 71 $ 974 room=.
+-> s
+T 780 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 70 $ 974 room=.
 -> l
-T 801 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 70/74 MP 0/0 Hu 68 $ 962 room=.
--> e
-T 802 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 70/74 MP 0/0 Hu 67 $ 962 room=.
--> e
-T 803 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 70/74 MP 0/0 Hu 67 $ 962 room=.
+T 781 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 70 $ 974 room=.
 -> n
-T 804 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 70/74 MP 0/0 Hu 66 $ 962 room=.
+T 782 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 70 $ 974 room=.
 -> s
-T 805 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 71/74 MP 0/0 Hu 65 $ 962 room=.
+T 783 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 69 $ 974 room=.
 -> w
-T 806 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 71/74 MP 0/0 Hu 65 $ 962 room=.
+T 784 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 68 $ 974 room=.
 -> w
-T 807 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 71/74 MP 0/0 Hu 64 $ 962 room=.
+T 785 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 67 $ 974 room=.
 -> w
-T 808 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 71/74 MP 0/0 Hu 63 $ 962 room=.
+T 786 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 67 $ 974 room=.
 -> w
-T 809 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 72/74 MP 0/0 Hu 63 $ 962 room=.
+T 787 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 66 $ 974 room=.
 -> n
-T 810 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 72/74 MP 0/0 Hu 62 $ 962 room=.
+T 788 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 65 $ 974 room=.
+-> w
+T 789 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 65 $ 974 room=.
+-> s
+T 790 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 64 $ 974 room=.
 -> l
-T 811 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 72/74 MP 0/0 Hu 62 $ 962 room=.
+T 791 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 64 $ 974 room=.
 -> w
-T 812 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 72/74 MP 0/0 Hu 61 $ 962 room=.
+T 792 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 63 $ 974 room=.
 -> n
-T 813 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 72/74 MP 0/0 Hu 60 $ 962 room=.
+T 793 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 63 $ 974 room=.
+-> n
+T 794 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 62 $ 974 room=.
 -> w
-T 814 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 73/74 MP 0/0 Hu 60 $ 962 room=.
+T 795 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 61 $ 974 room=.
+-> n
+T 796 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 60 $ 974 room=.
 -> s
-T 815 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 73/74 MP 0/0 Hu 59 $ 962 room=.
+T 797 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 60 $ 974 room=.
 -> s
-T 816 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 73/74 MP 0/0 Hu 58 $ 962 room=.
--> w
-T 817 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 58 $ 962 room=.
--> n
-T 818 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 73/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T 819 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 73/74 MP 0/0 Hu 56 $ 962 room=.
--> n
-T 820 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 73/74 MP 0/0 Hu 56 $ 962 room=.
+T 798 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 59 $ 974 room=.
+-> s
+T 799 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
+-> e
+T 800 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
 -> l
-T 821 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 73/74 MP 0/0 Hu 56 $ 962 room=.
--> s
-T 822 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 73/74 MP 0/0 Hu 55 $ 962 room=.
+T 801 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 58 $ 974 room=.
 -> e
-T 823 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 73/74 MP 0/0 Hu 54 $ 962 room=.
+T 802 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 57 $ 974 room=.
 -> e
-T 824 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 73/74 MP 0/0 Hu 53 $ 962 room=.
+T 803 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 56 $ 974 room=.
 -> e
-T 825 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 73/74 MP 0/0 Hu 53 $ 962 room=.
+T 804 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 805 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 55 $ 974 room=.
+-> e
+T 806 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 54 $ 974 room=.
+-> e
+T 807 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 808 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 74/74 MP 0/0 Hu 53 $ 974 room=D
+-> w
+T 809 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 52 $ 974 room=.
+-> n
+T 810 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
+-> l
+T 811 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
 -> s
-T 826 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 73/74 MP 0/0 Hu 52 $ 962 room=.
+T 812 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 51 $ 974 room=.
 -> w
-T 827 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 73/74 MP 0/0 Hu 51 $ 962 room=.
+T 813 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 50 $ 974 room=.
 -> w
-T 828 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 73/74 MP 0/0 Hu 51 $ 962 room=.
--> w
-T 829 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 73/74 MP 0/0 Hu 50 $ 962 room=.
--> s
-T 830 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 49 $ 962 room=.
+T 814 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> i
-T 831 mode=inventory           Dain Coalbeard(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 49 $ 962 room=.
+T 815 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 49 $ 974 room=.
 -> eat1
-T 832 mode=inventory           Dain Coalbeard(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 99 $ 962 room=.
+T 816 mode=inventory           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> x
-T 833 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 99 $ 962 room=.
--> e
-T 834 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 73/74 MP 0/0 Hu 99 $ 962 room=.
--> e
-T 835 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> e
-T 836 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> n
-T 837 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
+T 817 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
 -> w
-T 838 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
+T 818 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 99 $ 974 room=.
+-> w
+T 819 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 98 $ 974 room=.
 -> n
-T 839 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> e
-T 840 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
+T 820 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 97 $ 974 room=.
 -> l
-T 841 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
+T 821 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 97 $ 974 room=.
+-> n
+T 822 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 96 $ 974 room=.
 -> w
-T 842 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> w
-T 843 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
+T 823 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 96 $ 974 room=.
 -> s
-T 844 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
+T 824 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 95 $ 974 room=.
 -> w
-T 845 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
+T 825 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 94 $ 974 room=.
 -> s
-T 846 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
+T 826 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 94 $ 974 room=.
 -> e
-T 847 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
+T 827 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 93 $ 974 room=.
 -> e
-T 848 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> e
-T 849 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> e
-T 850 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
+T 828 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 92 $ 974 room=.
+-> n
+T 829 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 92 $ 974 room=.
+-> n
+T 830 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 91 $ 974 room=.
 -> l
-T 851 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> e
-T 852 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> e
-T 853 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> e
-T 854 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> n
-T 855 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> s
-T 856 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> n
-T 857 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> s
-T 858 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> w
-T 859 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> w
-T 860 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> l
-T 861 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> w
-T 862 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> w
-T 863 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> n
-T 864 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> w
-T 865 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> s
-T 866 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> w
-T 867 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> n
-T 868 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> n
-T 869 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> e
-T 870 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> l
-T 871 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> s
-T 872 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> e
-T 873 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> s
-T 874 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> e
-T 875 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> e
-T 876 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> e
-T 877 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> e
-T 878 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> n
-T 879 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> s
-T 880 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> l
-T 881 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> n
-T 882 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> s
-T 883 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> w
-T 884 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> w
-T 885 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T 886 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T 887 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> w
-T 888 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> n
-T 889 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T 890 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> l
-T 891 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> n
-T 892 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T 893 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> w
-T 894 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> s
-T 895 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> e
-T 896 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T 897 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> w
-T 898 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> w
-T 899 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T 900 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> l
-T 901 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T 902 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> e
-T 903 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> e
-T 904 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> s
-T 905 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> w
-T 906 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> w
-T 907 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> n
-T 908 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> e
-T 909 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> e
-T 910 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> l
-T 911 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> e
-T 912 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> s
-T 913 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> i
-T 914 mode=inventory           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> eat1
-T 915 mode=inventory           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> x
-T 916 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> s
-T 917 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> e
-T 918 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> e
-T 919 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> e
-T 920 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> l
-T 921 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> e
-T 922 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> n
-T 923 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> s
-T 924 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> w
-T 925 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> w
-T 926 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> w
-T 927 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> w
-T 928 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> w
-T 929 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> w
-T 930 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> l
-T 931 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> n
-T 932 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> w
-T 933 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> n
-T 934 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> n
-T 935 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> s
-T 936 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> e
-T 937 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> s
-T 938 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> s
-T 939 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> e
-T 940 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> l
-T 941 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> n
-T 942 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> e
-T 943 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> s
-T 944 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> e
-T 945 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> e
-T 946 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> e
-T 947 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> e
-T 948 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> n
-T 949 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> s
-T 950 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> l
-T 951 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> n
-T 952 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> s
-T 953 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> w
-T 954 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> w
-T 955 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> w
-T 956 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> w
-T 957 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> n
-T 958 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> w
-T 959 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> n
-T 960 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> l
-T 961 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> w
-T 962 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> s
-T 963 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> s
-T 964 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> w
-T 965 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> n
-T 966 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> n
-T 967 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> e
-T 968 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> s
-T 969 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> s
-T 970 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> l
-T 971 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> e
-T 972 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T 973 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> n
-T 974 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T 975 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T 976 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> n
-T 977 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> w
-T 978 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> s
-T 979 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T 980 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> l
-T 981 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> e
-T 982 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> n
-T 983 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T 984 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> e
-T 985 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> e
-T 986 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> s
-T 987 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> s
-T 988 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> e
-T 989 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> e
-T 990 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> l
-T 991 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> e
-T 992 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> e
-T 993 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> n
-T 994 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> s
-T 995 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> i
-T 996 mode=inventory           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> eat1
-T 997 mode=inventory           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> x
-T 998 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> w
-T 999 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> w
-T1000 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> l
-T1001 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> w
-T1002 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> w
-T1003 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> w
-T1004 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> n
-T1005 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> w
-T1006 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> s
-T1007 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> w
-T1008 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> n
-T1009 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> n
-T1010 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> l
-T1011 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> e
-T1012 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> s
-T1013 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> e
-T1014 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> s
-T1015 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> w
-T1016 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> w
-T1017 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> n
-T1018 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> n
-T1019 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> e
-T1020 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> l
-T1021 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> e
-T1022 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> e
-T1023 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> s
-T1024 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> w
-T1025 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> w
-T1026 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> n
-T1027 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> e
-T1028 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> e
-T1029 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> s
-T1030 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> l
-T1031 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> s
-T1032 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> w
-T1033 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> w
-T1034 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> w
-T1035 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> n
-T1036 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> e
-T1037 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> n
-T1038 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> e
-T1039 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> s
-T1040 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> l
-T1041 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> s
-T1042 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> w
-T1043 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> n
-T1044 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> w
-T1045 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> s
-T1046 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> n
-T1047 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> n
-T1048 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> e
-T1049 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> e
-T1050 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> l
-T1051 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> s
-T1052 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> e
-T1053 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> n
-T1054 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> w
-T1055 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> w
-T1056 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> w
-T1057 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> n
-T1058 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> s
-T1059 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> s
-T1060 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> l
-T1061 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> s
-T1062 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> e
-T1063 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> n
-T1064 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> e
-T1065 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> s
-T1066 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> e
-T1067 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> e
-T1068 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> e
-T1069 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> e
-T1070 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> l
-T1071 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> e
-T1072 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> n
-T1073 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> s
-T1074 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> n
-T1075 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> s
-T1076 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> w
-T1077 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> i
-T1078 mode=inventory           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> eat1
-T1079 mode=inventory           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> x
-T1080 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> l
-T1081 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> w
-T1082 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> w
-T1083 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> w
-T1084 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> n
-T1085 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> w
-T1086 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> s
-T1087 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> w
-T1088 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> n
-T1089 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> w
-T1090 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> l
-T1091 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> s
-T1092 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> e
-T1093 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> e
-T1094 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> e
-T1095 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> e
-T1096 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> e
-T1097 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> e
-T1098 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> e
-T1099 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> n
-T1100 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> l
-T1101 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> s
-T1102 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> n
-T1103 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> s
-T1104 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> w
-T1105 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T1106 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> w
-T1107 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> w
-T1108 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> n
-T1109 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> n
-T1110 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> l
-T1111 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> w
-T1112 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> s
-T1113 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> w
-T1114 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> s
-T1115 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> e
-T1116 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> e
-T1117 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> n
-T1118 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> n
-T1119 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> w
-T1120 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> l
-T1121 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> w
-T1122 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> s
-T1123 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> e
-T1124 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> e
-T1125 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> s
-T1126 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> w
-T1127 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> w
-T1128 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> n
-T1129 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> n
-T1130 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> l
-T1131 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> w
-T1132 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> s
-T1133 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> s
-T1134 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> e
-T1135 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> e
-T1136 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T1137 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T1138 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> e
-T1139 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> e
-T1140 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> l
-T1141 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> e
-T1142 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> n
-T1143 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> s
-T1144 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> n
-T1145 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T1146 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> w
-T1147 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> w
-T1148 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> w
-T1149 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> w
-T1150 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> l
-T1151 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> w
-T1152 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> w
-T1153 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> w
-T1154 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> n
-T1155 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> n
-T1156 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> n
-T1157 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> s
-T1158 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> e
-T1159 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> e
-T1160 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> i
-T1161 mode=inventory           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> eat1
-T1162 mode=inventory           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> x
-T1163 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> s
-T1164 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> w
-T1165 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> s
-T1166 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> w
-T1167 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> n
-T1168 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> n
-T1169 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> e
-T1170 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> l
-T1171 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> s
-T1172 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> e
-T1173 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> e
-T1174 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> s
-T1175 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> e
-T1176 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> e
-T1177 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> e
-T1178 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> e
-T1179 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> n
-T1180 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> l
-T1181 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> s
-T1182 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> w
-T1183 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> w
-T1184 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> w
-T1185 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> w
-T1186 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T1187 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T1188 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> n
-T1189 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> n
-T1190 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> l
-T1191 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> e
-T1192 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> s
-T1193 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> e
-T1194 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> n
-T1195 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> s
-T1196 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> s
-T1197 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> w
-T1198 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> w
-T1199 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> w
-T1200 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> l
-T1201 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> n
-T1202 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> n
-T1203 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> n
-T1204 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> s
-T1205 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> e
-T1206 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> e
-T1207 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> e
-T1208 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> s
-T1209 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> w
-T1210 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> l
-T1211 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> w
-T1212 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
+T 831 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 91 $ 974 room=.
 -> w
-T1213 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
+T 832 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 90 $ 974 room=.
 -> s
-T1214 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> e
-T1215 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> e
-T1216 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> e
-T1217 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> n
-T1218 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> w
-T1219 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> n
-T1220 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> l
-T1221 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> w
-T1222 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> s
-T1223 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> w
-T1224 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> n
-T1225 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> n
-T1226 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T1227 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> e
-T1228 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> s
-T1229 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> e
-T1230 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> e
-T1231 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> n
-T1232 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> w
-T1233 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> w
-T1234 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> w
-T1235 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> n
-T1236 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> s
-T1237 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> s
-T1238 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> e
-T1239 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> n
-T1240 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> i
-T1241 mode=inventory           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> eat1
-T1242 mode=inventory           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> x
-T1243 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> e
-T1244 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 99 $ 962 room=.
--> s
-T1245 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 98 $ 962 room=.
--> s
-T1246 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> w
-T1247 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 97 $ 962 room=.
--> w
-T1248 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 96 $ 962 room=.
--> n
-T1249 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 95 $ 962 room=.
--> e
-T1250 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> e
-T1251 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 94 $ 962 room=.
--> e
-T1252 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 93 $ 962 room=.
--> n
-T1253 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> w
-T1254 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 92 $ 962 room=.
--> w
-T1255 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 91 $ 962 room=.
--> w
-T1256 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> s
-T1257 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 90 $ 962 room=.
--> s
-T1258 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 89 $ 962 room=.
--> e
-T1259 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 88 $ 962 room=.
--> n
-T1260 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> e
-T1261 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 87 $ 962 room=.
--> e
-T1262 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 86 $ 962 room=.
--> s
-T1263 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> w
-T1264 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 85 $ 962 room=.
--> w
-T1265 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 84 $ 962 room=.
--> w
-T1266 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> n
-T1267 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 83 $ 962 room=.
--> e
-T1268 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 82 $ 962 room=.
--> n
-T1269 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 81 $ 962 room=.
--> e
-T1270 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> s
-T1271 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 80 $ 962 room=.
--> e
-T1272 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 79 $ 962 room=.
--> n
-T1273 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> w
-T1274 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 78 $ 962 room=.
--> w
-T1275 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 77 $ 962 room=.
--> s
-T1276 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> s
-T1277 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 76 $ 962 room=.
--> w
-T1278 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 75 $ 962 room=.
--> n
-T1279 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 74 $ 962 room=.
--> n
-T1280 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> e
-T1281 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 73 $ 962 room=.
--> s
-T1282 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 72 $ 962 room=.
--> e
-T1283 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> e
-T1284 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 71 $ 962 room=.
--> s
-T1285 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 70 $ 962 room=.
--> w
-T1286 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> w
-T1287 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 69 $ 962 room=.
--> n
-T1288 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 68 $ 962 room=.
--> e
-T1289 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 67 $ 962 room=.
--> n
-T1290 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T1291 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 66 $ 962 room=.
--> w
-T1292 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 65 $ 962 room=.
--> s
-T1293 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T1294 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 64 $ 962 room=.
--> e
-T1295 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 63 $ 962 room=.
--> n
-T1296 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T1297 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 62 $ 962 room=.
--> w
-T1298 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 61 $ 962 room=.
--> s
-T1299 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 60 $ 962 room=.
--> e
-T1300 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> s
-T1301 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 59 $ 962 room=.
--> w
-T1302 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 58 $ 962 room=.
--> n
-T1303 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T1304 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 57 $ 962 room=.
--> n
-T1305 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,13) HP 74/74 MP 0/0 Hu 56 $ 962 room=.
--> s
-T1306 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> e
-T1307 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 55 $ 962 room=.
--> s
-T1308 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 54 $ 962 room=.
--> w
-T1309 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 53 $ 962 room=.
--> s
-T1310 mode=game_loop           Dain Coalbeard(dwa) F2@( 1,16) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> e
-T1311 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,16) HP 74/74 MP 0/0 Hu 52 $ 962 room=.
--> e
-T1312 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 51 $ 962 room=.
--> n
-T1313 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> w
-T1314 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 50 $ 962 room=.
--> n
-T1315 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 49 $ 962 room=.
--> e
-T1316 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 48 $ 962 room=.
--> e
-T1317 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 48 $ 962 room=.
+T 833 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 89 $ 974 room=.
 -> s
-T1318 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 47 $ 962 room=.
--> w
-T1319 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,15) HP 74/74 MP 0/0 Hu 46 $ 962 room=.
--> w
-T1320 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,15) HP 74/74 MP 0/0 Hu 45 $ 962 room=.
--> n
-T1321 mode=game_loop           Dain Coalbeard(dwa) F2@( 2,14) HP 74/74 MP 0/0 Hu 45 $ 962 room=.
--> e
-T1322 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,14) HP 74/74 MP 0/0 Hu 44 $ 962 room=.
+T 834 mode=game_loop           Dain Coalbeard(dwa) F2@( 3,16) HP 74/74 MP 0/0 Hu 89 $ 974 room=.
 -> e
-T1323 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,14) HP 74/74 MP 0/0 Hu 43 $ 962 room=.
--> s
-T1324 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,15) HP 74/74 MP 0/0 Hu 43 $ 962 room=.
--> s
-T1325 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 42 $ 962 room=.
+T 835 mode=game_loop           Dain Coalbeard(dwa) F2@( 4,16) HP 74/74 MP 0/0 Hu 88 $ 974 room=.
 -> e
-T1326 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 41 $ 962 room=.
+T 836 mode=game_loop           Dain Coalbeard(dwa) F2@( 5,16) HP 74/74 MP 0/0 Hu 87 $ 974 room=.
 -> e
-T1327 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 41 $ 962 room=.
+T 837 mode=game_loop           Dain Coalbeard(dwa) F2@( 6,16) HP 74/74 MP 0/0 Hu 87 $ 974 room=.
 -> e
-T1328 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 40 $ 962 room=.
+T 838 mode=game_loop           Dain Coalbeard(dwa) F2@( 7,16) HP 74/74 MP 0/0 Hu 86 $ 974 room=.
 -> e
-T1329 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 39 $ 962 room=.
--> n
-T1330 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,15) HP 74/74 MP 0/0 Hu 38 $ 962 room=.
--> s
-T1331 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 38 $ 962 room=.
+T 839 mode=game_loop           Dain Coalbeard(dwa) F2@( 8,16) HP 74/74 MP 0/0 Hu 85 $ 974 room=.
 -> e
-T1332 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 74/74 MP 0/0 Hu 37 $ 962 room=D
+T 840 mode=stairs_down_mode    Dain Coalbeard(dwa) F2@( 9,16) HP 74/74 MP 0/0 Hu 85 $ 974 room=D
 -> d
-T1333 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 37 $ 962 room=U
+T 841 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 85 $ 974 room=U
+-> n
+T 842 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 85 $ 974 room=U
+-> n
+T 843 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 85 $ 974 room=U
+-> n
+T 844 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 85 $ 974 room=U
 -> e
-T1334 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 36 $ 962 room=.
+T 845 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 84 $ 974 room=.
 -> l
-T1335 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 36 $ 962 room=.
+T 846 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 84 $ 974 room=.
 -> s
-T1336 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 36 $ 962 room=.
+T 847 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
 -> l
-T1337 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 36 $ 962 room=.
+T 848 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 83 $ 974 room=.
 -> s
-T1338 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 35 $ 962 room=.
+T 849 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> l
-T1339 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 35 $ 962 room=.
+T 850 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> e
-T1340 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 34 $ 962 room=.
+T 851 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> l
-T1341 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 34 $ 962 room=.
+T 852 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 82 $ 974 room=.
 -> e
-T1342 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 34 $ 962 room=.
+T 853 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 81 $ 974 room=.
 -> l
-T1343 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 34 $ 962 room=.
+T 854 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 81 $ 974 room=.
 -> e
-T1344 mode=pool_mode           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 33 $ 962 room=P
+T 855 mode=pool_mode           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 80 $ 974 room=P
 -> dr
-T1345 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 66/74 MP 0/0 Hu 33 $ 962 room=.
--> w
-T1346 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 62/74 MP 0/0 Hu 32 $ 962 room=.
--> s
-T1347 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 58/74 MP 0/0 Hu 31 $ 962 room=.
+T 856 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 41/74 MP 0/0 Hu 80 $ 974 room=.
 -> n
-T1348 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 54/74 MP 0/0 Hu 31 $ 962 room=.
--> w
-T1349 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 50/74 MP 0/0 Hu 30 $ 962 room=.
--> w
-T1350 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 50/74 MP 0/0 Hu 29 $ 962 room=.
--> n
-T1351 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 50/74 MP 0/0 Hu 29 $ 962 room=.
--> n
-T1352 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 50/74 MP 0/0 Hu 28 $ 962 room=.
--> w
-T1353 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 50/74 MP 0/0 Hu 27 $ 962 room=U
--> s
-T1354 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 50/74 MP 0/0 Hu 27 $ 962 room=.
--> s
-T1355 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 50/74 MP 0/0 Hu 26 $ 962 room=.
--> e
-T1356 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 50/74 MP 0/0 Hu 25 $ 962 room=.
--> e
-T1357 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 50/74 MP 0/0 Hu 24 $ 962 room=.
--> e
-T1358 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 24 $ 962 room=.
--> s
-T1359 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 50/74 MP 0/0 Hu 23 $ 962 room=.
--> n
-T1360 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 22 $ 962 room=.
--> n
-T1361 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 50/74 MP 0/0 Hu 22 $ 962 room=.
--> n
-T1362 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 50/74 MP 0/0 Hu 21 $ 962 room=.
--> w
-T1363 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 50/74 MP 0/0 Hu 20 $ 962 room=.
--> w
-T1364 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 50/74 MP 0/0 Hu 20 $ 962 room=.
--> s
-T1365 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 50/74 MP 0/0 Hu 19 $ 962 room=.
--> s
-T1366 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 50/74 MP 0/0 Hu 18 $ 962 room=.
--> e
-T1367 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 50/74 MP 0/0 Hu 17 $ 962 room=.
--> e
-T1368 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 17 $ 962 room=.
--> s
-T1369 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 50/74 MP 0/0 Hu 16 $ 962 room=.
--> n
-T1370 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 15 $ 962 room=.
--> n
-T1371 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 50/74 MP 0/0 Hu 15 $ 962 room=.
--> n
-T1372 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 50/74 MP 0/0 Hu 14 $ 962 room=.
--> w
-T1373 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 50/74 MP 0/0 Hu 13 $ 962 room=.
--> w
-T1374 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 50/74 MP 0/0 Hu 13 $ 962 room=.
--> s
-T1375 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 50/74 MP 0/0 Hu 12 $ 962 room=.
--> s
-T1376 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 50/74 MP 0/0 Hu 11 $ 962 room=.
--> e
-T1377 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 50/74 MP 0/0 Hu 10 $ 962 room=.
--> e
-T1378 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 10 $ 962 room=.
--> s
-T1379 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 50/74 MP 0/0 Hu  9 $ 962 room=.
--> n
-T1380 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu  8 $ 962 room=.
--> e
-T1381 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 50/74 MP 0/0 Hu  8 $ 962 room=.
--> n
-T1382 mode=combat_mode         Dain Coalbeard(dwa) F3@( 5, 2) HP 50/74 MP 0/0 Hu  7 $ 962 room=M vs Kobold(L2 HP20/20)
--> f
-T1383 mode=flee_direction_mode Dain Coalbeard(dwa) F3@( 5, 2) HP 49/74 MP 0/0 Hu  7 $ 962 room=M
--> w
-T1384 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 49/74 MP 0/0 Hu  7 $ 962 room=.
--> n
-T1385 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 49/74 MP 0/0 Hu  6 $ 962 room=.
--> w
-T1386 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 49/74 MP 0/0 Hu  6 $ 962 room=.
--> w
-T1387 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 49/74 MP 0/0 Hu  5 $ 962 room=.
--> s
-T1388 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 49/74 MP 0/0 Hu  4 $ 962 room=.
--> s
-T1389 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 49/74 MP 0/0 Hu  3 $ 962 room=.
--> e
-T1390 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 49/74 MP 0/0 Hu  3 $ 962 room=.
--> e
-T1391 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 49/74 MP 0/0 Hu  2 $ 962 room=.
--> s
-T1392 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 49/74 MP 0/0 Hu  1 $ 962 room=.
--> n
-T1393 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 49/74 MP 0/0 Hu  1 $ 962 room=.
--> n
-T1394 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 47/74 MP 0/0 Hu  0 $ 962 room=.
--> n
-T1395 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 45/74 MP 0/0 Hu  0 $ 962 room=.
--> w
-T1396 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 43/74 MP 0/0 Hu  0 $ 962 room=.
--> w
-T1397 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 41/74 MP 0/0 Hu  0 $ 962 room=.
--> s
-T1398 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 39/74 MP 0/0 Hu  0 $ 962 room=.
--> s
-T1399 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 37/74 MP 0/0 Hu  0 $ 962 room=.
--> e
-T1400 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 35/74 MP 0/0 Hu  0 $ 962 room=.
--> e
-T1401 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 33/74 MP 0/0 Hu  0 $ 962 room=.
--> s
-T1402 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 31/74 MP 0/0 Hu  0 $ 962 room=.
--> n
-T1403 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 29/74 MP 0/0 Hu  0 $ 962 room=.
--> e
-T1404 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 27/74 MP 0/0 Hu  0 $ 962 room=.
--> n
-T1405 mode=combat_mode         Dain Coalbeard(dwa) F3@( 5, 2) HP 25/74 MP 0/0 Hu  0 $ 962 room=M vs Kobold(L2 HP20/20)
+T 857 mode=combat_mode         Dain Coalbeard(dwa) F3@( 5, 2) HP 41/74 MP 0/0 Hu 80 $ 974 room=M vs Stirge(L2 HP6/6)
 -> a
-T1406 mode=combat_mode         Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  0 $ 962 room=M vs Kobold(L2 HP20/20)
+T 858 mode=combat_mode         Dain Coalbeard(dwa) F3@( 5, 2) HP 40/74 MP 0/0 Hu 80 $ 974 room=M vs Stirge(L2 HP6/6)
 -> a
-T1407 mode=combat_victory      Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  0 $ 986 room=.
+T 859 mode=combat_victory      Dain Coalbeard(dwa) F3@( 5, 2) HP 36/74 MP 0/0 Hu 80 $ 1004 room=.
 -> back
-T1408 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  0 $ 986 room=.
+T 860 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 36/74 MP 0/0 Hu 80 $ 1004 room=.
 -> i
-T1409 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  0 $ 986 room=.
--> u6
-T1410 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  0 $ 986 room=.
--> eat1
-T1411 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu 15 $ 986 room=.
+T 861 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 36/74 MP 0/0 Hu 80 $ 1004 room=.
+-> u7
+T 862 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 36/74 MP 0/0 Hu 80 $ 1004 room=.
 -> x
-T1412 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu 15 $ 986 room=.
+T 863 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 36/74 MP 0/0 Hu 80 $ 1004 room=.
 -> w
-T1413 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 24/74 MP 0/0 Hu 15 $ 986 room=.
+T 864 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 36/74 MP 0/0 Hu 79 $ 1004 room=.
 -> n
-T1414 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 24/74 MP 0/0 Hu 14 $ 986 room=.
+T 865 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 36/74 MP 0/0 Hu 78 $ 1004 room=.
 -> w
-T1415 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 24/74 MP 0/0 Hu 13 $ 986 room=.
+T 866 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 37/74 MP 0/0 Hu 78 $ 1004 room=.
 -> w
-T1416 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 24/74 MP 0/0 Hu 12 $ 986 room=.
+T 867 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 37/74 MP 0/0 Hu 77 $ 1004 room=.
 -> s
-T1417 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 24/74 MP 0/0 Hu 12 $ 986 room=.
+T 868 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 37/74 MP 0/0 Hu 76 $ 1004 room=.
 -> s
-T1418 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 24/74 MP 0/0 Hu 11 $ 986 room=.
+T 869 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 37/74 MP 0/0 Hu 75 $ 1004 room=.
 -> e
-T1419 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 24/74 MP 0/0 Hu 10 $ 986 room=.
+T 870 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 38/74 MP 0/0 Hu 75 $ 1004 room=.
 -> e
-T1420 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 24/74 MP 0/0 Hu 10 $ 986 room=.
+T 871 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 38/74 MP 0/0 Hu 74 $ 1004 room=.
 -> s
-T1421 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 24/74 MP 0/0 Hu  9 $ 986 room=.
+T 872 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 38/74 MP 0/0 Hu 73 $ 1004 room=.
 -> n
-T1422 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 24/74 MP 0/0 Hu  8 $ 986 room=.
+T 873 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 38/74 MP 0/0 Hu 73 $ 1004 room=.
 -> e
-T1423 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 24/74 MP 0/0 Hu  8 $ 986 room=.
+T 874 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 39/74 MP 0/0 Hu 72 $ 1004 room=.
 -> n
-T1424 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 24/74 MP 0/0 Hu  7 $ 986 room=.
+T 875 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 39/74 MP 0/0 Hu 71 $ 1004 room=.
 -> w
-T1425 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 24/74 MP 0/0 Hu  6 $ 986 room=.
+T 876 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 39/74 MP 0/0 Hu 71 $ 1004 room=.
 -> n
-T1426 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 24/74 MP 0/0 Hu  5 $ 986 room=.
+T 877 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 39/74 MP 0/0 Hu 70 $ 1004 room=.
 -> w
-T1427 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 24/74 MP 0/0 Hu  5 $ 986 room=.
+T 878 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 40/74 MP 0/0 Hu 69 $ 1004 room=.
 -> w
-T1428 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 24/74 MP 0/0 Hu  4 $ 986 room=.
+T 879 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 40/74 MP 0/0 Hu 68 $ 1004 room=.
 -> s
-T1429 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 24/74 MP 0/0 Hu  3 $ 986 room=.
+T 880 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 40/74 MP 0/0 Hu 68 $ 1004 room=.
 -> s
-T1430 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 24/74 MP 0/0 Hu  3 $ 986 room=.
+T 881 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 40/74 MP 0/0 Hu 67 $ 1004 room=.
 -> e
-T1431 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 24/74 MP 0/0 Hu  2 $ 986 room=.
+T 882 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 41/74 MP 0/0 Hu 66 $ 1004 room=.
 -> e
-T1432 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 24/74 MP 0/0 Hu  1 $ 986 room=.
+T 883 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 41/74 MP 0/0 Hu 66 $ 1004 room=.
 -> s
-T1433 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 24/74 MP 0/0 Hu  1 $ 986 room=.
+T 884 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 41/74 MP 0/0 Hu 65 $ 1004 room=.
 -> n
-T1434 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 22/74 MP 0/0 Hu  0 $ 986 room=.
--> e
-T1435 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 20/74 MP 0/0 Hu  0 $ 986 room=.
+T 885 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 41/74 MP 0/0 Hu 64 $ 1004 room=.
 -> n
-T1436 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 18/74 MP 0/0 Hu  0 $ 986 room=.
--> w
-T1437 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 16/74 MP 0/0 Hu  0 $ 986 room=.
+T 886 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 42/74 MP 0/0 Hu 64 $ 1004 room=.
+-> e
+T 887 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 42/74 MP 0/0 Hu 63 $ 1004 room=.
+-> s
+T 888 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 42/74 MP 0/0 Hu 62 $ 1004 room=.
 -> n
-T1438 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 14/74 MP 0/0 Hu  0 $ 986 room=.
+T 889 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 42/74 MP 0/0 Hu 61 $ 1004 room=.
+-> s
+T 890 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 43/74 MP 0/0 Hu 61 $ 1004 room=.
 -> w
-T1439 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 12/74 MP 0/0 Hu  0 $ 986 room=.
+T 891 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 43/74 MP 0/0 Hu 60 $ 1004 room=.
+-> s
+T 892 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 43/74 MP 0/0 Hu 59 $ 1004 room=.
+-> n
+T 893 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 43/74 MP 0/0 Hu 59 $ 1004 room=.
 -> w
-T1440 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 10/74 MP 0/0 Hu  0 $ 986 room=.
+T 894 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 43/74 MP 0/0 Hu 58 $ 1004 room=.
+-> w
+T 895 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 43/74 MP 0/0 Hu 57 $ 1004 room=.
+-> n
+T 896 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 43/74 MP 0/0 Hu 57 $ 1004 room=.
+-> w
+T 897 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 43/74 MP 0/0 Hu 56 $ 1004 room=.
 -> s
-T1441 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 8/74 MP 0/0 Hu  0 $ 986 room=.
+T 898 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 43/74 MP 0/0 Hu 55 $ 1004 room=.
+-> l
+T 899 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 43/74 MP 0/0 Hu 55 $ 1004 room=.
 -> s
-T1442 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 6/74 MP 0/0 Hu  0 $ 986 room=.
+T 900 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 4) HP 43/74 MP 0/0 Hu 54 $ 1004 room=.
+-> n
+T 901 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 43/74 MP 0/0 Hu 54 $ 1004 room=.
 -> e
-T1443 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 4/74 MP 0/0 Hu  0 $ 986 room=.
+T 902 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 43/74 MP 0/0 Hu 53 $ 1004 room=.
 -> e
-T1444 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 2/74 MP 0/0 Hu  0 $ 986 room=.
+T 903 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 43/74 MP 0/0 Hu 52 $ 1004 room=.
+-> e
+T 904 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 43/74 MP 0/0 Hu 52 $ 1004 room=.
 -> s
-T1445 mode=death_screen        Dain Coalbeard(dwa) F3@( 4, 4) HP 0/74 MP 0/0 Hu  0 $ 986 room=.
+T 905 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 43/74 MP 0/0 Hu 51 $ 1004 room=.
+-> n
+T 906 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 43/74 MP 0/0 Hu 50 $ 1004 room=.
+-> n
+T 907 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 43/74 MP 0/0 Hu 50 $ 1004 room=.
+-> e
+T 908 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 43/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T 909 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 43/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat2
+T 910 mode=inventory           Dain Coalbeard(dwa) F3@( 5, 2) HP 43/74 MP 0/0 Hu 67 $ 1004 room=.
+-> x
+T 911 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 43/74 MP 0/0 Hu 67 $ 1004 room=.
+-> s
+T 912 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 43/74 MP 0/0 Hu 66 $ 1004 room=.
+-> n
+T 913 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 43/74 MP 0/0 Hu 65 $ 1004 room=.
+-> s
+T 914 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 43/74 MP 0/0 Hu 65 $ 1004 room=.
+-> w
+T 915 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 64 $ 1004 room=.
+-> s
+T 916 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 44/74 MP 0/0 Hu 63 $ 1004 room=.
+-> n
+T 917 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 44/74 MP 0/0 Hu 63 $ 1004 room=.
+-> w
+T 918 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 44/74 MP 0/0 Hu 62 $ 1004 room=.
+-> w
+T 919 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 45/74 MP 0/0 Hu 61 $ 1004 room=.
+-> n
+T 920 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 45/74 MP 0/0 Hu 61 $ 1004 room=.
+-> n
+T 921 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 45/74 MP 0/0 Hu 60 $ 1004 room=.
+-> w
+T 922 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 45/74 MP 0/0 Hu 59 $ 1004 room=U
+-> s
+T 923 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 45/74 MP 0/0 Hu 58 $ 1004 room=.
+-> s
+T 924 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 45/74 MP 0/0 Hu 58 $ 1004 room=.
+-> e
+T 925 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 45/74 MP 0/0 Hu 57 $ 1004 room=.
+-> e
+T 926 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 45/74 MP 0/0 Hu 56 $ 1004 room=.
+-> e
+T 927 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 45/74 MP 0/0 Hu 56 $ 1004 room=.
+-> s
+T 928 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 45/74 MP 0/0 Hu 55 $ 1004 room=.
+-> n
+T 929 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 45/74 MP 0/0 Hu 54 $ 1004 room=.
+-> n
+T 930 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 45/74 MP 0/0 Hu 54 $ 1004 room=.
+-> e
+T 931 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 45/74 MP 0/0 Hu 53 $ 1004 room=.
+-> s
+T 932 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 45/74 MP 0/0 Hu 52 $ 1004 room=.
+-> n
+T 933 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 45/74 MP 0/0 Hu 51 $ 1004 room=.
+-> s
+T 934 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 45/74 MP 0/0 Hu 51 $ 1004 room=.
+-> w
+T 935 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 45/74 MP 0/0 Hu 50 $ 1004 room=.
+-> s
+T 936 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 45/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T 937 mode=inventory           Dain Coalbeard(dwa) F3@( 4, 4) HP 45/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat1
+T 938 mode=inventory           Dain Coalbeard(dwa) F3@( 4, 4) HP 45/74 MP 0/0 Hu 99 $ 1004 room=.
+-> x
+T 939 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 45/74 MP 0/0 Hu 99 $ 1004 room=.
+-> n
+T 940 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 45/74 MP 0/0 Hu 99 $ 1004 room=.
+-> n
+T 941 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 46/74 MP 0/0 Hu 98 $ 1004 room=.
+-> n
+T 942 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 46/74 MP 0/0 Hu 97 $ 1004 room=.
+-> w
+T 943 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 47/74 MP 0/0 Hu 97 $ 1004 room=.
+-> w
+T 944 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 47/74 MP 0/0 Hu 96 $ 1004 room=.
+-> s
+T 945 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 48/74 MP 0/0 Hu 95 $ 1004 room=.
+-> s
+T 946 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 48/74 MP 0/0 Hu 94 $ 1004 room=.
+-> e
+T 947 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 49/74 MP 0/0 Hu 94 $ 1004 room=.
+-> e
+T 948 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 49/74 MP 0/0 Hu 93 $ 1004 room=.
+-> s
+T 949 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 50/74 MP 0/0 Hu 92 $ 1004 room=.
+-> n
+T 950 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 50/74 MP 0/0 Hu 92 $ 1004 room=.
+-> n
+T 951 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 51/74 MP 0/0 Hu 91 $ 1004 room=.
+-> n
+T 952 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 51/74 MP 0/0 Hu 90 $ 1004 room=.
+-> w
+T 953 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 52/74 MP 0/0 Hu 90 $ 1004 room=.
+-> w
+T 954 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 52/74 MP 0/0 Hu 89 $ 1004 room=.
+-> s
+T 955 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 53/74 MP 0/0 Hu 88 $ 1004 room=.
+-> s
+T 956 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 53/74 MP 0/0 Hu 87 $ 1004 room=.
+-> e
+T 957 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 54/74 MP 0/0 Hu 87 $ 1004 room=.
+-> e
+T 958 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 54/74 MP 0/0 Hu 86 $ 1004 room=.
+-> s
+T 959 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 55/74 MP 0/0 Hu 85 $ 1004 room=.
+-> n
+T 960 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 55/74 MP 0/0 Hu 85 $ 1004 room=.
+-> e
+T 961 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 55/74 MP 0/0 Hu 84 $ 1004 room=.
+-> n
+T 962 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 55/74 MP 0/0 Hu 83 $ 1004 room=.
+-> w
+T 963 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 56/74 MP 0/0 Hu 83 $ 1004 room=.
+-> n
+T 964 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 56/74 MP 0/0 Hu 82 $ 1004 room=.
+-> w
+T 965 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 56/74 MP 0/0 Hu 81 $ 1004 room=.
+-> w
+T 966 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 56/74 MP 0/0 Hu 80 $ 1004 room=.
+-> s
+T 967 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 57/74 MP 0/0 Hu 80 $ 1004 room=.
+-> s
+T 968 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 57/74 MP 0/0 Hu 79 $ 1004 room=.
+-> e
+T 969 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 57/74 MP 0/0 Hu 78 $ 1004 room=.
+-> e
+T 970 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 57/74 MP 0/0 Hu 78 $ 1004 room=.
+-> s
+T 971 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 58/74 MP 0/0 Hu 77 $ 1004 room=.
+-> n
+T 972 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 58/74 MP 0/0 Hu 76 $ 1004 room=.
+-> e
+T 973 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 58/74 MP 0/0 Hu 76 $ 1004 room=.
+-> n
+T 974 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 58/74 MP 0/0 Hu 75 $ 1004 room=.
+-> w
+T 975 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 59/74 MP 0/0 Hu 74 $ 1004 room=.
+-> n
+T 976 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 59/74 MP 0/0 Hu 73 $ 1004 room=.
+-> w
+T 977 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 59/74 MP 0/0 Hu 73 $ 1004 room=.
+-> w
+T 978 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 59/74 MP 0/0 Hu 72 $ 1004 room=.
+-> s
+T 979 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 60/74 MP 0/0 Hu 71 $ 1004 room=.
+-> s
+T 980 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 60/74 MP 0/0 Hu 71 $ 1004 room=.
+-> e
+T 981 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 60/74 MP 0/0 Hu 70 $ 1004 room=.
+-> e
+T 982 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 60/74 MP 0/0 Hu 69 $ 1004 room=.
+-> s
+T 983 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 61/74 MP 0/0 Hu 69 $ 1004 room=.
+-> n
+T 984 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 61/74 MP 0/0 Hu 68 $ 1004 room=.
+-> n
+T 985 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 61/74 MP 0/0 Hu 67 $ 1004 room=.
+-> e
+T 986 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 61/74 MP 0/0 Hu 66 $ 1004 room=.
+-> s
+T 987 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 62/74 MP 0/0 Hu 66 $ 1004 room=.
+-> n
+T 988 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 62/74 MP 0/0 Hu 65 $ 1004 room=.
+-> s
+T 989 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 62/74 MP 0/0 Hu 64 $ 1004 room=.
+-> w
+T 990 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 62/74 MP 0/0 Hu 64 $ 1004 room=.
+-> s
+T 991 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 63/74 MP 0/0 Hu 63 $ 1004 room=.
+-> n
+T 992 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 63/74 MP 0/0 Hu 62 $ 1004 room=.
+-> w
+T 993 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 63/74 MP 0/0 Hu 62 $ 1004 room=.
+-> w
+T 994 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 63/74 MP 0/0 Hu 61 $ 1004 room=.
+-> w
+T 995 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 64/74 MP 0/0 Hu 60 $ 1004 room=.
+-> n
+T 996 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 64/74 MP 0/0 Hu 59 $ 1004 room=.
+-> n
+T 997 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 64/74 MP 0/0 Hu 59 $ 1004 room=U
+-> e
+T 998 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 64/74 MP 0/0 Hu 58 $ 1004 room=.
+-> s
+T 999 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 64/74 MP 0/0 Hu 57 $ 1004 room=.
+-> s
+T1000 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 64/74 MP 0/0 Hu 57 $ 1004 room=.
+-> e
+T1001 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 64/74 MP 0/0 Hu 56 $ 1004 room=.
+-> e
+T1002 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 64/74 MP 0/0 Hu 55 $ 1004 room=.
+-> s
+T1003 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 64/74 MP 0/0 Hu 55 $ 1004 room=.
+-> n
+T1004 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 64/74 MP 0/0 Hu 54 $ 1004 room=.
+-> e
+T1005 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 64/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1006 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 64/74 MP 0/0 Hu 52 $ 1004 room=.
+-> w
+T1007 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 64/74 MP 0/0 Hu 52 $ 1004 room=.
+-> n
+T1008 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 64/74 MP 0/0 Hu 51 $ 1004 room=.
+-> w
+T1009 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 64/74 MP 0/0 Hu 50 $ 1004 room=.
+-> w
+T1010 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 64/74 MP 0/0 Hu 50 $ 1004 room=.
+-> s
+T1011 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 64/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T1012 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 2) HP 64/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat1
+T1013 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 2) HP 64/74 MP 0/0 Hu 99 $ 1004 room=.
+-> x
+T1014 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 64/74 MP 0/0 Hu 99 $ 1004 room=.
+-> s
+T1015 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 64/74 MP 0/0 Hu 98 $ 1004 room=.
+-> e
+T1016 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 65/74 MP 0/0 Hu 98 $ 1004 room=.
+-> e
+T1017 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 65/74 MP 0/0 Hu 97 $ 1004 room=.
+-> s
+T1018 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 66/74 MP 0/0 Hu 96 $ 1004 room=.
+-> n
+T1019 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 66/74 MP 0/0 Hu 95 $ 1004 room=.
+-> e
+T1020 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 67/74 MP 0/0 Hu 95 $ 1004 room=.
+-> n
+T1021 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 67/74 MP 0/0 Hu 94 $ 1004 room=.
+-> w
+T1022 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 68/74 MP 0/0 Hu 93 $ 1004 room=.
+-> n
+T1023 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 68/74 MP 0/0 Hu 93 $ 1004 room=.
+-> w
+T1024 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 69/74 MP 0/0 Hu 92 $ 1004 room=.
+-> w
+T1025 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 69/74 MP 0/0 Hu 91 $ 1004 room=.
+-> s
+T1026 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 70/74 MP 0/0 Hu 91 $ 1004 room=.
+-> s
+T1027 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 70/74 MP 0/0 Hu 90 $ 1004 room=.
+-> e
+T1028 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 71/74 MP 0/0 Hu 89 $ 1004 room=.
+-> e
+T1029 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 71/74 MP 0/0 Hu 88 $ 1004 room=.
+-> s
+T1030 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 72/74 MP 0/0 Hu 88 $ 1004 room=.
+-> n
+T1031 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 72/74 MP 0/0 Hu 87 $ 1004 room=.
+-> n
+T1032 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 73/74 MP 0/0 Hu 86 $ 1004 room=.
+-> n
+T1033 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 73/74 MP 0/0 Hu 86 $ 1004 room=.
+-> w
+T1034 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> w
+T1035 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> s
+T1036 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> s
+T1037 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> e
+T1038 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> e
+T1039 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> s
+T1040 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> n
+T1041 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> n
+T1042 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> n
+T1043 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> w
+T1044 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 78 $ 1004 room=.
+-> w
+T1045 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> s
+T1046 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> s
+T1047 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 76 $ 1004 room=.
+-> e
+T1048 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> e
+T1049 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> s
+T1050 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> l
+T1051 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> n
+T1052 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> n
+T1053 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> e
+T1054 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> s
+T1055 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> n
+T1056 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> s
+T1057 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> w
+T1058 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> s
+T1059 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> n
+T1060 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> l
+T1061 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> w
+T1062 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> w
+T1063 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> n
+T1064 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> w
+T1065 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> s
+T1066 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 64 $ 1004 room=.
+-> s
+T1067 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 4) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> n
+T1068 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> e
+T1069 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 62 $ 1004 room=.
+-> e
+T1070 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> l
+T1071 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> e
+T1072 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> s
+T1073 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> n
+T1074 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> n
+T1075 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> e
+T1076 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> s
+T1077 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> n
+T1078 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> s
+T1079 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> w
+T1080 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> l
+T1081 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> s
+T1082 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 54 $ 1004 room=.
+-> n
+T1083 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1084 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1085 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> w
+T1086 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> w
+T1087 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> s
+T1088 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> s
+T1089 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T1090 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat1
+T1091 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> x
+T1092 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> e
+T1093 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> e
+T1094 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 98 $ 1004 room=.
+-> s
+T1095 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 97 $ 1004 room=.
+-> n
+T1096 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> n
+T1097 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> e
+T1098 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 95 $ 1004 room=.
+-> s
+T1099 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> n
+T1100 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> l
+T1101 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> w
+T1102 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 93 $ 1004 room=.
+-> w
+T1103 mode=warp_mode           Dain Coalbeard(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 92 $ 1004 room=W
+-> y
+T1104 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 92 $ 1004 room=W
+-> s
+T1105 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 92 $ 1004 room=.
+-> e
+T1106 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 91 $ 1004 room=.
+-> s
+T1107 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 90 $ 1004 room=.
+-> n
+T1108 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 89 $ 1004 room=.
+-> e
+T1109 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 89 $ 1004 room=.
+-> n
+T1110 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 88 $ 1004 room=.
+-> l
+T1111 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 88 $ 1004 room=.
+-> w
+T1112 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 87 $ 1004 room=.
+-> n
+T1113 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 87 $ 1004 room=.
+-> w
+T1114 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 86 $ 1004 room=.
+-> w
+T1115 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> s
+T1116 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> s
+T1117 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> e
+T1118 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> e
+T1119 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> s
+T1120 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> l
+T1121 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> n
+T1122 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> n
+T1123 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> e
+T1124 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> s
+T1125 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> n
+T1126 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 78 $ 1004 room=.
+-> s
+T1127 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 78 $ 1004 room=.
+-> w
+T1128 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> s
+T1129 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 76 $ 1004 room=.
+-> n
+T1130 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> l
+T1131 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> n
+T1132 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> e
+T1133 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> s
+T1134 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> n
+T1135 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> s
+T1136 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> w
+T1137 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> s
+T1138 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> n
+T1139 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> n
+T1140 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> l
+T1141 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> e
+T1142 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> s
+T1143 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> n
+T1144 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> s
+T1145 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> w
+T1146 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> s
+T1147 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> n
+T1148 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 64 $ 1004 room=.
+-> n
+T1149 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 64 $ 1004 room=.
+-> e
+T1150 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> l
+T1151 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> s
+T1152 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 62 $ 1004 room=.
+-> n
+T1153 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> s
+T1154 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> w
+T1155 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> s
+T1156 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> n
+T1157 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> w
+T1158 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> w
+T1159 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> w
+T1160 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> l
+T1161 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> n
+T1162 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> e
+T1163 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> n
+T1164 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 54 $ 1004 room=.
+-> w
+T1165 mode=stairs_up_mode      Dain Coalbeard(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 54 $ 1004 room=U
+-> s
+T1166 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> s
+T1167 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> e
+T1168 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> e
+T1169 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> e
+T1170 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> l
+T1171 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> s
+T1172 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> n
+T1173 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T1174 mode=inventory           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat1
+T1175 mode=inventory           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> x
+T1176 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> n
+T1177 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 98 $ 1004 room=.
+-> n
+T1178 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 97 $ 1004 room=.
+-> w
+T1179 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 97 $ 1004 room=.
+-> w
+T1180 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> l
+T1181 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> s
+T1182 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 95 $ 1004 room=.
+-> s
+T1183 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 95 $ 1004 room=.
+-> e
+T1184 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> e
+T1185 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 93 $ 1004 room=.
+-> s
+T1186 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 93 $ 1004 room=.
+-> n
+T1187 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 92 $ 1004 room=.
+-> e
+T1188 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 91 $ 1004 room=.
+-> n
+T1189 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 90 $ 1004 room=.
+-> w
+T1190 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 90 $ 1004 room=.
+-> l
+T1191 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 90 $ 1004 room=.
+-> n
+T1192 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 89 $ 1004 room=.
+-> w
+T1193 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 88 $ 1004 room=.
+-> w
+T1194 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 88 $ 1004 room=.
+-> s
+T1195 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 87 $ 1004 room=.
+-> s
+T1196 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 86 $ 1004 room=.
+-> e
+T1197 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 86 $ 1004 room=.
+-> e
+T1198 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> s
+T1199 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> n
+T1200 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> l
+T1201 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> n
+T1202 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> n
+T1203 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> w
+T1204 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> w
+T1205 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> s
+T1206 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> s
+T1207 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> e
+T1208 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> e
+T1209 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 78 $ 1004 room=.
+-> s
+T1210 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> l
+T1211 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> n
+T1212 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 76 $ 1004 room=.
+-> n
+T1213 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 76 $ 1004 room=.
+-> n
+T1214 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> w
+T1215 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> w
+T1216 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> s
+T1217 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> s
+T1218 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> e
+T1219 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> e
+T1220 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> l
+T1221 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> s
+T1222 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> n
+T1223 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> e
+T1224 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> n
+T1225 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> w
+T1226 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> n
+T1227 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> w
+T1228 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> w
+T1229 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> s
+T1230 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> l
+T1231 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> s
+T1232 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 64 $ 1004 room=.
+-> e
+T1233 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> e
+T1234 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 62 $ 1004 room=.
+-> s
+T1235 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 62 $ 1004 room=.
+-> n
+T1236 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> e
+T1237 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> n
+T1238 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> w
+T1239 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> n
+T1240 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> l
+T1241 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> w
+T1242 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> w
+T1243 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> s
+T1244 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> s
+T1245 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> e
+T1246 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> e
+T1247 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 54 $ 1004 room=.
+-> s
+T1248 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1249 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1250 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> l
+T1251 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> n
+T1252 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> w
+T1253 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> w
+T1254 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> s
+T1255 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> i
+T1256 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> eat1
+T1257 mode=inventory           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> x
+T1258 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 99 $ 1004 room=.
+-> s
+T1259 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 98 $ 1004 room=.
+-> e
+T1260 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 98 $ 1004 room=.
+-> l
+T1261 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 98 $ 1004 room=.
+-> e
+T1262 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 97 $ 1004 room=.
+-> s
+T1263 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> n
+T1264 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 96 $ 1004 room=.
+-> n
+T1265 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 95 $ 1004 room=.
+-> e
+T1266 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> s
+T1267 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 94 $ 1004 room=.
+-> n
+T1268 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 93 $ 1004 room=.
+-> s
+T1269 mode=game_loop           Dain Coalbeard(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 92 $ 1004 room=.
+-> w
+T1270 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 91 $ 1004 room=.
+-> l
+T1271 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 91 $ 1004 room=.
+-> s
+T1272 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 91 $ 1004 room=.
+-> n
+T1273 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 90 $ 1004 room=.
+-> w
+T1274 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 89 $ 1004 room=.
+-> w
+T1275 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 89 $ 1004 room=.
+-> w
+T1276 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 88 $ 1004 room=.
+-> n
+T1277 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 87 $ 1004 room=.
+-> e
+T1278 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 87 $ 1004 room=.
+-> n
+T1279 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 86 $ 1004 room=.
+-> e
+T1280 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> l
+T1281 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 85 $ 1004 room=.
+-> e
+T1282 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> s
+T1283 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 84 $ 1004 room=.
+-> s
+T1284 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 83 $ 1004 room=.
+-> s
+T1285 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> n
+T1286 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 82 $ 1004 room=.
+-> w
+T1287 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 81 $ 1004 room=.
+-> w
+T1288 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> n
+T1289 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 2) HP 74/74 MP 0/0 Hu 80 $ 1004 room=.
+-> w
+T1290 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> l
+T1291 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 79 $ 1004 room=.
+-> s
+T1292 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 78 $ 1004 room=.
+-> s
+T1293 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 4) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> n
+T1294 mode=game_loop           Dain Coalbeard(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 77 $ 1004 room=.
+-> e
+T1295 mode=game_loop           Dain Coalbeard(dwa) F3@( 2, 3) HP 74/74 MP 0/0 Hu 76 $ 1004 room=.
+-> e
+T1296 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 3) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> e
+T1297 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 75 $ 1004 room=.
+-> s
+T1298 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 4) HP 74/74 MP 0/0 Hu 74 $ 1004 room=.
+-> n
+T1299 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 3) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> n
+T1300 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> l
+T1301 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 73 $ 1004 room=.
+-> n
+T1302 mode=game_loop           Dain Coalbeard(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 72 $ 1004 room=.
+-> w
+T1303 mode=game_loop           Dain Coalbeard(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 71 $ 1004 room=.
+-> s
+T1304 mode=warp_mode           Dain Coalbeard(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 70 $ 1004 room=W
+-> n
+T1305 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> n
+T1306 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 70 $ 1004 room=.
+-> s
+T1307 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 69 $ 1004 room=.
+-> w
+T1308 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> w
+T1309 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 68 $ 1004 room=.
+-> s
+T1310 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 74/74 MP 0/0 Hu 67 $ 1004 room=.
+-> w
+T1311 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> n
+T1312 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 66 $ 1004 room=.
+-> n
+T1313 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 65 $ 1004 room=.
+-> n
+T1314 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 64 $ 1004 room=.
+-> n
+T1315 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> n
+T1316 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 63 $ 1004 room=.
+-> w
+T1317 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 62 $ 1004 room=.
+-> s
+T1318 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> s
+T1319 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 4) HP 74/74 MP 0/0 Hu 61 $ 1004 room=.
+-> e
+T1320 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 60 $ 1004 room=.
+-> s
+T1321 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> e
+T1322 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 59 $ 1004 room=.
+-> s
+T1323 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 58 $ 1004 room=.
+-> w
+T1324 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 57 $ 1004 room=.
+-> s
+T1325 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> e
+T1326 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 74/74 MP 0/0 Hu 56 $ 1004 room=.
+-> w
+T1327 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 55 $ 1004 room=.
+-> e
+T1328 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 74/74 MP 0/0 Hu 54 $ 1004 room=.
+-> n
+T1329 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 54 $ 1004 room=.
+-> w
+T1330 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 53 $ 1004 room=.
+-> n
+T1331 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> e
+T1332 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 52 $ 1004 room=.
+-> s
+T1333 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 51 $ 1004 room=.
+-> e
+T1334 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 50 $ 1004 room=.
+-> e
+T1335 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> n
+T1336 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 49 $ 1004 room=.
+-> s
+T1337 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 48 $ 1004 room=.
+-> s
+T1338 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 47 $ 1004 room=.
+-> n
+T1339 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 47 $ 1004 room=.
+-> w
+T1340 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 46 $ 1004 room=.
+-> w
+T1341 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 45 $ 1004 room=.
+-> s
+T1342 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 74/74 MP 0/0 Hu 45 $ 1004 room=.
+-> w
+T1343 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 44 $ 1004 room=.
+-> n
+T1344 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 43 $ 1004 room=.
+-> n
+T1345 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 42 $ 1004 room=.
+-> e
+T1346 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 42 $ 1004 room=.
+-> s
+T1347 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 41 $ 1004 room=.
+-> e
+T1348 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 40 $ 1004 room=.
+-> e
+T1349 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 40 $ 1004 room=.
+-> s
+T1350 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 39 $ 1004 room=.
+-> n
+T1351 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 38 $ 1004 room=.
+-> n
+T1352 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 38 $ 1004 room=.
+-> s
+T1353 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 37 $ 1004 room=.
+-> w
+T1354 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 36 $ 1004 room=.
+-> w
+T1355 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 35 $ 1004 room=.
+-> w
+T1356 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 35 $ 1004 room=.
+-> n
+T1357 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 34 $ 1004 room=.
+-> e
+T1358 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 33 $ 1004 room=.
+-> w
+T1359 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 33 $ 1004 room=.
+-> n
+T1360 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 32 $ 1004 room=.
+-> n
+T1361 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 31 $ 1004 room=.
+-> w
+T1362 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 31 $ 1004 room=.
+-> n
+T1363 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 30 $ 1004 room=.
+-> e
+T1364 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 29 $ 1004 room=.
+-> s
+T1365 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 28 $ 1004 room=.
+-> s
+T1366 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 28 $ 1004 room=.
+-> w
+T1367 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 4) HP 74/74 MP 0/0 Hu 27 $ 1004 room=.
+-> n
+T1368 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 26 $ 1004 room=.
+-> w
+T1369 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 3) HP 74/74 MP 0/0 Hu 26 $ 1004 room=.
+-> s
+T1370 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 4) HP 74/74 MP 0/0 Hu 25 $ 1004 room=.
+-> n
+T1371 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 3) HP 74/74 MP 0/0 Hu 24 $ 1004 room=.
+-> n
+T1372 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 2) HP 74/74 MP 0/0 Hu 24 $ 1004 room=.
+-> e
+T1373 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 23 $ 1004 room=.
+-> e
+T1374 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 22 $ 1004 room=.
+-> s
+T1375 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 3) HP 74/74 MP 0/0 Hu 21 $ 1004 room=.
+-> w
+T1376 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 21 $ 1004 room=.
+-> s
+T1377 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 4) HP 74/74 MP 0/0 Hu 20 $ 1004 room=.
+-> w
+T1378 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 4) HP 74/74 MP 0/0 Hu 19 $ 1004 room=.
+-> n
+T1379 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 3) HP 74/74 MP 0/0 Hu 19 $ 1004 room=.
+-> n
+T1380 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 2) HP 74/74 MP 0/0 Hu 18 $ 1004 room=.
+-> n
+T1381 mode=game_loop           Dain Coalbeard(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 17 $ 1004 room=E
+-> e
+T1382 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 1) HP 74/74 MP 0/0 Hu 17 $ 1004 room=N
+-> s
+T1383 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 16 $ 1004 room=.
+-> s
+T1384 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 3) HP 74/74 MP 0/0 Hu 15 $ 1004 room=.
+-> s
+T1385 mode=game_loop           Dain Coalbeard(dwa) F1@( 2, 4) HP 74/74 MP 0/0 Hu 14 $ 1004 room=.
+-> e
+T1386 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 14 $ 1004 room=.
+-> s
+T1387 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu 13 $ 1004 room=.
+-> e
+T1388 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 12 $ 1004 room=.
+-> s
+T1389 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 12 $ 1004 room=.
+-> e
+T1390 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 11 $ 1004 room=.
+-> e
+T1391 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu 10 $ 1004 room=.
+-> n
+T1392 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 10 $ 1004 room=.
+-> s
+T1393 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu  9 $ 1004 room=.
+-> s
+T1394 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu  8 $ 1004 room=.
+-> n
+T1395 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 74/74 MP 0/0 Hu  7 $ 1004 room=.
+-> w
+T1396 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu  7 $ 1004 room=.
+-> w
+T1397 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu  6 $ 1004 room=.
+-> n
+T1398 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu  5 $ 1004 room=.
+-> w
+T1399 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 74/74 MP 0/0 Hu  5 $ 1004 room=.
+-> s
+T1400 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu  4 $ 1004 room=.
+-> s
+T1401 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu  3 $ 1004 room=.
+-> e
+T1402 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 74/74 MP 0/0 Hu  3 $ 1004 room=.
+-> n
+T1403 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu  2 $ 1004 room=.
+-> e
+T1404 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu  1 $ 1004 room=.
+-> e
+T1405 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 72/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1406 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 5) HP 70/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1407 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 68/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1408 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 7) HP 66/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1409 mode=game_loop           Dain Coalbeard(dwa) F1@( 6, 6) HP 64/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1410 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 62/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1411 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 60/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1412 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 58/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1413 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 56/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1414 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 54/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1415 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 52/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1416 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 50/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1417 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 48/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1418 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1419 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 44/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1420 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 42/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1421 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 40/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1422 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 38/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1423 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 36/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1424 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 34/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1425 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 32/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1426 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 30/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1427 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 28/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1428 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 26/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1429 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 24/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1430 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 22/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1431 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 20/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1432 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 18/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1433 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 16/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1434 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 5) HP 14/74 MP 0/0 Hu  0 $ 1004 room=.
+-> w
+T1435 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 5) HP 12/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1436 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 6) HP 10/74 MP 0/0 Hu  0 $ 1004 room=.
+-> s
+T1437 mode=game_loop           Dain Coalbeard(dwa) F1@( 3, 7) HP 8/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1438 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 7) HP 6/74 MP 0/0 Hu  0 $ 1004 room=.
+-> n
+T1439 mode=game_loop           Dain Coalbeard(dwa) F1@( 4, 6) HP 4/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1440 mode=game_loop           Dain Coalbeard(dwa) F1@( 5, 6) HP 2/74 MP 0/0 Hu  0 $ 1004 room=.
+-> e
+T1441 mode=death_screen        Dain Coalbeard(dwa) F1@( 6, 6) HP 0/74 MP 0/0 Hu  0 $ 1004 room=.
 
-=== run finished: turns=1445 floor=3 hp=0/74 gold=986 alive=False mode=death_screen ===
+=== run finished: turns=1441 floor=1 hp=0/74 gold=1004 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00137_dwarf.html

@@ -5291,938 +5291,326 @@ T2636 mode=game_loop           Durin Forgewright(dwa) F3@( 2, 2) HP 90/90 MP 0/0
 T2637 mode=warp_mode           Durin Forgewright(dwa) F3@( 2, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=W
 -> n
 T2638 mode=stairs_down_mode    Durin Forgewright(dwa) F4@(17,13) HP 90/90 MP 0/0 Hu 66 $ 572 room=D
+-> d
+T2639 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
 -> w
-T2639 mode=stairs_down_mode    Durin Forgewright(dwa) F4@(17,13) HP 90/90 MP 0/0 Hu 66 $ 572 room=D
+T2640 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
 -> s
-T2640 mode=garden_mode         Durin Forgewright(dwa) F4@(17,14) HP 90/90 MP 0/0 Hu 65 $ 572 room=G
--> h
-T2641 mode=game_loop           Durin Forgewright(dwa) F4@(17,14) HP 90/90 MP 0/0 Hu 65 $ 572 room=.
+T2641 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
 -> s
-T2642 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 64 $ 572 room=.
--> w
-T2643 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 90/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP100/100)
--> a
-T2644 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 67/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP100/100)
--> a
-T2645 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 44/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
--> i
-T2646 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 44/90 MP 0/0 Hu 64 $ 572 room=M
--> u2
-T2647 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 74/90 MP 0/0 Hu 64 $ 572 room=M
--> x
-T2648 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 74/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
--> a
-T2649 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 51/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
--> a
-T2650 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 51/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
+T2642 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
+-> s
+T2643 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
+-> s
+T2644 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
+-> n
+T2645 mode=stairs_up_mode      Durin Forgewright(dwa) F5@( 1, 1) HP 90/90 MP 0/0 Hu 66 $ 572 room=U
+-> e
+T2646 mode=warp_mode           Durin Forgewright(dwa) F5@( 2, 1) HP 90/90 MP 0/0 Hu 65 $ 572 room=W
+-> y
+T2647 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 90/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> f
-T2651 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 5/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
+T2648 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 88/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2649 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 88/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2650 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 88/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2651 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 86/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2652 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 80/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2653 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 80/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2654 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2655 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2656 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 66/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2657 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2658 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2659 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2660 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2661 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2662 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2663 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2664 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2665 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2666 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 56/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2667 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2668 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2669 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2670 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2652 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 5/90 MP 0/0 Hu 64 $ 572 room=M
+T2671 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 38/90 MP 0/0 Hu 65 $ 572 room=M
 -> u2
-T2653 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 35/90 MP 0/0 Hu 64 $ 572 room=M
+T2672 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 68/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2654 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 35/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
+T2673 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 68/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2674 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2675 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2676 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2677 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2678 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2679 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2680 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2681 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2682 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2683 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2684 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2685 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2686 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2687 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2688 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2689 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 54/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2690 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 54/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2691 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 48/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2692 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 48/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2693 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 40/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2655 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 35/90 MP 0/0 Hu 64 $ 572 room=M
+T2694 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 34/90 MP 0/0 Hu 65 $ 572 room=M
 -> u2
-T2656 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 65/90 MP 0/0 Hu 64 $ 572 room=M
+T2695 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2657 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 65/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP77/100)
--> a
-T2658 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 42/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP54/100)
+T2696 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2697 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2698 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2699 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2700 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2701 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2702 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2703 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2704 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2705 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2706 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2707 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2708 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2659 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 42/90 MP 0/0 Hu 64 $ 572 room=M
+T2709 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 38/90 MP 0/0 Hu 65 $ 572 room=M
 -> u2
-T2660 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 72/90 MP 0/0 Hu 64 $ 572 room=M
+T2710 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 68/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2661 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 72/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP54/100)
--> a
-T2662 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 49/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP31/100)
--> a
-T2663 mode=combat_mode         Durin Forgewright(dwa) F4@(16,15) HP 49/90 MP 0/0 Hu 64 $ 572 room=M vs UNDEAD WRAITH(L3 HP8/100)
--> a
-T2664 mode=combat_victory      Durin Forgewright(dwa) F4@(16,15) HP 49/90 MP 0/0 Hu 64 $ 580 room=.
--> back
-T2665 mode=game_loop           Durin Forgewright(dwa) F4@(16,15) HP 49/90 MP 0/0 Hu 64 $ 580 room=.
+T2711 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 68/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2712 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 60/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2713 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 52/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2714 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2715 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2716 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 38/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2666 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 49/90 MP 0/0 Hu 64 $ 580 room=.
--> u5
-T2667 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 79/90 MP 0/0 Hu 64 $ 580 room=.
+T2717 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 32/90 MP 0/0 Hu 65 $ 572 room=M
 -> u2
-T2668 mode=inventory           Durin Forgewright(dwa) F4@(16,15) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
+T2718 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2669 mode=game_loop           Durin Forgewright(dwa) F4@(16,15) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> n
-T2670 mode=tomb_mode           Durin Forgewright(dwa) F4@(16,14) HP 90/90 MP 0/0 Hu 63 $ 580 room=T
--> p
-T2671 mode=game_loop           Durin Forgewright(dwa) F4@(16,14) HP 90/90 MP 0/0 Hu 63 $ 580 room=T
--> s
-T2672 mode=game_loop           Durin Forgewright(dwa) F4@(16,15) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> n
-T2673 mode=game_loop           Durin Forgewright(dwa) F4@(16,14) HP 90/90 MP 0/0 Hu 62 $ 580 room=T
--> s
-T2674 mode=game_loop           Durin Forgewright(dwa) F4@(16,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> e
-T2675 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> s
-T2676 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> n
-T2677 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> e
-T2678 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> e
-T2679 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> s
-T2680 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> n
-T2681 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> s
-T2682 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> n
-T2683 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> w
-T2684 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> w
-T2685 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> s
-T2686 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> n
-T2687 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> s
-T2688 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> n
-T2689 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> e
-T2690 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> e
-T2691 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
+T2719 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 62/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2720 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 56/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2721 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 56/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2722 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2723 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2724 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2725 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2692 mode=inventory           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> eat1
-T2693 mode=inventory           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
+T2726 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> u2
+T2727 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2694 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> s
-T2695 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> n
-T2696 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> s
-T2697 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 97 $ 580 room=.
--> n
-T2698 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> w
-T2699 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> w
-T2700 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 95 $ 580 room=.
--> s
-T2701 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> n
-T2702 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> s
-T2703 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> n
-T2704 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> e
-T2705 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> e
-T2706 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> s
-T2707 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 90 $ 580 room=.
--> n
-T2708 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> s
-T2709 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> n
-T2710 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 88 $ 580 room=.
--> w
-T2711 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> w
-T2712 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> s
-T2713 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> n
-T2714 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> s
-T2715 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> n
-T2716 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> e
-T2717 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 83 $ 580 room=.
--> e
-T2718 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> s
-T2719 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> n
-T2720 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 81 $ 580 room=.
--> s
-T2721 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> n
-T2722 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> w
-T2723 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> w
-T2724 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> s
-T2725 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> n
-T2726 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> s
-T2727 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 76 $ 580 room=.
--> n
-T2728 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> e
-T2729 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> e
-T2730 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 74 $ 580 room=.
--> s
-T2731 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> n
-T2732 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> s
-T2733 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> n
-T2734 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> w
-T2735 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> w
-T2736 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> s
-T2737 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 69 $ 580 room=.
--> n
-T2738 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> s
-T2739 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> n
-T2740 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 67 $ 580 room=.
--> e
-T2741 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> e
-T2742 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> s
-T2743 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> n
-T2744 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> s
-T2745 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> n
-T2746 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> w
-T2747 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> w
-T2748 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> s
-T2749 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> n
-T2750 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> s
-T2751 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> n
-T2752 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> e
-T2753 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> e
-T2754 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> s
-T2755 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> n
-T2756 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> s
-T2757 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> n
-T2758 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> w
-T2759 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> w
-T2760 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> s
-T2761 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> n
-T2762 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> s
-T2763 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> n
-T2764 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> e
-T2765 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
+T2728 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2729 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 72/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2730 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 70/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2731 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2732 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2733 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2734 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2735 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 52/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2736 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 52/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2737 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2738 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2739 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2740 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2741 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2742 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2743 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2744 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2745 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2746 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2747 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2748 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2749 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2750 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2751 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2752 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2753 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2754 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2755 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2756 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2757 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2758 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2759 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2760 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2761 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2762 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 46/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2763 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
 -> i
-T2766 mode=inventory           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> eat1
-T2767 mode=inventory           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
+T2764 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> u2
+T2765 mode=inventory           Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M
 -> x
-T2768 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> e
-T2769 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> s
-T2770 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> n
-T2771 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 97 $ 580 room=.
--> s
-T2772 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 97 $ 580 room=.
--> n
-T2773 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> w
-T2774 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 95 $ 580 room=.
--> w
-T2775 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> s
-T2776 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> n
-T2777 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> s
-T2778 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> n
-T2779 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> e
-T2780 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> e
-T2781 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 90 $ 580 room=.
--> s
-T2782 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 90 $ 580 room=.
--> n
-T2783 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> s
-T2784 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 88 $ 580 room=.
--> n
-T2785 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> w
-T2786 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> w
-T2787 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> s
-T2788 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> n
-T2789 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> s
-T2790 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> n
-T2791 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 83 $ 580 room=.
--> e
-T2792 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 83 $ 580 room=.
--> e
-T2793 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> s
-T2794 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 81 $ 580 room=.
--> n
-T2795 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> s
-T2796 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> n
-T2797 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> w
-T2798 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> w
-T2799 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> s
-T2800 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> n
-T2801 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 76 $ 580 room=.
--> s
-T2802 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 76 $ 580 room=.
--> n
-T2803 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> e
-T2804 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 74 $ 580 room=.
--> e
-T2805 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> s
-T2806 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> n
-T2807 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> s
-T2808 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> n
-T2809 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> w
-T2810 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> w
-T2811 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 69 $ 580 room=.
--> s
-T2812 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 69 $ 580 room=.
--> n
-T2813 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> s
-T2814 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 67 $ 580 room=.
--> n
-T2815 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> e
-T2816 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> e
-T2817 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> s
-T2818 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> n
-T2819 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> s
-T2820 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> n
-T2821 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> w
-T2822 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> w
-T2823 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> s
-T2824 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> n
-T2825 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> s
-T2826 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> n
-T2827 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> e
-T2828 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> e
-T2829 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> s
-T2830 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> n
-T2831 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> s
-T2832 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> n
-T2833 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> w
-T2834 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> w
-T2835 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> s
-T2836 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> n
-T2837 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> s
-T2838 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> n
-T2839 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> e
-T2840 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> i
-T2841 mode=inventory           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> eat1
-T2842 mode=inventory           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> x
-T2843 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> e
-T2844 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> s
-T2845 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> n
-T2846 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 97 $ 580 room=.
--> s
-T2847 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> n
-T2848 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 95 $ 580 room=.
--> w
-T2849 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 95 $ 580 room=.
--> w
-T2850 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> s
-T2851 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> n
-T2852 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> s
-T2853 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> n
-T2854 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> e
-T2855 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> e
-T2856 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 90 $ 580 room=.
--> s
-T2857 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> n
-T2858 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 88 $ 580 room=.
--> s
-T2859 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 88 $ 580 room=.
--> n
-T2860 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> w
-T2861 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> w
-T2862 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> s
-T2863 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> n
-T2864 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> s
-T2865 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> n
-T2866 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 83 $ 580 room=.
--> e
-T2867 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> e
-T2868 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 81 $ 580 room=.
--> s
-T2869 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 81 $ 580 room=.
--> n
-T2870 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> s
-T2871 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> n
-T2872 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> w
-T2873 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> w
-T2874 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> s
-T2875 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> n
-T2876 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 76 $ 580 room=.
--> s
-T2877 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> n
-T2878 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 74 $ 580 room=.
--> e
-T2879 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 74 $ 580 room=.
--> e
-T2880 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> s
-T2881 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> n
-T2882 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> s
-T2883 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> n
-T2884 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> w
-T2885 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> w
-T2886 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 69 $ 580 room=.
--> s
-T2887 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> n
-T2888 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 67 $ 580 room=.
--> s
-T2889 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 67 $ 580 room=.
--> n
-T2890 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> e
-T2891 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> e
-T2892 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> s
-T2893 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> n
-T2894 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> s
-T2895 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> n
-T2896 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> w
-T2897 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> w
-T2898 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> s
-T2899 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> n
-T2900 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> s
-T2901 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> n
-T2902 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> e
-T2903 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> e
-T2904 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> s
-T2905 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> n
-T2906 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> s
-T2907 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> n
-T2908 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> w
-T2909 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> w
-T2910 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> s
-T2911 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> n
-T2912 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> s
-T2913 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> n
-T2914 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> i
-T2915 mode=inventory           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> eat1
-T2916 mode=inventory           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> x
-T2917 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> e
-T2918 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 99 $ 580 room=.
--> e
-T2919 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 98 $ 580 room=.
--> s
-T2920 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 97 $ 580 room=.
--> n
-T2921 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> s
-T2922 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 96 $ 580 room=.
--> n
-T2923 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 95 $ 580 room=.
--> w
-T2924 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> w
-T2925 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 94 $ 580 room=.
--> s
-T2926 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 93 $ 580 room=.
--> n
-T2927 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> s
-T2928 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 92 $ 580 room=.
--> n
-T2929 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 91 $ 580 room=.
--> e
-T2930 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 90 $ 580 room=.
--> e
-T2931 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> s
-T2932 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 89 $ 580 room=.
--> n
-T2933 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 88 $ 580 room=.
--> s
-T2934 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> n
-T2935 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 87 $ 580 room=.
--> w
-T2936 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 86 $ 580 room=.
--> w
-T2937 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> s
-T2938 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 85 $ 580 room=.
--> n
-T2939 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 84 $ 580 room=.
--> s
-T2940 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 83 $ 580 room=.
--> n
-T2941 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> e
-T2942 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 82 $ 580 room=.
--> e
-T2943 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 81 $ 580 room=.
--> s
-T2944 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> n
-T2945 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 80 $ 580 room=.
--> s
-T2946 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 79 $ 580 room=.
--> n
-T2947 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> w
-T2948 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 78 $ 580 room=.
--> w
-T2949 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 77 $ 580 room=.
--> s
-T2950 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 76 $ 580 room=.
--> n
-T2951 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> s
-T2952 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 75 $ 580 room=.
--> n
-T2953 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 74 $ 580 room=.
--> e
-T2954 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> e
-T2955 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 73 $ 580 room=.
--> s
-T2956 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 72 $ 580 room=.
--> n
-T2957 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> s
-T2958 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 71 $ 580 room=.
--> n
-T2959 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 70 $ 580 room=.
--> w
-T2960 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 69 $ 580 room=.
--> w
-T2961 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> s
-T2962 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 68 $ 580 room=.
--> n
-T2963 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 67 $ 580 room=.
--> s
-T2964 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> n
-T2965 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 66 $ 580 room=.
--> e
-T2966 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 65 $ 580 room=.
--> e
-T2967 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> s
-T2968 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 64 $ 580 room=.
--> n
-T2969 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 63 $ 580 room=.
--> s
-T2970 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 62 $ 580 room=.
--> n
-T2971 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> w
-T2972 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 61 $ 580 room=.
--> w
-T2973 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 60 $ 580 room=.
--> s
-T2974 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> n
-T2975 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 59 $ 580 room=.
--> s
-T2976 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 58 $ 580 room=.
--> n
-T2977 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> e
-T2978 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 57 $ 580 room=.
--> e
-T2979 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 56 $ 580 room=.
--> s
-T2980 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 55 $ 580 room=.
--> n
-T2981 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> s
-T2982 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 54 $ 580 room=.
--> n
-T2983 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 53 $ 580 room=.
--> w
-T2984 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> w
-T2985 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 52 $ 580 room=.
--> s
-T2986 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 51 $ 580 room=.
--> n
-T2987 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> s
-T2988 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 50 $ 580 room=.
--> n
-T2989 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 49 $ 580 room=.
--> e
-T2990 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 48 $ 580 room=.
--> e
-T2991 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 47 $ 580 room=.
--> s
-T2992 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 47 $ 580 room=.
--> n
-T2993 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 46 $ 580 room=.
--> s
-T2994 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 45 $ 580 room=.
--> n
-T2995 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 45 $ 580 room=.
--> w
-T2996 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 44 $ 580 room=.
--> w
-T2997 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 43 $ 580 room=.
--> s
-T2998 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 43 $ 580 room=.
--> n
-T2999 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 42 $ 580 room=.
--> s
-T3000 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 41 $ 580 room=.
--> n
-T3001 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 40 $ 580 room=.
--> e
-T3002 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 40 $ 580 room=.
--> e
-T3003 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 39 $ 580 room=.
--> s
-T3004 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 38 $ 580 room=.
--> n
-T3005 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 38 $ 580 room=.
--> s
-T3006 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 37 $ 580 room=.
--> n
-T3007 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 36 $ 580 room=.
--> w
-T3008 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 36 $ 580 room=.
--> w
-T3009 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 35 $ 580 room=.
--> s
-T3010 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 34 $ 580 room=.
--> n
-T3011 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 33 $ 580 room=.
--> s
-T3012 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 33 $ 580 room=.
--> n
-T3013 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 32 $ 580 room=.
--> e
-T3014 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 31 $ 580 room=.
--> e
-T3015 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 31 $ 580 room=.
--> s
-T3016 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 30 $ 580 room=.
--> n
-T3017 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 29 $ 580 room=.
--> s
-T3018 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 29 $ 580 room=.
--> n
-T3019 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 28 $ 580 room=.
--> w
-T3020 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 27 $ 580 room=.
--> w
-T3021 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 26 $ 580 room=.
--> s
-T3022 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 26 $ 580 room=.
--> n
-T3023 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 25 $ 580 room=.
--> s
-T3024 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 24 $ 580 room=.
--> n
-T3025 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 24 $ 580 room=.
--> e
-T3026 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 23 $ 580 room=.
--> e
-T3027 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 22 $ 580 room=.
--> s
-T3028 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 22 $ 580 room=.
--> n
-T3029 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 21 $ 580 room=.
--> s
-T3030 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 20 $ 580 room=.
--> n
-T3031 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 19 $ 580 room=.
--> w
-T3032 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 19 $ 580 room=.
--> w
-T3033 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 18 $ 580 room=.
--> s
-T3034 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 17 $ 580 room=.
--> n
-T3035 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 17 $ 580 room=.
--> s
-T3036 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu 16 $ 580 room=.
--> n
-T3037 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 15 $ 580 room=.
--> e
-T3038 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 15 $ 580 room=.
--> e
-T3039 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 14 $ 580 room=.
--> s
-T3040 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 13 $ 580 room=.
--> n
-T3041 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 12 $ 580 room=.
--> s
-T3042 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu 12 $ 580 room=.
--> n
-T3043 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu 11 $ 580 room=.
--> w
-T3044 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu 10 $ 580 room=.
--> w
-T3045 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu 10 $ 580 room=.
--> s
-T3046 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu  9 $ 580 room=.
--> n
-T3047 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu  8 $ 580 room=.
--> s
-T3048 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu  8 $ 580 room=.
--> n
-T3049 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu  7 $ 580 room=.
--> e
-T3050 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu  6 $ 580 room=.
--> e
-T3051 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu  5 $ 580 room=.
--> s
-T3052 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu  5 $ 580 room=.
--> n
-T3053 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu  4 $ 580 room=.
--> s
-T3054 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 90/90 MP 0/0 Hu  3 $ 580 room=.
--> n
-T3055 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 90/90 MP 0/0 Hu  3 $ 580 room=.
--> w
-T3056 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 90/90 MP 0/0 Hu  2 $ 580 room=.
--> w
-T3057 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 90/90 MP 0/0 Hu  1 $ 580 room=.
--> s
-T3058 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 90/90 MP 0/0 Hu  1 $ 580 room=.
--> n
-T3059 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 88/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3060 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 86/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3061 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 84/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3062 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 82/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3063 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 80/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3064 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 78/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3065 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 76/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3066 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 74/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3067 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 72/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3068 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 70/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3069 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 68/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3070 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 66/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3071 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 64/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3072 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 62/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3073 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 60/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3074 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 58/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3075 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 56/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3076 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 54/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3077 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 52/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3078 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 50/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3079 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 48/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3080 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 46/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3081 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 44/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3082 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 42/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3083 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 40/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3084 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 38/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3085 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 36/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3086 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 34/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3087 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 32/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3088 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 30/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3089 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 28/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3090 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 26/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3091 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 24/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3092 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 22/90 MP 0/0 Hu  0 $ 580 room=.
--> w
-T3093 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 20/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3094 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 18/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3095 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 16/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3096 mode=game_loop           Durin Forgewright(dwa) F4@(17,16) HP 14/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3097 mode=game_loop           Durin Forgewright(dwa) F4@(17,15) HP 12/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3098 mode=game_loop           Durin Forgewright(dwa) F4@(18,15) HP 10/90 MP 0/0 Hu  0 $ 580 room=.
--> e
-T3099 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 8/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3100 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 6/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3101 mode=game_loop           Durin Forgewright(dwa) F4@(19,15) HP 4/90 MP 0/0 Hu  0 $ 580 room=.
--> s
-T3102 mode=game_loop           Durin Forgewright(dwa) F4@(19,16) HP 2/90 MP 0/0 Hu  0 $ 580 room=.
--> n
-T3103 mode=death_screen        Durin Forgewright(dwa) F4@(19,15) HP 0/90 MP 0/0 Hu  0 $ 580 room=.
+T2766 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 74/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2767 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 72/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2768 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 70/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2769 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2770 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 64/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2771 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2772 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 58/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2773 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 50/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2774 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2775 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 44/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2776 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 38/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2777 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 32/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2778 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 32/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2779 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2780 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2781 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2782 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2783 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2784 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 26/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2785 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 24/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2786 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 24/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2787 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 24/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2788 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 24/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2789 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 24/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2790 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 22/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2791 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 22/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2792 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 22/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2793 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 20/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2794 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 12/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2795 mode=flee_direction_mode Durin Forgewright(dwa) F7@(12,14) HP 6/90 MP 0/0 Hu 65 $ 572 room=M
+-> c
+T2796 mode=combat_mode         Durin Forgewright(dwa) F7@(12,14) HP 6/90 MP 0/0 Hu 65 $ 572 room=M vs Ettercap(L6 HP51/51)
+-> f
+T2797 mode=death_screen        Durin Forgewright(dwa) F7@(12,14) HP 0/90 MP 0/0 Hu 65 $ 572 room=M
 
-=== run finished: turns=3103 floor=4 hp=0/90 gold=580 alive=False mode=death_screen ===
+=== run finished: turns=2797 floor=7 hp=0/90 gold=572 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00314_dwarf.html
