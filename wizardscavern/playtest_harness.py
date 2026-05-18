@@ -1029,8 +1029,20 @@ class PlaytestSession:
             # deepest floor they've reached via canonical stairs, the
             # wayfinder switches into ascend-back mode and aims for
             # this floor index. None when no retreat is needed.
+            # Retreat target: when a warp drops the agent BELOW the
+            # deepest floor they've reached via canonical stairs by
+            # 2 or more, the wayfinder switches into ascend-back mode
+            # and aims for this floor index. A single-floor gap (warp
+            # F1 -> F2 with max_z_via_stairs = 0) no longer triggers
+            # retreat -- if D is reachable on the current floor the
+            # agent should descend it normally rather than route back
+            # up and re-warp later. Caught on s=99 elf F2: warped from
+            # F1, found F2's D reachable at 86% reach, but retreat
+            # mode kept tiers = [U, V] and the agent routed onto a W
+            # tile, force-warped back to F1, wandered 2000 more turns
+            # in circles before starving.
             "retreat_to_floor": (self.max_z_via_stairs
-                                 if pc.z > self.max_z_via_stairs
+                                 if pc.z > self.max_z_via_stairs + 1
                                  else None),
             "tile_coverage": self._tile_coverage_obs(),
             "nearest_warp_path": self._nearest_warp_path_obs(),
