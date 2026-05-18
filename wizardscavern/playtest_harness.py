@@ -2301,6 +2301,14 @@ class PlaytestSession:
         """
         if obs is None:
             return False
+        # Bug-level shrunken agent: stairs/warps are sealed by
+        # design. The escape is a chest-borne Growth Mushroom or
+        # the Bug Queen kill (her drop), neither visible to the
+        # 'no D/U/W + no escape scroll' shape of this check. Don't
+        # early-terminate -- the quest path is alive.
+        p = obs.get("player") or {}
+        if p.get("is_shrunk"):
+            return False
         turns_on_floor = obs.get("turns_on_floor") or 0
         if turns_on_floor < 1500:
             return False
@@ -2554,6 +2562,21 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "game_loop":
         # Tier 0 priorities -- self-care that takes precedence over
         # any exploration / fighting decision.
+        # Growth Mushroom: instant escape from the bug-level quest.
+        # If we're shrunk AND holding the mushroom, open inventory
+        # so the in-inventory cascade can consume it -- this
+        # un-shrinks the agent and re-opens the stairs. Beats
+        # every other gate because it's the only way to break the
+        # sealed-floor lockout.
+        is_shrunk_now = bool(p.get("is_shrunk"))
+        if is_shrunk_now:
+            has_mushroom = any(
+                e.get("category", "").startswith("potion_")
+                and e.get("potion_type") == "growth_mushroom"
+                for e in inv
+            )
+            if has_mushroom and obs.get("last_action") not in ("i", "x"):
+                return "i"
         if hp_pct < 0.30 and heal_pot_slot:
             return "i"
         # Pre-emptive heal: 11 of 16 deaths in the analysis pass died
@@ -3611,6 +3634,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # in slot 9 -- the broken-weapon block was entered, found no
         # swap, and `elif hunger < 80 and food_slot:` was never reached).
         proposed = None
+        # Growth Mushroom: highest priority while shrunk. Reverses
+        # Zot's shrinking spell, re-opens stairs/warps, ends the
+        # bug-level quest. Caught on s=777 human: agent picked up
+        # the Mushroom from a chest at T~2000, kept it in slot 15
+        # until starvation at T4357 because the cascade had no
+        # gate that recognised potion_type='growth_mushroom'.
+        if is_shrunk:
+            for entry in inv:
+                if (entry.get("category", "").startswith("potion_")
+                        and entry.get("potion_type") == "growth_mushroom"):
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None and hp_pct < 0.95 and heal_pot_slot:
             proposed = f"u{heal_pot_slot}"
         if proposed is None and urgent_meat is not None:
