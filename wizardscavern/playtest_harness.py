@@ -4475,6 +4475,39 @@ def smart_policy(obs, rng, use_lantern=True):
             if cat in STOCK and owned.get(cat, 0) < STOCK[cat]:
                 return f"b{v['slot']}"
 
+        # 2.4) Equipment UPGRADES. Promoted from section 4 (last) to
+        # right after the survival stockpile. Build-351 playtester
+        # diagnosis on the F1-F4 death cliff: 58% of all deaths happen
+        # before tomb_mode is even reachable, and most occur at base
+        # Dagger (atk+2) / Leather Armor (def+1). Vendors stock Short
+        # Sword (atk+4, 25g), Iron Sword (atk+5, 75g), Mace (atk+5,
+        # 60g), Ring Mail / Chainmail def+4-6 -- huge swings, but the
+        # old order spent gold on scrolls and buff potions FIRST, then
+        # the 150g reserve gate often blocked the upgrade. Order now:
+        # stockpile -> upgrade -> scrolls -- the upgrade is bigger
+        # combat math than a one-shot scroll. Skip known-cursed and
+        # sealed items (weld to hand on equip).
+        UPGRADE_RESERVE = 100  # was 150 -- we buy this BEFORE scrolls
+        # and buff potions, so leaving 150g for them is wrong. 100g
+        # still buys 2 healing potions at the next vendor.
+        cur_w_bonus = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        cur_a_bonus = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        for v in vendor_inv:
+            if v["category"] not in ("weapon", "armor"):
+                continue
+            if v["price"] > gold - UPGRADE_RESERVE:
+                continue
+            if v.get("is_broken") or v.get("is_sealed"):
+                continue
+            if v.get("buc_known") and v.get("buc_status") == "cursed":
+                continue
+            if v["category"] == "weapon":
+                if (v.get("attack_bonus") or 0) > cur_w_bonus:
+                    return f"b{v['slot']}"
+            else:  # armor
+                if (v.get("defense_bonus") or 0) > cur_a_bonus:
+                    return f"b{v['slot']}"
+
         # 2.5) Magical / utility items the agent should keep one or two
         # of around: stat-buff potions are pre-combat insurance
         # (Strength Elixir / Defense Brew / Stone Skin / Regeneration
@@ -4541,34 +4574,9 @@ def smart_policy(obs, rng, use_lantern=True):
                 if v["category"] == "armor" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
-        # 4) Equipment UPGRADES from the vendor. The biggest combat-
-        # balance gap surfaced by the F4 death cliff: vendors stock
-        # weapons (Longsword atk+10, Mace +6, Morningstar +8) and
-        # armor (Ring Mail def+4, Chainmail +6) that BLOW AWAY the
-        # starter Dagger / Leather Armor, but the policy was buying
-        # only stockpile items and walking past the upgrades. Now we
-        # scan vendor weapons / armor and buy any strict-bonus
-        # improvement we can afford, after keeping a healing-pot
-        # reserve. Skip known-cursed and sealed items -- can't be
-        # repaired and weld to hand on equip.
-        UPGRADE_RESERVE = 150  # keep this much for next vendor's potions
-        cur_w_bonus = (equipped.get("weapon") or {}).get("attack_bonus") or 0
-        cur_a_bonus = (equipped.get("armor") or {}).get("defense_bonus") or 0
-        for v in vendor_inv:
-            if v["category"] not in ("weapon", "armor"):
-                continue
-            if v["price"] > gold - UPGRADE_RESERVE:
-                continue
-            if v.get("is_broken") or v.get("is_sealed"):
-                continue
-            if v.get("buc_known") and v.get("buc_status") == "cursed":
-                continue
-            if v["category"] == "weapon":
-                if (v.get("attack_bonus") or 0) > cur_w_bonus:
-                    return f"b{v['slot']}"
-            else:  # armor
-                if (v.get("defense_bonus") or 0) > cur_a_bonus:
-                    return f"b{v['slot']}"
+        # 4) Equipment upgrades hoisted to section 2.4 (above scrolls
+        # and buff potions). The promotion is the build-352 change --
+        # see comment there.
 
         # 5) Identify unknown scrolls + potions. Upgrade scrolls are the
         # high-value drop the user explicitly called out -- you can't
