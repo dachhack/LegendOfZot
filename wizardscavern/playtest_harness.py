@@ -3082,13 +3082,24 @@ def smart_policy(obs, rng, use_lantern=True):
                 # has walked 2 tiles (reach_pct=100% of a 2-tile
                 # region) and a W happens to be visible -- the b364
                 # sweep caught dwarf/s10 stepping east onto a known
-                # W at T6 because of this. 20-tile / 30-turn floor
-                # is the threshold below which "explored everything
-                # I can reach" really means "haven't started yet".
+                # W at T6 because of this.
+                # Build-367 retune: the b366 rider closed a small
+                # but real combat-spiral death window -- 11/36 runs
+                # in the validation sweep died on tight floors
+                # while taking damage with a warp still available
+                # but blocked by the 30-turn rider. Add an OR-side
+                # escape valve: if hp_pct < 0.4, fire the fast-path
+                # regardless of turns_on_floor / reachable. The
+                # original spawn-pocket fix still holds because a
+                # T5 spawn-pocket agent is at full HP, so the
+                # spiral side doesn't trigger.
                 or (reach_pct_avoid >= 95
                     and obs.get("nearest_warp_path") is not None
-                    and (obs.get("tile_coverage") or {}).get("reachable", 0) >= 20
-                    and turns_on_floor_avoid >= 30)
+                    and (
+                        ((obs.get("tile_coverage") or {}).get("reachable", 0) >= 20
+                         and turns_on_floor_avoid >= 30)
+                        or hp_pct < 0.4
+                    ))
             )
         )
         # Cornered detection: agent's ONLY walkable cardinal
