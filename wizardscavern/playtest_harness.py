@@ -4687,18 +4687,19 @@ def smart_policy(obs, rng, use_lantern=True):
             # Walking north spawned a 3-tile bounce loop instead
             # of routing toward escape.
             STEP_OFF_SKIP = ("#", "M", "W", "D", "T")
-            # Step onto W IS the goal when path_dist==1 (W tile is
-            # adjacent). The warp_mode handler will then decide
-            # whether to accept the warp. Allow W as a valid
-            # warp-dir step even though it's in the general SKIP.
-            # Caught on s=8128 dwarf F1 D at (16,14) with W east
-            # at dist 1: step-off skipped 'e' (W neighbour) and
-            # walked west away from the only escape, looping 2400T.
+            # Warp-dir-preferred set: step toward W is the goal,
+            # AND tomb (T) tiles are passable (combat-risky but
+            # navigable -- the wayfinder routes through them).
+            # Caught on s=1234 dwarf F3 D at (1,5) with W south
+            # at path_dist=9 PAST a T at (1,6): step-off skipped
+            # 's' (T neighbour), walked 'n' away from W, looped
+            # n/s for 477T. Allow T as a valid warp-dir step.
+            WARP_DIR_SKIP = ("#", "M", "D")
             if warp_dir:
                 t = neighbors.get(warp_dir)
                 if t == "W" and (warp_path.get("path_dist") or 99) == 1:
                     return warp_dir
-                if t and t not in STEP_OFF_SKIP:
+                if t and t not in WARP_DIR_SKIP:
                     return warp_dir
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
