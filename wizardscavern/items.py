@@ -1224,6 +1224,29 @@ class Potion(Item):
             gs.player_passed_bug_quest = True
             character.remove_status_effect('Shrinking')
 
+            # Symmetric to game_systems._restore_size_on_bug_exit. The
+            # stair-exit path strips bug gear when the Mushroom's
+            # residual power restores size, but eating the Mushroom
+            # directly skipped this -- build-360 sweep human/s7 spent
+            # 225T post-grow with Chitin Shell (bug armor, def_bonus=6)
+            # still equipped alongside a normal weapon. Drop bug
+            # weapon / armor so the player can't keep wearing tiny
+            # gear at full size. Items stay in inventory in case the
+            # player re-enters a bug floor.
+            from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+            bug_item_names = (
+                {t['name'] for t in BUG_WEAPON_TEMPLATES}
+                | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+            )
+            ew = character.equipped_weapon
+            if ew is not None and ew.name in bug_item_names:
+                add_log(f"{COLOR_YELLOW}The {ew.name} falls from your hand -- it's comically tiny now.{COLOR_RESET}")
+                character.equipped_weapon = None
+            ea = character.equipped_armor
+            if ea is not None and ea.name in bug_item_names:
+                add_log(f"{COLOR_YELLOW}The {ea.name} slides off -- it no longer fits.{COLOR_RESET}")
+                character.equipped_armor = None
+
             return True  # Consumed
 
         else:
