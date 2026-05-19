@@ -4104,8 +4104,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # still there when the debuff wears off. Skip the flee when
         # immobilised (move refused) and when starving + edible-
         # monster (we need this kill to eat).
+        # Tiny-pocket exception: in a small reachable region (<=
+        # 10 tiles) fleeing from a status effect just re-encounters
+        # the same M next move -- the status ticks AND the flee
+        # parting blow lands AND the M is back. Commit to combat
+        # instead. Caught on s=1234 dwarf F1: 4-tile pocket, M
+        # south of D with a poison special; agent's a/f cycle
+        # drained HP without producing a kill.
+        pocket_reach = (obs.get("tile_coverage") or {}).get("reachable") or 0
+        in_tiny_pocket = pocket_reach <= 10
         if (has_ticking_status and not immobilised
-                and not (starving and m_is_edible)):
+                and not (starving and m_is_edible)
+                and not in_tiny_pocket):
             return "f"
         # Low-HP last-ditch flee: HP < 30%, no healing options at all,
         # not starving. Better to disengage and look for a vendor /
@@ -4757,6 +4767,23 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if (under_descend and not grind_done_descend
                 and not stuck and not is_weak):
+            nmp_descend = obs.get("nearest_monster_path") or {}
+            # Pocket short-circuit: if NO M tile is BFS-reachable on
+            # this floor, there are no kills to grind for. Descend
+            # rather than step-off and bounce.
+            if not nmp_descend.get("first_step"):
+                return "d"
+            # Engage adjacent M directly: when nearest M is at
+            # path_dist 1 (one of D's cardinal neighbours), step
+            # toward it to fight. The step-off cascade below skips
+            # M (hazard) and picks a non-M direction, which then
+            # routes back to D next turn -- s=1234 dwarf F1 with D
+            # at (2,2) and M south at (2,3), grind-not-done at
+            # kof=2/3 looped n -> back to D -> n for 200+T. Going
+            # straight into the M produces the kill we needed.
+            if (nmp_descend.get("path_dist") == 1
+                    and nmp_descend.get("first_step")):
+                return nmp_descend["first_step"]
             neighbors = obs.get("neighbors") or {}
             recent_descend = set(obs.get("recent_step_set") or [])
             blocked_descend = set(obs.get("blocked_directions") or [])
