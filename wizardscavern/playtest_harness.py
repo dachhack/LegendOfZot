@@ -3485,8 +3485,11 @@ def smart_policy(obs, rng, use_lantern=True):
         elif too_long_on_floor:
             tiers = [("D",), ("V",)]
         elif high_coverage_descend:
-            # Floor mostly swept + stairs in sight -- go.
-            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+            # Floor mostly swept + stairs in sight -- go. But never
+            # leave an unvisited V on a floor we're abandoning; user-
+            # framing build-364: "it's pretty much the top priority of
+            # any level to find the vendor and buy all the items".
+            tiers = [("V",), ("D",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
         elif is_weak:
             tiers = [("V",), tuple(BENEFICIAL_SAFE)]
             if not unvisited_beneficials_exist:
@@ -3496,12 +3499,16 @@ def smart_policy(obs, rng, use_lantern=True):
             if not unvisited_beneficials_exist:
                 tiers.append(("D",))
         elif ready_to_clear:
-            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",),
+            # V first so a still-unvisited vendor on a swept floor
+            # doesn't get left behind.
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("M",),
                      ("T", "N"), ("D",)]
         elif unvisited_beneficials_exist:
-            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
         else:
-            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+            # Default exploration: V still wins -- it's a higher-EV
+            # detour than another `.` tile of the next floor.
+            tiers = [("V",), ("D",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
         # Tomb-aware filter: when an undead has been encountered on
         # this floor AND the agent is weak (low HP or broken gear),
         # strip M and T/N from every tier. M because stepping into
