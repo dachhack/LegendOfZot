@@ -492,9 +492,11 @@ class Tower:
     def _ensure_d_reachable(self, floor):
         """Connectivity guarantee: from the player's entry tile (E on
         F1, U on F2+), BFS through walkable, non-hazard tiles and
-        confirm the downstairs D is reachable. If not, carve a
-        corridor through walls AND through hazard rooms (M, W) to
-        the nearest D so no floor ships as a hard softlock.
+        confirm D (downstairs), W (warp), and V (vendor) are each
+        reachable. If not, carve a corridor through walls (NOT
+        through hazard rooms M / W, which still block transit) to
+        the unreachable target so no floor ships as a hard softlock
+        or as a no-vendor-island spawn pocket.
 
         Match the agent's BFS transit rules (M and W block transit)
         rather than raw walkable -- the agent's wayfinder refuses
@@ -541,9 +543,14 @@ class Tower:
                 visited.add((nr, nc))
                 queue.append((nr, nc))
         # Carve a corridor to any required-but-unreachable target.
-        # 'D' on every floor (entry to next), plus the first 'W'
-        # (warp escape valve).
-        for target in ('D', 'W'):
+        # 'D' on every floor (entry to next), 'W' (warp escape valve),
+        # and 'V' (vendor) -- build-353 validation found ~10% of F1-F4
+        # deaths were on runs that never reached a vendor because V
+        # was walled-off from spawn. Vendors are the only weapon /
+        # armor upgrade path for non-caster races and a major healing-
+        # pot top-up for everyone, so a softlock spawn pocket with no
+        # V is as bad as one with no D.
+        for target in ('D', 'W', 'V'):
             t_pos = None
             for r in range(floor.rows):
                 for c in range(floor.cols):
