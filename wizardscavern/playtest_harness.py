@@ -3708,6 +3708,24 @@ def smart_policy(obs, rng, use_lantern=True):
                         and path.get("path_dist") is not None):
                     candidates.append((path["path_dist"], path["first_step"]))
             if candidates:
+                # When D is in avoid_set (wedge block active),
+                # BFS through walkable tiles can still pick a
+                # first_step that lands ON the D tile incidentally
+                # (BFS treats D as walkable transit). Stepping onto
+                # D triggers stairs_down_mode where the wedge step-
+                # off fires another loop. Filter out candidates
+                # whose first_step lands on a D neighbour so the
+                # wayfinder picks the next-closest non-D path.
+                # Caught on s=271 dwarf F2 D at (12,15): wayfinder
+                # picked 's' (toward U via BFS path that crossed D),
+                # agent walked onto D, step-off, n/s/n/s for 300+T.
+                if "D" in avoid_set:
+                    safe_cands = [
+                        (pd, fs) for (pd, fs) in candidates
+                        if neighbors.get(fs) != "D"
+                    ]
+                    if safe_cands:
+                        candidates = safe_cands
                 candidates.sort(key=lambda c: c[0])
                 return _swap_if_backtrack(candidates[0][1])
 
@@ -4820,6 +4838,17 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if (under_descend and not grind_done_descend
                 and not stuck and not is_weak):
+            # Anti-bounce: if we've visited this D tile 3+ times
+            # already, the grind-step-off is creating a loop
+            # (step north, wayfinder routes back to D, step north
+            # again, repeat). Just descend and let the next floor
+            # have the grind opportunity. Caught on s=271 dwarf
+            # F2 D at (12,15): kof=0/3, on_floor=22, grind-step-off
+            # fired each visit to D, agent looped n/s for 319T
+            # without ever staying on F2 long enough to fight.
+            cur_visits_d = obs.get("current_tile_visits") or 0
+            if cur_visits_d >= 3:
+                return "d"
             nmp_descend = obs.get("nearest_monster_path") or {}
             # Pocket short-circuit: if NO M tile is BFS-reachable on
             # this floor, there are no kills to grind for. Descend
