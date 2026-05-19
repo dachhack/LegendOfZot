@@ -441,6 +441,17 @@ ephemeral_gardens = {}
 bug_level_floors = {}  # floor_index -> True if this floor is a bug level
 player_is_shrunk = False  # True while player is under Zot's shrinking spell
 bug_queen_defeated = False  # Set True when Bug Queen falls on current bug level
+# Move counter for bug-level "she's done waiting" fallback Queen spawn.
+# Counts moves since the shrinking spell triggered; resets on cure.
+# _check_bug_queen_spawn reads this and spawns the Queen when the agent
+# has put in enough time even without a 100% bug clear (region-split
+# layouts can make 100% impossible). See _trigger_shrinking_spell.
+bug_shrink_moves = 0
+# Bug-kill counter for the current bug-level visit. Feeds the
+# early-enrage Queen spawn -- killing 20+ of her children pulls her
+# out even before the patience timer expires or every reachable bug
+# is dead. Reset alongside bug_shrink_moves in _trigger_shrinking_spell.
+bug_kills_this_level = 0
 
 # ============================================================================
 # FEY GARDEN INGREDIENTS

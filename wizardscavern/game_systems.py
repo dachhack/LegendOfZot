@@ -3967,6 +3967,15 @@ def _trigger_shrinking_spell(player_character):
     """Trigger Zot's shrinking spell when player enters a bug level."""
     gs.player_is_shrunk = True
     gs.bug_queen_defeated = False
+    # Restart the "she's done waiting" countdown. Bug Queen spawns
+    # automatically after a fixed move budget even if some bugs
+    # remain unreachable (region-split layouts). See
+    # combat._check_bug_queen_spawn.
+    gs.bug_shrink_moves = 0
+    # Per-bug-level kill counter. Feeds the early-enrage spawn:
+    # killing enough of her children pulls the Queen out regardless
+    # of remaining bugs.
+    gs.bug_kills_this_level = 0
 
     # Add the shrinking status effect (very long duration - effectively permanent until cured)
     player_character.add_status_effect(

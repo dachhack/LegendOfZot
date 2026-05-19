@@ -222,7 +222,16 @@ def _monster_attack_during_channeling(player_character):
 
 def _check_bug_queen_spawn(player_character, my_tower):
     """After a bug monster is killed, check if all bugs on the floor are dead.
-    If so, the Bug Queen spawns to avenge her swarm."""
+    If so, the Bug Queen spawns to avenge her swarm.
+
+    Fallback: also spawn after the player has been shrunk for
+    BUG_QUEEN_PATIENCE moves without a 100% bug clear, OR when
+    the kill count alone reaches BUG_QUEEN_KILL_THRESHOLD.
+    Region-split bug-floor layouts can hide a few bugs behind walls
+    the agent can't BFS to (s=167 dwarf: 125 bug kills, 1773T on
+    F8, Queen never spawned, starved). The patience fallback
+    guarantees the quest is resolvable on every layout.
+    """
     current_floor = my_tower.floors[player_character.z]
 
     # Only applies on bug levels, and only if queen hasn't been defeated yet
@@ -239,7 +248,16 @@ def _check_bug_queen_spawn(player_character, my_tower):
             if room.room_type == 'M' and room.properties.get('is_bug_monster'):
                 remaining_bugs += 1
 
-    if remaining_bugs > 0:
+    BUG_QUEEN_PATIENCE = 500     # moves shrunk before Queen emerges anyway
+    BUG_QUEEN_KILL_THRESHOLD = 20  # bug kills to enrage her early
+
+    shrink_moves = getattr(gs, 'bug_shrink_moves', 0)
+    bugs_killed = getattr(gs, 'bug_kills_this_level', 0)
+
+    patience_spent = shrink_moves >= BUG_QUEEN_PATIENCE
+    kill_threshold = bugs_killed >= BUG_QUEEN_KILL_THRESHOLD
+
+    if remaining_bugs > 0 and not (patience_spent or kill_threshold):
         return
 
     # All bugs are dead! The Bug Queen appears to avenge them.
@@ -1804,7 +1822,12 @@ def get_trophy_drop(monster_name):
 
 
 def _drop_bug_gear(player_character):
-    """25% chance to drop a random bug weapon or armor after killing a bug monster."""
+    """25% chance to drop a random bug weapon or armor after killing a bug monster.
+    Also increments the bug-kill counter that feeds the patience-spawn
+    of the Bug Queen (see _check_bug_queen_spawn)."""
+    # Bug-kill counter. Reset alongside bug_shrink_moves in
+    # _trigger_shrinking_spell so each bug-level visit counts fresh.
+    gs.bug_kills_this_level = getattr(gs, 'bug_kills_this_level', 0) + 1
     from .items import Weapon, Armor
     if random.random() > 0.25:
         return

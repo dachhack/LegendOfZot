@@ -3185,6 +3185,11 @@ def tick_meat_rot(character):
 
 def process_hunger(character):
     """Called each move. Decreases hunger and applies penalties/bonuses."""
+    # Bug-level move counter: ticks while shrunk, drives the "she's
+    # done waiting" Bug Queen spawn fallback in
+    # combat._check_bug_queen_spawn. Resets in _trigger_shrinking_spell.
+    if gs.player_is_shrunk:
+        gs.bug_shrink_moves = getattr(gs, 'bug_shrink_moves', 0) + 1
     # Check for lembas hunger freeze
     freeze = getattr(character, 'hunger_freeze_turns', 0)
     if freeze > 0:
