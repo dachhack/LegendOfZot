@@ -3485,10 +3485,16 @@ def smart_policy(obs, rng, use_lantern=True):
         elif too_long_on_floor:
             tiers = [("D",), ("V",)]
         elif high_coverage_descend:
-            # Floor mostly swept + stairs in sight -- go. But never
-            # leave an unvisited V on a floor we're abandoning; user-
-            # framing build-364: "it's pretty much the top priority of
-            # any level to find the vendor and buy all the items".
+            # Floor mostly swept + stairs in sight -- go. V kept at
+            # tier 0 here because this is the LAST chance to shop
+            # before leaving the floor; gold won't grow further. The
+            # other tiers below revert to b363's V-tier-1 ordering --
+            # the b364 sweep showed V-first in default / ready_to_
+            # clear / unvisited branches pulled agents to vendors
+            # before they'd collected chest gold, regressing F5
+            # atk+def 16.8 -> 12.9. Build-365: only keep the descent-
+            # gate V-first, let the agent accumulate gold through
+            # chests + kills first elsewhere.
             tiers = [("V",), ("D",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
         elif is_weak:
             tiers = [("V",), tuple(BENEFICIAL_SAFE)]
@@ -3499,16 +3505,12 @@ def smart_policy(obs, rng, use_lantern=True):
             if not unvisited_beneficials_exist:
                 tiers.append(("D",))
         elif ready_to_clear:
-            # V first so a still-unvisited vendor on a swept floor
-            # doesn't get left behind.
-            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("M",),
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",),
                      ("T", "N"), ("D",)]
         elif unvisited_beneficials_exist:
-            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         else:
-            # Default exploration: V still wins -- it's a higher-EV
-            # detour than another `.` tile of the next floor.
-            tiers = [("V",), ("D",), tuple(BENEFICIAL_SAFE), ("M",), ("T", "N")]
+            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         # Tomb-aware filter: when an undead has been encountered on
         # this floor AND the agent is weak (low HP or broken gear),
         # strip M and T/N from every tier. M because stepping into
@@ -4403,11 +4405,14 @@ def smart_policy(obs, rng, use_lantern=True):
             return "c"
         # Routing rule: weapon priority by default (attack scales
         # kill speed, which compresses every other survival metric)
-        # but let armor catch up when it's lagging by 2+ levels.
-        # On a 6-scroll budget that produces roughly a 4 weapon /
-        # 2 armor split, which mirrors the user's intuition that
-        # the equipped armor should also be getting some upgrades.
-        ARMOR_CATCHUP_GAP = 2
+        # but let armor catch up when it's lagging.
+        # Build-365 retune from the b364 sweep: dwarf weapon_UL=1.25
+        # vs armor_UL=0.42 (3:1) -- the +2 catchup gap was too lax
+        # given that runs only read ~2 scrolls total before death.
+        # Dropping to +1 yields true round-robin (weapon, armor,
+        # weapon, armor) so armor scaling actually shows up at the
+        # F5-F7 wall instead of staying at base.
+        ARMOR_CATCHUP_GAP = 1
         chosen_idx = None
         if wpn_eligible and arm_eligible:
             if eq_weapon_upg - eq_armor_upg >= ARMOR_CATCHUP_GAP:
