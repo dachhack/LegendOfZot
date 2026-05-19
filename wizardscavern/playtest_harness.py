@@ -3259,9 +3259,27 @@ def smart_policy(obs, rng, use_lantern=True):
         # turns on the current floor, drop the clear-before-descend
         # gate. Pulls the agent off floor 1 when an unreachable
         # beneficial (behind a wall the greedy walker can't navigate
-        # around) would otherwise loop forever. 300 turns is enough
-        # to do a thorough sweep of a 18x21 floor.
-        FLOOR_STUCK_TURNS = 300
+        # around) would otherwise loop forever. Two thresholds:
+        # ready agents (level + gear meet floor) release at 300T, but
+        # under-levelled OR weakly-geared agents get 800T to keep
+        # grinding/shopping. Build-362 validation sweep caught the
+        # leak -- 6 of 11 stairs-descents to F6+ fired the old 300T
+        # override on weak agents, letting them descend at e.g.
+        # kof=6/11 atk+def=22 (s=11 human F5->F6 at T888). under_leveled
+        # / weakly_geared are recomputed inline here because the
+        # canonical definitions sit ~80 lines below.
+        _pre_pc_z = (p.get("floor", 1) - 1)
+        _pre_under_lvl = p.get("level", 1) <= _pre_pc_z + 2
+        _pre_eq_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        _pre_eq_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        _pre_weak_gear = (
+            _pre_pc_z >= 2
+            and (_pre_eq_w + _pre_eq_a) < (2 * _pre_pc_z + 3)
+        )
+        if _pre_under_lvl or _pre_weak_gear:
+            FLOOR_STUCK_TURNS = 800
+        else:
+            FLOOR_STUCK_TURNS = 300
         too_long_on_floor = (obs.get("turns_on_floor") or 0) > FLOOR_STUCK_TURNS
         if too_long_on_floor:
             unvisited_beneficials_exist = False
@@ -3292,9 +3310,24 @@ def smart_policy(obs, rng, use_lantern=True):
         # have 25g easily after 1-2 kills.
         weak_starter_weapon = cur_w <= 2  # Dagger atk_bonus = 2
         weak_starter_armor = cur_a <= 3   # Leather Armor def_bonus = 3
+        # Build-362 validation sweep finding: vendor visits averaged
+        # 2.2-2.8 per run (most upgrades came from chests, not V).
+        # The wants_gear_upgrade gate only fired for starter-gear
+        # agents (cur_w <= 2). An F5 agent on Short Sword (atk+4)
+        # didn't pull to V even though Mace (atk+5 60g) / Longsword
+        # (atk+8 ~200g) / Plate (def+8 ~250g) would clear the
+        # weakly_geared threshold. Extend the pull: on F3+, anytime
+        # combined atk+def is below the depth target AND we have
+        # enough gold to buy a mid-tier upgrade, route to V.
+        pc_z_v = (p.get("floor", 1) - 1)
+        weakly_geared_v = (
+            pc_z_v >= 2
+            and (cur_w + cur_a) < (2 * pc_z_v + 3)
+        )
         wants_gear_upgrade = (
-            (weak_starter_weapon or weak_starter_armor)
-            and p["gold"] >= 25
+            ((weak_starter_weapon or weak_starter_armor)
+             and p["gold"] >= 25)
+            or (weakly_geared_v and p["gold"] >= 60)
         )
         wants_vendor = (((healing_count < 2 or needs_repair) and p["gold"] >= 50)
                         or wants_gear_upgrade)
@@ -4892,7 +4925,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # often-empty handoff. Stepped onto incidentally still works
         # via the mode handler, just not proactively targeted.
         BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
-        stuck = (obs.get("turns_on_floor") or 0) > 300
+        # Tiered stuck threshold mirrors the game_loop FLOOR_STUCK_TURNS
+        # (build 362). Under-levelled / weakly-geared agents get 800T
+        # before the step-off releases, ready agents 300T.
+        _sd_pc_z = (p.get("floor", 1) - 1)
+        _sd_under_lvl = p.get("level", 1) <= _sd_pc_z + 2
+        _sd_eq_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        _sd_eq_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        _sd_weak_gear = (
+            _sd_pc_z >= 2
+            and (_sd_eq_w + _sd_eq_a) < (2 * _sd_pc_z + 3)
+        )
+        _sd_stuck_threshold = 800 if (_sd_under_lvl or _sd_weak_gear) else 300
+        stuck = (obs.get("turns_on_floor") or 0) > _sd_stuck_threshold
         nearby = [
             feature_paths[t] for t in BENEFICIAL_SAFE
             if feature_paths.get(t)
