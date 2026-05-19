@@ -452,6 +452,17 @@ bug_shrink_moves = 0
 # out even before the patience timer expires or every reachable bug
 # is dead. Reset alongside bug_shrink_moves in _trigger_shrinking_spell.
 bug_kills_this_level = 0
+# Persistent flag: once the player has been cured of the shrinking
+# spell (Bug Queen kill OR Growth Mushroom consume), Zot's magic
+# recognises them and the spell does not re-cast on subsequent
+# entries to the bug level. Without this an agent who descends F8
+# -> F9 then warps back to F8 gets re-shrunk with no cure path
+# (one Mushroom per bug-level visit, Queen drops once per game) --
+# they die holding their best gear in the bag because they can't
+# equip non-bug weapons. Caught on s=777 human: un-shrunk + Soul
+# Reaver equipped at T2516, re-warped to F8 garden at T2661,
+# re-shrunk, died F9 starvation still wearing Firefly Wand.
+player_passed_bug_quest = False
 
 # ============================================================================
 # FEY GARDEN INGREDIENTS

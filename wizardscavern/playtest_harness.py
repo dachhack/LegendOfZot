@@ -441,6 +441,9 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     # floors and softlock in stairs_down_mode forever.
     gs.player_is_shrunk = False
     gs.bug_queen_defeated = False
+    gs.player_passed_bug_quest = False
+    gs.bug_shrink_moves = 0
+    gs.bug_kills_this_level = 0
     gs.bug_level_floors = {}
     gs.monster_acts_first = False
     gs.monster_initiative_pending = False

@@ -1219,6 +1219,9 @@ class Potion(Item):
 
             # Remove shrinking effect
             gs.player_is_shrunk = False
+            # Persistent quest-complete flag: bug-level re-entry should
+            # no longer re-cast the spell. The player has paid the price.
+            gs.player_passed_bug_quest = True
             character.remove_status_effect('Shrinking')
 
             return True  # Consumed

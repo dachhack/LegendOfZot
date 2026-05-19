@@ -3964,7 +3964,17 @@ def activate_playtest_mode(player_character):
 
 
 def _trigger_shrinking_spell(player_character):
-    """Trigger Zot's shrinking spell when player enters a bug level."""
+    """Trigger Zot's shrinking spell when player enters a bug level.
+
+    No-op when the player has already completed the bug-quest once
+    this run (gs.player_passed_bug_quest). Without this guard, an
+    agent who descends F8 -> F9 then warps back to F8 gets re-shrunk
+    with no cure path (one Mushroom per bug-level visit, Queen drops
+    only once per game) and dies wearing bug gear with their best
+    weapon in the bag (s=777 human re-shrunk at T2661 garden after
+    un-shrunk on F8 + Soul Reaver +17 equipped at T2516)."""
+    if getattr(gs, 'player_passed_bug_quest', False):
+        return
     gs.player_is_shrunk = True
     gs.bug_queen_defeated = False
     # Restart the "she's done waiting" countdown. Bug Queen spawns
