@@ -5169,10 +5169,28 @@ def smart_policy(obs, rng, use_lantern=True):
         pc_attack = pc_str + weapon_atk_bonus
         pc_defense = 5 + armor_def_bonus  # game default base defense
 
-        level_ok = pc_lv >= floor_idx + 3
+        # Build-350 over-tightened: 73% -> 61% UNDEAD share but mean
+        # depth F5.36 -> F4.19 (-1.17 floors). Walk-out saved heroes
+        # who then starved out without the cursed-gear payoff that
+        # powered the F5+ push. Build 351 loosens two gates:
+        #   1. level_ok    : pc.level >= floor+2 (parity with the
+        #                    guardian, was floor+3 / one above). The
+        #                    cardinal-guardian avoid still uses +3
+        #                    because those spawn with 1.25-1.3x stats;
+        #                    the raid guardian is 1.0x baseline so
+        #                    parity is a fairer comparison.
+        #   2. can_dent    : pc.strength + weapon.attack_bonus >=
+        #                    guardian_defense + 5  (we can dent), kept
+        #                    the same -- 1-2 dmg-per-hit is still a
+        #                    lose-the-war scenario regardless of level.
+        #   3. can_survive : max_hp >= 3 * expected_dmg_per_hit (was
+        #                    4x). Raid guardians have no stat_mult; we
+        #                    only need to weather what we expect to
+        #                    take across the alpha-strike window.
+        level_ok = pc_lv >= floor_idx + 2
         can_dent = pc_attack >= g_defense + 5
         expected_dmg = max(1, int(g_attack) - pc_defense)
-        can_survive = pc_max_hp >= 4 * expected_dmg
+        can_survive = pc_max_hp >= 3 * expected_dmg
         strong_enough = level_ok and can_dent and can_survive
 
         no_escape = (heal_pot_slot is None) and (heal_spell_slot is None)
