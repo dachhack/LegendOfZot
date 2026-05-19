@@ -1447,7 +1447,7 @@ class Character:
             add_log(f"{COLOR_YELLOW}Unknown spell type for {spell_to_cast.name}. No effect.{COLOR_RESET}")
             return False
 
-    def add_status_effect(self, effect_name, duration, effect_type, magnitude=0, description=""):
+    def add_status_effect(self, effect_name, duration, effect_type, magnitude=0, description="", resistance_element=None):
         # Venom Ward Amulet: block all poison effects
         if effect_type == 'poison' and _has_poison_immunity(self):
             add_log(f"{COLOR_GREEN}[Venom Ward] You are immune to poison!{COLOR_RESET}")
@@ -1456,7 +1456,7 @@ class Character:
         if effect_type == 'confusion' and _has_confusion_immunity(self):
             add_log(f"{COLOR_CYAN}[Psychic Shield] Your mind repels the confusion!{COLOR_RESET}")
             return
-        effect = StatusEffect(effect_name, duration, effect_type, magnitude, description)
+        effect = StatusEffect(effect_name, duration, effect_type, magnitude, description, resistance_element)
         self.status_effects[effect_name] = effect
         add_log(f"{self.name} is now affected by {effect_name}!")
         if effect_type in gs.NEGATIVE_EFFECT_TYPES:
@@ -1724,8 +1724,8 @@ class Monster:
     def is_alive(self):
         return self.health > 0
 
-    def add_status_effect(self, effect_name, duration, effect_type, magnitude=0, description=""):
-        effect = StatusEffect(effect_name, duration, effect_type, magnitude, description)
+    def add_status_effect(self, effect_name, duration, effect_type, magnitude=0, description="", resistance_element=None):
+        effect = StatusEffect(effect_name, duration, effect_type, magnitude, description, resistance_element)
         self.status_effects[effect_name] = effect
         add_log(f"{self.name} is now affected by {effect_name}!")
         if effect_type in gs.NEGATIVE_EFFECT_TYPES:

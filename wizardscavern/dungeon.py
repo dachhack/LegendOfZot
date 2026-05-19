@@ -339,6 +339,14 @@ class Tower:
         # BLACKSMITH (B): floors 5-50
         actual_b_limits = b_limits if floor_number >= 5 else (0, 0)
 
+        # TOMB (T): floors 3+. L1 dwarf/human in starter Dagger+Leather has
+        # no answer to the floor+2 raid guardian (build-357 playtest:
+        # human/10 died at T184 on F1, 30 HP -> -1 in 4 turns). Even
+        # walking past undead-surrounded tombs is risky for L1-L2. Pushing
+        # tomb floor up to F3 gives the agent two floors of gear + level
+        # to absorb the encounter.
+        actual_t_limits = t_limits if floor_number >= 3 else (0, 0)
+
         # SHRINE OF THE FALLEN (F): floors 1-20 only
         actual_f_limits = f_limits if floor_number <= 20 else (0, 0)
 
@@ -414,7 +422,7 @@ class Tower:
                              a_limits=a_limits,
                              l_limits=l_limits,
                              dungeon_limits=dungeon_limits,
-                             t_limits=t_limits,
+                             t_limits=actual_t_limits,
                              garden_limits=garden_limits,
                              o_limits=actual_o_limits,
                              m_limits=m_limits,

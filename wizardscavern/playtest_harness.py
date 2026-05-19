@@ -393,9 +393,13 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     ``int_bonus`` to bump intelligence past the spell-casting threshold
     (int > 15) so an Elf can actually cast on turn one. ``spells`` is an
     iterable of SPELL_TEMPLATES names to pre-memorize. ``starter_pack``
-    seeds the same gear the in-game starting_shop hands out -- Dagger +
-    Leather Armor (auto-equipped), Lantern, 4 Minor Healing Potions,
-    3 Rations -- so the agent isn't punching monsters bare-fisted.
+    mirrors the in-game starting_shop "buy everything" outcome -- a real
+    player walks out of the F1 vendor with the starter weapon (auto-
+    equipped Dagger, or Battleaxe for dwarves), Leather Armor (auto-
+    equipped), Lantern, Rations, CookingKit, and 3-5 Minor Healing
+    Potions, with 500 starting gold minus the bundle cost. The harness
+    seeds the same loadout (and the same residual gold) so the agent
+    starts on the same footing as a real run.
     """
     if seed is not None:
         _stdlib_random.seed(seed)
@@ -533,16 +537,19 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 spell_copy.is_identified = True
             pc.memorized_spells.append(spell_copy)
     if starter_pack:
-        # Mirror Vendor(starting=True) inventory at vendor.py:93-104,
-        # plus the _auto_equip_starting_shop_item behaviour: the weapon
-        # + armor land in BOTH the equipment slots and inventory.items
-        # (the in-game buy flow at vendor.py:485-499 adds the item to
-        # inventory first, then equips by reference -- so equipped
-        # gear ALSO appears in inventory.items, which is what lets the
-        # vendor repair handler at vendor.py:733-749 see it).
-        from .items import Lantern as _Lantern, Food as _Food, LanternFuel as _LF
-        # Race-flavoured starter weapon, mirroring vendor.py:93+ now
-        # that the starting shop gives dwarves a Battleaxe.
+        # Mirror Vendor(starting=True) inventory at vendor.py:94-130 --
+        # what a real player walks out of the F1 starting shop with
+        # after buying everything. The shop stocks one each of: starter
+        # weapon, Leather Armor, Lantern (fuel=50), Rations (count=5),
+        # CookingKit, plus 3-5 Minor Healing Potions. We roll the same
+        # 3-5 distribution off _stdlib_random so it stays seed-stable.
+        # Weapon + armor get auto-equipped (matching
+        # _auto_equip_starting_shop_item at vendor.py:38-57) AND stay
+        # in inventory.items, because the in-game buy flow adds-then-
+        # equips by reference -- that's what lets the vendor repair
+        # handler see equipped gear.
+        from .items import Lantern as _Lantern, Food as _Food
+        from .items import CookingKit as _CookingKit, LanternFuel as _LF
         if race == "dwarf":
             starter_weapon = Weapon(
                 "Battleaxe", "A heavy two-handed axe of dwarven make.",
@@ -565,10 +572,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             "Lantern", "Provides continuous light with fuel.",
             fuel_amount=80, light_radius=7, value=30, level=0,
         ))
-        # Starter pack also includes 2 fuel canisters (40 fires).
-        # Combined with the lantern's 80 base = 120 fires before
-        # the agent needs to hit a vendor for more, enough to
-        # explore F1-F3 thoroughly even with aggressive fog reveal.
+        # Build 358: 2 fuel cans in starter pack mirror vendor.py:115-118.
         for _ in range(2):
             pc.inventory.add_item_quiet(_LF(
                 "Lantern Fuel", "A small flask of oil for your lantern.",
@@ -576,35 +580,25 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=50, count=8,
+            value=10, level=0, nutrition=50, count=5,
         ))
-        # User-requested balance pass: Iron Rations in starter pack
-        # to extend the early-floor food window (70 nutrition each
-        # vs 50 for plain Rations).
-        pc.inventory.add_item_quiet(_Food(
-            "Iron Rations",
-            "Military-grade rations. Tasteless but highly nutritious.",
-            value=30, level=3, nutrition=70, count=4,
-        ))
-        # Cooking Kit also in the starter pack. Earlier balance pass
-        # framed cooking as a "mid-game depth bonus" gated on a F3+
-        # vendor, but the 160-seed audit showed 40% of runs never
-        # visit a vendor at all and 67% die starving. Mirror the
-        # UI starting-shop change in vendor.py that put a kit on
-        # the F1 starter inventory: every fresh agent gets one
-        # auto-cook tool in the bag from turn 0. The kit is heavy
-        # (120g value, but free in the starter) and pays itself
-        # off after ~2 monster meat drops.
-        from .items import CookingKit as _CookingKit
         pc.inventory.add_item_quiet(_CookingKit())
-        for _ in range(4):
+        num_starting_potions = _stdlib_random.randint(3, 5)
+        for _ in range(num_starting_potions):
             pc.inventory.add_item_quiet(Potion(
                 "Minor Healing Potion",
                 "A small vial of red liquid that heals minor wounds.",
                 value=30, level=0,
                 potion_type="healing", effect_magnitude=30,
             ))
-        pc.gold = 500 - 210
+        # Residual gold = 500 starting purse minus the bundle cost:
+        # weapon (10g Dagger / 25g Battleaxe) + 50g armor + 30g lantern
+        # + 2 x 5g fuel cans + 10g rations + 120g cooking kit
+        # + 30g/potion. Real players spend exactly this much when they
+        # clear out the F1 shop.
+        bundle_cost = (starter_weapon.value + leather.value + 30 + 2 * 5
+                       + 10 + 120 + 30 * num_starting_potions)
+        pc.gold = 500 - bundle_cost
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
         for raw in spells:
@@ -1118,9 +1112,23 @@ class PlaytestSession:
             # mode kept tiers = [U, V] and the agent routed onto a W
             # tile, force-warped back to F1, wandered 2000 more turns
             # in circles before starving.
-            "retreat_to_floor": (self.max_z_via_stairs
-                                 if pc.z > self.max_z_via_stairs + 1
-                                 else None),
+            # Suppress retreat when the destination floor is in
+            # permanent_wedge_floors. Build-358 7000T playtest dwarf/11:
+            # warped from F2 (perm-wedged) to F5, retreat_to_floor=2,
+            # stairs_up policy returned 'u' to ascend toward unreachable
+            # F2 -> bounced F4<->F5 indefinitely while starving. With
+            # this guard the agent treats current z as the new banked
+            # depth and resumes normal play instead of climbing into a
+            # wall.
+            "retreat_to_floor": (
+                self.max_z_via_stairs
+                if (pc.z > self.max_z_via_stairs + 1
+                    and self.max_z_via_stairs not in {
+                        z for z, c in self.wedge_count.items()
+                        if c >= self._WEDGE_PERMANENT_AFTER
+                    })
+                else None
+            ),
             "tile_coverage": self._tile_coverage_obs(),
             "nearest_warp_path": self._nearest_warp_path_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
@@ -5105,6 +5113,15 @@ def smart_policy(obs, rng, use_lantern=True):
         #   2. no new tile in 500T regardless of reach_pct
         #   3. 600T on the current floor with no D found
         turns_on_floor_warp = obs.get("turns_on_floor") or 0
+        # Build-358 7000T playtest dwarf/9: F1 D unreachable for 454T,
+        # nearest_warp_path always visible, but trapped_no_d gate
+        # didn't fire because reach_pct stayed < 80% (slow fog reveal
+        # in a small starting region). Dwarf starved before turns_on_floor
+        # hit 600. Added 5th firing path: if D unreachable AND a W is
+        # already visible AND we've spent 200T on this floor, accept.
+        # The agent has demonstrably explored enough to know D isn't
+        # in this region; further wandering just burns food.
+        has_visible_warp = bool(obs.get("nearest_warp_path"))
         if (not d_reachable
                 and (
                     (reach_pct_warp >= 80 and turns_since_new_warp >= 200)
@@ -5112,6 +5129,7 @@ def smart_policy(obs, rng, use_lantern=True):
                     or (turns_on_floor_warp >= 600)
                     or (d_leads_to_perm_warp
                         and turns_on_floor_warp_mode >= 150)
+                    or (has_visible_warp and turns_on_floor_warp >= 200)
                 )):
             return "n"
         return "y"

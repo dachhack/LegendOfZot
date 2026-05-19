@@ -4105,6 +4105,30 @@ def _trigger_shrinking_spell(player_character):
     # of remaining bugs.
     gs.bug_kills_this_level = 0
 
+    # Symmetric to _restore_size_on_bug_exit: shed normal-size gear at
+    # the moment of shrinking so the player can't end up wearing
+    # Adamantine Armor + Scorpion Tail Whip at the same time. Without
+    # this, a player who enters a bug floor in full kit keeps the
+    # normal armor/weapon equipped through the shrink (the equip gate
+    # only blocks NEW equips while shrunk, not existing ones), then
+    # swaps the weapon slot to a bug weapon -- leaving them in a
+    # logically impossible mixed state. Both items stay in inventory
+    # so they're auto-equippable again on grow-back. Bombur Axebreaker
+    # (s=10 dwarf) hit exactly this state mid-run.
+    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+    bug_item_names = (
+        {t['name'] for t in BUG_WEAPON_TEMPLATES}
+        | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+    )
+    ew = player_character.equipped_weapon
+    if ew is not None and ew.name not in bug_item_names:
+        add_log(f"{COLOR_YELLOW}The {ew.name} is suddenly enormous in your tiny hands -- you have to set it down.{COLOR_RESET}")
+        player_character.equipped_weapon = None
+    ea = player_character.equipped_armor
+    if ea is not None and ea.name not in bug_item_names:
+        add_log(f"{COLOR_YELLOW}The {ea.name} slides off your shrunken frame.{COLOR_RESET}")
+        player_character.equipped_armor = None
+
     # Add the shrinking status effect (very long duration - effectively permanent until cured)
     player_character.add_status_effect(
         effect_name='Shrinking',

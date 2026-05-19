@@ -1192,6 +1192,49 @@ def process_pool_action(player_character, my_tower, cmd):
 
         outcome_data = outcomes[chosen_outcome]
 
+        # Build-358: damage outcomes now scale linearly with floor depth.
+        # Previously every damage roll was flat (cursed 20-35, mimic 50-100,
+        # explosion 15-40, strength damage 10-20, poison 10-20, slip 5-15)
+        # regardless of who was drinking -- a fresh elf at 28 max HP could
+        # be one-shot by an F1 mimic (build-357 playtest: elf/3 hit -90
+        # in a single drink). New formula: base scaled per floor so F1
+        # rolls are survivable for starter HP pools and deep floors keep
+        # the original lethality. Only patches the damage-class rolls;
+        # heals / buffs / gold rolls untouched.
+        if chosen_outcome in ('damage', 'mimic', 'explosion',
+                              'poison', 'slip'):
+            z = player_character.z  # 0-indexed floor
+            base_min = outcome_data['min']
+            base_max = outcome_data['max']
+            if chosen_outcome == 'mimic':
+                # Golden-pool mimic: was 50-100 flat. New: 20-40 @ F1,
+                # +5 min / +8 max per floor. F5: 40-72, F10: 65-104.
+                scaled_min = 20 + z * 5
+                scaled_max = 40 + z * 8
+            elif chosen_outcome == 'explosion':
+                # Mysterious pool: was 15-40 flat. F1: 8-20, +3/+4 per
+                # floor. F5: 20-36, F10: 35-56.
+                scaled_min = 8 + z * 3
+                scaled_max = 20 + z * 4
+            elif chosen_outcome == 'damage':
+                # Used by cursed (20-35) and strength (10-20) pools.
+                # Keep proportional to original base via a 0.5*base
+                # floor and +base_per_2_floors growth.
+                scaled_min = max(1, base_min // 2 + z * (base_min // 6 + 1))
+                scaled_max = max(scaled_min + 2,
+                                 base_max // 2 + z * (base_max // 6 + 1))
+            elif chosen_outcome == 'poison':
+                # DoT poison: cursed (10-20). F1: 6-12, +1/+2 per floor.
+                scaled_min = max(1, base_min // 2 + z)
+                scaled_max = max(scaled_min + 1, base_max // 2 + z * 2)
+            elif chosen_outcome == 'slip':
+                # Agility-pool slip (5-15). F1: 3-8, +1/+2 per floor.
+                scaled_min = max(1, base_min // 2 + z)
+                scaled_max = max(scaled_min + 1, base_max // 2 + z * 2)
+            outcome_data = dict(outcome_data)
+            outcome_data['min'] = scaled_min
+            outcome_data['max'] = scaled_max
+
         # Process the outcome
         if chosen_outcome in ['major_heal', 'minor_heal', 'full_heal']:
             if chosen_outcome == 'full_heal':
