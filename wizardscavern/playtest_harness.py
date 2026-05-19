@@ -1955,6 +1955,46 @@ class PlaytestSession:
                 and self.osc_streak >= 50):
             self.wedge_floors[pc.z] = self.turn
             self.wedge_count[pc.z] = self.wedge_count.get(pc.z, 0) + 1
+        # Cornered-ascend: a 1-tile region-split where the U tile has
+        # no walkable cardinal neighbours from the agent's POV (fog-
+        # of-war counted as wall -- an undiscovered tile is just as
+        # unreachable as a real wall until the agent walks adjacent
+        # to reveal it). The stairs_up_mode fallback returns 'u'
+        # rather than wall-bumping forever; mirror the wedge-mark
+        # here so the next stairs_down_mode strips D from priority.
+        # Caught on s=2500 human/elf F2 (U at (1,1) with N/W walls
+        # and S/E undiscovered fog).
+        if mode == "stairs_up_mode" and action == "u":
+            floor = tw.floors[pc.z]
+            wall = floor.wall_char
+            cornered = True
+            for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)):
+                nx, ny = pc.x + dx, pc.y + dy
+                if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                    continue  # off-map counts as wall
+                cell = floor.grid[ny][nx]
+                rt = cell.room_type
+                if rt == wall or rt == "U":
+                    continue
+                # Fog-of-war: undiscovered cells are unreachable
+                # from the policy's POV. Only a DISCOVERED
+                # walkable cell breaks the cornered state.
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                cornered = False
+                break
+            if cornered:
+                self.wedge_floors[pc.z] = self.turn
+                # Definitionally permanent: a U tile with zero
+                # discovered walkable cardinal neighbours is a 1-
+                # tile island that won't open up via lantern reveal
+                # (the agent never moves off U to reveal more). Jump
+                # straight to the permanent threshold so the
+                # stairs_down_mode block never expires.
+                self.wedge_count[pc.z] = max(
+                    self.wedge_count.get(pc.z, 0) + 1,
+                    self._WEDGE_PERMANENT_AFTER,
+                )
         # Record flee attempts (both successful and failed) so the
         # game_loop heal-up gate can fire before the agent walks back
         # into another fight. Every flee costs one monster attack
@@ -3374,8 +3414,28 @@ def smart_policy(obs, rng, use_lantern=True):
         # F1 with D pointing back to F2, then re-wedged-and-escaped
         # F2 in 100T cycles for 1500+ turns before starvation.
         turns_on_floor_wedge = obs.get("turns_on_floor") or 0
-        if ((cur_z_for_wedge + 1) in avoid_descent_to
-                and turns_on_floor_wedge < 600):
+        # Permanent wedge: never retry. The 600T-on-floor release
+        # below only applies to ordinary wedges (where a fresh
+        # exploration might open the floor up); a permanent wedge
+        # is a known 1-tile region-split that won't get better.
+        # Caught on s=941 dwarf F2: marked permanent at T293 but
+        # the 600T release fired four times (T896, T1502, T2108)
+        # to re-descend, wasting ~600T per cycle.
+        perm_wedge_set = set(obs.get("permanent_wedge_floors") or [])
+        is_perm_target = (cur_z_for_wedge + 1) in perm_wedge_set
+        if (((cur_z_for_wedge + 1) in avoid_descent_to)
+                and (turns_on_floor_wedge < 600 or is_perm_target)):
+            # Also add D to BFS avoid_set so the wayfinder routes
+            # AROUND the D tile instead of walking onto it
+            # incidentally while targeting V / chests / frontier
+            # (D is walkable terrain so BFS will path through it
+            # otherwise, and stepping onto D triggers stairs_down_
+            # mode which is what we're trying to avoid). Caught on
+            # s=2500 human/elf F2 (1-tile region-split): without
+            # this gate the agent ascended out of F2 wedge, hit F1's
+            # D incidentally during exploration, descended right
+            # back, looped 4800+T.
+            avoid_set.add("D")
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
@@ -4516,9 +4576,14 @@ def smart_policy(obs, rng, use_lantern=True):
         # 600T-on-floor escape: if the supposedly-safe floor has
         # also become a wedge (agent stuck here too long), drop
         # the block and let normal descent fire. Mirrors the
-        # game_loop gate above.
+        # game_loop gate above. EXCEPTION: permanent wedge never
+        # releases -- s=941 dwarf F2 cycled 4 times at 600T
+        # intervals before this gate.
         turns_on_floor_wedge = obs.get("turns_on_floor") or 0
-        if (cur_z + 1) in avoid_descent_to and turns_on_floor_wedge < 600:
+        perm_wedge_sd = set(obs.get("permanent_wedge_floors") or [])
+        is_perm_sd = (cur_z + 1) in perm_wedge_sd
+        if ((cur_z + 1) in avoid_descent_to
+                and (turns_on_floor_wedge < 600 or is_perm_sd)):
             neighbors = obs.get("neighbors") or {}
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
@@ -4529,6 +4594,18 @@ def smart_policy(obs, rng, use_lantern=True):
                 t = neighbors.get(d)
                 if t and t not in ("#", "D"):
                     return d
+            # All four cardinals are fog (None) or walls -- the agent
+            # arrived on this D via warp / direct stair landing and
+            # hasn't seen any neighbour yet. Step BLINDLY into a
+            # fog direction so reveal_adjacent_walls uncovers a
+            # walkable tile. Anything is better than re-descending
+            # into a known-permanent wedge. Caught on s=7 elf F2 D
+            # at (8,10) with all None neighbours, descending every
+            # turn to F3 (1,1) and immediately ascending back.
+            unknown_dirs = [d for d in ("n", "s", "e", "w")
+                            if neighbors.get(d) is None]
+            if unknown_dirs:
+                return rng.choice(unknown_dirs)
             # Truly cornered (only D in non-wall neighbours). Fall
             # through to the normal descent logic -- we tried.
         # Retreat-after-warp: if a warp landed us on a floor deeper
@@ -4731,12 +4808,16 @@ def smart_policy(obs, rng, use_lantern=True):
                 return d
         # Truly cornered: U above and the only other neighbour is M
         # or W. Prefer M over W (one fight vs a random teleport),
-        # then fall back to a random cardinal as a last resort so we
-        # don't hang the policy.
-        # NB: stair-island handling lives entirely in stairs_down_mode
-        # (it presses 'd' to descend past the island). Adding a 'u'
-        # valve here would cancel that fix -- agent oscillates
-        # between F(N) descending and F(N+1) ascending forever.
+        # then fall back to ASCEND if even M/W are absent.
+        # Caught on s=2500 human/elf: F2 was a 1-tile region-split
+        # where the U tile sat alone with walls in all four cardinals.
+        # stairs_up_mode's step-off cascade fell through to a random
+        # cardinal pick, which wall-bumped 124+ turns, eventually
+        # the agent stepped onto a passing W tile by chance and the
+        # cycle repeated -- F1<->F2 ping-pong via stairs for 1400+T
+        # until starvation. The ascend fallback breaks the loop AND
+        # the step() recorder marks F2 as wedge so the next
+        # stairs_down_mode strips D from priority.
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t == "M":
@@ -4745,7 +4826,12 @@ def smart_policy(obs, rng, use_lantern=True):
             t = neighbors.get(d)
             if t and t not in ("#", "U"):
                 return d
-        return rng.choice(["n", "s", "e", "w"])
+        # All cardinals are wall/U/hazard absent. Wall-bumping for
+        # 100+ turns hits the food clock; ascend instead so the
+        # step() recorder marks this floor as a wedge and the next
+        # descent skips it. See PlaytestSession.step().
+        return "u"
+
     if mode == "warp_mode":
         # Floors are sometimes split into regions only connected via
         # warps (verified empirically on seed 7 floor 1: D was in a
