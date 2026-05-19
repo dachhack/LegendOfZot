@@ -3116,15 +3116,27 @@ def smart_policy(obs, rng, use_lantern=True):
         # 70% explored).
         avoid_pc_floor = p.get("floor", 1)
         avoid_pc_z = avoid_pc_floor - 1
-        avoid_under_leveled = p.get("level", 1) <= avoid_pc_z + 1
+        avoid_under_leveled = p.get("level", 1) <= avoid_pc_z + 2
         avoid_kills = obs.get("kills_on_floor") or 0
-        avoid_min_kills = min(12, max(3, avoid_pc_z * 2 + 1))
+        # Mirror the build-362 retune in the main grind gate.
+        avoid_min_kills = min(15, max(3, avoid_pc_z * 2 + 3))
         avoid_coverage = (obs.get("tile_coverage") or {}).get("pct", 0)
-        avoid_grind_done = (
-            avoid_kills >= avoid_min_kills
-            or avoid_coverage >= 70
+        # Mirror the gear-quality gate from the main grind block so
+        # AVOID-D fires for weak-gear agents too, not just
+        # under-levelled ones.
+        avoid_eq_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        avoid_eq_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        avoid_weakly_geared = (
+            avoid_pc_z >= 2
+            and (avoid_eq_w + avoid_eq_a) < (2 * avoid_pc_z + 3)
         )
-        if (avoid_under_leveled and not avoid_grind_done
+        avoid_grind_done = (
+            (avoid_kills >= avoid_min_kills
+             or avoid_coverage >= 70)
+            and not avoid_weakly_geared
+        )
+        if ((avoid_under_leveled or avoid_weakly_geared)
+                and not avoid_grind_done
                 and not is_weak and not trapped_no_d):
             # Restore `not is_weak`: dropping it left HP=1 retreat
             # agents (Thorin / Legolas / Boromir seed 1234) stuck
@@ -3247,9 +3259,27 @@ def smart_policy(obs, rng, use_lantern=True):
         # turns on the current floor, drop the clear-before-descend
         # gate. Pulls the agent off floor 1 when an unreachable
         # beneficial (behind a wall the greedy walker can't navigate
-        # around) would otherwise loop forever. 300 turns is enough
-        # to do a thorough sweep of a 18x21 floor.
-        FLOOR_STUCK_TURNS = 300
+        # around) would otherwise loop forever. Two thresholds:
+        # ready agents (level + gear meet floor) release at 300T, but
+        # under-levelled OR weakly-geared agents get 800T to keep
+        # grinding/shopping. Build-362 validation sweep caught the
+        # leak -- 6 of 11 stairs-descents to F6+ fired the old 300T
+        # override on weak agents, letting them descend at e.g.
+        # kof=6/11 atk+def=22 (s=11 human F5->F6 at T888). under_leveled
+        # / weakly_geared are recomputed inline here because the
+        # canonical definitions sit ~80 lines below.
+        _pre_pc_z = (p.get("floor", 1) - 1)
+        _pre_under_lvl = p.get("level", 1) <= _pre_pc_z + 2
+        _pre_eq_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        _pre_eq_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        _pre_weak_gear = (
+            _pre_pc_z >= 2
+            and (_pre_eq_w + _pre_eq_a) < (2 * _pre_pc_z + 3)
+        )
+        if _pre_under_lvl or _pre_weak_gear:
+            FLOOR_STUCK_TURNS = 800
+        else:
+            FLOOR_STUCK_TURNS = 300
         too_long_on_floor = (obs.get("turns_on_floor") or 0) > FLOOR_STUCK_TURNS
         if too_long_on_floor:
             unvisited_beneficials_exist = False
@@ -3280,9 +3310,24 @@ def smart_policy(obs, rng, use_lantern=True):
         # have 25g easily after 1-2 kills.
         weak_starter_weapon = cur_w <= 2  # Dagger atk_bonus = 2
         weak_starter_armor = cur_a <= 3   # Leather Armor def_bonus = 3
+        # Build-362 validation sweep finding: vendor visits averaged
+        # 2.2-2.8 per run (most upgrades came from chests, not V).
+        # The wants_gear_upgrade gate only fired for starter-gear
+        # agents (cur_w <= 2). An F5 agent on Short Sword (atk+4)
+        # didn't pull to V even though Mace (atk+5 60g) / Longsword
+        # (atk+8 ~200g) / Plate (def+8 ~250g) would clear the
+        # weakly_geared threshold. Extend the pull: on F3+, anytime
+        # combined atk+def is below the depth target AND we have
+        # enough gold to buy a mid-tier upgrade, route to V.
+        pc_z_v = (p.get("floor", 1) - 1)
+        weakly_geared_v = (
+            pc_z_v >= 2
+            and (cur_w + cur_a) < (2 * pc_z_v + 3)
+        )
         wants_gear_upgrade = (
-            (weak_starter_weapon or weak_starter_armor)
-            and p["gold"] >= 25
+            ((weak_starter_weapon or weak_starter_armor)
+             and p["gold"] >= 25)
+            or (weakly_geared_v and p["gold"] >= 60)
         )
         wants_vendor = (((healing_count < 2 or needs_repair) and p["gold"] >= 50)
                         or wants_gear_upgrade)
@@ -3318,49 +3363,64 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         m_reachable = m_reachable_via_path or m_reachable_adj
         # Minimum kills required before this floor's descend gate
-        # opens. Scales with depth: F1 needs 3, F3 needs 5, F5 needs
-        # 9. Past that the curve caps at 12 so deep floors don't
-        # demand impossible grind counts. Bumped from the earlier
-        # F4=5 / F8=9 curve because the lighter version didn't
-        # actually change the grid (existing tier order already
-        # preferred SAFE/V/M over D when boons remained, so the
-        # filter was a near no-op).
+        # opens. Build-362 retune from the build-360 10000T sweep
+        # F5-F7 wall: every race plateaued there with 74% of deaths
+        # being -HP combat losses, food still in belly. The agent was
+        # meeting the old gate (F5=9 kills, Lv5) and descending into
+        # F6 monsters it couldn't actually handle.
+        # New curve: F1=3, F2=5, F3=7, F4=9, F5=11, F6=13, F7+=15
+        # (cap). About +25% kills per floor vs the old min(12,
+        # max(3, z*2+1)) curve.
         pc_z = (p.get("floor", 1) - 1)
-        min_kills_for_floor = min(12, max(3, pc_z * 2 + 1))
+        min_kills_for_floor = min(15, max(3, pc_z * 2 + 3))
         kills_so_far = obs.get("kills_on_floor") or 0
         # under_leveled fires when:
-        #  - pc.level <= pc.z + 1 (Lv N on F N is "on-pace", anything
-        #    below is under-levelled -- Lv2 on F3 / Lv3 on F4 etc.
-        #    qualifies), AND
-        #  - this floor still has a reachable monster to fight.
+        #  - pc.level <= pc.z + 2 (one level AHEAD of floor is the
+        #    target, not just on-pace -- F5 needs Lv6 minimum). The
+        #    old "Lv == floor" gate was on-pace by D&D convention
+        #    but in WC the next-floor monster pool is tuned to
+        #    floor+1, so on-pace == one shot away from instakill.
+        #    Bumping the gate by one level forces the agent to
+        #    bank an XP cushion before descending.
         # The pc.z comparison uses the 0-indexed floor; the user-
-        # facing floor is z+1, so "Lv equal to displayed floor" =
-        # pc.level == pc.z + 1.
+        # facing floor is z+1, so "Lv N on F N" = pc.level == pc.z + 1.
         # under_leveled drops the m_reachable check -- if there are
         # NO visible monsters and the agent is under-levelled, we
         # want them to explore (find more monsters in fog) before
         # descending, not bolt for the stairs.
-        under_leveled = (p.get("level", 1) <= pc_z + 1)
-        # Grind is "not done" until one of:
-        #   - kills_so_far meets the per-floor minimum, OR
-        #   - no monsters remain reachable AND coverage >= 70%
-        #     (i.e., the floor has been thoroughly swept and the
-        #     visible M tiles are gone; remaining M tiles, if any,
-        #     are behind fog the BFS can't path through anyway).
-        # The 70% gate is softer than high_coverage_descend's 80%
-        # because grind cares about M tiles, not boons -- once 70%
-        # of walkable tiles are seen, most M spawns have been found.
-        grind_complete = (
-            kills_so_far >= min_kills_for_floor
-            or (not m_reachable and coverage_pct >= 70)
+        under_leveled = (p.get("level", 1) <= pc_z + 2)
+        # Gear-quality gate. Build-360 sweep showed agents reaching
+        # F5-F7 still on Short Sword (atk+4) + Ring Mail (def+4), a
+        # combined +8 vs F5 monsters tuned for combined +11-12. The
+        # combined-bonus check is a cheap proxy for "is the loadout
+        # actually scaled to depth?". Triggers from F3 onward (F1-F2
+        # tolerates starter gear). F3+: combined >= 2*z+3
+        # (F3 needs >=9, F5 needs >=13, F7 needs >=17). Treated as
+        # an extension of under_leveled so the same gates that hold
+        # the agent on-floor for XP also hold them for gear shopping.
+        eq_wpn = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        eq_arm = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        weakly_geared = (
+            pc_z >= 2
+            and (eq_wpn + eq_arm) < (2 * pc_z + 3)
         )
-        # 90% sweep + D reachable + not weak + grind done. Bumped
-        # 80 -> 90 because a 20% slice of an 18x21 floor still
-        # hides plenty of M spawns the agent hasn't fought; the
-        # earlier threshold descended before the floor's XP was
-        # banked. grind_complete (min_kills met OR thoroughly
-        # explored with no M visible) is the second gate -- ensures
-        # under-levelled agents don't rush past their depth.
+        # Grind is "not done" until ALL of:
+        #   - kills_so_far meets the per-floor minimum (or the
+        #     no-M-reachable + 70%-coverage shortcut), AND
+        #   - the agent is NOT weakly geared (combined atk+def bonus
+        #     meets the depth target). The weakly-geared rider keeps
+        #     the agent on-floor pulling toward V/C/B/F until the
+        #     loadout catches up to depth -- otherwise a F5 Lv7 agent
+        #     with a Short Sword would clear the kill quota and walk
+        #     onto F6 atk+4 vs monsters tuned for atk+7-8.
+        grind_complete = (
+            (kills_so_far >= min_kills_for_floor
+             or (not m_reachable and coverage_pct >= 70))
+            and not weakly_geared
+        )
+        # 90% sweep + D reachable + not weak + grind done. The
+        # grind_complete now includes the weakly_geared guard, so
+        # this gate also implicitly waits for gear scaling.
         high_coverage_descend = (
             coverage_pct >= 90
             and d_reachable
@@ -4865,7 +4925,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # often-empty handoff. Stepped onto incidentally still works
         # via the mode handler, just not proactively targeted.
         BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
-        stuck = (obs.get("turns_on_floor") or 0) > 300
+        # Tiered stuck threshold mirrors the game_loop FLOOR_STUCK_TURNS
+        # (build 362). Under-levelled / weakly-geared agents get 800T
+        # before the step-off releases, ready agents 300T.
+        _sd_pc_z = (p.get("floor", 1) - 1)
+        _sd_under_lvl = p.get("level", 1) <= _sd_pc_z + 2
+        _sd_eq_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        _sd_eq_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        _sd_weak_gear = (
+            _sd_pc_z >= 2
+            and (_sd_eq_w + _sd_eq_a) < (2 * _sd_pc_z + 3)
+        )
+        _sd_stuck_threshold = 800 if (_sd_under_lvl or _sd_weak_gear) else 300
+        stuck = (obs.get("turns_on_floor") or 0) > _sd_stuck_threshold
         nearby = [
             feature_paths[t] for t in BENEFICIAL_SAFE
             if feature_paths.get(t)
@@ -4888,14 +4960,33 @@ def smart_policy(obs, rng, use_lantern=True):
         # an easy way to start off on the wrong foot."
         kills_so_far_descend = obs.get("kills_on_floor") or 0
         pc_z_descend = (p.get("floor", 1) - 1)
-        min_kills_descend = min(12, max(3, pc_z_descend * 2 + 1))
+        # Mirror the build-362 curve from the game_loop grind gate
+        # (min(15, max(3, z*2+3))). Keeping this in sync matters --
+        # the wayfinder strips D from tiers when under-levelled, but
+        # an agent who stumbles ONTO D (frontier walk or warp) lands
+        # here and needs the same kill threshold to step off.
+        min_kills_descend = min(15, max(3, pc_z_descend * 2 + 3))
         coverage_pct_descend = (obs.get("tile_coverage") or {}).get("pct", 0)
-        under_descend = p.get("level", 1) <= pc_z_descend + 1
-        grind_done_descend = (
-            kills_so_far_descend >= min_kills_descend
-            or coverage_pct_descend >= 70
+        # under_descend uses the same tightened threshold (level <=
+        # z+2 = under-levelled). Also factor gear quality: an F5
+        # agent on Short Sword shouldn't auto-descend just because
+        # the kill count hit 11 -- they need V/C/B/F first.
+        under_descend = p.get("level", 1) <= pc_z_descend + 2
+        eq_wpn_d = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        eq_arm_d = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        weakly_geared_d = (
+            pc_z_descend >= 2
+            and (eq_wpn_d + eq_arm_d) < (2 * pc_z_descend + 3)
         )
-        if (under_descend and not grind_done_descend
+        grind_done_descend = (
+            (kills_so_far_descend >= min_kills_descend
+             or coverage_pct_descend >= 70)
+            and not weakly_geared_d
+        )
+        # Either under-levelled or weakly-geared triggers the
+        # step-off -- having one without the other still means the
+        # agent isn't ready to drop a floor.
+        if ((under_descend or weakly_geared_d) and not grind_done_descend
                 and not stuck and not is_weak):
             # Anti-bounce: if we've visited this D tile 3+ times
             # already, the grind-step-off is creating a loop
