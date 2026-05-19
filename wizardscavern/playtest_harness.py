@@ -3035,6 +3035,17 @@ def smart_policy(obs, rng, use_lantern=True):
                 or (d_leads_to_perm_wedge
                     and obs.get("nearest_warp_path") is not None
                     and turns_on_floor_avoid >= 150)
+                # Fully-explored-but-no-D fast-path: reach_pct>=95
+                # AND a warp is reachable. The agent has swept their
+                # region and there's literally no D to find -- warp
+                # is the only escape, fire trapped_no_d immediately
+                # so the W tier kicks in. Caught on s=500 human F1:
+                # 24-tile region, no D, W reachable, ts_new=18 (not
+                # 200+), turns_on_floor=170 (not 600+), so trapped
+                # didn't fire and agent oscillated around W for 280T
+                # before the standard 200T-since-new gate engaged.
+                or (reach_pct_avoid >= 95
+                    and obs.get("nearest_warp_path") is not None)
             )
         )
         # Cornered detection: agent's ONLY walkable cardinal
