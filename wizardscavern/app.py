@@ -5901,14 +5901,22 @@ class WizardsCavernApp(toga.App):
                 border = '2px solid #FFD700' if is_picked else '1px solid #555'
                 bg = '#332b00' if is_picked else '#222'
                 check = ' [PICKED]' if is_picked else ''
+                # Card meta varies by cantrip kind: damage cantrips show
+                # power + element, utility cantrips show their cost only
+                # so a "power 0" line doesn't appear next to "Light".
+                if spell.spell_type == 'damage':
+                    meta = f"{spell.mana_cost} MP &middot; {spell.damage_type} &middot; power {spell.base_power}"
+                else:
+                    meta = f"{spell.mana_cost} MP &middot; utility"
                 cmd = f"ct{i+1}"
                 cards.append(
                     f"<div class='taprow altar-act' "
                     f"style='display:block;margin:6px 0;padding:8px;background:{bg};"
                     f"border:{border};border-radius:6px;text-align:left;' "
                     f"data-zcmd='{cmd}' onclick=\"window.__zotTap('{cmd}', this)\">"
-                    f"<div class='aname'>{spell.name} &middot; {spell.damage_type}{check}</div>"
-                    f"<div class='ameta'>{spell.description} ({spell.mana_cost} MP, power {spell.base_power})</div>"
+                    f"<div class='aname'>{spell.name}{check}</div>"
+                    f"<div class='ameta'>{spell.description}</div>"
+                    f"<div class='ameta' style='color:#9CC;'>{meta}</div>"
                     f"</div>"
                 )
             confirm_enabled = (len(selected) == 2)

@@ -514,14 +514,20 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     pc.gold = 500
     pc.memorized_spells = []
     # Build-355: elves get 2 cantrips at game start (in-game flow uses
-    # the player_cantrips picker; the harness defaults to the first 2
-    # cantrips so the grid is deterministic and reproducible). Granted
-    # before the --spells arg so explicit spell lists still override.
+    # the player_cantrips picker). Harness default = Hold Monster +
+    # Mind Touch -- the combat-relevant pair, matching what a
+    # competent player would pick for a 4-cantrip pool that includes
+    # 2 utility (Detect Monster, Light) and 2 combat (Hold Monster,
+    # Mind Touch) options. --spells still overrides if explicit.
     if race == 'elf':
         from .items import SPELL_TEMPLATES as _ST
         import copy as _copy
-        cantrip_pool = [s for s in _ST if getattr(s, 'is_cantrip', False)]
-        for spell in cantrip_pool[:2]:
+        wanted = {'hold monster', 'mind touch'}
+        for spell in _ST:
+            if not getattr(spell, 'is_cantrip', False):
+                continue
+            if spell.name.lower() not in wanted:
+                continue
             spell_copy = _copy.deepcopy(spell)
             if hasattr(spell_copy, 'is_identified'):
                 spell_copy.is_identified = True

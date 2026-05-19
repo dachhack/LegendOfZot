@@ -163,6 +163,38 @@ def _execute_charged_spell(player_character):
             else:
                 add_log(f"{COLOR_YELLOW}{player_character.name} is not affected by {spell.status_effect_name}.{COLOR_RESET}")
         return True
+    elif spell.spell_type == 'detect_monster':
+        # Charged-spell mirror of cast_spell's detect_monster branch.
+        floor = gs.my_tower.floors[player_character.z]
+        found = []
+        for dy in range(-1, 2):
+            for dx in range(-1, 2):
+                r, c = player_character.y + dy, player_character.x + dx
+                if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                    tile = floor.grid[r][c]
+                    if tile.room_type == 'M':
+                        mon = gs.encountered_monsters.get((c, r, player_character.z))
+                        if mon and getattr(mon, 'health', 1) > 0:
+                            found.append(f"{mon.name} (Lvl {mon.level}) at ({c},{r})")
+                            tile.discovered = True
+        if found:
+            add_log(f"{COLOR_PURPLE}Detect Monster: {'; '.join(found)}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_PURPLE}Detect Monster: no creatures nearby.{COLOR_RESET}")
+        return True
+    elif spell.spell_type == 'reveal_fog':
+        floor = gs.my_tower.floors[player_character.z]
+        revealed = 0
+        for dy in range(-2, 3):
+            for dx in range(-2, 3):
+                r, c = player_character.y + dy, player_character.x + dx
+                if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                    tile = floor.grid[r][c]
+                    if not tile.discovered:
+                        tile.discovered = True
+                        revealed += 1
+        add_log(f"{COLOR_YELLOW}Light reveals {revealed} new tiles.{COLOR_RESET}")
+        return True
     elif spell.spell_type == 'add_status_effect':
         if spell.status_effect_name and spell.status_effect_type:
             player_character.add_status_effect(
@@ -1782,8 +1814,14 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                         gs.prompt_cntl = "death_screen"
                         return  # Game Over
 
-                # If combat continues, return to combat mode
-                gs.prompt_cntl = "combat_mode"
+                # If combat continues, return to combat mode; if we were
+                # casting utility magic (Detect/Light cantrips) outside
+                # combat with no active_monster, drop back to game_loop
+                # so the player can keep exploring.
+                if gs.active_monster:
+                    gs.prompt_cntl = "combat_mode"
+                else:
+                    gs.prompt_cntl = "game_loop"
 
             else:  # Spell cast not successful (e.g., not enough mana)
                 gs.prompt_cntl = "spell_casting_mode"  # Stay in spell selection mode

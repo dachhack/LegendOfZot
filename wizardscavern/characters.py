@@ -1379,6 +1379,44 @@ class Character:
             else:
                 add_log(f"{COLOR_YELLOW}No specific status effect to remove for {spell_to_cast.name}.{COLOR_RESET}")
             return True
+        elif spell_to_cast.spell_type == 'detect_monster':
+            # Cantrip: scan a 3x3 around the caster, log each monster
+            # we find by name + level + (col,row), and reveal the tile
+            # so the player sees it on the map. Caster-centred; target
+            # arg ignored. No INT scaling -- a cantrip is a cantrip.
+            floor = gs.my_tower.floors[self.z]
+            found = []
+            for dy in range(-1, 2):
+                for dx in range(-1, 2):
+                    r, c = self.y + dy, self.x + dx
+                    if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                        tile = floor.grid[r][c]
+                        if tile.room_type == 'M':
+                            mon = gs.encountered_monsters.get((c, r, self.z))
+                            if mon and getattr(mon, 'health', 1) > 0:
+                                found.append(f"{mon.name} (Lvl {mon.level}) at ({c},{r})")
+                                tile.discovered = True
+            if found:
+                add_log(f"{COLOR_PURPLE}Detect Monster: {'; '.join(found)}.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_PURPLE}Detect Monster: no creatures nearby.{COLOR_RESET}")
+            return True
+        elif spell_to_cast.spell_type == 'reveal_fog':
+            # Cantrip: mark every tile in a 5x5 around the caster as
+            # discovered. Helpful for sweeping unmapped corridor in
+            # dark rooms / fog-of-war floors.
+            floor = gs.my_tower.floors[self.z]
+            revealed = 0
+            for dy in range(-2, 3):
+                for dx in range(-2, 3):
+                    r, c = self.y + dy, self.x + dx
+                    if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                        tile = floor.grid[r][c]
+                        if not tile.discovered:
+                            tile.discovered = True
+                            revealed += 1
+            add_log(f"{COLOR_YELLOW}Light reveals {revealed} new tiles.{COLOR_RESET}")
+            return True
         elif spell_to_cast.spell_type == 'add_status_effect':
             # Buff spells: apply to SELF (the caster)
             if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:

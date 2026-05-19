@@ -699,7 +699,7 @@ def process_vault_defender_combat(player_character, my_tower, cmd):
     elif cmd == 'c':
         # Only allow spell casting if player can cast spells
         if not can_cast_spells(player_character):
-            add_log(f"{COLOR_YELLOW}You cannot cast spells. (Requires Intelligence > 15){COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}You cannot cast spells. (Need mana and either a memorized spell or a racial cantrip){COLOR_RESET}")
             return
         gs.prompt_cntl = 'spell_casting_mode'
         process_spell_casting_action(player_character, my_tower, "init")
@@ -4735,11 +4735,19 @@ def generate_player_sprite_html(race, gender, equipped_armor=None):
 def can_cast_spells(player_character):
     """
     Check if player has the ability to cast spells.
-    Returns True if player has: 
-    - Max mana > 0 (requires Intelligence > 15)
-    - Max spell slots > 0 (requires Intelligence > 15)
+    Returns True if player has:
+    - Max mana > 0 AND
+    - Either max spell slots > 0 (regular memorized spell) OR at least
+      one cantrip in memorized_spells (cantrips are slot-free racial
+      magic granted at character creation -- elves at INT 12 have
+      max_slots = 0 but can still fire their cantrips).
     """
-    return player_character.max_mana > 0 and player_character.get_max_memorized_spell_slots() > 0
+    if player_character.max_mana <= 0:
+        return False
+    if player_character.get_max_memorized_spell_slots() > 0:
+        return True
+    return any(getattr(s, 'is_cantrip', False)
+               for s in player_character.memorized_spells)
 
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display."""
