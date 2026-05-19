@@ -1012,6 +1012,11 @@ class PlaytestSession:
                 "equipped": _equipped_obs(pc),
                 "lantern": _lantern_obs(pc),
                 "is_shrunk": bool(gs.player_is_shrunk),
+                # Persistent across re-shrinks: True once the player
+                # has consumed the Growth Mushroom this run. While
+                # True the policy can route to D/U even when shrunk
+                # because the stair handlers auto-cure on use.
+                "passed_bug_quest": bool(getattr(gs, 'player_passed_bug_quest', False)),
             },
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
@@ -2469,9 +2474,14 @@ def smart_policy(obs, rng, use_lantern=True):
                 continue
             if entry.get("buc_known") and entry.get("buc_status") == "cursed":
                 continue
-            # While shrunk, only bug-sized gear actually equips -- the
-            # handler silently rejects anything else with "too tiny".
+            # Bug-gear sizing: while shrunk only bug-sized gear
+            # equips ("too tiny"), and while normal-sized bug gear
+            # is rejected as "comically tiny in your hands". The
+            # policy mirrors both filters so _best_upgrade doesn't
+            # return a slot the equip handler will refuse.
             if is_shrunk and not entry.get("is_bug_gear"):
+                continue
+            if (not is_shrunk) and entry.get("is_bug_gear"):
                 continue
             b = entry.get(bonus_key) or 0
             if b > best_bonus:
@@ -3315,17 +3325,35 @@ def smart_policy(obs, rng, use_lantern=True):
         # dropping the Growth Mushroom). The build-337 starter
         # kit (game_systems.py:_trigger_shrinking_spell) covers
         # the truly-stranded case where no V is reachable.
+        passed_quest = bool(p.get("passed_bug_quest"))
         if is_shrunk:
             shrunk_beneficials = tuple(
                 t for t in BENEFICIAL_SAFE if t != "C"
             )
-            tiers = [
-                ("V",),
-                ("C",),
-                ("M",),
-                shrunk_beneficials,
-                ("T", "N"),
-            ]
+            if passed_quest:
+                # Re-shrunk veteran: the stair handlers auto-cure
+                # via the Mushroom's residual power, so D/U are
+                # valid targets. Put U FIRST (closer to known
+                # territory) and D second so the agent heads for
+                # the exit instead of fighting the floor again
+                # with no fresh cure available.
+                tiers = [
+                    ("U",),
+                    ("D",),
+                    ("V",),
+                    ("C",),
+                    ("M",),
+                    shrunk_beneficials,
+                    ("T", "N"),
+                ]
+            else:
+                tiers = [
+                    ("V",),
+                    ("C",),
+                    ("M",),
+                    shrunk_beneficials,
+                    ("T", "N"),
+                ]
             tiers = [tier for tier in tiers if tier]
         # Wedge-floor descent block: target floor (current_z + 1)
         # has been escaped from before via the osc 'u' valve. Strip
@@ -3684,7 +3712,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 if (entry["category"] == "weapon"
                         and not entry.get("is_broken")
                         and entry["name"] != equipped["weapon"]["name"]
-                        and (not is_shrunk or entry.get("is_bug_gear"))):
+                        and ((is_shrunk and entry.get("is_bug_gear"))
+                             or (not is_shrunk and not entry.get("is_bug_gear")))):
                     proposed = f"e{entry['slot']}"
                     break
         if (proposed is None
@@ -3695,7 +3724,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 if (entry["category"] == "armor"
                         and not entry.get("is_broken")
                         and entry["name"] != equipped["armor"]["name"]
-                        and (not is_shrunk or entry.get("is_bug_gear"))):
+                        and ((is_shrunk and entry.get("is_bug_gear"))
+                             or (not is_shrunk and not entry.get("is_bug_gear")))):
                     proposed = f"e{entry['slot']}"
                     break
         if proposed is None and weapon_upgrade_slot is not None:
@@ -4458,7 +4488,11 @@ def smart_policy(obs, rng, use_lantern=True):
         # s=461 elf F8 (176+ turns at HP 42/78). Walk off the D tile
         # so the wayfinder can route to the Bug Queen / Growth
         # Mushroom in game_loop. Same gate guards stairs_up_mode below.
-        if p.get("is_shrunk"):
+        # Exception: a quest-passed re-shrunk player CAN descend --
+        # the stair handler auto-cures them via the Mushroom's
+        # residual power and they emerge normal-sized on the next
+        # floor (game_systems._restore_size_on_bug_exit).
+        if p.get("is_shrunk") and not p.get("passed_bug_quest"):
             neighbors = obs.get("neighbors") or {}
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
@@ -4625,8 +4659,9 @@ def smart_policy(obs, rng, use_lantern=True):
         return "d"
     if mode == "stairs_up_mode":
         # Shrunk on a bug level: ascent is also blocked ('the stairs
-        # are impossibly tall'). Walk off the U tile.
-        if p.get("is_shrunk"):
+        # are impossibly tall'). Walk off the U tile. Quest-passed
+        # re-shrunk player can still climb (auto-cure fires).
+        if p.get("is_shrunk") and not p.get("passed_bug_quest"):
             neighbors = obs.get("neighbors") or {}
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)

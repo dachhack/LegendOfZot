@@ -1991,13 +1991,27 @@ class Scroll(Item):
             return True  # Consumed
 
         elif self.scroll_type == 'descent':
-            #  DESCENT SCROLL 
+            #  DESCENT SCROLL
             add_log(f"{COLOR_PURPLE}You read the {self.name}!{COLOR_RESET}")
             add_log(f"{COLOR_PURPLE}The floor beneath you opens...{COLOR_RESET}")
 
-            # Teleport down 1-3 floors
+            # Teleport down 1-3 floors, but never INTO a bug level --
+            # forcing the player to shrink with no prep / no bug
+            # gear is too punishing as a non-consensual destination.
+            # If the rolled target is a bug floor, nudge one floor
+            # deeper (or shallower if pinned at the deep end).
+            start_z = character.z
             floors_down = random.randint(1, 3)
-            character.z += floors_down
+            target_z = min(49, start_z + floors_down)
+            while len(my_tower.floors) <= target_z:
+                my_tower.add_floor(**gs.floor_params)
+            if my_tower.floors[target_z].properties.get('is_bug_level'):
+                if target_z + 1 <= 49:
+                    target_z += 1
+                else:
+                    target_z -= 1
+            character.z = target_z
+            floors_down = character.z - start_z
 
             # Generate floors if needed
             while len(my_tower.floors) <= character.z:
