@@ -49,6 +49,11 @@ previous_prompt_cntl = ""
 # the starting shop.
 player_sprite_return_to = None
 
+# Build-355 cantrip picker (elf only, fires between player_sprite and
+# starting_shop). Indices into the cantrip pool the player has currently
+# toggled on; cleared once the picker confirms.
+cantrip_selections = []
+
 # Loot toast popup queue. Each entry is
 # {'icon': html, 'text': str, 'created_at': float}. The renderer reads,
 # emits, and prunes via wizardscavern.sprites.loot_toast.

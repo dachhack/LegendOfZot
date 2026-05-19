@@ -3705,11 +3705,54 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
                 gs.player_sprite_return_to = None
                 if return_to:
                     gs.prompt_cntl = return_to
+                elif player_character.race == 'elf':
+                    # Elf branches into the cantrip picker before the
+                    # starting shop. Other races skip straight to shop.
+                    gs.cantrip_selections = []
+                    gs.prompt_cntl = "player_cantrips"
                 else:
                     gs.prompt_cntl = "starting_shop"
                     handle_starting_shop(player_character, my_tower, "init")
                 return True
         add_log("Tap a portrait to continue.")
+        return True
+
+    if _cntl == "player_cantrips":
+        # Build-355: elf cantrip picker. 4 cantrips on offer, player
+        # toggles via 'ct1'..'ct4', confirms with 'x' once exactly 2
+        # are selected. Cantrips are mana_cost=1, slot-free, granted
+        # by appending Spell copies directly to memorized_spells.
+        from .item_templates import SPELL_TEMPLATES as _ST
+        cantrip_pool = [s for s in _ST if getattr(s, 'is_cantrip', False)]
+        choice = (cmd or '').lower().strip()
+        if choice.startswith('ct') and choice[2:].isdigit():
+            idx = int(choice[2:]) - 1
+            if 0 <= idx < len(cantrip_pool):
+                if idx in gs.cantrip_selections:
+                    gs.cantrip_selections.remove(idx)
+                elif len(gs.cantrip_selections) < 2:
+                    gs.cantrip_selections.append(idx)
+                else:
+                    add_log("You can only pick two cantrips.")
+            return True
+        if choice == 'x':
+            if len(gs.cantrip_selections) != 2:
+                add_log("Pick exactly two cantrips before confirming.")
+                return True
+            import copy
+            for idx in gs.cantrip_selections:
+                spell_copy = copy.deepcopy(cantrip_pool[idx])
+                player_character.memorized_spells.append(spell_copy)
+                # Cantrips are racial knowledge -- auto-identified so
+                # the player doesn't have to scry a starter cantrip.
+                if hasattr(spell_copy, 'is_identified'):
+                    spell_copy.is_identified = True
+            picked = ", ".join(cantrip_pool[i].name for i in gs.cantrip_selections)
+            add_log(f"You know {picked}.")
+            gs.cantrip_selections = []
+            gs.prompt_cntl = "starting_shop"
+            handle_starting_shop(player_character, my_tower, "init")
+            return True
         return True
     return False # Should not be reached if state is managed
 def activate_playtest_mode(player_character):
@@ -4463,6 +4506,7 @@ MODE_HANDLERS = {
     "player_race":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_gender":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_sprite":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
+    "player_cantrips":        lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
 
     # Shops / vendors.
     "starting_shop":          handle_starting_shop,
@@ -4494,7 +4538,8 @@ MODE_HANDLERS = {
 # handle_starting_shop has its own "done shopping" boolean).  Everything
 # else just returns True once dispatched.
 _HANDLE_PASSTHROUGH_RESULT = {
-    "player_name", "player_race", "player_gender", "starting_shop",
+    "player_name", "player_race", "player_gender", "player_cantrips",
+    "starting_shop",
 }
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0

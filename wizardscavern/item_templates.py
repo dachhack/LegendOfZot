@@ -421,6 +421,11 @@ MEAT_ROT_TURNS_PRESERVED = 200  # cooked with kit keeps even longer
 # ================================================================================
 
 SPELL_TEMPLATES = [
+    # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
+    Spell(name="Mote", description="A tiny crackle of static, hurled at the target.", mana_cost=1, damage_type='Wind', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Frost Bite", description="A nip of magical chill.", mana_cost=1, damage_type='Ice', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Pebble", description="A magically flicked stone, faster than a sling.", mana_cost=1, damage_type='Earth', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=8, damage_type='Ice', base_power=15, level=0),
     Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=5, damage_type='Wind', base_power=12, level=0),

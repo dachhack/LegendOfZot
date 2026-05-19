@@ -513,6 +513,19 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     pc.mana = pc.max_mana  # re-clamp after the int_bonus bumps max_mana
     pc.gold = 500
     pc.memorized_spells = []
+    # Build-355: elves get 2 cantrips at game start (in-game flow uses
+    # the player_cantrips picker; the harness defaults to the first 2
+    # cantrips so the grid is deterministic and reproducible). Granted
+    # before the --spells arg so explicit spell lists still override.
+    if race == 'elf':
+        from .items import SPELL_TEMPLATES as _ST
+        import copy as _copy
+        cantrip_pool = [s for s in _ST if getattr(s, 'is_cantrip', False)]
+        for spell in cantrip_pool[:2]:
+            spell_copy = _copy.deepcopy(spell)
+            if hasattr(spell_copy, 'is_identified'):
+                spell_copy.is_identified = True
+            pc.memorized_spells.append(spell_copy)
     if starter_pack:
         # Mirror Vendor(starting=True) inventory at vendor.py:93-104,
         # plus the _auto_equip_starting_shop_item behaviour: the weapon
@@ -1001,7 +1014,12 @@ class PlaytestSession:
                 "strength": pc.strength,
                 "dexterity": pc.dexterity,
                 "intelligence": pc.intelligence,
-                "can_cast": pc.intelligence > 15,
+                # Build-355: pc.max_mana is now the canonical gate (it
+                # already encodes the race-specific INT threshold: elf
+                # > 11, human > 15, dwarf > 20). Was hardcoded to
+                # intelligence > 15 which rejected fresh-elf cantrips
+                # (INT 12 gives 8 MP but no cast access).
+                "can_cast": pc.max_mana > 0,
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,

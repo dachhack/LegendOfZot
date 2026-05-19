@@ -3577,7 +3577,8 @@ class Towel(Item):
 
 class Spell(Item):
     def __init__(self, name, description="", mana_cost=0, damage_type='Physical', base_power=0, level=0, spell_type='damage',
-                 status_effect_name=None, status_effect_duration=0, status_effect_type=None, status_effect_magnitude=0):
+                 status_effect_name=None, status_effect_duration=0, status_effect_type=None, status_effect_magnitude=0,
+                 is_cantrip=False):
         # Call parent Item class's __init__. Value is placeholder based on mana_cost.
         super().__init__(name, description, value=mana_cost * 2, level=level)
         self.mana_cost = mana_cost
@@ -3588,6 +3589,10 @@ class Spell(Item):
         self.status_effect_duration = status_effect_duration
         self.status_effect_type = status_effect_type
         self.status_effect_magnitude = status_effect_magnitude
+        # Cantrips: cost 1 MP, take 0 memorization slots, and bypass the
+        # spell-slot gate so a fresh elf can hold them at INT 12.
+        # Granted at character creation via the cantrip picker.
+        self.is_cantrip = is_cantrip
 
     def __repr__(self):
         base_repr = f"Spell(name='{self.name}', mana_cost={self.mana_cost}, level={self.level}, spell_type='{self.spell_type}')"
@@ -3610,6 +3615,11 @@ class Spell(Item):
 # Replace your existing SPELL_TEMPLATES list with this expanded version:
 
 SPELL_TEMPLATES = [
+    # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
+    Spell(name="Mote", description="A tiny crackle of static, hurled at the target.", mana_cost=1, damage_type='Wind', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Frost Bite", description="A nip of magical chill.", mana_cost=1, damage_type='Ice', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Pebble", description="A magically flicked stone, faster than a sling.", mana_cost=1, damage_type='Earth', base_power=6, level=0, is_cantrip=True),
+    Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
     Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=3, damage_type='Wind', base_power=12, level=0),

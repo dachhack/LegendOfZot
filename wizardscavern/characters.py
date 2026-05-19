@@ -896,9 +896,14 @@ class Character:
             int_mp = (int_score - 20) * 2 + 3
             lvl_mp = max(0, (self.level - 4) * 4)
         elif race == 'elf':
-            if int_score <= 15:
+            # Build-355: gate lowered 15 -> 11 so a fresh elf (INT 12)
+            # starts with mana to spend on the racial cantrips. Slope
+            # softened (4 -> 3 per INT) so high-INT mana pool stays
+            # roughly the same: INT 12 -> 8 MP, INT 16 -> 20 MP (was
+            # 14), INT 25 -> 47 MP (was 50).
+            if int_score <= 11:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 15) * 4 + 10
+            int_mp = (int_score - 11) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 10)
         else:  # human (default)
             if int_score <= 15:
@@ -1446,6 +1451,11 @@ class Character:
 
     def get_spell_slots(self, spell):
         """Calculate how many slots a spell takes to memorize based on its level."""
+        # Cantrips are slot-free -- they're racial spells, not memorized
+        # from the spellbook, so they don't compete with Level 0+ spells
+        # for the limited INT-gated slot pool.
+        if getattr(spell, 'is_cantrip', False):
+            return 0
         # Level 0 spells: 1 slot
         # Level 1-2 spells: 2 slots
         # Level 3+ spells: 3 slots
