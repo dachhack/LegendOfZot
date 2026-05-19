@@ -3659,6 +3659,22 @@ def smart_policy(obs, rng, use_lantern=True):
                         if (trapped_no_d
                                 and not obs.get("nearest_warp_path")):
                             return mp["first_step"]
+                        # Tiny-pocket M-engage: in a small region
+                        # (<= 10 reachable) the agent cannot reach
+                        # M without re-stepping recent tiles --
+                        # _swap_if_backtrack would rewrite 'n'
+                        # (toward M) to 's' (away) forever. Bypass
+                        # the swap when M is adjacent (dist 1) in
+                        # a tiny pocket. Caught on s=8128 dwarf F3
+                        # 3-tile pocket: M at (17,7) was 1 north,
+                        # wayfinder picked 'n' but swap turned it
+                        # 's' every other turn, n/s/n/s for 247T.
+                        pocket_reach_mt = (
+                            (obs.get("tile_coverage") or {}).get("reachable") or 0
+                        )
+                        if (pocket_reach_mt <= 10
+                                and mp.get("path_dist") <= 2):
+                            return mp["first_step"]
                         candidates.append((mp["path_dist"], mp["first_step"]))
                     continue
                 if t == "W":
@@ -4127,17 +4143,33 @@ def smart_policy(obs, rng, use_lantern=True):
         # tiles forever. s=317 human F8 burned 1500T cycling
         # combat (low HP) -> flee -> walk back -> combat. Commit
         # to the fight instead.
+        # Tiny-pocket exception (same as the ticking-status gate):
+        # with no D / no W reachable and a tiny reachable region,
+        # fleeing just re-encounters the same M next move forever
+        # while the food clock drains. Commit to combat (die
+        # fighting at depth beats a 500T flee->re-engage loop).
+        # Caught on s=8128 dwarf F3: 3-tile pocket, M north, agent
+        # fled 247T against a too-tough Tomb Guardian instead of
+        # engaging it or accepting the early-term.
+        pocket_reach_cb = (obs.get("tile_coverage") or {}).get("reachable") or 0
+        no_escape_pocket = (
+            pocket_reach_cb <= 10
+            and not (obs.get("feature_paths") or {}).get("D")
+            and not obs.get("nearest_warp_path")
+        )
         if (hp_pct < 0.30
                 and not heal_pot_slot
                 and not heal_spell_slot
                 and not starving
-                and not is_shrunk):
+                and not is_shrunk
+                and not no_escape_pocket):
             return "f"
         # Threat-flee only when NOT starving -- a starving agent vs
         # an edible monster needs to win this fight to live. Same
-        # shrunk exception: with no escape route, fleeing just
-        # postpones the same fight.
-        if monster_too_tough and not starving and not is_shrunk:
+        # shrunk + tiny-pocket exception: with no escape route,
+        # fleeing just postpones the same fight.
+        if (monster_too_tough and not starving and not is_shrunk
+                and not no_escape_pocket):
             return "f"
         # Damage spells beat melee: more damage per turn, no weapon
         # durability loss, scale with INT for casters. Mana regens at
