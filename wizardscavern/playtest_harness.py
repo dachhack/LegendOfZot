@@ -3763,7 +3763,16 @@ def smart_policy(obs, rng, use_lantern=True):
             t_main was in AVOID, but that left HP=1 retreat agents
             stuck on F1 forever -- with no alternatives the fallback
             returned `d` anyway and the AVOID check just added a
-            no-op detour. Reverted.)"""
+            no-op detour. Reverted.)
+            Build-368: also exclude fog (None) tiles from the swap
+            target list. Previously the swap could rewrite a known-
+            good direction like 's' (toward a discovered floor) into
+            a fog 'w' just because 's' was in recent_steps -- the
+            agent then stepped into the unknown tile and 36-44%
+            of the time landed on a W and warped. Per user
+            directive 'almost never step into unknown fog'. The
+            ultimate-fallback at the bottom also gets the fog
+            exclusion."""
             if d not in recent_steps and d not in blocked:
                 return d
             alts = []
@@ -3773,18 +3782,18 @@ def smart_policy(obs, rng, use_lantern=True):
                 if alt in recent_steps or alt in blocked:
                     continue
                 t = neighbors.get(alt)
-                if t in AVOID or t == "#":
+                if t in AVOID or t == "#" or t is None:
                     continue
                 alts.append(alt)
             if alts:
                 return rng.choice(alts)
             # All non-recent / non-blocked alternatives also walls/
-            # recent. Try ANY walkable that isn't blocked.
+            # recent. Try ANY walkable known tile that isn't blocked.
             for alt in ("n", "s", "e", "w"):
                 if alt in blocked:
                     continue
                 t = neighbors.get(alt)
-                if t not in AVOID and t != "#":
+                if t not in AVOID and t != "#" and t is not None:
                     return alt
             return d
 
@@ -3881,14 +3890,31 @@ def smart_policy(obs, rng, use_lantern=True):
 
         # Random fallback only when the BFS has nothing reachable to
         # offer (fully-explored floor or trapped behind a fog wall).
-        # Prefer an undiscovered neighbour if one happens to sit
-        # adjacent so the lantern still has a chance to break through.
-        # The anti-backtrack guard filters out recent tiles first so the
-        # random walk doesn't immediately re-feed the oscillation.
+        # Build-368: per user directive "playtesters should be shining
+        # the lantern and almost never stepping into an unknown fog
+        # room", fog tiles (neighbors.get(d) is None) are NO LONGER
+        # walkable in the fallback. Stepping onto fog reveals AND
+        # commits to the tile -- if it's a W the warp triggers, if
+        # it's an M combat triggers, etc. The b366 7000T sweep showed
+        # 52.7% of all floor transitions were warp-driven, much of it
+        # from fog-step W reveals. The lantern fire above (line 2927)
+        # already converts fog neighbours to known tiles when fuel is
+        # available, so the only path here is "fuel empty AND fog
+        # adjacent" -- in that case prefer backtracking (recent) or
+        # bumping a wall over stepping into the unknown. The TRULY-
+        # cornered last-resort block below now permits a fog step
+        # ONLY when there's literally no other option (no walkable
+        # known tile, no recent tile, no wall to bump that's safer).
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
             if t in AVOID or t == "#":
+                return False
+            # Fog tiles (None) are not walkable in the fallback.
+            # The lantern reveal path above handles them first; if
+            # we're here with a fog neighbour, fuel is empty AND
+            # stepping into it would commit to whatever's underneath.
+            if t is None:
                 return False
             # Also exclude inferred/known guardian directions so the
             # random fallback doesn't blunder into a tomb-adjacent M.
@@ -3917,28 +3943,40 @@ def smart_policy(obs, rng, use_lantern=True):
                            if _walkable(d) and d not in recent_steps]
             if stuck_break:
                 candidates = stuck_break
-        undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
-        if undiscovered_nbrs:
-            candidates = undiscovered_nbrs
+        # Build-368: removed the old "prefer fog neighbour" block here.
+        # _walkable() now rejects fog tiles, so the lantern fire above
+        # gets the responsibility for fog reveal -- the fallback no
+        # longer commits the agent to an unknown tile.
         if not candidates:
             candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
         if not candidates:
             # Truly cornered: every walkable direction is recent OR
-            # the only neighbours are walls/AVOID tiles. Don't just
+            # the only neighbours are walls/AVOID/fog tiles. Don't just
             # rng.choice all 4 dirs -- that picks W tiles when AVOID
             # has W (Fili of Khazad-dum dwarf seed 13 stepped onto a
             # known W via this exact path because rng landed on it
-            # uniformly across all 4 dirs). Prefer non-AVOID dirs
-            # even if walls -- a wall bump wastes one turn; a W
+            # uniformly across all 4 dirs). Prefer non-AVOID, non-fog
+            # dirs even if walls -- a wall bump wastes one turn; a W
             # step wastes 200+ turns of warp + retreat. Fall through
-            # to all 4 only if even the non-AVOID set is empty (no
-            # tile is safer than another).
+            # to fog only if the lantern is empty AND every cardinal
+            # is a wall or AVOID (no safer alternative).
             safe_dirs = [d for d in ("n", "s", "e", "w")
-                         if neighbors.get(d) not in AVOID]
+                         if neighbors.get(d) not in AVOID
+                         and neighbors.get(d) is not None]
             if safe_dirs:
                 candidates = safe_dirs
             else:
-                candidates = ["n", "s", "e", "w"]
+                # Last-resort fog step: lantern is dark AND every
+                # known cardinal is either a wall or in AVOID. Stepping
+                # into fog is a coin flip but standing still risks
+                # starvation. Prefer a fog tile (None) over an AVOID
+                # tile because AVOID is known-bad while fog is unknown.
+                fog_dirs = [d for d in ("n", "s", "e", "w")
+                            if neighbors.get(d) is None]
+                if fog_dirs:
+                    candidates = fog_dirs
+                else:
+                    candidates = ["n", "s", "e", "w"]
         return rng.choice(candidates)
 
     if mode == "inventory":
