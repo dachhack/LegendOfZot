@@ -5115,35 +5115,89 @@ def smart_policy(obs, rng, use_lantern=True):
         # Take the drink rather than loop forever.
         return "dr"
     if mode == "tomb_mode":
-        # Tombs offer a binary risk choice each visit:
-        #   'r' (Raid)         -- spawns an undead guardian; if you win,
-        #                         major reward (cursed weapon/armor).
-        #   'p' (Pay Respects) -- safe heal or minor buff, no fight.
-        # Raid only when we're flush AND not on a floor that's
-        # already proven to have undead. Four gates, ANY triggers 'p':
-        #   1. is_weak              (HP < 50% or broken / missing gear)
-        #   2. no fallback          (no healing potion in bag AND no
-        #                            affordable Heal spell -- no
-        #                            recovery from a bad guardian draw)
-        #   3. tomb_suspected_here  (already fought an undead on this
-        #                            floor; one more dragon-lich-tier
-        #                            fight is a coin flip on death)
-        #   4. not over-levelled    (pc.level < pc.floor + 2 -- the
-        #                            raid spawns a Lv(floor+2) guardian
-        #                            and fragile races (elf base HP 28)
-        #                            get one-shot at parity HP). User-
-        #                            flagged after Legolas the Bowyer
-        #                            seed=1234 elf raided an F2 tomb at
-        #                            Lv4, the elite mummy spawned at
-        #                            Lv4 and hit him for 28/swing,
-        #                            dead in 1-2 rounds.
+        # Three choices from tomb_mode:
+        #   'r' (Raid)         -- spawns an undead guardian at floor+2;
+        #                         major cursed-gear reward on win.
+        #   'p' (Pay Respects) -- free heal (30% max HP) or minor buff.
+        #   n/s/e/w            -- walk out (process_tomb_action accepts
+        #                         cardinal moves; the '.' neighbour we
+        #                         arrived on is always safe since the
+        #                         four-corner guardians block the rest).
+        # Build-349 audit: UNDEAD/ELITE UNDEAD = 73% of combat deaths,
+        # concentrated F5-F8 where the level+2 raid spawn outpaces
+        # actual gear/HP growth. The prior gate (`pc.level < floor+2`)
+        # let parity-level heroes raid into a floor+2 guardian and lose
+        # the trade even with full HP. Replace with a strength gate
+        # that gates on the THREE numbers that actually matter for the
+        # fight outcome:
+        #   1. level_ok    : pc.level >= floor+3 -- matches the cardinal-
+        #                    guardian avoid threshold, gives us at least
+        #                    a one-level HP cushion over the raid spawn.
+        #   2. can_dent    : pc.strength + weapon.attack_bonus >=
+        #                    guardian_defense + 5  -- if our hits round
+        #                    to 1-2 dmg we'll never out-DPS the 140+ HP
+        #                    guardian before food/HP runs out.
+        #   3. can_survive : max_hp >= 4 * expected_dmg_per_hit. The
+        #                    raid is multi-turn; we need 4 swings of
+        #                    cushion to alpha-strike the guardian down.
+        # If any gate fails: we're not strong enough to raid. Fall back:
+        #   - Wounded (hp_pct < 0.70): 'p' for the free heal.
+        #   - Full HP: walk out via the '.' neighbour we came from --
+        #             don't burn the one-shot benefit at full HP.
+        #   - No '.' neighbour visible: 'p' as last resort (still safe).
+        # Hard vetoes (always pay respects, never raid):
+        #   - is_weak               (HP < 50% or broken / missing gear)
+        #   - no_escape             (no Healing Potion + no Heal spell)
+        #   - tomb_suspected_here   (already saw undead on this floor;
+        #                            multiple tomb encounters compound)
+        pc_floor = p.get("floor", 1)
+        floor_idx = pc_floor - 1  # raid spawn uses pc.z, which is 0-indexed
+        pc_lv = p.get("level", 1)
+        pc_str = p.get("strength", 10)
+        pc_max_hp = p.get("max_hp", 1)
+        equipped = p.get("equipped") or {}
+        weapon = equipped.get("weapon") or {}
+        armor = equipped.get("armor") or {}
+        weapon_atk_bonus = (weapon.get("attack_bonus") or 0) if weapon else 0
+        armor_def_bonus = (armor.get("defense_bonus") or 0) if armor else 0
+
+        # Tomb-raid guardian stats (room_actions.py:2138-2149).
+        # health = 80 + floor*12, attack = 12 + floor*1.5, defense = 8 + floor.
+        g_attack = 12 + floor_idx * 1.5
+        g_defense = 8 + floor_idx
+
+        pc_attack = pc_str + weapon_atk_bonus
+        pc_defense = 5 + armor_def_bonus  # game default base defense
+
+        level_ok = pc_lv >= floor_idx + 3
+        can_dent = pc_attack >= g_defense + 5
+        expected_dmg = max(1, int(g_attack) - pc_defense)
+        can_survive = pc_max_hp >= 4 * expected_dmg
+        strong_enough = level_ok and can_dent and can_survive
+
         no_escape = (heal_pot_slot is None) and (heal_spell_slot is None)
         tomb_floor = bool(obs.get("tomb_suspected_here"))
-        pc_floor = p.get("floor", 1)
-        under_for_raid = p.get("level", 1) < pc_floor + 2
-        if is_weak or no_escape or tomb_floor or under_for_raid:
+        hard_veto = is_weak or no_escape or tomb_floor
+
+        if strong_enough and not hard_veto:
+            return "r"
+
+        # Not strong enough -- decline. Pay respects when we'd benefit;
+        # walk out when at full HP (the heal is wasted there).
+        if hp_pct < 0.70:
             return "p"
-        return "r"
+
+        # Full HP: walk out via the '.' we came in on. The 4-corner
+        # guardian spawn means non-'.' neighbours are walls or M tiles
+        # (one of which we already cleared to step onto T). The cleared
+        # tile becomes '.' and is our safe exit.
+        neighbors = obs.get("neighbors") or {}
+        for d in ("n", "s", "e", "w"):
+            if neighbors.get(d) == ".":
+                return d
+        # No '.' exit visible (fog or unusual layout) -- pay respects
+        # instead of raiding without the strength gate.
+        return "p"
     if mode == "dungeon_mode":
         # Locked dungeon. Send 'u' regardless: if we hold the key the
         # handler unlocks and flips us into dungeon_unlocked_mode (next
