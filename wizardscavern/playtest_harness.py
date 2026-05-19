@@ -3233,8 +3233,27 @@ def smart_policy(obs, rng, use_lantern=True):
         # low-HP run quickly. M and W are NEVER active targets.
         healing_count = sum(i.get("count", 1) for i in inv
                             if i["category"] == "potion_healing")
-        wants_vendor = ((healing_count < 2 or needs_repair)
-                        and p["gold"] >= 50)
+        # Gear-upgrade vendor pull. Build-352 validation showed 11/14
+        # base-Dagger F1-F4 deaths came from runs that NEVER visited a
+        # vendor -- the wayfinder didn't actively path to V because
+        # wants_vendor only triggered on healing-pot or repair need,
+        # and the 4-potion starter pack keeps healing_count >= 4
+        # through F1-F2. So even when V was reachable, the descend-
+        # /clear-beneficials priority routed past it. Now: if we're
+        # still on the starter Dagger (atk_bonus<=2) OR starter
+        # Leather Armor or worse (def_bonus<=3), AND we can afford a
+        # cheap upgrade (Short Sword 25g, Mace 60g, Iron Sword 75g),
+        # actively pull toward V. The cheap-upgrade gold floor (25g)
+        # is far below the healing-need floor (50g) -- early floors
+        # have 25g easily after 1-2 kills.
+        weak_starter_weapon = cur_w <= 2  # Dagger atk_bonus = 2
+        weak_starter_armor = cur_a <= 3   # Leather Armor def_bonus = 3
+        wants_gear_upgrade = (
+            (weak_starter_weapon or weak_starter_armor)
+            and p["gold"] >= 25
+        )
+        wants_vendor = (((healing_count < 2 or needs_repair) and p["gold"] >= 50)
+                        or wants_gear_upgrade)
 
         # Tile-coverage descent gate: when we've swept >= 70% of this
         # floor's walkable tiles AND D is reachable, descend even if
