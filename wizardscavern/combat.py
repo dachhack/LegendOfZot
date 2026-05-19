@@ -163,6 +163,38 @@ def _execute_charged_spell(player_character):
             else:
                 add_log(f"{COLOR_YELLOW}{player_character.name} is not affected by {spell.status_effect_name}.{COLOR_RESET}")
         return True
+    elif spell.spell_type == 'detect_monster':
+        # Charged-spell mirror of cast_spell's detect_monster branch.
+        floor = gs.my_tower.floors[player_character.z]
+        found = []
+        for dy in range(-1, 2):
+            for dx in range(-1, 2):
+                r, c = player_character.y + dy, player_character.x + dx
+                if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                    tile = floor.grid[r][c]
+                    if tile.room_type == 'M':
+                        mon = gs.encountered_monsters.get((c, r, player_character.z))
+                        if mon and getattr(mon, 'health', 1) > 0:
+                            found.append(f"{mon.name} (Lvl {mon.level}) at ({c},{r})")
+                            tile.discovered = True
+        if found:
+            add_log(f"{COLOR_PURPLE}Detect Monster: {'; '.join(found)}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_PURPLE}Detect Monster: no creatures nearby.{COLOR_RESET}")
+        return True
+    elif spell.spell_type == 'reveal_fog':
+        floor = gs.my_tower.floors[player_character.z]
+        revealed = 0
+        for dy in range(-2, 3):
+            for dx in range(-2, 3):
+                r, c = player_character.y + dy, player_character.x + dx
+                if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                    tile = floor.grid[r][c]
+                    if not tile.discovered:
+                        tile.discovered = True
+                        revealed += 1
+        add_log(f"{COLOR_YELLOW}Light reveals {revealed} new tiles.{COLOR_RESET}")
+        return True
     elif spell.spell_type == 'add_status_effect':
         if spell.status_effect_name and spell.status_effect_type:
             player_character.add_status_effect(
@@ -222,7 +254,16 @@ def _monster_attack_during_channeling(player_character):
 
 def _check_bug_queen_spawn(player_character, my_tower):
     """After a bug monster is killed, check if all bugs on the floor are dead.
-    If so, the Bug Queen spawns to avenge her swarm."""
+    If so, the Bug Queen spawns to avenge her swarm.
+
+    Fallback: also spawn after the player has been shrunk for
+    BUG_QUEEN_PATIENCE moves without a 100% bug clear, OR when
+    the kill count alone reaches BUG_QUEEN_KILL_THRESHOLD.
+    Region-split bug-floor layouts can hide a few bugs behind walls
+    the agent can't BFS to (s=167 dwarf: 125 bug kills, 1773T on
+    F8, Queen never spawned, starved). The patience fallback
+    guarantees the quest is resolvable on every layout.
+    """
     current_floor = my_tower.floors[player_character.z]
 
     # Only applies on bug levels, and only if queen hasn't been defeated yet
@@ -239,7 +280,16 @@ def _check_bug_queen_spawn(player_character, my_tower):
             if room.room_type == 'M' and room.properties.get('is_bug_monster'):
                 remaining_bugs += 1
 
-    if remaining_bugs > 0:
+    BUG_QUEEN_PATIENCE = 500     # moves shrunk before Queen emerges anyway
+    BUG_QUEEN_KILL_THRESHOLD = 20  # bug kills to enrage her early
+
+    shrink_moves = getattr(gs, 'bug_shrink_moves', 0)
+    bugs_killed = getattr(gs, 'bug_kills_this_level', 0)
+
+    patience_spent = shrink_moves >= BUG_QUEEN_PATIENCE
+    kill_threshold = bugs_killed >= BUG_QUEEN_KILL_THRESHOLD
+
+    if remaining_bugs > 0 and not (patience_spent or kill_threshold):
         return
 
     # All bugs are dead! The Bug Queen appears to avenge them.
@@ -1764,8 +1814,14 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                         gs.prompt_cntl = "death_screen"
                         return  # Game Over
 
-                # If combat continues, return to combat mode
-                gs.prompt_cntl = "combat_mode"
+                # If combat continues, return to combat mode; if we were
+                # casting utility magic (Detect/Light cantrips) outside
+                # combat with no active_monster, drop back to game_loop
+                # so the player can keep exploring.
+                if gs.active_monster:
+                    gs.prompt_cntl = "combat_mode"
+                else:
+                    gs.prompt_cntl = "game_loop"
 
             else:  # Spell cast not successful (e.g., not enough mana)
                 gs.prompt_cntl = "spell_casting_mode"  # Stay in spell selection mode
@@ -1804,7 +1860,12 @@ def get_trophy_drop(monster_name):
 
 
 def _drop_bug_gear(player_character):
-    """25% chance to drop a random bug weapon or armor after killing a bug monster."""
+    """25% chance to drop a random bug weapon or armor after killing a bug monster.
+    Also increments the bug-kill counter that feeds the patience-spawn
+    of the Bug Queen (see _check_bug_queen_spawn)."""
+    # Bug-kill counter. Reset alongside bug_shrink_moves in
+    # _trigger_shrinking_spell so each bug-level visit counts fresh.
+    gs.bug_kills_this_level = getattr(gs, 'bug_kills_this_level', 0) + 1
     from .items import Weapon, Armor
     if random.random() > 0.25:
         return

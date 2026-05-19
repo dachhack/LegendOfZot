@@ -122,7 +122,7 @@ def get_audio_mood(prompt_cntl):
     """
     if prompt_cntl in ('splash', 'intro_story', 'main_menu',
                         'player_name', 'player_race', 'player_gender',
-                        'player_sprite',
+                        'player_sprite', 'player_cantrips',
                         'starting_shop', 'game_loaded_summary',
                         'save_load_mode', 'load_pending', 'confirm_quit'):
         return 'menu'
@@ -2581,7 +2581,7 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     # body owns the entire screen, no toga panel needed.
     'splash', 'intro_story', 'main_menu', 'death_screen',
     'game_loaded_summary',
-    'player_race', 'player_gender', 'player_sprite',
+    'player_race', 'player_gender', 'player_sprite', 'player_cantrips',
     'confirm_quit',
     # Map-view room modes — body owns d-pad + HUD chips via
     # _build_map_hud_and_dpad_html().
@@ -5301,7 +5301,7 @@ class WizardsCavernApp(toga.App):
             return html_code
 
         # Player stats - hide HP/MP during character creation and starting shop
-        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'player_sprite', 'starting_shop']
+        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'player_sprite', 'player_cantrips', 'starting_shop']
 
         # Get dynamic title
         player_title = get_player_title(gs.player_character) if show_bars else ""
@@ -5886,6 +5886,60 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = "Tap a portrait"
+
+        elif gs.prompt_cntl == "player_cantrips":
+            # ELF CANTRIP PICKER — build-355. Four 1-MP slot-free
+            # cantrips on offer (Mote/Frost Bite/Pebble/Mind Touch).
+            # Player taps to toggle, confirms with the bottom button
+            # once exactly two are picked.
+            from .item_templates import SPELL_TEMPLATES as _ST
+            cantrip_pool = [s for s in _ST if getattr(s, 'is_cantrip', False)]
+            selected = set(getattr(gs, 'cantrip_selections', []))
+            cards = []
+            for i, spell in enumerate(cantrip_pool):
+                is_picked = i in selected
+                border = '2px solid #FFD700' if is_picked else '1px solid #555'
+                bg = '#332b00' if is_picked else '#222'
+                check = ' [PICKED]' if is_picked else ''
+                # Card meta varies by cantrip kind: damage cantrips show
+                # power + element, utility cantrips show their cost only
+                # so a "power 0" line doesn't appear next to "Light".
+                if spell.spell_type == 'damage':
+                    meta = f"{spell.mana_cost} MP &middot; {spell.damage_type} &middot; power {spell.base_power}"
+                else:
+                    meta = f"{spell.mana_cost} MP &middot; utility"
+                cmd = f"ct{i+1}"
+                cards.append(
+                    f"<div class='taprow altar-act' "
+                    f"style='display:block;margin:6px 0;padding:8px;background:{bg};"
+                    f"border:{border};border-radius:6px;text-align:left;' "
+                    f"data-zcmd='{cmd}' onclick=\"window.__zotTap('{cmd}', this)\">"
+                    f"<div class='aname'>{spell.name}{check}</div>"
+                    f"<div class='ameta'>{spell.description}</div>"
+                    f"<div class='ameta' style='color:#9CC;'>{meta}</div>"
+                    f"</div>"
+                )
+            confirm_enabled = (len(selected) == 2)
+            confirm_color = '#4CAF50' if confirm_enabled else '#555'
+            confirm_text = "Confirm (x)" if confirm_enabled else f"Pick {2 - len(selected)} more"
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; padding: 10px;">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 12px; color: #FFD700; text-align: center;">
+                        CANTRIPS
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
+                        Even an untrained elf carries two minor magics. Pick the pair you've practiced:
+                    </div>
+                    {''.join(cards)}
+                    <div class='taprow altar-act' data-zcmd='x'
+                         onclick="window.__zotTap('x', this)"
+                         style='display:block;margin-top:10px;padding:10px;background:{confirm_color};
+                         border-radius:6px;text-align:center;font-weight:bold;color:#FFF;'>
+                        {confirm_text}
+                    </div>
+                </div>
+                """
+            current_commands_text = "Pick 2 cantrips"
 
         elif gs.prompt_cntl == "achievements_mode":
             # ACHIEVEMENTS VIEW

@@ -4000,6 +4000,14 @@ def process_zotle_teleporter_action(player_character, my_tower, cmd):
 
         target_floor = my_tower.floors[target_z]
 
+        # Forbid teleporting INTO a bug level via Zot's Dimensional
+        # Key. The shrinking spell is too punishing as a non-stair
+        # destination -- bug-quest must start by deliberate descent.
+        if target_floor.properties.get('is_bug_level'):
+            add_log(f"{COLOR_YELLOW}The key fizzles &mdash; Zot's magic forbids skipping the bug hive.{COLOR_RESET}")
+            add_log(f"{COLOR_GREY}(Floor {target_z + 1} is sealed to dimensional travel. Descend the stairs instead.){COLOR_RESET}")
+            return
+
         # Validate coordinates are in bounds
         if target_x < 0 or target_x >= target_floor.cols or target_y < 0 or target_y >= target_floor.rows:
             add_log(f"{COLOR_RED}Coordinates out of bounds!{COLOR_RESET}")

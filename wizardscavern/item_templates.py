@@ -421,6 +421,11 @@ MEAT_ROT_TURNS_PRESERVED = 200  # cooked with kit keeps even longer
 # ================================================================================
 
 SPELL_TEMPLATES = [
+    # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
+    Spell(name="Detect Monster", description="Reveals the name, level, and location of any monsters in a 3x3 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='detect_monster', is_cantrip=True),
+    Spell(name="Light", description="A floating sphere of magelight reveals the dungeon in a 5x5 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='reveal_fog', is_cantrip=True),
+    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- enough to flee, or to land a free attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
+    Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=8, damage_type='Ice', base_power=15, level=0),
     Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=5, damage_type='Wind', base_power=12, level=0),

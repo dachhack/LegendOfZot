@@ -1,3 +1,125 @@
+# Playtest Harness — Handoff (build 356)
+
+Branch: `claude/resume-playtesting-e6mpI`. Builds 347-356 in this
+session focused on **loop elimination, vendor connectivity, tomb-raid
+tuning, and the build-355/356 elf rework**. Site:
+https://dachhack.github.io/LegendOfZot/playtest/.
+
+## TL;DR — build 356 highlights
+
+The big-ticket change this stretch was the **elf overhaul** (builds
+355-356). The b354 grid surfaced an elf-cohort collapse — 30/45 elves
+never reached F2 because they started at INT 12 / 0 mana and could not
+cast their memorised spells. Three coordinated fixes shipped:
+
+1. **Elf mana threshold lowered INT 15 → INT 11**, softer slope
+   (`(int-11)*3+5`). Fresh elf INT 12 → 8 MP (was 0); INT 16 → 20 MP;
+   INT 25 → 47 MP. `wizardscavern/characters.py:899-908`.
+2. **Four racial cantrips** added — `Detect Monster` (3x3 monster
+   reveal), `Light` (5x5 fog-of-war reveal), `Hold Monster` (1-turn
+   time_stop on target), `Mind Touch` (1 MP Psionic damage). All
+   slot-free, `is_cantrip=True` on the Spell class. Definitions live in
+   BOTH `wizardscavern/items.py:3619-3622` and
+   `wizardscavern/item_templates.py:425-428` — the codebase has two
+   parallel SPELL_TEMPLATES tables (harness uses items.py, in-game uses
+   item_templates.py — pre-existing duplication, do not consolidate
+   without a separate audit).
+3. **New `player_cantrips` character-creation screen** between portrait
+   pick and starting shop. Elves only — toggles via `ct1..ct4`,
+   confirms with `x` once exactly 2 are selected. Other races skip
+   straight to starting_shop unchanged.
+
+Cast-pipeline plumbing:
+- `can_cast_spells()` now allows casters with at least one cantrip
+  even at 0 spell slots (fresh elves have `max_slots = 0` since
+  `(12-15)//2 = 0`).
+- `get_spell_slots(spell)` returns 0 for cantrips so they don't
+  compete with regular L0 spells for the INT-gated slot pool.
+- New spell_type handlers `detect_monster` and `reveal_fog` in
+  `characters.cast_spell` AND `combat._execute_charged_spell`.
+- `spell_casting_mode` now routes back to `game_loop` (not
+  `combat_mode`) after a successful cast when `gs.active_monster` is
+  None, so Detect/Light work as exploration utilities.
+- Harness `can_cast` obs moved from `intelligence > 15` to
+  `max_mana > 0` (was filtering fresh-elf cantrips out of the spell
+  policy). Harness default cantrip pair for elves = `Hold Monster +
+  Mind Touch` (auto-granted in `new_game` when `race='elf'`,
+  combat-relevant pair so grid runs have an offensive option).
+
+## Build 356 validation grid — PASS
+
+20 seeds × 3 races, turns=3000, policy=smart. Site updated 2026-05-19
+via `deploy_gh_pages(..., replace=True)`. Commit `d29a78b` on
+`origin/main`.
+
+| Cohort | Mean max-floor | F2+ % | F5+ % | Alive % | Mean level |
+|---|---|---|---|---|---|
+| Elf (n=20) | **4.55** | **95%** | 45% | 15% | 3.80 |
+| Elf (b354) | 2.16 | 33% | — | — | — |
+| Human (n=20) | 4.75 | 95% | 60% | 15% | 4.75 |
+| Dwarf (n=20) | 5.75 | 100% | 65% | 20% | 6.35 |
+
+**Elf cohort up +110% on mean max-floor**, +62pp on F2+. Zero crashes,
+zero softlocks. Human/dwarf cohorts steady — the changes are
+race-gated correctly. Max elf floor reached: F9 (seeds 3 and 9).
+
+## Known issue carried into build 357+
+
+**Elf mean character level (3.80) trails depth.** Comparable depth to
+human cohort (F4.55 vs F4.75) but +1 level behind on average. Working
+hypothesis: Hold Monster and Mind Touch let elves *skip* fights they
+would have *won* on melee, so they descend on the XP curve of fights
+not fought. Elf seed 9 hit F9 at lv7 and died to a Demilich —
+classic "deep but fragile" pattern. Options for next build:
+
+- Give cantrip-kill events XP credit equivalent to a melee kill
+  (Mind Touch currently is sub-melee damage but kills are still kills).
+- Tag Hold Monster as a panic button, not a default opener — escalating
+  mana cost on consecutive uses, or per-floor uses cap.
+- Just track for another build before tuning. n=20 is one data point.
+
+## Earlier session work (builds 347-354)
+
+Loop hunt rounds 12-14, vendor connectivity, tomb-raid gates. See
+`wizardscavern/version.py:CHANGELOG` for full per-build detail. Key
+landmarks:
+
+| Build | Change | Driver |
+|---|---|---|
+| 347 | Warp-dir step-off passes through T (tomb) tiles | s=1234 dwarf F3 477T n/s/n loop |
+| 348 | trapped_no_d fast-path when W reachable + reach_pct ≥ 95 | s=500 human F1 280-loop |
+| 349 | On-D-tile anti-bounce after 3+ visits | s=271 dwarf F2 D bounce |
+| 350 | Tomb-raid strength gate (level + dmg + HP all-or-nothing) | UNDEAD = 73% of combat deaths |
+| 351 | Strength-gate loosened (floor+2, 3 hits) | Walk-out saved heroes were starving |
+| 352 | Vendor upgrade priority promoted | F1-F4 attrition at base Dagger |
+| 353 | Gear-upgrade vendor pull on F1-F2 | weapon/armor triggers + 25g floor |
+| 354 | V added to floor-connectivity guarantee | "V should always be reachable" |
+
+Cumulative loop_turns reduction across rounds 8-14: 40512 → 5410 (-87%).
+
+## Running the harness
+
+```bash
+# Smoke run
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
+    --policy smart --race elf
+
+# With report output (HTML + JSON)
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 1500 \
+    --policy smart --race elf --report-dir /tmp/myrun
+
+# Grid (write the driver yourself; the canonical /tmp/deep_deploy.py
+# doesn't survive container restarts). 20 seeds × 3 races at
+# turns=3000 is the standard validation shape. Don't pass --deploy
+# per-run -- do one final invocation with --deploy --replace, or call
+# wizardscavern.playtest_report.deploy_gh_pages() directly.
+```
+
+The `playtester` subagent will set up grids, drill into specific
+runs, and post-analyse — spawn with a focused task. Last session
+artifacts in `/tmp/grid_b356/`, `/tmp/run_grid_b356.sh`,
+`/tmp/analyze_grid_b356.py`.
+
 # Playtest Harness — Handoff (build 314)
 
 Branch: `claude/wizards-cavern-playtest-4stBF`. Continuation of the

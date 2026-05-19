@@ -200,9 +200,20 @@ def generate_player_sprite_html(race, armor_state='none', seed=None, sprite_pid=
 
     pid = sprite_pid
     if pid is None:
-        if seed is None or not _csprites._CHARACTERS_POOL:
+        if seed is None:
             return ''
-        pid = get_generic_variant(_csprites._CHARACTERS_POOL, seed=seed)
+        # Filter by race so the auto-picked avatar matches what the
+        # in-game character-creation picker (app.py:5849) shows for
+        # this race. Before this fix, the seed-based fallback drew
+        # from the full _CHARACTERS_POOL (a dwarf could get an
+        # elf-looking portrait, etc.) which broke the visual link
+        # between the playtest report and what a player launching
+        # this seed in the actual game would see.
+        from .sprites.characters import get_race_pool
+        pool = get_race_pool(race) if race else _csprites._CHARACTERS_POOL
+        if not pool:
+            return ''
+        pid = get_generic_variant(pool, seed=seed)
     if not pid:
         return ''
     img_b64 = get_image_b64(pid)

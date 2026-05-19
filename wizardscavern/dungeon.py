@@ -486,7 +486,113 @@ class Tower:
                     new_floor.grid[mr][mc].properties['is_magic_shop'] = True
                     add_log(f"{COLOR_PURPLE}You sense arcane commerce somewhere on this floor...{COLOR_RESET}")
 
+        self._ensure_d_reachable(new_floor)
         self.floors.append(new_floor)
+
+    def _ensure_d_reachable(self, floor):
+        """Connectivity guarantee: from the player's entry tile (E on
+        F1, U on F2+), BFS through walkable, non-hazard tiles and
+        confirm D (downstairs), W (warp), and V (vendor) are each
+        reachable. If not, carve a corridor through walls (NOT
+        through hazard rooms M / W, which still block transit) to
+        the unreachable target so no floor ships as a hard softlock
+        or as a no-vendor-island spawn pocket.
+
+        Match the agent's BFS transit rules (M and W block transit)
+        rather than raw walkable -- the agent's wayfinder refuses
+        to route through monster / warp tiles, so an "E reaches D
+        only via an M chain" layout is still a softlock for the
+        smart-policy even though raw-walkable BFS says reachable.
+
+        Without this, drunk-carve occasionally produces a tiny
+        spawn pocket where the entry tile is surrounded by M rooms
+        and D is wedged on the far side of the M ring (s=1234 all
+        races: F1 spawn at (1,1)E with M east/south, D at (2,2)
+        behind another M -- agent had to fight 4+ M rooms with no
+        BFS path, starved at T883).
+        """
+        wall = floor.wall_char
+        TRANSIT_BLOCKERS = {wall, 'M', 'W'}
+        # Find entry tile (E if exists, else U)
+        entry = None
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                rt = floor.grid[r][c].room_type
+                if rt == 'E':
+                    entry = (r, c)
+                    break
+                if rt == 'U' and entry is None:
+                    entry = (r, c)
+            if entry and floor.grid[entry[0]][entry[1]].room_type == 'E':
+                break
+        if entry is None:
+            return  # no entry tile, nothing to validate
+        # BFS through non-wall tiles
+        visited = {entry}
+        queue = deque([entry])
+        while queue:
+            r, c = queue.popleft()
+            for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                nr, nc = r + dr, c + dc
+                if (nr, nc) in visited:
+                    continue
+                if not (0 <= nr < floor.rows and 0 <= nc < floor.cols):
+                    continue
+                if floor.grid[nr][nc].room_type in TRANSIT_BLOCKERS:
+                    continue
+                visited.add((nr, nc))
+                queue.append((nr, nc))
+        # Carve a corridor to any required-but-unreachable target.
+        # 'D' on every floor (entry to next), 'W' (warp escape valve),
+        # and 'V' (vendor) -- build-353 validation found ~10% of F1-F4
+        # deaths were on runs that never reached a vendor because V
+        # was walled-off from spawn. Vendors are the only weapon /
+        # armor upgrade path for non-caster races and a major healing-
+        # pot top-up for everyone, so a softlock spawn pocket with no
+        # V is as bad as one with no D.
+        for target in ('D', 'W', 'V'):
+            t_pos = None
+            for r in range(floor.rows):
+                for c in range(floor.cols):
+                    if floor.grid[r][c].room_type == target:
+                        t_pos = (r, c)
+                        break
+                if t_pos:
+                    break
+            if t_pos is None or t_pos in visited:
+                continue
+            # Manhattan corridor from nearest visited tile to t_pos.
+            # Pick the visited cell closest to t_pos, then carve a
+            # straight L-shape (walls -> floor) along the way. Doesn't
+            # touch existing non-wall cells (which preserves the
+            # placement of other rooms).
+            best = min(visited, key=lambda v: abs(v[0]-t_pos[0]) + abs(v[1]-t_pos[1]))
+            br, bc = best
+            tr, tc = t_pos
+            # Step rows first, then columns.
+            for r in range(min(br, tr), max(br, tr) + 1):
+                if floor.grid[r][bc].room_type == wall:
+                    floor.grid[r][bc] = Room('.')
+            for c in range(min(bc, tc), max(bc, tc) + 1):
+                if floor.grid[tr][c].room_type == wall:
+                    floor.grid[tr][c] = Room('.')
+            # Refresh visited for subsequent target checks (the new
+            # corridor adds tiles).
+            queue = deque([best])
+            new_visited = set(visited)
+            while queue:
+                r, c = queue.popleft()
+                for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                    nr, nc = r + dr, c + dc
+                    if (nr, nc) in new_visited:
+                        continue
+                    if not (0 <= nr < floor.rows and 0 <= nc < floor.cols):
+                        continue
+                    if floor.grid[nr][nc].room_type == wall:
+                        continue
+                    new_visited.add((nr, nc))
+                    queue.append((nr, nc))
+            visited = new_visited
 
     def create_floor_50_boss_arena(self, floor):
         """Create the special Floor 50 boss arena with Zot's Guardian"""

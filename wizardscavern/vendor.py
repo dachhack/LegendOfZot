@@ -24,6 +24,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Scroll, Spell, Weapon, Armor, Treasure,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
+    CookingKit,
     _create_item_copy,
     is_item_identified, identify_item,
     get_vendor_identify_cost, get_item_display_name,
@@ -116,6 +117,17 @@ class Vendor:
             # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
             # pre-vendor food cushion.
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
+            # Cooking Kit at the starting vendor too. The 160-seed
+            # audit showed 63/159 runs (40%) never reach a dungeon
+            # vendor at all -- they starve before finding one, and
+            # the kit (which 4x's meat nutrition + auto-cooks the
+            # bag in one action) was only stocked on F3+ dungeon
+            # vendors. Putting it at the starting shop closes the
+            # gap: any run that survives to the starting shop now
+            # has the option to start cooking immediately. Price
+            # (120g) keeps it as a deliberate purchase, not a
+            # freebie.
+            self.inventory.add_item_quiet(CookingKit())
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -263,6 +275,27 @@ class Vendor:
             # All vendors stock rations (3-4)
             num_rations = random.randint(3, 4)
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
+            # Iron Rations: heavier-nutrition option. items.py:2511
+            # listed these at F1+, but the actual dungeon-vendor
+            # stocking in this file never included them -- 0/160 runs
+            # ever saw one. Same goes for Salted Jerky and Cooking
+            # Kit. With 109/160 (68%) of the grid dying of starvation
+            # (dominated by F1-F3 deaths), the missing food tiers were
+            # the bottleneck. current_floor_level is character.z, so
+            # z>=1 == F2+ and z>=2 == F3+.
+            # Iron Rations stack bumped from 1 -> 3 (build 328) for
+            # the same carnage-round push: 70 nut each * 3 = 210
+            # nut per vendor visit on top of the Rations stack,
+            # roughly doubling the vendor's food payload.
+            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=3))
+            if current_floor_level >= 1:  # F2+
+                self.inventory.add_item_quiet(Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1))
+            if current_floor_level >= 2:  # F3+
+                # Cooking Kit multiplies meat nutrition by ~4x and
+                # cooks ALL raw meat in the bag in one action. The
+                # death-cause histogram showed this as the single
+                # biggest depth gate the agent never saw.
+                self.inventory.add_item_quiet(CookingKit())
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:

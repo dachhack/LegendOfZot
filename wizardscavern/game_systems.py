@@ -699,7 +699,7 @@ def process_vault_defender_combat(player_character, my_tower, cmd):
     elif cmd == 'c':
         # Only allow spell casting if player can cast spells
         if not can_cast_spells(player_character):
-            add_log(f"{COLOR_YELLOW}You cannot cast spells. (Requires Intelligence > 15){COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}You cannot cast spells. (Need mana and either a memorized spell or a racial cantrip){COLOR_RESET}")
             return
         gs.prompt_cntl = 'spell_casting_mode'
         process_spell_casting_action(player_character, my_tower, "init")
@@ -2245,15 +2245,24 @@ def handle_inventory_menu(player_character, my_tower, cmd):
             if 0 <= item_number < len(working_items):
                 item_to_equip = working_items[item_number]
 
-                # Block equipping non-bug items while shrunk
+                # Bug-gear sizing: bug-sized weapons/armor only fit
+                # while shrunk; regular gear only fits at normal size.
+                # The mirror restriction means an un-shrunk hero
+                # can't keep wielding a tiny Stinger Blade after
+                # leaving the bug level.
+                from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+                bug_item_names = {t['name'] for t in BUG_WEAPON_TEMPLATES} | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+                is_bug_item = item_to_equip.name in bug_item_names
                 if gs.player_is_shrunk:
-                    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
-                    bug_item_names = {t['name'] for t in BUG_WEAPON_TEMPLATES} | {t['name'] for t in BUG_ARMOR_TEMPLATES}
-                    if isinstance(item_to_equip, (Weapon, Armor, Towel)) and item_to_equip.name not in bug_item_names:
+                    if isinstance(item_to_equip, (Weapon, Armor, Towel)) and not is_bug_item:
                         add_log(f"{COLOR_YELLOW}You're too tiny to use {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
                         return
                     if isinstance(item_to_equip, Treasure) and item_to_equip.treasure_type == 'passive':
                         add_log(f"{COLOR_YELLOW}You're too tiny to wear {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
+                        return
+                else:
+                    if isinstance(item_to_equip, (Weapon, Armor)) and is_bug_item:
+                        add_log(f"{COLOR_YELLOW}The {item_to_equip.name} is comically tiny in your normal-sized hands -- it'd snap on the first swing.{COLOR_RESET}")
                         return
 
                 if isinstance(item_to_equip, Weapon):
@@ -3028,10 +3037,41 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         new_z = random.randint(min_z, max_z)
         if new_z == current_z and min_z != max_z:
              new_z = random.randint(min_z, max_z)  # Try one more time to change floors
+        # Forbid warping INTO a bug level via this random roll --
+        # the bug level should only be entered by deliberate stair
+        # descent. Without this filter agents on F6/F7/F9 routinely
+        # warp into F8 underleveled with no bug gear.
+        while len(my_tower.floors) <= new_z:
+            my_tower.add_floor(**floor_params_ref)
+        if (new_z != current_z
+                and my_tower.floors[new_z].properties.get('is_bug_level')):
+            # Try nudging one floor away. If that's also bug-level
+            # or out of range, fall back to staying on current floor
+            # (the warp still consumes a turn but no shrinking).
+            alt = new_z + 1 if new_z + 1 <= max_z else new_z - 1
+            if (min_z <= alt <= max_z
+                    and alt != current_z):
+                while len(my_tower.floors) <= alt:
+                    my_tower.add_floor(**floor_params_ref)
+                if not my_tower.floors[alt].properties.get('is_bug_level'):
+                    new_z = alt
+                else:
+                    new_z = current_z
+            else:
+                new_z = current_z
+
+        # Warp transition: if we're leaving the bug level AND the
+        # quest has been passed, the Mushroom's residual power un-
+        # shrinks us en route. Runs before the floor switch so the
+        # arrival on the non-bug floor is already normal-sized.
+        from_floor = my_tower.floors[current_z]
+        target_floor = my_tower.floors[new_z]
+        if (from_floor.properties.get('is_bug_level')
+                and not target_floor.properties.get('is_bug_level')):
+            _restore_size_on_bug_exit(player_character)
 
         player_character.z = new_z
         gs.music_restart = True
-        target_floor = my_tower.floors[new_z]
 
         # Pick new location
         while True:
@@ -3665,11 +3705,54 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
                 gs.player_sprite_return_to = None
                 if return_to:
                     gs.prompt_cntl = return_to
+                elif player_character.race == 'elf':
+                    # Elf branches into the cantrip picker before the
+                    # starting shop. Other races skip straight to shop.
+                    gs.cantrip_selections = []
+                    gs.prompt_cntl = "player_cantrips"
                 else:
                     gs.prompt_cntl = "starting_shop"
                     handle_starting_shop(player_character, my_tower, "init")
                 return True
         add_log("Tap a portrait to continue.")
+        return True
+
+    if _cntl == "player_cantrips":
+        # Build-355: elf cantrip picker. 4 cantrips on offer, player
+        # toggles via 'ct1'..'ct4', confirms with 'x' once exactly 2
+        # are selected. Cantrips are mana_cost=1, slot-free, granted
+        # by appending Spell copies directly to memorized_spells.
+        from .item_templates import SPELL_TEMPLATES as _ST
+        cantrip_pool = [s for s in _ST if getattr(s, 'is_cantrip', False)]
+        choice = (cmd or '').lower().strip()
+        if choice.startswith('ct') and choice[2:].isdigit():
+            idx = int(choice[2:]) - 1
+            if 0 <= idx < len(cantrip_pool):
+                if idx in gs.cantrip_selections:
+                    gs.cantrip_selections.remove(idx)
+                elif len(gs.cantrip_selections) < 2:
+                    gs.cantrip_selections.append(idx)
+                else:
+                    add_log("You can only pick two cantrips.")
+            return True
+        if choice == 'x':
+            if len(gs.cantrip_selections) != 2:
+                add_log("Pick exactly two cantrips before confirming.")
+                return True
+            import copy
+            for idx in gs.cantrip_selections:
+                spell_copy = copy.deepcopy(cantrip_pool[idx])
+                player_character.memorized_spells.append(spell_copy)
+                # Cantrips are racial knowledge -- auto-identified so
+                # the player doesn't have to scry a starter cantrip.
+                if hasattr(spell_copy, 'is_identified'):
+                    spell_copy.is_identified = True
+            picked = ", ".join(cantrip_pool[i].name for i in gs.cantrip_selections)
+            add_log(f"You know {picked}.")
+            gs.cantrip_selections = []
+            gs.prompt_cntl = "starting_shop"
+            handle_starting_shop(player_character, my_tower, "init")
+            return True
         return True
     return False # Should not be reached if state is managed
 def activate_playtest_mode(player_character):
@@ -3963,10 +4046,64 @@ def activate_playtest_mode(player_character):
 
 
 
+def _restore_size_on_bug_exit(player_character):
+    """When a quest-passed player attempts to leave the bug level
+    while shrunk, the Growth Mushroom's residual power activates --
+    they grow back to normal size as they step off the floor. Called
+    by the stair / warp handlers BEFORE the floor transition runs,
+    so the arriving player on the new floor is already normal-sized
+    and can equip regular gear.
+
+    Side effect: bug-sized weapon / armor in the equip slots is
+    auto-unequipped on regrow (it'd be comically small in normal
+    hands and the equip handler now rejects it on swap anyway)."""
+    if (gs.player_is_shrunk
+            and getattr(gs, 'player_passed_bug_quest', False)):
+        add_log("")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        add_log(f"{COLOR_GREEN}The Mushroom's residual power surges as you leave the bug floor!{COLOR_RESET}")
+        add_log(f"{COLOR_GREEN}You GROW back to your normal size!{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        add_log("")
+        gs.player_is_shrunk = False
+        try:
+            player_character.remove_status_effect('Shrinking')
+        except Exception:
+            pass
+        # Drop bug-sized equipped gear -- it doesn't fit anymore.
+        from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+        bug_item_names = (
+            {t['name'] for t in BUG_WEAPON_TEMPLATES}
+            | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+        )
+        ew = player_character.equipped_weapon
+        if ew is not None and ew.name in bug_item_names:
+            add_log(f"{COLOR_YELLOW}The {ew.name} falls from your hand -- it's comically tiny now.{COLOR_RESET}")
+            player_character.equipped_weapon = None
+        ea = player_character.equipped_armor
+        if ea is not None and ea.name in bug_item_names:
+            add_log(f"{COLOR_YELLOW}The {ea.name} slides off -- it no longer fits.{COLOR_RESET}")
+            player_character.equipped_armor = None
+
+
 def _trigger_shrinking_spell(player_character):
-    """Trigger Zot's shrinking spell when player enters a bug level."""
+    """Trigger Zot's shrinking spell when player enters a bug level.
+
+    Re-fires on every bug-level entry. The Mushroom's residual power
+    automatically restores normal size the moment the player LEAVES
+    the bug-level floor (see _restore_size_on_bug_exit), so a
+    re-shrunk veteran can still escape via stairs."""
     gs.player_is_shrunk = True
     gs.bug_queen_defeated = False
+    # Restart the "she's done waiting" countdown. Bug Queen spawns
+    # automatically after a fixed move budget even if some bugs
+    # remain unreachable (region-split layouts). See
+    # combat._check_bug_queen_spawn.
+    gs.bug_shrink_moves = 0
+    # Per-bug-level kill counter. Feeds the early-enrage spawn:
+    # killing enough of her children pulls the Queen out regardless
+    # of remaining bugs.
+    gs.bug_kills_this_level = 0
 
     # Add the shrinking status effect (very long duration - effectively permanent until cured)
     player_character.add_status_effect(
@@ -3976,6 +4113,27 @@ def _trigger_shrinking_spell(player_character):
         magnitude=0,
         description="Zot's shrinking spell - you are tiny!"
     )
+
+    # Emergency starter kit so a player arriving by warp-forced has at
+    # least one bug-sized weapon and a healing potion -- without this
+    # they punch bug monsters for 1 damage with their fists (regular
+    # gear is too big to wield while shrunk) and die in 30T. Playtest
+    # audit on F6->F8 warp-forced runs (s=88 elf, 167 dwarf, 500 human)
+    # showed all three had zero bug weapons and zero heal pots on
+    # arrival and died within 36T of the shrink trigger.
+    from .game_data import BUG_WEAPON_TEMPLATES
+    starter = BUG_WEAPON_TEMPLATES[0]  # Stinger Blade
+    player_character.inventory.add_item(Weapon(
+        name=starter['name'], description=starter['description'],
+        attack_bonus=starter['attack_bonus'], value=starter['value'],
+        level=starter['level'], upgrade_level=0,
+        elemental_strength=starter.get('elemental_strength', ["None"]),
+    ))
+    player_character.inventory.add_item(Potion(
+        "Nectar Vial",
+        "A drop of flower nectar -- a full meal at this size.",
+        value=25, level=1, potion_type='healing', effect_magnitude=35,
+    ))
 
     add_log("")
     add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
@@ -4131,6 +4289,36 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
             my_tower.add_floor(**gs.floor_params)
 
         new_z = random.randint(min_z, max_z)
+
+        # Forbid warp-portal destinations on the bug level -- the
+        # bug-quest should only start by deliberate stair descent.
+        # Nudge to an adjacent floor (or stay) if the random roll
+        # lands on F8.
+        while len(my_tower.floors) <= new_z:
+            my_tower.add_floor(**gs.floor_params)
+        if (new_z != player_character.z
+                and my_tower.floors[new_z].properties.get('is_bug_level')):
+            alt = new_z + 1 if new_z + 1 <= max_z else new_z - 1
+            if (min_z <= alt <= max_z
+                    and alt != player_character.z):
+                while len(my_tower.floors) <= alt:
+                    my_tower.add_floor(**gs.floor_params)
+                if not my_tower.floors[alt].properties.get('is_bug_level'):
+                    new_z = alt
+                else:
+                    new_z = player_character.z
+            else:
+                new_z = player_character.z
+
+        # Bug-level exit auto-cure: if leaving a bug floor for a
+        # non-bug floor AND quest already passed, the Mushroom's
+        # residual power restores normal size mid-warp.
+        from_floor_warp = my_tower.floors[player_character.z]
+        to_floor_warp = my_tower.floors[new_z]
+        if (from_floor_warp.properties.get('is_bug_level')
+                and not to_floor_warp.properties.get('is_bug_level')):
+            _restore_size_on_bug_exit(player_character)
+
         player_character.z = new_z
 
         # Determine new (x,y) on the new floor
@@ -4163,18 +4351,22 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
 
 def process_stairs_up_action(player_character, my_tower, cmd, floor_params_ref):
 
+    passed_quest = getattr(gs, 'player_passed_bug_quest', False)
     if cmd == "init":
-        if gs.player_is_shrunk:
+        if gs.player_is_shrunk and not passed_quest:
             add_log(f"{COLOR_YELLOW}You see stairs leading upwards, but each step is a cliff face at your size!{COLOR_RESET}")
             add_log(f"{COLOR_RED}Zot's shrinking spell prevents you from leaving! Defeat the Bug Queen or find a Growth Mushroom!{COLOR_RESET}")
+        elif gs.player_is_shrunk and passed_quest:
+            add_log(f"{COLOR_GREEN}The Mushroom's power stirs in your veins -- you can leave this floor and grow back to normal size.{COLOR_RESET}")
         else:
             add_log("You see stairs leading upwards. Press 'u' to ascend.")
         return
 
     if cmd == 'u':
-        if gs.player_is_shrunk:
+        if gs.player_is_shrunk and not passed_quest:
             add_log(f"{COLOR_RED}You try to climb but the stairs are impossibly tall! You need to break the shrinking spell first!{COLOR_RESET}")
             return
+        _restore_size_on_bug_exit(player_character)
         add_log("You begin to climb the stairs.")
         ch_x, ch_y, game_quit, interacted = handle_stairs_up(player_character, my_tower, floor_params_ref)
         if game_quit:
@@ -4193,11 +4385,14 @@ def process_stairs_up_action(player_character, my_tower, cmd, floor_params_ref):
 
 def process_stairs_down_action(player_character, my_tower, cmd):
 
+    passed_quest = getattr(gs, 'player_passed_bug_quest', False)
     if cmd == "init":
-        if gs.player_is_shrunk:
+        if gs.player_is_shrunk and not passed_quest:
             add_log(f"{COLOR_YELLOW}You see stairs leading downwards, but each step is a deadly drop at your size!{COLOR_RESET}")
             add_log(f"{COLOR_RED}Zot's shrinking spell prevents you from leaving! Defeat the Bug Queen or find a Growth Mushroom!{COLOR_RESET}")
             return
+        if gs.player_is_shrunk and passed_quest:
+            add_log(f"{COLOR_GREEN}The Mushroom's power stirs in your veins -- you can leave this floor and grow back to normal size.{COLOR_RESET}")
         # Check if this is floor 49 (the gate to floor 50)
         if player_character.z == 48:  # 0-indexed, floor 48 is the 49th floor
             if gs.gate_to_floor_50_unlocked:
@@ -4213,9 +4408,10 @@ def process_stairs_down_action(player_character, my_tower, cmd):
         return
 
     if cmd == 'd':
-        if gs.player_is_shrunk:
+        if gs.player_is_shrunk and not passed_quest:
             add_log(f"{COLOR_RED}You peer over the edge but the drop is lethal at your size! Break the shrinking spell first!{COLOR_RESET}")
             return
+        _restore_size_on_bug_exit(player_character)
         # Check if trying to descend from floor 49 without all shards
         if player_character.z == 48 and not gs.gate_to_floor_50_unlocked:
             add_log(f"{COLOR_RED}The gate remains sealed! You need all 8 Shards of Power!{COLOR_RESET}")
@@ -4310,6 +4506,7 @@ MODE_HANDLERS = {
     "player_race":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_gender":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_sprite":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
+    "player_cantrips":        lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
 
     # Shops / vendors.
     "starting_shop":          handle_starting_shop,
@@ -4341,7 +4538,8 @@ MODE_HANDLERS = {
 # handle_starting_shop has its own "done shopping" boolean).  Everything
 # else just returns True once dispatched.
 _HANDLE_PASSTHROUGH_RESULT = {
-    "player_name", "player_race", "player_gender", "starting_shop",
+    "player_name", "player_race", "player_gender", "player_cantrips",
+    "starting_shop",
 }
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0
@@ -4537,11 +4735,19 @@ def generate_player_sprite_html(race, gender, equipped_armor=None):
 def can_cast_spells(player_character):
     """
     Check if player has the ability to cast spells.
-    Returns True if player has: 
-    - Max mana > 0 (requires Intelligence > 15)
-    - Max spell slots > 0 (requires Intelligence > 15)
+    Returns True if player has:
+    - Max mana > 0 AND
+    - Either max spell slots > 0 (regular memorized spell) OR at least
+      one cantrip in memorized_spells (cantrips are slot-free racial
+      magic granted at character creation -- elves at INT 12 have
+      max_slots = 0 but can still fire their cantrips).
     """
-    return player_character.max_mana > 0 and player_character.get_max_memorized_spell_slots() > 0
+    if player_character.max_mana <= 0:
+        return False
+    if player_character.get_max_memorized_spell_slots() > 0:
+        return True
+    return any(getattr(s, 'is_cantrip', False)
+               for s in player_character.memorized_spells)
 
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display."""

@@ -1219,6 +1219,9 @@ class Potion(Item):
 
             # Remove shrinking effect
             gs.player_is_shrunk = False
+            # Persistent quest-complete flag: bug-level re-entry should
+            # no longer re-cast the spell. The player has paid the price.
+            gs.player_passed_bug_quest = True
             character.remove_status_effect('Shrinking')
 
             return True  # Consumed
@@ -1988,13 +1991,27 @@ class Scroll(Item):
             return True  # Consumed
 
         elif self.scroll_type == 'descent':
-            #  DESCENT SCROLL 
+            #  DESCENT SCROLL
             add_log(f"{COLOR_PURPLE}You read the {self.name}!{COLOR_RESET}")
             add_log(f"{COLOR_PURPLE}The floor beneath you opens...{COLOR_RESET}")
 
-            # Teleport down 1-3 floors
+            # Teleport down 1-3 floors, but never INTO a bug level --
+            # forcing the player to shrink with no prep / no bug
+            # gear is too punishing as a non-consensual destination.
+            # If the rolled target is a bug floor, nudge one floor
+            # deeper (or shallower if pinned at the deep end).
+            start_z = character.z
             floors_down = random.randint(1, 3)
-            character.z += floors_down
+            target_z = min(49, start_z + floors_down)
+            while len(my_tower.floors) <= target_z:
+                my_tower.add_floor(**gs.floor_params)
+            if my_tower.floors[target_z].properties.get('is_bug_level'):
+                if target_z + 1 <= 49:
+                    target_z += 1
+                else:
+                    target_z -= 1
+            character.z = target_z
+            floors_down = character.z - start_z
 
             # Generate floors if needed
             while len(my_tower.floors) <= character.z:
@@ -2112,8 +2129,17 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
         scroll_tier = "Basic"
         next_tier_hint = "Scroll of Greater Upgrade (floor 5+)"
 
+    # Iterate the sorted view to match the rest of the game's slot
+    # numbering (vendor identify, use-item-slot, equip-item-slot all
+    # use get_sorted_inventory). Without this, the scroll menu numbers
+    # items by insertion order, so picking '1' in the menu doesn't
+    # correspond to the equipped weapon the player sees first in their
+    # bag. Playtester scanned 9 upgrade scrolls consumed on s=1 dwarf
+    # yet the equipped Halberd ended +0 upg -- the upgrades were being
+    # applied to junk weapons that got dropped later.
+    from .characters import get_sorted_inventory
     upgradable_items = []
-    for item in player_character.inventory.items:
+    for item in get_sorted_inventory(player_character.inventory):
         if isinstance(item, (Weapon, Armor)):
             upgradable_items.append(item)
 
@@ -2158,21 +2184,33 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_YELLOW}This item has reached the maximum possible upgrade level!{COLOR_RESET}")
                 return
 
-            # Upgrade probability logic - gets harder at higher levels
-            base_prob = 0.70
+            # Upgrade probability logic - gets harder at higher levels.
+            # User flagged 'pretty high failure rate on upgrade
+            # scrolls' on the 159-seed grid. Bumped each tier by
+            # 10pp and softened the natural-limit penalty
+            # 15pp -> 8pp. Base rate of 80% (was 70%) means a Lv1
+            # agent at INT 8-12 lands the first upgrade at the 90-95%
+            # clamp instead of 79-83%. The diminishing-returns shape
+            # is preserved (still gets harder at +6 / +10 / +15)
+            # but the curve doesn't bite as hard early.
+            base_prob = 0.80
             if chosen_item.upgrade_level >= 15:
-                base_prob = 0.35  # Very hard at +15 and above
+                base_prob = 0.45  # Very hard at +15 and above
             elif chosen_item.upgrade_level >= 10:
-                base_prob = 0.45  # Hard at +10 to +14
+                base_prob = 0.55  # Hard at +10 to +14
             elif chosen_item.upgrade_level >= 6:
-                base_prob = 0.55  # Medium at +6 to +9
+                base_prob = 0.65  # Medium at +6 to +9
             elif chosen_item.upgrade_level >= 3:
-                base_prob = 0.60  # Slightly harder at +3 to +5
-            
-            # Item's own upgrade limit still applies
+                base_prob = 0.70  # Slightly harder at +3 to +5
+
+            # Item's own upgrade limit still applies (softened from
+            # -15pp to -8pp; starter Battleaxe / Dagger sit at
+            # item.level = 0 so even a +1 upgrade trips this gate,
+            # and the steep penalty was the dominant reason early
+            # scrolls fizzled).
             if chosen_item.upgrade_limit:
                 if chosen_item.upgrade_level >= (chosen_item.level + 1):
-                    base_prob -= 0.15  # Penalty for exceeding item's natural limit
+                    base_prob -= 0.08
             
             # Intelligence and level bonuses
             upgrade_prob = base_prob + (player_character.intelligence / 100) + (player_character.level / 100)
@@ -2221,9 +2259,11 @@ def process_identify_scroll_action(player_character, my_tower, cmd):
         handle_inventory_menu(player_character, my_tower, "init")
         return
     
-    # Build list of unidentified items
+    # Sorted view for consistent slot numbering with the rest of
+    # the game (see upgrade-scroll comment above).
+    from .characters import get_sorted_inventory
     unidentified_items = []
-    for item in player_character.inventory.items:
+    for item in get_sorted_inventory(player_character.inventory):
         if isinstance(item, (Potion, Scroll, Spell, Weapon, Armor)):
             if not is_item_identified(item):
                 unidentified_items.append(item)
@@ -2495,14 +2535,20 @@ def generate_vendor_inventory(floor_level, room):
     #   F2+: Salted Jerky.
     #   F3+: Cooking Kit (original game tier; restored after a
     #        brief F4 experiment).
+    # NB: floor_level here is character.z (0-indexed). F2 == z=1
+    # and F3 == z=2. Without this correction the jerky tier fired
+    # at F3+ and the cooking-kit tier at F4+ -- 160-run audit found
+    # 0/160 runs with either item stocked. 109/160 (68%) of those
+    # runs died of starvation, dominated by F1-F3 deaths where the
+    # cooking kit would have multiplied the meat economy.
     rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
     iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
     inventory.append(_create_item_copy(iron_rations))
-    if floor_level >= 2:
+    if floor_level >= 1:  # F2+
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
-    if floor_level >= 3:
+    if floor_level >= 2:  # F3+
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
 
@@ -2733,7 +2779,18 @@ MEAT_DEFAULT = ("steak", "dubious", 12)
 MEAT_DEFAULT_CUTS = ["steak", "burger", "chops", "filet", "kebab"]
 
 HUNGER_MAX = 100
-HUNGER_DECAY_PER_MOVE = 1  # hunger decreases 1 per move
+# Hunger decays 7 units per 10 moves -- 0.7/move averaged. Earlier
+# rate was 1/move flat. The 5000-turn carnage round (build 327)
+# audit showed agents hit a per-floor deficit on vendor-less
+# floors (~65 nut short per floor), compounding into ~60 turns at
+# hunger 0 even though they were eating constantly. Slowing the
+# clock by 30% stretches every food source -- starter pack,
+# vendor stock, monster meat -- proportionally, so more agents
+# push past the F3-F4 starvation gate and into the F5+ tomb
+# grinder where the real carnage lives. The tracker-pair below
+# keeps decay integer (no float drift) and deterministic.
+HUNGER_DECAY_PER_MOVE = 7
+HUNGER_DECAY_INTERVAL = 10
 HUNGER_STARVING_THRESHOLD = 10   # below this: starving, take 1 dmg per move
 HUNGER_HUNGRY_THRESHOLD = 40     # below this: hungry, slight combat penalty
 HUNGER_PECKISH_THRESHOLD = 70     # below this: peckish, just a cute British word
@@ -3101,11 +3158,14 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 55% chance to drop meat (was 35% -- user-requested balance pass).
-    # Combined with the Cooking Kit being F1+ available, this gives
-    # agents who clear floors a meaningful steady food source so the
-    # food clock doesn't always end the run before depth does.
-    if random.random() > 0.55:
+    # 70% chance to drop meat (was 55%, originally 35%). Build-327
+    # food audit showed agents averaging only ~15 kills per floor
+    # past F3 with a 55% drop rate, generating roughly 75 nut of
+    # meat against a 140 nut per-floor exploration cost. Bumping
+    # to 70% pushes meat supply to ~100 nut per floor and meets
+    # the 5000-turn 'deep death' carnage goal alongside the slower
+    # hunger decay and bigger Iron Rations stash.
+    if random.random() > 0.70:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
@@ -3142,6 +3202,11 @@ def tick_meat_rot(character):
 
 def process_hunger(character):
     """Called each move. Decreases hunger and applies penalties/bonuses."""
+    # Bug-level move counter: ticks while shrunk, drives the "she's
+    # done waiting" Bug Queen spawn fallback in
+    # combat._check_bug_queen_spawn. Resets in _trigger_shrinking_spell.
+    if gs.player_is_shrunk:
+        gs.bug_shrink_moves = getattr(gs, 'bug_shrink_moves', 0) + 1
     # Check for lembas hunger freeze
     freeze = getattr(character, 'hunger_freeze_turns', 0)
     if freeze > 0:
@@ -3149,7 +3214,17 @@ def process_hunger(character):
         if character.hunger_freeze_turns == 0:
             add_log(f"{COLOR_YELLOW}The sustaining power of the lembas fades.{COLOR_RESET}")
     else:
-        character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
+        # Fractional decay via integer tracker: accumulate
+        # HUNGER_DECAY_PER_MOVE per call and drain one hunger
+        # point every time the tracker reaches HUNGER_DECAY_INTERVAL.
+        # At the 7/10 ratio that averages 0.7 hunger/move while
+        # keeping every decrement an integer step.
+        tracker = getattr(character, 'hunger_decay_tracker', 0)
+        tracker += HUNGER_DECAY_PER_MOVE
+        while tracker >= HUNGER_DECAY_INTERVAL:
+            character.hunger = max(0, character.hunger - 1)
+            tracker -= HUNGER_DECAY_INTERVAL
+        character.hunger_decay_tracker = tracker
 
     h = character.hunger
 
@@ -3502,7 +3577,8 @@ class Towel(Item):
 
 class Spell(Item):
     def __init__(self, name, description="", mana_cost=0, damage_type='Physical', base_power=0, level=0, spell_type='damage',
-                 status_effect_name=None, status_effect_duration=0, status_effect_type=None, status_effect_magnitude=0):
+                 status_effect_name=None, status_effect_duration=0, status_effect_type=None, status_effect_magnitude=0,
+                 is_cantrip=False):
         # Call parent Item class's __init__. Value is placeholder based on mana_cost.
         super().__init__(name, description, value=mana_cost * 2, level=level)
         self.mana_cost = mana_cost
@@ -3513,6 +3589,10 @@ class Spell(Item):
         self.status_effect_duration = status_effect_duration
         self.status_effect_type = status_effect_type
         self.status_effect_magnitude = status_effect_magnitude
+        # Cantrips: cost 1 MP, take 0 memorization slots, and bypass the
+        # spell-slot gate so a fresh elf can hold them at INT 12.
+        # Granted at character creation via the cantrip picker.
+        self.is_cantrip = is_cantrip
 
     def __repr__(self):
         base_repr = f"Spell(name='{self.name}', mana_cost={self.mana_cost}, level={self.level}, spell_type='{self.spell_type}')"
@@ -3535,6 +3615,11 @@ class Spell(Item):
 # Replace your existing SPELL_TEMPLATES list with this expanded version:
 
 SPELL_TEMPLATES = [
+    # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
+    Spell(name="Detect Monster", description="Reveals the name, level, and location of any monsters in a 3x3 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='detect_monster', is_cantrip=True),
+    Spell(name="Light", description="A floating sphere of magelight reveals the dungeon in a 5x5 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='reveal_fog', is_cantrip=True),
+    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- enough to flee, or to land a free attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
+    Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
     Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=3, damage_type='Wind', base_power=12, level=0),

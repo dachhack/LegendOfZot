@@ -896,9 +896,14 @@ class Character:
             int_mp = (int_score - 20) * 2 + 3
             lvl_mp = max(0, (self.level - 4) * 4)
         elif race == 'elf':
-            if int_score <= 15:
+            # Build-355: gate lowered 15 -> 11 so a fresh elf (INT 12)
+            # starts with mana to spend on the racial cantrips. Slope
+            # softened (4 -> 3 per INT) so high-INT mana pool stays
+            # roughly the same: INT 12 -> 8 MP, INT 16 -> 20 MP (was
+            # 14), INT 25 -> 47 MP (was 50).
+            if int_score <= 11:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 15) * 4 + 10
+            int_mp = (int_score - 11) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 10)
         else:  # human (default)
             if int_score <= 15:
@@ -1374,6 +1379,44 @@ class Character:
             else:
                 add_log(f"{COLOR_YELLOW}No specific status effect to remove for {spell_to_cast.name}.{COLOR_RESET}")
             return True
+        elif spell_to_cast.spell_type == 'detect_monster':
+            # Cantrip: scan a 3x3 around the caster, log each monster
+            # we find by name + level + (col,row), and reveal the tile
+            # so the player sees it on the map. Caster-centred; target
+            # arg ignored. No INT scaling -- a cantrip is a cantrip.
+            floor = gs.my_tower.floors[self.z]
+            found = []
+            for dy in range(-1, 2):
+                for dx in range(-1, 2):
+                    r, c = self.y + dy, self.x + dx
+                    if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                        tile = floor.grid[r][c]
+                        if tile.room_type == 'M':
+                            mon = gs.encountered_monsters.get((c, r, self.z))
+                            if mon and getattr(mon, 'health', 1) > 0:
+                                found.append(f"{mon.name} (Lvl {mon.level}) at ({c},{r})")
+                                tile.discovered = True
+            if found:
+                add_log(f"{COLOR_PURPLE}Detect Monster: {'; '.join(found)}.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_PURPLE}Detect Monster: no creatures nearby.{COLOR_RESET}")
+            return True
+        elif spell_to_cast.spell_type == 'reveal_fog':
+            # Cantrip: mark every tile in a 5x5 around the caster as
+            # discovered. Helpful for sweeping unmapped corridor in
+            # dark rooms / fog-of-war floors.
+            floor = gs.my_tower.floors[self.z]
+            revealed = 0
+            for dy in range(-2, 3):
+                for dx in range(-2, 3):
+                    r, c = self.y + dy, self.x + dx
+                    if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                        tile = floor.grid[r][c]
+                        if not tile.discovered:
+                            tile.discovered = True
+                            revealed += 1
+            add_log(f"{COLOR_YELLOW}Light reveals {revealed} new tiles.{COLOR_RESET}")
+            return True
         elif spell_to_cast.spell_type == 'add_status_effect':
             # Buff spells: apply to SELF (the caster)
             if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:
@@ -1446,6 +1489,11 @@ class Character:
 
     def get_spell_slots(self, spell):
         """Calculate how many slots a spell takes to memorize based on its level."""
+        # Cantrips are slot-free -- they're racial spells, not memorized
+        # from the spellbook, so they don't compete with Level 0+ spells
+        # for the limited INT-gated slot pool.
+        if getattr(spell, 'is_cantrip', False):
+            return 0
         # Level 0 spells: 1 slot
         # Level 1-2 spells: 2 slots
         # Level 3+ spells: 3 slots

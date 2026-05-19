@@ -215,6 +215,98 @@ class SpriteRegistry:
         return "\n".join(rules)
 
 
+_MEAT_CUTS = (
+    "burger", "chops", "cold cuts", "filet", "kebab",
+    "nuggets", "roast", "skewer", "steak",
+)
+
+
+def _normalize_meat_name(raw, cooked):
+    """Drop leading descriptor words and lowercase the cut so cook
+    log entries (`Cooked Kobold Cold cuts`) and eat log entries
+    (`Cooked sinewy Kobold cold cuts`) hash to the same key in the
+    food-economy table.
+
+    Strategy: find the trailing cut suffix from a known list (the
+    monster_meat table in items.py:2716+ has 9 cut shapes), then
+    take the word(s) immediately before it as the monster name --
+    everything before that is descriptor and gets dropped. This is
+    more robust than the earlier 'first capitalised word' heuristic
+    which mis-grouped two-word cooked-meat names where the cut
+    itself was capitalised (cook log emits {cut.capitalize()} so
+    'Cooked Gnoll Burger' looks like a two-word monster name)."""
+    raw = raw.strip()
+    low = raw.lower()
+    cut_found = None
+    body_end = len(raw)
+    for cand in _MEAT_CUTS:
+        # Match the cut as a trailing word boundary so 'cold cuts'
+        # wins over 'cuts'.
+        if low.endswith(" " + cand) or low == cand:
+            cut_found = cand
+            body_end = len(raw) - (len(cand) + (1 if low != cand else 0))
+            break
+    if cut_found is None:
+        # No known cut suffix -- this is the 'You harvested some
+        # raw X meat' case (cut == 'meat') or a sausage / lembas
+        # path. Fall back to identifying the first capitalised
+        # word as the monster name.
+        parts = raw.split()
+        monster_idx = next(
+            (i for i, w in enumerate(parts) if w and w[0].isupper()),
+            0,
+        )
+        monster = parts[monster_idx] if monster_idx < len(parts) else raw
+        if (monster_idx + 1 < len(parts)
+                and parts[monster_idx + 1]
+                and parts[monster_idx + 1][0].isupper()):
+            monster += " " + parts[monster_idx + 1]
+            cut_start = monster_idx + 2
+        else:
+            cut_start = monster_idx + 1
+        cut = " ".join(parts[cut_start:]).lower()
+        prefix = "Cooked " if cooked else "Raw "
+        return f"{prefix}{monster} {cut}".rstrip()
+    body = raw[:body_end].strip()
+    # The monster name is the trailing word(s) of `body`. Take the
+    # last 1-2 capitalised words; everything before is descriptor.
+    body_parts = body.split()
+    cap_run_start = len(body_parts)
+    for i in range(len(body_parts) - 1, -1, -1):
+        w = body_parts[i]
+        if w and w[0].isupper():
+            cap_run_start = i
+        else:
+            break
+    monster = " ".join(body_parts[cap_run_start:]).strip() or body
+    prefix = "Cooked " if cooked else "Raw "
+    return f"{prefix}{monster} {cut_found}"
+
+
+def _detect_loop_period(actions, min_matches=12):
+    """Given a list of action strings, return the cycle period
+    (1, 2, 3, or 4) if at least `min_matches` of them fit a tight
+    periodic pattern keyed to the tail. Else None.
+
+    Used both for end-of-run stuck classification (called once with
+    the last 20 actions) and the post-hoc episode scan (called per
+    sliding window across the whole run)."""
+    if len(actions) < min_matches:
+        return None
+    for period in (1, 2, 3, 4):
+        if len(actions) < period * 3:  # need at least 3 cycles
+            continue
+        base = actions[-period:]
+        matches = 0
+        for i in range(len(actions)):
+            pos_from_end = len(actions) - 1 - i
+            if actions[i] == base[(period - 1) - (pos_from_end % period)]:
+                matches += 1
+        if matches >= min_matches:
+            return period
+    return None
+
+
 def _sprite_span(registry, pid, size=32, extra_class=""):
     """Emit an inline sprite reference using the registry for dedupe."""
     if not pid:
@@ -254,9 +346,33 @@ class RunReport:
         self.hp_timeline = []  # [(turn, hp, max_hp)]
         self.mana_timeline = []  # [(turn, mana, max_mana)]
         self.hunger_timeline = []  # [(turn, hunger)]  -- hunger is 0-100
+        # Food / cooking accounting -- populated from log parsing in
+        # _categorise_log. Used by the per-run Food Economy report
+        # section so the playtester can spot agents wasting meat,
+        # starving with food in the bag, or skipping the cooking kit.
+        self.eat_events = []        # [(turn, food_name, hunger_gained)]
+        self.cook_events = []       # [(turn, meat_name)] per-piece cook log
+        self.cook_batches = []      # [(turn, count)] per kit-use summary
+        self.meat_rot_events = []   # [(turn, meat_name)] -- meat that spoiled in the bag
+        self.meat_drops_log = []    # [(turn, meat_name)] -- monster meat drop landings
         self.events = []  # [(turn, kind, detail)]
         self.recent_log = []  # rolling buffer of last 60 lines
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
+        # Full per-run action history used for two passes:
+        #   - end-of-run stuck classification (last 20 actions only)
+        #   - post-hoc mid-run loop-episode scan (whole list, at
+        #     finalize time, after the run is over)
+        # Each entry is (turn, mode, action) so the episode reporter
+        # can name the mode the agent got wedged in.
+        self._action_history = []  # [(turn, mode, action)] full run
+        # Mid-run loop episodes found at finalize. Each entry:
+        #   {"start": int, "end": int, "length": int, "period": int,
+        #    "mode": str, "action": str}
+        # Sorted by length descending. Episodes < 50 turns are
+        # filtered out -- the harness's anti-wedge breaks short
+        # ones cheaply; what we care about are the persistent ones
+        # that burn real budget before resolving.
+        self.loop_episodes = []
         self.kills_by_monster = {}  # name -> count
         self.kills_by_floor = {}  # floor -> count
         # Tomb-suspicion log -- floors where the agent fought an undead
@@ -281,6 +397,11 @@ class RunReport:
         self.first_visit_moves = {}       # floor -> new-tile moves
         self.revisit_moves = {}           # floor -> already-seen tile moves
         self._last_xy = None              # (z, x, y) of prior frame
+        # Last turn we reached a tile we hadn't seen before (anywhere
+        # on the run). Combined with progress-event timestamps to
+        # gate the flatline classifier so an exploring agent doesn't
+        # get flagged stuck just because it hasn't killed anything.
+        self.last_new_tile_turn = 0
         self.buys = []  # (turn, floor, name, price, count)
         self.identifies = []  # (turn, item_name)
         self.descents = []  # turn at which each new floor was first entered
@@ -335,6 +456,15 @@ class RunReport:
         # Final-state fields, filled in by `finalize`
         self.final = None
         self.death_cause = None
+        # Three-state outcome: "alive" | "dead" | "stuck". "stuck"
+        # means the agent finished alive but stopped making progress
+        # (flatlined HP + no events) or got trapped in a tight action
+        # cycle. status_reason is a short human-readable detail used
+        # in the per-run page and in the index "Cause" column for
+        # stuck runs (death_cause holds the analogous string for
+        # dead runs).
+        self.status = None
+        self.status_reason = None
 
     # ------------------------------------------------------------------
     # Recording -- called every turn from the harness loop
@@ -362,13 +492,30 @@ class RunReport:
             prev_floor = getattr(self, "_last_floor_seen", None)
             if prev_floor is not None and f != prev_floor:
                 mode_at, action_at = self._last_action_mode
-                if mode_at == "stairs_down_mode" and action_at == "d":
+                jump = f - prev_floor
+                if mode_at == "stairs_down_mode" and action_at == "d" and jump == 1:
                     method = "stairs_down"
-                elif mode_at == "stairs_up_mode" and action_at == "u":
+                elif mode_at == "stairs_up_mode" and action_at == "u" and jump == -1:
                     method = "stairs_up"
                 elif mode_at == "warp_mode" and action_at == "n":
                     method = "warp_accept"
                 elif mode_at == "warp_mode" and action_at == "y":
+                    method = "warp_forced"
+                elif mode_at == "inventory":
+                    # Scroll of Descent (random 1-3 floor jump) or
+                    # another teleport-class scroll consumed from
+                    # inventory. Labelled uniformly as
+                    # 'scroll_descent' / 'scroll_ascent' by direction
+                    # so the Journey tab doesn't pretend a F3->F5
+                    # hop was a normal staircase. Includes the +1
+                    # roll case (jump==1) -- otherwise a Scroll of
+                    # Descent rolling 1 looks identical to a stairs
+                    # transition.
+                    method = "scroll_descent" if jump > 0 else "scroll_ascent"
+                elif abs(jump) >= 2:
+                    # Multi-floor jump from somewhere we didn't tag --
+                    # forced warp without the warp_mode prompt (vault
+                    # exit, gas-trap teleport, etc.). Still a warp.
                     method = "warp_forced"
                 else:
                     method = "other"
@@ -423,6 +570,12 @@ class RunReport:
                 self.revisit_moves[floor] = self.revisit_moves.get(floor, 0) + 1
             else:
                 seen.add(xy)
+                # Stamp "new tile reached" as a progress event so the
+                # flatline classifier counts cartographic progress
+                # alongside kill / xp / descent. Without this, an agent
+                # who's exploring fog but hasn't killed anything for a
+                # long stretch can still be productively scouting.
+                self.last_new_tile_turn = turn
                 self.first_visit_moves[floor] = (
                     self.first_visit_moves.get(floor, 0) + 1
                 )
@@ -464,10 +617,85 @@ class RunReport:
         self.recent_actions.append((turn, mode, action))
         if len(self.recent_actions) > 12:
             self.recent_actions.pop(0)
+        # Full-run action history -- no cap. The whole-run scan at
+        # finalize uses this to find loop episodes the agent
+        # eventually escaped. 5k turns x ~16 bytes per tuple ~ 80KB,
+        # fine for a per-run report buffer.
+        if isinstance(action, str):
+            self._action_history.append((turn, mode, action))
 
     def _categorise_log(self, turn, line, p):
         low = line.lower()
         floor = (p or {}).get("floor", 1)
+
+        # Food / cooking instrumentation. The game emits several
+        # different log shapes for eats and drops, so we match them
+        # all:
+        #   * Food.use (items.py:2824):
+        #     "You eat the {name}. Hunger restored by {N}."
+        #   * Meat.use cooked (items.py:2967):
+        #     "You ate a {descr} {monster} {cut}! Hunger restored by {N}."
+        #   * Meat.use raw (items.py:2957-2961):
+        #     "You gnaw on the raw {monster} {cut}." then next line
+        #     "Hunger restored by {N}." -- handle via fall-back.
+        #   * Cook batch (items.py:2991):
+        #     "Cooked N piece(s) of meat. It will stay fresh..."
+        #   * Cook single (items.py:2990):
+        #     "You cooked the {meat.name}!"
+        #   * Meat harvest (items.py:3147):
+        #     "You harvested some raw {monster} meat."
+        #   * Meat rot (items.py:3157):
+        #     "Your {monster} meat has gone rotten!"
+        m = re.match(r"you eat (?:the |a |an |some )?([^.!]+?)\.\s*hunger restored by (\d+)", line, re.IGNORECASE)
+        if m:
+            self.eat_events.append((turn, m.group(1).strip(), int(m.group(2))))
+        else:
+            m = re.match(r"you ate (?:a |an )?([^!]+)!\s*hunger restored by (\d+)", line, re.IGNORECASE)
+            if m:
+                # Format: "{descriptor} {monster_name} {cut}".
+                # Descriptors are 1-3 lowercase words ('sinewy',
+                # 'barely palatable', 'tough and gamey'). Strip
+                # them by taking everything from the first
+                # capitalised word onward, then lowercase the cut
+                # so 'Cold cuts' and 'cold cuts' merge into one
+                # row. The cook log emits "Cooked X Y" where Y is
+                # cut.capitalize(), so the same normalisation
+                # produces a matching key.
+                self.eat_events.append((
+                    turn,
+                    _normalize_meat_name(m.group(1).strip(), cooked=True),
+                    int(m.group(2)),
+                ))
+            elif "hunger restored by" in low:
+                # Raw-meat fall-through: previous line had the gnaw
+                # description; this line just carries the N. Pull
+                # the count and tag as 'raw meat'.
+                m2 = re.search(r"hunger restored by (\d+)", line, re.IGNORECASE)
+                if m2:
+                    self.eat_events.append((turn, "Raw meat (gnawed)", int(m2.group(1))))
+        m = re.match(r"you cooked the ([^!]+)!", line, re.IGNORECASE)
+        if m:
+            # Cook log shape: 'You cooked the Cooked {Monster} {Cut}'
+            # (items.py:2932 renames the meat to 'Cooked {M} {Cut}'
+            # via cut.capitalize() BEFORE this log fires). Strip the
+            # outer 'Cooked ' so the captured group is just the
+            # monster+cut, then re-prefix via _normalize_meat_name
+            # to match the cooked-eat key shape.
+            raw = m.group(1).strip()
+            if raw.lower().startswith("cooked "):
+                raw = raw[len("cooked "):]
+            self.cook_events.append((turn, _normalize_meat_name(raw, cooked=True)))
+        m = re.match(r"cooked (\d+) piece", line, re.IGNORECASE)
+        if m:
+            self.cook_batches.append((turn, int(m.group(1))))
+        # Meat harvest: counts as a 'found' item for the food table.
+        m = re.match(r"you harvested some raw ([\w '\-]+?) meat", line, re.IGNORECASE)
+        if m:
+            self.found_items.append((turn, floor, f"Raw {m.group(1).strip()} meat", "monster_drop"))
+        # Meat rot in inventory.
+        m = re.match(r"your ([^!]+) meat has gone rotten", line, re.IGNORECASE)
+        if m:
+            self.meat_rot_events.append((turn, f"{m.group(1).strip()} meat"))
 
         if "you gained" in low and "experience" in low:
             self.events.append((turn, "xp", line))
@@ -546,7 +774,8 @@ class RunReport:
     # ------------------------------------------------------------------
     # Finalising
     # ------------------------------------------------------------------
-    def finalize(self, final_obs, gs_log_lines, turns):
+    def finalize(self, final_obs, gs_log_lines, turns,
+                 early_terminate_reason=None):
         p = final_obs.get("player") or {}
         alive = final_obs.get("alive")
         # Grab a snapshot of the final log buffer (in addition to
@@ -577,6 +806,209 @@ class RunReport:
         }
         if not alive:
             self.death_cause = self._derive_death_cause()
+        # Three-state classification: dead beats stuck beats alive.
+        # Stuck only fires when the agent is still alive but has
+        # clearly stopped progressing (see _classify_status). The
+        # early_terminate_reason short-circuit is for runs the
+        # harness break-stopped because no D/U/W/escape-scroll
+        # path exists -- these are objectively stuck even though
+        # the agent might still have full HP and food.
+        if early_terminate_reason and alive:
+            self.status = "stuck"
+            self.status_reason = early_terminate_reason
+        else:
+            self.status, self.status_reason = self._classify_status(turns)
+        # Scan the whole run for mid-run loop episodes the agent
+        # eventually escaped. These don't change status (the run
+        # ended fine) but signal a softlock the harness's anti-
+        # wedge had to fight through -- exactly the diagnostic
+        # surface the user asked for ('loops within runs').
+        self.loop_episodes = self._scan_loop_episodes()
+
+    def _classify_status(self, turns):
+        """Return (status, reason) where status is one of
+        'alive' / 'dead' / 'stuck'. Reason is a short human-readable
+        detail string for stuck runs, or None.
+
+        Stuck signals (alive only):
+          1. flatline -- no progress event (kill / xp / level_up /
+             buy / identify / descent / NEW TILE reached) AND HP
+             roughly flat in a recent window. Window = max(80, turns
+             // 5); HP stable = max-min <= 3 in that window.
+          2. loop -- the last N action strings form a tight
+             repeating cycle (1, 2, 3, or 4-action period covering
+             at least 12 of the last 20 actions). Catches the
+             classic ping-pong-on-warp-tile pattern.
+
+        Dead always wins over stuck. Alive-with-no-stuck-signal is
+        plain 'alive'.
+        """
+        alive = (self.final or {}).get("alive", False)
+        if not alive:
+            return "dead", None
+
+        # ---- flatline check -----------------------------------------
+        # 'Progress' = any signal the agent is still making forward
+        # motion: a kill, XP gain, level-up, vendor buy, identify,
+        # fuel drop, tomb fight, descent to a new floor, OR reaching
+        # a tile not previously stood on (cartographic progress).
+        # The last-progress turn is the latest of any of these.
+        progress_kinds = {
+            "kill", "xp", "level_up", "buy", "identify",
+            "fuel_drop", "tomb_fight",
+        }
+        last_progress = 0
+        for (t, kind, _detail) in self.events:
+            if kind in progress_kinds and t > last_progress:
+                last_progress = t
+        if self.descents:
+            last_progress = max(last_progress, max(t for (t, _f) in self.descents))
+        if self.identifies:
+            last_progress = max(last_progress, max(t for (t, _n) in self.identifies))
+        last_progress = max(last_progress, self.last_new_tile_turn)
+
+        idle_turns = max(0, turns - last_progress)
+        # Tighter window than the earlier max(100, turns//4): at
+        # 2000-turn budgets that was 500 idle, which let a lot of
+        # softly-stuck runs pass. The new-tile signal above makes
+        # the gate honest about exploration progress, so we can
+        # narrow the idle window without false positives.
+        window = max(80, turns // 5)
+
+        # HP must be roughly stable in the idle window (no fights, no
+        # ticks). max-min <= 3 lets passive regen + 1 hunger-tick
+        # count as 'stable' so a turn-budget-bound exploring agent
+        # whose HP creeps from 60 -> 63 over 400 turns still
+        # qualifies as flatlined when nothing else is happening.
+        window_start = max(0, turns - window)
+        hp_samples = [hp for (t, hp, _mx) in self.hp_timeline if t >= window_start]
+        hp_stable = bool(hp_samples) and (max(hp_samples) - min(hp_samples) <= 3)
+
+        flatlined = (
+            turns >= 80          # need enough runtime to be confident
+            and idle_turns >= window
+            and hp_stable
+        )
+
+        # ---- loop check ---------------------------------------------
+        # A periodic action sequence ALONE doesn't mean stuck -- a
+        # healthy explore phase can run n/e/s/w in a loop while still
+        # making real progress. Only treat the cycle as 'stuck' when
+        # the agent ALSO hasn't logged a progress event for a while
+        # (idle for at least 30 turns). The flatline check above
+        # requires HP-stability + a full window; the loop branch is
+        # a lighter idle gate that catches tighter ping-pong wedges
+        # before the flatline window fully closes.
+        loop_period = self._detect_action_loop()
+        looped = loop_period is not None and idle_turns >= 30 and turns >= 80
+
+        if looped:
+            return "stuck", f"loop (period={loop_period}, {idle_turns} idle)"
+        if flatlined:
+            return "stuck", f"flatline ({idle_turns} turns, no progress)"
+        return "alive", None
+
+    def _detect_action_loop(self):
+        """Look at the last 20 action STRINGS. If at least 12 of them
+        form a tight period-1/2/3/4 cycle, return that period. Else
+        None.
+
+        Period-1 = same action repeated (e.g., 'i i i i ...').
+        Period-2 = two-action ping-pong ('n s n s ...').
+        Periods 3 and 4 cover the longer wander-loops the harness's
+        own stuck-on-floor override is designed to break out of."""
+        actions = [a for (_t, _m, a) in self._action_history[-20:]]
+        return _detect_loop_period(actions, min_matches=12)
+
+    def _scan_loop_episodes(self):
+        """Whole-run pass over self._action_history to find stretches
+        where the agent was looping but eventually escaped. Returns
+        a list of episode dicts sorted by length descending. Only
+        episodes >= 50 turns are kept -- shorter wedges that the
+        harness's anti-wedge override clears are noise.
+
+        Algorithm: slide a 20-action window across the whole history.
+        At each position, run the same period-1..4 loop detector
+        used by the end-of-run classifier. Mark each frame as 'in
+        loop' (and at which period). Merge consecutive marked frames
+        into episodes, taking start/end turns and the dominant mode
+        + action at the start.
+        """
+        if len(self._action_history) < 20:
+            return []
+        actions = [a for (_t, _m, a) in self._action_history]
+        # in_loop[i] = period (1..4) or None for action index i
+        # Walk i = 19..N-1: the window ends at i (inclusive of last
+        # 20 frames). Mark every frame within a tripping window.
+        in_loop = [None] * len(actions)
+        tripped_until = -1  # right edge of currently-tripped window
+        for i in range(19, len(actions)):
+            window = actions[i - 19:i + 1]
+            period = _detect_loop_period(window, min_matches=12)
+            if period is not None:
+                # Mark all 20 frames in the window as part of a loop
+                # with this period. Frames before tripped_until keep
+                # their already-recorded period (first-seen wins so
+                # period stays consistent across overlapping windows).
+                left = max(i - 19, tripped_until + 1)
+                for j in range(left, i + 1):
+                    in_loop[j] = period
+                tripped_until = i
+        # Merge consecutive marked frames into episodes. For each
+        # episode, pick a representative "cycle" string by sampling
+        # `period` actions from a stable section (skip the first few
+        # frames where the boundary action may differ from the body
+        # of the loop). The MODE comes from the same section too --
+        # the start frame's mode can be a transition (e.g.
+        # 'inventory' on the boundary while the cycle is really in
+        # game_loop with n/s/n/s).
+        episodes = []
+        i = 0
+        while i < len(actions):
+            if in_loop[i] is None:
+                i += 1
+                continue
+            start = i
+            period = in_loop[i]
+            while i < len(actions) and in_loop[i] is not None:
+                i += 1
+            end = i - 1
+            start_turn = self._action_history[start][0]
+            end_turn = self._action_history[end][0]
+            length = end_turn - start_turn + 1
+            # Sample mode + cycle from the middle of the episode so
+            # the labels reflect the steady-state loop, not the
+            # transition frame at start.
+            mid = (start + end) // 2
+            mode = self._action_history[mid][1]
+            cycle_start = max(start, mid - (period - 1))
+            cycle = "".join(
+                self._action_history[j][2]
+                for j in range(cycle_start, min(cycle_start + period, end + 1))
+            )
+            # Skip combat-mode runs: a long fight is the agent
+            # repeatedly attacking the same monster (action 'a'
+            # period-1) or flee+attack ping-ponging at low HP --
+            # not a softlock, the monster's HP is ticking down.
+            # HP changes alongside the period-1 action so it doesn't
+            # match the 'no progress' definition either. Filter at
+            # the report level so the loop-episodes table surfaces
+            # only real wedges.
+            COMBAT_MODES = ("combat_mode", "combat_victory",
+                            "spell_casting_mode", "flee_direction_mode")
+            if mode in COMBAT_MODES:
+                continue
+            if length >= 50:  # filter transient wedges
+                episodes.append({
+                    "start": start_turn,
+                    "end": end_turn,
+                    "length": length,
+                    "period": period,
+                    "mode": mode,
+                    "action": cycle,
+                })
+        episodes.sort(key=lambda e: -e["length"])
+        return episodes
 
     def _derive_death_cause(self):
         """Walk recent_log backwards for a recognisable killer.
@@ -806,6 +1238,8 @@ class RunReport:
             "gold": f.get("gold"),
             "kills": sum(self.kills_by_floor.values()),
             "alive": f.get("alive", False),
+            "status": self.status or ("alive" if f.get("alive") else "dead"),
+            "status_reason": self.status_reason or "",
             "death_cause": self.death_cause or "—",
             "started": self.start_iso,
             "moves_total": total_moves,
@@ -824,6 +1258,10 @@ class RunReport:
             "xp_pct": round(xp_pct, 1),
             "chests_total": total_chests,
             "boons_total": total_boons,
+            # Mid-run loop episodes (eventually escaped). Top-line:
+            # count + total turns burned. Per-run page shows details.
+            "loop_episode_count": len(self.loop_episodes),
+            "loop_turns_total": sum(e["length"] for e in self.loop_episodes),
         }
 
     def to_html(self):
@@ -832,26 +1270,42 @@ class RunReport:
         wpn = eq.get("weapon") or {}
         arm = eq.get("armor") or {}
         inv = f.get("inventory") or []
-        alive_class = "alive" if f.get("alive") else "dead"
-        outcome_label = "SURVIVED" if f.get("alive") else "FELL"
+        # Three-state outcome on the per-run page.
+        status = self.status or ("alive" if f.get("alive") else "dead")
+        if status == "stuck":
+            alive_class = "stuck"
+            outcome_label = "STUCK"
+        elif status == "alive":
+            alive_class = "alive"
+            outcome_label = "SURVIVED"
+        else:
+            alive_class = "dead"
+            outcome_label = "FELL"
+        if self.status_reason:
+            outcome_label = f"{outcome_label} · {self.status_reason}"
 
         # Per-page sprite registry -- collects every pid referenced
         # on this page and emits a single dedup'd <style> block.
         sprites = SpriteRegistry()
 
-        # Player sprite: mirror the IN-GAME character pick. The game's
-        # generate_player_sprite_html (sprite_data.py:182) seeds the
-        # pool with (race, gender, character_name) so a fresh
-        # character gets a stable-but-unique look that matches what
-        # they'd see launching this seed in the actual game. The
-        # playtest report previously used (race, name) which produced
-        # a DIFFERENT sprite for the same hero, breaking the visual
-        # link between reports and live runs. User-flagged: "use the
-        # race to sprite assignments in the game for the playtest."
+        # Player sprite: mirror the IN-GAME character-creation picker.
+        # app.py:5852 uses get_race_pool(race) to show only race-
+        # appropriate portraits during character creation. The report
+        # previously seeded from the FULL _CHARACTERS_POOL, so a
+        # dwarf hero could show an elf-looking avatar, etc. -- user
+        # flagged: 'The player sprites don't match the races outlined
+        # by the in game sprite picker.' Now we filter by race first
+        # so the same (race, gender, name) seed produces a portrait
+        # the actual character-creation screen would have offered.
         try:
-            from .sprites import characters as _csprites, get_generic_variant
+            from .sprites.characters import (
+                _CHARACTERS_POOL as _full_pool,
+                get_race_pool,
+            )
+            from .sprites import get_generic_variant
+            pool = get_race_pool(self.race) or _full_pool
             pid = get_generic_variant(
-                _csprites._CHARACTERS_POOL,
+                pool,
                 seed=(self.race, self.gender, self.name),
             )
             self.player_sprite_pid = pid
@@ -870,6 +1324,7 @@ class RunReport:
         hp_chart = self._hp_chart_svg()
         mana_chart = self._mana_chart_svg()
         hunger_chart = self._hunger_chart_svg()
+        food_economy_section = self._food_economy_section_html()
 
         kills_total = sum(self.kills_by_floor.values())
         kills_by_floor_lines = "".join(
@@ -1024,7 +1479,7 @@ class RunReport:
             in_bag = final_inv_counts.get(name, 0)
             total = bought + found
             used = max(0, total - in_bag)
-            status, color = _agg_status(name, in_bag, total)
+            item_status, color = _agg_status(name, in_bag, total)
             # Sprite: use the recorded category for the icon.
             cat = self.item_categories.get(name)
             sprite_cat = _category_to_sprite_cat(cat) if cat else None
@@ -1038,7 +1493,7 @@ class RunReport:
                 f"<td>{bought}</td>"
                 f"<td>{in_bag}</td>"
                 f"<td>{used}</td>"
-                f"<td style='color:{color};'>{status}</td></tr>"
+                f"<td style='color:{color};'>{item_status}</td></tr>"
             )
         items_total_rows = len(agg_rows)
 
@@ -1077,18 +1532,22 @@ class RunReport:
         # user can see e.g. "F2 -> F3 at T203 (stairs_down)" or
         # "F3 -> F5 at T314 (warp_forced -- skipped F4)".
         method_label = {
-            "stairs_down": "stairs down",
-            "stairs_up":   "stairs up",
-            "warp_accept": "warp accepted",
-            "warp_forced": "warp forced (resist failed)",
-            "other":       "other",
+            "stairs_down":    "stairs down",
+            "stairs_up":      "stairs up",
+            "warp_accept":    "warp accepted",
+            "warp_forced":    "warp forced (resist failed)",
+            "scroll_descent": "Scroll of Descent",
+            "scroll_ascent":  "scroll ascent",
+            "other":          "other",
         }
         method_color = {
-            "stairs_down": "#94a3b8",
-            "stairs_up":   "#94a3b8",
-            "warp_accept": "#fb923c",
-            "warp_forced": "#f43f5e",
-            "other":       "#94a3b8",
+            "stairs_down":    "#94a3b8",
+            "stairs_up":      "#94a3b8",
+            "warp_accept":    "#fb923c",
+            "warp_forced":    "#f43f5e",
+            "scroll_descent": "#a78bfa",
+            "scroll_ascent":  "#a78bfa",
+            "other":          "#94a3b8",
         }
         descent_lines = ""
         if self.floor_exits:
@@ -1096,8 +1555,15 @@ class RunReport:
                 color = method_color.get(method, "#94a3b8")
                 label = method_label.get(method, method)
                 arrow = "↓" if to > fr else "↑"
+                jump = abs(to - fr)
+                skip_note = (
+                    f" <span style='color:#a78bfa;font-size:0.85em;'>"
+                    f"(skipped {jump - 1} floor{'s' if jump > 2 else ''})</span>"
+                    if jump >= 2 else ""
+                )
                 descent_lines += (
-                    f"<li>T{t}: F{fr} {arrow} F{to} "
+                    f"<li>T{t}: F{fr} {arrow} F{to}"
+                    f"{skip_note} "
                     f"<span style='color:{color};'>({label})</span></li>"
                 )
         else:
@@ -1146,6 +1612,37 @@ class RunReport:
                 "<li class='muted'>no undead encountered — no tombs suspected</li>"
             )
 
+        # Mid-run loop episodes (escaped wedges). Each row names the
+        # mode the agent got wedged in, the dominant action, the
+        # turn window, and the period. Top of the list is the
+        # longest wedge -- usually where to start diagnosing.
+        if self.loop_episodes:
+            loop_episode_rows = "".join(
+                f"<tr><td>T{e['start']}–T{e['end']}</td>"
+                f"<td>{e['length']}</td>"
+                f"<td>{html.escape(e['mode'])}</td>"
+                f"<td><code>{html.escape(e['action'])}</code></td>"
+                f"<td>period {e['period']}</td></tr>"
+                for e in self.loop_episodes
+            )
+            loop_episode_total = sum(e["length"] for e in self.loop_episodes)
+            loop_episodes_section = (
+                f"<h2 style='margin-top:18px;'>Mid-run Loop Episodes "
+                f"({len(self.loop_episodes)} · {loop_episode_total} turns wasted)</h2>"
+                f"<p class='muted'>Stretches where the agent was caught in a tight "
+                f"period-1..4 action cycle for 50+ turns before escaping. The mode + "
+                f"first action name where the wedge happened so the next fix targets "
+                f"the right handler. Long episodes here = the harness's anti-wedge "
+                f"needed to fight through a real softlock.</p>"
+                f"<table><tr><th>Turns</th><th>Length</th><th>Mode</th>"
+                f"<th>Action</th><th>Cycle</th></tr>{loop_episode_rows}</table>"
+            )
+        else:
+            loop_episodes_section = (
+                "<h2 style='margin-top:18px;'>Mid-run Loop Episodes</h2>"
+                "<p class='muted'>None — the agent never wedged in a tight cycle for 50+ turns.</p>"
+            )
+
         actions_html = "".join(
             f"<li>T{t} <span class='mode'>{html.escape(m)}</span>: "
             f"<code>{html.escape(a)}</code></li>"
@@ -1171,12 +1668,41 @@ class RunReport:
                 killer_pid = _sprite_pid_for("monster", killer_name)
                 killer_sprite = _sprite_span(sprites, killer_pid, size=64)
 
-        death_block = ""
+        # Final-log block. Earlier this only rendered for not-alive
+        # runs (death) and stuck runs; alive runs that finished
+        # turn-budget got no log tail at all. User asked for
+        # 'always capture the final log for all runs, not just the
+        # combat deaths' -- the alive branch now emits the same
+        # last-30-log + last-actions table inside a neutral banner.
         if not f.get("alive"):
             death_block = f"""
         <div class="death-banner">
           {killer_sprite}
           <p class="cause">Cause: <strong>{html.escape(self.death_cause or '?')}</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log">{log_html}</ol>
+        <h3>Last actions</h3>
+        <ol class="actions">{actions_html}</ol>
+        """
+        elif status == "stuck":
+            death_block = f"""
+        <div class="stuck-banner">
+          <p class="cause">Stuck: <strong>{html.escape(self.status_reason or '?')}</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log">{log_html}</ol>
+        <h3>Last actions</h3>
+        <ol class="actions">{actions_html}</ol>
+        """
+        else:
+            # Alive at turn budget. Same log + actions tail in a
+            # neutral 'survived' banner so the user can see what
+            # the agent was up to when the harness clock ran out.
+            death_block = f"""
+        <div class="alive-banner">
+          <p class="cause">Survived to T{f.get('turn', '?')}.
+            Run ended at the turn budget, not by death.</p>
         </div>
         <h3>Last 30 log lines</h3>
         <ol class="log">{log_html}</ol>
@@ -1234,6 +1760,7 @@ class RunReport:
             hp_chart=hp_chart,
             mana_chart=mana_chart,
             hunger_chart=hunger_chart,
+            food_economy_section=food_economy_section,
             kills_by_floor=kills_by_floor_lines or "<tr><td colspan='2'>no kills logged</td></tr>",
             kills_by_monster=kills_by_monster_lines or "<tr><td colspan='2'>—</td></tr>",
             items_lines=items_lines or "<tr><td colspan='7'>no items</td></tr>",
@@ -1256,6 +1783,7 @@ class RunReport:
             overall_xp_pct=f"{total_xpct:.0f}",
             tomb_sighting_lines=tomb_sighting_lines,
             tomb_floor_count=len(self.tomb_suspected_floors),
+            loop_episodes_section=loop_episodes_section,
             death_block=death_block,
             sprite_styles=sprites.style_block(),
         )
@@ -1270,6 +1798,116 @@ class RunReport:
         return self._timeline_chart_svg(
             self.mana_timeline, "#38bdf8", "Mana", with_max=True,
         )
+
+    def _food_economy_section_html(self):
+        """Render the Food & Cooking block for the Stats tab. Combines
+        hunger summary statistics, food-source totals (by item from
+        the items aggregator data already on self.buys / found_items),
+        cooking-kit usage, and meat-rot losses. User request:
+        'I'd love to add a report that details hunger, food
+        found/purchased, and cooking.'"""
+        # Hunger summary stats.
+        hunger_min = min((h for (_t, h) in self.hunger_timeline), default=None)
+        hunger_avg = (
+            sum(h for (_t, h) in self.hunger_timeline) / len(self.hunger_timeline)
+            if self.hunger_timeline else None
+        )
+        turns_starving = sum(1 for (_t, h) in self.hunger_timeline if h <= 30)
+        turns_zero = sum(1 for (_t, h) in self.hunger_timeline if h == 0)
+        # Eat events: count + total hunger restored, broken out by name.
+        from collections import Counter
+        eat_count = Counter()
+        eat_hunger = Counter()  # name -> total hunger restored
+        for (_t, name, gained) in self.eat_events:
+            eat_count[name] += 1
+            eat_hunger[name] += gained
+        total_eaten = sum(eat_count.values())
+        total_hunger_restored = sum(eat_hunger.values())
+        # Cooking summary.
+        cook_actions = len(self.cook_batches)
+        meats_cooked = sum(n for (_t, n) in self.cook_batches)
+        meats_rotted = len(self.meat_rot_events)
+        # Per-name cook counts (keyed via _normalize_meat_name so
+        # cook events and cooked-eat events hash to the same row).
+        cook_by_name = Counter()
+        for (_t, name) in self.cook_events:
+            cook_by_name[name] += 1
+        # Food acquisition: count by name + source from self.buys
+        # (vendor purchases) and self.found_items (chests / drops).
+        buys_by_name = Counter()
+        for (_t, _fl, name, _pr, c) in self.buys:
+            if "Ration" in name or "Jerky" in name or "Lembas" in name or "Sausage" in name:
+                buys_by_name[name] += c
+        found_by_name = Counter()
+        FOOD_TAGS = (
+            "Kebab", "Burger", "Filet", "Chops", "Steak",
+            "Nuggets", "Cold cuts", "Liver", "Brain", "Stew",
+            "Sausage", "Lembas", "Ration", "Jerky", "meat",
+        )
+        for (_t, _fl, name, src) in self.found_items:
+            if any(tag in name for tag in FOOD_TAGS):
+                found_by_name[name] += 1
+        # Render the section.
+        hunger_min_s = f"{hunger_min}" if hunger_min is not None else "—"
+        hunger_avg_s = f"{hunger_avg:.0f}" if hunger_avg is not None else "—"
+        all_names = sorted(
+            set(found_by_name) | set(buys_by_name) | set(cook_by_name) | set(eat_count),
+            key=lambda n: -(found_by_name.get(n, 0) + buys_by_name.get(n, 0)
+                            + cook_by_name.get(n, 0) + eat_count.get(n, 0)),
+        )
+        # Cap to top 25 -- enough for the common cases (rations,
+        # jerky, iron rations, plus all monster-meat variants) and
+        # keeps the report from ballooning on long runs that ate
+        # 30+ unique cooked meats.
+        food_rows = "".join(
+            f"<tr><td>{html.escape(name)}</td>"
+            f"<td>{found_by_name.get(name, 0)}</td>"
+            f"<td>{buys_by_name.get(name, 0)}</td>"
+            f"<td>{cook_by_name.get(name, 0)}</td>"
+            f"<td>{eat_count.get(name, 0)}</td>"
+            f"<td>{eat_hunger.get(name, 0)}</td></tr>"
+            for name in all_names[:25]
+        )
+        if len(all_names) > 25:
+            food_rows += (
+                f"<tr><td colspan='6' class='muted'>… and {len(all_names) - 25} "
+                f"more food item(s) -- showing top 25 by activity</td></tr>"
+            )
+        if not food_rows:
+            food_rows = "<tr><td colspan='6' class='muted'>no food acquired or eaten</td></tr>"
+        starving_pct = (turns_starving / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
+        zero_pct = (turns_zero / len(self.hunger_timeline) * 100.0) if self.hunger_timeline else 0
+        cook_note = (
+            f"{cook_actions} kit use(s) → cooked {meats_cooked} piece(s)"
+            if cook_actions else "no cooking kit usage logged"
+        )
+        if meats_rotted:
+            cook_note += f" · <span style='color:#fb923c;'>{meats_rotted} meat stack(s) spoiled in bag</span>"
+        return f"""
+      <div class="chart-block">
+        <h3>Food &amp; Cooking</h3>
+        <div class="grid4">
+          <div class="stat"><span>Min hunger</span>
+            <span class="v" style="color:{'#f43f5e' if hunger_min is not None and hunger_min <= 5 else '#fde68a'};">{hunger_min_s}</span></div>
+          <div class="stat"><span>Avg hunger</span>
+            <span class="v">{hunger_avg_s}</span></div>
+          <div class="stat"><span>Turns in starve zone (&le;30)</span>
+            <span class="v">{turns_starving} <span class="muted" style="font-weight:normal;">({starving_pct:.0f}%)</span></span></div>
+          <div class="stat"><span>Turns at hunger 0</span>
+            <span class="v" style="color:{'#f43f5e' if turns_zero else '#fde68a'};">{turns_zero} <span class="muted" style="font-weight:normal;">({zero_pct:.0f}%)</span></span></div>
+          <div class="stat"><span>Food items eaten</span>
+            <span class="v">{total_eaten}</span></div>
+          <div class="stat"><span>Total hunger restored</span>
+            <span class="v">{total_hunger_restored}</span></div>
+          <div class="stat" style="grid-column: span 2;"><span>Cooking</span>
+            <span class="v" style="text-align:right;font-size:0.85em;">{cook_note}</span></div>
+        </div>
+        <table style="margin-top:10px;">
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Cooked</th><th>Eaten</th><th>Hunger restored</th></tr>
+          {food_rows}
+        </table>
+      </div>
+"""
 
     def _hunger_chart_svg(self):
         # Hunger has a fixed 0-100 scale, so reuse the timeline helper
@@ -1369,6 +2007,17 @@ a:hover { text-decoration: underline; }
 }
 .outcome.alive { background: #134e2b; color: #bbf7d0; }
 .outcome.dead { background: #5a1313; color: #fecaca; }
+.outcome.stuck { background: #4a3a0a; color: #fde68a; }
+.stuck-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a160a; border-left:3px solid #fbbf24;
+  border-radius:4px; margin-bottom:10px;
+}
+.stuck-banner .cause strong { color: #fbbf24; }
+.alive-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#0d1a13; border-left:3px solid #4ade80;
+  border-radius:4px; margin-bottom:10px;
+}
+.alive-banner .cause { color: #bbf7d0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
@@ -1626,6 +2275,7 @@ $sprite_styles
         <h3>Hunger over the run</h3>
         $hunger_chart
       </div>
+      $food_economy_section
     </div>
 
     <!-- Equipment + Inventory -->
@@ -1669,6 +2319,7 @@ $sprite_styles
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list">$tomb_sighting_lines</ul>
+      $loop_episodes_section
       $death_block
     </div>
 
@@ -1678,7 +2329,8 @@ $sprite_styles
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: $warp_pct%</strong>
         ($warp_changes warp / $floor_changes total · $warp_accepts accepted, $warp_forced forced).</p>
       <ul>$descent_lines</ul>
@@ -1746,6 +2398,7 @@ _INDEX_TEMPLATE = """<!doctype html>
 .tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
 .tag.alive { background: #134e2b; color: #bbf7d0; }
 .tag.dead { background: #5a1313; color: #fecaca; }
+.tag.stuck { background: #4a3a0a; color: #fde68a; }
 </style>
 </head>
 <body>
@@ -1760,7 +2413,9 @@ _INDEX_TEMPLATE = """<!doctype html>
     <tr>
       <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
-      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th><th>Cause</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th>
+      <th title="Mid-run loop episodes &gt;= 50 turns (count · total turns wasted)">Loops</th>
+      <th>Cause</th>
     </tr>
     $rows
   </table>
@@ -1768,6 +2423,62 @@ _INDEX_TEMPLATE = """<!doctype html>
 </body>
 </html>
 """
+
+
+def _index_row(d):
+    """Render one <tr> for the index table from a JSON summary dict.
+
+    Status reads from the new 'status' field (alive / dead / stuck)
+    when present, else falls back to the legacy 'alive' bool so old
+    sidecars from before the three-state classifier still render."""
+    status = d.get("status")
+    if not status:
+        status = "alive" if d.get("alive") else "dead"
+    cause = d.get("status_reason") if status == "stuck" else d.get("death_cause", "—")
+    cause = cause or "—"
+    return (
+        f"<tr>"
+        f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
+        f"<td>{html.escape(d.get('race','?'))}</td>"
+        f"<td>{d.get('seed','?')}</td>"
+        f"<td><span class='tag {status}'>{status}</span></td>"
+        f"<td>{d.get('turn','?')}</td>"
+        f"<td>F{d.get('max_floor','?')}</td>"
+        f"<td>L{d.get('level','?')}</td>"
+        f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
+        f"<td>{d.get('gold','?')}g</td>"
+        f"<td>{d.get('kills','?')}</td>"
+        f"<td>{d.get('wasted_pct','?')}%</td>"
+        f"<td>{d.get('warp_pct','?')}% "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
+        f"</span></td>"
+        f"<td>{d.get('xp_pct','?')}% "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
+        f"</span></td>"
+        f"<td>{_loops_cell(d)}</td>"
+        f"<td>{html.escape(str(cause))}</td>"
+        f"</tr>"
+    )
+
+
+def _loops_cell(d):
+    """Render the Loops column: count × total-turns-wasted, with
+    the row tinted amber when the agent wasted heavy time wedged.
+    Old JSON sidecars without the field render as a dash."""
+    n = d.get("loop_episode_count")
+    if n is None:
+        return "—"
+    if n == 0:
+        return "<span class='muted'>0</span>"
+    total = d.get("loop_turns_total", 0)
+    color = "#fbbf24" if total >= 200 else "#fde68a"
+    return (
+        f"<span style='color:{color};'>{n}</span> "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({total} turns)</span>"
+    )
 
 
 def write_report(report, out_dir):
@@ -1798,36 +2509,11 @@ def write_index(out_dir):
                                    -(d.get("level") or 0),
                                    d.get("seed") or 0))
     for d in summaries:
-        alive_tag = "alive" if d.get("alive") else "dead"
-        outcome_label = "alive" if d.get("alive") else "dead"
-        rows.append(
-            f"<tr>"
-            f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
-            f"<td>{html.escape(d.get('race','?'))}</td>"
-            f"<td>{d.get('seed','?')}</td>"
-            f"<td><span class='tag {alive_tag}'>{outcome_label}</span></td>"
-            f"<td>{d.get('turn','?')}</td>"
-            f"<td>F{d.get('max_floor','?')}</td>"
-            f"<td>L{d.get('level','?')}</td>"
-            f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
-            f"<td>{d.get('gold','?')}g</td>"
-            f"<td>{d.get('kills','?')}</td>"
-            f"<td>{d.get('wasted_pct','?')}%</td>"
-            f"<td>{d.get('warp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
-            f"</span></td>"
-            f"<td>{d.get('xp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
-            f"</span></td>"
-            f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
-            f"</tr>"
-        )
+        rows.append(_index_row(d))
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='15'>no runs yet</td></tr>",
     )
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
@@ -1972,36 +2658,11 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
                                    d.get("seed") or 0))
     rows = []
     for d in summaries:
-        alive_tag = "alive" if d.get("alive") else "dead"
-        outcome_label = "alive" if d.get("alive") else "dead"
-        rows.append(
-            f"<tr>"
-            f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
-            f"<td>{html.escape(d.get('race','?'))}</td>"
-            f"<td>{d.get('seed','?')}</td>"
-            f"<td><span class='tag {alive_tag}'>{outcome_label}</span></td>"
-            f"<td>{d.get('turn','?')}</td>"
-            f"<td>F{d.get('max_floor','?')}</td>"
-            f"<td>L{d.get('level','?')}</td>"
-            f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
-            f"<td>{d.get('gold','?')}g</td>"
-            f"<td>{d.get('kills','?')}</td>"
-            f"<td>{d.get('wasted_pct','?')}%</td>"
-            f"<td>{d.get('warp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
-            f"</span></td>"
-            f"<td>{d.get('xp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
-            f"</span></td>"
-            f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
-            f"</tr>"
-        )
+        rows.append(_index_row(d))
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='15'>no runs yet</td></tr>",
     )
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html

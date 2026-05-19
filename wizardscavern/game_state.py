@@ -49,6 +49,11 @@ previous_prompt_cntl = ""
 # the starting shop.
 player_sprite_return_to = None
 
+# Build-355 cantrip picker (elf only, fires between player_sprite and
+# starting_shop). Indices into the cantrip pool the player has currently
+# toggled on; cleared once the picker confirms.
+cantrip_selections = []
+
 # Loot toast popup queue. Each entry is
 # {'icon': html, 'text': str, 'created_at': float}. The renderer reads,
 # emits, and prunes via wizardscavern.sprites.loot_toast.
@@ -441,6 +446,28 @@ ephemeral_gardens = {}
 bug_level_floors = {}  # floor_index -> True if this floor is a bug level
 player_is_shrunk = False  # True while player is under Zot's shrinking spell
 bug_queen_defeated = False  # Set True when Bug Queen falls on current bug level
+# Move counter for bug-level "she's done waiting" fallback Queen spawn.
+# Counts moves since the shrinking spell triggered; resets on cure.
+# _check_bug_queen_spawn reads this and spawns the Queen when the agent
+# has put in enough time even without a 100% bug clear (region-split
+# layouts can make 100% impossible). See _trigger_shrinking_spell.
+bug_shrink_moves = 0
+# Bug-kill counter for the current bug-level visit. Feeds the
+# early-enrage Queen spawn -- killing 20+ of her children pulls her
+# out even before the patience timer expires or every reachable bug
+# is dead. Reset alongside bug_shrink_moves in _trigger_shrinking_spell.
+bug_kills_this_level = 0
+# Persistent flag: once the player has been cured of the shrinking
+# spell (Bug Queen kill OR Growth Mushroom consume), Zot's magic
+# recognises them and the spell does not re-cast on subsequent
+# entries to the bug level. Without this an agent who descends F8
+# -> F9 then warps back to F8 gets re-shrunk with no cure path
+# (one Mushroom per bug-level visit, Queen drops once per game) --
+# they die holding their best gear in the bag because they can't
+# equip non-bug weapons. Caught on s=777 human: un-shrunk + Soul
+# Reaver equipped at T2516, re-warped to F8 garden at T2661,
+# re-shrunk, died F9 starvation still wearing Firefly Wand.
+player_passed_bug_quest = False
 
 # ============================================================================
 # FEY GARDEN INGREDIENTS
