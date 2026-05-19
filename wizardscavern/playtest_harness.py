@@ -3076,8 +3076,19 @@ def smart_policy(obs, rng, use_lantern=True):
                 # 200+), turns_on_floor=170 (not 600+), so trapped
                 # didn't fire and agent oscillated around W for 280T
                 # before the standard 200T-since-new gate engaged.
+                # Build-366 retune: ALSO require reachable >= 20 AND
+                # turns_on_floor >= 30. Without those, the fast-path
+                # overfires on T5-T8 spawn pockets where the agent
+                # has walked 2 tiles (reach_pct=100% of a 2-tile
+                # region) and a W happens to be visible -- the b364
+                # sweep caught dwarf/s10 stepping east onto a known
+                # W at T6 because of this. 20-tile / 30-turn floor
+                # is the threshold below which "explored everything
+                # I can reach" really means "haven't started yet".
                 or (reach_pct_avoid >= 95
-                    and obs.get("nearest_warp_path") is not None)
+                    and obs.get("nearest_warp_path") is not None
+                    and (obs.get("tile_coverage") or {}).get("reachable", 0) >= 20
+                    and turns_on_floor_avoid >= 30)
             )
         )
         # Cornered detection: agent's ONLY walkable cardinal
