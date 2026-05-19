@@ -2357,30 +2357,78 @@ class PlaytestSession:
         p = obs.get("player") or {}
         if p.get("is_shrunk"):
             return False
+        feature_paths = obs.get("feature_paths") or {}
+        # D-leads-to-permanent-wedge counts as "no D" here. Without
+        # this an agent in a 3-tile pocket with D pointing into a
+        # known-impassable F2 wedge stays "D=reachable" forever and
+        # never early-terminates. s=1234 (all races) F1: D reachable
+        # south but it lands on a 1-tile region-split, agent bounces
+        # 500T in the pocket until starvation.
+        cur_z_for_perm = (p.get("floor") or 1) - 1
+        perm_wedge = set(obs.get("permanent_wedge_floors") or [])
+        d_into_perm = (cur_z_for_perm + 1) in perm_wedge
+        # "On the D tile" also counts as D-reachable -- BFS skips
+        # the player's own tile so feature_paths.D=None when the
+        # agent is standing on D. Otherwise the early-term gate
+        # false-fires the moment the agent steps onto D.
+        mode = obs.get("mode")
+        on_d_tile = (mode == "stairs_down_mode")
+        d_reachable = (
+            (bool((feature_paths.get("D") or {}).get("first_step"))
+             or on_d_tile)
+            and not d_into_perm
+        )
+        on_u_tile = (mode == "stairs_up_mode")
+        u_reachable = (bool((feature_paths.get("U") or {}).get("first_step"))
+                       or on_u_tile)
+        w_reachable = obs.get("nearest_warp_path") is not None
+        # Escape-scroll check (Teleport / Descent only).
+        ESCAPE_SCROLLS = {"teleport", "descent"}
+        has_escape_scroll = any(
+            e.get("category") == "scroll"
+            and e.get("is_identified")
+            and e.get("scroll_type") in ESCAPE_SCROLLS
+            for e in (obs.get("inventory") or [])
+        )
+        if d_reachable or u_reachable or w_reachable or has_escape_scroll:
+            return False
+        # Tiny-pocket fast-path: a small reachable region (<= 20
+        # tiles) with reach_pct >= 90 and no escape options means
+        # the agent has nothing more to do. Fire after 200T-since-
+        # new (their last fog reveal happened at least 200T ago)
+        # instead of waiting the full 1500T floor budget. Caught on
+        # s=1234 (dwarf/human/elf) F1: 3-tile pocket, D-into-perm-
+        # wedge, no W, no scrolls -- starved at T883 because the
+        # 1500T threshold never fired.
+        #
+        # EXCEPTION: don't terminate while the agent is still
+        # productively grinding M rooms (kills_on_floor >= 20). M
+        # tiles respawn monsters per-visit, so a tight 3-tile
+        # pocket adjacent to an M can churn out XP + drops for a
+        # long stretch -- the run ends in real combat death, which
+        # is more diagnostic than 'stuck'. Caught on s=271 human
+        # F1: 3-tile pocket vs M east, 100 bug kills, died T2154
+        # to poison -- shorting to T1166 stuck cut the combat story.
+        cov = obs.get("tile_coverage") or {}
+        reach_pct = cov.get("reach_pct") or 0
+        reachable_tiles = cov.get("reachable") or 0
+        turns_since_new = obs.get("turns_since_new_tile") or 0
         turns_on_floor = obs.get("turns_on_floor") or 0
+        kills_on_floor = obs.get("kills_on_floor") or 0
+        if (reachable_tiles <= 20
+                and reach_pct >= 90
+                and turns_since_new >= 200
+                and turns_on_floor >= 300
+                and kills_on_floor < 20):
+            return True
+        # Standard gates (region big enough to plausibly hide
+        # something the agent hasn't seen yet).
         if turns_on_floor < 1500:
             return False
-        turns_since_new = obs.get("turns_since_new_tile") or 0
         if turns_since_new < 800:
             return False
-        cov = obs.get("tile_coverage") or {}
-        if (cov.get("reach_pct") or 0) < 90:
+        if reach_pct < 90:
             return False
-        feature_paths = obs.get("feature_paths") or {}
-        if (feature_paths.get("D") or {}).get("first_step"):
-            return False
-        if (feature_paths.get("U") or {}).get("first_step"):
-            return False
-        if obs.get("nearest_warp_path") is not None:
-            return False
-        ESCAPE_SCROLLS = {"teleport", "descent"}
-        for entry in obs.get("inventory") or []:
-            if entry.get("category") != "scroll":
-                continue
-            if not entry.get("is_identified"):
-                continue
-            if entry.get("scroll_type") in ESCAPE_SCROLLS:
-                return False
         return True
 
 
@@ -4585,9 +4633,25 @@ def smart_policy(obs, rng, use_lantern=True):
         if ((cur_z + 1) in avoid_descent_to
                 and (turns_on_floor_wedge < 600 or is_perm_sd)):
             neighbors = obs.get("neighbors") or {}
+            # Direction toward the nearest warp -- if the agent has
+            # a W reachable, walking off D in the warp's direction
+            # makes progress instead of bouncing onto T/M.
+            warp_path = obs.get("nearest_warp_path") or {}
+            warp_dir = warp_path.get("first_step")
+            # Prefer the warp direction first if it's a clean step
+            # (non-wall non-hazard non-D non-T). Caught on s=941
+            # dwarf F1 D at (17,14): step-off picked 'n' (toward
+            # T tile) by iteration order, but W was 9 steps south.
+            # Walking north spawned a 3-tile bounce loop instead
+            # of routing toward escape.
+            STEP_OFF_SKIP = ("#", "M", "W", "D", "T")
+            if warp_dir:
+                t = neighbors.get(warp_dir)
+                if t and t not in STEP_OFF_SKIP:
+                    return warp_dir
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
-                if t and t not in ("#", "M", "W", "D"):
+                if t and t not in STEP_OFF_SKIP:
                     return d
             # No clean step-off: take any non-wall non-hazard non-D.
             for d in ("n", "s", "e", "w"):
