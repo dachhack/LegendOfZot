@@ -549,7 +549,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # equips by reference -- that's what lets the vendor repair
         # handler see equipped gear.
         from .items import Lantern as _Lantern, Food as _Food
-        from .items import CookingKit as _CookingKit
+        from .items import CookingKit as _CookingKit, LanternFuel as _LF
         if race == "dwarf":
             starter_weapon = Weapon(
                 "Battleaxe", "A heavy two-handed axe of dwarven make.",
@@ -570,8 +570,14 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",
-            fuel_amount=50, light_radius=7, value=30, level=0,
+            fuel_amount=80, light_radius=7, value=30, level=0,
         ))
+        # Build 358: 2 fuel cans in starter pack mirror vendor.py:115-118.
+        for _ in range(2):
+            pc.inventory.add_item_quiet(_LF(
+                "Lantern Fuel", "A small flask of oil for your lantern.",
+                value=5, level=0, fuel_restore_amount=20,
+            ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
             value=10, level=0, nutrition=50, count=5,
@@ -587,10 +593,11 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         # Residual gold = 500 starting purse minus the bundle cost:
         # weapon (10g Dagger / 25g Battleaxe) + 50g armor + 30g lantern
-        # + 10g rations + 120g cooking kit + 30g/potion. Real players
-        # spend exactly this much when they clear out the F1 shop.
-        bundle_cost = (starter_weapon.value + leather.value + 30 + 10
-                       + 120 + 30 * num_starting_potions)
+        # + 2 x 5g fuel cans + 10g rations + 120g cooking kit
+        # + 30g/potion. Real players spend exactly this much when they
+        # clear out the F1 shop.
+        bundle_cost = (starter_weapon.value + leather.value + 30 + 2 * 5
+                       + 10 + 120 + 30 * num_starting_potions)
         pc.gold = 500 - bundle_cost
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
@@ -1105,9 +1112,23 @@ class PlaytestSession:
             # mode kept tiers = [U, V] and the agent routed onto a W
             # tile, force-warped back to F1, wandered 2000 more turns
             # in circles before starving.
-            "retreat_to_floor": (self.max_z_via_stairs
-                                 if pc.z > self.max_z_via_stairs + 1
-                                 else None),
+            # Suppress retreat when the destination floor is in
+            # permanent_wedge_floors. Build-358 7000T playtest dwarf/11:
+            # warped from F2 (perm-wedged) to F5, retreat_to_floor=2,
+            # stairs_up policy returned 'u' to ascend toward unreachable
+            # F2 -> bounced F4<->F5 indefinitely while starving. With
+            # this guard the agent treats current z as the new banked
+            # depth and resumes normal play instead of climbing into a
+            # wall.
+            "retreat_to_floor": (
+                self.max_z_via_stairs
+                if (pc.z > self.max_z_via_stairs + 1
+                    and self.max_z_via_stairs not in {
+                        z for z, c in self.wedge_count.items()
+                        if c >= self._WEDGE_PERMANENT_AFTER
+                    })
+                else None
+            ),
             "tile_coverage": self._tile_coverage_obs(),
             "nearest_warp_path": self._nearest_warp_path_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
@@ -5092,6 +5113,15 @@ def smart_policy(obs, rng, use_lantern=True):
         #   2. no new tile in 500T regardless of reach_pct
         #   3. 600T on the current floor with no D found
         turns_on_floor_warp = obs.get("turns_on_floor") or 0
+        # Build-358 7000T playtest dwarf/9: F1 D unreachable for 454T,
+        # nearest_warp_path always visible, but trapped_no_d gate
+        # didn't fire because reach_pct stayed < 80% (slow fog reveal
+        # in a small starting region). Dwarf starved before turns_on_floor
+        # hit 600. Added 5th firing path: if D unreachable AND a W is
+        # already visible AND we've spent 200T on this floor, accept.
+        # The agent has demonstrably explored enough to know D isn't
+        # in this region; further wandering just burns food.
+        has_visible_warp = bool(obs.get("nearest_warp_path"))
         if (not d_reachable
                 and (
                     (reach_pct_warp >= 80 and turns_since_new_warp >= 200)
@@ -5099,6 +5129,7 @@ def smart_policy(obs, rng, use_lantern=True):
                     or (turns_on_floor_warp >= 600)
                     or (d_leads_to_perm_warp
                         and turns_on_floor_warp_mode >= 150)
+                    or (has_visible_warp and turns_on_floor_warp >= 200)
                 )):
             return "n"
         return "y"
