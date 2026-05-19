@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forlong the Tall the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.outcome.stuck { background: #4a3a0a; color: #fde68a; }
+.stuck-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a160a; border-left:3px solid #fbbf24;
+  border-radius:4px; margin-bottom:10px;
+}
+.stuck-banner .cause strong { color: #fbbf24; }
+.alive-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#0d1a13; border-left:3px solid #4ade80;
+  border-radius:4px; margin-bottom:10px;
+}
+.alive-banner .cause { color: #bbf7d0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+/* Mobile-friendly layout. Body padding shrinks, hero portrait stacks
+   above the info column, the Final Tally drops from 4 columns to 2,
+   gear cards stack, tab labels shrink, tables get a touch smaller.
+   The two breakpoints (800 / 600) cover tablet and phone-portrait. */
+@media (max-width: 800px) {
+  .grid4 { grid-template-columns: 1fr 1fr; }
+  .grid3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .card { padding: 10px 12px; }
+  h1 { font-size: 18px; }
+  h2 { font-size: 14px; }
+  .grid4, .grid3, .grid2 { grid-template-columns: 1fr; }
+  .hero-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-portrait { min-height: auto; }
+  .gear-cards { grid-template-columns: 1fr; }
+  .tabs > label {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 1px;
+  }
+  .tab-panels { padding: 10px 12px; }
+  table { font-size: 11px; }
+  th, td { padding: 3px 4px; }
+  .stat { font-size: 12px; }
+  .hpchart { /* Stretch the SVG full-width on small screens */
+    max-width: 100%;
+  }
+}
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.death-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a0c0c; border-left:3px solid #f43f5e;
+  border-radius:4px; margin-bottom:10px;
+}
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+/* Sprite system: each sprite renders as a background-image on a <span>,
+   so a sprite referenced N times only embeds the base64 webp once. */
+.sprite {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player-sprite { display:block; margin: 0 auto; image-rendering: pixelated; }
+.sprite-cell { width: 36px; }
+
+/* Hero banner with portrait + headline stats side by side. */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+.hero-portrait {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.hero-info p { margin: 4px 0; }
+.gear-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gear-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.gear-card .sprite { width: 48px; height: 48px; margin-right: 0; }
+.gear-card .gear-meta { flex: 1; }
+
+/* Tabs -- pure-CSS radio-button pattern, no JS required. */
+.tabs { margin-top: 14px; }
+.tabs input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  transition: background .15s;
+}
+.tabs > label:hover { background: #1f1f1f; color: #fde68a; }
+.tabs > input[type=radio]:checked + label {
+  background: #2a1f0a;
+  color: #fbbf24;
+  border-bottom: 1px solid #2a1f0a;
+}
+.tab-panels { background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 0 6px 6px 6px; padding: 14px 18px; }
+.tab-panel { display: none; }
+/* Show the panel whose paired radio is :checked. ~ matches siblings
+   that follow the input, and the panels live right after the labels. */
+#tab-overview:checked ~ .tab-panels #panel-overview,
+#tab-stats:checked ~ .tab-panels #panel-stats,
+#tab-equipment:checked ~ .tab-panels #panel-equipment,
+#tab-combat:checked ~ .tab-panels #panel-combat,
+#tab-journey:checked ~ .tab-panels #panel-journey { display: block; }
+
+.chart-block { margin: 16px 0; }
+.chart-block h3 { margin-top: 0; }
+.tomb-list { list-style: none; padding: 0; }
+.tomb-list li { padding: 6px 0; border-bottom: 1px dotted #2a2a2a; }
+.tomb-list li:last-child { border: none; }
+.tomb-list strong { color: #f97316; }
+
+.sprite-p0000{background-image:url(data:image/webp;base64,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)}
+.sprite-p0001{background-image:url(data:image/webp;base64,UklGRvoEAABXRUJQVlA4IO4EAADwFwCdASpgAGAAPm0ylEgkIqIhpXgK8IANiWdpZVZXnD6ibApNPIE7u8+Xnv/73lN+l/YK/l39o63fo8E35idT32Al7wBXpRZgCaamgZzDp3OtHgokf29rafThT/k+qsSxVglbQ/b6pwH7oHYvf1I5iq9qTxAx06oFBYT09X5o24I8tJk8Y91QEbVrBOcsvxxz6tBFF1wEw+/zRjcB34Le+3QPOJdHfKV/sCxCqi2W+fo47MqHVdK0egTwNnGe+VP093wId08eAAD+/m7Lff5r4CcUsMWiVEzKH06d70b8Cq10tZTlxhFzJbRC3YPdnR0ygKLuGHtj+6wxaNHeiGsbnx3uK2MpEnawsXlKDb0dXfTunKS/creTv/ej/f78if+24qFG75q68+nS2pGmnqIaDbGvo+C13KpV9/w7i94byIm5sbiXbGOCQKe+//6PHNHeSgAyJz3wUu4WlON1PZesm2JRWkD4Lt9/eaR/+GsPxW2WzcQ0Gnb+yfHR6SRyYNr1XjmdI+D8E89unM6PskJUlcka+G27uflvx6Y5nCy/T7lK/pNFS5dHL9eKfuqw19z9OcxFvV6g1kMOP07ekIpBeSqiNGypvn6pjTWrygjcTJ1IGayYr4uD7fKwuoJ+FzIfpRYzvseNnm+adPVBLsp0NXXU28EubutPcfkKLIjbnSbaka+2bkmf8yv6j2gWfOfiVwJ8M52KQALUH1WNZXPiRvp8qepe+rpyo5Dl21np9sNRYjQ0EY3mltQCFT8ZwRFo8AxW+h6i96mOX+6EK7ZX+U5dPAADoLcLL6U0AShbPjzVVCTLOgSiOUhpBm70VupFFy8nVGyz9DFwbE7/bYx+rugoZoqP9QtVgR6csShLv8HQ5GwwaB9pjmqAaufQcigxXOTG1pjoniZUBL1u7oayO96dku4Ilcj46PAAeE/BCUXEmP5rj/2u+1Zg9dDnjEgxMfAazkQ269OTgB9JFpiRXA4MKbxfwKxI96qTTHSQeMzD1CMCH6EM5FSeKtjdfzuGJAbo53X8MRCZ/J/IlJ2pkiyE6WIj4kL7p7k4OWthpGg1Wt+hrWitN8zcLNOqufFNx4CIs30n4eSvLYN7lzbd1r5Wml5LZ8UB2p0NebLV/8yW8O/4ho/x/clxaDSpU1xTVuyCDkZJ1Yc0q5fpYsxaeI3ngm4xUvcpQcOb87xsi9u+yUgmnSyeVngdO8ClMxwtkiU9UM5jgvCtCJGqyvwex9S/5eh3Ujxu4fSD8UQRSGSKfPaDPDg2NCIaw59/8lKs5gRrJov9hMgZBIovt8j4jxlac5ENq2uhTp23PaxyDNnJwek9aH28ELbUSsG0j1K5VbMw0gjp/V8T0Q+GzFmlIDZKTPVSmYmI6KkRaoOKdsoIwFUqhY20wdieUMOZQ8a2TbdKXOT2r0h6rFps0WgKgrH9KKnfUM85murcnEaLnUAPf1jHulZ1+ibhNZa2l/TekMv/RrXTHTRpqt5NPFolJgB+FWpzZgRwbfcnnPMAT4v/W2ZZi5YlF739iNmMiDpkeafsRH71e14GREJj60PIqi3wiH3XPOfK6wacbkroYLAJiJRvV+PvQO+3Mv5WWT1qu6rRHfy1AzMZXmfadJmMTXu2Qzdam/rM+Zogu4pCm7fIEb3E2LePh5WVtmDx5h4BB7QUSUSozHsYYgwAAA==)}
+.sprite-p0002{background-image:url(data:image/webp;base64,UklGRlgFAABXRUJQVlA4IEwFAABwGQCdASpgAGAAPm0skkakIqGhLjYLMIANiUOAAcwnOJnZK66dAB6Y9vdzrDNi8sAZ7O7sZllMHtM3NR8zUuORUk8BNmy4qek9aiNWlCESp3MLib/y9tU90/cBlOuLcjl4OjRLYO8zR4/Hq7mqeh0cJTZL+fbrGf46D2XQape+rt7rqN7KUOvAZ01ie1yIzycOPR1nIbF/gYCyl6V+EB0DJRLURm86Ie1Z4eOt42/bh3Ir6n5CRyAx8gRpoMmCVfZe+kdParZ+vTUVaP4FIXl+FfwTgAD+/d2UZKVKUIAlYj5C01mMJK5q0h4kpIbaMbTERpE8Qc32oZaDxFyuWhyNNw/fcn/SzxqFsrICQzNw5Beqodc/Ubb2MmkTtsPScBwJ0tThSTzN5ddBTcvOQOnznPfuCSIwOS68ty5heC1cEWgmzMEQyE5FvEnj3MaEegbWLLU9dbwm6dE/5slP8sis9/y9meKM/foagfEHAntB5efj9jGu56ZcwUoYDlFMEjI1JCxgSwGb+sEF0tJk+GU9lO07UU2pF+342z0ZSD8Uzn827VG0jhbM0YHaj8+letvuP3ndZ/jOZXCvLeRmiNUlLfVDhsPTxsx5FkW3MA9/4C6TyrgJMjDHvxLqc+mEjy8ZPW1hDnICEuc6WgtXb0bn1VGRvuJ9n9LhmwMVI1IxbeQlU52W7YZipaMPCvf5UkJ71BivrPtzNb2SfPCZ9FUn3bqEbizLGZ+J3lGDzD7ACDRSNzJpK52iiW0mdAJO5QtTuudFvv3eIuP6TzlBK6XBVaulU05kbA1vY4NYGJoQDJdF84EjAiRYaY+yoJcNIAqdkD5ybaoH4tiu6y4pMC7zTTFhDif5ddYba3njq/gv0uj+x2xOR5DViypI/7AUEgRLhPPQa6yx/KFxrnBa2U31b33hujvXLXenrk1bF4TqLT+XElHex4ftf5EeqUa2eQzSZ1eC12AAPFKTqmyZOhwYuK3tTlThFfls99M7naEvxMlzfTr0fldm6qrUUVgyq30qHFAiF/qXtOhZRlO5HddRBfchY8gn8VtnNEcHZBBZBwNmnINO8x02yBraRIGVUAz5NhFzXgtm/sWG5ZorCi/iwJzOyQtZyvO2aohsSYwFY1w/vG29LEvDENtSeFnQE03KYgiq7R7MQF0mPzPOBM8Z9ZntNk+2crXmqcjWbAa445BBwdpVoLLYuKzHwjT2mI8ELtr77Tz2CNIGHo1xIen6hcJi0w29QFVd66W45IZzsE5azOFJxDNFdsH2r9761oVKJeIoBy1oBo7iNllq3lf32Pt0cYWZXySTU1Xl1aVXoRoMaL3huhvmaWiGZA4Y+g7GrgOq34UyUygkw0knGztxgTZF1n9EGX2ZcCFFjJSyX2DDzeQDuIlLUav74+kmt2jlnNubaPaWTDr9sKQ3YNsbmhRX2WZrV59k+kPiyeM6/INGESVgri2fILRUOASaKb0oCxttF0udKnjlCDwX1Dfs0+KspoiA9Gt7TVtFxhr3/EztxYX/SsnAh7+oA+hkvbniQJoaHczix12RtTWwx4UUKODH/WTzlQi15+V5ByFqck8RroU6UVyo8JYrLCaegqhJh+B6s17oVwPAMTPWC4+b/jGSm4bzK2GrfmacYlqVZzMC4mvv7I3AXeeNd50ZZlgAlw4+4AN3YuyWY6v2VG79xQL5ILk406WKm8Re7mKfgKqsSDKCDxDpwCRHnFv3EtwYzjXoYizOL7GDEQlCf6NkGy72S1pca+bXD/KDI75mJVLQRfRNe9VmwbD0soz/oFvYzaI610ilzu1ZgAA=)}
+.sprite-p0003{background-image:url(data:image/webp;base64,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)}
+.sprite-p0004{background-image:url(data:image/webp;base64,UklGRiYEAABXRUJQVlA4IBoEAACQFgCdASpgAGAAPm0ulEckIiShK5TqcJANiWMA1XSiDb/Ics6Cf4GOfuEVvQ5ibKZajBXTeY8uXm+6rEle4hR1269N4Yu1hwbl6I8Fs0Y55FtdLkesBZ1oqC1TAObKqCIPCQN/1eJ0ZDxUxjg2RngJVJMXZ4N1Juo9NgnTGf/9ppXb4QoXvU0ocqMd/1ssrzNOHDNl0cOFd1LrIR2nHCGi7/jzibFdGcpbO3aSIKMyhTXTS407xJQXG2/VPiAA/vxEqgSXv3HMC0So+m8E+QgY5wwQoRrYvour+c94TnNrIZIsjFVem+McqH33Ur13u6OqrgPXveQSVm9PumbtT1LOIGAMG8uuZfbFEZP5EwPaHJvFYIzUt/ILuMnibxPp4v+XYecXsR23rzfhgpmQWpUgy/uICbdbaJC58uyyZd/7B9bstPJgs4PVc0ax3G7y1Gegwn9abyVkfMvSnRUlkaVWEf+Gkq7LJFS1RWjypMFO50c3l1DLCyjKPRptzARe1zPvA5rGXH8Lu8uLc778sJCUGHNMAAUO2xsdTfcbuJ1Z0T61GAGMjx8/7sAg7Yb9YUGouV9XKRGMoCHXGYyUn39HCJ46NAgmZY4Ou8lo1YfyAc+p0YUrbYJRDXWy3Cz3zSASk6Bb6ya0Rzc9C3EzKC9TRo+/M+/3PML1Nha3w3TmRttddFE6Z3ddeK77rmGVpr1gIahKVFiSYrCHJVg/NKW/6NGIN++AntFHK1N5o4Stm/xO3hg4Gr2NcYWz12CzWAfcmztjkfY0H22iThXlVyALBjp05TsrNN7dFZa7CkaRdXwMLv2wu2eeeyfZ11BGfRTz7tffYwbsx51ejMMwbyHClY4nV3tfj3fCUDr3mxDPHGanzADMqT5i1cXataJuMQLBcJRInLMdG/6N4Ceu+9bdFDMcH4eqNXDZgdpB5Tb5OD1lGBQM5GcFD6tTjSA1ajZyNC5n+NxHV8CBiFb/hskOSJjsl8W5IhO4kdnj2bMKTlGSJFZSapDPZbDUS9t6vQHuVps58pK+xg/v4i7afoIb+/+Kb+dYM/5fGIb2BIYIYejm29fUz+yOqjaxXuTz0VO2mu+Q1CTxBKjEaDyfzdtGO/W6CIXsb9lUcVRG3FNOaa5HsC+jKjhWvYDOJGNnvE9hhvfzuc8+rGI2IPuO92uQq2wG/4TNHkDxFTkdAtKMkSQWlHRvRoZYpmpByxxmPuw+OUKr6tT+k5rKIRimg9a+ZR8gyOTT+Gn2aFa8RsT4fV5BUMw9BJnc1RXL7wcuumxW0iCB3jL4gnQZCMlZYWDx1fW5Li1/r8nkiIl1v9AQThaMKunwwsQaVtKrKV1KdmNE3Nypv8aWjHethgncppCpXoObFBjhG6TGXb/vmlANJ+TTYC1nzMAAAAA=)}
+.sprite-p0005{background-image:url(data:image/webp;base64,UklGRnoIAABXRUJQVlA4IG4IAAAwJQCdASpgAGAAPm0ukkakIqGhKrlcqIANiWUAyFSERBHXX9kWvaWPlfzE5bXUn+O9Bf5X9wvz3hReE/xe1CPXv+R+1Xh/NV/ynjSfWP9h4S/+R6FdyJ/t/Sz/deMd9b/3nqXf3P0RdDD1F/3PcM/Wb/mfmquhzFJRQBfdmW3YXpilv/QgdYeAuV2b5wiOzqBWVqFz6v6Pf3veb+fa0M8Wf/tR5+kNOgpcvXOAJXQGvqij+VwxmbZCJT5uKD5gqkIflTb8i+RFaOHN3Fo+xL4Y8+DHPpIlyR9zcOQd20XnWiCLB1efqt7OhX2w4/aWZpfzEflriGQAYjhZzh0Malnu8j9kHxm88e97RFbER0CP0759NJ/gLpsW1WklBfy2yQua6o4nzP6rKI7nIU5wyZZ6mAAA/v6fadxGHwFQmh6Vsv8lCwm27mEqjbZ3wyGN8XYVc3VisEfkGwY4It3kQgtpLMb+3VlmutTdaow8d2nfjoGur4SAlZW16XXs0HY545pXZpcf/Dz8+cw3PTSYrG65uxvSQlh/oTUVQ5qk97/zaYtHotqVKkb2GkD5EXcW7DMooPNCIXBv4+k9T/pB4MPq5IWEgsn1GZnAblSTbGPZZ4qZeDrRkvxAEw4zV7sZl+qOYlth38bqVN4BP64UatPAaLtLYiCF+59qqUT4vHCbA7u3dpCK0MV6D2mRO/73cU4AIZt//eivHfuq/DNqCpFmW3vIYugs1khAZ5n4oqPuNSmEKbow/T69+L6Zcv841WlexTO1w2mCo7zoIFzEQ64d87GCOUgDmMW/49ntqJK3Ysranp9SN3bJ0drPxCRxgj1h9ifUV5e/xoaJwrIFejuBTDfoFBOOKQHuqOf47z7+T0js/MoJ1h+bue4fSxwlx1bAkC8RfeX9m8OAbl8Ke1AiVEjiJI1oNcqSebkMOlVzQwNrgmEPPOog7TrIX0qOz3WG8CNE+FbfIiztPdkM+4fRd2RyeMbNQ0fQ0qz2b0WjORDAUAx209/HHy6x177wnvl9HnMV+4hSKy/Xj3b2QPQGZ1VZvCjYIyVy+uAYKJBrCiFtet78d6jpT+cD+y1LRTSXT+EGFxIAfuNpnQvqPR4VyLp//tofL/9Vc4PND9xlX2Dt3H/vJRGluCxuzy7rHTPAmjkUHy/I0tYTg6P/qwQO7+KOsmsxPkoA2OSrNe4smLinn+6MN+BzFFQyCV5Y3TWVIiZ/1adHK74fuPqlC9RfSspt7AjPs5vPtGQqTTqP+tGYQ7X2qJXel/qDcinUgzQ9kSHs42I09Nz9McoBts86xtJ32uue4YjRqjD57HVMF78hyt1fi0w2sh3krVXP7JeUmwypD5z/AWt3nDhV/TKJ7zj26ZgPGqdh3YlrNdrr/+dR0ya1rVOqKN2/E/+QNndGFW2wqCa2plGqh8jhImZ0SMsbNnTwYlnkqgAthzGNTPWeiqekg9j4sHNYGX/eeh13SgLtmML1O/8+XthZq6wKSpLXy3/yrmOrB92Gw/sS34vGjcB5PLGr2N/XHuV1mru6MXjn0uOeba53FNdT1oOnrzN2gW9NCISQD5RfYUJ16f19/00Ab2Leu1SpVxi7hn0VXrFXGOY+wCxKOAebzhxU0s1EyB/ble1OfH1WT2/wctEXsEAUJ1cnysPcE2EuiI1XB4f+bjCZd+QrBl1VIKhx0m4wBsS92lySXZL72kseAKXu29n6vniA9pNT+RvavsDRYanOxhVuwr0ikCoHEVmWk1J9/IoDX6KltN9PiZ5SxC+m6x3zFbe81uAPVlPdVbYNtcmklAriGCpXJBL9gHRmjoL3NRyJVS4TXJxlbWZdqb7EEiK4xk7TJr3vhQhcIlqUAaiKdcI7ziOrddEyk1O/G2EpVBodFkgI70c2CA3xHtjPnXBKUSDyiGFAUDxDQ7y5aNPy9YOrZZIWJd5slDSRiofXUp3niOXiuHjxPiw2QdkVyomlPq1ctEtzDB6CPovlGanjgiCocxW1+u9adJ62vjXTyOsQZeQbqDeCeJjWoFxgTgeeyYY/sDiNnb9Zt0CH/QQEXzCMiKkVNcyIoRZSvmKS+jfiac+eV4hiUhVDy/Bi3HAPxz92rpL1qWsu/u60E9aeU2ebN/uVOEkWaqrWr9/wHMu3rAJilbkY37UppyarOCs5VCjY20ScLGtU8o7flG7ZVDdId2F7Uad7xC+3em/44moAwaq97T2pgW1G92CRYRoP5dwXbUeiaTwajuzIecPiSOWGnGRrf+IT7EExms9hMCfTCs3H3rk75XxvH4UO9K7x0AKfW80qYk4O3EsWA0cRX6kZwzUaZ9PakXf2zKJM7BQRXjh+ZF+EnDz9KLMJsPnZYgtxGdkiVAnZiR2ZtIAQ06kqO84ysdXRyjlh6vT/C0W13RUU3txEwMRemjWUAil5/1zIkKKYSH5dDDZUnqRUeNB+EGVl2mvreesqBzrqEY75zxHKBa7jTq9imOwD4MvO4NVMILKODYveNnMlvOapW8WRleK+dyETtlafClwDc4ufS5f04tCAv3d4UVw8MXJnaStVTgDf8WvM/58Dxd7wcgG8z9PdwbPNuS+P4/9F/1HEau9W4C2vio9FO7vQ1uXj/7emne5r+Y3aOq4oMYw6F6l3uDaUma/sAG3IFWVNDX2gK19+yRylWvv8koRO5DNao3Hzm9LUIj9qUqNeB0n+I/uBYKIt4txJZrOm4B5p/scKTX3ZZ5jkOS9prWf/9wKz1KocDh/hj1+ODhF5vKP/A8d71ZU8DA3k4AlhuXHZA3AASWdamiFxg1NvXFCinLVcbiajPoQMRvYLL1eGMV2ina7R9k+UymAARplN/x2UKNxojKMY7MVLB3406GhUNhhmpHQwLiAAAAAA)}
+.sprite-p0006{background-image:url(data:image/webp;base64,UklGRn4FAABXRUJQVlA4IHIFAACQGACdASpgAGAAPm0wlEckIqIhLHN6MIANiUAaVJE6StdJJn8uDJuBVud5i/fslw4X6j/uuFWWA+q82uN/v9DPGks0E0Va/WsoxHYSzgYHGEVA/yuSonbNIyqi19nwM9Hq46HSnxOvveITcQn+nolIm+ZbAZLPyQUH6YJTHj6lNcfM5If/6w4wktYfDGaRgsmg/g6eItqleZQ0kOrMSzHNRL8VqSj3ZTnBX+4858oP76NEsw5XsjshHjduBGyL0IWEIZnu2+ornc6k5LQAAP7+R4JXnBThVY1XO3KbMEIiUtwWqL+zrfvtOgPU12Tub64G2n9x5FrU4ul/u+L3/B0anCoTQ2mgPo4XgKCKvETspYvDHGp0BlO8/UyMN9rPPexKD3VDBpL4yvJpkDat+F5wljoQQfZVi2wc7i96eXy+twZnZdF3DPPYWJB9CGZPJLck6BGTHrWS8DXENOvWwuTse6OELLnEQtUL86Y44glXaUAgBwYlM934dNV8+skjmFQzfy1e5SLEbNf1wt8Oe84OYmXcVS1C4hG4EszmiM9o8Y9CmZ+NyGiOKw2hBzA6kJnMsyEpiIz7wFNAF1ygutyl9E7VNe33Q4pR/uVxooay6ZCrivcFjHxQIgjLoSWT8BeqYmaK0SdwiibnCtYcfqu0UY/Dc9EaIK+AAQ1QH4xIDoIuNWi5JS67LPl9WUgwAhvz1pLOpZ/5W/kT4pHMi8HtOjKcCZwli+KSVP4eMg4c+SS1XuI4926PxHmrIXPGwtZf9VYduy2zZ48465Kvk3VWlq/uJr4CYwD30vBCVvd71rN+TzQpbLqMYJZ/a9syYy6OI90zGa7nxxTDXqxkQyBRiuBZEeqG7MLloMdRC/QXYLyTk4iBKWLe1VRZxzcoX59lkzs13UzNe1K+jDWXF/omH6ulavDhk2ggJs+Zb5/e6M3kRtYF/THuGIvsZb7XmxLepoLg8j26HhzT843QMmG4RitTYhMIvhhGIplor+fb5eJE2l42091qyMPtWXRzbU/lcOlmLvKG3Bm/9m7xh/PmiQj09CiHTRjoJKwkUP2bKfXQDE/zmhyD456QpgnrP7WC+PkkoUFkIR1WN9d04FK8tLuYv+a/tYZ6aOAzCNRsPWaoImJXlPR8mfRE1EkZBBCwYIuIg2Yqwb+BAsdBcQGYZ8VIlz62+mX+eyh0l016Xuz1PswCO1hChwH42FG3jRQgcGizDDJ+UNffnJjAqGI31wd6n9PtaFTlyq8hMeoH9prZKUPpFsOxv7kAvBY8/gNTTwlnMNwQFxTHUe62tQ+OO5Mxa+EVpT+J4ifpLatMZISNRpDGLiAG3zRkfICzS3cZi7/InSM8xqXeq4fKBjlUwHaql/OYoeh26Jifabe5qZXkqvjntnlRMvJ2pSw5/ZePjEC2KvZwQx7KAZS8lx4PgtMKLddMTAMxlm7NXBcbHvlWrkwzH9ZzMS63dfZUCiFb3CWnvRZzmdfigzf4fGofo0Q4rhYLcTurtDU/Gd8JfamI4U9+E7EuFa8//dS2Mk+mOJEPK516JFeEVU7nm4F5xeJu2by8Bqz7yGodnsOtLfEdpEf2/S4OG7TW9jEsbE1z8Hj/qQ8oBdC08l+yBSWK6JZUpMrL2T7UUpcMc3489Fn4enqQr3q1uXBGwxLgTVGt5sheyUTtMpo/HFaXncGIWUUyk3JrtOJ3784v0mPp8LN/u9VGG1buI4mkpUVlhvVT+gNSU4j4Iu+xNpYQ25zo4yan3zTUvuLpdGU6S3TwIZKGvFcD6XTSLkdflSs6vB/pgElk/14gwguZyMTEq6RQX4BXG+nk95H4keG1IAjot1yQruXAVx0XJKx+OGokWAAAAA==)}
+.sprite-p0007{background-image:url(data:image/webp;base64,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)}
+.sprite-p0008{background-image:url(data:image/webp;base64,UklGRrYEAABXRUJQVlA4IKoEAABwFgCdASpgAGAAPm0skkYkIiGhMBR8cIANiWUS4ALQjvq3xbx223fnsdld3H+FvTMNAn6gCy7yCDvRMRqLKbyNT7DOBZaIDXYcgRjwoOuqiZRPbyku5gdKprbU3/jSSMDJyqC3m9OjnvIRyoeRftbm6v+BZxlWr33QcjgmJnnnFtHoqY7nyf6hO0jdwPRsYKG6TRporGxjFoc04UBaSRpTxBQK+rpaOmgtzUOxYTuDeFJDXP0Pvdgwoz1QgAD+/zqBvJxxgUnVVZgyUsVRu5QZE5EiDKcFs2S9+3dy8xzL9F4Z4ZQo2plma7hUq89ZUJPv6IPKzvnXi+eTb+yRLrALLZTokaFpdQ+A2mefk5SYJczJgNZXC2EjD7fJB1LYnN+Pd0m8VRzO0J2a3O317oVr551en28Hkz0WvoTjyDTGjmccUjomIcH0v/vgOzUvhLmAVL2kzqKJ+qr8K4lgmw1U4hpjNoaFF3JocxwgDN8BWe67CBXsRHk/rvLk3QFnp7593T/LuflaCBXwDY3lU1uglQbiJZPRVEU2pFQrm3gydY542sDEdyIRz+VB1HWDRj2acQXwLb2MsJGhrP9nX4dES/ITmCPnpgt1Sv+mvAeWTR2KdKfzsOztaCKDIFdk1WUQ+MDlzXMjHvdacmxwBY3gWMpIG9x2eV+i7RqSA3YOuWzg/vKB+b7uhUnyUzYuaIrLM1Wloq9/uDSzi5c4LhhtNKf+0hb6ANwRcwvigVs/lqZ6GoJ5q13rjlYTrOd9dyCykVVYjCJmcBy/ISAr5ThQJlXzPuFsMo1lO9ca52dSfOZThvc7c9qtJF7qv/ZNiSjBZxUTRjr7LURhdIEQKBPfoiSVikENle1xgHxWsQ1sjHIHlUzHupGdN579jWG/SYWL1xn3L4bLVE2e0O0d7E9Yhdk1SBHhL4fGO6/Cv/jUf8/q+CU+In+BLmQgp+HQpspQKFp0AjwHOMDGsNgKtxJ67BT72Ylp4RRnjOVZIJjES0tS24owjgTNa3Om7F8dPOk9NvXCg0pcuvdQOAAYEUEHR53XUu1WneXyoYXJwH45fqmAKisFo18dJBgUtPOtvB3kIrqqORj3Vejb6Wykvq97cO/7AyHmjEp4ctfYND9YqRJT+xWXbftMNOLA54zmnWdM4WTEL4g3jHD34PiYxvk+p33EGGbINIVyJ5ocw2FPSCaUjUVJ1Eq/4H5nt5spkO1/A8CsgrRION7iRN85neLRHgH1OIZBCli/2yjQzS+2f/I2UcbTkgsWm17ZeNj6UQpgR0st2yataERf7ksiq6Ubiqk44XVr5RhWW5kE/wX9U/zUklti7N6ReJ3Vht39fb+Ezu7QYAk8glDU4tH08UnBcA1ed0rCTWkphJZcfrFQjrMBxjJa5CmXkEiTcK/9f+ixxrW4TwIWIVShXAWM5k1yQvHeu2wT8Tb9Hrext955N6GsrrG8Y4Qve55lFJ8UWLR9zCwA6TPW7wFz+f/3+9sgcVKU1yqUGVgEpsRpIrhFjaEjoS3Ibj2NvcnQq1awKxpLx/q2DwqgWkiLgu1bgEKW7i1Oa4rogQPELukBJn66jI7FRJouZmlCoAA=)}
+.sprite-p0009{background-image:url(data:image/webp;base64,UklGRtYEAABXRUJQVlA4IMoEAADQFgCdASpgAGAAPm0ylUekIyIhJXgLuIANiWMA0wkciapZy09Op+C/xVTg3GqpYZ/5K9Q1rv2HNb0dx+oYwSxTjBF6LFP1OhqKTl3xWBztIGGC2DPP9NWmD+t9j9waE2xwEWliWOGSV12TnyzvOAOMHK9FukIycke8G5+KtqWZWT9shwh4DHPJuj9i3Wx91f1YyW5Hvgv47QEMzd4qhXwC/nG/5NZvtlrAFyf6M9c7SARlZ8r5GFcVj30FsfVlgAD+/52LoLqENcRsoR7/YRtXFsOQFSbUrN7HX3q9IIp07VSNcyWBGLutGMLEv453E9+ZjCXCs5mT5DKFp+UuJGFGL+NTZpKh1NTXVWmPbSJFpp5jmQPcFpx+pTWlnAArYBSIzuvXFCTOJJ+m/3VDxZn58uqCl3+91k/f7RNhkyDacV8bPnUvXu4pv6iVKRa8pw3vXBpNz8dDqrORH5f+soC0VO/JxA3OvCl15JKFQgNcV3hCHROi3ojfPaqQfnNTqwYUFph5/TA/IjbtuGXkhpAtspyOOHwOzNqPUWWBT6rYCmI6lOAQ4uFBaToOkSfLNEtoHiomMQiV3XTFlXiGyI3Wx6HtSpH/db/OWInGjxUP53eojHv+/b+juBMy70ZMBl7mt593DWnK8XeDRYnsUDzvVRlB/NcEMxsHH5biu9kfxVb8CxpMwAIGQ9pgH2N3n2YsQN0fib4p/Zy3aTscB6A55TvssW+SZ682ibtmRHe6j1IvvBIZGkACZvD4/CeBlKzSvxOA7REdispKT+Jeyp2reCl8tCujc7RzqNW33mKK8sSw4kDbppQKWuBKj2UmAyBum7tCwzj/LWMbj4KIrfNiU3iyf5MELdEkc71jdwxjY/rtGZCxi9t+6HM6KHX78O1InB3+2b15jq67HHJFBtg10N3cg3qKXwYSyerNXM0B2o6I+WQGzK+rRNzP5U9/bPBwOYr97r2G5a+lK5gF49dfj7I8jNUd62H9/orMpUUyR+Ob6OtJn5+Cmx8YBtz5uJJSevg+UWWLQAWW3lr7pVW9mYryAoCE+vJfTgEvC6DvuVJnuTDyIfdLkxpRFbI+rs8lSuQOEqYDc+hoRzGK6XzWapXtRU9QkHW5jAuJ/HO9ExY6SVV2GZ/DVXQ68kUO5Nou4Cv6leaGeFXf87qeYyCfXMJh0hRiBk8L7RVgRdr7DA7U8XW7E9vEuz+SMb5IaDnElBgT6D8aTzjMznFM246ywiYDiuX7hQGgaAIeMJIe96MGa26ZFl4dRj3KHO9Sz9ZHyZqX8GyTAMWLG7927I7BP2tCl64azuRGk8rnAzCfKJE6/daVIBc52OJK+2Dx9iX6AYa75/BqU0wXNmFsxC+FS808xnQG1R9y/QZrrP1Kg6q/E6kymmIV35Tzh623b0Vz9Ebrg27H9juurmYlOH9rfqJc7cAo8Xv+u4cAX08Q+byHJDiBeWOvwo939+ZPurljLCJIvlS0wmzpKiFmNiwSWQ9Ov5ktU9Xocg/5ftrajzO5+PqG4h0/oQuPf2K2dDJU0l3GM5dj7ChbxJkHkFLLv0lBf6fRhZG0r/DfGSZbfgjRutExc0NlDz+NhTfxAqrruh8hjeZS5+aSfHDLSQYBIaZBJUL7wQAAAA==)}
+.sprite-p0010{background-image:url(data:image/webp;base64,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)}
+.sprite-p0011{background-image:url(data:image/webp;base64,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)}
+.sprite-p0012{background-image:url(data:image/webp;base64,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)}
+.sprite-p0013{background-image:url(data:image/webp;base64,UklGRj4FAABXRUJQVlA4IDIFAADwGACdASpgAGAAPm0qkEWkIqGYeo9IQAbEsbOsPZjssTFbYePY4S9uCp6b2EvbG8WXxqBGlSI+SXM6gjvX+KOXsP5xh8lmVyRZtZtDNQP9YyNMP5CDNg9g8vF91tUDVRnRjee21KnoJb8cF4pgzWTXeRpDRvhznZIs3G9Cd8AusggUpEqdCsCjROwscGzSxxuB+SuyHbWMG//TY0VwlB9soSxgJMKjuRiL3Sc/gn7M3SPzlrURtDaZlLsRcanLbtex7y5B832nUJCHk/Xtet4QAP7/Ce50Q83R/GGv5mNtnLcGISHMk8hH7uGSuZ7XdBLFAqhq0Stw3SQD8bPfSJeynh1dtrTodvvy1XTSp83URQDiL2LXa3nRjmtqI1SiRB0in+aJ2hCfV1CdlJN3GziLkPEjBnYuZY48w2HOqqiBaQpEyohZebeOIAaoCqjOApuM/xeXpWTrhq8jyzmdOtno5me9UfvBqkeqhYFUp24mIFb1kQ7A0iN65iG6zzqBYOrUkJubFZBEGKLICJ/rMluTUMZNy3d0uK8lcEZOggE6YzJp6MtCLk7dnf+9VSKS4M44TYPbfZoWSZrh8IW/1X9oIty03Ae7XzHPUKChqFO9ltVvLDXAmTHwVcIfRb0rHTG/q1CNu0TlAZK2d6e9a3UQEkX3AkcV/kFeNcHNDbXpWDVsFvvycPdbDICV+hdXb9YLvKaUjh/tJyUIIhrOnDef3nZDaTgMVmQTBdXkNhFiAuvRNrdt1EsRwrdw+auGNwenkEN6TzF+29Gstf7vxeycyGxv0lsXqCSL7m+wO/bCE7eM2/E2B2/vs1udFhS4gffSl3L8MvbaMPYt4Oz5B5uYVi0tR4pNMvFVWerZyETpPNFs0cvoEqzVGEzwPhkAmB3U6whlnKr5CYZ7ZxvLH301FFK0hlhm8B3oZ2U3t3Iq8PqIoqRUnIT9uwGr9dvZPJ7R89PMDC2m6OFiD+H20sfbLyMkFwCTr4cf9yfHEcEIqJOwGGJNcRCSoC30twryXnq5bNR0TlhbaHXF688u1DJpOdvI3QVRB9rFQUW/VvjDzsgoJIHIg49A1cjBrPJtxQu64J3X8/AwrDNr8UrT90fRDKw6CdwqC1Ep0rcWrL9CAWuzhK3o5RniiQ7t66NBBGRH86AlmoDk6MjoemtCmM3KXEGwq6aTpvREams2FVHR0eNoN4bEGrHVqtyDNnndOFyUJx67QkB8DXB36SD4+JlWzojk4mykDQSNWj08ZTKW0BKPh28On7e9KwG21aux5HC7cGPm+T4c25O8n5G3avVcwkjUwNepGIc/ZzIYLVXiyNb8WVWZR1gnKHTjFNoXww2KPRg3NKWRXwupBpGNo7hfLhqMGjkBvmmcXsl8T6qQBov4GxW8/i1ghAJnDzCkaSVgmgwfCuDohTulJp/biEk8ayEIiBomSIrm4ehk4jMZ3K7lGF3l9jwESDiGrxOZidkUqZWDWuNtOscD2w5P/sq5VYYbIhrOyiXh3KWzf3tfOGaeLM8+zkKwrJMue9gMhWcbKgXME+Y3iWOIhko15X/ff+pMOGoKfD+2zrbj8ZvDLanKVlnFar577Ysu35v0jjQC+mPZh4UWrXDDskYygC2HX8P1Z3WwQd0nOJ09EiP0XUsTJ3QdIQj3qDcTC0d9aRB72oUtW4HFhhb8cUpCRC62MC5bpsdUDMUIrUUx4t6ykD28FahPTxcc7D+P+lpLABIhGhtxkTc0Kl42kOXhCVWkdZjRAtTdAq/C4Ax2rFS2QAAA)}
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <div class="hero-banner">
+    <div class="hero-portrait">
+      <span class='sprite sprite-p0000 player-sprite' style='width:96px;height:96px'></span>
+      <p class="muted" style="margin-top:8px;font-size:11px;">human</p>
+    </div>
+    <div class="hero-info">
+      <h1>Forlong the Tall, the human</h1>
+      <p class="muted">non-binary adventurer · seed 5 · started 2026-05-19T19:17:23+00:00</p>
+      <p><span class="outcome dead">FELL</span></p>
+      <p class="muted">Memorised: —</p>
+    </div>
+  </div>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid4">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">366</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">80</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-12 / 32</span></div>
+      <div class="stat"><span>Mana</span><span class="v">0 / 0</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">57</span></div>
+      <div class="stat"><span>Gold</span><span class="v">769g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>STR</span><span class="v">11 <span class="muted" style="font-weight:normal;">(start 10)</span></span></div>
+      <div class="stat"><span>DEX</span><span class="v">10 <span class="muted" style="font-weight:normal;">(start 10)</span></span></div>
+      <div class="stat"><span>INT</span><span class="v">12 <span class="muted" style="font-weight:normal;">(start 10)</span></span></div>
+      <div class="stat"><span>Can cast</span><span class="v">no (int <= 15)</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">22</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">7</span></div>
+      <div class="stat"><span>Tombs suspected</span><span class="v">0</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="tabs">
+  <input type="radio" name="rep-tabs" id="tab-overview" checked>
+  <label for="tab-overview">Overview</label>
+  <input type="radio" name="rep-tabs" id="tab-stats">
+  <label for="tab-stats">Stats</label>
+  <input type="radio" name="rep-tabs" id="tab-equipment">
+  <label for="tab-equipment">Equipment</label>
+  <input type="radio" name="rep-tabs" id="tab-combat">
+  <label for="tab-combat">Combat</label>
+  <input type="radio" name="rep-tabs" id="tab-journey">
+  <label for="tab-journey">Journey</label>
+
+  <div class="tab-panels">
+    <!-- Overview -->
+    <div class="tab-panel" id="panel-overview">
+      <h2>Equipment at end</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          <span class='sprite sprite-p0001' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">Dagger</p>
+            <p class="muted" style="margin:0;">+2 atk (2 base + 0 upg) · dur 23/40 · uncursed</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          <span class='sprite sprite-p0002' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">Leather Armor</p>
+            <p class="muted" style="margin:0;">+3 def (3 base + 0 upg) · dur 33/50 · uncursed</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart-block">
+        <h3>HP arc</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,21.2 12.1,21.2 14.3,21.2 16.4,21.2 18.5,21.2 20.7,21.2 22.8,21.2 24.9,21.2 27.0,21.2 29.2,21.2 31.3,21.2 33.4,21.2 35.6,21.2 37.7,21.2 39.8,21.2 42.0,21.2 44.1,21.2 46.2,21.2 48.4,21.2 50.5,21.2 52.6,21.2 54.8,21.2 56.9,21.2 59.0,21.2 61.1,21.2 63.3,21.2 65.4,21.2 67.5,21.2 69.7,21.2 71.8,21.2 73.9,21.2 76.1,21.2 78.2,21.2 80.3,21.2 82.5,21.2 84.6,21.2 86.7,21.2 88.9,21.2 91.0,21.2 93.1,21.2 95.2,21.2 97.4,21.2 99.5,21.2 101.6,21.2 103.8,21.2 105.9,21.2 108.0,21.2 110.2,21.2 112.3,21.2 114.4,21.2 116.6,26.9 118.7,32.5 120.8,32.5 123.0,32.5 125.1,32.5 127.2,32.5 129.3,32.5 131.5,26.9 133.6,26.9 135.7,26.9 137.9,26.9 140.0,26.9 142.1,26.9 144.3,21.2 146.4,21.2 148.5,21.2 150.7,21.2 152.8,21.2 154.9,21.2 157.0,21.2 159.2,21.2 161.3,21.2 163.4,21.2 165.6,21.2 167.7,21.2 169.8,21.2 172.0,21.2 174.1,26.9 176.2,26.9 178.4,32.5 180.5,32.5 182.6,32.5 184.8,21.2 186.9,21.2 189.0,21.2 191.1,21.2 193.3,21.2 195.4,21.2 197.5,21.2 199.7,21.2 201.8,21.2 203.9,21.2 206.1,21.2 208.2,21.2 210.3,43.8 212.5,43.8 214.6,43.8 216.7,43.8 218.9,21.2 221.0,21.2 223.1,21.2 225.2,21.2 227.4,21.2 229.5,21.2 231.6,21.2 233.8,21.2 235.9,21.2 238.0,21.2 240.2,21.2 242.3,21.2 244.4,21.2 246.6,21.2 248.7,15.6 250.8,15.6 253.0,15.6 255.1,15.6 257.2,15.6 259.3,15.6 261.5,15.6 263.6,10.0 265.7,10.0 267.9,10.0 270.0,10.0 272.1,10.0 274.3,10.0 276.4,10.0 278.5,10.0 280.7,10.0 282.8,10.0 284.9,10.0 287.0,10.0 289.2,10.0 291.3,10.0 293.4,10.0 295.6,10.0 297.7,10.0 299.8,10.0 302.0,10.0 304.1,10.0 306.2,10.0 308.4,10.0 310.5,10.0 312.6,10.0 314.8,10.0 316.9,10.0 319.0,10.0 321.1,10.0 323.3,10.0 325.4,10.0 327.5,10.0 329.7,10.0 331.8,10.0 333.9,10.0 336.1,10.0 338.2,10.0 340.3,10.0 342.5,10.0 344.6,10.0 346.7,10.0 348.9,10.0 351.0,10.0 353.1,10.0 355.2,10.0 357.4,10.0 359.5,10.0 361.6,10.0 363.8,10.0 365.9,10.0 368.0,10.0 370.2,10.0 372.3,10.0 374.4,10.0 376.6,10.0 378.7,10.0 380.8,10.0 383.0,10.0 385.1,10.0 387.2,10.0 389.3,10.0 391.5,10.0 393.6,10.0 395.7,10.0 397.9,10.0 400.0,10.0 402.1,10.0 404.3,10.0 406.4,10.0 408.5,10.0 410.7,10.0 412.8,10.0 414.9,10.0 417.0,10.0 419.2,10.0 421.3,10.0 423.4,10.0 425.6,10.0 427.7,10.0 429.8,10.0 432.0,10.0 434.1,10.0 436.2,10.0 438.4,10.0 440.5,10.0 442.6,10.0 444.8,10.0 446.9,10.0 449.0,10.0 451.1,10.0 453.3,10.0 455.4,10.0 457.5,10.0 459.7,10.0 461.8,10.0 463.9,10.0 466.1,10.0 468.2,10.0 470.3,10.0 472.5,10.0 474.6,10.0 476.7,10.0 478.9,10.0 481.0,10.0 483.1,10.0 485.2,10.0 487.4,10.0 489.5,10.0 491.6,10.0 493.8,10.0 495.9,10.0 498.0,10.0 500.2,10.0 502.3,10.0 504.4,10.0 506.6,10.0 508.7,10.0 510.8,10.0 513.0,10.0 515.1,10.0 517.2,10.0 519.3,10.0 521.5,10.0 523.6,10.0 525.7,10.0 527.9,10.0 530.0,10.0 532.1,10.0 534.3,10.0 536.4,10.0 538.5,10.0 540.7,10.0 542.8,10.0 544.9,10.0 547.0,10.0 549.2,10.0 551.3,10.0 553.4,10.0 555.6,10.0 557.7,10.0 559.8,10.0 562.0,10.0 564.1,10.0 566.2,10.0 568.4,10.0 570.5,10.0 572.6,10.0 574.8,10.0 576.9,10.0 579.0,21.2 581.1,21.2 583.3,32.5 585.4,32.5 587.5,32.5 589.7,32.5 591.8,10.0 593.9,10.0 596.1,10.0 598.2,10.0 600.3,10.0 602.5,10.0 604.6,10.0 606.7,10.0 608.9,10.0 611.0,10.0 613.1,10.0 615.2,10.0 617.4,10.0 619.5,10.0 621.6,10.0 623.8,10.0 625.9,10.0 628.0,10.0 630.2,10.0 632.3,10.0 634.4,10.0 636.6,10.0 638.7,10.0 640.8,10.0 643.0,10.0 645.1,10.0 647.2,10.0 649.3,10.0 651.5,10.0 653.6,10.0 655.7,10.0 657.9,10.0 660.0,10.0 662.1,10.0 664.3,10.0 666.4,10.0 668.5,10.0 670.7,10.0 672.8,10.0 674.9,10.0 677.0,10.0 679.2,10.0 681.3,10.0 683.4,10.0 685.6,10.0 687.7,10.0 689.8,10.0 692.0,10.0 694.1,10.0 696.2,10.0 698.4,10.0 700.5,10.0 702.6,10.0 704.8,10.0 706.9,10.0 709.0,10.0 711.1,10.0 713.3,10.0 715.4,10.0 717.5,10.0 719.7,10.0 721.8,10.0 723.9,10.0 726.1,10.0 728.2,10.0 730.3,10.0 732.5,10.0 734.6,10.0 736.7,10.0 738.9,10.0 741.0,10.0 743.1,10.0 745.2,10.0 747.4,10.0 749.5,10.0 751.6,10.0 753.8,10.0 755.9,10.0 758.0,10.0 760.2,10.0 762.3,10.0 764.4,10.0 766.6,10.0 768.7,10.0 770.8,10.0 773.0,10.0 775.1,10.0 777.2,10.0 779.3,10.0 781.5,10.0 783.6,10.0 785.7,10.0 787.9,10.0 790.0,257.5 790.0,257.5' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T366, max 32</text></svg>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="tab-panel" id="panel-stats">
+      <div class="chart-block">
+        <h3>HP over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,21.2 12.1,21.2 14.3,21.2 16.4,21.2 18.5,21.2 20.7,21.2 22.8,21.2 24.9,21.2 27.0,21.2 29.2,21.2 31.3,21.2 33.4,21.2 35.6,21.2 37.7,21.2 39.8,21.2 42.0,21.2 44.1,21.2 46.2,21.2 48.4,21.2 50.5,21.2 52.6,21.2 54.8,21.2 56.9,21.2 59.0,21.2 61.1,21.2 63.3,21.2 65.4,21.2 67.5,21.2 69.7,21.2 71.8,21.2 73.9,21.2 76.1,21.2 78.2,21.2 80.3,21.2 82.5,21.2 84.6,21.2 86.7,21.2 88.9,21.2 91.0,21.2 93.1,21.2 95.2,21.2 97.4,21.2 99.5,21.2 101.6,21.2 103.8,21.2 105.9,21.2 108.0,21.2 110.2,21.2 112.3,21.2 114.4,21.2 116.6,26.9 118.7,32.5 120.8,32.5 123.0,32.5 125.1,32.5 127.2,32.5 129.3,32.5 131.5,26.9 133.6,26.9 135.7,26.9 137.9,26.9 140.0,26.9 142.1,26.9 144.3,21.2 146.4,21.2 148.5,21.2 150.7,21.2 152.8,21.2 154.9,21.2 157.0,21.2 159.2,21.2 161.3,21.2 163.4,21.2 165.6,21.2 167.7,21.2 169.8,21.2 172.0,21.2 174.1,26.9 176.2,26.9 178.4,32.5 180.5,32.5 182.6,32.5 184.8,21.2 186.9,21.2 189.0,21.2 191.1,21.2 193.3,21.2 195.4,21.2 197.5,21.2 199.7,21.2 201.8,21.2 203.9,21.2 206.1,21.2 208.2,21.2 210.3,43.8 212.5,43.8 214.6,43.8 216.7,43.8 218.9,21.2 221.0,21.2 223.1,21.2 225.2,21.2 227.4,21.2 229.5,21.2 231.6,21.2 233.8,21.2 235.9,21.2 238.0,21.2 240.2,21.2 242.3,21.2 244.4,21.2 246.6,21.2 248.7,15.6 250.8,15.6 253.0,15.6 255.1,15.6 257.2,15.6 259.3,15.6 261.5,15.6 263.6,10.0 265.7,10.0 267.9,10.0 270.0,10.0 272.1,10.0 274.3,10.0 276.4,10.0 278.5,10.0 280.7,10.0 282.8,10.0 284.9,10.0 287.0,10.0 289.2,10.0 291.3,10.0 293.4,10.0 295.6,10.0 297.7,10.0 299.8,10.0 302.0,10.0 304.1,10.0 306.2,10.0 308.4,10.0 310.5,10.0 312.6,10.0 314.8,10.0 316.9,10.0 319.0,10.0 321.1,10.0 323.3,10.0 325.4,10.0 327.5,10.0 329.7,10.0 331.8,10.0 333.9,10.0 336.1,10.0 338.2,10.0 340.3,10.0 342.5,10.0 344.6,10.0 346.7,10.0 348.9,10.0 351.0,10.0 353.1,10.0 355.2,10.0 357.4,10.0 359.5,10.0 361.6,10.0 363.8,10.0 365.9,10.0 368.0,10.0 370.2,10.0 372.3,10.0 374.4,10.0 376.6,10.0 378.7,10.0 380.8,10.0 383.0,10.0 385.1,10.0 387.2,10.0 389.3,10.0 391.5,10.0 393.6,10.0 395.7,10.0 397.9,10.0 400.0,10.0 402.1,10.0 404.3,10.0 406.4,10.0 408.5,10.0 410.7,10.0 412.8,10.0 414.9,10.0 417.0,10.0 419.2,10.0 421.3,10.0 423.4,10.0 425.6,10.0 427.7,10.0 429.8,10.0 432.0,10.0 434.1,10.0 436.2,10.0 438.4,10.0 440.5,10.0 442.6,10.0 444.8,10.0 446.9,10.0 449.0,10.0 451.1,10.0 453.3,10.0 455.4,10.0 457.5,10.0 459.7,10.0 461.8,10.0 463.9,10.0 466.1,10.0 468.2,10.0 470.3,10.0 472.5,10.0 474.6,10.0 476.7,10.0 478.9,10.0 481.0,10.0 483.1,10.0 485.2,10.0 487.4,10.0 489.5,10.0 491.6,10.0 493.8,10.0 495.9,10.0 498.0,10.0 500.2,10.0 502.3,10.0 504.4,10.0 506.6,10.0 508.7,10.0 510.8,10.0 513.0,10.0 515.1,10.0 517.2,10.0 519.3,10.0 521.5,10.0 523.6,10.0 525.7,10.0 527.9,10.0 530.0,10.0 532.1,10.0 534.3,10.0 536.4,10.0 538.5,10.0 540.7,10.0 542.8,10.0 544.9,10.0 547.0,10.0 549.2,10.0 551.3,10.0 553.4,10.0 555.6,10.0 557.7,10.0 559.8,10.0 562.0,10.0 564.1,10.0 566.2,10.0 568.4,10.0 570.5,10.0 572.6,10.0 574.8,10.0 576.9,10.0 579.0,21.2 581.1,21.2 583.3,32.5 585.4,32.5 587.5,32.5 589.7,32.5 591.8,10.0 593.9,10.0 596.1,10.0 598.2,10.0 600.3,10.0 602.5,10.0 604.6,10.0 606.7,10.0 608.9,10.0 611.0,10.0 613.1,10.0 615.2,10.0 617.4,10.0 619.5,10.0 621.6,10.0 623.8,10.0 625.9,10.0 628.0,10.0 630.2,10.0 632.3,10.0 634.4,10.0 636.6,10.0 638.7,10.0 640.8,10.0 643.0,10.0 645.1,10.0 647.2,10.0 649.3,10.0 651.5,10.0 653.6,10.0 655.7,10.0 657.9,10.0 660.0,10.0 662.1,10.0 664.3,10.0 666.4,10.0 668.5,10.0 670.7,10.0 672.8,10.0 674.9,10.0 677.0,10.0 679.2,10.0 681.3,10.0 683.4,10.0 685.6,10.0 687.7,10.0 689.8,10.0 692.0,10.0 694.1,10.0 696.2,10.0 698.4,10.0 700.5,10.0 702.6,10.0 704.8,10.0 706.9,10.0 709.0,10.0 711.1,10.0 713.3,10.0 715.4,10.0 717.5,10.0 719.7,10.0 721.8,10.0 723.9,10.0 726.1,10.0 728.2,10.0 730.3,10.0 732.5,10.0 734.6,10.0 736.7,10.0 738.9,10.0 741.0,10.0 743.1,10.0 745.2,10.0 747.4,10.0 749.5,10.0 751.6,10.0 753.8,10.0 755.9,10.0 758.0,10.0 760.2,10.0 762.3,10.0 764.4,10.0 766.6,10.0 768.7,10.0 770.8,10.0 773.0,10.0 775.1,10.0 777.2,10.0 779.3,10.0 781.5,10.0 783.6,10.0 785.7,10.0 787.9,10.0 790.0,257.5 790.0,257.5' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T366, max 32</text></svg>
+      </div>
+      <div class="chart-block">
+        <h3>Mana over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,190.0 12.1,190.0 14.3,190.0 16.4,190.0 18.5,190.0 20.7,190.0 22.8,190.0 24.9,190.0 27.0,190.0 29.2,190.0 31.3,190.0 33.4,190.0 35.6,190.0 37.7,190.0 39.8,190.0 42.0,190.0 44.1,190.0 46.2,190.0 48.4,190.0 50.5,190.0 52.6,190.0 54.8,190.0 56.9,190.0 59.0,190.0 61.1,190.0 63.3,190.0 65.4,190.0 67.5,190.0 69.7,190.0 71.8,190.0 73.9,190.0 76.1,190.0 78.2,190.0 80.3,190.0 82.5,190.0 84.6,190.0 86.7,190.0 88.9,190.0 91.0,190.0 93.1,190.0 95.2,190.0 97.4,190.0 99.5,190.0 101.6,190.0 103.8,190.0 105.9,190.0 108.0,190.0 110.2,190.0 112.3,190.0 114.4,190.0 116.6,190.0 118.7,190.0 120.8,190.0 123.0,190.0 125.1,190.0 127.2,190.0 129.3,190.0 131.5,190.0 133.6,190.0 135.7,190.0 137.9,190.0 140.0,190.0 142.1,190.0 144.3,190.0 146.4,190.0 148.5,190.0 150.7,190.0 152.8,190.0 154.9,190.0 157.0,190.0 159.2,190.0 161.3,190.0 163.4,190.0 165.6,190.0 167.7,190.0 169.8,190.0 172.0,190.0 174.1,190.0 176.2,190.0 178.4,190.0 180.5,190.0 182.6,190.0 184.8,190.0 186.9,190.0 189.0,190.0 191.1,190.0 193.3,190.0 195.4,190.0 197.5,190.0 199.7,190.0 201.8,190.0 203.9,190.0 206.1,190.0 208.2,190.0 210.3,190.0 212.5,190.0 214.6,190.0 216.7,190.0 218.9,190.0 221.0,190.0 223.1,190.0 225.2,190.0 227.4,190.0 229.5,190.0 231.6,190.0 233.8,190.0 235.9,190.0 238.0,190.0 240.2,190.0 242.3,190.0 244.4,190.0 246.6,190.0 248.7,190.0 250.8,190.0 253.0,190.0 255.1,190.0 257.2,190.0 259.3,190.0 261.5,190.0 263.6,190.0 265.7,190.0 267.9,190.0 270.0,190.0 272.1,190.0 274.3,190.0 276.4,190.0 278.5,190.0 280.7,190.0 282.8,190.0 284.9,190.0 287.0,190.0 289.2,190.0 291.3,190.0 293.4,190.0 295.6,190.0 297.7,190.0 299.8,190.0 302.0,190.0 304.1,190.0 306.2,190.0 308.4,190.0 310.5,190.0 312.6,190.0 314.8,190.0 316.9,190.0 319.0,190.0 321.1,190.0 323.3,190.0 325.4,190.0 327.5,190.0 329.7,190.0 331.8,190.0 333.9,190.0 336.1,190.0 338.2,190.0 340.3,190.0 342.5,190.0 344.6,190.0 346.7,190.0 348.9,190.0 351.0,190.0 353.1,190.0 355.2,190.0 357.4,190.0 359.5,190.0 361.6,190.0 363.8,190.0 365.9,190.0 368.0,190.0 370.2,190.0 372.3,190.0 374.4,190.0 376.6,190.0 378.7,190.0 380.8,190.0 383.0,190.0 385.1,190.0 387.2,190.0 389.3,190.0 391.5,190.0 393.6,190.0 395.7,190.0 397.9,190.0 400.0,190.0 402.1,190.0 404.3,190.0 406.4,190.0 408.5,190.0 410.7,190.0 412.8,190.0 414.9,190.0 417.0,190.0 419.2,190.0 421.3,190.0 423.4,190.0 425.6,190.0 427.7,190.0 429.8,190.0 432.0,190.0 434.1,190.0 436.2,190.0 438.4,190.0 440.5,190.0 442.6,190.0 444.8,190.0 446.9,190.0 449.0,190.0 451.1,190.0 453.3,190.0 455.4,190.0 457.5,190.0 459.7,190.0 461.8,190.0 463.9,190.0 466.1,190.0 468.2,190.0 470.3,190.0 472.5,190.0 474.6,190.0 476.7,190.0 478.9,190.0 481.0,190.0 483.1,190.0 485.2,190.0 487.4,190.0 489.5,190.0 491.6,190.0 493.8,190.0 495.9,190.0 498.0,190.0 500.2,190.0 502.3,190.0 504.4,190.0 506.6,190.0 508.7,190.0 510.8,190.0 513.0,190.0 515.1,190.0 517.2,190.0 519.3,190.0 521.5,190.0 523.6,190.0 525.7,190.0 527.9,190.0 530.0,190.0 532.1,190.0 534.3,190.0 536.4,190.0 538.5,190.0 540.7,190.0 542.8,190.0 544.9,190.0 547.0,190.0 549.2,190.0 551.3,190.0 553.4,190.0 555.6,190.0 557.7,190.0 559.8,190.0 562.0,190.0 564.1,190.0 566.2,190.0 568.4,190.0 570.5,190.0 572.6,190.0 574.8,190.0 576.9,190.0 579.0,190.0 581.1,190.0 583.3,190.0 585.4,190.0 587.5,190.0 589.7,190.0 591.8,190.0 593.9,190.0 596.1,190.0 598.2,190.0 600.3,190.0 602.5,190.0 604.6,190.0 606.7,190.0 608.9,190.0 611.0,190.0 613.1,190.0 615.2,190.0 617.4,190.0 619.5,190.0 621.6,190.0 623.8,190.0 625.9,190.0 628.0,190.0 630.2,190.0 632.3,190.0 634.4,190.0 636.6,190.0 638.7,190.0 640.8,190.0 643.0,190.0 645.1,190.0 647.2,190.0 649.3,190.0 651.5,190.0 653.6,190.0 655.7,190.0 657.9,190.0 660.0,190.0 662.1,190.0 664.3,190.0 666.4,190.0 668.5,190.0 670.7,190.0 672.8,190.0 674.9,190.0 677.0,190.0 679.2,190.0 681.3,190.0 683.4,190.0 685.6,190.0 687.7,190.0 689.8,190.0 692.0,190.0 694.1,190.0 696.2,190.0 698.4,190.0 700.5,190.0 702.6,190.0 704.8,190.0 706.9,190.0 709.0,190.0 711.1,190.0 713.3,190.0 715.4,190.0 717.5,190.0 719.7,190.0 721.8,190.0 723.9,190.0 726.1,190.0 728.2,190.0 730.3,190.0 732.5,190.0 734.6,190.0 736.7,190.0 738.9,190.0 741.0,190.0 743.1,190.0 745.2,190.0 747.4,190.0 749.5,190.0 751.6,190.0 753.8,190.0 755.9,190.0 758.0,190.0 760.2,190.0 762.3,190.0 764.4,190.0 766.6,190.0 768.7,190.0 770.8,190.0 773.0,190.0 775.1,190.0 777.2,190.0 779.3,190.0 781.5,190.0 783.6,190.0 785.7,190.0 787.9,190.0 790.0,190.0 790.0,190.0' fill='none' stroke='#38bdf8' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Mana over T0..T366, max 1</text></svg>
+      </div>
+      <div class="chart-block">
+        <h3>Hunger over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><rect x='10' y='136.0' width='780' height='54.0' fill='#5a131333'/><polyline points='10.0,10.0 12.1,10.0 14.3,10.0 16.4,10.0 18.5,10.0 20.7,11.8 22.8,11.8 24.9,11.8 27.0,11.8 29.2,11.8 31.3,11.8 33.4,11.8 35.6,13.6 37.7,13.6 39.8,13.6 42.0,13.6 44.1,13.6 46.2,15.4 48.4,15.4 50.5,17.2 52.6,17.2 54.8,19.0 56.9,20.8 59.0,22.6 61.1,22.6 63.3,22.6 65.4,22.6 67.5,22.6 69.7,24.4 71.8,26.2 73.9,26.2 76.1,26.2 78.2,26.2 80.3,26.2 82.5,28.0 84.6,28.0 86.7,29.8 88.9,29.8 91.0,29.8 93.1,31.6 95.2,33.4 97.4,33.4 99.5,33.4 101.6,33.4 103.8,35.2 105.9,35.2 108.0,35.2 110.2,35.2 112.3,35.2 114.4,37.0 116.6,37.0 118.7,37.0 120.8,37.0 123.0,37.0 125.1,38.8 127.2,38.8 129.3,40.6 131.5,42.4 133.6,42.4 135.7,42.4 137.9,42.4 140.0,44.2 142.1,46.0 144.3,47.8 146.4,47.8 148.5,49.6 150.7,51.4 152.8,51.4 154.9,51.4 157.0,53.2 159.2,53.2 161.3,55.0 163.4,55.0 165.6,55.0 167.7,55.0 169.8,56.8 172.0,58.6 174.1,58.6 176.2,58.6 178.4,58.6 180.5,58.6 182.6,58.6 184.8,58.6 186.9,58.6 189.0,58.6 191.1,58.6 193.3,58.6 195.4,58.6 197.5,60.4 199.7,60.4 201.8,60.4 203.9,62.2 206.1,62.2 208.2,62.2 210.3,62.2 212.5,62.2 214.6,62.2 216.7,62.2 218.9,62.2 221.0,62.2 223.1,62.2 225.2,62.2 227.4,62.2 229.5,62.2 231.6,64.0 233.8,64.0 235.9,64.0 238.0,64.0 240.2,64.0 242.3,65.8 244.4,67.6 246.6,67.6 248.7,69.4 250.8,69.4 253.0,71.2 255.1,73.0 257.2,73.0 259.3,73.0 261.5,73.0 263.6,74.8 265.7,76.6 267.9,76.6 270.0,78.4 272.1,80.2 274.3,80.2 276.4,82.0 278.5,83.8 280.7,85.6 282.8,85.6 284.9,87.4 287.0,89.2 289.2,89.2 291.3,89.2 293.4,91.0 295.6,92.8 297.7,92.8 299.8,92.8 302.0,92.8 304.1,94.6 306.2,96.4 308.4,98.2 310.5,98.2 312.6,100.0 314.8,101.8 316.9,101.8 319.0,69.4 321.1,69.4 323.3,69.4 325.4,71.2 327.5,73.0 329.7,73.0 331.8,74.8 333.9,76.6 336.1,78.4 338.2,78.4 340.3,80.2 342.5,82.0 344.6,82.0 346.7,83.8 348.9,85.6 351.0,85.6 353.1,87.4 355.2,89.2 357.4,91.0 359.5,91.0 361.6,92.8 363.8,94.6 365.9,94.6 368.0,96.4 370.2,98.2 372.3,98.2 374.4,100.0 376.6,101.8 378.7,101.8 380.8,83.8 383.0,83.8 385.1,85.6 387.2,85.6 389.3,87.4 391.5,89.2 393.6,89.2 395.7,91.0 397.9,92.8 400.0,92.8 402.1,94.6 404.3,96.4 406.4,98.2 408.5,98.2 410.7,100.0 412.8,101.8 414.9,101.8 417.0,69.4 419.2,69.4 421.3,69.4 423.4,71.2 425.6,73.0 427.7,73.0 429.8,74.8 432.0,76.6 434.1,78.4 436.2,78.4 438.4,80.2 440.5,82.0 442.6,82.0 444.8,83.8 446.9,85.6 449.0,85.6 451.1,87.4 453.3,89.2 455.4,91.0 457.5,91.0 459.7,92.8 461.8,94.6 463.9,94.6 466.1,96.4 468.2,98.2 470.3,98.2 472.5,100.0 474.6,101.8 476.7,101.8 478.9,10.0 481.0,10.0 483.1,11.8 485.2,11.8 487.4,13.6 489.5,15.4 491.6,15.4 493.8,15.4 495.9,15.4 498.0,15.4 500.2,15.4 502.3,17.2 504.4,19.0 506.6,19.0 508.7,20.8 510.8,22.6 513.0,24.4 515.1,24.4 517.2,26.2 519.3,28.0 521.5,28.0 523.6,29.8 525.7,31.6 527.9,31.6 530.0,33.4 532.1,35.2 534.3,37.0 536.4,37.0 538.5,38.8 540.7,40.6 542.8,40.6 544.9,42.4 547.0,44.2 549.2,44.2 551.3,46.0 553.4,47.8 555.6,49.6 557.7,49.6 559.8,51.4 562.0,53.2 564.1,53.2 566.2,55.0 568.4,56.8 570.5,56.8 572.6,58.6 574.8,60.4 576.9,60.4 579.0,60.4 581.1,60.4 583.3,60.4 585.4,60.4 587.5,60.4 589.7,60.4 591.8,60.4 593.9,60.4 596.1,60.4 598.2,60.4 600.3,60.4 602.5,62.2 604.6,62.2 606.7,64.0 608.9,65.8 611.0,65.8 613.1,67.6 615.2,69.4 617.4,69.4 619.5,71.2 621.6,73.0 623.8,74.8 625.9,74.8 628.0,76.6 630.2,78.4 632.3,78.4 634.4,78.4 636.6,78.4 638.7,78.4 640.8,80.2 643.0,82.0 645.1,82.0 647.2,82.0 649.3,82.0 651.5,82.0 653.6,83.8 655.7,83.8 657.9,83.8 660.0,83.8 662.1,83.8 664.3,85.6 666.4,85.6 668.5,87.4 670.7,87.4 672.8,89.2 674.9,91.0 677.0,91.0 679.2,91.0 681.3,92.8 683.4,92.8 685.6,92.8 687.7,94.6 689.8,94.6 692.0,96.4 694.1,96.4 696.2,96.4 698.4,98.2 700.5,100.0 702.6,100.0 704.8,101.8 706.9,101.8 709.0,62.2 711.1,62.2 713.3,64.0 715.4,64.0 717.5,64.0 719.7,64.0 721.8,64.0 723.9,64.0 726.1,65.8 728.2,65.8 730.3,65.8 732.5,67.6 734.6,67.6 736.7,67.6 738.9,67.6 741.0,67.6 743.1,69.4 745.2,69.4 747.4,71.2 749.5,71.2 751.6,73.0 753.8,73.0 755.9,73.0 758.0,74.8 760.2,76.6 762.3,76.6 764.4,78.4 766.6,80.2 768.7,80.2 770.8,82.0 773.0,82.0 775.1,83.8 777.2,85.6 779.3,85.6 781.5,85.6 783.6,85.6 785.7,87.4 787.9,87.4 790.0,87.4 790.0,87.4' fill='none' stroke='#fb923c' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Hunger 0..100 over T0..T366 (red band = starving)</text></svg>
+      </div>
+      
+      <div class="chart-block">
+        <h3>Food &amp; Cooking</h3>
+        <div class="grid4">
+          <div class="stat"><span>Min hunger</span>
+            <span class="v" style="color:#fde68a;">49</span></div>
+          <div class="stat"><span>Avg hunger</span>
+            <span class="v">71</span></div>
+          <div class="stat"><span>Turns in starve zone (&le;30)</span>
+            <span class="v">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Turns at hunger 0</span>
+            <span class="v" style="color:#fde68a;">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Food items eaten</span>
+            <span class="v">59</span></div>
+          <div class="stat"><span>Total hunger restored</span>
+            <span class="v">1350</span></div>
+          <div class="stat" style="grid-column: span 2;"><span>Cooking</span>
+            <span class="v" style="text-align:right;font-size:0.85em;">12 kit use(s) → cooked 12 piece(s)</span></div>
+        </div>
+        <table style="margin-top:10px;">
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Cooked</th><th>Eaten</th><th>Hunger restored</th></tr>
+          <tr><td>Cooked Harpy steak</td><td>0</td><td>0</td><td>2</td><td>21</td><td>378</td></tr><tr><td>Cooked Orc steak</td><td>0</td><td>0</td><td>2</td><td>14</td><td>140</td></tr><tr><td>Cooked Rust Monster filet</td><td>0</td><td>0</td><td>2</td><td>11</td><td>198</td></tr><tr><td>Iron Rations</td><td>0</td><td>0</td><td>0</td><td>12</td><td>612</td></tr><tr><td>Raw Gnoll meat</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Gnoll burger</td><td>0</td><td>0</td><td>5</td><td>1</td><td>22</td></tr><tr><td>Raw Harpy meat</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Orc meat</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Rust Monster meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Equipment + Inventory -->
+    <div class="tab-panel" id="panel-equipment">
+      <h2>Equipped</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          <span class='sprite sprite-p0001' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">Dagger</p>
+            <p class="muted" style="margin:0;">+2 atk (2 base + 0 upg) · dur 23/40 · uncursed</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          <span class='sprite sprite-p0002' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">Leather Armor</p>
+            <p class="muted" style="margin:0;">+3 def (3 base + 0 upg) · dur 33/50 · uncursed</p>
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-top:18px;">Final Inventory</h2>
+      <table><tr><th>Slot</th><th></th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+      <tr><td>1</td><td class='sprite-cell'><span class='sprite sprite-p0001' style='width:28px;height:28px'></span></td><td>Dagger</td><td>weapon</td><td>1</td><td>+2 | dur 23/40 ★</td></tr><tr><td>2</td><td class='sprite-cell'><span class='sprite sprite-p0002' style='width:28px;height:28px'></span></td><td>Leather Armor</td><td>armor</td><td>1</td><td>+3 | dur 33/50 ★</td></tr><tr><td>3</td><td class='sprite-cell'><span class='sprite sprite-p0008' style='width:28px;height:28px'></span></td><td>Mana Potion</td><td>potion_mana</td><td>1</td><td>unidentified</td></tr><tr><td>4</td><td class='sprite-cell'><span class='sprite sprite-p0009' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>5</td><td class='sprite-cell'><span class='sprite sprite-p0010' style='width:28px;height:28px'></span></td><td>Iron Rations</td><td>food</td><td>3</td><td></td></tr><tr><td>6</td><td class='sprite-cell'><span class='sprite sprite-p0011' style='width:28px;height:28px'></span></td><td>Rations</td><td>food</td><td>8</td><td></td></tr><tr><td>7</td><td class='sprite-cell'></td><td>Cooking Kit</td><td>cooking_kit</td><td>1</td><td></td></tr><tr><td>8</td><td class='sprite-cell'><span class='sprite sprite-p0012' style='width:28px;height:28px'></span></td><td>Lantern</td><td>lantern</td><td>1</td><td></td></tr><tr><td>9</td><td class='sprite-cell'><span class='sprite sprite-p0013' style='width:28px;height:28px'></span></td><td>Lantern Fuel</td><td>lantern_fuel</td><td>4</td><td></td></tr><tr><td>10</td><td class='sprite-cell'><span class='sprite sprite-p0013' style='width:28px;height:28px'></span></td><td>Lantern Fuel</td><td>lantern_fuel</td><td>1</td><td></td></tr><tr><td>11</td><td class='sprite-cell'></td><td>Dragon Scale</td><td>other</td><td>1</td><td></td></tr><tr><td>12</td><td class='sprite-cell'></td><td>Quicksilver Drop</td><td>other</td><td>1</td><td></td></tr><tr><td>13</td><td class='sprite-cell'></td><td>Stone Flower</td><td>other</td><td>1</td><td></td></tr><tr><td>14</td><td class='sprite-cell'></td><td>Essence Vial</td><td>other</td><td>1</td><td></td></tr><tr><td>15</td><td class='sprite-cell'></td><td>Fire Pepper</td><td>other</td><td>2</td><td></td></tr><tr><td>16</td><td class='sprite-cell'></td><td>Healing Moss</td><td>other</td><td>2</td><td></td></tr><tr><td>17</td><td class='sprite-cell'></td><td>Moonpetal</td><td>other</td><td>1</td><td></td></tr><tr><td>18</td><td class='sprite-cell'></td><td>Starbloom</td><td>other</td><td>2</td><td></td></tr>
+      </table>
+    </div>
+
+    <!-- Combat -->
+    <div class="tab-panel" id="panel-combat">
+      <h2>Top Victims</h2>
+      <table><tr><th>Monster</th><th>Kills</th></tr>
+      <tr><td><span class='sprite sprite-p0003' style='width:32px;height:32px'></span> Gnoll</td><td>7</td></tr><tr><td><span class='sprite sprite-p0004' style='width:32px;height:32px'></span> Bat</td><td>5</td></tr><tr><td><span class='sprite sprite-p0005' style='width:32px;height:32px'></span> Harpy</td><td>4</td></tr><tr><td><span class='sprite sprite-p0006' style='width:32px;height:32px'></span> Orc</td><td>4</td></tr><tr><td><span class='sprite sprite-p0007' style='width:32px;height:32px'></span> Rust Monster</td><td>2</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Kills by floor</h2>
+      <table><tr><td>Floor 1</td><td>2</td></tr><tr><td>Floor 2</td><td>20</td></tr></table>
+      <h2 style="margin-top:18px;">Tomb-suspected floors</h2>
+      <p class="muted">Encountering an undead is a reliable tell that a
+        tomb is on the floor; the policy drops M/T from its priority
+        list while weak on flagged floors to avoid blundering into the
+        elite guardian.</p>
+      <ul class="tomb-list"><li class='muted'>no undead encountered — no tombs suspected</li></ul>
+      <h2 style='margin-top:18px;'>Mid-run Loop Episodes</h2><p class='muted'>None — the agent never wedged in a tight cycle for 50+ turns.</p>
+      
+        <div class="death-banner">
+          
+          <p class="cause">Cause: <strong>unknown</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log"><li>T362: Gathered: Healing Moss</li><li>T362: Gathered: Quicksilver Drop</li><li>T362: Gathered: Starbloom</li><li>T363: You light your Lantern...</li><li>T363: The lantern reveals 6 nearby rooms!</li><li>T363: Lantern fuel remaining: 43</li><li>T364: Pray to claim a blessing, or sacrifice to deepen your piety.</li><li>T364: (Visit an Oracle to gauge your standing with the gods.)</li><li>T364: @ You pray to Athenaeum, the All-Knowing.</li><li>T364: 8 room(s) revealed within 2 tiles.</li><li>T364: The altar crumbles to dust, its divine power spent.</li><li>T364: A lush magical garden blooms before you, filled with rare ingredients.</li><li>T364: You gather useful herbs and plants...</li><li>T364: Gathered: Fire Pepper</li><li>T364: Gathered: Healing Moss</li><li>T364: Gathered: Quicksilver Drop</li><li>T364: Gathered: Starbloom</li><li>T364: You light your Lantern...</li><li>T364: The lantern reveals 6 nearby rooms!</li><li>T364: Lantern fuel remaining: 43</li><li>T364: Ancient tomes line the dusty shelves. You could search for useful grimoires here.</li><li>T365: You begin searching through the dusty tomes...</li><li>T365: You found a grimoire!</li><li>T365: You examine the tome...
+It appears to be a Level 4 grimoire.
+</li><li>T365: Do you want to attempt to read this grimoire? (y/n)</li><li>T366: You carefully open the grimoire and attempt to decipher its ancient text...</li><li>T366: The arcane text is too complex! The spell backfires!</li><li>T366: Magical energy lashes out at you!</li><li>T366: You took 44 damage!</li><li>T366: You have been defeated by the backfiring spell... Game Over!</li></ol>
+        <h3>Last actions</h3>
+        <ol class="actions"><li>T355 <span class='mode'>game_loop</span>: <code>e</code></li><li>T356 <span class='mode'>game_loop</span>: <code>e</code></li><li>T357 <span class='mode'>game_loop</span>: <code>e</code></li><li>T358 <span class='mode'>altar_mode</span>: <code>pray</code></li><li>T359 <span class='mode'>game_loop</span>: <code>e</code></li><li>T360 <span class='mode'>game_loop</span>: <code>n</code></li><li>T361 <span class='mode'>game_loop</span>: <code>n</code></li><li>T362 <span class='mode'>garden_mode</span>: <code>h</code></li><li>T363 <span class='mode'>game_loop</span>: <code>l</code></li><li>T364 <span class='mode'>game_loop</span>: <code>w</code></li><li>T365 <span class='mode'>library_mode</span>: <code>r</code></li><li>T366 <span class='mode'>library_read_decision_mode</span>: <code>y</code></li></ol>
+        
+    </div>
+
+    <!-- Journey -->
+    <div class="tab-panel" id="panel-journey">
+      <h2>Floor Transitions</h2>
+      <p class="muted">How each floor was left.
+        <span style="color:#94a3b8;">stairs</span> = chosen,
+        <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
+        <strong>Warp share of floor changes: 50%</strong>
+        (2 warp / 4 total · 1 accepted, 1 forced).</p>
+      <ul><li>T15: F1 ↓ F2 <span style='color:#f43f5e;'>(warp forced (resist failed))</span></li><li>T135: F2 ↓ F3 <span style='color:#94a3b8;'>(stairs down)</span></li><li>T136: F3 ↑ F2 <span style='color:#94a3b8;'>(stairs up)</span></li><li>T293: F2 ↓ F4 <span style='color:#a78bfa;font-size:0.85em;'>(skipped 1 floor)</span> <span style='color:#fb923c;'>(warp accepted)</span></li></ul>
+      <h2 style="margin-top:18px;">Movement Efficiency · overall waste 69%</h2>
+      <p class="muted">First-visit moves discover new ground; revisits
+        are moves that step onto a tile the agent has already stood on
+        this floor. High waste% = patrol-bouncing.</p>
+      <table>
+        <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+        <tr><td>Floor 2</td><td>172</td><td>41</td><td>41</td><td>131</td><td>76%</td></tr><tr><td>Floor 4</td><td>25</td><td>21</td><td>21</td><td>4</td><td>16%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>197</td><td>62</td><td>62</td><td>135</td><td>69%</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Exploration · kills 23% · XP 19%</h2>
+      <p class="muted">Per-floor share of available monsters
+        engaged and XP banked. Big gaps indicate unclaimed survival
+        value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
+      <table>
+        <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
+        <tr><td>Floor 1</td><td>2/53</td><td>4%</td><td>16/444</td><td>4%</td><td>7</td><td>11</td><td>1</td><td>2</td></tr><tr><td>Floor 2</td><td>20/15</td><td>133%</td><td>360/284</td><td>127%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 3</td><td>0/14</td><td>0%</td><td>0/466</td><td>0%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 4</td><td>0/15</td><td>0%</td><td>0/794</td><td>0%</td><td>7</td><td>13</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>22/97</td><td>23%</td><td>376/1988</td><td>19%</td><td>28</td><td>48</td><td>4</td><td>8</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Items (20 unique · 0 bought · 103 found)</h2>
+      <p class="muted">Aggregated by item name across the run. Status:
+        <span style="color:#4ade80;">equipped</span> at some point,
+        <span style="color:#fde68a;">in bag</span> still held at death/end,
+        <span style="color:#fbbf24;">partial</span> some held / some used,
+        <span style="color:#94a3b8;">used</span> fully consumed.</p>
+      <table>
+        <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
+        <tr><td class='sprite-cell'></td><td>passage leading back up toward the entrance</td><td>23</td><td>0</td><td>0</td><td>23</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>passage leading down</td><td>15</td><td>0</td><td>0</td><td>15</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>dungeon key for location (7, 5)</td><td>7</td><td>0</td><td>0</td><td>7</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Raw Gnoll meat</td><td>7</td><td>0</td><td>0</td><td>7</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>dungeon key for location (11, 11)</td><td>5</td><td>0</td><td>0</td><td>5</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Stone Flower</td><td>4</td><td>0</td><td>1</td><td>3</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Dragon Scale</td><td>4</td><td>0</td><td>1</td><td>3</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>134 gold in the dungeon</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Raw Harpy meat</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Healing Moss</td><td>4</td><td>0</td><td>2</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Starbloom</td><td>4</td><td>0</td><td>2</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Fire Pepper</td><td>4</td><td>0</td><td>2</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Raw Orc meat</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>3 Lantern Fuel</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Raw Rust Monster meat</td><td>3</td><td>0</td><td>0</td><td>3</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Scroll labeled ANDOVA BEGARIN</td><td>2</td><td>0</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Quicksilver Drop</td><td>2</td><td>0</td><td>1</td><td>1</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Essence Vial</td><td>1</td><td>0</td><td>1</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'></td><td>Moonpetal</td><td>1</td><td>0</td><td>1</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'></td><td>grimoire</td><td>1</td><td>0</td><td>0</td><td>1</td><td style='color:#94a3b8;'>used</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Vendor Purchases by Floor (0 vendors)</h2>
+      <p class="muted">Grouped by the floor's vendor. Category breakdown shows
+        what was bought + how much gold went toward each category.</p>
+      <table>
+        <tr><th>Floor</th><th>Items</th><th>Gold spent</th><th>By category</th></tr>
+        <tr><td colspan='4'>no vendor purchases</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
