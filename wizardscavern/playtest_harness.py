@@ -379,6 +379,8 @@ def _item_category(item):
         return "trophy"
     if cls == "CookingKit":
         return "cooking_kit"
+    if cls == "CuringKit":
+        return "curing_kit"
     return "other"
 
 
@@ -549,7 +551,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # equips by reference -- that's what lets the vendor repair
         # handler see equipped gear.
         from .items import Lantern as _Lantern, Food as _Food
-        from .items import CookingKit as _CookingKit, LanternFuel as _LF
+        from .items import LanternFuel as _LF
         if race == "dwarf":
             starter_weapon = Weapon(
                 "Battleaxe", "A heavy two-handed axe of dwarven make.",
@@ -582,7 +584,11 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             "Rations", "Standard travel rations.",
             value=10, level=0, nutrition=50, count=5,
         ))
-        pc.inventory.add_item_quiet(_CookingKit())
+        # Cooking Kit no longer in starter pack -- removed from starting
+        # shop in vendor.py to make cooking a real F3+ gating decision.
+        # The auto-cooking smart-policy in this harness (search for
+        # CookingKit.use()) now actually requires the agent to find and
+        # buy the kit before raw meat starts contributing 4x nutrition.
         num_starting_potions = _stdlib_random.randint(3, 5)
         for _ in range(num_starting_potions):
             pc.inventory.add_item_quiet(Potion(
@@ -593,11 +599,12 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         # Residual gold = 500 starting purse minus the bundle cost:
         # weapon (10g Dagger / 25g Battleaxe) + 50g armor + 30g lantern
-        # + 2 x 5g fuel cans + 10g rations + 120g cooking kit
-        # + 30g/potion. Real players spend exactly this much when they
-        # clear out the F1 shop.
+        # + 2 x 5g fuel cans + 10g rations + 30g/potion. Real players
+        # spend exactly this much when they clear out the F1 shop.
+        # Cooking Kit removed from the starting shop, so it's no longer
+        # part of the bundle.
         bundle_cost = (starter_weapon.value + leather.value + 30 + 2 * 5
-                       + 10 + 120 + 30 * num_starting_potions)
+                       + 10 + 30 * num_starting_potions)
         pc.gold = 500 - bundle_cost
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
@@ -616,8 +623,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     gs.encountered_monsters = {}
     gs.encountered_vendors = {}
     gs.newly_unlocked_achievements = []
-    gs.curing_kit_stocked = False
-    gs.curing_kit_floor = _stdlib_random.randint(0, 9)
+    gs.curing_kit_stocked = False  # First F9+ vendor stocks the Curing Kit
     gs.achievement_notification_timer = 0
 
     gs.dungeon_keys = {}
@@ -4654,6 +4660,18 @@ def smart_policy(obs, rng, use_lantern=True):
         if not has_kit:
             for v in vendor_inv:
                 if v["category"] == "cooking_kit" and v["price"] <= gold:
+                    return f"b{v['slot']}"
+
+        # CURING KIT: one-time purchase that unlocks sausage crafting.
+        # Stocks on the first vendor at F9+ (after the bug level).
+        # Playtest-371 found 0/8 runs ever saw the kit, leaving the
+        # whole sausage subsystem (Bratwurst, Andouille, Boerewors,
+        # etc.) as dead code. Buy it on sight; it's permanent and
+        # cheap relative to deep-floor gold reserves (~180g).
+        has_curing_kit = any(i["category"] == "curing_kit" for i in inv)
+        if not has_curing_kit:
+            for v in vendor_inv:
+                if v["category"] == "curing_kit" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
         # RATIONS FIRST: buy EVERY ration the vendor offers, before

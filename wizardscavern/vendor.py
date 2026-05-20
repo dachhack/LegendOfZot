@@ -24,7 +24,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Scroll, Spell, Weapon, Armor, Treasure,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
-    CookingKit,
+    CookingKit, CuringKit,
     _create_item_copy,
     is_item_identified, identify_item,
     get_vendor_identify_cost, get_item_display_name,
@@ -127,17 +127,15 @@ class Vendor:
             # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
             # pre-vendor food cushion.
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
-            # Cooking Kit at the starting vendor too. The 160-seed
-            # audit showed 63/159 runs (40%) never reach a dungeon
-            # vendor at all -- they starve before finding one, and
-            # the kit (which 4x's meat nutrition + auto-cooks the
-            # bag in one action) was only stocked on F3+ dungeon
-            # vendors. Putting it at the starting shop closes the
-            # gap: any run that survives to the starting shop now
-            # has the option to start cooking immediately. Price
-            # (120g) keeps it as a deliberate purchase, not a
-            # freebie.
-            self.inventory.add_item_quiet(CookingKit())
+            # Cooking Kit REMOVED from the starting shop (build 372+).
+            # Playtest-371 audit found the kit was making cooking a
+            # zero-decision mechanic: starter-pack kit + auto-cook on
+            # raw-meat-detect meant 0 rot events across 8 runs and the
+            # food clock never bit (mean hunger 67-77, hunger floor
+            # 48-49). Kit now only available from F3+ dungeon vendors
+            # (per its level=3 metadata), so players actually have to
+            # survive on rations + raw meat for the first few floors
+            # before the meat economy multiplies.
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -306,6 +304,22 @@ class Vendor:
                 # death-cause histogram showed this as the single
                 # biggest depth gate the agent never saw.
                 self.inventory.add_item_quiet(CookingKit())
+
+            # Curing Kit: unlocks sausage crafting. Stocked on the
+            # FIRST vendor encountered at F9+ (i.e. after the bug
+            # level at F8). The previous random-F1-F10 gate was on
+            # the restock-only path in items.py:generate_vendor_inventory
+            # and never fired in normal play -- playtest-371 saw 0/8
+            # runs receive a Curing Kit, leaving the entire sausage
+            # subsystem (Bratwurst / Andouille / Boerewors / etc.) as
+            # dead code. Gating to F9+ ties the unlock to the bug-
+            # level milestone: survive the shrink, claim the kit.
+            # current_floor_level is character.z (0-indexed), so
+            # z >= 8 == F9+.
+            if (current_floor_level >= 8
+                    and not getattr(gs, 'curing_kit_stocked', False)):
+                self.inventory.add_item_quiet(CuringKit())
+                gs.curing_kit_stocked = True
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
