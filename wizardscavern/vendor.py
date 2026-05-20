@@ -24,7 +24,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Scroll, Spell, Weapon, Armor, Treasure,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
-    CookingKit,
+    CookingKit, CuringKit,
     _create_item_copy,
     is_item_identified, identify_item,
     get_vendor_identify_cost, get_item_display_name,
@@ -125,19 +125,20 @@ class Vendor:
             # were dying with 0 food on floor 1-2 because the starter 3
             # Rations + 1-2 monster meat drops ran out before reaching
             # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
-            # pre-vendor food cushion.
+            # pre-vendor food cushion. (Build 377 tried 3, rolled back
+            # in 378: the food-abundance problem is on the dungeon-
+            # vendor side, not the starter pack -- agents need the
+            # pre-F2-vendor buffer.)
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
-            # Cooking Kit at the starting vendor too. The 160-seed
-            # audit showed 63/159 runs (40%) never reach a dungeon
-            # vendor at all -- they starve before finding one, and
-            # the kit (which 4x's meat nutrition + auto-cooks the
-            # bag in one action) was only stocked on F3+ dungeon
-            # vendors. Putting it at the starting shop closes the
-            # gap: any run that survives to the starting shop now
-            # has the option to start cooking immediately. Price
-            # (120g) keeps it as a deliberate purchase, not a
-            # freebie.
-            self.inventory.add_item_quiet(CookingKit())
+            # Cooking Kit REMOVED from the starting shop (build 372+).
+            # Playtest-371 audit found the kit was making cooking a
+            # zero-decision mechanic: starter-pack kit + auto-cook on
+            # raw-meat-detect meant 0 rot events across 8 runs and the
+            # food clock never bit (mean hunger 67-77, hunger floor
+            # 48-49). Kit now only available from F3+ dungeon vendors
+            # (per its level=3 metadata), so players actually have to
+            # survive on rations + raw meat for the first few floors
+            # before the meat economy multiplies.
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -282,22 +283,29 @@ class Vendor:
                             status_effect_magnitude=spell_template.status_effect_magnitude
                         ))
 
-            # All vendors stock rations (3-4)
-            num_rations = random.randint(3, 4)
+            # All vendors stock rations (1-2). Build 378 cut from 3-4
+            # to 1-2 (~50%) after the b376 sweep showed peak inventory
+            # nutrition hitting 1560-3315 across the run -- with the
+            # smart policy buying every food stack on every visit and
+            # 5-10 vendor visits per long run, agents accumulated
+            # 19-53 ration stockpiles regardless of need. Halving the
+            # per-vendor stack still leaves 5-20 rations across a
+            # typical run (plus Iron Rations + Jerky stacks, unchanged)
+            # but breaks the "rations are infinite" assumption so the
+            # meat / cooking / sausage economy actually matters.
+            num_rations = random.randint(1, 2)
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
-            # Iron Rations: heavier-nutrition option. items.py:2511
-            # listed these at F1+, but the actual dungeon-vendor
-            # stocking in this file never included them -- 0/160 runs
-            # ever saw one. Same goes for Salted Jerky and Cooking
-            # Kit. With 109/160 (68%) of the grid dying of starvation
-            # (dominated by F1-F3 deaths), the missing food tiers were
-            # the bottleneck. current_floor_level is character.z, so
-            # z>=1 == F2+ and z>=2 == F3+.
-            # Iron Rations stack bumped from 1 -> 3 (build 328) for
-            # the same carnage-round push: 70 nut each * 3 = 210
-            # nut per vendor visit on top of the Rations stack,
-            # roughly doubling the vendor's food payload.
-            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=3))
+            # Iron Rations: heavier-nutrition option. Stack reverted
+            # from 3 -> 1 in build 379. The b328 bump (1 -> 3) was
+            # part of the same b327-era sparse-food tuning that gave
+            # us 0.7/move hunger decay (reverted b374) and a 5-ration
+            # starter pack (reverted b377 then half-reverted b378).
+            # b378's per-vendor food was still 295-345 nut (Iron
+            # Rations alone = 210 nut, ~60-70% of the food calories).
+            # Back to count=1 = 70 nut/vendor, putting Iron Rations
+            # in line with Salted Jerky as a single-bite supplement
+            # rather than the dominant food source.
+            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1))
             if current_floor_level >= 1:  # F2+
                 self.inventory.add_item_quiet(Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1))
             if current_floor_level >= 2:  # F3+
@@ -306,6 +314,26 @@ class Vendor:
                 # death-cause histogram showed this as the single
                 # biggest depth gate the agent never saw.
                 self.inventory.add_item_quiet(CookingKit())
+
+            # Curing Kit: unlocks sausage crafting. Stocked at EVERY
+            # regular vendor at F5+ until the player buys one (the
+            # global gs.curing_kit_stocked flag flips in the buy
+            # handler at cmd 'b'). Dropped F10 -> F5 in build 377:
+            # the b376 sweep showed crafting works ~100% once the
+            # kit is owned, but only 4/18 runs ever got one because
+            # the F10 gate placed the relief valve AFTER the F2-F5
+            # starvation cliff. F5 puts the kit on the same floor
+            # band where hunger pressure starts biting. Stocking
+            # every regular vendor (not just the first) survives the
+            # bug-merchant skip: if the first F5+ vendor is a bug
+            # merchant (which takes a different __init__ branch
+            # above and doesn't run this gate), the next regular
+            # vendor still carries the kit.
+            # current_floor_level is character.z (0-indexed), so
+            # z >= 4 == F5+.
+            if (current_floor_level >= 4
+                    and not getattr(gs, 'curing_kit_stocked', False)):
+                self.inventory.add_item_quiet(CuringKit())
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
@@ -641,6 +669,15 @@ def process_vendor_action(player_character, vendor_character, cmd):
                     # Remove the actual item from vendor's inventory (not by index since we used sorted)
                     vendor_character.inventory.items.remove(item_to_buy)
 
+                    # Curing Kit purchase flips the global one-shot flag --
+                    # see vendor.py:Vendor.__init__ Curing-Kit block. Every
+                    # F10+ regular vendor stocks one until this flag flips,
+                    # so the player can't soft-lock by skipping the first
+                    # bug-merchant F10 vendor. Flag flip on PURCHASE (here),
+                    # not on stocking.
+                    if isinstance(new_item, CuringKit):
+                        gs.curing_kit_stocked = True
+
                     # Starting shop: auto-equip purchased gear so the
                     # player doesn't need to dive into the inventory
                     # before stepping into the dungeon.
@@ -956,7 +993,7 @@ def generate_magic_shop_inventory(floor_level, player_character):
         elixir_pool = [
             Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
             Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=15, potion_type='permanent_intelligence', effect_magnitude=2),
+            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
             Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
         ]
     num_elixirs = random.randint(1, 2)

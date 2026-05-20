@@ -893,6 +893,14 @@ class Character:
         self.hunger_freeze_turns = 0  # Lembas wafer postpones hunger decay
         self.hunger_regen_tracker = 0  # Tracks moves for HP regen when well-fed
         self.mana_regen_tracker = 0   # Tracks moves for out-of-combat MP regen
+        # Stat-point allocation (build 380). Every level-up grants 1
+        # unspent point the player can apply to STR / DEX / INT via the
+        # character-stats screen. Was the missing piece behind the
+        # in-code claim at characters.py:912 that "magic is unlocked by
+        # investing in INT (oracles, potions, level-ups)" -- before
+        # this, level-ups granted only HP via the max_health formula
+        # and INT was locked at character creation for non-elves.
+        self.unspent_stat_points = 0
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -936,9 +944,16 @@ class Character:
             int_mp = (int_score - 11) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 10)
         else:  # human (default)
-            if int_score <= 15:
+            # Build-382: gate lowered 15 -> 13 so a human with the
+            # b380 stat-point system + the b381 Mind Touch cantrip can
+            # actually cast in mid-game. At 1 pt per 2 levels they
+            # need +4 INT to clear the new gate -> reachable by L9
+            # (median runs L6, deep runs L13+). Threshold-15 left
+            # them locked out -- b381 sweep: 1/6 humans reached INT
+            # 16, that one died 43 turns later before casting.
+            if int_score <= 13:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 15) * 3 + 5
+            int_mp = (int_score - 13) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 6)
 
         return int_mp + lvl_mp + self.base_max_mana_bonus
@@ -1332,10 +1347,29 @@ class Character:
         self.experience += amount
         add_log(f"You gained {amount} experience.")
         if int(math.sqrt(self.experience)/5) > self.level:
+            old_level = self.level
             self.level = int(math.sqrt(self.experience)/5)
             gs.sfx_event = 'level_up'
+            # Grant 1 stat point per 2 levels gained -- the player
+            # allocates via the character-stats screen ('p' to allocate,
+            # then a/d/i for STR/DEX/INT). Spacing the points out
+            # keeps starting race differences meaningful: a median-L6
+            # run yields 3 pts (not enough for a human's 6-point cast
+            # gap), an L13 run yields 6 pts (humans cast naturally
+            # mid-deep), an L19 run yields 9 pts (dwarves still need
+            # to push to L27 for cast access -- effectively endgame).
+            # Formula: total points due = (level - 1) // 2. A multi-
+            # level jump in one gain_experience call grants the delta
+            # so big-XP kills don't lose points.
+            old_pts_due = (old_level - 1) // 2
+            new_pts_due = (self.level - 1) // 2
+            points_gained = new_pts_due - old_pts_due
+            self.unspent_stat_points += points_gained
             add_log(f"{COLOR_YELLOW}*** LEVEL UP! You are now level {self.level} ***{COLOR_RESET}")
             add_log(f"Max Health increased to {self.max_health}!")
+            if points_gained > 0:
+                pts_word = "point" if points_gained == 1 else "points"
+                add_log(f"{COLOR_CYAN}You earned {points_gained} stat {pts_word}! ({self.unspent_stat_points} unspent total){COLOR_RESET}")
             _check_achievements(self)
 
     def is_alive(self):

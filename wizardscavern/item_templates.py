@@ -285,6 +285,36 @@ SAUSAGE_RECIPES = {
     },
 
     # ============================================================
+    # DWARVEN SAUSAGES — race-locked. Use rare mountain-themed
+    # garden drops (Iron Bark, Stone Flower) so they read as the
+    # treasure-tier craft they are. Sausage.use() already grants
+    # dwarves a hidden +50% nutrition bonus on top.
+    # ============================================================
+
+    'Landjäger': {
+        'ingredients': [('Fire Root', 1), ('Iron Bark', 1)],
+        'meat_cost': 1,
+        'tier': 2,
+        'race': 'dwarf',
+        'result': lambda: Sausage(
+            name="Landjäger",
+            description="A flat air-dried Alpine hunter's sausage, pressed between boards and smoked over beechwood. Dwarves carry these into the mines.",
+            value=70, level=2, nutrition=100, sausage_style="Landjäger"
+        ),
+    },
+    'Blutwurst': {
+        'ingredients': [('Healing Moss', 1), ('Stone Flower', 1)],
+        'meat_cost': 2,
+        'tier': 3,
+        'race': 'dwarf',
+        'result': lambda: Sausage(
+            name="Blutwurst",
+            description="A heavy German blood sausage, iron-rich and barley-thick. Said to put fire back in a dwarf's beard.",
+            value=110, level=3, nutrition=140, sausage_style="Blutwurst"
+        ),
+    },
+
+    # ============================================================
     # SPICY SAUSAGES — require hot peppers, grant Spiced Fury buff
     # ============================================================
 
@@ -991,7 +1021,7 @@ POTION_TEMPLATES = [
     # Permanent stat elixirs - rare, expensive, one-time boosts
     Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
     Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=15, potion_type='permanent_intelligence', effect_magnitude=2),
+    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
     Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=25, potion_type='permanent_strength', effect_magnitude=4),
     Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=25, potion_type='permanent_dexterity', effect_magnitude=4),
     Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=25, potion_type='permanent_intelligence', effect_magnitude=4),

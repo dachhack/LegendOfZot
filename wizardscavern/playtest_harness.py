@@ -379,6 +379,10 @@ def _item_category(item):
         return "trophy"
     if cls == "CookingKit":
         return "cooking_kit"
+    if cls == "CuringKit":
+        return "curing_kit"
+    if cls == "Ingredient":
+        return "ingredient"
     return "other"
 
 
@@ -536,6 +540,24 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             if hasattr(spell_copy, 'is_identified'):
                 spell_copy.is_identified = True
             pc.memorized_spells.append(spell_copy)
+    elif race == 'human':
+        # Humans get one cantrip (Mind Touch) at character creation
+        # to match the "balanced between melee and magic" design.
+        # The cantrip sits unusable until INT crosses the human cast
+        # gate (INT > 15 -> max_mana > 0), then activates naturally
+        # via the existing memorized_spells flow. Single cantrip vs
+        # the elf's two preserves the magic gap. Dwarves get no
+        # cantrip -- they're the dedicated melee race.
+        from .items import SPELL_TEMPLATES as _ST
+        import copy as _copy
+        for spell in _ST:
+            if (getattr(spell, 'is_cantrip', False)
+                    and spell.name.lower() == 'mind touch'):
+                spell_copy = _copy.deepcopy(spell)
+                if hasattr(spell_copy, 'is_identified'):
+                    spell_copy.is_identified = True
+                pc.memorized_spells.append(spell_copy)
+                break
     if starter_pack:
         # Mirror Vendor(starting=True) inventory at vendor.py:94-130 --
         # what a real player walks out of the F1 starting shop with
@@ -549,7 +571,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # equips by reference -- that's what lets the vendor repair
         # handler see equipped gear.
         from .items import Lantern as _Lantern, Food as _Food
-        from .items import CookingKit as _CookingKit, LanternFuel as _LF
+        from .items import LanternFuel as _LF
         if race == "dwarf":
             starter_weapon = Weapon(
                 "Battleaxe", "A heavy two-handed axe of dwarven make.",
@@ -582,7 +604,11 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             "Rations", "Standard travel rations.",
             value=10, level=0, nutrition=50, count=5,
         ))
-        pc.inventory.add_item_quiet(_CookingKit())
+        # Cooking Kit no longer in starter pack -- removed from starting
+        # shop in vendor.py to make cooking a real F3+ gating decision.
+        # The auto-cooking smart-policy in this harness (search for
+        # CookingKit.use()) now actually requires the agent to find and
+        # buy the kit before raw meat starts contributing 4x nutrition.
         num_starting_potions = _stdlib_random.randint(3, 5)
         for _ in range(num_starting_potions):
             pc.inventory.add_item_quiet(Potion(
@@ -593,11 +619,12 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         # Residual gold = 500 starting purse minus the bundle cost:
         # weapon (10g Dagger / 25g Battleaxe) + 50g armor + 30g lantern
-        # + 2 x 5g fuel cans + 10g rations + 120g cooking kit
-        # + 30g/potion. Real players spend exactly this much when they
-        # clear out the F1 shop.
+        # + 2 x 5g fuel cans + 10g rations + 30g/potion. Real players
+        # spend exactly this much when they clear out the F1 shop.
+        # Cooking Kit removed from the starting shop, so it's no longer
+        # part of the bundle.
         bundle_cost = (starter_weapon.value + leather.value + 30 + 2 * 5
-                       + 10 + 120 + 30 * num_starting_potions)
+                       + 10 + 30 * num_starting_potions)
         pc.gold = 500 - bundle_cost
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
@@ -616,8 +643,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     gs.encountered_monsters = {}
     gs.encountered_vendors = {}
     gs.newly_unlocked_achievements = []
-    gs.curing_kit_stocked = False
-    gs.curing_kit_floor = _stdlib_random.randint(0, 9)
+    gs.curing_kit_stocked = False  # First F9+ vendor stocks the Curing Kit
     gs.achievement_notification_timer = 0
 
     gs.dungeon_keys = {}
@@ -1020,6 +1046,7 @@ class PlaytestSession:
                 # intelligence > 15 which rejected fresh-elf cantrips
                 # (INT 12 gives 8 MP but no cast access).
                 "can_cast": pc.max_mana > 0,
+                "unspent_stat_points": getattr(pc, "unspent_stat_points", 0),
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
@@ -2156,6 +2183,22 @@ class PlaytestSession:
             elif mode == "foresight_direction_mode":
                 from .combat import process_foresight_direction_action
                 process_foresight_direction_action(pc, tw, action)
+            elif mode == "crafting_mode":
+                from .game_systems import process_crafting_action
+                process_crafting_action(pc, tw, action)
+            elif mode == "stat_allocation_mode":
+                from .game_systems import process_stat_allocation_action
+                process_stat_allocation_action(pc, tw, action)
+            elif mode == "character_stats_mode":
+                # Minimal handler -- the in-game UI lives in app.py
+                # (line ~4865); the harness just needs to honor 'p'
+                # (open allocation menu) and 'x' (back to inventory).
+                if action == "p":
+                    if pc.unspent_stat_points > 0:
+                        gs.prompt_cntl = "stat_allocation_mode"
+                elif action == "x":
+                    gs.prompt_cntl = "inventory"
+                    handle_inventory_menu(pc, tw, "init")
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -2465,6 +2508,90 @@ class PlaytestSession:
         if reach_pct < 90:
             return False
         return True
+
+
+# ----------------------------------------------------------------------
+# Food crafting (build 375-376): sausage + lembas
+# ----------------------------------------------------------------------
+# Ingredients in this set make a recipe "spicy" -- the spicy variants
+# grant the Spiced Fury attack buff but consume Fire Pepper / Ghost
+# Pepper, which are rare garden drops (1-3% spawn vs. 10-15% for the
+# common herbs). Smart policy skips spicy recipes for now and hoards
+# the peppers; a future buff-aware policy can use them deliberately.
+_SPICY_INGREDIENTS = frozenset({"Fire Pepper", "Ghost Pepper"})
+
+
+def _is_spicy_recipe(recipe_data):
+    return any(ing[0] in _SPICY_INGREDIENTS
+               for ing in recipe_data.get("ingredients", []))
+
+
+def _count_rations(player_character):
+    """How many Rations does the player hold? Used to gate lembas
+    crafting -- each lembas burns 1 Ration, and we never want to burn
+    the last one (would leave the agent vendor-dependent for food)."""
+    from .items import Food
+    n = 0
+    for item in player_character.inventory.items:
+        if isinstance(item, Food) and item.name == "Rations":
+            n += getattr(item, "count", 1)
+    return n
+
+
+def _pick_craftable_food(player_character):
+    """Return the 1-based index (into the live `craftable` list shown by
+    process_crafting_action) of the best food recipe we can craft right
+    now, or None.
+
+    Priority:
+      1. Race-locked recipes first (dwarven Landjäger / Blutwurst when
+         the player IS a dwarf -- they only appear in craftable when
+         the race filter in get_available_recipes admits them, so just
+         giving them top priority surfaces them when materials line up).
+      2. Lembas wafers (elf-only, gated to ration_count >= 2 so we
+         never burn the last Ration on a craft).
+      3. Basic non-spicy sausages, lowest tier first (Bratwurst >
+         Chorizo > Andouille > Boerewors).
+      4. Spicy sausages -- SKIPPED (Fire Pepper / Ghost Pepper are 1-3%
+         garden drops; hoard for a future buff-aware policy).
+
+    Mirrors process_crafting_action's recipe-number lookup: it filters
+    get_available_recipes() down to r[2] == True and then indexes by
+    user-entered number. We compute the same list locally so the
+    returned action ('1', '2', ...) lines up with the game's expectation.
+    """
+    from .game_systems import get_available_recipes
+    from .item_templates import SAUSAGE_RECIPES, LEMBAS_RECIPES
+    available = get_available_recipes(player_character)
+    craftable = [r for r in available if r[2]]
+    ration_count = _count_rations(player_character)
+
+    best_idx = None
+    best_score = (99, 99)  # (priority_bucket, tier) -- lower is better
+    for i, (recipe_name, recipe_data, _craftable_flag, _missing) in enumerate(craftable):
+        idx_1based = i + 1
+        in_sausage = recipe_name in SAUSAGE_RECIPES
+        in_lembas = recipe_name in LEMBAS_RECIPES
+        if not (in_sausage or in_lembas):
+            continue
+        if in_sausage and _is_spicy_recipe(recipe_data):
+            continue
+        if in_lembas and ration_count < 2:
+            continue
+        # Priority bucket: race-locked sausage first, then lembas,
+        # then generic sausage. Tier breaks ties within a bucket.
+        if in_sausage and recipe_data.get("race"):
+            bucket = 0
+        elif in_lembas:
+            bucket = 1
+        else:
+            bucket = 2
+        tier = recipe_data.get("tier", 99)
+        score = (bucket, tier)
+        if score < best_score:
+            best_score = score
+            best_idx = idx_1based
+    return best_idx
 
 
 # ----------------------------------------------------------------------
@@ -2795,6 +2922,15 @@ def smart_policy(obs, rng, use_lantern=True):
             for i in inv
         )
         if has_cooking_kit and has_raw_meat:
+            return "i"
+        # Stat-point allocation (build 380). When the level-up granted
+        # points are sitting unspent, route into the inventory -> stats
+        # -> allocation flow. The inventory cascade has a parallel gate
+        # that returns 's' to enter character_stats_mode, then the
+        # stats handler returns 'p', then the allocation handler
+        # actually spends. No hunger / HP gate -- the allocation is a
+        # passive optimization that costs ~3 turns but unlocks magic.
+        if p.get("unspent_stat_points", 0) > 0:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
         # Open inventory to swap when current gear is broken AND we
@@ -4038,6 +4174,15 @@ def smart_policy(obs, rng, use_lantern=True):
         if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
+        # Stat-point allocation flow (build 380). Route through
+        # character_stats_mode -> stat_allocation_mode to spend any
+        # unspent level-up points. Fires AFTER heal/urgent so a low-HP
+        # agent stabilises first, but BEFORE all the routine swap /
+        # upgrade / eat-when-hungry / scroll-read steps so the agent
+        # doesn't burn turns on optimization actions while points sit
+        # idle.
+        if proposed is None and p.get("unspent_stat_points", 0) > 0:
+            proposed = "s"
         # Cook raw meat with the Cooking Kit. User: 'have the player
         # cook all their meat once they have the kit. Eating cooked
         # meat is much better for survival.' No hunger gate -- cook
@@ -4055,6 +4200,40 @@ def smart_policy(obs, rng, use_lantern=True):
                     if entry["category"] == "cooking_kit":
                         proposed = f"u{entry['slot']}"
                         break
+        # Craft a sausage or lembas. Build 375 surfaced the dead
+        # sausage subsystem; b376 adds dwarven specialties (Landjäger,
+        # Blutwurst) and elven lembas crafting. Bratwurst = 60 nut per
+        # 1 cooked meat (3.3x plain cooked meat at 18 nut/use);
+        # Landjäger/Blutwurst stack the hidden Sausage.use() +50%
+        # dwarf bonus for 100-140 base nutrition. Lembas Wafer fills
+        # hunger to max AND freezes decay for 30 turns -- the most
+        # powerful single food in the game. Trigger conditions:
+        #   - Sausage: Curing Kit + cooked meat + non-spicy recipe
+        #     materials (handled by _pick_craftable_food).
+        #   - Lembas: elf race + ration_count >= 2 + recipe materials.
+        # Hunger-gated >= 30 so a starving agent with only 1-2 cooked
+        # meats eats them instead of crafting (food crafts cost 4-5
+        # turns: i -> c -> <recipe> -> x -> eat).
+        if proposed is None:
+            has_curing_kit = any(e["category"] == "curing_kit" for e in inv)
+            has_cooked_meat_iv = any(
+                e["category"] == "food"
+                and e.get("is_cooked")
+                and not e.get("is_rotten")
+                and e.get("rot_timer") is not None  # Meat, not Rations
+                for e in inv
+            )
+            is_elf = (getattr(gs.player_character, "race", "") or "").lower() == "elf"
+            has_ingredients = any(e["category"] == "ingredient" for e in inv)
+            # Two pathways into the craft menu:
+            #   1. Sausage path: kit + cooked meat (lembas not needed).
+            #   2. Lembas path: elf + ingredients (Curing Kit not needed
+            #      since lembas uses rations, not Curing Kit).
+            can_try_sausage = has_curing_kit and has_cooked_meat_iv
+            can_try_lembas = is_elf and has_ingredients
+            if (can_try_sausage or can_try_lembas) and hunger >= 30:
+                if _pick_craftable_food(gs.player_character) is not None:
+                    proposed = "c"
         if (proposed is None
                 and equipped.get("weapon", {})
                 and equipped["weapon"].get("is_broken")
@@ -4412,6 +4591,47 @@ def smart_policy(obs, rng, use_lantern=True):
             return "c"
         return "a" if rng.random() < 0.92 else "f"
 
+    if mode == "crafting_mode":
+        # We landed here because the inventory cascade fired 'c' on a
+        # turn where _pick_craftable_food found a craftable recipe
+        # (sausage or lembas). Pick the recipe and send its number.
+        # process_crafting_action stays in crafting_mode after a
+        # successful craft so the next obs may still be in this mode;
+        # in that case _pick_craftable_food re-evaluates against the
+        # new inventory (meat - 1 / ration - 1 / herbs - n) and either
+        # crafts again or returns None -> we exit with 'x'.
+        idx = _pick_craftable_food(gs.player_character)
+        if idx is not None:
+            return str(idx)
+        return "x"
+
+    if mode == "character_stats_mode":
+        # We landed here because the game_loop trigger fired 'i' -> 's'
+        # to surface unspent stat points. Open the allocation panel if
+        # any are available; otherwise back out to inventory.
+        if obs["player"].get("unspent_stat_points", 0) > 0:
+            return "p"
+        return "x"
+
+    if mode == "stat_allocation_mode":
+        # Auto-allocate stat points (build 380).
+        # Priority: INT until the player is past their racial cast
+        # threshold + 4 (so they have mana for a real spell, not just
+        # crossing the gate by 1). After that, alternate STR / DEX to
+        # round out the build. Race thresholds match max_mana gates
+        # (characters.py:920+): elf 11, human 15, dwarf 20.
+        pc = gs.player_character
+        race = (getattr(pc, "race", "") or "").lower()
+        cast_thresh = {"elf": 11, "human": 13, "dwarf": 20}.get(race, 13)
+        target_int = cast_thresh + 4  # 1 + ~3 spells of mana headroom
+        if pc.unspent_stat_points <= 0:
+            return "x"
+        if pc.intelligence < target_int:
+            return "i"
+        # Past INT target: alternate STR / DEX to round the build.
+        # rng makes it look organic rather than always STR first.
+        return "a" if rng.random() < 0.5 else "d"
+
     if mode == "identify_scroll_mode":
         # Scroll of Identify opened a sub-mode listing unidentified
         # items (1..N) or 'c' to cancel. Cancel doesn't consume the
@@ -4654,6 +4874,18 @@ def smart_policy(obs, rng, use_lantern=True):
         if not has_kit:
             for v in vendor_inv:
                 if v["category"] == "cooking_kit" and v["price"] <= gold:
+                    return f"b{v['slot']}"
+
+        # CURING KIT: one-time purchase that unlocks sausage crafting.
+        # Stocks on the first vendor at F9+ (after the bug level).
+        # Playtest-371 found 0/8 runs ever saw the kit, leaving the
+        # whole sausage subsystem (Bratwurst, Andouille, Boerewors,
+        # etc.) as dead code. Buy it on sight; it's permanent and
+        # cheap relative to deep-floor gold reserves (~180g).
+        has_curing_kit = any(i["category"] == "curing_kit" for i in inv)
+        if not has_curing_kit:
+            for v in vendor_inv:
+                if v["category"] == "curing_kit" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
         # RATIONS FIRST: buy EVERY ration the vendor offers, before

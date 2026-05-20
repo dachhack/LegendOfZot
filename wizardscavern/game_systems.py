@@ -1721,9 +1721,16 @@ def get_available_recipes(player_character):
                 if len(missing) <= 2:
                     available.append((recipe_name, recipe_data, False, missing))
 
-    # Check sausage recipes (requires Curing Kit)
+    # Check sausage recipes (requires Curing Kit). Race-locked recipes
+    # (recipe_data.get('race')) are hidden from the menu when the
+    # player's race doesn't match -- e.g. Landjäger and Blutwurst are
+    # dwarven specialties and don't appear for humans / elves.
+    player_race = getattr(player_character, 'race', '').lower()
     if has_curing_kit:
         for recipe_name, recipe_data in SAUSAGE_RECIPES.items():
+            recipe_race = recipe_data.get('race')
+            if recipe_race and recipe_race != player_race:
+                continue
             can_craft = True
             missing = []
             for ing_name, ing_count in recipe_data['ingredients']:
@@ -3711,6 +3718,25 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
                     gs.cantrip_selections = []
                     gs.prompt_cntl = "player_cantrips"
                 else:
+                    # Humans get one starter cantrip (Mind Touch) to
+                    # support the "balanced between melee and magic"
+                    # design. The cantrip is auto-added (no picker)
+                    # since there's only one. It sits unusable until
+                    # INT crosses the human cast gate (INT > 15 ->
+                    # max_mana > 0), then activates via the existing
+                    # memorized_spells flow. Dwarves intentionally
+                    # get nothing -- they're the dedicated melee race.
+                    if player_character.race == 'human':
+                        from .item_templates import SPELL_TEMPLATES as _ST
+                        import copy as _copy
+                        for spell in _ST:
+                            if (getattr(spell, 'is_cantrip', False)
+                                    and spell.name.lower() == 'mind touch'):
+                                spell_copy = _copy.deepcopy(spell)
+                                if hasattr(spell_copy, 'is_identified'):
+                                    spell_copy.is_identified = True
+                                player_character.memorized_spells.append(spell_copy)
+                                break
                     gs.prompt_cntl = "starting_shop"
                     handle_starting_shop(player_character, my_tower, "init")
                 return True
@@ -4755,6 +4781,49 @@ def generate_player_sprite_html(race, gender, equipped_armor=None):
     else:
         armor_state = 'nonmetal'
     return _generate_player_sprite_html(race, armor_state)
+
+def process_stat_allocation_action(player_character, my_tower, cmd):
+    """Handle stat-point allocation menu (build 380).
+
+    Spends unspent_stat_points granted at level-up. One point = one
+    permanent +1 to STR / DEX / INT. Mirrors the in-code claim at
+    characters.py:912 that level-ups invest in stats. Mode is entered
+    from character_stats_mode via cmd 'p'.
+
+    Accepted commands:
+        a / 1   -> +1 STR
+        d / 2   -> +1 DEX
+        i / 3   -> +1 INT
+        x       -> back to character_stats_mode
+    """
+    if cmd == "init":
+        return
+    if cmd == 'x':
+        gs.prompt_cntl = "character_stats_mode"
+        return
+    if player_character.unspent_stat_points <= 0:
+        add_log(f"{COLOR_YELLOW}You have no stat points to spend.{COLOR_RESET}")
+        gs.prompt_cntl = "character_stats_mode"
+        return
+    stat_map = {'a': 'strength', '1': 'strength',
+                'd': 'dexterity', '2': 'dexterity',
+                'i': 'intelligence', '3': 'intelligence'}
+    if cmd not in stat_map:
+        add_log(f"{COLOR_RED}Enter 'a' (STR), 'd' (DEX), 'i' (INT), or 'x' to back out.{COLOR_RESET}")
+        return
+    stat = stat_map[cmd]
+    setattr(player_character, stat,
+            getattr(player_character, stat) + 1)
+    player_character.unspent_stat_points -= 1
+    label = {'strength': 'Strength', 'dexterity': 'Dexterity',
+             'intelligence': 'Intelligence'}[stat]
+    add_log(f"{COLOR_GREEN}{label} +1 (now {getattr(player_character, stat)}).{COLOR_RESET}")
+    if player_character.unspent_stat_points > 0:
+        add_log(f"{COLOR_CYAN}{player_character.unspent_stat_points} stat point(s) remaining.{COLOR_RESET}")
+    else:
+        add_log(f"{COLOR_CYAN}All stat points spent.{COLOR_RESET}")
+        gs.prompt_cntl = "character_stats_mode"
+
 
 def can_cast_spells(player_character):
     """

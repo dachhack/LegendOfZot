@@ -2583,16 +2583,17 @@ def generate_vendor_inventory(floor_level, room):
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
 
-    # Curing Kit: stocked on the first vendor found on a specific random floor (1-10).
-    # Safety net: if player has reached floor 10 without the kit being stocked yet,
-    # the next vendor they find will always carry it.
-    if not getattr(gs, 'curing_kit_stocked', False):
-        target_floor = getattr(gs, 'curing_kit_floor', None)
-        is_target_floor = target_floor is not None and floor_level == target_floor
-        is_last_chance = floor_level >= 9  # Floor 10 (0-indexed 9) is the safety net
-        if (1 <= floor_level <= 10) and (is_target_floor or is_last_chance):
-            inventory.append(CuringKit())
-            gs.curing_kit_stocked = True
+    # Curing Kit: unlocks sausage crafting. Stocked at every regular
+    # vendor at F5+ until the player buys one (matching the gate in
+    # vendor.py:Vendor.__init__). The gs.curing_kit_stocked flag flips
+    # in the buy handler at vendor.py:process_vendor_action (cmd 'b'),
+    # not here -- a restock that surfaces the kit should leave it
+    # claimable by the next regular vendor too, in case the player
+    # walks past this one. Gate dropped F10 -> F5 in build 377; see
+    # vendor.py:Vendor.__init__ for the rationale.
+    if (floor_level >= 4
+            and not getattr(gs, 'curing_kit_stocked', False)):
+        inventory.append(CuringKit())
 
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
@@ -2825,17 +2826,21 @@ MEAT_DEFAULT = ("steak", "dubious", 12)
 MEAT_DEFAULT_CUTS = ["steak", "burger", "chops", "filet", "kebab"]
 
 HUNGER_MAX = 100
-# Hunger decays 7 units per 10 moves -- 0.7/move averaged. Earlier
-# rate was 1/move flat. The 5000-turn carnage round (build 327)
-# audit showed agents hit a per-floor deficit on vendor-less
-# floors (~65 nut short per floor), compounding into ~60 turns at
-# hunger 0 even though they were eating constantly. Slowing the
-# clock by 30% stretches every food source -- starter pack,
-# vendor stock, monster meat -- proportionally, so more agents
-# push past the F3-F4 starvation gate and into the F5+ tomb
-# grinder where the real carnage lives. The tracker-pair below
-# keeps decay integer (no float drift) and deterministic.
-HUNGER_DECAY_PER_MOVE = 7
+# Hunger decays 1 unit per move (10/10 ratio kept for the integer
+# tracker below). Build 373 bumps from the 7/10 = 0.7/move rate set
+# in build 327. Playtest-372 sweep (18 runs, 50k turns) found the
+# food clock was decorative: F1-F3 mean hunger 74.5, F4-F6 70.8,
+# 0/18 runs ever crossed the Hungry threshold, 0/18 starvation
+# deaths. The 0.7/move rate dates from a much sparser food economy
+# (single Iron Rations per vendor, no F1 dungeon-vendor rations,
+# no starter Cooking Kit) -- since then Iron Rations stack went
+# 1->3 (b328), F1 vendor got Rations + Iron Rations (b328), and
+# more food sources landed. Net: the food clock no longer bites.
+# Going back to 1/move (+43% decay rate) should restore real
+# hunger pressure without re-introducing the b327 starvation gate
+# because today's vendors carry ~410 nut per visit (b328) vs.
+# ~210 nut at the time of the original tuning.
+HUNGER_DECAY_PER_MOVE = 10
 HUNGER_DECAY_INTERVAL = 10
 HUNGER_STARVING_THRESHOLD = 10   # below this: starving, take 1 dmg per move
 HUNGER_HUNGRY_THRESHOLD = 40     # below this: hungry, slight combat penalty
@@ -2904,6 +2909,13 @@ class Food(Item):
         return f"Food(name='{self.name}', nutrition={self.nutrition}, count={self.count})"
 
     def use(self, character, my_tower=None):
+        # b381 added a dwarf bonus here too; b382 reverted it. Dwarves
+        # are now explicitly carnivore-tuned: the Meat / Sausage bonus
+        # (2.0x) lives in those subclasses' use() methods, while plain
+        # Food (Rations, Iron Rations, Salted Jerky) gives the same
+        # nutrition to every race. Leaning into "kill, butcher, eat"
+        # as the dwarf food economy means rations are a budget filler,
+        # meat is the meal.
         old_hunger = character.hunger
         character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
         gained = character.hunger - old_hunger
@@ -2947,10 +2959,13 @@ class Sausage(Food):
 
     def use(self, character, my_tower=None):
         is_dwarf = getattr(character, 'race', '').lower() == 'dwarf'
-        # Dwarves get +50% nutrition and healing from sausages
-        nutrition_gain = int(self.nutrition * 1.5) if is_dwarf else self.nutrition
+        # Dwarven Carnivore Diet (build 382): bumped sausage bonus from
+        # +50% to +100% to match the Meat.use() carnivore tier.
+        # Sausages are cured meat -- they fit the same race archetype
+        # that gives dwarves a meat-only food advantage.
+        nutrition_gain = self.nutrition * 2 if is_dwarf else self.nutrition
         base_heal = 5
-        heal_amount = int(base_heal * 1.5) if is_dwarf else base_heal
+        heal_amount = base_heal * 2 if is_dwarf else base_heal
 
         old_hunger = character.hunger
         character.hunger = min(HUNGER_MAX, character.hunger + nutrition_gain)
@@ -2963,7 +2978,7 @@ class Sausage(Food):
         if heal > 0:
             add_log(f"{COLOR_GREEN}The hearty cured meat restores {heal} HP.{COLOR_RESET}")
         if is_dwarf:
-            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}[Carnivore Diet] Mountain blood feasts on flesh -- the meat fills you twice over.{COLOR_RESET}")
 
         # Spicy sausage buff — grants "Spiced Fury" attack boost
         if self.is_spicy:
@@ -3034,23 +3049,40 @@ class Meat(Item):
         return False
 
     def use(self, character, my_tower=None):
+        # Dwarven Carnivore Diet (build 382): dwarves now get +100%
+        # nutrition on raw AND cooked monster meat (bumped from b381's
+        # +50%). The b381 sweep showed +50% wasn't enough -- dwarves
+        # still hit 4/6 starvation deaths because the food supply ran
+        # out entirely on long runs, not because each meal was too
+        # small. +100% effectively doubles meat-per-kill efficiency
+        # for dwarves while leaving Rations / Iron Rations at base
+        # rate (user spec: "lean into the dwarf carnivore diet").
+        # Lore: dwarves draw on a hearty meat-and-mead constitution
+        # that processed grains never satisfy.
+        is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
         if self.is_rotten:
             add_log(f"{COLOR_RED}You choke down the rotten {self.monster_name} {self.cut}. Ugh! Your stomach protests.{COLOR_RESET}")
             character.take_damage_no_def(10, "Physical")
             add_log(f"{COLOR_RED}You lose 10 HP from food poisoning!{COLOR_RESET}")
             return True  # consumed anyway
         if not self.is_cooked:
+            base_gain = max(5, self.nutrition // 2)
+            gain = base_gain * 2 if is_dwarf else base_gain
             add_log(f"{COLOR_YELLOW}You gnaw on the raw {self.monster_name} {self.cut}. It's disgusting but fills you a little.{COLOR_RESET}")
             old_hunger = character.hunger
-            character.hunger = min(HUNGER_MAX, character.hunger + max(5, self.nutrition // 2))
+            character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
             add_log(f"{COLOR_YELLOW}Hunger restored by {gained}.{COLOR_RESET}")
         else:
+            base_gain = self.nutrition
+            gain = base_gain * 2 if is_dwarf else base_gain
             old_hunger = character.hunger
-            character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+            character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
             article = "a" if self.descriptor[0].lower() not in 'aeiou' else "an"
             add_log(f"{COLOR_GREEN}You ate {article} {self.descriptor} {self.monster_name} {self.cut}! Hunger restored by {gained}.{COLOR_RESET}")
+        if is_dwarf and gained > 0:
+            add_log(f"{COLOR_YELLOW}[Carnivore Diet] Mountain blood feasts on flesh -- the meat fills you twice over.{COLOR_RESET}")
         return True  # consumed
 
 
@@ -3204,14 +3236,17 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 70% chance to drop meat (was 55%, originally 35%). Build-327
-    # food audit showed agents averaging only ~15 kills per floor
-    # past F3 with a 55% drop rate, generating roughly 75 nut of
-    # meat against a 140 nut per-floor exploration cost. Bumping
-    # to 70% pushes meat supply to ~100 nut per floor and meets
-    # the 5000-turn 'deep death' carnage goal alongside the slower
-    # hunger decay and bigger Iron Rations stash.
-    if random.random() > 0.70:
+    # 55% chance to drop meat. Build-379 reverted from 70% -- the b327
+    # bump (35% -> 55% -> 70%) was tuned alongside slower hunger decay
+    # AND a bigger Iron Rations stash, both of which have now been
+    # reverted (b374 restored 1.0/move decay, b379 dropped Iron
+    # Rations 3 -> 1). At 70% drop + 22 kills/run agents averaged
+    # ~16 meat drops per run, which combined with the abundant ration
+    # supply made cooking / sausage-crafting decisions feel optional.
+    # 55% (~12 meat/run) keeps meat the dominant kill reward but pulls
+    # raw-vs-cooked and craft-now-vs-later back into being real tactical
+    # choices.
+    if random.random() > 0.55:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
@@ -4231,7 +4266,7 @@ POTION_TEMPLATES = [
     # Permanent stat elixirs - rare, expensive, one-time boosts
     Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
     Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=15, potion_type='permanent_intelligence', effect_magnitude=2),
+    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
     Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=25, potion_type='permanent_strength', effect_magnitude=4),
     Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=25, potion_type='permanent_dexterity', effect_magnitude=4),
     Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=25, potion_type='permanent_intelligence', effect_magnitude=4),
