@@ -285,6 +285,36 @@ SAUSAGE_RECIPES = {
     },
 
     # ============================================================
+    # DWARVEN SAUSAGES — race-locked. Use rare mountain-themed
+    # garden drops (Iron Bark, Stone Flower) so they read as the
+    # treasure-tier craft they are. Sausage.use() already grants
+    # dwarves a hidden +50% nutrition bonus on top.
+    # ============================================================
+
+    'Landjäger': {
+        'ingredients': [('Fire Root', 1), ('Iron Bark', 1)],
+        'meat_cost': 1,
+        'tier': 2,
+        'race': 'dwarf',
+        'result': lambda: Sausage(
+            name="Landjäger",
+            description="A flat air-dried Alpine hunter's sausage, pressed between boards and smoked over beechwood. Dwarves carry these into the mines.",
+            value=70, level=2, nutrition=100, sausage_style="Landjäger"
+        ),
+    },
+    'Blutwurst': {
+        'ingredients': [('Healing Moss', 1), ('Stone Flower', 1)],
+        'meat_cost': 2,
+        'tier': 3,
+        'race': 'dwarf',
+        'result': lambda: Sausage(
+            name="Blutwurst",
+            description="A heavy German blood sausage, iron-rich and barley-thick. Said to put fire back in a dwarf's beard.",
+            value=110, level=3, nutrition=140, sausage_style="Blutwurst"
+        ),
+    },
+
+    # ============================================================
     # SPICY SAUSAGES — require hot peppers, grant Spiced Fury buff
     # ============================================================
 

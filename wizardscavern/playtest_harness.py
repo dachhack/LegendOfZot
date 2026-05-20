@@ -2479,7 +2479,7 @@ class PlaytestSession:
 
 
 # ----------------------------------------------------------------------
-# Sausage crafting (build 375)
+# Food crafting (build 375-376): sausage + lembas
 # ----------------------------------------------------------------------
 # Ingredients in this set make a recipe "spicy" -- the spicy variants
 # grant the Spiced Fury attack buff but consume Fire Pepper / Ghost
@@ -2494,36 +2494,71 @@ def _is_spicy_recipe(recipe_data):
                for ing in recipe_data.get("ingredients", []))
 
 
-def _pick_craftable_sausage(player_character):
-    """Return the 1-based index (into the live `craftable` list shown by
-    process_crafting_action) of the lowest-tier non-spicy sausage we can
-    craft right now, or None.
+def _count_rations(player_character):
+    """How many Rations does the player hold? Used to gate lembas
+    crafting -- each lembas burns 1 Ration, and we never want to burn
+    the last one (would leave the agent vendor-dependent for food)."""
+    from .items import Food
+    n = 0
+    for item in player_character.inventory.items:
+        if isinstance(item, Food) and item.name == "Rations":
+            n += getattr(item, "count", 1)
+    return n
 
-    Mirrors process_crafting_action's recipe lookup: it filters
-    get_available_recipes() down to `r[2] == True` and then indexes by
+
+def _pick_craftable_food(player_character):
+    """Return the 1-based index (into the live `craftable` list shown by
+    process_crafting_action) of the best food recipe we can craft right
+    now, or None.
+
+    Priority:
+      1. Race-locked recipes first (dwarven Landjäger / Blutwurst when
+         the player IS a dwarf -- they only appear in craftable when
+         the race filter in get_available_recipes admits them, so just
+         giving them top priority surfaces them when materials line up).
+      2. Lembas wafers (elf-only, gated to ration_count >= 2 so we
+         never burn the last Ration on a craft).
+      3. Basic non-spicy sausages, lowest tier first (Bratwurst >
+         Chorizo > Andouille > Boerewors).
+      4. Spicy sausages -- SKIPPED (Fire Pepper / Ghost Pepper are 1-3%
+         garden drops; hoard for a future buff-aware policy).
+
+    Mirrors process_crafting_action's recipe-number lookup: it filters
+    get_available_recipes() down to r[2] == True and then indexes by
     user-entered number. We compute the same list locally so the
     returned action ('1', '2', ...) lines up with the game's expectation.
     """
     from .game_systems import get_available_recipes
-    from .item_templates import SAUSAGE_RECIPES
+    from .item_templates import SAUSAGE_RECIPES, LEMBAS_RECIPES
     available = get_available_recipes(player_character)
     craftable = [r for r in available if r[2]]
-    # First pass: pick the lowest-tier non-spicy sausage. Tier 1
-    # (Bratwurst) before tier 2 (Chorizo / Andouille) before tier 3
-    # (Boerewors) -- saves the better herbs for the better recipes
-    # while still surfacing the sausage subsystem in playtests.
+    ration_count = _count_rations(player_character)
+
     best_idx = None
-    best_tier = 99
+    best_score = (99, 99)  # (priority_bucket, tier) -- lower is better
     for i, (recipe_name, recipe_data, _craftable_flag, _missing) in enumerate(craftable):
-        if recipe_name not in SAUSAGE_RECIPES:
+        idx_1based = i + 1
+        in_sausage = recipe_name in SAUSAGE_RECIPES
+        in_lembas = recipe_name in LEMBAS_RECIPES
+        if not (in_sausage or in_lembas):
             continue
-        sausage_recipe = SAUSAGE_RECIPES[recipe_name]
-        if _is_spicy_recipe(sausage_recipe):
+        if in_sausage and _is_spicy_recipe(recipe_data):
             continue
-        tier = sausage_recipe.get("tier", 99)
-        if tier < best_tier:
-            best_tier = tier
-            best_idx = i + 1  # craftable index is 1-based at the menu
+        if in_lembas and ration_count < 2:
+            continue
+        # Priority bucket: race-locked sausage first, then lembas,
+        # then generic sausage. Tier breaks ties within a bucket.
+        if in_sausage and recipe_data.get("race"):
+            bucket = 0
+        elif in_lembas:
+            bucket = 1
+        else:
+            bucket = 2
+        tier = recipe_data.get("tier", 99)
+        score = (bucket, tier)
+        if score < best_score:
+            best_score = score
+            best_idx = idx_1based
     return best_idx
 
 
@@ -4115,16 +4150,20 @@ def smart_policy(obs, rng, use_lantern=True):
                     if entry["category"] == "cooking_kit":
                         proposed = f"u{entry['slot']}"
                         break
-        # Craft a sausage. Build 375: surfaces the dead sausage
-        # subsystem in playtests. Bratwurst = 60 nut per 1 cooked meat
-        # (3.3x plain cooked meat at 18 nut/use), Chorizo / Boerewors
-        # scale up from there. Dwarves get a hidden +50% bonus
-        # (Sausage.use() at items.py:2955). Trigger: have Curing Kit
-        # + at least one cooked meat + ingredients for a non-spicy
-        # recipe. The crafting_mode branch below handles recipe
-        # selection. Hunger-gated so a starving agent with only 1-2
-        # cooked meats eats them instead of crafting (sausages are 5
-        # turns to make: i -> c -> <recipe> -> x -> eat).
+        # Craft a sausage or lembas. Build 375 surfaced the dead
+        # sausage subsystem; b376 adds dwarven specialties (Landjäger,
+        # Blutwurst) and elven lembas crafting. Bratwurst = 60 nut per
+        # 1 cooked meat (3.3x plain cooked meat at 18 nut/use);
+        # Landjäger/Blutwurst stack the hidden Sausage.use() +50%
+        # dwarf bonus for 100-140 base nutrition. Lembas Wafer fills
+        # hunger to max AND freezes decay for 30 turns -- the most
+        # powerful single food in the game. Trigger conditions:
+        #   - Sausage: Curing Kit + cooked meat + non-spicy recipe
+        #     materials (handled by _pick_craftable_food).
+        #   - Lembas: elf race + ration_count >= 2 + recipe materials.
+        # Hunger-gated >= 30 so a starving agent with only 1-2 cooked
+        # meats eats them instead of crafting (food crafts cost 4-5
+        # turns: i -> c -> <recipe> -> x -> eat).
         if proposed is None:
             has_curing_kit = any(e["category"] == "curing_kit" for e in inv)
             has_cooked_meat_iv = any(
@@ -4134,8 +4173,16 @@ def smart_policy(obs, rng, use_lantern=True):
                 and e.get("rot_timer") is not None  # Meat, not Rations
                 for e in inv
             )
-            if has_curing_kit and has_cooked_meat_iv and hunger >= 30:
-                if _pick_craftable_sausage(gs.player_character) is not None:
+            is_elf = (getattr(gs.player_character, "race", "") or "").lower() == "elf"
+            has_ingredients = any(e["category"] == "ingredient" for e in inv)
+            # Two pathways into the craft menu:
+            #   1. Sausage path: kit + cooked meat (lembas not needed).
+            #   2. Lembas path: elf + ingredients (Curing Kit not needed
+            #      since lembas uses rations, not Curing Kit).
+            can_try_sausage = has_curing_kit and has_cooked_meat_iv
+            can_try_lembas = is_elf and has_ingredients
+            if (can_try_sausage or can_try_lembas) and hunger >= 30:
+                if _pick_craftable_food(gs.player_character) is not None:
                     proposed = "c"
         if (proposed is None
                 and equipped.get("weapon", {})
@@ -4496,14 +4543,14 @@ def smart_policy(obs, rng, use_lantern=True):
 
     if mode == "crafting_mode":
         # We landed here because the inventory cascade fired 'c' on a
-        # turn where we had Curing Kit + cooked meat + ingredients for
-        # at least one non-spicy sausage recipe. Pick the recipe and
-        # send its number. process_crafting_action stays in
-        # crafting_mode after a successful craft so the next obs may
-        # still be in this mode; in that case _pick_craftable_sausage
-        # re-evaluates against the new inventory (meat - 1, herbs - n)
-        # and either crafts again or returns None -> we exit with 'x'.
-        idx = _pick_craftable_sausage(gs.player_character)
+        # turn where _pick_craftable_food found a craftable recipe
+        # (sausage or lembas). Pick the recipe and send its number.
+        # process_crafting_action stays in crafting_mode after a
+        # successful craft so the next obs may still be in this mode;
+        # in that case _pick_craftable_food re-evaluates against the
+        # new inventory (meat - 1 / ration - 1 / herbs - n) and either
+        # crafts again or returns None -> we exit with 'x'.
+        idx = _pick_craftable_food(gs.player_character)
         if idx is not None:
             return str(idx)
         return "x"

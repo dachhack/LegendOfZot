@@ -1721,9 +1721,16 @@ def get_available_recipes(player_character):
                 if len(missing) <= 2:
                     available.append((recipe_name, recipe_data, False, missing))
 
-    # Check sausage recipes (requires Curing Kit)
+    # Check sausage recipes (requires Curing Kit). Race-locked recipes
+    # (recipe_data.get('race')) are hidden from the menu when the
+    # player's race doesn't match -- e.g. Landjäger and Blutwurst are
+    # dwarven specialties and don't appear for humans / elves.
+    player_race = getattr(player_character, 'race', '').lower()
     if has_curing_kit:
         for recipe_name, recipe_data in SAUSAGE_RECIPES.items():
+            recipe_race = recipe_data.get('race')
+            if recipe_race and recipe_race != player_race:
+                continue
             can_craft = True
             missing = []
             for ing_name, ing_count in recipe_data['ingredients']:
