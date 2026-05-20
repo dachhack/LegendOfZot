@@ -12,9 +12,9 @@
   "kills": 58,
   "alive": true,
   "status": "stuck",
-  "status_reason": "flatline (6448 turns, no progress)",
+  "status_reason": "loop (period=1, 6448 idle)",
   "death_cause": "\u2014",
-  "started": "2026-05-20T00:22:11+00:00",
+  "started": "2026-05-20T00:49:12+00:00",
   "moves_total": 187,
   "moves_revisit": 46,
   "wasted_pct": 24.6,
@@ -31,6 +31,6 @@
   "xp_pct": 71.2,
   "chests_total": 21,
   "boons_total": 36,
-  "loop_episode_count": 1,
-  "loop_turns_total": 6451
+  "loop_episode_count": 2,
+  "loop_turns_total": 6445
 }
