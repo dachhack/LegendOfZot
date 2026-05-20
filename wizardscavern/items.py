@@ -2584,13 +2584,14 @@ def generate_vendor_inventory(floor_level, room):
         inventory.append(cooking_kit)
 
     # Curing Kit: unlocks sausage crafting. Stocked at every regular
-    # vendor at F10+ until the player buys one (matching the gate in
+    # vendor at F5+ until the player buys one (matching the gate in
     # vendor.py:Vendor.__init__). The gs.curing_kit_stocked flag flips
     # in the buy handler at vendor.py:process_vendor_action (cmd 'b'),
     # not here -- a restock that surfaces the kit should leave it
     # claimable by the next regular vendor too, in case the player
-    # walks past this one.
-    if (floor_level >= 9
+    # walks past this one. Gate dropped F10 -> F5 in build 377; see
+    # vendor.py:Vendor.__init__ for the rationale.
+    if (floor_level >= 4
             and not getattr(gs, 'curing_kit_stocked', False)):
         inventory.append(CuringKit())
 

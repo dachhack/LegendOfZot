@@ -584,7 +584,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=50, count=5,
+            value=10, level=0, nutrition=50, count=3,
         ))
         # Cooking Kit no longer in starter pack -- removed from starting
         # shop in vendor.py to make cooking a real F3+ gating decision.

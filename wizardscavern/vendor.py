@@ -121,12 +121,16 @@ class Vendor:
                 self.inventory.add_item_quiet(LanternFuel(
                     "Lantern Fuel", "A small flask of oil for your lantern.",
                     value=5, level=0, fuel_restore_amount=20))
-            # Rations bumped 3 -> 5 after a playtest pass: 10/30 runs
-            # were dying with 0 food on floor 1-2 because the starter 3
-            # Rations + 1-2 monster meat drops ran out before reaching
-            # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
-            # pre-vendor food cushion.
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
+            # Rations: 3 in the starting shop. Build 377 dropped this
+            # from 5 -> 3 (originally 3 in early builds, bumped to 5
+            # after a starvation-cliff fix, now back to 3 because the
+            # b376 sweep showed peak inventory nutrition still hits
+            # 1560-3315 across the run -- rations are abundant enough
+            # that 5 in the starter pack made the F1-F4 food economy
+            # decorative. Three rations = 150 nutrition use, still a
+            # real cushion but no longer guarantees the agent ignores
+            # raw meat / cooking decisions until F5+.
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=3))
             # Cooking Kit REMOVED from the starting shop (build 372+).
             # Playtest-371 audit found the kit was making cooking a
             # zero-decision mechanic: starter-pack kit + auto-cook on
@@ -306,20 +310,22 @@ class Vendor:
                 self.inventory.add_item_quiet(CookingKit())
 
             # Curing Kit: unlocks sausage crafting. Stocked at EVERY
-            # regular vendor at F10+ until the player buys one (after
-            # which the global gs.curing_kit_stocked flag flips and no
-            # more are minted). F10 is "mostly after the bug level":
-            # bug spawns F8-F15 (40% per floor, one per game) -- 78% of
-            # bug levels fall at F8-F10. Stocking every F10+ regular
-            # vendor (rather than just the first) survives the bug-
-            # merchant skip: if the first F10+ vendor the player meets
-            # is a bug merchant (which takes a different __init__
-            # branch above and doesn't run this gate), the next regular
-            # vendor still carries the kit. Playtest-372 sweep caught
-            # this skip in 2/5 F9+ first-vendor encounters.
+            # regular vendor at F5+ until the player buys one (the
+            # global gs.curing_kit_stocked flag flips in the buy
+            # handler at cmd 'b'). Dropped F10 -> F5 in build 377:
+            # the b376 sweep showed crafting works ~100% once the
+            # kit is owned, but only 4/18 runs ever got one because
+            # the F10 gate placed the relief valve AFTER the F2-F5
+            # starvation cliff. F5 puts the kit on the same floor
+            # band where hunger pressure starts biting. Stocking
+            # every regular vendor (not just the first) survives the
+            # bug-merchant skip: if the first F5+ vendor is a bug
+            # merchant (which takes a different __init__ branch
+            # above and doesn't run this gate), the next regular
+            # vendor still carries the kit.
             # current_floor_level is character.z (0-indexed), so
-            # z >= 9 == F10+.
-            if (current_floor_level >= 9
+            # z >= 4 == F5+.
+            if (current_floor_level >= 4
                     and not getattr(gs, 'curing_kit_stocked', False)):
                 self.inventory.add_item_quiet(CuringKit())
 
