@@ -305,21 +305,23 @@ class Vendor:
                 # biggest depth gate the agent never saw.
                 self.inventory.add_item_quiet(CookingKit())
 
-            # Curing Kit: unlocks sausage crafting. Stocked on the
-            # FIRST vendor encountered at F9+ (i.e. after the bug
-            # level at F8). The previous random-F1-F10 gate was on
-            # the restock-only path in items.py:generate_vendor_inventory
-            # and never fired in normal play -- playtest-371 saw 0/8
-            # runs receive a Curing Kit, leaving the entire sausage
-            # subsystem (Bratwurst / Andouille / Boerewors / etc.) as
-            # dead code. Gating to F9+ ties the unlock to the bug-
-            # level milestone: survive the shrink, claim the kit.
+            # Curing Kit: unlocks sausage crafting. Stocked at EVERY
+            # regular vendor at F10+ until the player buys one (after
+            # which the global gs.curing_kit_stocked flag flips and no
+            # more are minted). F10 is "mostly after the bug level":
+            # bug spawns F8-F15 (40% per floor, one per game) -- 78% of
+            # bug levels fall at F8-F10. Stocking every F10+ regular
+            # vendor (rather than just the first) survives the bug-
+            # merchant skip: if the first F10+ vendor the player meets
+            # is a bug merchant (which takes a different __init__
+            # branch above and doesn't run this gate), the next regular
+            # vendor still carries the kit. Playtest-372 sweep caught
+            # this skip in 2/5 F9+ first-vendor encounters.
             # current_floor_level is character.z (0-indexed), so
-            # z >= 8 == F9+.
-            if (current_floor_level >= 8
+            # z >= 9 == F10+.
+            if (current_floor_level >= 9
                     and not getattr(gs, 'curing_kit_stocked', False)):
                 self.inventory.add_item_quiet(CuringKit())
-                gs.curing_kit_stocked = True
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
@@ -654,6 +656,15 @@ def process_vendor_action(player_character, vendor_character, cmd):
                     player_character.inventory.add_item(new_item, notify=False)
                     # Remove the actual item from vendor's inventory (not by index since we used sorted)
                     vendor_character.inventory.items.remove(item_to_buy)
+
+                    # Curing Kit purchase flips the global one-shot flag --
+                    # see vendor.py:Vendor.__init__ Curing-Kit block. Every
+                    # F10+ regular vendor stocks one until this flag flips,
+                    # so the player can't soft-lock by skipping the first
+                    # bug-merchant F10 vendor. Flag flip on PURCHASE (here),
+                    # not on stocking.
+                    if isinstance(new_item, CuringKit):
+                        gs.curing_kit_stocked = True
 
                     # Starting shop: auto-equip purchased gear so the
                     # player doesn't need to dive into the inventory

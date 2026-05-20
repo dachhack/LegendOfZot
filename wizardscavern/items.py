@@ -2583,15 +2583,16 @@ def generate_vendor_inventory(floor_level, room):
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
 
-    # Curing Kit: unlocks sausage crafting. Stocked on the first vendor
-    # the player encounters at F9+ (i.e. after the bug level at F8).
-    # See vendor.py:Vendor.__init__ for the matching initial-stock gate;
-    # this restock path mirrors it so a Scroll of Restock on a deep-floor
-    # vendor can also surface the kit if the player skipped earlier ones.
-    if (floor_level >= 8
+    # Curing Kit: unlocks sausage crafting. Stocked at every regular
+    # vendor at F10+ until the player buys one (matching the gate in
+    # vendor.py:Vendor.__init__). The gs.curing_kit_stocked flag flips
+    # in the buy handler at vendor.py:process_vendor_action (cmd 'b'),
+    # not here -- a restock that surfaces the kit should leave it
+    # claimable by the next regular vendor too, in case the player
+    # walks past this one.
+    if (floor_level >= 9
             and not getattr(gs, 'curing_kit_stocked', False)):
         inventory.append(CuringKit())
-        gs.curing_kit_stocked = True
 
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
