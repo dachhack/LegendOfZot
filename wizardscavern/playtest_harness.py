@@ -381,6 +381,8 @@ def _item_category(item):
         return "cooking_kit"
     if cls == "CuringKit":
         return "curing_kit"
+    if cls == "Ingredient":
+        return "ingredient"
     return "other"
 
 
@@ -2162,6 +2164,9 @@ class PlaytestSession:
             elif mode == "foresight_direction_mode":
                 from .combat import process_foresight_direction_action
                 process_foresight_direction_action(pc, tw, action)
+            elif mode == "crafting_mode":
+                from .game_systems import process_crafting_action
+                process_crafting_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -2471,6 +2476,55 @@ class PlaytestSession:
         if reach_pct < 90:
             return False
         return True
+
+
+# ----------------------------------------------------------------------
+# Sausage crafting (build 375)
+# ----------------------------------------------------------------------
+# Ingredients in this set make a recipe "spicy" -- the spicy variants
+# grant the Spiced Fury attack buff but consume Fire Pepper / Ghost
+# Pepper, which are rare garden drops (1-3% spawn vs. 10-15% for the
+# common herbs). Smart policy skips spicy recipes for now and hoards
+# the peppers; a future buff-aware policy can use them deliberately.
+_SPICY_INGREDIENTS = frozenset({"Fire Pepper", "Ghost Pepper"})
+
+
+def _is_spicy_recipe(recipe_data):
+    return any(ing[0] in _SPICY_INGREDIENTS
+               for ing in recipe_data.get("ingredients", []))
+
+
+def _pick_craftable_sausage(player_character):
+    """Return the 1-based index (into the live `craftable` list shown by
+    process_crafting_action) of the lowest-tier non-spicy sausage we can
+    craft right now, or None.
+
+    Mirrors process_crafting_action's recipe lookup: it filters
+    get_available_recipes() down to `r[2] == True` and then indexes by
+    user-entered number. We compute the same list locally so the
+    returned action ('1', '2', ...) lines up with the game's expectation.
+    """
+    from .game_systems import get_available_recipes
+    from .item_templates import SAUSAGE_RECIPES
+    available = get_available_recipes(player_character)
+    craftable = [r for r in available if r[2]]
+    # First pass: pick the lowest-tier non-spicy sausage. Tier 1
+    # (Bratwurst) before tier 2 (Chorizo / Andouille) before tier 3
+    # (Boerewors) -- saves the better herbs for the better recipes
+    # while still surfacing the sausage subsystem in playtests.
+    best_idx = None
+    best_tier = 99
+    for i, (recipe_name, recipe_data, _craftable_flag, _missing) in enumerate(craftable):
+        if recipe_name not in SAUSAGE_RECIPES:
+            continue
+        sausage_recipe = SAUSAGE_RECIPES[recipe_name]
+        if _is_spicy_recipe(sausage_recipe):
+            continue
+        tier = sausage_recipe.get("tier", 99)
+        if tier < best_tier:
+            best_tier = tier
+            best_idx = i + 1  # craftable index is 1-based at the menu
+    return best_idx
 
 
 # ----------------------------------------------------------------------
@@ -4061,6 +4115,28 @@ def smart_policy(obs, rng, use_lantern=True):
                     if entry["category"] == "cooking_kit":
                         proposed = f"u{entry['slot']}"
                         break
+        # Craft a sausage. Build 375: surfaces the dead sausage
+        # subsystem in playtests. Bratwurst = 60 nut per 1 cooked meat
+        # (3.3x plain cooked meat at 18 nut/use), Chorizo / Boerewors
+        # scale up from there. Dwarves get a hidden +50% bonus
+        # (Sausage.use() at items.py:2955). Trigger: have Curing Kit
+        # + at least one cooked meat + ingredients for a non-spicy
+        # recipe. The crafting_mode branch below handles recipe
+        # selection. Hunger-gated so a starving agent with only 1-2
+        # cooked meats eats them instead of crafting (sausages are 5
+        # turns to make: i -> c -> <recipe> -> x -> eat).
+        if proposed is None:
+            has_curing_kit = any(e["category"] == "curing_kit" for e in inv)
+            has_cooked_meat_iv = any(
+                e["category"] == "food"
+                and e.get("is_cooked")
+                and not e.get("is_rotten")
+                and e.get("rot_timer") is not None  # Meat, not Rations
+                for e in inv
+            )
+            if has_curing_kit and has_cooked_meat_iv and hunger >= 30:
+                if _pick_craftable_sausage(gs.player_character) is not None:
+                    proposed = "c"
         if (proposed is None
                 and equipped.get("weapon", {})
                 and equipped["weapon"].get("is_broken")
@@ -4417,6 +4493,20 @@ def smart_policy(obs, rng, use_lantern=True):
         if affordable_dmg and rng.random() < 0.90:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
+
+    if mode == "crafting_mode":
+        # We landed here because the inventory cascade fired 'c' on a
+        # turn where we had Curing Kit + cooked meat + ingredients for
+        # at least one non-spicy sausage recipe. Pick the recipe and
+        # send its number. process_crafting_action stays in
+        # crafting_mode after a successful craft so the next obs may
+        # still be in this mode; in that case _pick_craftable_sausage
+        # re-evaluates against the new inventory (meat - 1, herbs - n)
+        # and either crafts again or returns None -> we exit with 'x'.
+        idx = _pick_craftable_sausage(gs.player_character)
+        if idx is not None:
+            return str(idx)
+        return "x"
 
     if mode == "identify_scroll_mode":
         # Scroll of Identify opened a sub-mode listing unidentified
