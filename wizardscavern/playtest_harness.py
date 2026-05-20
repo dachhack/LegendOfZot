@@ -4988,6 +4988,36 @@ def smart_policy(obs, rng, use_lantern=True):
                 if v["category"] == "curing_kit" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
+        # PERMANENT ELIXIRS: buy one of each unowned permanent stat /
+        # resistance elixir before draining gold on the healing-potion
+        # stockpile. Build-384 instrumented trace on s=1 human at
+        # Flimsy Fred F7 showed agent with 1574g would pay 180g for
+        # Curing Kit then buy 6x 60g Healing Potions + 3 Rations,
+        # leaving 414g -- below the Elixir of Might's 800g price. The
+        # vendor-stocking gate (b385 vendor.py:338) put basic-tier
+        # elixirs at F4+ vendors with 25% chance per visit, but the
+        # buy-side priority never reached them. Promoting elixirs
+        # above the stockpile (one per type, no MAGIC_RESERVE
+        # cushion) ensures the permanent improvement lands before
+        # the consumable stockpile burns through the surplus.
+        owned_permanent_types = {
+            i["category"] for i in inv
+            if i["category"].startswith("potion_permanent_")
+            or (i["category"].startswith("potion_resistance_")
+                and i["category"] != "potion_resistance")
+        }
+        for v in vendor_inv:
+            cat = v["category"]
+            is_permanent = (cat.startswith("potion_permanent_")
+                            or (cat.startswith("potion_resistance_")
+                                and cat != "potion_resistance"))
+            if not is_permanent:
+                continue
+            if cat in owned_permanent_types:
+                continue
+            if v["price"] <= gold:
+                return f"b{v['slot']}"
+
         # RATIONS FIRST: buy EVERY ration the vendor offers, before
         # any other stockpile or magic-item check. User framing:
         # "Buying all rations from every vendor on every floor

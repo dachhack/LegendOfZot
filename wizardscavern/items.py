@@ -894,7 +894,7 @@ class Potion(Item):
             add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
             add_log(f"{COLOR_RED}Power surges through your muscles!{COLOR_RESET}")
             character.strength += self.effect_magnitude
-            character.base_attack += self.effect_magnitude
+            character._base_attack += self.effect_magnitude
             add_log(f"{COLOR_GREEN}* PERMANENT: Strength +{self.effect_magnitude}! *{COLOR_RESET}")
             add_log(f"{COLOR_YELLOW}New Strength: {character.strength}{COLOR_RESET}")
             add_log("")
@@ -946,9 +946,9 @@ class Potion(Item):
             add_log(f"{COLOR_YELLOW}You drink the {self.name}!{COLOR_RESET}")
             add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
             add_log(f"{COLOR_GREY}Your skin hardens like iron!{COLOR_RESET}")
-            character.base_defense += self.effect_magnitude
+            character._base_defense += self.effect_magnitude
             add_log(f"{COLOR_GREEN}* PERMANENT: Defense +{self.effect_magnitude}! *{COLOR_RESET}")
-            add_log(f"{COLOR_YELLOW}New Defense: {character.base_defense}{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}New Defense: {character._base_defense}{COLOR_RESET}")
             add_log("")
             return True
         
