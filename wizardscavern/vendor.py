@@ -295,19 +295,17 @@ class Vendor:
             # meat / cooking / sausage economy actually matters.
             num_rations = random.randint(1, 2)
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
-            # Iron Rations: heavier-nutrition option. items.py:2511
-            # listed these at F1+, but the actual dungeon-vendor
-            # stocking in this file never included them -- 0/160 runs
-            # ever saw one. Same goes for Salted Jerky and Cooking
-            # Kit. With 109/160 (68%) of the grid dying of starvation
-            # (dominated by F1-F3 deaths), the missing food tiers were
-            # the bottleneck. current_floor_level is character.z, so
-            # z>=1 == F2+ and z>=2 == F3+.
-            # Iron Rations stack bumped from 1 -> 3 (build 328) for
-            # the same carnage-round push: 70 nut each * 3 = 210
-            # nut per vendor visit on top of the Rations stack,
-            # roughly doubling the vendor's food payload.
-            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=3))
+            # Iron Rations: heavier-nutrition option. Stack reverted
+            # from 3 -> 1 in build 379. The b328 bump (1 -> 3) was
+            # part of the same b327-era sparse-food tuning that gave
+            # us 0.7/move hunger decay (reverted b374) and a 5-ration
+            # starter pack (reverted b377 then half-reverted b378).
+            # b378's per-vendor food was still 295-345 nut (Iron
+            # Rations alone = 210 nut, ~60-70% of the food calories).
+            # Back to count=1 = 70 nut/vendor, putting Iron Rations
+            # in line with Salted Jerky as a single-bite supplement
+            # rather than the dominant food source.
+            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1))
             if current_floor_level >= 1:  # F2+
                 self.inventory.add_item_quiet(Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1))
             if current_floor_level >= 2:  # F3+

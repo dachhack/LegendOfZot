@@ -3209,14 +3209,17 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 70% chance to drop meat (was 55%, originally 35%). Build-327
-    # food audit showed agents averaging only ~15 kills per floor
-    # past F3 with a 55% drop rate, generating roughly 75 nut of
-    # meat against a 140 nut per-floor exploration cost. Bumping
-    # to 70% pushes meat supply to ~100 nut per floor and meets
-    # the 5000-turn 'deep death' carnage goal alongside the slower
-    # hunger decay and bigger Iron Rations stash.
-    if random.random() > 0.70:
+    # 55% chance to drop meat. Build-379 reverted from 70% -- the b327
+    # bump (35% -> 55% -> 70%) was tuned alongside slower hunger decay
+    # AND a bigger Iron Rations stash, both of which have now been
+    # reverted (b374 restored 1.0/move decay, b379 dropped Iron
+    # Rations 3 -> 1). At 70% drop + 22 kills/run agents averaged
+    # ~16 meat drops per run, which combined with the abundant ration
+    # supply made cooking / sausage-crafting decisions feel optional.
+    # 55% (~12 meat/run) keeps meat the dominant kill reward but pulls
+    # raw-vs-cooked and craft-now-vs-later back into being real tactical
+    # choices.
+    if random.random() > 0.55:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
