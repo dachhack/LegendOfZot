@@ -5787,6 +5787,10 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "player_race":
             # PLAYER RACE SELECTION SCREEN — tappable race cards.
+            # Inline style overrides bump the chip size + add strengths
+            # / weaknesses breakdown so a new player sees what each
+            # race actually does. Numbers track the b382 race tunings
+            # (HP / stats / cast threshold / Carnivore Diet).
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #FFD700; text-align: center;">
@@ -5795,24 +5799,43 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; margin-bottom: 15px; color: #FFFFFF;">
                         <b>{gs.player_character.name}</b>. Really? Oooohkay.
                     </div>
-                    <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
+                    <div style="font-size: 14px; margin-bottom: 10px; color: #FFFFFF;">
                         Choose your race:
                     </div>
                     <div class='altar-actions'>
                         <div class='taprow altar-act bless' data-zcmd='h'
-                             onclick="window.__zotTap('h', this)">
-                            <div class='aname'>Human</div>
-                            <div class='ameta'>Balanced stats &mdash; the jack of all trades</div>
+                             onclick="window.__zotTap('h', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Human</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Balanced stats (HP 30, ATK 15, DEF 5, all 10s)</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Starts with Mind Touch cantrip</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Casts at INT 14+ &middot; balanced melee &amp; magic</div>
+                                <div style='color: #EF9A9A;'><b>−</b> No standout strengths &mdash; a true generalist</div>
+                            </div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='e'
-                             onclick="window.__zotTap('e', this)">
-                            <div class='aname'>Elf</div>
-                            <div class='ameta'>+Dex, +Int &middot; -Str, -Health</div>
+                             onclick="window.__zotTap('e', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Elf</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> +2 INT, +2 DEX, +1 ATK (start INT 12, DEX 12)</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Starts with TWO cantrips: Hold Monster + Mind Touch</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Casts at INT 12+ (lowest threshold) &middot; can craft Lembas Wafers</div>
+                                <div style='color: #EF9A9A;'><b>−</b> Fragile: HP 20 (-10), STR 9, DEF 4</div>
+                            </div>
                         </div>
                         <div class='taprow altar-act forge' data-zcmd='d'
-                             onclick="window.__zotTap('d', this)">
-                            <div class='aname'>Dwarf</div>
-                            <div class='ameta'>+Str, +Def, +Health &middot; -Dex, -Int</div>
+                             onclick="window.__zotTap('d', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Dwarf</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Tank: HP 60 (+30), DEF 7, ATK 17, STR 12</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Starts with Battleaxe (+4 ATK) instead of Dagger</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Carnivore Diet: +100% nutrition from meat &amp; sausages</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Unlocks dwarven-only sausages (Landjäger, Blutwurst)</div>
+                                <div style='color: #EF9A9A;'><b>−</b> -2 DEX, -2 INT &middot; magic gated at INT 21+ (almost never casts)</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5820,7 +5843,9 @@ class WizardsCavernApp(toga.App):
             current_commands_text = "Tap a race"
 
         elif gs.prompt_cntl == "player_gender":
-            # PLAYER GENDER SELECTION SCREEN — tappable gender cards.
+            # PLAYER GENDER SELECTION SCREEN — tappable gender cards
+            # with inclusive subtitle on each ("He can do anything.",
+            # etc.). Chips sized to match the player_race screen.
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #FFD700; text-align: center;">
@@ -5829,21 +5854,27 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; margin-bottom: 15px; color: #FFFFFF;">
                         You went with <b>{gs.player_character.race.title()}</b>
                     </div>
-                    <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
+                    <div style="font-size: 14px; margin-bottom: 10px; color: #FFFFFF;">
                         Choose your gender:
                     </div>
                     <div class='altar-actions'>
                         <div class='taprow altar-act detect' data-zcmd='m'
-                             onclick="window.__zotTap('m', this)">
-                            <div class='aname'>Male</div>
+                             onclick="window.__zotTap('m', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Male</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #BBB;'>He can do anything.</div>
                         </div>
                         <div class='taprow altar-act offering' data-zcmd='f'
-                             onclick="window.__zotTap('f', this)">
-                            <div class='aname'>Female</div>
+                             onclick="window.__zotTap('f', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Female</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #BBB;'>She can do anything.</div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='n'
-                             onclick="window.__zotTap('n', this)">
-                            <div class='aname'>Non-binary</div>
+                             onclick="window.__zotTap('n', this)"
+                             style="padding: 14px 14px; line-height: 1.45;">
+                            <div class='aname' style='font-size: 20px;'>Non-binary</div>
+                            <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #BBB;'>They can do anything.</div>
                         </div>
                     </div>
                 </div>
