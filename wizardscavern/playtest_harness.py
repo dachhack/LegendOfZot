@@ -2887,6 +2887,47 @@ def smart_policy(obs, rng, use_lantern=True):
         if (has_buff_potion and 0.60 <= hp_pct < 0.95
                 and m_adjacent):
             return "i"
+        # Identification + permanent-buff drink: open inventory when
+        # either (a) the bag has an IDENTIFIED permanent stat / resistance
+        # potion (Elixir of Brilliance, Fireward Elixir, etc.) -- these
+        # are permanent improvements with no tactical timing, just
+        # drink them on sight; or (b) the bag has an unidentified
+        # potion and HP is at least slightly worn (<95%) so a
+        # mystery-Healing-Potion's heal isn't wasted. All potions in
+        # the game are beneficial (no BUC on potions, no harmful types),
+        # so drinking auto-identifies AND grants the effect in one
+        # action. Gate on `last_action not in ("i", "x")` to prevent
+        # i->x->i ping after the drink consumes the slot.
+        PERMANENT_POTION_TYPES = {
+            "permanent_strength", "permanent_dexterity",
+            "permanent_intelligence", "permanent_health",
+            "permanent_defense",
+            "resistance_all", "resistance_fire", "resistance_ice",
+            "resistance_lightning", "resistance_darkness",
+            "resistance_light",
+        }
+        has_permanent_potion = any(
+            i.get("category", "").startswith("potion_")
+            and i.get("is_identified")
+            and i.get("potion_type") in PERMANENT_POTION_TYPES
+            for i in inv
+        )
+        wedge_tried = (
+            set(obs.get("wedge_attempted_actions") or [])
+            | set(obs.get("wedge_tried_this_floor") or [])
+        )
+        has_unid_potion_to_try = any(
+            i.get("category", "").startswith("potion")
+            and not i.get("is_identified")
+            and i.get("potion_type") != "growth_mushroom"
+            and f"u{i['slot']}" not in wedge_tried
+            for i in inv
+        )
+        if obs.get("last_action") not in ("i", "x"):
+            if has_permanent_potion:
+                return "i"
+            if has_unid_potion_to_try and hp_pct < 0.95:
+                return "i"
         # Bad-status cure: when the player has a curable negative
         # effect (poison / web / sticky_hands / confusion etc.) AND
         # a Scroll of Restoration or Antidote-style cure_all potion
@@ -4384,6 +4425,32 @@ def smart_policy(obs, rng, use_lantern=True):
             "dexterity", "intelligence", "frost_armor",
             "true_sight", "invisibility", "fortune", "experience",
         }
+        # Permanent stat / resistance potions (Elixir of Brilliance,
+        # Elixir of Might, Fireward Elixir, Prismatic Elixir, etc.):
+        # always drink on sight, no HP gate. These are permanent
+        # improvements -- there's no "save for later" because the
+        # benefit doesn't expire. Pre-b384 these never fired: the
+        # only inventory drink path was HELPFUL_POTION_TYPES gated on
+        # HP < 0.95, and permanent_* / resistance_* weren't in that
+        # set, so an Elixir of Brilliance picked up at F4 (level-gate
+        # dropped from 15 in b380) just sat in the bag until death.
+        PERMANENT_POTION_TYPES = {
+            "permanent_strength", "permanent_dexterity",
+            "permanent_intelligence", "permanent_health",
+            "permanent_defense",
+            "resistance_all", "resistance_fire", "resistance_ice",
+            "resistance_lightning", "resistance_darkness",
+            "resistance_light",
+        }
+        if proposed is None:
+            for entry in inv:
+                if not entry["category"].startswith("potion_"):
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") in PERMANENT_POTION_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None and hp_pct < 0.95:
             for entry in inv:
                 if not entry["category"].startswith("potion_"):
@@ -4393,6 +4460,39 @@ def smart_policy(obs, rng, use_lantern=True):
                 if entry.get("potion_type") in HELPFUL_POTION_TYPES:
                     proposed = f"u{entry['slot']}"
                     break
+        # Identify-by-drinking: when nothing higher-priority fired
+        # and HP is at least slightly worn (<95%), drink an
+        # unidentified potion. All potions in the game are beneficial
+        # (no BUC on potions, no harmful potion_type), so drinking
+        # auto-identifies the type AND applies the effect in one
+        # action. Skip slots in wedge_attempted so a Healing Potion
+        # tried at near-full HP doesn't immediately re-trigger.
+        # Pre-b384 this only fired in wedge mode (tile visited 6+
+        # times), so a typical run carrying 3-4 unidentified potions
+        # walked them to the grave unconsumed.
+        # EXCLUSION: Zot's Growth Mushroom is a Potion(potion_type=
+        # 'growth_mushroom') that's only useful while shrunk on a
+        # bug floor. Drinking it elsewhere wastes the quest item AND
+        # flips player_passed_bug_quest -- the dedicated `is_shrunk`
+        # gate above handles it correctly. Filter by potion_type so
+        # the policy doesn't reach for it via category alone.
+        if proposed is None and hp_pct < 0.95:
+            wedge_tried_iv = (
+                set(obs.get("wedge_attempted_actions") or [])
+                | set(obs.get("wedge_tried_this_floor") or [])
+            )
+            for entry in inv:
+                if not entry["category"].startswith("potion"):
+                    continue
+                if entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") == "growth_mushroom":
+                    continue
+                candidate = f"u{entry['slot']}"
+                if candidate in wedge_tried_iv:
+                    continue
+                proposed = candidate
+                break
         current_tile_visits_iv = obs.get("current_tile_visits") or 0
         wedged_iv = current_tile_visits_iv >= 6
         wedge_attempted = (
