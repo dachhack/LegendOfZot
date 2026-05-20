@@ -3720,11 +3720,19 @@ def process_lantern_quick_use(player_character, my_tower):
         # Check if out of fuel
         if lantern.fuel_amount <= 0:
             # Try to auto-refuel
+            # Build-370: consume ONE canister, not the entire stack.
+            # Mirror of the items.py:Lantern.use() fix -- same bug, same
+            # remove_item(name)-wipes-the-stack pattern.
             lantern_fuel_item = player_character.inventory.get_item("Lantern Fuel")
             if lantern_fuel_item:
+                refill = getattr(lantern_fuel_item, "fuel_restore_amount", 20)
                 add_log(f"{COLOR_GREEN}Auto-refueling lantern with {lantern_fuel_item.name}...{COLOR_RESET}")
-                lantern.fuel_amount += 10
-                player_character.inventory.remove_item(lantern_fuel_item.name)
+                lantern.fuel_amount += refill
+                cur_count = getattr(lantern_fuel_item, "count", 1) or 1
+                if cur_count > 1:
+                    lantern_fuel_item.count = cur_count - 1
+                else:
+                    player_character.inventory.items.remove(lantern_fuel_item)
                 add_log(f"{COLOR_GREEN}Lantern refueled! Fuel remaining: {lantern.fuel_amount}{COLOR_RESET}")
             else:
                 add_log(f"{COLOR_RED}Your lantern is out of fuel! Find Lantern Fuel to refill it.{COLOR_RESET}")

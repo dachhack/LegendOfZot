@@ -710,13 +710,28 @@ def rot_food_items(player_character, magnitude=1):
     any_effect = False
 
     # --- Food destruction ---
+    # Build-370: rot ONE UNIT per victim, not the entire stack. The
+    # previous `inventory.remove(item)` wiped a stacked Food entry
+    # regardless of its count -- a single Spore Puff (magnitude 1)
+    # could eliminate 8 Rations (400 nutrition) in one spore attack.
+    # The b369 sweep caught Bombur Ironbeard (dwarf seed 4) losing
+    # 8 Rations to a level-0 Spore Puff at T161, starving on F1 at
+    # T819 with no carryforward. Now: decrement count by 1, only
+    # remove the entry when count drops to 0. A Spore Puff still
+    # picks `magnitude` distinct food entries per attack -- it just
+    # nibbles each one, doesn't devour the whole stack.
     max_food_rot = magnitude
     if food_targets:
         victims = random.sample(food_targets, min(max_food_rot, len(food_targets)))
         for item in victims:
             if item in inventory:
-                inventory.remove(item)
-                add_log(f"{COLOR_GREY}The spores rot your {item.name} into a pile of mold!{COLOR_RESET}")
+                cur_count = getattr(item, "count", 1) or 1
+                if cur_count > 1:
+                    item.count = cur_count - 1
+                    add_log(f"{COLOR_GREY}The spores rot one of your {item.name} into a pile of mold!{COLOR_RESET}")
+                else:
+                    inventory.remove(item)
+                    add_log(f"{COLOR_GREY}The spores rot your {item.name} into a pile of mold!{COLOR_RESET}")
                 any_effect = True
 
     # --- Meat rot effect ---
