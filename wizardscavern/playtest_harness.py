@@ -1028,6 +1028,7 @@ class PlaytestSession:
                 # intelligence > 15 which rejected fresh-elf cantrips
                 # (INT 12 gives 8 MP but no cast access).
                 "can_cast": pc.max_mana > 0,
+                "unspent_stat_points": getattr(pc, "unspent_stat_points", 0),
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
@@ -2167,6 +2168,19 @@ class PlaytestSession:
             elif mode == "crafting_mode":
                 from .game_systems import process_crafting_action
                 process_crafting_action(pc, tw, action)
+            elif mode == "stat_allocation_mode":
+                from .game_systems import process_stat_allocation_action
+                process_stat_allocation_action(pc, tw, action)
+            elif mode == "character_stats_mode":
+                # Minimal handler -- the in-game UI lives in app.py
+                # (line ~4865); the harness just needs to honor 'p'
+                # (open allocation menu) and 'x' (back to inventory).
+                if action == "p":
+                    if pc.unspent_stat_points > 0:
+                        gs.prompt_cntl = "stat_allocation_mode"
+                elif action == "x":
+                    gs.prompt_cntl = "inventory"
+                    handle_inventory_menu(pc, tw, "init")
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -2890,6 +2904,15 @@ def smart_policy(obs, rng, use_lantern=True):
             for i in inv
         )
         if has_cooking_kit and has_raw_meat:
+            return "i"
+        # Stat-point allocation (build 380). When the level-up granted
+        # points are sitting unspent, route into the inventory -> stats
+        # -> allocation flow. The inventory cascade has a parallel gate
+        # that returns 's' to enter character_stats_mode, then the
+        # stats handler returns 'p', then the allocation handler
+        # actually spends. No hunger / HP gate -- the allocation is a
+        # passive optimization that costs ~3 turns but unlocks magic.
+        if p.get("unspent_stat_points", 0) > 0:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
         # Open inventory to swap when current gear is broken AND we
@@ -4133,6 +4156,15 @@ def smart_policy(obs, rng, use_lantern=True):
         if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
+        # Stat-point allocation flow (build 380). Route through
+        # character_stats_mode -> stat_allocation_mode to spend any
+        # unspent level-up points. Fires AFTER heal/urgent so a low-HP
+        # agent stabilises first, but BEFORE all the routine swap /
+        # upgrade / eat-when-hungry / scroll-read steps so the agent
+        # doesn't burn turns on optimization actions while points sit
+        # idle.
+        if proposed is None and p.get("unspent_stat_points", 0) > 0:
+            proposed = "s"
         # Cook raw meat with the Cooking Kit. User: 'have the player
         # cook all their meat once they have the kit. Eating cooked
         # meat is much better for survival.' No hunger gate -- cook
@@ -4554,6 +4586,33 @@ def smart_policy(obs, rng, use_lantern=True):
         if idx is not None:
             return str(idx)
         return "x"
+
+    if mode == "character_stats_mode":
+        # We landed here because the game_loop trigger fired 'i' -> 's'
+        # to surface unspent stat points. Open the allocation panel if
+        # any are available; otherwise back out to inventory.
+        if obs["player"].get("unspent_stat_points", 0) > 0:
+            return "p"
+        return "x"
+
+    if mode == "stat_allocation_mode":
+        # Auto-allocate stat points (build 380).
+        # Priority: INT until the player is past their racial cast
+        # threshold + 4 (so they have mana for a real spell, not just
+        # crossing the gate by 1). After that, alternate STR / DEX to
+        # round out the build. Race thresholds match max_mana gates
+        # (characters.py:920+): elf 11, human 15, dwarf 20.
+        pc = gs.player_character
+        race = (getattr(pc, "race", "") or "").lower()
+        cast_thresh = {"elf": 11, "human": 15, "dwarf": 20}.get(race, 15)
+        target_int = cast_thresh + 4  # 1 + ~3 spells of mana headroom
+        if pc.unspent_stat_points <= 0:
+            return "x"
+        if pc.intelligence < target_int:
+            return "i"
+        # Past INT target: alternate STR / DEX to round the build.
+        # rng makes it look organic rather than always STR first.
+        return "a" if rng.random() < 0.5 else "d"
 
     if mode == "identify_scroll_mode":
         # Scroll of Identify opened a sub-mode listing unidentified

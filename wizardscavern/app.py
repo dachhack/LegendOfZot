@@ -2599,7 +2599,7 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     # panel and they're invisible anyway.
     'spell_casting_mode', 'spell_memorization_mode',
     'crafting_mode', 'sell_quantity_mode',
-    'journal_mode', 'character_stats_mode',
+    'journal_mode', 'character_stats_mode', 'stat_allocation_mode',
     'save_load_mode',
     'flare_direction_mode', 'library_read_decision_mode',
     'flee_direction_mode', 'foresight_direction_mode',
@@ -4870,7 +4870,18 @@ class WizardsCavernApp(toga.App):
                 # Launch the portrait picker, then return to stats screen.
                 gs.player_sprite_return_to = "character_stats_mode"
                 gs.prompt_cntl = "player_sprite"
+            elif cmd == 'p':
+                # Stat-point allocation (build 380). Open the spend menu
+                # when the player has level-up points waiting. If they
+                # don't, the handler logs and bounces back.
+                if gs.player_character.unspent_stat_points > 0:
+                    gs.prompt_cntl = "stat_allocation_mode"
+                else:
+                    add_log(f"{COLOR_YELLOW}You have no stat points to spend.{COLOR_RESET}")
             # Invalid commands are silently ignored - prompt is in placeholder
+        elif gs.prompt_cntl == "stat_allocation_mode":
+            from .game_systems import process_stat_allocation_action
+            process_stat_allocation_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "chest_mode":
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
@@ -6745,6 +6756,14 @@ class WizardsCavernApp(toga.App):
                 character_name=getattr(gs.player_character, 'name', None),
                 sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
+            unspent_pts = gs.player_character.unspent_stat_points
+            if unspent_pts > 0:
+                points_html = (
+                    f' | <b style="color:#fbbf24;">Unspent Points:</b> {unspent_pts} '
+                    f'<span style="color:#94a3b8;">(press p to allocate)</span>'
+                )
+            else:
+                points_html = ""
             stats_html = f"""
                 {player_sprite_html}
                 <b>Name:</b> {gs.player_character.name} | <b>Level:</b> {gs.player_character.level} ({gs.player_character.experience} XP) |
@@ -6754,7 +6773,7 @@ class WizardsCavernApp(toga.App):
                 <b>Mana:</b> {gs.player_character.mana} / {gs.player_character.max_mana}<br>
                 <b>Attack:</b> {gs.player_character.attack} | <b> Defense:</b> {gs.player_character.defense}<br>
                 <hr>
-                <b>Str:</b> {gs.player_character.strength} | <b>Dex:</b> {gs.player_character.dexterity} | <b>Int:</b> {gs.player_character.intelligence}<br>
+                <b>Str:</b> {gs.player_character.strength} | <b>Dex:</b> {gs.player_character.dexterity} | <b>Int:</b> {gs.player_character.intelligence}{points_html}<br>
                 <hr>
                 """
 
@@ -6814,13 +6833,63 @@ class WizardsCavernApp(toga.App):
                         <div class='aname'>Change Portrait</div>
                         <div class='ameta'>Pick a new avatar from the gallery</div>
                     </div>
+                    {(f'''
+                    <div class='taprow altar-act' data-zcmd='p' style='border-left: 3px solid #fbbf24;'
+                         onclick="window.__zotTap('p', this)">
+                        <div class='aname' style='color:#fbbf24;'>Allocate Stat Points ({gs.player_character.unspent_stat_points})</div>
+                        <div class='ameta'>Spend level-up points on STR / DEX / INT</div>
+                    </div>
+                    ''') if gs.player_character.unspent_stat_points > 0 else ''}
                     <div class='taprow cancel' data-zcmd='x'
                          onclick="window.__zotTap('x', this)">
                         <span class='tapnum'>&times;</span>Back to Inventory
                     </div>
 </div>
                 """
-            current_commands_text = "Tap Back | cp = change portrait | x = inventory"
+            base_cmds = "Tap Back | cp = change portrait | x = inventory"
+            if gs.player_character.unspent_stat_points > 0:
+                base_cmds = f"p = allocate ({gs.player_character.unspent_stat_points} pts) | {base_cmds}"
+            current_commands_text = base_cmds
+
+        elif gs.prompt_cntl == "stat_allocation_mode":
+            # Stat-point allocation panel (build 380). Reuses the stats
+            # HTML from character_stats_mode above so the player sees
+            # their current stat values while spending. a/d/i spend a
+            # point; x backs out.
+            allocation_html = f"""
+<div class='full-inventory-panel'>
+    <h2>Allocate Stat Points</h2>
+    <div style='margin-bottom: 8px;'>
+        <b style='color:#fbbf24;'>Unspent: {gs.player_character.unspent_stat_points}</b>
+    </div>
+    <div style='margin-bottom: 12px; padding: 8px; background: #1a1a1a; border-radius: 4px;'>
+        <b>Str:</b> {gs.player_character.strength} |
+        <b>Dex:</b> {gs.player_character.dexterity} |
+        <b>Int:</b> {gs.player_character.intelligence}
+    </div>
+    <div class='taprow altar-act' data-zcmd='a'
+         onclick="window.__zotTap('a', this)">
+        <div class='aname'>+1 Strength</div>
+        <div class='ameta'>Boosts attack, max HP, melee math.</div>
+    </div>
+    <div class='taprow altar-act' data-zcmd='d'
+         onclick="window.__zotTap('d', this)">
+        <div class='aname'>+1 Dexterity</div>
+        <div class='ameta'>Boosts dodge, ranged accuracy, initiative.</div>
+    </div>
+    <div class='taprow altar-act' data-zcmd='i'
+         onclick="window.__zotTap('i', this)">
+        <div class='aname'>+1 Intelligence</div>
+        <div class='ameta'>Unlocks spell casting at race threshold (elf 12, human 16, dwarf 21) and grows max mana.</div>
+    </div>
+    <div class='taprow cancel' data-zcmd='x'
+         onclick="window.__zotTap('x', this)">
+        <span class='tapnum'>&times;</span>Back to Stats
+    </div>
+</div>
+            """
+            room_html = allocation_html
+            current_commands_text = "a = +STR | d = +DEX | i = +INT | x = back"
 
         elif gs.prompt_cntl == "crafting_mode":
             # CRAFTING MENU VIEW - Full HTML display

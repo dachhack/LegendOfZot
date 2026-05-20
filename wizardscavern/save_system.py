@@ -495,6 +495,7 @@ class SaveSystem:
             # Don't save max_health - it's computed from level, strength, and bonus
             'base_max_health_bonus': getattr(character, 'base_max_health_bonus', 0),
             'base_max_mana_bonus': getattr(character, 'base_max_mana_bonus', 0),
+            'unspent_stat_points': getattr(character, 'unspent_stat_points', 0),
             'mana': character.mana,
             # Don't save max_mana - it's computed from intelligence, level, and bonus
             'gold': character.gold,
