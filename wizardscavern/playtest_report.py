@@ -2519,7 +2519,7 @@ def write_index(out_dir):
 
 
 def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
-                    sub_path="docs/playtest", replace=False):
+                    sub_path="docs/playtest", replace=True):
     """Push `out_dir` contents to `<branch>:<sub_path>/`.
 
     Default target is `main:docs/playtest/` because dachhack/LegendOfZot
@@ -2527,16 +2527,15 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
     don't want to clobber the existing spell-sprite-audit site. The
     reports land at `https://dachhack.github.io/LegendOfZot/playtest/`.
 
-    ``replace=False`` (default) is ADDITIVE: existing files at
-    ``<sub_path>/`` are preserved unless a same-named report has been
-    regenerated. Good for incremental runs that add a few new seeds.
+    ``replace=True`` (default, build-371) purges the entire
+    ``<sub_path>/`` tree before overlaying the current ``out_dir``.
+    Each sweep ships a clean set so stale runs from prior builds
+    don't clutter the index page with mismatched metrics.
 
-    ``replace=True`` purges the entire ``<sub_path>/`` tree before
-    overlaying the current ``out_dir``. Use after a report-template
-    change so old-format pages don't linger -- e.g., when the layout
-    moves from a single-page card list to the tabbed sprite-rich
-    format and a stale seed-1800 page from the prior format sticks
-    around because the current grid doesn't cover that seed.
+    ``replace=False`` is ADDITIVE: existing files at ``<sub_path>/``
+    are preserved unless a same-named report has been regenerated.
+    Use only when intentionally accumulating runs across builds
+    (e.g., longitudinal regression tracking).
 
     Uses git plumbing (hash-object / ls-tree / mktree / commit-tree)
     so the deploy never modifies the working tree or index, never
