@@ -2726,10 +2726,25 @@ class Lantern(Item):
             # If lantern is out of fuel, try to use Lantern Fuel from inventory
             lantern_fuel_item = character.inventory.get_item("Lantern Fuel")
             if lantern_fuel_item:
+                # Build-370: consume ONE canister from the stack, not the
+                # entire stack. The old `inventory.remove_item(name)`
+                # dropped the whole LanternFuel entry regardless of count
+                # -- the b369 sweep caught Luthien the Singer (elf seed 1)
+                # losing 7 canisters in one auto-refuel at T595 (spare 8
+                # -> 1), then stranding on F5 in the dark by T717 with
+                # 1400 turns to starve. Also: use the canister's actual
+                # fuel_restore_amount (20) instead of the hardcoded 10
+                # -- the magic-number undercount halved the canister's
+                # value when it was the one path that fired.
+                refill = getattr(lantern_fuel_item, "fuel_restore_amount", 20)
                 add_log(f"{COLOR_GREEN}The {self.name} is out of fuel. Using {lantern_fuel_item.name} to refuel.{COLOR_RESET}")
-                self.fuel_amount += 10 # Refuel amount
-                character.inventory.remove_item(lantern_fuel_item.name)
-                add_log(f"{COLOR_GREEN}Lantern refueled! Fuel remaining: {self.fuel_amount}){COLOR_RESET}")
+                self.fuel_amount += refill
+                cur_count = getattr(lantern_fuel_item, "count", 1) or 1
+                if cur_count > 1:
+                    lantern_fuel_item.count = cur_count - 1
+                else:
+                    character.inventory.items.remove(lantern_fuel_item)
+                add_log(f"{COLOR_GREEN}Lantern refueled! Fuel remaining: {self.fuel_amount}{COLOR_RESET}")
                 # Now that it's refueled, it can be used, so return False (not consumed)
                 return False
             else:
