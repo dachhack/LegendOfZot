@@ -121,16 +121,15 @@ class Vendor:
                 self.inventory.add_item_quiet(LanternFuel(
                     "Lantern Fuel", "A small flask of oil for your lantern.",
                     value=5, level=0, fuel_restore_amount=20))
-            # Rations: 3 in the starting shop. Build 377 dropped this
-            # from 5 -> 3 (originally 3 in early builds, bumped to 5
-            # after a starvation-cliff fix, now back to 3 because the
-            # b376 sweep showed peak inventory nutrition still hits
-            # 1560-3315 across the run -- rations are abundant enough
-            # that 5 in the starter pack made the F1-F4 food economy
-            # decorative. Three rations = 150 nutrition use, still a
-            # real cushion but no longer guarantees the agent ignores
-            # raw meat / cooking decisions until F5+.
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=3))
+            # Rations bumped 3 -> 5 after a playtest pass: 10/30 runs
+            # were dying with 0 food on floor 1-2 because the starter 3
+            # Rations + 1-2 monster meat drops ran out before reaching
+            # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
+            # pre-vendor food cushion. (Build 377 tried 3, rolled back
+            # in 378: the food-abundance problem is on the dungeon-
+            # vendor side, not the starter pack -- agents need the
+            # pre-F2-vendor buffer.)
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
             # Cooking Kit REMOVED from the starting shop (build 372+).
             # Playtest-371 audit found the kit was making cooking a
             # zero-decision mechanic: starter-pack kit + auto-cook on
@@ -284,8 +283,17 @@ class Vendor:
                             status_effect_magnitude=spell_template.status_effect_magnitude
                         ))
 
-            # All vendors stock rations (3-4)
-            num_rations = random.randint(3, 4)
+            # All vendors stock rations (1-2). Build 378 cut from 3-4
+            # to 1-2 (~50%) after the b376 sweep showed peak inventory
+            # nutrition hitting 1560-3315 across the run -- with the
+            # smart policy buying every food stack on every visit and
+            # 5-10 vendor visits per long run, agents accumulated
+            # 19-53 ration stockpiles regardless of need. Halving the
+            # per-vendor stack still leaves 5-20 rations across a
+            # typical run (plus Iron Rations + Jerky stacks, unchanged)
+            # but breaks the "rations are infinite" assumption so the
+            # meat / cooking / sausage economy actually matters.
+            num_rations = random.randint(1, 2)
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
             # Iron Rations: heavier-nutrition option. items.py:2511
             # listed these at F1+, but the actual dungeon-vendor
