@@ -660,8 +660,16 @@ def burn_inventory_items(player_character, source="fire"):
 
     for item in destroyed:
         if item in player_character.inventory.items:
-            player_character.inventory.items.remove(item)
-            add_log(f"{COLOR_RED}Your {item.name} was destroyed by the {source}!{COLOR_RESET}")
+            # Build-371: decrement count, only remove on count==0.
+            # Potions and Scrolls stack -- the old `remove(item)`
+            # wiped a 5-Healing-Potion stack on a single fire hit.
+            cur_count = getattr(item, "count", 1) or 1
+            if cur_count > 1:
+                item.count = cur_count - 1
+                add_log(f"{COLOR_RED}One of your {item.name} was destroyed by the {source}!{COLOR_RESET}")
+            else:
+                player_character.inventory.items.remove(item)
+                add_log(f"{COLOR_RED}Your {item.name} was destroyed by the {source}!{COLOR_RESET}")
 
     if not destroyed:
         add_log(f"{COLOR_YELLOW}Your potions and scrolls survived the {source}... barely.{COLOR_RESET}")
@@ -687,8 +695,15 @@ def freeze_inventory_items(player_character):
 
     for item in destroyed:
         if item in player_character.inventory.items:
-            player_character.inventory.items.remove(item)
-            add_log(f"{COLOR_CYAN}Your {item.name} froze solid and shattered!{COLOR_RESET}")
+            # Build-371: decrement count, only remove on count==0.
+            # Mirror of the burn fix above.
+            cur_count = getattr(item, "count", 1) or 1
+            if cur_count > 1:
+                item.count = cur_count - 1
+                add_log(f"{COLOR_CYAN}One of your {item.name} froze solid and shattered!{COLOR_RESET}")
+            else:
+                player_character.inventory.items.remove(item)
+                add_log(f"{COLOR_CYAN}Your {item.name} froze solid and shattered!{COLOR_RESET}")
 
     if not destroyed:
         add_log(f"{COLOR_CYAN}Your potions held together against the cold... this time.{COLOR_RESET}")

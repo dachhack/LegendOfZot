@@ -1368,7 +1368,13 @@ def process_foresight_direction_action(player_character, my_tower, cmd):
     add_log(f"{COLOR_GREY}The scroll crumbles to dust in your hands.{COLOR_RESET}")
 
     # Consume the scroll
-    player_character.inventory.remove_item(gs.active_foresight_scroll.name)
+    # Build-371: decrement count, only remove on count==0.
+    # Scrolls stack -- the old `remove_item(name)` wiped the stack.
+    cur_count = getattr(gs.active_foresight_scroll, "count", 1) or 1
+    if cur_count > 1:
+        gs.active_foresight_scroll.count = cur_count - 1
+    else:
+        player_character.inventory.remove_item(gs.active_foresight_scroll.name)
     gs.active_foresight_scroll = None
     gs.prompt_cntl = "inventory"
     main.handle_inventory_menu(player_character, my_tower, "init")

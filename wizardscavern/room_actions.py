@@ -672,9 +672,15 @@ def process_altar_action(player_character, my_tower, cmd):
             return
 
         # Right type: consume item + grant piety + sacrifice reward.
+        # Build-371: decrement count, only remove on count==0.
+        # Sacrificing one of a 5-Rations stack used to wipe all 5.
         add_log("")
         add_log(f"{COLOR_PURPLE}You place {item.name} upon the altar...{COLOR_RESET}")
-        player_character.inventory.remove_item(item.name)
+        cur_count = getattr(item, "count", 1) or 1
+        if cur_count > 1:
+            item.count = cur_count - 1
+        else:
+            player_character.inventory.remove_item(item.name)
         gs.altar_piety[blessed_id] = gs.altar_piety.get(blessed_id, 0) + 1
         new_piety = gs.altar_piety[blessed_id]
         new_tier = altar_piety_tier(new_piety)
@@ -3267,8 +3273,17 @@ def process_alchemist_action(player_character, my_tower, cmd):
                     gs.prompt_cntl = "alchemist_mode"
                     return
                 p1, p2 = potions[a], potions[b]
-                player_character.inventory.remove_item(p1.name)
-                player_character.inventory.remove_item(p2.name)
+                # Build-371: decrement count, only remove on count==0.
+                # Potions stack -- the old `remove_item(name)` consumed
+                # the entire stack of each selected potion type when
+                # brewing one of each. Picking 2 Healing Potions out
+                # of an 8-Healing-Potion stack wiped all 8.
+                for p in (p1, p2):
+                    cur_count = getattr(p, "count", 1) or 1
+                    if cur_count > 1:
+                        p.count = cur_count - 1
+                    else:
+                        player_character.inventory.remove_item(p.name)
                 result = _alchemist_brew(p1, p2, floor_level)
                 player_character.inventory.add_item(result)
                 uses_left = room.properties.get('alch_uses', 3) - 1

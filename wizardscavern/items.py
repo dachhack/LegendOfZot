@@ -2259,7 +2259,15 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_RED}Upgrade failed! The scroll crumbles to dust.{COLOR_RESET}")
 
             # Consume the scroll
-            player_character.inventory.remove_item(gs.active_scroll_item.name)
+            # Build-371: decrement count, only remove on count==0.
+            # Scrolls stack via Inventory.add_item -- the old
+            # `remove_item(name)` consumed a 3-Upgrade-scroll stack
+            # on a single use, silently destroying the other two.
+            cur_count = getattr(gs.active_scroll_item, "count", 1) or 1
+            if cur_count > 1:
+                gs.active_scroll_item.count = cur_count - 1
+            else:
+                player_character.inventory.remove_item(gs.active_scroll_item.name)
             gs.active_scroll_item = None
             gs.prompt_cntl = "inventory"
             handle_inventory_menu(player_character, my_tower, "init")
