@@ -1019,16 +1019,16 @@ POTION_TEMPLATES = [
     Potion(name="Warlord Elixir", description="Fight like a god of war.", value=600, level=18, potion_type='berserker', effect_magnitude=80, duration=6),
 
     # Permanent stat elixirs - rare, expensive, one-time boosts
-    Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
-    Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
+    Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=400, level=15, potion_type='permanent_strength', effect_magnitude=2),
+    Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=400, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
+    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=400, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
     Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=25, potion_type='permanent_strength', effect_magnitude=4),
     Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=25, potion_type='permanent_dexterity', effect_magnitude=4),
     Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=25, potion_type='permanent_intelligence', effect_magnitude=4),
     Potion(name="Supreme Elixir of Might", description="Permanently increases STR by 6.", value=5000, level=35, potion_type='permanent_strength', effect_magnitude=6),
     Potion(name="Supreme Elixir of Grace", description="Permanently increases DEX by 6.", value=5000, level=35, potion_type='permanent_dexterity', effect_magnitude=6),
     Potion(name="Supreme Elixir of Brilliance", description="Permanently increases INT by 6.", value=5000, level=35, potion_type='permanent_intelligence', effect_magnitude=6),
-    Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
+    Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=600, level=15, potion_type='permanent_health', effect_magnitude=20),
     Potion(name="Greater Elixir of Vitality", description="Permanently increases max HP by 40.", value=3000, level=25, potion_type='permanent_health', effect_magnitude=40),
     Potion(name="Supreme Elixir of Vitality", description="Permanently increases max HP by 75.", value=6000, level=35, potion_type='permanent_health', effect_magnitude=75),
 

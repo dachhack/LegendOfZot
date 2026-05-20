@@ -347,31 +347,36 @@ class Vendor:
             # potion_<type>" rule (playtest_harness.py:5096-5099)
             # picks them up on contact; the new permanent-drink
             # path drinks them once owned. Basic tier is the only
-            # one stocked here (800g / 1200g for Vitality) -- the
+            # one stocked here (400g / 600g for Vitality) -- the
             # Greater (+4, 2000g) and Supreme (+6, 5000g) tiers stay
             # locked to Magic Shoppes so deep-floor Magic Shop finds
-            # still feel special. current_floor_level is 0-indexed,
+            # still feel special. Build-386 cut basic-tier prices ~50%
+            # (Might/Grace/Brilliance 800g -> 400g, Vitality 1200g ->
+            # 600g) after the b385 sweep showed 3 of 4 stocked elixirs
+            # missed the buy because mid-game agents (700-1100g per
+            # vendor visit) couldn't reach the 800g threshold after
+            # stockpile spending. current_floor_level is 0-indexed,
             # so z >= 3 means F4+.
             if current_floor_level >= 3 and random.random() < 0.25:
                 permanent_pool = [
                     Potion(name="Elixir of Might",
                            description="Permanently increases STR by 2.",
-                           value=800, level=4,
+                           value=400, level=4,
                            potion_type='permanent_strength',
                            effect_magnitude=2),
                     Potion(name="Elixir of Grace",
                            description="Permanently increases DEX by 2.",
-                           value=800, level=4,
+                           value=400, level=4,
                            potion_type='permanent_dexterity',
                            effect_magnitude=2),
                     Potion(name="Elixir of Brilliance",
                            description="Permanently increases INT by 2.",
-                           value=800, level=4,
+                           value=400, level=4,
                            potion_type='permanent_intelligence',
                            effect_magnitude=2),
                     Potion(name="Elixir of Vitality",
                            description="Permanently increases max HP by 20.",
-                           value=1200, level=4,
+                           value=600, level=4,
                            potion_type='permanent_health',
                            effect_magnitude=20),
                 ]
@@ -1033,10 +1038,10 @@ def generate_magic_shop_inventory(floor_level, player_character):
         ]
     else:
         elixir_pool = [
-            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
-            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
-            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
+            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=400, level=15, potion_type='permanent_strength', effect_magnitude=2),
+            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=400, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
+            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=400, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
+            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=600, level=15, potion_type='permanent_health', effect_magnitude=20),
         ]
     num_elixirs = random.randint(1, 2)
     for _ in range(num_elixirs):
