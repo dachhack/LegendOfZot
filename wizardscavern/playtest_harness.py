@@ -2017,16 +2017,19 @@ class PlaytestSession:
                 break
             if cornered:
                 self.wedge_floors[pc.z] = self.turn
-                # Definitionally permanent: a U tile with zero
-                # discovered walkable cardinal neighbours is a 1-
-                # tile island that won't open up via lantern reveal
-                # (the agent never moves off U to reveal more). Jump
-                # straight to the permanent threshold so the
-                # stairs_down_mode block never expires.
-                self.wedge_count[pc.z] = max(
-                    self.wedge_count.get(pc.z, 0) + 1,
-                    self._WEDGE_PERMANENT_AFTER,
-                )
+                # Build-369: regular +1 bump on cornered, not an
+                # immediate jump to PERMANENT. The old "definitionally
+                # permanent on first cornered visit" was firing
+                # spuriously when the agent landed on a corner U tile
+                # with fog-of-war neighbours (cornered=True because
+                # fog counts as wall in this check). With the W
+                # escape tier removed in b369 a misfired permanent
+                # mark hard-locks the agent on the previous floor
+                # forever -- dwarf seed 1 spent 945T grinding on F1
+                # because F2's U tile was at (1,1) with fog. Three
+                # actual stair-down bounces still mark it permanent;
+                # one initial fog-blind arrival does not.
+                self.wedge_count[pc.z] = self.wedge_count.get(pc.z, 0) + 1
         # Record flee attempts (both successful and failed) so the
         # game_loop heal-up gate can fire before the agent walks back
         # into another fight. Every flee costs one monster attack
@@ -2992,8 +2995,15 @@ def smart_policy(obs, rng, use_lantern=True):
         cur_z_for_perm = p.get("floor", 1) - 1
         perm_wedge = set(obs.get("permanent_wedge_floors") or [])
         d_leads_to_perm_wedge = (cur_z_for_perm + 1) in perm_wedge
-        if d_leads_to_perm_wedge:
-            d_avoid_reachable = False
+        # Build-369: removed `d_avoid_reachable = False` override.
+        # Without the W escape tier (also removed in b369), forcing
+        # trapped_no_d via perm_wedge no longer helps -- the agent
+        # just loses access to D in priority and stalls until
+        # starvation. Better to keep targeting D (which is genuinely
+        # reachable per BFS); if it really does lead to a wedge, the
+        # stair-down step-off / retreat logic handles the bounce.
+        # The original use case (s=88 human F1 cycling F1<->F2
+        # wedge until starvation) is now bounded by other guards.
         coverage_obs_avoid = obs.get("tile_coverage") or {}
         coverage_pct_avoid = coverage_obs_avoid.get("pct", 0)
         reach_pct_avoid = coverage_obs_avoid.get("reach_pct", 0)
@@ -3123,7 +3133,13 @@ def smart_policy(obs, rng, use_lantern=True):
         avoid_set = set()
         if is_weak and not starving and not only_m_walkable:
             avoid_set.add("M")
-        if (is_weak or early_floor) and not trapped_no_d:
+        # Build-369: W is now unconditionally in AVOID. The previous
+        # `not trapped_no_d` exception let agents step onto W when
+        # the policy thought they were wedged -- but a real player
+        # never voluntarily teleports. The trapped_no_d state still
+        # changes tier priorities (D drops), it just no longer
+        # promotes W as a target.
+        if is_weak or early_floor:
             avoid_set.add("W")
         # Avoid D while under-levelled and the floor's grind isn't
         # done. Without this, an agent who walked OFF the D tile
@@ -3476,16 +3492,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # behaviour into ascend.
         retreat_to_floor = obs.get("retreat_to_floor")
         # Trapped-no-D escape: region-split floor where D is behind
-        # walls and the only way out is a known W tile. The W tier
-        # is handled specially in the tier-iteration below
-        # (feature_paths doesn't include W, but nearest_warp_path
-        # provides the approach + step-onto-W). This block takes
-        # priority over everything except retreat (which targets U
-        # back to known territory).
+        # walls. Previously this branch fired tiers = [("W",), ("V",)]
+        # to target the only-known-W as an escape valve. Build-369
+        # removed it per user directive "why would a player step into
+        # a warp room?" -- they wouldn't. A real player on a wedged
+        # floor would re-explore, wait for hunger, or accept death
+        # rather than coin-flip a forced teleport that 60%+ of the
+        # time drops them somewhere worse. The W tier was the
+        # single largest source of warp transitions in the b369
+        # 9-run smoke (35 of 36 warps were step-onto-revealed-W via
+        # this branch, not fog reveals). Now trapped_no_d only
+        # targets V (vendor, safe) and falls through to frontier_
+        # step / random fallback if V isn't reachable either.
         if (retreat_to_floor is None
                 and trapped_no_d
                 and obs.get("nearest_warp_path")):
-            tiers = [("W",), ("V",)]
+            tiers = [("V",)]
         elif (retreat_to_floor is None
                 and trapped_no_d
                 and not obs.get("nearest_warp_path")
@@ -4851,6 +4873,19 @@ def smart_policy(obs, rng, use_lantern=True):
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
+        # Build-369: fire the lantern BEFORE the step-off cascade
+        # when fog is adjacent. Mirrors the stairs_up_mode fix --
+        # the game_loop lantern gate doesn't fire here, so an agent
+        # standing on a D tile with fog cardinals can't see safe
+        # step-off directions and may default to 'd' (descend) when
+        # the agent isn't ready to descend. Lantern reveal first.
+        neighbors_lantern_sd = obs.get("neighbors") or {}
+        fog_adjacent_sd = any(neighbors_lantern_sd.get(d) is None
+                              for d in ("n", "s", "e", "w"))
+        lantern_obj_sd = p.get("lantern") or {}
+        lantern_fuel_sd = lantern_obj_sd.get("fuel", 0)
+        if use_lantern and fog_adjacent_sd and lantern_fuel_sd > 0:
+            return "l"
         # Shrunk on a bug level: Zot's spell blocks descent ('You peer
         # over the edge but the drop is lethal at your size!') and the
         # handler stays in stairs_down_mode. Without this gate the
@@ -5130,6 +5165,26 @@ def smart_policy(obs, rng, use_lantern=True):
             return "d"
         return "d"
     if mode == "stairs_up_mode":
+        # Build-369: fire the lantern BEFORE the step-off cascade
+        # when fog is adjacent. The smart_policy game_loop branch
+        # has its own lantern fire (line ~2927) but that's gated on
+        # mode == "game_loop" and never runs here. Without this,
+        # an agent who lands on a corner U tile with fog cardinals
+        # (e.g. F2's (1,1) U in dwarf seed 1) cannot find a walkable
+        # neighbour, falls through to 'u' ascent, and the cornered
+        # detector marks the floor wedge -- the previous build's
+        # PERMANENT-on-first-cornered flag has been softened but
+        # repeated bounces still accumulate. Lantern reveal turns
+        # those fog cardinals into discovered tiles so the step-off
+        # actually fires and the agent EXPLORES the floor instead
+        # of ping-ponging out.
+        neighbors_lantern_check = obs.get("neighbors") or {}
+        fog_adjacent = any(neighbors_lantern_check.get(d) is None
+                           for d in ("n", "s", "e", "w"))
+        lantern_obj = p.get("lantern") or {}
+        lantern_fuel_su = lantern_obj.get("fuel", 0)
+        if use_lantern and fog_adjacent and lantern_fuel_su > 0:
+            return "l"
         # Shrunk on a bug level: ascent is also blocked ('the stairs
         # are impossibly tall'). Walk off the U tile. Quest-passed
         # re-shrunk player can still climb (auto-cure fires).
