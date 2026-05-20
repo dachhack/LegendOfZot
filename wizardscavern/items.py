@@ -2825,17 +2825,21 @@ MEAT_DEFAULT = ("steak", "dubious", 12)
 MEAT_DEFAULT_CUTS = ["steak", "burger", "chops", "filet", "kebab"]
 
 HUNGER_MAX = 100
-# Hunger decays 7 units per 10 moves -- 0.7/move averaged. Earlier
-# rate was 1/move flat. The 5000-turn carnage round (build 327)
-# audit showed agents hit a per-floor deficit on vendor-less
-# floors (~65 nut short per floor), compounding into ~60 turns at
-# hunger 0 even though they were eating constantly. Slowing the
-# clock by 30% stretches every food source -- starter pack,
-# vendor stock, monster meat -- proportionally, so more agents
-# push past the F3-F4 starvation gate and into the F5+ tomb
-# grinder where the real carnage lives. The tracker-pair below
-# keeps decay integer (no float drift) and deterministic.
-HUNGER_DECAY_PER_MOVE = 7
+# Hunger decays 1 unit per move (10/10 ratio kept for the integer
+# tracker below). Build 373 bumps from the 7/10 = 0.7/move rate set
+# in build 327. Playtest-372 sweep (18 runs, 50k turns) found the
+# food clock was decorative: F1-F3 mean hunger 74.5, F4-F6 70.8,
+# 0/18 runs ever crossed the Hungry threshold, 0/18 starvation
+# deaths. The 0.7/move rate dates from a much sparser food economy
+# (single Iron Rations per vendor, no F1 dungeon-vendor rations,
+# no starter Cooking Kit) -- since then Iron Rations stack went
+# 1->3 (b328), F1 vendor got Rations + Iron Rations (b328), and
+# more food sources landed. Net: the food clock no longer bites.
+# Going back to 1/move (+43% decay rate) should restore real
+# hunger pressure without re-introducing the b327 starvation gate
+# because today's vendors carry ~410 nut per visit (b328) vs.
+# ~210 nut at the time of the original tuning.
+HUNGER_DECAY_PER_MOVE = 10
 HUNGER_DECAY_INTERVAL = 10
 HUNGER_STARVING_THRESHOLD = 10   # below this: starving, take 1 dmg per move
 HUNGER_HUNGRY_THRESHOLD = 40     # below this: hungry, slight combat penalty
