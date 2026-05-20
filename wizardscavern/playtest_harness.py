@@ -4622,7 +4622,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # (characters.py:920+): elf 11, human 15, dwarf 20.
         pc = gs.player_character
         race = (getattr(pc, "race", "") or "").lower()
-        cast_thresh = {"elf": 11, "human": 15, "dwarf": 20}.get(race, 15)
+        cast_thresh = {"elf": 11, "human": 13, "dwarf": 20}.get(race, 13)
         target_int = cast_thresh + 4  # 1 + ~3 spells of mana headroom
         if pc.unspent_stat_points <= 0:
             return "x"

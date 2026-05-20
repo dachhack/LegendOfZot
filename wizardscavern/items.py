@@ -2909,21 +2909,17 @@ class Food(Item):
         return f"Food(name='{self.name}', nutrition={self.nutrition}, count={self.count})"
 
     def use(self, character, my_tower=None):
-        # Dwarven Appetite (build 381): dwarves draw +50% nutrition from
-        # all rations / jerky / mundane food, mirroring the Sausage.use()
-        # bonus. Lore-consistent with the "hearty mountain appetite" the
-        # sausage scholar in your tabletop group never shuts up about,
-        # and gives the melee race a survival edge that doesn't depend
-        # on crafting (which isn't firing in playtests yet). Sausage
-        # and LembasWafer override use() so they remain unaffected.
-        is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
-        nutrition_gain = int(self.nutrition * 1.5) if is_dwarf else self.nutrition
+        # b381 added a dwarf bonus here too; b382 reverted it. Dwarves
+        # are now explicitly carnivore-tuned: the Meat / Sausage bonus
+        # (2.0x) lives in those subclasses' use() methods, while plain
+        # Food (Rations, Iron Rations, Salted Jerky) gives the same
+        # nutrition to every race. Leaning into "kill, butcher, eat"
+        # as the dwarf food economy means rations are a budget filler,
+        # meat is the meal.
         old_hunger = character.hunger
-        character.hunger = min(HUNGER_MAX, character.hunger + nutrition_gain)
+        character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
         gained = character.hunger - old_hunger
         add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger restored by {gained}.{COLOR_RESET}")
-        if is_dwarf and gained > 0:
-            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
         return True  # consumed
 
 
@@ -2963,10 +2959,13 @@ class Sausage(Food):
 
     def use(self, character, my_tower=None):
         is_dwarf = getattr(character, 'race', '').lower() == 'dwarf'
-        # Dwarves get +50% nutrition and healing from sausages
-        nutrition_gain = int(self.nutrition * 1.5) if is_dwarf else self.nutrition
+        # Dwarven Carnivore Diet (build 382): bumped sausage bonus from
+        # +50% to +100% to match the Meat.use() carnivore tier.
+        # Sausages are cured meat -- they fit the same race archetype
+        # that gives dwarves a meat-only food advantage.
+        nutrition_gain = self.nutrition * 2 if is_dwarf else self.nutrition
         base_heal = 5
-        heal_amount = int(base_heal * 1.5) if is_dwarf else base_heal
+        heal_amount = base_heal * 2 if is_dwarf else base_heal
 
         old_hunger = character.hunger
         character.hunger = min(HUNGER_MAX, character.hunger + nutrition_gain)
@@ -2979,7 +2978,7 @@ class Sausage(Food):
         if heal > 0:
             add_log(f"{COLOR_GREEN}The hearty cured meat restores {heal} HP.{COLOR_RESET}")
         if is_dwarf:
-            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}[Carnivore Diet] Mountain blood feasts on flesh -- the meat fills you twice over.{COLOR_RESET}")
 
         # Spicy sausage buff — grants "Spiced Fury" attack boost
         if self.is_spicy:
@@ -3050,11 +3049,16 @@ class Meat(Item):
         return False
 
     def use(self, character, my_tower=None):
-        # Dwarven Appetite (build 381): +50% nutrition on cooked AND
-        # raw meat. Same bonus pattern as Sausage.use() and Food.use()
-        # so the melee race has a consistent hunger advantage across
-        # the entire food economy, not just sausages (which the smart
-        # policy rarely manages to craft).
+        # Dwarven Carnivore Diet (build 382): dwarves now get +100%
+        # nutrition on raw AND cooked monster meat (bumped from b381's
+        # +50%). The b381 sweep showed +50% wasn't enough -- dwarves
+        # still hit 4/6 starvation deaths because the food supply ran
+        # out entirely on long runs, not because each meal was too
+        # small. +100% effectively doubles meat-per-kill efficiency
+        # for dwarves while leaving Rations / Iron Rations at base
+        # rate (user spec: "lean into the dwarf carnivore diet").
+        # Lore: dwarves draw on a hearty meat-and-mead constitution
+        # that processed grains never satisfy.
         is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
         if self.is_rotten:
             add_log(f"{COLOR_RED}You choke down the rotten {self.monster_name} {self.cut}. Ugh! Your stomach protests.{COLOR_RESET}")
@@ -3063,7 +3067,7 @@ class Meat(Item):
             return True  # consumed anyway
         if not self.is_cooked:
             base_gain = max(5, self.nutrition // 2)
-            gain = int(base_gain * 1.5) if is_dwarf else base_gain
+            gain = base_gain * 2 if is_dwarf else base_gain
             add_log(f"{COLOR_YELLOW}You gnaw on the raw {self.monster_name} {self.cut}. It's disgusting but fills you a little.{COLOR_RESET}")
             old_hunger = character.hunger
             character.hunger = min(HUNGER_MAX, character.hunger + gain)
@@ -3071,14 +3075,14 @@ class Meat(Item):
             add_log(f"{COLOR_YELLOW}Hunger restored by {gained}.{COLOR_RESET}")
         else:
             base_gain = self.nutrition
-            gain = int(base_gain * 1.5) if is_dwarf else base_gain
+            gain = base_gain * 2 if is_dwarf else base_gain
             old_hunger = character.hunger
             character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
             article = "a" if self.descriptor[0].lower() not in 'aeiou' else "an"
             add_log(f"{COLOR_GREEN}You ate {article} {self.descriptor} {self.monster_name} {self.cut}! Hunger restored by {gained}.{COLOR_RESET}")
         if is_dwarf and gained > 0:
-            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}[Carnivore Diet] Mountain blood feasts on flesh -- the meat fills you twice over.{COLOR_RESET}")
         return True  # consumed
 
 

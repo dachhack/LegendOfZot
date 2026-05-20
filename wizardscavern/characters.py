@@ -944,9 +944,16 @@ class Character:
             int_mp = (int_score - 11) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 10)
         else:  # human (default)
-            if int_score <= 15:
+            # Build-382: gate lowered 15 -> 13 so a human with the
+            # b380 stat-point system + the b381 Mind Touch cantrip can
+            # actually cast in mid-game. At 1 pt per 2 levels they
+            # need +4 INT to clear the new gate -> reachable by L9
+            # (median runs L6, deep runs L13+). Threshold-15 left
+            # them locked out -- b381 sweep: 1/6 humans reached INT
+            # 16, that one died 43 turns later before casting.
+            if int_score <= 13:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 15) * 3 + 5
+            int_mp = (int_score - 13) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 6)
 
         return int_mp + lvl_mp + self.base_max_mana_bonus
