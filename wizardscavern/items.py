@@ -2909,10 +2909,21 @@ class Food(Item):
         return f"Food(name='{self.name}', nutrition={self.nutrition}, count={self.count})"
 
     def use(self, character, my_tower=None):
+        # Dwarven Appetite (build 381): dwarves draw +50% nutrition from
+        # all rations / jerky / mundane food, mirroring the Sausage.use()
+        # bonus. Lore-consistent with the "hearty mountain appetite" the
+        # sausage scholar in your tabletop group never shuts up about,
+        # and gives the melee race a survival edge that doesn't depend
+        # on crafting (which isn't firing in playtests yet). Sausage
+        # and LembasWafer override use() so they remain unaffected.
+        is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
+        nutrition_gain = int(self.nutrition * 1.5) if is_dwarf else self.nutrition
         old_hunger = character.hunger
-        character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+        character.hunger = min(HUNGER_MAX, character.hunger + nutrition_gain)
         gained = character.hunger - old_hunger
         add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger restored by {gained}.{COLOR_RESET}")
+        if is_dwarf and gained > 0:
+            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
         return True  # consumed
 
 
@@ -3039,23 +3050,35 @@ class Meat(Item):
         return False
 
     def use(self, character, my_tower=None):
+        # Dwarven Appetite (build 381): +50% nutrition on cooked AND
+        # raw meat. Same bonus pattern as Sausage.use() and Food.use()
+        # so the melee race has a consistent hunger advantage across
+        # the entire food economy, not just sausages (which the smart
+        # policy rarely manages to craft).
+        is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
         if self.is_rotten:
             add_log(f"{COLOR_RED}You choke down the rotten {self.monster_name} {self.cut}. Ugh! Your stomach protests.{COLOR_RESET}")
             character.take_damage_no_def(10, "Physical")
             add_log(f"{COLOR_RED}You lose 10 HP from food poisoning!{COLOR_RESET}")
             return True  # consumed anyway
         if not self.is_cooked:
+            base_gain = max(5, self.nutrition // 2)
+            gain = int(base_gain * 1.5) if is_dwarf else base_gain
             add_log(f"{COLOR_YELLOW}You gnaw on the raw {self.monster_name} {self.cut}. It's disgusting but fills you a little.{COLOR_RESET}")
             old_hunger = character.hunger
-            character.hunger = min(HUNGER_MAX, character.hunger + max(5, self.nutrition // 2))
+            character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
             add_log(f"{COLOR_YELLOW}Hunger restored by {gained}.{COLOR_RESET}")
         else:
+            base_gain = self.nutrition
+            gain = int(base_gain * 1.5) if is_dwarf else base_gain
             old_hunger = character.hunger
-            character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+            character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
             article = "a" if self.descriptor[0].lower() not in 'aeiou' else "an"
             add_log(f"{COLOR_GREEN}You ate {article} {self.descriptor} {self.monster_name} {self.cut}! Hunger restored by {gained}.{COLOR_RESET}")
+        if is_dwarf and gained > 0:
+            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
         return True  # consumed
 
 

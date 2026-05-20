@@ -540,6 +540,24 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             if hasattr(spell_copy, 'is_identified'):
                 spell_copy.is_identified = True
             pc.memorized_spells.append(spell_copy)
+    elif race == 'human':
+        # Humans get one cantrip (Mind Touch) at character creation
+        # to match the "balanced between melee and magic" design.
+        # The cantrip sits unusable until INT crosses the human cast
+        # gate (INT > 15 -> max_mana > 0), then activates naturally
+        # via the existing memorized_spells flow. Single cantrip vs
+        # the elf's two preserves the magic gap. Dwarves get no
+        # cantrip -- they're the dedicated melee race.
+        from .items import SPELL_TEMPLATES as _ST
+        import copy as _copy
+        for spell in _ST:
+            if (getattr(spell, 'is_cantrip', False)
+                    and spell.name.lower() == 'mind touch'):
+                spell_copy = _copy.deepcopy(spell)
+                if hasattr(spell_copy, 'is_identified'):
+                    spell_copy.is_identified = True
+                pc.memorized_spells.append(spell_copy)
+                break
     if starter_pack:
         # Mirror Vendor(starting=True) inventory at vendor.py:94-130 --
         # what a real player walks out of the F1 starting shop with

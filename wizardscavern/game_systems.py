@@ -3718,6 +3718,25 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
                     gs.cantrip_selections = []
                     gs.prompt_cntl = "player_cantrips"
                 else:
+                    # Humans get one starter cantrip (Mind Touch) to
+                    # support the "balanced between melee and magic"
+                    # design. The cantrip is auto-added (no picker)
+                    # since there's only one. It sits unusable until
+                    # INT crosses the human cast gate (INT > 15 ->
+                    # max_mana > 0), then activates via the existing
+                    # memorized_spells flow. Dwarves intentionally
+                    # get nothing -- they're the dedicated melee race.
+                    if player_character.race == 'human':
+                        from .item_templates import SPELL_TEMPLATES as _ST
+                        import copy as _copy
+                        for spell in _ST:
+                            if (getattr(spell, 'is_cantrip', False)
+                                    and spell.name.lower() == 'mind touch'):
+                                spell_copy = _copy.deepcopy(spell)
+                                if hasattr(spell_copy, 'is_identified'):
+                                    spell_copy.is_identified = True
+                                player_character.memorized_spells.append(spell_copy)
+                                break
                     gs.prompt_cntl = "starting_shop"
                     handle_starting_shop(player_character, my_tower, "init")
                 return True
