@@ -128,8 +128,23 @@ def _execute_charged_spell(player_character):
 
     target = gs.active_monster
 
+    # b400: layer an additive INT-scaling bonus on top of the existing
+    # per-level int_bonus formula. The pre-b400 scaling
+    # `INT // 2 + max(0, INT-10) * spell.level // 3` already gave
+    # high-INT casters meaningful damage bumps on high-level spells
+    # (Lightning Bolt L2 at INT 25 gained +22 over base_power 31), but
+    # cantrips and L0 spells barely scaled (Mind Touch base 6 + INT // 2
+    # = 6 + 12 = 18 at INT 25, only 3x base). The new layer adds a
+    # flat per-2-INT-above-15 bonus that benefits every spell tier
+    # equally, so an INT-invested caster sees a 8-10% damage uplift
+    # across the whole spellbook -- reward for stat investment that
+    # doesn't disproportionately scale boss-killer L2-L3 spells.
+    int_scaling_bonus = max(0, (player_character.intelligence - 15) // 2)
+
     if spell.spell_type == 'healing':
-        healing_amount = spell.base_power + (player_character.intelligence // 2)
+        healing_amount = (spell.base_power
+                          + (player_character.intelligence // 2)
+                          + int_scaling_bonus)
         player_character.health += healing_amount
         if player_character.health > player_character.max_health:
             player_character.health = player_character.max_health
@@ -138,7 +153,7 @@ def _execute_charged_spell(player_character):
         return True
     elif spell.spell_type == 'damage':
         int_bonus = (player_character.intelligence // 2) + (max(0, player_character.intelligence - 10) * spell.level // 3)
-        base_damage = spell.base_power + int_bonus
+        base_damage = spell.base_power + int_bonus + int_scaling_bonus
         effective_damage = base_damage
         if spell.damage_type != 'Physical':
             if spell.damage_type in target.elemental_weakness:
