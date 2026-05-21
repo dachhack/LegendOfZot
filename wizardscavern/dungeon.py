@@ -614,7 +614,20 @@ class Tower:
             visited = new_visited
 
     def create_floor_50_boss_arena(self, floor):
-        """Create the special Floor 50 boss arena with Zot's Guardian"""
+        """Create the special Floor 50 boss arena with Zot's Guardian.
+
+        b410 fix: the prior implementation only converted the center
+        tile IF it was already a '.' floor tile. The floor generator
+        randomly places walls / chests / tombs / vendors, so on roughly
+        40% of seeds the (rows//2, cols//2) coordinate was not '.' and
+        the Guardian silently failed to spawn -- F50 was an empty
+        arena and the 8-shard quest was unwinnable on that seed.
+
+        Now scans outward from the center for the first walkable tile
+        and force-converts it to M + Guardian regardless of what was
+        there originally. Falls back to any '.' tile if the spiral
+        somehow doesn't find one (defensive).
+        """
         add_log("")
         add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
         add_log(f"{COLOR_RED}*** YOU HAVE REACHED FLOOR 50! ***{COLOR_RESET}")
@@ -622,16 +635,48 @@ class Tower:
         add_log(f"{COLOR_YELLOW}The final chamber... Zot's Guardian awaits!{COLOR_RESET}")
         add_log("")
 
-        # Mark all rooms as special boss floor
-        for r in range(floor.rows):
-            for c in range(floor.cols):
-                room = floor.grid[r][c]
-                if room and room.room_type == '.':
-                    # Convert center area to boss arena
-                    if r == floor.rows // 2 and c == floor.cols // 2:
-                        room.room_type = 'M'  # Boss monster room
-                        room.properties['is_boss_arena'] = True
-                        room.properties['has_zots_guardian'] = True
+        # Locate the Guardian tile: spiral outward from the geometric
+        # center until we land on a non-wall tile. Whatever was there
+        # (chest, tomb, vendor) gets overwritten -- the boss arena
+        # supersedes the random layout for that single tile.
+        cy, cx = floor.rows // 2, floor.cols // 2
+        target_r, target_c = None, None
+        max_radius = max(floor.rows, floor.cols)
+        for radius in range(0, max_radius):
+            for dr in range(-radius, radius + 1):
+                for dc in range(-radius, radius + 1):
+                    if radius > 0 and max(abs(dr), abs(dc)) != radius:
+                        continue  # only the ring at this radius
+                    r, c = cy + dr, cx + dc
+                    if not (0 <= r < floor.rows and 0 <= c < floor.cols):
+                        continue
+                    room = floor.grid[r][c]
+                    if room is None or room.room_type == '#':
+                        continue
+                    target_r, target_c = r, c
+                    break
+                if target_r is not None:
+                    break
+            if target_r is not None:
+                break
+
+        # Defensive fallback: if no walkable tile was reachable from
+        # center (shouldn't happen given the generator guarantees '.'
+        # floor), pick the first '.' on the floor.
+        if target_r is None:
+            for r in range(floor.rows):
+                for c in range(floor.cols):
+                    if floor.grid[r][c].room_type == '.':
+                        target_r, target_c = r, c
+                        break
+                if target_r is not None:
+                    break
+
+        if target_r is not None:
+            boss_room = floor.grid[target_r][target_c]
+            boss_room.room_type = 'M'
+            boss_room.properties['is_boss_arena'] = True
+            boss_room.properties['has_zots_guardian'] = True
 
     def setup_dungeons_and_tombs(self, floor, floor_number):
         """

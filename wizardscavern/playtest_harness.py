@@ -389,7 +389,7 @@ def _item_category(item):
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
              int_bonus=0, spells=None, starter_pack=True,
-             fog_of_war=True, start_floor=1):
+             fog_of_war=True, start_floor=1, with_shards=False):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
@@ -723,6 +723,54 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         _plant_survivor_baseline(pc, start_floor)
     else:
         _trigger_room_interaction(gs.player_character, gs.my_tower)
+
+    # b410 quest playtest: short-circuit the rune/shard grind so the
+    # F50 boss arena can be tested directly. Pre-grants all 8 runes +
+    # shards + flips gate_to_floor_50_unlocked so a F47-F49 plant can
+    # walk straight to the boss without first finding 200 monsters,
+    # 75 gardens, etc. Real games still go through the full grind --
+    # this is a harness-only escape hatch for verifying the end-game
+    # mechanics work end-to-end.
+    if with_shards:
+        for key in gs.runes_obtained:
+            gs.runes_obtained[key] = True
+        for key in gs.shards_obtained:
+            gs.shards_obtained[key] = True
+        gs.gate_to_floor_50_unlocked = True
+        # When planted on F50 with shards, scoot the player adjacent
+        # to the Zot's Guardian boss tile (center of the arena, see
+        # dungeon.py:631 -- rows // 2, cols // 2). Without this the
+        # plant lands on U far from center and gets eaten by ambient
+        # Mythic-tier monsters before reaching the boss. We pick an
+        # adjacent walkable tile so the agent's first move can step
+        # onto M and trigger the Guardian encounter cleanly.
+        if start_floor == 50:
+            floor = gs.my_tower.floors[pc.z]
+            # Boss-arena test isolation: clear ambient F50 monsters
+            # and undead-guardian spawns so we test the Guardian
+            # fight in isolation, not the F50 mob soup. The boss
+            # arena builder (dungeon.py:create_floor_50_boss_arena)
+            # places ONE M tile with has_zots_guardian -- find it.
+            boss_xy = None
+            for r in range(floor.rows):
+                for c in range(floor.cols):
+                    cell = floor.grid[r][c]
+                    if cell.properties.get('has_zots_guardian'):
+                        boss_xy = (c, r)
+                    elif cell.room_type == 'M':
+                        cell.room_type = '.'
+                    elif cell.room_type in ('T', 'N'):
+                        cell.room_type = '.'
+                    cell.properties.pop('undead_guardian', None)
+                    cell.discovered = True
+            # Drop the player ON the Guardian tile and trigger the room
+            # interaction. The standard plant path skips
+            # _trigger_room_interaction (it would auto-fire stairs on
+            # a U tile), but for the boss test we WANT the M handler
+            # to fire and spawn the Guardian as gs.active_monster.
+            if boss_xy is not None:
+                pc.x, pc.y = boss_xy
+                _trigger_room_interaction(pc, gs.my_tower)
 
     session = PlaytestSession(fog_of_war=fog_of_war)
     if start_floor > 1:
