@@ -945,13 +945,25 @@ def _grant_memorized_spells(pc, start_floor):
     # Picks bias toward survival utility (Heal / Stone Skin) ahead of
     # raw damage, since the smart-policy heal-cast gate is the highest-
     # impact spell usage in the harness today.
+    #
+    # b408: added Meteor Strike (L3, +45 base) and Inferno (L4, +55
+    # base) for F18+ / F22+ plants. The b407 caster death audit showed
+    # status-lockout monsters (Frost Worm 50-80 dmg/swing, Basilisk
+    # paralysis + Death Knight 90 dmg + Burn) were claiming F25-F30
+    # casters because Flame Lance (61 dmg at INT 26) couldn't drop a
+    # 100-150 HP F25 monster in 1 cast -- the channel-complete swing
+    # landed for 50-90 dmg AND applied the status. A one-shot Meteor
+    # Strike (~79 dmg at F25 elf) drops mid-tier F25 monsters in a
+    # single cast, eliminating the lockout window. Dropped Fireball
+    # (superseded by L2 spells), Minor Heal (superseded by Heal), and
+    # Battle Hymn (audit confirms smart-policy never picks it) to
+    # make slot room.
     tiers = [
         # Healing ladder. Granted in tier order; the spell_casting_mode
         # heal pick (b398) chooses the smallest heal >= deficit, so
-        # having Minor Heal + Heal + Greater Heal + Mass Heal lets the
-        # agent right-size every heal cast to the actual HP loss
-        # without overpaying mana.
-        (5, "Minor Heal"),       # L0, 1 slot, +15 HP
+        # having Heal + Greater Heal + Mass Heal lets the agent right-
+        # size every heal cast to the actual HP loss without
+        # overpaying mana.
         (8, "Heal"),             # L1, 2 slots, +25 HP
         (18, "Greater Heal"),    # L2, 2 slots, +40 HP
         (22, "Mass Heal"),       # L3, 3 slots, +60 HP
@@ -961,30 +973,29 @@ def _grant_memorized_spells(pc, start_floor):
         # spells get picked when mana is high, L0 fallback when mana
         # is depleted between fights.
         (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
-        (13, "Fireball"),        # L1, 2 slots, 20 dmg fire
         (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg wind
         (20, "Flame Lance"),     # L2, 2 slots, 33 dmg fire
+        # b408 high-tier nukes. Meteor Strike and Inferno hit hard
+        # enough that the F25 caster can drop a parity-level monster
+        # in 1 cast before the status-lockout swing lands. Meteor
+        # Strike ~79 dmg at F25 elf (vs Flame Lance 61), Inferno
+        # ~94 dmg. Higher mana cost (22/35 vs 17 for Flame Lance)
+        # so they're picked when mana is full and saved for the
+        # dangerous fights, then the b399 race-INT regen rebuilds
+        # the pool between fights.
+        (18, "Meteor Strike"),   # L3, 3 slots, 45 dmg fire
+        (22, "Inferno"),         # L4, 3 slots, 55 dmg fire
         # b403/b404 caster defense suite -- moved ahead of buff/utility
         # tier because the b403 deep audit showed the F25 caster slot
         # cap (24) was exhausted by heals+damage+stone_skin before
         # Mage Armor / Spectral Hand could be memorized, leaving them
         # unused across all 18 audit seeds. New order grants the
-        # high-impact defensive layer first, drops Battle Hymn last
-        # since the smart-policy never picks offense buffs anyway.
+        # high-impact defensive layer first.
         (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns (stacks w/ Stone Skin)
         (15, "Spectral Hand"),   # L2, 2 slots, absorb 3 hits / 8 turns
         # Stone Skin -- burst +8 DEF for short tough fights. Stacks
         # with Mage Armor since they have separate status_effect_name.
         (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
-        # Status cure. Surfaces a non-potion poison cleanse for deep
-        # floors where Cave Lizards / Cobras hit poison ticks.
-        (19, "Purify"),          # L1, 2 slots, cure poison
-        # Battle Hymn (offense buff) intentionally last -- audit on
-        # b398 showed it's never auto-cast by the policy because back-
-        # to-back buff turns burn more damage output than the +10 ATK
-        # window pays back over a 3-turn fight. Kept in the tier list
-        # for human/dwarf mages who'd cast it manually.
-        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
     ]
     used = pc.get_used_spell_slots()
     for min_floor, name in tiers:
@@ -5760,6 +5771,25 @@ def smart_policy(obs, rng, use_lantern=True):
             )
             if hold_monster:
                 return str(hold_monster["slot"])
+
+        # 1b. Burst nuke (b408). When a L3+ damage spell is available
+        # and powerful enough to drop the monster in <= 2 casts, fire
+        # it now instead of cycling through the Spectral Hand / Mage
+        # Armor / Stone Skin buff cascade. The b408 spell-usage audit
+        # showed Meteor Strike cast only 13 times across 40 caster
+        # runs vs Spectral Hand 1768 times -- the cascade burned 3
+        # channel turns of monster swings every fight before reaching
+        # damage at position 6. For tough fights vs status-applying
+        # monsters (Frost Worm freeze, Basilisk paralysis), each delayed
+        # turn is one more chance for status-lockout to land. Two casts
+        # of Meteor Strike (~79 dmg each at F25 elf INT 26) drops a
+        # 150-HP monster faster than 3 buffs + 2 attacks.
+        if affordable_dmg:
+            best_dmg = max(affordable_dmg,
+                           key=lambda s: (s["base_power"], -s["mana_cost"]))
+            if (best_dmg.get("level", 0) >= 3
+                    and best_dmg["base_power"] * 2 >= _m_max_hp):
+                return str(best_dmg["slot"])
 
         # 2. Spectral Hand (14 MP). Absorbs 3 enemy strikes; with F25
         # Savage hitting ~80 raw, one cast removes ~240 dmg from the
