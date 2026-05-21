@@ -335,6 +335,53 @@ class Vendor:
                     and not getattr(gs, 'curing_kit_stocked', False)):
                 self.inventory.add_item_quiet(CuringKit())
 
+            # Permanent stat elixirs: 25% chance to stock one basic-
+            # tier permanent (level 4) at every F4+ regular vendor.
+            # Pre-build 384 these only spawned in F20+ Magic Shoppes
+            # (15% per floor) -- no playtest agent reached F20 in
+            # any race, so the new smart-policy "drink permanent
+            # buffs on sight" path had nothing to consume. Stocking
+            # at F4+ regular vendors mirrors the b380 Elixir of
+            # Brilliance gate drop (level 15 -> 4) on the placement
+            # side. Smart-policy's existing "buy one of each unknown
+            # potion_<type>" rule (playtest_harness.py:5096-5099)
+            # picks them up on contact; the new permanent-drink
+            # path drinks them once owned. Basic tier is the only
+            # one stocked here (400g / 600g for Vitality) -- the
+            # Greater (+4, 2000g) and Supreme (+6, 5000g) tiers stay
+            # locked to Magic Shoppes so deep-floor Magic Shop finds
+            # still feel special. Build-386 cut basic-tier prices ~50%
+            # (Might/Grace/Brilliance 800g -> 400g, Vitality 1200g ->
+            # 600g) after the b385 sweep showed 3 of 4 stocked elixirs
+            # missed the buy because mid-game agents (700-1100g per
+            # vendor visit) couldn't reach the 800g threshold after
+            # stockpile spending. current_floor_level is 0-indexed,
+            # so z >= 3 means F4+.
+            if current_floor_level >= 3 and random.random() < 0.25:
+                permanent_pool = [
+                    Potion(name="Elixir of Might",
+                           description="Permanently increases STR by 2.",
+                           value=400, level=4,
+                           potion_type='permanent_strength',
+                           effect_magnitude=2),
+                    Potion(name="Elixir of Grace",
+                           description="Permanently increases DEX by 2.",
+                           value=400, level=4,
+                           potion_type='permanent_dexterity',
+                           effect_magnitude=2),
+                    Potion(name="Elixir of Brilliance",
+                           description="Permanently increases INT by 2.",
+                           value=400, level=4,
+                           potion_type='permanent_intelligence',
+                           effect_magnitude=2),
+                    Potion(name="Elixir of Vitality",
+                           description="Permanently increases max HP by 20.",
+                           value=600, level=4,
+                           potion_type='permanent_health',
+                           effect_magnitude=20),
+                ]
+                self.inventory.add_item_quiet(random.choice(permanent_pool))
+
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
                 self.inventory.add_item_quiet(Towel("Towel", "A soft cotton towel. Don't panic!", value=5, level=0))
@@ -991,10 +1038,10 @@ def generate_magic_shop_inventory(floor_level, player_character):
         ]
     else:
         elixir_pool = [
-            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
-            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
-            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
+            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=400, level=15, potion_type='permanent_strength', effect_magnitude=2),
+            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=400, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
+            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=400, level=4, potion_type='permanent_intelligence', effect_magnitude=2),
+            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=600, level=15, potion_type='permanent_health', effect_magnitude=20),
         ]
     num_elixirs = random.randint(1, 2)
     for _ in range(num_elixirs):
