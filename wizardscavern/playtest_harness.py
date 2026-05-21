@@ -1047,6 +1047,15 @@ class PlaytestSession:
                 # (INT 12 gives 8 MP but no cast access).
                 "can_cast": pc.max_mana > 0,
                 "unspent_stat_points": getattr(pc, "unspent_stat_points", 0),
+                # Spell-slot capacity (build 387): exposes the INT-gated
+                # memorize budget so smart_policy can decide when to
+                # enter spell_memorization_mode. Cantrips are slot-free
+                # (granted at character creation, no cost), so they
+                # don't count against `used_spell_slots`. Mid-game humans
+                # reach max_spell_slots > 0 at INT 17 via stat
+                # allocation, opening the memorize path.
+                "max_spell_slots": pc.get_max_memorized_spell_slots(),
+                "used_spell_slots": pc.get_used_spell_slots(),
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
@@ -1069,6 +1078,14 @@ class PlaytestSession:
                  "type": s.spell_type}
                 for i, s in enumerate(pc.memorized_spells)
             ],
+            # Spell inventory in insertion order (build 387). The
+            # spell_memorization_mode handler at combat.py:1454
+            # iterates player_character.get_spell_inventory() and
+            # indexes m<N> off THAT order. The flat `inventory` field
+            # above is in get_sorted_inventory order (level desc) so
+            # the slots don't match. The mode policy reads from THIS
+            # field to compute the correct 1-based index for `m<N>`.
+            "spell_inventory": self._spell_inventory_obs(),
             "vendor_inventory": self._vendor_obs(),
             "neighbors": self._neighbors_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
@@ -1353,7 +1370,53 @@ class PlaytestSession:
                 entry["scroll_name"] = getattr(item, "name", "")
             if isinstance(item, Potion):
                 entry["potion_type"] = getattr(item, "potion_type", None)
+            # Spell metadata (build 387): expose level / mana_cost /
+            # base_power / spell_type / is_cantrip so the memorize
+            # policy can score candidates (healing > high damage-per-
+            # mana > buff) and gate slot-budget choices without
+            # importing the Spell class. spell_type is e.g.
+            # 'healing', 'damage', 'debuff_target', 'detect_monster',
+            # 'reveal_fog', 'add_status_effect', 'remove_status'.
+            if isinstance(item, Spell):
+                entry["spell_level"] = getattr(item, "level", 0)
+                entry["mana_cost"] = getattr(item, "mana_cost", 0)
+                entry["damage_type"] = getattr(item, "damage_type", "")
+                entry["base_power"] = getattr(item, "base_power", 0)
+                entry["spell_type"] = getattr(item, "spell_type", "")
+                entry["is_cantrip"] = bool(getattr(item, "is_cantrip", False))
             out.append(entry)
+        return out
+
+    def _spell_inventory_obs(self):
+        """Spells in player_character.get_spell_inventory() order (insertion
+        order), which is what spell_memorization_mode's m<N> / c<N> /
+        f<N> commands index off (combat.py:1454). Distinct from the
+        sorted_inventory ordering used by `inventory` -- the indices
+        differ. The spell_memorization_mode policy reads from this
+        field so the slot number it emits actually picks the spell
+        it intended."""
+        pc = gs.player_character
+        if pc is None:
+            return []
+        from .items import is_item_identified
+        out = []
+        for i, s in enumerate(pc.get_spell_inventory()):
+            try:
+                ident = bool(is_item_identified(s))
+            except Exception:
+                ident = True
+            out.append({
+                "slot": i + 1,
+                "name": s.name,
+                "level": getattr(s, "level", 0),
+                "mana_cost": getattr(s, "mana_cost", 0),
+                "base_power": getattr(s, "base_power", 0),
+                "damage_type": getattr(s, "damage_type", ""),
+                "spell_type": getattr(s, "spell_type", ""),
+                "is_cantrip": bool(getattr(s, "is_cantrip", False)),
+                "is_identified": ident,
+                "memorized": s in pc.memorized_spells,
+            })
         return out
 
     def _vendor_obs(self):
@@ -2118,6 +2181,9 @@ class PlaytestSession:
                 process_flee_direction_action(pc, tw, action)
             elif mode == "spell_casting_mode":
                 process_spell_casting_action(pc, tw, action)
+            elif mode == "spell_memorization_mode":
+                from .combat import process_spell_memorization_action
+                process_spell_memorization_action(pc, tw, action)
             elif mode == "chest_mode":
                 process_chest_action(pc, tw, action)
             elif mode == "stairs_down_mode":
@@ -4224,6 +4290,47 @@ def smart_policy(obs, rng, use_lantern=True):
         # idle.
         if proposed is None and p.get("unspent_stat_points", 0) > 0:
             proposed = "s"
+        # Spell memorization (build 387). Once INT is high enough to
+        # unlock memorize slots (>= 17 per the get_max_memorized_spell_slots
+        # formula at characters.py:1571 -- (int-15)//2 with a level
+        # bonus for INT > 15), any identified unmemorized spell in
+        # inventory is a free power-up: it costs no slot to learn
+        # (until cast). Mid-game humans hit INT 17 around L13 via the
+        # stat allocation system and at that point the bag often
+        # contains Heal, Fireball, etc., picked up at vendors or from
+        # drops -- previously they all sat unused because no policy
+        # hook entered spell_memorization_mode. Routes inventory ->
+        # 'm' -> spell_memorization_mode; the mode handler picks the
+        # best candidate by (healing > damage > buff > utility) and
+        # sends 'm<N>'.
+        if proposed is None:
+            max_slots = p.get("max_spell_slots", 0)
+            used_slots = p.get("used_spell_slots", 0)
+            free_slots = max_slots - used_slots
+            if free_slots > 0:
+                memorized_names = {s.get("name")
+                                   for s in obs.get("memorized_spells") or []}
+                for entry in inv:
+                    if entry["category"] != "spell":
+                        continue
+                    if not entry.get("is_identified"):
+                        continue
+                    if entry.get("name") in memorized_names:
+                        continue
+                    # Skip cantrips -- they're racial, granted at
+                    # character creation, NOT memorized from inventory
+                    # (and slot-free; the inventory copy is just for
+                    # display + reference, the active cantrip lives in
+                    # memorized_spells already).
+                    if entry.get("is_cantrip"):
+                        continue
+                    # Slot check (mirrors characters.py:get_spell_slots).
+                    level = entry.get("spell_level", 0)
+                    slots = 1 if level == 0 else (2 if level <= 2 else 3)
+                    if slots > free_slots:
+                        continue
+                    proposed = "m"
+                    break
         # Cook raw meat with the Cooking Kit. User: 'have the player
         # cook all their meat once they have the kit. Eating cooked
         # meat is much better for survival.' No hunger gate -- cook
@@ -4713,6 +4820,51 @@ def smart_policy(obs, rng, use_lantern=True):
             return "p"
         return "x"
 
+    if mode == "spell_memorization_mode":
+        # Pick the best memorizable spell that fits the free slot
+        # budget, score by (healing > damage-per-mana > buff/utility).
+        # Index lookups must use obs["spell_inventory"] (insertion
+        # order = handler's get_spell_inventory() order), NOT obs["inventory"]
+        # (sorted by -level). The combat.py:1454 handler does
+        # `all_spells = player_character.get_spell_inventory(); ...
+        # all_spells[int(cmd[1:]) - 1].memorize_spell(...)`, so m<N>
+        # is 1-indexed into the unsorted spell-only filter.
+        max_slots = obs["player"].get("max_spell_slots", 0)
+        used_slots = obs["player"].get("used_spell_slots", 0)
+        free_slots = max_slots - used_slots
+        if free_slots <= 0:
+            return "x"
+        spell_inv = obs.get("spell_inventory") or []
+        candidates = []
+        for entry in spell_inv:
+            if not entry.get("is_identified"):
+                continue
+            if entry.get("memorized"):
+                continue
+            if entry.get("is_cantrip"):
+                continue
+            level = entry.get("level", 0)
+            slots = 1 if level == 0 else (2 if level <= 2 else 3)
+            if slots > free_slots:
+                continue
+            spell_type = entry.get("spell_type") or ""
+            base_power = entry.get("base_power", 0)
+            mana_cost = entry.get("mana_cost", 1) or 1
+            # Score: healing dominates (always useful, can self-cast
+            # out of combat). Damage spells second, ranked by power-
+            # per-mana. Utility / buffs last.
+            if spell_type == "healing":
+                score = 10000 + base_power
+            elif entry.get("damage_type") and base_power > 0:
+                score = 5000 + (base_power * 10) // mana_cost
+            else:
+                score = 1000  # detect / reveal_fog / debuff / status
+            candidates.append((score, entry["slot"], entry["name"]))
+        if not candidates:
+            return "x"
+        candidates.sort(key=lambda x: (x[0], -x[1]), reverse=True)
+        return f"m{candidates[0][1]}"
+
     if mode == "stat_allocation_mode":
         # Auto-allocate stat points (build 380).
         # Priority: INT until the player is past their racial cast
@@ -5126,6 +5278,29 @@ def smart_policy(obs, rng, use_lantern=True):
             if (cat.startswith("potion_")
                     and cat not in ("potion_healing", "potion_mana", "potion")
                     and cat not in owned_buff_potion_types):
+                return f"b{v['slot']}"
+
+        # Spell scrolls (build 387). Vendors stock 0-2 random Spell
+        # items per visit (vendor.py:260-284). Pre-b387 the smart
+        # policy never bought them -- the buff-potion + scroll loop
+        # above skips category=="spell". Once owned + INT >= 17, the
+        # new spell-memorization trigger in inventory mode picks
+        # them up. Gate the buy on `can_cast` so we don't waste gold
+        # for dwarves (cast threshold INT 20, almost never reached)
+        # and pre-INT-13 humans (cast gate). Cap at 5 distinct spells
+        # to leave gold for stockpile and upgrades on later vendors.
+        SPELL_BUY_CAP = 5
+        owned_spell_names = {i["name"] for i in inv
+                             if i["category"] == "spell"}
+        if (obs["player"].get("can_cast")
+                and len(owned_spell_names) < SPELL_BUY_CAP):
+            for v in vendor_inv:
+                if v["category"] != "spell":
+                    continue
+                if v["name"] in owned_spell_names:
+                    continue
+                if v["price"] > gold - MAGIC_RESERVE:
+                    continue
                 return f"b{v['slot']}"
 
         # 3) Replacement gear: if our equipped weapon or armor is broken
