@@ -4094,10 +4094,18 @@ def process_zotle_teleporter_action(player_character, my_tower, cmd):
         # floors past the boss arena -- those are outside the balance
         # curve entirely (Mythic evolution caps catch every spawn) so
         # they crush even god-mode characters.
+        # b409: also block targets >= F50 (z=49) when the shard gate
+        # is locked. F50 is the boss arena -- jumping there with the
+        # Key would skip the entire 8-shard quest design.
         MAX_FLOOR_Z = 49
         if target_z > MAX_FLOOR_Z:
             add_log(f"{COLOR_YELLOW}The key fizzles &mdash; Zot's experiments only mapped 50 floors.{COLOR_RESET}")
             add_log(f"{COLOR_GREY}(Maximum floor is 50.){COLOR_RESET}")
+            return
+        if target_z >= MAX_FLOOR_Z and not gs.gate_to_floor_50_unlocked:
+            shards_count = sum(gs.shards_obtained.values())
+            add_log(f"{COLOR_YELLOW}The key resists &mdash; Zot's wards bar the boss arena until the Gate is opened.{COLOR_RESET}")
+            add_log(f"{COLOR_GREY}(You have {shards_count}/8 Shards of Power. Reach Floor 49 with all 8 to open the Gate.){COLOR_RESET}")
             return
 
         # Generate floors if needed (for floors not yet visited)

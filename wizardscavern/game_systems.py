@@ -3031,10 +3031,17 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         # New Floor Logic. Capped at the designed dungeon depth (50
         # floors, 0-indexed 0-49) so the warp can never spit the
         # player into a phantom floor past the boss arena.
+        # b409: also clamp the warp ceiling at F49 (z=48) when the
+        # shard gate is locked. F50 (z=49) is the boss arena -- the
+        # shard-quest design intent is that you can only reach it by
+        # collecting all 8 Shards of Power and descending through the
+        # gate on F49. A random portal roll dropping the player onto
+        # the boss arena would skip the entire quest.
         MAX_FLOOR_Z = 49
+        gate_cap = MAX_FLOOR_Z - 1 if not gs.gate_to_floor_50_unlocked else MAX_FLOOR_Z
         current_z = player_character.z
         min_z = max(0, current_z - 2)
-        max_z = min(MAX_FLOOR_Z, current_z + 2)
+        max_z = min(gate_cap, current_z + 2)
 
         # Generate needed floors
         while len(my_tower.floors) <= max_z:
@@ -4343,9 +4350,14 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
         # b409: cap max_z at F50 (z=49). Mirror the warp at line 3037
         # which already caps; without it a F49+ warp could spit the
         # player onto a phantom F51 generated past the boss arena.
+        # Also clamp at F49 (z=48) when the Gate to Floor 50 is
+        # still locked, so the random portal can't skip the
+        # 8-shard quest by warping the player straight onto the
+        # boss arena.
         MAX_FLOOR_Z = 49
+        gate_cap = MAX_FLOOR_Z - 1 if not gs.gate_to_floor_50_unlocked else MAX_FLOOR_Z
         min_z = max(0, player_character.z - 2)
-        max_z = min(MAX_FLOOR_Z, player_character.z + 2)
+        max_z = min(gate_cap, player_character.z + 2)
 
         # Ensure max_z does not exceed newly generated floor (if any) to prevent errors
         # This might require generating floors up to max_z if they don't exist.
