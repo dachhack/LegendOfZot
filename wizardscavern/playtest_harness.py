@@ -881,13 +881,38 @@ def _grant_memorized_spells(pc, start_floor):
     # raw damage, since the smart-policy heal-cast gate is the highest-
     # impact spell usage in the harness today.
     tiers = [
+        # Healing ladder. Granted in tier order; the spell_casting_mode
+        # heal pick (b398) chooses the smallest heal >= deficit, so
+        # having Minor Heal + Heal + Greater Heal + Mass Heal lets the
+        # agent right-size every heal cast to the actual HP loss
+        # without overpaying mana.
         (5, "Minor Heal"),       # L0, 1 slot, +15 HP
         (8, "Heal"),             # L1, 2 slots, +25 HP
-        (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
-        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
-        (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg
         (18, "Greater Heal"),    # L2, 2 slots, +40 HP
         (22, "Mass Heal"),       # L3, 3 slots, +60 HP
+        # Damage ladder. The spell_casting_mode damage pick (b398) uses
+        # strongest-affordable, so adding more tiers expands the
+        # mana-budget options without diluting selection -- the L2
+        # spells get picked when mana is high, L0 fallback when mana
+        # is depleted between fights.
+        (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
+        (13, "Fireball"),        # L1, 2 slots, 20 dmg fire
+        (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg wind
+        (20, "Flame Lance"),     # L2, 2 slots, 33 dmg fire
+        # Defensive + offensive buffs. Lay both available so a planted
+        # F15+ caster can stack Stone Skin (+8 DEF / 4t) + Battle Hymn
+        # (+10 ATK / 3t) before a tough fight. Pre-b398 the harness
+        # never cast buffs; the new pre-combat buff trigger (game_loop
+        # branch) fires when an M is adjacent and the buff isn't
+        # already active.
+        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
+        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
+        # Status cure. Surfaces a non-potion poison cleanse for deep
+        # floors where Cave Lizards / Cobras hit poison ticks. The
+        # combat_mode ticking-status flee gate still fires first;
+        # Purify is the post-flee cleanse so the agent can re-engage
+        # at clean HP.
+        (19, "Purify"),          # L1, 2 slots, cure poison
     ]
     used = pc.get_used_spell_slots()
     for min_floor, name in tiers:
@@ -1406,7 +1431,15 @@ class PlaytestSession:
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
                  "mana_cost": s.mana_cost, "level": s.level,
-                 "type": s.spell_type}
+                 "type": s.spell_type,
+                 # base_power is the spell's damage (for type=='damage')
+                 # or heal amount (for type=='healing'). Surfaced so the
+                 # smart-policy spell pick can choose strongest-affordable
+                 # instead of uniform-random across the affordable set
+                 # (pre-b398 a F25 elf with Lightning Bolt was casting
+                 # 6-dmg Mind Touch ~70% of fights because the rng.choice
+                 # gave the cheap cantrip equal weight with the L2 spell).
+                 "base_power": getattr(s, "base_power", 0) or 0}
                 for i, s in enumerate(pc.memorized_spells)
             ],
             # Spell inventory in insertion order (build 387). The
@@ -3149,7 +3182,18 @@ def smart_policy(obs, rng, use_lantern=True):
                             and s["mana_cost"] <= mana), None) if can_cast else None
     affordable_spells = ([s for s in spells if s["mana_cost"] <= mana]
                          if can_cast else [])
-    affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
+    # Damage spells with non-trivial impact. The min-power floor of 10
+    # keeps Mind Touch (6 dmg) out of the damage pick -- pre-b398 a
+    # F15 human with only Mind Touch cast it 538 times across the
+    # 8-seed F15 audit, eating combat turns on a 6-dmg spell instead
+    # of just swinging the equipped weapon (which hits for 12-20 at
+    # that level). Cantrip combat spells (Mind Touch, Hold Monster)
+    # are still available via affordable_spells for the
+    # spell_casting_mode fallback, but the combat-mode `c` trigger
+    # gates on affordable_dmg being non-empty so the agent will
+    # default to melee `a` when only Mind Touch is available.
+    affordable_dmg = [s for s in affordable_spells
+                      if s["type"] == "damage" and s["base_power"] >= 10]
 
     # Lantern state. With the omniscient nearest_features obs the agent
     # doesn't NEED to reveal tiles, but a real player would, and the
@@ -5259,6 +5303,27 @@ def smart_policy(obs, rng, use_lantern=True):
         if (monster_too_tough and not starving and not is_shrunk
                 and not no_escape_pocket):
             return "f"
+        # Pre-damage buff (Stone Skin only). Gate: monster level must
+        # be within parity range (m_level >= pc_level - 1) so we don't
+        # waste a turn buffing trivial fights, AND defense_boost must
+        # not already be active. Stone Skin lasts 4 turns vs typical
+        # 2-4 turn fights, so the buff usually carries the whole fight.
+        # Battle Hymn is intentionally NOT triggered here -- audit on
+        # b398-rc1 showed back-to-back buffs (Stone Skin -> Battle Hymn)
+        # ate 2 turns of damage output for fights that lasted 3 turns,
+        # netting one buffed damage cast at the cost of 36 MP and 2
+        # rounds of monster swings. Pure offense beats offense+defense
+        # buff for short fights; only the defensive buff is worth the
+        # 1-turn investment because it pays back even on a 2-turn fight.
+        if (can_cast
+                and m_level >= pc_level - 1
+                and "defense_boost" not in active_status_types):
+            stone_skin = next(
+                (s for s in affordable_spells if s["name"] == "Stone Skin"),
+                None,
+            )
+            if stone_skin:
+                return "c"
         # Damage spells beat melee: more damage per turn, no weapon
         # durability loss, scale with INT for casters. Mana regens at
         # 1/5 moves so casting freely between fights is sustainable.
@@ -5509,10 +5574,46 @@ def smart_policy(obs, rng, use_lantern=True):
         return "c"  # cornered; fight back
 
     if mode == "spell_casting_mode":
-        if hp_pct < 0.55 and heal_spell_slot:
-            return str(heal_spell_slot)
+        # Pre-fight buff (Stone Skin): combat_mode queued this cast
+        # because the parity-level monster gate fired and defense_boost
+        # wasn't already active. Battle Hymn intentionally NOT picked
+        # here -- see combat_mode comment for why offense-buff doesn't
+        # pay off on short fights.
+        if "defense_boost" not in active_status_types:
+            stone_skin = next((s for s in affordable_spells
+                               if s["name"] == "Stone Skin"), None)
+            if stone_skin:
+                return str(stone_skin["slot"])
+        # Healing pick: choose the smallest heal that >= current HP deficit,
+        # falling back to the largest affordable heal if no single spell
+        # covers the deficit. Pre-b398 the heal slot was "first healing
+        # in the memorized_spells list" -- which is always Minor Heal
+        # (granted at F5+) -- so a F25 elf with Mass Heal in inventory
+        # still cast +15 Minor Heal at 30% HP when +60 Mass Heal would
+        # have actually mattered. Audit on b397 showed Minor Heal:
+        # 71 / Lightning Bolt: 5 for F25 elf -- the heal pick was
+        # eating most of the cast budget on undersized spells.
+        if hp_pct < 0.55:
+            heals = [s for s in spells
+                     if s["type"] == "healing" and s["mana_cost"] <= mana]
+            if heals:
+                deficit = max(0, p["max_hp"] - p["hp"])
+                covering = [s for s in heals if s["base_power"] >= deficit]
+                if covering:
+                    pick = min(covering, key=lambda s: s["base_power"])
+                else:
+                    pick = max(heals, key=lambda s: s["base_power"])
+                return str(pick["slot"])
+        # Damage pick: strongest base_power that fits mana. The agent
+        # has nothing to gain by picking 6-dmg Mind Touch over 31-dmg
+        # Lightning Bolt when both are affordable -- mana regens at
+        # 1/5 turns between fights, and unspent mana at end-of-run is
+        # zero-value. Ties broken by lower mana_cost so the agent
+        # prefers efficient spells when damage is equal.
         if affordable_dmg:
-            return str(rng.choice(affordable_dmg)["slot"])
+            pick = max(affordable_dmg,
+                       key=lambda s: (s["base_power"], -s["mana_cost"]))
+            return str(pick["slot"])
         if affordable_spells:
             return str(rng.choice(affordable_spells)["slot"])
         return "x"
