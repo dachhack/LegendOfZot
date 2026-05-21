@@ -883,6 +883,16 @@ class PlaytestSession:
         # earlier symmetric stair-island valve in build 318.
         self.osc_streak = 0
         self._last_osc_pair = None  # the (a, b) pair the streak is on
+        # Freeze detector: consecutive turns where (z,x,y,hp,kills) has
+        # not changed. The 2-tile oscillation detector needs >= 2 distinct
+        # positions in the window; this catches pure tile-freezing such
+        # as the lantern-loop wedge (period-1 'l' for 2162 turns on
+        # b394 seed=67 elf F16) where the position never updates because
+        # 'l' doesn't tick a game turn for hunger/spawns. The streak
+        # arms the wedge-break in smart_policy, which forces a non-
+        # frozen action once 30+ consecutive frozen turns accumulate.
+        self.freeze_streak = 0
+        self._prev_freeze_key = None
         # z-indexes of floors the agent escaped from via the stairs_up
         # osc-valve. Recorded the moment the policy issues 'u' to
         # break a 50-turn 2-tile wedge. stairs_down_mode reads this
@@ -1227,6 +1237,7 @@ class PlaytestSession:
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "oscillation": self._oscillation_state(),
+            "freeze_streak": self.freeze_streak,
             "blocked_directions": sorted(self.blocked_directions),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
@@ -2594,6 +2605,17 @@ class PlaytestSession:
         self.position_history.append(cur_xy)
         if len(self.position_history) > 16:
             self.position_history.pop(0)
+        # Freeze-streak update. The key combines position, HP, and per-
+        # floor kill count. Any movement, any HP delta (taking damage
+        # or healing), and any kill resets the streak -- those are all
+        # signs of real progress / world advancement.
+        freeze_key = (pc_after.z, pc_after.x, pc_after.y,
+                      pc_after.health, self.kills_on_floor)
+        if freeze_key == self._prev_freeze_key:
+            self.freeze_streak += 1
+        else:
+            self.freeze_streak = 0
+        self._prev_freeze_key = freeze_key
 
         return self.observe()
 
@@ -2814,6 +2836,59 @@ def smart_policy(obs, rng, use_lantern=True):
     p = obs["player"]
     inv = obs.get("inventory") or []
     spells = obs.get("memorized_spells") or []
+
+    # Wedge break: when the freeze detector OR the 2-tile oscillation
+    # detector has been tripping long enough that the existing per-mode
+    # escape valves clearly haven't resolved the loop, force a non-
+    # frozen action. Two trigger conditions:
+    #   - freeze_streak >= 30 in a movement-capable mode -- catches
+    #     the lantern-loop wedge (period-1 'l' for 2162T on b394
+    #     seed=67 elf F16) where pc.xy never updates because 'l'
+    #     doesn't tick a game turn.
+    #   - oscillation.streak >= 60 in game_loop -- catches the
+    #     2-tile saddle-point that recent_step_set + swap-if-backtrack
+    #     and the stairs_up 'u' valve all failed to resolve. Threshold
+    #     is higher than the stairs_up 'u' valve (50) so it only fires
+    #     when the existing valve provably hasn't fixed it.
+    # Escape: random walkable direction that is NOT a wall, fog, or in
+    # blocked_directions / recent_step_set. Falls back to ANY non-wall
+    # direction (including recent) and finally to 'pass' to let world
+    # state tick over while the wedge clears.
+    freeze_streak = obs.get("freeze_streak", 0)
+    osc_obs = obs.get("oscillation") or {}
+    osc_streak = osc_obs.get("streak", 0)
+    WEDGE_BREAK_MODES = ("game_loop", "stairs_up_mode", "stairs_down_mode")
+    wedge_trip = (
+        (freeze_streak >= 30 and mode in WEDGE_BREAK_MODES)
+        or (osc_streak >= 60 and mode == "game_loop")
+    )
+    if wedge_trip:
+        neighbors_wb = obs.get("neighbors") or {}
+        blocked_wb = set(obs.get("blocked_directions") or [])
+        recent_steps_wb = set(obs.get("recent_step_set") or [])
+        # Tier 1: walkable known tile, not blocked, not recent
+        candidates_wb = []
+        for d in ("n", "s", "e", "w"):
+            if d in blocked_wb or d in recent_steps_wb:
+                continue
+            t = neighbors_wb.get(d)
+            if t in (None, "#"):
+                continue
+            candidates_wb.append(d)
+        if candidates_wb:
+            return rng.choice(candidates_wb)
+        # Tier 2: any walkable known tile, not blocked (allow recent --
+        # we are trying to escape)
+        for d in ("n", "s", "e", "w"):
+            if d in blocked_wb:
+                continue
+            t = neighbors_wb.get(d)
+            if t not in (None, "#"):
+                return d
+        # Tier 3: completely cornered -- pass to let world advance
+        # (monster steps adjacent, hunger ticks, status duration drops).
+        # 'pass' is a game_loop action; other modes treat it as a no-op.
+        return "pass"
 
     hp_pct = p["hp"] / max(1, p["max_hp"])
     hunger = p["hunger"]
