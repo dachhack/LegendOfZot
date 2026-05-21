@@ -959,14 +959,24 @@ def process_combat_action(player_character, my_tower, cmd):
                     # picks it up, then heal/refill into the new
                     # ceiling. Surfaced by the playtester catching
                     # the same bug in room_actions.py shrine prayer.
+                    # Character stores base attack/defense as
+                    # `_base_attack` / `_base_defense` (private); `.attack`
+                    # and `.defense` are computed @property. Reading
+                    # `.base_attack` / `.base_defense` raises AttributeError
+                    # -- same bug class as the b385 Potion.use() fix.
+                    # Pre-fix: the lambda crashed on the read, was likely
+                    # swallowed by a higher try/except, and the Shard of
+                    # Battle / Shard of Eternity passive was never applied
+                    # (player got the shard but the +3 atk / +5 def never
+                    # took effect). Route through the private name.
                     shard_bonuses = {
-                        'battle': ('Attack +3', lambda: setattr(player_character, 'base_attack', player_character.base_attack + 3)),
+                        'battle': ('Attack +3', lambda: setattr(player_character, '_base_attack', player_character._base_attack + 3)),
                         'treasure': ('Gold drops +10%', None),  # Implemented in gold calculation
                         'devotion': ('Max HP +20', lambda: (setattr(player_character, 'base_max_health_bonus', player_character.base_max_health_bonus + 20), setattr(player_character, 'health', player_character.health + 20))),
                         'reflection': ('Max Mana +20', lambda: (setattr(player_character, 'base_max_mana_bonus', player_character.base_max_mana_bonus + 20), setattr(player_character, 'mana', player_character.mana + 20))),
                         'knowledge': ('Spell costs -20%', None),  # Implemented in spell casting
                         'secrets': ('Reveal hidden rooms', None),  # Special ability
-                        'eternity': ('Defense +5', lambda: setattr(player_character, 'base_defense', player_character.base_defense + 5)),
+                        'eternity': ('Defense +5', lambda: setattr(player_character, '_base_defense', player_character._base_defense + 5)),
                         'growth': ('Potion effects +2 turns', None)  # Implemented in potion use
                     }
 
