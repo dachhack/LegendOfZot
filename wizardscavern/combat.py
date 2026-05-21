@@ -75,9 +75,18 @@ def get_spell_charge_turns(spell):
 
 
 def concentration_check(player_character, damage_taken):
-    """Roll a concentration check: d20 + INT//4 vs DC (damage_taken // 2, min 5).
-    Returns (passed, raw_roll, modifier, total, dc)."""
-    modifier = player_character.intelligence // 4
+    """Roll a concentration check: d20 + INT//4 + DEX//4 vs DC (damage_taken // 2, min 5).
+    Returns (passed, raw_roll, modifier, total, dc).
+
+    b403: added DEX//4 to the modifier. Pre-b403 the check used INT
+    only, so the duelist-mage build (INT/DEX hybrid pushed by the b399
+    mana regen + b402 quick-cast features) had no edge on concentration.
+    DEX is the natural caster defense stat -- nimble reflexes keep the
+    spell focused under fire. Net effect on F25 elf (INT 25, DEX 20):
+    modifier 6 -> 11, success rate on a typical 40-dmg-hit DC 20 check
+    climbs from 0.30 to 0.55. Helps the channeled L2-L3 endgame spells
+    that the agent commits mana to actually fire instead of fizzling."""
+    modifier = (player_character.intelligence // 4) + (player_character.dexterity // 4)
     dc = max(5, damage_taken // 2)
     raw_roll = random.randint(1, 20)
     total = raw_roll + modifier
@@ -1744,9 +1753,15 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                 # intact so the monster still gets a counter-action --
                 # quick-cast only buys back the channeling "lock-in"
                 # period, not the whole exchange.
+                # b403: cast_speed_bonus (Hourglass Talisman, +20%)
+                # stacks additively on top of the INT-scaled base.
+                # Cap raised 50 -> 75 so a full caster build
+                # (INT 25 + Talisman = 52%) can stretch toward 70%+
+                # with future relic gear.
                 quick_cast_chance = min(
-                    50,
-                    max(0, (player_character.intelligence - 17) * 4),
+                    75,
+                    max(0, (player_character.intelligence - 17) * 4)
+                    + getattr(player_character, 'cast_speed_bonus', 0),
                 )
                 if random.randint(1, 100) <= quick_cast_chance:
                     add_log(f"{COLOR_PURPLE}[Quick Cast] Your arcane reflexes finish the spell instantly -- the {gs.active_monster.name if gs.active_monster else 'enemy'} doesn't react in time.{COLOR_RESET}")
@@ -1862,12 +1877,27 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     return  # Combat ended
 
                 elif gs.active_monster and gs.active_monster.is_alive():  # Monster still alive, it attacks back
-                    gs.active_monster.attack_target(player_character)
+                    # b403 Hold Monster fix: respect time_stop on the
+                    # post-instant-cast monster swing. Pre-b403 the
+                    # Hold Monster cantrip was broken -- it applied
+                    # time_stop but every monster-attack callsite
+                    # checked it EXCEPT this one, so the freeze meant
+                    # nothing on instant casts. Now Hold Monster (L0
+                    # cantrip, 1 MP) actually buys a free turn for the
+                    # follow-up L2 cast.
+                    monster_frozen = any(
+                        e.effect_type == 'time_stop'
+                        for e in gs.active_monster.status_effects.values()
+                    )
+                    if monster_frozen:
+                        add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time -- no counter-attack!{COLOR_RESET}")
+                    else:
+                        gs.active_monster.attack_target(player_character)
 
-                    if not player_character.is_alive():
-                        add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
-                        gs.prompt_cntl = "death_screen"
-                        return  # Game Over
+                        if not player_character.is_alive():
+                            add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
+                            gs.prompt_cntl = "death_screen"
+                            return  # Game Over
 
                 # If combat continues, return to combat mode; if we were
                 # casting utility magic (Detect/Light cantrips) outside

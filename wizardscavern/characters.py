@@ -888,6 +888,11 @@ class Character:
         # Initialize bonus attributes BEFORE calling max_mana/max_health
         self.base_max_health_bonus = 0  # For permanent HP bonuses (altars, potions, etc.)
         self.base_max_mana_bonus = 0    # For permanent mana bonuses
+        # b403: cast_speed_bonus is a flat percent added to the b402
+        # quick-cast roll. Granted by the Hourglass Talisman accessory
+        # (+20%). Lets a high-INT caster stack arcane reflexes with
+        # equipment for a real chance to skip channel-init swings.
+        self.cast_speed_bonus = 0
         # Hunger system
         self.hunger = HUNGER_MAX  # Start full
         self.hunger_freeze_turns = 0  # Lembas wafer postpones hunger decay
@@ -1119,6 +1124,11 @@ class Character:
             "Drake Cloak":            {"_base_defense": 4},
             "Psychic Shield Circlet": {"intelligence": 6, "base_max_mana_bonus": 10},
             "Apex Predator Signet":   {"_base_attack": 8, "dexterity": 5, "strength": 3},
+            # b403: caster-focused accessory. +20% added to the b402
+            # quick-cast roll (which already scales with INT). At INT
+            # 25 elf this stacks to 32 + 20 = 52% chance to skip
+            # channel-init monster swing per L2+ cast.
+            "Hourglass Talisman":     {"cast_speed_bonus": 20, "intelligence": 2},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})
@@ -1167,6 +1177,11 @@ class Character:
             "Drake Cloak":            {"_base_defense": 4},
             "Psychic Shield Circlet": {"intelligence": 6, "base_max_mana_bonus": 10},
             "Apex Predator Signet":   {"_base_attack": 8, "dexterity": 5, "strength": 3},
+            # b403: caster-focused accessory. +20% added to the b402
+            # quick-cast roll (which already scales with INT). At INT
+            # 25 elf this stacks to 32 + 20 = 52% chance to skip
+            # channel-init monster swing per L2+ cast.
+            "Hourglass Talisman":     {"cast_speed_bonus": 20, "intelligence": 2},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})
@@ -1284,6 +1299,23 @@ class Character:
 
         # Defense is already applied in attack_target - don't subtract again
         reduced_amount = max(0, actual_damage)
+
+        # b403 Spectral Hand: hit_absorb effects consume one full hit
+        # each. Iterate in insertion order; the first absorber in the
+        # dict catches the hit. magnitude is the remaining absorb
+        # count; on consumption decrement, and when it hits 0 mark
+        # the effect for removal. Skips the rest of the damage-
+        # reduction pipeline (the hit never lands on the caster).
+        for effect_name, effect in list(self.status_effects.items()):
+            if effect.effect_type == 'hit_absorb' and effect.magnitude > 0:
+                effect.magnitude -= 1
+                add_log(f"{COLOR_PURPLE} [{effect_name}] The {effect_name.lower()} catches the blow! ({effect.magnitude} left){COLOR_RESET}")
+                if effect.magnitude <= 0:
+                    self.remove_status_effect(effect_name)
+                    add_log(f"{COLOR_PURPLE} The {effect_name} fades, its work done.{COLOR_RESET}")
+                gs.last_player_damage = 0
+                gs.last_player_blocked = True
+                return False  # Caster not killed; no damage applied.
 
         # Step 2: Apply damage reduction effects individually
         for effect_name, effect in self.status_effects.items():

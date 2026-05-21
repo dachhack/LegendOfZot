@@ -3729,7 +3729,7 @@ SPELL_TEMPLATES = [
     # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
     Spell(name="Detect Monster", description="Reveals the name, level, and location of any monsters in a 3x3 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='detect_monster', is_cantrip=True),
     Spell(name="Light", description="A floating sphere of magelight reveals the dungeon in a 5x5 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='reveal_fog', is_cantrip=True),
-    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- enough to flee, or to land a free attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
+    Spell(name="Hold Monster", description="Freezes one monster in place for two turns -- long enough to land a free attack or fully channel a follow-up spell.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=2, status_effect_magnitude=0, is_cantrip=True),
     Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
@@ -3748,6 +3748,9 @@ SPELL_TEMPLATES = [
     Spell(name="Mind Spike", description="A sharp psionic attack.", mana_cost=13, damage_type='Psionic', base_power=24, level=1),
     Spell(name="Purify", description="Cleanses poison from the caster.", mana_cost=15, level=1, spell_type='remove_status', status_effect_name='Poison'),
     Spell(name="Cure Weakness", description="Restores strength and vigor.", mana_cost=12, level=1, spell_type='add_status_effect', status_effect_name='Vigor', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=5),
+    # b403: Mage Armor -- L1 defensive buff designed to pair with channeled
+    # spells. 10 turn duration covers 3-4 fights, +6 DEF stacks with Stone Skin.
+    Spell(name="Mage Armor", description="Conjures a shimmering field of force around the caster.", mana_cost=8, level=1, spell_type='add_status_effect', status_effect_name='Mage Armor', status_effect_duration=10, status_effect_type='defense_boost', status_effect_magnitude=6),
 
     # ===== LEVEL 2 SPELLS (2 slots each) - Advanced =====
     Spell(name="Thunder Clap", description="A concussive wave of sound.", mana_cost=15, damage_type='Physical', base_power=30, level=2),
@@ -3756,6 +3759,11 @@ SPELL_TEMPLATES = [
     Spell(name="Freedom", description="Removes the web effect from the caster.", mana_cost=18, level=2, spell_type='remove_status', status_effect_name='Web'),
     Spell(name="Battle Hymn", description="Inspires the caster with increased attack for a short time.", mana_cost=20, level=2, spell_type='add_status_effect', status_effect_name='Inspired', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=10),
     Spell(name="Stone Skin", description="Hardens your skin like stone.", mana_cost=18, level=2, spell_type='add_status_effect', status_effect_name='Stone Skin', status_effect_duration=4, status_effect_type='defense_boost', status_effect_magnitude=8),
+    # b403: Spectral Hand -- summons a ghostly hand that interposes
+    # itself between caster and monster. magnitude=3 = number of hits
+    # absorbed before the effect expires. Wears off either when hit
+    # count drops to 0 (consumed) or duration ticks out (faded).
+    Spell(name="Spectral Hand", description="Conjures a ghostly hand that interposes itself, absorbing the next 3 enemy strikes.", mana_cost=14, level=2, spell_type='add_status_effect', status_effect_name='Spectral Hand', status_effect_duration=8, status_effect_type='hit_absorb', status_effect_magnitude=3),
     Spell(name="Flame Lance", description="A concentrated spear of flame.", mana_cost=17, damage_type='Fire', base_power=33, level=2),
     Spell(name="Lightning Bolt", description="A powerful bolt of electricity.", mana_cost=16, damage_type='Wind', base_power=31, level=2),
     Spell(name="Greater Heal", description="Restores a moderate amount of health.", mana_cost=18, damage_type='Healing', base_power=40, level=2, spell_type='healing'),

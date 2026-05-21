@@ -550,23 +550,26 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 spell_copy.is_identified = True
             pc.memorized_spells.append(spell_copy)
     elif race == 'human':
-        # Humans get one cantrip (Mind Touch) at character creation
-        # to match the "balanced between melee and magic" design.
-        # The cantrip sits unusable until INT crosses the human cast
-        # gate (INT > 15 -> max_mana > 0), then activates naturally
-        # via the existing memorized_spells flow. Single cantrip vs
-        # the elf's two preserves the magic gap. Dwarves get no
+        # Humans get two cantrips at character creation: Mind Touch (the
+        # damage cantrip from the original "balanced between melee and
+        # magic" design) AND Hold Monster (b403 -- the caster-survival
+        # opener that buys a free monster turn for a follow-up channeled
+        # spell). Both sit unusable until INT crosses the human cast
+        # gate (INT > 13 post-b382 -> max_mana > 0), then activate via
+        # the existing memorized_spells flow. Dwarves still get no
         # cantrip -- they're the dedicated melee race.
         from .items import SPELL_TEMPLATES as _ST
         import copy as _copy
+        wanted = {'mind touch', 'hold monster'}
         for spell in _ST:
-            if (getattr(spell, 'is_cantrip', False)
-                    and spell.name.lower() == 'mind touch'):
-                spell_copy = _copy.deepcopy(spell)
-                if hasattr(spell_copy, 'is_identified'):
-                    spell_copy.is_identified = True
-                pc.memorized_spells.append(spell_copy)
-                break
+            if not getattr(spell, 'is_cantrip', False):
+                continue
+            if spell.name.lower() not in wanted:
+                continue
+            spell_copy = _copy.deepcopy(spell)
+            if hasattr(spell_copy, 'is_identified'):
+                spell_copy.is_identified = True
+            pc.memorized_spells.append(spell_copy)
     if starter_pack:
         # Mirror Vendor(starting=True) inventory at vendor.py:94-130 --
         # what a real player walks out of the F1 starting shop with
@@ -913,6 +916,14 @@ def _grant_memorized_spells(pc, start_floor):
         # Purify is the post-flee cleanse so the agent can re-engage
         # at clean HP.
         (19, "Purify"),          # L1, 2 slots, cure poison
+        # b403 caster-defense suite -- targets the cast-turn attrition
+        # bottleneck identified in the b402 death diag (15/30 F25 elf
+        # deaths in spell_casting_mode). Mage Armor is L1 / 2 slots
+        # cheap defensive buff for mid-game humans. Spectral Hand is
+        # L2 / 2 slots interposer that absorbs 3 hits whole -- one
+        # cast removes ~240 raw F25 dmg from the next 3 monster turns.
+        (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns
+        (15, "Spectral Hand"),   # L2, 2 slots, absorb 3 hits / 8 turns
     ]
     used = pc.get_used_spell_slots()
     for min_floor, name in tiers:
@@ -943,6 +954,7 @@ def _grant_survivor_inventory(pc, start_floor):
     from .items import (
         Potion as _Potion, Scroll as _Scroll, Sausage as _Sausage,
         CookingKit as _CK, CuringKit as _CuK, LanternFuel as _LF,
+        Treasure as _Treasure,
     )
 
     def _add(item):
@@ -1024,6 +1036,23 @@ def _grant_survivor_inventory(pc, start_floor):
         for _ in range(2):
             _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
                      value=5, level=0, fuel_restore_amount=20))
+
+    # Caster equipment (F18+): Hourglass Talisman -- the b403
+    # cast-speed accessory. +20% quick-cast roll + 2 INT. Granted only
+    # to caster-eligible builds (max_mana > 0) since dwarves never
+    # benefit from quick-cast. Auto-equipped after grant so the bonus
+    # is live without the smart-policy needing a wear-accessory action.
+    if start_floor >= 18 and pc.max_mana > 0:
+        talisman = _Treasure(
+            name="Hourglass Talisman",
+            description="A pendant of frozen sand. Time slows around the caster.",
+            value=250, level=4, treasure_type='passive',
+        )
+        _add(talisman)
+        for slot in range(4):
+            if pc.equipped_accessories[slot] is None:
+                pc.equip_accessory(talisman, slot)
+                break
 
     # Tier 5 (F20+): late-game stash, fits a Magic-Shoppe-reaching
     # survivor's bag.
@@ -1597,6 +1626,13 @@ class PlaytestSession:
             "max_hp": getattr(m, "max_health", m.health),
             "is_edible": meat_info is not None,
             "is_undead": is_undead,
+            # b403: surface monster status effects so the policy can
+            # detect Held / time_stop / paralysis and avoid wasting a
+            # cast on a monster that already can't act this turn.
+            "is_held": any(eff.effect_type == 'time_stop'
+                           for eff in m.status_effects.values()),
+            "is_paralyzed": any(eff.effect_type in ('paralysis', 'freeze')
+                                for eff in m.status_effects.values()),
         }
 
     def _inventory_obs(self):
@@ -5608,6 +5644,31 @@ def smart_policy(obs, rng, use_lantern=True):
                 else:
                     pick = max(heals, key=lambda s: s["base_power"])
                 return str(pick["slot"])
+        # b403 Hold Monster opener: classic D&D wizard "buy a round of
+        # concentration" trick. Cost 1 MP (elf cantrip + memorize for
+        # human/dwarf if INT permits), freezes target 1 turn. Cast as
+        # the opening turn of combat so the next damage cast goes off
+        # without the channel-init monster swing (monster is held when
+        # spell starts -> no attack -> spell channels safely). Gate:
+        # only if monster isn't already held / paralyzed (avoid double-
+        # cast waste) AND we have a damage spell to follow up with AND
+        # the fight is worth the 1-turn investment (m_max_hp filter
+        # mirrors b401 Stone Skin prey filter). Pre-b403 the smart-
+        # policy never picked Hold Monster -- spell_type='debuff_target'
+        # fell through all the damage/heal/buff branches.
+        _m_obs = obs.get("monster") or {}
+        m_held = _m_obs.get("is_held") or False
+        m_paralyzed = _m_obs.get("is_paralyzed") or False
+        _m_max_hp = _m_obs.get("max_hp") or 0
+        if (affordable_dmg
+                and not m_held and not m_paralyzed
+                and _m_max_hp >= p["max_hp"] * 0.30):
+            hold_monster = next(
+                (s for s in affordable_spells if s["name"] == "Hold Monster"),
+                None,
+            )
+            if hold_monster:
+                return str(hold_monster["slot"])
         # Damage pick: strongest base_power that fits mana. The agent
         # has nothing to gain by picking 6-dmg Mind Touch over 31-dmg
         # Lightning Bolt when both are affordable -- mana regens at

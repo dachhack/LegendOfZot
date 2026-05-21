@@ -117,4 +117,13 @@ _ACCESSORIES_MAP = {
         ('AC0130', 1),  # sheet=AC1 src=r10c11
         ('AC0136', 2),  # sheet=AC1 src=r11c06
     ],
+    # b403 -- Hourglass Talisman, the +cast_speed caster accessory.
+    # Sprites share with Heartstone Pendant since both are
+    # pendant/amulet visuals; could promote a dedicated sand/glass
+    # sprite from canonical_pool_full in a future pass.
+    "Hourglass Talisman": [
+        ('AC0053', 0),  # sheet=AC1 src=r04c06
+        ('AC0055', 1),  # sheet=AC1 src=r04c08
+        ('AC0057', 2),  # sheet=AC1 src=r04c10
+    ],
 }
