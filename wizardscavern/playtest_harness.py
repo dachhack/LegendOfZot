@@ -902,28 +902,27 @@ def _grant_memorized_spells(pc, start_floor):
         (13, "Fireball"),        # L1, 2 slots, 20 dmg fire
         (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg wind
         (20, "Flame Lance"),     # L2, 2 slots, 33 dmg fire
-        # Defensive + offensive buffs. Lay both available so a planted
-        # F15+ caster can stack Stone Skin (+8 DEF / 4t) + Battle Hymn
-        # (+10 ATK / 3t) before a tough fight. Pre-b398 the harness
-        # never cast buffs; the new pre-combat buff trigger (game_loop
-        # branch) fires when an M is adjacent and the buff isn't
-        # already active.
-        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
-        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
-        # Status cure. Surfaces a non-potion poison cleanse for deep
-        # floors where Cave Lizards / Cobras hit poison ticks. The
-        # combat_mode ticking-status flee gate still fires first;
-        # Purify is the post-flee cleanse so the agent can re-engage
-        # at clean HP.
-        (19, "Purify"),          # L1, 2 slots, cure poison
-        # b403 caster-defense suite -- targets the cast-turn attrition
-        # bottleneck identified in the b402 death diag (15/30 F25 elf
-        # deaths in spell_casting_mode). Mage Armor is L1 / 2 slots
-        # cheap defensive buff for mid-game humans. Spectral Hand is
-        # L2 / 2 slots interposer that absorbs 3 hits whole -- one
-        # cast removes ~240 raw F25 dmg from the next 3 monster turns.
-        (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns
+        # b403/b404 caster defense suite -- moved ahead of buff/utility
+        # tier because the b403 deep audit showed the F25 caster slot
+        # cap (24) was exhausted by heals+damage+stone_skin before
+        # Mage Armor / Spectral Hand could be memorized, leaving them
+        # unused across all 18 audit seeds. New order grants the
+        # high-impact defensive layer first, drops Battle Hymn last
+        # since the smart-policy never picks offense buffs anyway.
+        (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns (stacks w/ Stone Skin)
         (15, "Spectral Hand"),   # L2, 2 slots, absorb 3 hits / 8 turns
+        # Stone Skin -- burst +8 DEF for short tough fights. Stacks
+        # with Mage Armor since they have separate status_effect_name.
+        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
+        # Status cure. Surfaces a non-potion poison cleanse for deep
+        # floors where Cave Lizards / Cobras hit poison ticks.
+        (19, "Purify"),          # L1, 2 slots, cure poison
+        # Battle Hymn (offense buff) intentionally last -- audit on
+        # b398 showed it's never auto-cast by the policy because back-
+        # to-back buff turns burn more damage output than the +10 ATK
+        # window pays back over a 3-turn fight. Kept in the tier list
+        # for human/dwarf mages who'd cast it manually.
+        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
     ]
     used = pc.get_used_spell_slots()
     for min_floor, name in tiers:
@@ -954,7 +953,6 @@ def _grant_survivor_inventory(pc, start_floor):
     from .items import (
         Potion as _Potion, Scroll as _Scroll, Sausage as _Sausage,
         CookingKit as _CK, CuringKit as _CuK, LanternFuel as _LF,
-        Treasure as _Treasure,
     )
 
     def _add(item):
@@ -1036,23 +1034,6 @@ def _grant_survivor_inventory(pc, start_floor):
         for _ in range(2):
             _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
                      value=5, level=0, fuel_restore_amount=20))
-
-    # Caster equipment (F18+): Hourglass Talisman -- the b403
-    # cast-speed accessory. +20% quick-cast roll + 2 INT. Granted only
-    # to caster-eligible builds (max_mana > 0) since dwarves never
-    # benefit from quick-cast. Auto-equipped after grant so the bonus
-    # is live without the smart-policy needing a wear-accessory action.
-    if start_floor >= 18 and pc.max_mana > 0:
-        talisman = _Treasure(
-            name="Hourglass Talisman",
-            description="A pendant of frozen sand. Time slows around the caster.",
-            value=250, level=4, treasure_type='passive',
-        )
-        _add(talisman)
-        for slot in range(4):
-            if pc.equipped_accessories[slot] is None:
-                pc.equip_accessory(talisman, slot)
-                break
 
     # Tier 5 (F20+): late-game stash, fits a Magic-Shoppe-reaching
     # survivor's bag.
@@ -1600,7 +1581,15 @@ class PlaytestSession:
 
     def _monster_obs(self):
         m = gs.active_monster
-        if m is None or gs.prompt_cntl != "combat_mode":
+        # b404: surface active monster in BOTH combat_mode and
+        # spell_casting_mode so the spell-pick policy can check
+        # m_max_hp / is_held / is_paralyzed when deciding between
+        # Hold Monster, Spectral Hand, Stone Skin, and damage. Pre-
+        # b404 _monster_obs returned None outside combat_mode, so the
+        # spell_casting_mode tough_fight gate (m_max_hp >= 30% pc max)
+        # always evaluated False -- Hold Monster and Spectral Hand
+        # never fired across the b403 audit.
+        if m is None or gs.prompt_cntl not in ("combat_mode", "spell_casting_mode"):
             return None
         name = _strip_markup(m.name).strip()
         # Edibility check via items.get_monster_meat_info -- returns
@@ -5614,25 +5603,89 @@ def smart_policy(obs, rng, use_lantern=True):
         return "c"  # cornered; fight back
 
     if mode == "spell_casting_mode":
-        # Pre-fight buff (Stone Skin): combat_mode queued this cast
-        # because the parity-level monster gate fired and defense_boost
-        # wasn't already active. Battle Hymn intentionally NOT picked
-        # here -- see combat_mode comment for why offense-buff doesn't
-        # pay off on short fights.
-        if "defense_boost" not in active_status_types:
+        # b404: Priority order rewritten. The b403 audit showed Hold
+        # Monster / Mage Armor / Spectral Hand were never cast across
+        # 18 caster runs because Stone Skin was first in the cascade
+        # and always fired when defense_boost wasn't active. The new
+        # order layers the defensive suite from cheapest -> most
+        # expensive, with Hold Monster as the universal opener and
+        # heal as the emergency override:
+        #
+        #  1. Hold Monster (1 MP) -- opener, locks monster for next cast
+        #  2. Spectral Hand (14 MP) -- absorb 3 hits, fights >= 0.30 max_hp
+        #  3. Mage Armor (8 MP) -- long-duration cheap +6 DEF
+        #  4. Stone Skin (18 MP) -- burst +8 DEF / 4 turns
+        #  5. Emergency heal (HP < 55%)
+        #  6. Damage pick
+        #  7. Random fallback
+        #
+        # Each defensive layer skips if its named status is already
+        # active (no re-cast waste). Hold Monster also skips if the
+        # target is already held/paralyzed.
+
+        _m_obs = obs.get("monster") or {}
+        m_held = _m_obs.get("is_held") or False
+        m_paralyzed = _m_obs.get("is_paralyzed") or False
+        _m_max_hp = _m_obs.get("max_hp") or 0
+        _status_names = set(p.get("status_effects") or [])
+        tough_fight = _m_max_hp >= p["max_hp"] * 0.30
+
+        # 1. Hold Monster opener (1 MP, instant). Buys 2 monster turns
+        # of safety -- covers post-cast swing of NEXT spell + its
+        # channel-init swing. Classic D&D wizard buy-a-round trick.
+        if (affordable_dmg
+                and not m_held and not m_paralyzed
+                and tough_fight):
+            hold_monster = next(
+                (s for s in affordable_spells if s["name"] == "Hold Monster"),
+                None,
+            )
+            if hold_monster:
+                return str(hold_monster["slot"])
+
+        # 2. Spectral Hand (14 MP). Absorbs 3 enemy strikes; with F25
+        # Savage hitting ~80 raw, one cast removes ~240 dmg from the
+        # next sequence. Heavy upfront mana but pays back over 8 turns.
+        # Gate on tough_fight only -- small-prey fights die before the
+        # third hit lands.
+        if (tough_fight
+                and "Spectral Hand" not in _status_names):
+            spectral = next(
+                (s for s in affordable_spells if s["name"] == "Spectral Hand"),
+                None,
+            )
+            if spectral:
+                return str(spectral["slot"])
+
+        # 3. Mage Armor (8 MP). Cheap +6 DEF / 10 turns. Stacks with
+        # Stone Skin via separate status_effect_name. Gate on its own
+        # name (not defense_boost effect_type) so Stone Skin doesn't
+        # block it. 10-turn duration covers ~3 fights of out-of-combat
+        # transit, ideal as the "always-on" buff vs Stone Skin's burst.
+        if "Mage Armor" not in _status_names:
+            mage_armor = next(
+                (s for s in affordable_spells if s["name"] == "Mage Armor"),
+                None,
+            )
+            if mage_armor:
+                return str(mage_armor["slot"])
+
+        # 4. Stone Skin (18 MP, +8 DEF / 4 turns). The burst-buff
+        # layer on top of Mage Armor. Gate on its own name (so it can
+        # stack with Mage Armor). Filter to tough fights only since
+        # the burst window is short.
+        if (tough_fight
+                and "Stone Skin" not in _status_names):
             stone_skin = next((s for s in affordable_spells
                                if s["name"] == "Stone Skin"), None)
             if stone_skin:
                 return str(stone_skin["slot"])
-        # Healing pick: choose the smallest heal that >= current HP deficit,
-        # falling back to the largest affordable heal if no single spell
-        # covers the deficit. Pre-b398 the heal slot was "first healing
-        # in the memorized_spells list" -- which is always Minor Heal
-        # (granted at F5+) -- so a F25 elf with Mass Heal in inventory
-        # still cast +15 Minor Heal at 30% HP when +60 Mass Heal would
-        # have actually mattered. Audit on b397 showed Minor Heal:
-        # 71 / Lightning Bolt: 5 for F25 elf -- the heal pick was
-        # eating most of the cast budget on undersized spells.
+
+        # 5. Emergency heal: choose the smallest heal that >= current
+        # HP deficit, falling back to the largest affordable heal if
+        # no single spell covers the deficit. Smallest-covering keeps
+        # the agent from spamming +60 Mass Heal at 30% HP when a +25
+        # Heal would top them off without overpaying mana.
         if hp_pct < 0.55:
             heals = [s for s in spells
                      if s["type"] == "healing" and s["mana_cost"] <= mana]
@@ -5644,41 +5697,14 @@ def smart_policy(obs, rng, use_lantern=True):
                 else:
                     pick = max(heals, key=lambda s: s["base_power"])
                 return str(pick["slot"])
-        # b403 Hold Monster opener: classic D&D wizard "buy a round of
-        # concentration" trick. Cost 1 MP (elf cantrip + memorize for
-        # human/dwarf if INT permits), freezes target 1 turn. Cast as
-        # the opening turn of combat so the next damage cast goes off
-        # without the channel-init monster swing (monster is held when
-        # spell starts -> no attack -> spell channels safely). Gate:
-        # only if monster isn't already held / paralyzed (avoid double-
-        # cast waste) AND we have a damage spell to follow up with AND
-        # the fight is worth the 1-turn investment (m_max_hp filter
-        # mirrors b401 Stone Skin prey filter). Pre-b403 the smart-
-        # policy never picked Hold Monster -- spell_type='debuff_target'
-        # fell through all the damage/heal/buff branches.
-        _m_obs = obs.get("monster") or {}
-        m_held = _m_obs.get("is_held") or False
-        m_paralyzed = _m_obs.get("is_paralyzed") or False
-        _m_max_hp = _m_obs.get("max_hp") or 0
-        if (affordable_dmg
-                and not m_held and not m_paralyzed
-                and _m_max_hp >= p["max_hp"] * 0.30):
-            hold_monster = next(
-                (s for s in affordable_spells if s["name"] == "Hold Monster"),
-                None,
-            )
-            if hold_monster:
-                return str(hold_monster["slot"])
-        # Damage pick: strongest base_power that fits mana. The agent
-        # has nothing to gain by picking 6-dmg Mind Touch over 31-dmg
-        # Lightning Bolt when both are affordable -- mana regens at
-        # 1/5 turns between fights, and unspent mana at end-of-run is
-        # zero-value. Ties broken by lower mana_cost so the agent
-        # prefers efficient spells when damage is equal.
+
+        # 6. Damage pick: strongest base_power that fits mana.
         if affordable_dmg:
             pick = max(affordable_dmg,
                        key=lambda s: (s["base_power"], -s["mana_cost"]))
             return str(pick["slot"])
+
+        # 7. Random affordable spell fallback.
         if affordable_spells:
             return str(rng.choice(affordable_spells)["slot"])
         return "x"

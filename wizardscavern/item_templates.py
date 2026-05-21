@@ -1840,6 +1840,25 @@ def _build_unique_treasure_templates():
             benefit={'special': 'Vitality boost'}
         ),
 
+        # b404: Hourglass Talisman -- caster accessory promoted from
+        # auto-grant to legitimate unique drop. Spawns from the same
+        # F3+ chest pool (10% chance) and vault chamber rewards as
+        # other uniques. Level 4 keeps it in the typical mid-game
+        # drop window where casters need it most -- by F20 the
+        # cast-attrition wall starts mattering, and casters who never
+        # find one fall back on the b402 INT-only quick-cast roll.
+        Treasure(
+            name="Hourglass Talisman",
+            description="A pendant of frozen sand. Time slows around the caster, letting spells slip past enemy reactions.",
+            gold_value=0,
+            value=550,
+            level=4,
+            treasure_type='passive',
+            is_unique=True,
+            passive_effect='+2 INT, +20% Quick Cast chance',
+            benefit={'special': 'Cast speed'}
+        ),
+
         Treasure(
             name="Merchant's Horn",
             description="An ornate horn that summons merchants and compels them to restock.",
