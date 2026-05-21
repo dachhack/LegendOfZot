@@ -389,7 +389,7 @@ def _item_category(item):
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
              int_bonus=0, spells=None, starter_pack=True,
-             fog_of_war=True):
+             fog_of_war=True, start_floor=1):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
@@ -404,6 +404,15 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     Potions, with 500 starting gold minus the bundle cost. The harness
     seeds the same loadout (and the same residual gold) so the agent
     starts on the same footing as a real run.
+
+    ``start_floor=N`` (default 1) plants the character on F<N> with a
+    median-survivor profile: level max(1, N-2), race-flavored
+    stat-point spend (dwarf -> STR, elf -> INT, human -> balanced),
+    weapon/armor upgraded by (N-1)//3, ~150g/floor gold pad, and
+    full heal/mana refill. Floors 1..N-1 are generated and every tile
+    flipped to ``discovered = True`` so the smart-policy wayfinder can
+    retreat to earlier vendors immediately. ``max_z_via_stairs`` is
+    pre-banked so the policy doesn't think the agent was warp-skipped.
     """
     if seed is not None:
         _stdlib_random.seed(seed)
@@ -692,8 +701,131 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         'vendors_sold_to': set(),
     }
 
-    _trigger_room_interaction(gs.player_character, gs.my_tower)
-    return PlaytestSession(fog_of_war=fog_of_war)
+    # Plant the character on a deeper start floor when requested. The
+    # helpers below assume gs.my_tower already has F1 generated (the
+    # add_floor call at line 479 above). They (a) generate F2..F<N>,
+    # (b) move pc to F<N>'s U tile, (c) flip discovered=True on every
+    # tile in F1..F<N-1> so the smart-policy wayfinder can retreat
+    # to earlier vendors immediately, and (d) plant level / stat-
+    # points / gear / gold scaled to depth (median-survivor profile
+    # per the AskUser choice). The PlaytestSession's max_z_via_stairs
+    # is set below so the retreat policy doesn't misread the plant as
+    # a warp-drop. _trigger_room_interaction is SKIPPED when planted
+    # deep -- standing on U would auto-fire stairs_up_mode on turn
+    # one, putting the agent in ascend-confirm before it can do
+    # anything else. The U tile stays underfoot; the smart-policy
+    # wayfinder will step off naturally on its first move.
+    if start_floor > 1:
+        _generate_floors_and_plant_at(pc, gs.my_tower, start_floor)
+        _plant_survivor_baseline(pc, start_floor)
+    else:
+        _trigger_room_interaction(gs.player_character, gs.my_tower)
+
+    session = PlaytestSession(fog_of_war=fog_of_war)
+    if start_floor > 1:
+        # 0-indexed; pc.z is start_floor - 1. Banking this prevents
+        # the smart-policy "retreat from warp-skipped depth" branch
+        # at playtest_harness.py:1168 from firing on turn one.
+        session.max_z_via_stairs = pc.z
+    return session
+
+
+def _generate_floors_and_plant_at(pc, tower, start_floor):
+    """Generate F2..F<start_floor> via the canonical floor-params
+    dict and place pc on F<start_floor>'s U tile. Mirrors the
+    handle_stairs_down placement contract. Caller is responsible for
+    NOT running _trigger_room_interaction afterwards (the U tile
+    would auto-fire stairs_up_mode).
+    """
+    target_z = start_floor - 1  # 0-indexed array slot
+    while len(tower.floors) <= target_z:
+        tower.add_floor(**gs.floor_params)
+    pc.z = target_z
+    floor = tower.floors[target_z]
+
+    placed = False
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            if floor.grid[r][c].room_type == 'U':
+                pc.x, pc.y = c, r
+                floor.grid[r][c].discovered = True
+                placed = True
+                break
+        if placed:
+            break
+    if not placed:
+        # No U on the target floor (very rare -- add_floor places one
+        # via the required_chars contract). Fall back to any '.' tile.
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                if floor.grid[r][c].room_type == '.':
+                    pc.x, pc.y = c, r
+                    floor.grid[r][c].discovered = True
+                    placed = True
+                    break
+            if placed:
+                break
+
+    # Pre-discover every tile on F1..F<start_floor-1>. The agent's
+    # wayfinder treats discovered tiles as eligible BFS nodes and
+    # undiscovered ones as fog. Retreating up the stairs from F<N>
+    # immediately gives the agent a fully mapped F<N-1>, so it can
+    # path straight to vendors / shrines without re-exploring.
+    for prior_z in range(target_z):
+        prior_floor = tower.floors[prior_z]
+        for r in range(prior_floor.rows):
+            for c in range(prior_floor.cols):
+                prior_floor.grid[r][c].discovered = True
+
+
+def _plant_survivor_baseline(pc, start_floor):
+    """Apply the median-F<N>-survivor stat / gear / gold profile.
+    Mirrors what the b389 sweep data shows real agents look like at
+    that depth: level ~start_floor-2, basic upgrades scaled to floor,
+    ~150g/floor pad, race-flavored stat-point spend.
+    """
+    target_level = max(1, start_floor - 2)
+    # gain_experience() levels up off `int(sqrt(experience) / 5)`.
+    # Granting (target_level * 5)**2 + 1 puts the player exactly one
+    # XP past the boundary, so the level resolves to target_level and
+    # the matching (level-1)//2 stat points land in unspent_stat_points.
+    target_xp = (target_level * 5) ** 2 + 1
+    pc.gain_experience(target_xp)
+
+    # Race-flavored stat-point spend. Mirrors the racial archetype:
+    # dwarf leans STR (with a DEX tap for dodge), elf leans INT (with
+    # DEX for cantrip-spam reaction), human spreads evenly.
+    race = (getattr(pc, 'race', 'human') or 'human').lower()
+    if race == 'dwarf':
+        bias = ('strength', 'strength', 'dexterity')
+    elif race == 'elf':
+        bias = ('intelligence', 'intelligence', 'dexterity')
+    else:
+        bias = ('strength', 'dexterity', 'intelligence')
+    for i in range(pc.unspent_stat_points):
+        stat = bias[i % len(bias)]
+        setattr(pc, stat, getattr(pc, stat) + 1)
+    pc.unspent_stat_points = 0
+
+    # Gear upgrades: +1 per 3 floors of depth (F4 -> +1, F7 -> +2,
+    # F10 -> +3, F13 -> +4). The starter Dagger/Battleaxe + Leather
+    # at +3 is consistent with what F10 survivors carry in the b389
+    # sweep (most haven't bought a new weapon but have hit two
+    # upgrade scrolls along the way).
+    upg = max(0, (start_floor - 1) // 3)
+    if pc.equipped_weapon is not None and upg > 0:
+        pc.equipped_weapon.upgrade_level = min(20, pc.equipped_weapon.upgrade_level + upg)
+    if pc.equipped_armor is not None and upg > 0:
+        pc.equipped_armor.upgrade_level = min(20, pc.equipped_armor.upgrade_level + upg)
+
+    # Gold pad: ~150g/floor net of accumulated stockpile spend.
+    pc.gold += (start_floor - 1) * 150
+
+    # Refill HP / mana to the new max so the planted character isn't
+    # bleeding mid-encounter on turn one. max_health and max_mana are
+    # @property fields that pick up the level / stat / bonus deltas.
+    pc.health = pc.max_health
+    pc.mana = pc.max_mana
 
 
 ACTION_HINTS = {
@@ -6423,6 +6555,13 @@ def main(argv=None):
                         help="Disable fog-of-war in obs (agent sees the full "
                              "floor regardless of `discovered`). Useful for "
                              "isolating upstream balance from navigation.")
+    parser.add_argument("--start-floor", type=int, default=1,
+                        help="Plant the character on F<N> with a median-"
+                             "survivor profile (level N-2, basic gear "
+                             "upgrades, gold pad). Floors 1..N-1 are "
+                             "pre-discovered so retreat for vendors works. "
+                             "Useful for iterating on mid/late-floor "
+                             "mechanics without waiting for F1-F5 mortality.")
     parser.add_argument("--report-dir", default=None,
                         help="Write a per-run HTML report (and JSON sidecar) "
                              "to this directory. The report covers the hero, "
@@ -6447,7 +6586,8 @@ def main(argv=None):
                     name=args.name, race=args.race,
                     starter_pack=not args.no_starter_pack,
                     fog_of_war=not args.no_fog,
-                    int_bonus=args.int_bonus, spells=spells)
+                    int_bonus=args.int_bonus, spells=spells,
+                    start_floor=args.start_floor)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
 
