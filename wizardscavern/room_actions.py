@@ -2563,10 +2563,30 @@ def process_garden_action(player_character, my_tower, cmd):
             loot_table = GARDEN_INGREDIENTS
             add_log(f"{COLOR_GREEN}You gather useful herbs and plants...{COLOR_RESET}")
 
-        # Grant Items
+        # Grant Items. Build-389: switched from random.choice (uniform)
+        # to random.choices weighted by the 5th tuple field for tables
+        # where that field is a numeric `chance` (0.15 / 0.10 /
+        # 0.02-0.03 per GARDEN_INGREDIENTS at item_templates.py:357).
+        # The 5th field was added with intent of biasing toward common
+        # herbs but never wired up -- uniform choice meant Dragon
+        # Scale (3% intended) dropped as often as Moonpetal (15%
+        # intended), starving the lembas / sausage recipes. Heads-up:
+        # the inline fey-garden loot_table at room_actions.py:2548
+        # puts the DESCRIPTION string in slot [4] (not a chance), so
+        # we detect numeric weights and fall back to uniform otherwise
+        # -- otherwise random.choices does `sum(weights)` on strings
+        # and raises TypeError mid-step (the harness swallows it and
+        # the harvest silently fails, blocking lembas crafting).
         num_items = random.randint(2, 4)
+        weights = None
+        if all(len(it) > 4 and isinstance(it[4], (int, float))
+               for it in loot_table):
+            weights = [item_data[4] for item_data in loot_table]
         for _ in range(num_items):
-            item_data = random.choice(loot_table)
+            if weights is not None:
+                item_data = random.choices(loot_table, weights=weights, k=1)[0]
+            else:
+                item_data = random.choice(loot_table)
             # item_data is (name, description, value, level, chance)
             ingredient = Ingredient(name=item_data[0], description=item_data[1],
                                     value=item_data[2], level=item_data[3])
