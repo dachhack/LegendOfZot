@@ -786,8 +786,14 @@ def _plant_survivor_baseline(pc, start_floor):
     Mirrors what the b389 sweep data shows real agents look like at
     that depth: level ~start_floor-2, basic upgrades scaled to floor,
     ~150g/floor pad, race-flavored stat-point spend.
+
+    b407: bumped target_level from N-2 to N+1 so F25-plant probes of
+    the F30-F50 wall start from a character that can actually survive
+    F25 encounters. The b406 sweep showed >70% of plant deaths happen
+    in <100T on F25, before the agent makes any descent progress; the
+    F30-F50 wall is invisible until we get past that.
     """
-    target_level = max(1, start_floor - 2)
+    target_level = max(1, start_floor + 1)
     # gain_experience() levels up off `int(sqrt(experience) / 5)`.
     # Granting (target_level * 5)**2 + 1 puts the player exactly one
     # XP past the boundary, so the level resolves to target_level and
@@ -822,21 +828,50 @@ def _plant_survivor_baseline(pc, start_floor):
     # cast gate actually engage. Without it, humans at F12-F25 are
     # locked out of spell content despite reaching the floor where
     # vendors stock spell scrolls.
-    elixir_bonus = start_floor // 5
+    elixir_bonus = start_floor // 4
     if elixir_bonus > 0:
         for stat in ('strength', 'dexterity', 'intelligence'):
             setattr(pc, stat, getattr(pc, stat) + elixir_bonus)
+
+    # Permanent HP / mana elixir pad. A F<N> survivor would have drunk
+    # a few Potions of Permanent Health / Mana (or hit altar-of-the-
+    # fallen HP boosts) along the way. +5 HP per floor and +3 MP per
+    # floor of depth past F1 brings F25 plant HP from ~290 (elf) to
+    # ~410, enough to absorb 2-3 status-lockout hits at 50-80 dmg/
+    # swing without dying. F25 mana pool gains +75 so casters have
+    # enough spell budget for the longer F30-F50 runs.
+    # b407: caster F25 audit showed Frost Worm / Basilisk / Gorgon
+    # lockout deaths landed in 2-3 swings against elves at 290 HP
+    # (e.g. seed=5 elf t=514: 57 dmg/swing while frozen, dead in 2).
+    pc.base_max_health_bonus += (start_floor - 1) * 5
+    pc.base_max_mana_bonus += (start_floor - 1) * 3
 
     # Gear upgrades: +1 per 3 floors of depth (F4 -> +1, F7 -> +2,
     # F10 -> +3, F13 -> +4). The starter Dagger/Battleaxe + Leather
     # at +3 is consistent with what F10 survivors carry in the b389
     # sweep (most haven't bought a new weapon but have hit two
     # upgrade scrolls along the way).
-    upg = max(0, (start_floor - 1) // 3)
+    #
+    # b407: at F15+ also swap up the *base* weapon/armor tier so the
+    # plant's gear bar clears the smart-policy descent gate (line
+    # 6260 `(eq_w + eq_a) < (2*z + 3)`). At F25 the gate requires
+    # base+upgrade >= 53; a maxed starter Dagger+Leather (4+3 base,
+    # +20 each) only reaches 47, so plants never trip "ready to
+    # descend" and stagnate on the plant floor. Real F25 survivors
+    # would have bought a tier-12 weapon by then.
+    upg = max(0, (start_floor - 1) // 2)
+    if start_floor >= 25:
+        _swap_plant_gear(pc, "Enchanted Longsword", "Enchanted Plate")
+    elif start_floor >= 20:
+        _swap_plant_gear(pc, "Volcanic Blade", "Volcanic Mail")
+    elif start_floor >= 15:
+        _swap_plant_gear(pc, "Adamantine Sword", "Dragon Scale")
     if pc.equipped_weapon is not None and upg > 0:
-        pc.equipped_weapon.upgrade_level = min(20, pc.equipped_weapon.upgrade_level + upg)
+        cap = getattr(pc.equipped_weapon, 'upgrade_limit', 20) or 20
+        pc.equipped_weapon.upgrade_level = min(cap, pc.equipped_weapon.upgrade_level + upg)
     if pc.equipped_armor is not None and upg > 0:
-        pc.equipped_armor.upgrade_level = min(20, pc.equipped_armor.upgrade_level + upg)
+        cap = getattr(pc.equipped_armor, 'upgrade_limit', 20) or 20
+        pc.equipped_armor.upgrade_level = min(cap, pc.equipped_armor.upgrade_level + upg)
 
     # Gold pad: ~150g/floor net of accumulated stockpile spend.
     pc.gold += (start_floor - 1) * 150
@@ -864,6 +899,33 @@ def _plant_survivor_baseline(pc, start_floor):
     # cooking a real decision -- but a F15 survivor would have bought
     # one by F3, so granting it here matches the surveyed profile.
     _grant_survivor_inventory(pc, start_floor)
+
+
+def _swap_plant_gear(pc, weapon_name, armor_name):
+    """Replace the plant's equipped weapon / armor with a deeper-tier
+    template by name. The starter Dagger/Battleaxe + Leather can't
+    clear the smart-policy descent gate past F12 even when maxed; a
+    real F15+ survivor would have a much better base item. Caller is
+    responsible for upgrade_level scaling -- this only swaps the base.
+    """
+    from .item_templates import WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    import copy as _copy
+    by_w = {w.name: w for w in WEAPON_TEMPLATES}
+    by_a = {a.name: a for a in ARMOR_TEMPLATES}
+    if weapon_name in by_w:
+        new_wpn = _copy.deepcopy(by_w[weapon_name])
+        if hasattr(new_wpn, 'is_identified'):
+            new_wpn.is_identified = True
+        pc.equipped_weapon = new_wpn
+        if new_wpn not in pc.inventory.items:
+            pc.inventory.add_item_quiet(new_wpn)
+    if armor_name in by_a:
+        new_arm = _copy.deepcopy(by_a[armor_name])
+        if hasattr(new_arm, 'is_identified'):
+            new_arm.is_identified = True
+        pc.equipped_armor = new_arm
+        if new_arm not in pc.inventory.items:
+            pc.inventory.add_item_quiet(new_arm)
 
 
 def _grant_memorized_spells(pc, start_floor):
@@ -1050,6 +1112,45 @@ def _grant_survivor_inventory(pc, start_floor):
                      description="Glows with a protective aura.",
                      effect_description="Grants +15 defense for 5 turns.",
                      value=80, level=1, scroll_type='protection', count=2))
+
+    # Tier 6 (F25+): deep-dungeon survivor stash. The b407 sweep
+    # showed plant deaths skew toward status-lockout (Freeze /
+    # Paralysis / Confusion locking the agent out while the monster
+    # lands 70-100 dmg/swing) and starvation in lantern-wedge loops.
+    # Adds a panic-tier emergency kit on top of Tier 5:
+    #   - Antidote x3 (cure_all -- snaps lockout state once the
+    #     game_loop bad-status gate fires)
+    #   - More Master Healing Potions (5 total at F25+) for absorb-
+    #     through-lockout HP buffer
+    #   - More Restoration Scrolls (3 total) -- full HP + status
+    #     clear, the strongest single-turn panic button
+    #   - Bratwurst x6 (sausages don't rot) to outlast 7000T runs
+    #     where the F25 lantern-wedge cases burned 1500T of stairs
+    #     navigation before starvation kicked in
+    #   - Extra Teleportation scrolls so vault Tarrasque seeds get
+    #     a real escape option (game-loop has the gate but inventory
+    #     ran dry).
+    if start_floor >= 25:
+        _add(_Potion(name="Antidote",
+                     description="Cures all negative status effects.",
+                     value=100, level=1, potion_type='cure_all',
+                     effect_magnitude=0, count=3))
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=3))
+        _add(_Scroll(name="Scroll of Restoration",
+                     description="Pulses with healing light.",
+                     effect_description="Fully restore HP and remove status effects.",
+                     value=200, level=3, scroll_type='restoration', count=2))
+        _add(_Scroll(name="Scroll of Teleportation",
+                     description="Space itself warps.",
+                     effect_description="Teleport to a random safe location on the floor.",
+                     value=100, level=2, scroll_type='teleport', count=2))
+        _add(_Sausage(name="Bratwurst",
+                      description="A coarse-ground German sausage.",
+                      value=30, level=1, nutrition=60,
+                      sausage_style="Bratwurst", count=6))
 
 
 ACTION_HINTS = {
@@ -2852,12 +2953,21 @@ class PlaytestSession:
         self.position_history.append(cur_xy)
         if len(self.position_history) > 16:
             self.position_history.pop(0)
-        # Freeze-streak update. The key combines position, HP, and per-
-        # floor kill count. Any movement, any HP delta (taking damage
-        # or healing), and any kill resets the streak -- those are all
+        # Freeze-streak update. The key combines position, HP, mana,
+        # and per-floor kill count. Any movement, any HP delta (taking
+        # damage or healing), any mana spend (cast a buff that doesn't
+        # change HP), and any kill resets the streak -- those are all
         # signs of real progress / world advancement.
+        #
+        # b407: mana added to the key. Without it, a caster in combat
+        # buffing themselves (Stone Skin / Mage Armor / Spectral Hand)
+        # against a missing monster appears "frozen" because none of
+        # position/HP/kills change while mana ticks down. Caught on
+        # F25 elf seed=4: 30 cast turns -> wedge fired 'x' in combat
+        # for 2919 turns straight.
         freeze_key = (pc_after.z, pc_after.x, pc_after.y,
-                      pc_after.health, self.kills_on_floor)
+                      pc_after.health, pc_after.mana,
+                      self.kills_on_floor)
         if freeze_key == self._prev_freeze_key:
             self.freeze_streak += 1
         else:
@@ -3116,7 +3226,15 @@ def smart_policy(obs, rng, use_lantern=True):
         or (osc_streak >= 60 and mode == "game_loop")
     )
     if wedge_trip and mode not in MOVE_MODES:
-        # Non-movement mode -- back out to game_loop.
+        # Non-movement mode -- back out to game_loop. combat_mode is
+        # the only one that doesn't accept 'x' (combat.py:1271 logs
+        # 'Invalid combat command'); flee instead. b407 caught: F25
+        # elf seed=4 entered combat with a Savage Werewolf, cycled
+        # Stone Skin / Mage Armor buffs that didn't change HP / kills
+        # / position, freeze_streak hit 30 and the wedge break fired
+        # 'x' for 2919 turns straight (1 stuck monster, 3000T burned).
+        if mode == "combat_mode":
+            return "f"
         return "x"
     if wedge_trip:
         neighbors_wb = obs.get("neighbors") or {}
