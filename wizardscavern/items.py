@@ -3358,22 +3358,52 @@ def process_hunger(character):
 
 
 def process_mana_regen(character):
-    """Out-of-combat mana regen: 1 MP per 5 moves while not starving.
+    """Out-of-combat mana regen, race + INT scaled.
 
-    Called from move_player only -- combat handlers don't invoke it, so the
-    'out of combat' gate is free. Silent (no log) by design: passive tick.
-    Starving players (hunger == 0) get no regen to avoid edge-case healing
-    via Minor Heal after the hunger tick zeroes them out.
+    Called from move_player only -- combat handlers don't invoke it, so
+    the 'out of combat' gate is free. Silent (no log) by design: passive
+    tick. Starving players (hunger == 0) get no regen to avoid edge-case
+    healing via Minor Heal after the hunger tick zeroes them out.
+
+    Race-flavored tick interval reflects the magical aptitude curve:
+      elf   -> 1 tick / 2 moves   (innately attuned to magic)
+      human -> 1 tick / 3 moves   (mid-tier caster)
+      dwarf -> 1 tick / 5 moves   (unchanged -- magic is hard for them)
+    Per-tick MP scales with intelligence: +1 MP per tick for every 4
+    points of INT above 16. A high-INT elf (INT 24) gains 3 MP per
+    tick every 2 moves -- enough to recover one Stone Skin + one
+    Lightning Bolt across a 30-move room transit.
+
+    Pre-b399 a uniform 1 MP / 5 moves left F25 elves (max_mana ~237)
+    unable to keep up with the deep-content cast budget: a Stone Skin
+    (18) + Flame Lance (17) + Mass Heal (30) fight burned 65 MP, the
+    transit to the next room covered ~15 moves -> 3 MP recovered,
+    next fight only afforded one spell. The new curve gives the
+    same elf 3 MP * (15//2) = 21 MP recovered per transit, sustaining
+    full caster output across a long session.
     """
     if character.max_mana <= 0 or character.mana >= character.max_mana:
         character.mana_regen_tracker = 0
         return
     if character.hunger <= 0:
         return
+    race = (getattr(character, 'race', 'human') or 'human').lower()
+    if race == 'elf':
+        interval = 2
+    elif race == 'dwarf':
+        interval = 5
+    else:  # human + fallback
+        interval = 3
     tracker = getattr(character, 'mana_regen_tracker', 0) + 1
-    if tracker >= 5:
+    if tracker >= interval:
         character.mana_regen_tracker = 0
-        character.mana = min(character.max_mana, character.mana + 1)
+        # INT bonus: high-INT casters tick harder. Bonus floor of 0
+        # means a fresh-cast elf at INT 12 still gets exactly 1 MP /
+        # 2 moves -- the same baseline as before scaled by race, but
+        # no INT-investment bonus until they cross 20.
+        int_bonus = max(0, (character.intelligence - 16) // 4)
+        gain = 1 + int_bonus
+        character.mana = min(character.max_mana, character.mana + gain)
     else:
         character.mana_regen_tracker = tracker
 
