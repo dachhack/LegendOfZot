@@ -3030,6 +3030,38 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if has_cooking_kit and has_raw_meat:
             return "i"
+        # Crafting gate (build 388): open inventory when materials are
+        # available for sausage or lembas crafting. The inventory
+        # cascade has a parallel craft trigger at line ~4365, but
+        # without a game_loop trigger to ENTER inventory the craft
+        # only fires opportunistically (when the agent enters inv for
+        # some other reason). Diagnostic on the b387 sweep showed
+        # 12/18 runs had Curing Kit + cooked meat + herbs + craftable
+        # recipe but only 5 craft events fired -- the bottleneck is
+        # opening the inventory in the first place. Match the
+        # inventory-branch conditions (curing kit + cooked meat OR
+        # elf + ingredients, hunger >= 30) plus an actual craftable
+        # recipe via _pick_craftable_food. Gate on last_action not
+        # in ("i", "x", "c") to prevent post-craft re-entry loops
+        # (the craft consumes ingredients; if a second recipe was
+        # craftable, the next turn will re-trigger naturally).
+        has_curing_kit_gl = any(i["category"] == "curing_kit" for i in inv)
+        has_cooked_meat_gl = any(
+            i["category"] == "food"
+            and i.get("is_cooked")
+            and not i.get("is_rotten")
+            and i.get("rot_timer") is not None
+            for i in inv
+        )
+        is_elf_gl = (getattr(gs.player_character, "race", "") or "").lower() == "elf"
+        has_ingredients_gl = any(i["category"] == "ingredient" for i in inv)
+        can_try_sausage_gl = has_curing_kit_gl and has_cooked_meat_gl
+        can_try_lembas_gl = is_elf_gl and has_ingredients_gl
+        if ((can_try_sausage_gl or can_try_lembas_gl)
+                and hunger >= 30
+                and obs.get("last_action") not in ("i", "x", "c")):
+            if _pick_craftable_food(gs.player_character) is not None:
+                return "i"
         # Stat-point allocation (build 380). When the level-up granted
         # points are sitting unspent, route into the inventory -> stats
         # -> allocation flow. The inventory cascade has a parallel gate
