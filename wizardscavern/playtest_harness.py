@@ -827,6 +827,121 @@ def _plant_survivor_baseline(pc, start_floor):
     pc.health = pc.max_health
     pc.mana = pc.max_mana
 
+    # Survivor inventory: items a real F<N> player would have looted /
+    # bought across the F1..F<N-1> stretch. Scales with depth so an F5
+    # plant gets bare essentials and an F20+ plant has the full kit.
+    # The b394 F15-plant sweep saw 12/90 starvation deaths because the
+    # Cooking Kit was pulled from the starter pack in b358 to make F3
+    # cooking a real decision -- but a F15 survivor would have bought
+    # one by F3, so granting it here matches the surveyed profile.
+    _grant_survivor_inventory(pc, start_floor)
+
+
+def _grant_survivor_inventory(pc, start_floor):
+    """Plant inventory tiers, modelled on what a real F<N> player would
+    have accumulated. Items are stacked when possible to mirror the
+    inventory layout the smart-policy reads."""
+    from .items import (
+        Potion as _Potion, Scroll as _Scroll, Sausage as _Sausage,
+        CookingKit as _CK, CuringKit as _CuK, LanternFuel as _LF,
+    )
+
+    def _add(item):
+        pc.inventory.add_item_quiet(item)
+
+    # Always: cooking kit. F1 plants benefit too (raw meat -> 4x
+    # nutrition when cooked, otherwise raw is 1x and rots fast).
+    _add(_CK())
+
+    # Tier 1 (F5+): bag a real F5 survivor walks around with -- a few
+    # heals, identify scroll, extra fuel, a couple of cooked meats from
+    # past monster drops.
+    if start_floor >= 5:
+        _add(_Potion(name="Healing Potion", description="Restores 50 HP.",
+                     value=50, level=1, potion_type='healing',
+                     effect_magnitude=50, count=3))
+        _add(_Scroll(name="Scroll of Identify",
+                     description="Ancient runes of knowledge.",
+                     effect_description="Identifies one unidentified item.",
+                     value=50, level=0, scroll_type='identify', count=2))
+        for _ in range(3):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 2 (F8+): curing kit unlocks the sausage pipeline; greater
+    # heals, mapping scrolls, mana potions for casters.
+    if start_floor >= 8:
+        _add(_CuK())
+        _add(_Potion(name="Greater Healing Potion",
+                     description="Restores 80 HP.",
+                     value=80, level=3, potion_type='healing',
+                     effect_magnitude=80, count=2))
+        _add(_Scroll(name="Scroll of Mapping",
+                     description="Contains the essence of cartographic magic.",
+                     effect_description="Reveals the entire current floor layout.",
+                     value=120, level=2, scroll_type='mapping', count=1))
+        _add(_Potion(name="Mana Potion",
+                     description="Restores 50 MP.",
+                     value=50, level=1, potion_type='mana',
+                     effect_magnitude=50, count=3))
+        for _ in range(2):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 3 (F12+): protection scrolls, mid-tier heals, sausages
+    # (the player's been crafting them).
+    if start_floor >= 12:
+        _add(_Potion(name="Superior Healing Potion",
+                     description="Restores 120 HP.",
+                     value=120, level=5, potion_type='healing',
+                     effect_magnitude=120, count=2))
+        _add(_Scroll(name="Scroll of Protection",
+                     description="Glows with a protective aura.",
+                     effect_description="Grants +15 defense for 5 turns.",
+                     value=80, level=1, scroll_type='protection', count=2))
+        # Two bratwursts -- the entry-tier sausage from the meat
+        # cooking + Fire Root recipe. Pre-crafted so the planted agent
+        # has shelf-stable food without needing to retreat for the
+        # Curing Kit's recipe gate.
+        _add(_Sausage(name="Bratwurst",
+                      description="A coarse-ground German sausage.",
+                      value=30, level=1, nutrition=60,
+                      sausage_style="Bratwurst", count=2))
+
+    # Tier 4 (F15+): emergency-escape kit + master heals.
+    if start_floor >= 15:
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=2))
+        _add(_Scroll(name="Scroll of Restoration",
+                     description="Pulses with healing light.",
+                     effect_description="Fully restore HP and remove status effects.",
+                     value=200, level=3, scroll_type='restoration', count=1))
+        _add(_Scroll(name="Scroll of Teleportation",
+                     description="Space itself warps.",
+                     effect_description="Teleport to a random safe location on the floor.",
+                     value=100, level=2, scroll_type='teleport', count=1))
+        for _ in range(2):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 5 (F20+): late-game stash, fits a Magic-Shoppe-reaching
+    # survivor's bag.
+    if start_floor >= 20:
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=2))
+        _add(_Scroll(name="Scroll of Mapping",
+                     description="Contains the essence of cartographic magic.",
+                     effect_description="Reveals the entire current floor layout.",
+                     value=120, level=2, scroll_type='mapping', count=2))
+        _add(_Scroll(name="Scroll of Protection",
+                     description="Glows with a protective aura.",
+                     effect_description="Grants +15 defense for 5 turns.",
+                     value=80, level=1, scroll_type='protection', count=2))
+
 
 ACTION_HINTS = {
     "game_loop":     "n s e w | d (descend) u (ascend) | i (inventory)",
@@ -2840,28 +2955,37 @@ def smart_policy(obs, rng, use_lantern=True):
     # Wedge break: when the freeze detector OR the 2-tile oscillation
     # detector has been tripping long enough that the existing per-mode
     # escape valves clearly haven't resolved the loop, force a non-
-    # frozen action. Two trigger conditions:
-    #   - freeze_streak >= 30 in a movement-capable mode -- catches
-    #     the lantern-loop wedge (period-1 'l' for 2162T on b394
-    #     seed=67 elf F16) where pc.xy never updates because 'l'
-    #     doesn't tick a game turn.
-    #   - oscillation.streak >= 60 in game_loop -- catches the
-    #     2-tile saddle-point that recent_step_set + swap-if-backtrack
-    #     and the stairs_up 'u' valve all failed to resolve. Threshold
-    #     is higher than the stairs_up 'u' valve (50) so it only fires
-    #     when the existing valve provably hasn't fixed it.
-    # Escape: random walkable direction that is NOT a wall, fog, or in
-    # blocked_directions / recent_step_set. Falls back to ANY non-wall
-    # direction (including recent) and finally to 'pass' to let world
-    # state tick over while the wedge clears.
+    # frozen action. Trigger conditions:
+    #   - freeze_streak >= 30 -- catches the lantern-loop wedge
+    #     (period-1 'l' for 2162T on b394 seed=67 elf F16) where pc.xy
+    #     never updates because 'l' doesn't tick a game turn, AND the
+    #     vendor-shop id<N> oscillation (b395 seed=223 dwarf F13 stuck
+    #     in vendor_shop sending 'id4' for 900+ turns because the
+    #     identify policy doesn't track tried-this-session items and
+    #     oscillates between id4 and id5 on two unidentified scrolls).
+    #   - oscillation.streak >= 60 in game_loop -- catches the 2-tile
+    #     saddle-point that recent_step_set + swap-if-backtrack and
+    #     the stairs_up 'u' valve all failed to resolve.
+    # Escape strategy depends on mode:
+    #   - movement modes (game_loop, stairs_up/down): random walkable
+    #     direction, falling through to recent then 'pass'.
+    #   - any other mode (vendor_shop, inventory, chest_mode, library,
+    #     altar, etc.): 'x' (back) to drop the agent into game_loop,
+    #     where the wayfinder can re-evaluate. 'x' is the standard
+    #     cancel/leave key across modes; if a mode doesn't accept 'x'
+    #     the dispatch falls through harmlessly (the unknown-action
+    #     log is captured but no turn is wasted on the wrong handler).
     freeze_streak = obs.get("freeze_streak", 0)
     osc_obs = obs.get("oscillation") or {}
     osc_streak = osc_obs.get("streak", 0)
-    WEDGE_BREAK_MODES = ("game_loop", "stairs_up_mode", "stairs_down_mode")
+    MOVE_MODES = ("game_loop", "stairs_up_mode", "stairs_down_mode")
     wedge_trip = (
-        (freeze_streak >= 30 and mode in WEDGE_BREAK_MODES)
+        freeze_streak >= 30
         or (osc_streak >= 60 and mode == "game_loop")
     )
+    if wedge_trip and mode not in MOVE_MODES:
+        # Non-movement mode -- back out to game_loop.
+        return "x"
     if wedge_trip:
         neighbors_wb = obs.get("neighbors") or {}
         blocked_wb = set(obs.get("blocked_directions") or [])
@@ -5622,7 +5746,17 @@ def smart_policy(obs, rng, use_lantern=True):
                 if cat not in IDENT_TARGETS and not cat.startswith("potion"):
                     continue
                 proposed = f"id{entry['slot']}"
-                if obs.get("last_action") != proposed:
+                # Block any 'id<N>' last-action, not just the same slot.
+                # With 2+ unidentified items the prior `!= proposed`
+                # check oscillated id4 <-> id5 indefinitely (b395
+                # seed=223 dwarf F13 vendor_shop wedge -- 900+ turns
+                # alternating id4 and id5 because each iteration only
+                # blocked the same slot as last_action). Treating any
+                # id<N> last_action as 'already tried this visit'
+                # forces the loop to fall through to 'x' (leave) after
+                # one identify attempt per vendor visit.
+                last_action = obs.get("last_action") or ""
+                if not last_action.startswith("id"):
                     return proposed
 
         return "x"
