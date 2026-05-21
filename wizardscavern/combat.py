@@ -1728,8 +1728,32 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_PURPLE}You begin channeling {chosen_spell.name}! ({charge_turns} turn{'s' if charge_turns > 1 else ''} remaining){COLOR_RESET}")
                 add_log(f"{COLOR_CYAN}Mana spent: {actual_cost}. Remaining: {player_character.mana}.{COLOR_RESET}")
 
-                # Monster attacks during the channeling initiation turn
-                damage_taken = _monster_attack_during_channeling(player_character)
+                # Monster attacks during the channeling initiation turn.
+                # b402: high-INT casters can occasionally slip the spell
+                # off without the monster reacting -- the "Quick Cast"
+                # arcane-reflex feature. Death diagnostic on b401 found
+                # 15/30 F25 elf deaths happened in spell_casting_mode
+                # because each L2-L3 cast = 2 turns of monster damage
+                # (channel init + channel complete, ~80 dmg each at F25);
+                # casters were burning 240+ raw across a 3-spell sequence
+                # against monsters they couldn't reliably kill. Quick
+                # Cast skips the channel-init swing on a dice roll
+                # scaling with INT investment: (INT-17)*4%, capped 50%.
+                # INT 18:4% / 20:12% / 22:20% / 25:32% / 28:44%. The
+                # channel-complete swing (post-spell-fires) is left
+                # intact so the monster still gets a counter-action --
+                # quick-cast only buys back the channeling "lock-in"
+                # period, not the whole exchange.
+                quick_cast_chance = min(
+                    50,
+                    max(0, (player_character.intelligence - 17) * 4),
+                )
+                if random.randint(1, 100) <= quick_cast_chance:
+                    add_log(f"{COLOR_PURPLE}[Quick Cast] Your arcane reflexes finish the spell instantly -- the {gs.active_monster.name if gs.active_monster else 'enemy'} doesn't react in time.{COLOR_RESET}")
+                    damage_taken = 0
+                    gs.game_stats['quick_casts'] = gs.game_stats.get('quick_casts', 0) + 1
+                else:
+                    damage_taken = _monster_attack_during_channeling(player_character)
 
                 if not player_character.is_alive():
                     add_log(f"{COLOR_RED}You were defeated while channeling...{COLOR_RESET}")
