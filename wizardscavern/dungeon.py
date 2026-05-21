@@ -684,8 +684,19 @@ class Tower:
                         )
                         placed.append(adj_room)
             if placed:
-                elite = random.choice(placed)
-                elite.properties['tomb_elite'] = True
+                # Hard floor cap on tomb_elite: tombs on F1-F4 still get
+                # four floor-leveled undead guardians, but no +1-level
+                # 1.3x-stat elite. The b389 death-cause sweep attributed
+                # 3/17 deaths to ELITE UNDEAD WRAITH / SPECTER at F2-F5
+                # (32 atk * 1.3 = 41 raw vs L3 player def~5 HP~50 = 2-
+                # round kill). Smart-policy flee + b390 T-tile avoid
+                # help, but the parting blow on tight floors finishes
+                # under-levelled agents anyway. Cap at z>=5 removes the
+                # early death trap at spawn time -- by F5 the player
+                # has ~60-80 HP and Stone Skin / +DEF gear in reach.
+                if floor_number >= 5:
+                    elite = random.choice(placed)
+                    elite.properties['tomb_elite'] = True
 
     def _should_create_bug_level(self, floor_number):
         """Determine if this floor should be a bug level.
