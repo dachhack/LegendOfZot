@@ -1505,7 +1505,13 @@ class RunReport:
             cat = self.item_categories.get(n, "other")
             f_dict = vendor_by_floor.setdefault(fl, {})
             cur = f_dict.get(cat, (0, 0))
-            f_dict[cat] = (cur[0] + c, cur[1] + price * c)
+            # `price` is `new_item.calculated_value` -- the TOTAL gold
+            # paid for the whole stack at vendor.py:709, not per-unit.
+            # The parsed log line ("You bought 5 Flares for 100 gold")
+            # carries count=5, price=100, but only 100g changed hands.
+            # `price * c` therefore over-counted by factor c whenever a
+            # bundled item (Flare / multi-pack) was bought.
+            f_dict[cat] = (cur[0] + c, cur[1] + price)
         vendor_rows = ""
         for fl in sorted(vendor_by_floor):
             cats = vendor_by_floor[fl]
@@ -1570,7 +1576,10 @@ class RunReport:
             descent_lines = "<li>never left Floor 1</li>"
 
         inv_rows = ""
-        for i in inv[:24]:
+        # Render the full inventory -- prior `inv[:24]` truncated late-game
+        # bags. Crafted sausages routinely land at slot 60+ and were
+        # invisible in the rendered table.
+        for i in inv:
             cat = i.get("category", "")
             sprite_cat = _category_to_sprite_cat(cat)
             pid = _sprite_pid_for(sprite_cat, i.get("name")) if sprite_cat else None

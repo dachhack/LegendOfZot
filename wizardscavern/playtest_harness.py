@@ -389,7 +389,7 @@ def _item_category(item):
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
              int_bonus=0, spells=None, starter_pack=True,
-             fog_of_war=True):
+             fog_of_war=True, start_floor=1):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
@@ -404,6 +404,15 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     Potions, with 500 starting gold minus the bundle cost. The harness
     seeds the same loadout (and the same residual gold) so the agent
     starts on the same footing as a real run.
+
+    ``start_floor=N`` (default 1) plants the character on F<N> with a
+    median-survivor profile: level max(1, N-2), race-flavored
+    stat-point spend (dwarf -> STR, elf -> INT, human -> balanced),
+    weapon/armor upgraded by (N-1)//3, ~150g/floor gold pad, and
+    full heal/mana refill. Floors 1..N-1 are generated and every tile
+    flipped to ``discovered = True`` so the smart-policy wayfinder can
+    retreat to earlier vendors immediately. ``max_z_via_stairs`` is
+    pre-banked so the policy doesn't think the agent was warp-skipped.
     """
     if seed is not None:
         _stdlib_random.seed(seed)
@@ -541,23 +550,26 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 spell_copy.is_identified = True
             pc.memorized_spells.append(spell_copy)
     elif race == 'human':
-        # Humans get one cantrip (Mind Touch) at character creation
-        # to match the "balanced between melee and magic" design.
-        # The cantrip sits unusable until INT crosses the human cast
-        # gate (INT > 15 -> max_mana > 0), then activates naturally
-        # via the existing memorized_spells flow. Single cantrip vs
-        # the elf's two preserves the magic gap. Dwarves get no
+        # Humans get two cantrips at character creation: Mind Touch (the
+        # damage cantrip from the original "balanced between melee and
+        # magic" design) AND Hold Monster (b403 -- the caster-survival
+        # opener that buys a free monster turn for a follow-up channeled
+        # spell). Both sit unusable until INT crosses the human cast
+        # gate (INT > 13 post-b382 -> max_mana > 0), then activate via
+        # the existing memorized_spells flow. Dwarves still get no
         # cantrip -- they're the dedicated melee race.
         from .items import SPELL_TEMPLATES as _ST
         import copy as _copy
+        wanted = {'mind touch', 'hold monster'}
         for spell in _ST:
-            if (getattr(spell, 'is_cantrip', False)
-                    and spell.name.lower() == 'mind touch'):
-                spell_copy = _copy.deepcopy(spell)
-                if hasattr(spell_copy, 'is_identified'):
-                    spell_copy.is_identified = True
-                pc.memorized_spells.append(spell_copy)
-                break
+            if not getattr(spell, 'is_cantrip', False):
+                continue
+            if spell.name.lower() not in wanted:
+                continue
+            spell_copy = _copy.deepcopy(spell)
+            if hasattr(spell_copy, 'is_identified'):
+                spell_copy.is_identified = True
+            pc.memorized_spells.append(spell_copy)
     if starter_pack:
         # Mirror Vendor(starting=True) inventory at vendor.py:94-130 --
         # what a real player walks out of the F1 starting shop with
@@ -692,8 +704,352 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         'vendors_sold_to': set(),
     }
 
-    _trigger_room_interaction(gs.player_character, gs.my_tower)
-    return PlaytestSession(fog_of_war=fog_of_war)
+    # Plant the character on a deeper start floor when requested. The
+    # helpers below assume gs.my_tower already has F1 generated (the
+    # add_floor call at line 479 above). They (a) generate F2..F<N>,
+    # (b) move pc to F<N>'s U tile, (c) flip discovered=True on every
+    # tile in F1..F<N-1> so the smart-policy wayfinder can retreat
+    # to earlier vendors immediately, and (d) plant level / stat-
+    # points / gear / gold scaled to depth (median-survivor profile
+    # per the AskUser choice). The PlaytestSession's max_z_via_stairs
+    # is set below so the retreat policy doesn't misread the plant as
+    # a warp-drop. _trigger_room_interaction is SKIPPED when planted
+    # deep -- standing on U would auto-fire stairs_up_mode on turn
+    # one, putting the agent in ascend-confirm before it can do
+    # anything else. The U tile stays underfoot; the smart-policy
+    # wayfinder will step off naturally on its first move.
+    if start_floor > 1:
+        _generate_floors_and_plant_at(pc, gs.my_tower, start_floor)
+        _plant_survivor_baseline(pc, start_floor)
+    else:
+        _trigger_room_interaction(gs.player_character, gs.my_tower)
+
+    session = PlaytestSession(fog_of_war=fog_of_war)
+    if start_floor > 1:
+        # 0-indexed; pc.z is start_floor - 1. Banking this prevents
+        # the smart-policy "retreat from warp-skipped depth" branch
+        # at playtest_harness.py:1168 from firing on turn one.
+        session.max_z_via_stairs = pc.z
+    return session
+
+
+def _generate_floors_and_plant_at(pc, tower, start_floor):
+    """Generate F2..F<start_floor> via the canonical floor-params
+    dict and place pc on F<start_floor>'s U tile. Mirrors the
+    handle_stairs_down placement contract. Caller is responsible for
+    NOT running _trigger_room_interaction afterwards (the U tile
+    would auto-fire stairs_up_mode).
+    """
+    target_z = start_floor - 1  # 0-indexed array slot
+    while len(tower.floors) <= target_z:
+        tower.add_floor(**gs.floor_params)
+    pc.z = target_z
+    floor = tower.floors[target_z]
+
+    placed = False
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            if floor.grid[r][c].room_type == 'U':
+                pc.x, pc.y = c, r
+                floor.grid[r][c].discovered = True
+                placed = True
+                break
+        if placed:
+            break
+    if not placed:
+        # No U on the target floor (very rare -- add_floor places one
+        # via the required_chars contract). Fall back to any '.' tile.
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                if floor.grid[r][c].room_type == '.':
+                    pc.x, pc.y = c, r
+                    floor.grid[r][c].discovered = True
+                    placed = True
+                    break
+            if placed:
+                break
+
+    # Pre-discover every tile on F1..F<start_floor-1>. The agent's
+    # wayfinder treats discovered tiles as eligible BFS nodes and
+    # undiscovered ones as fog. Retreating up the stairs from F<N>
+    # immediately gives the agent a fully mapped F<N-1>, so it can
+    # path straight to vendors / shrines without re-exploring.
+    for prior_z in range(target_z):
+        prior_floor = tower.floors[prior_z]
+        for r in range(prior_floor.rows):
+            for c in range(prior_floor.cols):
+                prior_floor.grid[r][c].discovered = True
+
+
+def _plant_survivor_baseline(pc, start_floor):
+    """Apply the median-F<N>-survivor stat / gear / gold profile.
+    Mirrors what the b389 sweep data shows real agents look like at
+    that depth: level ~start_floor-2, basic upgrades scaled to floor,
+    ~150g/floor pad, race-flavored stat-point spend.
+    """
+    target_level = max(1, start_floor - 2)
+    # gain_experience() levels up off `int(sqrt(experience) / 5)`.
+    # Granting (target_level * 5)**2 + 1 puts the player exactly one
+    # XP past the boundary, so the level resolves to target_level and
+    # the matching (level-1)//2 stat points land in unspent_stat_points.
+    target_xp = (target_level * 5) ** 2 + 1
+    pc.gain_experience(target_xp)
+
+    # Race-flavored stat-point spend. Mirrors the racial archetype:
+    # dwarf leans STR (with a DEX tap for dodge), elf leans INT (with
+    # DEX for cantrip-spam reaction), human spreads evenly.
+    race = (getattr(pc, 'race', 'human') or 'human').lower()
+    if race == 'dwarf':
+        bias = ('strength', 'strength', 'dexterity')
+    elif race == 'elf':
+        bias = ('intelligence', 'intelligence', 'dexterity')
+    else:
+        bias = ('strength', 'dexterity', 'intelligence')
+    for i in range(pc.unspent_stat_points):
+        stat = bias[i % len(bias)]
+        setattr(pc, stat, getattr(pc, stat) + 1)
+    pc.unspent_stat_points = 0
+
+    # Permanent stat-elixir pad: a real F<N> player would have found
+    # and used a handful of stat-boost elixirs along the way (Elixir
+    # of Strength / Dexterity / Intellect, Permanent Memorize, etc).
+    # +1 to each stat per 5 floors of depth -- F5 -> +1 each, F10
+    # -> +2, F15 -> +3, F20 -> +4. Stacked equally across STR/DEX/INT
+    # rather than racially because elixirs are race-agnostic drops.
+    # Critically, this pushes F15+ humans into casting range
+    # (default INT 10 -> 12 from race bias -> 15 from elixir pad)
+    # which lets the b387 memorize policy and the smart-policy heal-
+    # cast gate actually engage. Without it, humans at F12-F25 are
+    # locked out of spell content despite reaching the floor where
+    # vendors stock spell scrolls.
+    elixir_bonus = start_floor // 5
+    if elixir_bonus > 0:
+        for stat in ('strength', 'dexterity', 'intelligence'):
+            setattr(pc, stat, getattr(pc, stat) + elixir_bonus)
+
+    # Gear upgrades: +1 per 3 floors of depth (F4 -> +1, F7 -> +2,
+    # F10 -> +3, F13 -> +4). The starter Dagger/Battleaxe + Leather
+    # at +3 is consistent with what F10 survivors carry in the b389
+    # sweep (most haven't bought a new weapon but have hit two
+    # upgrade scrolls along the way).
+    upg = max(0, (start_floor - 1) // 3)
+    if pc.equipped_weapon is not None and upg > 0:
+        pc.equipped_weapon.upgrade_level = min(20, pc.equipped_weapon.upgrade_level + upg)
+    if pc.equipped_armor is not None and upg > 0:
+        pc.equipped_armor.upgrade_level = min(20, pc.equipped_armor.upgrade_level + upg)
+
+    # Gold pad: ~150g/floor net of accumulated stockpile spend.
+    pc.gold += (start_floor - 1) * 150
+
+    # Pre-memorized utility spells for caster builds. A F<N> caster
+    # would have learned a handful along the way from vendor spell-
+    # books and the b387 memorize policy; we plant them directly so
+    # the agent can cast from turn 1 without needing to find / buy /
+    # memorize first. Tier scales with depth, only spells the agent
+    # has slot capacity for are memorized (the get_max_memorized_spell_slots
+    # gate skips dwarves and low-INT humans cleanly).
+    _grant_memorized_spells(pc, start_floor)
+
+    # Refill HP / mana to the new max so the planted character isn't
+    # bleeding mid-encounter on turn one. max_health and max_mana are
+    # @property fields that pick up the level / stat / bonus deltas.
+    pc.health = pc.max_health
+    pc.mana = pc.max_mana
+
+    # Survivor inventory: items a real F<N> player would have looted /
+    # bought across the F1..F<N-1> stretch. Scales with depth so an F5
+    # plant gets bare essentials and an F20+ plant has the full kit.
+    # The b394 F15-plant sweep saw 12/90 starvation deaths because the
+    # Cooking Kit was pulled from the starter pack in b358 to make F3
+    # cooking a real decision -- but a F15 survivor would have bought
+    # one by F3, so granting it here matches the surveyed profile.
+    _grant_survivor_inventory(pc, start_floor)
+
+
+def _grant_memorized_spells(pc, start_floor):
+    """Pre-memorize utility spells for caster builds, scaled by depth.
+    No-op for non-casters (get_max_memorized_spell_slots() == 0) so
+    dwarves and low-INT humans pass through untouched."""
+    max_slots = pc.get_max_memorized_spell_slots()
+    if max_slots <= 0:
+        return  # cantrip-only race / stat profile
+
+    from .items import SPELL_TEMPLATES as _ST
+    import copy as _copy
+
+    by_name = {s.name: s for s in _ST}
+
+    # Tier list -- scales with depth. Each entry is (min_floor, name).
+    # Picks bias toward survival utility (Heal / Stone Skin) ahead of
+    # raw damage, since the smart-policy heal-cast gate is the highest-
+    # impact spell usage in the harness today.
+    tiers = [
+        # Healing ladder. Granted in tier order; the spell_casting_mode
+        # heal pick (b398) chooses the smallest heal >= deficit, so
+        # having Minor Heal + Heal + Greater Heal + Mass Heal lets the
+        # agent right-size every heal cast to the actual HP loss
+        # without overpaying mana.
+        (5, "Minor Heal"),       # L0, 1 slot, +15 HP
+        (8, "Heal"),             # L1, 2 slots, +25 HP
+        (18, "Greater Heal"),    # L2, 2 slots, +40 HP
+        (22, "Mass Heal"),       # L3, 3 slots, +60 HP
+        # Damage ladder. The spell_casting_mode damage pick (b398) uses
+        # strongest-affordable, so adding more tiers expands the
+        # mana-budget options without diluting selection -- the L2
+        # spells get picked when mana is high, L0 fallback when mana
+        # is depleted between fights.
+        (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
+        (13, "Fireball"),        # L1, 2 slots, 20 dmg fire
+        (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg wind
+        (20, "Flame Lance"),     # L2, 2 slots, 33 dmg fire
+        # b403/b404 caster defense suite -- moved ahead of buff/utility
+        # tier because the b403 deep audit showed the F25 caster slot
+        # cap (24) was exhausted by heals+damage+stone_skin before
+        # Mage Armor / Spectral Hand could be memorized, leaving them
+        # unused across all 18 audit seeds. New order grants the
+        # high-impact defensive layer first, drops Battle Hymn last
+        # since the smart-policy never picks offense buffs anyway.
+        (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns (stacks w/ Stone Skin)
+        (15, "Spectral Hand"),   # L2, 2 slots, absorb 3 hits / 8 turns
+        # Stone Skin -- burst +8 DEF for short tough fights. Stacks
+        # with Mage Armor since they have separate status_effect_name.
+        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
+        # Status cure. Surfaces a non-potion poison cleanse for deep
+        # floors where Cave Lizards / Cobras hit poison ticks.
+        (19, "Purify"),          # L1, 2 slots, cure poison
+        # Battle Hymn (offense buff) intentionally last -- audit on
+        # b398 showed it's never auto-cast by the policy because back-
+        # to-back buff turns burn more damage output than the +10 ATK
+        # window pays back over a 3-turn fight. Kept in the tier list
+        # for human/dwarf mages who'd cast it manually.
+        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
+    ]
+    used = pc.get_used_spell_slots()
+    for min_floor, name in tiers:
+        if start_floor < min_floor:
+            continue
+        spell = by_name.get(name)
+        if spell is None:
+            continue
+        cost = pc.get_spell_slots(spell)
+        if used + cost > max_slots:
+            continue
+        # Skip duplicates (the cantrip starter pack already memorizes
+        # Mind Touch by name, and re-running this on the same pc would
+        # otherwise stack).
+        if any(s.name == name for s in pc.memorized_spells):
+            continue
+        spell_copy = _copy.deepcopy(spell)
+        if hasattr(spell_copy, 'is_identified'):
+            spell_copy.is_identified = True
+        pc.memorized_spells.append(spell_copy)
+        used += cost
+
+
+def _grant_survivor_inventory(pc, start_floor):
+    """Plant inventory tiers, modelled on what a real F<N> player would
+    have accumulated. Items are stacked when possible to mirror the
+    inventory layout the smart-policy reads."""
+    from .items import (
+        Potion as _Potion, Scroll as _Scroll, Sausage as _Sausage,
+        CookingKit as _CK, CuringKit as _CuK, LanternFuel as _LF,
+    )
+
+    def _add(item):
+        pc.inventory.add_item_quiet(item)
+
+    # Always: cooking kit. F1 plants benefit too (raw meat -> 4x
+    # nutrition when cooked, otherwise raw is 1x and rots fast).
+    _add(_CK())
+
+    # Tier 1 (F5+): bag a real F5 survivor walks around with -- a few
+    # heals, identify scroll, extra fuel, a couple of cooked meats from
+    # past monster drops.
+    if start_floor >= 5:
+        _add(_Potion(name="Healing Potion", description="Restores 50 HP.",
+                     value=50, level=1, potion_type='healing',
+                     effect_magnitude=50, count=3))
+        _add(_Scroll(name="Scroll of Identify",
+                     description="Ancient runes of knowledge.",
+                     effect_description="Identifies one unidentified item.",
+                     value=50, level=0, scroll_type='identify', count=2))
+        for _ in range(3):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 2 (F8+): curing kit unlocks the sausage pipeline; greater
+    # heals, mapping scrolls, mana potions for casters.
+    if start_floor >= 8:
+        _add(_CuK())
+        _add(_Potion(name="Greater Healing Potion",
+                     description="Restores 80 HP.",
+                     value=80, level=3, potion_type='healing',
+                     effect_magnitude=80, count=2))
+        _add(_Scroll(name="Scroll of Mapping",
+                     description="Contains the essence of cartographic magic.",
+                     effect_description="Reveals the entire current floor layout.",
+                     value=120, level=2, scroll_type='mapping', count=1))
+        _add(_Potion(name="Mana Potion",
+                     description="Restores 50 MP.",
+                     value=50, level=1, potion_type='mana',
+                     effect_magnitude=50, count=3))
+        for _ in range(2):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 3 (F12+): protection scrolls, mid-tier heals, sausages
+    # (the player's been crafting them).
+    if start_floor >= 12:
+        _add(_Potion(name="Superior Healing Potion",
+                     description="Restores 120 HP.",
+                     value=120, level=5, potion_type='healing',
+                     effect_magnitude=120, count=2))
+        _add(_Scroll(name="Scroll of Protection",
+                     description="Glows with a protective aura.",
+                     effect_description="Grants +15 defense for 5 turns.",
+                     value=80, level=1, scroll_type='protection', count=2))
+        # Two bratwursts -- the entry-tier sausage from the meat
+        # cooking + Fire Root recipe. Pre-crafted so the planted agent
+        # has shelf-stable food without needing to retreat for the
+        # Curing Kit's recipe gate.
+        _add(_Sausage(name="Bratwurst",
+                      description="A coarse-ground German sausage.",
+                      value=30, level=1, nutrition=60,
+                      sausage_style="Bratwurst", count=2))
+
+    # Tier 4 (F15+): emergency-escape kit + master heals.
+    if start_floor >= 15:
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=2))
+        _add(_Scroll(name="Scroll of Restoration",
+                     description="Pulses with healing light.",
+                     effect_description="Fully restore HP and remove status effects.",
+                     value=200, level=3, scroll_type='restoration', count=1))
+        _add(_Scroll(name="Scroll of Teleportation",
+                     description="Space itself warps.",
+                     effect_description="Teleport to a random safe location on the floor.",
+                     value=100, level=2, scroll_type='teleport', count=1))
+        for _ in range(2):
+            _add(_LF("Lantern Fuel", "A small flask of oil for your lantern.",
+                     value=5, level=0, fuel_restore_amount=20))
+
+    # Tier 5 (F20+): late-game stash, fits a Magic-Shoppe-reaching
+    # survivor's bag.
+    if start_floor >= 20:
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=2))
+        _add(_Scroll(name="Scroll of Mapping",
+                     description="Contains the essence of cartographic magic.",
+                     effect_description="Reveals the entire current floor layout.",
+                     value=120, level=2, scroll_type='mapping', count=2))
+        _add(_Scroll(name="Scroll of Protection",
+                     description="Glows with a protective aura.",
+                     effect_description="Grants +15 defense for 5 turns.",
+                     value=80, level=1, scroll_type='protection', count=2))
 
 
 ACTION_HINTS = {
@@ -751,6 +1107,16 @@ class PlaytestSession:
         # earlier symmetric stair-island valve in build 318.
         self.osc_streak = 0
         self._last_osc_pair = None  # the (a, b) pair the streak is on
+        # Freeze detector: consecutive turns where (z,x,y,hp,kills) has
+        # not changed. The 2-tile oscillation detector needs >= 2 distinct
+        # positions in the window; this catches pure tile-freezing such
+        # as the lantern-loop wedge (period-1 'l' for 2162 turns on
+        # b394 seed=67 elf F16) where the position never updates because
+        # 'l' doesn't tick a game turn for hunger/spawns. The streak
+        # arms the wedge-break in smart_policy, which forces a non-
+        # frozen action once 30+ consecutive frozen turns accumulate.
+        self.freeze_streak = 0
+        self._prev_freeze_key = None
         # z-indexes of floors the agent escaped from via the stairs_up
         # osc-valve. Recorded the moment the policy issues 'u' to
         # break a 50-turn 2-tile wedge. stairs_down_mode reads this
@@ -1075,7 +1441,15 @@ class PlaytestSession:
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
                  "mana_cost": s.mana_cost, "level": s.level,
-                 "type": s.spell_type}
+                 "type": s.spell_type,
+                 # base_power is the spell's damage (for type=='damage')
+                 # or heal amount (for type=='healing'). Surfaced so the
+                 # smart-policy spell pick can choose strongest-affordable
+                 # instead of uniform-random across the affordable set
+                 # (pre-b398 a F25 elf with Lightning Bolt was casting
+                 # 6-dmg Mind Touch ~70% of fights because the rng.choice
+                 # gave the cheap cantrip equal weight with the L2 spell).
+                 "base_power": getattr(s, "base_power", 0) or 0}
                 for i, s in enumerate(pc.memorized_spells)
             ],
             # Spell inventory in insertion order (build 387). The
@@ -1095,6 +1469,7 @@ class PlaytestSession:
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "oscillation": self._oscillation_state(),
+            "freeze_streak": self.freeze_streak,
             "blocked_directions": sorted(self.blocked_directions),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
@@ -1206,7 +1581,15 @@ class PlaytestSession:
 
     def _monster_obs(self):
         m = gs.active_monster
-        if m is None or gs.prompt_cntl != "combat_mode":
+        # b404: surface active monster in BOTH combat_mode and
+        # spell_casting_mode so the spell-pick policy can check
+        # m_max_hp / is_held / is_paralyzed when deciding between
+        # Hold Monster, Spectral Hand, Stone Skin, and damage. Pre-
+        # b404 _monster_obs returned None outside combat_mode, so the
+        # spell_casting_mode tough_fight gate (m_max_hp >= 30% pc max)
+        # always evaluated False -- Hold Monster and Spectral Hand
+        # never fired across the b403 audit.
+        if m is None or gs.prompt_cntl not in ("combat_mode", "spell_casting_mode"):
             return None
         name = _strip_markup(m.name).strip()
         # Edibility check via items.get_monster_meat_info -- returns
@@ -1232,6 +1615,13 @@ class PlaytestSession:
             "max_hp": getattr(m, "max_health", m.health),
             "is_edible": meat_info is not None,
             "is_undead": is_undead,
+            # b403: surface monster status effects so the policy can
+            # detect Held / time_stop / paralysis and avoid wasting a
+            # cast on a monster that already can't act this turn.
+            "is_held": any(eff.effect_type == 'time_stop'
+                           for eff in m.status_effects.values()),
+            "is_paralyzed": any(eff.effect_type in ('paralysis', 'freeze')
+                                for eff in m.status_effects.values()),
         }
 
     def _inventory_obs(self):
@@ -2462,6 +2852,17 @@ class PlaytestSession:
         self.position_history.append(cur_xy)
         if len(self.position_history) > 16:
             self.position_history.pop(0)
+        # Freeze-streak update. The key combines position, HP, and per-
+        # floor kill count. Any movement, any HP delta (taking damage
+        # or healing), and any kill resets the streak -- those are all
+        # signs of real progress / world advancement.
+        freeze_key = (pc_after.z, pc_after.x, pc_after.y,
+                      pc_after.health, self.kills_on_floor)
+        if freeze_key == self._prev_freeze_key:
+            self.freeze_streak += 1
+        else:
+            self.freeze_streak = 0
+        self._prev_freeze_key = freeze_key
 
         return self.observe()
 
@@ -2683,6 +3084,68 @@ def smart_policy(obs, rng, use_lantern=True):
     inv = obs.get("inventory") or []
     spells = obs.get("memorized_spells") or []
 
+    # Wedge break: when the freeze detector OR the 2-tile oscillation
+    # detector has been tripping long enough that the existing per-mode
+    # escape valves clearly haven't resolved the loop, force a non-
+    # frozen action. Trigger conditions:
+    #   - freeze_streak >= 30 -- catches the lantern-loop wedge
+    #     (period-1 'l' for 2162T on b394 seed=67 elf F16) where pc.xy
+    #     never updates because 'l' doesn't tick a game turn, AND the
+    #     vendor-shop id<N> oscillation (b395 seed=223 dwarf F13 stuck
+    #     in vendor_shop sending 'id4' for 900+ turns because the
+    #     identify policy doesn't track tried-this-session items and
+    #     oscillates between id4 and id5 on two unidentified scrolls).
+    #   - oscillation.streak >= 60 in game_loop -- catches the 2-tile
+    #     saddle-point that recent_step_set + swap-if-backtrack and
+    #     the stairs_up 'u' valve all failed to resolve.
+    # Escape strategy depends on mode:
+    #   - movement modes (game_loop, stairs_up/down): random walkable
+    #     direction, falling through to recent then 'pass'.
+    #   - any other mode (vendor_shop, inventory, chest_mode, library,
+    #     altar, etc.): 'x' (back) to drop the agent into game_loop,
+    #     where the wayfinder can re-evaluate. 'x' is the standard
+    #     cancel/leave key across modes; if a mode doesn't accept 'x'
+    #     the dispatch falls through harmlessly (the unknown-action
+    #     log is captured but no turn is wasted on the wrong handler).
+    freeze_streak = obs.get("freeze_streak", 0)
+    osc_obs = obs.get("oscillation") or {}
+    osc_streak = osc_obs.get("streak", 0)
+    MOVE_MODES = ("game_loop", "stairs_up_mode", "stairs_down_mode")
+    wedge_trip = (
+        freeze_streak >= 30
+        or (osc_streak >= 60 and mode == "game_loop")
+    )
+    if wedge_trip and mode not in MOVE_MODES:
+        # Non-movement mode -- back out to game_loop.
+        return "x"
+    if wedge_trip:
+        neighbors_wb = obs.get("neighbors") or {}
+        blocked_wb = set(obs.get("blocked_directions") or [])
+        recent_steps_wb = set(obs.get("recent_step_set") or [])
+        # Tier 1: walkable known tile, not blocked, not recent
+        candidates_wb = []
+        for d in ("n", "s", "e", "w"):
+            if d in blocked_wb or d in recent_steps_wb:
+                continue
+            t = neighbors_wb.get(d)
+            if t in (None, "#"):
+                continue
+            candidates_wb.append(d)
+        if candidates_wb:
+            return rng.choice(candidates_wb)
+        # Tier 2: any walkable known tile, not blocked (allow recent --
+        # we are trying to escape)
+        for d in ("n", "s", "e", "w"):
+            if d in blocked_wb:
+                continue
+            t = neighbors_wb.get(d)
+            if t not in (None, "#"):
+                return d
+        # Tier 3: completely cornered -- pass to let world advance
+        # (monster steps adjacent, hunger ticks, status duration drops).
+        # 'pass' is a game_loop action; other modes treat it as a no-op.
+        return "pass"
+
     hp_pct = p["hp"] / max(1, p["max_hp"])
     hunger = p["hunger"]
     mana = p["mana"]
@@ -2744,7 +3207,18 @@ def smart_policy(obs, rng, use_lantern=True):
                             and s["mana_cost"] <= mana), None) if can_cast else None
     affordable_spells = ([s for s in spells if s["mana_cost"] <= mana]
                          if can_cast else [])
-    affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
+    # Damage spells with non-trivial impact. The min-power floor of 10
+    # keeps Mind Touch (6 dmg) out of the damage pick -- pre-b398 a
+    # F15 human with only Mind Touch cast it 538 times across the
+    # 8-seed F15 audit, eating combat turns on a 6-dmg spell instead
+    # of just swinging the equipped weapon (which hits for 12-20 at
+    # that level). Cantrip combat spells (Mind Touch, Hold Monster)
+    # are still available via affordable_spells for the
+    # spell_casting_mode fallback, but the combat-mode `c` trigger
+    # gates on affordable_dmg being non-empty so the agent will
+    # default to melee `a` when only Mind Touch is available.
+    affordable_dmg = [s for s in affordable_spells
+                      if s["type"] == "damage" and s["base_power"] >= 10]
 
     # Lantern state. With the omniscient nearest_features obs the agent
     # doesn't NEED to reveal tiles, but a real player would, and the
@@ -4854,6 +5328,31 @@ def smart_policy(obs, rng, use_lantern=True):
         if (monster_too_tough and not starving and not is_shrunk
                 and not no_escape_pocket):
             return "f"
+        # Pre-damage buff (Stone Skin only). Two-gate filter (b401):
+        # cast Stone Skin preemptively only when the fight will both
+        # (a) last long enough for the buff to pay off AND (b)
+        # actually matter for survival:
+        #   - m_level >= pc_level - 1: monster is parity-or-tougher.
+        #   - m_max_hp >= pc_max_hp * 0.30: short-fight prey filter.
+        #     A small-HP enemy dies in 1-2 alpha-strikes regardless
+        #     of Stone Skin, the 18 MP + 1-turn buff cost never pays
+        #     back.
+        # Pre-b401 experimental hp_pct < 0.75 gate (defer buff until
+        # already-hurt) regressed F15 elf survival 6/30 -> 1/30 across
+        # the 30-seed sweep: by the time the elf was at 75% HP, the
+        # monster had already landed the big hit Stone Skin would
+        # have prevented. Preemptive on turn 1 is correct; the over-
+        # firing fix is the m_max_hp prey filter, not deferral.
+        if (can_cast
+                and m_level >= pc_level - 1
+                and m_max_hp >= p["max_hp"] * 0.30
+                and "defense_boost" not in active_status_types):
+            stone_skin = next(
+                (s for s in affordable_spells if s["name"] == "Stone Skin"),
+                None,
+            )
+            if stone_skin:
+                return "c"
         # Damage spells beat melee: more damage per turn, no weapon
         # durability loss, scale with INT for casters. Mana regens at
         # 1/5 moves so casting freely between fights is sustainable.
@@ -5104,10 +5603,108 @@ def smart_policy(obs, rng, use_lantern=True):
         return "c"  # cornered; fight back
 
     if mode == "spell_casting_mode":
-        if hp_pct < 0.55 and heal_spell_slot:
-            return str(heal_spell_slot)
+        # b404: Priority order rewritten. The b403 audit showed Hold
+        # Monster / Mage Armor / Spectral Hand were never cast across
+        # 18 caster runs because Stone Skin was first in the cascade
+        # and always fired when defense_boost wasn't active. The new
+        # order layers the defensive suite from cheapest -> most
+        # expensive, with Hold Monster as the universal opener and
+        # heal as the emergency override:
+        #
+        #  1. Hold Monster (1 MP) -- opener, locks monster for next cast
+        #  2. Spectral Hand (14 MP) -- absorb 3 hits, fights >= 0.30 max_hp
+        #  3. Mage Armor (8 MP) -- long-duration cheap +6 DEF
+        #  4. Stone Skin (18 MP) -- burst +8 DEF / 4 turns
+        #  5. Emergency heal (HP < 55%)
+        #  6. Damage pick
+        #  7. Random fallback
+        #
+        # Each defensive layer skips if its named status is already
+        # active (no re-cast waste). Hold Monster also skips if the
+        # target is already held/paralyzed.
+
+        _m_obs = obs.get("monster") or {}
+        m_held = _m_obs.get("is_held") or False
+        m_paralyzed = _m_obs.get("is_paralyzed") or False
+        _m_max_hp = _m_obs.get("max_hp") or 0
+        _status_names = set(p.get("status_effects") or [])
+        tough_fight = _m_max_hp >= p["max_hp"] * 0.30
+
+        # 1. Hold Monster opener (1 MP, instant). Buys 2 monster turns
+        # of safety -- covers post-cast swing of NEXT spell + its
+        # channel-init swing. Classic D&D wizard buy-a-round trick.
+        if (affordable_dmg
+                and not m_held and not m_paralyzed
+                and tough_fight):
+            hold_monster = next(
+                (s for s in affordable_spells if s["name"] == "Hold Monster"),
+                None,
+            )
+            if hold_monster:
+                return str(hold_monster["slot"])
+
+        # 2. Spectral Hand (14 MP). Absorbs 3 enemy strikes; with F25
+        # Savage hitting ~80 raw, one cast removes ~240 dmg from the
+        # next sequence. Heavy upfront mana but pays back over 8 turns.
+        # Gate on tough_fight only -- small-prey fights die before the
+        # third hit lands.
+        if (tough_fight
+                and "Spectral Hand" not in _status_names):
+            spectral = next(
+                (s for s in affordable_spells if s["name"] == "Spectral Hand"),
+                None,
+            )
+            if spectral:
+                return str(spectral["slot"])
+
+        # 3. Mage Armor (8 MP). Cheap +6 DEF / 10 turns. Stacks with
+        # Stone Skin via separate status_effect_name. Gate on its own
+        # name (not defense_boost effect_type) so Stone Skin doesn't
+        # block it. 10-turn duration covers ~3 fights of out-of-combat
+        # transit, ideal as the "always-on" buff vs Stone Skin's burst.
+        if "Mage Armor" not in _status_names:
+            mage_armor = next(
+                (s for s in affordable_spells if s["name"] == "Mage Armor"),
+                None,
+            )
+            if mage_armor:
+                return str(mage_armor["slot"])
+
+        # 4. Stone Skin (18 MP, +8 DEF / 4 turns). The burst-buff
+        # layer on top of Mage Armor. Gate on its own name (so it can
+        # stack with Mage Armor). Filter to tough fights only since
+        # the burst window is short.
+        if (tough_fight
+                and "Stone Skin" not in _status_names):
+            stone_skin = next((s for s in affordable_spells
+                               if s["name"] == "Stone Skin"), None)
+            if stone_skin:
+                return str(stone_skin["slot"])
+
+        # 5. Emergency heal: choose the smallest heal that >= current
+        # HP deficit, falling back to the largest affordable heal if
+        # no single spell covers the deficit. Smallest-covering keeps
+        # the agent from spamming +60 Mass Heal at 30% HP when a +25
+        # Heal would top them off without overpaying mana.
+        if hp_pct < 0.55:
+            heals = [s for s in spells
+                     if s["type"] == "healing" and s["mana_cost"] <= mana]
+            if heals:
+                deficit = max(0, p["max_hp"] - p["hp"])
+                covering = [s for s in heals if s["base_power"] >= deficit]
+                if covering:
+                    pick = min(covering, key=lambda s: s["base_power"])
+                else:
+                    pick = max(heals, key=lambda s: s["base_power"])
+                return str(pick["slot"])
+
+        # 6. Damage pick: strongest base_power that fits mana.
         if affordable_dmg:
-            return str(rng.choice(affordable_dmg)["slot"])
+            pick = max(affordable_dmg,
+                       key=lambda s: (s["base_power"], -s["mana_cost"]))
+            return str(pick["slot"])
+
+        # 7. Random affordable spell fallback.
         if affordable_spells:
             return str(rng.choice(affordable_spells)["slot"])
         return "x"
@@ -5415,7 +6012,17 @@ def smart_policy(obs, rng, use_lantern=True):
                 if cat not in IDENT_TARGETS and not cat.startswith("potion"):
                     continue
                 proposed = f"id{entry['slot']}"
-                if obs.get("last_action") != proposed:
+                # Block any 'id<N>' last-action, not just the same slot.
+                # With 2+ unidentified items the prior `!= proposed`
+                # check oscillated id4 <-> id5 indefinitely (b395
+                # seed=223 dwarf F13 vendor_shop wedge -- 900+ turns
+                # alternating id4 and id5 because each iteration only
+                # blocked the same slot as last_action). Treating any
+                # id<N> last_action as 'already tried this visit'
+                # forces the loop to fall through to 'x' (leave) after
+                # one identify attempt per vendor visit.
+                last_action = obs.get("last_action") or ""
+                if not last_action.startswith("id"):
                     return proposed
 
         return "x"
@@ -6423,6 +7030,13 @@ def main(argv=None):
                         help="Disable fog-of-war in obs (agent sees the full "
                              "floor regardless of `discovered`). Useful for "
                              "isolating upstream balance from navigation.")
+    parser.add_argument("--start-floor", type=int, default=1,
+                        help="Plant the character on F<N> with a median-"
+                             "survivor profile (level N-2, basic gear "
+                             "upgrades, gold pad). Floors 1..N-1 are "
+                             "pre-discovered so retreat for vendors works. "
+                             "Useful for iterating on mid/late-floor "
+                             "mechanics without waiting for F1-F5 mortality.")
     parser.add_argument("--report-dir", default=None,
                         help="Write a per-run HTML report (and JSON sidecar) "
                              "to this directory. The report covers the hero, "
@@ -6447,7 +7061,8 @@ def main(argv=None):
                     name=args.name, race=args.race,
                     starter_pack=not args.no_starter_pack,
                     fog_of_war=not args.no_fog,
-                    int_bonus=args.int_bonus, spells=spells)
+                    int_bonus=args.int_bonus, spells=spells,
+                    start_floor=args.start_floor)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
 

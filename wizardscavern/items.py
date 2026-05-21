@@ -3358,22 +3358,52 @@ def process_hunger(character):
 
 
 def process_mana_regen(character):
-    """Out-of-combat mana regen: 1 MP per 5 moves while not starving.
+    """Out-of-combat mana regen, race + INT scaled.
 
-    Called from move_player only -- combat handlers don't invoke it, so the
-    'out of combat' gate is free. Silent (no log) by design: passive tick.
-    Starving players (hunger == 0) get no regen to avoid edge-case healing
-    via Minor Heal after the hunger tick zeroes them out.
+    Called from move_player only -- combat handlers don't invoke it, so
+    the 'out of combat' gate is free. Silent (no log) by design: passive
+    tick. Starving players (hunger == 0) get no regen to avoid edge-case
+    healing via Minor Heal after the hunger tick zeroes them out.
+
+    Race-flavored tick interval reflects the magical aptitude curve:
+      elf   -> 1 tick / 2 moves   (innately attuned to magic)
+      human -> 1 tick / 3 moves   (mid-tier caster)
+      dwarf -> 1 tick / 5 moves   (unchanged -- magic is hard for them)
+    Per-tick MP scales with intelligence: +1 MP per tick for every 4
+    points of INT above 16. A high-INT elf (INT 24) gains 3 MP per
+    tick every 2 moves -- enough to recover one Stone Skin + one
+    Lightning Bolt across a 30-move room transit.
+
+    Pre-b399 a uniform 1 MP / 5 moves left F25 elves (max_mana ~237)
+    unable to keep up with the deep-content cast budget: a Stone Skin
+    (18) + Flame Lance (17) + Mass Heal (30) fight burned 65 MP, the
+    transit to the next room covered ~15 moves -> 3 MP recovered,
+    next fight only afforded one spell. The new curve gives the
+    same elf 3 MP * (15//2) = 21 MP recovered per transit, sustaining
+    full caster output across a long session.
     """
     if character.max_mana <= 0 or character.mana >= character.max_mana:
         character.mana_regen_tracker = 0
         return
     if character.hunger <= 0:
         return
+    race = (getattr(character, 'race', 'human') or 'human').lower()
+    if race == 'elf':
+        interval = 2
+    elif race == 'dwarf':
+        interval = 5
+    else:  # human + fallback
+        interval = 3
     tracker = getattr(character, 'mana_regen_tracker', 0) + 1
-    if tracker >= 5:
+    if tracker >= interval:
         character.mana_regen_tracker = 0
-        character.mana = min(character.max_mana, character.mana + 1)
+        # INT bonus: high-INT casters tick harder. Bonus floor of 0
+        # means a fresh-cast elf at INT 12 still gets exactly 1 MP /
+        # 2 moves -- the same baseline as before scaled by race, but
+        # no INT-investment bonus until they cross 20.
+        int_bonus = max(0, (character.intelligence - 16) // 4)
+        gain = 1 + int_bonus
+        character.mana = min(character.max_mana, character.mana + gain)
     else:
         character.mana_regen_tracker = tracker
 
@@ -3699,7 +3729,7 @@ SPELL_TEMPLATES = [
     # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
     Spell(name="Detect Monster", description="Reveals the name, level, and location of any monsters in a 3x3 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='detect_monster', is_cantrip=True),
     Spell(name="Light", description="A floating sphere of magelight reveals the dungeon in a 5x5 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='reveal_fog', is_cantrip=True),
-    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- enough to flee, or to land a free attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
+    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- long enough to slip past the counter-attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
     Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
     Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
@@ -3718,6 +3748,13 @@ SPELL_TEMPLATES = [
     Spell(name="Mind Spike", description="A sharp psionic attack.", mana_cost=13, damage_type='Psionic', base_power=24, level=1),
     Spell(name="Purify", description="Cleanses poison from the caster.", mana_cost=15, level=1, spell_type='remove_status', status_effect_name='Poison'),
     Spell(name="Cure Weakness", description="Restores strength and vigor.", mana_cost=12, level=1, spell_type='add_status_effect', status_effect_name='Vigor', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=5),
+    # b403/b405: Mage Armor -- L1 defensive buff. Toned down b405:
+    # b404 sweep showed Mage Armor + Stone Skin stacking gave +14 DEF
+    # which neutered F25 monsters too hard. New profile: +4 DEF / 6
+    # turns at unchanged 8 MP. Still cheaper-per-DEF-turn than Stone
+    # Skin (4 DEF * 6t / 8 MP = 3 vs Stone Skin 8*4/18 = 1.78) but
+    # the burst Stone Skin remains the bigger buff per cast.
+    Spell(name="Mage Armor", description="Conjures a shimmering field of force around the caster.", mana_cost=8, level=1, spell_type='add_status_effect', status_effect_name='Mage Armor', status_effect_duration=6, status_effect_type='defense_boost', status_effect_magnitude=4),
 
     # ===== LEVEL 2 SPELLS (2 slots each) - Advanced =====
     Spell(name="Thunder Clap", description="A concussive wave of sound.", mana_cost=15, damage_type='Physical', base_power=30, level=2),
@@ -3726,6 +3763,14 @@ SPELL_TEMPLATES = [
     Spell(name="Freedom", description="Removes the web effect from the caster.", mana_cost=18, level=2, spell_type='remove_status', status_effect_name='Web'),
     Spell(name="Battle Hymn", description="Inspires the caster with increased attack for a short time.", mana_cost=20, level=2, spell_type='add_status_effect', status_effect_name='Inspired', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=10),
     Spell(name="Stone Skin", description="Hardens your skin like stone.", mana_cost=18, level=2, spell_type='add_status_effect', status_effect_name='Stone Skin', status_effect_duration=4, status_effect_type='defense_boost', status_effect_magnitude=8),
+    # b405: Spectral Hand toned down from 3-absorb / 8-turn / 14 MP
+    # because b404 sweep showed F25 elf/human at 70-80% survival vs
+    # dwarf at 27% -- caster suite over-corrected. New profile is a
+    # single-absorb insurance card with shorter window and higher
+    # mana cost. magnitude=1 = one hit absorbed before fade; duration=4
+    # gives ~2 fights worth of coverage; cost 16 MP makes it a real
+    # mana investment that competes with damage spells.
+    Spell(name="Spectral Hand", description="Conjures a ghostly hand that interposes itself, absorbing the next enemy strike.", mana_cost=16, level=2, spell_type='add_status_effect', status_effect_name='Spectral Hand', status_effect_duration=4, status_effect_type='hit_absorb', status_effect_magnitude=1),
     Spell(name="Flame Lance", description="A concentrated spear of flame.", mana_cost=17, damage_type='Fire', base_power=33, level=2),
     Spell(name="Lightning Bolt", description="A powerful bolt of electricity.", mana_cost=16, damage_type='Wind', base_power=31, level=2),
     Spell(name="Greater Heal", description="Restores a moderate amount of health.", mana_cost=18, damage_type='Healing', base_power=40, level=2, spell_type='healing'),

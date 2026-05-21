@@ -313,8 +313,17 @@ def process_altar_action(player_character, my_tower, cmd):
 
         elif god_id == 7:  # The Void: +2 max MP if max_mana > 0, else fill hunger
             if player_character.max_mana > 0:
-                player_character.base_max_health_bonus  # no-op; we modify mana via _max_mana
-                player_character._max_mana = (player_character._max_mana or player_character.max_mana) + 2
+                # max_mana is an @property -- there is no `_max_mana`
+                # attribute on Character (the prior code's "no-op; we
+                # modify mana via _max_mana" comment was wrong). Reading
+                # `player_character._max_mana` raised AttributeError,
+                # which was swallowed silently, and the +2 max MP
+                # passive was never applied. Mirrors the b385 Potion.use
+                # fix and the shrine-prayer fix at room_actions.py:3122.
+                # Route through `base_max_mana_bonus`, which the
+                # property folds into max_mana, then refill into the
+                # new ceiling.
+                player_character.base_max_mana_bonus += 2
                 player_character.mana = min(player_character.max_mana, player_character.mana + 2)
                 add_log(f"{COLOR_GREEN}The Void grants +2 max MP.{COLOR_RESET}")
             else:
@@ -356,7 +365,10 @@ def process_altar_action(player_character, my_tower, cmd):
                 _restore_hunger_pct(player_character, 1.00)
                 player_character.status_effects.clear()
                 player_character.base_max_health_bonus += 10
-                player_character._max_mana = (player_character._max_mana or player_character.max_mana) + 10
+                # Same _max_mana AttributeError as the Void sacrifice
+                # path above -- the +10 max MP never actually applied
+                # at Solara T3, even though the log line claimed it did.
+                player_character.base_max_mana_bonus += 10
                 player_character.health = player_character.max_health
                 player_character.mana = player_character.max_mana
                 add_log(f"{COLOR_GREEN}Full restore, status cleared, +10 max HP, +10 max MP.{COLOR_RESET}")
@@ -2544,14 +2556,26 @@ def process_garden_action(player_character, my_tower, cmd):
 
         # Determine loot table based on garden type
         if is_fey_garden:
-            # Fey Garden Loot (Rare/Exotic)
+            # Fey Garden Loot (Rare/Exotic). The prior inline tuple
+            # shape was `(name, effect_type, magnitude, value, desc)`
+            # but the Ingredient constructor at line 2603 below reads
+            # `description=item_data[1], value=item_data[2],
+            # level=item_data[3]` -- the canonical garden shape
+            # `(name, desc, value, level, chance)`. Pre-fix every fey
+            # ingredient had description="mana_boost" (effect_type),
+            # value=magnitude (1-3 gold, ~free), level=value (15-50,
+            # absurdly out-of-tier for an F5-rare drop). The
+            # `effect_type` strings ('mana_boost' / 'stealth_boost' /
+            # etc.) never did anything either -- Ingredient is just a
+            # crafting material with no effect dispatch. Restored to
+            # the canonical 5-tuple shape; effect_type field dropped.
             loot_table = [
-                ('Moonbell Flower', 'mana_boost', 2, 25, 'Glows with soft lunar light'),
-                ('Starshade Root', 'stealth_boost', 3, 40, 'Shadows cling to it'),
-                ('Sunfire Petal', 'strength_boost', 1, 30, 'Warm to the touch'),
-                ('Voidshroom', 'magic_resist', 2, 50, 'Absorbs light around it'),
-                ('Fey Grace', 'defense_boost', 3, 15, 'Protected by fey spirits'),
-                ('Time Blossom', 'speed_boost', 2, 35, 'Petals fall in slow motion')
+                ('Moonbell Flower', 'Glows with soft lunar light.', 25, 5, 0.20),
+                ('Starshade Root',  'Shadows cling to it.',         40, 6, 0.15),
+                ('Sunfire Petal',   'Warm to the touch.',           30, 5, 0.20),
+                ('Voidshroom',      'Absorbs light around it.',     50, 7, 0.10),
+                ('Fey Grace',       'Protected by fey spirits.',    15, 5, 0.20),
+                ('Time Blossom',    'Petals fall in slow motion.',  35, 6, 0.15),
             ]
             add_log(f"{COLOR_CYAN}You carefully harvest the otherworldly flora...{COLOR_RESET}")
         elif is_bug_garden:

@@ -455,8 +455,19 @@ class Tower:
             if not is_bug_level and generate_vault_on_floor(new_floor, len(self.floors)):
                 add_log(f"{COLOR_PURPLE}A hidden vault chamber has been carved into this floor...{COLOR_RESET}")
 
-            # Setup special room mechanics for dungeons and tombs
-            self.setup_dungeons_and_tombs(new_floor, len(self.floors))
+            # Setup special room mechanics for dungeons and tombs.
+            # Pass the 1-indexed `floor_number` (defined at the top of
+            # add_floor as `len(self.floors) + 1`) -- NOT
+            # `len(self.floors)`. The floor hasn't been appended yet
+            # (append is at the end of this method), so
+            # `len(self.floors)` is one less than the player-visible
+            # floor. The b391 tomb_elite cap reads this arg and
+            # compares `floor_number >= 5`; the off-by-one made the cap
+            # over-correct, suppressing elite spawns on F5 too. Other
+            # branches in this method (bug-level checks at lines
+            # 450/452) already use the 1-indexed variable, this site
+            # was the lone holdout.
+            self.setup_dungeons_and_tombs(new_floor, floor_number)
 
             # Spawn puzzle room on ~50% of floors (Zotle)
             if gs.zotle_puzzle is not None and should_spawn_puzzle_room(len(self.floors), gs.zotle_puzzle):
@@ -684,8 +695,22 @@ class Tower:
                         )
                         placed.append(adj_room)
             if placed:
-                elite = random.choice(placed)
-                elite.properties['tomb_elite'] = True
+                # Hard floor cap on tomb_elite (b391): tombs on F1-F4
+                # still get their floor-leveled undead guardians (1-4
+                # per tomb, however many adjacent '.' tiles convert),
+                # but no +1-level 1.3x-stat elite. The b389 death-cause
+                # sweep attributed 3/17 deaths to ELITE UNDEAD WRAITH /
+                # SPECTER at F2-F5 (32 atk * 1.3 = 41 raw vs L3 player
+                # def~5 HP~50 = 2-round kill). Smart-policy flee + b390
+                # T-tile avoid help, but the parting blow on tight
+                # floors finishes under-levelled agents anyway. Cap at
+                # floor>=5 (b393 fix: was an off-by-one cap that also
+                # zero'd F5) removes the early death trap at spawn
+                # time -- by F5 the player has ~60-80 HP and Stone Skin
+                # / +DEF gear in reach.
+                if floor_number >= 5:
+                    elite = random.choice(placed)
+                    elite.properties['tomb_elite'] = True
 
     def _should_create_bug_level(self, floor_number):
         """Determine if this floor should be a bug level.

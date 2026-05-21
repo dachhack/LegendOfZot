@@ -75,9 +75,18 @@ def get_spell_charge_turns(spell):
 
 
 def concentration_check(player_character, damage_taken):
-    """Roll a concentration check: d20 + INT//4 vs DC (damage_taken // 2, min 5).
-    Returns (passed, raw_roll, modifier, total, dc)."""
-    modifier = player_character.intelligence // 4
+    """Roll a concentration check: d20 + INT//4 + DEX//4 vs DC (damage_taken // 2, min 5).
+    Returns (passed, raw_roll, modifier, total, dc).
+
+    b403: added DEX//4 to the modifier. Pre-b403 the check used INT
+    only, so the duelist-mage build (INT/DEX hybrid pushed by the b399
+    mana regen + b402 quick-cast features) had no edge on concentration.
+    DEX is the natural caster defense stat -- nimble reflexes keep the
+    spell focused under fire. Net effect on F25 elf (INT 25, DEX 20):
+    modifier 6 -> 11, success rate on a typical 40-dmg-hit DC 20 check
+    climbs from 0.30 to 0.55. Helps the channeled L2-L3 endgame spells
+    that the agent commits mana to actually fire instead of fizzling."""
+    modifier = (player_character.intelligence // 4) + (player_character.dexterity // 4)
     dc = max(5, damage_taken // 2)
     raw_roll = random.randint(1, 20)
     total = raw_roll + modifier
@@ -128,8 +137,23 @@ def _execute_charged_spell(player_character):
 
     target = gs.active_monster
 
+    # b400: layer an additive INT-scaling bonus on top of the existing
+    # per-level int_bonus formula. The pre-b400 scaling
+    # `INT // 2 + max(0, INT-10) * spell.level // 3` already gave
+    # high-INT casters meaningful damage bumps on high-level spells
+    # (Lightning Bolt L2 at INT 25 gained +22 over base_power 31), but
+    # cantrips and L0 spells barely scaled (Mind Touch base 6 + INT // 2
+    # = 6 + 12 = 18 at INT 25, only 3x base). The new layer adds a
+    # flat per-2-INT-above-15 bonus that benefits every spell tier
+    # equally, so an INT-invested caster sees a 8-10% damage uplift
+    # across the whole spellbook -- reward for stat investment that
+    # doesn't disproportionately scale boss-killer L2-L3 spells.
+    int_scaling_bonus = max(0, (player_character.intelligence - 15) // 2)
+
     if spell.spell_type == 'healing':
-        healing_amount = spell.base_power + (player_character.intelligence // 2)
+        healing_amount = (spell.base_power
+                          + (player_character.intelligence // 2)
+                          + int_scaling_bonus)
         player_character.health += healing_amount
         if player_character.health > player_character.max_health:
             player_character.health = player_character.max_health
@@ -138,7 +162,7 @@ def _execute_charged_spell(player_character):
         return True
     elif spell.spell_type == 'damage':
         int_bonus = (player_character.intelligence // 2) + (max(0, player_character.intelligence - 10) * spell.level // 3)
-        base_damage = spell.base_power + int_bonus
+        base_damage = spell.base_power + int_bonus + int_scaling_bonus
         effective_damage = base_damage
         if spell.damage_type != 'Physical':
             if spell.damage_type in target.elemental_weakness:
@@ -959,14 +983,24 @@ def process_combat_action(player_character, my_tower, cmd):
                     # picks it up, then heal/refill into the new
                     # ceiling. Surfaced by the playtester catching
                     # the same bug in room_actions.py shrine prayer.
+                    # Character stores base attack/defense as
+                    # `_base_attack` / `_base_defense` (private); `.attack`
+                    # and `.defense` are computed @property. Reading
+                    # `.base_attack` / `.base_defense` raises AttributeError
+                    # -- same bug class as the b385 Potion.use() fix.
+                    # Pre-fix: the lambda crashed on the read, was likely
+                    # swallowed by a higher try/except, and the Shard of
+                    # Battle / Shard of Eternity passive was never applied
+                    # (player got the shard but the +3 atk / +5 def never
+                    # took effect). Route through the private name.
                     shard_bonuses = {
-                        'battle': ('Attack +3', lambda: setattr(player_character, 'base_attack', player_character.base_attack + 3)),
+                        'battle': ('Attack +3', lambda: setattr(player_character, '_base_attack', player_character._base_attack + 3)),
                         'treasure': ('Gold drops +10%', None),  # Implemented in gold calculation
                         'devotion': ('Max HP +20', lambda: (setattr(player_character, 'base_max_health_bonus', player_character.base_max_health_bonus + 20), setattr(player_character, 'health', player_character.health + 20))),
                         'reflection': ('Max Mana +20', lambda: (setattr(player_character, 'base_max_mana_bonus', player_character.base_max_mana_bonus + 20), setattr(player_character, 'mana', player_character.mana + 20))),
                         'knowledge': ('Spell costs -20%', None),  # Implemented in spell casting
                         'secrets': ('Reveal hidden rooms', None),  # Special ability
-                        'eternity': ('Defense +5', lambda: setattr(player_character, 'base_defense', player_character.base_defense + 5)),
+                        'eternity': ('Defense +5', lambda: setattr(player_character, '_base_defense', player_character._base_defense + 5)),
                         'growth': ('Potion effects +2 turns', None)  # Implemented in potion use
                     }
 
@@ -1703,8 +1737,38 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_PURPLE}You begin channeling {chosen_spell.name}! ({charge_turns} turn{'s' if charge_turns > 1 else ''} remaining){COLOR_RESET}")
                 add_log(f"{COLOR_CYAN}Mana spent: {actual_cost}. Remaining: {player_character.mana}.{COLOR_RESET}")
 
-                # Monster attacks during the channeling initiation turn
-                damage_taken = _monster_attack_during_channeling(player_character)
+                # Monster attacks during the channeling initiation turn.
+                # b402: high-INT casters can occasionally slip the spell
+                # off without the monster reacting -- the "Quick Cast"
+                # arcane-reflex feature. Death diagnostic on b401 found
+                # 15/30 F25 elf deaths happened in spell_casting_mode
+                # because each L2-L3 cast = 2 turns of monster damage
+                # (channel init + channel complete, ~80 dmg each at F25);
+                # casters were burning 240+ raw across a 3-spell sequence
+                # against monsters they couldn't reliably kill. Quick
+                # Cast skips the channel-init swing on a dice roll
+                # scaling with INT investment: (INT-17)*4%, capped 50%.
+                # INT 18:4% / 20:12% / 22:20% / 25:32% / 28:44%. The
+                # channel-complete swing (post-spell-fires) is left
+                # intact so the monster still gets a counter-action --
+                # quick-cast only buys back the channeling "lock-in"
+                # period, not the whole exchange.
+                # b403: cast_speed_bonus (Hourglass Talisman, +20%)
+                # stacks additively on top of the INT-scaled base.
+                # Cap raised 50 -> 75 so a full caster build
+                # (INT 25 + Talisman = 52%) can stretch toward 70%+
+                # with future relic gear.
+                quick_cast_chance = min(
+                    75,
+                    max(0, (player_character.intelligence - 17) * 4)
+                    + getattr(player_character, 'cast_speed_bonus', 0),
+                )
+                if random.randint(1, 100) <= quick_cast_chance:
+                    add_log(f"{COLOR_PURPLE}[Quick Cast] Your arcane reflexes finish the spell instantly -- the {gs.active_monster.name if gs.active_monster else 'enemy'} doesn't react in time.{COLOR_RESET}")
+                    damage_taken = 0
+                    gs.game_stats['quick_casts'] = gs.game_stats.get('quick_casts', 0) + 1
+                else:
+                    damage_taken = _monster_attack_during_channeling(player_character)
 
                 if not player_character.is_alive():
                     add_log(f"{COLOR_RED}You were defeated while channeling...{COLOR_RESET}")
@@ -1813,12 +1877,27 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     return  # Combat ended
 
                 elif gs.active_monster and gs.active_monster.is_alive():  # Monster still alive, it attacks back
-                    gs.active_monster.attack_target(player_character)
+                    # b403 Hold Monster fix: respect time_stop on the
+                    # post-instant-cast monster swing. Pre-b403 the
+                    # Hold Monster cantrip was broken -- it applied
+                    # time_stop but every monster-attack callsite
+                    # checked it EXCEPT this one, so the freeze meant
+                    # nothing on instant casts. Now Hold Monster (L0
+                    # cantrip, 1 MP) actually buys a free turn for the
+                    # follow-up L2 cast.
+                    monster_frozen = any(
+                        e.effect_type == 'time_stop'
+                        for e in gs.active_monster.status_effects.values()
+                    )
+                    if monster_frozen:
+                        add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time -- no counter-attack!{COLOR_RESET}")
+                    else:
+                        gs.active_monster.attack_target(player_character)
 
-                    if not player_character.is_alive():
-                        add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
-                        gs.prompt_cntl = "death_screen"
-                        return  # Game Over
+                        if not player_character.is_alive():
+                            add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
+                            gs.prompt_cntl = "death_screen"
+                            return  # Game Over
 
                 # If combat continues, return to combat mode; if we were
                 # casting utility magic (Detect/Light cantrips) outside
