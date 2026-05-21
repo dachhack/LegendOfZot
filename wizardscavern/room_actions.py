@@ -2545,8 +2545,34 @@ def process_garden_action(player_character, my_tower, cmd):
         has_world_tree = room.properties.get('has_world_tree', False)
 
         if has_world_tree and not gs.runes_obtained['growth']:
-            # ... (Existing World Tree logic remains unchanged) ...
-            pass  # (Keep your existing World Tree code block here if modifying manually)
+            # b410: World Tree harvest awards the Rune of Growth.
+            # Pattern mirrors the Codex (Rune of Knowledge) at line
+            # 1589 and the Champion (Rune of Battle) at combat.py:958.
+            # Without this the growth path was a literal `pass` stub
+            # and the 8-shard quest could never complete -- F50 boss
+            # arena was unreachable.
+            rune = Rune(
+                name="Rune of Growth",
+                rune_type='growth',
+                description="A verdant rune entwined with living roots. Unlocks the Growth Shard vault.",
+                value=0,
+                level=0,
+            )
+            player_character.inventory.add_item(rune)
+            gs.runes_obtained['growth'] = True
+            gs.world_tree_available = False
+            add_log("")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}* THE RUNE OF GROWTH IS YOURS! *{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}The World Tree's sapling dissolves into a glowing rune, its primordial energy yours.{COLOR_RESET}")
+            add_log("")
+            gs.harvested_gardens[coords] = True
+            current_floor = my_tower.floors[player_character.z]
+            current_room = current_floor.grid[player_character.y][player_character.x]
+            current_room.room_type = '.'
+            gs.prompt_cntl = "game_loop"
+            return
 
         # Standard Harvest Logic
         if coords in gs.harvested_gardens:
@@ -2631,6 +2657,21 @@ def process_garden_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_PURPLE}[Dwarven Instinct] A rare Ghost Pepper hides in the soil!{COLOR_RESET}")
 
         gs.harvested_gardens[coords] = True
+
+        # b410: track garden harvests toward the Rune of Growth. The
+        # quest design (game_state.py:345) expects 75 harvested gardens
+        # to unlock the World Tree spawn (game_systems.py:2479). Before
+        # this fix the counter was never incremented and world_tree_available
+        # never flipped, so the growth path was a permanent dead end and
+        # the 8-shard gate to F50 couldn't be opened.
+        if not gs.runes_obtained['growth']:
+            gs.rune_progress['gardens_harvested_total'] += 1
+            if (gs.rune_progress['gardens_harvested_total']
+                    >= gs.rune_progress_reqs['gardens_harvested_total']
+                    and not gs.world_tree_available):
+                gs.world_tree_available = True
+                add_log(f"{COLOR_PURPLE}The earth stirs... A primordial sapling has taken root somewhere below.{COLOR_RESET}")
+                add_log(f"{COLOR_PURPLE}Seek a garden room to find the World Tree and claim the Rune of Growth.{COLOR_RESET}")
 
         # Track fey garden floors so they don't respawn
         if is_fey_garden:
