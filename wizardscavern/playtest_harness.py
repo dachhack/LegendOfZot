@@ -5303,20 +5303,24 @@ def smart_policy(obs, rng, use_lantern=True):
         if (monster_too_tough and not starving and not is_shrunk
                 and not no_escape_pocket):
             return "f"
-        # Pre-damage buff (Stone Skin only). Gate: monster level must
-        # be within parity range (m_level >= pc_level - 1) so we don't
-        # waste a turn buffing trivial fights, AND defense_boost must
-        # not already be active. Stone Skin lasts 4 turns vs typical
-        # 2-4 turn fights, so the buff usually carries the whole fight.
-        # Battle Hymn is intentionally NOT triggered here -- audit on
-        # b398-rc1 showed back-to-back buffs (Stone Skin -> Battle Hymn)
-        # ate 2 turns of damage output for fights that lasted 3 turns,
-        # netting one buffed damage cast at the cost of 36 MP and 2
-        # rounds of monster swings. Pure offense beats offense+defense
-        # buff for short fights; only the defensive buff is worth the
-        # 1-turn investment because it pays back even on a 2-turn fight.
+        # Pre-damage buff (Stone Skin only). Two-gate filter (b401):
+        # cast Stone Skin preemptively only when the fight will both
+        # (a) last long enough for the buff to pay off AND (b)
+        # actually matter for survival:
+        #   - m_level >= pc_level - 1: monster is parity-or-tougher.
+        #   - m_max_hp >= pc_max_hp * 0.30: short-fight prey filter.
+        #     A small-HP enemy dies in 1-2 alpha-strikes regardless
+        #     of Stone Skin, the 18 MP + 1-turn buff cost never pays
+        #     back.
+        # Pre-b401 experimental hp_pct < 0.75 gate (defer buff until
+        # already-hurt) regressed F15 elf survival 6/30 -> 1/30 across
+        # the 30-seed sweep: by the time the elf was at 75% HP, the
+        # monster had already landed the big hit Stone Skin would
+        # have prevented. Preemptive on turn 1 is correct; the over-
+        # firing fix is the m_max_hp prey filter, not deferral.
         if (can_cast
                 and m_level >= pc_level - 1
+                and m_max_hp >= p["max_hp"] * 0.30
                 and "defense_boost" not in active_status_types):
             stone_skin = next(
                 (s for s in affordable_spells if s["name"] == "Stone Skin"),
