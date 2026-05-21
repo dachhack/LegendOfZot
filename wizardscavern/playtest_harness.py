@@ -807,6 +807,23 @@ def _plant_survivor_baseline(pc, start_floor):
         setattr(pc, stat, getattr(pc, stat) + 1)
     pc.unspent_stat_points = 0
 
+    # Permanent stat-elixir pad: a real F<N> player would have found
+    # and used a handful of stat-boost elixirs along the way (Elixir
+    # of Strength / Dexterity / Intellect, Permanent Memorize, etc).
+    # +1 to each stat per 5 floors of depth -- F5 -> +1 each, F10
+    # -> +2, F15 -> +3, F20 -> +4. Stacked equally across STR/DEX/INT
+    # rather than racially because elixirs are race-agnostic drops.
+    # Critically, this pushes F15+ humans into casting range
+    # (default INT 10 -> 12 from race bias -> 15 from elixir pad)
+    # which lets the b387 memorize policy and the smart-policy heal-
+    # cast gate actually engage. Without it, humans at F12-F25 are
+    # locked out of spell content despite reaching the floor where
+    # vendors stock spell scrolls.
+    elixir_bonus = start_floor // 5
+    if elixir_bonus > 0:
+        for stat in ('strength', 'dexterity', 'intelligence'):
+            setattr(pc, stat, getattr(pc, stat) + elixir_bonus)
+
     # Gear upgrades: +1 per 3 floors of depth (F4 -> +1, F7 -> +2,
     # F10 -> +3, F13 -> +4). The starter Dagger/Battleaxe + Leather
     # at +3 is consistent with what F10 survivors carry in the b389
@@ -820,6 +837,15 @@ def _plant_survivor_baseline(pc, start_floor):
 
     # Gold pad: ~150g/floor net of accumulated stockpile spend.
     pc.gold += (start_floor - 1) * 150
+
+    # Pre-memorized utility spells for caster builds. A F<N> caster
+    # would have learned a handful along the way from vendor spell-
+    # books and the b387 memorize policy; we plant them directly so
+    # the agent can cast from turn 1 without needing to find / buy /
+    # memorize first. Tier scales with depth, only spells the agent
+    # has slot capacity for are memorized (the get_max_memorized_spell_slots
+    # gate skips dwarves and low-INT humans cleanly).
+    _grant_memorized_spells(pc, start_floor)
 
     # Refill HP / mana to the new max so the planted character isn't
     # bleeding mid-encounter on turn one. max_health and max_mana are
@@ -835,6 +861,54 @@ def _plant_survivor_baseline(pc, start_floor):
     # cooking a real decision -- but a F15 survivor would have bought
     # one by F3, so granting it here matches the surveyed profile.
     _grant_survivor_inventory(pc, start_floor)
+
+
+def _grant_memorized_spells(pc, start_floor):
+    """Pre-memorize utility spells for caster builds, scaled by depth.
+    No-op for non-casters (get_max_memorized_spell_slots() == 0) so
+    dwarves and low-INT humans pass through untouched."""
+    max_slots = pc.get_max_memorized_spell_slots()
+    if max_slots <= 0:
+        return  # cantrip-only race / stat profile
+
+    from .items import SPELL_TEMPLATES as _ST
+    import copy as _copy
+
+    by_name = {s.name: s for s in _ST}
+
+    # Tier list -- scales with depth. Each entry is (min_floor, name).
+    # Picks bias toward survival utility (Heal / Stone Skin) ahead of
+    # raw damage, since the smart-policy heal-cast gate is the highest-
+    # impact spell usage in the harness today.
+    tiers = [
+        (5, "Minor Heal"),       # L0, 1 slot, +15 HP
+        (8, "Heal"),             # L1, 2 slots, +25 HP
+        (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
+        (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
+        (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg
+        (18, "Greater Heal"),    # L2, 2 slots, +40 HP
+        (22, "Mass Heal"),       # L3, 3 slots, +60 HP
+    ]
+    used = pc.get_used_spell_slots()
+    for min_floor, name in tiers:
+        if start_floor < min_floor:
+            continue
+        spell = by_name.get(name)
+        if spell is None:
+            continue
+        cost = pc.get_spell_slots(spell)
+        if used + cost > max_slots:
+            continue
+        # Skip duplicates (the cantrip starter pack already memorizes
+        # Mind Touch by name, and re-running this on the same pc would
+        # otherwise stack).
+        if any(s.name == name for s in pc.memorized_spells):
+            continue
+        spell_copy = _copy.deepcopy(spell)
+        if hasattr(spell_copy, 'is_identified'):
+            spell_copy.is_identified = True
+        pc.memorized_spells.append(spell_copy)
+        used += cost
 
 
 def _grant_survivor_inventory(pc, start_floor):
