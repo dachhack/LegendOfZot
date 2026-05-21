@@ -3408,6 +3408,24 @@ def smart_policy(obs, rng, use_lantern=True):
         avoid_set = set()
         if is_weak and not starving and not only_m_walkable:
             avoid_set.add("M")
+        # T-tile avoid for under-levelled agents (build 390). Stops
+        # the wayfinder from TARGETING discovered tomb tiles when
+        # the player can't survive the elite/regular undead guardian
+        # math. Same threshold as blocked_guardian_dirs release at
+        # line 3522 (level >= floor + 3). The existing guardian-dir
+        # avoidance covers the four corner M tiles AROUND a T, but
+        # without T avoid the BFS first_step still pulls the agent
+        # toward the tomb, then the guardian-dir filter rejects each
+        # cardinal in turn and the agent oscillates. Releasing T as
+        # a target while still allowing transit means the agent
+        # doesn't walk toward tomb death traps when fragile.
+        # Trapped exception: when no D is reachable, drop the T
+        # avoid so the agent can still pray at the tomb for boons.
+        avoid_pc_floor_t = p.get("floor", 1)
+        avoid_pc_level_t = p.get("level", 1)
+        if (avoid_pc_level_t < avoid_pc_floor_t + 3
+                and not trapped_no_d):
+            avoid_set.add("T")
         # Build-369: W is now unconditionally in AVOID. The previous
         # `not trapped_no_d` exception let agents step onto W when
         # the policy thought they were wedged -- but a real player
@@ -4813,6 +4831,22 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not is_shrunk
                 and not no_escape_pocket):
             return "f"
+        # Heal-before-flee narrow window (build 390). Pre-fix, the
+        # HP<50% heal gate above caught urgent heals but a 55-65%
+        # HP agent fleeing a brutal elite (Wraith / Mummy / Hardened
+        # Ogre hitting for 30+) took the parting blow straight to
+        # death. This gate fires only when (a) monster_too_tough,
+        # (b) HP between 50% and 65% (the existing < 50% gate
+        # handles below, > 65% the heal would cap and be wasted),
+        # (c) have a heal pot, (d) we didn't JUST drink (last_action
+        # != "i" prevents the drink->loop). Eats one turn (monster
+        # gets a free hit during the drink) but lifts post-flee HP
+        # enough to absorb the parting blow.
+        if (monster_too_tough and not starving and not is_shrunk
+                and not no_escape_pocket and heal_pot_slot
+                and 0.50 <= hp_pct <= 0.65
+                and obs.get("last_action") != "i"):
+            return "i"
         # Threat-flee only when NOT starving -- a starving agent vs
         # an edible monster needs to win this fight to live. Same
         # shrunk + tiny-pocket exception: with no escape route,
