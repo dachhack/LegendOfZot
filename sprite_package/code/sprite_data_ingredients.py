@@ -83,4 +83,25 @@ _INGREDIENTS_MAP = {
     'Wisdom Moss': [
         ('IN0360', 0),  # sheet=IN5 src=r00c10
     ],
+    'Aphid Honeydew': [
+        ('IN0231', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Chitin Moss': [
+        ('IN0359', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Dew Silk': [
+        ('IN0235', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Mycelium Thread': [
+        ('IN0225', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Nectar Bead': [
+        ('IN0228', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Pollen Cluster': [
+        ('CR0009', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Spore Cap': [
+        ('PR0103', 0),  # picked via sprite_package/picks_recent
+    ],
 }

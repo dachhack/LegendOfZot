@@ -2,8 +2,8 @@
   "category": "accessories",
   "version": 1,
   "generated_at": "2026-05-02",
-  "chosen_count": 60,
-  "reserve_count": 414,
+  "chosen_count": 61,
+  "reserve_count": 413,
   "total_count": 474,
   "source_pickers": [
     "accessories_picker.html",
@@ -791,6 +791,13 @@
         "category": "anklet",
         "variant_index": 0
       }
+    },
+    {
+      "pid": "AC0495",
+      "sheet": "AC6",
+      "src_label": "AC6",
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -2448,13 +2455,6 @@
     },
     {
       "pid": "AC0494",
-      "sheet": "AC6",
-      "src_label": "AC6",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "AC0495",
       "sheet": "AC6",
       "src_label": "AC6",
       "status": "reserve",

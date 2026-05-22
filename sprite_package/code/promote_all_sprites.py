@@ -289,8 +289,9 @@ def index_in_game_pngs(in_game_dir):
 # Main
 # ============================================================================
 
-NAMED_CATS = ["weapons", "armors", "accessories", "bug_armors", "foods", "ingredients",
-              "lanterns", "monsters", "runes", "shards", "towels", "treasures", "trophies"]
+NAMED_CATS = ["weapons", "bug_weapons", "armors", "accessories", "bug_armors",
+              "foods", "ingredients", "lanterns", "monsters", "runes", "shards",
+              "towels", "treasures", "trophies"]
 GENERIC_CATS = ["characters", "potions", "scrolls", "spells"]
 
 
