@@ -759,7 +759,12 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                         boss_xy = (c, r)
                     elif cell.room_type == 'M':
                         cell.room_type = '.'
-                    elif cell.room_type in ('T', 'N'):
+                    elif cell.room_type in ('T', 'N', 'W'):
+                        # Clear tombs / dungeons / warps so the boss
+                        # test isolates the Guardian fight. Warps in
+                        # particular can pull the agent off F50 to
+                        # F47-F49 mid-fight, ending up dead to an
+                        # ambient Mythic mob on those floors.
                         cell.room_type = '.'
                     cell.properties.pop('undead_guardian', None)
                     cell.discovered = True
@@ -1033,6 +1038,17 @@ def _grant_memorized_spells(pc, start_floor):
         # the pool between fights.
         (18, "Meteor Strike"),   # L3, 3 slots, 45 dmg fire
         (22, "Inferno"),         # L4, 3 slots, 55 dmg fire
+        # b410 Guardian-coverage damage spells. Zot's Guardian (F50
+        # boss) resists Physical/Fire/Ice/Lightning/Light/Darkness --
+        # the entire core damage spellbook above. Without a non-
+        # resisted damage option the player has zero offensive answer
+        # to the boss. These spells are deep-floor only (F30+, F35+)
+        # so they don't homogenize the F25 caster meta but are
+        # available by the time a player has the 8 shards.
+        (30, "Mind Blast"),       # L3, 3 slots, 40 dmg Psionic
+        (30, "Earthquake"),       # L3, 3 slots, 46 dmg Earth
+        (35, "Holy Smite"),       # L4, 3 slots, 56 dmg Holy
+        (35, "Psychic Scream"),   # L4, 3 slots, 48 dmg Psionic
         # b403/b404 caster defense suite -- moved ahead of buff/utility
         # tier because the b403 deep audit showed the F25 caster slot
         # cap (24) was exhausted by heals+damage+stone_skin before
@@ -1609,7 +1625,11 @@ class PlaytestSession:
                  # (pre-b398 a F25 elf with Lightning Bolt was casting
                  # 6-dmg Mind Touch ~70% of fights because the rng.choice
                  # gave the cheap cantrip equal weight with the L2 spell).
-                 "base_power": getattr(s, "base_power", 0) or 0}
+                 "base_power": getattr(s, "base_power", 0) or 0,
+                 # b410: surface damage_type so the spell-pick policy
+                 # can match the spell's element against the monster's
+                 # elemental_strength / elemental_weakness lists.
+                 "damage_type": getattr(s, "damage_type", "None") or "None"}
                 for i, s in enumerate(pc.memorized_spells)
             ],
             # Spell inventory in insertion order (build 387). The
@@ -1782,6 +1802,18 @@ class PlaytestSession:
                            for eff in m.status_effects.values()),
             "is_paralyzed": any(eff.effect_type in ('paralysis', 'freeze')
                                 for eff in m.status_effects.values()),
+            # b410: surface monster elemental resistances + weaknesses
+            # so the spell-pick policy can demote resisted spells (0.5x
+            # damage per combat.py:172) and promote weakness-targeting
+            # ones (2.5x per combat.py:169). Critical against Zot's
+            # Guardian (F50 boss) which resists Physical/Fire/Ice/
+            # Lightning/Light/Darkness -- the entire Inferno / Meteor
+            # Strike / Flame Lance / Lightning Bolt / Ice Shard core
+            # damage suite. Without surfacing this the policy keeps
+            # casting Inferno (55 base -> 27 effective -> 1 final after
+            # DEF 50) instead of Mind Blast (40 base -> full 40).
+            "elemental_strength": list(getattr(m, 'elemental_strength', []) or []),
+            "elemental_weakness": list(getattr(m, 'elemental_weakness', []) or []),
         }
 
     def _inventory_obs(self):
@@ -5388,6 +5420,17 @@ def smart_policy(obs, rng, use_lantern=True):
         m_is_edible = m.get("is_edible", True)
         m_name_low = (m.get("name") or "").lower()
         pc_level = p.get("level") or 1
+        # b410: detect Zot's Guardian (end-boss). Once engaged the
+        # smart-policy must NOT flee -- the boss arena has no
+        # re-engagement path (the wayfinder treats M as a hazard
+        # and the F50 cap blocks the descent loop the agent would
+        # otherwise fall into). Smoke test caught this: 5/9 plants
+        # got the Guardian to 5-11 HP then fled at low HP and
+        # spent the rest of the budget pressing 'd' against the
+        # bottom-of-dungeon block. Hold ground, heal in-combat,
+        # win or die fighting.
+        is_boss_combat = (gs.active_monster is not None
+                          and gs.active_monster.properties.get('is_zots_guardian'))
         # Reuse the module-level token list; obs.monster.is_undead is
         # already set by _monster_obs, but we recompute here so the
         # combat threat assessment is self-contained.
@@ -5420,7 +5463,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # because the agent kept fighting Wraiths/Liches/Lichen with
         # no meat return. Now we abort those fights immediately and
         # keep looking for an edible target.
-        if starving and not m_is_edible:
+        if starving and not m_is_edible and not is_boss_combat:
             return "f"
         # Drink a healing potion mid-fight as a last resort.
         if hp_pct < 0.50 and heal_pot_slot and not heal_spell_slot:
@@ -5449,7 +5492,8 @@ def smart_policy(obs, rng, use_lantern=True):
         in_tiny_pocket = pocket_reach <= 10
         if (has_ticking_status and not immobilised
                 and not (starving and m_is_edible)
-                and not in_tiny_pocket):
+                and not in_tiny_pocket
+                and not is_boss_combat):
             return "f"
         # Low-HP last-ditch flee: HP < 30%, no healing options at all,
         # not starving. Better to disengage and look for a vendor /
@@ -5480,7 +5524,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not heal_spell_slot
                 and not starving
                 and not is_shrunk
-                and not no_escape_pocket):
+                and not no_escape_pocket
+                and not is_boss_combat):
             return "f"
         # Heal-before-flee narrow window (build 390). Pre-fix, the
         # HP<50% heal gate above caught urgent heals but a 55-65%
@@ -5498,12 +5543,12 @@ def smart_policy(obs, rng, use_lantern=True):
                 and 0.50 <= hp_pct <= 0.65
                 and obs.get("last_action") != "i"):
             return "i"
-        # Threat-flee only when NOT starving -- a starving agent vs
+        # Threat-flee only when NOT starving and NOT in boss combat --
         # an edible monster needs to win this fight to live. Same
         # shrunk + tiny-pocket exception: with no escape route,
         # fleeing just postpones the same fight.
         if (monster_too_tough and not starving and not is_shrunk
-                and not no_escape_pocket):
+                and not no_escape_pocket and not is_boss_combat):
             return "f"
         # Pre-damage buff (Stone Skin only). Two-gate filter (b401):
         # cast Stone Skin preemptively only when the fight will both
@@ -5536,9 +5581,38 @@ def smart_policy(obs, rng, use_lantern=True):
         # Bumped 0.65 -> 0.90 to actually USE the spells the agent
         # buys (Scroll of Fireball etc.) instead of saving mana for
         # an emergency that never comes.
-        if affordable_dmg and rng.random() < 0.90:
-            return "c"
-        return "a" if rng.random() < 0.92 else "f"
+        # b410: against bosses, only fire 'c' if the best affordable
+        # damage spell is actually effective against the monster's
+        # resistances. Otherwise melee. Caught dwarves spamming Ice
+        # Shard (15 base x 0.5 resist - 50 DEF = 1 dmg) for thousands
+        # of turns vs Zot's Guardian after running out of Holy Smite
+        # mana, when melee would do 18 dmg per swing.
+        if affordable_dmg:
+            m_resist_cb = set(m.get("elemental_strength") or [])
+            m_weak_cb = set(m.get("elemental_weakness") or [])
+            def _eff_cb(s):
+                dt = s.get("damage_type") or "None"
+                if dt in m_weak_cb: return s["base_power"] * 2.5
+                if dt in m_resist_cb: return s["base_power"] * 0.5
+                return s["base_power"]
+            best_eff = max((_eff_cb(s) for s in affordable_dmg), default=0)
+            # Boss-tier or any time the best damage spell is too
+            # gutted by resistance to beat a basic melee swing, attack
+            # instead of casting. Threshold 20 = roughly the floor
+            # where melee starts to outdamage a resisted L0 cantrip.
+            if best_eff >= 20 and rng.random() < 0.90:
+                return "c"
+            # b410: no random flee against bosses -- a single 'f' roll
+            # at the wrong time disengages the Guardian, the agent
+            # walks off the M tile, the F50 stairs cap loop traps
+            # them. Smoke test: human s=0 had 1 flee and burned 6267T
+            # in stairs_down_mode unable to re-engage.
+            if is_boss_combat:
+                return "a"
+            return "a" if rng.random() < 0.95 else "f"
+        if is_boss_combat:
+            return "a"
+        return "a" if rng.random() < 0.95 else "f"
 
     if mode == "crafting_mode":
         # We landed here because the inventory cascade fired 'c' on a
@@ -5804,8 +5878,24 @@ def smart_policy(obs, rng, use_lantern=True):
         m_held = _m_obs.get("is_held") or False
         m_paralyzed = _m_obs.get("is_paralyzed") or False
         _m_max_hp = _m_obs.get("max_hp") or 0
+        _m_cur_hp = _m_obs.get("hp") or 0
         _status_names = set(p.get("status_effects") or [])
         tough_fight = _m_max_hp >= p["max_hp"] * 0.30
+        # b410: boss override. For very high-HP fights (Zot's Guardian
+        # at 1000, vault Tarrasques, etc.) the regular buff cascade
+        # (Spectral Hand 14 MP every 4 turns + Stone Skin 18 MP every
+        # 4 turns + Mage Armor 8 MP every 6 turns) drains 40 MP per
+        # buff cycle. Across a 50-turn boss fight that's 500+ MP spent
+        # on buffs, leaving zero budget for damage spells. The smoke
+        # test bottomed the Guardian to 5-11 HP across 5 seeds but
+        # never finished -- the player ran out of mana for damage
+        # casts. Override: against boss-tier monsters (max_hp >= 500
+        # OR explicitly is_zots_guardian), skip Spectral Hand and
+        # Stone Skin recasts after the first cycle, and prioritize
+        # damage spells over buff recasts.
+        is_boss = (_m_max_hp >= 500
+                   or (gs.active_monster is not None
+                       and gs.active_monster.properties.get('is_zots_guardian')))
 
         # 1. Hold Monster opener (1 MP, instant). Buys 2 monster turns
         # of safety -- covers post-cast swing of NEXT spell + its
@@ -5833,18 +5923,34 @@ def smart_policy(obs, rng, use_lantern=True):
         # of Meteor Strike (~79 dmg each at F25 elf INT 26) drops a
         # 150-HP monster faster than 3 buffs + 2 attacks.
         if affordable_dmg:
+            # b410: score by resistance-adjusted power (see position
+            # 6 picker below) so a Fire spell against a Fire-resistant
+            # boss doesn't trigger burst-nuke.
+            _m_resist_1b = set(_m_obs.get("elemental_strength") or [])
+            _m_weak_1b = set(_m_obs.get("elemental_weakness") or [])
+
+            def _eff_1b(s):
+                dt = s.get("damage_type") or "None"
+                if dt in _m_weak_1b:
+                    return s["base_power"] * 2.5
+                if dt in _m_resist_1b:
+                    return s["base_power"] * 0.5
+                return s["base_power"] * 1.0
+
             best_dmg = max(affordable_dmg,
-                           key=lambda s: (s["base_power"], -s["mana_cost"]))
+                           key=lambda s: (_eff_1b(s), -s["mana_cost"]))
             if (best_dmg.get("level", 0) >= 3
-                    and best_dmg["base_power"] * 2 >= _m_max_hp):
+                    and _eff_1b(best_dmg) * 2 >= _m_max_hp):
                 return str(best_dmg["slot"])
 
         # 2. Spectral Hand (14 MP). Absorbs 3 enemy strikes; with F25
         # Savage hitting ~80 raw, one cast removes ~240 dmg from the
         # next sequence. Heavy upfront mana but pays back over 8 turns.
         # Gate on tough_fight only -- small-prey fights die before the
-        # third hit lands.
-        if (tough_fight
+        # third hit lands. b410 boss override: skip on boss-tier
+        # fights (max_hp >= 500) where the 4-turn buff cycle costs
+        # more mana than it returns over a 50+ turn fight.
+        if (tough_fight and not is_boss
                 and "Spectral Hand" not in _status_names):
             spectral = next(
                 (s for s in affordable_spells if s["name"] == "Spectral Hand"),
@@ -5869,8 +5975,9 @@ def smart_policy(obs, rng, use_lantern=True):
         # 4. Stone Skin (18 MP, +8 DEF / 4 turns). The burst-buff
         # layer on top of Mage Armor. Gate on its own name (so it can
         # stack with Mage Armor). Filter to tough fights only since
-        # the burst window is short.
-        if (tough_fight
+        # the burst window is short. b410 boss override: same logic
+        # as Spectral Hand -- the recast loop steals mana from damage.
+        if (tough_fight and not is_boss
                 and "Stone Skin" not in _status_names):
             stone_skin = next((s for s in affordable_spells
                                if s["name"] == "Stone Skin"), None)
@@ -5894,10 +6001,31 @@ def smart_policy(obs, rng, use_lantern=True):
                     pick = max(heals, key=lambda s: s["base_power"])
                 return str(pick["slot"])
 
-        # 6. Damage pick: strongest base_power that fits mana.
+        # 6. Damage pick: strongest base_power that fits mana, scored
+        # against the monster's elemental resistances. b410: a Fire
+        # spell vs a Fire-resistant target gets 0.5x damage (combat.py:
+        # 172); a Holy spell vs a Holy-weak target gets 2.5x. Without
+        # this scaling the picker always grabs Inferno (55 base) even
+        # when the monster resists Fire and a Mind Blast (40 base
+        # Psionic) would deal nearly twice the effective damage.
+        # Critical for Zot's Guardian (resists Physical/Fire/Ice/
+        # Lightning/Light/Darkness) where the entire Inferno / Meteor
+        # Strike / Flame Lance core suite gets gutted.
         if affordable_dmg:
+            m_resist = set(_m_obs.get("elemental_strength") or [])
+            m_weak = set(_m_obs.get("elemental_weakness") or [])
+
+            def _effective(s):
+                dt = s.get("damage_type") or "None"
+                mult = 1.0
+                if dt in m_weak:
+                    mult = 2.5
+                elif dt in m_resist:
+                    mult = 0.5
+                return s["base_power"] * mult
+
             pick = max(affordable_dmg,
-                       key=lambda s: (s["base_power"], -s["mana_cost"]))
+                       key=lambda s: (_effective(s), -s["mana_cost"]))
             return str(pick["slot"])
 
         # 7. Random affordable spell fallback.

@@ -732,6 +732,7 @@ def process_combat_action(player_character, my_tower, cmd):
                     current_floor = my_tower.floors[player_character.z]
                     room = current_floor.grid[player_character.y][player_character.x]
                     _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
+                    _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
                     room.room_type = '.'
                     drop_monster_items(gs.active_monster, player_character)
                     drop_monster_meat(gs.active_monster, player_character)
@@ -739,6 +740,36 @@ def process_combat_action(player_character, my_tower, cmd):
 
                     if _was_bug_monster:
                         _check_bug_queen_spawn(player_character, my_tower)
+
+                    # b410: Guardian-kill victory check on the spell
+                    # kill paths. The melee-attack kill path (line
+                    # 1043) checks is_zots_guardian BEFORE clearing
+                    # gs.active_monster, but both spell-kill paths
+                    # (channeled L2+ and the legacy instant L0-1)
+                    # clear it first and only set combat_victory --
+                    # so killing Zot's Guardian with Holy Smite or
+                    # any L2+ spell silently routed through
+                    # combat_victory and the YOU WIN screen never
+                    # fired. The end-game smoke test caught it: T116
+                    # elf seed=1 cast 'c' on the Guardian, mode went
+                    # combat_mode -> combat_victory -> game_loop,
+                    # then 2884 more turns of wandering an empty F50.
+                    # _was_guardian was captured before the active_monster
+                    # clear at the top of this block.
+                    if _was_guardian:
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log("")
+                        add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
+                        add_log("")
+                        gs.prompt_cntl = "victory_screen"
+                        check_achievements(player_character)
+                        return
 
                     gs.prompt_cntl = "combat_victory"
                     return
@@ -1153,6 +1184,7 @@ def process_combat_action(player_character, my_tower, cmd):
             current_floor = my_tower.floors[player_character.z]
             room = current_floor.grid[player_character.y][player_character.x]
             _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
+            _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
             room.room_type = '.'  # Clear room
             # Drop items from monster
             drop_monster_items(gs.active_monster, player_character)
@@ -1165,6 +1197,31 @@ def process_combat_action(player_character, my_tower, cmd):
             # Check if all bugs are dead and the Bug Queen should spawn
             if _was_bug_monster:
                 _check_bug_queen_spawn(player_character, my_tower)
+
+            # b410: Guardian-kill victory check on the melee path. The
+            # existing check at line ~1075 is nested inside both
+            # `if not gs.runes_obtained['battle']` AND
+            # `if gs.active_monster.properties.get('is_legendary')`,
+            # neither of which holds for the Guardian (it doesn't have
+            # is_legendary set, and a player at F50 with all 8 shards
+            # already has the battle rune). So melee-killing the
+            # Guardian silently flowed through to combat_victory and
+            # the YOU WIN screen never fired. Smoke test: dwarf s=0
+            # killed the Guardian with 'a' at T56 -> combat_victory.
+            if _was_guardian:
+                add_log("")
+                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
+                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                add_log("")
+                add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
+                add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
+                add_log("")
+                add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
+                add_log("")
+                gs.prompt_cntl = "victory_screen"
+                check_achievements(player_character)
+                return
 
             gs.prompt_cntl = "combat_victory"
             return
@@ -1864,6 +1921,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     current_floor = my_tower.floors[player_character.z]
                     room = current_floor.grid[player_character.y][player_character.x]
                     _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
+                    _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
                     room.room_type = '.'  # Clear room
                     drop_monster_items(gs.active_monster, player_character)
                     drop_monster_meat(gs.active_monster, player_character)
@@ -1872,6 +1930,36 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     # Check if all bugs are dead and the Bug Queen should spawn
                     if _was_bug_monster:
                         _check_bug_queen_spawn(player_character, my_tower)
+
+                    # b410: Guardian-kill victory check on the spell
+                    # kill paths. The melee-attack kill path (line
+                    # 1043) checks is_zots_guardian BEFORE clearing
+                    # gs.active_monster, but both spell-kill paths
+                    # (channeled L2+ and the legacy instant L0-1)
+                    # clear it first and only set combat_victory --
+                    # so killing Zot's Guardian with Holy Smite or
+                    # any L2+ spell silently routed through
+                    # combat_victory and the YOU WIN screen never
+                    # fired. The end-game smoke test caught it: T116
+                    # elf seed=1 cast 'c' on the Guardian, mode went
+                    # combat_mode -> combat_victory -> game_loop,
+                    # then 2884 more turns of wandering an empty F50.
+                    # _was_guardian was captured before the active_monster
+                    # clear at the top of this block.
+                    if _was_guardian:
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log("")
+                        add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
+                        add_log("")
+                        gs.prompt_cntl = "victory_screen"
+                        check_achievements(player_character)
+                        return
 
                     gs.prompt_cntl = "combat_victory"
                     return  # Combat ended
