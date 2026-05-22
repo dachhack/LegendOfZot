@@ -3617,9 +3617,12 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
             # Activate playtest mode
             activate_playtest_mode(player_character)
 
-            # Skip to game start
-            gs.prompt_cntl = "game_loop"
-            add_log(f"{COLOR_GREEN}Playtest mode ready! Press a movement key to begin.{COLOR_RESET}")
+            # Hand off to the depth picker (F1..F50) before dropping the
+            # Tourist into the game loop. The picker writes the chosen
+            # floor back onto pc.z by generating the floors in between
+            # and warping; F1 short-circuits the warp.
+            gs.prompt_cntl = "tourist_depth"
+            add_log(f"{COLOR_GREEN}Playtest mode ready! Choose a starting cavern depth.{COLOR_RESET}")
             return True
 
         # Don't add prompts to log - they're in the HTML now
@@ -3785,6 +3788,27 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
             gs.cantrip_selections = []
             gs.prompt_cntl = "starting_shop"
             handle_starting_shop(player_character, my_tower, "init")
+            return True
+        return True
+
+    if _cntl == "tourist_depth":
+        # Tourist depth picker. Chips emit 'td<n>' (n in 1..50) and we
+        # warp the maxed-out Playtester onto F<n>, generating the
+        # intervening floors on demand so retreat-up via stairs lands
+        # on a fully mapped F<n-1>. F1 short-circuits the warp.
+        choice = (cmd or '').lower().strip()
+        if choice.startswith('td') and choice[2:].isdigit():
+            target = int(choice[2:])
+            if not (1 <= target <= 50):
+                add_log(f"{COLOR_YELLOW}Pick a depth between F1 and F50.{COLOR_RESET}")
+                return True
+            if target > 1:
+                plant_player_at_depth(player_character, my_tower, target)
+                add_log(f"{COLOR_PURPLE}[TOURIST] Warped to Depth {target}. "
+                        f"F1..F{target - 1} pre-discovered.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_PURPLE}[TOURIST] Starting at Depth 1.{COLOR_RESET}")
+            gs.prompt_cntl = "game_loop"
             return True
         return True
     return False # Should not be reached if state is managed
@@ -4236,6 +4260,59 @@ def _trigger_shrinking_spell(player_character):
     add_log(f"{COLOR_CYAN}Look for bug merchants to find gear that fits!{COLOR_RESET}")
     add_log(f"{COLOR_RED}The stairs are sealed by Zot's magic while you are shrunk!{COLOR_RESET}")
     add_log("")
+
+
+def plant_player_at_depth(player_character, my_tower, target_floor):
+    """Generate floors 2..target_floor on demand and place the player
+    on F<target_floor>'s U tile (fallback: any '.' tile). All prior
+    floors are marked discovered so retreat-up via stairs lands the
+    player on a fully mapped floor and the tap-to-move pathfinder can
+    plan routes to vendors immediately. Caller is responsible for not
+    triggering room interaction afterwards (the U tile would auto-fire
+    stairs_up_mode). Used by both the in-game Tourist depth picker and
+    the playtest harness's start-floor plant. Returns True on success."""
+    target_z = max(0, target_floor - 1)
+    while len(my_tower.floors) <= target_z:
+        my_tower.add_floor(**gs.floor_params)
+    player_character.z = target_z
+    floor = my_tower.floors[target_z]
+
+    placed = False
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            if floor.grid[r][c].room_type == 'U':
+                player_character.x, player_character.y = c, r
+                floor.grid[r][c].discovered = True
+                placed = True
+                break
+        if placed:
+            break
+    if not placed:
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                if floor.grid[r][c].room_type == '.':
+                    player_character.x, player_character.y = c, r
+                    floor.grid[r][c].discovered = True
+                    placed = True
+                    break
+            if placed:
+                break
+
+    for prior_z in range(target_z):
+        prior_floor = my_tower.floors[prior_z]
+        for r in range(prior_floor.rows):
+            for c in range(prior_floor.cols):
+                prior_floor.grid[r][c].discovered = True
+
+    # Track max-z so deepest-floor stats / achievements see the plant
+    # depth as reached. game_stats is initialised both in the in-game
+    # init path (app.py) and the harness's new_game.
+    stats = getattr(gs, 'game_stats', None)
+    if stats is not None:
+        stats['max_floor_reached'] = max(
+            stats.get('max_floor_reached', 0), target_z + 1
+        )
+    return placed
 
 
 def handle_stairs_up(player_character, my_tower, floor_params):

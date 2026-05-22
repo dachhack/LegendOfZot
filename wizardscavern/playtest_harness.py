@@ -787,51 +787,12 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
 
 
 def _generate_floors_and_plant_at(pc, tower, start_floor):
-    """Generate F2..F<start_floor> via the canonical floor-params
-    dict and place pc on F<start_floor>'s U tile. Mirrors the
-    handle_stairs_down placement contract. Caller is responsible for
-    NOT running _trigger_room_interaction afterwards (the U tile
-    would auto-fire stairs_up_mode).
-    """
-    target_z = start_floor - 1  # 0-indexed array slot
-    while len(tower.floors) <= target_z:
-        tower.add_floor(**gs.floor_params)
-    pc.z = target_z
-    floor = tower.floors[target_z]
-
-    placed = False
-    for r in range(floor.rows):
-        for c in range(floor.cols):
-            if floor.grid[r][c].room_type == 'U':
-                pc.x, pc.y = c, r
-                floor.grid[r][c].discovered = True
-                placed = True
-                break
-        if placed:
-            break
-    if not placed:
-        # No U on the target floor (very rare -- add_floor places one
-        # via the required_chars contract). Fall back to any '.' tile.
-        for r in range(floor.rows):
-            for c in range(floor.cols):
-                if floor.grid[r][c].room_type == '.':
-                    pc.x, pc.y = c, r
-                    floor.grid[r][c].discovered = True
-                    placed = True
-                    break
-            if placed:
-                break
-
-    # Pre-discover every tile on F1..F<start_floor-1>. The agent's
-    # wayfinder treats discovered tiles as eligible BFS nodes and
-    # undiscovered ones as fog. Retreating up the stairs from F<N>
-    # immediately gives the agent a fully mapped F<N-1>, so it can
-    # path straight to vendors / shrines without re-exploring.
-    for prior_z in range(target_z):
-        prior_floor = tower.floors[prior_z]
-        for r in range(prior_floor.rows):
-            for c in range(prior_floor.cols):
-                prior_floor.grid[r][c].discovered = True
+    """Thin wrapper around the shared plant_player_at_depth helper in
+    game_systems (also used by the in-game Tourist depth picker).
+    Kept under the old harness-private name so existing call sites
+    don't churn."""
+    from .game_systems import plant_player_at_depth
+    plant_player_at_depth(pc, tower, start_floor)
 
 
 def _plant_survivor_baseline(pc, start_floor):
