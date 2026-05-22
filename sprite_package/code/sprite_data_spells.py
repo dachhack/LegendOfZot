@@ -72,4 +72,5 @@ _SPELLS_POOL = [
     'I172',  # picked via sprite_package/picks_recent
     'V310',  # picked via sprite_package/picks_recent
     'V358',  # picked via sprite_package/picks_recent
+    'I135',  # picked via sprite_package/picks_recent
 ]

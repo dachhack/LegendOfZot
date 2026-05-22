@@ -123,8 +123,7 @@ _SPELLS_NAMED = {
     'Thunder Clap':         'W141',
     'Chain Lightning':      'W144',
     'Lightning Bolt':       'W146',
-    # Mage Armor still reuses the Divine Shield force-field visual.
-    'Mage Armor':           'I047',
+    'Mage Armor':           'I135',
     'Spectral Hand':        'V358',
     'Detect Monster':       'V124',
     'Hold Monster':         'V175',

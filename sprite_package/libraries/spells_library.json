@@ -2,8 +2,8 @@
   "category": "spells",
   "version": 1,
   "generated_at": "2026-05-02",
-  "chosen_count": 54,
-  "reserve_count": 83,
+  "chosen_count": 55,
+  "reserve_count": 82,
   "total_count": 137,
   "source_pickers": [
     "spell_refine_picker.html",
@@ -633,6 +633,13 @@
       "src_label": "3665-bb-x1317y436",
       "status": "in-game",
       "marked": null
+    },
+    {
+      "pid": "I135",
+      "sheet": "original",
+      "src_label": "K6",
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -710,13 +717,6 @@
       "pid": "I134",
       "sheet": "original",
       "src_label": "C3",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "I135",
-      "sheet": "original",
-      "src_label": "K6",
       "status": "reserve",
       "marked": null
     },

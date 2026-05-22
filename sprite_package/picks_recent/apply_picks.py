@@ -491,14 +491,22 @@ def update_manifests(picks_by_cat, assets_dir, dry_run, log):
 
 def regenerate_pool(assets_dir, dry_run):
     """Call promote_all_sprites.py to rebuild canonical_pool_full.pkl
-    from the now-canonical PNG layout + library + snippet state."""
+    from the now-canonical PNG layout + library + snippet state.
+
+    NOTE: --include-reserve is intentionally NOT passed. The shipped
+    pool is in-game only (per CLAUDE.md, ~1283 sprites, ~2.9 MB).
+    Reserve sprites stay in the bundle for future picker rounds but
+    don't bloat the APK."""
+    # Delete the pool first so we regenerate from scratch rather than
+    # accumulating stale entries.
+    if not dry_run and os.path.exists(_POOL_PATH):
+        os.remove(_POOL_PATH)
     cmd = [
         sys.executable, _PROMOTE_SCRIPT,
         '--pool', _POOL_PATH,
         '--package', _PACKAGE_DIR,
         '--in-game-dir', str(Path(assets_dir) / 'in_game'),
         '--reserve-dir', str(Path(assets_dir) / 'reserve'),
-        '--include-reserve',
     ]
     if dry_run:
         cmd.append('--dry-run')
