@@ -123,12 +123,11 @@ _SPELLS_NAMED = {
     'Thunder Clap':         'W141',
     'Chain Lightning':      'W144',
     'Lightning Bolt':       'W146',
-    # b403 caster-defense suite. Sprites shared with thematically-
-    # matched existing entries because the round-8 spell pool is 1:1
-    # mapped to the prior spellbook; a future pass through
-    # canonical_pool_full could promote dedicated pids for these.
-    # Mage Armor reuses the Divine Shield force-field visual.
+    # Mage Armor still reuses the Divine Shield force-field visual.
     'Mage Armor':           'I047',
-    # Spectral Hand reuses the Stone Skin defensive-aura visual.
-    'Spectral Hand':        'I058',
+    'Spectral Hand':        'V358',
+    'Detect Monster':       'V124',
+    'Hold Monster':         'V175',
+    'Light':                'I172',
+    'Mind Touch':           'V310',
 }

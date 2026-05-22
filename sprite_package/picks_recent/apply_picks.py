@@ -5,26 +5,34 @@ maps under wizardscavern/sprites/.
 Run:
     python3 sprite_package/picks_recent/apply_picks.py
         [--input recent_picks.json]
+        [--reserve-dir /tmp/wc_reserve/wc_sprites_assets/reserve]
         [--dry-run]
 
-Default input is sprite_package/picks_recent/recent_picks.json (drop the
-file the picker downloaded next to this script). With --dry-run the
-script prints the planned edits without touching files.
+For each pick:
+  1. If the PID isn't already in canonical_pool_full.pkl, promote the
+     PNG from --reserve-dir (encode as base64 webp matching pool
+     conventions) and write the pool back.
+  2. Update the sprite map (_SPELLS_NAMED single-pid dict, or
+     _ACCESSORIES_MAP [(pid, 0)] block).
 
-Edit shape per category:
-  spells       -> updates _SPELLS_NAMED (single-pid dict)
-  accessories  -> replaces _ACCESSORIES_MAP entry with [(pid, 0)]
-                  (single variant; add more by hand if you want a pool)
+Skip the pool step entirely if every picked PID is already shipped.
+With --dry-run nothing is written; you get the planned actions.
 """
 import argparse
+import base64
+import io
 import json
 import os
+import pickle
 import re
 import sys
+from pathlib import Path
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = os.path.abspath(os.path.join(_HERE, '..', '..'))
 _SPRITES_DIR = os.path.join(_ROOT, 'wizardscavern', 'sprites')
+_POOL_PATH = os.path.join(_ROOT, 'wizardscavern', 'data',
+                          'canonical_pool_full.pkl')
 
 
 def _spells_path():
@@ -35,11 +43,63 @@ def _accessories_path():
     return os.path.join(_SPRITES_DIR, 'accessories.py')
 
 
+# --- Pool promotion -------------------------------------------------------
+
+def png_to_b64_webp(path):
+    """Match canonical_pool_full.pkl format (webp@80, method=4)."""
+    from PIL import Image
+    im = Image.open(path).convert("RGBA")
+    buf = io.BytesIO()
+    im.save(buf, format="WEBP", quality=80, method=4)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
+def find_reserve_png(reserve_dir, category, pid):
+    """Return Path to <pid>_*.png under reserve_dir/category/, or None."""
+    cat_dir = Path(reserve_dir) / category
+    if not cat_dir.exists():
+        return None
+    hits = list(cat_dir.glob(f"{pid}_*.png"))
+    return hits[0] if hits else None
+
+
+def promote_pids(pool, picks_by_cat, reserve_dir, dry_run):
+    """Add missing reserve PIDs to the pool. Mutates `pool` in place.
+    Returns list of (pid, action) for reporting."""
+    actions = []
+    for category, entries in picks_by_cat.items():
+        for _name, pid in entries:
+            if pid in pool:
+                actions.append((pid, 'already-in-pool'))
+                continue
+            png = find_reserve_png(reserve_dir, category, pid)
+            if png is None:
+                raise RuntimeError(
+                    f"Reserve PNG for {pid} not found under "
+                    f"{Path(reserve_dir) / category}/. Re-unzip the "
+                    f"sprite-assets-v1 release into --reserve-dir.")
+            img_b64 = '' if dry_run else png_to_b64_webp(png)
+            # Match the schema other pool entries use (cat / status / pid /
+            # img_b64 / sheet / src_label / game_data).
+            pool[pid] = {
+                'pid': pid,
+                'cat': category,
+                'status': 'in-game',
+                'img_b64': img_b64,
+                'sheet': png.stem.split('_', 1)[1] if '_' in png.stem else '',
+                'src_label': '',
+                'game_data': {},
+            }
+            actions.append((pid, f'promoted from {png.name}'))
+    return actions
+
+
+# --- Sprite map edits -----------------------------------------------------
+
 def apply_spell_pick(text, name, pid):
     """Find `'Name': 'OLDPID',` in _SPELLS_NAMED and rewrite the PID.
     Returns (new_text, action) where action is 'replaced'/'inserted'/'noop'.
     """
-    # Existing entry: 'Name': 'PID', or "Name": 'PID',
     pattern = re.compile(
         r"^(\s+)([\"'])" + re.escape(name) + r"\2:\s+'[A-Z]\d+',?\s*(?:#.*)?$",
         re.MULTILINE,
@@ -52,11 +112,7 @@ def apply_spell_pick(text, name, pid):
         new_text = text[:m.start()] + replacement + text[m.end():]
         return new_text, 'replaced'
 
-    # New entry -- insert before the closing brace of _SPELLS_NAMED.
-    # The map ends with a single `}` on its own line after the last entry.
     closing = re.compile(r"^(\}\s*)$", re.MULTILINE)
-    # Find the close that belongs to _SPELLS_NAMED. The dict opens with
-    # `_SPELLS_NAMED = {`; we take the FIRST `^}` after that point.
     open_m = re.search(r"^_SPELLS_NAMED\s*=\s*\{\s*$", text, re.MULTILINE)
     if not open_m:
         raise RuntimeError("Could not find _SPELLS_NAMED dict in spells.py")
@@ -70,13 +126,7 @@ def apply_spell_pick(text, name, pid):
 
 def apply_accessory_pick(text, name, pid):
     """Replace the existing `"Name": [...],` block in _ACCESSORIES_MAP
-    with a single-variant `[('PID', 0)]`. Inserts a new block before the
-    closing brace if the entry doesn't exist yet."""
-    # Multi-line entry block:
-    #   "Name": [
-    #       ('AC...', 0),  # ...
-    #       ...
-    #   ],
+    with a single-variant `[('PID', 0)]`. Inserts new if missing."""
     block = re.compile(
         r"^(\s+)([\"'])" + re.escape(name) + r"\2:\s*\[\s*\n"
         r"(?:.*?\n)*?"
@@ -93,7 +143,6 @@ def apply_accessory_pick(text, name, pid):
         new_text = text[:m.start()] + new_block + text[m.end():]
         return new_text, 'replaced'
 
-    # Insert before _ACCESSORIES_MAP closing brace.
     open_m = re.search(r"^_ACCESSORIES_MAP\s*=\s*\{\s*$", text, re.MULTILINE)
     if not open_m:
         raise RuntimeError("Could not find _ACCESSORIES_MAP in accessories.py")
@@ -106,16 +155,17 @@ def apply_accessory_pick(text, name, pid):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--input', default=os.path.join(_HERE, 'recent_picks.json'),
-                    help='Picks JSON file (default: recent_picks.json next '
-                         'to this script).')
-    ap.add_argument('--dry-run', action='store_true',
-                    help="Don't write anything; just print planned edits.")
+    ap.add_argument('--input', default=os.path.join(_HERE, 'recent_picks.json'))
+    ap.add_argument('--reserve-dir',
+                    default='/tmp/wc_reserve/wc_sprites_assets/reserve',
+                    help='Where the unzipped reserve PNGs live '
+                         '(only needed if a picked PID is not yet in the '
+                         'canonical pool).')
+    ap.add_argument('--dry-run', action='store_true')
     args = ap.parse_args()
 
     if not os.path.exists(args.input):
         print(f"ERROR: input file not found: {args.input}", file=sys.stderr)
-        print("Download recent_picks.json from picker.html first.", file=sys.stderr)
         sys.exit(2)
 
     with open(args.input, 'r') as f:
@@ -125,13 +175,32 @@ def main():
         print("No picks in input -- nothing to apply.")
         return 0
 
-    # Group picks by sprite-map file.
-    by_file = {}
+    by_cat = {}
     for key, pid in picks.items():
         category, _, name = key.partition('::')
-        by_file.setdefault(category, []).append((name, pid))
+        by_cat.setdefault(category, []).append((name, pid))
 
-    for category, entries in sorted(by_file.items()):
+    # Step 1: promote missing PIDs into the canonical pool.
+    print("== pool promotion ==")
+    with open(_POOL_PATH, 'rb') as f:
+        pool = pickle.load(f)
+    pool_size_before = len(pool)
+    pool_actions = promote_pids(pool, by_cat, args.reserve_dir, args.dry_run)
+    for pid, action in pool_actions:
+        print(f"  {pid}: {action}")
+    if args.dry_run:
+        print(f"  [dry-run] would write pool "
+              f"(+{len(pool) - pool_size_before} entries)")
+    elif len(pool) > pool_size_before:
+        with open(_POOL_PATH, 'wb') as f:
+            pickle.dump(pool, f, protocol=pickle.HIGHEST_PROTOCOL)
+        print(f"  wrote pool: {pool_size_before} -> {len(pool)}")
+    else:
+        print("  pool unchanged (all PIDs already present)")
+
+    # Step 2: rewrite the sprite-map files.
+    print("\n== sprite-map edits ==")
+    for category, entries in sorted(by_cat.items()):
         if category == 'spells':
             path = _spells_path()
             apply = apply_spell_pick
@@ -145,11 +214,9 @@ def main():
 
         with open(path, 'r') as f:
             text = f.read()
-
         for name, pid in sorted(entries):
             text, action = apply(text, name, pid)
             print(f"  {category}/{name!r}: {pid} ({action})")
-
         if args.dry_run:
             print(f"  [dry-run] would write {path}")
         else:
