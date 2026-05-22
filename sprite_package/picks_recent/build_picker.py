@@ -56,6 +56,9 @@ from wizardscavern.sprites import get_image_b64  # noqa: E402
 from wizardscavern.sprites.pool import _load_pool  # noqa: E402
 from wizardscavern.sprites.spells import _SPELLS_NAMED  # noqa: E402
 from wizardscavern.sprites.accessories import _ACCESSORIES_MAP  # noqa: E402
+from wizardscavern.sprites.ingredients import _INGREDIENTS_MAP  # noqa: E402
+from wizardscavern.sprites.foods import _FOODS_MAP  # noqa: E402
+from wizardscavern.sprites.bug_weapons import _BUG_WEAPONS_MAP  # noqa: E402
 from wizardscavern.item_templates import SPELL_TEMPLATES  # noqa: E402
 
 
@@ -80,6 +83,33 @@ ACCESSORY_PICKS = [
     ('Hourglass Talisman', 'auto',
      'b403 -- shares pendant sprites with Heartstone Pendant; '
      'flagged for a dedicated sand/glass visual'),
+]
+
+FOOD_PICKS = [
+    ('Blutwurst', 'gap',
+     'dwarf-tier-3 sausage recipe (SAUSAGE_RECIPES) -- '
+     'no _FOODS_MAP entry, falls to generic food pool'),
+    ('Landjäger', 'gap',
+     'dwarf-tier-2 sausage recipe (SAUSAGE_RECIPES) -- '
+     'no _FOODS_MAP entry, falls to generic food pool'),
+]
+
+INGREDIENT_PICKS = [
+    ('Aphid Honeydew',  'gap',  'bug garden T1 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Mycelium Thread', 'gap',  'bug garden T1 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Pollen Cluster',  'gap',  'bug garden T1 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Chitin Moss',     'gap',  'bug garden T1 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Spore Cap',       'gap',  'bug garden T2 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Nectar Bead',     'gap',  'bug garden T2 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+    ('Dew Silk',        'gap',  'bug garden T2 (BUG_GARDEN_INGREDIENTS) -- unmapped'),
+]
+
+BUG_WEAPON_PICKS = [
+    ('Stinger Blade',      'gap', 'shrinking-bug-level loot, no bug_weapons sprite map until now'),
+    ('Mandible Axe',       'gap', 'shrinking-bug-level loot, no bug_weapons sprite map until now'),
+    ('Thorax Spear',       'gap', 'shrinking-bug-level loot, no bug_weapons sprite map until now'),
+    ('Firefly Wand',       'gap', 'shrinking-bug-level loot, no bug_weapons sprite map until now'),
+    ('Scorpion Tail Whip', 'gap', 'shrinking-bug-level loot, no bug_weapons sprite map until now'),
 ]
 
 
@@ -156,19 +186,26 @@ def main():
     args = ap.parse_args()
 
     print(f"Loading reserve sprites from {args.reserve_dir}...")
+    # bug_weapons uses the regular weapons reserve pool (no dedicated
+    # reserve dir exists). User hand-picks the insectoid-looking ones
+    # from the 321 weapon reserve sprites.
     spell_reserve = load_reserve_sprites(args.reserve_dir, 'spells')
     acc_reserve = load_reserve_sprites(args.reserve_dir, 'accessories')
+    food_reserve = load_reserve_sprites(args.reserve_dir, 'foods')
+    ing_reserve = load_reserve_sprites(args.reserve_dir, 'ingredients')
+    weapon_reserve = load_reserve_sprites(args.reserve_dir, 'weapons')
     print(f"  spells reserve: {len(spell_reserve)}")
     print(f"  accessories reserve: {len(acc_reserve)}")
+    print(f"  foods reserve: {len(food_reserve)}")
+    print(f"  ingredients reserve: {len(ing_reserve)}")
+    print(f"  weapons reserve (used for bug_weapons): {len(weapon_reserve)}")
 
-    # Chosen included as a fallback section -- user might prefer to keep
-    # current. Always last in the candidate list, behind the reserve.
     spell_chosen = load_chosen_sprites('spells')
     acc_chosen = load_chosen_sprites('accessories')
-    print(f"  spells chosen: {len(spell_chosen)}  "
-          f"accessories chosen: {len(acc_chosen)}")
+    food_chosen = load_chosen_sprites('foods')
+    ing_chosen = load_chosen_sprites('ingredients')
+    weapon_chosen = load_chosen_sprites('weapons')
 
-    # Build items.
     items = []
     for name, kind, note in SPELL_PICKS:
         info = spell_meta(name)
@@ -198,18 +235,57 @@ def main():
             'current_img': get_image_b64(current) if current else '',
         })
 
-    # Candidate pools live at the top level (not duplicated per item)
-    # so a 13-item picker doesn't blow up to 4 MB. The runtime JS keys
-    # off item.category.
+    for name, kind, note in FOOD_PICKS:
+        variants = _FOODS_MAP.get(name) or []
+        current = variants[0][0] if variants else ''
+        items.append({
+            'category': 'foods',
+            'name': name,
+            'kind': kind,
+            'note': note,
+            'description': '',
+            'meta': 'sausage recipe',
+            'current': current,
+            'current_img': get_image_b64(current) if current else '',
+        })
+
+    for name, kind, note in INGREDIENT_PICKS:
+        variants = _INGREDIENTS_MAP.get(name) or []
+        current = variants[0][0] if variants else ''
+        items.append({
+            'category': 'ingredients',
+            'name': name,
+            'kind': kind,
+            'note': note,
+            'description': '',
+            'meta': 'bug-garden harvest',
+            'current': current,
+            'current_img': get_image_b64(current) if current else '',
+        })
+
+    for name, kind, note in BUG_WEAPON_PICKS:
+        variants = _BUG_WEAPONS_MAP.get(name) or []
+        current = variants[0][0] if variants else ''
+        items.append({
+            'category': 'bug_weapons',
+            'name': name,
+            'kind': kind,
+            'note': note,
+            'description': '',
+            'meta': 'bug-level weapon drop',
+            'current': current,
+            'current_img': get_image_b64(current) if current else '',
+        })
+
     candidates = {
-        'spells': {
-            'reserve': spell_reserve,
-            'chosen': spell_chosen,
-        },
-        'accessories': {
-            'reserve': acc_reserve,
-            'chosen': acc_chosen,
-        },
+        'spells':       {'reserve': spell_reserve,  'chosen': spell_chosen},
+        'accessories':  {'reserve': acc_reserve,    'chosen': acc_chosen},
+        'foods':        {'reserve': food_reserve,   'chosen': food_chosen},
+        'ingredients':  {'reserve': ing_reserve,    'chosen': ing_chosen},
+        # bug_weapons borrows the weapons candidate pool (no dedicated
+        # bug_weapons reserve dir exists; user picks insect-looking ones
+        # from the regular weapons sprite reserve).
+        'bug_weapons':  {'reserve': weapon_reserve, 'chosen': weapon_chosen},
     }
 
     # Seed any existing picks from a previous session.
@@ -235,12 +311,10 @@ def main():
     size_mb = os.path.getsize(out_path) / (1024 * 1024)
     print(f"\nWrote {out_path}")
     print(f"  items={len(items)}")
-    print(f"  spells candidates: {len(spell_reserve)} reserve + "
-          f"{len(spell_chosen)} chosen = "
-          f"{len(spell_reserve) + len(spell_chosen)}")
-    print(f"  accessories candidates: {len(acc_reserve)} reserve + "
-          f"{len(acc_chosen)} chosen = "
-          f"{len(acc_reserve) + len(acc_chosen)}")
+    for cat, c in candidates.items():
+        print(f"  {cat} candidates: {len(c['reserve'])} reserve + "
+              f"{len(c['chosen'])} chosen = "
+              f"{len(c['reserve']) + len(c['chosen'])}")
     print(f"  size={size_mb:.2f} MB")
 
 

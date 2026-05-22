@@ -40,6 +40,7 @@ from . import (
     accessories,
     armors,
     bug_armors,
+    bug_weapons,
     characters,
     foods,
     ingredients,
@@ -60,7 +61,7 @@ from . import (
 __all__ = [
     'get_image_b64', 'get_pool_entry', 'get_named_variant',
     'get_generic_variant', 'pool_size',
-    'accessories', 'armors', 'bug_armors', 'characters', 'foods',
+    'accessories', 'armors', 'bug_armors', 'bug_weapons', 'characters', 'foods',
     'ingredients', 'lanterns', 'monsters', 'potions', 'rooms', 'runes',
     'scrolls', 'shards', 'spells', 'towels', 'treasures', 'trophies',
     'weapons',

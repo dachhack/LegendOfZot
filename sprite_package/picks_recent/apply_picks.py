@@ -34,13 +34,27 @@ _SPRITES_DIR = os.path.join(_ROOT, 'wizardscavern', 'sprites')
 _POOL_PATH = os.path.join(_ROOT, 'wizardscavern', 'data',
                           'canonical_pool_full.pkl')
 
+# Picker category -> sprite module file + the dict identifier inside it.
+# bug_weapons is included here because the sprites/bug_weapons.py module
+# was created upfront with `_BUG_WEAPONS_MAP = {}`; we just edit it.
+_CATEGORY_FILES = {
+    'spells':      ('spells.py',      '_SPELLS_NAMED',     'simple_dict'),
+    'accessories': ('accessories.py', '_ACCESSORIES_MAP',  'variant_list'),
+    'foods':       ('foods.py',       '_FOODS_MAP',        'variant_list'),
+    'ingredients': ('ingredients.py', '_INGREDIENTS_MAP',  'variant_list'),
+    'bug_weapons': ('bug_weapons.py', '_BUG_WEAPONS_MAP',  'variant_list'),
+}
 
-def _spells_path():
-    return os.path.join(_SPRITES_DIR, 'spells.py')
-
-
-def _accessories_path():
-    return os.path.join(_SPRITES_DIR, 'accessories.py')
+# Where to find the reserve PNG for a picker category. Most categories
+# have a matching reserve/<cat>/ dir; bug_weapons borrows the weapons
+# pool since there's no dedicated bug_weapons reserve.
+_CATEGORY_RESERVE_DIR = {
+    'spells':      'spells',
+    'accessories': 'accessories',
+    'foods':       'foods',
+    'ingredients': 'ingredients',
+    'bug_weapons': 'weapons',
+}
 
 
 # --- Pool promotion -------------------------------------------------------
@@ -72,33 +86,37 @@ def promote_pids(pool, picks_by_cat, reserve_dir, dry_run):
             if pid in pool:
                 actions.append((pid, 'already-in-pool'))
                 continue
-            png = find_reserve_png(reserve_dir, category, pid)
+            reserve_subdir = _CATEGORY_RESERVE_DIR.get(category, category)
+            png = find_reserve_png(reserve_dir, reserve_subdir, pid)
             if png is None:
                 raise RuntimeError(
                     f"Reserve PNG for {pid} not found under "
-                    f"{Path(reserve_dir) / category}/. Re-unzip the "
-                    f"sprite-assets-v1 release into --reserve-dir.")
+                    f"{Path(reserve_dir) / reserve_subdir}/. Re-unzip "
+                    f"the sprite-assets-v1 release into --reserve-dir.")
             img_b64 = '' if dry_run else png_to_b64_webp(png)
-            # Match the schema other pool entries use (cat / status / pid /
-            # img_b64 / sheet / src_label / game_data).
+            # Pool entry uses the underlying sprite category (e.g.
+            # bug_weapons borrows from the weapons sprite sheets), not
+            # the picker category. This keeps cat consistent with the
+            # sheet of origin so other pool consumers can still
+            # filter by cat.
             pool[pid] = {
                 'pid': pid,
-                'cat': category,
+                'cat': reserve_subdir,
                 'status': 'in-game',
                 'img_b64': img_b64,
                 'sheet': png.stem.split('_', 1)[1] if '_' in png.stem else '',
                 'src_label': '',
                 'game_data': {},
             }
-            actions.append((pid, f'promoted from {png.name}'))
+            actions.append((pid, f'promoted from {reserve_subdir}/{png.name}'))
     return actions
 
 
 # --- Sprite map edits -----------------------------------------------------
 
-def apply_spell_pick(text, name, pid):
-    """Find `'Name': 'OLDPID',` in _SPELLS_NAMED and rewrite the PID.
-    Returns (new_text, action) where action is 'replaced'/'inserted'/'noop'.
+def apply_simple_dict_pick(text, dict_name, name, pid):
+    """Update `'Name': 'PID',` style entries (used by _SPELLS_NAMED).
+    Returns (new_text, action) where action is 'replaced'/'inserted'.
     """
     pattern = re.compile(
         r"^(\s+)([\"'])" + re.escape(name) + r"\2:\s+'[A-Z]\d+',?\s*(?:#.*)?$",
@@ -112,21 +130,22 @@ def apply_spell_pick(text, name, pid):
         new_text = text[:m.start()] + replacement + text[m.end():]
         return new_text, 'replaced'
 
-    closing = re.compile(r"^(\}\s*)$", re.MULTILINE)
-    open_m = re.search(r"^_SPELLS_NAMED\s*=\s*\{\s*$", text, re.MULTILINE)
+    open_m = re.search(rf"^{re.escape(dict_name)}\s*=\s*\{{\s*$",
+                       text, re.MULTILINE)
     if not open_m:
-        raise RuntimeError("Could not find _SPELLS_NAMED dict in spells.py")
-    close_m = closing.search(text, open_m.end())
+        raise RuntimeError(f"Could not find {dict_name} dict")
+    close_m = re.compile(r"^(\}\s*)$", re.MULTILINE).search(text, open_m.end())
     if not close_m:
-        raise RuntimeError("Could not find _SPELLS_NAMED closing brace")
+        raise RuntimeError(f"Could not find {dict_name} closing brace")
     new_line = f"    '{name}':{' ' * max(1, 22 - len(name) - 2)}'{pid}',\n"
     new_text = text[:close_m.start()] + new_line + text[close_m.start():]
     return new_text, 'inserted'
 
 
-def apply_accessory_pick(text, name, pid):
-    """Replace the existing `"Name": [...],` block in _ACCESSORIES_MAP
-    with a single-variant `[('PID', 0)]`. Inserts new if missing."""
+def apply_variant_list_pick(text, dict_name, name, pid):
+    """Replace/insert a `'Name': [('PID', 0)]` block in a variant-list
+    map (used by _ACCESSORIES_MAP, _INGREDIENTS_MAP, _FOODS_MAP,
+    _BUG_WEAPONS_MAP). Returns (new_text, action)."""
     block = re.compile(
         r"^(\s+)([\"'])" + re.escape(name) + r"\2:\s*\[\s*\n"
         r"(?:.*?\n)*?"
@@ -143,12 +162,13 @@ def apply_accessory_pick(text, name, pid):
         new_text = text[:m.start()] + new_block + text[m.end():]
         return new_text, 'replaced'
 
-    open_m = re.search(r"^_ACCESSORIES_MAP\s*=\s*\{\s*$", text, re.MULTILINE)
+    open_m = re.search(rf"^{re.escape(dict_name)}\s*=\s*\{{\s*$",
+                       text, re.MULTILINE)
     if not open_m:
-        raise RuntimeError("Could not find _ACCESSORIES_MAP in accessories.py")
+        raise RuntimeError(f"Could not find {dict_name} dict")
     close_m = re.compile(r"^\}\s*$", re.MULTILINE).search(text, open_m.end())
     if not close_m:
-        raise RuntimeError("Could not find _ACCESSORIES_MAP closing brace")
+        raise RuntimeError(f"Could not find {dict_name} closing brace")
     new_text = text[:close_m.start()] + new_block + text[close_m.start():]
     return new_text, 'inserted'
 
@@ -201,21 +221,19 @@ def main():
     # Step 2: rewrite the sprite-map files.
     print("\n== sprite-map edits ==")
     for category, entries in sorted(by_cat.items()):
-        if category == 'spells':
-            path = _spells_path()
-            apply = apply_spell_pick
-        elif category == 'accessories':
-            path = _accessories_path()
-            apply = apply_accessory_pick
-        else:
+        if category not in _CATEGORY_FILES:
             print(f"WARN: unknown category {category!r}, skipping "
                   f"{len(entries)} entries")
             continue
+        filename, dict_name, shape = _CATEGORY_FILES[category]
+        path = os.path.join(_SPRITES_DIR, filename)
+        apply = (apply_simple_dict_pick if shape == 'simple_dict'
+                 else apply_variant_list_pick)
 
         with open(path, 'r') as f:
             text = f.read()
         for name, pid in sorted(entries):
-            text, action = apply(text, name, pid)
+            text, action = apply(text, dict_name, name, pid)
             print(f"  {category}/{name!r}: {pid} ({action})")
         if args.dry_run:
             print(f"  [dry-run] would write {path}")
