@@ -118,6 +118,6 @@ _ACCESSORIES_MAP = {
         ('AC0136', 2),  # sheet=AC1 src=r11c06
     ],
     'Hourglass Talisman': [
-        ('AC0495', 0),  # b413 -- dedicated sand/glass sprite via picks_recent
+        ('AC0495', 0),  # picked via sprite_package/picks_recent
     ],
 }
