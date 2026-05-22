@@ -3031,10 +3031,17 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         # New Floor Logic. Capped at the designed dungeon depth (50
         # floors, 0-indexed 0-49) so the warp can never spit the
         # player into a phantom floor past the boss arena.
+        # b409: also clamp the warp ceiling at F49 (z=48) when the
+        # shard gate is locked. F50 (z=49) is the boss arena -- the
+        # shard-quest design intent is that you can only reach it by
+        # collecting all 8 Shards of Power and descending through the
+        # gate on F49. A random portal roll dropping the player onto
+        # the boss arena would skip the entire quest.
         MAX_FLOOR_Z = 49
+        gate_cap = MAX_FLOOR_Z - 1 if not gs.gate_to_floor_50_unlocked else MAX_FLOOR_Z
         current_z = player_character.z
         min_z = max(0, current_z - 2)
-        max_z = min(MAX_FLOOR_Z, current_z + 2)
+        max_z = min(gate_cap, current_z + 2)
 
         # Generate needed floors
         while len(my_tower.floors) <= max_z:
@@ -4262,6 +4269,17 @@ def handle_stairs_up(player_character, my_tower, floor_params):
 
 def handle_stairs_down(player_character, my_tower, floor_params):
     interacted_this_turn = False
+    # b409: cap descent at F50 (z=49, the boss-arena floor). Without
+    # this the stairs would happily generate F51+ phantom floors past
+    # the designed dungeon depth. Caught on b408 deploy sweep: elf
+    # seed=12 reached max_floor=51 via a warp -> stair chain that
+    # pushed z to 50. The warp at line 4333 also lacked the cap (also
+    # patched in b409); the stair handler is the more common path.
+    MAX_FLOOR_Z = 49
+    if player_character.z >= MAX_FLOOR_Z:
+        print_to_output("The stairs lead nowhere -- this is the bottom of Zot's dungeon.")
+        add_log(f"{COLOR_YELLOW}You stand at the bottom of the cavern. There is nowhere deeper to descend.{COLOR_RESET}")
+        return player_character.x, player_character.y, False, interacted_this_turn
     print_to_output("You found a passage leading down!")
 
     player_character.z += 1
@@ -4329,8 +4347,17 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
         print_to_output(f"{COLOR_RED}The portal's power overwhelms you! You are sucked in...{COLOR_RESET}")
 
         # Determine new floor (within +/- 2 floors)
+        # b409: cap max_z at F50 (z=49). Mirror the warp at line 3037
+        # which already caps; without it a F49+ warp could spit the
+        # player onto a phantom F51 generated past the boss arena.
+        # Also clamp at F49 (z=48) when the Gate to Floor 50 is
+        # still locked, so the random portal can't skip the
+        # 8-shard quest by warping the player straight onto the
+        # boss arena.
+        MAX_FLOOR_Z = 49
+        gate_cap = MAX_FLOOR_Z - 1 if not gs.gate_to_floor_50_unlocked else MAX_FLOOR_Z
         min_z = max(0, player_character.z - 2)
-        max_z = player_character.z + 2
+        max_z = min(gate_cap, player_character.z + 2)
 
         # Ensure max_z does not exceed newly generated floor (if any) to prevent errors
         # This might require generating floors up to max_z if they don't exist.

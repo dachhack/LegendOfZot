@@ -1,130 +1,238 @@
-# Session Handoff — Caster Sweep Complete, Next: F25 Plant with Stronger Stats
+# Session Handoff — End-Game Quest Now Completable, F50 Boss Beatable
 
-**Date:** 2026-05-21  
-**Outgoing branch:** `claude/fix-tomb-elite-cap-YnjrE` (b391 → b406, ten builds)  
-**Incoming task:** Repeat the playtest/balance sweep at F25 plant with stronger starting characters to probe F30-F50 content.
+**Date:** 2026-05-22
+**Outgoing branch:** `claude/f25-plant-balance-sweep-ZQKaG` (b406 → b411)
+**Incoming task:** Polish the natural-play path or balance the F30-F40 caster transition.
 
 ---
 
-## What just shipped (b391 → b406)
+## What just shipped (b407 → b411)
 
-Ten coordinated builds turned casters from "0% F25 survival" into a viable late-game archetype. Each build's full rationale is in `wizardscavern/version.py` CHANGELOG, but the arc:
+Five builds turned the F25-plant playtester loose on the deep dungeon
+and exposed a chain of bugs in the end-game quest. Full rationale per
+build is in `wizardscavern/version.py` CHANGELOG; the arc:
 
-| Build | Change | Why |
+| Build | Theme | Key change |
 |---|---|---|
-| b391/b393 | Hard cap tomb_elite at F5+ | F2-F5 elite Wraith one-shots |
-| b394 | `--start-floor N` plant baseline | Iterate deep without 4000T waits |
-| b395 | Wedge-break / oscillation detector | 9/90 wedged runs at b394 |
-| b396 | Survivor inventory grants | Plants arrived consumable-bare |
-| b397 | Stat-elixir pad + pre-memorized utility spells | Plants arrived spell-bare |
-| b398 | Power-aware spell pick + pre-fight Stone Skin | Smart-policy ignored Lightning Bolt |
-| b399 | Race+INT mana regen (elf 1/2, human 1/3, dwarf 1/5) | Casters bled mana between fights |
-| b400 | Additive INT-scaling on spell damage | Cantrips didn't scale with stat investment |
-| b401 | Prey-filter on Stone Skin trigger | Wasted buff on short fights |
-| b402 | INT-scaled Quick Cast (skip channel-init swing) | F25 elf died mid-cast 50% of deaths |
-| b403 | Hold Monster fix + DEX concentration + Mage Armor + Spectral Hand + Hourglass Talisman | Defensive suite |
-| b404 | Spell priority rewrite + monster obs in spell_casting_mode | b403 features never fired |
-| b405 | Spectral Hand 3→1 absorb, Mage Armor +6→+4 DEF | b404 over-corrected (80% F25 survival) |
-| b406 | Hold Monster duration 2→1 | Final balance pass |
+| b407 | Stronger F25 plants | target_level N+1, gear-swap by tier, +120 HP / +75 MP pad, Tier 6 inventory, fix combat-mode wedge break |
+| b408 | High-tier damage spells | Meteor Strike + Inferno at F18+/F22+, burst-nuke priority for L3+ damage |
+| b409 | Cap dungeon at F50 | handle_stairs_down + warps + scrolls + Key all clamp at z=49 (and gate-lock past z=48 until shards) |
+| b410 | Repair Rune of Growth | World Tree harvest stub → real rune award; gardens_harvested_total counter wired up |
+| b411 | Guardian victory trigger | victory_screen hoisted out of the nested `is_legendary` block in all three kill paths; non-resisted damage spells in tier list; resistance-aware picker; boss-combat policy overrides |
 
-### Final balance numbers (1500T sweep, 30 seeds each)
+### F25-plant final numbers (b408, 30 seeds, 3000T)
 
 | Plant | Dwarf | Elf | Human |
 |---|---|---|---|
-| F15 | 20% | 23% | 30% |
-| F20 | 10% | 17% | 7% |
-| F25 | 27% | 20% | 20% |
+| F25 | 21/30 (70%) | 16/30 (53%) | 13/30 (43%) |
 
-Race niche distribution: **Human strongest at F15** (balanced stats), **Elf strongest at F20** (mid-tier caster prime), **Dwarf strongest at F25** (deep-floor tank). Each race has a survival sweet spot.
+### F25-plant deep numbers (b408, 30 seeds, 10000T) — last deploy
 
-### Final balance numbers (7000T sweep, 15 seeds each)
+| Race | Alive @ F49 (cap) | Avg max floor | F30-F40 deaths |
+|---|---|---|---|
+| Dwarf | 12/30 (8 reach F49) | F40.5 | 6 in F30-F35, 3 in F35-F40, 4 in F40+ |
+| Elf | 4/30 (2 reach F49) | F35.6 | 1 F30-35, 5 F35-40, 7 F40-F49 |
+| Human | 2/30 (1 reaches F49) | F31.9 | 5 F30-35, 5 F35-40, 2 F40+ |
 
-| Plant | Dwarf | Elf | Human | Max Depth |
-|---|---|---|---|---|
-| F15 | 0/15 | 0/15 | 1/15 | F35 (human) |
-| F20 | 0/15 | 1/15 | 0/15 | F28 (dwarf) |
-| F25 | 1/15 | 2/15 | 2/15 | F33 (dwarf) |
+### F50-boss numbers (b411, 30 seeds, 3000T with shards pre-loaded)
 
-Long-form (5% overall) is much harder than short-form (20-30%). **F25 caster wall is broken; F30+ wall is the next frontier.** F25 elf max depth = F26 (they survive but don't push). F25 dwarf max depth = F33 (the real deep-game runner).
+| Race | Wins | Avg turns to victory |
+|---|---|---|
+| Dwarf | **30/30** | 53.7T (pure melee) |
+| Elf | **30/30** | 116.4T (Holy Smite cycle) |
+| Human | **30/30** | 144.7T (mixed) |
+
+Every seed defeats Zot's Guardian when planted on F50 with all 8
+shards. Reports deployed to `main:docs/playtest/` — 90 individual
+run pages + index.
 
 ---
 
-## Next session task: F25-plant playtest with stronger starting players
+## Bugs found and fixed in the end-game quest
 
-The user's directive: "Repeat the playtesters but seeds at floor 25 this time. Same process we just went through but deeper with stronger starting players."
+The b410-b411 audits surfaced 7 distinct bugs that would have made
+the natural shard quest impossible to complete:
 
-**Interpretation:** We've broken the F25 wall; now turn the dial up. Plant characters with stronger profiles (more stats, more gear, more memorized spells) at F25, then run them with 5000-7000T budgets, and see which floor becomes the new wall (F30? F35? F40?). Iterate balance changes against the new wall.
+1. **Rune of Growth was a `pass` stub** (`room_actions.py:2547`) —
+   harvesting the World Tree did nothing, no rune awarded.
+2. **`gardens_harvested_total` never incremented** anywhere; the
+   75-harvest requirement to spawn the World Tree could never fire.
+3. **`world_tree_available` flag never set True** — the G-room
+   upgrade at `game_systems.py:2479` never triggered.
+4. **Warp paths bypassed the shard gate** — random portals on F47-F49
+   could roll +2 = F50 and drop the player onto the Guardian without
+   the 8 shards.
+5. **`handle_stairs_down` had no cap** — agents on F50 descended to
+   phantom F51 floors past the boss arena (one elf seed reached F51
+   in the prior deploy).
+6. **F50 boss arena tile-selection was fragile** — center tile only
+   became the Guardian if randomly generated as `.`; ~40% of seeds
+   had no Guardian at all on F50.
+7. **Victory screen was nested inside `if not runes_obtained['battle']`
+   AND `if is_legendary`** — killing the Guardian after the rune was
+   collected silently set `combat_victory` instead of `victory_screen`.
+   All three kill paths (melee, channeled-spell, instant-cast-spell)
+   had the same bug.
 
-### Concrete starting point
+Post-b411, the quest path is whole end-to-end: 75 gardens → World Tree
+spawn → harvest = Rune of Growth → shard vault → 8 shards → F49 gate
+opens → F50 boss arena → Zot's Guardian → victory_screen → YOU WIN.
 
-1. **Beef up `_plant_survivor_baseline` for F25+ plants:**
-   - Currently grants `(level*5)**2 + 1` XP where `level = max(1, N-2)`. F25 plant → L23 character. Bump to L26-28 (target L=N+1 or N+2).
-   - Stat-elixir pad: +1 per 5 floors. At F25 → +5 to each stat. Consider F25+ getting +6 or +7.
-   - Equipment upgrades: weapon/armor `+(N-1)//3`. F25 → +8. Could bump to +10 at F25+.
+---
 
-2. **F25-plant sweep harness:**
-   - `/tmp/caster_sweep_7k.py` is the existing 7000T template. Trim to just F25 plant, all races, 30 seeds, 5000-7000T.
-   - Expect ~2-4 min per sweep at this size.
+## What it takes to kill Zot's Guardian
 
-3. **Audit script for deep diagnostics:**
-   - `/tmp/caster_audit.py` tracks Hold Monster cast rate, Spectral Hand uptime, Mage Armor uptime, Quick Cast triggers. Reuse it.
-   - Add: track final floor reached, deaths by depth, death cause (last monster type / mode).
+**Boss profile**: 1000 HP, 80 ATK, 50 DEF, resists Physical / Fire /
+Ice / Lightning / Light / Darkness, no weaknesses, level 50.
 
-4. **Likely investigation areas (predicting the F30+ wall):**
-   - **Food clock** — at 7000T, hunger ticks ~1400 times. Stronger plants need more food OR longer-lasting sausages.
-   - **Item replenishment** — F25 plant inventory runs out by F30. Magic Shoppes are rare past F30; need a deep-floor refresh mechanic.
-   - **Monster scaling** — at F40+ monsters have base_health + 600. Spell damage caps at ~80 raw. Need stronger damage or pierce mechanics.
-   - **Mana decay even with b399 regen** — high-INT casters at F35+ deplete mana faster than they regen.
+**Required build** (any one path works):
 
-### What NOT to repeat from this session
+- **Caster path**: Holy Smite (L4 Holy, 36 MP, ~85 net dmg/cast) OR
+  Mind Blast (L3 Psionic) / Earthquake (L3 Earth) / Psychic Scream
+  (L4 Psionic). Mass Heal for sustain. Mage Armor for defense. INT
+  22+ for casting + mana pool.
+- **Melee path**: Enchanted Longsword tier or higher (+30 base) at
+  +20 upgrade. STR-padded dwarf at L51 deals ~30 dmg/swing into the
+  Guardian's DEF 50. Kill takes ~50 swings.
+- **Hybrid (recommended)**: cast Holy Smite while mana lasts, swing
+  weapon when mana depletes. Most forgiving against mana scarcity.
 
-- **Don't fight the priority cascade again.** The b404 fix already wired the `spell_casting_mode` priority correctly. New defensive spells should fit into the existing order (Hold Monster → Spectral Hand → Mage Armor → Stone Skin → Heal → Damage).
-- **Don't auto-grant items in plant baseline.** Hourglass Talisman is in `UNIQUE_TREASURE_TEMPLATES` and drops via the 10% chest path. Any new accessory should follow that pattern, not the failed b403 auto-equip pattern.
-- **Don't break the dwarf identity.** The b405/b406 nerf restored dwarf as deep-floor tank. New caster features should not push them below dwarf survivability.
+**Audit conclusion**: TOUGH-BUT-FAIR. All required spells/gear are
+findable through normal vendor stock at F2-F17 (spells) and F12-F42
+(weapons). The Mythic Destroyer (+84 base, F37+) makes the melee path
+trivial. L51 is overshot by 20-50 levels in a natural F45-F49 grind.
+
+**Real risk**: a player who never memorizes a non-resisted damage spell
+by F30 (the L3/L4 vendor window closes past F10) will hit a hard wall
+against the Guardian — resisted spells = half damage forever. This is
+a planning gate, not RNG. Estimated success: ~80% guided, ~50-60% blind.
+
+---
+
+## Smart-policy boss-combat overrides (b411)
+
+The boss fight required several policy adjustments that should not
+regress general-purpose play:
+
+1. **Boss override for buff cascade** (`is_boss = m_max_hp >= 500 OR
+   is_zots_guardian`): skip Spectral Hand / Stone Skin recasts. On
+   50+ turn fights the 14 MP + 18 MP per cycle is net mana loss vs
+   damage spells.
+2. **No flee against the Guardian**: all `return "f"` gates in
+   combat_mode now skip when `is_boss_combat = is_zots_guardian`.
+   The boss arena has no re-engagement path — fleeing locks the agent
+   in a stairs_down_mode loop against the F50 cap.
+3. **Resistance-aware spell pick**: position 6 damage pick and burst-
+   nuke 1b gate both score by `base_power * (0.5 / 1.0 / 2.5)` based
+   on monster resistance. Surfaces `elemental_strength` and
+   `elemental_weakness` on the monster obs; `damage_type` on the
+   spell obs.
+4. **Low-mana attack fallback**: when `affordable_dmg` exists but
+   the best effective power is < 20 (e.g., resisted Ice Shard does
+   ~1 dmg), prefer melee.
+
+---
+
+## Next session task: polish the natural-play path
+
+Three candidate iterations, in rough priority order:
+
+### 1. Smoke-test natural play (no pre-memorized spells)
+
+The current F50 boss test pre-grants Holy Smite via the plant tier
+list. A real player must MEMORIZE it from a vendor scroll between F2
+and F5. Run a 90-seed F25 plant sweep where the harness does NOT
+pre-memorize the L3/L4 non-resisted spells, and see whether the
+smart-policy's vendor-shop branch (`mode == "vendor_shop"`) actually
+buys them when stocked. Expected: ~50-60% organic spell-acquisition
+rate per audit prediction.
+
+If the smart-policy doesn't buy non-resisted spells (likely it grabs
+whatever's highest-base_power), then add resistance-awareness to the
+vendor-buy logic mirroring the b411 spell-pick.
+
+### 2. Tune the F30-F40 caster wall
+
+The b408 deep sweep showed elf/human casters mostly die in F30-F40
+(13/30 elf in F35-F49 deaths). The F50 plant tier list gives Holy
+Smite / Mind Blast etc., but the F25 plant tier doesn't — those
+spells are gated at F30+/F35+. A F25-plant elf descending into F30-F40
+content uses Inferno (Fire), Meteor Strike (Fire), Lightning Bolt
+(Wind/Lightning) against monsters that resist those. Mind Blast /
+Earthquake might be the right early L3 picks even for F25 plants.
+
+### 3. Bump Mana Potion stock at deep vendors
+
+The audit found mana sustain is the real bottleneck for the caster
+boss build. F40+ vendors should stock 5+ Mana Potions to make the
+~500-MP-budget boss fight feasible. Check `vendor.py` potion stock
+generation.
 
 ---
 
 ## Key files to know
 
-- `wizardscavern/playtest_harness.py` — `_plant_survivor_baseline`, `_grant_memorized_spells`, `_grant_survivor_inventory`, `smart_policy` (3000+ line dispatcher)
-- `wizardscavern/combat.py` — `_execute_charged_spell`, `process_combat_action`, `process_spell_casting_action`, `concentration_check`, `get_spell_charge_turns`
-- `wizardscavern/characters.py` — `Character.cast_spell`, `take_damage`, `max_mana` property, `add_status_effect`
-- `wizardscavern/items.py` — `SPELL_TEMPLATES` (1500+ entries), `process_mana_regen`
-- `wizardscavern/item_templates.py` — `UNIQUE_TREASURE_TEMPLATES` (built lazily), `ENHANCED_MINOR_TREASURES`
-- `wizardscavern/version.py` — `CHANGELOG` (keep <8 entries, drop oldest)
-
-## Caster mechanic reference
-
-- **Spell channeling**: L2-L3 spells take 1 channel turn + 1 fire turn (2 monster swings). L4-L5 take 2+1=3. L0-L1 are instant (1 swing).
-- **Quick Cast**: `(INT - 17) * 4%` chance to skip channel-init swing, capped 75%, +cast_speed_bonus from Hourglass Talisman.
-- **Concentration check**: d20 + INT//4 + DEX//4 vs DC = max(5, dmg_taken // 2). Pass = channel continues, fail = mana lost.
-- **Hold Monster**: 1 MP, 1-turn freeze, monster's reactive swing (post-cast) skipped. Doesn't cover next-spell channel-init (duration too short by design after b406).
-- **Mage Armor + Stone Skin stack**: Different `status_effect_name`, both apply `defense_boost` magnitude. +4 + +8 = +12 DEF when both up.
+- `wizardscavern/playtest_harness.py`:
+  - `new_game(with_shards=True)` line 392 — short-circuits the rune/
+    shard grind for boss testing. When `start_floor=50`, plants
+    directly on the Guardian tile (after clearing ambient mobs and
+    warps) and triggers the boss room interaction.
+  - `_plant_survivor_baseline` line 803 — stat/level/gear/HP/MP
+    pumps + spell tier list
+  - `_swap_plant_gear` line 951 — tier-swap helper for F15/F20/F25
+  - `_grant_memorized_spells` line 978 — non-resisted damage spells
+    at F30+/F35+
+  - `smart_policy` line 5421 — boss-combat overrides, resistance-
+    aware spell pick, no-flee-against-Guardian gates
+- `wizardscavern/combat.py:735`, `:1188`, `:1898` — three Guardian
+  victory-screen triggers
+- `wizardscavern/dungeon.py:create_floor_50_boss_arena` line 616 —
+  spiral-out fallback so Guardian always spawns
+- `wizardscavern/room_actions.py:harvest` line 2543 — Rune of Growth
+  award + counter increment
+- `wizardscavern/game_systems.py:handle_stairs_down` line 4267 —
+  F50 cap; `handle_warp_room` line 3037, 4344 — gate-locked warps
+- `wizardscavern/version.py` — CHANGELOG, keep ~8 entries
 
 ## Sweep harness commands
 
 ```bash
-# Short sweep, 1500T, 30 seeds (~7 min)
-timeout 1500 python3 /tmp/caster_sweep.py
+# Standard F25-plant 3000T sweep, 30 seeds (~6-8 min)
+timeout 1800 python3 /tmp/caster_sweep.py
 
-# Long sweep, 7000T, 15 seeds (~5-6 min)
-timeout 1800 python3 /tmp/caster_sweep_7k.py
+# F25-plant 7000T deep sweep, 15 seeds (~12-15 min)
+timeout 2400 python3 /tmp/caster_sweep_7k.py
 
-# Deep audit (Hold Monster usage, buff uptime, quick-cast rate) ~10-15 min
-timeout 900 python3 /tmp/caster_audit.py
+# F25-plant 10000T deploy sweep, 30 seeds with reports + gh-pages push (~30 min)
+python3 /tmp/caster_sweep_deploy.py
+
+# F50-plant boss-fight smoke test, 9 seeds (~1-2 min)
+python3 /tmp/endgame_smoke.py
+
+# F50-plant boss-fight deploy sweep, 90 reports + gh-pages push (~12-15 min)
+python3 /tmp/guardian_deploy.py
+
+# Spell-cast audit (counts per spell + last monster killer)
+timeout 1200 python3 /tmp/caster_audit.py
+
+# Death cause audit (last killer + log tail per seed)
+timeout 1200 python3 /tmp/death_audit.py
 ```
-
-## Pre-combat buff casting (deferred but designed)
-
-The user asked about it; I designed but didn't implement. The plan:
-
-In `smart_policy` game_loop branch, when `nearest_monster_path` distance ≤ 3 AND Spectral Hand / Mage Armor not active → fire `c` to enter spell_casting_mode and pre-buff. Would push F25 survival from 20% → ~30-40% but might over-tune again. Keep in reserve for the F25+ playtest if survival drops too low.
-
----
 
 ## Open questions for next session
 
-1. Is +5 stat pad enough at F25 plant, or should it scale steeper (e.g. +1 per 4 floors)?
-2. Should the F25 plant inventory tier add a Master Mana Potion stack to push casters past the F30 mana wall?
-3. Should new spells get dedicated sprites (Mage Armor / Spectral Hand currently share Divine Shield / Stone Skin pids)? Pool has 49 named-mapped pids; canonical has 1283 available.
-4. Is the b406 1500T F25 distribution (27/20/20) close enough to "balanced" or should casters get bumped back up?
+1. Does the smart-policy `vendor_shop` branch buy non-resisted spells
+   when stocked? Or does it always pick highest-base_power (i.e. it
+   would grab Inferno over Mind Blast at the same level)?
+2. Should the F25 plant tier list include at least one non-resisted
+   L3 spell (Mind Blast or Earthquake) to give F30+ descenders a
+   fighting chance against Fire/Lightning-resistant Mythic monsters?
+3. The b411 boss-combat override applies to all monsters with
+   `max_hp >= 500` (vault Tarrasques, Mythic bosses, plus the
+   Guardian). Is the "skip Spectral Hand / Stone Skin recast" rule
+   universally correct, or only for the Guardian's 1000-HP / multi-
+   resist profile?
+4. The F50 deploy reports show 90/90 victories — does the user want
+   to see a "natural progression" sweep (F25 plant, 10000T, agents
+   reach F50 organically) to confirm the quest can complete without
+   the with_shards plant baseline?

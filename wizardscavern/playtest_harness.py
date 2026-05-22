@@ -389,7 +389,7 @@ def _item_category(item):
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
              int_bonus=0, spells=None, starter_pack=True,
-             fog_of_war=True, start_floor=1):
+             fog_of_war=True, start_floor=1, with_shards=False):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
@@ -724,6 +724,59 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     else:
         _trigger_room_interaction(gs.player_character, gs.my_tower)
 
+    # b410 quest playtest: short-circuit the rune/shard grind so the
+    # F50 boss arena can be tested directly. Pre-grants all 8 runes +
+    # shards + flips gate_to_floor_50_unlocked so a F47-F49 plant can
+    # walk straight to the boss without first finding 200 monsters,
+    # 75 gardens, etc. Real games still go through the full grind --
+    # this is a harness-only escape hatch for verifying the end-game
+    # mechanics work end-to-end.
+    if with_shards:
+        for key in gs.runes_obtained:
+            gs.runes_obtained[key] = True
+        for key in gs.shards_obtained:
+            gs.shards_obtained[key] = True
+        gs.gate_to_floor_50_unlocked = True
+        # When planted on F50 with shards, scoot the player adjacent
+        # to the Zot's Guardian boss tile (center of the arena, see
+        # dungeon.py:631 -- rows // 2, cols // 2). Without this the
+        # plant lands on U far from center and gets eaten by ambient
+        # Mythic-tier monsters before reaching the boss. We pick an
+        # adjacent walkable tile so the agent's first move can step
+        # onto M and trigger the Guardian encounter cleanly.
+        if start_floor == 50:
+            floor = gs.my_tower.floors[pc.z]
+            # Boss-arena test isolation: clear ambient F50 monsters
+            # and undead-guardian spawns so we test the Guardian
+            # fight in isolation, not the F50 mob soup. The boss
+            # arena builder (dungeon.py:create_floor_50_boss_arena)
+            # places ONE M tile with has_zots_guardian -- find it.
+            boss_xy = None
+            for r in range(floor.rows):
+                for c in range(floor.cols):
+                    cell = floor.grid[r][c]
+                    if cell.properties.get('has_zots_guardian'):
+                        boss_xy = (c, r)
+                    elif cell.room_type == 'M':
+                        cell.room_type = '.'
+                    elif cell.room_type in ('T', 'N', 'W'):
+                        # Clear tombs / dungeons / warps so the boss
+                        # test isolates the Guardian fight. Warps in
+                        # particular can pull the agent off F50 to
+                        # F47-F49 mid-fight, ending up dead to an
+                        # ambient Mythic mob on those floors.
+                        cell.room_type = '.'
+                    cell.properties.pop('undead_guardian', None)
+                    cell.discovered = True
+            # Drop the player ON the Guardian tile and trigger the room
+            # interaction. The standard plant path skips
+            # _trigger_room_interaction (it would auto-fire stairs on
+            # a U tile), but for the boss test we WANT the M handler
+            # to fire and spawn the Guardian as gs.active_monster.
+            if boss_xy is not None:
+                pc.x, pc.y = boss_xy
+                _trigger_room_interaction(pc, gs.my_tower)
+
     session = PlaytestSession(fog_of_war=fog_of_war)
     if start_floor > 1:
         # 0-indexed; pc.z is start_floor - 1. Banking this prevents
@@ -786,8 +839,14 @@ def _plant_survivor_baseline(pc, start_floor):
     Mirrors what the b389 sweep data shows real agents look like at
     that depth: level ~start_floor-2, basic upgrades scaled to floor,
     ~150g/floor pad, race-flavored stat-point spend.
+
+    b407: bumped target_level from N-2 to N+1 so F25-plant probes of
+    the F30-F50 wall start from a character that can actually survive
+    F25 encounters. The b406 sweep showed >70% of plant deaths happen
+    in <100T on F25, before the agent makes any descent progress; the
+    F30-F50 wall is invisible until we get past that.
     """
-    target_level = max(1, start_floor - 2)
+    target_level = max(1, start_floor + 1)
     # gain_experience() levels up off `int(sqrt(experience) / 5)`.
     # Granting (target_level * 5)**2 + 1 puts the player exactly one
     # XP past the boundary, so the level resolves to target_level and
@@ -822,21 +881,50 @@ def _plant_survivor_baseline(pc, start_floor):
     # cast gate actually engage. Without it, humans at F12-F25 are
     # locked out of spell content despite reaching the floor where
     # vendors stock spell scrolls.
-    elixir_bonus = start_floor // 5
+    elixir_bonus = start_floor // 4
     if elixir_bonus > 0:
         for stat in ('strength', 'dexterity', 'intelligence'):
             setattr(pc, stat, getattr(pc, stat) + elixir_bonus)
+
+    # Permanent HP / mana elixir pad. A F<N> survivor would have drunk
+    # a few Potions of Permanent Health / Mana (or hit altar-of-the-
+    # fallen HP boosts) along the way. +5 HP per floor and +3 MP per
+    # floor of depth past F1 brings F25 plant HP from ~290 (elf) to
+    # ~410, enough to absorb 2-3 status-lockout hits at 50-80 dmg/
+    # swing without dying. F25 mana pool gains +75 so casters have
+    # enough spell budget for the longer F30-F50 runs.
+    # b407: caster F25 audit showed Frost Worm / Basilisk / Gorgon
+    # lockout deaths landed in 2-3 swings against elves at 290 HP
+    # (e.g. seed=5 elf t=514: 57 dmg/swing while frozen, dead in 2).
+    pc.base_max_health_bonus += (start_floor - 1) * 5
+    pc.base_max_mana_bonus += (start_floor - 1) * 3
 
     # Gear upgrades: +1 per 3 floors of depth (F4 -> +1, F7 -> +2,
     # F10 -> +3, F13 -> +4). The starter Dagger/Battleaxe + Leather
     # at +3 is consistent with what F10 survivors carry in the b389
     # sweep (most haven't bought a new weapon but have hit two
     # upgrade scrolls along the way).
-    upg = max(0, (start_floor - 1) // 3)
+    #
+    # b407: at F15+ also swap up the *base* weapon/armor tier so the
+    # plant's gear bar clears the smart-policy descent gate (line
+    # 6260 `(eq_w + eq_a) < (2*z + 3)`). At F25 the gate requires
+    # base+upgrade >= 53; a maxed starter Dagger+Leather (4+3 base,
+    # +20 each) only reaches 47, so plants never trip "ready to
+    # descend" and stagnate on the plant floor. Real F25 survivors
+    # would have bought a tier-12 weapon by then.
+    upg = max(0, (start_floor - 1) // 2)
+    if start_floor >= 25:
+        _swap_plant_gear(pc, "Enchanted Longsword", "Enchanted Plate")
+    elif start_floor >= 20:
+        _swap_plant_gear(pc, "Volcanic Blade", "Volcanic Mail")
+    elif start_floor >= 15:
+        _swap_plant_gear(pc, "Adamantine Sword", "Dragon Scale")
     if pc.equipped_weapon is not None and upg > 0:
-        pc.equipped_weapon.upgrade_level = min(20, pc.equipped_weapon.upgrade_level + upg)
+        cap = getattr(pc.equipped_weapon, 'upgrade_limit', 20) or 20
+        pc.equipped_weapon.upgrade_level = min(cap, pc.equipped_weapon.upgrade_level + upg)
     if pc.equipped_armor is not None and upg > 0:
-        pc.equipped_armor.upgrade_level = min(20, pc.equipped_armor.upgrade_level + upg)
+        cap = getattr(pc.equipped_armor, 'upgrade_limit', 20) or 20
+        pc.equipped_armor.upgrade_level = min(cap, pc.equipped_armor.upgrade_level + upg)
 
     # Gold pad: ~150g/floor net of accumulated stockpile spend.
     pc.gold += (start_floor - 1) * 150
@@ -866,6 +954,33 @@ def _plant_survivor_baseline(pc, start_floor):
     _grant_survivor_inventory(pc, start_floor)
 
 
+def _swap_plant_gear(pc, weapon_name, armor_name):
+    """Replace the plant's equipped weapon / armor with a deeper-tier
+    template by name. The starter Dagger/Battleaxe + Leather can't
+    clear the smart-policy descent gate past F12 even when maxed; a
+    real F15+ survivor would have a much better base item. Caller is
+    responsible for upgrade_level scaling -- this only swaps the base.
+    """
+    from .item_templates import WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    import copy as _copy
+    by_w = {w.name: w for w in WEAPON_TEMPLATES}
+    by_a = {a.name: a for a in ARMOR_TEMPLATES}
+    if weapon_name in by_w:
+        new_wpn = _copy.deepcopy(by_w[weapon_name])
+        if hasattr(new_wpn, 'is_identified'):
+            new_wpn.is_identified = True
+        pc.equipped_weapon = new_wpn
+        if new_wpn not in pc.inventory.items:
+            pc.inventory.add_item_quiet(new_wpn)
+    if armor_name in by_a:
+        new_arm = _copy.deepcopy(by_a[armor_name])
+        if hasattr(new_arm, 'is_identified'):
+            new_arm.is_identified = True
+        pc.equipped_armor = new_arm
+        if new_arm not in pc.inventory.items:
+            pc.inventory.add_item_quiet(new_arm)
+
+
 def _grant_memorized_spells(pc, start_floor):
     """Pre-memorize utility spells for caster builds, scaled by depth.
     No-op for non-casters (get_max_memorized_spell_slots() == 0) so
@@ -883,13 +998,25 @@ def _grant_memorized_spells(pc, start_floor):
     # Picks bias toward survival utility (Heal / Stone Skin) ahead of
     # raw damage, since the smart-policy heal-cast gate is the highest-
     # impact spell usage in the harness today.
+    #
+    # b408: added Meteor Strike (L3, +45 base) and Inferno (L4, +55
+    # base) for F18+ / F22+ plants. The b407 caster death audit showed
+    # status-lockout monsters (Frost Worm 50-80 dmg/swing, Basilisk
+    # paralysis + Death Knight 90 dmg + Burn) were claiming F25-F30
+    # casters because Flame Lance (61 dmg at INT 26) couldn't drop a
+    # 100-150 HP F25 monster in 1 cast -- the channel-complete swing
+    # landed for 50-90 dmg AND applied the status. A one-shot Meteor
+    # Strike (~79 dmg at F25 elf) drops mid-tier F25 monsters in a
+    # single cast, eliminating the lockout window. Dropped Fireball
+    # (superseded by L2 spells), Minor Heal (superseded by Heal), and
+    # Battle Hymn (audit confirms smart-policy never picks it) to
+    # make slot room.
     tiers = [
         # Healing ladder. Granted in tier order; the spell_casting_mode
         # heal pick (b398) chooses the smallest heal >= deficit, so
-        # having Minor Heal + Heal + Greater Heal + Mass Heal lets the
-        # agent right-size every heal cast to the actual HP loss
-        # without overpaying mana.
-        (5, "Minor Heal"),       # L0, 1 slot, +15 HP
+        # having Heal + Greater Heal + Mass Heal lets the agent right-
+        # size every heal cast to the actual HP loss without
+        # overpaying mana.
         (8, "Heal"),             # L1, 2 slots, +25 HP
         (18, "Greater Heal"),    # L2, 2 slots, +40 HP
         (22, "Mass Heal"),       # L3, 3 slots, +60 HP
@@ -899,30 +1026,40 @@ def _grant_memorized_spells(pc, start_floor):
         # spells get picked when mana is high, L0 fallback when mana
         # is depleted between fights.
         (10, "Ice Shard"),       # L0, 1 slot, 15 dmg
-        (13, "Fireball"),        # L1, 2 slots, 20 dmg fire
         (15, "Lightning Bolt"),  # L2, 2 slots, 31 dmg wind
         (20, "Flame Lance"),     # L2, 2 slots, 33 dmg fire
+        # b408 high-tier nukes. Meteor Strike and Inferno hit hard
+        # enough that the F25 caster can drop a parity-level monster
+        # in 1 cast before the status-lockout swing lands. Meteor
+        # Strike ~79 dmg at F25 elf (vs Flame Lance 61), Inferno
+        # ~94 dmg. Higher mana cost (22/35 vs 17 for Flame Lance)
+        # so they're picked when mana is full and saved for the
+        # dangerous fights, then the b399 race-INT regen rebuilds
+        # the pool between fights.
+        (18, "Meteor Strike"),   # L3, 3 slots, 45 dmg fire
+        (22, "Inferno"),         # L4, 3 slots, 55 dmg fire
+        # b410 Guardian-coverage damage spells. Zot's Guardian (F50
+        # boss) resists Physical/Fire/Ice/Lightning/Light/Darkness --
+        # the entire core damage spellbook above. Without a non-
+        # resisted damage option the player has zero offensive answer
+        # to the boss. These spells are deep-floor only (F30+, F35+)
+        # so they don't homogenize the F25 caster meta but are
+        # available by the time a player has the 8 shards.
+        (30, "Mind Blast"),       # L3, 3 slots, 40 dmg Psionic
+        (30, "Earthquake"),       # L3, 3 slots, 46 dmg Earth
+        (35, "Holy Smite"),       # L4, 3 slots, 56 dmg Holy
+        (35, "Psychic Scream"),   # L4, 3 slots, 48 dmg Psionic
         # b403/b404 caster defense suite -- moved ahead of buff/utility
         # tier because the b403 deep audit showed the F25 caster slot
         # cap (24) was exhausted by heals+damage+stone_skin before
         # Mage Armor / Spectral Hand could be memorized, leaving them
         # unused across all 18 audit seeds. New order grants the
-        # high-impact defensive layer first, drops Battle Hymn last
-        # since the smart-policy never picks offense buffs anyway.
+        # high-impact defensive layer first.
         (10, "Mage Armor"),      # L1, 2 slots, +6 DEF / 10 turns (stacks w/ Stone Skin)
         (15, "Spectral Hand"),   # L2, 2 slots, absorb 3 hits / 8 turns
         # Stone Skin -- burst +8 DEF for short tough fights. Stacks
         # with Mage Armor since they have separate status_effect_name.
         (12, "Stone Skin"),      # L2, 2 slots, +8 DEF / 4 turns
-        # Status cure. Surfaces a non-potion poison cleanse for deep
-        # floors where Cave Lizards / Cobras hit poison ticks.
-        (19, "Purify"),          # L1, 2 slots, cure poison
-        # Battle Hymn (offense buff) intentionally last -- audit on
-        # b398 showed it's never auto-cast by the policy because back-
-        # to-back buff turns burn more damage output than the +10 ATK
-        # window pays back over a 3-turn fight. Kept in the tier list
-        # for human/dwarf mages who'd cast it manually.
-        (16, "Battle Hymn"),     # L2, 2 slots, +10 ATK / 3 turns
     ]
     used = pc.get_used_spell_slots()
     for min_floor, name in tiers:
@@ -1050,6 +1187,45 @@ def _grant_survivor_inventory(pc, start_floor):
                      description="Glows with a protective aura.",
                      effect_description="Grants +15 defense for 5 turns.",
                      value=80, level=1, scroll_type='protection', count=2))
+
+    # Tier 6 (F25+): deep-dungeon survivor stash. The b407 sweep
+    # showed plant deaths skew toward status-lockout (Freeze /
+    # Paralysis / Confusion locking the agent out while the monster
+    # lands 70-100 dmg/swing) and starvation in lantern-wedge loops.
+    # Adds a panic-tier emergency kit on top of Tier 5:
+    #   - Antidote x3 (cure_all -- snaps lockout state once the
+    #     game_loop bad-status gate fires)
+    #   - More Master Healing Potions (5 total at F25+) for absorb-
+    #     through-lockout HP buffer
+    #   - More Restoration Scrolls (3 total) -- full HP + status
+    #     clear, the strongest single-turn panic button
+    #   - Bratwurst x6 (sausages don't rot) to outlast 7000T runs
+    #     where the F25 lantern-wedge cases burned 1500T of stairs
+    #     navigation before starvation kicked in
+    #   - Extra Teleportation scrolls so vault Tarrasque seeds get
+    #     a real escape option (game-loop has the gate but inventory
+    #     ran dry).
+    if start_floor >= 25:
+        _add(_Potion(name="Antidote",
+                     description="Cures all negative status effects.",
+                     value=100, level=1, potion_type='cure_all',
+                     effect_magnitude=0, count=3))
+        _add(_Potion(name="Master Healing Potion",
+                     description="Restores 180 HP.",
+                     value=180, level=7, potion_type='healing',
+                     effect_magnitude=180, count=3))
+        _add(_Scroll(name="Scroll of Restoration",
+                     description="Pulses with healing light.",
+                     effect_description="Fully restore HP and remove status effects.",
+                     value=200, level=3, scroll_type='restoration', count=2))
+        _add(_Scroll(name="Scroll of Teleportation",
+                     description="Space itself warps.",
+                     effect_description="Teleport to a random safe location on the floor.",
+                     value=100, level=2, scroll_type='teleport', count=2))
+        _add(_Sausage(name="Bratwurst",
+                      description="A coarse-ground German sausage.",
+                      value=30, level=1, nutrition=60,
+                      sausage_style="Bratwurst", count=6))
 
 
 ACTION_HINTS = {
@@ -1449,7 +1625,11 @@ class PlaytestSession:
                  # (pre-b398 a F25 elf with Lightning Bolt was casting
                  # 6-dmg Mind Touch ~70% of fights because the rng.choice
                  # gave the cheap cantrip equal weight with the L2 spell).
-                 "base_power": getattr(s, "base_power", 0) or 0}
+                 "base_power": getattr(s, "base_power", 0) or 0,
+                 # b410: surface damage_type so the spell-pick policy
+                 # can match the spell's element against the monster's
+                 # elemental_strength / elemental_weakness lists.
+                 "damage_type": getattr(s, "damage_type", "None") or "None"}
                 for i, s in enumerate(pc.memorized_spells)
             ],
             # Spell inventory in insertion order (build 387). The
@@ -1622,6 +1802,18 @@ class PlaytestSession:
                            for eff in m.status_effects.values()),
             "is_paralyzed": any(eff.effect_type in ('paralysis', 'freeze')
                                 for eff in m.status_effects.values()),
+            # b410: surface monster elemental resistances + weaknesses
+            # so the spell-pick policy can demote resisted spells (0.5x
+            # damage per combat.py:172) and promote weakness-targeting
+            # ones (2.5x per combat.py:169). Critical against Zot's
+            # Guardian (F50 boss) which resists Physical/Fire/Ice/
+            # Lightning/Light/Darkness -- the entire Inferno / Meteor
+            # Strike / Flame Lance / Lightning Bolt / Ice Shard core
+            # damage suite. Without surfacing this the policy keeps
+            # casting Inferno (55 base -> 27 effective -> 1 final after
+            # DEF 50) instead of Mind Blast (40 base -> full 40).
+            "elemental_strength": list(getattr(m, 'elemental_strength', []) or []),
+            "elemental_weakness": list(getattr(m, 'elemental_weakness', []) or []),
         }
 
     def _inventory_obs(self):
@@ -2852,12 +3044,21 @@ class PlaytestSession:
         self.position_history.append(cur_xy)
         if len(self.position_history) > 16:
             self.position_history.pop(0)
-        # Freeze-streak update. The key combines position, HP, and per-
-        # floor kill count. Any movement, any HP delta (taking damage
-        # or healing), and any kill resets the streak -- those are all
+        # Freeze-streak update. The key combines position, HP, mana,
+        # and per-floor kill count. Any movement, any HP delta (taking
+        # damage or healing), any mana spend (cast a buff that doesn't
+        # change HP), and any kill resets the streak -- those are all
         # signs of real progress / world advancement.
+        #
+        # b407: mana added to the key. Without it, a caster in combat
+        # buffing themselves (Stone Skin / Mage Armor / Spectral Hand)
+        # against a missing monster appears "frozen" because none of
+        # position/HP/kills change while mana ticks down. Caught on
+        # F25 elf seed=4: 30 cast turns -> wedge fired 'x' in combat
+        # for 2919 turns straight.
         freeze_key = (pc_after.z, pc_after.x, pc_after.y,
-                      pc_after.health, self.kills_on_floor)
+                      pc_after.health, pc_after.mana,
+                      self.kills_on_floor)
         if freeze_key == self._prev_freeze_key:
             self.freeze_streak += 1
         else:
@@ -3116,7 +3317,15 @@ def smart_policy(obs, rng, use_lantern=True):
         or (osc_streak >= 60 and mode == "game_loop")
     )
     if wedge_trip and mode not in MOVE_MODES:
-        # Non-movement mode -- back out to game_loop.
+        # Non-movement mode -- back out to game_loop. combat_mode is
+        # the only one that doesn't accept 'x' (combat.py:1271 logs
+        # 'Invalid combat command'); flee instead. b407 caught: F25
+        # elf seed=4 entered combat with a Savage Werewolf, cycled
+        # Stone Skin / Mage Armor buffs that didn't change HP / kills
+        # / position, freeze_streak hit 30 and the wedge break fired
+        # 'x' for 2919 turns straight (1 stuck monster, 3000T burned).
+        if mode == "combat_mode":
+            return "f"
         return "x"
     if wedge_trip:
         neighbors_wb = obs.get("neighbors") or {}
@@ -5211,6 +5420,17 @@ def smart_policy(obs, rng, use_lantern=True):
         m_is_edible = m.get("is_edible", True)
         m_name_low = (m.get("name") or "").lower()
         pc_level = p.get("level") or 1
+        # b410: detect Zot's Guardian (end-boss). Once engaged the
+        # smart-policy must NOT flee -- the boss arena has no
+        # re-engagement path (the wayfinder treats M as a hazard
+        # and the F50 cap blocks the descent loop the agent would
+        # otherwise fall into). Smoke test caught this: 5/9 plants
+        # got the Guardian to 5-11 HP then fled at low HP and
+        # spent the rest of the budget pressing 'd' against the
+        # bottom-of-dungeon block. Hold ground, heal in-combat,
+        # win or die fighting.
+        is_boss_combat = (gs.active_monster is not None
+                          and gs.active_monster.properties.get('is_zots_guardian'))
         # Reuse the module-level token list; obs.monster.is_undead is
         # already set by _monster_obs, but we recompute here so the
         # combat threat assessment is self-contained.
@@ -5243,7 +5463,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # because the agent kept fighting Wraiths/Liches/Lichen with
         # no meat return. Now we abort those fights immediately and
         # keep looking for an edible target.
-        if starving and not m_is_edible:
+        if starving and not m_is_edible and not is_boss_combat:
             return "f"
         # Drink a healing potion mid-fight as a last resort.
         if hp_pct < 0.50 and heal_pot_slot and not heal_spell_slot:
@@ -5272,7 +5492,8 @@ def smart_policy(obs, rng, use_lantern=True):
         in_tiny_pocket = pocket_reach <= 10
         if (has_ticking_status and not immobilised
                 and not (starving and m_is_edible)
-                and not in_tiny_pocket):
+                and not in_tiny_pocket
+                and not is_boss_combat):
             return "f"
         # Low-HP last-ditch flee: HP < 30%, no healing options at all,
         # not starving. Better to disengage and look for a vendor /
@@ -5303,7 +5524,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not heal_spell_slot
                 and not starving
                 and not is_shrunk
-                and not no_escape_pocket):
+                and not no_escape_pocket
+                and not is_boss_combat):
             return "f"
         # Heal-before-flee narrow window (build 390). Pre-fix, the
         # HP<50% heal gate above caught urgent heals but a 55-65%
@@ -5321,12 +5543,12 @@ def smart_policy(obs, rng, use_lantern=True):
                 and 0.50 <= hp_pct <= 0.65
                 and obs.get("last_action") != "i"):
             return "i"
-        # Threat-flee only when NOT starving -- a starving agent vs
+        # Threat-flee only when NOT starving and NOT in boss combat --
         # an edible monster needs to win this fight to live. Same
         # shrunk + tiny-pocket exception: with no escape route,
         # fleeing just postpones the same fight.
         if (monster_too_tough and not starving and not is_shrunk
-                and not no_escape_pocket):
+                and not no_escape_pocket and not is_boss_combat):
             return "f"
         # Pre-damage buff (Stone Skin only). Two-gate filter (b401):
         # cast Stone Skin preemptively only when the fight will both
@@ -5359,9 +5581,38 @@ def smart_policy(obs, rng, use_lantern=True):
         # Bumped 0.65 -> 0.90 to actually USE the spells the agent
         # buys (Scroll of Fireball etc.) instead of saving mana for
         # an emergency that never comes.
-        if affordable_dmg and rng.random() < 0.90:
-            return "c"
-        return "a" if rng.random() < 0.92 else "f"
+        # b410: against bosses, only fire 'c' if the best affordable
+        # damage spell is actually effective against the monster's
+        # resistances. Otherwise melee. Caught dwarves spamming Ice
+        # Shard (15 base x 0.5 resist - 50 DEF = 1 dmg) for thousands
+        # of turns vs Zot's Guardian after running out of Holy Smite
+        # mana, when melee would do 18 dmg per swing.
+        if affordable_dmg:
+            m_resist_cb = set(m.get("elemental_strength") or [])
+            m_weak_cb = set(m.get("elemental_weakness") or [])
+            def _eff_cb(s):
+                dt = s.get("damage_type") or "None"
+                if dt in m_weak_cb: return s["base_power"] * 2.5
+                if dt in m_resist_cb: return s["base_power"] * 0.5
+                return s["base_power"]
+            best_eff = max((_eff_cb(s) for s in affordable_dmg), default=0)
+            # Boss-tier or any time the best damage spell is too
+            # gutted by resistance to beat a basic melee swing, attack
+            # instead of casting. Threshold 20 = roughly the floor
+            # where melee starts to outdamage a resisted L0 cantrip.
+            if best_eff >= 20 and rng.random() < 0.90:
+                return "c"
+            # b410: no random flee against bosses -- a single 'f' roll
+            # at the wrong time disengages the Guardian, the agent
+            # walks off the M tile, the F50 stairs cap loop traps
+            # them. Smoke test: human s=0 had 1 flee and burned 6267T
+            # in stairs_down_mode unable to re-engage.
+            if is_boss_combat:
+                return "a"
+            return "a" if rng.random() < 0.95 else "f"
+        if is_boss_combat:
+            return "a"
+        return "a" if rng.random() < 0.95 else "f"
 
     if mode == "crafting_mode":
         # We landed here because the inventory cascade fired 'c' on a
@@ -5627,8 +5878,24 @@ def smart_policy(obs, rng, use_lantern=True):
         m_held = _m_obs.get("is_held") or False
         m_paralyzed = _m_obs.get("is_paralyzed") or False
         _m_max_hp = _m_obs.get("max_hp") or 0
+        _m_cur_hp = _m_obs.get("hp") or 0
         _status_names = set(p.get("status_effects") or [])
         tough_fight = _m_max_hp >= p["max_hp"] * 0.30
+        # b410: boss override. For very high-HP fights (Zot's Guardian
+        # at 1000, vault Tarrasques, etc.) the regular buff cascade
+        # (Spectral Hand 14 MP every 4 turns + Stone Skin 18 MP every
+        # 4 turns + Mage Armor 8 MP every 6 turns) drains 40 MP per
+        # buff cycle. Across a 50-turn boss fight that's 500+ MP spent
+        # on buffs, leaving zero budget for damage spells. The smoke
+        # test bottomed the Guardian to 5-11 HP across 5 seeds but
+        # never finished -- the player ran out of mana for damage
+        # casts. Override: against boss-tier monsters (max_hp >= 500
+        # OR explicitly is_zots_guardian), skip Spectral Hand and
+        # Stone Skin recasts after the first cycle, and prioritize
+        # damage spells over buff recasts.
+        is_boss = (_m_max_hp >= 500
+                   or (gs.active_monster is not None
+                       and gs.active_monster.properties.get('is_zots_guardian')))
 
         # 1. Hold Monster opener (1 MP, instant). Buys 2 monster turns
         # of safety -- covers post-cast swing of NEXT spell + its
@@ -5643,12 +5910,47 @@ def smart_policy(obs, rng, use_lantern=True):
             if hold_monster:
                 return str(hold_monster["slot"])
 
+        # 1b. Burst nuke (b408). When a L3+ damage spell is available
+        # and powerful enough to drop the monster in <= 2 casts, fire
+        # it now instead of cycling through the Spectral Hand / Mage
+        # Armor / Stone Skin buff cascade. The b408 spell-usage audit
+        # showed Meteor Strike cast only 13 times across 40 caster
+        # runs vs Spectral Hand 1768 times -- the cascade burned 3
+        # channel turns of monster swings every fight before reaching
+        # damage at position 6. For tough fights vs status-applying
+        # monsters (Frost Worm freeze, Basilisk paralysis), each delayed
+        # turn is one more chance for status-lockout to land. Two casts
+        # of Meteor Strike (~79 dmg each at F25 elf INT 26) drops a
+        # 150-HP monster faster than 3 buffs + 2 attacks.
+        if affordable_dmg:
+            # b410: score by resistance-adjusted power (see position
+            # 6 picker below) so a Fire spell against a Fire-resistant
+            # boss doesn't trigger burst-nuke.
+            _m_resist_1b = set(_m_obs.get("elemental_strength") or [])
+            _m_weak_1b = set(_m_obs.get("elemental_weakness") or [])
+
+            def _eff_1b(s):
+                dt = s.get("damage_type") or "None"
+                if dt in _m_weak_1b:
+                    return s["base_power"] * 2.5
+                if dt in _m_resist_1b:
+                    return s["base_power"] * 0.5
+                return s["base_power"] * 1.0
+
+            best_dmg = max(affordable_dmg,
+                           key=lambda s: (_eff_1b(s), -s["mana_cost"]))
+            if (best_dmg.get("level", 0) >= 3
+                    and _eff_1b(best_dmg) * 2 >= _m_max_hp):
+                return str(best_dmg["slot"])
+
         # 2. Spectral Hand (14 MP). Absorbs 3 enemy strikes; with F25
         # Savage hitting ~80 raw, one cast removes ~240 dmg from the
         # next sequence. Heavy upfront mana but pays back over 8 turns.
         # Gate on tough_fight only -- small-prey fights die before the
-        # third hit lands.
-        if (tough_fight
+        # third hit lands. b410 boss override: skip on boss-tier
+        # fights (max_hp >= 500) where the 4-turn buff cycle costs
+        # more mana than it returns over a 50+ turn fight.
+        if (tough_fight and not is_boss
                 and "Spectral Hand" not in _status_names):
             spectral = next(
                 (s for s in affordable_spells if s["name"] == "Spectral Hand"),
@@ -5673,8 +5975,9 @@ def smart_policy(obs, rng, use_lantern=True):
         # 4. Stone Skin (18 MP, +8 DEF / 4 turns). The burst-buff
         # layer on top of Mage Armor. Gate on its own name (so it can
         # stack with Mage Armor). Filter to tough fights only since
-        # the burst window is short.
-        if (tough_fight
+        # the burst window is short. b410 boss override: same logic
+        # as Spectral Hand -- the recast loop steals mana from damage.
+        if (tough_fight and not is_boss
                 and "Stone Skin" not in _status_names):
             stone_skin = next((s for s in affordable_spells
                                if s["name"] == "Stone Skin"), None)
@@ -5698,10 +6001,31 @@ def smart_policy(obs, rng, use_lantern=True):
                     pick = max(heals, key=lambda s: s["base_power"])
                 return str(pick["slot"])
 
-        # 6. Damage pick: strongest base_power that fits mana.
+        # 6. Damage pick: strongest base_power that fits mana, scored
+        # against the monster's elemental resistances. b410: a Fire
+        # spell vs a Fire-resistant target gets 0.5x damage (combat.py:
+        # 172); a Holy spell vs a Holy-weak target gets 2.5x. Without
+        # this scaling the picker always grabs Inferno (55 base) even
+        # when the monster resists Fire and a Mind Blast (40 base
+        # Psionic) would deal nearly twice the effective damage.
+        # Critical for Zot's Guardian (resists Physical/Fire/Ice/
+        # Lightning/Light/Darkness) where the entire Inferno / Meteor
+        # Strike / Flame Lance core suite gets gutted.
         if affordable_dmg:
+            m_resist = set(_m_obs.get("elemental_strength") or [])
+            m_weak = set(_m_obs.get("elemental_weakness") or [])
+
+            def _effective(s):
+                dt = s.get("damage_type") or "None"
+                mult = 1.0
+                if dt in m_weak:
+                    mult = 2.5
+                elif dt in m_resist:
+                    mult = 0.5
+                return s["base_power"] * mult
+
             pick = max(affordable_dmg,
-                       key=lambda s: (s["base_power"], -s["mana_cost"]))
+                       key=lambda s: (_effective(s), -s["mana_cost"]))
             return str(pick["slot"])
 
         # 7. Random affordable spell fallback.

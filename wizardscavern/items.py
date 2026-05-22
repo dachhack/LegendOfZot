@@ -2023,13 +2023,17 @@ class Scroll(Item):
             # gear is too punishing as a non-consensual destination.
             # If the rolled target is a bug floor, nudge one floor
             # deeper (or shallower if pinned at the deep end).
+            # b409: also bar F50 (z=49) when the shard gate is locked;
+            # otherwise reading the scroll on F47-F49 could roll
+            # straight onto the boss arena and skip the 8-shard quest.
             start_z = character.z
             floors_down = random.randint(1, 3)
-            target_z = min(49, start_z + floors_down)
+            ceiling = 48 if not gs.gate_to_floor_50_unlocked else 49
+            target_z = min(ceiling, start_z + floors_down)
             while len(my_tower.floors) <= target_z:
                 my_tower.add_floor(**gs.floor_params)
             if my_tower.floors[target_z].properties.get('is_bug_level'):
-                if target_z + 1 <= 49:
+                if target_z + 1 <= ceiling:
                     target_z += 1
                 else:
                     target_z -= 1
