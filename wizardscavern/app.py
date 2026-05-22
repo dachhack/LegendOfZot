@@ -122,7 +122,7 @@ def get_audio_mood(prompt_cntl):
     """
     if prompt_cntl in ('splash', 'intro_story', 'main_menu',
                         'player_name', 'player_race', 'player_gender',
-                        'player_sprite', 'player_cantrips',
+                        'player_sprite', 'player_cantrips', 'tourist_depth',
                         'starting_shop', 'game_loaded_summary',
                         'save_load_mode', 'load_pending', 'confirm_quit'):
         return 'menu'
@@ -2582,6 +2582,7 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     'splash', 'intro_story', 'main_menu', 'death_screen',
     'game_loaded_summary',
     'player_race', 'player_gender', 'player_sprite', 'player_cantrips',
+    'tourist_depth',
     'confirm_quit',
     # Map-view room modes — body owns d-pad + HUD chips via
     # _build_map_hud_and_dpad_html().
@@ -4957,6 +4958,8 @@ class WizardsCavernApp(toga.App):
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif gs.prompt_cntl == "player_sprite":
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
+        elif gs.prompt_cntl == "tourist_depth":
+            create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif _handle(gs.my_tower, gs.player_character, cmd):
             pass
         else: # This 'else' block means gs.prompt_cntl is "game_loop" or similar map-based interaction.
@@ -5310,7 +5313,7 @@ class WizardsCavernApp(toga.App):
             return html_code
 
         # Player stats - hide HP/MP during character creation and starting shop
-        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'player_sprite', 'player_cantrips', 'starting_shop']
+        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'player_sprite', 'player_cantrips', 'tourist_depth', 'starting_shop']
 
         # Get dynamic title
         player_title = get_player_title(gs.player_character) if show_bars else ""
@@ -5980,6 +5983,58 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = "Pick 2 cantrips"
+
+        elif gs.prompt_cntl == "tourist_depth":
+            # TOURIST DEPTH PICKER -- spawn the maxed-out Playtester at
+            # F<n> instead of F1. Chips emit 'td<n>' which the
+            # game_systems handler intercepts to call
+            # plant_player_at_depth(). Presets cover the key tuning
+            # bands: F1 (true start), F5 (early), F10/F15 (mid), F20-
+            # F30 (the F30-F50-wall stress band the harness probes),
+            # F35-F45 (deep), F49 (boss approach), F50 (boss arena).
+            depth_presets = [
+                (1,  "F1",  "True start. Same as a normal new game; no warp."),
+                (5,  "F5",  "Early. First vendor tier, F5 garden / oracle content."),
+                (10, "F10", "Mid. Bug-level zone, second vendor wave."),
+                (15, "F15", "Mid-deep. Dungeons / tombs / dwarven sausage country."),
+                (20, "F20", "Volcanic-tier gear baseline."),
+                (25, "F25", "F30-wall stress band -- the b407/b408 plant depth."),
+                (30, "F30", "Deep. Death Knight / Demilich / Storm Giant territory."),
+                (35, "F35", "Deeper still. Mythic-tier mob rolls."),
+                (40, "F40", "Near-endgame. Tier-9 vendor stock."),
+                (45, "F45", "Pre-boss. Final shard drops."),
+                (49, "F49", "One step from the gate. Quest path tested here."),
+                (50, "F50", "Boss arena. Zot's Guardian -- god mode lets you cheese it."),
+            ]
+            chips = []
+            for depth, label, blurb in depth_presets:
+                cmd = f"td{depth}"
+                chips.append(
+                    f"<div class='taprow altar-act' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\" "
+                    f"style='display:block;margin:4px 0;padding:10px 12px;"
+                    f"line-height:1.35;'>"
+                    f"<div class='aname' style='font-size:16px;color:#FFD700;'>{label}</div>"
+                    f"<div class='ameta' style='font-size:12px;color:#BBB;'>{blurb}</div>"
+                    f"</div>"
+                )
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; padding: 10px;">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 8px; color: #FFD700; text-align: center;">
+                        TOURIST -- STARTING DEPTH
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
+                        Welcome, <b>Tourist</b>. You are armed to the teeth, infinitely buffed, and on Anthropic's dime. Where would you like to start your tour of the Cavern?
+                    </div>
+                    <div style="font-size: 11px; margin-bottom: 10px; color: #888; font-style: italic;">
+                        F1..F&lt;N-1&gt; are pre-discovered, so you can retreat upstairs to earlier vendors immediately.
+                    </div>
+                    <div class='altar-actions' style="max-height: 460px; overflow-y: auto; padding-right: 4px;">
+                        {''.join(chips)}
+                    </div>
+                </div>
+                """
+            current_commands_text = "Tap a depth"
 
         elif gs.prompt_cntl == "achievements_mode":
             # ACHIEVEMENTS VIEW
@@ -10286,7 +10341,8 @@ class WizardsCavernApp(toga.App):
         full_bleed = {
             'splash', 'intro_story', 'main_menu', 'death_screen',
             'player_name', 'player_race', 'player_gender',
-            'player_sprite', 'starting_shop', 'game_loaded_summary',
+            'player_sprite', 'tourist_depth',
+            'starting_shop', 'game_loaded_summary',
         }
         return 'full-bleed' if prompt_cntl in full_bleed else ''
 
