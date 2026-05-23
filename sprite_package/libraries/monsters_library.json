@@ -4,7 +4,7 @@
   "generated_at": "2026-05-03",
   "named_count": 372,
   "generic_count": 0,
-  "reserve_count": 1428,
+  "reserve_count": 1423,
   "total_count": 1800,
   "source_pickers": [
     "phash_dedup_thresh2",
@@ -4864,6 +4864,51 @@
         "category": "monster",
         "variant_index": 2
       }
+    },
+    {
+      "pid": "MN2904",
+      "sheet": "S6G",
+      "src_label": "r13c05",
+      "source_row": 13,
+      "source_col": 5,
+      "status": "in-game",
+      "marked": "reserve_kept"
+    },
+    {
+      "pid": "MN0630",
+      "sheet": "M3",
+      "src_label": "r08c07",
+      "status": "in-game",
+      "source_row": 8,
+      "source_col": 7,
+      "marked": null
+    },
+    {
+      "pid": "MN1784",
+      "sheet": "LM",
+      "src_label": "r04c06",
+      "source_row": 4,
+      "source_col": 6,
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "MN3494",
+      "sheet": "S6J",
+      "src_label": "r09c14",
+      "source_row": 9,
+      "source_col": 14,
+      "status": "in-game",
+      "marked": "reserve_kept"
+    },
+    {
+      "pid": "MN1792",
+      "sheet": "LM",
+      "src_label": "r05c06",
+      "source_row": 5,
+      "source_col": 6,
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -6899,15 +6944,6 @@
       "status": "reserve",
       "source_row": 8,
       "source_col": 6,
-      "marked": null
-    },
-    {
-      "pid": "MN0630",
-      "sheet": "M3",
-      "src_label": "r08c07",
-      "status": "reserve",
-      "source_row": 8,
-      "source_col": 7,
       "marked": null
     },
     {
@@ -12473,15 +12509,6 @@
       "marked": null
     },
     {
-      "pid": "MN1784",
-      "sheet": "LM",
-      "src_label": "r04c06",
-      "source_row": 4,
-      "source_col": 6,
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "MN1785",
       "sheet": "LM",
       "src_label": "r04c07",
@@ -12541,15 +12568,6 @@
       "src_label": "r05c05",
       "source_row": 5,
       "source_col": 5,
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "MN1792",
-      "sheet": "LM",
-      "src_label": "r05c06",
-      "source_row": 5,
-      "source_col": 6,
       "status": "reserve",
       "marked": null
     },
@@ -16433,15 +16451,6 @@
       "marked": "reserve_kept"
     },
     {
-      "pid": "MN2904",
-      "sheet": "S6G",
-      "src_label": "r13c05",
-      "source_row": 13,
-      "source_col": 5,
-      "status": "reserve",
-      "marked": "reserve_kept"
-    },
-    {
       "pid": "MN2914",
       "sheet": "S6G",
       "src_label": "r13c15",
@@ -17513,15 +17522,6 @@
       "marked": "reserve_kept"
     },
     {
-      "pid": "MN3494",
-      "sheet": "S6J",
-      "src_label": "r09c14",
-      "source_row": 9,
-      "source_col": 14,
-      "status": "reserve",
-      "marked": "reserve_kept"
-    },
-    {
       "pid": "MN3496",
       "sheet": "S6J",
       "src_label": "r10c00",
@@ -17719,5 +17719,6 @@
       "status": "reserve",
       "marked": "reserve_kept"
     }
-  ]
+  ],
+  "chosen_count": 377
 }

@@ -666,7 +666,7 @@ _MONSTERS_MAP = {
         ('MN3438', 0),  # sheet=S6J src=r05c12 (reserve-promoted)
     ],
     'Hundred-Eyed Watcher': [
-        ('MN3348', 0),  # sheet=S6I src=r14c12 (reserve-promoted)
+        ('MN0630', 0),  # picked via sprite_package/picks_recent
     ],
     'Necrarch Lich': [
         ('MN3468', 0),  # sheet=S6J src=r08c04 (reserve-promoted)
@@ -681,7 +681,7 @@ _MONSTERS_MAP = {
         ('MN3479', 0),  # sheet=S6J src=r08c15 (reserve-promoted)
     ],
     'Starspawn Aberration': [
-        ('MN3400', 0),  # sheet=S6J src=r02c14 (reserve-promoted)
+        ('MN3494', 0),  # picked via sprite_package/picks_recent
     ],
     'Crimson Wyrmlord': [
         ('MN2692', 0),  # sheet=S6F src=r13c03 (reserve-promoted)
@@ -702,15 +702,15 @@ _MONSTERS_MAP = {
         ('MN3469', 0),  # sheet=S6J src=r08c05 (reserve-promoted)
     ],
     'Voidmaw Devourer': [
-        ('MN3343', 0),  # sheet=S6I src=r14c07 (reserve-promoted)
+        ('MN1792', 0),  # picked via sprite_package/picks_recent
     ],
     'Cataclysm Fiend': [
-        ('MN3490', 0),  # sheet=S6J src=r09c10 (reserve-promoted)
+        ('MN2904', 0),  # picked via sprite_package/picks_recent
     ],
     'Nightmare Lich': [
         ('MN3484', 0),  # sheet=S6J src=r09c04 (reserve-promoted)
     ],
     'Soulflayer Wraith': [
-        ('MN3496', 0),  # sheet=S6J src=r10c00 (reserve-promoted)
+        ('MN1784', 0),  # picked via sprite_package/picks_recent
     ],
 }
