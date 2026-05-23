@@ -268,20 +268,35 @@ def promote_reserve(reserve_dir, pool):
 # Index PNG files by pid for fast lookup
 # ============================================================================
 
-def index_in_game_pngs(in_game_dir):
-    """Walk <in_game_dir>/by_category/<cat>/<pid>_*.png and build pid → path."""
+def index_in_game_pngs(in_game_dir, extra_dirs=None):
+    """Walk <in_game_dir>/by_category/<cat>/<pid>_*.png and build pid → path.
+
+    extra_dirs is an optional list of additional roots laid out as
+    <root>/<cat>/<pid>_*.png (no by_category/ wrapper). Used to overlay
+    per-pick PNGs committed to the repo on top of the base bundle, so
+    promote_all_sprites can find PIDs that have been picked since the
+    last full bundle re-publish. Entries in extra_dirs WIN over the
+    base bundle for the same PID."""
     by_pid = {}
     by_cat_dir = Path(in_game_dir) / "by_category"
-    if not by_cat_dir.exists():
-        return by_pid
     pid_pattern = re.compile(r"^([A-Z]+\d+)_")
-    for cat_dir in by_cat_dir.iterdir():
-        if not cat_dir.is_dir():
-            continue
-        for png in cat_dir.glob("*.png"):
-            m = pid_pattern.match(png.name)
-            if m:
-                by_pid[m.group(1)] = png
+
+    def _scan(cat_root, has_by_category_wrapper):
+        root = cat_root / "by_category" if has_by_category_wrapper else cat_root
+        if not root.exists():
+            return
+        for cat_dir in root.iterdir():
+            if not cat_dir.is_dir():
+                continue
+            for png in cat_dir.glob("*.png"):
+                m = pid_pattern.match(png.name)
+                if m:
+                    by_pid[m.group(1)] = png
+
+    if by_cat_dir.exists():
+        _scan(Path(in_game_dir), has_by_category_wrapper=True)
+    for extra in (extra_dirs or []):
+        _scan(Path(extra), has_by_category_wrapper=False)
     return by_pid
 
 
@@ -289,8 +304,9 @@ def index_in_game_pngs(in_game_dir):
 # Main
 # ============================================================================
 
-NAMED_CATS = ["weapons", "armors", "accessories", "bug_armors", "foods", "ingredients",
-              "lanterns", "monsters", "runes", "shards", "towels", "treasures", "trophies"]
+NAMED_CATS = ["weapons", "bug_weapons", "armors", "accessories", "bug_armors",
+              "foods", "ingredients", "lanterns", "monsters", "runes", "shards",
+              "towels", "treasures", "trophies"]
 GENERIC_CATS = ["characters", "potions", "scrolls", "spells"]
 
 
@@ -303,6 +319,11 @@ def main():
                     help="Path to unpacked in_game/ assets (default: <package>/in_game OR assets/sprites/in_game)")
     ap.add_argument("--reserve-dir", default=None,
                     help="Path to unpacked reserve/ assets (default: <package>/reserve OR assets/sprites/reserve)")
+    ap.add_argument("--sprite-picks-dir", default=None,
+                    help="Optional overlay dir laid out as <root>/<cat>/<pid>_*.png. "
+                         "PNGs here are treated as additional in-game sources and win "
+                         "over the base in_game/ bundle for the same PID. Defaults to "
+                         "<repo>/assets/sprite_picks if it exists.")
     ap.add_argument("--include-reserve", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--categories", nargs="+",
@@ -340,9 +361,26 @@ def main():
         print(f"Creating new pool at {pool_path}")
         pool = {}
 
+    # Sprite picks overlay -- per-pick PNGs committed to the repo on
+    # top of the external bundle. See assets/sprite_picks/README for
+    # the workflow.
+    sprite_picks_dir = args.sprite_picks_dir
+    if sprite_picks_dir is None:
+        # Default: look for assets/sprite_picks/ next to assets/sprites/
+        default_overlay = in_game_dir.parent.parent / "sprite_picks"
+        if default_overlay.exists():
+            sprite_picks_dir = str(default_overlay)
+    overlay_dirs = [sprite_picks_dir] if sprite_picks_dir else []
+
     initial_size = len(pool)
-    pid_files = index_in_game_pngs(in_game_dir)
+    pid_files = index_in_game_pngs(in_game_dir, extra_dirs=overlay_dirs)
+    base_only = index_in_game_pngs(in_game_dir)
+    overlay_only_count = sum(1 for pid, p in pid_files.items()
+                             if pid not in base_only)
     print(f"In-game assets:  {in_game_dir}  ({len(pid_files)} PNGs)")
+    if sprite_picks_dir:
+        print(f"Sprite-picks overlay:  {sprite_picks_dir}  "
+              f"({overlay_only_count} PNGs not in base bundle)")
     if args.include_reserve:
         print(f"Reserve assets:  {reserve_dir}")
 

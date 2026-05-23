@@ -244,6 +244,55 @@
         "category": "fey_garden_ingredient",
         "variant_index": 0
       }
+    },
+    {
+      "pid": "IN0231",
+      "sheet": "IN3",
+      "src_label": "r04c03",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "IN0359",
+      "sheet": "IN5",
+      "src_label": "r00c09",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "IN0235",
+      "sheet": "IN3",
+      "src_label": "r04c07",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "IN0225",
+      "sheet": "IN3",
+      "src_label": "r03c03",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "IN0228",
+      "sheet": "IN3",
+      "src_label": "r03c10",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "CR0009",
+      "sheet": "CR1",
+      "src_label": "CR1",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "PR0103",
+      "sheet": "PR1",
+      "src_label": "PR1",
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -333,13 +382,6 @@
     },
     {
       "pid": "PR0008",
-      "sheet": "CR1",
-      "src_label": "CR1",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "CR0009",
       "sheet": "CR1",
       "src_label": "CR1",
       "status": "reserve",
@@ -1018,13 +1060,6 @@
       "marked": null
     },
     {
-      "pid": "IN0225",
-      "sheet": "IN3",
-      "src_label": "r03c03",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "IN0226",
       "sheet": "IN3",
       "src_label": "r03c04",
@@ -1039,13 +1074,6 @@
       "marked": null
     },
     {
-      "pid": "IN0228",
-      "sheet": "IN3",
-      "src_label": "r03c10",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "IN0229",
       "sheet": "IN3",
       "src_label": "r03c11",
@@ -1056,13 +1084,6 @@
       "pid": "IN0230",
       "sheet": "IN3",
       "src_label": "r04c02",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "IN0231",
-      "sheet": "IN3",
-      "src_label": "r04c03",
       "status": "reserve",
       "marked": null
     },
@@ -1084,13 +1105,6 @@
       "pid": "IN0234",
       "sheet": "IN3",
       "src_label": "r04c06",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "IN0235",
-      "sheet": "IN3",
-      "src_label": "r04c07",
       "status": "reserve",
       "marked": null
     },
@@ -1210,13 +1224,6 @@
       "pid": "IN0358",
       "sheet": "IN5",
       "src_label": "r00c08",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "IN0359",
-      "sheet": "IN5",
-      "src_label": "r00c09",
       "status": "reserve",
       "marked": null
     },
@@ -2530,13 +2537,6 @@
       "marked": null
     },
     {
-      "pid": "PR0103",
-      "sheet": "PR1",
-      "src_label": "PR1",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "PR0104",
       "sheet": "PR1",
       "src_label": "PR1",
@@ -2892,7 +2892,7 @@
     ],
     "note": "No in-game ingredients yet. Use a future picker to promote to chosen."
   },
-  "chosen_count": 22,
-  "reserve_count": 375,
+  "chosen_count": 29,
+  "reserve_count": 368,
   "total_count": 397
 }

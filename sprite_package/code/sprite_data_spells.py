@@ -67,4 +67,10 @@ _SPELLS_POOL = [
     'W141',  # variant_index=0 sheet=ewck9w src=x319y979-x416y1076
     'W144',  # variant_index=0 sheet=ewck9w src=x1161y321-x1272y433
     'W146',  # variant_index=0 sheet=ewck9w src=x526y321-x635y430
+    'V124',  # picked via sprite_package/picks_recent
+    'V175',  # picked via sprite_package/picks_recent
+    'I172',  # picked via sprite_package/picks_recent
+    'V310',  # picked via sprite_package/picks_recent
+    'V358',  # picked via sprite_package/picks_recent
+    'I135',  # picked via sprite_package/picks_recent
 ]

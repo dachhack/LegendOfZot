@@ -117,4 +117,7 @@ _ACCESSORIES_MAP = {
         ('AC0130', 1),  # sheet=AC1 src=r10c11
         ('AC0136', 2),  # sheet=AC1 src=r11c06
     ],
+    'Hourglass Talisman': [
+        ('AC0495', 0),  # picked via sprite_package/picks_recent
+    ],
 }

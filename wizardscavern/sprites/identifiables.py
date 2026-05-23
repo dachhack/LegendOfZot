@@ -33,6 +33,7 @@ from . import weapons as _weapons
 from . import armors as _armors
 from . import accessories as _accessories
 from . import bug_armors as _bug_armors
+from . import bug_weapons as _bug_weapons
 from . import foods as _foods
 from . import ingredients as _ingredients
 from . import lanterns as _lanterns
@@ -136,6 +137,9 @@ def get_named_item_pid(item):
     name = getattr(item, 'name', '') or ''
 
     if cls == 'Weapon':
+        bug = _pick_named(_bug_weapons._BUG_WEAPONS_MAP, name)
+        if bug:
+            return bug
         return _pick_named(_weapons._WEAPONS_MAP, name)
 
     if cls == 'Armor':

@@ -123,4 +123,10 @@ _FOODS_MAP = {
         ('FD0196', 1),  # sheet=F2 src=r09c13
         ('FD0199', 2),  # sheet=F2 src=r10c12
     ],
+    'Blutwurst': [
+        ('FD0670', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Landjäger': [
+        ('FD0701', 0),  # picked via sprite_package/picks_recent
+    ],
 }

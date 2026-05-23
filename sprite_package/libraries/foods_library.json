@@ -2,8 +2,8 @@
   "category": "foods",
   "version": 1,
   "generated_at": "2026-05-02",
-  "chosen_count": 54,
-  "reserve_count": 121,
+  "chosen_count": 56,
+  "reserve_count": 119,
   "total_count": 175,
   "source_pickers": [
     "food_variant_picker.html",
@@ -712,6 +712,20 @@
         "category": "kit",
         "variant_index": 0
       }
+    },
+    {
+      "pid": "FD0670",
+      "sheet": "F5",
+      "src_label": "F5",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "FD0701",
+      "sheet": "F5",
+      "src_label": "F5",
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -1318,13 +1332,6 @@
       "marked": null
     },
     {
-      "pid": "FD0670",
-      "sheet": "F5",
-      "src_label": "F5",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "FD0671",
       "sheet": "F5",
       "src_label": "F5",
@@ -1424,13 +1431,6 @@
     },
     {
       "pid": "FD0698",
-      "sheet": "F5",
-      "src_label": "F5",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "FD0701",
       "sheet": "F5",
       "src_label": "F5",
       "status": "reserve",

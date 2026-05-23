@@ -2,8 +2,8 @@
   "category": "spells",
   "version": 1,
   "generated_at": "2026-05-02",
-  "chosen_count": 49,
-  "reserve_count": 88,
+  "chosen_count": 55,
+  "reserve_count": 82,
   "total_count": 137,
   "source_pickers": [
     "spell_refine_picker.html",
@@ -598,6 +598,48 @@
         "col": 5,
         "index": 21
       }
+    },
+    {
+      "pid": "V124",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x253y638",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "V175",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x828y572",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "I172",
+      "sheet": "original",
+      "src_label": "I8",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "V310",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x631y325",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "V358",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x1317y436",
+      "status": "in-game",
+      "marked": null
+    },
+    {
+      "pid": "I135",
+      "sheet": "original",
+      "src_label": "K6",
+      "status": "in-game",
+      "marked": null
     }
   ],
   "reserve": [
@@ -679,13 +721,6 @@
       "marked": null
     },
     {
-      "pid": "I135",
-      "sheet": "original",
-      "src_label": "K6",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "I138",
       "sheet": "original",
       "src_label": "I10",
@@ -752,13 +787,6 @@
       "pid": "I167",
       "sheet": "original",
       "src_label": "H7",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "I172",
-      "sheet": "original",
-      "src_label": "I8",
       "status": "reserve",
       "marked": null
     },
@@ -854,13 +882,6 @@
       "marked": null
     },
     {
-      "pid": "V124",
-      "sheet": "v3664",
-      "src_label": "3664-bb-x253y638",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "V164",
       "sheet": "v3664",
       "src_label": "3664-bb-x61y702",
@@ -871,13 +892,6 @@
       "pid": "V174",
       "sheet": "v3664",
       "src_label": "3664-bb-x894y511",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "V175",
-      "sheet": "v3664",
-      "src_label": "3664-bb-x828y572",
       "status": "reserve",
       "marked": null
     },
@@ -1092,13 +1106,6 @@
       "marked": null
     },
     {
-      "pid": "V310",
-      "sheet": "v3665",
-      "src_label": "3665-bb-x631y325",
-      "status": "reserve",
-      "marked": null
-    },
-    {
       "pid": "V326",
       "sheet": "v3665",
       "src_label": "3665-bb-x791y494",
@@ -1109,13 +1116,6 @@
       "pid": "V357",
       "sheet": "v3665",
       "src_label": "3665-bb-x844y495",
-      "status": "reserve",
-      "marked": null
-    },
-    {
-      "pid": "V358",
-      "sheet": "v3665",
-      "src_label": "3665-bb-x1317y436",
       "status": "reserve",
       "marked": null
     },
