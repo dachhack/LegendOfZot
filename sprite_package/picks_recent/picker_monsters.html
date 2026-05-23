@@ -303,6 +303,34 @@ function renderCanvas(canvas, imgB64) {
   img.src = 'data:image/webp;base64,' + imgB64;
 }
 
+// Lazy canvas rendering: with large candidate pools (e.g. ~1,400 reserve
+// monster sprites) decoding every webp into a canvas up front freezes
+// mobile and leaves the tiles blank. Render a tile's sprite only when it
+// scrolls near the viewport; the b64 is parked on the canvas element.
+const lazyObserver = ('IntersectionObserver' in window)
+  ? new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const cv = e.target;
+        if (!cv._rendered) {
+          renderCanvas(cv, cv._imgB64 || '');
+          cv._rendered = true;
+        }
+        lazyObserver.unobserve(cv);
+      });
+    }, { rootMargin: '300px' })
+  : null;
+
+function lazyRender(canvas, imgB64) {
+  if (lazyObserver) {
+    canvas._imgB64 = imgB64;
+    lazyObserver.observe(canvas);
+  } else {
+    renderCanvas(canvas, imgB64);
+  }
+}
+
+
 function getKey(item) { return item.category + '::' + item.name; }
 
 function getPickedSprite(item) {
@@ -397,12 +425,14 @@ function buildTile(sprite, item, source) {
     persistState();
   });
 
-  renderCanvas(canvas, sprite.img);
+  lazyRender(canvas, sprite.img);
   return t;
 }
 
 function renderGrid(item) {
   const host = document.getElementById('grid-host');
+  // Stop observing the previous item's tiles before they're detached.
+  if (lazyObserver) lazyObserver.disconnect();
   host.innerHTML = '';
 
   const c = itemCandidates(item);
