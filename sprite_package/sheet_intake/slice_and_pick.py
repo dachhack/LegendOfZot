@@ -43,8 +43,9 @@ except ImportError:
     sys.exit(2)
 
 
-def cell_is_blank(cell, threshold):
-    """A cell is blank if almost none of it is opaque."""
+def cell_is_blank(cell, threshold, min_variance):
+    """A cell is blank if almost none of it is opaque, or (for flat opaque
+    sheets with no alpha) if its content is near-uniform background."""
     alpha = cell.getchannel('A')
     lo, hi = alpha.getextrema()
     if hi == 0:
@@ -52,7 +53,15 @@ def cell_is_blank(cell, threshold):
     # fraction of pixels with meaningful opacity (alpha > 16), via histogram
     hist = alpha.histogram()
     opaque = sum(hist[17:])
-    return (opaque / (cell.width * cell.height)) < threshold
+    if (opaque / (cell.width * cell.height)) < threshold:
+        return True
+    # Opaque-sheet fallback: a background-only cell has very low luminance
+    # spread. Only applied when --min-variance > 0 (it's sheet-specific).
+    if min_variance > 0:
+        from PIL import ImageStat
+        if ImageStat.Stat(cell.convert('L')).stddev[0] < min_variance:
+            return True
+    return False
 
 
 def webp_b64(img):
@@ -84,6 +93,10 @@ def main():
                     help='Output cell size, NEAREST-resampled (default 96; 0 = keep native).')
     ap.add_argument('--blank-threshold', type=float, default=0.01,
                     help='Skip cells with less than this opaque fraction (default 0.01).')
+    ap.add_argument('--min-variance', type=float, default=0.0,
+                    help='For flat opaque sheets (no transparency): also skip cells whose '
+                         'luminance std-dev is below this, i.e. background-only. Sheet-specific; '
+                         '0 = off (default). ~13 worked for a dark-stone demon sheet.')
     ap.add_argument('--staging-dir', default=os.path.join(_HERE, 'staging'))
     args = ap.parse_args()
 
@@ -122,7 +135,7 @@ def main():
             x = start_x + c * (cw + sp)
             y = start_y + r * (ch + sp)
             cell = sheet.crop((x, y, x + cw, y + ch))
-            if cell_is_blank(cell, args.blank_threshold):
+            if cell_is_blank(cell, args.blank_threshold, args.min_variance):
                 blank += 1
                 continue
             if out_size:
