@@ -73,6 +73,12 @@ def main():
     g.add_argument('--cell-size', type=int, help='Square cell size in px.')
     g.add_argument('--grid', help='ROWSxCOLS, e.g. 8x12 (cell size derived).')
     ap.add_argument('--margin', type=int, default=0, help='Border around the whole sheet (px).')
+    ap.add_argument('--offset-x', type=int, default=0,
+                    help='Extra px to skip from the LEFT before the grid starts '
+                         '(e.g. a row-label gutter). Not mirrored on the right.')
+    ap.add_argument('--offset-y', type=int, default=0,
+                    help='Extra px to skip from the TOP before the grid starts '
+                         '(e.g. a column-label header). Not mirrored on the bottom.')
     ap.add_argument('--spacing', type=int, default=0, help='Gutter between cells (px).')
     ap.add_argument('--out-size', type=int, default=96,
                     help='Output cell size, NEAREST-resampled (default 96; 0 = keep native).')
@@ -84,19 +90,22 @@ def main():
     sheet = Image.open(args.sheet).convert('RGBA')
     W, H = sheet.size
     m, sp = args.margin, args.spacing
+    start_x = m + args.offset_x   # left edge of the first cell
+    start_y = m + args.offset_y   # top edge of the first cell
 
     if args.cell_size:
         cw = ch = args.cell_size
-        cols = (W - 2 * m + sp) // (cw + sp)
-        rows = (H - 2 * m + sp) // (ch + sp)
+        cols = (W - m - start_x + sp) // (cw + sp)
+        rows = (H - m - start_y + sp) // (ch + sp)
     else:
         rows, cols = (int(x) for x in args.grid.lower().split('x'))
-        cw = (W - 2 * m - (cols - 1) * sp) // cols
-        ch = (H - 2 * m - (rows - 1) * sp) // rows
+        cw = (W - m - start_x - (cols - 1) * sp) // cols
+        ch = (H - m - start_y - (rows - 1) * sp) // rows
 
     if rows < 1 or cols < 1:
         print(f"ERROR: computed a {rows}x{cols} grid from {W}x{H}. "
-              f"Check --cell-size/--grid/--margin/--spacing.", file=sys.stderr)
+              f"Check --cell-size/--grid/--margin/--offset-x/--offset-y/--spacing.",
+              file=sys.stderr)
         sys.exit(1)
 
     out_dir = os.path.join(args.staging_dir, args.label)
@@ -110,8 +119,8 @@ def main():
     blank = 0
     for r in range(rows):
         for c in range(cols):
-            x = m + c * (cw + sp)
-            y = m + r * (ch + sp)
+            x = start_x + c * (cw + sp)
+            y = start_y + r * (ch + sp)
             cell = sheet.crop((x, y, x + cw, y + ch))
             if cell_is_blank(cell, args.blank_threshold):
                 blank += 1
