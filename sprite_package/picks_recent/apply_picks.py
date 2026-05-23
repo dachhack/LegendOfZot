@@ -65,6 +65,7 @@ _CATEGORY_RUNTIME = {
     'foods':       ('foods.py',       '_FOODS_MAP',        'variant_list'),
     'ingredients': ('ingredients.py', '_INGREDIENTS_MAP',  'variant_list'),
     'bug_weapons': ('bug_weapons.py', '_BUG_WEAPONS_MAP',  'variant_list'),
+    'monsters':    ('monsters.py',    '_MONSTERS_MAP',     'variant_list'),
 }
 
 # Picker category -> reserve PNG subdir + canonical pipeline category.
@@ -78,6 +79,7 @@ _CATEGORY_PIPELINE = {
     'foods':       {'reserve_subdir': 'foods',       'canonical_cat': 'foods',       'kind': 'named'},
     'ingredients': {'reserve_subdir': 'ingredients', 'canonical_cat': 'ingredients', 'kind': 'named'},
     'bug_weapons': {'reserve_subdir': 'weapons',     'canonical_cat': 'bug_weapons', 'kind': 'named'},
+    'monsters':    {'reserve_subdir': 'monsters',    'canonical_cat': 'monsters',    'kind': 'named'},
 }
 
 

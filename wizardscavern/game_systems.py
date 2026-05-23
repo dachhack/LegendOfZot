@@ -2599,9 +2599,15 @@ def _trigger_room_interaction(player_character, my_tower):
             elif room.properties.get('is_champion', False) and not gs.runes_obtained['battle']:
                 # Spawn Champion - 2x stats, special name. Draw from the
                 # floor's own tier pool (looking a little deeper) so the
-                # champion is always a floor-appropriate, genuinely tough mob.
+                # champion is floor-appropriate. Cap the source floor at 30:
+                # the champion doubles the template's stats, and 2x of a
+                # baked tier-14/15 monster (HP up to 1650, ATK up to 322)
+                # is an unwinnable 3300 HP / 644 ATK wall. Capping keeps a
+                # deep champion to ~2x of a floor-30 monster -- still a
+                # genuine elite, but beatable.
                 target_lvl = player_character.z + 2  # Higher level
-                potential_monsters = (monsters_for_floor(player_character.z + 3)
+                champ_floor = min(player_character.z + 3, 30)
+                potential_monsters = (monsters_for_floor(champ_floor)
                                       or monsters_for_floor(player_character.z))
                 if not potential_monsters:
                     potential_monsters = MONSTER_TEMPLATES
@@ -2641,8 +2647,6 @@ def _trigger_room_interaction(player_character, my_tower):
                 # noticeable but survivable.
                 is_elite = room.properties.get('tomb_elite', False)
                 target_lvl = player_character.z + (1 if is_elite else 0)
-                min_lvl = max(0, target_lvl - 1)
-                max_lvl = target_lvl + 1
 
                 undead_types = (
                     'Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Specter',
@@ -2662,14 +2666,31 @@ def _trigger_room_interaction(player_character, my_tower):
                     m for m in MONSTER_TEMPLATES
                     if _undead_re.search(m['name'])
                 ]
-                in_range = [
-                    m for m in all_undead
-                    if min_lvl <= m['level'] <= max_lvl
-                ]
-                # No regular-mob fallback. If no undead sits in the
-                # level band, broaden to all undead templates so we
-                # still spawn a proper undead type.
-                m_data = random.choice(in_range or all_undead)
+                # Pick an undead whose spawn tier actually covers this
+                # floor, so a deep tomb guardian is a floor-appropriate
+                # undead. The old code banded by template *level* against
+                # the *floor* number (z), which never matched past floor
+                # ~14 and fell through to a uniform random over ALL undead
+                # -- now that the deep tiers add level 12-15 liches/wraiths
+                # that could roll a 1400 HP one-shotter at F25 (or a
+                # trivial Skeleton). Floor-range selection fixes both.
+                def _covers(m, fl):
+                    lo, hi = MONSTER_SPAWN_FLOOR_RANGE.get(m['level'], (0, 49))
+                    return lo <= fl <= hi
+                in_range = [m for m in all_undead if _covers(m, target_lvl)]
+                if in_range:
+                    m_data = random.choice(in_range)
+                else:
+                    # No undead native to this depth: take the deepest
+                    # undead that can appear at/before this floor (closest
+                    # in power), not a uniform random over the whole roster.
+                    at_or_below = [
+                        m for m in all_undead
+                        if MONSTER_SPAWN_FLOOR_RANGE.get(m['level'], (0, 49))[0] <= target_lvl
+                    ]
+                    pool = at_or_below or all_undead
+                    top_lvl = max(m['level'] for m in pool)
+                    m_data = random.choice([m for m in pool if m['level'] == top_lvl])
 
                 # Stats: 1.25x baseline (kept from prior balance pass).
                 # Spawn level = target_lvl directly (was template+1

@@ -34,7 +34,7 @@ MONSTER_SPAWN_FLOOR_RANGE = {
     12: (24, 39),  # Djinn, hollow liches, drakes
     13: (28, 44),  # Abyssal fiends, illithid overminds, colossi
     14: (32, 49),  # Archfiends, wyrmlords, glacial titans
-    15: (38, 49),  # Zot's elite: starspawn, infernal warlords, the unmaking
+    15: (43, 49),  # Zot's elite: starspawn, infernal warlords, the unmaking
 }
 
 # ============================================================================
