@@ -37,10 +37,25 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 _ROOT = os.path.abspath(os.path.join(_HERE, '..', '..'))
 
 try:
-    from PIL import Image
+    from PIL import Image, ImageFilter, ImageEnhance
 except ImportError:
     print("ERROR: Pillow required. pip install Pillow", file=sys.stderr)
     sys.exit(2)
+
+
+def crispen_cell(cell, colors=28):
+    """Harden soft / anti-aliased source art toward crisp pixel art:
+    unsharp the edges, lift contrast, then quantize to a tight palette so
+    feathered edges collapse to clean color steps. Preserves the alpha
+    channel (re-attached after the RGB quantize)."""
+    rgb = cell.convert('RGB')
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=1.2, percent=170, threshold=2))
+    rgb = ImageEnhance.Contrast(rgb).enhance(1.28)
+    rgb = rgb.convert('P', palette=Image.ADAPTIVE, colors=colors).convert('RGB')
+    out = rgb.convert('RGBA')
+    if 'A' in cell.getbands():
+        out.putalpha(cell.getchannel('A'))
+    return out
 
 
 def cell_is_blank(cell, threshold, min_variance):
@@ -91,6 +106,11 @@ def main():
     ap.add_argument('--spacing', type=int, default=0, help='Gutter between cells (px).')
     ap.add_argument('--out-size', type=int, default=96,
                     help='Output cell size, NEAREST-resampled (default 96; 0 = keep native).')
+    ap.add_argument('--crispen', action='store_true',
+                    help='Harden soft/anti-aliased source art toward crisp pixel art '
+                         '(unsharp + contrast + palette quantize). Use for fuzzy AI sheets.')
+    ap.add_argument('--crispen-colors', type=int, default=28,
+                    help='Palette size for --crispen (lower = chunkier/flatter; default 28).')
     ap.add_argument('--blank-threshold', type=float, default=0.01,
                     help='Skip cells with less than this opaque fraction (default 0.01).')
     ap.add_argument('--min-variance', type=float, default=0.0,
@@ -138,6 +158,8 @@ def main():
             if cell_is_blank(cell, args.blank_threshold, args.min_variance):
                 blank += 1
                 continue
+            if args.crispen:
+                cell = crispen_cell(cell, args.crispen_colors)
             if out_size:
                 cell = cell.resize((out_size, out_size), Image.NEAREST)
             src_label = f"r{r:02d}c{c:02d}"
