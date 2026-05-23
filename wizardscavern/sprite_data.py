@@ -15,33 +15,19 @@
 # ASCII only - no Unicode, emojis, or special characters.
 
 
-# Evolution prefixes the dungeon spawns at higher floor depths. Stripped
-# when looking up base monster names in the sprite map.
-_EVO_PREFIXES = ('Hardened ', 'Savage ', 'Dread ', 'Mythic ')
-
-
-def _strip_evo_prefix(name):
-    for p in _EVO_PREFIXES:
-        if name.startswith(p):
-            return name[len(p):]
-    return name
-
-
 def _resolve_new_monster_key(monster_name, cat_map):
     """Match a (potentially decorated) monster name against the sprite map.
 
-    Tries: as-is, with evolution prefix stripped, with whitespace and '~'
-    garbage trimmed, then a multi-word trailing-tail match in title /
-    upper / raw casings, then a per-word title-case match.
+    Tries: as-is, with whitespace and '~' garbage trimmed, then a multi-word
+    trailing-tail match in title / upper / raw casings (catches decorated
+    boss names like " ELITE UNDEAD SPECTER" -> "Specter" and the
+    leading-space legendaries like " TREASURE GOLEM"), then a per-word
+    title-case match.
 
     Returns the matched key in `cat_map`, or None.
     """
     if monster_name in cat_map:
         return monster_name
-
-    stripped_evo = _strip_evo_prefix(monster_name)
-    if stripped_evo in cat_map:
-        return stripped_evo
 
     stripped = monster_name.strip().lstrip('~').strip()
     if stripped in cat_map:
@@ -80,9 +66,8 @@ def generate_monster_sprite_html(monster_name, seed=None):
     """Render a 64x64 canvas for a monster.
 
     Looks up `monster_name` in the round-8 monster map (with name
-    resolution for evolution prefixes and decorated boss names), picks a
-    deterministic variant from the seed, and renders the pre-rendered
-    webp from the canonical pool.
+    resolution for decorated boss names), picks a deterministic variant
+    from the seed, and renders the pre-rendered webp from the canonical pool.
 
     Returns an HTML string, or '' if the monster has no sprite.
     """

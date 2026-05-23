@@ -4122,7 +4122,7 @@ def process_zotle_teleporter_action(player_character, my_tower, cmd):
         # Cap at the designed dungeon depth (50 floors, 0-indexed 0-49).
         # Without this, the loop below would happily generate phantom
         # floors past the boss arena -- those are outside the balance
-        # curve entirely (Mythic evolution caps catch every spawn) so
+        # curve entirely (only the deepest tier-15 spawns remain) so
         # they crush even god-mode characters.
         # b409: also block targets >= F50 (z=49) when the shard gate
         # is locked. F50 is the boss arena -- jumping there with the

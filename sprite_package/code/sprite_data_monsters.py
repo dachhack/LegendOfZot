@@ -617,4 +617,100 @@ _MONSTERS_MAP = {
         ('MN0060', 1),  # sheet=M1 src=r03c11
         ('MN0076', 2),  # sheet=M1 src=r04c11
     ],
+
+    # ------------------------------------------------------------------
+    # Deep-descent bestiary (tiers 11-15) -- reserve sprites promoted to
+    # in-game for the floors-24-49 monster overhaul. One variant each.
+    # PNGs live in assets/sprite_picks/monsters/ (committed overlay).
+    # ------------------------------------------------------------------
+    'Gloomback Bear': [
+        ('MN2668', 0),  # sheet=S6F src=r11c09 (reserve-promoted)
+    ],
+    'Voidspawn Brute': [
+        ('MN2593', 0),  # sheet=S6F src=r06c12 (reserve-promoted)
+    ],
+    'Cinder Serpent': [
+        ('MN2427', 0),  # sheet=S6D src=r09c09 (reserve-promoted)
+    ],
+    'Sporelord Myconid': [
+        ('MN2757', 0),  # sheet=S6G src=r03c02 (reserve-promoted)
+    ],
+    'Bonepicker Reaver': [
+        ('MN2535', 0),  # sheet=S6F src=r02c12 (reserve-promoted)
+    ],
+    'Ridgeback Wyvern': [
+        ('MN2421', 0),  # sheet=S6D src=r09c03 (reserve-promoted)
+    ],
+    'Iron Vanguard': [
+        ('MN2601', 0),  # sheet=S6F src=r07c05 (reserve-promoted)
+    ],
+    'Rimebound Djinn': [
+        ('MN2626', 0),  # sheet=S6F src=r08c14 (reserve-promoted)
+    ],
+    'Cinderborn Efreet': [
+        ('MN2627', 0),  # sheet=S6F src=r08c15 (reserve-promoted)
+    ],
+    'Hollow Lich': [
+        ('MN2614', 0),  # sheet=S6F src=r08c02 (reserve-promoted)
+    ],
+    'Emberscale Drake': [
+        ('MN2691', 0),  # sheet=S6F src=r13c02 (reserve-promoted)
+    ],
+    'Gnashing Horror': [
+        ('MN2638', 0),  # sheet=S6F src=r09c10 (reserve-promoted)
+    ],
+    'Abyssal Fiend': [
+        ('MN3452', 0),  # sheet=S6J src=r06c15 (reserve-promoted)
+    ],
+    'Illithid Overmind': [
+        ('MN3438', 0),  # sheet=S6J src=r05c12 (reserve-promoted)
+    ],
+    'Hundred-Eyed Watcher': [
+        ('MN0630', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Necrarch Lich': [
+        ('MN3468', 0),  # sheet=S6J src=r08c04 (reserve-promoted)
+    ],
+    'Graven Colossus': [
+        ('MN3526', 0),  # sheet=S6J src=r11c15 (reserve-promoted)
+    ],
+    'Cryptborn Wraith': [
+        ('MN2562', 0),  # sheet=S6F src=r04c11 (reserve-promoted)
+    ],
+    'Abyssal Archfiend': [
+        ('MN3479', 0),  # sheet=S6J src=r08c15 (reserve-promoted)
+    ],
+    'Starspawn Aberration': [
+        ('MN3494', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Crimson Wyrmlord': [
+        ('MN2692', 0),  # sheet=S6F src=r13c03 (reserve-promoted)
+    ],
+    'Sepulchral Lich': [
+        ('MN2813', 0),  # sheet=S6G src=r07c04 (reserve-promoted)
+    ],
+    'Maw of the Deep': [
+        ('MN3414', 0),  # sheet=S6J src=r03c15 (reserve-promoted)
+    ],
+    'Glacian Titan': [
+        ('MN3543', 0),  # sheet=S6J src=r13c00 (reserve-promoted)
+    ],
+    'Elder Starspawn': [
+        ('MN3422', 0),  # sheet=S6J src=r04c08 (reserve-promoted)
+    ],
+    'Infernal Warlord': [
+        ('MN3469', 0),  # sheet=S6J src=r08c05 (reserve-promoted)
+    ],
+    'Voidmaw Devourer': [
+        ('MN1792', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Cataclysm Fiend': [
+        ('MN2904', 0),  # picked via sprite_package/picks_recent
+    ],
+    'Nightmare Lich': [
+        ('MN3484', 0),  # sheet=S6J src=r09c04 (reserve-promoted)
+    ],
+    'Soulflayer Wraith': [
+        ('MN1784', 0),  # picked via sprite_package/picks_recent
+    ],
 }
