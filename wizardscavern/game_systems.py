@@ -14,7 +14,7 @@ from .game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR
                         BOLD, UNDERLINE, normal_int_range, get_article)
 from .sprite_data import generate_monster_sprite_html, generate_room_sprite_html
 from .sprite_data import generate_player_sprite_html as _generate_player_sprite_html
-from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EVOLUTION_TIERS,
+from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE,
                        TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
 from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
@@ -2401,6 +2401,21 @@ def reveal_secrets_shard_rooms(player_character, my_tower):
         add_log(f"{COLOR_PURPLE}[Secrets Shard] {revealed_count} hidden room{'s' if revealed_count != 1 else ''} revealed on the map!{COLOR_RESET}")
 
 
+def monsters_for_floor(floor):
+    """Return the monster templates whose spawn-tier range covers `floor`.
+
+    Each template's `level` is its tier; MONSTER_SPAWN_FLOOR_RANGE maps the
+    tier to a (first_floor, last_floor) window. Tiers overlap, so a floor
+    typically pulls from several tiers' worth of distinct monsters.
+    """
+    out = []
+    for m in MONSTER_TEMPLATES:
+        first, last = MONSTER_SPAWN_FLOOR_RANGE.get(m['level'], (0, 49))
+        if first <= floor <= last:
+            out.append(m)
+    return out
+
+
 def _trigger_room_interaction(player_character, my_tower):
     """
     Checks the room type at the player's current position and triggers the appropriate
@@ -2582,12 +2597,15 @@ def _trigger_room_interaction(player_character, my_tower):
                 new_monster.properties['is_platino'] = True
             # Check if this is a Champion Monster
             elif room.properties.get('is_champion', False) and not gs.runes_obtained['battle']:
-                # Spawn Champion - 2x stats, special name
+                # Spawn Champion - 2x stats, special name. Draw from the
+                # floor's own tier pool (looking a little deeper) so the
+                # champion is always a floor-appropriate, genuinely tough mob.
                 target_lvl = player_character.z + 2  # Higher level
-                potential_monsters = [m for m in MONSTER_TEMPLATES if m['level'] >= target_lvl - 1 and m['level'] <= target_lvl + 1]
+                potential_monsters = (monsters_for_floor(player_character.z + 3)
+                                      or monsters_for_floor(player_character.z))
                 if not potential_monsters:
                     potential_monsters = MONSTER_TEMPLATES
-                
+
                 m_data = random.choice(potential_monsters)
                 new_monster = Monster(
                     f" CHAMPION {m_data['name'].upper()} ",
@@ -2727,84 +2745,37 @@ def _trigger_room_interaction(player_character, my_tower):
                     new_monster.properties['is_bug_monster'] = True
 
             else:
-                # Normal monster spawning with floor-based phasing and evolution
-                # Each template level has a floor range where it can appear.
-                # Lower-level templates phase out on deeper floors.
-                # Monsters evolve (Hardened/Savage/Dread/Mythic) based on floor
-                # depth vs their base template level.
-
+                # Normal monster spawning with floor-based phasing.
+                # Sixteen overlapping tiers span the dungeon; each floor draws
+                # from whichever tiers list it in their spawn range. Stats are
+                # baked into the templates -- deep floors are lethal because
+                # they spawn genuinely tougher monsters, not re-skinned weaklings.
                 target_lvl = player_character.z
 
-                # Filter templates by floor range
-                potential_monsters = [
-                    m for m in MONSTER_TEMPLATES
-                    if MONSTER_SPAWN_FLOOR_RANGE.get(m['level'], (0, 49))[0] <= target_lvl
-                    <= MONSTER_SPAWN_FLOOR_RANGE.get(m['level'], (0, 49))[1]
-                ]
-                
+                potential_monsters = monsters_for_floor(target_lvl)
                 if not potential_monsters:
-                    # Fallback: use highest level templates
-                    potential_monsters = [m for m in MONSTER_TEMPLATES if m['level'] >= 8]
+                    # Fallback: deepest-tier templates (should never trigger)
+                    potential_monsters = [m for m in MONSTER_TEMPLATES if m['level'] >= 14]
                     if not potential_monsters:
                         potential_monsters = MONSTER_TEMPLATES
 
                 m_data = random.choice(potential_monsters)
-                
-                # Determine evolution tier based on floor depth vs template level
-                base_level = m_data.get('level', 1)
-                floor_diff = max(0, target_lvl - base_level)
-                
-                # Find matching evolution tier
-                evo_prefix = ''
-                hp_mult = 1.0
-                atk_mult = 1.0
-                def_mult = 1.0
-                for min_d, max_d, prefix, hm, am, dm in MONSTER_EVOLUTION_TIERS:
-                    if min_d <= floor_diff <= max_d:
-                        evo_prefix = prefix
-                        hp_mult = hm
-                        atk_mult = am
-                        def_mult = dm
-                        break
-                
-                # Apply evolution tier multiplier + linear floor scaling.
-                # Linear scaling: ATK grows faster than DEF so monsters hit
-                # harder on deep floors.  Stat curve is purely per-floor
-                # (template base × evolution × linear) — no aggression
-                # scalar; weak monsters stay weak when they spawn at their
-                # native floor.
-                linear_hp = 1.0 + (floor_diff * 0.04)
-                linear_atk = 1.0 + (floor_diff * 0.03)
-                linear_def = 1.0 + (floor_diff * 0.015)
 
-                scaled_health = int(m_data['health'] * hp_mult * linear_hp)
-                scaled_attack = int(m_data['attack'] * atk_mult * linear_atk)
-                scaled_defense = int(m_data['defense'] * def_mult * linear_def)
-                scaled_level = target_lvl  # Monster level matches floor
-                
-                # Build display name with evolution prefix
-                monster_name = m_data['name']
-                if evo_prefix:
-                    monster_name = f"{evo_prefix} {monster_name}"
-                
                 new_monster = Monster(
-                    monster_name,
-                    scaled_health,
-                    scaled_attack,
-                    scaled_defense,
+                    m_data['name'],
+                    m_data['health'],
+                    m_data['attack'],
+                    m_data['defense'],
                     m_data.get('elemental_weakness', []),
                     m_data.get('elemental_strength', []),
-                    scaled_level,
+                    target_lvl,  # displayed level matches the floor
                     m_data.get('attack_element', 'Physical'),
                     m_data.get('flavor_text', ''),
                     m_data.get('victory_text', ''),
-                m_data.get('can_talk', False),
-                m_data.get('greeting_template', ''),
-                m_data.get('special_attack', None)
-            )
-                # Store evolution tier for combat UI display
-                if evo_prefix:
-                    new_monster.properties['evolution_tier'] = evo_prefix
+                    m_data.get('can_talk', False),
+                    m_data.get('greeting_template', ''),
+                    m_data.get('special_attack', None)
+                )
             gs.encountered_monsters[coords] = new_monster
 
         gs.active_monster = gs.encountered_monsters[coords]
@@ -4863,17 +4834,14 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 # ============================================================
 
 def get_evolution_tier_style(monster):
-    """Return (border_color, tier_label_html) for evolution tier display."""
-    tier = monster.properties.get('evolution_tier', '') if hasattr(monster, 'properties') else ''
-    if tier == 'Hardened':
-        return '#8B7355', '<span style="color:#8B7355;font-size:9px;font-weight:bold;">[Hardened]</span>'
-    elif tier == 'Savage':
-        return '#A0522D', '<span style="color:#A0522D;font-size:9px;font-weight:bold;">[Savage]</span>'
-    elif tier == 'Dread':
-        return '#7B68AE', '<span style="color:#7B68AE;font-size:9px;font-weight:bold;">[Dread]</span>'
-    elif tier == 'Mythic':
-        return '#B8962E', '<span style="color:#B8962E;font-size:9px;font-weight:bold;">[Mythic]</span>'
-    return '', ''  # Normal: no border, no label
+    """Border color + tier label for a monster's combat panel.
+
+    Monsters no longer carry name-prefix evolution tiers, so this returns
+    no decoration; the panel falls back to its default border and name color.
+    Retained as the single styling hook in case bespoke per-monster framing
+    is wanted later.
+    """
+    return '', ''
 
 
 def generate_player_sprite_html(race, gender, equipped_armor=None):

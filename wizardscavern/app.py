@@ -43,7 +43,6 @@ from .sprite_data import (
 from .game_data import (
     MONSTER_TEMPLATES,
     MONSTER_SPAWN_FLOOR_RANGE,
-    MONSTER_EVOLUTION_TIERS,
     TROPHY_DROPS,
     TAXIDERMIST_COLLECTIONS,
 )
@@ -2374,17 +2373,12 @@ def generate_monster_defeat_js(monster_name):
 # ============================================================
 
 def get_evolution_tier_style(monster):
-    """Return (border_color, tier_label_html) for evolution tier display."""
-    tier = monster.properties.get('evolution_tier', '') if hasattr(monster, 'properties') else ''
-    if tier == 'Hardened':
-        return '#8B7355', '<span style="color:#8B7355;font-size:11px;font-weight:bold;">[Hardened]</span>'
-    elif tier == 'Savage':
-        return '#A0522D', '<span style="color:#A0522D;font-size:11px;font-weight:bold;">[Savage]</span>'
-    elif tier == 'Dread':
-        return '#7B68AE', '<span style="color:#7B68AE;font-size:11px;font-weight:bold;">[Dread]</span>'
-    elif tier == 'Mythic':
-        return '#B8962E', '<span style="color:#B8962E;font-size:11px;font-weight:bold;">[Mythic]</span>'
-    return '', ''  # Normal: no border, no label
+    """Border color + tier label for a monster's combat panel.
+
+    Monsters no longer carry name-prefix evolution tiers, so this returns
+    no decoration; the panel falls back to its default border and name color.
+    """
+    return '', ''
 
 
 def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None, sprite_pid=None):
@@ -6000,7 +5994,7 @@ class WizardsCavernApp(toga.App):
                 (20, "F20", "Volcanic-tier gear baseline."),
                 (25, "F25", "F30-wall stress band -- the b407/b408 plant depth."),
                 (30, "F30", "Deep. Death Knight / Demilich / Storm Giant territory."),
-                (35, "F35", "Deeper still. Mythic-tier mob rolls."),
+                (35, "F35", "Deeper still. Tier 13-14 native horrors appear."),
                 (40, "F40", "Near-endgame. Tier-9 vendor stock."),
                 (45, "F45", "Pre-boss. Final shard drops."),
                 (49, "F49", "One step from the gate. Quest path tested here."),

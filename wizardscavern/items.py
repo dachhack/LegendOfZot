@@ -451,15 +451,14 @@ CORROSIVE_MONSTERS = {
     'Ochre Jelly': {'type': 'acid', 'damage': (2, 4), 'targets': 'organic', 'break_chance': 0.15},
 }
 
-EVOLUTION_PREFIXES = ('Hardened ', 'Savage ', 'Dread ', 'Mythic ')
-
 def get_base_monster_name(monster_name):
-    """Strip evolution prefixes to get the base template name."""
-    name = monster_name.strip()
-    for prefix in EVOLUTION_PREFIXES:
-        if name.startswith(prefix):
-            return name[len(prefix):]
-    return name
+    """Normalize a monster name for template/effect lookups.
+
+    Monsters no longer carry evolution name-prefixes, so this is just a
+    whitespace trim. Kept as the canonical lookup hook used by the
+    corrosion and trophy systems.
+    """
+    return monster_name.strip()
 
 def is_metal_item(item):
     """Check if an item is made of metal and can rust"""

@@ -14,34 +14,28 @@
 # ============================================================================
 
 # Monster spawn floor ranges: template_level -> (first_floor, last_floor)
-# Lower-level monsters phase out as you descend; higher-level persist longer
+# Sixteen tiers span the full 50-floor descent. Each tier covers a band of
+# floors and overlaps its neighbours so every floor draws from 2-5 distinct
+# tiers. Low tiers phase out as you descend and genuinely stronger monsters
+# (defined natively, not re-skinned with a prefix) take their place.
 MONSTER_SPAWN_FLOOR_RANGE = {
-    0: (0, 12),   # Bats, rats, kobolds: gone by floor 13
-    1: (0, 14),   # Goblins, skeletons: gone by floor 15
-    2: (1, 17),   # Bugbears, orcs: appear floor 1, gone by 18
-    3: (3, 21),   # Ogres, trolls: appear floor 3, gone by 22
-    4: (5, 25),   # Basilisks, wraiths: appear floor 5
-    5: (7, 29),   # Manticores, mummies: appear floor 7
-    6: (10, 34),  # Dragon liches, vampires: appear floor 10
-    7: (13, 39),  # Beholders, mind flayers: appear floor 13
-    8: (16, 44),  # Frost giants, rocs: appear floor 16
-    9: (20, 49),  # Dragons, sphinxes: appear floor 20, persist to end
-    10: (24, 49), # Ancient dragons, tarrasque: appear floor 24, persist to end
+    0:  (0, 5),    # Bats, rats, kobolds
+    1:  (0, 7),    # Goblins, skeletons
+    2:  (1, 9),    # Orcs, gnolls, bugbears
+    3:  (3, 12),   # Ogres, trolls, minotaurs
+    4:  (5, 15),   # Wraiths, basilisks, hill giants
+    5:  (7, 18),   # Mummies, werewolves, manticores
+    6:  (9, 20),   # Vampires, golems, dragon liches
+    7:  (11, 23),  # Beholders, mind flayers, young dragons
+    8:  (13, 26),  # Frost giants, fire elementals, rocs
+    9:  (16, 29),  # Sphinxes, efreeti, fire giants
+    10: (18, 32),  # Ancient dragons, tarrasque, balor
+    11: (20, 35),  # Voidspawn, cinder serpents, lesser horrors
+    12: (24, 39),  # Djinn, hollow liches, drakes
+    13: (28, 44),  # Abyssal fiends, illithid overminds, colossi
+    14: (32, 49),  # Archfiends, wyrmlords, glacial titans
+    15: (38, 49),  # Zot's elite: starspawn, infernal warlords, the unmaking
 }
-
-# Evolution tiers: when a low-level template spawns on a much deeper floor,
-# it evolves into a tougher variant with a name prefix and stat multipliers
-# (min_floor_diff, max_floor_diff, prefix, hp_mult, atk_mult, def_mult)
-MONSTER_EVOLUTION_TIERS = [
-    # (min_floor_diff, max_floor_diff, prefix, hp_mult, atk_mult, def_mult)
-    # ATK multipliers raised so monsters hit harder as they evolve
-    # DEF multipliers lowered so player attacks remain effective
-    (0,   4,  '',         1.0,  1.0,  1.0),   # Normal
-    (5,   12, 'Hardened', 1.3,  1.4,  1.1),   # Tougher, hits harder
-    (13,  22, 'Savage',   1.6,  1.8,  1.2),   # Dangerous
-    (23,  34, 'Dread',    2.0,  2.2,  1.3),   # Very dangerous
-    (35,  99, 'Mythic',   2.5,  2.5,  1.4),   # Endgame nightmare
-]
 
 # ============================================================================
 # TROPHY SYSTEM - drops, collections, and taxidermist rewards
@@ -2124,6 +2118,371 @@ MONSTER_TEMPLATES = [
             'magnitude': 18,
             'description': 'haunts your dreams and drains your vitality'
         }
+    },
+
+    # ========================================================================
+    # DEEP DESCENT BESTIARY - TIERS 11-15 (Floors ~24-49)
+    # ========================================================================
+    # Native inhabitants of the lower vaults leading to Zot. These are not
+    # re-skinned low-level mobs -- they carry their own baked-in stats so the
+    # deep floors stay lethal without any name-prefix evolution. Stat budgets
+    # are anchored to the difficulty curve the old evolution tiers produced
+    # at the same depths, so the endgame ceiling is preserved.
+
+    # ---- TIER 11 (floors 24-39): the outer dark ----
+    {
+        'name': "Gloomback Bear",
+        'health': 560, 'attack': 74, 'defense': 42, 'level': 11,
+        'flavor_text': "A cave bear gone wrong in the lightless deep, its hide rimed with frost.",
+        'victory_text': "The gloomback bear slumps, its cold breath stilled.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Ice', 'Physical'],
+        'attack_element': 'Physical',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'weakness', 'chance': 0.40, 'duration': 3, 'magnitude': 12, 'description': 'rakes you with frostbitten claws'}
+    },
+    {
+        'name': "Voidspawn Brute",
+        'health': 480, 'attack': 90, 'defense': 32, 'level': 11,
+        'flavor_text': "A slab of muscle birthed from the gaps between worlds. It should not be.",
+        'victory_text': "The voidspawn collapses inward and is simply gone.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness'],
+        'attack_element': 'Darkness',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.35, 'duration': 3, 'magnitude': 0, 'description': 'gibbers in a tongue that warps your mind'}
+    },
+    {
+        'name': "Cinder Serpent",
+        'health': 380, 'attack': 102, 'defense': 28, 'level': 11,
+        'flavor_text': "A great serpent that nests in magma vents, scales glowing like banked coals.",
+        'victory_text': "The cinder serpent's fires gutter out into ash.",
+        'elemental_weakness': ['Ice', 'Water'],
+        'elemental_strength': ['Fire'],
+        'attack_element': 'Fire',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'burn', 'chance': 0.50, 'duration': 4, 'magnitude': 12, 'description': 'spits a gout of magma'}
+    },
+    {
+        'name': "Sporelord Myconid",
+        'health': 440, 'attack': 78, 'defense': 30, 'level': 11,
+        'flavor_text': "An ancient mushroom-sovereign, its cap a cathedral of toxic spores.",
+        'victory_text': "The sporelord bursts one final time and falls silent.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Poison', 'Earth'],
+        'attack_element': 'Earth',
+        'can_talk': True,
+        'greeting_template': "Breathe deep, {name}. Join the colony.",
+        'special_attack': {'effect_type': 'poison', 'chance': 0.60, 'duration': 5, 'magnitude': 8, 'description': 'bursts in a cloud of choking spores'}
+    },
+    {
+        'name': "Bonepicker Reaver",
+        'health': 360, 'attack': 108, 'defense': 26, 'level': 11,
+        'flavor_text': "A skeletal marauder that hunts the deep for marrow and warmth.",
+        'victory_text': "The reaver clatters apart into a heap of yellowed bone.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness'],
+        'attack_element': 'Physical',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'life_drain', 'chance': 0.40, 'duration': 1, 'magnitude': 14, 'description': 'drinks the warmth from your veins'}
+    },
+    {
+        'name': "Ridgeback Wyvern",
+        'health': 400, 'attack': 94, 'defense': 34, 'level': 11,
+        'flavor_text': "A lean, vicious cousin of the dragons, all stinger and spite.",
+        'victory_text': "The wyvern's venomous tail droops and goes limp.",
+        'elemental_weakness': ['Ice'],
+        'elemental_strength': ['Poison'],
+        'attack_element': 'Physical',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'poison', 'chance': 0.50, 'duration': 4, 'magnitude': 10, 'description': 'drives its venom-slick stinger home'}
+    },
+
+    # ---- TIER 12 (floors 28-43): elementals, liches, and drakes ----
+    {
+        'name': "Iron Vanguard",
+        'health': 700, 'attack': 96, 'defense': 50, 'level': 12,
+        'flavor_text': "A war-construct of black iron, built to hold a line that no longer exists.",
+        'victory_text': "The iron vanguard topples with a deafening crash.",
+        'elemental_weakness': ['Lightning'],
+        'elemental_strength': ['Physical', 'Earth'],
+        'attack_element': 'Physical',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'slow', 'chance': 0.45, 'duration': 3, 'magnitude': 0, 'description': 'slams you with a tower-shield charge'}
+    },
+    {
+        'name': "Rimebound Djinn",
+        'health': 480, 'attack': 134, 'defense': 34, 'level': 12,
+        'flavor_text': "A genie of the frozen wastes, bound here long ago and very, very bitter about it.",
+        'victory_text': "The rimebound djinn shatters into a flurry of snow.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Ice', 'Wind'],
+        'attack_element': 'Ice',
+        'can_talk': True,
+        'greeting_template': "A thousand years in the ice, and now YOU disturb me?",
+        'special_attack': {'effect_type': 'freeze', 'chance': 0.40, 'duration': 2, 'magnitude': 0, 'description': 'exhales a blizzard that locks your limbs'}
+    },
+    {
+        'name': "Cinderborn Efreet",
+        'health': 480, 'attack': 136, 'defense': 34, 'level': 12,
+        'flavor_text': "A noble of the City of Brass, wreathed in furnace-heat and arrogance.",
+        'victory_text': "The efreet gutters out, its fire reclaimed by the dark.",
+        'elemental_weakness': ['Ice', 'Water'],
+        'elemental_strength': ['Fire'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "Mortal ash, that is all you will leave behind.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.55, 'duration': 5, 'magnitude': 14, 'description': 'wreathes you in furnace flame'}
+    },
+    {
+        'name': "Hollow Lich",
+        'health': 500, 'attack': 126, 'defense': 36, 'level': 12,
+        'flavor_text': "An undead spellweaver, hollowed of all but ambition and malice.",
+        'victory_text': "The hollow lich crumbles -- until its phylactery is found.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness', 'Ice'],
+        'attack_element': 'Darkness',
+        'can_talk': True,
+        'greeting_template': "Death is a door, {name}. Allow me to open it.",
+        'special_attack': {'effect_type': 'curse', 'chance': 0.40, 'duration': 4, 'magnitude': 0, 'description': 'speaks a word that rots your luck'}
+    },
+    {
+        'name': "Emberscale Drake",
+        'health': 660, 'attack': 112, 'defense': 46, 'level': 12,
+        'flavor_text': "A young dragon already drunk on its own fire, hoarding the bones of the deep.",
+        'victory_text': "The emberscale drake's furnace heart goes cold.",
+        'elemental_weakness': ['Ice'],
+        'elemental_strength': ['Fire'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "My hoard grows. Your bones will round it out nicely.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.55, 'duration': 5, 'magnitude': 14, 'description': 'looses a torrent of dragonfire'}
+    },
+    {
+        'name': "Gnashing Horror",
+        'health': 470, 'attack': 130, 'defense': 32, 'level': 12,
+        'flavor_text': "A floating cluster of teeth and psychic hunger. Do not look directly at it.",
+        'victory_text': "The gnashing horror's thoughts unravel and scatter.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Psionic', 'Darkness'],
+        'attack_element': 'Psionic',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.50, 'duration': 4, 'magnitude': 0, 'description': 'lashes your thoughts with raw psionic dread'}
+    },
+
+    # ---- TIER 13 (floors 32-47): fiends, overminds, and colossi ----
+    {
+        'name': "Abyssal Fiend",
+        'health': 760, 'attack': 158, 'defense': 50, 'level': 13,
+        'flavor_text': "A horned devil straight off the burning plains of the Abyss.",
+        'victory_text': "The abyssal fiend is dragged screaming back to its layer.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Fire', 'Demonic'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "Your contract is overdue, {name}. I'm here to collect.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.55, 'duration': 5, 'magnitude': 18, 'description': 'engulfs you in hellfire'}
+    },
+    {
+        'name': "Illithid Overmind",
+        'health': 620, 'attack': 168, 'defense': 40, 'level': 13,
+        'flavor_text': "A mind flayer elder, its tentacled maw twitching with anticipation.",
+        'victory_text': "The overmind's psychic presence vanishes like a snuffed candle.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Psionic'],
+        'attack_element': 'Psionic',
+        'can_talk': True,
+        'greeting_template': "Such a delectable cortex. Hold still.",
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.60, 'duration': 5, 'magnitude': 0, 'description': 'reaches into your skull for a snack'}
+    },
+    {
+        'name': "Hundred-Eyed Watcher",
+        'health': 660, 'attack': 152, 'defense': 44, 'level': 13,
+        'flavor_text': "A bloated orb of flesh studded with eyes, each one a different kind of doom.",
+        'victory_text': "The watcher's many eyes roll back and close, one by one.",
+        'elemental_weakness': ['Earth'],
+        'elemental_strength': ['Arcane', 'Psionic'],
+        'attack_element': 'Psionic',
+        'can_talk': True,
+        'greeting_template': "I see every path your life could take. They all end here.",
+        'special_attack': {'effect_type': 'paralysis', 'chance': 0.45, 'duration': 3, 'magnitude': 0, 'description': 'transfixes you with a ray from a dozen eyes'}
+    },
+    {
+        'name': "Necrarch Lich",
+        'health': 600, 'attack': 172, 'defense': 42, 'level': 13,
+        'flavor_text': "A lich-king of a fallen dynasty, crown fused to a fleshless skull.",
+        'victory_text': "The necrarch's reign ends as its bones finally still.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness'],
+        'attack_element': 'Darkness',
+        'can_talk': True,
+        'greeting_template': "I ruled empires while your ancestors were mud, {name}.",
+        'special_attack': {'effect_type': 'life_drain', 'chance': 0.50, 'duration': 1, 'magnitude': 22, 'description': 'siphons your soul toward its phylactery'}
+    },
+    {
+        'name': "Graven Colossus",
+        'health': 880, 'attack': 124, 'defense': 58, 'level': 13,
+        'flavor_text': "A mountain given legs and a grudge, carved in an age before names.",
+        'victory_text': "The graven colossus cracks down its center and falls to rubble.",
+        'elemental_weakness': ['Lightning'],
+        'elemental_strength': ['Earth', 'Physical'],
+        'attack_element': 'Earth',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'weakness', 'chance': 0.45, 'duration': 3, 'magnitude': 16, 'description': 'brings a fist of living stone down on you'}
+    },
+    {
+        'name': "Cryptborn Wraith",
+        'health': 620, 'attack': 165, 'defense': 44, 'level': 13,
+        'flavor_text': "A shroud of grave-cold malice that remembers being a person, and resents it.",
+        'victory_text': "The wraith dissipates with a sigh of ancient grief.",
+        'elemental_weakness': ['Holy', 'Light'],
+        'elemental_strength': ['Darkness'],
+        'attack_element': 'Darkness',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'curse', 'chance': 0.45, 'duration': 4, 'magnitude': 0, 'description': 'wraps you in grave-cold despair'}
+    },
+
+    # ---- TIER 14 (floors 36-49): archfiends, wyrmlords, titans ----
+    {
+        'name': "Abyssal Archfiend",
+        'health': 1080, 'attack': 188, 'defense': 64, 'level': 14,
+        'flavor_text': "A demon-prince in miniature, commanding lesser fiends with a glance.",
+        'victory_text': "The archfiend's infernal form buckles and is unmade.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness', 'Demonic'],
+        'attack_element': 'Darkness',
+        'can_talk': True,
+        'greeting_template': "Kneel, {name}, and I may make your end merely eternal.",
+        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 0, 'description': 'brands your soul with an infernal sigil'}
+    },
+    {
+        'name': "Starspawn Aberration",
+        'health': 920, 'attack': 210, 'defense': 52, 'level': 14,
+        'flavor_text': "A fragment of something vast that fell from the night sky aeons ago.",
+        'victory_text': "The starspawn folds away into an angle that no longer exists.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Psionic', 'Arcane'],
+        'attack_element': 'Psionic',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.60, 'duration': 5, 'magnitude': 0, 'description': 'unfolds in geometries that should not be'}
+    },
+    {
+        'name': "Crimson Wyrmlord",
+        'health': 1180, 'attack': 172, 'defense': 68, 'level': 14,
+        'flavor_text': "An elder red dragon, scales like furnace doors, voice like an avalanche of coins.",
+        'victory_text': "The wyrmlord's final roar collapses into smoldering silence.",
+        'elemental_weakness': ['Ice'],
+        'elemental_strength': ['Fire'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "I have eaten kings, {name}. You are barely an appetizer.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.60, 'duration': 6, 'magnitude': 20, 'description': 'incinerates the air around you'}
+    },
+    {
+        'name': "Sepulchral Lich",
+        'health': 820, 'attack': 232, 'defense': 50, 'level': 14,
+        'flavor_text': "An archmage who chose undeath to finish a spell that should never be finished.",
+        'victory_text': "The sepulchral lich's grand working collapses with it.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness', 'Arcane'],
+        'attack_element': 'Darkness',
+        'can_talk': True,
+        'greeting_template': "I am SO close, {name}. I will not be interrupted now.",
+        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 0, 'description': 'intones a litany of unmaking'}
+    },
+    {
+        'name': "Maw of the Deep",
+        'health': 980, 'attack': 196, 'defense': 54, 'level': 14,
+        'flavor_text': "A leviathan of the drowned vaults, all tentacles and a hunger older than light.",
+        'victory_text': "The maw recedes into the black water, defeated for now.",
+        'elemental_weakness': ['Lightning'],
+        'elemental_strength': ['Water', 'Ice'],
+        'attack_element': 'Ice',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'slow', 'chance': 0.55, 'duration': 4, 'magnitude': 0, 'description': 'drags you under with a forest of tentacles'}
+    },
+    {
+        'name': "Glacian Titan",
+        'health': 1140, 'attack': 168, 'defense': 68, 'level': 14,
+        'flavor_text': "A giant carved from a living glacier, each footfall a small avalanche.",
+        'victory_text': "The glacian titan splinters into a field of melting ice.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Ice'],
+        'attack_element': 'Ice',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'freeze', 'chance': 0.45, 'duration': 2, 'magnitude': 0, 'description': 'hammers you with a glacier-forged maul'}
+    },
+
+    # ---- TIER 15 (floors 40-49): Zot's elite, the final horrors ----
+    {
+        'name': "Elder Starspawn",
+        'health': 1340, 'attack': 290, 'defense': 62, 'level': 15,
+        'flavor_text': "The progenitor of the lesser starspawn, vast and patient and wrong.",
+        'victory_text': "The elder starspawn withdraws beyond the stars, screaming silence.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Psionic', 'Arcane'],
+        'attack_element': 'Psionic',
+        'can_talk': True,
+        'greeting_template': "You are a brief idea, {name}. I am the dark between thoughts.",
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.65, 'duration': 6, 'magnitude': 0, 'description': 'floods your mind with the silence between stars'}
+    },
+    {
+        'name': "Infernal Warlord",
+        'health': 1240, 'attack': 305, 'defense': 66, 'level': 15,
+        'flavor_text': "A general of the Nine Hells, armored in the suffering of legions.",
+        'victory_text': "The warlord's infernal legion-banner burns to nothing.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Fire', 'Demonic'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "I have a throne of skulls, {name}, and one seat is open.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.60, 'duration': 6, 'magnitude': 24, 'description': 'calls down a rain of brimstone'}
+    },
+    {
+        'name': "Voidmaw Devourer",
+        'health': 1480, 'attack': 258, 'defense': 70, 'level': 15,
+        'flavor_text': "A mouth in the shape of a world, eating its way toward the surface.",
+        'victory_text': "The voidmaw's endless hunger finally consumes itself.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Arcane', 'Darkness'],
+        'attack_element': 'Darkness',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'life_drain', 'chance': 0.55, 'duration': 1, 'magnitude': 30, 'description': 'swallows a piece of you whole'}
+    },
+    {
+        'name': "Cataclysm Fiend",
+        'health': 1650, 'attack': 248, 'defense': 84, 'level': 15,
+        'flavor_text': "A walking apocalypse of abyssal flame, the last thing many heroes ever see.",
+        'victory_text': "The cataclysm fiend detonates one final time and is spent.",
+        'elemental_weakness': ['Ice'],
+        'elemental_strength': ['Fire', 'Demonic'],
+        'attack_element': 'Fire',
+        'can_talk': True,
+        'greeting_template': "Everything ends, {name}. I just make it sooner.",
+        'special_attack': {'effect_type': 'burn', 'chance': 0.60, 'duration': 6, 'magnitude': 26, 'description': 'detonates in a pillar of abyssal flame'}
+    },
+    {
+        'name': "Nightmare Lich",
+        'health': 1120, 'attack': 322, 'defense': 58, 'level': 15,
+        'flavor_text': "A lich who mastered death so thoroughly it became death's nightmare.",
+        'victory_text': "The nightmare lich unravels into a scream no one will remember.",
+        'elemental_weakness': ['Holy'],
+        'elemental_strength': ['Darkness', 'Arcane'],
+        'attack_element': 'Darkness',
+        'can_talk': True,
+        'greeting_template': "I have rewritten my own ending a thousand times, {name}. Yours is fixed.",
+        'special_attack': {'effect_type': 'curse', 'chance': 0.55, 'duration': 6, 'magnitude': 0, 'description': 'rewrites your fate in a dead language'}
+    },
+    {
+        'name': "Soulflayer Wraith",
+        'health': 1100, 'attack': 318, 'defense': 60, 'level': 15,
+        'flavor_text': "Less a ghost than a wound in the world, hungry for the spark that fills it.",
+        'victory_text': "The soulflayer thins to nothing, its hunger finally answered.",
+        'elemental_weakness': ['Holy', 'Light'],
+        'elemental_strength': ['Darkness'],
+        'attack_element': 'Darkness',
+        'can_talk': False,
+        'special_attack': {'effect_type': 'life_drain', 'chance': 0.55, 'duration': 1, 'magnitude': 28, 'description': 'flays the soul from your body'}
     },
 ]
 
