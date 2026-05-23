@@ -11,3 +11,6 @@ logs/
 playtest_runs.log
 playtest_reports/
 assets/sprites/
+# assets/sprite_picks/ IS committed -- it's the per-pick delta over the
+# external sprite-assets-v1 bundle. promote_all_sprites.py reads it as
+# an additional in-game source.

@@ -51,6 +51,11 @@ _RUNTIME_SPRITES_DIR = os.path.join(_ROOT, 'wizardscavern', 'sprites')
 _POOL_PATH = os.path.join(_ROOT, 'wizardscavern', 'data',
                           'canonical_pool_full.pkl')
 _PROMOTE_SCRIPT = os.path.join(_SNIPPETS_DIR, 'promote_all_sprites.py')
+# Per-pick PNGs committed to the repo as an overlay over the external
+# sprite-assets-v1 bundle. promote_all_sprites.py reads this dir in
+# addition to assets/sprites/in_game/by_category/ so picks don't
+# require a 109 MB bundle re-publish to make it onto fresh checkouts.
+_SPRITE_PICKS_DIR = os.path.join(_ROOT, 'assets', 'sprite_picks')
 
 # Picker category -> runtime sprite map file + var name + shape.
 # bug_weapons uses the new sprites/bug_weapons.py module wired in b414.
@@ -118,41 +123,78 @@ def _find_in_game_png(assets_dir, canonical_cat, pid):
 # -- L1: bundle PNG move ---------------------------------------------------
 
 def move_png_to_in_game(pid, name, category, assets_dir, dry_run, log):
-    """Move (or no-op if already moved) PNG from reserve/ to
-    in_game/by_category/ and copy to in_game/by_item/. Returns the
-    destination Path."""
+    """Move PNG from reserve/ to the in-game side.
+
+    The canonical destination is the repo-committed
+    assets/sprite_picks/<cat>/PID_<Name>_v0.png (so the pick survives
+    fresh checkouts without re-publishing the 109 MB bundle). We also
+    mirror it into the local bundle's in_game/by_category/<cat>/ and
+    in_game/by_item/<cat>/<Name>/v0.png so promote_all_sprites finds
+    it and the local layout stays consistent.
+
+    Returns the path of the committed copy (the source of truth)."""
     pipe = _CATEGORY_PIPELINE[category]
     canonical_cat = pipe['canonical_cat']
     reserve_subdir = pipe['reserve_subdir']
 
-    # If already in in_game, we're done.
-    existing = _find_in_game_png(assets_dir, canonical_cat, pid)
-    if existing:
-        log.append(f"    L1 PNG: already at {existing.relative_to(assets_dir)}")
-        return existing
-
-    src = _find_reserve_png(assets_dir, reserve_subdir, pid)
-    if src is None:
-        raise RuntimeError(
-            f"PNG for {pid} not found in {_reserve_dir(assets_dir, reserve_subdir)} "
-            f"or {_by_category_dir(assets_dir, canonical_cat)}.")
-
     dst_name = f"{pid}_{_sanitize_filename(name)}_v0.png"
-    dst = _by_category_dir(assets_dir, canonical_cat) / dst_name
-    by_item_path = _by_item_dir(assets_dir, canonical_cat, name) / 'v0.png'
+    committed_dst = (Path(_SPRITE_PICKS_DIR) / canonical_cat / dst_name)
+    bundle_dst = _by_category_dir(assets_dir, canonical_cat) / dst_name
+    by_item_dst = _by_item_dir(assets_dir, canonical_cat, name) / 'v0.png'
+
+    # Find the source PNG. Could be in reserve/, the bundle's
+    # in_game/by_category/, or already in sprite_picks/ (re-apply).
+    src = None
+    existing_committed = (Path(_SPRITE_PICKS_DIR) / canonical_cat).glob(
+        f"{pid}_*.png") if (Path(_SPRITE_PICKS_DIR) / canonical_cat).exists() else iter([])
+    existing_committed = list(existing_committed)
+    existing_bundle = _find_in_game_png(assets_dir, canonical_cat, pid)
+    existing_reserve = _find_reserve_png(assets_dir, reserve_subdir, pid)
+    if existing_committed:
+        src = existing_committed[0]
+        src_label = f"sprite_picks/{canonical_cat}/{src.name} (re-apply)"
+    elif existing_bundle:
+        src = existing_bundle
+        src_label = f"bundle in_game/by_category/{canonical_cat}/{src.name}"
+    elif existing_reserve:
+        src = existing_reserve
+        src_label = f"bundle reserve/{reserve_subdir}/{src.name}"
+    else:
+        raise RuntimeError(
+            f"PNG for {pid} not found in sprite_picks/, "
+            f"in_game/by_category/{canonical_cat}/, or "
+            f"reserve/{reserve_subdir}/.")
 
     if dry_run:
-        log.append(f"    L1 PNG: would move {src.name} -> "
-                   f"{dst.relative_to(assets_dir)} (+ by_item)")
-        return dst
+        log.append(f"    L1 PNG: would copy {src_label} -> "
+                   f"assets/sprite_picks/{canonical_cat}/{dst_name} "
+                   f"(+ bundle mirrors)")
+        return committed_dst
 
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    by_item_path.parent.mkdir(parents=True, exist_ok=True)
-    shutil.move(str(src), str(dst))
-    shutil.copy2(str(dst), str(by_item_path))
-    log.append(f"    L1 PNG: moved to {dst.relative_to(assets_dir)} "
-               f"(+ by_item copy)")
-    return dst
+    # 1) Commit to assets/sprite_picks/ (the canonical destination).
+    committed_dst.parent.mkdir(parents=True, exist_ok=True)
+    if src != committed_dst:
+        shutil.copy2(str(src), str(committed_dst))
+    # 2) Mirror into the local bundle's in_game/by_category/ so
+    #    promote_all_sprites finds it via the regular path AND so
+    #    repack_bundle.sh produces a consistent zip.
+    bundle_dst.parent.mkdir(parents=True, exist_ok=True)
+    if not bundle_dst.exists():
+        shutil.copy2(str(committed_dst), str(bundle_dst))
+    # 3) Mirror into the bundle's by_item/ alternative view.
+    by_item_dst.parent.mkdir(parents=True, exist_ok=True)
+    if not by_item_dst.exists():
+        shutil.copy2(str(committed_dst), str(by_item_dst))
+    # 4) Remove the reserve PNG if it's still hanging around (a
+    #    historical artifact of the old "move not copy" behaviour;
+    #    keeping reserve in sync prevents the picker from showing the
+    #    same sprite as still-available next round).
+    if existing_reserve and existing_reserve.exists():
+        existing_reserve.unlink()
+
+    log.append(f"    L1 PNG: committed to "
+               f"sprite_picks/{canonical_cat}/{dst_name} (+ bundle mirrors)")
+    return committed_dst
 
 
 # -- L2: library JSON ------------------------------------------------------
