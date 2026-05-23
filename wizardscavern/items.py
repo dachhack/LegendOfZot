@@ -114,7 +114,7 @@ def initialize_identification_system():
     Shuffles cryptic names and creates mappings.
     Called at game start.
     """
-    from .item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    from .item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES, SPELL_TEMPLATES
 
     # Reset identification state
     gs.identified_items = set()
@@ -3150,7 +3150,7 @@ def drop_monster_items(monster, player_character):
     Low base probability, scales with monster level and floor.
     """
     from .game_systems import create_random_enhanced_weapon, create_random_enhanced_armor, get_random_potion
-    from .item_templates import SCROLL_TEMPLATES
+    from .item_templates import SCROLL_TEMPLATES, SPELL_TEMPLATES
 
     monster_lvl = getattr(monster, 'level', 1)
     floor_lvl = player_character.z
@@ -3725,92 +3725,9 @@ class Spell(Item):
                 base_repr += f", status_effect_duration={self.status_effect_duration}"
         return base_repr
 
-# Global list of Spell templates
-# EXPANDED SPELL LIST
-# Replace your existing SPELL_TEMPLATES list with this expanded version:
-
-SPELL_TEMPLATES = [
-    # ===== ELF CANTRIPS (1 MP, slot-free, picked at character creation) =====
-    Spell(name="Detect Monster", description="Reveals the name, level, and location of any monsters in a 3x3 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='detect_monster', is_cantrip=True),
-    Spell(name="Light", description="A floating sphere of magelight reveals the dungeon in a 5x5 area around you.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='reveal_fog', is_cantrip=True),
-    Spell(name="Hold Monster", description="Freezes one monster in place for a single turn -- long enough to slip past the counter-attack.", mana_cost=1, damage_type='Arcane', base_power=0, level=0, spell_type='debuff_target', status_effect_name='Held', status_effect_type='time_stop', status_effect_duration=1, status_effect_magnitude=0, is_cantrip=True),
-    Spell(name="Mind Touch", description="A whisper of psionic force that bypasses armor.", mana_cost=1, damage_type='Psionic', base_power=6, level=0, is_cantrip=True),
-    # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
-    Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
-    Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=3, damage_type='Wind', base_power=12, level=0),
-    Spell(name="Stone Throw", description="Magically hurls a small rock.", mana_cost=4, damage_type='Earth', base_power=13, level=0),
-    Spell(name="Minor Heal", description="Restores a tiny amount of health.", mana_cost=5, damage_type='Healing', base_power=15, level=0, spell_type='healing'),
-    Spell(name="Shadow Bolt", description="A weak bolt of shadow energy.", mana_cost=4, damage_type='Darkness', base_power=14, level=0),
-    Spell(name="Light Ray", description="A beam of pure light.", mana_cost=4, damage_type='Light', base_power=14, level=0),
-
-    # ===== LEVEL 1 SPELLS (2 slots each) - Intermediate =====
-    Spell(name="Fireball", description="Hurls a ball of fire at the enemy.", mana_cost=10, damage_type='Fire', base_power=20, level=1),
-    Spell(name="Heal", description="Restores a small amount of health.", mana_cost=12, damage_type='Healing', base_power=25, level=1, spell_type='healing'),
-    Spell(name="Water Blast", description="A pressurized stream of water.", mana_cost=11, damage_type='Water', base_power=22, level=1),
-    Spell(name="Wind Slash", description="A cutting blade of wind.", mana_cost=10, damage_type='Wind', base_power=21, level=1),
-    Spell(name="Acid Splash", description="Corrosive acid burns the target.", mana_cost=12, damage_type='Earth', base_power=23, level=1),
-    Spell(name="Mind Spike", description="A sharp psionic attack.", mana_cost=13, damage_type='Psionic', base_power=24, level=1),
-    Spell(name="Purify", description="Cleanses poison from the caster.", mana_cost=15, level=1, spell_type='remove_status', status_effect_name='Poison'),
-    Spell(name="Cure Weakness", description="Restores strength and vigor.", mana_cost=12, level=1, spell_type='add_status_effect', status_effect_name='Vigor', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=5),
-    # b403/b405: Mage Armor -- L1 defensive buff. Toned down b405:
-    # b404 sweep showed Mage Armor + Stone Skin stacking gave +14 DEF
-    # which neutered F25 monsters too hard. New profile: +4 DEF / 6
-    # turns at unchanged 8 MP. Still cheaper-per-DEF-turn than Stone
-    # Skin (4 DEF * 6t / 8 MP = 3 vs Stone Skin 8*4/18 = 1.78) but
-    # the burst Stone Skin remains the bigger buff per cast.
-    Spell(name="Mage Armor", description="Conjures a shimmering field of force around the caster.", mana_cost=8, level=1, spell_type='add_status_effect', status_effect_name='Mage Armor', status_effect_duration=6, status_effect_type='defense_boost', status_effect_magnitude=4),
-
-    # ===== LEVEL 2 SPELLS (2 slots each) - Advanced =====
-    Spell(name="Thunder Clap", description="A concussive wave of sound.", mana_cost=15, damage_type='Physical', base_power=30, level=2),
-    Spell(name="Darkness Bolt", description="Fires a bolt of pure shadow.", mana_cost=14, damage_type='Darkness', base_power=28, level=2),
-    Spell(name="Ice Storm", description="A freezing blizzard strikes the enemy.", mana_cost=16, damage_type='Ice', base_power=32, level=2),
-    Spell(name="Freedom", description="Removes the web effect from the caster.", mana_cost=18, level=2, spell_type='remove_status', status_effect_name='Web'),
-    Spell(name="Battle Hymn", description="Inspires the caster with increased attack for a short time.", mana_cost=20, level=2, spell_type='add_status_effect', status_effect_name='Inspired', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=10),
-    Spell(name="Stone Skin", description="Hardens your skin like stone.", mana_cost=18, level=2, spell_type='add_status_effect', status_effect_name='Stone Skin', status_effect_duration=4, status_effect_type='defense_boost', status_effect_magnitude=8),
-    # b405: Spectral Hand toned down from 3-absorb / 8-turn / 14 MP
-    # because b404 sweep showed F25 elf/human at 70-80% survival vs
-    # dwarf at 27% -- caster suite over-corrected. New profile is a
-    # single-absorb insurance card with shorter window and higher
-    # mana cost. magnitude=1 = one hit absorbed before fade; duration=4
-    # gives ~2 fights worth of coverage; cost 16 MP makes it a real
-    # mana investment that competes with damage spells.
-    Spell(name="Spectral Hand", description="Conjures a ghostly hand that interposes itself, absorbing the next enemy strike.", mana_cost=16, level=2, spell_type='add_status_effect', status_effect_name='Spectral Hand', status_effect_duration=4, status_effect_type='hit_absorb', status_effect_magnitude=1),
-    Spell(name="Flame Lance", description="A concentrated spear of flame.", mana_cost=17, damage_type='Fire', base_power=33, level=2),
-    Spell(name="Lightning Bolt", description="A powerful bolt of electricity.", mana_cost=16, damage_type='Wind', base_power=31, level=2),
-    Spell(name="Greater Heal", description="Restores a moderate amount of health.", mana_cost=18, damage_type='Healing', base_power=40, level=2, spell_type='healing'),
-
-    # ===== LEVEL 3 SPELLS (3 slots each) - Expert =====
-    Spell(name="Holy Light", description="Blinds and damages unholy foes.", mana_cost=18, damage_type='Holy', base_power=35, level=3),
-    Spell(name="Meteor Strike", description="Summons a falling meteor.", mana_cost=22, damage_type='Fire', base_power=45, level=3),
-    Spell(name="Regeneration", description="Heals the caster over several turns.", mana_cost=25, level=3, spell_type='add_status_effect', status_effect_name='Regenerating', status_effect_duration=4, status_effect_type='heal_over_time', status_effect_magnitude=8),
-    Spell(name="Chain Lightning", description="Lightning that bounces between foes.", mana_cost=24, damage_type='Wind', base_power=42, level=3),
-    Spell(name="Blizzard", description="A devastating ice storm.", mana_cost=23, damage_type='Ice', base_power=43, level=3),
-    Spell(name="Earthquake", description="Shakes the ground violently.", mana_cost=25, damage_type='Earth', base_power=46, level=3),
-    Spell(name="Mind Blast", description="Overwhelming psionic power.", mana_cost=21, damage_type='Psionic', base_power=40, level=3),
-    Spell(name="Shadow Strike", description="A deadly strike from the shadows.", mana_cost=20, damage_type='Darkness', base_power=38, level=3),
-    Spell(name="Divine Shield", description="Grants powerful protection.", mana_cost=28, level=3, spell_type='add_status_effect', status_effect_name='Divine Shield', status_effect_duration=3, status_effect_type='defense_boost', status_effect_magnitude=15),
-    Spell(name="Mass Heal", description="Restores a large amount of health.", mana_cost=30, damage_type='Healing', base_power=60, level=3, spell_type='healing'),
-
-    # ===== LEVEL 4 SPELLS (3 slots each) - Master =====
-    Spell(name="Inferno", description="An all-consuming firestorm.", mana_cost=35, damage_type='Fire', base_power=55, level=4),
-    Spell(name="Absolute Zero", description="Freeze the enemy solid.", mana_cost=33, damage_type='Ice', base_power=52, level=4),
-    Spell(name="Tsunami", description="A massive wave crashes down.", mana_cost=34, damage_type='Water', base_power=53, level=4),
-    Spell(name="Void Beam", description="Erases matter with dark energy.", mana_cost=32, damage_type='Darkness', base_power=50, level=4),
-    Spell(name="Holy Smite", description="Divine wrath incarnate.", mana_cost=36, damage_type='Holy', base_power=56, level=4),
-    Spell(name="Psychic Scream", description="Tears at the mind itself.", mana_cost=31, damage_type='Psionic', base_power=48, level=4),
-    Spell(name="Full Restore", description="Completely restores health.", mana_cost=40, damage_type='Healing', base_power=100, level=4, spell_type='healing'),
-    Spell(name="Titan's Strength", description="Grants enormous power.", mana_cost=38, level=4, spell_type='add_status_effect', status_effect_name='Titan Strength', status_effect_duration=5, status_effect_type='attack_boost', status_effect_magnitude=20),
-    Spell(name="Clarity", description="Removes all negative status effects.", mana_cost=35, level=4, spell_type='remove_status', status_effect_name='All'),
-    Spell(name="Time Stop", description="Slows time around the caster.", mana_cost=45, level=4, spell_type='add_status_effect', status_effect_name='Hasted', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=25),
-
-    # ===== LEVEL 5 SPELLS (3 slots each) - Legendary =====
-    Spell(name="Armageddon", description="The end of all things.", mana_cost=50, damage_type='Demonic', base_power=75, level=5),
-    Spell(name="Supernova", description="The power of an exploding star.", mana_cost=48, damage_type='Fire', base_power=70, level=5),
-    Spell(name="Black Hole", description="Draws enemies into oblivion.", mana_cost=52, damage_type='Darkness', base_power=72, level=5),
-    Spell(name="Divine Intervention", description="The gods themselves aid you.", mana_cost=55, damage_type='Holy', base_power=80, level=5),
-    Spell(name="Perfect Regeneration", description="Constant healing for many turns.", mana_cost=50, level=5, spell_type='add_status_effect', status_effect_name='Perfect Regen', status_effect_duration=8, status_effect_type='heal_over_time', status_effect_magnitude=15),
-    Spell(name="Ultimate Shield", description="Near-invulnerability.", mana_cost=60, level=5, spell_type='add_status_effect', status_effect_name='Ultimate Shield', status_effect_duration=5, status_effect_type='defense_boost', status_effect_magnitude=30),
-]
+# SPELL_TEMPLATES now lives canonically in item_templates.py
+# (imported lazily where needed). It was duplicated here and had
+# diverged in balance; consolidated b419.
 
 
 # 

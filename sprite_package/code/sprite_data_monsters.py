@@ -92,11 +92,6 @@ _MONSTERS_MAP = {
         ('MN1507', 1),  # sheet=BG2 src=r00c15
         ('MN1501', 2),  # sheet=BG2 src=r00c09
     ],
-    'Chimera': [
-        ('MN3865', 0),  # sheet=S6M src=r00c02
-        ('MN3901', 1),  # sheet=S6M src=r04c00
-        ('MN3903', 2),  # sheet=S6M src=r04c02
-    ],
     'Cockatrice': [
         ('MN2852', 0),  # sheet=S6G src=r09c13
         ('MN2664', 1),  # sheet=S6F src=r11c05
@@ -297,16 +292,6 @@ _MONSTERS_MAP = {
         ('MN2075', 1),  # sheet=S6B src=r05c03
         ('MN2014', 2),  # sheet=S6B src=r00c09
     ],
-    'Hook Horror': [
-        ('MN3874', 0),  # sheet=S6M src=r00c11
-        ('MN3886', 1),  # sheet=S6M src=r01c14
-        ('MN3899', 2),  # sheet=S6M src=r03c13
-    ],
-    'Hydra': [
-        ('MN0737', 0),  # sheet=M3 src=r15c02
-        ('MN0736', 1),  # sheet=M3 src=r15c01
-        ('MN2426', 2),  # sheet=S6D src=r09c08
-    ],
     'Iron Golem': [
         ('MN3042', 0),  # sheet=S6H src=r08c15
         ('MN3110', 1),  # sheet=S6H src=r13c05
@@ -341,11 +326,6 @@ _MONSTERS_MAP = {
         ('MN1366', 0),  # sheet=PM2 src=r07c15
         ('MN1365', 1),  # sheet=PM2 src=r07c14
         ('MN1364', 2),  # sheet=PM2 src=r07c13
-    ],
-    'Lizardman': [
-        ('MN0113', 0),  # sheet=M1 src=r07c01
-        ('MN0133', 1),  # sheet=M1 src=r08c05
-        ('MN0626', 2),  # sheet=M3 src=r08c03
     ],
     'MUMMIFIED KING': [
         ('MN2271', 0),  # sheet=S6C src=r12c14

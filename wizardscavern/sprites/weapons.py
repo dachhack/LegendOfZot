@@ -41,9 +41,6 @@ _WEAPONS_MAP = {
     'Blade of the Phoenix': [
         ('WP0590', 0),  # sheet=Weapons6 src=r07c03
     ],
-    'Bow': [
-        ('WP0624', 0),  # sheet=Weapons2 src=r10c09
-    ],
     'Claymore': [
         ('WP0481', 0),  # sheet=Weapons8 src=r07c03
         ('WP0464', 1),  # sheet=Weapons7 src=r09c00
