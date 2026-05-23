@@ -473,6 +473,10 @@ SPELL_TEMPLATES = [
     Spell(name="Mind Spike", description="A sharp psionic attack.", mana_cost=13, damage_type='Psionic', base_power=24, level=1),
     Spell(name="Purify", description="Cleanses poison from the caster.", mana_cost=15, level=1, spell_type='remove_status', status_effect_name='Poison'),
     Spell(name="Cure Weakness", description="Restores strength and vigor.", mana_cost=12, level=1, spell_type='add_status_effect', status_effect_name='Vigor', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=5),
+    # Mage Armor (b405 profile): +4 DEF / 6 turns at 8 MP. Cheaper per
+    # DEF-turn than Stone Skin (3 vs 1.78) but a smaller per-cast buff;
+    # stacks with Stone Skin for layered caster defense.
+    Spell(name="Mage Armor", description="Conjures a shimmering field of force around the caster.", mana_cost=8, level=1, spell_type='add_status_effect', status_effect_name='Mage Armor', status_effect_duration=6, status_effect_type='defense_boost', status_effect_magnitude=4),
 
     # ===== LEVEL 2 SPELLS (2 slots each) - Advanced =====
     Spell(name="Thunder Clap", description="A concussive wave of sound.", mana_cost=15, damage_type='Physical', base_power=30, level=2),
@@ -481,6 +485,9 @@ SPELL_TEMPLATES = [
     Spell(name="Freedom", description="Removes the web effect from the caster.", mana_cost=18, level=2, spell_type='remove_status', status_effect_name='Web'),
     Spell(name="Battle Hymn", description="Inspires the caster with increased attack for a short time.", mana_cost=20, level=2, spell_type='add_status_effect', status_effect_name='Inspired', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=10),
     Spell(name="Stone Skin", description="Hardens your skin like stone.", mana_cost=18, level=2, spell_type='add_status_effect', status_effect_name='Stone Skin', status_effect_duration=4, status_effect_type='defense_boost', status_effect_magnitude=8),
+    # Spectral Hand (b405 profile): single-hit absorb / 4 turns at 16 MP.
+    # An insurance card against one big strike, not a damage-sponge.
+    Spell(name="Spectral Hand", description="Conjures a ghostly hand that interposes itself, absorbing the next enemy strike.", mana_cost=16, level=2, spell_type='add_status_effect', status_effect_name='Spectral Hand', status_effect_duration=4, status_effect_type='hit_absorb', status_effect_magnitude=1),
     Spell(name="Flame Lance", description="A concentrated spear of flame.", mana_cost=17, damage_type='Fire', base_power=33, level=2),
     Spell(name="Lightning Bolt", description="A powerful bolt of electricity.", mana_cost=16, damage_type='Wind', base_power=31, level=2),
     Spell(name="Greater Heal", description="Restores a moderate amount of health.", mana_cost=18, damage_type='Healing', base_power=40, level=2, spell_type='healing'),

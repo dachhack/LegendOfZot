@@ -2582,27 +2582,16 @@ def process_garden_action(player_character, my_tower, cmd):
 
         # Determine loot table based on garden type
         if is_fey_garden:
-            # Fey Garden Loot (Rare/Exotic). The prior inline tuple
-            # shape was `(name, effect_type, magnitude, value, desc)`
-            # but the Ingredient constructor at line 2603 below reads
-            # `description=item_data[1], value=item_data[2],
-            # level=item_data[3]` -- the canonical garden shape
-            # `(name, desc, value, level, chance)`. Pre-fix every fey
-            # ingredient had description="mana_boost" (effect_type),
-            # value=magnitude (1-3 gold, ~free), level=value (15-50,
-            # absurdly out-of-tier for an F5-rare drop). The
-            # `effect_type` strings ('mana_boost' / 'stealth_boost' /
-            # etc.) never did anything either -- Ingredient is just a
-            # crafting material with no effect dispatch. Restored to
-            # the canonical 5-tuple shape; effect_type field dropped.
-            loot_table = [
-                ('Moonbell Flower', 'Glows with soft lunar light.', 25, 5, 0.20),
-                ('Starshade Root',  'Shadows cling to it.',         40, 6, 0.15),
-                ('Sunfire Petal',   'Warm to the touch.',           30, 5, 0.20),
-                ('Voidshroom',      'Absorbs light around it.',     50, 7, 0.10),
-                ('Fey Grace',       'Protected by fey spirits.',    15, 5, 0.20),
-                ('Time Blossom',    'Petals fall in slow motion.',  35, 6, 0.15),
-            ]
+            # Fey Garden Loot (Rare/Exotic). Uses the canonical
+            # FEY_GARDEN_INGREDIENTS (item_templates.py) -- the same
+            # list that builds INGREDIENT_TEMPLATES and has sprites in
+            # _INGREDIENTS_MAP. A prior inline table here listed
+            # different names (Moonbell Flower, Time Blossom, ...) that
+            # were never registered as templates and had no sprites, so
+            # fey harvests dropped unsprited pool-fallback ingredients
+            # while the 8 sprited fey ingredients (Fey Blossom, Phoenix
+            # Feather, Unicorn Tear, ...) could never be obtained.
+            loot_table = FEY_GARDEN_INGREDIENTS
             add_log(f"{COLOR_CYAN}You carefully harvest the otherworldly flora...{COLOR_RESET}")
         elif is_bug_garden:
             # Bug Garden Loot

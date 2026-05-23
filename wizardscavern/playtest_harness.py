@@ -44,9 +44,10 @@ from .game_systems import (
 )
 from .vendor import handle_vendor_shop, handle_starting_shop
 from .items import (
-    initialize_identification_system, SPELL_TEMPLATES,
+    initialize_identification_system,
     Potion, Food, Meat, Weapon, Armor, Spell, Scroll,
 )
+from .item_templates import SPELL_TEMPLATES
 from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
 # Names of bug-sized gear -- the only equipment a shrunk player can use.
@@ -537,7 +538,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     # 2 utility (Detect Monster, Light) and 2 combat (Hold Monster,
     # Mind Touch) options. --spells still overrides if explicit.
     if race == 'elf':
-        from .items import SPELL_TEMPLATES as _ST
+        from .item_templates import SPELL_TEMPLATES as _ST
         import copy as _copy
         wanted = {'hold monster', 'mind touch'}
         for spell in _ST:
@@ -558,7 +559,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # gate (INT > 13 post-b382 -> max_mana > 0), then activate via
         # the existing memorized_spells flow. Dwarves still get no
         # cantrip -- they're the dedicated melee race.
-        from .items import SPELL_TEMPLATES as _ST
+        from .item_templates import SPELL_TEMPLATES as _ST
         import copy as _copy
         wanted = {'mind touch', 'hold monster'}
         for spell in _ST:
@@ -950,7 +951,7 @@ def _grant_memorized_spells(pc, start_floor):
     if max_slots <= 0:
         return  # cantrip-only race / stat profile
 
-    from .items import SPELL_TEMPLATES as _ST
+    from .item_templates import SPELL_TEMPLATES as _ST
     import copy as _copy
 
     by_name = {s.name: s for s in _ST}

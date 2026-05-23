@@ -469,20 +469,6 @@ bug_kills_this_level = 0
 player_passed_bug_quest = False
 
 # ============================================================================
-# FEY GARDEN INGREDIENTS
-# ============================================================================
-FEY_GARDEN_INGREDIENTS = [
-    ('Fey Blossom', 'A flower from the realm between worlds, shimmering with otherworldly light', 50, 5, 0.20),
-    ('Ethereal Moss', 'Translucent moss that phases in and out of existence', 45, 5, 0.20),
-    ('Starfall Dust', 'Crystallized essence of fallen stars', 60, 6, 0.15),
-    ('Phoenix Feather', 'A feather still warm with eternal flame', 75, 6, 0.12),
-    ('Unicorn Tear', 'A single perfect drop of pure magical essence', 80, 7, 0.10),
-    ('Dragon Heart Root', 'A root pulsing with draconic vitality', 70, 6, 0.10),
-    ('Moonwell Water', 'Water blessed by a thousand full moons', 55, 5, 0.08),
-    ('Void Essence', 'A fragment of the space between dimensions', 100, 8, 0.05),
-]
-
-# ============================================================================
 # UNLOCKED ACHIEVEMENTS (runtime set)
 # ============================================================================
 unlocked_achievements = set()
