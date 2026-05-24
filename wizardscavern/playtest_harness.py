@@ -2710,6 +2710,11 @@ class PlaytestSession:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+                # Mirror app.py: a monster's teleport spell only sets a flag
+                # during its turn; resolve it (relocate + clean combat exit)
+                # now that the combat handler has fully returned.
+                from .combat import resolve_pending_monster_teleport
+                resolve_pending_monster_teleport(pc, tw)
             elif mode == "flee_direction_mode":
                 # Mid-flee direction prompt. Handler accepts n/s/e/w to
                 # move + exit combat, or 'c' to cancel + return to
@@ -2725,6 +2730,8 @@ class PlaytestSession:
                 process_flee_direction_action(pc, tw, action)
             elif mode == "spell_casting_mode":
                 process_spell_casting_action(pc, tw, action)
+                from .combat import resolve_pending_monster_teleport
+                resolve_pending_monster_teleport(pc, tw)
             elif mode == "spell_memorization_mode":
                 from .combat import process_spell_memorization_action
                 process_spell_memorization_action(pc, tw, action)
