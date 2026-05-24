@@ -915,7 +915,14 @@ MONSTER_TEMPLATES = [
             'duration': 6,
             'magnitude': 15,
             'description': 'blasts you with necromantic energy'
-        }
+        },
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Necrotic Bolt', 'type': 'damage', 'element': 'Shadow', 'power': 26,
+             'cast_text': 'raises a skeletal hand and hurls a crackling bolt of necrotic energy'},
+            {'name': 'Drain Vitality', 'type': 'heal', 'power': 28,
+             'cast_text': 'siphons the life from the air to knit its rotting form back together'},
+        ]
     },
 
     {
@@ -1179,7 +1186,12 @@ MONSTER_TEMPLATES = [
             'duration': 5,
             'magnitude': 0,
             'description': 'confounds you with impossible riddles'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Word of Power', 'type': 'damage', 'element': 'Arcane', 'power': 26,
+             'cast_text': 'speaks a Word of Power that detonates against your mind'},
+        ]
     },
 
     {
@@ -2024,7 +2036,14 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 8,
             'description': 'hexes you with fiendish magic'
-        }
+        },
+        'spell_chance': 0.32,
+        'spells': [
+            {'name': 'Mind Twist', 'type': 'damage', 'element': 'Arcane', 'power': 24,
+             'cast_text': 'twists reality and lashes your mind with searing arcane force'},
+            {'name': 'Phantom Veil', 'type': 'debuff', 'effect_type': 'blindness', 'duration': 3, 'magnitude': 0,
+             'cast_text': 'splits into a dozen illusory doubles, baffling your aim'},
+        ]
     },
 
     {
@@ -2712,7 +2731,12 @@ BUG_MONSTER_TEMPLATES = [
             'duration': 3,
             'magnitude': 4,
             'description': 'sears you with concentrated bioluminescent fire'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Lumen Lance', 'type': 'damage', 'element': 'Fire', 'power': 9,
+             'cast_text': 'gathers its glow into a searing lance of light'},
+        ]
     },
     {
         'name': "Ant Soldier",
@@ -2770,7 +2794,14 @@ BUG_MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'mesmerizes you with prismatic wing flashes'
-        }
+        },
+        'spell_chance': 0.32,
+        'spells': [
+            {'name': 'Prismatic Bolt', 'type': 'damage', 'element': 'Arcane', 'power': 8,
+             'cast_text': 'focuses its compound eyes and looses a prismatic bolt'},
+            {'name': 'Enervating Charm', 'type': 'debuff', 'effect_type': 'weakness', 'duration': 3, 'magnitude': 3,
+             'cast_text': 'weaves a draining enchantment that saps the strength from your limbs'},
+        ]
     },
     {
         'name': "Earthworm",

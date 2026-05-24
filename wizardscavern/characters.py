@@ -1721,6 +1721,11 @@ class Monster:
         self.can_talk = can_talk
         self.greeting_template = greeting_template
         self.special_attack = special_attack
+        # Spellcasting: caster monsters carry a list of spell dicts and a
+        # per-turn chance to cast one instead of swinging. Populated at spawn
+        # from the template (see game_systems spawn sites). None == no caster.
+        self.spells = None
+        self.spell_chance = 0.0
         self.properties = {}  # For storing special flags like is_champion, is_legendary
 
     def take_damage(self, amount, elemental_type):
@@ -1741,6 +1746,11 @@ class Monster:
         return self.health <= 0
 
     def attack_target(self, target):
+        # Spellcasters may hurl a spell INSTEAD of a melee swing -- it consumes
+        # the monster's action, so it's alternative damage, not bonus damage.
+        if self._try_cast_spell(target):
+            return 0
+
         base_chance = 0.70
         # Monster Level bonus: +3% per level difference (monster_level - player_level)
         level_bonus = (self.level - target.level) * 0.03
@@ -1850,6 +1860,63 @@ class Monster:
                     rot_food_items(target, magnitude=magnitude)
 
         return dmg
+
+    def _try_cast_spell(self, target):
+        """Caster monsters may cast a spell this turn instead of attacking.
+
+        Returns True if a spell was cast (the action is spent). Liches and kin
+        favour a self-heal when badly wounded; otherwise they sling an
+        offensive spell. Spell damage routes through target.take_damage, so it
+        bypasses armor (defense is normally subtracted during a melee swing)
+        but still respects the player's elemental resistances, Stone Skin, and
+        Spectral Hand -- a real threat the player can still build against.
+        """
+        if not self.spells:
+            return False
+        if random.random() >= self.spell_chance:
+            return False
+
+        heal_spells = [s for s in self.spells if s.get('type') == 'heal']
+        other_spells = [s for s in self.spells if s.get('type') != 'heal']
+        wounded = self.health < self.max_health * 0.5
+
+        if heal_spells and wounded and self.health < self.max_health:
+            spell = random.choice(heal_spells)
+        elif other_spells:
+            spell = random.choice(other_spells)
+        elif heal_spells and self.health < self.max_health:
+            spell = random.choice(heal_spells)
+        else:
+            return False
+
+        self._cast_monster_spell(spell, target)
+        return True
+
+    def _cast_monster_spell(self, spell, target):
+        cast_text = spell.get('cast_text', f"casts {spell.get('name', 'a spell')}")
+        add_log(f"{COLOR_PURPLE}The {self.name} {cast_text}!{COLOR_RESET}")
+        stype = spell.get('type', 'damage')
+
+        if stype == 'damage':
+            element = spell.get('element', 'Arcane')
+            power = spell.get('power', 10)
+            target.take_damage(power, element)
+        elif stype == 'heal':
+            amount = spell.get('power', 0)
+            old = self.health
+            self.health = min(self.max_health, self.health + amount)
+            healed = self.health - old
+            if healed > 0:
+                add_log(f"{COLOR_GREEN}The {self.name} mends {healed} HP!{COLOR_RESET}")
+        elif stype == 'debuff':
+            effect_type = spell.get('effect_type', 'weakness')
+            target.add_status_effect(
+                effect_name=f"{self.name}'s {spell.get('name', effect_type.title())}",
+                duration=spell.get('duration', 3),
+                effect_type=effect_type,
+                magnitude=spell.get('magnitude', 0),
+                description=cast_text,
+            )
 
     def is_alive(self):
         return self.health > 0
