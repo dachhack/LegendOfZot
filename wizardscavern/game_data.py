@@ -922,6 +922,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'raises a skeletal hand and hurls a crackling bolt of necrotic energy'},
             {'name': 'Drain Vitality', 'type': 'heal', 'power': 28,
              'cast_text': 'siphons the life from the air to knit its rotting form back together'},
+            {'name': 'Force Shield', 'type': 'self_buff', 'effect_type': 'hit_absorb', 'duration': 4, 'magnitude': 2,
+             'cast_text': 'weaves a shimmering shield of force around itself'},
         ]
     },
 
@@ -970,7 +972,14 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 8,
             'description': 'exhales a wave of necrotic breath'
-        }
+        },
+        'spell_chance': 0.32,
+        'spells': [
+            {'name': 'Necrotic Bolt', 'type': 'damage', 'element': 'Dark', 'power': 22,
+             'cast_text': 'gathers shadow between its horns and hurls a bolt of necrotic energy'},
+            {'name': 'Bone Mending', 'type': 'heal', 'power': 22,
+             'cast_text': 'drags loose bone and shadow back into its frame, mending itself'},
+        ]
     },
 
     {
@@ -991,7 +1000,20 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'fires a disintegration ray from one of its eyes'
-        }
+        },
+        'spell_chance': 0.45,
+        'spells': [
+            {'name': 'Disintegration Ray', 'type': 'damage', 'element': 'Arcane', 'power': 30,
+             'cast_text': 'fixes its great central eye on you and fires a disintegration ray'},
+            {'name': 'Antimagic Eye', 'type': 'debuff', 'effect_type': 'silence', 'duration': 2, 'magnitude': 0,
+             'cast_text': 'sweeps its central eye over you, snuffing the magic from your fingertips'},
+            {'name': 'Petrification Ray', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'fires a flesh-to-stone ray and your limbs seize up'},
+            {'name': 'Slowing Ray', 'type': 'debuff', 'effect_type': 'slow', 'duration': 3, 'magnitude': 0,
+             'cast_text': 'fires a slowing ray that turns the air around you to syrup'},
+            {'name': 'Enervation Ray', 'type': 'debuff', 'effect_type': 'weakness', 'duration': 3, 'magnitude': 10,
+             'cast_text': 'fires an enervation ray that drains the strength from your arm'},
+        ]
     },
 
     {
@@ -1054,7 +1076,14 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'assaults your mind with psionic energy'
-        }
+        },
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Mind Blast', 'type': 'damage', 'element': 'Psionic', 'power': 26,
+             'cast_text': 'unleashes a cone of psionic force that detonates inside your skull'},
+            {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'seizes your will, and for a moment your body is not your own'},
+        ]
     },
 
     # ========================================================================
@@ -1233,7 +1262,12 @@ MONSTER_TEMPLATES = [
             'duration': 5,
             'magnitude': 15,
             'description': 'surrounds you with infernal flames'
-        }
+        },
+        'spell_chance': 0.33,
+        'spells': [
+            {'name': 'Fireball', 'type': 'damage', 'element': 'Fire', 'power': 30,
+             'cast_text': 'conjures a roaring ball of flame and hurls it at you'},
+        ]
     },
 
     {
@@ -1301,7 +1335,14 @@ MONSTER_TEMPLATES = [
             'duration': 1,
             'magnitude': 20,
             'description': 'attempts to trap your soul'
-        }
+        },
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Soul Bolt', 'type': 'damage', 'element': 'Shadow', 'power': 34,
+             'cast_text': 'looses a screaming bolt of trapped souls'},
+            {'name': 'Devour Essence', 'type': 'heal', 'power': 30,
+             'cast_text': 'feeds on the souls in its sockets to restore itself'},
+        ]
     },
 
     {
@@ -1366,7 +1407,14 @@ MONSTER_TEMPLATES = [
             'duration': 5,
             'magnitude': 0,
             'description': 'overwhelms your mind with psychic assault'
-        }
+        },
+        'spell_chance': 0.40,
+        'spells': [
+            {'name': 'Psychic Crush', 'type': 'damage', 'element': 'Psionic', 'power': 30,
+             'cast_text': 'clenches an invisible fist around your mind and squeezes'},
+            {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'overrides your will and freezes you mid-motion'},
+        ]
     },
 
     {
@@ -1864,7 +1912,14 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 8,
             'description': 'claws with life-draining talons'
-        }
+        },
+        'spell_chance': 0.32,
+        'spells': [
+            {'name': 'Necrotic Bolt', 'type': 'damage', 'element': 'Dark', 'power': 18,
+             'cast_text': 'gathers shadow between its horns and hurls a bolt of necrotic energy'},
+            {'name': 'Bone Mending', 'type': 'heal', 'power': 18,
+             'cast_text': 'drags loose bone and shadow back into its frame, mending itself'},
+        ]
     },
 
     {
@@ -1972,7 +2027,14 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'blasts your mind with psionic energy'
-        }
+        },
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Mind Blast', 'type': 'damage', 'element': 'Psionic', 'power': 22,
+             'cast_text': 'unleashes a cone of psionic force that detonates inside your skull'},
+            {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'seizes your will, and for a moment your body is not your own'},
+        ]
     },
 
     {
@@ -1993,7 +2055,20 @@ MONSTER_TEMPLATES = [
             'duration': 5,
             'magnitude': 10,
             'description': 'hits you with multiple eye rays'
-        }
+        },
+        'spell_chance': 0.45,
+        'spells': [
+            {'name': 'Disintegration Ray', 'type': 'damage', 'element': 'Arcane', 'power': 30,
+             'cast_text': 'fixes its great central eye on you and fires a disintegration ray'},
+            {'name': 'Antimagic Eye', 'type': 'debuff', 'effect_type': 'silence', 'duration': 2, 'magnitude': 0,
+             'cast_text': 'sweeps its central eye over you, snuffing the magic from your fingertips'},
+            {'name': 'Petrification Ray', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'fires a flesh-to-stone ray and your limbs seize up'},
+            {'name': 'Slowing Ray', 'type': 'debuff', 'effect_type': 'slow', 'duration': 3, 'magnitude': 0,
+             'cast_text': 'fires a slowing ray that turns the air around you to syrup'},
+            {'name': 'Enervation Ray', 'type': 'debuff', 'effect_type': 'weakness', 'duration': 3, 'magnitude': 12,
+             'cast_text': 'fires an enervation ray that drains the strength from your arm'},
+        ]
     },
 
     {
@@ -2043,6 +2118,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'twists reality and lashes your mind with searing arcane force'},
             {'name': 'Phantom Veil', 'type': 'debuff', 'effect_type': 'blindness', 'duration': 3, 'magnitude': 0,
              'cast_text': 'splits into a dozen illusory doubles, baffling your aim'},
+            {'name': 'Spell Turning', 'type': 'self_buff', 'effect_type': 'spell_ward', 'duration': 4, 'magnitude': 1,
+             'cast_text': 'traces a sigil of spell-turning -- your next spell will rebound off it'},
         ]
     },
 
@@ -2086,7 +2163,14 @@ MONSTER_TEMPLATES = [
             'duration': 1,
             'magnitude': 15,
             'description': 'drains your life force with a kiss'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Charm', 'type': 'debuff', 'effect_type': 'confusion', 'duration': 3, 'magnitude': 0,
+             'cast_text': 'meets your eyes and whispers a charm that scrambles your resolve'},
+            {'name': 'Soul Siphon', 'type': 'damage', 'element': 'Shadow', 'power': 18,
+             'cast_text': 'reaches out a clawed hand and tears at your life essence from across the room'},
+        ]
     },
 
     # ========================================================================
@@ -2221,7 +2305,14 @@ MONSTER_TEMPLATES = [
             'duration': 1,
             'magnitude': 18,
             'description': 'haunts your dreams and drains your vitality'
-        }
+        },
+        'spell_chance': 0.33,
+        'spells': [
+            {'name': 'Nightmare', 'type': 'damage', 'element': 'Shadow', 'power': 24,
+             'cast_text': 'pours a waking nightmare into your skull'},
+            {'name': 'Sup on Souls', 'type': 'heal', 'power': 20,
+             'cast_text': 'sups from her soul-bag and the years melt off her'},
+        ]
     },
 
     # ========================================================================
@@ -2324,7 +2415,12 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Ice',
         'can_talk': True,
         'greeting_template': "A thousand years in the ice, and now YOU disturb me?",
-        'special_attack': {'effect_type': 'freeze', 'chance': 0.40, 'duration': 2, 'magnitude': 0, 'description': 'exhales a blizzard that locks your limbs'}
+        'special_attack': {'effect_type': 'freeze', 'chance': 0.40, 'duration': 2, 'magnitude': 0, 'description': 'exhales a blizzard that locks your limbs'},
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Ice Lance', 'type': 'damage', 'element': 'Ice', 'power': 58,
+             'cast_text': 'conjures a javelin of black ice and hurls it through the cold air'},
+        ]
     },
     {
         'name': "Cinderborn Efreet",
@@ -2336,7 +2432,12 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Fire',
         'can_talk': True,
         'greeting_template': "Mortal ash, that is all you will leave behind.",
-        'special_attack': {'effect_type': 'burn', 'chance': 0.55, 'duration': 5, 'magnitude': 14, 'description': 'wreathes you in furnace flame'}
+        'special_attack': {'effect_type': 'burn', 'chance': 0.55, 'duration': 5, 'magnitude': 14, 'description': 'wreathes you in furnace flame'},
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Fireball', 'type': 'damage', 'element': 'Fire', 'power': 60,
+             'cast_text': 'gathers the furnace-heat of the City of Brass into a screaming fireball'},
+        ]
     },
     {
         'name': "Hollow Lich",
@@ -2348,7 +2449,16 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "Death is a door, {name}. Allow me to open it.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.40, 'duration': 4, 'magnitude': 10, 'description': 'speaks a word that rots your luck'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.40, 'duration': 4, 'magnitude': 10, 'description': 'speaks a word that rots your luck'},
+        'spell_chance': 0.32,
+        'spells': [
+            {'name': 'Necrotic Bolt', 'type': 'damage', 'element': 'Darkness', 'power': 56,
+             'cast_text': 'speaks a word of unmaking and a bolt of pure entropy leaps from its palm'},
+            {'name': 'Drain Vitality', 'type': 'heal', 'power': 55,
+             'cast_text': 'rips the warmth from the room to knit its hollow frame'},
+            {'name': 'Force Shield', 'type': 'self_buff', 'effect_type': 'hit_absorb', 'duration': 4, 'magnitude': 2,
+             'cast_text': 'sheathes itself in a lattice of deathless force'},
+        ]
     },
     {
         'name': "Emberscale Drake",
@@ -2397,7 +2507,14 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Psionic',
         'can_talk': True,
         'greeting_template': "Such a delectable cortex. Hold still.",
-        'special_attack': {'effect_type': 'confusion', 'chance': 0.60, 'duration': 5, 'magnitude': 0, 'description': 'reaches into your skull for a snack'}
+        'special_attack': {'effect_type': 'confusion', 'chance': 0.60, 'duration': 5, 'magnitude': 0, 'description': 'reaches into your skull for a snack'},
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Mind Blast', 'type': 'damage', 'element': 'Psionic', 'power': 66,
+             'cast_text': 'unfurls its full intellect and detonates a cone of psionic force in your mind'},
+            {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
+             'cast_text': 'takes the reins of your nervous system and your body locks up'},
+        ]
     },
     {
         'name': "Hundred-Eyed Watcher",
@@ -2421,7 +2538,14 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "I ruled empires while your ancestors were mud, {name}.",
-        'special_attack': {'effect_type': 'life_drain', 'chance': 0.50, 'duration': 1, 'magnitude': 22, 'description': 'siphons your soul toward its phylactery'}
+        'special_attack': {'effect_type': 'life_drain', 'chance': 0.50, 'duration': 1, 'magnitude': 22, 'description': 'siphons your soul toward its phylactery'},
+        'spell_chance': 0.33,
+        'spells': [
+            {'name': 'Necrotic Bolt', 'type': 'damage', 'element': 'Darkness', 'power': 68,
+             'cast_text': 'levels a crowned skull at you and lets fly a bolt of grave-cold'},
+            {'name': 'Drain Vitality', 'type': 'heal', 'power': 66,
+             'cast_text': 'drinks the life from the very stones to mend itself'},
+        ]
     },
     {
         'name': "Graven Colossus",
@@ -2492,7 +2616,16 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "I am SO close, {name}. I will not be interrupted now.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 12, 'description': 'intones a litany of unmaking'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 12, 'description': 'intones a litany of unmaking'},
+        'spell_chance': 0.33,
+        'spells': [
+            {'name': 'Word of Unmaking', 'type': 'damage', 'element': 'Darkness', 'power': 86,
+             'cast_text': 'utters a fragment of its forbidden working and reality tears at you'},
+            {'name': 'Phylactery Mending', 'type': 'heal', 'power': 90,
+             'cast_text': 'draws on its hidden phylactery and its wounds close like rewound time'},
+            {'name': 'Force Shield', 'type': 'self_buff', 'effect_type': 'hit_absorb', 'duration': 4, 'magnitude': 2,
+             'cast_text': 'wraps itself in a shell of unmaking that turns aside the next blows'},
+        ]
     },
     {
         'name': "Maw of the Deep",
@@ -2540,7 +2673,12 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Fire',
         'can_talk': True,
         'greeting_template': "I have a throne of skulls, {name}, and one seat is open.",
-        'special_attack': {'effect_type': 'burn', 'chance': 0.60, 'duration': 6, 'magnitude': 24, 'description': 'calls down a rain of brimstone'}
+        'special_attack': {'effect_type': 'burn', 'chance': 0.60, 'duration': 6, 'magnitude': 24, 'description': 'calls down a rain of brimstone'},
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Hellfire Bolt', 'type': 'damage', 'element': 'Fire', 'power': 92,
+             'cast_text': 'gestures with a gauntleted hand and a lance of hellfire roars out'},
+        ]
     },
     {
         'name': "Voidmaw Devourer",
@@ -2575,7 +2713,16 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "I have rewritten my own ending a thousand times, {name}. Yours is fixed.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.55, 'duration': 6, 'magnitude': 14, 'description': 'rewrites your fate in a dead language'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.55, 'duration': 6, 'magnitude': 14, 'description': 'rewrites your fate in a dead language'},
+        'spell_chance': 0.35,
+        'spells': [
+            {'name': 'Death Bolt', 'type': 'damage', 'element': 'Darkness', 'power': 100,
+             'cast_text': 'speaks your name in a dead language and a bolt of pure ending answers'},
+            {'name': 'Unlife Mending', 'type': 'heal', 'power': 110,
+             'cast_text': 'rewrites the last few moments so its wounds were never dealt'},
+            {'name': 'Force Shield', 'type': 'self_buff', 'effect_type': 'hit_absorb', 'duration': 4, 'magnitude': 3,
+             'cast_text': 'edits itself out of harm, a shell of unbeing turning your strikes aside'},
+        ]
     },
     {
         'name': "Soulflayer Wraith",

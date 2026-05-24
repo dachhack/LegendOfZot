@@ -616,6 +616,22 @@ CONFUSION_EFFECT = StatusEffect(name='Confusion', duration=2, effect_type='confu
 WEB_EFFECT = StatusEffect(name='Web', duration=3, effect_type='web', description='You are stuck in a sticky web and cannot move.')
 STICKY_HANDS_EFFECT = StatusEffect(name='Sticky Hands', duration=4, effect_type='sticky_hands', description='Your hands are covered in a sticky substance, making it hard to use or equip items.')
 
+def _consume_spell_ward(target):
+    """Counterspell check: if the target monster has an active spell_ward
+    (e.g. a Rakshasa's), consume one charge and fizzle the player's spell.
+    Returns True if the spell was warded. The caster's mana/action is already
+    spent -- countering costs you the spell, as it should."""
+    if target is None:
+        return False
+    for name, effect in list(getattr(target, 'status_effects', {}).items()):
+        if effect.effect_type == 'spell_ward' and effect.magnitude > 0:
+            effect.magnitude -= 1
+            add_log(f"{COLOR_PURPLE}Your spell shatters against the {target.name}'s {name}! ({effect.magnitude} left){COLOR_RESET}")
+            if effect.magnitude <= 0:
+                target.remove_status_effect(name)
+            return True
+    return False
+
 def apply_poison_to_player(player_character):
     """
     Applies a poison status effect to the player if not already poisoned.
@@ -1467,6 +1483,10 @@ class Character:
             add_log(f"{COLOR_GREEN}You healed for {healing_amount} HP! Current health: {self.health}.{COLOR_RESET}")
             return True
         elif spell_to_cast.spell_type == 'damage':
+            # Rakshasa-style counterspell: a spell_ward on the monster eats the
+            # incoming spell (the action + mana are still spent -- counters cost).
+            if _consume_spell_ward(target):
+                return True
             # Base spell damage boosted by player's intelligence and spell level
             # INT scaling: higher INT rewards higher-level spells significantly
             int_bonus = (self.intelligence // 2) + (max(0, self.intelligence - 10) * spell_to_cast.level // 3)
@@ -1555,6 +1575,8 @@ class Character:
             return True
         elif spell_to_cast.spell_type == 'debuff_target':
             # Debuff spells: apply to TARGET (the monster) — e.g. Time Stop
+            if _consume_spell_ward(target):
+                return True
             if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:
                 target.add_status_effect(
                     effect_name=spell_to_cast.status_effect_name,
@@ -1729,6 +1751,18 @@ class Monster:
         self.properties = {}  # For storing special flags like is_champion, is_legendary
 
     def take_damage(self, amount, elemental_type):
+        # Force shields (hit_absorb) a caster lays on itself catch one full
+        # blow each -- mirror of the player's Spectral Hand. DoTs route through
+        # take_damage_no_def, so poison/bleed still tick past the shield.
+        for effect_name, effect in list(self.status_effects.items()):
+            if effect.effect_type == 'hit_absorb' and effect.magnitude > 0:
+                effect.magnitude -= 1
+                add_log(f"{COLOR_PURPLE}The {self.name}'s {effect_name} absorbs the blow! ({effect.magnitude} left){COLOR_RESET}")
+                if effect.magnitude <= 0:
+                    self.remove_status_effect(effect_name)
+                gs.last_monster_damage = 0
+                return 0
+
         actual_damage = apply_elemental_resistance(self, amount, elemental_type)
 
         # Defense is already applied in attack_target - just apply elemental resistance here
@@ -1876,8 +1910,19 @@ class Monster:
         if random.random() >= self.spell_chance:
             return False
 
-        heal_spells = [s for s in self.spells if s.get('type') == 'heal']
-        other_spells = [s for s in self.spells if s.get('type') != 'heal']
+        # Don't re-cast a self-buff the monster already has running (no point
+        # shielding twice). Everything else stays in the pool.
+        def _redundant(s):
+            if s.get('type') != 'self_buff':
+                return False
+            et = s.get('effect_type')
+            return any(e.effect_type == et for e in self.status_effects.values())
+        castable = [s for s in self.spells if not _redundant(s)]
+        if not castable:
+            return False
+
+        heal_spells = [s for s in castable if s.get('type') == 'heal']
+        other_spells = [s for s in castable if s.get('type') != 'heal']
         wounded = self.health < self.max_health * 0.5
 
         if heal_spells and wounded and self.health < self.max_health:
@@ -1915,6 +1960,17 @@ class Monster:
                 duration=spell.get('duration', 3),
                 effect_type=effect_type,
                 magnitude=spell.get('magnitude', 0),
+                description=cast_text,
+            )
+        elif stype == 'self_buff':
+            # Wards/shields the caster lays on ITSELF -- e.g. hit_absorb (a force
+            # shield that eats incoming blows) or spell_ward (counters the
+            # player's next spell). Honored in Monster.take_damage / cast_spell.
+            self.add_status_effect(
+                effect_name=spell.get('name', 'Ward'),
+                duration=spell.get('duration', 3),
+                effect_type=spell.get('effect_type', 'hit_absorb'),
+                magnitude=spell.get('magnitude', 1),
                 description=cast_text,
             )
 
