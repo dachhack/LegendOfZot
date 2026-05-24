@@ -409,6 +409,7 @@ last_concentration_roll = None    # (raw_roll, modifier, total, dc, passed) for 
 # ============================================================================
 monster_defeated_anim = None  # Set to monster name string when killed, cleared after render
 victory_monster_name = None   # Saved monster name for combat_victory view
+combat_threat_style = None    # Threat-tier panel styling of the active fight (for the victory view)
 
 # ============================================================================
 # DICE ROLL ANIMATION STATE

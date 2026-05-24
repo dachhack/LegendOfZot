@@ -62,12 +62,15 @@ def _resolve_new_monster_key(monster_name, cat_map):
 # MONSTER SPRITE
 # ============================================================================
 
-def generate_monster_sprite_html(monster_name, seed=None):
-    """Render a 64x64 canvas for a monster.
+def generate_monster_sprite_html(monster_name, seed=None, size=64):
+    """Render a square canvas for a monster (default 64x64).
 
     Looks up `monster_name` in the round-8 monster map (with name
     resolution for decorated boss names), picks a deterministic variant
     from the seed, and renders the pre-rendered webp from the canonical pool.
+
+    `size` lets the combat screen scale the sprite up for tougher foes so
+    the threat reads at a glance (see get_monster_threat_style in app.py).
 
     Returns an HTML string, or '' if the monster has no sprite.
     """
@@ -91,7 +94,11 @@ def generate_monster_sprite_html(monster_name, seed=None):
         return ''
 
     safe_id = "ms_" + "".join(ch if ch.isalnum() else "_" for ch in monster_name)
-    SIZE = 64
+    try:
+        SIZE = int(size)
+    except (TypeError, ValueError):
+        SIZE = 64
+    SIZE = max(32, min(SIZE, 160))
     img_uri = "data:image/webp;base64," + img_b64
     return (
         f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'

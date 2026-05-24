@@ -2372,13 +2372,82 @@ def generate_monster_defeat_js(monster_name):
 # All sprite data and rendering now in external sprite_data.py
 # ============================================================
 
-def get_evolution_tier_style(monster):
-    """Border color + tier label for a monster's combat panel.
+# Threat-tier visuals for the monster combat panel.  A roguelike's first job
+# is honest threat signalling (DCSS color-codes tiles, Brogue glows its
+# horrors) -- so deadlier foes get bigger sprites + fiercer, glowing boxes.
+# The glow color is fed to the threatPulse keyframe via the --tg CSS var so a
+# single animation serves every tier.  Each entry:
+#   (sprite_size, border_px, border_color, glow_rgba, pulse_secs,
+#    name_color, label, label_color)  -- glow_rgba '' = no glow; pulse 0 = static
+_THREAT_TIERS = {
+    'trivial':   (50,  1, '#4a4a4a', '',                      0,   '#9e9e9e', '',          '#9e9e9e'),
+    'normal':    (64,  2, '#666666', '',                      0,   '#F44336', '',          '#F44336'),
+    'tough':     (74,  2, '#FF9800', 'rgba(255,152,0,0.5)',   0,   '#FFB74D', 'TOUGH',     '#FFB74D'),
+    'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043'),
+    'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252'),
+    'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F'),
+    'legendary': (104, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8'),
+    'boss':      (118, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F'),
+}
 
-    Monsters no longer carry name-prefix evolution tiers, so this returns
-    no decoration; the panel falls back to its default border and name color.
+
+def _classify_monster_threat(monster, player=None):
+    """Pick a threat tier key for `monster` relative to `player`."""
+    props = getattr(monster, 'properties', None) or {}
+    if props.get('is_zots_guardian') or props.get('is_platino') or props.get('is_bug_queen'):
+        return 'boss'
+    if props.get('is_legendary'):
+        return 'legendary'
+    if props.get('is_champion'):
+        return 'champion'
+    # Everything else scales with how far the monster outclasses the player.
+    diff = 0
+    if player is not None:
+        diff = getattr(monster, 'level', 1) - getattr(player, 'level', 1)
+    if diff <= -4:
+        return 'trivial'
+    if diff <= 1:
+        return 'normal'
+    if diff <= 3:
+        return 'tough'
+    if diff <= 6:
+        return 'dangerous'
+    return 'deadly'
+
+
+def get_monster_threat_style(monster, player=None):
+    """Difficulty-scaled styling for a monster's combat panel.
+
+    Returns a dict the combat renderers drop straight into the panel HTML:
+      tier         - threat tier key (e.g. 'normal', 'champion', 'boss')
+      sprite_size  - canvas px for generate_monster_sprite_html()
+      panel_css    - border + glow + pulse to inject into #monster_panel style
+      name_color   - color for the monster name text
+      label_html   - pre-styled threat badge (may be '')
     """
-    return '', ''
+    tier = _classify_monster_threat(monster, player)
+    size, border_px, border_color, glow, pulse, name_color, label, label_color = _THREAT_TIERS[tier]
+    panel_css = f"border: {border_px}px solid {border_color};"
+    if glow:
+        panel_css += f" --tg: {glow}; box-shadow: 0 0 11px var(--tg);"
+    if pulse:
+        # Inline animation overrides the stylesheet's combatIn entrance, so
+        # replay it here alongside the pulse to keep the pop-in.
+        panel_css += f" animation: combatIn 250ms ease-out, threatPulse {pulse}s ease-in-out infinite;"
+    label_html = ''
+    if label:
+        label_html = (
+            f'<span style="font-size:8px;font-weight:bold;color:{label_color};'
+            f'border:1px solid {label_color};border-radius:3px;padding:0 3px;'
+            f'margin-left:4px;vertical-align:middle;letter-spacing:0.5px;">{label}</span>'
+        )
+    return {
+        'tier': tier,
+        'sprite_size': size,
+        'panel_css': panel_css,
+        'name_color': name_color,
+        'label_html': label_html,
+    }
 
 
 def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None, sprite_pid=None):
@@ -7568,18 +7637,17 @@ class WizardsCavernApp(toga.App):
             # Map is hidden to give spell list room on mobile screens.
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'])
 
             # Compact Monster Info (same as combat_mode compact style)
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
                             <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
@@ -7699,18 +7767,17 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'])
 
             # Compact Monster Info
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
                             <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
@@ -7863,7 +7930,14 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             victory_name = gs.victory_monster_name or "Monster"
-            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
+            # Reuse the threat styling from the fight so the defeated foe keeps
+            # its size + fierce box during the victory/defeat animation.
+            _v_threat = getattr(gs, 'combat_threat_style', None) or {}
+            _v_size = _v_threat.get('sprite_size', 64)
+            _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
+            _v_name_color = _v_threat.get('name_color', '#F44336')
+            _v_label_html = _v_threat.get('label_html', '')
+            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
 
             # Show last damage dealt
             dmg_text = ""
@@ -7871,11 +7945,11 @@ class WizardsCavernApp(toga.App):
                 dmg_text = f'<div style="font-size: 9px; color: #FF5252; font-weight: bold;">-{gs.last_monster_damage} HP</div>'
 
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
                         <div id="monster_info_box">
-                            <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
+                            <div style="color: {_v_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}{_v_label_html}</div>
                             <div style="font-size: 9px;">{health_bar(0, 1, width=10)}</div>
                             {dmg_text}
                     <div id="monster_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
@@ -7948,18 +8022,17 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'])
 
             # Monster info (still there, but you're fleeing)
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
+                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {threat['panel_css']} margin-bottom: 5px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">Fleeing from {gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">Fleeing from {gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
                             <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
                     <div id="monster_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
@@ -10736,6 +10809,14 @@ class WizardsCavernApp(toga.App):
                     60% {{ transform: translate(4px, -1px); }}
                     70% {{ transform: translate(-2px, 0); }}
                     80% {{ transform: translate(2px, 0); }}
+                }}
+
+                /* Threat pulse for the monster panel: stronger foes throb a
+                   glowing aura.  Color comes from the per-tier --tg var so one
+                   keyframe covers every tier (see get_monster_threat_style). */
+                @keyframes threatPulse {{
+                    0%, 100% {{ box-shadow: 0 0 7px var(--tg); }}
+                    50%      {{ box-shadow: 0 0 22px var(--tg), 0 0 9px var(--tg); }}
                 }}
 
                 /* Low-HP pulse for the player panel: red heartbeat warning */
