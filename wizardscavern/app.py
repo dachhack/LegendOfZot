@@ -2372,13 +2372,164 @@ def generate_monster_defeat_js(monster_name):
 # All sprite data and rendering now in external sprite_data.py
 # ============================================================
 
-def get_evolution_tier_style(monster):
-    """Border color + tier label for a monster's combat panel.
+# Threat-tier visuals for the monster combat panel.  A roguelike's first job
+# is honest threat signalling (DCSS color-codes tiles, Brogue glows its
+# horrors) -- so deadlier foes get bigger sprites + fiercer, glowing boxes.
+# The glow color is fed to the threatPulse keyframe via the --tg CSS var so a
+# single animation serves every tier.
+#
+# loom_px: how far the sprite rises ABOVE its panel.  The combat view packs
+# the monster + player boxes into a fixed 200px slot (.room-panel,
+# overflow:hidden), so an oversized sprite would clip the player's own box.
+# For the rare elite tiers the sprite is anchored to the bottom of a shorter
+# slot (sprite_size - loom_px) and a JS overlay paints it over the HUD.
+#
+# flourish: entrance-drama level (0-4), playing ONCE per fight (token-gated):
+#   0 none, 1 pop, 2 rise, 3 surge + soft buzz, 4 SLAM + screen flash + a
+#   dramatic vibration pattern -- the bigger the threat, the bigger the reveal.
+# Each entry:
+#   (sprite_size, border_px, border_color, glow_rgba, pulse_secs,
+#    name_color, label, label_color, loom_px, flourish)
+_THREAT_TIERS = {
+    'trivial':   (50,  1, '#4a4a4a', '',                      0,   '#9e9e9e', '',          '#9e9e9e',  0, 0),
+    'normal':    (64,  2, '#666666', '',                      0,   '#F44336', '',          '#F44336',  0, 0),
+    'tough':     (74,  2, '#FF9800', 'rgba(255,152,0,0.5)',   0,   '#FFB74D', 'TOUGH',     '#FFB74D',  0, 0),
+    'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0, 1),
+    'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0, 1),
+    'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0, 2),
+    'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44, 3),
+    'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76, 4),
+}
 
-    Monsters no longer carry name-prefix evolution tiers, so this returns
-    no decoration; the panel falls back to its default border and name color.
+
+def _classify_monster_threat(monster, player=None):
+    """Pick a threat tier key for `monster` relative to `player`."""
+    props = getattr(monster, 'properties', None) or {}
+    if props.get('is_zots_guardian') or props.get('is_platino') or props.get('is_bug_queen'):
+        return 'boss'
+    if props.get('is_legendary'):
+        return 'legendary'
+    if props.get('is_champion'):
+        return 'champion'
+    # Everything else scales with how far the monster outclasses the player.
+    diff = 0
+    if player is not None:
+        diff = getattr(monster, 'level', 1) - getattr(player, 'level', 1)
+    if diff <= -4:
+        return 'trivial'
+    if diff <= 1:
+        return 'normal'
+    if diff <= 3:
+        return 'tough'
+    if diff <= 6:
+        return 'dangerous'
+    return 'deadly'
+
+
+def get_monster_threat_style(monster, player=None):
+    """Difficulty-scaled styling for a monster's combat panel.
+
+    Returns a dict the combat renderers drop straight into the panel HTML:
+      tier         - threat tier key (e.g. 'normal', 'champion', 'boss')
+      sprite_size  - canvas px for generate_monster_sprite_html()
+      panel_css    - border + glow + pulse to inject into #monster_panel style
+      name_color   - color for the monster name text
+      label_html   - pre-styled threat badge (may be '')
+      loom_px      - px the sprite towers above its panel (0 = no loom)
+      looming      - bool: this tier mounts the JS over-the-HUD overlay
+      slot_css     - style for the sprite's flow slot (caps its layout height
+                     so the loom doesn't eat the panel budget below it)
+      roompanel_loom_css - style for the fixed-200px .room-panel (combat / flee):
+                     bottom-anchors the boxes + overflow:visible (no margin --
+                     the overlay is out of flow, so the map never moves)
+      growbox_loom_css - style for the spell view's growing container
+      row_align    - flex align-items for the monster row ('flex-start' when
+                     looming so the text sits up top, clearing the dice)
+      flourish     - entrance-drama level 0-4 (see _THREAT_TIERS)
     """
-    return '', ''
+    tier = _classify_monster_threat(monster, player)
+    (size, border_px, border_color, glow, pulse,
+     name_color, label, label_color, loom_px, flourish) = _THREAT_TIERS[tier]
+    panel_css = f"border: {border_px}px solid {border_color};"
+    if glow:
+        panel_css += f" --tg: {glow}; box-shadow: 0 0 11px var(--tg);"
+    if pulse:
+        # Inline animation overrides the stylesheet's combatIn entrance, so
+        # replay it here alongside the pulse to keep the pop-in.
+        panel_css += f" animation: combatIn 250ms ease-out, threatPulse {pulse}s ease-in-out infinite;"
+    label_html = ''
+    if label:
+        label_html = (
+            f'<span style="font-size:8px;font-weight:bold;color:{label_color};'
+            f'border:1px solid {label_color};border-radius:3px;padding:0 3px;'
+            f'margin-left:4px;vertical-align:middle;letter-spacing:0.5px;">{label}</span>'
+        )
+    slot_css = ''
+    roompanel_loom_css = ''
+    growbox_loom_css = ''
+    row_align = 'center'
+    looming = loom_px > 0
+    if looming:
+        # The sprite renders at full size but only its bottom (size - loom) px
+        # take flow height; the rest spills upward out of the slot.  A JS
+        # overlay (mounted by generate_monster_sprite_html with loom=True)
+        # promotes a copy to a fixed top layer (z-index above the HUD), so the
+        # towering part paints OVER the stats bar -- like the spell/damage
+        # effects.  Because the overlay is out of flow, NOTHING in the layout
+        # moves: the map stays exactly where a normal fight puts it.
+        slot_h = max(32, size - loom_px)
+        slot_css = f"height:{slot_h}px;width:{size}px;position:relative;overflow:visible;"
+        # Bottom-anchor the boxes inside the fixed 200px panel so the in-flow
+        # part of the sprite sits snug above the player box (no wasted gap).
+        roompanel_loom_css = "display:flex; flex-direction:column; justify-content:flex-end; overflow:visible;"
+        growbox_loom_css = "overflow:visible;"
+        # With a big sprite, pin the name/HP text to the TOP of the box so the
+        # roll dice have clear room below them.
+        row_align = 'flex-start'
+    return {
+        'tier': tier,
+        'sprite_size': size,
+        'panel_css': panel_css,
+        'name_color': name_color,
+        'label_html': label_html,
+        'loom_px': loom_px,
+        'looming': looming,
+        'slot_css': slot_css,
+        'roompanel_loom_css': roompanel_loom_css,
+        'growbox_loom_css': growbox_loom_css,
+        'row_align': row_align,
+        'flourish': flourish,
+    }
+
+
+def _combat_anim_token():
+    """A token that changes only when a NEW monster fight begins.
+
+    Combat re-renders every turn, but the entrance flourish + vibration should
+    fire just once.  The JS compares this token to window.__combatAnimTok and
+    plays the flourish only when it changed, so re-renders within the same
+    fight are static.
+    """
+    if gs.active_monster is not getattr(gs, '_last_anim_monster', None):
+        gs.combat_anim_token = getattr(gs, 'combat_anim_token', 0) + 1
+        gs._last_anim_monster = gs.active_monster
+    return gs.combat_anim_token
+
+
+def wrap_monster_loom(sprite_html, threat):
+    """Wrap a monster sprite so it towers above its panel for elite tiers.
+
+    For non-loom tiers returns the sprite unchanged.  For loom tiers the sprite
+    is anchored to the bottom of a height-capped slot and overflows upward (see
+    get_monster_threat_style / _THREAT_TIERS).
+    """
+    if not sprite_html or not threat.get('loom_px'):
+        return sprite_html
+    return (
+        f'<div style="{threat["slot_css"]}">'
+        f'<div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);">'
+        f'{sprite_html}</div></div>'
+    )
 
 
 def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None, sprite_pid=None):
@@ -7568,18 +7719,18 @@ class WizardsCavernApp(toga.App):
             # Map is hidden to give spell list room on mobile screens.
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Compact Monster Info (same as combat_mode compact style)
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
                             <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
@@ -7676,7 +7827,7 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     {player_stats_html}
 
-                    <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto;">
+                    <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto; {threat['growbox_loom_css']}">
                         {monster_html}
                         {player_combat_html}
                     </div>
@@ -7699,18 +7850,18 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Compact Monster Info
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
                             <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
@@ -7838,7 +7989,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
                     <div class="bottom-pinned-zone">
-                        <div class="room-panel" style="width: 100%;">
+                        <div class="room-panel" style="width: 100%; {threat['roompanel_loom_css']}">
                             {monster_html}
                             {player_combat_html}
                         </div>
@@ -7863,7 +8014,18 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             victory_name = gs.victory_monster_name or "Monster"
-            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
+            # Reuse the threat styling from the fight so the defeated foe keeps
+            # its size + fierce box during the victory/defeat animation.
+            _v_threat = getattr(gs, 'combat_threat_style', None) or {}
+            # Cap the defeated sprite so it fits the box without clipping -- the
+            # defeat grayscale runs on this in-flow canvas, so we don't mount
+            # the over-the-HUD overlay on the victory frame.
+            _v_size = min(_v_threat.get('sprite_size', 64), 96)
+            _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
+            _v_name_color = _v_threat.get('name_color', '#F44336')
+            _v_label_html = _v_threat.get('label_html', '')
+            _v_panel_loom = ''
+            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
 
             # Show last damage dealt
             dmg_text = ""
@@ -7871,11 +8033,11 @@ class WizardsCavernApp(toga.App):
                 dmg_text = f'<div style="font-size: 9px; color: #FF5252; font-weight: bold;">-{gs.last_monster_damage} HP</div>'
 
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
                         <div id="monster_info_box">
-                            <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
+                            <div style="color: {_v_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}{_v_label_html}</div>
                             <div style="font-size: 9px;">{health_bar(0, 1, width=10)}</div>
                             {dmg_text}
                     <div id="monster_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
@@ -7916,7 +8078,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
                     <div class="bottom-pinned-zone">
-                        <div class="room-panel" style="width: 100%;">
+                        <div class="room-panel" style="width: 100%; {_v_panel_loom}">
                             {monster_html}
                             {player_combat_html}
                         </div>
@@ -7948,18 +8110,18 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-            evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
+            threat = get_monster_threat_style(gs.active_monster, gs.player_character)
+            gs.combat_threat_style = threat
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Monster info (still there, but you're fleeing)
-            evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
-            evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {threat['panel_css']} margin-bottom: 5px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">Fleeing from {gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="color: {threat['name_color']}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">Fleeing from {gs.active_monster.name}{threat['label_html']}</div>
                             <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
                             <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
                     <div id="monster_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
@@ -8013,7 +8175,7 @@ class WizardsCavernApp(toga.App):
 
 
                     <div class="bottom-pinned-zone">
-                        <div class="room-panel" style="width: 100%;">
+                        <div class="room-panel" style="width: 100%; {threat['roompanel_loom_css']}">
                             {monster_html}
                             {player_combat_html}
                             <div style="text-align:center; color:#F44336; font-weight:bold; margin-top:8px;">Flee which way?</div>
@@ -10738,6 +10900,38 @@ class WizardsCavernApp(toga.App):
                     80% {{ transform: translate(2px, 0); }}
                 }}
 
+                /* Threat pulse for the monster panel: stronger foes throb a
+                   glowing aura.  Color comes from the per-tier --tg var so one
+                   keyframe covers every tier (see get_monster_threat_style). */
+                @keyframes threatPulse {{
+                    0%, 100% {{ box-shadow: 0 0 7px var(--tg); }}
+                    50%      {{ box-shadow: 0 0 22px var(--tg), 0 0 9px var(--tg); }}
+                }}
+
+                /* Tier-scaled monster ENTRANCE flourishes (fired once per fight
+                   by generate_monster_sprite_html).  transform-origin is set
+                   inline to bottom-center so the creature rises from its feet. */
+                @keyframes flourishPop {{
+                    0%   {{ opacity: 0; transform: scale(0.82); }}
+                    100% {{ opacity: 1; transform: scale(1); }}
+                }}
+                @keyframes flourishRise {{
+                    0%   {{ opacity: 0; transform: translateY(14px) scale(0.9); }}
+                    70%  {{ opacity: 1; transform: translateY(-3px) scale(1.05); }}
+                    100% {{ opacity: 1; transform: translateY(0) scale(1); }}
+                }}
+                @keyframes flourishSurge {{
+                    0%   {{ opacity: 0; transform: translateY(22px) scale(0.7); }}
+                    60%  {{ opacity: 1; transform: translateY(0) scale(1.07); }}
+                    100% {{ opacity: 1; transform: scale(1); }}
+                }}
+                @keyframes flourishSlam {{
+                    0%   {{ opacity: 0; transform: translateY(34px) scale(0.5); }}
+                    50%  {{ opacity: 1; transform: translateY(-6px) scale(1.12); }}
+                    72%  {{ transform: translateY(0) scale(0.96); }}
+                    100% {{ transform: scale(1); }}
+                }}
+
                 /* Low-HP pulse for the player panel: red heartbeat warning */
                 @keyframes lowHPPulse {{
                     0%, 100% {{
@@ -11736,6 +11930,13 @@ class WizardsCavernApp(toga.App):
                 window.updateGame = function(p) {{
                     var ca = document.getElementById('content-area');
                     if (ca && p.contentHtml !== undefined) {{
+                        // Drop any monster loom overlays from the previous
+                        // screen (they live on <body>, outside content-area, so
+                        // the innerHTML swap won't remove them).  The new
+                        // content's sprite script re-mounts one if still in a
+                        // loom fight.
+                        var _lo = document.querySelectorAll('.loom-overlay');
+                        for (var _i = 0; _i < _lo.length; _i++) _lo[_i].remove();
                         ca.innerHTML = p.contentHtml;
                         // Re-execute inline <script> tags from new content
                         var inner = ca.querySelectorAll('script');

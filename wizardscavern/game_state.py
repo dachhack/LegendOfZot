@@ -409,6 +409,9 @@ last_concentration_roll = None    # (raw_roll, modifier, total, dc, passed) for 
 # ============================================================================
 monster_defeated_anim = None  # Set to monster name string when killed, cleared after render
 victory_monster_name = None   # Saved monster name for combat_victory view
+combat_threat_style = None    # Threat-tier panel styling of the active fight (for the victory view)
+combat_anim_token = 0          # Bumped when a new fight starts, so the entrance flourish/vibration plays once
+_last_anim_monster = None      # The monster the flourish token was last computed against
 
 # ============================================================================
 # DICE ROLL ANIMATION STATE
