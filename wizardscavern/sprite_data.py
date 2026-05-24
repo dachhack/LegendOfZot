@@ -62,7 +62,7 @@ def _resolve_new_monster_key(monster_name, cat_map):
 # MONSTER SPRITE
 # ============================================================================
 
-def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False):
+def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, flourish=0, anim_token=0):
     """Render a square canvas for a monster (default 64x64).
 
     Looks up `monster_name` in the round-8 monster map (with name
@@ -78,6 +78,12 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False):
     #content-area -- the same fixed-overlay trick as the spell/damage effects.
     Being out of flow, it never moves the layout (the map stays put).  The
     overlay is cleaned up by updateGame() on every re-render.
+
+    `flourish` (0-4) plays a tier-scaled entrance animation on the sprite (the
+    overlay when looming, else the in-flow canvas): pop / rise / surge / SLAM,
+    with a soft buzz at 3 and a dramatic vibration + screen flash at 4.  It
+    fires once per fight -- `anim_token` (bumped server-side when a new monster
+    appears) is compared to window.__combatAnimTok so re-renders stay static.
 
     Returns an HTML string, or '' if the monster has no sprite.
     """
@@ -123,6 +129,37 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False):
             'octx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,' + str(SIZE) + ',' + str(SIZE) + ');'
             'document.body.appendChild(ov);'
         )
+    # Tier-scaled entrance flourish, fired once per fight (anim_token gate).
+    flourish_js = ''
+    if flourish and flourish > 0:
+        _anim = {1: ('flourishPop', 320), 2: ('flourishRise', 380),
+                 3: ('flourishSurge', 520), 4: ('flourishSlam', 720)}.get(flourish, ('flourishPop', 320))
+        _target = 'ov' if loom else 'c'
+        _vib = ''
+        if flourish >= 4:
+            _vib = 'if(navigator.vibrate){navigator.vibrate([0,55,45,95,45,170]);}'
+        elif flourish == 3:
+            _vib = 'if(navigator.vibrate){navigator.vibrate(45);}'
+        _flash = ''
+        if flourish >= 4:
+            _flash = (
+                'var _fl=document.createElement("div");'
+                '_fl.style.cssText="position:fixed;inset:0;z-index:1190;pointer-events:none;'
+                'background:radial-gradient(circle at 20% 32%,rgba(255,45,45,0.4),rgba(255,45,45,0) 62%);'
+                'opacity:1;transition:opacity 640ms ease-out;";'
+                'document.body.appendChild(_fl);'
+                'requestAnimationFrame(function(){_fl.style.opacity="0";});'
+                'setTimeout(function(){if(_fl&&_fl.parentNode)_fl.parentNode.removeChild(_fl);},700);'
+            )
+        flourish_js = (
+            'var _ft=' + str(anim_token) + ';'
+            'if(window.__combatAnimTok!==_ft){window.__combatAnimTok=_ft;'
+            'var _tg=' + _target + ';'
+            'if(_tg){_tg.style.transformOrigin="bottom center";'
+            '_tg.style.animation="' + _anim[0] + ' ' + str(_anim[1]) + 'ms cubic-bezier(.2,.85,.25,1.15) both";}'
+            + _vib + _flash +
+            '}'
+        )
     return (
         f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
         f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
@@ -132,7 +169,7 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False):
         f'var c=document.getElementById("{safe_id}");if(!c)return;'
         f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
         f'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});{loom_js}}};'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});{loom_js}{flourish_js}}};'
         f'img.src="{img_uri}";'
         f'}})()</script>'
         f'</div>'

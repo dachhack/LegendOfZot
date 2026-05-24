@@ -2382,20 +2382,23 @@ def generate_monster_defeat_js(monster_name):
 # the monster + player boxes into a fixed 200px slot (.room-panel,
 # overflow:hidden), so an oversized sprite would clip the player's own box.
 # For the rare elite tiers the sprite is anchored to the bottom of a shorter
-# slot (sprite_size - loom_px) and overflows upward; the render sites give the
-# panel a matching margin-top + overflow:visible so the creature towers over
-# its box instead of eating the budget below it.  Each entry:
+# slot (sprite_size - loom_px) and a JS overlay paints it over the HUD.
+#
+# flourish: entrance-drama level (0-4), playing ONCE per fight (token-gated):
+#   0 none, 1 pop, 2 rise, 3 surge + soft buzz, 4 SLAM + screen flash + a
+#   dramatic vibration pattern -- the bigger the threat, the bigger the reveal.
+# Each entry:
 #   (sprite_size, border_px, border_color, glow_rgba, pulse_secs,
-#    name_color, label, label_color, loom_px)
+#    name_color, label, label_color, loom_px, flourish)
 _THREAT_TIERS = {
-    'trivial':   (50,  1, '#4a4a4a', '',                      0,   '#9e9e9e', '',          '#9e9e9e',  0),
-    'normal':    (64,  2, '#666666', '',                      0,   '#F44336', '',          '#F44336',  0),
-    'tough':     (74,  2, '#FF9800', 'rgba(255,152,0,0.5)',   0,   '#FFB74D', 'TOUGH',     '#FFB74D',  0),
-    'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0),
-    'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0),
-    'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0),
-    'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44),
-    'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76),
+    'trivial':   (50,  1, '#4a4a4a', '',                      0,   '#9e9e9e', '',          '#9e9e9e',  0, 0),
+    'normal':    (64,  2, '#666666', '',                      0,   '#F44336', '',          '#F44336',  0, 0),
+    'tough':     (74,  2, '#FF9800', 'rgba(255,152,0,0.5)',   0,   '#FFB74D', 'TOUGH',     '#FFB74D',  0, 0),
+    'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0, 1),
+    'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0, 1),
+    'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0, 2),
+    'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44, 3),
+    'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76, 4),
 }
 
 
@@ -2442,10 +2445,11 @@ def get_monster_threat_style(monster, player=None):
       growbox_loom_css - style for the spell view's growing container
       row_align    - flex align-items for the monster row ('flex-start' when
                      looming so the text sits up top, clearing the dice)
+      flourish     - entrance-drama level 0-4 (see _THREAT_TIERS)
     """
     tier = _classify_monster_threat(monster, player)
     (size, border_px, border_color, glow, pulse,
-     name_color, label, label_color, loom_px) = _THREAT_TIERS[tier]
+     name_color, label, label_color, loom_px, flourish) = _THREAT_TIERS[tier]
     panel_css = f"border: {border_px}px solid {border_color};"
     if glow:
         panel_css += f" --tg: {glow}; box-shadow: 0 0 11px var(--tg);"
@@ -2494,7 +2498,22 @@ def get_monster_threat_style(monster, player=None):
         'roompanel_loom_css': roompanel_loom_css,
         'growbox_loom_css': growbox_loom_css,
         'row_align': row_align,
+        'flourish': flourish,
     }
+
+
+def _combat_anim_token():
+    """A token that changes only when a NEW monster fight begins.
+
+    Combat re-renders every turn, but the entrance flourish + vibration should
+    fire just once.  The JS compares this token to window.__combatAnimTok and
+    plays the flourish only when it changed, so re-renders within the same
+    fight are static.
+    """
+    if gs.active_monster is not getattr(gs, '_last_anim_monster', None):
+        gs.combat_anim_token = getattr(gs, 'combat_anim_token', 0) + 1
+        gs._last_anim_monster = gs.active_monster
+    return gs.combat_anim_token
 
 
 def wrap_monster_loom(sprite_html, threat):
@@ -7702,7 +7721,8 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Compact Monster Info (same as combat_mode compact style)
             monster_html = f"""
@@ -7832,7 +7852,8 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Compact Monster Info
             monster_html = f"""
@@ -8091,7 +8112,8 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
+            _anim_tok = _combat_anim_token()
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming'], flourish=threat['flourish'], anim_token=_anim_tok), threat)
 
             # Monster info (still there, but you're fleeing)
             monster_html = f"""
@@ -10884,6 +10906,30 @@ class WizardsCavernApp(toga.App):
                 @keyframes threatPulse {{
                     0%, 100% {{ box-shadow: 0 0 7px var(--tg); }}
                     50%      {{ box-shadow: 0 0 22px var(--tg), 0 0 9px var(--tg); }}
+                }}
+
+                /* Tier-scaled monster ENTRANCE flourishes (fired once per fight
+                   by generate_monster_sprite_html).  transform-origin is set
+                   inline to bottom-center so the creature rises from its feet. */
+                @keyframes flourishPop {{
+                    0%   {{ opacity: 0; transform: scale(0.82); }}
+                    100% {{ opacity: 1; transform: scale(1); }}
+                }}
+                @keyframes flourishRise {{
+                    0%   {{ opacity: 0; transform: translateY(14px) scale(0.9); }}
+                    70%  {{ opacity: 1; transform: translateY(-3px) scale(1.05); }}
+                    100% {{ opacity: 1; transform: translateY(0) scale(1); }}
+                }}
+                @keyframes flourishSurge {{
+                    0%   {{ opacity: 0; transform: translateY(22px) scale(0.7); }}
+                    60%  {{ opacity: 1; transform: translateY(0) scale(1.07); }}
+                    100% {{ opacity: 1; transform: scale(1); }}
+                }}
+                @keyframes flourishSlam {{
+                    0%   {{ opacity: 0; transform: translateY(34px) scale(0.5); }}
+                    50%  {{ opacity: 1; transform: translateY(-6px) scale(1.12); }}
+                    72%  {{ transform: translateY(0) scale(0.96); }}
+                    100% {{ transform: scale(1); }}
                 }}
 
                 /* Low-HP pulse for the player panel: red heartbeat warning */
