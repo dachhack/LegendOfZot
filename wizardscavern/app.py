@@ -2435,8 +2435,12 @@ def get_monster_threat_style(monster, player=None):
       loom_px      - px the sprite towers above its panel (0 = no loom)
       slot_css     - style for the sprite's flow slot (caps its layout height
                      so the loom doesn't eat the panel budget below it)
-      panel_loom_css - margin-top + overflow:visible the render site adds to the
-                     combat container so the loom has headroom to rise into
+      roompanel_loom_css - style for the fixed-200px .room-panel (combat / flee /
+                     victory): bottom-anchors the boxes so the loom rises into
+                     the panel's own unused space; only the residual sliver
+                     needs margin-top, so the map barely moves
+      growbox_loom_css - style for the spell view's growing container (no map):
+                     just overflow + full-loom headroom
     """
     tier = _classify_monster_threat(monster, player)
     (size, border_px, border_color, glow, pulse,
@@ -2456,16 +2460,33 @@ def get_monster_threat_style(monster, player=None):
             f'margin-left:4px;vertical-align:middle;letter-spacing:0.5px;">{label}</span>'
         )
     slot_css = ''
-    panel_loom_css = ''
+    roompanel_loom_css = ''
+    growbox_loom_css = ''
     if loom_px > 0:
         # Slot reserves only (sprite - loom) px of flow height; the sprite is
         # bottom-anchored inside it and spills upward by loom_px.
         slot_h = max(32, size - loom_px)
         slot_css = f"height:{slot_h}px;width:{size}px;position:relative;overflow:visible;"
-        # The container must show the spill (room-panel defaults to
-        # overflow:hidden) and reserve the headroom above so it isn't clipped
-        # by #content-area's top edge.
-        panel_loom_css = f"overflow:visible; margin-top:{loom_px}px;"
+        # Fixed 200px .room-panel: the monster + player boxes only fill part of
+        # it, leaving dead space.  Bottom-anchor them so that gap sits at the
+        # TOP, then let the sprite loom up into it -- only the sliver that still
+        # pokes past the panel needs margin headroom, so the map barely shifts
+        # (vs. moving by the full loom).  poke = how far the bottom-anchored
+        # sprite's top rises above the panel; derived from the panel budget.
+        ROOM_PANEL_H = 200
+        PLAYER_PANEL_H = 74  # 64px sprite + 6 padding + 4 border
+        monster_panel_h = slot_h + 10 + 2 * border_px  # +padding +border +margin
+        dead = max(0, ROOM_PANEL_H - monster_panel_h - PLAYER_PANEL_H)
+        poke = loom_px - dead - border_px - 3
+        headroom = poke + 6 if poke > 0 else 0
+        roompanel_loom_css = (
+            "display:flex; flex-direction:column; justify-content:flex-end; "
+            f"overflow:visible; margin-top:{headroom}px;"
+        )
+        # Spell view has no fixed box (panels grow, the spell list scrolls and
+        # there is no map to shove), so the sprite pokes the full loom above its
+        # container; just give it that headroom.
+        growbox_loom_css = f"overflow:visible; margin-top:{loom_px}px;"
     return {
         'tier': tier,
         'sprite_size': size,
@@ -2474,7 +2495,8 @@ def get_monster_threat_style(monster, player=None):
         'label_html': label_html,
         'loom_px': loom_px,
         'slot_css': slot_css,
-        'panel_loom_css': panel_loom_css,
+        'roompanel_loom_css': roompanel_loom_css,
+        'growbox_loom_css': growbox_loom_css,
     }
 
 
@@ -7788,7 +7810,7 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     {player_stats_html}
 
-                    <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto; {threat['panel_loom_css']}">
+                    <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto; {threat['growbox_loom_css']}">
                         {monster_html}
                         {player_combat_html}
                     </div>
@@ -7949,7 +7971,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
                     <div class="bottom-pinned-zone">
-                        <div class="room-panel" style="width: 100%; {threat['panel_loom_css']}">
+                        <div class="room-panel" style="width: 100%; {threat['roompanel_loom_css']}">
                             {monster_html}
                             {player_combat_html}
                         </div>
@@ -7981,7 +8003,7 @@ class WizardsCavernApp(toga.App):
             _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
             _v_name_color = _v_threat.get('name_color', '#F44336')
             _v_label_html = _v_threat.get('label_html', '')
-            _v_panel_loom = _v_threat.get('panel_loom_css', '')
+            _v_panel_loom = _v_threat.get('roompanel_loom_css', '')
             monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size), _v_threat)
 
             # Show last damage dealt
@@ -8131,7 +8153,7 @@ class WizardsCavernApp(toga.App):
 
 
                     <div class="bottom-pinned-zone">
-                        <div class="room-panel" style="width: 100%; {threat['panel_loom_css']}">
+                        <div class="room-panel" style="width: 100%; {threat['roompanel_loom_css']}">
                             {monster_html}
                             {player_combat_html}
                             <div style="text-align:center; color:#F44336; font-weight:bold; margin-top:8px;">Flee which way?</div>
