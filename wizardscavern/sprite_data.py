@@ -62,7 +62,7 @@ def _resolve_new_monster_key(monster_name, cat_map):
 # MONSTER SPRITE
 # ============================================================================
 
-def generate_monster_sprite_html(monster_name, seed=None, size=64):
+def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False):
     """Render a square canvas for a monster (default 64x64).
 
     Looks up `monster_name` in the round-8 monster map (with name
@@ -71,6 +71,13 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64):
 
     `size` lets the combat screen scale the sprite up for tougher foes so
     the threat reads at a glance (see get_monster_threat_style in app.py).
+
+    `loom=True` (elite tiers) additionally mounts a fixed-position copy of the
+    sprite on a top layer (class "loom-overlay", z-index above the HUD) so the
+    oversized creature paints OVER the stats bar instead of being clipped by
+    #content-area -- the same fixed-overlay trick as the spell/damage effects.
+    Being out of flow, it never moves the layout (the map stays put).  The
+    overlay is cleaned up by updateGame() on every re-render.
 
     Returns an HTML string, or '' if the monster has no sprite.
     """
@@ -100,6 +107,22 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64):
         SIZE = 64
     SIZE = max(32, min(SIZE, 160))
     img_uri = "data:image/webp;base64," + img_b64
+    # When looming, the same image is cloned into a fixed top-layer canvas
+    # positioned over the in-flow canvas, so it escapes the #content-area clip
+    # and paints over the HUD without disturbing layout.
+    loom_js = ''
+    if loom:
+        loom_js = (
+            'var r=c.getBoundingClientRect();'
+            'var ov=document.createElement("canvas");'
+            'ov.className="loom-overlay";'
+            'ov.width=' + str(SIZE) + ';ov.height=' + str(SIZE) + ';'
+            'ov.style.cssText="image-rendering:pixelated;position:fixed;pointer-events:none;'
+            'z-index:1200;left:"+r.left+"px;top:"+r.top+"px;";'
+            'var octx=ov.getContext("2d");octx.imageSmoothingEnabled=false;'
+            'octx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,' + str(SIZE) + ',' + str(SIZE) + ');'
+            'document.body.appendChild(ov);'
+        )
     return (
         f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
         f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
@@ -109,7 +132,7 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64):
         f'var c=document.getElementById("{safe_id}");if(!c)return;'
         f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
         f'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});{loom_js}}};'
         f'img.src="{img_uri}";'
         f'}})()</script>'
         f'</div>'

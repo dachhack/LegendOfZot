@@ -2394,8 +2394,8 @@ _THREAT_TIERS = {
     'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0),
     'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0),
     'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0),
-    'legendary': (104, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 16),
-    'boss':      (118, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 44),
+    'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44),
+    'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76),
 }
 
 
@@ -2433,14 +2433,15 @@ def get_monster_threat_style(monster, player=None):
       name_color   - color for the monster name text
       label_html   - pre-styled threat badge (may be '')
       loom_px      - px the sprite towers above its panel (0 = no loom)
+      looming      - bool: this tier mounts the JS over-the-HUD overlay
       slot_css     - style for the sprite's flow slot (caps its layout height
                      so the loom doesn't eat the panel budget below it)
-      roompanel_loom_css - style for the fixed-200px .room-panel (combat / flee /
-                     victory): bottom-anchors the boxes so the loom rises into
-                     the panel's own unused space; only the residual sliver
-                     needs margin-top, so the map barely moves
-      growbox_loom_css - style for the spell view's growing container (no map):
-                     just overflow + full-loom headroom
+      roompanel_loom_css - style for the fixed-200px .room-panel (combat / flee):
+                     bottom-anchors the boxes + overflow:visible (no margin --
+                     the overlay is out of flow, so the map never moves)
+      growbox_loom_css - style for the spell view's growing container
+      row_align    - flex align-items for the monster row ('flex-start' when
+                     looming so the text sits up top, clearing the dice)
     """
     tier = _classify_monster_threat(monster, player)
     (size, border_px, border_color, glow, pulse,
@@ -2462,31 +2463,25 @@ def get_monster_threat_style(monster, player=None):
     slot_css = ''
     roompanel_loom_css = ''
     growbox_loom_css = ''
-    if loom_px > 0:
-        # Slot reserves only (sprite - loom) px of flow height; the sprite is
-        # bottom-anchored inside it and spills upward by loom_px.
+    row_align = 'center'
+    looming = loom_px > 0
+    if looming:
+        # The sprite renders at full size but only its bottom (size - loom) px
+        # take flow height; the rest spills upward out of the slot.  A JS
+        # overlay (mounted by generate_monster_sprite_html with loom=True)
+        # promotes a copy to a fixed top layer (z-index above the HUD), so the
+        # towering part paints OVER the stats bar -- like the spell/damage
+        # effects.  Because the overlay is out of flow, NOTHING in the layout
+        # moves: the map stays exactly where a normal fight puts it.
         slot_h = max(32, size - loom_px)
         slot_css = f"height:{slot_h}px;width:{size}px;position:relative;overflow:visible;"
-        # Fixed 200px .room-panel: the monster + player boxes only fill part of
-        # it, leaving dead space.  Bottom-anchor them so that gap sits at the
-        # TOP, then let the sprite loom up into it -- only the sliver that still
-        # pokes past the panel needs margin headroom, so the map barely shifts
-        # (vs. moving by the full loom).  poke = how far the bottom-anchored
-        # sprite's top rises above the panel; derived from the panel budget.
-        ROOM_PANEL_H = 200
-        PLAYER_PANEL_H = 74  # 64px sprite + 6 padding + 4 border
-        monster_panel_h = slot_h + 10 + 2 * border_px  # +padding +border +margin
-        dead = max(0, ROOM_PANEL_H - monster_panel_h - PLAYER_PANEL_H)
-        poke = loom_px - dead - border_px - 3
-        headroom = poke + 6 if poke > 0 else 0
-        roompanel_loom_css = (
-            "display:flex; flex-direction:column; justify-content:flex-end; "
-            f"overflow:visible; margin-top:{headroom}px;"
-        )
-        # Spell view has no fixed box (panels grow, the spell list scrolls and
-        # there is no map to shove), so the sprite pokes the full loom above its
-        # container; just give it that headroom.
-        growbox_loom_css = f"overflow:visible; margin-top:{loom_px}px;"
+        # Bottom-anchor the boxes inside the fixed 200px panel so the in-flow
+        # part of the sprite sits snug above the player box (no wasted gap).
+        roompanel_loom_css = "display:flex; flex-direction:column; justify-content:flex-end; overflow:visible;"
+        growbox_loom_css = "overflow:visible;"
+        # With a big sprite, pin the name/HP text to the TOP of the box so the
+        # roll dice have clear room below them.
+        row_align = 'flex-start'
     return {
         'tier': tier,
         'sprite_size': size,
@@ -2494,9 +2489,11 @@ def get_monster_threat_style(monster, player=None):
         'name_color': name_color,
         'label_html': label_html,
         'loom_px': loom_px,
+        'looming': looming,
         'slot_css': slot_css,
         'roompanel_loom_css': roompanel_loom_css,
         'growbox_loom_css': growbox_loom_css,
+        'row_align': row_align,
     }
 
 
@@ -7705,12 +7702,12 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size']), threat)
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
 
             # Compact Monster Info (same as combat_mode compact style)
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
                             <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
@@ -7835,12 +7832,12 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size']), threat)
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
 
             # Compact Monster Info
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
                             <div style="color: {threat['name_color']}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name}{threat['label_html']}</div>
@@ -7999,12 +7996,15 @@ class WizardsCavernApp(toga.App):
             # Reuse the threat styling from the fight so the defeated foe keeps
             # its size + fierce box during the victory/defeat animation.
             _v_threat = getattr(gs, 'combat_threat_style', None) or {}
-            _v_size = _v_threat.get('sprite_size', 64)
+            # Cap the defeated sprite so it fits the box without clipping -- the
+            # defeat grayscale runs on this in-flow canvas, so we don't mount
+            # the over-the-HUD overlay on the victory frame.
+            _v_size = min(_v_threat.get('sprite_size', 64), 96)
             _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
             _v_name_color = _v_threat.get('name_color', '#F44336')
             _v_label_html = _v_threat.get('label_html', '')
-            _v_panel_loom = _v_threat.get('roompanel_loom_css', '')
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size), _v_threat)
+            _v_panel_loom = ''
+            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
 
             # Show last damage dealt
             dmg_text = ""
@@ -8091,12 +8091,12 @@ class WizardsCavernApp(toga.App):
             # Generate pixel art sprite for the monster
             threat = get_monster_threat_style(gs.active_monster, gs.player_character)
             gs.combat_threat_style = threat
-            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size']), threat)
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=threat['sprite_size'], loom=threat['looming']), threat)
 
             # Monster info (still there, but you're fleeing)
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {threat['panel_css']} margin-bottom: 5px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                    <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
                             <div style="color: {threat['name_color']}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">Fleeing from {gs.active_monster.name}{threat['label_html']}</div>
@@ -11884,6 +11884,13 @@ class WizardsCavernApp(toga.App):
                 window.updateGame = function(p) {{
                     var ca = document.getElementById('content-area');
                     if (ca && p.contentHtml !== undefined) {{
+                        // Drop any monster loom overlays from the previous
+                        // screen (they live on <body>, outside content-area, so
+                        // the innerHTML swap won't remove them).  The new
+                        // content's sprite script re-mounts one if still in a
+                        // loom fight.
+                        var _lo = document.querySelectorAll('.loom-overlay');
+                        for (var _i = 0; _i < _lo.length; _i++) _lo[_i].remove();
                         ca.innerHTML = p.contentHtml;
                         // Re-execute inline <script> tags from new content
                         var inner = ca.querySelectorAll('script');
