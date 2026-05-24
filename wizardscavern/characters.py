@@ -972,16 +972,20 @@ class Character:
         else:
             bonus = 0
         attack_from_stats = self._base_attack + bonus + (self.strength // 2)
-        # Add attack boost from status effects
+        # Add attack boost from status effects; weakness debuffs sap it.
+        # (Monster 'weakness' specials -- Lich's necromancy, a Tarrasque's
+        # savaging, etc. -- land here so the log's threat is mechanically real.)
         for effect in self.status_effects.values():
             if effect.effect_type == 'attack_boost':
                 attack_from_stats += effect.magnitude
+            elif effect.effect_type == 'weakness':
+                attack_from_stats -= effect.magnitude
         # BUC bonus: blessed weapon +2, cursed weapon -2
         if self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'blessed':
             attack_from_stats += 2
         elif self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'cursed':
             attack_from_stats -= 2
-        return attack_from_stats
+        return max(0, attack_from_stats)
 
     @property
     def defense(self):
@@ -991,16 +995,20 @@ class Character:
         else:
             bonus = 0
         defense_from_stats = self._base_defense + bonus + (self.dexterity // 3)
-        # Add defense boost from status effects
+        # Add defense boost from status effects; curses/defense penalties
+        # leave you exposed. (A Beholder's eye rays, a lich's hex, a Rakshasa's
+        # fiendish magic -- they now actually pry your guard open.)
         for effect in self.status_effects.values():
             if effect.effect_type == 'defense_boost':
                 defense_from_stats += effect.magnitude
+            elif effect.effect_type in ('curse', 'defense_penalty'):
+                defense_from_stats -= effect.magnitude
         # BUC bonus: blessed armor +2, cursed armor -2
         if self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'blessed':
             defense_from_stats += 2
         elif self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'cursed':
             defense_from_stats -= 2
-        return defense_from_stats
+        return max(0, defense_from_stats)
 
     def get_current_floor(self, tower):
         """Get the floor the character is currently on."""
@@ -1822,7 +1830,15 @@ class Monster:
                 elif effect_type == 'confusion':
                     add_log(f"{COLOR_PURPLE}Your mind reels in confusion!{COLOR_RESET}")
                 elif effect_type == 'weakness':
-                    add_log(f"{COLOR_GREY}You feel weakened!{COLOR_RESET}")
+                    add_log(f"{COLOR_GREY}You feel weakened -- your blows land softer!{COLOR_RESET}")
+                elif effect_type == 'curse':
+                    add_log(f"{COLOR_PURPLE}A curse settles over you, leaving your guard exposed!{COLOR_RESET}")
+                elif effect_type == 'slow':
+                    add_log(f"{COLOR_CYAN}Your limbs grow sluggish and slow to respond!{COLOR_RESET}")
+                elif effect_type == 'blindness':
+                    add_log(f"{COLOR_GREY}Your vision swims -- you can barely see your foe!{COLOR_RESET}")
+                elif effect_type == 'sticky_hands':
+                    add_log(f"{COLOR_YELLOW}Your hands are seized in a clinging grip!{COLOR_RESET}")
                 elif effect_type == 'burn':
                     add_log(f"{COLOR_RED}Your flesh burns!{COLOR_RESET}")
                     burn_inventory_items(target, source='fire')

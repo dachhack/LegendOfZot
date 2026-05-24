@@ -2797,6 +2797,9 @@ def _trigger_room_interaction(player_character, my_tower):
                     m_data.get('greeting_template', ''),
                     m_data.get('special_attack', None)
                 )
+                # Passive regeneration (Trolls, etc.) -- fraction of max HP per turn
+                if m_data.get('regen'):
+                    new_monster.properties['regen'] = m_data['regen']
             gs.encountered_monsters[coords] = new_monster
 
         gs.active_monster = gs.encountered_monsters[coords]

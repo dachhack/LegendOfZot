@@ -518,8 +518,9 @@ MONSTER_TEMPLATES = [
         'victory_text': "The troll falls with a thunderous crash.",
         'elemental_weakness': ['Fire'],
         'elemental_strength': ['Earth'],
-        'can_talk': False
-        # No special attack - pure strength
+        'can_talk': False,
+        # Trolls regenerate -- knit wounds shut each turn unless you out-damage it.
+        'regen': 0.07
     },
 
     {
@@ -547,8 +548,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The minotaur falls with a final snort.",
         'elemental_weakness': ['Physical'],
         'elemental_strength': ['Earth'],
-        'can_talk': False
-        # No special attack - charges and hits hard
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'paralysis',
+            'chance': 0.25,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'gores you with a goring charge that leaves you reeling'
+        }
     },
 
     {
@@ -710,8 +717,14 @@ MONSTER_TEMPLATES = [
         'elemental_weakness': ['Physical'],
         'elemental_strength': ['Earth'],
         'can_talk': True,
-        'greeting_template': "Fee fi fo fum! {name} die!"
-        # No special attack - just massive damage
+        'greeting_template': "Fee fi fo fum! {name} die!",
+        'special_attack': {
+            'effect_type': 'weakness',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 6,
+            'description': 'slams its tree-trunk club down, leaving you dazed'
+        }
     },
 
     # ========================================================================
@@ -808,8 +821,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The displacer beast's image solidifies as it dies.",
         'elemental_weakness': ['Light'],
         'elemental_strength': ['Darkness'],
-        'can_talk': False
-        # No special attack - its displacement makes it hard to hit already
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'blindness',
+            'chance': 0.40,
+            'duration': 3,
+            'magnitude': 0,
+            'description': 'blurs into a half-dozen afterimages, baffling your aim'
+        }
     },
 
     # ========================================================================
@@ -939,7 +958,7 @@ MONSTER_TEMPLATES = [
         'can_talk': True,
         'greeting_template': "I have conquered death itself... you are merely an inconvenience.",
         'special_attack': {
-            'effect_type': 'drain',
+            'effect_type': 'life_drain',
             'chance': 0.40,
             'duration': 4,
             'magnitude': 8,
@@ -1000,8 +1019,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The stone golem crumbles into boulders.",
         'elemental_weakness': ['Earth'],
         'elemental_strength': ['Physical'],
-        'can_talk': False
-        # No special attack - just very tanky
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'slow',
+            'chance': 0.40,
+            'duration': 3,
+            'magnitude': 0,
+            'description': 'slams the ground, the shockwave dragging at your limbs'
+        }
     },
 
     {
@@ -1081,8 +1106,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The griffin's final cry echoes through the chamber.",
         'elemental_weakness': ['Wind'],
         'elemental_strength': ['Physical'],
-        'can_talk': False
-        # No special attack - aerial mobility is its advantage
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'damage_over_time',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 7,
+            'description': 'dives and rakes you open with its talons'
+        }
     },
 
     {
@@ -1116,8 +1147,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The roc plummets to the floor.",
         'elemental_weakness': ['Wind'],
         'elemental_strength': ['Physical'],
-        'can_talk': False
-        # No special attack - just massive HP and defense
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'paralysis',
+            'chance': 0.30,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'snatches you up in its talons and slams you back down'
+        }
     },
 
     # ========================================================================
@@ -1198,8 +1235,14 @@ MONSTER_TEMPLATES = [
         'elemental_weakness': ['Physical'],
         'elemental_strength': ['Earth'],
         'can_talk': True,
-        'greeting_template': "Tiny {title}! Cyclops crush you!"
-        # No special attack - just massive stats
+        'greeting_template': "Tiny {title}! Cyclops crush you!",
+        'special_attack': {
+            'effect_type': 'paralysis',
+            'chance': 0.30,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'brings its massive club down and stuns you senseless'
+        }
     },
 
     {
@@ -1382,7 +1425,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The crawling claw twitches and goes still.",
         'elemental_weakness': ['Holy'],
         'elemental_strength': ['Poison'],
-        'can_talk': False
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'sticky_hands',
+            'chance': 0.20,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'latches onto your sword hand in a vice grip'
+        }
     },
 
     {
@@ -1582,7 +1632,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The owlbear lets out a final screech-roar and falls.",
         'elemental_weakness': ['Fire'],
         'elemental_strength': [],
-        'can_talk': False
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'damage_over_time',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 4,
+            'description': 'rends you with beak and talons, leaving you bleeding'
+        }
     },
 
     {
@@ -1597,10 +1654,10 @@ MONSTER_TEMPLATES = [
         'elemental_strength': ['Arcane'],
         'can_talk': False,
         'special_attack': {
-            'effect_type': 'curse',
+            'effect_type': 'blindness',
             'chance': 0.35,
             'duration': 3,
-            'magnitude': 3,
+            'magnitude': 0,
             'description': 'confuses your aim with its displacement'
         }
     },
@@ -1620,7 +1677,14 @@ MONSTER_TEMPLATES = [
         'elemental_weakness': ['Fire'],
         'elemental_strength': ['Physical'],
         'can_talk': True,
-        'greeting_template': "You dare enter MY maze, {title}?!"
+        'greeting_template': "You dare enter MY maze, {title}?!",
+        'special_attack': {
+            'effect_type': 'paralysis',
+            'chance': 0.25,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'gores you with a goring charge that leaves you reeling'
+        }
     },
 
     {
@@ -1759,7 +1823,14 @@ MONSTER_TEMPLATES = [
         'victory_text': "The bulette sinks back into the earth, defeated.",
         'elemental_weakness': ['Ice'],
         'elemental_strength': ['Physical', 'Earth'],
-        'can_talk': False
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'damage_over_time',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 6,
+            'description': 'clamps down with serrated jaws, tearing a ragged wound'
+        }
     },
 
     {
@@ -1776,7 +1847,7 @@ MONSTER_TEMPLATES = [
         'can_talk': True,
         'greeting_template': "My tomb shall become YOUR tomb!",
         'special_attack': {
-            'effect_type': 'drain',
+            'effect_type': 'life_drain',
             'chance': 0.45,
             'duration': 4,
             'magnitude': 8,
@@ -1836,7 +1907,14 @@ MONSTER_TEMPLATES = [
         'elemental_weakness': [],
         'elemental_strength': ['Physical'],
         'can_talk': True,
-        'greeting_template': "ME SMASH LITTLE THING!"
+        'greeting_template': "ME SMASH LITTLE THING!",
+        'special_attack': {
+            'effect_type': 'weakness',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 8,
+            'description': 'hurls a boulder that knocks the wind out of you'
+        }
     },
 
     {
@@ -1918,7 +1996,14 @@ MONSTER_TEMPLATES = [
         'elemental_strength': ['Ice'],
         'attack_element': 'Ice',
         'can_talk': True,
-        'greeting_template': "The cold will claim you, tiny warm-blood!"
+        'greeting_template': "The cold will claim you, tiny warm-blood!",
+        'special_attack': {
+            'effect_type': 'freeze',
+            'chance': 0.30,
+            'duration': 1,
+            'magnitude': 0,
+            'description': 'hammers you with a fist of solid ice'
+        }
     },
 
     {
@@ -2244,7 +2329,7 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "Death is a door, {name}. Allow me to open it.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.40, 'duration': 4, 'magnitude': 0, 'description': 'speaks a word that rots your luck'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.40, 'duration': 4, 'magnitude': 10, 'description': 'speaks a word that rots your luck'}
     },
     {
         'name': "Emberscale Drake",
@@ -2339,7 +2424,7 @@ MONSTER_TEMPLATES = [
         'elemental_strength': ['Darkness'],
         'attack_element': 'Darkness',
         'can_talk': False,
-        'special_attack': {'effect_type': 'curse', 'chance': 0.45, 'duration': 4, 'magnitude': 0, 'description': 'wraps you in grave-cold despair'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.45, 'duration': 4, 'magnitude': 11, 'description': 'wraps you in grave-cold despair'}
     },
 
     # ---- TIER 14 (floors 36-49): archfiends, wyrmlords, titans ----
@@ -2353,7 +2438,7 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "Kneel, {name}, and I may make your end merely eternal.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 0, 'description': 'brands your soul with an infernal sigil'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 12, 'description': 'brands your soul with an infernal sigil'}
     },
     {
         'name': "Starspawn Aberration",
@@ -2388,7 +2473,7 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "I am SO close, {name}. I will not be interrupted now.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 0, 'description': 'intones a litany of unmaking'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.50, 'duration': 5, 'magnitude': 12, 'description': 'intones a litany of unmaking'}
     },
     {
         'name': "Maw of the Deep",
@@ -2471,7 +2556,7 @@ MONSTER_TEMPLATES = [
         'attack_element': 'Darkness',
         'can_talk': True,
         'greeting_template': "I have rewritten my own ending a thousand times, {name}. Yours is fixed.",
-        'special_attack': {'effect_type': 'curse', 'chance': 0.55, 'duration': 6, 'magnitude': 0, 'description': 'rewrites your fate in a dead language'}
+        'special_attack': {'effect_type': 'curse', 'chance': 0.55, 'duration': 6, 'magnitude': 14, 'description': 'rewrites your fate in a dead language'}
     },
     {
         'name': "Soulflayer Wraith",

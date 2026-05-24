@@ -460,6 +460,14 @@ def process_combat_action(player_character, my_tower, cmd):
     main.process_passive_treasures(player_character)
     if gs.active_monster and gs.active_monster.is_alive():  # Only process monster effects if it's still alive
         gs.active_monster.process_status_effects()
+        # Regenerators (Trolls and kin) knit their wounds each turn -- burn them
+        # down fast or watch the damage melt away. Stored as a fraction of max HP.
+        regen = gs.active_monster.properties.get('regen', 0)
+        if regen and gs.active_monster.is_alive() and gs.active_monster.health < gs.active_monster.max_health:
+            healed = max(1, int(gs.active_monster.max_health * regen))
+            gs.active_monster.health = min(gs.active_monster.max_health,
+                                           gs.active_monster.health + healed)
+            add_log(f"{COLOR_GREEN}The {gs.active_monster.name} regenerates {healed} HP!{COLOR_RESET}")
 
     # Check if player was defeated by status effects
     if not player_character.is_alive():
@@ -795,6 +803,22 @@ def process_combat_action(player_character, my_tower, cmd):
                            if e.effect_type in ('paralysis', 'freeze'))
         add_log(f"{COLOR_RED}You are {effect_name.lower()} and cannot act!{COLOR_RESET}")
         # Monster still gets their attack
+        if gs.active_monster and gs.active_monster.is_alive():
+            if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
+                gs.active_monster.attack_target(player_character)
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+        return
+
+    # Slow: limbs drag. Each turn there's a chance the action is too sluggish to
+    # land -- you forfeit it while the monster (petrifying gaze, crushing coils,
+    # tower-shield slam) acts freely. Distinct from paralysis: it's a gamble, not
+    # a guaranteed lockout.
+    is_slowed = any(e.effect_type == 'slow'
+                    for e in player_character.status_effects.values())
+    if is_slowed and cmd in ('a', 'f', 'c') and random.random() < 0.30:
+        add_log(f"{COLOR_CYAN}You are too sluggish to act in time!{COLOR_RESET}")
         if gs.active_monster and gs.active_monster.is_alive():
             if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
                 gs.active_monster.attack_target(player_character)

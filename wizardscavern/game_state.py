@@ -430,7 +430,7 @@ last_dice_rolls = []   # list of roll tuples to show this frame
 NEGATIVE_EFFECT_TYPES = {
     'poison', 'damage_over_time', 'confusion', 'blindness', 'silence',
     'defense_penalty', 'web', 'sticky_hands', 'paralysis', 'weakness',
-    'burn', 'freeze', 'life_drain', 'shrinking',
+    'burn', 'freeze', 'life_drain', 'shrinking', 'slow', 'curse',
 }
 
 # ============================================================================
