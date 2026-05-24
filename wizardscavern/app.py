@@ -5032,12 +5032,14 @@ class WizardsCavernApp(toga.App):
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
             process_spell_casting_action(gs.player_character, gs.my_tower, cmd)
+            resolve_pending_monster_teleport(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_victory":
             # Any input dismisses victory screen early and transitions to room
             gs.victory_monster_name = None
             _trigger_room_interaction(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_mode": # This block needs to be after spell_casting_mode for 'c' to work
             process_combat_action(gs.player_character, gs.my_tower, cmd)
+            resolve_pending_monster_teleport(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "spell_memorization_mode":
             process_spell_memorization_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "crafting_mode":

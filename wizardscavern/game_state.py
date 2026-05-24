@@ -79,6 +79,10 @@ active_scroll_item = None
 active_flare_item = None
 active_foresight_scroll = None
 active_flee_state = None
+# Set by a monster's teleport spell during its turn; resolved by combat.py's
+# resolve_pending_monster_teleport() after the combat handler returns. Dict of
+# {'mode': 'blink'|'banish', 'name': monster_name} or None.
+pending_monster_teleport = None
 active_spell_choice = None
 active_towel_item = None
 active_library_state = None

@@ -1905,34 +1905,68 @@ class Monster:
         but still respects the player's elemental resistances, Stone Skin, and
         Spectral Hand -- a real threat the player can still build against.
         """
+        # Age any per-spell cooldowns first -- this runs every monster turn,
+        # before the cast roll, so cooldowns tick down even on melee turns.
+        cooldowns = getattr(self, '_spell_cooldowns', None)
+        if cooldowns:
+            for name in list(cooldowns.keys()):
+                cooldowns[name] -= 1
+                if cooldowns[name] <= 0:
+                    del cooldowns[name]
+
         if not self.spells:
             return False
         if random.random() >= self.spell_chance:
             return False
 
-        # Don't re-cast a self-buff the monster already has running (no point
-        # shielding twice). Everything else stays in the pool.
+        # Skip spells that are (a) a self-buff the monster already has running
+        # (no point shielding twice) or (b) still on cooldown. The cooldown is
+        # what stops a gaze monster from chain-petrifying on consecutive turns:
+        # the player is guaranteed a turn to act between stacks.
+        on_cooldown = getattr(self, '_spell_cooldowns', None) or {}
         def _redundant(s):
             if s.get('type') != 'self_buff':
                 return False
             et = s.get('effect_type')
             return any(e.effect_type == et for e in self.status_effects.values())
-        castable = [s for s in self.spells if not _redundant(s)]
+        castable = [s for s in self.spells
+                    if not _redundant(s) and s.get('name') not in on_cooldown]
         if not castable:
             return False
 
+        # A wounded caster would rather not stand and trade. It prefers to HEAL;
+        # failing that, a blink (teleport away + heal) is its escape hatch -- but
+        # only ~60% of the time so it isn't a guaranteed kite every engagement.
+        # A banish-mode teleport is offensive disruption, so it lives in the
+        # general pool and is used at any health.
+        def _is_blink(s):
+            return s.get('type') == 'teleport' and s.get('mode', 'blink') == 'blink'
         heal_spells = [s for s in castable if s.get('type') == 'heal']
-        other_spells = [s for s in castable if s.get('type') != 'heal']
+        blink_spells = [s for s in castable if _is_blink(s)]
+        other_spells = [s for s in castable if s.get('type') != 'heal' and not _is_blink(s)]
         wounded = self.health < self.max_health * 0.5
 
         if heal_spells and wounded and self.health < self.max_health:
             spell = random.choice(heal_spells)
+        elif blink_spells and wounded and random.random() < 0.6:
+            spell = random.choice(blink_spells)
         elif other_spells:
             spell = random.choice(other_spells)
         elif heal_spells and self.health < self.max_health:
             spell = random.choice(heal_spells)
+        elif blink_spells:
+            spell = random.choice(blink_spells)
         else:
             return False
+
+        # Arm this spell's cooldown (if it declares one) so it can't fire again
+        # for `cooldown` turns. Stored as cooldown+1 because the tick at the top
+        # of the next turn immediately decrements it.
+        cd = spell.get('cooldown')
+        if cd:
+            if getattr(self, '_spell_cooldowns', None) is None:
+                self._spell_cooldowns = {}
+            self._spell_cooldowns[spell.get('name')] = cd + 1
 
         self._cast_monster_spell(spell, target)
         return True
@@ -2020,6 +2054,26 @@ class Monster:
                 target.take_damage_no_def(target.max_health * 10)
             else:
                 add_log(f"{COLOR_YELLOW}Petrification creeps further across your body... (stage {stage}/{threshold} -- break the gaze or cure it before it claims you!){COLOR_RESET}")
+        elif stype == 'teleport':
+            # Two flavors, chosen by 'mode':
+            #   'blink'  -- the caster heals and warps to another spot on the
+            #               floor, breaking off the fight (a kiting escape).
+            #   'banish' -- the caster flings the PLAYER to a random tile,
+            #               yanking them out of the fight.
+            # The actual relocation + clean combat exit is deferred to
+            # combat.resolve_pending_monster_teleport() (it needs the floor
+            # grid + view state), triggered off this flag right after the
+            # combat handler returns. We only set the flag + apply the self-heal
+            # here so characters.py stays free of floor/UI surgery.
+            mode = spell.get('mode', 'blink')
+            heal = spell.get('heal', 0)
+            if heal > 0:
+                old = self.health
+                self.health = min(self.max_health, self.health + heal)
+                mended = self.health - old
+                if mended > 0:
+                    add_log(f"{COLOR_GREEN}The {self.name} knits its wounds as it fades ({mended} HP)!{COLOR_RESET}")
+            gs.pending_monster_teleport = {'mode': mode, 'name': self.name}
 
     def is_alive(self):
         return self.health > 0

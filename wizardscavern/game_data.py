@@ -642,7 +642,12 @@ MONSTER_TEMPLATES = [
             'duration': 1,
             'magnitude': 10,
             'description': 'touches you with icy ethereal claws'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Phase Out', 'type': 'teleport', 'mode': 'blink', 'heal': 25,
+             'cast_text': 'goes translucent and sinks away through the wall, wisping back together elsewhere'},
+        ]
     },
 
     {
@@ -665,7 +670,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.40,
         'spells': [
-            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'cooldown': 1, 'threshold': 3, 'duration': 5,
              'cast_text': 'fixes you with its deadly gaze and your skin begins to grey and harden'},
         ]
     },
@@ -860,7 +865,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.40,
         'spells': [
-            {'name': 'Petrifying Breath', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+            {'name': 'Petrifying Breath', 'type': 'petrify', 'cooldown': 1, 'threshold': 3, 'duration': 5,
              'cast_text': 'breathes a cloud of petrifying vapor over you and your limbs stiffen toward stone'},
         ]
     },
@@ -906,7 +911,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.45,
         'spells': [
-            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'cooldown': 1, 'threshold': 3, 'duration': 5,
              'cast_text': 'holds your gaze and the serpents hiss as your flesh greys and hardens'},
         ]
     },
@@ -1237,6 +1242,8 @@ MONSTER_TEMPLATES = [
         'spells': [
             {'name': 'Word of Power', 'type': 'damage', 'element': 'Arcane', 'power': 26,
              'cast_text': 'speaks a Word of Power that detonates against your mind'},
+            {'name': 'Riddle of Elsewhere', 'type': 'teleport', 'mode': 'banish',
+             'cast_text': 'poses a riddle whose only answer is a place far from here -- and sends you to it'},
         ]
     },
 
@@ -1630,7 +1637,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.30,
         'spells': [
-            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 4, 'duration': 5,
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'cooldown': 1, 'threshold': 4, 'duration': 5,
              'cast_text': 'fixes a beady eye on you and a patch of your skin turns to stone'},
         ]
     },
@@ -1820,7 +1827,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.40,
         'spells': [
-            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'cooldown': 1, 'threshold': 3, 'duration': 5,
              'cast_text': 'fixes its eight-legged stare on you and your flesh begins to grey and harden'},
         ]
     },
@@ -1886,7 +1893,7 @@ MONSTER_TEMPLATES = [
         },
         'spell_chance': 0.40,
         'spells': [
-            {'name': 'Petrifying Breath', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+            {'name': 'Petrifying Breath', 'type': 'petrify', 'cooldown': 1, 'threshold': 3, 'duration': 5,
              'cast_text': 'snorts a jet of petrifying vapor and your skin greys and hardens'},
         ]
     },
@@ -2165,6 +2172,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'splits into a dozen illusory doubles, baffling your aim'},
             {'name': 'Spell Turning', 'type': 'self_buff', 'effect_type': 'spell_ward', 'duration': 4, 'magnitude': 1,
              'cast_text': 'traces a sigil of spell-turning -- your next spell will rebound off it'},
+            {'name': 'Displacement', 'type': 'teleport', 'mode': 'banish',
+             'cast_text': 'twists the room inside-out and you tumble away through a fold in space'},
         ]
     },
 
@@ -2470,6 +2479,8 @@ MONSTER_TEMPLATES = [
         'spells': [
             {'name': 'Ice Lance', 'type': 'damage', 'element': 'Ice', 'power': 58,
              'cast_text': 'conjures a javelin of black ice and hurls it through the cold air'},
+            {'name': 'Genie Step', 'type': 'teleport', 'mode': 'blink', 'heal': 120,
+             'cast_text': 'collapses into a whirl of snow and reforms somewhere across the cavern'},
         ]
     },
     {
@@ -2568,6 +2579,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'takes the reins of your nervous system and your body locks up'},
             {'name': 'Devour Intellect', 'type': 'mana_burn', 'power': 50, 'element': 'Psionic',
              'cast_text': 'sinks a psychic proboscis into your mind and gorges on your magic'},
+            {'name': 'Planar Shift', 'type': 'teleport', 'mode': 'banish',
+             'cast_text': 'wrenches open a hole in reality and shoves you bodily through it'},
         ]
     },
     {
