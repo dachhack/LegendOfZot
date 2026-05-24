@@ -2075,6 +2075,21 @@ class Monster:
                     add_log(f"{COLOR_GREEN}The {self.name} knits its wounds as it fades ({mended} HP)!{COLOR_RESET}")
             gs.pending_monster_teleport = {'mode': mode, 'name': self.name}
 
+        # Surface a monster-side cast signature for the FX layer. app.py reads
+        # this to flash a banner + screen tint + element particles (and a buzz
+        # on big casts / petrify) in the spell's element, so every caster LOOKS
+        # like it's casting, not just emitting a log line. One-shot: cleared by
+        # the renderer after it fires.
+        gs.last_monster_spell_cast = {
+            'name': spell.get('name', 'a spell'),
+            'type': stype,
+            'element': spell.get('element'),
+            'effect_type': spell.get('effect_type'),
+            'mode': spell.get('mode'),
+            'monster_level': getattr(self, 'level', 1),
+            'fx_level': spell.get('fx_level'),
+        }
+
     def is_alive(self):
         return self.health > 0
 

@@ -396,6 +396,7 @@ last_player_damage_badge = None   # Badge on damage dealt TO player
 pre_round_monster_hp = None       # Monster HP before this combat round
 pre_round_player_hp = None        # Player HP before this combat round
 last_spell_cast = None            # Spell object from the last cast (for animation rendering)
+last_monster_spell_cast = None    # Dict describing a monster's spell cast this turn (drives its FX banner/tint/particles/haptic)
 monster_acts_first = False        # Initiative result: True if monster swings before player this round
 monster_initiative_pending = False # True after init when monster won; triggers auto-attack before player acts
 

@@ -1308,7 +1308,7 @@ ELEMENT_TINTS = {
 }
 
 
-def generate_spell_cast_js(spell):
+def generate_spell_cast_js(spell, delay_ms=0):
     """Generate spell casting animation: banner + screen tint.
 
     Plays BEFORE the damage/healing float sequence.
@@ -1349,8 +1349,8 @@ def generate_spell_cast_js(spell):
     # generate_damage_float_js at the moment of damage panel shake,
     # not at spell-banner appearance, so the buzz lands with the impact.
 
-    return (
-        '<script>(function(){'
+    _inner = (
+        '(function(){'
         # Layer 2: Spell name banner (scaled with level)
         'var bn=document.createElement("div");'
         'bn.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
@@ -1411,8 +1411,13 @@ def generate_spell_cast_js(spell):
         if lvl >= 4 else ''
         )
 
-        + '})();</script>'
+        + '})();'
     )
+    # Monster casts pass a delay so the flourish lands in the monster's turn
+    # window rather than at the top of the exchange (player casts use 0).
+    if delay_ms:
+        _inner = 'setTimeout(function(){' + _inner + '},' + str(int(delay_ms)) + ');'
+    return '<script>' + _inner + '</script>'
 
 
 # === Spell icon visual buckets ===========================================
@@ -1673,7 +1678,7 @@ def generate_spell_icon_visual_js(spell):
     return ''
 
 
-def generate_spell_particles_js(spell):
+def generate_spell_particles_js(spell, delay_ms=0, target_override=None):
     """Generate element-specific particle effects via a temporary canvas overlay.
 
     Creates a full-screen canvas, spawns particles with per-element physics,
@@ -1724,10 +1729,12 @@ def generate_spell_particles_js(spell):
     num_bursts = 1 + (1 if lvl >= 3 else 0) + (1 if lvl >= 5 else 0)
     burst_delay = 250                               # ms between bursts
 
-    target_id = 'player_panel' if dtype == 'Healing' else 'monster_panel'
+    # Monster casts override the burst origin (their spell lands on the player
+    # panel, or bursts from their own panel for self-buffs/heals).
+    target_id = target_override or ('player_panel' if dtype == 'Healing' else 'monster_panel')
 
-    return (
-        '<script>(function(){'
+    _inner = (
+        '(function(){'
         'var numBursts=' + str(num_bursts) + ';'
         'var burstDelay=' + str(burst_delay) + ';'
 
@@ -1897,8 +1904,112 @@ def generate_spell_particles_js(spell):
         '},400+burstIdx*burstDelay);'  # 400ms base + stagger per burst
         '})(burst);'
         '}'  # end burst loop
-        '})();</script>'
+        '})();'
     )
+    if delay_ms:
+        _inner = 'setTimeout(function(){' + _inner + '},' + str(int(delay_ms)) + ');'
+    return '<script>' + _inner + '</script>'
+
+
+# === Monster-side cast signature =========================================
+# Monster spells (characters.py:_cast_monster_spell) don't carry a Spell object
+# the way the player's do, so a casting monster stashes a small dict on
+# gs.last_monster_spell_cast. This builds a lightweight shim from it and reuses
+# the player's banner + tint + particle generators (in the monster's element),
+# plus a level-scaled phone buzz -- so all 33 casters FEEL like casters, not
+# just read like them in the log.
+
+class _MonsterSpellFX:
+    """Quacks like a Spell for _spell_visual_element / the FX generators."""
+    __slots__ = ('name', 'damage_type', 'spell_type', 'level')
+
+    def __init__(self, name, element, level):
+        self.name = name
+        self.damage_type = element   # _spell_visual_element returns this...
+        self.spell_type = 'damage'   # ...because we force it down the damage path
+        self.level = level
+
+
+_MONSTER_FX_ELEMENT_BY_EFFECT = {
+    'silence': 'Psionic', 'paralysis': 'Psionic', 'confusion': 'Psionic',
+    'weakness': 'Shadow', 'curse': 'Darkness', 'blindness': 'Darkness',
+    'slow': 'Ice', 'spell_ward': 'Psionic', 'hit_absorb': 'Holy',
+}
+
+
+def _monster_fx_element(info):
+    """Pick a visual element (banner/tint/particle color) for a monster spell."""
+    stype = info.get('type')
+    if stype == 'heal':
+        return 'Healing'
+    if stype == 'mana_burn':
+        return 'Psionic'
+    if stype == 'heat_metal':
+        return 'Fire'
+    if stype == 'petrify':
+        return 'Earth'
+    if stype == 'teleport':
+        return 'Psionic'
+    if stype == 'self_buff':
+        return _MONSTER_FX_ELEMENT_BY_EFFECT.get(info.get('effect_type'), 'Holy')
+    if stype == 'debuff':
+        return _MONSTER_FX_ELEMENT_BY_EFFECT.get(info.get('effect_type'), 'Darkness')
+    # damage: normalize the monster-data element names to ELEMENT_COLORS keys
+    el = {'Dark': 'Darkness', 'Arcane': 'Psionic'}.get(info.get('element'), info.get('element'))
+    return el if el in ELEMENT_COLORS else 'Psionic'
+
+
+def _monster_fx_level(info):
+    """0-5 visual intensity: explicit fx_level, else derived from monster level."""
+    fx = info.get('fx_level')
+    if fx is not None:
+        return max(0, min(5, int(fx)))
+    return max(1, min(5, int(info.get('monster_level', 1)) // 3))
+
+
+def _monster_fx_origin(info):
+    """Which panel the particles burst from."""
+    stype = info.get('type')
+    if stype in ('heal', 'self_buff') or (stype == 'teleport' and info.get('mode') != 'banish'):
+        return 'monster_panel'   # the monster affects ITSELF
+    return 'player_panel'        # the spell lands on the player
+
+
+def _monster_haptic_pattern(level, info):
+    if info.get('type') == 'petrify':
+        return '[40,40,40,40,130]' if level >= 3 else '[40,50,90]'   # creeping stone
+    if level >= 5:
+        return '[120,50,90,40,170]'
+    if level == 4:
+        return '[90,40,90]'
+    if level == 3:
+        return '[60]'
+    return None
+
+
+def generate_monster_haptic_js(info, delay_ms=0):
+    """Phone buzz for a monster cast, fired at the banner moment. Sparse:
+    only mid+ casts and any petrify gaze buzz."""
+    if not info:
+        return ''
+    pat = _monster_haptic_pattern(_monster_fx_level(info), info)
+    if not pat:
+        return ''
+    return ('<script>setTimeout(function(){try{if(navigator.vibrate)'
+            'navigator.vibrate(' + pat + ');}catch(e){}},' + str(int(delay_ms)) + ');</script>')
+
+
+def generate_monster_spell_fx(info, delay_ms=0):
+    """Combined monster cast signature (banner + tint + particles + haptic) as
+    one concatenated string. Used by the full-render path; the partial-update
+    path appends the pieces individually so each can be body-extracted."""
+    if not info:
+        return ''
+    shim = _MonsterSpellFX(info.get('name', 'a spell'),
+                           _monster_fx_element(info), _monster_fx_level(info))
+    return (generate_spell_cast_js(shim, delay_ms)
+            + generate_spell_particles_js(shim, delay_ms, _monster_fx_origin(info))
+            + generate_monster_haptic_js(info, delay_ms))
 
 
 def generate_dice_roll_js(dice_rolls):
@@ -5195,7 +5306,7 @@ class WizardsCavernApp(toga.App):
 
         # Extract animation / SFX script bodies (raw JS, no <script> wrapper)
         anim_scripts = []
-        for raw in (
+        _raw_sources = [
             generate_spell_cast_js(gs.last_spell_cast),
             generate_spell_icon_visual_js(gs.last_spell_cast),
             generate_spell_particles_js(gs.last_spell_cast),
@@ -5211,7 +5322,19 @@ class WizardsCavernApp(toga.App):
                 gs.monster_defeated_anim, gs.sfx_event,
                 gs.music_enabled, bool(gs.last_dice_rolls), has_init,
             ),
-        ):
+        ]
+        # Monster-side cast signature: banner + tint + particles (in the
+        # monster's element) + a buzz, delayed into the monster's turn window.
+        _mon_fx = getattr(gs, 'last_monster_spell_cast', None)
+        if _mon_fx:
+            _mfx_delay = 1900 + init_offset
+            _mshim = _MonsterSpellFX(_mon_fx.get('name', 'a spell'),
+                                     _monster_fx_element(_mon_fx),
+                                     _monster_fx_level(_mon_fx))
+            _raw_sources.append(generate_spell_cast_js(_mshim, _mfx_delay))
+            _raw_sources.append(generate_spell_particles_js(_mshim, _mfx_delay, _monster_fx_origin(_mon_fx)))
+            _raw_sources.append(generate_monster_haptic_js(_mon_fx, _mfx_delay))
+        for raw in _raw_sources:
             body = _extract_script_body(raw)
             if body:
                 anim_scripts.append(body)
@@ -5251,6 +5374,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_monster_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
         # Clear combat SFX flags so they don't re-fire on the next render
@@ -12068,6 +12192,7 @@ class WizardsCavernApp(toga.App):
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_icon_visual_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
+            {generate_monster_spell_fx(gs.last_monster_spell_cast, 1900 + (1000 if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 0))}
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
@@ -12080,6 +12205,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_monster_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
         # Clear combat SFX flags too — these are set at the start of a combat
