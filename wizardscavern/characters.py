@@ -1973,6 +1973,53 @@ class Monster:
                 magnitude=spell.get('magnitude', 1),
                 description=cast_text,
             )
+        elif stype == 'mana_burn':
+            # Anti-caster: devour the player's mana, with a psychic backlash
+            # that scales on what was burned. A pure melee build with an empty
+            # pool shrugs it off -- the threat is build-relevant, not universal.
+            amount = spell.get('power', 12)
+            burned = min(getattr(target, 'mana', 0), amount)
+            if burned > 0:
+                target.mana -= burned
+                add_log(f"{COLOR_PURPLE}The {self.name} devours {burned} of your mana!{COLOR_RESET}")
+                backlash = spell.get('backlash', burned // 2)
+                if backlash > 0:
+                    target.take_damage(backlash, spell.get('element', 'Psionic'))
+            else:
+                add_log(f"{COLOR_PURPLE}The {self.name} gropes through your mind for magic to devour, but finds none.{COLOR_RESET}")
+        elif stype == 'heat_metal':
+            # Anti-tank: damage that scales with the player's armor -- the
+            # better-armored you are, the more it cooks you. Routes through
+            # take_damage (which does NOT subtract defense) so the scaling
+            # isn't quietly undone by that same armor.
+            base = spell.get('power', 0)
+            armor_dmg = int(getattr(target, 'defense', 0) * spell.get('armor_mult', 0.7))
+            add_log(f"{COLOR_RED}The {self.name} sets your armor and weapon searing white-hot -- your own gear turns against you!{COLOR_RESET}")
+            target.take_damage(base + armor_dmg, spell.get('element', 'Fire'))
+        elif stype == 'petrify':
+            # Stacking save-or-die gaze. Each gaze adds a stage; reaching the
+            # per-monster threshold turns the player fully to stone (death via
+            # the same path a lethal melee hit uses). The effect carries its own
+            # duration, so if the player kills the gazer or flees, it simply
+            # expires (the stone recedes) -- a guaranteed fair out that needs no
+            # cure item. Stage 1..threshold-1 are escalating warnings.
+            threshold = spell.get('threshold', 3)
+            dur = spell.get('duration', 5)
+            pet = target.status_effects.get('Petrification')
+            if pet is not None and getattr(pet, 'effect_type', '') == 'petrifying':
+                pet.magnitude += 1
+                pet.duration = max(pet.duration, dur)
+            else:
+                target.add_status_effect('Petrification', dur, 'petrifying',
+                                         magnitude=1,
+                                         description='Your flesh is hardening into cold grey stone.')
+                pet = target.status_effects.get('Petrification')
+            stage = pet.magnitude if pet is not None else 1
+            if stage >= threshold:
+                add_log(f"{COLOR_RED}The last of your flesh hardens -- you are turned entirely to stone!{COLOR_RESET}")
+                target.take_damage_no_def(target.max_health * 10)
+            else:
+                add_log(f"{COLOR_YELLOW}Petrification creeps further across your body... (stage {stage}/{threshold} -- break the gaze or cure it before it claims you!){COLOR_RESET}")
 
     def is_alive(self):
         return self.health > 0

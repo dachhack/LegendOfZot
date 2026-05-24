@@ -431,6 +431,7 @@ NEGATIVE_EFFECT_TYPES = {
     'poison', 'damage_over_time', 'confusion', 'blindness', 'silence',
     'defense_penalty', 'web', 'sticky_hands', 'paralysis', 'weakness',
     'burn', 'freeze', 'life_drain', 'shrinking', 'slow', 'curse',
+    'petrifying',
 }
 
 # ============================================================================

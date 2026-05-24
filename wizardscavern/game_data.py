@@ -662,7 +662,12 @@ MONSTER_TEMPLATES = [
             'duration': 2,
             'magnitude': 0,
             'description': 'locks eyes with you, beginning to turn you to stone'
-        }
+        },
+        'spell_chance': 0.40,
+        'spells': [
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+             'cast_text': 'fixes you with its deadly gaze and your skin begins to grey and harden'},
+        ]
     },
 
     {
@@ -852,7 +857,12 @@ MONSTER_TEMPLATES = [
             'duration': 3,
             'magnitude': 0,
             'description': 'breathes petrifying gas at you'
-        }
+        },
+        'spell_chance': 0.40,
+        'spells': [
+            {'name': 'Petrifying Breath', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+             'cast_text': 'breathes a cloud of petrifying vapor over you and your limbs stiffen toward stone'},
+        ]
     },
 
     {
@@ -893,7 +903,12 @@ MONSTER_TEMPLATES = [
             'duration': 3,
             'magnitude': 0,
             'description': 'meets your gaze, turning you to stone'
-        }
+        },
+        'spell_chance': 0.45,
+        'spells': [
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+             'cast_text': 'holds your gaze and the serpents hiss as your flesh greys and hardens'},
+        ]
     },
 
     {
@@ -1083,6 +1098,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'unleashes a cone of psionic force that detonates inside your skull'},
             {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
              'cast_text': 'seizes your will, and for a moment your body is not your own'},
+            {'name': 'Intellect Devour', 'type': 'mana_burn', 'power': 20, 'element': 'Psionic',
+             'cast_text': 'fixes you with a hungry stare and feeds directly on your arcane reserves'},
         ]
     },
 
@@ -1267,6 +1284,8 @@ MONSTER_TEMPLATES = [
         'spells': [
             {'name': 'Fireball', 'type': 'damage', 'element': 'Fire', 'power': 30,
              'cast_text': 'conjures a roaring ball of flame and hurls it at you'},
+            {'name': 'Heat Metal', 'type': 'heat_metal', 'power': 8, 'armor_mult': 0.7, 'element': 'Fire',
+             'cast_text': 'snaps its fingers and the metal you wear begins to glow'},
         ]
     },
 
@@ -1342,6 +1361,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'looses a screaming bolt of trapped souls'},
             {'name': 'Devour Essence', 'type': 'heal', 'power': 30,
              'cast_text': 'feeds on the souls in its sockets to restore itself'},
+            {'name': 'Drain Magic', 'type': 'mana_burn', 'power': 30, 'element': 'Shadow',
+             'cast_text': 'rasps a word of unbinding and your spells unravel into its sockets'},
         ]
     },
 
@@ -1386,7 +1407,12 @@ MONSTER_TEMPLATES = [
             'duration': 5,
             'magnitude': 16,
             'description': 'lashes you with its flaming whip'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Heat Metal', 'type': 'heat_metal', 'power': 14, 'armor_mult': 0.75, 'element': 'Fire',
+             'cast_text': 'wreathes your armor in shadow-flame until the metal sears the skin beneath'},
+        ]
     },
 
     {
@@ -1414,6 +1440,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'clenches an invisible fist around your mind and squeezes'},
             {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
              'cast_text': 'overrides your will and freezes you mid-motion'},
+            {'name': 'Mind Leech', 'type': 'mana_burn', 'power': 35, 'element': 'Psionic',
+             'cast_text': 'drinks deeply of your arcane reserves through the psychic link'},
         ]
     },
 
@@ -1599,7 +1627,12 @@ MONSTER_TEMPLATES = [
             'duration': 3,
             'magnitude': 0,
             'description': 'begins turning your flesh to stone'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 4, 'duration': 5,
+             'cast_text': 'fixes a beady eye on you and a patch of your skin turns to stone'},
+        ]
     },
 
     {
@@ -1784,7 +1817,12 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'begins petrifying you with its gaze'
-        }
+        },
+        'spell_chance': 0.40,
+        'spells': [
+            {'name': 'Petrifying Gaze', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+             'cast_text': 'fixes its eight-legged stare on you and your flesh begins to grey and harden'},
+        ]
     },
 
     {
@@ -1845,7 +1883,12 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 0,
             'description': 'breathes petrifying vapor at you'
-        }
+        },
+        'spell_chance': 0.40,
+        'spells': [
+            {'name': 'Petrifying Breath', 'type': 'petrify', 'threshold': 3, 'duration': 5,
+             'cast_text': 'snorts a jet of petrifying vapor and your skin greys and hardens'},
+        ]
     },
 
     {
@@ -2034,6 +2077,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'unleashes a cone of psionic force that detonates inside your skull'},
             {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
              'cast_text': 'seizes your will, and for a moment your body is not your own'},
+            {'name': 'Intellect Devour', 'type': 'mana_burn', 'power': 22, 'element': 'Psionic',
+             'cast_text': 'fixes you with a hungry stare and feeds directly on your arcane reserves'},
         ]
     },
 
@@ -2142,7 +2187,12 @@ MONSTER_TEMPLATES = [
             'duration': 4,
             'magnitude': 12,
             'description': 'hurls molten iron at you'
-        }
+        },
+        'spell_chance': 0.30,
+        'spells': [
+            {'name': 'Heat Metal', 'type': 'heat_metal', 'power': 10, 'armor_mult': 0.7, 'element': 'Fire',
+             'cast_text': 'eyes your armor like a smith eyes raw stock, and the metal flares red-hot'},
+        ]
     },
 
     {
@@ -2437,6 +2487,8 @@ MONSTER_TEMPLATES = [
         'spells': [
             {'name': 'Fireball', 'type': 'damage', 'element': 'Fire', 'power': 60,
              'cast_text': 'gathers the furnace-heat of the City of Brass into a screaming fireball'},
+            {'name': 'Heat Metal', 'type': 'heat_metal', 'power': 18, 'armor_mult': 0.8, 'element': 'Fire',
+             'cast_text': 'turns its furnace-gaze on your armor until the rivets run molten'},
         ]
     },
     {
@@ -2514,6 +2566,8 @@ MONSTER_TEMPLATES = [
              'cast_text': 'unfurls its full intellect and detonates a cone of psionic force in your mind'},
             {'name': 'Dominate', 'type': 'debuff', 'effect_type': 'paralysis', 'duration': 1, 'magnitude': 0,
              'cast_text': 'takes the reins of your nervous system and your body locks up'},
+            {'name': 'Devour Intellect', 'type': 'mana_burn', 'power': 50, 'element': 'Psionic',
+             'cast_text': 'sinks a psychic proboscis into your mind and gorges on your magic'},
         ]
     },
     {
@@ -2678,6 +2732,8 @@ MONSTER_TEMPLATES = [
         'spells': [
             {'name': 'Hellfire Bolt', 'type': 'damage', 'element': 'Fire', 'power': 92,
              'cast_text': 'gestures with a gauntleted hand and a lance of hellfire roars out'},
+            {'name': 'Heat Metal', 'type': 'heat_metal', 'power': 30, 'armor_mult': 0.8, 'element': 'Fire',
+             'cast_text': 'speaks a word of damnation and your own armor turns into a furnace around you'},
         ]
     },
     {
