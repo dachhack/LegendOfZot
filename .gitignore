@@ -10,6 +10,9 @@ build/
 logs/
 playtest_runs.log
 playtest_reports/
+# Headless playtest-harness redirect scratch (stdout/stderr transcripts)
+out*.log
+err*.log
 assets/sprites/
 # assets/sprite_picks/ IS committed -- it's the per-pick delta over the
 # external sprite-assets-v1 bundle. promote_all_sprites.py reads it as
