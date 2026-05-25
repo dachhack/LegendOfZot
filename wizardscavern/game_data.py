@@ -2432,8 +2432,8 @@ MONSTER_TEMPLATES = [
     {
         'name': "Bonepicker Reaver",
         'health': 360, 'attack': 108, 'defense': 26, 'level': 11,
-        'flavor_text': "A skeletal marauder that hunts the deep for marrow and warmth.",
-        'victory_text': "The reaver clatters apart into a heap of yellowed bone.",
+        'flavor_text': "A six-armed marauder that strips the deep's dead to the bone, a notched blade in every fist.",
+        'victory_text': "The reaver's six arms fall limp, its blades ringing one by one on the stone.",
         'elemental_weakness': ['Holy'],
         'elemental_strength': ['Darkness'],
         'attack_element': 'Physical',
