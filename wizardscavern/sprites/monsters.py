@@ -21,7 +21,7 @@ _MONSTERS_MAP = {
         ('MN5000', 0),  # strong_monsters atlas s12_00
     ],
     'ANCIENT': [
-        ('MN0590', 0),  # strong_monsters atlas s11_18
+        ('MN0590', 0),  # strong_monsters atlas s12_14
     ],
     'ARCHLICH': [
         ('MN2260', 0),  # strong_monsters atlas s06_09
@@ -283,7 +283,7 @@ _MONSTERS_MAP = {
         ('MN3406', 2),  # sheet=S6J src=r03c05
     ],
     'LORD': [
-        ('MN2912', 0),  # strong_monsters atlas s05_03
+        ('MN2912', 0),  # strong_monsters atlas s12_18
     ],
     'LOST SOUL': [
         ('MN2767', 0),  # sheet=S6G src=r03c12
