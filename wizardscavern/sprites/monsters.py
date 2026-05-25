@@ -596,7 +596,7 @@ _MONSTERS_MAP = {
         ('MN2757', 0),  # strong_monsters atlas s08_04
     ],
     'Bonepicker Reaver': [
-        ('MN2535', 0),  # sheet=S6F src=r02c12 (reserve-promoted)
+        ('MN2535', 0),  # strong_monsters atlas s09_03
     ],
     'Ridgeback Wyvern': [
         ('MN2421', 0),  # strong_monsters atlas s07_02
