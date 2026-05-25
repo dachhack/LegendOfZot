@@ -2508,9 +2508,29 @@ _THREAT_TIERS = {
     'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0, 1),
     'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0, 1),
     'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0, 2),
+    'elite':     (118, 3, '#FF7043', 'rgba(255,112,67,0.65)', 1.6, '#FF8A65', 'ELITE',     '#FF8A65', 40, 3),
     'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44, 3),
     'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76, 4),
 }
+
+
+# The marquee deep-tier "strong monsters" (shard-guardian-grade elites with
+# bespoke atlas art).  These always loom in combat regardless of player level
+# -- a Cinder Serpent should read as imposing even to an over-levelled hero --
+# so they floor to the 'elite' tier below.  Flagged champion/legendary/boss
+# spawns are classified first and keep their higher tier.
+_STRONG_MONSTER_NAMES = frozenset({
+    'Elder Starspawn', 'Voidmaw Devourer', 'Cataclysm Fiend', 'Nightmare Lich',
+    'Soulflayer Wraith', 'Infernal Warlord', 'Abyssal Archfiend', 'Starspawn Aberration',
+    'Crimson Wyrmlord', 'Sepulchral Lich', 'Maw of the Deep', 'Glacian Titan',
+    'Abyssal Fiend', 'Illithid Overmind', 'Hundred-Eyed Watcher', 'Necrarch Lich',
+    'Graven Colossus', 'Cryptborn Wraith', 'Hollow Lich', 'Emberscale Drake',
+    'Gnashing Horror', 'Iron Vanguard', 'Cinderborn Efreet', 'Rimebound Djinn',
+    'Cinder Serpent', 'Gloomback Bear', 'Ridgeback Wyvern', 'Voidspawn Brute',
+    'Sporelord Myconid', 'Balrog', 'Balor', 'Demilich', 'Elder Brain', 'Pit Fiend',
+    'Storm Giant', 'Cyclops', 'Dragon Turtle', 'Fire Giant', 'Purple Worm', 'Sphinx',
+    'Bonepicker Reaver',
+})
 
 
 def _classify_monster_threat(monster, player=None):
@@ -2522,6 +2542,8 @@ def _classify_monster_threat(monster, player=None):
         return 'legendary'
     if props.get('is_champion'):
         return 'champion'
+    if (getattr(monster, 'name', '') or '').strip() in _STRONG_MONSTER_NAMES:
+        return 'elite'
     # Everything else scales with how far the monster outclasses the player.
     diff = 0
     if player is not None:
