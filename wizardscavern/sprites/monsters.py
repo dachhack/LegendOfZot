@@ -17,15 +17,14 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _MONSTERS_MAP = {
+    "ZOT'S GUARDIAN": [
+        ('MN5000', 0),  # strong_monsters atlas s12_00
+    ],
     'ANCIENT': [
-        ('MN0590', 0),  # sheet=M3 src=r05c15
-        ('MN2237', 1),  # sheet=S6C src=r09c10
-        ('MN2825', 2),  # sheet=S6G src=r08c00
+        ('MN0590', 0),  # strong_monsters atlas s11_18
     ],
     'ARCHLICH': [
-        ('MN2260', 0),  # sheet=S6C src=r11c10
-        ('MN2259', 1),  # sheet=S6C src=r11c09
-        ('MN1945', 2),  # sheet=S6A src=r11c10
+        ('MN2260', 0),  # strong_monsters atlas s06_09
     ],
     'Ancient Dragon': [
         ('MN1829', 0),  # sheet=S6A src=r01c11
@@ -38,19 +37,13 @@ _MONSTERS_MAP = {
         ('MN1496', 2),  # sheet=BG2 src=r00c04
     ],
     'BUG QUEEN': [
-        ('MN1718', 0),  # sheet=BG2 src=r14c02
-        ('MN1733', 1),  # sheet=BG2 src=r15c01
-        ('MN1735', 2),  # sheet=BG2 src=r15c03
+        ('MN1718', 0),  # strong_monsters atlas s12_06
     ],
     'Balor': [
-        ('MN0108', 0),  # sheet=M1 src=r06c12
-        ('MN0107', 1),  # sheet=M1 src=r06c11
-        ('MN0191', 2),  # sheet=M1 src=r11c15
+        ('MN0108', 0),  # strong_monsters atlas s04_01
     ],
     'Balrog': [
-        ('MN2634', 0),  # sheet=S6F src=r09c06
-        ('MN2635', 1),  # sheet=S6F src=r09c07
-        ('MN2701', 2),  # sheet=S6F src=r13c12
+        ('MN2634', 0),  # strong_monsters atlas s08_05
     ],
     'Basilisk': [
         ('MN0741', 0),  # sheet=M3 src=r15c06
@@ -103,29 +96,19 @@ _MONSTERS_MAP = {
         ('MN4104', 2),  # sheet=S6N src=r08c12
     ],
     'Cyclops': [
-        ('MN0009', 0),  # sheet=M1 src=r00c08
-        ('MN0025', 1),  # sheet=M1 src=r01c08
-        ('MN0010', 2),  # sheet=M1 src=r00c09
+        ('MN0009', 0),  # strong_monsters atlas s11_08
     ],
     'DEATH KNIGHT': [
-        ('MN2911', 0),  # sheet=S6G src=r13c12
-        ('MN2909', 1),  # sheet=S6G src=r13c10
-        ('MN2174', 2),  # sheet=S6C src=r03c09
+        ('MN2911', 0),  # strong_monsters atlas s12_13
     ],
     'DEMON': [
-        ('MN2636', 0),  # sheet=S6F src=r09c08
-        ('MN2699', 1),  # sheet=S6F src=r13c10
-        ('MN2700', 2),  # sheet=S6F src=r13c11
+        ('MN2636', 0),  # strong_monsters atlas s02_02
     ],
     'DIVINE AVATAR': [
-        ('MN2697', 0),  # sheet=S6F src=r13c08
-        ('MN2827', 1),  # sheet=S6G src=r08c02
-        ('MN2896', 2),  # sheet=S6G src=r12c13
+        ('MN2697', 0),  # strong_monsters atlas s12_05
     ],
     'DRAGON': [
-        ('MN2875', 0),  # sheet=S6G src=r11c08
-        ('MN2882', 1),  # sheet=S6G src=r11c15
-        ('MN2884', 2),  # sheet=S6G src=r12c01
+        ('MN2875', 0),  # strong_monsters atlas s05_07
     ],
     'Death Knight': [
         ('MN2703', 0),  # sheet=S6F src=r13c14
@@ -133,9 +116,7 @@ _MONSTERS_MAP = {
         ('MN2910', 2),  # sheet=S6G src=r13c11
     ],
     'Demilich': [
-        ('MN2255', 0),  # sheet=S6C src=r11c05
-        ('MN2256', 1),  # sheet=S6C src=r11c06
-        ('MN2257', 2),  # sheet=S6C src=r11c07
+        ('MN2255', 0),  # strong_monsters atlas s07_09
     ],
     'Displacer Beast': [
         ('MN2587', 0),  # sheet=S6F src=r06c06
@@ -148,9 +129,7 @@ _MONSTERS_MAP = {
         ('MN3948', 2),  # sheet=S6M src=r07c09
     ],
     'Dragon Turtle': [
-        ('MN2630', 0),  # sheet=S6F src=r09c02
-        ('MN2633', 1),  # sheet=S6F src=r09c05
-        ('MN2833', 2),  # sheet=S6G src=r08c08
+        ('MN2630', 0),  # strong_monsters atlas s07_08
     ],
     'Dragonfly Enchantress': [
         ('MN1132', 0),  # sheet=BG src=r08c13
@@ -173,9 +152,7 @@ _MONSTERS_MAP = {
         ('MN2831', 2),  # sheet=S6G src=r08c06
     ],
     'Elder Brain': [
-        ('MN1672', 0),  # sheet=BG2 src=r11c04
-        ('MN2577', 1),  # sheet=S6F src=r05c12
-        ('MN2578', 2),  # sheet=S6F src=r05c13
+        ('MN1672', 0),  # strong_monsters atlas s08_10
     ],
     'Ettercap': [
         ('MN0180', 0),  # sheet=M1 src=r11c04
@@ -188,9 +165,7 @@ _MONSTERS_MAP = {
         ('MN0123', 2),  # sheet=M1 src=r07c11
     ],
     'Fire Giant': [
-        ('MN0026', 0),  # sheet=M1 src=r01c09
-        ('MN0149', 1),  # sheet=M1 src=r09c05
-        ('MN2076', 2),  # sheet=S6B src=r05c05
+        ('MN0026', 0),  # strong_monsters atlas s10_14
     ],
     'Firefly Mage': [
         ('MN1598', 0),  # sheet=BG2 src=r06c10
@@ -308,9 +283,7 @@ _MONSTERS_MAP = {
         ('MN3406', 2),  # sheet=S6J src=r03c05
     ],
     'LORD': [
-        ('MN2912', 0),  # sheet=S6G src=r13c13
-        ('MN2258', 1),  # sheet=S6C src=r11c08
-        ('MN1943', 2),  # sheet=S6A src=r11c08
+        ('MN2912', 0),  # strong_monsters atlas s05_03
     ],
     'LOST SOUL': [
         ('MN2767', 0),  # sheet=S6G src=r03c12
@@ -418,19 +391,13 @@ _MONSTERS_MAP = {
         ('MN1611', 2),  # sheet=BG2 src=r07c07
     ],
     'Pit Fiend': [
-        ('MN0713', 0),  # sheet=M3 src=r13c10
-        ('MN0218', 1),  # sheet=M1 src=r13c10
-        ('MN0124', 2),  # sheet=M1 src=r07c12
+        ('MN0713', 0),  # strong_monsters atlas s05_00
     ],
     'Platino': [
-        ('MN1860', 0),  # sheet=S6A src=r06c01
-        ('MN1876', 1),  # sheet=S6A src=r07c01
-        ('MN1877', 2),  # sheet=S6A src=r07c02
+        ('MN1860', 0),  # strong_monsters atlas s12_01
     ],
     'Purple Worm': [
-        ('MN3699', 0),  # sheet=S6K src=r11c11
-        ('MN3721', 1),  # sheet=S6K src=r13c03
-        ('MN3747', 2),  # sheet=S6K src=r14c13
+        ('MN3699', 0),  # strong_monsters atlas s02_18
     ],
     'RESTLESS SPIRIT': [
         ('MN2572', 0),  # sheet=S6F src=r05c07
@@ -488,9 +455,7 @@ _MONSTERS_MAP = {
         ('MN2246', 2),  # sheet=S6C src=r10c06
     ],
     'Sphinx': [
-        ('MN2479', 0),  # sheet=S6D src=r14c09
-        ('MN2494', 1),  # sheet=S6D src=r15c09
-        ('MN2822', 2),  # sheet=S6G src=r07c13
+        ('MN2479', 0),  # strong_monsters atlas s07_15
     ],
     'Spore Puff': [
         ('MN1277', 0),  # sheet=PM2 src=r02c03
@@ -513,9 +478,7 @@ _MONSTERS_MAP = {
         ('MN2607', 2),  # sheet=S6F src=r07c11
     ],
     'Storm Giant': [
-        ('MN0700', 0),  # sheet=M3 src=r12c13
-        ('MN0205', 1),  # sheet=M1 src=r12c13
-        ('MN0145', 2),  # sheet=M1 src=r09c01
+        ('MN0700', 0),  # strong_monsters atlas s07_12
     ],
     'Succubus': [
         ('MN2900', 0),  # sheet=S6G src=r13c01
@@ -528,9 +491,7 @@ _MONSTERS_MAP = {
         ('MN2248', 2),  # sheet=S6C src=r10c08
     ],
     'TREASURE GOLEM': [
-        ('MN4022', 0),  # sheet=S6M src=r12c13
-        ('MN4039', 1),  # sheet=S6M src=r13c14
-        ('MN4004', 2),  # sheet=S6M src=r11c10
+        ('MN4022', 0),  # strong_monsters atlas s12_16
     ],
     'Tarrasque': [
         ('MN2641', 0),  # sheet=S6F src=r09c13
@@ -623,93 +584,93 @@ _MONSTERS_MAP = {
     # in-game for the floors-24-49 monster overhaul. One variant each.
     # ------------------------------------------------------------------
     'Gloomback Bear': [
-        ('MN2668', 0),  # sheet=S6F src=r11c09 (reserve-promoted)
+        ('MN2668', 0),  # strong_monsters atlas s07_01
     ],
     'Voidspawn Brute': [
-        ('MN2593', 0),  # sheet=S6F src=r06c12 (reserve-promoted)
+        ('MN2593', 0),  # strong_monsters atlas s07_03
     ],
     'Cinder Serpent': [
-        ('MN2427', 0),  # sheet=S6D src=r09c09 (reserve-promoted)
+        ('MN2427', 0),  # strong_monsters atlas s08_00
     ],
     'Sporelord Myconid': [
-        ('MN2757', 0),  # sheet=S6G src=r03c02 (reserve-promoted)
+        ('MN2757', 0),  # strong_monsters atlas s08_04
     ],
     'Bonepicker Reaver': [
         ('MN2535', 0),  # sheet=S6F src=r02c12 (reserve-promoted)
     ],
     'Ridgeback Wyvern': [
-        ('MN2421', 0),  # sheet=S6D src=r09c03 (reserve-promoted)
+        ('MN2421', 0),  # strong_monsters atlas s07_02
     ],
     'Iron Vanguard': [
-        ('MN2601', 0),  # sheet=S6F src=r07c05 (reserve-promoted)
+        ('MN2601', 0),  # strong_monsters atlas s11_13
     ],
     'Rimebound Djinn': [
-        ('MN2626', 0),  # sheet=S6F src=r08c14 (reserve-promoted)
+        ('MN2626', 0),  # strong_monsters atlas s05_11
     ],
     'Cinderborn Efreet': [
-        ('MN2627', 0),  # sheet=S6F src=r08c15 (reserve-promoted)
+        ('MN2627', 0),  # strong_monsters atlas s05_10
     ],
     'Hollow Lich': [
-        ('MN2614', 0),  # sheet=S6F src=r08c02 (reserve-promoted)
+        ('MN2614', 0),  # strong_monsters atlas s05_06
     ],
     'Emberscale Drake': [
-        ('MN2691', 0),  # sheet=S6F src=r13c02 (reserve-promoted)
+        ('MN2691', 0),  # strong_monsters atlas s12_03
     ],
     'Gnashing Horror': [
-        ('MN2638', 0),  # sheet=S6F src=r09c10 (reserve-promoted)
+        ('MN2638', 0),  # strong_monsters atlas s05_08
     ],
     'Abyssal Fiend': [
-        ('MN3452', 0),  # sheet=S6J src=r06c15 (reserve-promoted)
+        ('MN3452', 0),  # strong_monsters atlas s03_02
     ],
     'Illithid Overmind': [
-        ('MN3438', 0),  # sheet=S6J src=r05c12 (reserve-promoted)
+        ('MN3438', 0),  # strong_monsters atlas s05_01
     ],
     'Hundred-Eyed Watcher': [
-        ('MN0630', 0),  # picked via sprite_package/picks_recent
+        ('MN0630', 0),  # strong_monsters atlas s05_02
     ],
     'Necrarch Lich': [
-        ('MN3468', 0),  # sheet=S6J src=r08c04 (reserve-promoted)
+        ('MN3468', 0),  # strong_monsters atlas s06_03
     ],
     'Graven Colossus': [
-        ('MN3526', 0),  # sheet=S6J src=r11c15 (reserve-promoted)
+        ('MN3526', 0),  # strong_monsters atlas s05_04
     ],
     'Cryptborn Wraith': [
-        ('MN2562', 0),  # sheet=S6F src=r04c11 (reserve-promoted)
+        ('MN2562', 0),  # strong_monsters atlas s05_05
     ],
     'Abyssal Archfiend': [
-        ('MN3479', 0),  # sheet=S6J src=r08c15 (reserve-promoted)
+        ('MN3479', 0),  # strong_monsters atlas s04_11
     ],
     'Starspawn Aberration': [
-        ('MN3494', 0),  # picked via sprite_package/picks_recent
+        ('MN3494', 0),  # strong_monsters atlas s06_00
     ],
     'Crimson Wyrmlord': [
-        ('MN2692', 0),  # sheet=S6F src=r13c03 (reserve-promoted)
+        ('MN2692', 0),  # strong_monsters atlas s04_07
     ],
     'Sepulchral Lich': [
-        ('MN2813', 0),  # sheet=S6G src=r07c04 (reserve-promoted)
+        ('MN2813', 0),  # strong_monsters atlas s12_12
     ],
     'Maw of the Deep': [
-        ('MN3414', 0),  # sheet=S6J src=r03c15 (reserve-promoted)
+        ('MN3414', 0),  # strong_monsters atlas s06_14
     ],
     'Glacian Titan': [
-        ('MN3543', 0),  # sheet=S6J src=r13c00 (reserve-promoted)
+        ('MN3543', 0),  # strong_monsters atlas s06_11
     ],
     'Elder Starspawn': [
-        ('MN3422', 0),  # sheet=S6J src=r04c08 (reserve-promoted)
+        ('MN3422', 0),  # strong_monsters atlas s06_07
     ],
     'Infernal Warlord': [
-        ('MN3469', 0),  # sheet=S6J src=r08c05 (reserve-promoted)
+        ('MN3469', 0),  # strong_monsters atlas s06_05
     ],
     'Voidmaw Devourer': [
-        ('MN1792', 0),  # picked via sprite_package/picks_recent
+        ('MN1792', 0),  # strong_monsters atlas s06_01
     ],
     'Cataclysm Fiend': [
-        ('MN2904', 0),  # picked via sprite_package/picks_recent
+        ('MN2904', 0),  # strong_monsters atlas s07_11
     ],
     'Nightmare Lich': [
-        ('MN3484', 0),  # sheet=S6J src=r09c04 (reserve-promoted)
+        ('MN3484', 0),  # strong_monsters atlas s04_08
     ],
     'Soulflayer Wraith': [
-        ('MN1784', 0),  # picked via sprite_package/picks_recent
+        ('MN1784', 0),  # strong_monsters atlas s06_04
     ],
 }
