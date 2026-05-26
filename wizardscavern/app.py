@@ -2442,6 +2442,12 @@ def generate_monster_defeat_js(monster_name):
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
+        # When the foe looms, the visible sprite is the fixed over-the-HUD
+        # overlay (the in-flow canvas is hidden), so fade that too.
+        'var lo=document.querySelectorAll(".loom-overlay");'
+        'for(var i=0;i<lo.length;i++){'
+        'lo[i].style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
+        '}'
         '},2100);'
 
         # Phase 3 (2700ms): flash in overlay with monster name + DEFEATED
@@ -2660,7 +2666,7 @@ def wrap_monster_loom(sprite_html, threat):
         return sprite_html
     return (
         f'<div style="{threat["slot_css"]}">'
-        f'<div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);">'
+        f'<div style="position:absolute;bottom:0;left:0;">'
         f'{sprite_html}</div></div>'
     )
 
@@ -8165,15 +8171,20 @@ class WizardsCavernApp(toga.App):
             # Reuse the threat styling from the fight so the defeated foe keeps
             # its size + fierce box during the victory/defeat animation.
             _v_threat = getattr(gs, 'combat_threat_style', None) or {}
-            # Cap the defeated sprite so it fits the box without clipping -- the
-            # defeat grayscale runs on this in-flow canvas, so we don't mount
-            # the over-the-HUD overlay on the victory frame.
-            _v_size = min(_v_threat.get('sprite_size', 64), 96)
+            # Keep the defeated foe at its full fight size + loom so the victory
+            # frame matches the fight (big elites still tower over the HUD).  The
+            # loom slot caps the panel height, so the sprite spills upward
+            # instead of growing the box and clipping the player panel below.
+            # The defeat grayscale (generate_monster_defeat_js) also greys the
+            # loom overlay, so the dead-monster fade still reads while looming.
+            _v_size = _v_threat.get('sprite_size', 64)
+            _v_loom = bool(_v_threat.get('looming'))
             _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
             _v_name_color = _v_threat.get('name_color', '#F44336')
             _v_label_html = _v_threat.get('label_html', '')
-            _v_panel_loom = ''
-            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
+            _v_row_align = _v_threat.get('row_align', 'center')
+            _v_panel_loom = _v_threat.get('roompanel_loom_css', '')
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size, loom=_v_loom, flourish=0, anim_token=0), _v_threat)
 
             # Show last damage dealt
             dmg_text = ""
@@ -8182,7 +8193,7 @@ class WizardsCavernApp(toga.App):
 
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                    <div style="display:flex; align-items:{_v_row_align}; gap:6px; margin-bottom:3px;">
                         <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
                         <div id="monster_info_box">
                             <div style="color: {_v_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}{_v_label_html}</div>
