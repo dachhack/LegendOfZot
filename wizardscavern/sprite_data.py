@@ -119,12 +119,17 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
     # sprite is painted exactly ONCE, so the two copies can never drift apart.
     _canvas_extra = 'visibility:hidden;' if loom else ''
     # When looming, the same image is cloned into a fixed top-layer canvas that
-    # TRACKS the in-flow canvas's position (escaping the #content-area clip so
-    # it paints over the HUD without disturbing layout).  The track is a short
-    # rAF loop, not a one-shot snapshot, because the panel's combatIn entrance
-    # (a scale animation that replays every combat re-render) is still in flight
-    # when img.onload fires -- a single getBoundingClientRect would lock the
-    # overlay to a stale, lower position and it would droop below the anchor.
+    # CONTINUOUSLY tracks the in-flow canvas's position (escaping the
+    # #content-area + .room-panel clips so it paints over the HUD without
+    # disturbing layout).  Tracking every frame -- not a one-shot snapshot, nor
+    # a short fixed window -- because the box keeps moving after mount: the
+    # panel's combatIn scale entrance replays on every combat re-render, the
+    # victory frame re-flows (HP drain, DEFEATED flash, the map rendering in),
+    # and the box shrinks/grows with its text.  A snapshot would strand the
+    # overlay high above the box (esp. on the victory frame).  The rAF loop
+    # self-terminates when the in-flow canvas leaves the DOM (the next
+    # re-render swaps #content-area's innerHTML), so only one ever runs.  The
+    # small left nudge pulls the creature toward the screen's left edge.
     loom_js = ''
     if loom:
         loom_js = (
@@ -138,9 +143,11 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
             'var octx=ov.getContext("2d");octx.imageSmoothingEnabled=false;'
             'octx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,' + str(SIZE) + ',' + str(SIZE) + ');'
             'document.body.appendChild(ov);'
-            'var _sn=function(){var rr=c.getBoundingClientRect();'
-            'ov.style.left=rr.left+"px";ov.style.top=rr.top+"px";};'
-            '_sn();var _sc=0;(function _tk(){_sn();if(++_sc<32){requestAnimationFrame(_tk);}})();'
+            'var _sn=function(){'
+            'if(!document.body.contains(c)){if(ov.parentNode)ov.parentNode.removeChild(ov);return false;}'
+            'var rr=c.getBoundingClientRect();'
+            'ov.style.left=(rr.left-10)+"px";ov.style.top=rr.top+"px";return true;};'
+            '(function _tk(){if(_sn())requestAnimationFrame(_tk);})();'
         )
     # Tier-scaled entrance flourish, fired once per fight (anim_token gate).
     flourish_js = ''
