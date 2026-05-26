@@ -616,6 +616,22 @@ CONFUSION_EFFECT = StatusEffect(name='Confusion', duration=2, effect_type='confu
 WEB_EFFECT = StatusEffect(name='Web', duration=3, effect_type='web', description='You are stuck in a sticky web and cannot move.')
 STICKY_HANDS_EFFECT = StatusEffect(name='Sticky Hands', duration=4, effect_type='sticky_hands', description='Your hands are covered in a sticky substance, making it hard to use or equip items.')
 
+def _consume_spell_ward(target):
+    """Counterspell check: if the target monster has an active spell_ward
+    (e.g. a Rakshasa's), consume one charge and fizzle the player's spell.
+    Returns True if the spell was warded. The caster's mana/action is already
+    spent -- countering costs you the spell, as it should."""
+    if target is None:
+        return False
+    for name, effect in list(getattr(target, 'status_effects', {}).items()):
+        if effect.effect_type == 'spell_ward' and effect.magnitude > 0:
+            effect.magnitude -= 1
+            add_log(f"{COLOR_PURPLE}Your spell shatters against the {target.name}'s {name}! ({effect.magnitude} left){COLOR_RESET}")
+            if effect.magnitude <= 0:
+                target.remove_status_effect(name)
+            return True
+    return False
+
 def apply_poison_to_player(player_character):
     """
     Applies a poison status effect to the player if not already poisoned.
@@ -972,16 +988,20 @@ class Character:
         else:
             bonus = 0
         attack_from_stats = self._base_attack + bonus + (self.strength // 2)
-        # Add attack boost from status effects
+        # Add attack boost from status effects; weakness debuffs sap it.
+        # (Monster 'weakness' specials -- Lich's necromancy, a Tarrasque's
+        # savaging, etc. -- land here so the log's threat is mechanically real.)
         for effect in self.status_effects.values():
             if effect.effect_type == 'attack_boost':
                 attack_from_stats += effect.magnitude
+            elif effect.effect_type == 'weakness':
+                attack_from_stats -= effect.magnitude
         # BUC bonus: blessed weapon +2, cursed weapon -2
         if self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'blessed':
             attack_from_stats += 2
         elif self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'cursed':
             attack_from_stats -= 2
-        return attack_from_stats
+        return max(0, attack_from_stats)
 
     @property
     def defense(self):
@@ -991,16 +1011,20 @@ class Character:
         else:
             bonus = 0
         defense_from_stats = self._base_defense + bonus + (self.dexterity // 3)
-        # Add defense boost from status effects
+        # Add defense boost from status effects; curses/defense penalties
+        # leave you exposed. (A Beholder's eye rays, a lich's hex, a Rakshasa's
+        # fiendish magic -- they now actually pry your guard open.)
         for effect in self.status_effects.values():
             if effect.effect_type == 'defense_boost':
                 defense_from_stats += effect.magnitude
+            elif effect.effect_type in ('curse', 'defense_penalty'):
+                defense_from_stats -= effect.magnitude
         # BUC bonus: blessed armor +2, cursed armor -2
         if self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'blessed':
             defense_from_stats += 2
         elif self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'cursed':
             defense_from_stats -= 2
-        return defense_from_stats
+        return max(0, defense_from_stats)
 
     def get_current_floor(self, tower):
         """Get the floor the character is currently on."""
@@ -1459,6 +1483,10 @@ class Character:
             add_log(f"{COLOR_GREEN}You healed for {healing_amount} HP! Current health: {self.health}.{COLOR_RESET}")
             return True
         elif spell_to_cast.spell_type == 'damage':
+            # Rakshasa-style counterspell: a spell_ward on the monster eats the
+            # incoming spell (the action + mana are still spent -- counters cost).
+            if _consume_spell_ward(target):
+                return True
             # Base spell damage boosted by player's intelligence and spell level
             # INT scaling: higher INT rewards higher-level spells significantly
             int_bonus = (self.intelligence // 2) + (max(0, self.intelligence - 10) * spell_to_cast.level // 3)
@@ -1547,6 +1575,8 @@ class Character:
             return True
         elif spell_to_cast.spell_type == 'debuff_target':
             # Debuff spells: apply to TARGET (the monster) — e.g. Time Stop
+            if _consume_spell_ward(target):
+                return True
             if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:
                 target.add_status_effect(
                     effect_name=spell_to_cast.status_effect_name,
@@ -1713,9 +1743,26 @@ class Monster:
         self.can_talk = can_talk
         self.greeting_template = greeting_template
         self.special_attack = special_attack
+        # Spellcasting: caster monsters carry a list of spell dicts and a
+        # per-turn chance to cast one instead of swinging. Populated at spawn
+        # from the template (see game_systems spawn sites). None == no caster.
+        self.spells = None
+        self.spell_chance = 0.0
         self.properties = {}  # For storing special flags like is_champion, is_legendary
 
     def take_damage(self, amount, elemental_type):
+        # Force shields (hit_absorb) a caster lays on itself catch one full
+        # blow each -- mirror of the player's Spectral Hand. DoTs route through
+        # take_damage_no_def, so poison/bleed still tick past the shield.
+        for effect_name, effect in list(self.status_effects.items()):
+            if effect.effect_type == 'hit_absorb' and effect.magnitude > 0:
+                effect.magnitude -= 1
+                add_log(f"{COLOR_PURPLE}The {self.name}'s {effect_name} absorbs the blow! ({effect.magnitude} left){COLOR_RESET}")
+                if effect.magnitude <= 0:
+                    self.remove_status_effect(effect_name)
+                gs.last_monster_damage = 0
+                return 0
+
         actual_damage = apply_elemental_resistance(self, amount, elemental_type)
 
         # Defense is already applied in attack_target - just apply elemental resistance here
@@ -1733,6 +1780,11 @@ class Monster:
         return self.health <= 0
 
     def attack_target(self, target):
+        # Spellcasters may hurl a spell INSTEAD of a melee swing -- it consumes
+        # the monster's action, so it's alternative damage, not bonus damage.
+        if self._try_cast_spell(target):
+            return 0
+
         base_chance = 0.70
         # Monster Level bonus: +3% per level difference (monster_level - player_level)
         level_bonus = (self.level - target.level) * 0.03
@@ -1822,7 +1874,15 @@ class Monster:
                 elif effect_type == 'confusion':
                     add_log(f"{COLOR_PURPLE}Your mind reels in confusion!{COLOR_RESET}")
                 elif effect_type == 'weakness':
-                    add_log(f"{COLOR_GREY}You feel weakened!{COLOR_RESET}")
+                    add_log(f"{COLOR_GREY}You feel weakened -- your blows land softer!{COLOR_RESET}")
+                elif effect_type == 'curse':
+                    add_log(f"{COLOR_PURPLE}A curse settles over you, leaving your guard exposed!{COLOR_RESET}")
+                elif effect_type == 'slow':
+                    add_log(f"{COLOR_CYAN}Your limbs grow sluggish and slow to respond!{COLOR_RESET}")
+                elif effect_type == 'blindness':
+                    add_log(f"{COLOR_GREY}Your vision swims -- you can barely see your foe!{COLOR_RESET}")
+                elif effect_type == 'sticky_hands':
+                    add_log(f"{COLOR_YELLOW}Your hands are seized in a clinging grip!{COLOR_RESET}")
                 elif effect_type == 'burn':
                     add_log(f"{COLOR_RED}Your flesh burns!{COLOR_RESET}")
                     burn_inventory_items(target, source='fire')
@@ -1834,6 +1894,201 @@ class Monster:
                     rot_food_items(target, magnitude=magnitude)
 
         return dmg
+
+    def _try_cast_spell(self, target):
+        """Caster monsters may cast a spell this turn instead of attacking.
+
+        Returns True if a spell was cast (the action is spent). Liches and kin
+        favour a self-heal when badly wounded; otherwise they sling an
+        offensive spell. Spell damage routes through target.take_damage, so it
+        bypasses armor (defense is normally subtracted during a melee swing)
+        but still respects the player's elemental resistances, Stone Skin, and
+        Spectral Hand -- a real threat the player can still build against.
+        """
+        # Age any per-spell cooldowns first -- this runs every monster turn,
+        # before the cast roll, so cooldowns tick down even on melee turns.
+        cooldowns = getattr(self, '_spell_cooldowns', None)
+        if cooldowns:
+            for name in list(cooldowns.keys()):
+                cooldowns[name] -= 1
+                if cooldowns[name] <= 0:
+                    del cooldowns[name]
+
+        if not self.spells:
+            return False
+        if random.random() >= self.spell_chance:
+            return False
+
+        # Skip spells that are (a) a self-buff the monster already has running
+        # (no point shielding twice) or (b) still on cooldown. The cooldown is
+        # what stops a gaze monster from chain-petrifying on consecutive turns:
+        # the player is guaranteed a turn to act between stacks.
+        on_cooldown = getattr(self, '_spell_cooldowns', None) or {}
+        def _redundant(s):
+            if s.get('type') != 'self_buff':
+                return False
+            et = s.get('effect_type')
+            return any(e.effect_type == et for e in self.status_effects.values())
+        castable = [s for s in self.spells
+                    if not _redundant(s) and s.get('name') not in on_cooldown]
+        if not castable:
+            return False
+
+        # A wounded caster would rather not stand and trade. It prefers to HEAL;
+        # failing that, a blink (teleport away + heal) is its escape hatch -- but
+        # only ~60% of the time so it isn't a guaranteed kite every engagement.
+        # A banish-mode teleport is offensive disruption, so it lives in the
+        # general pool and is used at any health.
+        def _is_blink(s):
+            return s.get('type') == 'teleport' and s.get('mode', 'blink') == 'blink'
+        heal_spells = [s for s in castable if s.get('type') == 'heal']
+        blink_spells = [s for s in castable if _is_blink(s)]
+        other_spells = [s for s in castable if s.get('type') != 'heal' and not _is_blink(s)]
+        wounded = self.health < self.max_health * 0.5
+
+        if heal_spells and wounded and self.health < self.max_health:
+            spell = random.choice(heal_spells)
+        elif blink_spells and wounded and random.random() < 0.6:
+            spell = random.choice(blink_spells)
+        elif other_spells:
+            spell = random.choice(other_spells)
+        elif heal_spells and self.health < self.max_health:
+            spell = random.choice(heal_spells)
+        elif blink_spells:
+            spell = random.choice(blink_spells)
+        else:
+            return False
+
+        # Arm this spell's cooldown (if it declares one) so it can't fire again
+        # for `cooldown` turns. Stored as cooldown+1 because the tick at the top
+        # of the next turn immediately decrements it.
+        cd = spell.get('cooldown')
+        if cd:
+            if getattr(self, '_spell_cooldowns', None) is None:
+                self._spell_cooldowns = {}
+            self._spell_cooldowns[spell.get('name')] = cd + 1
+
+        self._cast_monster_spell(spell, target)
+        return True
+
+    def _cast_monster_spell(self, spell, target):
+        cast_text = spell.get('cast_text', f"casts {spell.get('name', 'a spell')}")
+        add_log(f"{COLOR_PURPLE}The {self.name} {cast_text}!{COLOR_RESET}")
+        stype = spell.get('type', 'damage')
+
+        if stype == 'damage':
+            element = spell.get('element', 'Arcane')
+            power = spell.get('power', 10)
+            target.take_damage(power, element)
+        elif stype == 'heal':
+            amount = spell.get('power', 0)
+            old = self.health
+            self.health = min(self.max_health, self.health + amount)
+            healed = self.health - old
+            if healed > 0:
+                add_log(f"{COLOR_GREEN}The {self.name} mends {healed} HP!{COLOR_RESET}")
+        elif stype == 'debuff':
+            effect_type = spell.get('effect_type', 'weakness')
+            target.add_status_effect(
+                effect_name=f"{self.name}'s {spell.get('name', effect_type.title())}",
+                duration=spell.get('duration', 3),
+                effect_type=effect_type,
+                magnitude=spell.get('magnitude', 0),
+                description=cast_text,
+            )
+        elif stype == 'self_buff':
+            # Wards/shields the caster lays on ITSELF -- e.g. hit_absorb (a force
+            # shield that eats incoming blows) or spell_ward (counters the
+            # player's next spell). Honored in Monster.take_damage / cast_spell.
+            self.add_status_effect(
+                effect_name=spell.get('name', 'Ward'),
+                duration=spell.get('duration', 3),
+                effect_type=spell.get('effect_type', 'hit_absorb'),
+                magnitude=spell.get('magnitude', 1),
+                description=cast_text,
+            )
+        elif stype == 'mana_burn':
+            # Anti-caster: devour the player's mana, with a psychic backlash
+            # that scales on what was burned. A pure melee build with an empty
+            # pool shrugs it off -- the threat is build-relevant, not universal.
+            amount = spell.get('power', 12)
+            burned = min(getattr(target, 'mana', 0), amount)
+            if burned > 0:
+                target.mana -= burned
+                add_log(f"{COLOR_PURPLE}The {self.name} devours {burned} of your mana!{COLOR_RESET}")
+                backlash = spell.get('backlash', burned // 2)
+                if backlash > 0:
+                    target.take_damage(backlash, spell.get('element', 'Psionic'))
+            else:
+                add_log(f"{COLOR_PURPLE}The {self.name} gropes through your mind for magic to devour, but finds none.{COLOR_RESET}")
+        elif stype == 'heat_metal':
+            # Anti-tank: damage that scales with the player's armor -- the
+            # better-armored you are, the more it cooks you. Routes through
+            # take_damage (which does NOT subtract defense) so the scaling
+            # isn't quietly undone by that same armor.
+            base = spell.get('power', 0)
+            armor_dmg = int(getattr(target, 'defense', 0) * spell.get('armor_mult', 0.7))
+            add_log(f"{COLOR_RED}The {self.name} sets your armor and weapon searing white-hot -- your own gear turns against you!{COLOR_RESET}")
+            target.take_damage(base + armor_dmg, spell.get('element', 'Fire'))
+        elif stype == 'petrify':
+            # Stacking save-or-die gaze. Each gaze adds a stage; reaching the
+            # per-monster threshold turns the player fully to stone (death via
+            # the same path a lethal melee hit uses). The effect carries its own
+            # duration, so if the player kills the gazer or flees, it simply
+            # expires (the stone recedes) -- a guaranteed fair out that needs no
+            # cure item. Stage 1..threshold-1 are escalating warnings.
+            threshold = spell.get('threshold', 3)
+            dur = spell.get('duration', 5)
+            pet = target.status_effects.get('Petrification')
+            if pet is not None and getattr(pet, 'effect_type', '') == 'petrifying':
+                pet.magnitude += 1
+                pet.duration = max(pet.duration, dur)
+            else:
+                target.add_status_effect('Petrification', dur, 'petrifying',
+                                         magnitude=1,
+                                         description='Your flesh is hardening into cold grey stone.')
+                pet = target.status_effects.get('Petrification')
+            stage = pet.magnitude if pet is not None else 1
+            if stage >= threshold:
+                add_log(f"{COLOR_RED}The last of your flesh hardens -- you are turned entirely to stone!{COLOR_RESET}")
+                target.take_damage_no_def(target.max_health * 10)
+            else:
+                add_log(f"{COLOR_YELLOW}Petrification creeps further across your body... (stage {stage}/{threshold} -- break the gaze or cure it before it claims you!){COLOR_RESET}")
+        elif stype == 'teleport':
+            # Two flavors, chosen by 'mode':
+            #   'blink'  -- the caster heals and warps to another spot on the
+            #               floor, breaking off the fight (a kiting escape).
+            #   'banish' -- the caster flings the PLAYER to a random tile,
+            #               yanking them out of the fight.
+            # The actual relocation + clean combat exit is deferred to
+            # combat.resolve_pending_monster_teleport() (it needs the floor
+            # grid + view state), triggered off this flag right after the
+            # combat handler returns. We only set the flag + apply the self-heal
+            # here so characters.py stays free of floor/UI surgery.
+            mode = spell.get('mode', 'blink')
+            heal = spell.get('heal', 0)
+            if heal > 0:
+                old = self.health
+                self.health = min(self.max_health, self.health + heal)
+                mended = self.health - old
+                if mended > 0:
+                    add_log(f"{COLOR_GREEN}The {self.name} knits its wounds as it fades ({mended} HP)!{COLOR_RESET}")
+            gs.pending_monster_teleport = {'mode': mode, 'name': self.name}
+
+        # Surface a monster-side cast signature for the FX layer. app.py reads
+        # this to flash a banner + screen tint + element particles (and a buzz
+        # on big casts / petrify) in the spell's element, so every caster LOOKS
+        # like it's casting, not just emitting a log line. One-shot: cleared by
+        # the renderer after it fires.
+        gs.last_monster_spell_cast = {
+            'name': spell.get('name', 'a spell'),
+            'type': stype,
+            'element': spell.get('element'),
+            'effect_type': spell.get('effect_type'),
+            'mode': spell.get('mode'),
+            'monster_level': getattr(self, 'level', 1),
+            'fx_level': spell.get('fx_level'),
+        }
 
     def is_alive(self):
         return self.health > 0

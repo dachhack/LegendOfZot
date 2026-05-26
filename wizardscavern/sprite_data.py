@@ -113,21 +113,43 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
         SIZE = 64
     SIZE = max(32, min(SIZE, 160))
     img_uri = "data:image/webp;base64," + img_b64
-    # When looming, the same image is cloned into a fixed top-layer canvas
-    # positioned over the in-flow canvas, so it escapes the #content-area clip
-    # and paints over the HUD without disturbing layout.
+    # When looming, the in-flow canvas is kept only as an invisible layout
+    # anchor (it reserves the slot + gives the overlay a rect to track); the
+    # visible sprite is the fixed top-layer overlay below.  Hiding it means the
+    # sprite is painted exactly ONCE, so the two copies can never drift apart.
+    _canvas_extra = 'visibility:hidden;' if loom else ''
+    # When looming, the same image is cloned into a fixed top-layer canvas that
+    # CONTINUOUSLY tracks the in-flow canvas's position (escaping the
+    # #content-area + .room-panel clips so it paints over the HUD without
+    # disturbing layout).  Tracking every frame -- not a one-shot snapshot, nor
+    # a short fixed window -- because the box keeps moving after mount: the
+    # panel's combatIn scale entrance replays on every combat re-render, the
+    # victory frame re-flows (HP drain, DEFEATED flash, the map rendering in),
+    # and the box shrinks/grows with its text.  A snapshot would strand the
+    # overlay high above the box (esp. on the victory frame).  The rAF loop
+    # self-terminates when the in-flow canvas leaves the DOM (the next
+    # re-render swaps #content-area's innerHTML), so only one ever runs.  The
+    # small left nudge pulls the creature toward the screen's left edge.
     loom_js = ''
     if loom:
         loom_js = (
-            'var r=c.getBoundingClientRect();'
+            'var _ex=document.querySelectorAll(".loom-overlay");'
+            'for(var _k=0;_k<_ex.length;_k++)_ex[_k].remove();'
             'var ov=document.createElement("canvas");'
             'ov.className="loom-overlay";'
             'ov.width=' + str(SIZE) + ';ov.height=' + str(SIZE) + ';'
             'ov.style.cssText="image-rendering:pixelated;position:fixed;pointer-events:none;'
-            'z-index:1200;left:"+r.left+"px;top:"+r.top+"px;";'
+            'z-index:1200;left:0;top:0;";'
             'var octx=ov.getContext("2d");octx.imageSmoothingEnabled=false;'
             'octx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,' + str(SIZE) + ',' + str(SIZE) + ');'
             'document.body.appendChild(ov);'
+            'var _sn=function(){'
+            'if(!document.body.contains(c)){if(ov.parentNode)ov.parentNode.removeChild(ov);return false;}'
+            'var rr=c.getBoundingClientRect();'
+            # left-nudge toward the screen edge; sink ~22px so a tall/top-heavy
+            # creature sits low over its box instead of flying off the top.
+            'ov.style.left=(rr.left-10)+"px";ov.style.top=(rr.top+22)+"px";return true;};'
+            '(function _tk(){if(_sn())requestAnimationFrame(_tk);})();'
         )
     # Tier-scaled entrance flourish, fired once per fight (anim_token gate).
     flourish_js = ''
@@ -164,7 +186,7 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
         f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
         f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
         f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        f'display:block;margin:2px auto;"></canvas>'
+        f'display:block;margin:2px auto;{_canvas_extra}"></canvas>'
         f'<script>(function(){{'
         f'var c=document.getElementById("{safe_id}");if(!c)return;'
         f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'

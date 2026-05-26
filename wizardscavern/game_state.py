@@ -79,6 +79,10 @@ active_scroll_item = None
 active_flare_item = None
 active_foresight_scroll = None
 active_flee_state = None
+# Set by a monster's teleport spell during its turn; resolved by combat.py's
+# resolve_pending_monster_teleport() after the combat handler returns. Dict of
+# {'mode': 'blink'|'banish', 'name': monster_name} or None.
+pending_monster_teleport = None
 active_spell_choice = None
 active_towel_item = None
 active_library_state = None
@@ -392,6 +396,7 @@ last_player_damage_badge = None   # Badge on damage dealt TO player
 pre_round_monster_hp = None       # Monster HP before this combat round
 pre_round_player_hp = None        # Player HP before this combat round
 last_spell_cast = None            # Spell object from the last cast (for animation rendering)
+last_monster_spell_cast = None    # Dict describing a monster's spell cast this turn (drives its FX banner/tint/particles/haptic)
 monster_acts_first = False        # Initiative result: True if monster swings before player this round
 monster_initiative_pending = False # True after init when monster won; triggers auto-attack before player acts
 
@@ -430,7 +435,8 @@ last_dice_rolls = []   # list of roll tuples to show this frame
 NEGATIVE_EFFECT_TYPES = {
     'poison', 'damage_over_time', 'confusion', 'blindness', 'silence',
     'defense_penalty', 'web', 'sticky_hands', 'paralysis', 'weakness',
-    'burn', 'freeze', 'life_drain', 'shrinking',
+    'burn', 'freeze', 'life_drain', 'shrinking', 'slow', 'curse',
+    'petrifying',
 }
 
 # ============================================================================

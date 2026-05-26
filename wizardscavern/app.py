@@ -1308,7 +1308,7 @@ ELEMENT_TINTS = {
 }
 
 
-def generate_spell_cast_js(spell):
+def generate_spell_cast_js(spell, delay_ms=0):
     """Generate spell casting animation: banner + screen tint.
 
     Plays BEFORE the damage/healing float sequence.
@@ -1349,8 +1349,8 @@ def generate_spell_cast_js(spell):
     # generate_damage_float_js at the moment of damage panel shake,
     # not at spell-banner appearance, so the buzz lands with the impact.
 
-    return (
-        '<script>(function(){'
+    _inner = (
+        '(function(){'
         # Layer 2: Spell name banner (scaled with level)
         'var bn=document.createElement("div");'
         'bn.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
@@ -1411,8 +1411,13 @@ def generate_spell_cast_js(spell):
         if lvl >= 4 else ''
         )
 
-        + '})();</script>'
+        + '})();'
     )
+    # Monster casts pass a delay so the flourish lands in the monster's turn
+    # window rather than at the top of the exchange (player casts use 0).
+    if delay_ms:
+        _inner = 'setTimeout(function(){' + _inner + '},' + str(int(delay_ms)) + ');'
+    return '<script>' + _inner + '</script>'
 
 
 # === Spell icon visual buckets ===========================================
@@ -1673,7 +1678,7 @@ def generate_spell_icon_visual_js(spell):
     return ''
 
 
-def generate_spell_particles_js(spell):
+def generate_spell_particles_js(spell, delay_ms=0, target_override=None):
     """Generate element-specific particle effects via a temporary canvas overlay.
 
     Creates a full-screen canvas, spawns particles with per-element physics,
@@ -1724,10 +1729,12 @@ def generate_spell_particles_js(spell):
     num_bursts = 1 + (1 if lvl >= 3 else 0) + (1 if lvl >= 5 else 0)
     burst_delay = 250                               # ms between bursts
 
-    target_id = 'player_panel' if dtype == 'Healing' else 'monster_panel'
+    # Monster casts override the burst origin (their spell lands on the player
+    # panel, or bursts from their own panel for self-buffs/heals).
+    target_id = target_override or ('player_panel' if dtype == 'Healing' else 'monster_panel')
 
-    return (
-        '<script>(function(){'
+    _inner = (
+        '(function(){'
         'var numBursts=' + str(num_bursts) + ';'
         'var burstDelay=' + str(burst_delay) + ';'
 
@@ -1897,8 +1904,112 @@ def generate_spell_particles_js(spell):
         '},400+burstIdx*burstDelay);'  # 400ms base + stagger per burst
         '})(burst);'
         '}'  # end burst loop
-        '})();</script>'
+        '})();'
     )
+    if delay_ms:
+        _inner = 'setTimeout(function(){' + _inner + '},' + str(int(delay_ms)) + ');'
+    return '<script>' + _inner + '</script>'
+
+
+# === Monster-side cast signature =========================================
+# Monster spells (characters.py:_cast_monster_spell) don't carry a Spell object
+# the way the player's do, so a casting monster stashes a small dict on
+# gs.last_monster_spell_cast. This builds a lightweight shim from it and reuses
+# the player's banner + tint + particle generators (in the monster's element),
+# plus a level-scaled phone buzz -- so all 33 casters FEEL like casters, not
+# just read like them in the log.
+
+class _MonsterSpellFX:
+    """Quacks like a Spell for _spell_visual_element / the FX generators."""
+    __slots__ = ('name', 'damage_type', 'spell_type', 'level')
+
+    def __init__(self, name, element, level):
+        self.name = name
+        self.damage_type = element   # _spell_visual_element returns this...
+        self.spell_type = 'damage'   # ...because we force it down the damage path
+        self.level = level
+
+
+_MONSTER_FX_ELEMENT_BY_EFFECT = {
+    'silence': 'Psionic', 'paralysis': 'Psionic', 'confusion': 'Psionic',
+    'weakness': 'Shadow', 'curse': 'Darkness', 'blindness': 'Darkness',
+    'slow': 'Ice', 'spell_ward': 'Psionic', 'hit_absorb': 'Holy',
+}
+
+
+def _monster_fx_element(info):
+    """Pick a visual element (banner/tint/particle color) for a monster spell."""
+    stype = info.get('type')
+    if stype == 'heal':
+        return 'Healing'
+    if stype == 'mana_burn':
+        return 'Psionic'
+    if stype == 'heat_metal':
+        return 'Fire'
+    if stype == 'petrify':
+        return 'Earth'
+    if stype == 'teleport':
+        return 'Psionic'
+    if stype == 'self_buff':
+        return _MONSTER_FX_ELEMENT_BY_EFFECT.get(info.get('effect_type'), 'Holy')
+    if stype == 'debuff':
+        return _MONSTER_FX_ELEMENT_BY_EFFECT.get(info.get('effect_type'), 'Darkness')
+    # damage: normalize the monster-data element names to ELEMENT_COLORS keys
+    el = {'Dark': 'Darkness', 'Arcane': 'Psionic'}.get(info.get('element'), info.get('element'))
+    return el if el in ELEMENT_COLORS else 'Psionic'
+
+
+def _monster_fx_level(info):
+    """0-5 visual intensity: explicit fx_level, else derived from monster level."""
+    fx = info.get('fx_level')
+    if fx is not None:
+        return max(0, min(5, int(fx)))
+    return max(1, min(5, int(info.get('monster_level', 1)) // 3))
+
+
+def _monster_fx_origin(info):
+    """Which panel the particles burst from."""
+    stype = info.get('type')
+    if stype in ('heal', 'self_buff') or (stype == 'teleport' and info.get('mode') != 'banish'):
+        return 'monster_panel'   # the monster affects ITSELF
+    return 'player_panel'        # the spell lands on the player
+
+
+def _monster_haptic_pattern(level, info):
+    if info.get('type') == 'petrify':
+        return '[40,40,40,40,130]' if level >= 3 else '[40,50,90]'   # creeping stone
+    if level >= 5:
+        return '[120,50,90,40,170]'
+    if level == 4:
+        return '[90,40,90]'
+    if level == 3:
+        return '[60]'
+    return None
+
+
+def generate_monster_haptic_js(info, delay_ms=0):
+    """Phone buzz for a monster cast, fired at the banner moment. Sparse:
+    only mid+ casts and any petrify gaze buzz."""
+    if not info:
+        return ''
+    pat = _monster_haptic_pattern(_monster_fx_level(info), info)
+    if not pat:
+        return ''
+    return ('<script>setTimeout(function(){try{if(navigator.vibrate)'
+            'navigator.vibrate(' + pat + ');}catch(e){}},' + str(int(delay_ms)) + ');</script>')
+
+
+def generate_monster_spell_fx(info, delay_ms=0):
+    """Combined monster cast signature (banner + tint + particles + haptic) as
+    one concatenated string. Used by the full-render path; the partial-update
+    path appends the pieces individually so each can be body-extracted."""
+    if not info:
+        return ''
+    shim = _MonsterSpellFX(info.get('name', 'a spell'),
+                           _monster_fx_element(info), _monster_fx_level(info))
+    return (generate_spell_cast_js(shim, delay_ms)
+            + generate_spell_particles_js(shim, delay_ms, _monster_fx_origin(info))
+            + generate_monster_haptic_js(info, delay_ms))
 
 
 def generate_dice_roll_js(dice_rolls):
@@ -2331,6 +2442,12 @@ def generate_monster_defeat_js(monster_name):
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
+        # When the foe looms, the visible sprite is the fixed over-the-HUD
+        # overlay (the in-flow canvas is hidden), so fade that too.
+        'var lo=document.querySelectorAll(".loom-overlay");'
+        'for(var i=0;i<lo.length;i++){'
+        'lo[i].style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
+        '}'
         '},2100);'
 
         # Phase 3 (2700ms): flash in overlay with monster name + DEFEATED
@@ -2397,9 +2514,29 @@ _THREAT_TIERS = {
     'dangerous': (84,  3, '#FF5722', 'rgba(255,87,34,0.6)',   2.0, '#FF7043', 'DANGEROUS', '#FF7043',  0, 1),
     'deadly':    (92,  3, '#FF1744', 'rgba(255,23,68,0.72)',  1.5, '#FF5252', 'DEADLY',    '#FF5252',  0, 1),
     'champion':  (96,  3, '#FFD54F', 'rgba(255,213,79,0.75)', 1.6, '#FFD54F', '',          '#FFD54F',  0, 2),
+    'elite':     (118, 3, '#FF7043', 'rgba(255,112,67,0.65)', 1.6, '#FF8A65', 'ELITE',     '#FF8A65', 40, 3),
     'legendary': (120, 3, '#BA68C8', 'rgba(186,104,200,0.8)', 1.4, '#CE93D8', 'LEGENDARY', '#CE93D8', 44, 3),
     'boss':      (150, 4, '#FF1744', 'rgba(255,23,68,0.85)',  1.2, '#FF5252', 'BOSS',      '#FFD54F', 76, 4),
 }
+
+
+# The marquee deep-tier "strong monsters" (shard-guardian-grade elites with
+# bespoke atlas art).  These always loom in combat regardless of player level
+# -- a Cinder Serpent should read as imposing even to an over-levelled hero --
+# so they floor to the 'elite' tier below.  Flagged champion/legendary/boss
+# spawns are classified first and keep their higher tier.
+_STRONG_MONSTER_NAMES = frozenset({
+    'Elder Starspawn', 'Voidmaw Devourer', 'Cataclysm Fiend', 'Nightmare Lich',
+    'Soulflayer Wraith', 'Infernal Warlord', 'Abyssal Archfiend', 'Starspawn Aberration',
+    'Crimson Wyrmlord', 'Sepulchral Lich', 'Maw of the Deep', 'Glacian Titan',
+    'Abyssal Fiend', 'Illithid Overmind', 'Hundred-Eyed Watcher', 'Necrarch Lich',
+    'Graven Colossus', 'Cryptborn Wraith', 'Hollow Lich', 'Emberscale Drake',
+    'Gnashing Horror', 'Iron Vanguard', 'Cinderborn Efreet', 'Rimebound Djinn',
+    'Cinder Serpent', 'Gloomback Bear', 'Ridgeback Wyvern', 'Voidspawn Brute',
+    'Sporelord Myconid', 'Balrog', 'Balor', 'Demilich', 'Elder Brain', 'Pit Fiend',
+    'Storm Giant', 'Cyclops', 'Dragon Turtle', 'Fire Giant', 'Purple Worm', 'Sphinx',
+    'Bonepicker Reaver',
+})
 
 
 def _classify_monster_threat(monster, player=None):
@@ -2411,6 +2548,8 @@ def _classify_monster_threat(monster, player=None):
         return 'legendary'
     if props.get('is_champion'):
         return 'champion'
+    if (getattr(monster, 'name', '') or '').strip() in _STRONG_MONSTER_NAMES:
+        return 'elite'
     # Everything else scales with how far the monster outclasses the player.
     diff = 0
     if player is not None:
@@ -2470,17 +2609,23 @@ def get_monster_threat_style(monster, player=None):
     row_align = 'center'
     looming = loom_px > 0
     if looming:
-        # The sprite renders at full size but only its bottom (size - loom) px
-        # take flow height; the rest spills upward out of the slot.  A JS
-        # overlay (mounted by generate_monster_sprite_html with loom=True)
-        # promotes a copy to a fixed top layer (z-index above the HUD), so the
-        # towering part paints OVER the stats bar -- like the spell/damage
-        # effects.  Because the overlay is out of flow, NOTHING in the layout
-        # moves: the map stays exactly where a normal fight puts it.
-        slot_h = max(32, size - loom_px)
-        slot_css = f"height:{slot_h}px;width:{size}px;position:relative;overflow:visible;"
-        # Bottom-anchor the boxes inside the fixed 200px panel so the in-flow
-        # part of the sprite sits snug above the player box (no wasted gap).
+        # The loomed sprite is anchored to the BOTTOM-LEFT of #monster_panel
+        # (the absolute bottom:0;left:0 wrapper in wrap_monster_loom resolves to
+        # the panel because slot_css is NOT positioned).  So the creature's feet
+        # sit at the bottom of its box -- immediately above the player box below
+        # it -- and the body towers UPWARD, spilling out of the box top.
+        # slot_css is an in-flow spacer: its WIDTH keeps the box text indented
+        # clear of the sprite, and its fixed HEIGHT pins the box to a constant
+        # size so it does NOT shrink when the text shortens (e.g. on the victory
+        # frame, which has fewer lines).  The sprite itself is out of flow
+        # (absolute), so it adds no height and the map never moves.  A JS overlay
+        # (generate_monster_sprite_html loom=True) tracks a copy on a fixed top
+        # layer (z above the HUD) so the towering part paints OVER the stats bar
+        # instead of being clipped; that overlay also sinks the sprite a little
+        # (see loom_js) so a tall/top-heavy creature doesn't fly off the top.
+        slot_css = f"width:{size}px;height:64px;"
+        # Bottom-anchor the boxes inside the fixed 200px panel so they sit snug
+        # above the map (no wasted gap).
         roompanel_loom_css = "display:flex; flex-direction:column; justify-content:flex-end; overflow:visible;"
         growbox_loom_css = "overflow:visible;"
         # With a big sprite, pin the name/HP text to the TOP of the box so the
@@ -2527,7 +2672,7 @@ def wrap_monster_loom(sprite_html, threat):
         return sprite_html
     return (
         f'<div style="{threat["slot_css"]}">'
-        f'<div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);">'
+        f'<div style="position:absolute;bottom:0;left:0;">'
         f'{sprite_html}</div></div>'
     )
 
@@ -5032,12 +5177,14 @@ class WizardsCavernApp(toga.App):
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
             process_spell_casting_action(gs.player_character, gs.my_tower, cmd)
+            resolve_pending_monster_teleport(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_victory":
             # Any input dismisses victory screen early and transitions to room
             gs.victory_monster_name = None
             _trigger_room_interaction(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_mode": # This block needs to be after spell_casting_mode for 'c' to work
             process_combat_action(gs.player_character, gs.my_tower, cmd)
+            resolve_pending_monster_teleport(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "spell_memorization_mode":
             process_spell_memorization_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "crafting_mode":
@@ -5193,7 +5340,7 @@ class WizardsCavernApp(toga.App):
 
         # Extract animation / SFX script bodies (raw JS, no <script> wrapper)
         anim_scripts = []
-        for raw in (
+        _raw_sources = [
             generate_spell_cast_js(gs.last_spell_cast),
             generate_spell_icon_visual_js(gs.last_spell_cast),
             generate_spell_particles_js(gs.last_spell_cast),
@@ -5209,7 +5356,19 @@ class WizardsCavernApp(toga.App):
                 gs.monster_defeated_anim, gs.sfx_event,
                 gs.music_enabled, bool(gs.last_dice_rolls), has_init,
             ),
-        ):
+        ]
+        # Monster-side cast signature: banner + tint + particles (in the
+        # monster's element) + a buzz, delayed into the monster's turn window.
+        _mon_fx = getattr(gs, 'last_monster_spell_cast', None)
+        if _mon_fx:
+            _mfx_delay = 1900 + init_offset
+            _mshim = _MonsterSpellFX(_mon_fx.get('name', 'a spell'),
+                                     _monster_fx_element(_mon_fx),
+                                     _monster_fx_level(_mon_fx))
+            _raw_sources.append(generate_spell_cast_js(_mshim, _mfx_delay))
+            _raw_sources.append(generate_spell_particles_js(_mshim, _mfx_delay, _monster_fx_origin(_mon_fx)))
+            _raw_sources.append(generate_monster_haptic_js(_mon_fx, _mfx_delay))
+        for raw in _raw_sources:
             body = _extract_script_body(raw)
             if body:
                 anim_scripts.append(body)
@@ -5249,6 +5408,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_monster_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
         # Clear combat SFX flags so they don't re-fire on the next render
@@ -8017,15 +8177,20 @@ class WizardsCavernApp(toga.App):
             # Reuse the threat styling from the fight so the defeated foe keeps
             # its size + fierce box during the victory/defeat animation.
             _v_threat = getattr(gs, 'combat_threat_style', None) or {}
-            # Cap the defeated sprite so it fits the box without clipping -- the
-            # defeat grayscale runs on this in-flow canvas, so we don't mount
-            # the over-the-HUD overlay on the victory frame.
-            _v_size = min(_v_threat.get('sprite_size', 64), 96)
+            # Keep the defeated foe at its full fight size + loom so the victory
+            # frame matches the fight (big elites still tower over the HUD).  The
+            # loom slot caps the panel height, so the sprite spills upward
+            # instead of growing the box and clipping the player panel below.
+            # The defeat grayscale (generate_monster_defeat_js) also greys the
+            # loom overlay, so the dead-monster fade still reads while looming.
+            _v_size = _v_threat.get('sprite_size', 64)
+            _v_loom = bool(_v_threat.get('looming'))
             _v_panel_css = _v_threat.get('panel_css', 'border: 2px solid #666;')
             _v_name_color = _v_threat.get('name_color', '#F44336')
             _v_label_html = _v_threat.get('label_html', '')
-            _v_panel_loom = ''
-            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
+            _v_row_align = _v_threat.get('row_align', 'center')
+            _v_panel_loom = _v_threat.get('roompanel_loom_css', '')
+            monster_sprite_html = wrap_monster_loom(generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size, loom=_v_loom, flourish=0, anim_token=0), _v_threat)
 
             # Show last damage dealt
             dmg_text = ""
@@ -8034,7 +8199,7 @@ class WizardsCavernApp(toga.App):
 
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                    <div style="display:flex; align-items:{_v_row_align}; gap:6px; margin-bottom:3px;">
                         <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
                         <div id="monster_info_box">
                             <div style="color: {_v_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}{_v_label_html}</div>
@@ -12066,6 +12231,7 @@ class WizardsCavernApp(toga.App):
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_icon_visual_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
+            {generate_monster_spell_fx(gs.last_monster_spell_cast, 1900 + (1000 if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 0))}
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
@@ -12078,6 +12244,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_monster_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
         # Clear combat SFX flags too — these are set at the start of a combat

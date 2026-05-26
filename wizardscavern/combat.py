@@ -460,6 +460,14 @@ def process_combat_action(player_character, my_tower, cmd):
     main.process_passive_treasures(player_character)
     if gs.active_monster and gs.active_monster.is_alive():  # Only process monster effects if it's still alive
         gs.active_monster.process_status_effects()
+        # Regenerators (Trolls and kin) knit their wounds each turn -- burn them
+        # down fast or watch the damage melt away. Stored as a fraction of max HP.
+        regen = gs.active_monster.properties.get('regen', 0)
+        if regen and gs.active_monster.is_alive() and gs.active_monster.health < gs.active_monster.max_health:
+            healed = max(1, int(gs.active_monster.max_health * regen))
+            gs.active_monster.health = min(gs.active_monster.max_health,
+                                           gs.active_monster.health + healed)
+            add_log(f"{COLOR_GREEN}The {gs.active_monster.name} regenerates {healed} HP!{COLOR_RESET}")
 
     # Check if player was defeated by status effects
     if not player_character.is_alive():
@@ -795,6 +803,22 @@ def process_combat_action(player_character, my_tower, cmd):
                            if e.effect_type in ('paralysis', 'freeze'))
         add_log(f"{COLOR_RED}You are {effect_name.lower()} and cannot act!{COLOR_RESET}")
         # Monster still gets their attack
+        if gs.active_monster and gs.active_monster.is_alive():
+            if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
+                gs.active_monster.attack_target(player_character)
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+        return
+
+    # Slow: limbs drag. Each turn there's a chance the action is too sluggish to
+    # land -- you forfeit it while the monster (petrifying gaze, crushing coils,
+    # tower-shield slam) acts freely. Distinct from paralysis: it's a gamble, not
+    # a guaranteed lockout.
+    is_slowed = any(e.effect_type == 'slow'
+                    for e in player_character.status_effects.values())
+    if is_slowed and cmd in ('a', 'f', 'c') and random.random() < 0.30:
+        add_log(f"{COLOR_CYAN}You are too sluggish to act in time!{COLOR_RESET}")
         if gs.active_monster and gs.active_monster.is_alive():
             if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
                 gs.active_monster.attack_target(player_character)
@@ -1383,6 +1407,70 @@ def process_flee_direction_action(player_character, my_tower, cmd):
 
     else:
         add_log(f"{COLOR_YELLOW}Invalid direction. Enter n, s, e, or w to flee (or 'c' to cancel).{COLOR_RESET}")
+
+def resolve_pending_monster_teleport(player_character, my_tower):
+    """Carry out a teleport a monster requested via its spell this turn.
+
+    Set by Monster._cast_monster_spell (gs.pending_monster_teleport); called
+    from the app loop right after the combat handler returns, so the combat
+    turn has fully finished before we touch the floor/view. Two modes:
+
+      'banish' -- fling the PLAYER to a random empty tile; the monster stays
+                  put, so the fight can be resumed by walking back to it.
+      'blink'  -- warp the MONSTER to a random empty tile (it healed when it
+                  cast); the player is left on the now-empty tile and must
+                  hunt the kiting caster down.
+
+    Either way the current fight ends cleanly (active_monster cleared, view
+    returned to the map via _trigger_room_interaction). No-op if no teleport
+    is pending, the player already died/won this turn, or there's nowhere to go.
+    """
+    info = getattr(gs, 'pending_monster_teleport', None)
+    gs.pending_monster_teleport = None
+    if not info:
+        return False
+    # Don't stomp on a death/victory that resolved earlier this same turn.
+    if gs.game_should_quit or not player_character.is_alive() or gs.active_monster is None:
+        return False
+
+    main = _main()
+    current_floor = my_tower.floors[player_character.z]
+    px, py, pz = player_character.x, player_character.y, player_character.z
+    floor_char = current_floor.floor_char
+
+    valid = [(c, r)
+             for r in range(current_floor.rows)
+             for c in range(current_floor.cols)
+             if current_floor.grid[r][c].room_type == floor_char
+             and (c != px or r != py)]
+    if not valid:
+        add_log(f"{COLOR_PURPLE}The {info['name']}'s teleport sputters -- there is nowhere to go.{COLOR_RESET}")
+        return False
+
+    new_x, new_y = random.choice(valid)
+
+    if info['mode'] == 'banish':
+        add_log(f"{COLOR_PURPLE}The {info['name']} warps the very space around you -- the cavern lurches and you are flung far across the floor!{COLOR_RESET}")
+        player_character.x, player_character.y = new_x, new_y
+        current_floor.grid[new_y][new_x].discovered = True
+        main.reveal_adjacent_walls(player_character, my_tower)
+    else:  # 'blink' -- relocate the monster, leave the player where they stand
+        old_coords = (px, py, pz)
+        new_coords = (new_x, new_y, pz)
+        mon = gs.encountered_monsters.get(old_coords) or gs.active_monster
+        gs.encountered_monsters.pop(old_coords, None)
+        if mon is not None:
+            gs.encountered_monsters[new_coords] = mon
+        current_floor.grid[new_y][new_x].room_type = 'M'
+        current_floor.grid[new_y][new_x].discovered = True
+        # The monster shared the player's tile during combat; it has now left it.
+        if current_floor.grid[py][px].room_type == 'M':
+            current_floor.grid[py][px].room_type = floor_char
+        add_log(f"{COLOR_PURPLE}The {info['name']} folds into a rip in the air and is gone -- it lurks elsewhere on the floor now.{COLOR_RESET}")
+
+    gs.active_monster = None
+    main._trigger_room_interaction(player_character, my_tower)
+    return True
 
 def process_foresight_direction_action(player_character, my_tower, cmd):
     """

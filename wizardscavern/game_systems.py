@@ -2764,6 +2764,9 @@ def _trigger_room_interaction(player_character, my_tower):
                         m_data.get('special_attack', None)
                     )
                     new_monster.properties['is_bug_monster'] = True
+                    if m_data.get('spells'):
+                        new_monster.spells = m_data['spells']
+                        new_monster.spell_chance = m_data.get('spell_chance', 0.30)
 
             else:
                 # Normal monster spawning with floor-based phasing.
@@ -2797,6 +2800,13 @@ def _trigger_room_interaction(player_character, my_tower):
                     m_data.get('greeting_template', ''),
                     m_data.get('special_attack', None)
                 )
+                # Passive regeneration (Trolls, etc.) -- fraction of max HP per turn
+                if m_data.get('regen'):
+                    new_monster.properties['regen'] = m_data['regen']
+                # Spellcasting: caster monsters carry a spell list + cast chance
+                if m_data.get('spells'):
+                    new_monster.spells = m_data['spells']
+                    new_monster.spell_chance = m_data.get('spell_chance', 0.30)
             gs.encountered_monsters[coords] = new_monster
 
         gs.active_monster = gs.encountered_monsters[coords]
