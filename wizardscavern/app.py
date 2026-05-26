@@ -2609,17 +2609,20 @@ def get_monster_threat_style(monster, player=None):
     row_align = 'center'
     looming = loom_px > 0
     if looming:
-        # The sprite renders at full size but only its bottom (size - loom) px
-        # take flow height; the rest spills upward out of the slot.  A JS
-        # overlay (mounted by generate_monster_sprite_html with loom=True)
-        # promotes a copy to a fixed top layer (z-index above the HUD), so the
-        # towering part paints OVER the stats bar -- like the spell/damage
-        # effects.  Because the overlay is out of flow, NOTHING in the layout
-        # moves: the map stays exactly where a normal fight puts it.
-        slot_h = max(32, size - loom_px)
-        slot_css = f"height:{slot_h}px;width:{size}px;position:relative;overflow:visible;"
-        # Bottom-anchor the boxes inside the fixed 200px panel so the in-flow
-        # part of the sprite sits snug above the player box (no wasted gap).
+        # The loomed sprite is anchored to the BOTTOM-LEFT of #monster_panel
+        # (the absolute bottom:0;left:0 wrapper in wrap_monster_loom resolves to
+        # the panel because slot_css is NOT positioned).  So the creature's feet
+        # sit at the bottom of its box -- immediately above the player box below
+        # it -- and the body towers UPWARD, spilling out of the box top.
+        # slot_css is just an in-flow width spacer that keeps the box text
+        # indented clear of the sprite; the sprite is out of flow (absolute), so
+        # it adds no height and the map never moves.  A JS overlay (mounted by
+        # generate_monster_sprite_html with loom=True) promotes a tracked copy
+        # to a fixed top layer (z above the HUD) so the towering part paints
+        # OVER the stats bar instead of being clipped by #content-area.
+        slot_css = f"width:{size}px;"
+        # Bottom-anchor the boxes inside the fixed 200px panel so they sit snug
+        # above the map (no wasted gap).
         roompanel_loom_css = "display:flex; flex-direction:column; justify-content:flex-end; overflow:visible;"
         growbox_loom_css = "overflow:visible;"
         # With a big sprite, pin the name/HP text to the TOP of the box so the
