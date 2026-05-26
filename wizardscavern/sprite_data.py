@@ -113,21 +113,34 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
         SIZE = 64
     SIZE = max(32, min(SIZE, 160))
     img_uri = "data:image/webp;base64," + img_b64
-    # When looming, the same image is cloned into a fixed top-layer canvas
-    # positioned over the in-flow canvas, so it escapes the #content-area clip
-    # and paints over the HUD without disturbing layout.
+    # When looming, the in-flow canvas is kept only as an invisible layout
+    # anchor (it reserves the slot + gives the overlay a rect to track); the
+    # visible sprite is the fixed top-layer overlay below.  Hiding it means the
+    # sprite is painted exactly ONCE, so the two copies can never drift apart.
+    _canvas_extra = 'visibility:hidden;' if loom else ''
+    # When looming, the same image is cloned into a fixed top-layer canvas that
+    # TRACKS the in-flow canvas's position (escaping the #content-area clip so
+    # it paints over the HUD without disturbing layout).  The track is a short
+    # rAF loop, not a one-shot snapshot, because the panel's combatIn entrance
+    # (a scale animation that replays every combat re-render) is still in flight
+    # when img.onload fires -- a single getBoundingClientRect would lock the
+    # overlay to a stale, lower position and it would droop below the anchor.
     loom_js = ''
     if loom:
         loom_js = (
-            'var r=c.getBoundingClientRect();'
+            'var _ex=document.querySelectorAll(".loom-overlay");'
+            'for(var _k=0;_k<_ex.length;_k++)_ex[_k].remove();'
             'var ov=document.createElement("canvas");'
             'ov.className="loom-overlay";'
             'ov.width=' + str(SIZE) + ';ov.height=' + str(SIZE) + ';'
             'ov.style.cssText="image-rendering:pixelated;position:fixed;pointer-events:none;'
-            'z-index:1200;left:"+r.left+"px;top:"+r.top+"px;";'
+            'z-index:1200;left:0;top:0;";'
             'var octx=ov.getContext("2d");octx.imageSmoothingEnabled=false;'
             'octx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,' + str(SIZE) + ',' + str(SIZE) + ');'
             'document.body.appendChild(ov);'
+            'var _sn=function(){var rr=c.getBoundingClientRect();'
+            'ov.style.left=rr.left+"px";ov.style.top=rr.top+"px";};'
+            '_sn();var _sc=0;(function _tk(){_sn();if(++_sc<32){requestAnimationFrame(_tk);}})();'
         )
     # Tier-scaled entrance flourish, fired once per fight (anim_token gate).
     flourish_js = ''
@@ -164,7 +177,7 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
         f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
         f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
         f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        f'display:block;margin:2px auto;"></canvas>'
+        f'display:block;margin:2px auto;{_canvas_extra}"></canvas>'
         f'<script>(function(){{'
         f'var c=document.getElementById("{safe_id}");if(!c)return;'
         f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
