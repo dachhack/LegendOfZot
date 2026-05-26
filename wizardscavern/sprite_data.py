@@ -146,7 +146,9 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
             'var _sn=function(){'
             'if(!document.body.contains(c)){if(ov.parentNode)ov.parentNode.removeChild(ov);return false;}'
             'var rr=c.getBoundingClientRect();'
-            'ov.style.left=(rr.left-10)+"px";ov.style.top=rr.top+"px";return true;};'
+            # left-nudge toward the screen edge; sink ~22px so a tall/top-heavy
+            # creature sits low over its box instead of flying off the top.
+            'ov.style.left=(rr.left-10)+"px";ov.style.top=(rr.top+22)+"px";return true;};'
             '(function _tk(){if(_sn())requestAnimationFrame(_tk);})();'
         )
     # Tier-scaled entrance flourish, fired once per fight (anim_token gate).

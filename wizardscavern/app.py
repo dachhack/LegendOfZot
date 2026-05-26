@@ -2614,13 +2614,16 @@ def get_monster_threat_style(monster, player=None):
         # the panel because slot_css is NOT positioned).  So the creature's feet
         # sit at the bottom of its box -- immediately above the player box below
         # it -- and the body towers UPWARD, spilling out of the box top.
-        # slot_css is just an in-flow width spacer that keeps the box text
-        # indented clear of the sprite; the sprite is out of flow (absolute), so
-        # it adds no height and the map never moves.  A JS overlay (mounted by
-        # generate_monster_sprite_html with loom=True) promotes a tracked copy
-        # to a fixed top layer (z above the HUD) so the towering part paints
-        # OVER the stats bar instead of being clipped by #content-area.
-        slot_css = f"width:{size}px;"
+        # slot_css is an in-flow spacer: its WIDTH keeps the box text indented
+        # clear of the sprite, and its fixed HEIGHT pins the box to a constant
+        # size so it does NOT shrink when the text shortens (e.g. on the victory
+        # frame, which has fewer lines).  The sprite itself is out of flow
+        # (absolute), so it adds no height and the map never moves.  A JS overlay
+        # (generate_monster_sprite_html loom=True) tracks a copy on a fixed top
+        # layer (z above the HUD) so the towering part paints OVER the stats bar
+        # instead of being clipped; that overlay also sinks the sprite a little
+        # (see loom_js) so a tall/top-heavy creature doesn't fly off the top.
+        slot_css = f"width:{size}px;height:64px;"
         # Bottom-anchor the boxes inside the fixed 200px panel so they sit snug
         # above the map (no wasted gap).
         roompanel_loom_css = "display:flex; flex-direction:column; justify-content:flex-end; overflow:visible;"
