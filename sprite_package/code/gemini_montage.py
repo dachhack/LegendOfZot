@@ -194,6 +194,14 @@ def cmd_pack(args):
 # slice
 # --------------------------------------------------------------------------
 
+def _encode_webp_b64(img):
+    """Encode an RGBA image to base64 WebP, matching the canonical pool's
+    convention (promote_all_sprites.py uses WEBP quality 80, method 4)."""
+    buf = io.BytesIO()
+    img.convert("RGBA").save(buf, format="WEBP", quality=80, method=4)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
 def cmd_slice(args):
     with open(args.manifest) as f:
         manifest = json.load(f)
@@ -203,10 +211,21 @@ def cmd_slice(args):
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    if args.into_pool and not args.dechroma:
+        print("slice: --into-pool requires --dechroma (the pool needs the "
+              "transparent sprites, not the green cells)", file=sys.stderr)
+        sys.exit(1)
+
     ck = forced_key = None
     if args.dechroma:
         ck = _load_chroma()
         forced_key = args.key       # tuple, or None -> auto-detect per cell
+
+    pool = None
+    pool_updates = {}
+    if args.into_pool:
+        with open(args.into_pool, "rb") as f:
+            pool = pickle.load(f)
 
     inset = args.trim               # fraction of a cell to crop off each side
     fit = args.dechroma and not args.no_fit
@@ -245,11 +264,27 @@ def cmd_slice(args):
                                           round(h * (1 - margin_frac)))
                                          ).resize((ss, ss), Image.NEAREST)
             cell_img.save(out_dir / f"{pid}.png")
+            if pool is not None:
+                pool_updates[pid] = _encode_webp_b64(cell_img)
             n += 1
         print(f"  {sh['file']}  {W}x{H}  ->  {len(sh['cells'])} cells")
     print(f"\nsliced {n} sprite(s) -> {out_dir}")
-    if args.dechroma:
-        print("transparent PNGs written; next: promote_all_sprites.py")
+
+    if pool is not None:
+        matched = [p for p in pool_updates if p in pool]
+        missing = [p for p in pool_updates if p not in pool]
+        for p in matched:
+            pool[p]["img_b64"] = pool_updates[p]
+        with open(args.into_pool, "wb") as f:
+            pickle.dump(pool, f)
+        msg = f"pool: updated {len(matched)} entries in {args.into_pool}"
+        if missing:
+            msg += f" ({len(missing)} pids not in pool, skipped: {missing[:5]}...)"
+        print(msg)
+        print("rebuild the APK to see them transparent in-game.")
+    elif args.dechroma:
+        print("transparent PNGs written; next: promote_all_sprites.py "
+              "(or re-run with --into-pool to write straight into the pool)")
     else:
         print("next: chroma_key.py on this folder, then promote_all_sprites.py")
 
@@ -302,6 +337,10 @@ def main():
     sl.add_argument("--no-fit", action="store_true",
                     help="[--dechroma] skip trimming the cell margin + rescaling "
                          "to sprite_size (leave the keyed cell at its sliced size)")
+    sl.add_argument("--into-pool", metavar="POOL.pkl",
+                    help="also write each keyed sprite straight into this canonical "
+                         "pool .pkl (updates img_b64 for matching pids); requires "
+                         "--dechroma. Lets you fold sheets in incrementally.")
     sl.set_defaults(func=cmd_slice)
 
     args = ap.parse_args()
