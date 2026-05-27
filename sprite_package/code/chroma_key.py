@@ -71,7 +71,20 @@ def detect_key_color(rgb):
     return tuple(int(c) for c in np.median(ring, axis=0))
 
 
-def chroma_key(im, key, inner, outer, despill):
+def _dilate(mask, iterations):
+    """Binary dilation by `iterations` px (4-connectivity), numpy-only."""
+    m = mask
+    for _ in range(iterations):
+        d = m.copy()
+        d[1:, :] |= m[:-1, :]
+        d[:-1, :] |= m[1:, :]
+        d[:, 1:] |= m[:, :-1]
+        d[:, :-1] |= m[:, 1:]
+        m = d
+    return m
+
+
+def chroma_key(im, key, inner, outer, despill, despill_band=3):
     """Return a new RGBA image with the key colour removed."""
     arr = np.asarray(im.convert("RGBA"), dtype=np.float32)
     rgb = arr[..., :3]
@@ -80,14 +93,22 @@ def chroma_key(im, key, inner, outer, despill):
     dist = np.sqrt(np.sum((rgb - np.array(key, dtype=np.float32)) ** 2, axis=-1))
     # 0.0 = looks like background (transparent), 1.0 = clearly sprite (keep)
     keep = np.clip((dist - inner) / max(outer - inner, 1e-6), 0.0, 1.0)
+    alpha = orig_a * keep
 
-    if despill:
+    if despill and despill_band > 0:
+        # Despill the EDGE BAND: kept pixels within despill_band px of a
+        # transparent one. That ring is where the key colour bled into
+        # anti-aliased edges (the green halo) -- especially after a generative
+        # model resamples the sheet. Interiors are untouched, so a genuinely
+        # green sprite (goblin skin, slime) keeps its colour.
+        transparent = alpha < 32
+        band = _dilate(transparent, despill_band) & (~transparent)
         cap = np.maximum(rgb[..., 0], rgb[..., 2])          # max(R, B)
         spill = np.maximum(rgb[..., 1] - cap, 0.0)          # excess green
-        rgb[..., 1] -= spill * (1.0 - keep)                 # only on edge pixels
+        rgb[..., 1] = np.where(band, rgb[..., 1] - spill, rgb[..., 1])
 
     arr[..., :3] = rgb
-    arr[..., 3] = orig_a * keep
+    arr[..., 3] = alpha
     return Image.fromarray(arr.round().clip(0, 255).astype(np.uint8), "RGBA")
 
 
@@ -123,6 +144,9 @@ def main():
                     help="Distance at/above which a pixel is fully kept (default 130)")
     ap.add_argument("--no-despill", action="store_true",
                     help="Skip green-fringe removal on edges")
+    ap.add_argument("--despill-band", type=int, default=3,
+                    help="Width in px of the edge ring to despill (default 3); "
+                         "raise it if a thick green halo survives a downscale")
     ap.add_argument("--dry-run", action="store_true",
                     help="Report what would be done; write nothing")
     ap.add_argument("-v", "--verbose", action="store_true")
@@ -163,7 +187,8 @@ def main():
 
             dst.parent.mkdir(parents=True, exist_ok=True)
             chroma_key(im, key, args.inner, args.outer,
-                       despill=not args.no_despill).save(dst)
+                       despill=not args.no_despill,
+                       despill_band=args.despill_band).save(dst)
             n_ok += 1
         except Exception as e:
             print(f"  WARN {src}: {e}", file=sys.stderr)

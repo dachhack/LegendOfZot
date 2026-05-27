@@ -146,15 +146,19 @@ def cmd_pack(args):
     ss, margin = args.sprite_size, args.margin
     cell = ss + 2 * margin
     rows, cols = args.rows, args.cols
-    per_sheet = rows * cols
+    reserve = max(0, args.reserve_corner)
+    per_sheet = rows * cols - reserve     # trailing cells left empty for a logo
+    if per_sheet < 1:
+        print("pack: --reserve-corner leaves no room for sprites", file=sys.stderr)
+        sys.exit(1)
     bg = parse_hex(args.bg)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     manifest = {"sprite_size": ss, "margin": margin, "cell": cell,
-                "rows": rows, "cols": cols, "bg": args.bg.lstrip("#"),
-                "sheets": []}
+                "rows": rows, "cols": cols, "reserve_corner": reserve,
+                "bg": args.bg.lstrip("#"), "sheets": []}
 
     n_sheets = (len(sprites) + per_sheet - 1) // per_sheet
     for s in range(n_sheets):
@@ -194,6 +198,7 @@ def cmd_slice(args):
     with open(args.manifest) as f:
         manifest = json.load(f)
     rows, cols = manifest["rows"], manifest["cols"]
+    ss, margin, cell = manifest["sprite_size"], manifest["margin"], manifest["cell"]
     in_dir = Path(args.in_dir)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -204,6 +209,8 @@ def cmd_slice(args):
         forced_key = args.key       # tuple, or None -> auto-detect per cell
 
     inset = args.trim               # fraction of a cell to crop off each side
+    fit = args.dechroma and not args.no_fit
+    margin_frac = margin / cell     # known padding to trim back off after keying
     n = 0
     for sh in manifest["sheets"]:
         src = in_dir / sh["file"]
@@ -224,7 +231,19 @@ def cmd_slice(args):
             if ck:                  # one-pass: key the green margin away too
                 key = forced_key or ck.detect_key_color(ck.np.asarray(cell_img))
                 cell_img = ck.chroma_key(cell_img, key, args.inner, args.outer,
-                                         despill=not args.no_despill)
+                                         despill=not args.no_despill,
+                                         despill_band=args.despill_band)
+            if fit:
+                # Recover the original framing: the sprite sat in the middle of
+                # its cell with a known margin around it. Trim that margin and
+                # rescale to sprite_size -- a FIXED fraction, so relative sizes
+                # (a ring vs a greatsword) are preserved. (autocropping to the
+                # alpha bbox would wrongly blow every sprite up to fill the frame.)
+                w, h = cell_img.size
+                cell_img = cell_img.crop((round(w * margin_frac), round(h * margin_frac),
+                                          round(w * (1 - margin_frac)),
+                                          round(h * (1 - margin_frac)))
+                                         ).resize((ss, ss), Image.NEAREST)
             cell_img.save(out_dir / f"{pid}.png")
             n += 1
         print(f"  {sh['file']}  {W}x{H}  ->  {len(sh['cells'])} cells")
@@ -251,6 +270,10 @@ def main():
     pk.add_argument("--margin", type=int, default=16, help="bg padding around each sprite")
     pk.add_argument("--bg", default="00FF00", help="cell background hex (default green)")
     pk.add_argument("--labeled", action="store_true", help="also emit *_ref.png with pids")
+    pk.add_argument("--reserve-corner", type=int, default=0,
+                    help="leave the last N grid cells (bottom-right) empty -- a "
+                         "landing zone for a generative model's watermark/logo, "
+                         "which is otherwise stamped over the corner sprite")
     pk.add_argument("--recursive", action="store_true")
     pk.add_argument("--out-dir", required=True)
     pk.set_defaults(func=cmd_pack)
@@ -273,6 +296,12 @@ def main():
                     help="[--dechroma] distance at/above which a pixel is fully kept")
     sl.add_argument("--no-despill", action="store_true",
                     help="[--dechroma] skip green-fringe removal on edges")
+    sl.add_argument("--despill-band", type=int, default=3,
+                    help="[--dechroma] width in px of the edge ring to despill "
+                         "(default 3); raise it if a thick green halo survives")
+    sl.add_argument("--no-fit", action="store_true",
+                    help="[--dechroma] skip trimming the cell margin + rescaling "
+                         "to sprite_size (leave the keyed cell at its sliced size)")
     sl.set_defaults(func=cmd_slice)
 
     args = ap.parse_args()
