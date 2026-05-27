@@ -45,6 +45,11 @@ Usage:
     python3 sprite_package/code/gemini_montage.py slice \
         --manifest /tmp/montage/manifest.json --in-dir returned/ --out-dir cut/
     # then: chroma_key.py cut/  ->  promote_all_sprites.py
+
+    # ...or do slice + chroma-key in one pass (output is ready to promote):
+    python3 sprite_package/code/gemini_montage.py slice \
+        --manifest /tmp/montage/manifest.json --in-dir returned/ \
+        --out-dir cut/ --dechroma
 """
 
 import argparse
@@ -70,6 +75,18 @@ def parse_hex(s):
     if len(s) != 6:
         raise argparse.ArgumentTypeError(f"colour must be 6 hex digits, got {s!r}")
     return tuple(int(s[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def _load_chroma():
+    """Import chroma_key.py (same dir) so `slice --dechroma` reuses its keying
+    algorithm instead of duplicating it. Lazy -- only called with --dechroma,
+    so plain pack/slice keep working without numpy installed."""
+    import importlib.util
+    path = Path(__file__).with_name("chroma_key.py")
+    spec = importlib.util.spec_from_file_location("chroma_key", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 # --------------------------------------------------------------------------
@@ -181,7 +198,12 @@ def cmd_slice(args):
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    inset = args.trim          # fraction of a cell to crop off each side
+    ck = forced_key = None
+    if args.dechroma:
+        ck = _load_chroma()
+        forced_key = args.key       # tuple, or None -> auto-detect per cell
+
+    inset = args.trim               # fraction of a cell to crop off each side
     n = 0
     for sh in manifest["sheets"]:
         src = in_dir / sh["file"]
@@ -195,13 +217,22 @@ def cmd_slice(args):
         for c in sh["cells"]:
             r, col, pid = c["row"], c["col"], c["pid"]
             left, top = col * cw, r * ch
-            box = (left + inset * cw, top + inset * ch,
-                   left + (1 - inset) * cw, top + (1 - inset) * ch)
-            img.crop(tuple(round(v) for v in box)).save(out_dir / f"{pid}.png")
+            box = tuple(round(v) for v in (
+                left + inset * cw, top + inset * ch,
+                left + (1 - inset) * cw, top + (1 - inset) * ch))
+            cell_img = img.crop(box)
+            if ck:                  # one-pass: key the green margin away too
+                key = forced_key or ck.detect_key_color(ck.np.asarray(cell_img))
+                cell_img = ck.chroma_key(cell_img, key, args.inner, args.outer,
+                                         despill=not args.no_despill)
+            cell_img.save(out_dir / f"{pid}.png")
             n += 1
         print(f"  {sh['file']}  {W}x{H}  ->  {len(sh['cells'])} cells")
     print(f"\nsliced {n} sprite(s) -> {out_dir}")
-    print("next: chroma_key.py on this folder, then promote_all_sprites.py")
+    if args.dechroma:
+        print("transparent PNGs written; next: promote_all_sprites.py")
+    else:
+        print("next: chroma_key.py on this folder, then promote_all_sprites.py")
 
 
 def main():
@@ -231,6 +262,17 @@ def main():
     sl.add_argument("--trim", type=float, default=0.0,
                     help="fraction of each cell to crop off all sides (0..0.4); "
                          "leave 0 -- chroma_key removes the green margin anyway")
+    sl.add_argument("--dechroma", action="store_true",
+                    help="one-pass: also chroma-key each cell to transparency "
+                         "(reuses chroma_key.py); output is ready to promote")
+    sl.add_argument("--key", type=parse_hex, default=None,
+                    help="[--dechroma] force key colour hex; default auto-detect per cell")
+    sl.add_argument("--inner", type=float, default=60.0,
+                    help="[--dechroma] distance at/below which a pixel is fully transparent")
+    sl.add_argument("--outer", type=float, default=130.0,
+                    help="[--dechroma] distance at/above which a pixel is fully kept")
+    sl.add_argument("--no-despill", action="store_true",
+                    help="[--dechroma] skip green-fringe removal on edges")
     sl.set_defaults(func=cmd_slice)
 
     args = ap.parse_args()
