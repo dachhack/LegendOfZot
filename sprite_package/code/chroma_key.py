@@ -98,14 +98,27 @@ def chroma_key(im, key, inner, outer, despill, despill_band=3):
     if despill and despill_band > 0:
         # Despill the EDGE BAND: kept pixels within despill_band px of a
         # transparent one. That ring is where the key colour bled into
-        # anti-aliased edges (the green halo) -- especially after a generative
-        # model resamples the sheet. Interiors are untouched, so a genuinely
-        # green sprite (goblin skin, slime) keeps its colour.
+        # anti-aliased edges -- especially after a generative model resamples
+        # the sheet. Interiors are untouched, so a genuinely key-coloured
+        # sprite (e.g. a green slime under a green key) keeps its colour.
+        #
+        # Generalised across any key colour: a channel is a "dominant" channel
+        # of the key if it's above the key's mean, "weak" if below. Spill is
+        # the excess of each dominant channel over the highest weak channel.
+        # For a green key (0,255,0) this is the classic G -> max(R,B); for
+        # magenta (255,0,255) it caps R and B at G; etc.
         transparent = alpha < 32
         band = _dilate(transparent, despill_band) & (~transparent)
-        cap = np.maximum(rgb[..., 0], rgb[..., 2])          # max(R, B)
-        spill = np.maximum(rgb[..., 1] - cap, 0.0)          # excess green
-        rgb[..., 1] = np.where(band, rgb[..., 1] - spill, rgb[..., 1])
+        key_arr = np.asarray(key, dtype=np.float32)
+        key_mean = float(key_arr.mean())
+        dom = key_arr > key_mean
+        weak = key_arr < key_mean
+        if weak.any() and dom.any():
+            weak_max = rgb[..., weak].max(axis=-1)
+            for ch in range(3):
+                if dom[ch]:
+                    excess = np.maximum(rgb[..., ch] - weak_max, 0.0)
+                    rgb[..., ch] = np.where(band, rgb[..., ch] - excess, rgb[..., ch])
 
     arr[..., :3] = rgb
     arr[..., 3] = alpha
