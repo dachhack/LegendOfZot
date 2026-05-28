@@ -1,30 +1,34 @@
 """
-Scrub residual Gemini bg-green from a keyed canonical pool, using the
-pre-greening pool as ground truth.
+Restore a Gemini-round-tripped canonical pool toward the pre-greening
+ground truth, pixel by pixel.
 
-After the Gemini round-trip + chroma_key, two kinds of green survive:
+The orig pool is the source of truth: it tells us, per sprite, both
+WHAT COLOUR each pixel should be and WHETHER THAT PIXEL IS PART OF THE
+SPRITE AT ALL. The current pool gives us the clean RGBA alpha channel
+(produced by chroma_key after the round-trip). We want orig's colour and
+current's alpha, fused.
 
-1. Enclosed interiors that the key flood-fill couldn't reach (the hole
-   in an archway, the panel of a door, the inside of a ring). The pixels
-   are bright green, but they sit inside a closed sprite silhouette.
-2. A thin edge fringe where the kept anti-aliased edge still carries
-   spill from the painted-on green background.
+Per sprite:
 
-A pure-image despill can't tell case 1 from a genuinely green sprite
-(slime, healing potion, green gem). The orig pool can: any pixel that
-is green-excess NOW but was NOT green-excess BEFORE the greening is, by
-construction, contamination -- you can't gain real green art during a
-chroma-key.
+  1. Flood-fill the orig RGB image from its four corners with colour
+     tolerance to identify the background (the dark stone tone the orig
+     was rendered against). Pixels not reached are the orig sprite.
+     A 1px dilation forgives sub-pixel Gemini re-scaling.
+  2. For each pixel:
+       a. orig was SPRITE and current is OPAQUE  -> restore orig RGB,
+          keep current alpha. Fixes "shape preserved, colour shifted"
+          (W141: cyan ring desaturated to green; RM0017: arch frame
+          tinted greener).
+       b. orig was BACKGROUND and current is OPAQUE -> cut alpha to 0.
+          Fixes "shape extended into bg" (RM0017's filled-in hole,
+          AC0004's Gemini-added leaves).
+  3. Generalised key-aware despill on the resulting opaque edge band so
+     any leftover anti-alias fringe gets neutralised.
 
-For each (current, orig) sprite pair this:
-  - cuts pixels where current is green-excess but orig was not, by
-    setting their alpha to 0;
-  - despills the resulting opaque edge band -- general key-colour
-    formula (cap each dominant key channel at the highest weak channel)
-    so the same code works if we ever key against another colour.
-
-Pixels where orig was already green-excess are NEVER touched, so a
-genuine green sprite (orig green ~ current green) survives untouched.
+Genuinely green sprites (slime, healing potion liquid, green gems) are
+SPRITE in orig, so they get their orig colour restored -- never cut.
+Brand-new Gemini hallucinations (AC0004's leaves) are BG in orig, so
+they get cut cleanly.
 
 Usage:
     python3 sprite_package/code/scrub_green_via_orig.py \\
@@ -46,19 +50,16 @@ import sys
 try:
     import numpy as np
     from PIL import Image, ImageDraw, ImageFont
+    from scipy.ndimage import binary_dilation
 except ImportError:
-    print("ERROR: Pillow and numpy required.  pip install Pillow numpy",
-          file=sys.stderr)
+    print("ERROR: Pillow, numpy and scipy required.  "
+          "pip install Pillow numpy scipy", file=sys.stderr)
     sys.exit(1)
 
 
 GREEN_KEY = (0, 255, 0)
-# "Contamination" = how much MORE green-excess a pixel has now than it did in
-# the orig pool. Threshold compares the SHIFT, not the absolute level, so a
-# sprite that was always teal/cyan in orig (where G is high but not channel-
-# dominant, so absolute green-excess is near 0) survives untouched -- we only
-# cut where Gemini pushed the pixel further into pure-green than it ever was.
-GEX_SHIFT = 30
+BG_TOLERANCE = 40    # px-color must be within this Linf distance to count as bg
+SPRITE_DILATE = 1    # forgive sub-pixel Gemini re-scaling by widening sprite mask
 
 
 def _dilate(mask, iterations):
@@ -73,15 +74,43 @@ def _dilate(mask, iterations):
     return m
 
 
-def _green_excess(rgb):
-    return rgb[..., 1].astype(np.int16) - np.maximum(rgb[..., 0], rgb[..., 2]).astype(np.int16)
+def _orig_bg_mask(orig_rgb_arr, tol=BG_TOLERANCE):
+    """Flood-fill bg from the four corners through pixels close to the median
+    border colour. Returns a bool mask (True where bg)."""
+    H, W = orig_rgb_arr.shape[:2]
+    arr_i = orig_rgb_arr.astype(np.int16)
+    # Median of a thin border ring -- robust to a noisy corner pixel.
+    bw = max(1, min(3, H // 16, W // 16))
+    ring = np.concatenate([
+        arr_i[:bw, :, :].reshape(-1, 3),
+        arr_i[-bw:, :, :].reshape(-1, 3),
+        arr_i[:, :bw, :].reshape(-1, 3),
+        arr_i[:, -bw:, :].reshape(-1, 3),
+    ])
+    bg_color = np.median(ring, axis=0)
+    close = np.max(np.abs(arr_i - bg_color), axis=-1) <= tol
+    # Seed from the four corners IF they're close to bg.
+    seed = np.zeros_like(close)
+    for cy, cx in [(0, 0), (0, W-1), (H-1, 0), (H-1, W-1)]:
+        if close[cy, cx]:
+            seed[cy, cx] = True
+    if not seed.any():
+        # All corners look like sprite -- treat nothing as bg.
+        return np.zeros_like(close)
+    # Flood-fill through 'close' using binary dilation with mask.
+    prev = -1
+    cur = seed
+    while cur.sum() != prev:
+        prev = cur.sum()
+        cur = binary_dilation(cur, iterations=1, mask=close)
+    return cur
 
 
-def scrub(cur_im, orig_im, key=GREEN_KEY, despill_band=3):
-    """Return a new RGBA image with contamination cut and edges despilled,
-    or None if no change is needed."""
+def scrub(cur_im, orig_im, key=GREEN_KEY, despill_band=3,
+          sprite_dilate=SPRITE_DILATE):
+    """Return (new_rgba_image, n_restored, n_cut), or (None, 0, 0) if no change."""
     cur = np.asarray(cur_im.convert("RGBA"), dtype=np.float32)
-    rgb = cur[..., :3]
+    rgb = cur[..., :3].copy()
     alpha = cur[..., 3].copy()
 
     orig_arr = np.asarray(orig_im.convert("RGB"), dtype=np.float32)
@@ -91,25 +120,29 @@ def scrub(cur_im, orig_im, key=GREEN_KEY, despill_band=3):
             dtype=np.float32,
         )
 
-    cur_gex = _green_excess(rgb)
-    orig_gex = _green_excess(orig_arr)
+    bg = _orig_bg_mask(orig_arr)
+    sprite = ~bg
+    if sprite_dilate > 0 and sprite.any():
+        sprite = binary_dilation(sprite, iterations=sprite_dilate)
+        bg = ~sprite
 
-    # Contamination = pixel got noticeably greener than orig. Catches both
-    # interior-fill (orig gex ~ 0, cur gex ~ 100, shift = 100) and edge fringe
-    # (orig gex ~ 0, cur gex ~ 40, shift = 40), and leaves intrinsic green art
-    # alone (orig and cur both gex ~ 80, shift ~ 0).
     opaque = alpha > 32
-    contam = opaque & ((cur_gex - orig_gex) > GEX_SHIFT)
 
-    if not contam.any():
-        # Even with no enclosed contamination, the existing edge ring may
-        # still hold soft fringe -- let the despill pass run anyway.
-        pass
+    # (a) Where orig was sprite and current is opaque: restore orig RGB
+    #     (Gemini may have shifted the colour; orig is ground truth). We
+    #     keep current's alpha so anti-aliased edges remain soft.
+    restore = sprite & opaque
+    if restore.any():
+        rgb[restore] = orig_arr[restore]
 
-    # Cut: drop alpha to 0 wherever we flagged contamination.
-    alpha[contam] = 0
+    # (b) Where orig was bg and current is opaque: this is sprite-extension
+    #     contamination -- bg painted-in regions (arch holes, ring centres,
+    #     Gemini-hallucinated leaves). Cut alpha to 0.
+    cut = bg & opaque
+    if cut.any():
+        alpha[cut] = 0.0
 
-    # Generalised key-colour despill on the opaque edge band.
+    # (c) Generalised despill on the resulting opaque edge band.
     if despill_band > 0:
         transp = alpha < 32
         if transp.any() and (~transp).any():
@@ -127,11 +160,10 @@ def scrub(cur_im, orig_im, key=GREEN_KEY, despill_band=3):
                             band, rgb[..., ch] - excess, rgb[..., ch]
                         )
 
-    # Did anything actually change?
     new_arr = np.dstack([rgb, alpha]).round().clip(0, 255).astype(np.uint8)
     if np.array_equal(new_arr, np.asarray(cur_im.convert("RGBA"))):
-        return None, int(contam.sum())
-    return Image.fromarray(new_arr, "RGBA"), int(contam.sum())
+        return None, 0, 0
+    return Image.fromarray(new_arr, "RGBA"), int(restore.sum()), int(cut.sum())
 
 
 def encode_webp_b64(img):
@@ -148,7 +180,7 @@ def _make_stone(size):
 
 
 def render_sample(rows, out_path):
-    """rows: list of (pid, cat, orig_im, before_im, after_im, n_cut)."""
+    """rows: list of (pid, cat, orig_im, before_im, after_im, n_restored, n_cut)."""
     TILE = 192
     PAD = 6
     LABEL = 22
@@ -174,10 +206,11 @@ def render_sample(rows, out_path):
            fill=(255, 220, 100), font=f)
 
     stone = _make_stone(TILE)
-    for i, (pid, cat, orig_im, before_im, after_im, n_cut) in enumerate(rows):
+    for i, (pid, cat, orig_im, before_im, after_im, n_restored, n_cut) in enumerate(rows):
         y = 25 + i * (TILE + PAD * 2 + LABEL)
         x0 = PAD + 200
-        d.text((PAD, y + TILE // 2 - 8), f"{pid}\n{cat}\ncut: {n_cut}px",
+        d.text((PAD, y + TILE // 2 - 16),
+               f"{pid}\n{cat}\nrestore:{n_restored}\ncut: {n_cut}",
                fill=(220, 220, 180), font=fs)
 
         def sz(im, mode="RGBA"):
@@ -226,7 +259,6 @@ def main():
         orig_pool = pickle.load(f)
 
     if args.sample > 0:
-        # Score every pid by contamination count, then render the worst N.
         candidates = []
         for pid, ent in pool.items():
             if pid not in orig_pool:
@@ -235,13 +267,14 @@ def main():
             if cim.mode not in ("RGBA", "LA"):
                 continue
             oim = Image.open(io.BytesIO(base64.b64decode(orig_pool[pid]["img_b64"])))
-            after, n_cut = scrub(cim, oim, despill_band=args.band)
-            if after is None or n_cut < 10:
+            after, n_restored, n_cut = scrub(cim, oim, despill_band=args.band)
+            if after is None or (n_cut + n_restored) < 10:
                 continue
-            candidates.append((pid, ent["cat"], cim.copy(), after, oim.copy(), n_cut))
-        candidates.sort(key=lambda r: -r[5])
-        rows = [(pid, cat, oim, before, after, n)
-                for pid, cat, before, after, oim, n in candidates[: args.sample]]
+            candidates.append((pid, ent["cat"], cim.copy(), after, oim.copy(),
+                               n_restored, n_cut))
+        candidates.sort(key=lambda r: -(r[5] + r[6]))
+        rows = [(pid, cat, oim, before, after, nr, nc)
+                for pid, cat, before, after, oim, nr, nc in candidates[: args.sample]]
         if not rows:
             print("nothing flagged.")
             return
@@ -250,7 +283,7 @@ def main():
               f"({len(rows)} sprites, worst-first)")
         return
 
-    cut_total = 0
+    cut_total = restored_total = 0
     changed = unchanged = no_alpha = missing = 0
     for pid, ent in pool.items():
         if pid not in orig_pool:
@@ -261,8 +294,9 @@ def main():
             no_alpha += 1
             continue
         oim = Image.open(io.BytesIO(base64.b64decode(orig_pool[pid]["img_b64"])))
-        out, n_cut = scrub(cim, oim, despill_band=args.band)
+        out, n_restored, n_cut = scrub(cim, oim, despill_band=args.band)
         cut_total += n_cut
+        restored_total += n_restored
         if out is None:
             unchanged += 1
             continue
@@ -271,8 +305,8 @@ def main():
         changed += 1
 
     print(f"scrubbed {changed} sprites  "
-          f"({cut_total} green pixels cut total, unchanged {unchanged}, "
-          f"no-alpha {no_alpha}, missing-orig {missing})")
+          f"(restored {restored_total} px, cut {cut_total} px, "
+          f"unchanged {unchanged}, no-alpha {no_alpha}, missing-orig {missing})")
     if args.dry_run:
         print("DRY RUN -- pool not written.")
         return
