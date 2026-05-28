@@ -66,7 +66,9 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
   #bar button,#bar select{background:#2c313a;color:#ddd;border:1px solid #444;
        border-radius:5px;padding:6px 9px;font-size:13px}
   #bar button.on{background:#3a5;border-color:#4c7}
-  #count{font-weight:bold;margin-left:auto}
+  #legend{font-size:12px;opacity:.85}
+  #legend b.f{color:#ff5c5c} #legend b.m{color:#f3c54a} #legend b.s{color:#7cc77c}
+  #count{font-weight:bold;margin-left:auto;font-size:13px}
   #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));
         gap:4px;padding:6px}
   .cell{position:relative;border-radius:5px;overflow:hidden;cursor:pointer;
@@ -74,10 +76,12 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
   .cell img{width:100%;display:block;image-rendering:pixelated;aspect-ratio:1}
   .cell .lbl{position:absolute;left:0;bottom:0;right:0;font-size:9px;
         background:rgba(0,0,0,.55);padding:1px 2px;white-space:nowrap;overflow:hidden}
-  .cell.flag{outline-color:#ff3b3b}
-  .cell.flag::after{content:"\\2715";position:absolute;top:2px;right:3px;
+  .cell.fix{outline-color:#ff3b3b}
+  .cell.fix::after{content:"\\2715";position:absolute;top:2px;right:3px;
         color:#ff3b3b;font-weight:bold;text-shadow:0 0 3px #000}
-  /* backdrops to reveal green */
+  .cell.manual{outline-color:#f3c54a;outline-width:3px}
+  .cell.manual::after{content:"M";position:absolute;top:2px;right:3px;
+        color:#f3c54a;font-weight:bold;text-shadow:0 0 3px #000;font-size:13px}
   body.bg-check .cell{background:
      conic-gradient(#cfcfcf 90deg,#888 0 180deg,#cfcfcf 0 270deg,#888 0) 0 0/16px 16px}
   body.bg-dark .cell{background:#181818}
@@ -86,13 +90,19 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
 </style></head>
 <body class="bg-check">
 <div id="bar">
-  <strong>Tap sprites with background-green to remove</strong>
+  <span id="legend">Tap to cycle: <b class="f">FIX</b> &rarr; <b class="s">skip</b> &rarr; <b class="m">MANUAL</b></span>
   <button onclick="setbg('check')">Checker</button>
   <button onclick="setbg('dark')">Dark</button>
   <button onclick="setbg('white')">White</button>
   <button onclick="setbg('mag')">Magenta</button>
   <select id="cat" onchange="render()"></select>
-  <button id="onlyflag" onclick="toggleOnly()">Show flagged only</button>
+  <select id="filt" onchange="render()">
+    <option value="all">show: all</option>
+    <option value="nonskip">show: fix + manual only</option>
+    <option value="fix">show: fix only</option>
+    <option value="manual">show: manual only</option>
+    <option value="skip">show: skip only</option>
+  </select>
   <span id="count"></span>
   <button onclick="exportPids()" style="background:#3a5;border-color:#4c7">Export</button>
 </div>
@@ -100,33 +110,46 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
 <textarea id="out" style="width:100%;height:80px;display:none;background:#111;color:#6f6"></textarea>
 <script>
 const DATA=__DATA__;
-const flagged=new Set(DATA.filter(d=>d.pre).map(d=>d.pid));
-let onlyFlag=false;
+// state per pid: 'fix' | 'skip' | 'manual'.  Pre-flagged default to FIX,
+// others to SKIP (so the user only marks exceptions either way).
+const state={};
+for(const d of DATA) state[d.pid]=d.pre?'fix':'skip';
+const NEXT={fix:'skip',skip:'manual',manual:'fix'};
 function setbg(b){document.body.className='bg-'+b;}
-function toggleOnly(){onlyFlag=!onlyFlag;document.getElementById('onlyflag').classList.toggle('on',onlyFlag);render();}
 function cats(){const s=new Set(DATA.map(d=>d.cat));return ['(all)',...[...s].sort()];}
+function classFor(s){return s==='skip'?'':s;}
 function render(){
   const cat=document.getElementById('cat').value||'(all)';
+  const filt=document.getElementById('filt').value;
   const g=document.getElementById('grid');g.innerHTML='';
-  let shown=0;
   for(const d of DATA){
     if(cat!=='(all)'&&d.cat!==cat)continue;
-    if(onlyFlag&&!flagged.has(d.pid))continue;
-    shown++;
-    const c=document.createElement('div');c.className='cell'+(flagged.has(d.pid)?' flag':'');
+    const s=state[d.pid];
+    if(filt==='nonskip'&&s==='skip')continue;
+    if(filt==='fix'&&s!=='fix')continue;
+    if(filt==='manual'&&s!=='manual')continue;
+    if(filt==='skip'&&s!=='skip')continue;
+    const c=document.createElement('div');
+    c.className=('cell '+classFor(s)).trim();
     c.innerHTML='<img src="data:image/webp;base64,'+d.b64+'"><span class="lbl">'+d.pid+'</span>';
-    c.onclick=()=>{if(flagged.has(d.pid))flagged.delete(d.pid);else flagged.add(d.pid);
-      c.classList.toggle('flag');upd();};
+    c.onclick=()=>{state[d.pid]=NEXT[state[d.pid]];
+      c.className=('cell '+classFor(state[d.pid])).trim();upd();};
     g.appendChild(c);
   }
-  upd(shown);
+  upd();
 }
-function upd(shown){document.getElementById('count').textContent=
-   flagged.size+' flagged'+(shown!=null?(' / '+shown+' shown'):'');}
+function counts(){const c={fix:0,skip:0,manual:0};for(const p in state)c[state[p]]++;return c;}
+function upd(){const c=counts();
+  document.getElementById('count').innerHTML=
+    '<span style="color:#ff5c5c">'+c.fix+' fix</span> &middot; '+
+    '<span style="color:#f3c54a">'+c.manual+' manual</span> &middot; '+
+    '<span style="color:#7cc77c">'+c.skip+' skip</span>';}
 function exportPids(){
-  const arr=[...flagged].sort();
+  const fix=[],manual=[];
+  for(const d of DATA){if(state[d.pid]==='fix')fix.push(d.pid);else if(state[d.pid]==='manual')manual.push(d.pid);}
+  const payload={fix:fix.sort(),manual:manual.sort()};
   const t=document.getElementById('out');t.style.display='block';
-  t.value=JSON.stringify(arr);
+  t.value=JSON.stringify(payload,null,2);
   const blob=new Blob([t.value],{type:'application/json'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);
   a.download='greenfix_pids.json';a.click();
