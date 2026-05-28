@@ -72,16 +72,22 @@ TEMPLATE = """<!doctype html><html><head><meta charset="utf-8">
   #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));
         gap:4px;padding:6px}
   .cell{position:relative;border-radius:5px;overflow:hidden;cursor:pointer;
-        outline:2px solid transparent}
+        outline:3px solid transparent}
   .cell img{width:100%;display:block;image-rendering:pixelated;aspect-ratio:1}
   .cell .lbl{position:absolute;left:0;bottom:0;right:0;font-size:9px;
         background:rgba(0,0,0,.55);padding:1px 2px;white-space:nowrap;overflow:hidden}
-  .cell.fix{outline-color:#ff3b3b}
-  .cell.fix::after{content:"\\2715";position:absolute;top:2px;right:3px;
-        color:#ff3b3b;font-weight:bold;text-shadow:0 0 3px #000}
-  .cell.manual{outline-color:#f3c54a;outline-width:3px}
-  .cell.manual::after{content:"M";position:absolute;top:2px;right:3px;
-        color:#f3c54a;font-weight:bold;text-shadow:0 0 3px #000;font-size:13px}
+  /* state visual: thick coloured outline + a solid label bar across the top.
+     Designed to be read at a glance on a phone where a thin ring + tiny glyph
+     wouldn't. */
+  .cell.fix{outline:4px solid #ff3b3b}
+  .cell.fix::before{content:"FIX";position:absolute;top:0;left:0;right:0;
+        background:#ff3b3b;color:#fff;font-weight:900;text-align:center;
+        padding:3px 0;font-size:11px;letter-spacing:2px;
+        text-shadow:0 1px 1px rgba(0,0,0,.4)}
+  .cell.manual{outline:4px solid #f3c54a}
+  .cell.manual::before{content:"MANUAL";position:absolute;top:0;left:0;right:0;
+        background:#f3c54a;color:#1a1a1a;font-weight:900;text-align:center;
+        padding:3px 0;font-size:11px;letter-spacing:2px}
   body.bg-check .cell{background:
      conic-gradient(#cfcfcf 90deg,#888 0 180deg,#cfcfcf 0 270deg,#888 0) 0 0/16px 16px}
   body.bg-dark .cell{background:#181818}
