@@ -43,6 +43,7 @@ except ImportError:
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import chroma_key as ck
+import scrub_green_via_orig as sgo
 
 
 def _auto_key(orig_im):
@@ -58,16 +59,114 @@ def _auto_key(orig_im):
     return tuple(int(c) for c in np.median(ring, axis=0))
 
 
-def restore(orig_im, key=None, inner=20, outer=80, despill_band=3):
+def _flood_alpha(orig_im, despill_band=2):
+    """Use the orig flood-fill bg mask to produce an RGBA image. Robust when
+    the bg colour overlaps with dark sprite tones (chroma_key would over-key
+    in that case). The flood reaches BG only through bg-coloured pixels from
+    the four corners, so isolated dark sprite pixels (eyes, armour) survive.
+
+    Anti-aliased orig edges are within bg tolerance and get swept up as bg
+    by the flood, which leaves the sprite-side edge clean. The result has
+    hard-edged alpha; the edge-band despill then neutralises any green
+    fringe that came along with the kept RGB.
+    """
+    orig_rgb = np.asarray(orig_im.convert("RGB"), dtype=np.float32)
+    bg = sgo._orig_bg_mask(orig_rgb)
+    sprite = ~bg
+    alpha = np.where(sprite, 255.0, 0.0)
+    rgba = np.dstack([orig_rgb, alpha])
+    out = Image.fromarray(rgba.round().clip(0, 255).astype(np.uint8), "RGBA")
+    if despill_band > 0:
+        # Run the generalised despill against the orig's bg colour. Caps any
+        # spill direction the bg leans toward (green/dark/whatever) without
+        # assuming a specific key.
+        bg_color = _auto_key(orig_im)
+        out = ck.chroma_key(
+            out, key=bg_color,
+            inner=999, outer=999,        # no-op the keying; we want despill only
+            despill=True, despill_band=despill_band,
+        )
+        # ^ chroma_key recomputes alpha from RGB distance; with inner=outer=999
+        # every pixel gets alpha=0. Bypass it: feed our hard alpha back through.
+        new_arr = np.asarray(out, dtype=np.float32).copy()
+        new_arr[..., 3] = alpha
+        out = Image.fromarray(new_arr.round().clip(0, 255).astype(np.uint8), "RGBA")
+    return out
+
+
+def _trim_alpha(cur_im, orig_im, despill_band=3, sprite_dilate=1):
+    """Keep current's RGB (Gemini's interpretation -- the bug body, the
+    armour detail, whatever) but TRIM its alpha to orig's silhouette.
+    Use for halo-only cases where the sprite shape is fine but a ring of
+    dark Gemini-bg leaked through the chroma key. The orig flood-fill
+    gives the clean shape; current keeps its colour.
+    """
+    cur = np.asarray(cur_im.convert("RGBA"), dtype=np.float32)
+    rgb = cur[..., :3].copy()
+    alpha = cur[..., 3].copy()
+
+    orig_arr = np.asarray(orig_im.convert("RGB"), dtype=np.float32)
+    if orig_arr.shape[:2] != rgb.shape[:2]:
+        orig_arr = np.asarray(
+            orig_im.convert("RGB").resize(cur_im.size, Image.LANCZOS),
+            dtype=np.float32,
+        )
+
+    bg = sgo._orig_bg_mask(orig_arr)
+    sprite = ~bg
+    if sprite_dilate > 0 and sprite.any():
+        from scipy.ndimage import binary_dilation
+        sprite = binary_dilation(sprite, iterations=sprite_dilate)
+        bg = ~sprite
+
+    # Cut alpha wherever orig says bg. Current's RGB is preserved
+    # everywhere; only the silhouette is tightened.
+    alpha = np.where(bg, 0.0, alpha)
+
+    if despill_band > 0:
+        transp = alpha < 32
+        if transp.any() and (~transp).any():
+            from scrub_green_via_orig import _dilate
+            band = _dilate(transp, despill_band) & (~transp)
+            # Use green key by default for the despill since that's what
+            # leaked through; harmless for any other tint.
+            key = np.asarray(GREEN_KEY := (0, 255, 0), dtype=np.float32)
+            key_mean = float(key.mean())
+            dom = key > key_mean
+            weak = key < key_mean
+            if weak.any() and dom.any():
+                weak_max = rgb[..., weak].max(axis=-1)
+                for ch in range(3):
+                    if dom[ch]:
+                        excess = np.maximum(rgb[..., ch] - weak_max, 0.0)
+                        rgb[..., ch] = np.where(
+                            band, rgb[..., ch] - excess, rgb[..., ch]
+                        )
+
+    new_arr = np.dstack([rgb, alpha]).round().clip(0, 255).astype(np.uint8)
+    return Image.fromarray(new_arr, "RGBA")
+
+
+def restore(orig_im, mode="flood", cur_im=None, key=None,
+            inner=20, outer=80, despill_band=3):
+    """mode='flood'  : drop current entirely, re-key orig via flood-fill mask
+                       (robust on dark bgs); use for real Gemini swaps.
+       mode='trim'   : keep current's RGB, use orig flood mask as alpha
+                       (kills halo without losing Gemini detail); needs cur_im.
+       mode='chroma' : chroma_key the orig with auto-detected (or forced) key
+                       (legacy fallback)."""
+    if mode == "trim":
+        if cur_im is None:
+            raise ValueError("--mode trim needs the current pool image too")
+        return _trim_alpha(cur_im, orig_im, despill_band=despill_band), "trim"
+    if mode == "flood":
+        return _flood_alpha(orig_im, despill_band=max(2, despill_band)), "flood"
     if key is None:
         key = _auto_key(orig_im)
     keyed = ck.chroma_key(
         orig_im.convert("RGBA"),
-        key=key,
-        inner=inner,
-        outer=outer,
-        despill=True,
-        despill_band=despill_band,
+        key=key, inner=inner, outer=outer,
+        despill=True, despill_band=despill_band,
     )
     return keyed, key
 
@@ -90,7 +189,13 @@ def main():
     ap.add_argument("--pids-file",
                     help="text file with one pid per line, or a JSON list")
     ap.add_argument("--key",
-                    help="force a hex key colour instead of auto-detecting")
+                    help="force a hex key colour instead of auto-detecting (only with --mode chroma)")
+    ap.add_argument("--mode", choices=["flood", "trim", "chroma"], default="trim",
+                    help="trim (default): keep current's RGB, use orig flood "
+                         "mask as alpha -- kills halo without losing Gemini "
+                         "detail; flood: drop current and re-key orig from "
+                         "its bg flood-fill mask (real swaps); chroma: "
+                         "chroma_key the orig with auto-detected key (legacy)")
     ap.add_argument("--inner", type=int, default=20)
     ap.add_argument("--outer", type=int, default=80)
     ap.add_argument("--despill-band", type=int, default=3)
@@ -130,11 +235,12 @@ def main():
             missing += 1
             continue
         oim = Image.open(io.BytesIO(base64.b64decode(orig_pool[pid]["img_b64"])))
+        cim = Image.open(io.BytesIO(base64.b64decode(pool[pid]["img_b64"])))
         keyed, key = restore(
-            oim, key=force_key, inner=args.inner, outer=args.outer,
-            despill_band=args.despill_band,
+            oim, mode=args.mode, cur_im=cim, key=force_key, inner=args.inner,
+            outer=args.outer, despill_band=args.despill_band,
         )
-        print(f"  {pid}: key={key}  keyed_size={keyed.size}")
+        print(f"  {pid}: mode={args.mode} key={key}  size={keyed.size}")
         if not args.dry_run:
             pool[pid]["img_b64"] = encode_webp_b64(keyed)
         done += 1
