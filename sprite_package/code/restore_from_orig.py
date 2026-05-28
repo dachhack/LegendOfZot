@@ -147,14 +147,58 @@ def _trim_alpha(cur_im, orig_im, despill_band=3, sprite_dilate=1):
     return Image.fromarray(new_arr, "RGBA")
 
 
+def _dim_to_orig(cur_im, orig_im, threshold=15, full=75):
+    """Where CURRENT is brighter than ORIG (luma delta > threshold), blend
+    current RGB toward orig RGB. Weight ramps 0 at delta=threshold up to 1
+    at delta=full. Alpha is preserved -- the silhouette stays Gemini's,
+    only the colour is pulled back toward the pre-greening original. This
+    catches the systematic "Gemini washed everything a few stops brighter"
+    pattern, while leaving anti-aliased edge anti-alias (small delta) alone.
+    """
+    cur = np.asarray(cur_im.convert("RGBA"), dtype=np.float32)
+    rgb = cur[..., :3].copy()
+    alpha = cur[..., 3]
+
+    orig_arr = np.asarray(orig_im.convert("RGB"), dtype=np.float32)
+    if orig_arr.shape[:2] != rgb.shape[:2]:
+        orig_arr = np.asarray(
+            orig_im.convert("RGB").resize(cur_im.size, Image.LANCZOS),
+            dtype=np.float32,
+        )
+
+    # Rec.709 luma
+    def _luma(arr):
+        return 0.2126 * arr[..., 0] + 0.7152 * arr[..., 1] + 0.0722 * arr[..., 2]
+
+    delta = _luma(rgb) - _luma(orig_arr)
+    opaque = alpha > 32
+    mask = (delta > threshold) & opaque
+    if not mask.any():
+        return cur_im, 0
+    weight = np.clip((delta - threshold) / max(full - threshold, 1), 0.0, 1.0)
+    w = weight[..., None]
+    rgb = np.where(mask[..., None], rgb * (1 - w) + orig_arr * w, rgb)
+
+    new_arr = np.dstack([rgb, alpha]).round().clip(0, 255).astype(np.uint8)
+    return Image.fromarray(new_arr, "RGBA"), int(mask.sum())
+
+
 def restore(orig_im, mode="flood", cur_im=None, key=None,
             inner=20, outer=80, despill_band=3):
-    """mode='flood'  : drop current entirely, re-key orig via flood-fill mask
-                       (robust on dark bgs); use for real Gemini swaps.
+    """mode='dim'    : keep current's alpha + shape, blend RGB toward orig
+                       where current is brighter than orig. Use for the
+                       'Gemini washed it lighter' pattern; needs cur_im.
        mode='trim'   : keep current's RGB, use orig flood mask as alpha
                        (kills halo without losing Gemini detail); needs cur_im.
+       mode='flood'  : drop current entirely, re-key orig via flood-fill mask
+                       (robust on dark bgs); for real Gemini swaps.
        mode='chroma' : chroma_key the orig with auto-detected (or forced) key
                        (legacy fallback)."""
+    if mode == "dim":
+        if cur_im is None:
+            raise ValueError("--mode dim needs the current pool image too")
+        out, n = _dim_to_orig(cur_im, orig_im)
+        return out, f"dim:{n}"
     if mode == "trim":
         if cur_im is None:
             raise ValueError("--mode trim needs the current pool image too")
@@ -190,12 +234,14 @@ def main():
                     help="text file with one pid per line, or a JSON list")
     ap.add_argument("--key",
                     help="force a hex key colour instead of auto-detecting (only with --mode chroma)")
-    ap.add_argument("--mode", choices=["flood", "trim", "chroma"], default="trim",
-                    help="trim (default): keep current's RGB, use orig flood "
-                         "mask as alpha -- kills halo without losing Gemini "
-                         "detail; flood: drop current and re-key orig from "
-                         "its bg flood-fill mask (real swaps); chroma: "
-                         "chroma_key the orig with auto-detected key (legacy)")
+    ap.add_argument("--mode",
+                    choices=["dim", "trim", "flood", "chroma"], default="dim",
+                    help="dim (default): keep current's alpha, blend RGB "
+                         "toward orig where current is brighter than orig; "
+                         "trim: keep current's RGB, use orig flood mask as "
+                         "alpha; flood: drop current and re-key orig from "
+                         "its flood-fill mask (real swaps); chroma: legacy "
+                         "auto-detected chroma_key of orig")
     ap.add_argument("--inner", type=int, default=20)
     ap.add_argument("--outer", type=int, default=80)
     ap.add_argument("--despill-band", type=int, default=3)
