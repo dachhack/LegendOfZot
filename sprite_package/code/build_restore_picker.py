@@ -117,6 +117,8 @@ def main():
                     help="path to write the HTML file")
     ap.add_argument("--tile", type=int, default=96,
                     help="display size per sprite (default 96)")
+    ap.add_argument("--top", type=int, default=0,
+                    help="keep only the top N by swap-score (0 = all)")
     args = ap.parse_args()
 
     with open(args.pool, "rb") as f:
@@ -152,6 +154,8 @@ def main():
             "cur": cur_b64,
         })
     items.sort(key=lambda r: (-r["score"], r["cat"], r["pid"]))
+    if args.top > 0:
+        items = items[: args.top]
     print(f"emitting {len(items)} entries to {args.out}", file=sys.stderr)
 
     cats = sorted({r["cat"] for r in items})
