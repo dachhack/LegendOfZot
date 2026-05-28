@@ -60,6 +60,11 @@ except ImportError:
 GREEN_KEY = (0, 255, 0)
 BG_TOLERANCE = 40    # px-color must be within this Linf distance to count as bg
 SPRITE_DILATE = 1    # forgive sub-pixel Gemini re-scaling by widening sprite mask
+# Cut-rule guard: a pixel only gets alpha=0 when orig flagged it as bg AND
+# the CURRENT pixel is actually green-contaminated. Stops dark sprite content
+# (stone walls, dark monsters) that happens to match the orig's bg tone from
+# being eaten when orig's flood-fill labelled it bg.
+GREEN_EXCESS_CONTAM = 20
 
 
 def _dilate(mask, iterations):
@@ -135,10 +140,17 @@ def scrub(cur_im, orig_im, key=GREEN_KEY, despill_band=3,
     if restore.any():
         rgb[restore] = orig_arr[restore]
 
-    # (b) Where orig was bg and current is opaque: this is sprite-extension
-    #     contamination -- bg painted-in regions (arch holes, ring centres,
-    #     Gemini-hallucinated leaves). Cut alpha to 0.
-    cut = bg & opaque
+    # (b) Where orig was bg and current is opaque AND current is actually
+    #     green-contaminated: this is sprite-extension contamination -- bg
+    #     painted-in regions (arch holes, ring centres, Gemini-hallucinated
+    #     leaves). Cut alpha to 0. The green check is the safety net: a
+    #     dark sprite pixel (stone wall, dark monster body) that happens to
+    #     match the orig's bg colour and got flood-filled as bg is NOT cut,
+    #     because it doesn't carry green contamination in current.
+    cur_g_excess = (rgb[..., 1].astype(np.int32)
+                    - np.maximum(rgb[..., 0], rgb[..., 2]).astype(np.int32))
+    contaminated = cur_g_excess > GREEN_EXCESS_CONTAM
+    cut = bg & opaque & contaminated
     if cut.any():
         alpha[cut] = 0.0
 
