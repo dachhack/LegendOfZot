@@ -350,7 +350,7 @@ class SaveSystem:
         elif cls_name == 'Lantern':
             return Lantern(
                 name=data['name'], description=data.get('description', ''),
-                fuel_amount=data.get('fuel_amount', 50), light_radius=data.get('light_radius', 7),
+                fuel_amount=data.get('fuel_amount', 50), light_radius=data.get('light_radius', 3),
                 value=data.get('value', 30), level=data.get('level', 0),
                 upgrade_level=data.get('upgrade_level', 0)
             )

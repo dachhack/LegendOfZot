@@ -605,7 +605,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",
-            fuel_amount=80, light_radius=7, value=30, level=0,
+            fuel_amount=80, light_radius=3, value=30, level=0,
         ))
         # Build 358: 2 fuel cans in starter pack mirror vendor.py:115-118.
         for _ in range(2):
