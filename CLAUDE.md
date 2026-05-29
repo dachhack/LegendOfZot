@@ -49,6 +49,17 @@ Reserve sprites (3,968 visually approved but unassigned) live in the
 `sprite-assets-v1` GitHub Release — not shipped in the APK. Pull them
 in with `--include-reserve` if expanding categories.
 
+**When promoting reserves**: most key cleanly via the orig flood-fill
+mask (`sprite_package/code/restore_from_orig.py --mode flood`, which
+reuses `scrub_green_via_orig._orig_bg_mask`). Dark-stone room sprites
+are the known failure case — their content matches their bg colour, so
+the corner flood absorbs the whole image. For those, run the Gemini
+round-trip first: `gemini_montage.py pack` the failing pids into sheets,
+have Gemini repaint the bg flat magenta (`#FF00FF` — zero overlap with
+the sprite palette), then `slice --dechroma --key FF00FF` and fold the
+keyed result into the pool with `status="reserve"`. The chroma_key
+despill is now key-colour-aware (b436), so any backstop key works.
+
 ## Source of Truth
 
 **IMPORTANT:** All game source code lives in `wizardscavern/`. Briefcase
