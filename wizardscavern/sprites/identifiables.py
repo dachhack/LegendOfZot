@@ -25,6 +25,8 @@ shipped with the round-8 package may have multiple variants per item
 name; we pick a deterministic variant by hashing item.name.
 """
 
+import random
+
 from .pool import _stable_seed, get_image_b64
 from . import potions as _potions
 from . import scrolls as _scrolls
@@ -59,14 +61,84 @@ _POOLS = {
 _SPELL_PLACEHOLDER_PID = 'S087'
 
 
+def _category_template_names(category):
+    """All real item names for a cryptic category, in template order.
+
+    The order is a stable literal list in item_templates.py, so the
+    appearance-key ordering used by the collision-free assignment below
+    is identical across app launches.
+    """
+    try:
+        from .. import item_templates as _it
+    except Exception:
+        return []
+    if category == 'potions':
+        return [getattr(p, 'name', '') for p in _it.POTION_TEMPLATES]
+    if category == 'scrolls':
+        return [getattr(s, 'name', '') for s in _it.SCROLL_TEMPLATES]
+    return []
+
+
+# {category: (signature, {appearance_key: pid})}. Rebuilt whenever a new
+# game reshuffles item_cryptic_mapping (the signature changes).
+_cryptic_assignment_cache = {}
+
+
+def _cryptic_assignment(category, pool):
+    """Build (and cache) a per-game collision-free {appearance_key: pid} map.
+
+    Each distinct appearance (the per-game cryptic name where one exists,
+    else the real item name) is walked onto a *per-game shuffled* pool
+    permutation, so two appearances never share a sprite until the pool
+    is genuinely exhausted -- reuse is pushed to the pigeonhole minimum
+    (types - pool_size) instead of the ~40% the old hash-modulo produced.
+
+    The permutation is seeded by the per-game cryptic pairing, so the
+    identification minigame still randomises which sprite a potion wears
+    each game while keeping it stable (and consistent before/after
+    identification) within a game.
+    """
+    try:
+        from .. import game_state as _gs
+        mapping = _gs.item_cryptic_mapping.get(category, {}) if _gs.item_cryptic_mapping else {}
+    except Exception:
+        mapping = {}
+
+    sig = (len(pool), tuple(sorted(mapping.items())))
+    cached = _cryptic_assignment_cache.get(category)
+    if cached and cached[0] == sig:
+        return cached[1]
+
+    # Ordered, de-duplicated appearance keys (stable template order).
+    keys = []
+    seen = set()
+    for name in _category_template_names(category):
+        key = mapping.get(name, name)
+        if key and key not in seen:
+            seen.add(key)
+            keys.append(key)
+
+    # Per-game pool permutation. Seeding off the cryptic *pairing*
+    # (real_name -> cryptic) varies it from game to game; an unstarted
+    # game (empty mapping) falls back to the unshuffled pool order.
+    seed = _stable_seed(tuple(sorted(mapping.items()))) if mapping else 0
+    order = list(range(len(pool)))
+    random.Random(seed).shuffle(order)
+
+    assignment = {key: pool[order[i % len(pool)]] for i, key in enumerate(keys)}
+    _cryptic_assignment_cache[category] = (sig, assignment)
+    return assignment
+
+
 def get_cryptic_sprite_pid(item, category):
     """Return the round-8 pid for a potion / scroll / spell.
 
     For 'spells' specifically, returns the shared placeholder scroll pid
     (every spell uses the same icon). For potions and scrolls, looks up
     the per-game cryptic appearance from
-    `game_state.item_cryptic_mapping[category]` and hashes it into the
-    matching pool. Falls back to item.name when no cryptic mapping is set.
+    `game_state.item_cryptic_mapping[category]` and resolves it through a
+    collision-free per-game assignment (see `_cryptic_assignment`). Items
+    with no template entry (modded / crafted) fall back to a stable hash.
     """
     if category == 'spells':
         return _SPELL_PLACEHOLDER_PID
@@ -82,6 +154,9 @@ def get_cryptic_sprite_pid(item, category):
     cryptic = mapping.get(name, name)
     if not cryptic:
         return None
+    pid = _cryptic_assignment(category, pool).get(cryptic)
+    if pid:
+        return pid
     return pool[_stable_seed(cryptic) % len(pool)]
 
 

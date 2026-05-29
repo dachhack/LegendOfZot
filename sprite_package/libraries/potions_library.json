@@ -2,8 +2,8 @@
   "category": "potions",
   "version": 2,
   "generated_at": "2026-05-02",
-  "chosen_count": 87,
-  "reserve_count": 6,
+  "chosen_count": 93,
+  "reserve_count": 0,
   "total_count": 93,
   "source_pickers": [
     "potion_picker.html",
@@ -1135,50 +1135,79 @@
           "S5 G4"
         ]
       }
-    }
-  ],
-  "reserve": [
+    },
     {
       "pid": "P002",
       "sheet": "",
       "src_label": "NEW1 A2",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW1 A2"
+        ]
+      }
     },
     {
       "pid": "P006",
       "sheet": "",
       "src_label": "NEW1 A7",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW1 A7"
+        ]
+      }
     },
     {
       "pid": "P013",
       "sheet": "",
       "src_label": "NEW1 B2",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW1 B2"
+        ]
+      }
     },
     {
       "pid": "P018",
       "sheet": "",
       "src_label": "NEW1 B7",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW1 B7"
+        ]
+      }
     },
     {
       "pid": "P021",
       "sheet": "",
       "src_label": "NEW1 B10",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW1 B10"
+        ]
+      }
     },
     {
       "pid": "P104",
       "sheet": "",
       "src_label": "NEW2 B12",
-      "status": "reserve",
-      "marked": null
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 B12"
+        ]
+      }
     }
-  ]
+  ],
+  "reserve": []
 }

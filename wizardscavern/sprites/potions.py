@@ -9,7 +9,7 @@ potion identification rolls a random sprite, etc.). They are NOT tied
 to specific item names.
 
 Stats:
-  total sprites: 87
+  total sprites: 93
 
 Use:
     pid = _POTIONS_POOL[index]                # if you want a specific one
@@ -18,6 +18,11 @@ Use:
 """
 
 _POTIONS_POOL = [
+    'P002',  # variant_index=0 sheet= src=NEW1 A2 (promoted from reserve b440)
+    'P006',  # variant_index=0 sheet= src=NEW1 A7 (promoted from reserve b440)
+    'P013',  # variant_index=0 sheet= src=NEW1 B2 (promoted from reserve b440)
+    'P018',  # variant_index=0 sheet= src=NEW1 B7 (promoted from reserve b440)
+    'P021',  # variant_index=0 sheet= src=NEW1 B10 (promoted from reserve b440)
     'P031',  # variant_index=0 sheet= src=NEW2 C9
     'P034',  # variant_index=0 sheet= src=NEW4 C12
     'P037',  # variant_index=0 sheet= src=NEW2 D3
@@ -52,6 +57,7 @@ _POTIONS_POOL = [
     'P099',  # variant_index=0 sheet= src=NEW2 B5
     'P102',  # variant_index=0 sheet= src=NEW2 B8
     'P103',  # variant_index=0 sheet= src=NEW2 B11
+    'P104',  # variant_index=0 sheet= src=NEW2 B12 (promoted from reserve b440)
     'P107',  # variant_index=0 sheet= src=NEW4 C6
     'P108',  # variant_index=0 sheet= src=NEW4 C7
     'P111',  # variant_index=0 sheet= src=NEW4 D4
