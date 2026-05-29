@@ -1552,7 +1552,7 @@ SCROLL_TEMPLATES = [
 
 UTILITY_TEMPLATES = [
     Lantern(name="Lantern", description="Provides continuous light with fuel.", fuel_amount=10, light_radius=7, value=30, level=0),
-    LanternFuel(name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=10),
+    LanternFuel(name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=20),
     # Food items
     Food(name="Rations", description="Standard travel rations. Keeps hunger at bay.", value=10, level=0, nutrition=40, count=1),
     Food(name="Hardtack", description="Dense, dry biscuit. Filling if not delicious.", value=5, level=0, nutrition=25, count=1),

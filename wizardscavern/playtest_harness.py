@@ -231,7 +231,7 @@ def _strip_markup_list(lines):
 def _lantern_obs(pc):
     """Snapshot of lantern + spare-fuel state so the smart policy can
     decide when to light up and when to buy refills. The Lantern lives
-    in inventory and ticks `fuel_amount`; LanternFuel items refill +10
+    in inventory and ticks `fuel_amount`; LanternFuel items refill +20
     per use (auto-applied when fuel hits 0)."""
     from .items import Lantern as _L, LanternFuel as _LF
     lantern = None
@@ -2696,12 +2696,13 @@ class PlaytestSession:
                     gs.inventory_filter = None
                     handle_inventory_menu(pc, tw, "init")
                 elif action == "l":
-                    # Lantern quick-use. Reveals adjacent tiles (radius =
-                    # upgrade_level + 1) and consumes 1 fuel. No game turn
-                    # is ticked -- hunger / status / monster spawns don't
-                    # advance, just the lantern itself depletes. Auto-
-                    # refuels from Lantern Fuel items in inventory when
-                    # fuel hits 0.
+                    # Lantern quick-use. Reveals tiles along the four
+                    # cardinal axes out to (light_radius + upgrade_level)
+                    # -- 7+ per direction with the starter lantern -- and
+                    # consumes 1 fuel. No game turn is ticked -- hunger /
+                    # status / monster spawns don't advance, just the
+                    # lantern itself depletes. Auto-refuels from Lantern
+                    # Fuel items in inventory when fuel hits 0.
                     from .room_actions import process_lantern_quick_use
                     process_lantern_quick_use(pc, tw)
                 elif action == "pass":
@@ -3520,8 +3521,12 @@ def smart_policy(obs, rng, use_lantern=True):
     # meat / XP / gold) or descend. Without this clock the agent could
     # spend the whole budget exploring fog while the food + light run
     # out. Pressure says "stop dawdling, transition to hunt or descend."
-    # Each LanternFuel canister adds 10 to the fuel gauge on auto-refill
-    # (items.py: +10 per use), so spare units count as fuel * 10.
+    # Each LanternFuel canister restores +20 to the fuel gauge on
+    # auto-refill (items.py: fuel_restore_amount=20). The pressure clock
+    # below deliberately counts each spare unit as only *10 -- a
+    # conservative half-estimate that keeps the agent's "stop dawdling"
+    # threshold (tuned against this margin) from drifting. Real reserve
+    # is ~2x this; the under-count just biases toward caution.
     fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
     resources_pressing = (
         hunger < 60       # below comfort, need meat soon
@@ -3813,8 +3818,11 @@ def smart_policy(obs, rng, use_lantern=True):
         #
         # TWO EXPLICIT RELEASE VALVES skip the fire:
         #   1. fuel_scarce: lantern_fuel + spare canisters * 10 < 15
-        #      uses left. Conserve the last few fires for genuine
-        #      emergencies and trust the wayfinder's AVOID set.
+        #      uses left (conservative -- canisters really restore 20,
+        #      see _lantern_obs; the *10 half-count is an intentional
+        #      caution margin, not a bug). Conserve the last few fires
+        #      for genuine emergencies and trust the wayfinder's AVOID
+        #      set.
         #   2. strong_and_healthy: pc.level >= pc.floor + 2 AND
         #      hp_pct >= 0.80. An over-levelled, full-HP agent can
         #      tank a surprise wraith / warp / chest-gas the lantern
@@ -6050,13 +6058,13 @@ def smart_policy(obs, rng, use_lantern=True):
         STOCK = {"potion_healing": 6, "food": 25, "potion_mana": 3}
         # Lantern fuel stockpile. Bumped trigger 20 -> 30 and target
         # 2 -> 4 so the more-aggressive lantern policy doesn't run
-        # dry mid-floor. Four canisters = 40 fires; combined with the
-        # base fuel that's ~70 fires per vendor visit -- enough to
-        # lantern every fog-adjacent step for 7-8 floors.
+        # dry mid-floor. Four canisters = 80 fires (20 each); combined
+        # with the base fuel that's ~130 fires per vendor visit --
+        # plenty to lantern every fog-adjacent step for many floors.
         # Fuel buys: trigger any time fuel < 45, target 6 canisters.
         # With the every-fog-step lantern policy, fuel drains ~1 per
-        # 3-4 moves. Six canisters = 60 fires, base 50 starter,
-        # ~110 fires per vendor visit which covers 8-10 floors of
+        # 3-4 moves. Six canisters = 120 fires, base 50 starter,
+        # ~170 fires per vendor visit which covers many floors of
         # aggressive lantern use. Bumped from 4 canisters/trigger
         # 30 because Fili of Khazad-dum hit fuel=0 between vendor
         # visits and stepped blind into a W.

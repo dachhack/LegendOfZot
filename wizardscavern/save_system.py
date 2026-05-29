@@ -358,7 +358,7 @@ class SaveSystem:
             item = LanternFuel(
                 name=data['name'], description=data.get('description', ''),
                 value=data.get('value', 0), level=data.get('level', 0),
-                fuel_restore_amount=data.get('fuel_restore_amount', 25)
+                fuel_restore_amount=data.get('fuel_restore_amount', 20)
             )
             item.count = data.get('count', 1)  # Restore stack count
             return item
