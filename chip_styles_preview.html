@@ -1,84 +1,55 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Legend of Zot — Hybrid Chip Fonts</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Silkscreen:wght@700&family=Pixelify+Sans:wght@700&family=Jacquard+12&family=MedievalSharp&family=Cinzel:wght@700&family=Metamorphous&family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Zot chips — FINAL (hybrid + Press Start 2P)</title>
 <style>
-  :root{ --bg:#0d0d10; }
-  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  body{ margin:0; padding:16px 12px 60px; background:var(--bg); color:#ddd;
-        font-family:'Courier New',monospace; font-size:13px; line-height:1.3; }
-  h1{ font-size:16px; color:#FFD700; margin:0 0 4px; }
-  .sub{ color:#888; font-size:11px; margin:0 0 18px; }
-  .block{ border-top:1px solid #222; padding:14px 0 8px; }
-  .block h2{ font-size:12px; color:#c8d29c; margin:0 0 2px; letter-spacing:1px; font-family:'Courier New',monospace; }
-  .block .desc{ font-size:10px; color:#777; margin:0 0 10px; font-family:'Courier New',monospace; }
-  .row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:10px; }
-  .ftabwrap{ display:flex; gap:4px; flex:1; max-width:360px; }
-
-  /* ---- HYBRID base (pixel bevel + stone + engraved) ---- */
-  .grain{ background-image:
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
-  .chip{ display:inline-flex; align-items:center; justify-content:center; padding:11px 14px; min-height:44px;
-    border-radius:3px; color:#c4b486; font-weight:bold;
-    background:linear-gradient(180deg,#484438,#28251d); border:2px solid #0c0a08;
-    box-shadow: inset 2px 2px 0 rgba(120,110,92,.6), inset -2px -2px 0 rgba(0,0,0,.55);
-    text-shadow:0 1px 0 #060504; }
-  .chip:active{ box-shadow: inset -2px -2px 0 rgba(120,110,92,.6), inset 2px 2px 0 rgba(0,0,0,.55); transform:translateY(1px); }
-  .chip.spell{ color:#ba96e0; background:linear-gradient(180deg,#403850,#241e2c); box-shadow:inset 2px 2px 0 rgba(120,100,150,.55), inset -2px -2px 0 rgba(0,0,0,.55); }
-  .chip.exit{ color:#d67856; background:linear-gradient(180deg,#56382c,#2c1c16); box-shadow:inset 2px 2px 0 rgba(170,108,82,.5), inset -2px -2px 0 rgba(0,0,0,.55); }
-  .ftab{ flex:1; text-align:center; padding:8px 4px; font-weight:bold; color:#b0a47c;
-    background:linear-gradient(180deg,#46423a,#28251f); border:2px solid #0c0a08; border-radius:3px;
-    box-shadow:inset 2px 2px 0 rgba(116,106,90,.5), inset -2px -2px 0 rgba(0,0,0,.5); text-shadow:0 1px 0 #060504; }
-  .ftab.active{ color:#c8fa9c; background:linear-gradient(180deg,#324a2c,#1c2a1a);
-    box-shadow:inset 2px 2px 0 rgba(120,200,110,.5), inset -2px -2px 0 rgba(20,44,18,.8); }
-
-  /* ---- per-font overrides ---- */
-  .f-courier .chip,.f-courier .ftab{ font-family:'Courier New',monospace; font-size:13px; letter-spacing:1px; }
-  .f-vt323 .chip,.f-vt323 .ftab{ font-family:'VT323',monospace; font-size:21px; letter-spacing:1px; }
-  .f-press .chip,.f-press .ftab{ font-family:'Press Start 2P',monospace; font-size:9px; letter-spacing:0; }
-  .f-silk .chip,.f-silk .ftab{ font-family:'Silkscreen',monospace; font-size:12px; letter-spacing:1px; }
-  .f-pixelify .chip,.f-pixelify .ftab{ font-family:'Pixelify Sans',monospace; font-size:17px; letter-spacing:.5px; }
-  .f-jacquard .chip,.f-jacquard .ftab{ font-family:'Jacquard 12',monospace; font-size:19px; letter-spacing:1px; }
-  .f-medieval .chip,.f-medieval .ftab{ font-family:'MedievalSharp',cursive; font-size:17px; letter-spacing:.5px; }
-  .f-cinzel .chip,.f-cinzel .ftab{ font-family:'Cinzel',serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; }
-  .f-metamorph .chip,.f-metamorph .ftab{ font-family:'Metamorphous',serif; font-size:13px; letter-spacing:.5px; }
-  .f-grenze .chip,.f-grenze .ftab{ font-family:'Grenze Gotisch',serif; font-size:18px; letter-spacing:.5px; }
-</style>
-</head>
-<body>
-  <h1>Hybrid Chips — Font Test</h1>
-  <p class="sub">Same hybrid style (pixel bevel + carved stone + engraved text). Only the font changes. Tap to feel the press.</p>
-  <div id="root"></div>
-
-<script>
-  const fonts = [
-    ['f-courier','COURIER NEW','current — generic mono, for reference'],
-    ['f-vt323','VT323','retro CRT terminal — readable, classic roguelike vibe'],
-    ['f-press','PRESS START 2P','true 8-bit — loud & blocky (note: wide, needs small size)'],
-    ['f-silk','SILKSCREEN','clean tiny pixel font — crisp & modern-retro'],
-    ['f-pixelify','PIXELIFY SANS','soft pixel sans — friendly, very legible'],
-    ['f-jacquard','JACQUARD 12','PIXEL BLACKLETTER — the retro+dungeon sweet spot'],
-    ['f-medieval','MEDIEVALSHARP','dungeon scribe — hand-inked medieval'],
-    ['f-cinzel','CINZEL','engraved Roman caps — chiseled-in-stone elegance'],
-    ['f-metamorph','METAMORPHOUS','gothic fantasy serif — grimdark storybook'],
-    ['f-grenze','GRENZE GOTISCH','condensed blackletter — tall & ominous'],
-  ];
-  const chips = `
-    <div class="row">
-      <span class="chip">CRAFT</span><span class="chip spell">SPELLS</span>
-      <span class="chip">JOURNAL</span><span class="chip exit">QUIT</span><span class="chip exit">CLOSE</span>
-    </div>
-    <div class="row"><div class="ftabwrap">
-      <div class="ftab active">All</div><div class="ftab">Use</div><div class="ftab">Equip</div><div class="ftab">Eat</div>
-    </div></div>`;
-  document.getElementById('root').innerHTML = fonts.map(([cls,name,desc],i)=>
-    `<div class="block grain ${cls}"><h2>${String(i).padStart(2,'0')} — ${name}</h2><p class="desc">${desc}</p>${chips}</div>`
-  ).join('');
-</script>
-</body>
-</html>
+@font-face{ font-family:'PressStart'; font-style:normal; font-weight:400; font-display:swap;
+  src:url("data:font/woff2;base64,d09GMgABAAAAABJgAA0AAAAASFgAABILAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYcgzwGYACEbBEICvB00n4Lg0QAATYCJAOGdAQgBYRKB4ReG7k2IxE1HRM1iOA/JWg2xvD6obMqmE5SN4m6JErQGe1cnR7tTm21roiCRXGDph2W57zlE2hWfkyCDRZhurA4QpJZeJ7fH3Xufd9jvYGwAJrkBDcnoU4JS7aJ6zQ4wEsveVcau6YSMNkW5dRZkKLO7kl2gJ99Pu1cgBXilsXzxNXe312wJuAISuQ69LpAmygPOJGMosbv9O8fKPBxUDdsnCIs31VPLCJq8pmJK+q+O4R4UVF6lcpGGsmA+ctVGunAV3/7FmaFSTNZmPJ92eQtKF2y1Rr6/y1N6Yx01bXAVlgCUKk8KMZpgFl/5u/37Gi0sVYrvVtZ7nK74tp2Vme/ldxrAoNKh86llIYaDKq0FUKDyIWF4gAe22ycgtZjjJuJs/Vp39+v74B3YB+yQ62hxBJjrLUTa+Sy99Pd99cEAbEAQLyFMgwBkam6oK3xU+ciNfPcvhE6mZDmqLkWqDD0n1OuQAhC9KYOn4NBoU/niabLNmzGoo/+xw1ug9G9ztasWoJO56Zl61ETp6VJm7R+cvD8ZkwUIyroOEAERD5UKipJnfOhLrSmENhSWc6QqDOfQyh0tj+jiuXZ/8PnSYaaAyFm4rtroNK5XussnBuyoeJ5zoC6dKczmSccloW4oypBxUAoF5sxFQLcirAInR1MZjcgX4k1EysGSJ2M5k6neut6/27mwJd9UgEBelYHgCn+hjJAKlssT6Nb+z7hmPbscWyAorp5AYB5SJwFuA5AnyFHrMaflApHNJ7x+9UCg5cKiFNPUZr/iKRY64ru6S29YxCbarNtvi2yZbbLjsVGDlfh+VP9sQ79ByCOJUFJRyTFKnpWsDWbaXOvr/N7If+vgBkAhrjBYK4NDee34PsV+L4WIZYBuvuPvincl783AAKgATDVFSAXRr6c3JrN/3HGVa0aLTpwRps+/SqsqTWkSYca7bZt2tLsNLxYcRIkYXPIYUecwAHDhRsvUeIkSJIiTYEiJcpU9ajU66pOd6nRo8+QMQuWrFhz5MSZKzceAgQJFiJMuBix4sRL0uWybrvmNJi3bMGKK86547xUI/YMu+CeS3YUKXbTvrOq3FIozagypcq1IHN5Ir5QjHhpmDBjwe6oY45jwEMQH37CBKwTIk+GLDkqxITSok6DDk3adBkwZ8KUGQe27Ngz4s6HJy9+vG3wFS1CpCgJAiUS4W/QgElTJiDk/98A4AcAuQPyAZJ2ACkvAB6oAIABACppDAYfuDIBBwdtvWyhIRj9eiPiRtE2zhO4kUR6xplwhByIGdHEfl2lnhqraTbpW3ibCwPlFbCkAFDqFEs+ouId4rDYFIx3Rgp1JviWVtp0gLoZoOHhudAa3lXMO58l1rNuCTB3bALXXGnb/nuVbib5zIAjGHU0I+vqIX3dp0pfZIhBAJldd9NXY27Td77KTu2odNh1bNd/MmxWU60SgwDYrbYVsG5SAHPc3OnXRDqZZx5AN4/b+QP23IQU1ololz89jHe+3vpcMkt0lwM/573pXzp9PbXfizZscl0ELXO3a1UbZW84hcdS+ygg252g2kqvjynC9Zz5uT51374IQGxoIViy+r1aO2cyM1kuabuu5YAzwR0QDOVNMNfejiJ58vbRAC0ACLPuM673tXdTiQJqCKUJCSkIhFMSVoRCcGriaPVLaSFOCpqoMooEDSlcYkRUz4XwkApimZR+FhfXwZA7MYXyScHaPDaFYc9ss7gM5ZYs1QwfQMYZkEJYRVaGwLrE3ZDOqopH0WKhrKYyn5jgFnBKR8aVHwy1EDwOxPWwMKq6LAwr4eYDjbhnmEePgsSAzHtLsGN2LkSLRIgzniTDyUNzR6G8Ek9CE6wMyORehlJUVkKLRUvDhjbMGHMpCvC6v2xgNRXAwggUCRJ7PYSgTV5RpEvG1kdpwglup8CaTjp0/tZdr1688A6jRiAAYkX2jYaGI2yEUED4agQ4JpDdlCU2KgqlAuYHCKlez0mlj0QvcpGO1NK3dCvyfsXpVCbst9GllNVsQ/m0ecUNbEvtYUVwoaaijNyRgJRbfvMoDLqOhDUhD6bAXNSUZNyJX5IekmQF0UTzLC7AZFlcCQmxLmpK1rQZ1SDkaC+d0IVasLlKGNSTvKgXcxoCTsoYtZLGBXO0cUdZAhJxAg+O4C9r2GC83qogpN6xJx2xIGwwFrEk9VR+tHKBggk6U1LmwfkF1dp8yUJX3ga9eH9YtsMWX5wQqUZ21yGWFNq9ajBoEVsoSz36d5cSzFLbAJZ5HBsmU2S1hKJbU3Wc79U6Nu0xgKAelp0Z4jqLRPumclG2eKPlL+r190iKNpW7y5sA7cqgGMvWIEl+SE0N0tmH8mlGSxpVQE9Urd3YqVrA4oAp+2BKXB2A9K0eTRqj3WAoGXskoL132wA2/MvgLLOL0yqYLSBZEKCPLV8PkjVdB1SZ2IaBQd0U2Dakfm5sFl48kBeNEFPjhuqccG1xKdLMwtZahGBvKKj6sjd4NlQ2UZAigsnBtsxkmBAUrlaQNUGBWoRSctWWPDeHg9iWFt953iW8s41nKaqZgHL5RcUdtBmY0DFS28bLdxTjSGv0Ny4ptkZdtFbyxfXlBPJDC4Ka2InUcWZ417DMcPZAbTE6gjA8DIy0MWAeNVYPa4tlrhwoNDFkIcAYzAytW7JuIRhZsd7KzTSi50qCGnCvLdArficHWmmiCSHD/ERsIt1qdKQoYJHWYU6i20IBgh6JxJBmjvp7VLIwpFuZVnPEYIUCAskhO76ejxt9JGFxxlGRPKmMLhhBMW5gFMreRedqpVDNopuVpA5k2WxxghipqIfCBeIQRbeLoJs/OepnCw3rhRJpLwo3B29Qq6EQM9waX0tDbZe40xbbQ8/Qa5GCtQc+yGI3ByXFWSYyj81HTC3W1zqV4c3rHdDDtnUb32qt2mopLZvM3ZEnvGTljav/AAf3pR20pETliLUD5zAcEqZRuQ9zKv2DmWBzQez4zdVKH+VrRaAdiE1/2ETrXlpfGErt8QoFgzpPFunNUSa4VWFHgoo0idkyGesoICEQZhHswBR91la3rV3gEjWmUsVVpknJ6pmHX/KmF43M4y/mWPbQU4884NT8oSZ5LwGogx9eW6Gg7lmG/eALtL62Cp9ZUfqamgDfQ7nZ8bGexsAjpAPQHi/0A1pEaFHLboEV7d7dlF4Wbk7rt4KwRSduRJ4z0D893esysc4j7AYVAWuIKyXUddVmqQXZGi4jTAKLOSCwevool+taG4JeINVM5C9/6RKRoAwBZkHGFI/KetWPFCwGXCty3kllWldUY5t/MES0hG3Ha/tc6iFbK775b3PmP/6oxozEvPtWJK7CZJoPNvFwsXLq6RSsjK/OMOpSWGfdXTUUFhBOgAJILasEIC5mwLtlTPxoSoULOiJOa+8v6Dv5BrFchoD8fhVln2F87NH/B/mdN+WJ4DnP9UwOEZPJK3/7wNukPDMoq25+jO5DwuuANDPcW1YujJBA9wCSgw/8hen1aZwisQxxavv9nRFeeQ92LxUGPVGqmTPyNfIsbV5bpsOY5Zn7Cg7jmCvvKM055v3uQzHXQLfeJrTPa109NFJ030JNeFlVetcMGlNOVKhvhUzlCtCsKDcCRJFpo5FhHNpN3SVrrjbYoI4HLifJ0rYu4Qb3LM/gr95bjW2mvJxLSMwkrwkCVPbopYjpdwP9xOkFMwa5FkCOe25XVib8XSGvVIU5K1FfIlZ6K1l9nWjBqt8PSMTirPC+1WzipXQWgAeIBGev81ZJnSRzIe9URfVr8idW4VjoLi+ZiXaEr/9mAzAS/Epx1d5AgoU39Q0OqJTKc64NLg31Kbw++PLxlBz11UYvg93MTzlOTfCrms73QWn0HAWZlactcaDAjplYhAX1YEZdo8rBS/IHZ4oHSETVB+rHBwqhStc6AMQk5XmS6yhCfQXDgrAKDHX7EMzXxdeuOGcWDvl+QyTWUV8wt7se4jmo3csmwcjmsUUkxaa+ZH57WZEEC3kbDqgAReeRoFq6CoesJJ6pB6YvQVcBI0VeS3R9p8NLwpdzcbpV3PvfOwhKDol+mGS4O9MwFVeFDXm0AYvD7dgFnYOG3jRV9XiF4FecuOnM8CRU2vpkopbhKx7KfarCpzaTBFlfv/kfJxMN61HC6Xr3REx7WKz1hnFoxwCTW0XLpk0fPXYC1ErjyY/nY9l+Uvt5rkq6dNytY3UsitNePuss4/wnPo8xLKo75akhjLhUPAjjblOpnjfObJI5bvxrdCKY6sI/XycSypfTlSJWcI2PPdg3Xn7OwgjEJh4Y1AejzXCCNtAGaV4nk8eI9z9dXXZARXv7WVklkuvtdphJvRTe0U/xAawWvJyG+RLhGZ0ZFQvz4wgiRfMWkEFuhqeQSccJ5XPBW6YYaQv3qURhivQHhS7J91v2gf+6vPLp79wn47pD1rAckkBiNknOOtbOcYZNonH8SE14tzCdXq2skwcM4mu+UmA+hdubYq/yYFyppJZRX+l5LYV9teDdwZwji+o8AlhWkZsGcQ4YCKMIcGUs6tn8b3Vqj7pi7T67hgd/hShh7hbiYPL0FbuZrb3NaOSleDv2iNecJ0otEvBme7gEwrPYXLSXB37EQEt6DzeEeMkZzjZDR/roZl7PmFX4Hq4fu+9foRncGLo0G1y/iKBLOV/JVrvYj7o1K4r7I4mcsGHwlcXdB0BecrCv2L0r70MMFtGq82yPHwR3CGswxYG/cFaU3rrO4wfB8PP/weaL4HI+jpG83mzQTuLUxB9R14tT8IYJdK/XpC9//2S8K8KHqVj0ESnA+bUYGqY6X3E26L0SM9pa7svsLqooBnhBXsNCjeUndRMo6jx4+7VE0+hjASzwqLDJtGNnUQ4fMWQdebCuCD1XNWMCOuVaNxUhM+4zhH7IfZyPv0hisvibkEXok2mXsfeoI7UvSpznoaMuFDb06f8mAKK2w6lIRDx+F2Gcqyno9hWf5vWbX0x4JiajeI+I/7O6FU68x7ya9w7jfpykm+RvKierpLT/0+5NErUBjlaKu4vcpfux/sh5u+RCfDvt6mtKBeg497nU+xiWEy5rM8Pc99z+Oz7DlPj1MF8j3UgBCcwwsdV3p6jz34Vzb4NQN0uU0xWnpZabXKxZU0dAgauXK2RlmbNGfke9MM7qZ/jC2LKtrTNm6XcnkalivUfIprI24lDRtCxMz0vEURAh4IJlZM7rf4weA+qG0a0cn/xAGWxegACD3pvs54un8q/L9AHwuoH993c8rOp/+yvqRXiCTxEKYPDmtAJAZ43UB2QlyP7rXi+xmH7AtffY69Cf+A8Ul8e/Ac4U/SEfNxVPdx9g09ixNkUj8M3RGN/e1Y5rjgNArt1er3NCr+F9oyeSUJB4dwZSwUCXe63ZRo78IlVqTKX+RRDwgwIaJUi1qQV+rcBKOFKFwMdQQVNErndTVLzvU4zhuqY4asRNcWVzmeKpIKPibRWwWgxNiKBEfN1o3qIEqorR4WKiVUhU4aXy761rTo8Ji1T54pNEsxbDU5QYUiyIsuLLX6yQnbITHUXVV7gwGGliJJzIPom1GuuvB4tG/9Yo0+bIii5lKTbYe/4NtYWLkJiHir+AsHxToANjUzDfXhMhasNwQXx57zs0xUIH5BEi+xbgLZyPRBqSssN9lYID0FcMQSIw8QKjZUZ0dDZVnHb6wOjtgKPTjKdQaQfO1Ruu9aCDodm85ujr8QNIgTJKnLTPyyhvYyrw4uOD30sCfB045TRBQoSJOOOsc84TJUY8uIwpP3/tCy7yd1mlcROkvX0/4bnkKbjiqgDX3rrYUcVrqnQEvk+hgrwzVAfdVDfU94qBiPy9k0iGjBgzcV2MOPFi32komwf/hoZK8C8nUbIUSTqlmmTtHRu27BSy5yBNhkzp73G8PxdvLHG1YVOrNsxYsL4rIt+z+O8NQTzx6fWFr3yD1gjb8rGjdw/ebURJuHQhiORjosWNBzUaqMV6ZgpDyNwxZM26XTNmzZm3EwrHrSIl4oS6UBPvJwswnDhU89QTGoLESTzFKE7LU6xIiWzuXtAMvSQKI6XuuaGMtlvuuln9r0HXdUyWb9ruhCy7+LEb1zRIjFb0m6WapAeP0slL4P+AdTi6pEmqsbXJbM/BtTy3bt20a8fmEN5Rqw//PeH1K/5x23Oq8rId2wcRFUqN1gYA") format('woff2'); }
+body{ margin:0; padding:18px 12px 48px; background:#1a1a1a; color:#ddd;
+  font-family:'Courier New',monospace; font-size:13px; }
+h1{ font-size:14px; color:#FFD700; }
+.lbl{ color:#888; font-size:11px; margin:14px 0 6px; }
+.hudchips{ display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
+.hudchips.inv-bar{ flex-wrap:nowrap; overflow-x:auto; gap:4px; }
+.hudchips.inv-bar .hudchip{ padding:9px 9px; font-size:8px; min-height:38px; border-radius:3px; letter-spacing:0; }
+.hudchip{ display:inline-flex; align-items:center; padding:12px 14px; min-height:44px; box-sizing:border-box;
+  border-radius:3px; background:linear-gradient(180deg,#484438,#28251d); border:2px solid #0c0a08; color:#c4b486;
+  font-family:'PressStart',monospace; font-size:9px; line-height:1.5; font-weight:bold; letter-spacing:0;
+  text-shadow:0 1px 0 #060504; box-shadow:inset 2px 2px 0 rgba(120,110,92,.55), inset -2px -2px 0 rgba(0,0,0,.55);
+  transition:transform 60ms ease-out, filter 120ms ease-out; flex-shrink:0; }
+.hudchip:active{ transform:translateY(1px); filter:brightness(1.18);
+  box-shadow:inset -2px -2px 0 rgba(120,110,92,.55), inset 2px 2px 0 rgba(0,0,0,.55); }
+.hudchip.lantern{ background:linear-gradient(180deg,#4a3a14,#241c08); border-color:#0c0a08; color:#FFD27A; }
+.hudchip.stairs{ background:linear-gradient(180deg,#2c4a22,#16280f); border-color:#0c0a08; color:#a6e07a; }
+.hudchip.exit{ background:linear-gradient(180deg,#56382c,#2c1c16); border-color:#0c0a08; color:#e0906a; }
+.hudchip.combat-attack{ background:linear-gradient(180deg,#5a2820,#2c1210); border-color:#0c0a08; color:#ff7a5a; }
+.hudchip.combat-cast{ background:linear-gradient(180deg,#403850,#241e2c); border-color:#0c0a08; color:#ba96e0; }
+.filtertabs{ display:flex; gap:3px; margin:0 0 6px; padding:3px; background:#1b1916; border:1px solid #0c0a08; border-radius:4px; max-width:360px; }
+.filtertab{ flex:1; text-align:center; padding:8px 3px; font-family:'PressStart',monospace; font-size:8px; line-height:1.5;
+  font-weight:bold; letter-spacing:0; color:#b0a47c; background:linear-gradient(180deg,#46423a,#28251f);
+  border:2px solid #0c0a08; border-radius:3px; text-shadow:0 1px 0 #060504;
+  box-shadow:inset 2px 2px 0 rgba(116,106,90,.5), inset -2px -2px 0 rgba(0,0,0,.5); }
+.filtertab:active{ transform:translateY(1px); filter:brightness(1.15); }
+.filtertab.active{ background:linear-gradient(180deg,#324a2c,#1c2a1a); color:#c8fa9c; border-color:#0c0a08;
+  box-shadow:inset 2px 2px 0 rgba(20,44,18,.9), inset -2px -2px 0 rgba(120,200,110,.4); }
+.unequip-chip{ padding:7px 8px; font-family:'PressStart',monospace; font-size:7px; line-height:1.5; font-weight:bold;
+  letter-spacing:0; color:#e0906a; background:linear-gradient(180deg,#56382c,#2c1c16); border:2px solid #0c0a08;
+  border-radius:3px; text-shadow:0 1px 0 #060504; box-shadow:inset 2px 2px 0 rgba(150,96,72,.45), inset -2px -2px 0 rgba(0,0,0,.55); display:inline-block; }
+</style></head><body>
+<h1>FINAL — Hybrid chips in Press Start 2P (live embedded font)</h1>
+<div class="lbl">Inventory bar (scrolls if tight):</div>
+<div class="hudchips inv-bar">
+  <span class="hudchip">CRAFT</span><span class="hudchip combat-cast">SPELLS</span>
+  <span class="hudchip">JOURNAL</span><span class="hudchip exit">QUIT</span><span class="hudchip exit">CLOSE</span></div>
+<div class="lbl">Game HUD chips:</div>
+<div class="hudchips">
+  <span class="hudchip">INVENTORY</span><span class="hudchip lantern">LANTERN</span><span class="hudchip stairs">STAIRS</span></div>
+<div class="lbl">Combat chips:</div>
+<div class="hudchips">
+  <span class="hudchip combat-attack">ATTACK</span><span class="hudchip combat-cast">CAST</span><span class="hudchip exit">FLEE</span></div>
+<div class="lbl">Filter tabs (ALL selected = pushed-in/green):</div>
+<div class="filtertabs"><div class="filtertab active">All</div><div class="filtertab">Use</div><div class="filtertab">Equip</div><div class="filtertab">Eat</div></div>
+<div class="lbl">Unequip chip:</div>
+<span class="unequip-chip">UNEQUIP</span>
+<p style="color:#666;font-size:10px;margin-top:24px;">Tap any chip to feel the pixel press (bevel flips inward).</p>
+</body></html>
