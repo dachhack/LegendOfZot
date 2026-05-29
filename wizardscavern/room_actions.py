@@ -3757,46 +3757,15 @@ def process_lantern_quick_use(player_character, my_tower):
     if lantern.fuel_amount > 0:
         add_log(f"{COLOR_CYAN}You light your {lantern.name}...{COLOR_RESET}")
 
-        # Cardinal-only reveal: light shines N/S/E/W along the four
-        # cardinal axes up to `light_radius + upgrade_level` tiles,
-        # stopping when it hits a wall (line-of-sight per axis). The
-        # cross pattern matches the in-game minimap UI and is more
-        # honest about what one light "sees" down a corridor than the
-        # previous Euclidean disc (which leaked around walls via
-        # diagonal gaps). Same logic lives in items.py:Lantern.use.
-        directions_to_reveal = []
-        radius = lantern.light_radius + lantern.upgrade_level
-        for step in range(1, radius + 1):
-            directions_to_reveal.extend([
-                (-step, 0), (step, 0),  # north, south
-                (0, -step), (0, step),  # west, east
-            ])
-
-        revealed_any = False
-        revealed_count = 0
-        axis_open = {"n": True, "s": True, "e": True, "w": True}
-        for dr, dc in directions_to_reveal:
-            axis = ("n" if dr < 0 else "s") if dc == 0 \
-                   else ("w" if dc < 0 else "e")
-            if not axis_open[axis]:
-                continue
-            target_x, target_y = player_character.y + dr, player_character.x + dc
-            if not (0 <= target_x < current_floor.rows
-                    and 0 <= target_y < current_floor.cols):
-                axis_open[axis] = False
-                continue
-            target_room = current_floor.grid[target_x][target_y]
-            if target_room.room_type == current_floor.wall_char:
-                if not target_room.discovered:
-                    target_room.discovered = True
-                    revealed_any = True
-                    revealed_count += 1
-                axis_open[axis] = False
-                continue
-            if not target_room.discovered:
-                target_room.discovered = True
-                revealed_any = True
-                revealed_count += 1
+        # Filled line-of-sight disc reveal. Radius scales with upgrades
+        # (base light_radius + 2 per upgrade level); walls block the
+        # light so it never leaks around corners. Shared helper lives in
+        # items.py and is the same one items.py:Lantern.use calls.
+        from .items import reveal_lantern_area, lantern_reveal_radius
+        radius = lantern_reveal_radius(lantern)
+        revealed_count = reveal_lantern_area(
+            current_floor, player_character.y, player_character.x, radius)
+        revealed_any = revealed_count > 0
 
         if not revealed_any:
             add_log(f"{COLOR_CYAN}The lantern shines brightly, but reveals no new rooms nearby.{COLOR_RESET}")
@@ -3831,9 +3800,21 @@ def process_lantern_quick_use(player_character, my_tower):
         # Lantern out of fuel
         lantern_fuel_item = player_character.inventory.get_item("Lantern Fuel")
         if lantern_fuel_item:
+            # Build-371: this branch still carried the pre-b370 stack-wipe
+            # bug -- it used the hardcoded +10 (ignoring the canister's
+            # fuel_restore_amount of 20) and remove_item(name), which drops
+            # the WHOLE LanternFuel stack regardless of count. The fix in
+            # b370 only landed in the fuel-drains-mid-use branch above and
+            # in items.py:Lantern.use; this twin (fuel already at 0 on
+            # entry) was missed. Mirror the corrected pattern here.
+            refill = getattr(lantern_fuel_item, "fuel_restore_amount", 20)
             add_log(f"{COLOR_GREEN}Your lantern is empty. Using {lantern_fuel_item.name} to refuel...{COLOR_RESET}")
-            lantern.fuel_amount += 10
-            player_character.inventory.remove_item(lantern_fuel_item.name)
+            lantern.fuel_amount += refill
+            cur_count = getattr(lantern_fuel_item, "count", 1) or 1
+            if cur_count > 1:
+                lantern_fuel_item.count = cur_count - 1
+            else:
+                player_character.inventory.items.remove(lantern_fuel_item)
             add_log(f"{COLOR_GREEN}Lantern refueled! Fuel remaining: {lantern.fuel_amount}{COLOR_RESET}")
             return False  # Don't use it this turn, just refueled
         else:

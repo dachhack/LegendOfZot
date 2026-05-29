@@ -116,7 +116,7 @@ class Vendor:
             # dungeon vendor (~T80-100 of darkness on F1). 80 base + 40
             # from 2 cans = 120 fires, enough to explore F1-F3
             # thoroughly even with aggressive fog reveal.
-            self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=80, light_radius=7, value=30, level=0))
+            self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=80, light_radius=3, value=30, level=0))
             for _ in range(2):
                 self.inventory.add_item_quiet(LanternFuel(
                     "Lantern Fuel", "A small flask of oil for your lantern.",
@@ -399,7 +399,7 @@ class Vendor:
             # canisters = 80 fires per vendor visit ensures the
             # agent rarely sees fuel < 15 mid-floor.
             if not player_has_lantern:
-                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=7, value=30, level=0))
+                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=3, value=30, level=0))
             fuel_count = random.randint(2, 4)
             for _ in range(fuel_count):
                 self.inventory.add_item_quiet(

@@ -2664,8 +2664,97 @@ room_discover_descriptions = {
         'X': 'The smell of tanning leather and preserving salts drifts from a taxidermist workshop'}
 
 
+# --------------------------------------------------------------------------------
+# LANTERN LIGHT -- shared line-of-sight disc reveal
+# --------------------------------------------------------------------------------
+
+# Lantern reveal geometry. The light is a FILLED DISC centred on the
+# player, but blocked by walls (line-of-sight per ray) so it never leaks
+# around corners into sealed rooms -- the failure mode that retired the
+# original Euclidean disc and forced the cardinal-cross stopgap. Radius
+# scales with upgrades: base 3, +2 per upgrade level (3 / 5 / 7 at
+# +0 / +1 / +2). The stored light_radius IS the base, so a normal lantern
+# ships at 3 and the debug Infinite Lantern (light_radius 10) stays huge.
+LANTERN_RADIUS_PER_UPGRADE = 2
+
+
+def lantern_reveal_radius(lantern):
+    """Effective disc radius = base light_radius + 2 per upgrade level."""
+    base = getattr(lantern, "light_radius", 3)
+    return base + LANTERN_RADIUS_PER_UPGRADE * getattr(lantern, "upgrade_level", 0)
+
+
+def _bresenham_line(r0, c0, r1, c1):
+    """Yield grid cells from (r0,c0) to (r1,c1) inclusive (integer LOS).
+
+    Canonical all-octant integer Bresenham (Wikipedia form): dc is the
+    positive column delta, dr the *negative* row delta, err = dc + dr.
+    This stays strictly inside the bounding box of the two endpoints for
+    every octant, including axis-aligned lines. (An earlier hand-rolled
+    variant used err = abs(dr) - abs(dc) and tripped both step-conditions
+    on a horizontal line travelling in the -c direction, drifting off
+    the row and never reaching the endpoint -- an infinite loop that
+    walked the index out of bounds.)
+    """
+    dc = abs(c1 - c0)
+    dr = -abs(r1 - r0)
+    sc = 1 if c0 < c1 else -1
+    sr = 1 if r0 < r1 else -1
+    err = dc + dr
+    r, c = r0, c0
+    while True:
+        yield r, c
+        if r == r1 and c == c1:
+            break
+        e2 = 2 * err
+        if e2 >= dr:
+            err += dr
+            c += sc
+        if e2 <= dc:
+            err += dc
+            r += sr
+
+
+def reveal_lantern_area(floor, center_row, center_col, radius):
+    """Reveal a line-of-sight disc of `radius` around the centre cell.
+
+    Light fills every open tile within Euclidean `radius` that has a
+    clear line of sight from the player. A wall on a ray is itself
+    revealed (you see the wall the light hits) but blocks everything
+    behind it. Returns the count of newly-revealed tiles.
+
+    Grid is indexed [row][col]; callers pass center_row=character.y and
+    center_col=character.x to match the rest of the dungeon code.
+    """
+    revealed = 0
+    wall = floor.wall_char
+    rows, cols = floor.rows, floor.cols
+    r2 = radius * radius
+    for dr in range(-radius, radius + 1):
+        for dc in range(-radius, radius + 1):
+            if dr * dr + dc * dc > r2:
+                continue  # outside the disc
+            tr, tc = center_row + dr, center_col + dc
+            if not (0 <= tr < rows and 0 <= tc < cols):
+                continue
+            # Walk the ray from the player to this cell; stop at the
+            # first wall (lit, but opaque) so nothing behind it reveals.
+            for cr, cc in _bresenham_line(center_row, center_col, tr, tc):
+                if cr == center_row and cc == center_col:
+                    continue  # the player's own tile is already known
+                if not (0 <= cr < rows and 0 <= cc < cols):
+                    break  # defensive: never index outside the grid
+                cell = floor.grid[cr][cc]
+                if not cell.discovered:
+                    cell.discovered = True
+                    revealed += 1
+                if cell.room_type == wall:
+                    break  # opaque -- the ray dies here
+    return revealed
+
+
 class Lantern(Item):
-    def __init__(self, name="Lantern", description="", fuel_amount=50, light_radius=7, value=0, level=0, upgrade_level=0):
+    def __init__(self, name="Lantern", description="", fuel_amount=50, light_radius=3, value=0, level=0, upgrade_level=0):
         super().__init__(name, description, value, level)
         self.fuel_amount = fuel_amount
         self.light_radius = light_radius
@@ -2684,46 +2773,15 @@ class Lantern(Item):
 
             current_floor = my_tower.floors[character.z]
 
-            # Cardinal-only reveal: light shines N/S/E/W along the four
-            # cardinal axes up to `light_radius + upgrade_level` tiles,
-            # stopping when it hits a wall (line-of-sight per axis).
-            # Previously this revealed an Euclidean disc, which (a)
-            # didn't match the in-game minimap UI, and (b) over-revealed
-            # corners through diagonal gaps. The cross pattern is more
-            # honest about what one light "sees" down a corridor and
-            # matches the player's intuition.
-            directions_to_reveal = []
-            radius = self.light_radius + self.upgrade_level
-            for step in range(1, radius + 1):
-                directions_to_reveal.extend([
-                    (-step, 0), (step, 0),  # north, south
-                    (0, -step), (0, step),  # west, east
-                ])
-
-            revealed_any = False
-            axis_open = {"n": True, "s": True, "e": True, "w": True}
-            for dr, dc in directions_to_reveal:
-                axis = ("n" if dr < 0 else "s") if dc == 0 \
-                       else ("w" if dc < 0 else "e")
-                if not axis_open[axis]:
-                    continue
-                target_x, target_y = character.y + dr, character.x + dc
-                if not (0 <= target_x < current_floor.rows
-                        and 0 <= target_y < current_floor.cols):
-                    axis_open[axis] = False
-                    continue
-                target_room = current_floor.grid[target_x][target_y]
-                if target_room.room_type == current_floor.wall_char:
-                    # The wall surface itself becomes visible, then the
-                    # axis goes dark beyond it.
-                    if not target_room.discovered:
-                        target_room.discovered = True
-                        revealed_any = True
-                    axis_open[axis] = False
-                    continue
-                if not target_room.discovered:
-                    target_room.discovered = True
-                    revealed_any = True
+            # Filled line-of-sight disc reveal (see reveal_lantern_area).
+            # Radius scales with upgrades: base light_radius + 2 per
+            # upgrade level. Walls block the light, so it never leaks
+            # around corners. Shared with the quick-use 'l' hotkey in
+            # room_actions.process_lantern_quick_use.
+            radius = lantern_reveal_radius(self)
+            revealed_count = reveal_lantern_area(
+                current_floor, character.y, character.x, radius)
+            revealed_any = revealed_count > 0
 
             my_tower.floors[character.z].print_floor(highlight_coords=(character.x, character.y))
             if not revealed_any:
@@ -4400,7 +4458,7 @@ def _create_item_copy(item_obj):
     elif isinstance(item_obj, Flare):
         return Flare(item_obj.name, item_obj.description, item_obj.count, item_obj.light_radius, item_obj.value, item_obj.level)
     elif isinstance(item_obj, Lantern):
-        return Lantern(item_obj.name, item_obj.description, item_obj.fuel_amount, item_obj.light_radius, item_obj.value, item_obj.level)
+        return Lantern(item_obj.name, item_obj.description, item_obj.fuel_amount, item_obj.light_radius, item_obj.value, item_obj.level, upgrade_level=getattr(item_obj, 'upgrade_level', 0))
     elif isinstance(item_obj, LanternFuel):
         return LanternFuel(item_obj.name, item_obj.description, item_obj.value, item_obj.level, item_obj.fuel_restore_amount, count=getattr(item_obj, 'count', 1))
     elif isinstance(item_obj, Ingredient):
