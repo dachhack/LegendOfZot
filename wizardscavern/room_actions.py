@@ -3831,9 +3831,21 @@ def process_lantern_quick_use(player_character, my_tower):
         # Lantern out of fuel
         lantern_fuel_item = player_character.inventory.get_item("Lantern Fuel")
         if lantern_fuel_item:
+            # Build-371: this branch still carried the pre-b370 stack-wipe
+            # bug -- it used the hardcoded +10 (ignoring the canister's
+            # fuel_restore_amount of 20) and remove_item(name), which drops
+            # the WHOLE LanternFuel stack regardless of count. The fix in
+            # b370 only landed in the fuel-drains-mid-use branch above and
+            # in items.py:Lantern.use; this twin (fuel already at 0 on
+            # entry) was missed. Mirror the corrected pattern here.
+            refill = getattr(lantern_fuel_item, "fuel_restore_amount", 20)
             add_log(f"{COLOR_GREEN}Your lantern is empty. Using {lantern_fuel_item.name} to refuel...{COLOR_RESET}")
-            lantern.fuel_amount += 10
-            player_character.inventory.remove_item(lantern_fuel_item.name)
+            lantern.fuel_amount += refill
+            cur_count = getattr(lantern_fuel_item, "count", 1) or 1
+            if cur_count > 1:
+                lantern_fuel_item.count = cur_count - 1
+            else:
+                player_character.inventory.items.remove(lantern_fuel_item)
             add_log(f"{COLOR_GREEN}Lantern refueled! Fuel remaining: {lantern.fuel_amount}{COLOR_RESET}")
             return False  # Don't use it this turn, just refueled
         else:
