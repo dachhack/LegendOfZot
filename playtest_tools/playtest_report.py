@@ -70,7 +70,7 @@ def _sprite_pid_for(category, name, seed_extra=""):
     Returns a pid string, or None.
     """
     try:
-        from .sprites import (
+        from wizardscavern.sprites import (
             monsters as _msprites,
             weapons as _wsprites,
             armors as _asprites,
@@ -86,7 +86,7 @@ def _sprite_pid_for(category, name, seed_extra=""):
             accessories as _accsprites,
             get_named_variant, get_generic_variant,
         )
-        from .sprite_data import _resolve_new_monster_key
+        from wizardscavern.sprite_data import _resolve_new_monster_key
     except Exception:
         return None
 
@@ -200,7 +200,7 @@ class SpriteRegistry:
 
     def style_block(self):
         try:
-            from .sprites import get_image_b64
+            from wizardscavern.sprites import get_image_b64
         except Exception:
             return ""
         rules = []
@@ -1298,11 +1298,11 @@ class RunReport:
         # so the same (race, gender, name) seed produces a portrait
         # the actual character-creation screen would have offered.
         try:
-            from .sprites.characters import (
+            from wizardscavern.sprites.characters import (
                 _CHARACTERS_POOL as _full_pool,
                 get_race_pool,
             )
-            from .sprites import get_generic_variant
+            from wizardscavern.sprites import get_generic_variant
             pool = get_race_pool(self.race) or _full_pool
             pid = get_generic_variant(
                 pool,

@@ -172,7 +172,7 @@ generation.
 
 ## Key files to know
 
-- `wizardscavern/playtest_harness.py`:
+- `playtest_tools/playtest_harness.py`:
   - `new_game(with_shards=True)` line 392 — short-circuits the rune/
     shard grind for boss testing. When `start_floor=50`, plants
     directly on the Guardian tile (after clearing ambient mobs and
