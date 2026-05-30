@@ -19,13 +19,6 @@ def is_wall_at_coordinate(current_floor, r, c):
 def new_grid(grid_rows, grid_cols, wall_char):
     return [[wall_char for _ in range(gs.grid_cols)] for _ in range(gs.grid_rows)]
 
-def count_room_cells(grid, floor_char):
-    room_cell_count = 0
-    for r in range(len(grid)):
-        for c in range(len(grid[0])):
-            if grid[r][c] == floor_char:
-                room_cell_count += 1
-    return room_cell_count
 
 def does_path_not_exist(start_r, start_c, end_r, end_c, grid, floor_char):
     rows = len(grid)

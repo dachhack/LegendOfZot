@@ -301,28 +301,6 @@ def get_vendor_identify_cost(item):
     else:
         return base_cost * level_mult
 
-def vendor_identify_item(item, player_character):
-    """
-    Have a vendor identify an item for gold.
-    Returns True if successful.
-    """
-    cost = get_vendor_identify_cost(item)
-    
-    if player_character.gold < cost:
-        add_log(f"{COLOR_RED}You don't have enough gold! Identification costs {cost} gold.{COLOR_RESET}")
-        return False
-    
-    if is_item_identified(item):
-        add_log(f"{COLOR_YELLOW}That item is already identified.{COLOR_RESET}")
-        return False
-    
-    player_character.gold -= cost
-    identify_item(item)
-    add_log(f"{COLOR_GREEN}The vendor examines the item carefully...{COLOR_RESET}")
-    add_log(f"{COLOR_YELLOW}You paid {cost} gold for identification.{COLOR_RESET}")
-    
-    return True
-
 
 # ============================================================================
 # DURABILITY SYSTEM
@@ -3465,22 +3443,6 @@ def process_mana_regen(character):
         character.mana_regen_tracker = tracker
 
 
-def get_hunger_label(hunger):
-    """Return a text label for the current hunger level."""
-    if hunger <= 0:
-        return "STARVING"
-    elif hunger <= HUNGER_STARVING_THRESHOLD:
-        return "Starving"
-    elif hunger <= HUNGER_HUNGRY_THRESHOLD:
-        return "Hungry"
-    elif hunger <= HUNGER_PECKISH_THRESHOLD:
-        return "Peckish"
-    elif hunger <= HUNGER_SATED_THRESHOLD:
-        return "Satisfied"
-    else:
-        return "Full"
-
-
 def get_hunger_color(hunger):
     """Return HTML color for hunger label."""
     if hunger <= HUNGER_STARVING_THRESHOLD:
@@ -4423,15 +4385,6 @@ def process_regeneration_effect(character):
         if actual_heal > 0:
             add_log(f"{COLOR_GREEN}[Regeneration] +{actual_heal} HP{COLOR_RESET}")
 
-
-def remove_giant_strength_on_expire(character, effect):
-    """
-    When Giant's Strength expires, restore original STR.
-    Add to your status effect expiration handler.
-    """
-    if effect.effect_type == 'stat_boost_str':
-        character.strength -= effect.magnitude
-        add_log(f"{COLOR_YELLOW}Giant's Strength fades. Strength returns to {character.strength}.{COLOR_RESET}")
 
 def _create_item_copy(item_obj):
     """Helper function to create a new instance of an item, preserving its specific class and attributes."""

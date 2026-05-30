@@ -276,29 +276,6 @@ class Inventory:
                 return item
         return None
 
-    def check_item(self, item_name):
-        for item in self.items:
-            if item.name.lower() == item_name.lower():
-                return True
-        return False
-
-    def display_inventory(self):
-        if not self.items:
-            add_log("Inventory is empty.")
-        else:
-            add_log("Inventory:")
-            for i, item in enumerate(self.items):
-                item_display = f"  {i + 1}. {item.name} (Value: {item.calculated_value} gold)"
-                if isinstance(item, (Weapon, Armor)) and item.upgrade_level>0:
-                    item_display += f" +{item.upgrade_level}"
-                if isinstance(item, Flare):
-                    item_display += f" (Count: {item.count})"
-                if isinstance(item, Lantern):
-                    item_display += f" (Fuel: {item.fuel_amount})"
-                    if item.upgrade_level > 0:
-                        item_str += f" +{item.upgrade_level}"
-                add_log(item_display)
-
     def __repr__(self):
         return f"Inventory(items={[item.name for item in self.items]})"
 

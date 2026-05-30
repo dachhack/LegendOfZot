@@ -778,8 +778,6 @@ def handle_vault_defender_victory(player_character, my_tower):
     gs.prompt_cntl = "game_loop"
 
 
-
-
 # --------------------------------------------------------------------------------
 # 13. TREASURE EFFECTS & SPECIAL FLOORS
 # --------------------------------------------------------------------------------
@@ -1075,7 +1073,6 @@ def use_merchants_bell(character, my_tower):
 # 
 # UNIQUE TREASURE TEMPLATES
 # 
-
 
 
 def get_random_potion(floor_level):
@@ -1488,55 +1485,6 @@ def get_holy_brand_bonus(character):
 # Define item templates for various types
 
 
-def get_equipment_display_name(item):
-    """
-    Generate a dynamic display name for weapons and armor based on:
-    - Upgrade level (tier prefix)
-    - Elemental strengths (suffix)
-    
-    Examples:
-    - "Dagger" (base, no elements)
-    - "Honed Iron Sword" (+1 upgrade)
-    - "Masterwork Greatsword of Flames" (+6, Fire element)
-    - "Legendary Mithril Sword of Twilight" (+8, Light+Dark elements)
-    """
-    if not isinstance(item, (Weapon, Armor)):
-        return item.name
-    
-    base_name = item.name
-    
-    # Get tier prefix based on upgrade level
-    if isinstance(item, Weapon):
-        prefix = WEAPON_TIER_PREFIXES.get(item.upgrade_level, "Ascended")
-    else:
-        prefix = ARMOR_TIER_PREFIXES.get(item.upgrade_level, "Ascended")
-    
-    # Get elemental suffix
-    elements = [e for e in item.elemental_strength if e != "None"]
-    suffix = ""
-    
-    if len(elements) >= 2:
-        # Check for special multi-element combinations
-        element_set = frozenset(elements[:2])  # Use first two elements
-        suffix = MULTI_ELEMENT_SUFFIXES.get(element_set, "")
-        if not suffix:
-            # Default: use first element's suffix
-            suffix = ELEMENTAL_SUFFIXES.get(elements[0], "")
-    elif len(elements) == 1:
-        suffix = ELEMENTAL_SUFFIXES.get(elements[0], "")
-    
-    # Build the full name
-    parts = []
-    if prefix:
-        parts.append(prefix)
-    parts.append(base_name)
-    
-    full_name = " ".join(parts)
-    if suffix:
-        full_name += " " + suffix
-    
-    return full_name
-
 def create_random_enhanced_weapon(floor_level):
     """
     Create a random weapon with possible upgrades and elemental properties
@@ -1638,7 +1586,6 @@ def create_random_enhanced_armor(floor_level):
             armor.elemental_strength.append(second)
     
     return armor
-
 
 
 # --------------------------------------------------------------------------------
@@ -1836,7 +1783,6 @@ def process_crafting_action(player_character, my_tower, cmd):
     except ValueError:
         if cmd != "init":
             add_log(f"{COLOR_RED}Enter a recipe number or 'x' to exit.{COLOR_RESET}")
-
 
 
 def handle_inventory_menu(player_character, my_tower, cmd):
@@ -3087,8 +3033,6 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         add_log(f"You emerge disoriented in a new room at ({player_character.x}, {player_character.y}) on Floor {player_character.z + 1}.")
 
 
-
-
 # 18. CHEST & LOOT
 # --------------------------------------------------------------------------------
 
@@ -3529,8 +3473,6 @@ def get_player_title(player_character):
     # Sort by prestige (second element) and return the highest
     titles.sort(key=lambda x: x[1], reverse=True)
     return titles[0][0]
-
-
 
 
 # 21. CHARACTER CREATION
@@ -4080,7 +4022,6 @@ def activate_playtest_mode(player_character):
     add_log(f"{COLOR_YELLOW}Happy testing, TOURIST! {COLOR_RESET}")
 
 
-
 def _restore_size_on_bug_exit(player_character):
     """When a quest-passed player attempts to leave the bug level
     while shrunk, the Growth Mushroom's residual power activates --
@@ -4368,117 +4309,6 @@ def handle_stairs_down(player_character, my_tower, floor_params):
     interacted_this_turn = True
     print_to_output(f"You arrive at ({player_character.x}, {player_character.y}) on Depth {player_character.z + 1}.")
     return player_character.x, player_character.y, False, interacted_this_turn # False for gs.game_should_quit
-
-def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_tower, player_character, floor_params):
-    """
-    Handles interaction when player enters a 'W' (Warp) room.
-
-    Args:
-        current_x (int): The current row coordinate of the player.
-        current_y (int): The current column coordinate of the player.
-        current_room (Room): The Room object the player is currently in.
-        grid_size (int): The size of one dimension of the square grid.
-        gs.game_should_quit (bool): Flag to indicate if the game should quit.
-        my_tower (Tower): The Tower object.
-        player_character (Character): The player's character object.
-        specified_chars (list): List of specified room characters.
-        required_chars (list): List of required room characters.
-
-    Returns:
-        tuple: (updated_x, updated_y, gs.game_should_quit, interacted_this_turn)
-    """
-    interacted_this_turn = False
-    print_to_output("A swirling portal shimmers before you!")
-
-    # Calculate evasion chance based on intelligence
-    evasion_chance = 0.20 + (player_character.intelligence * 0.02) # Base 20% + 2% per intelligence point
-    evasion_chance = min(1.0, evasion_chance) # Cap at 100%
-
-    if random.random() < evasion_chance:
-        print_to_output(f"{COLOR_GREEN}Your keen intellect allows you to resist the portal's pull! You manage to avoid being warped.{COLOR_RESET}")
-        # No movement or turn consumed specific to the warp, player can move normally.
-        # This means the game loop will ask for input again.
-    else:
-        print_to_output(f"{COLOR_RED}The portal's power overwhelms you! You are sucked in...{COLOR_RESET}")
-
-        # Determine new floor (within +/- 2 floors)
-        # b409: cap max_z at F50 (z=49). Mirror the warp at line 3037
-        # which already caps; without it a F49+ warp could spit the
-        # player onto a phantom F51 generated past the boss arena.
-        # Also clamp at F49 (z=48) when the Gate to Floor 50 is
-        # still locked, so the random portal can't skip the
-        # 8-shard quest by warping the player straight onto the
-        # boss arena.
-        MAX_FLOOR_Z = 49
-        gate_cap = MAX_FLOOR_Z - 1 if not gs.gate_to_floor_50_unlocked else MAX_FLOOR_Z
-        min_z = max(0, player_character.z - 2)
-        max_z = min(gate_cap, player_character.z + 2)
-
-        # Ensure max_z does not exceed newly generated floor (if any) to prevent errors
-        # This might require generating floors up to max_z if they don't exist.
-        while len(my_tower.floors) <= max_z:
-            # When generating new floors due to warp, use the standard required_chars including 'D', 'U', 'V'
-            my_tower.add_floor(**gs.floor_params)
-
-        new_z = random.randint(min_z, max_z)
-
-        # Forbid warp-portal destinations on the bug level -- the
-        # bug-quest should only start by deliberate stair descent.
-        # Nudge to an adjacent floor (or stay) if the random roll
-        # lands on F8.
-        while len(my_tower.floors) <= new_z:
-            my_tower.add_floor(**gs.floor_params)
-        if (new_z != player_character.z
-                and my_tower.floors[new_z].properties.get('is_bug_level')):
-            alt = new_z + 1 if new_z + 1 <= max_z else new_z - 1
-            if (min_z <= alt <= max_z
-                    and alt != player_character.z):
-                while len(my_tower.floors) <= alt:
-                    my_tower.add_floor(**gs.floor_params)
-                if not my_tower.floors[alt].properties.get('is_bug_level'):
-                    new_z = alt
-                else:
-                    new_z = player_character.z
-            else:
-                new_z = player_character.z
-
-        # Bug-level exit auto-cure: if leaving a bug floor for a
-        # non-bug floor AND quest already passed, the Mushroom's
-        # residual power restores normal size mid-warp.
-        from_floor_warp = my_tower.floors[player_character.z]
-        to_floor_warp = my_tower.floors[new_z]
-        if (from_floor_warp.properties.get('is_bug_level')
-                and not to_floor_warp.properties.get('is_bug_level')):
-            _restore_size_on_bug_exit(player_character)
-
-        player_character.z = new_z
-
-        # Determine new (x,y) on the new floor
-        #work to do here
-        #check if not wall
-        while True:
-          new_x = random.randint(0, my_tower.floors[player_character.z].rows - 1)
-          new_y = random.randint(0, my_tower.floors[player_character.z].cols - 1)
-          current_room = my_tower.floors[player_character.z].grid[new_x][new_y]
-          current_room_type = current_room.room_type
-          if is_wall_at_coordinate(my_tower.floors[player_character.z], new_x, new_y) or current_room_type=='W':
-            continue
-          else:
-            break
-
-        player_character.x = new_x
-        player_character.y = new_y
-
-        # Check if we warped into a bug level - trigger shrinking spell
-        warp_target_floor = my_tower.floors[player_character.z]
-        if warp_target_floor.properties.get('is_bug_level') and not gs.player_is_shrunk:
-            _trigger_shrinking_spell(player_character)
-
-        print_to_output(f"You emerge disoriented in a new room at ({player_character.x}, {player_character.y}) on Depth {player_character.z + 1}!")
-        interacted_this_turn = True # A turn was definitely consumed by warping
-
-    return player_character.x, player_character.y, gs.game_should_quit, interacted_this_turn
-
 
 
 def process_stairs_up_action(player_character, my_tower, cmd, floor_params_ref):
@@ -4840,16 +4670,6 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 # All sprite data and rendering now in external sprite_data.py
 # ============================================================
 
-def get_evolution_tier_style(monster):
-    """Border color + tier label for a monster's combat panel.
-
-    Monsters no longer carry name-prefix evolution tiers, so this returns
-    no decoration; the panel falls back to its default border and name color.
-    Retained as the single styling hook in case bespoke per-monster framing
-    is wanted later.
-    """
-    return '', ''
-
 
 def generate_player_sprite_html(race, gender, equipped_armor=None):
     """Wrapper that resolves armor state, then delegates to sprite_data."""
@@ -5017,7 +4837,6 @@ def generate_grid_html(floor, player_x, player_y):
         grid_html += "</div>"
     grid_html += "</div></div>"
     return grid_html
-
 
 
 # --------------------------------------------------------------------------------
