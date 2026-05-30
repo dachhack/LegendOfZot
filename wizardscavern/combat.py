@@ -10,27 +10,21 @@ Usage:
 """
 
 import random
-import math
 
 from . import game_state as gs
 from .game_state import (
     add_log,
     COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-    COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
-    BOLD, UNDERLINE,
-    normal_int_range, get_article,
+    COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
+    get_article,
 )
 
-from .items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
+from .items import (Trophy, Treasure, Rune, Shard, Towel, Potion,
                    CORROSIVE_MONSTERS, get_base_monster_name, apply_corrosion_effect,
-                   apply_rust_effect, degrade_equipment, is_item_identified, identify_item,
-                   get_item_display_name, process_potion_effects_in_combat,
-                   process_potion_effects_on_monster_defeat, process_regeneration_effect,
-                   track_equipment_use, drop_monster_items, drop_monster_meat)
+                   degrade_equipment, is_item_identified, get_item_display_name, track_equipment_use, drop_monster_items, drop_monster_meat)
 from .achievements import check_achievements
 
-from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
-from .dungeon import Room
+from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
 
 # ---------------------------------------------------------------------------

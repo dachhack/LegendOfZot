@@ -15,14 +15,12 @@ import random
 from . import game_state as gs
 from .game_state import (
     add_log,
-    COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-    COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
-    BOLD, normal_int_range, get_article,
+    COLOR_RESET, COLOR_YELLOW,
 )
 
 # Item classes and item functions
 from .items import (
-    Item, Potion, Scroll, Spell, Weapon, Armor, Treasure,
+    Potion, Scroll, Spell, Weapon, Armor, Treasure,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
     CookingKit, CuringKit,
     _create_item_copy,

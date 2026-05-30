@@ -5,21 +5,18 @@ tombs, gardens, oracles, blacksmith, shrine, alchemist, war room, taxidermist, e
 """
 
 import random
-import math
 from . import game_state as gs
 from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-                        COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
-                        normal_int_range, get_article)
-from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_GARDEN_INGREDIENTS
-from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
-                   Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-                   Trophy, Rune, Shard, identify_item, is_item_identified,
-                   get_item_display_name, _create_item_copy, roll_buc_status)
-from .characters import Monster, get_sorted_inventory, format_item_for_display, burn_inventory_items
+                        COLOR_CYAN, COLOR_YELLOW, COLOR_GREY)
+from .game_data import BUG_MONSTER_TEMPLATES, BUG_GARDEN_INGREDIENTS
+from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+                   Lantern, Ingredient,
+                   Trophy, Rune, Shard, get_item_display_name, _create_item_copy, roll_buc_status)
+from .characters import Monster, get_sorted_inventory, burn_inventory_items
 from .achievements import check_achievements
 from .zotle import check_zotle_guess
 from .dungeon import is_wall_at_coordinate
-from .item_templates import (POTION_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
+from .item_templates import (GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
                             SPELL_TEMPLATES, POTION_TEMPLATES, WEAPON_TEMPLATES,
                             ARMOR_TEMPLATES, SCROLL_TEMPLATES, FEY_GARDEN_INGREDIENTS)
 from .save_system import SaveSystem

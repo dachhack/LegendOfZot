@@ -1,8 +1,7 @@
 """Item template data for Wizard's Cavern."""
 from .items import (
-    Item, Potion, Ingredient, Trophy, Rune, Shard,
-    Weapon, Armor, Scroll, Flare, Lantern, LanternFuel,
-    Food, Meat, CookingKit, CuringKit, Sausage, Treasure, Towel, Spell, LembasWafer,
+    Potion, Ingredient, Weapon, Armor, Scroll, Lantern, LanternFuel,
+    Food, CookingKit, Sausage, Treasure, Spell, LembasWafer,
 )
 
 

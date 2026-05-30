@@ -4,11 +4,9 @@ Contains all item subclasses, identification, durability, and item management fu
 """
 
 import random
-import math
 from . import game_state as gs
 from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-                        COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
-                        normal_int_range, get_article)
+                        COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, get_article)
 
 
 def register_item_discovery(item):

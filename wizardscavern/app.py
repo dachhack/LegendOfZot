@@ -20,14 +20,9 @@ Game logic is split across module files:
 """
 
 # Standard library imports
-import random
-import math
 import re
-import textwrap
-from collections import deque
 import json
 import os
-from datetime import datetime
 
 # Toga framework
 import toga
@@ -40,33 +35,24 @@ from .sprite_data import (
     generate_room_sprite_html,
     generate_player_sprite_html as _generate_player_sprite_html,
 )
-from .game_data import (
-    MONSTER_TEMPLATES,
-    MONSTER_SPAWN_FLOOR_RANGE,
-    TROPHY_DROPS,
-    TAXIDERMIST_COLLECTIONS,
-)
 
 # Game state (all shared mutable globals)
 from . import game_state as gs
-from .game_state import (add_log, print_to_output, normal_int_range, get_article,
-                        COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-                        COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE)
+from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW)
 
 # Game modules - import all public names for backward compatibility
-from .achievements import Achievement, ACHIEVEMENTS, check_achievements
-from .zotle import (scramble_word_for_zotle, check_zotle_guess, initialize_zotle_puzzle,
-                   format_zotle_guess_html, should_spawn_puzzle_room, spawn_puzzle_room_on_floor)
+from .achievements import ACHIEVEMENTS
+from .zotle import (initialize_zotle_puzzle)
 from .item_templates import *
 from .items import *
 from .characters import *
-from .dungeon import Room, Floor, Tower, is_wall_at_coordinate
+from .dungeon import Tower
 from .combat import *
 from .vendor import *
 from .save_system import SaveSystem
 from .room_actions import *
 from .game_systems import *
-from .game_systems import _handle, _trigger_room_interaction, _execute_warp
+from .game_systems import _handle, _trigger_room_interaction
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
 
@@ -3257,14 +3243,12 @@ class WizardsCavernApp(toga.App):
                 pass
             # Also try finding and hiding the toolbar view directly
             try:
-                from android.view import View
                 decor = activity.getWindow().getDecorView()
                 root = decor.getRootView()
                 self._hide_toolbar_recursive(root)
             except Exception:
                 pass
 
-            from android.view.inputmethod import InputMethodManager
             if hasattr(self.input_field, '_impl') and hasattr(self.input_field._impl, 'native'):
                 native_field = self.input_field._impl.native
                 native_field.setShowSoftInputOnFocus(False)
@@ -3276,7 +3260,6 @@ class WizardsCavernApp(toga.App):
                 native_field.setBackgroundDrawable(bg)
                 # Also clear the tint that draws the colored underline
                 try:
-                    from java.lang import Class
                     # Use ViewCompat to clear background tint
                     from androidx.core.view import ViewCompat
                     ViewCompat.setBackgroundTintList(native_field, None)
@@ -3343,7 +3326,6 @@ class WizardsCavernApp(toga.App):
             return
         try:
             from android import activity
-            from android.view import View
 
             # Hide toolbar
             decor = activity.getWindow().getDecorView()
@@ -8301,7 +8283,6 @@ class WizardsCavernApp(toga.App):
             #    the inventory list has the whole content area to itself.
             #    BACK chip returns to the default altar view.
 
-            from .room_actions import altar_piety_tier
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})

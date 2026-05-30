@@ -24,14 +24,12 @@ import math
 from . import game_state as gs
 from .game_state import (
     add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-    COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD,
-    normal_int_range, get_article, print_to_output
+    COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, print_to_output
 )
 
 from .items import (
-    Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
-    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-    Trophy, Rune, Shard, LembasWafer
+    Potion, Weapon, Armor, Scroll, Spell, Treasure, Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
+    LembasWafer
 )
 
 

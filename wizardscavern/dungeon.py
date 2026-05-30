@@ -3,7 +3,7 @@ import random
 from collections import deque
 from . import game_state as gs
 from .game_state import (
-    add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
+    add_log, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
     COLOR_RED, COLOR_PURPLE, COLOR_CYAN,
 )
 
@@ -772,7 +772,6 @@ class Tower:
     def _create_bug_level(self, floor, floor_number):
         """Transform a floor into Zot's Shrinking Bug Level.
         Replaces all monster rooms with bug monsters and places the Bug Queen."""
-        from .game_data import BUG_MONSTER_TEMPLATES
 
         floor_index = floor_number - 1  # Convert to 0-indexed
         gs.bug_level_floors[floor_index] = True

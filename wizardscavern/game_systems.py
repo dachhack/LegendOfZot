@@ -5,47 +5,33 @@ chest/loot, character creation, stair handling, combat display, and grid renderi
 """
 
 import random
-import math
-import re
-import textwrap
 from . import game_state as gs
 from .game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR_RESET,
-                        COLOR_PURPLE, COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
-                        BOLD, UNDERLINE, normal_int_range, get_article)
-from .sprite_data import generate_monster_sprite_html, generate_room_sprite_html
+                        COLOR_PURPLE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY)
 from .sprite_data import generate_player_sprite_html as _generate_player_sprite_html
 from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE,
-                       TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
-from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+                       BUG_MONSTER_TEMPLATES)
+from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
                    Sausage, Ingredient,
-                   LembasWafer, Trophy, Rune, Shard, identify_item, is_item_identified,
-                   get_item_display_name, register_item_discovery, _create_item_copy,
-                   get_monster_meat_info, drop_monster_items, drop_monster_meat,
-                   cook_meat_in_inventory, player_has_item_type,
-                   process_potion_effects_in_combat, process_potion_effects_on_monster_defeat,
-                   process_regeneration_effect, degrade_equipment, apply_corrosion_effect,
-                   apply_rust_effect, repair_item, get_repair_cost,
+                   Rune, identify_item, get_item_display_name, _create_item_copy,
+                   apply_corrosion_effect,
                    process_hunger, process_mana_regen, tick_meat_rot, get_base_monster_name,
                    is_metal_item, generate_vendor_inventory, process_upgrade_scroll_action,
                    roll_buc_status, CORROSIVE_MONSTERS)
 from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
-                            UTILITY_TEMPLATES, TREASURE_TEMPLATES, POTION_TEMPLATES,
-                            SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
-                            UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
+                            TREASURE_TEMPLATES, POTION_TEMPLATES,
+                            SPELL_TEMPLATES, UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
                             POTION_RECIPES, LEMBAS_RECIPES, SAUSAGE_RECIPES,
-                            GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
-                            HUNGER_MAX, HUNGER_DECAY_PER_MOVE,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
                             ELEMENTAL_SUFFIXES, MULTI_ELEMENT_SUFFIXES)
-from .characters import Character, Monster, Inventory, StatusEffect, get_sorted_inventory, format_item_for_display, burn_inventory_items
+from .characters import Monster, get_sorted_inventory, burn_inventory_items
 from .achievements import check_achievements
-from .dungeon import Room, Floor, Tower, is_wall_at_coordinate
-from .vendor import (Vendor, set_vendor_greeting, set_shop_msg, process_vendor_action,
-                    handle_starting_shop, handle_vendor_shop, generate_magic_shop_inventory,
-                    process_sell_quantity, reveal_adjacent_walls,
+from .dungeon import is_wall_at_coordinate
+from .vendor import (Vendor, set_vendor_greeting, process_vendor_action,
+                    handle_starting_shop, reveal_adjacent_walls,
                     MAGIC_SHOP_NAMES, MAGIC_SHOP_MESSAGES, vendor_names)
 from .save_system import SaveSystem
 

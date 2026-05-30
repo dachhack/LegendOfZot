@@ -7,7 +7,7 @@ The pool already pre-renders all 81 named room sprites (24 base codes +
 bytes directly without runtime PIL slicing.
 """
 
-from .pool import _load_pool, get_image_b64
+from .pool import _load_pool
 
 _base_pids = None
 _variant_pids = None
