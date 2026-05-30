@@ -40,6 +40,10 @@ MAX_SAVE_SLOTS = 3
 # GAME LOOP STATE
 # ============================================================================
 log_lines = []
+# Parallel to log_lines: per-line reveal delay in ms, or None for a line
+# added since the last render (the renderer stamps those with the matching
+# combat-reveal delay). 0 means "already on screen, show immediately".
+log_line_delays = []
 prompt_cntl = "intro_story"
 previous_prompt_cntl = ""
 # When the portrait picker (player_sprite mode) is launched from somewhere
@@ -58,6 +62,11 @@ cantrip_selections = []
 # {'icon': html, 'text': str, 'created_at': float}. The renderer reads,
 # emits, and prunes via wizardscavern.sprites.loot_toast.
 loot_toasts = []
+# Reveal delay (ms) stamped onto toasts created right now. Combat kills set
+# this so loot/gold toasts hold until the defeat animation has revealed the
+# kill, instead of popping up top-right and spoiling the result. Reset to 0
+# after each render (parallel to monster_defeated_anim).
+loot_toast_delay_ms = 0
 game_should_quit = False
 lets_go = False
 html_cache = ""
@@ -492,13 +501,63 @@ def add_log(text):
     text = text.replace(COLOR_GREY, '<span style="color: grey;">')
     text = text.replace(COLOR_RESET, '</span>')
     log_lines.append(text)
+    log_line_delays.append(None)  # new line; renderer assigns its reveal delay
     if len(log_lines) > 16:
         log_lines.pop(0)
+        log_line_delays.pop(0)
 
 
 def print_to_output(text):
     """Alias for add_log for compatibility."""
     add_log(text)
+
+
+# --- Monster-defeat animation timeline (ms from the kill frame painting) ---
+# Single source of truth for the whole kill sequence. generate_monster_defeat_js
+# plays the grayscale + overlay phases off these, the victory-panel auto-dismiss
+# timer uses DEFEAT_DISMISS_MS, and the log/toast reveal is timed to land just
+# after the overlay flashes in (between OVERLAY and DISMISS).
+DEFEAT_GRAYSCALE_MS = 2100  # monster sprite box fades to grayscale (kill confirmed)
+DEFEAT_OVERLAY_MS = 2700    # "NAME / DEFEATED" overlay flashes in (0.3s scale+fade)
+DEFEAT_DISMISS_MS = 4500    # victory panel auto-dismissed, back to room view
+
+# Combat-log reveal timing (ms). New log lines added while a combat
+# animation is playing are held back until that animation has revealed the
+# result, so the log can't spoil a dice roll or a kill before the player
+# sees it on screen. This replaces the old "blank the whole log" approach.
+COMBAT_LOG_REVEAL_MS = 3300       # opposed-dice exchange fully resolved
+COMBAT_LOG_REVEAL_MS_INIT = 1000  # initiative-only roll resolves sooner
+DEFEAT_LOG_REVEAL_MS = DEFEAT_OVERLAY_MS + 600  # after the "DEFEATED" overlay flashes in
+
+
+def consume_log_delays():
+    """Return per-line reveal delays (ms) for the current render, then reset.
+
+    Lines already on screen reveal at 0ms. Lines added since the last render
+    (sentinel ``None``) are held until the combat animation matching this
+    frame has resolved: a dice exchange, or the monster-defeat overlay. This
+    is a one-shot — after the call every line is marked revealed, so a line
+    only ever fades in once and is instant on every later render.
+    """
+    # Keep the parallel list aligned with log_lines (defensive: log_lines may
+    # be cleared/reassigned elsewhere; pad old entries as already-revealed).
+    while len(log_line_delays) < len(log_lines):
+        log_line_delays.insert(0, 0)
+    while len(log_line_delays) > len(log_lines):
+        log_line_delays.pop(0)
+
+    has_init = bool(last_dice_rolls and any(r[3] == 'INIT' for r in last_dice_rolls))
+    if monster_defeated_anim:
+        reveal = DEFEAT_LOG_REVEAL_MS
+    elif last_dice_rolls:
+        reveal = COMBAT_LOG_REVEAL_MS_INIT if has_init else COMBAT_LOG_REVEAL_MS
+    else:
+        reveal = 0
+
+    delays = [reveal if d is None else 0 for d in log_line_delays]
+    for i in range(len(log_line_delays)):
+        log_line_delays[i] = 0
+    return delays
 
 
 def normal_int_range(mean):

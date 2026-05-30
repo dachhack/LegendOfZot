@@ -1999,13 +1999,14 @@ def generate_concentration_check_js(conc_roll):
 def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
-    Combat sequence on a kill (matches dice/damage timing):
-      0-600ms:    Player ATTACK dice tumbles + lands
-      600-1000ms: Monster DEFEND dice tumbles + lands (exchange resolved)
-      1300ms:     Monster damage float appears
-      2100ms:     Sprite fades to grayscale (kill confirmed)
-      2700ms:     Flash "MONSTER NAME / DEFEATED" overlay
-      4500ms:     Panel auto-dismissed by Python timer
+    Phase times come from game_state (single source of truth for the kill
+    sequence), so retuning the timeline only touches the constants:
+      0-600ms:               Player ATTACK dice tumbles + lands
+      600-1000ms:            Monster DEFEND dice tumbles + lands (resolved)
+      1300ms:                Monster damage float appears
+      DEFEAT_GRAYSCALE_MS:   Sprite fades to grayscale (kill confirmed)
+      DEFEAT_OVERLAY_MS:     Flash "MONSTER NAME / DEFEATED" overlay
+      DEFEAT_DISMISS_MS:     Panel auto-dismissed by Python timer
     """
     if not monster_name:
         return ""
@@ -2020,17 +2021,17 @@ def generate_monster_defeat_js(monster_name):
         # Cancel CSS entrance animation that might conflict
         'mp.style.animation="none";'
 
-        # Phase 1 (0-2100ms): wait for opposed dice + damage float to play
+        # Phase 1: wait for opposed dice + damage float to play
 
-        # Phase 2 (2100ms): grayscale + dim the sprite box only (not the text)
+        # Phase 2 (DEFEAT_GRAYSCALE_MS): grayscale + dim the sprite box only (not the text)
         'setTimeout(function(){'
         'var sb=document.getElementById("monster_sprite_box");'
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
-        '},2100);'
+        f'}},{gs.DEFEAT_GRAYSCALE_MS});'
 
-        # Phase 3 (2700ms): flash in overlay with monster name + DEFEATED
+        # Phase 3 (DEFEAT_OVERLAY_MS): flash in overlay with monster name + DEFEATED
         'setTimeout(function(){'
         'var ov=document.createElement("div");'
         'ov.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
@@ -2057,7 +2058,7 @@ def generate_monster_defeat_js(monster_name):
         'ov.style.opacity="1";'
         'ov.style.transform="scale(1)";'
         '});'
-        '},2700);'
+        f'}},{gs.DEFEAT_OVERLAY_MS});'
 
         '})();</script>'
     )
@@ -2627,7 +2628,8 @@ class WizardsCavernApp(toga.App):
         gs.prompt_cntl = ""
 
         gs.log_lines = []
-        
+        gs.log_line_delays = []
+
         # Track if current mode needs numbers (for button behavior)
         self.current_needs_numbers = False
 
@@ -4553,8 +4555,10 @@ class WizardsCavernApp(toga.App):
         # 'q' already has its own y/n confirm flow (confirm_quit prompt).
         if c == 'df':
             return 'Drink potions to full'
-        if c == 'f' and gs.prompt_cntl == 'combat_mode':
-            return 'Flee combat'
+        # Flee is NOT armed for two-tap confirm: it's a defensive escape, not
+        # an irreversible act, and choosing a flee direction (with FIGHT to
+        # cancel) is already a natural confirm. The extra "tap again" made
+        # every escape attempt feel like three taps.
         if c == 's' and gs.prompt_cntl == 'altar_mode':
             return 'Sacrifice at the altar'
         # Save-overwrite commands (o1/o2/o3) destroy the existing save in
@@ -4873,9 +4877,11 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 4.5s total: opposed ATK exchange (0-1.0s) + damage (1.3-1.9s) +
-        # grayscale (2.1-2.7s) + DEFEATED flash (2.7-4.5s)
-        threading.Timer(4.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # Dismiss after the full defeat timeline: opposed ATK exchange +
+        # damage float + grayscale (DEFEAT_GRAYSCALE_MS) + DEFEATED flash
+        # (DEFEAT_OVERLAY_MS). DEFEAT_DISMISS_MS is the single tunable knob.
+        threading.Timer(gs.DEFEAT_DISMISS_MS / 1000.0,
+                        lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """Render the game state to the display.
@@ -4959,6 +4965,7 @@ class WizardsCavernApp(toga.App):
             'statsHtml': getattr(self, '_last_stats_html', '') or '',
             'bodyClass': self._body_class_for_mode(gs.prompt_cntl),
             'logLines': list(gs.log_lines),
+            'logDelays': gs.consume_log_delays(),
             'hasDiceRolls': bool(gs.last_dice_rolls),
             'hasInitRoll': has_init,
             'scripts': anim_scripts,
@@ -4987,6 +4994,7 @@ class WizardsCavernApp(toga.App):
 
         # Clear one-shot flags (mirrors what wrap_html does on first render)
         gs.monster_defeated_anim = None
+        gs.loot_toast_delay_ms = 0
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
@@ -10110,6 +10118,7 @@ class WizardsCavernApp(toga.App):
         # Convert log_lines to JavaScript-safe format
         import json
         log_lines_json = json.dumps(gs.log_lines)
+        log_delays_json = json.dumps(gs.consume_log_delays())
 
         # Stats bar lives in the fixed top strip alongside the log.
         # Stash is set in generate_html() right after player_stats_html
@@ -10225,7 +10234,10 @@ class WizardsCavernApp(toga.App):
                     font-size: 12px;
                     line-height: 1.2;
                     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-                    animation: lootFade 4s linear forwards;
+                    /* 'both' so a positive animation-delay (a combat-kill
+                       toast waiting out its reveal delay) holds the 0%
+                       keyframe — opacity 0 — instead of flashing visible. */
+                    animation: lootFade 4s linear both;
                     max-width: 100% !important;
                 }}
                 .loot-toast-text {{
@@ -11600,40 +11612,17 @@ class WizardsCavernApp(toga.App):
                     if (p.bodyClass !== undefined) {{
                         document.body.className = p.bodyClass;
                     }}
-                    // Update log
+                    // Update log. Per-line reveal delays hold back the new
+                    // combat-result lines until their animation resolves;
+                    // chips always RENDER server-side and animateCombatChips
+                    // fades them during the roll so they can't be double-tapped.
                     if (p.logLines !== undefined) {{
                         window.logLines = p.logLines;
+                        window.logDelays = p.logDelays || [];
                         window.hasDiceRolls = !!p.hasDiceRolls;
                         window.hasInitRoll = !!p.hasInitRoll;
-                        var ld = document.getElementById('game-log');
-                        // Fade combat chips during the dice animation so
-                        // they can't be double-tapped during resolution.
-                        // Chips always RENDER server-side; JS toggles the
-                        // animating flag so opacity + pointer-events flip
-                        // off during the roll, on after it completes.
-                        var chipBars = document.querySelectorAll('.hudchips');
-                        if (window.hasDiceRolls && ld) {{
-                            ld.style.opacity = '0';
-                            for (var ci = 0; ci < chipBars.length; ci++) {{
-                                chipBars[ci].classList.add('animating');
-                            }}
-                            var delay = window.hasInitRoll ? 1000 : 3300;
-                            setTimeout(function() {{
-                                if (typeof updateLog === 'function') updateLog();
-                                ld.style.transition = 'opacity 0.3s';
-                                ld.style.opacity = '1';
-                                var bars = document.querySelectorAll('.hudchips');
-                                for (var ci = 0; ci < bars.length; ci++) {{
-                                    bars[ci].classList.remove('animating');
-                                }}
-                            }}, delay);
-                        }} else {{
-                            if (typeof updateLog === 'function') updateLog();
-                            if (ld) ld.style.opacity = '1';
-                            for (var ci = 0; ci < chipBars.length; ci++) {{
-                                chipBars[ci].classList.remove('animating');
-                            }}
-                        }}
+                        if (typeof updateLog === 'function') updateLog();
+                        if (typeof animateCombatChips === 'function') animateCombatChips();
                     }}
                     // Run animation / SFX scripts from payload
                     if (p.scripts) {{
@@ -11663,46 +11652,57 @@ class WizardsCavernApp(toga.App):
             </div>
             <div id="game-log"></div>
             <script>
-                // Embed log lines from Python
+                // Embed log lines + per-line reveal delays from Python
                 window.logLines = {log_lines_json};
+                window.logDelays = {log_delays_json};
                 window.hasDiceRolls = {'true' if gs.last_dice_rolls else 'false'};
                 window.hasInitRoll = {'true' if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 'false'};
+                window._logToken = 0;
 
-                // Update log content and auto-scroll to bottom
+                // Render the log, holding back any line flagged with a reveal
+                // delay until that delay elapses. Lines already on screen stay
+                // put; only the new combat-result lines fade in once their
+                // animation (a dice exchange or the defeat overlay) resolves,
+                // so the log never spoils a roll or a kill. Replaces the old
+                // "blank the whole log" hack.
                 function updateLog() {{
-                    var logDiv = document.getElementById('game-log');
-                    if (logDiv && window.logLines) {{
-                        logDiv.innerHTML = window.logLines.join('<br>');
-                        logDiv.scrollTop = logDiv.scrollHeight;
+                    var ld = document.getElementById('game-log');
+                    if (!ld || !window.logLines) return;
+                    var token = ++window._logToken;
+                    var lines = window.logLines, delays = window.logDelays || [];
+                    function renderUpTo(maxD) {{
+                        if (token !== window._logToken) return;  // superseded by a newer render
+                        var html = [];
+                        for (var i = 0; i < lines.length; i++) {{
+                            if ((delays[i] || 0) <= maxD) html.push(lines[i]);
+                        }}
+                        ld.innerHTML = html.join('<br>');
+                        ld.scrollTop = ld.scrollHeight;
+                    }}
+                    renderUpTo(0);
+                    var seen = {{}};
+                    for (var i = 0; i < lines.length; i++) {{
+                        var d = delays[i] || 0;
+                        if (d > 0 && !seen[d]) {{
+                            seen[d] = 1;
+                            (function(dd) {{ setTimeout(function() {{ renderUpTo(dd); }}, dd); }})(d);
+                        }}
                     }}
                 }}
-                // Delay log when dice are rolling so results aren't spoiled.
-                // Log stays hidden until after the reveal animation finishes.
-                // Combat chips fade during the same window so the player
-                // can't double-tap during the roll.
-                if (window.hasDiceRolls) {{
-                    var logDiv = document.getElementById('game-log');
-                    if (logDiv) logDiv.style.opacity = '0';
-                    var chipBars0 = document.querySelectorAll('.hudchips');
-                    for (var ci = 0; ci < chipBars0.length; ci++) {{
-                        chipBars0[ci].classList.add('animating');
-                    }}
-                    // Reveal delay: ATK reveal ~1160ms, DEF reveal ~3060ms, init ~760ms
+
+                // Fade combat chips during the dice/defeat animation so they
+                // can't be double-tapped before the result resolves.
+                function animateCombatChips() {{
+                    if (!window.hasDiceRolls) return;
+                    var bars = document.querySelectorAll('.hudchips');
+                    for (var ci = 0; ci < bars.length; ci++) bars[ci].classList.add('animating');
                     var delay = window.hasInitRoll ? 1000 : 3300;
-                    window.addEventListener('load', function() {{
-                        setTimeout(function() {{
-                            updateLog();
-                            var ld = document.getElementById('game-log');
-                            if (ld) {{ ld.style.transition = 'opacity 0.3s'; ld.style.opacity = '1'; }}
-                            var bars = document.querySelectorAll('.hudchips');
-                            for (var ci = 0; ci < bars.length; ci++) {{
-                                bars[ci].classList.remove('animating');
-                            }}
-                        }}, delay);
-                    }});
-                }} else {{
-                    window.addEventListener('load', updateLog);
+                    setTimeout(function() {{
+                        var b = document.querySelectorAll('.hudchips');
+                        for (var ci = 0; ci < b.length; ci++) b[ci].classList.remove('animating');
+                    }}, delay);
                 }}
+                window.addEventListener('load', function() {{ updateLog(); animateCombatChips(); }});
             </script>
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_icon_visual_js(gs.last_spell_cast)}
@@ -11717,6 +11717,7 @@ class WizardsCavernApp(toga.App):
         """
         # Clear one-shot animation flags after rendering
         gs.monster_defeated_anim = None
+        gs.loot_toast_delay_ms = 0
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
