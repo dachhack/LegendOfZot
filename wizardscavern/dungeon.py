@@ -3,7 +3,7 @@ import random
 from collections import deque
 from . import game_state as gs
 from .game_state import (
-    add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
+    add_log, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
     COLOR_RED, COLOR_PURPLE, COLOR_CYAN,
 )
 
@@ -19,13 +19,6 @@ def is_wall_at_coordinate(current_floor, r, c):
 def new_grid(grid_rows, grid_cols, wall_char):
     return [[wall_char for _ in range(gs.grid_cols)] for _ in range(gs.grid_rows)]
 
-def count_room_cells(grid, floor_char):
-    room_cell_count = 0
-    for r in range(len(grid)):
-        for c in range(len(grid[0])):
-            if grid[r][c] == floor_char:
-                room_cell_count += 1
-    return room_cell_count
 
 def does_path_not_exist(start_r, start_c, end_r, end_c, grid, floor_char):
     rows = len(grid)
@@ -291,9 +284,7 @@ class Floor:
         """Prints the floor layout showing all room types, ignoring fog of war."""
         for r_idx in range(self.rows):
             for c_idx in range(self.cols):
-                room = self.grid[r_idx][c_idx]
-                char_to_print = room.room_type
-                output = f" {char_to_print} "
+                self.grid[r_idx][c_idx]
                 #add_log(output, end="")
             #add_log()
 
@@ -774,7 +765,6 @@ class Tower:
     def _create_bug_level(self, floor, floor_number):
         """Transform a floor into Zot's Shrinking Bug Level.
         Replaces all monster rooms with bug monsters and places the Bug Queen."""
-        from .game_data import BUG_MONSTER_TEMPLATES
 
         floor_index = floor_number - 1  # Convert to 0-indexed
         gs.bug_level_floors[floor_index] = True

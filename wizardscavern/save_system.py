@@ -13,15 +13,6 @@ import os
 from datetime import datetime
 
 from . import game_state as gs
-from .game_state import (
-    add_log,
-    COLOR_RED,
-    COLOR_GREEN,
-    COLOR_RESET,
-    COLOR_YELLOW,
-    COLOR_CYAN,
-    COLOR_PURPLE,
-)
 
 # These imports are needed for serialization/deserialization of game objects.
 # They are imported at module level since the save system must know about
@@ -29,7 +20,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
-    CookingKit, CuringKit, Sausage, Ingredient, Trophy, Rune, Shard, LembasWafer,
+    CookingKit, CuringKit, Sausage, Ingredient, Rune, Shard, LembasWafer,
 )
 from .characters import Character, Monster, Inventory, StatusEffect
 from .vendor import Vendor

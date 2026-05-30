@@ -4,11 +4,9 @@ Contains all item subclasses, identification, durability, and item management fu
 """
 
 import random
-import math
 from . import game_state as gs
 from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-                        COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
-                        normal_int_range, get_article)
+                        COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, get_article)
 
 
 def register_item_discovery(item):
@@ -302,28 +300,6 @@ def get_vendor_identify_cost(item):
         return base_cost * level_mult * 2  # Equipment costs more
     else:
         return base_cost * level_mult
-
-def vendor_identify_item(item, player_character):
-    """
-    Have a vendor identify an item for gold.
-    Returns True if successful.
-    """
-    cost = get_vendor_identify_cost(item)
-    
-    if player_character.gold < cost:
-        add_log(f"{COLOR_RED}You don't have enough gold! Identification costs {cost} gold.{COLOR_RESET}")
-        return False
-    
-    if is_item_identified(item):
-        add_log(f"{COLOR_YELLOW}That item is already identified.{COLOR_RESET}")
-        return False
-    
-    player_character.gold -= cost
-    identify_item(item)
-    add_log(f"{COLOR_GREEN}The vendor examines the item carefully...{COLOR_RESET}")
-    add_log(f"{COLOR_YELLOW}You paid {cost} gold for identification.{COLOR_RESET}")
-    
-    return True
 
 
 # ============================================================================
@@ -1577,7 +1553,7 @@ class Weapon(Item):
         elif pct > 0:
             return f"<span style='color: #FF5722;'>{self.durability}/{self.max_durability}</span>"
         else:
-            return f"<span style='color: #F44336;'>BROKEN</span>"
+            return "<span style='color: #F44336;'>BROKEN</span>"
 
     @property
     def calculated_value(self):
@@ -1706,7 +1682,7 @@ class Armor(Item):
         elif pct > 0:
             return f"<span style='color: #FF5722;'>{self.durability}/{self.max_durability}</span>"
         else:
-            return f"<span style='color: #F44336;'>BROKEN</span>"
+            return "<span style='color: #F44336;'>BROKEN</span>"
 
     @property
     def calculated_value(self):
@@ -2246,7 +2222,6 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
                 chosen_item.upgrade_level += 1
                 # Recalculate max_durability to reflect the upgrade, and heal proportionally
                 if isinstance(chosen_item, (Weapon, Armor)):
-                    old_max = chosen_item.max_durability
                     bonus = chosen_item.UPGRADE_DURABILITY_BONUS
                     chosen_item.max_durability += bonus
                     chosen_item.durability = min(chosen_item.max_durability, chosen_item.durability + bonus)
@@ -3102,7 +3077,6 @@ class Meat(Item):
         self.rot_timer -= 1
         if self.rot_timer <= 0:
             self.is_rotten = True
-            old_name = self.name
             self.name = f"Rotten {self.monster_name} {self.cut.capitalize()}"
             self.description = "Spoiled meat. Eating it will make you sick."
             self.nutrition = -15  # eating rotten meat hurts
@@ -3469,22 +3443,6 @@ def process_mana_regen(character):
         character.mana_regen_tracker = tracker
 
 
-def get_hunger_label(hunger):
-    """Return a text label for the current hunger level."""
-    if hunger <= 0:
-        return "STARVING"
-    elif hunger <= HUNGER_STARVING_THRESHOLD:
-        return "Starving"
-    elif hunger <= HUNGER_HUNGRY_THRESHOLD:
-        return "Hungry"
-    elif hunger <= HUNGER_PECKISH_THRESHOLD:
-        return "Peckish"
-    elif hunger <= HUNGER_SATED_THRESHOLD:
-        return "Satisfied"
-    else:
-        return "Full"
-
-
 def get_hunger_color(hunger):
     """Return HTML color for hunger label."""
     if hunger <= HUNGER_STARVING_THRESHOLD:
@@ -3676,10 +3634,10 @@ class Towel(Item):
         
         # Not worn - offer options
         add_log(f"{COLOR_CYAN}What do you want to do with the towel?{COLOR_RESET}")
-        add_log(f"  1. Wear it over your face (blind yourself)")
-        add_log(f"  2. Wipe your face (cure face-based blindness)")
-        add_log(f"  3. Wipe your hands (cure slippery hands)")
-        add_log(f"  4. Cancel")
+        add_log("  1. Wear it over your face (blind yourself)")
+        add_log("  2. Wipe your face (cure face-based blindness)")
+        add_log("  3. Wipe your hands (cure slippery hands)")
+        add_log("  4. Cancel")
         
         # Set up towel action mode
         gs.prompt_cntl = "towel_action_mode"
@@ -4371,7 +4329,7 @@ def process_potion_effects_in_combat(character, active_monster):
 
     # Check for Vampirism - heal on damage dealt
     if 'Vampiric' in character.status_effects:
-        lifesteal_pct = character.status_effects['Vampiric'].magnitude
+        character.status_effects['Vampiric'].magnitude
         # After dealing damage, heal character based on percentage
         # Example: heal_amount = int(damage_dealt * lifesteal_pct / 100)
         pass
@@ -4385,7 +4343,7 @@ def process_potion_effects_in_combat(character, active_monster):
 
     # Check for Stone Skin - reduce incoming damage
     if 'Stone Skin' in character.status_effects:
-        reduction = character.status_effects['Stone Skin'].magnitude
+        character.status_effects['Stone Skin'].magnitude
         # Reduce damage in your damage calculation
         # Example: final_damage = max(0, damage - reduction)
         pass
@@ -4427,15 +4385,6 @@ def process_regeneration_effect(character):
         if actual_heal > 0:
             add_log(f"{COLOR_GREEN}[Regeneration] +{actual_heal} HP{COLOR_RESET}")
 
-
-def remove_giant_strength_on_expire(character, effect):
-    """
-    When Giant's Strength expires, restore original STR.
-    Add to your status effect expiration handler.
-    """
-    if effect.effect_type == 'stat_boost_str':
-        character.strength -= effect.magnitude
-        add_log(f"{COLOR_YELLOW}Giant's Strength fades. Strength returns to {character.strength}.{COLOR_RESET}")
 
 def _create_item_copy(item_obj):
     """Helper function to create a new instance of an item, preserving its specific class and attributes."""

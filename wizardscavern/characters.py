@@ -24,14 +24,12 @@ import math
 from . import game_state as gs
 from .game_state import (
     add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-    COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD,
-    normal_int_range, get_article, print_to_output
+    COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, print_to_output
 )
 
 from .items import (
-    Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
-    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-    Trophy, Rune, Shard, LembasWafer
+    Potion, Weapon, Armor, Scroll, Spell, Treasure, Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
+    LembasWafer
 )
 
 
@@ -208,7 +206,7 @@ class Inventory:
                 if isinstance(item, Potion) and item.name == item_obj.name:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
-                    display_name = _get_item_display_name(item_obj)
+                    _get_item_display_name(item_obj)
                     _toast()
                     return
 
@@ -218,7 +216,7 @@ class Inventory:
                 if isinstance(item, Scroll) and item.name == item_obj.name and item.scroll_type == item_obj.scroll_type:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
-                    display_name = _get_item_display_name(item_obj)
+                    _get_item_display_name(item_obj)
                     _toast()
                     return
 
@@ -277,29 +275,6 @@ class Inventory:
             if item.name.lower() == item_name.lower():
                 return item
         return None
-
-    def check_item(self, item_name):
-        for item in self.items:
-            if item.name.lower() == item_name.lower():
-                return True
-        return False
-
-    def display_inventory(self):
-        if not self.items:
-            add_log("Inventory is empty.")
-        else:
-            add_log("Inventory:")
-            for i, item in enumerate(self.items):
-                item_display = f"  {i + 1}. {item.name} (Value: {item.calculated_value} gold)"
-                if isinstance(item, (Weapon, Armor)) and item.upgrade_level>0:
-                    item_display += f" +{item.upgrade_level}"
-                if isinstance(item, Flare):
-                    item_display += f" (Count: {item.count})"
-                if isinstance(item, Lantern):
-                    item_display += f" (Fuel: {item.fuel_amount})"
-                    if item.upgrade_level > 0:
-                        item_str += f" +{item.upgrade_level}"
-                add_log(item_display)
 
     def __repr__(self):
         return f"Inventory(items={[item.name for item in self.items]})"
@@ -510,7 +485,6 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         item_str += price_str
 
     elif isinstance(item, Meat):
-        state = "Cooked" if item.is_cooked else "Raw"
         if item.is_rotten:
             item_str = f"<span style='color:#888;'>{item.name} [ROTTEN]</span>"
         elif item.is_cooked:
@@ -631,7 +605,7 @@ def apply_poison_to_player(player_character):
             description='You are taking damage from poison.'
         )
         add_log(f"{COLOR_RED}You have been poisoned! Move around to observe the effect. Each move will deal damage.{COLOR_RESET}")
-        add_log(f"If your HP reaches 0 from poison, you will be defeated.")
+        add_log("If your HP reaches 0 from poison, you will be defeated.")
 
 def burn_inventory_items(player_character, source="fire"):
     """
@@ -1275,7 +1249,7 @@ class Character:
         if holy_bonus > 0 and not (weapon_broken or no_weapon):
             # Holy damage bypasses defense and hits undead hard
             dmg += holy_bonus
-            badge = f"HOLY +{holy_bonus}" if not badge else badge + f" +HOLY"
+            badge = f"HOLY +{holy_bonus}" if not badge else badge + " +HOLY"
             add_log(f"{COLOR_YELLOW}[Holy Brand] +{holy_bonus} Holy damage!{COLOR_RESET}")
 
         gs.last_monster_damage_badge = badge
@@ -1338,7 +1312,7 @@ class Character:
         if reduced_amount > 0:
            add_log(f"You took {reduced_amount} damage!")
         else:
-           add_log(f"You were not harmed by the attack.")
+           add_log("You were not harmed by the attack.")
 
         # Fire damage has a chance to destroy potions/scrolls in inventory
         if elemental_type == 'Fire' and reduced_amount > 0:

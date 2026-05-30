@@ -20,14 +20,9 @@ Game logic is split across module files:
 """
 
 # Standard library imports
-import random
-import math
 import re
-import textwrap
-from collections import deque
 import json
 import os
-from datetime import datetime
 
 # Toga framework
 import toga
@@ -40,33 +35,24 @@ from .sprite_data import (
     generate_room_sprite_html,
     generate_player_sprite_html as _generate_player_sprite_html,
 )
-from .game_data import (
-    MONSTER_TEMPLATES,
-    MONSTER_SPAWN_FLOOR_RANGE,
-    TROPHY_DROPS,
-    TAXIDERMIST_COLLECTIONS,
-)
 
 # Game state (all shared mutable globals)
 from . import game_state as gs
-from .game_state import (add_log, print_to_output, normal_int_range, get_article,
-                        COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
-                        COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE)
+from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW)
 
 # Game modules - import all public names for backward compatibility
-from .achievements import Achievement, ACHIEVEMENTS, check_achievements
-from .zotle import (scramble_word_for_zotle, check_zotle_guess, initialize_zotle_puzzle,
-                   format_zotle_guess_html, should_spawn_puzzle_room, spawn_puzzle_room_on_floor)
+from .achievements import ACHIEVEMENTS
+from .zotle import (initialize_zotle_puzzle)
 from .item_templates import *
 from .items import *
 from .characters import *
-from .dungeon import Room, Floor, Tower, is_wall_at_coordinate
+from .dungeon import Tower
 from .combat import *
 from .vendor import *
 from .save_system import SaveSystem
 from .room_actions import *
 from .game_systems import *
-from .game_systems import _handle, _trigger_room_interaction, _execute_warp
+from .game_systems import _handle, _trigger_room_interaction
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
 
@@ -136,130 +122,8 @@ def get_audio_mood(prompt_cntl):
     return 'explore'
 
 
-def generate_inline_music_js(mood, start_step, enabled, start_delay_ms=0):
-    """Generate a self-contained <script> tag that plays the given mood.
-
-    This injects a fresh AudioContext + sequencer into the main game
-    page on every render.
-
-    start_step lets us resume at the position the music *would* be at
-    if it had been playing continuously, so back-to-back renders feel
-    like one uninterrupted song.
-
-    start_delay_ms delays the entire music start — used when transitioning
-    to victory/death mood so the kill/damage animation finishes before
-    the new theme begins.
-    """
-    if not enabled:
-        return ""
-    return """
-    <script>
-    (function() {
-        var MOOD = '__MOOD__';
-        var START_STEP = __START_STEP__;
-        var START_DELAY_MS = __START_DELAY_MS__;
-        function startMusicEngine() {
-        try {
-            var AC = window.AudioContext || window.webkitAudioContext;
-            if (!AC) return;
-            var ctx = new AC();
-            // Try to resume on any user click anywhere
-            var resumeOnClick = function() {
-                if (ctx.state === 'suspended') ctx.resume();
-            };
-            window.addEventListener('click', resumeOnClick, {passive:true,once:false});
-            window.addEventListener('touchstart', resumeOnClick, {passive:true,once:false});
-            var master = ctx.createGain();
-            master.gain.value = 0;
-            master.connect(ctx.destination);
-            master.gain.linearRampToValueAtTime(0.0, ctx.currentTime + 0.05);
-            master.gain.linearRampToValueAtTime(0.25, ctx.currentTime + 0.4);
-
-            var songs = __SONGS_JSON__;
-            var MOOD_ALIASES = {shop:'explore', mystery:'explore', deep:'explore', garden:'explore'};
-            MOOD = MOOD_ALIASES[MOOD] || MOOD;
-            var song = songs[MOOD] || songs.explore;
-            var stepSec = 60 / (song.bpm * 2);
-            var totalSteps = 64;
-            var currentStep = ((START_STEP % totalSteps) + totalSteps) % totalSteps;
-
-            var nLen = ctx.sampleRate;
-            var nBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
-            var nd = nBuf.getChannelData(0);
-            for (var i = 0; i < nLen; i++) nd[i] = Math.random() * 2 - 1;
-            var VOL = { pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 };
-
-            function playNote(freq, dur, type, vol) {
-                if (!freq || freq <= 0) return;
-                var osc = ctx.createOscillator();
-                osc.type = type; osc.frequency.value = freq;
-                osc.detune.value = (Math.random() * 16) - 8;
-                var g = ctx.createGain();
-                var now = ctx.currentTime;
-                var len = dur * stepSec;
-                g.gain.setValueAtTime(vol, now);
-                g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
-                g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
-                osc.connect(g); g.connect(master);
-                osc.start(now); osc.stop(now + len);
-            }
-            function playNoiseHit(filterFreq, dur) {
-                var src = ctx.createBufferSource();
-                src.buffer = nBuf;
-                var filt = ctx.createBiquadFilter();
-                if (filterFreq < 500) {
-                    filt.type = 'lowpass';
-                    filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
-                } else {
-                    filt.type = 'bandpass';
-                    filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
-                    filt.Q.value = 1 + Math.random() * 2;
-                }
-                var g = ctx.createGain();
-                var now = ctx.currentTime;
-                var len = Math.min(dur * stepSec, 0.15);
-                g.gain.setValueAtTime(VOL.noise, now);
-                g.gain.exponentialRampToValueAtTime(0.001, now + len);
-                src.connect(filt); filt.connect(g); g.connect(master);
-                src.start(now); src.stop(now + len + 0.01);
-            }
-            function tick() {
-                var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
-                for (var c = 0; c < channels.length; c++) {
-                    var ch = channels[c];
-                    var pattern = song[ch];
-                    if (!pattern) continue;
-                    for (var n = 0; n < pattern.length; n++) {
-                        if (pattern[n][0] === currentStep) {
-                            var freq = pattern[n][1];
-                            var dur = pattern[n][2];
-                            if (ch === 'noise') playNoiseHit(freq, dur);
-                            else if (ch === 'triangle') playNote(freq, dur, 'triangle', VOL.triangle);
-                            else playNote(freq, dur, 'square', VOL[ch]);
-                        }
-                    }
-                }
-                currentStep = (currentStep + 1) % totalSteps;
-            }
-            setInterval(tick, stepSec * 1000);
-        } catch(e) {}
-        }  // end startMusicEngine
-        if (START_DELAY_MS > 0) {
-            setTimeout(startMusicEngine, START_DELAY_MS);
-        } else {
-            startMusicEngine();
-        }
-    })();
-    </script>
-    """.replace('__MOOD__', mood).replace(
-        '__START_STEP__', str(int(start_step) % 64)
-    ).replace(
-        '__START_DELAY_MS__', str(int(start_delay_ms))
-    ).replace('__SONGS_JSON__', _MUSIC_SONGS_JSON)
-
-
-# Song data extracted as JSON so generate_inline_music_js doesn't have
-# to re-encode it on every render.
+# Song data as JSON, embedded into the persistent _musicEngine shell
+# (see updateGame) so it isn't re-encoded on every render.
 _MUSIC_SONGS_JSON = json.dumps({
     'explore': {
         'bpm': 110,
@@ -297,173 +161,6 @@ _MUSIC_SONGS_JSON = json.dumps({
         'noise': [[0,8000,1],[4,8000,1],[8,8000,1],[12,8000,1],[16,8000,1],[20,8000,1],[24,8000,1],[28,8000,1],[32,8000,1],[36,8000,1],[40,8000,1],[44,8000,1],[48,8000,1],[52,8000,1],[56,8000,1],[60,8000,1]]
     }
 })
-
-
-def build_audio_player_html():
-    """Persistent audio player HTML — loaded ONCE into the hidden audio
-    WebView so the AudioContext lives forever across game renders.
-
-    Exposes:
-      - window.setMood(mood, enabled) — switch active song
-      - window.setMusicEnabled(on)     — mute/unmute on the fly
-      - window.audioReady              — true once initialized
-
-    Gesture policy is bypassed at the platform level (see startup() —
-    setMediaPlaybackRequiresUserGesture(false) on Android,
-    mediaTypesRequiringUserActionForPlayback = 0 on iOS).
-    """
-    return """<!DOCTYPE html>
-<html>
-<head><meta charset='UTF-8'></head>
-<body style='margin:0;padding:0;background:#000;'>
-<script>
-(function() {
-    var SONGS = """ + _MUSIC_SONGS_JSON + """;
-    var MOOD_ALIASES = {shop:'explore', mystery:'explore', deep:'explore', garden:'explore'};
-    var ctx = null, master = null, noiseBuf = null;
-    var currentMood = null, currentSong = null;
-    var stepSec = 0.3, currentStep = 0, tickHandle = null;
-    var enabled = true;
-    var totalSteps = 64;
-    var VOL = { pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 };
-    var pendingMood = null, pendingEnabled = true;
-
-    function initCtx() {
-        if (ctx) return true;
-        try {
-            var AC = window.AudioContext || window.webkitAudioContext;
-            if (!AC) return false;
-            ctx = new AC();
-            master = ctx.createGain();
-            master.gain.value = 0.25;
-            master.connect(ctx.destination);
-            var nLen = ctx.sampleRate;
-            noiseBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
-            var nd = noiseBuf.getChannelData(0);
-            for (var i = 0; i < nLen; i++) nd[i] = Math.random() * 2 - 1;
-            return true;
-        } catch(e) { return false; }
-    }
-
-    function playNote(freq, dur, type, vol) {
-        if (!freq || freq <= 0 || !enabled) return;
-        try {
-            var osc = ctx.createOscillator();
-            osc.type = type; osc.frequency.value = freq;
-            osc.detune.value = (Math.random() * 16) - 8;
-            var g = ctx.createGain();
-            var now = ctx.currentTime;
-            var len = dur * stepSec;
-            g.gain.setValueAtTime(vol, now);
-            g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
-            g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
-            osc.connect(g); g.connect(master);
-            osc.start(now); osc.stop(now + len);
-        } catch(e) {}
-    }
-
-    function playNoiseHit(filterFreq, dur) {
-        if (!enabled) return;
-        try {
-            var src = ctx.createBufferSource();
-            src.buffer = noiseBuf;
-            var filt = ctx.createBiquadFilter();
-            if (filterFreq < 500) {
-                filt.type = 'lowpass';
-                filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
-            } else {
-                filt.type = 'bandpass';
-                filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
-                filt.Q.value = 1 + Math.random() * 2;
-            }
-            var g = ctx.createGain();
-            var now = ctx.currentTime;
-            var len = Math.min(dur * stepSec, 0.15);
-            g.gain.setValueAtTime(VOL.noise, now);
-            g.gain.exponentialRampToValueAtTime(0.001, now + len);
-            src.connect(filt); filt.connect(g); g.connect(master);
-            src.start(now); src.stop(now + len + 0.01);
-        } catch(e) {}
-    }
-
-    function tick() {
-        if (!currentSong || !enabled) return;
-        var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
-        for (var c = 0; c < channels.length; c++) {
-            var ch = channels[c];
-            var pattern = currentSong[ch];
-            if (!pattern) continue;
-            for (var n = 0; n < pattern.length; n++) {
-                if (pattern[n][0] === currentStep) {
-                    var freq = pattern[n][1];
-                    var dur = pattern[n][2];
-                    if (ch === 'noise') playNoiseHit(freq, dur);
-                    else if (ch === 'triangle') playNote(freq, dur, 'triangle', VOL.triangle);
-                    else playNote(freq, dur, 'square', VOL[ch]);
-                }
-            }
-        }
-        currentStep = (currentStep + 1) % totalSteps;
-    }
-
-    window.setMood = function(mood, musicEnabled) {
-        if (!initCtx()) {
-            // Queue for retry
-            pendingMood = mood;
-            pendingEnabled = musicEnabled;
-            return;
-        }
-        enabled = (musicEnabled !== false);
-        if (ctx.state === 'suspended') {
-            try { ctx.resume(); } catch(e) {}
-        }
-        mood = MOOD_ALIASES[mood] || mood;
-        if (mood === currentMood) return;
-        currentMood = mood;
-        currentSong = SONGS[mood] || SONGS.explore;
-        stepSec = 60 / (currentSong.bpm * 2);
-        currentStep = 0;
-        if (tickHandle) clearInterval(tickHandle);
-        tickHandle = setInterval(tick, stepSec * 1000);
-    };
-
-    window.setMusicEnabled = function(on) {
-        enabled = !!on;
-        if (master) {
-            try {
-                var target = enabled ? 0.25 : 0;
-                master.gain.setTargetAtTime(target, ctx.currentTime, 0.05);
-            } catch(e) {}
-        }
-    };
-
-    window.stopMusic = function() {
-        if (tickHandle) { clearInterval(tickHandle); tickHandle = null; }
-        currentSong = null;
-        currentMood = null;
-    };
-
-    // Resume audio on any gesture this frame ever receives
-    function tryResume() {
-        if (ctx && ctx.state === 'suspended') {
-            try { ctx.resume(); } catch(e) {}
-        }
-        // Also process pending mood request if any
-        if (pendingMood) {
-            var m = pendingMood, e = pendingEnabled;
-            pendingMood = null;
-            window.setMood(m, e);
-        }
-    }
-    window.addEventListener('click', tryResume, {passive:true});
-    window.addEventListener('touchstart', tryResume, {passive:true});
-
-    // Mark ready so Python can detect that the page loaded
-    window.audioReady = true;
-})();
-</script>
-</body>
-</html>"""
 
 
 def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
@@ -1342,7 +1039,7 @@ def generate_spell_cast_js(spell):
     # Banner hold time: 0.4s at L0, 0.9s at L5
     banner_hold = 400 + lvl * 100
     # Screen tint intensity scales with level
-    tint_base_opacity = 0.15 + lvl * 0.06
+    0.15 + lvl * 0.06
     tint_duration = '120' if dtype in ('Lightning', 'Wind') else str(300 + lvl * 60)
 
     # NOTE: haptic on high-level spells is triggered by
@@ -2562,6 +2259,53 @@ def can_cast_spells(player_character):
     """
     return gs.player_character.max_mana > 0 and gs.player_character.get_max_memorized_spell_slots() > 0
 
+
+# Shared list-builders for the vendor shop screen. Both the buy/sell view and
+# the repair/identify view render the same "Vendor Wares" + "Your Inventory"
+# panels; only the player-row tap prefix differs between them.
+_INV_PANEL_OPEN = ("<div style='overflow-y: auto; border: 1px solid #444; "
+                   "padding: 3px; border-radius: 3px; max-height: 200px;'>")
+
+
+def _render_tappable_row(html, item_str, cmd_str):
+    """Append one inventory row -- tappable when cmd_str is set, else plain."""
+    if cmd_str:
+        return html + (
+            f"<div class='taprow' data-zcmd='{cmd_str}' "
+            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+            f"{item_str}"
+            f"</div>"
+        )
+    return html + f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
+
+
+def _render_vendor_wares_html():
+    """Build the 'Vendor Wares' panel; rows are tappable only in buy mode."""
+    sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
+    html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>" + _INV_PANEL_OPEN
+    if not sorted_vendor_items:
+        html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
+    else:
+        tappable = (gs.vendor_action == 'buy')
+        for i, item in enumerate(sorted_vendor_items):
+            item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
+            html = _render_tappable_row(html, item_str, f"b{i + 1}" if tappable else "")
+    return html + "</div>"
+
+
+def _render_player_inv_html(tap_prefix):
+    """Build the 'Your Inventory' panel; rows are tappable when tap_prefix set."""
+    sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
+    html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>" + _INV_PANEL_OPEN
+    if not sorted_player_items:
+        html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
+    else:
+        for i, item in enumerate(sorted_player_items):
+            item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
+            html = _render_tappable_row(html, item_str, f"{tap_prefix}{i + 1}" if tap_prefix else "")
+    return html + "</div>"
+
+
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display."""
     highlight_coords = (player_y, player_x)
@@ -3226,12 +2970,12 @@ class WizardsCavernApp(toga.App):
                     UIColor = ObjCClass('UIColor')
                     native_field.tintColor = UIColor.clearColor
 
-                except Exception as e:
+                except Exception:
                     pass
                     import traceback
                     traceback.print_exc()
                     
-        except Exception as e:
+        except Exception:
             pass
     
     def disable_android_keyboard(self):
@@ -3257,14 +3001,12 @@ class WizardsCavernApp(toga.App):
                 pass
             # Also try finding and hiding the toolbar view directly
             try:
-                from android.view import View
                 decor = activity.getWindow().getDecorView()
                 root = decor.getRootView()
                 self._hide_toolbar_recursive(root)
             except Exception:
                 pass
 
-            from android.view.inputmethod import InputMethodManager
             if hasattr(self.input_field, '_impl') and hasattr(self.input_field._impl, 'native'):
                 native_field = self.input_field._impl.native
                 native_field.setShowSoftInputOnFocus(False)
@@ -3276,7 +3018,6 @@ class WizardsCavernApp(toga.App):
                 native_field.setBackgroundDrawable(bg)
                 # Also clear the tint that draws the colored underline
                 try:
-                    from java.lang import Class
                     # Use ViewCompat to clear background tint
                     from androidx.core.view import ViewCompat
                     ViewCompat.setBackgroundTintList(native_field, None)
@@ -3343,7 +3084,6 @@ class WizardsCavernApp(toga.App):
             return
         try:
             from android import activity
-            from android.view import View
 
             # Hide toolbar
             decor = activity.getWindow().getDecorView()
@@ -5602,7 +5342,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
             loaded_char = gs._pending_load[0] if gs._pending_load else gs.player_character
-            loaded_tower = gs._pending_load[1] if gs._pending_load else gs.my_tower
+            gs._pending_load[1] if gs._pending_load else gs.my_tower
 
             # Count unlocked achievements
             unlocked_count = sum(1 for a in ACHIEVEMENTS if a.unlocked)
@@ -6305,47 +6045,8 @@ class WizardsCavernApp(toga.App):
                 )
             starting_tabs_html += "</div>"
 
-            sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
-            vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
-            vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_vendor_items:
-                vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
-            else:
-                _wares_tappable = (gs.vendor_action == 'buy')
-                for i, item in enumerate(sorted_vendor_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    if _wares_tappable:
-                        cmd_str = f"b{i + 1}"
-                        vendor_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            vendor_html += "</div>"
-
-            _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
-            sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
-            player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
-            else:
-                for i, item in enumerate(sorted_player_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    if _player_tap_prefix:
-                        cmd_str = f"{_player_tap_prefix}{i + 1}"
-                        player_inv_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            player_inv_html += "</div>"
+            vendor_html = _render_vendor_wares_html()
+            player_inv_html = _render_player_inv_html('s' if gs.vendor_action == 'sell' else '')
 
             vendor_html = starting_tabs_html + vendor_html
 
@@ -6467,48 +6168,10 @@ class WizardsCavernApp(toga.App):
             vendor_tabs_html += "</div>"
 
             # Vendor wares: tappable "buy" targets when buy tab is active.
-            sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
-            vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
-            vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_vendor_items:
-                vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
-            else:
-                _wares_tappable = (gs.vendor_action == 'buy')
-                for i, item in enumerate(sorted_vendor_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    if _wares_tappable:
-                        cmd_str = f"b{i + 1}"
-                        vendor_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            vendor_html += "</div>"
-
+            vendor_html = _render_vendor_wares_html()
             # Player inventory: tappable when sell/repair/identify is active.
             _player_tap_prefix = {'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
-            sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
-            player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
-            else:
-                for i, item in enumerate(sorted_player_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    if _player_tap_prefix:
-                        cmd_str = f"{_player_tap_prefix}{i + 1}"
-                        player_inv_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            player_inv_html += "</div>"
+            player_inv_html = _render_player_inv_html(_player_tap_prefix)
 
             # Prepend tabs above the wares list so the player sees them first.
             vendor_html = vendor_tabs_html + vendor_html
@@ -6589,13 +6252,10 @@ class WizardsCavernApp(toga.App):
                 
                 # Apply filter in combat too
                 display_items = combat_usable_items
-                combat_filter_label = "Combat Items"
                 if gs.inventory_filter == 'eat':
                     display_items = [i for i in combat_usable_items if isinstance(i, (Food, Meat))]
-                    combat_filter_label = "Food Items"
                 elif gs.inventory_filter == 'use':
                     display_items = [i for i in combat_usable_items if isinstance(i, (Potion, Scroll))]
-                    combat_filter_label = "Usable Items"
 
                 # Segmented filter tabs — combat has no Equip tab (can't
                 # swap gear mid-fight). 'All' sends 'b' to clear the filter.
@@ -7087,39 +6747,6 @@ class WizardsCavernApp(toga.App):
             # HTML from character_stats_mode above so the player sees
             # their current stat values while spending. a/d/i spend a
             # point; x backs out.
-            allocation_html = f"""
-<div class='full-inventory-panel'>
-    <h2>Allocate Stat Points</h2>
-    <div style='margin-bottom: 8px;'>
-        <b style='color:#fbbf24;'>Unspent: {gs.player_character.unspent_stat_points}</b>
-    </div>
-    <div style='margin-bottom: 12px; padding: 8px; background: #1a1a1a; border-radius: 4px;'>
-        <b>Str:</b> {gs.player_character.strength} |
-        <b>Dex:</b> {gs.player_character.dexterity} |
-        <b>Int:</b> {gs.player_character.intelligence}
-    </div>
-    <div class='taprow altar-act' data-zcmd='a'
-         onclick="window.__zotTap('a', this)">
-        <div class='aname'>+1 Strength</div>
-        <div class='ameta'>Boosts attack, max HP, melee math.</div>
-    </div>
-    <div class='taprow altar-act' data-zcmd='d'
-         onclick="window.__zotTap('d', this)">
-        <div class='aname'>+1 Dexterity</div>
-        <div class='ameta'>Boosts dodge, ranged accuracy, initiative.</div>
-    </div>
-    <div class='taprow altar-act' data-zcmd='i'
-         onclick="window.__zotTap('i', this)">
-        <div class='aname'>+1 Intelligence</div>
-        <div class='ameta'>Unlocks spell casting at race threshold (elf 12, human 16, dwarf 21) and grows max mana.</div>
-    </div>
-    <div class='taprow cancel' data-zcmd='x'
-         onclick="window.__zotTap('x', this)">
-        <span class='tapnum'>&times;</span>Back to Stats
-    </div>
-</div>
-            """
-            room_html = allocation_html
             current_commands_text = "a = +STR | d = +DEX | i = +INT | x = back"
 
         elif gs.prompt_cntl == "crafting_mode":
@@ -7280,7 +6907,7 @@ class WizardsCavernApp(toga.App):
                     if identified:
                         slots_needed = gs.player_character.get_spell_slots(spell)
                         spell_info = f"<b>{display_name}</b>{marker}<br>"
-                        spell_info += f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        spell_info += "<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
                         spell_info += f"L{spell.level} | {spell.mana_cost} MP | "
                         spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''} | "
                         spell_info += f"{spell.spell_type}</span>"
@@ -7638,7 +7265,7 @@ class WizardsCavernApp(toga.App):
                                 </div>
                                 """
                         if item_template.is_unique:
-                            entry_html += f"""
+                            entry_html += """
                                 <div style="color: #FF69B4; font-size: 12px; font-weight: bold;">
                                      UNIQUE TREASURE 
                                 </div>
@@ -7684,7 +7311,7 @@ class WizardsCavernApp(toga.App):
 
                 else:
                     # Show as undiscovered
-                    entry_html = f"""
+                    entry_html = """
                         <div style="border-left: 3px solid #333; padding: 4px; margin: 5px 0; border-radius: 3px; opacity: 0.5;">
                             <div style="color: #555; font-weight: bold; font-size: 12px;"> ???</div>
                             <div style="color: #555; font-size: 12px; margin-top: 3px; font-style: italic;">Not yet discovered</div>
@@ -7712,7 +7339,7 @@ class WizardsCavernApp(toga.App):
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
             music_label = "vol-" if gs.music_enabled else "vol+"
-            current_commands_text = f"Tap Back | x = close journal"
+            current_commands_text = "Tap Back | x = close journal"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - Compact: Combat panels + spell list (no map)
@@ -7845,7 +7472,6 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -8105,7 +7731,6 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML (same as combat view)
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -8196,12 +7821,11 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML (reuse existing map generation code)
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Scroll info panel
-            scroll_html = f"""
+            scroll_html = """
                 <div style="padding: 10px; border-radius: 4px; border: 2px solid #E040FB; margin-bottom: 5px;">
                     <div style="color: #E040FB; font-weight: bold; font-size: 15px; margin-bottom: 6px;"> Scroll of Foresight</div>
                     <div style="font-size: 12px; color: #DDD; margin-bottom: 8px;">
@@ -8258,16 +7882,13 @@ class WizardsCavernApp(toga.App):
 
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -8343,7 +7964,6 @@ class WizardsCavernApp(toga.App):
             #    the inventory list has the whole content area to itself.
             #    BACK chip returns to the default altar view.
 
-            from .room_actions import altar_piety_tier
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
@@ -8475,26 +8095,22 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             current_floor = gs.my_tower.floors[gs.player_character.z]
             room = current_floor.grid[gs.player_character.y][gs.player_character.x]
             pool_info = room.properties.get('pool_info', {})
 
-            pool_name = pool_info.get('name', 'Mysterious Pool')
-            pool_symbol = pool_info.get('symbol', '')
-            pool_color = pool_info.get('color', '#00CED1')
-            pool_desc = pool_info.get('description', 'A basin of water.')
-            unknown_pool_desc = "An unknown but powerful basin of water lies here."
+            pool_info.get('name', 'Mysterious Pool')
+            pool_info.get('symbol', '')
+            pool_info.get('color', '#00CED1')
+            pool_info.get('description', 'A basin of water.')
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -8568,7 +8184,7 @@ class WizardsCavernApp(toga.App):
             # Build pool commands with lantern if available
             current_commands_text = "Tap to drink | i = inventory"
             if has_lantern:
-                current_commands_text += f" | l = lantern"
+                current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "warp_mode":
@@ -8643,11 +8259,9 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
             
             # Generate map HTML
@@ -8711,11 +8325,9 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
             
             # Generate map HTML
@@ -8780,16 +8392,13 @@ class WizardsCavernApp(toga.App):
 
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -9371,7 +8980,7 @@ class WizardsCavernApp(toga.App):
                     "<div class='taprow altar-act offering' data-zcmd='o' "
                     "onclick=\"window.__zotTap('o', this)\">"
                     "<div class='aname'>Offering</div>"
-                    f"<div class='ameta'>50g &middot; potion / scroll</div>"
+                    "<div class='ameta'>50g &middot; potion / scroll</div>"
                     "</div>"
                     "</div>"
                 )
@@ -9625,10 +9234,10 @@ class WizardsCavernApp(toga.App):
             # Filter collections: bug taxidermist shows only bug collections, regular shows only non-bug
             collection_status = [(name, data, pieces, complete) for name, data, pieces, complete in collection_status
                                  if bool(data.get('is_bug')) == is_bug_tax]
-            trophies = get_player_trophies(gs.player_character)
+            get_player_trophies(gs.player_character)
             completable = [(name, data) for (name, data, pieces, complete) in collection_status
                            if complete and not room.properties.get(f'completed_{name}')]
-            already_done = [name for (name, data, pieces, complete) in collection_status
+            [name for (name, data, pieces, complete) in collection_status
                             if room.properties.get(f'completed_{name}')]
 
             # Build collection rows
@@ -9860,7 +9469,7 @@ class WizardsCavernApp(toga.App):
                 if letter:
                     current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #565758; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;">{letter}</div>'
                 else:
-                    current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
+                    current_row_html += '<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
             current_row_html += '</div>'
 
             guess_count = len(gs.zotle_puzzle['guesses']) if gs.zotle_puzzle else 0
@@ -10011,7 +9620,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Calculate valid coordinate ranges
-            max_floors = len(gs.my_tower.floors)
+            len(gs.my_tower.floors)
             typed_coords = (self.input_field.value or "").strip()
 
             teleporter_html = f"""
@@ -10115,7 +9724,6 @@ class WizardsCavernApp(toga.App):
             
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -10186,7 +9794,6 @@ class WizardsCavernApp(toga.App):
 
             if show_map:
                 floor = gs.my_tower.floors[gs.player_character.z]
-                highlight_coords = (gs.player_character.y, gs.player_character.x)
 
                 # ADD LANTERN INFO DISPLAY
                 if gs.prompt_cntl == "game_loop":
@@ -10197,9 +9804,7 @@ class WizardsCavernApp(toga.App):
                             break
 
                     if lantern:
-                        fuel_color = "#4CAF50" if lantern.fuel_amount > 5 else (
-                            "#FFD700" if lantern.fuel_amount > 2 else "#F44336")
-                        fuel_bar_pct = min(100, (lantern.fuel_amount / 10) * 100)
+                        min(100, (lantern.fuel_amount / 10) * 100)
 
                         lantern_info_html = ""
 
@@ -10364,11 +9969,9 @@ class WizardsCavernApp(toga.App):
                 """
             # Check if player has a lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # DYNAMIC COMMAND TEXT GENERATION
@@ -10381,18 +9984,18 @@ class WizardsCavernApp(toga.App):
 
                 # Add lantern command if player has one
                 if has_lantern:
-                    base_commands += f" | l = lantern"
+                    base_commands += " | l = lantern"
 
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
                     current_commands_text = "n/s/e/w = move | u = up | i = inventory"
                     if has_lantern:
-                        current_commands_text += f" | l = lantern"
+                        current_commands_text += " | l = lantern"
                 elif current_room.room_type == 'D':
                     current_commands_text = "n/s/e/w = move | d = down | i = inventory"
                     if has_lantern:
-                        current_commands_text += f" | l = lantern"
+                        current_commands_text += " | l = lantern"
                 else:
                     current_commands_text = base_commands
 
@@ -10401,12 +10004,12 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "chest_mode":
                 current_commands_text = "o = open | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "pool_mode":
                 current_commands_text = "dr = drink | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
                 if gs.altar_action:
@@ -10420,7 +10023,7 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "library_mode":
                 current_commands_text = "r = rummage for books | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "library_read_decision_mode":
                 current_commands_text = "Tap Read or Leave it"
@@ -12131,14 +11734,6 @@ class WizardsCavernApp(toga.App):
         gs.last_player_status = None
         gs.last_monster_status = None
         return result
-    
-
-    
-    @staticmethod
-    def strip_ansi(text):
-        """Remove ANSI color codes from text."""
-        ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
-        return ansi_escape.sub('', text)
 
 
 # --------------------------------------------------------------------------------

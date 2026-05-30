@@ -3805,7 +3805,6 @@ def smart_policy(obs, rng, use_lantern=True):
         # agent corners itself in a small explored region and never
         # discovers the rest of the floor.
         turns_on_floor = obs.get("turns_on_floor") or 0
-        stuck_on_floor = turns_on_floor > 100
         very_stuck = turns_on_floor > 200
         # Lantern policy: KNOW what you're walking into. The lantern
         # reveals tiles along the four cardinal axes up to
@@ -3840,10 +3839,9 @@ def smart_policy(obs, rng, use_lantern=True):
         # triggered the old 'fuel_scarce' gate and the lantern
         # skipped the critical reveal.
         fuel_empty = lantern_fuel <= 0
-        over_leveled_for_floor = (
+        (
             p.get("level", 1) >= p.get("floor", 1) + 2
         )
-        strong_and_healthy = over_leveled_for_floor and hp_pct >= 0.80
         # Critical fire: any fuel left + fog adjacent = burn it.
         # User on Gimli the Mighty (s=256 dwarf, F14 L6, 147 kills):
         # "I would think players would be avoiding warps more". Gimli
@@ -3933,9 +3931,9 @@ def smart_policy(obs, rng, use_lantern=True):
         # The original use case (s=88 human F1 cycling F1<->F2
         # wedge until starvation) is now bounded by other guards.
         coverage_obs_avoid = obs.get("tile_coverage") or {}
-        coverage_pct_avoid = coverage_obs_avoid.get("pct", 0)
+        coverage_obs_avoid.get("pct", 0)
         reach_pct_avoid = coverage_obs_avoid.get("reach_pct", 0)
-        frontier_avoid = obs.get("frontier_step")
+        obs.get("frontier_step")
         # Behavioral trapped detector: D unreachable AND the agent
         # has stopped making exploration progress (no new tile
         # visited in 100+ turns). The agent is on an island, has
@@ -4221,7 +4219,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # Include V here so the agent never descends with an unvisited
         # vendor reachable -- vendor-on-every-floor guarantee. Once V
         # is visited it leaves feature_paths and the gate releases.
-        nearest = obs.get("nearest_features") or {}
+        obs.get("nearest_features") or {}
         feature_paths_check = obs.get("feature_paths") or {}
         unvisited_beneficials_exist = any(
             feature_paths_check.get(t) for t in BENEFICIAL_SAFE + ("V",)
@@ -7160,9 +7158,6 @@ def smart_policy(obs, rng, use_lantern=True):
         props = obs.get("room", {}).get("properties", {}) or {}
         uses_left = props.get("alch_uses", 3)
         combining = bool(props.get("alch_combining"))
-        potion_categories = (
-            "potion_healing", "potion_mana", "potion",
-        )
         potion_count = sum(
             1 for i in inv
             if (i.get("category") or "").startswith("potion")

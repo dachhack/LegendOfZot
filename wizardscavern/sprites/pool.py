@@ -55,6 +55,46 @@ def _stable_seed(seed):
     return zlib.crc32(repr(seed).encode('utf-8'))
 
 
+def render_sprite_canvas(safe_id, size, img_uri, canvas_css,
+                         onload_extra='', wrap_id=None, wrap_style=''):
+    """Build the shared <canvas> + image-loader <script> for a pre-rendered sprite.
+
+    Every sprite render path (monster / room / player / inline item icon) draws
+    a pool webp into a pixelated 2D canvas with the same boilerplate; only these
+    differ:
+
+      safe_id       DOM id for the canvas.
+      size          square px (used for both the attributes and drawImage).
+      img_uri       data: URI of the webp.
+      canvas_css    style payload appended after the shared image-rendering rules.
+      onload_extra  extra JS run inside img.onload after drawImage (e.g. the
+                    monster loom/flourish effects); '' for the simple paths.
+      wrap_id       if set, the canvas+script are wrapped in a positioned <div>
+                    with this id + '_wrap' (monster/player need this so overlays
+                    can escape the canvas); None leaves them bare (room/item).
+      wrap_style    extra CSS for the wrapper div.
+    """
+    inner = (
+        f'<canvas id="{safe_id}" width="{size}" height="{size}" '
+        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
+        f'{canvas_css}"></canvas>'
+        f'<script>(function(){{'
+        f'var c=document.getElementById("{safe_id}");if(!c)return;'
+        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+        f'var img=new Image();'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{size},{size});{onload_extra}}};'
+        f'img.src="{img_uri}";'
+        f'}})()</script>'
+    )
+    if wrap_id is None:
+        return inner
+    return (
+        f'<div id="{wrap_id}_wrap" style="{wrap_style}">'
+        + inner +
+        '</div>'
+    )
+
+
 def get_named_variant(cat_map, item_name, seed):
     """Pick a deterministic (pid, variant_index) for a named item.
 
