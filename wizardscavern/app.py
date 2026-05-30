@@ -2627,7 +2627,8 @@ class WizardsCavernApp(toga.App):
         gs.prompt_cntl = ""
 
         gs.log_lines = []
-        
+        gs.log_line_delays = []
+
         # Track if current mode needs numbers (for button behavior)
         self.current_needs_numbers = False
 
@@ -4959,6 +4960,7 @@ class WizardsCavernApp(toga.App):
             'statsHtml': getattr(self, '_last_stats_html', '') or '',
             'bodyClass': self._body_class_for_mode(gs.prompt_cntl),
             'logLines': list(gs.log_lines),
+            'logDelays': gs.consume_log_delays(),
             'hasDiceRolls': bool(gs.last_dice_rolls),
             'hasInitRoll': has_init,
             'scripts': anim_scripts,
@@ -10110,6 +10112,7 @@ class WizardsCavernApp(toga.App):
         # Convert log_lines to JavaScript-safe format
         import json
         log_lines_json = json.dumps(gs.log_lines)
+        log_delays_json = json.dumps(gs.consume_log_delays())
 
         # Stats bar lives in the fixed top strip alongside the log.
         # Stash is set in generate_html() right after player_stats_html
@@ -11600,40 +11603,17 @@ class WizardsCavernApp(toga.App):
                     if (p.bodyClass !== undefined) {{
                         document.body.className = p.bodyClass;
                     }}
-                    // Update log
+                    // Update log. Per-line reveal delays hold back the new
+                    // combat-result lines until their animation resolves;
+                    // chips always RENDER server-side and animateCombatChips
+                    // fades them during the roll so they can't be double-tapped.
                     if (p.logLines !== undefined) {{
                         window.logLines = p.logLines;
+                        window.logDelays = p.logDelays || [];
                         window.hasDiceRolls = !!p.hasDiceRolls;
                         window.hasInitRoll = !!p.hasInitRoll;
-                        var ld = document.getElementById('game-log');
-                        // Fade combat chips during the dice animation so
-                        // they can't be double-tapped during resolution.
-                        // Chips always RENDER server-side; JS toggles the
-                        // animating flag so opacity + pointer-events flip
-                        // off during the roll, on after it completes.
-                        var chipBars = document.querySelectorAll('.hudchips');
-                        if (window.hasDiceRolls && ld) {{
-                            ld.style.opacity = '0';
-                            for (var ci = 0; ci < chipBars.length; ci++) {{
-                                chipBars[ci].classList.add('animating');
-                            }}
-                            var delay = window.hasInitRoll ? 1000 : 3300;
-                            setTimeout(function() {{
-                                if (typeof updateLog === 'function') updateLog();
-                                ld.style.transition = 'opacity 0.3s';
-                                ld.style.opacity = '1';
-                                var bars = document.querySelectorAll('.hudchips');
-                                for (var ci = 0; ci < bars.length; ci++) {{
-                                    bars[ci].classList.remove('animating');
-                                }}
-                            }}, delay);
-                        }} else {{
-                            if (typeof updateLog === 'function') updateLog();
-                            if (ld) ld.style.opacity = '1';
-                            for (var ci = 0; ci < chipBars.length; ci++) {{
-                                chipBars[ci].classList.remove('animating');
-                            }}
-                        }}
+                        if (typeof updateLog === 'function') updateLog();
+                        if (typeof animateCombatChips === 'function') animateCombatChips();
                     }}
                     // Run animation / SFX scripts from payload
                     if (p.scripts) {{
@@ -11663,46 +11643,57 @@ class WizardsCavernApp(toga.App):
             </div>
             <div id="game-log"></div>
             <script>
-                // Embed log lines from Python
+                // Embed log lines + per-line reveal delays from Python
                 window.logLines = {log_lines_json};
+                window.logDelays = {log_delays_json};
                 window.hasDiceRolls = {'true' if gs.last_dice_rolls else 'false'};
                 window.hasInitRoll = {'true' if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 'false'};
+                window._logToken = 0;
 
-                // Update log content and auto-scroll to bottom
+                // Render the log, holding back any line flagged with a reveal
+                // delay until that delay elapses. Lines already on screen stay
+                // put; only the new combat-result lines fade in once their
+                // animation (a dice exchange or the defeat overlay) resolves,
+                // so the log never spoils a roll or a kill. Replaces the old
+                // "blank the whole log" hack.
                 function updateLog() {{
-                    var logDiv = document.getElementById('game-log');
-                    if (logDiv && window.logLines) {{
-                        logDiv.innerHTML = window.logLines.join('<br>');
-                        logDiv.scrollTop = logDiv.scrollHeight;
+                    var ld = document.getElementById('game-log');
+                    if (!ld || !window.logLines) return;
+                    var token = ++window._logToken;
+                    var lines = window.logLines, delays = window.logDelays || [];
+                    function renderUpTo(maxD) {{
+                        if (token !== window._logToken) return;  // superseded by a newer render
+                        var html = [];
+                        for (var i = 0; i < lines.length; i++) {{
+                            if ((delays[i] || 0) <= maxD) html.push(lines[i]);
+                        }}
+                        ld.innerHTML = html.join('<br>');
+                        ld.scrollTop = ld.scrollHeight;
+                    }}
+                    renderUpTo(0);
+                    var seen = {{}};
+                    for (var i = 0; i < lines.length; i++) {{
+                        var d = delays[i] || 0;
+                        if (d > 0 && !seen[d]) {{
+                            seen[d] = 1;
+                            (function(dd) {{ setTimeout(function() {{ renderUpTo(dd); }}, dd); }})(d);
+                        }}
                     }}
                 }}
-                // Delay log when dice are rolling so results aren't spoiled.
-                // Log stays hidden until after the reveal animation finishes.
-                // Combat chips fade during the same window so the player
-                // can't double-tap during the roll.
-                if (window.hasDiceRolls) {{
-                    var logDiv = document.getElementById('game-log');
-                    if (logDiv) logDiv.style.opacity = '0';
-                    var chipBars0 = document.querySelectorAll('.hudchips');
-                    for (var ci = 0; ci < chipBars0.length; ci++) {{
-                        chipBars0[ci].classList.add('animating');
-                    }}
-                    // Reveal delay: ATK reveal ~1160ms, DEF reveal ~3060ms, init ~760ms
+
+                // Fade combat chips during the dice/defeat animation so they
+                // can't be double-tapped before the result resolves.
+                function animateCombatChips() {{
+                    if (!window.hasDiceRolls) return;
+                    var bars = document.querySelectorAll('.hudchips');
+                    for (var ci = 0; ci < bars.length; ci++) bars[ci].classList.add('animating');
                     var delay = window.hasInitRoll ? 1000 : 3300;
-                    window.addEventListener('load', function() {{
-                        setTimeout(function() {{
-                            updateLog();
-                            var ld = document.getElementById('game-log');
-                            if (ld) {{ ld.style.transition = 'opacity 0.3s'; ld.style.opacity = '1'; }}
-                            var bars = document.querySelectorAll('.hudchips');
-                            for (var ci = 0; ci < bars.length; ci++) {{
-                                bars[ci].classList.remove('animating');
-                            }}
-                        }}, delay);
-                    }});
-                }} else {{
-                    window.addEventListener('load', updateLog);
+                    setTimeout(function() {{
+                        var b = document.querySelectorAll('.hudchips');
+                        for (var ci = 0; ci < b.length; ci++) b[ci].classList.remove('animating');
+                    }}, delay);
                 }}
+                window.addEventListener('load', function() {{ updateLog(); animateCombatChips(); }});
             </script>
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_icon_visual_js(gs.last_spell_cast)}

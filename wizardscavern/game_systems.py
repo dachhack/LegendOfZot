@@ -4427,10 +4427,12 @@ def _handle(my_tower, player_character, cmd):
     # 'n' starts a new game (tap card on the main menu)
     if cmd == 'n':
         gs.log_lines.clear()
+        gs.log_line_delays.clear()
         gs.prompt_cntl = "player_name"
         return True
     # Otherwise start new game (legacy SEND / empty input path)
     gs.log_lines.clear()
+    gs.log_line_delays.clear()
     gs.prompt_cntl = "player_name"
     return True
   # --- Mode dispatch table -------------------------------------------------
