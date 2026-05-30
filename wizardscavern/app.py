@@ -4930,7 +4930,11 @@ class WizardsCavernApp(toga.App):
         music_delay_ms = 0
         if mood_changed and gs.last_dice_rolls:
             if new_mood == 'victory':
-                music_delay_ms = 1800 + init_offset
+                # Land the victory sting on the kill reveal, not before it.
+                # The monster greys out at DEFEAT_GRAYSCALE_MS and the
+                # DEFEATED overlay flashes at DEFEAT_OVERLAY_MS; starting the
+                # fanfare earlier spoils the result before the final blow lands.
+                music_delay_ms = gs.DEFEAT_OVERLAY_MS + init_offset
             elif new_mood == 'death':
                 music_delay_ms = 3500 + init_offset
         if mood_changed or gs.music_restart:
@@ -10383,7 +10387,20 @@ class WizardsCavernApp(toga.App):
                     padding: 0;
                     overflow-y: auto;
                     min-height: 0;
+                    /* Keep touch-scroll for tall views but drop the visible
+                       bar — on the combat screen the 200px panel + map + chips
+                       slightly overflow and the styled 8px track looked like a
+                       stray UI element. Inner lists (inventory/vendor) keep
+                       their own bars. */
+                    scrollbar-width: none;
                 }}
+                #content-area::-webkit-scrollbar {{ width: 0; height: 0; display: none; }}
+
+                /* Combat cards: stat lines flush-left. Without this they
+                   inherit text-align:center from .bottom-pinned-zone and each
+                   line (name / Lv / bars / A:D:) centres raggedly in its
+                   column. */
+                #monster_panel, #player_panel {{ text-align: left; }}
 
                 /* Full-bleed screens (splash, intro, death, character
                    creation) hide both bars so backdrop art fills the
