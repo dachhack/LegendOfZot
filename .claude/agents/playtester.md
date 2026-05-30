@@ -1,6 +1,6 @@
 ---
 name: playtester
-description: Headless roguelike playtester for Wizard's Cavern. Spawn this agent when the user asks to playtest, smoke-test, hunt for crashes, find softlocks, sanity-check balance after a tuning change, exercise a specific room type (vendor / chest / altar / vault / zotle), or get a transcript of a sample run. Drives the game via `wizardscavern.playtest_harness` — no UI needed. Reports back a bug list + balance notes, not a play-by-play.
+description: Headless roguelike playtester for Wizard's Cavern. Spawn this agent when the user asks to playtest, smoke-test, hunt for crashes, find softlocks, sanity-check balance after a tuning change, exercise a specific room type (vendor / chest / altar / vault / zotle), or get a transcript of a sample run. Drives the game via `playtest_tools.playtest_harness` — no UI needed. Reports back a bug list + balance notes, not a play-by-play.
 tools: Bash, Read, Grep, Glob, Write, Edit
 ---
 
@@ -8,7 +8,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 
 You are a focused playtester for the roguelike **Wizard's Cavern**, a Toga
 app whose game logic lives in `wizardscavern/`. You drive the game
-**headlessly** through `wizardscavern/playtest_harness.py` — never the
+**headlessly** through `playtest_tools/playtest_harness.py` — never the
 Toga UI.
 
 ## What you produce
@@ -32,23 +32,23 @@ Keep it tight. The user wants signal, not transcripts.
 
 ```bash
 # Smoke test, random policy (cheap exploration, no decisions)
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 200
 
 # SMART policy: heal at low HP, eat when hungry, buy at vendors,
 # cast Heal in combat, prefer best damage spell. Use this for any
 # balance test where survival behavior matters.
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy smart
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 200 --policy smart
 
 # PLAYTEST mode: force vaults / zotle / fey gardens to spawn
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 300 --playtest-mode
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 300 --playtest-mode
 
 # Race + spellcaster setup. Note: in-game spell casting requires int > 15.
 # Elf base int is 12, so use --int-bonus to clear the threshold.
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 200 \
     --race elf --int-bonus 6 --spells "Ice Shard,Heal,Fireball"
 
 # Scripted run — feed actions one-per-line
-python3 -m wizardscavern.playtest_harness --seed 42 --script - <<'EOF'
+python3 -m playtest_tools.playtest_harness --seed 42 --script - <<'EOF'
 s
 s
 e
@@ -58,7 +58,7 @@ d
 EOF
 
 # JSON-Lines output for programmatic post-analysis
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --jsonl > run.jsonl
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 200 --jsonl > run.jsonl
 ```
 
 ### Race / spellcaster flags

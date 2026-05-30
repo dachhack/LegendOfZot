@@ -29,10 +29,10 @@ import random as _stdlib_random
 import re
 import sys
 
-from . import game_state as gs
-from .characters import Character
-from .dungeon import Tower
-from .game_systems import (
+from wizardscavern import game_state as gs
+from wizardscavern.characters import Character
+from wizardscavern.dungeon import Tower
+from wizardscavern.game_systems import (
     _trigger_room_interaction,
     handle_inventory_menu,
     move_player,
@@ -42,13 +42,13 @@ from .game_systems import (
     process_stairs_down_action,
     process_stairs_up_action,
 )
-from .vendor import handle_vendor_shop, handle_starting_shop
-from .items import (
+from wizardscavern.vendor import handle_vendor_shop, handle_starting_shop
+from wizardscavern.items import (
     initialize_identification_system,
     Potion, Food, Meat, Weapon, Armor, Spell, Scroll,
 )
-from .item_templates import SPELL_TEMPLATES
-from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+from wizardscavern.item_templates import SPELL_TEMPLATES
+from wizardscavern.game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
 # Names of bug-sized gear -- the only equipment a shrunk player can use.
 # Mirrors the check at game_systems.py:2239 so the policy can filter
@@ -233,7 +233,7 @@ def _lantern_obs(pc):
     decide when to light up and when to buy refills. The Lantern lives
     in inventory and ticks `fuel_amount`; LanternFuel items refill +20
     per use (auto-applied when fuel hits 0)."""
-    from .items import Lantern as _L, LanternFuel as _LF
+    from wizardscavern.items import Lantern as _L, LanternFuel as _LF
     lantern = None
     spare_fuel = 0
     for it in pc.inventory.items:
@@ -308,7 +308,7 @@ def _equipped_obs(pc):
     # filter-narrowed when gs.inventory_filter is set ('use' /
     # 'equip' / 'eat'), so an in-mode scroll picker can't always
     # walk obs.inventory to find the equipped slot.
-    from .characters import get_sorted_inventory
+    from wizardscavern.characters import get_sorted_inventory
     gear_only = [
         i for i in get_sorted_inventory(pc.inventory)
         if isinstance(i, (Weapon, Armor))
@@ -364,7 +364,7 @@ def _item_category(item):
     # vendor-identify (upgrade scrolls are the high-value find the
     # user explicitly called out). Importing Scroll lazily keeps the
     # module-level import block tight.
-    from .items import Scroll
+    from wizardscavern.items import Scroll
     if isinstance(item, Scroll):
         return "scroll"
     # Lantern + LanternFuel get explicit tags so the policy can refuel
@@ -538,7 +538,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     # 2 utility (Detect Monster, Light) and 2 combat (Hold Monster,
     # Mind Touch) options. --spells still overrides if explicit.
     if race == 'elf':
-        from .item_templates import SPELL_TEMPLATES as _ST
+        from wizardscavern.item_templates import SPELL_TEMPLATES as _ST
         import copy as _copy
         wanted = {'hold monster', 'mind touch'}
         for spell in _ST:
@@ -559,7 +559,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # gate (INT > 13 post-b382 -> max_mana > 0), then activate via
         # the existing memorized_spells flow. Dwarves still get no
         # cantrip -- they're the dedicated melee race.
-        from .item_templates import SPELL_TEMPLATES as _ST
+        from wizardscavern.item_templates import SPELL_TEMPLATES as _ST
         import copy as _copy
         wanted = {'mind touch', 'hold monster'}
         for spell in _ST:
@@ -583,8 +583,8 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # in inventory.items, because the in-game buy flow adds-then-
         # equips by reference -- that's what lets the vendor repair
         # handler see equipped gear.
-        from .items import Lantern as _Lantern, Food as _Food
-        from .items import LanternFuel as _LF
+        from wizardscavern.items import Lantern as _Lantern, Food as _Food
+        from wizardscavern.items import LanternFuel as _LF
         if race == "dwarf":
             starter_weapon = Weapon(
                 "Battleaxe", "A heavy two-handed axe of dwarven make.",
@@ -792,7 +792,7 @@ def _generate_floors_and_plant_at(pc, tower, start_floor):
     game_systems (also used by the in-game Tourist depth picker).
     Kept under the old harness-private name so existing call sites
     don't churn."""
-    from .game_systems import plant_player_at_depth
+    from wizardscavern.game_systems import plant_player_at_depth
     plant_player_at_depth(pc, tower, start_floor)
 
 
@@ -923,7 +923,7 @@ def _swap_plant_gear(pc, weapon_name, armor_name):
     real F15+ survivor would have a much better base item. Caller is
     responsible for upgrade_level scaling -- this only swaps the base.
     """
-    from .item_templates import WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    from wizardscavern.item_templates import WEAPON_TEMPLATES, ARMOR_TEMPLATES
     import copy as _copy
     by_w = {w.name: w for w in WEAPON_TEMPLATES}
     by_a = {a.name: a for a in ARMOR_TEMPLATES}
@@ -951,7 +951,7 @@ def _grant_memorized_spells(pc, start_floor):
     if max_slots <= 0:
         return  # cantrip-only race / stat profile
 
-    from .item_templates import SPELL_TEMPLATES as _ST
+    from wizardscavern.item_templates import SPELL_TEMPLATES as _ST
     import copy as _copy
 
     by_name = {s.name: s for s in _ST}
@@ -1049,7 +1049,7 @@ def _grant_survivor_inventory(pc, start_floor):
     """Plant inventory tiers, modelled on what a real F<N> player would
     have accumulated. Items are stacked when possible to mirror the
     inventory layout the smart-policy reads."""
-    from .items import (
+    from wizardscavern.items import (
         Potion as _Potion, Scroll as _Scroll, Sausage as _Sausage,
         CookingKit as _CK, CuringKit as _CuK, LanternFuel as _LF,
     )
@@ -1738,7 +1738,7 @@ class PlaytestSession:
         # None for undead / constructs / oozes / fungi etc. Lets the
         # starving-flee policy avoid throwing the agent at fights that
         # produce no meat.
-        from .items import get_monster_meat_info
+        from wizardscavern.items import get_monster_meat_info
         meat_info = get_monster_meat_info(name)
         # Tomb-proximity tell: undead spawn exclusively as tomb-adjacent
         # guardians at typical playtest depths, so seeing one means a
@@ -1792,8 +1792,8 @@ class PlaytestSession:
         # function would shadow the module names and break helpers below
         # if they ever pre-reference them. See the Meat shadow bug we just
         # fixed in game_systems.py:handle_inventory_menu.)
-        from .characters import get_sorted_inventory
-        from .items import (Scroll, Flare, Lantern, LanternFuel,
+        from wizardscavern.characters import get_sorted_inventory
+        from wizardscavern.items import (Scroll, Flare, Lantern, LanternFuel,
                             Treasure, Towel, CookingKit, CuringKit)
         items = get_sorted_inventory(gs.player_character.inventory)
 
@@ -1895,7 +1895,7 @@ class PlaytestSession:
             # Identification status applies to potions / scrolls / spells
             # too -- knowing what's in your bag changes what's safe to
             # use. is_item_identified is the canonical check.
-            from .items import is_item_identified
+            from wizardscavern.items import is_item_identified
             try:
                 entry["is_identified"] = bool(is_item_identified(item))
             except Exception:
@@ -1942,7 +1942,7 @@ class PlaytestSession:
         pc = gs.player_character
         if pc is None:
             return []
-        from .items import is_item_identified
+        from wizardscavern.items import is_item_identified
         out = []
         for i, s in enumerate(pc.get_spell_inventory()):
             try:
@@ -1969,7 +1969,7 @@ class PlaytestSession:
         # Vendor's "buy" command uses get_sorted_inventory, so the slot
         # number we report must match the sorted order or 'b<N>' will buy
         # the wrong item.
-        from .characters import get_sorted_inventory
+        from wizardscavern.characters import get_sorted_inventory
         sorted_items = get_sorted_inventory(gs.active_vendor.inventory)
         out = []
         for i, item in enumerate(sorted_items):
@@ -2703,7 +2703,7 @@ class PlaytestSession:
                     # status / monster spawns don't advance, just the
                     # lantern itself depletes. Auto-refuels from Lantern
                     # Fuel items in inventory when fuel hits 0.
-                    from .room_actions import process_lantern_quick_use
+                    from wizardscavern.room_actions import process_lantern_quick_use
                     process_lantern_quick_use(pc, tw)
                 elif action == "pass":
                     pass
@@ -2722,12 +2722,12 @@ class PlaytestSession:
                 # tile so the next step walked right back into combat
                 # -- Finrod the elf burned ~10 turns this way taking
                 # 24-dmg Wraith hits between failed flees.
-                from .combat import process_flee_direction_action
+                from wizardscavern.combat import process_flee_direction_action
                 process_flee_direction_action(pc, tw, action)
             elif mode == "spell_casting_mode":
                 process_spell_casting_action(pc, tw, action)
             elif mode == "spell_memorization_mode":
-                from .combat import process_spell_memorization_action
+                from wizardscavern.combat import process_spell_memorization_action
                 process_spell_memorization_action(pc, tw, action)
             elif mode == "chest_mode":
                 process_chest_action(pc, tw, action)
@@ -2744,61 +2744,61 @@ class PlaytestSession:
             elif mode == "warp_mode":
                 # Warp = random teleport. The agent resists by default --
                 # see the smart_policy warp_mode branch.
-                from .game_systems import process_warp_action
+                from wizardscavern.game_systems import process_warp_action
                 process_warp_action(pc, tw, action, gs.floor_params)
             elif mode == "altar_mode":
-                from .game_systems import process_altar_action
+                from wizardscavern.game_systems import process_altar_action
                 process_altar_action(pc, tw, action)
             elif mode == "pool_mode":
-                from .game_systems import process_pool_action
+                from wizardscavern.game_systems import process_pool_action
                 process_pool_action(pc, tw, action)
             elif mode == "tomb_mode":
-                from .game_systems import process_tomb_action
+                from wizardscavern.game_systems import process_tomb_action
                 process_tomb_action(pc, tw, action)
             elif mode in ("dungeon_mode", "dungeon_unlocked_mode"):
-                from .game_systems import process_dungeon_action
+                from wizardscavern.game_systems import process_dungeon_action
                 process_dungeon_action(pc, tw, action)
             elif mode in ("garden_mode", "fey_garden_mode"):
-                from .game_systems import process_garden_action
+                from wizardscavern.game_systems import process_garden_action
                 process_garden_action(pc, tw, action)
             elif mode == "library_mode":
-                from .game_systems import process_library_action
+                from wizardscavern.game_systems import process_library_action
                 process_library_action(pc, tw, action)
             elif mode == "library_read_decision_mode":
-                from .room_actions import process_library_read_decision
+                from wizardscavern.room_actions import process_library_read_decision
                 process_library_read_decision(pc, tw, action)
             elif mode == "blacksmith_mode":
-                from .game_systems import process_blacksmith_action
+                from wizardscavern.game_systems import process_blacksmith_action
                 process_blacksmith_action(pc, tw, action)
             elif mode == "shrine_mode":
-                from .game_systems import process_shrine_action
+                from wizardscavern.game_systems import process_shrine_action
                 process_shrine_action(pc, tw, action)
             elif mode == "oracle_mode":
-                from .game_systems import process_oracle_action
+                from wizardscavern.game_systems import process_oracle_action
                 process_oracle_action(pc, tw, action)
             elif mode == "alchemist_mode":
-                from .game_systems import process_alchemist_action
+                from wizardscavern.game_systems import process_alchemist_action
                 process_alchemist_action(pc, tw, action)
             elif mode == "war_room_mode":
-                from .game_systems import process_war_room_action
+                from wizardscavern.game_systems import process_war_room_action
                 process_war_room_action(pc, tw, action)
             elif mode == "taxidermist_mode":
-                from .game_systems import process_taxidermist_action
+                from wizardscavern.game_systems import process_taxidermist_action
                 process_taxidermist_action(pc, tw, action)
             elif mode == "identify_scroll_mode":
-                from .items import process_identify_scroll_action
+                from wizardscavern.items import process_identify_scroll_action
                 process_identify_scroll_action(pc, tw, action)
             elif mode == "upgrade_scroll_mode":
-                from .items import process_upgrade_scroll_action
+                from wizardscavern.items import process_upgrade_scroll_action
                 process_upgrade_scroll_action(pc, tw, action)
             elif mode == "foresight_direction_mode":
-                from .combat import process_foresight_direction_action
+                from wizardscavern.combat import process_foresight_direction_action
                 process_foresight_direction_action(pc, tw, action)
             elif mode == "crafting_mode":
-                from .game_systems import process_crafting_action
+                from wizardscavern.game_systems import process_crafting_action
                 process_crafting_action(pc, tw, action)
             elif mode == "stat_allocation_mode":
-                from .game_systems import process_stat_allocation_action
+                from wizardscavern.game_systems import process_stat_allocation_action
                 process_stat_allocation_action(pc, tw, action)
             elif mode == "character_stats_mode":
                 # Minimal handler -- the in-game UI lives in app.py
@@ -3161,7 +3161,7 @@ def _count_rations(player_character):
     """How many Rations does the player hold? Used to gate lembas
     crafting -- each lembas burns 1 Ration, and we never want to burn
     the last one (would leave the agent vendor-dependent for food)."""
-    from .items import Food
+    from wizardscavern.items import Food
     n = 0
     for item in player_character.inventory.items:
         if isinstance(item, Food) and item.name == "Rations":
@@ -3191,8 +3191,8 @@ def _pick_craftable_food(player_character):
     user-entered number. We compute the same list locally so the
     returned action ('1', '2', ...) lines up with the game's expectation.
     """
-    from .game_systems import get_available_recipes
-    from .item_templates import SAUSAGE_RECIPES, LEMBAS_RECIPES
+    from wizardscavern.game_systems import get_available_recipes
+    from wizardscavern.item_templates import SAUSAGE_RECIPES, LEMBAS_RECIPES
     available = get_available_recipes(player_character)
     craftable = [r for r in available if r[2]]
     ration_count = _count_rations(player_character)
