@@ -752,9 +752,9 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 else:
                     set_shop_msg(f"Not enough gold! You need {item_to_buy.calculated_value} gold for {item_to_buy.name}.")
             else:
-                set_shop_msg(f"Invalid item number.")
+                set_shop_msg("Invalid item number.")
         except ValueError:
-            set_shop_msg(f"Invalid input. Please enter 'b' followed by the item number.")
+            set_shop_msg("Invalid input. Please enter 'b' followed by the item number.")
         return False # Shopping continues
 
     elif cmd.startswith('s') and not cmd.startswith('sell_qty'):
@@ -818,9 +818,9 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 else:
                     set_shop_msg(f"The vendor doesn't have enough gold to buy {item_to_sell.name}.")
             else:
-                set_shop_msg(f"Invalid item number.")
+                set_shop_msg("Invalid item number.")
         except ValueError:
-            set_shop_msg(f"Invalid input. Please use 'b [number]', 's [number]', 'f', or 'q'.")
+            set_shop_msg("Invalid input. Please use 'b [number]', 's [number]', 'f', or 'q'.")
         return False # Shopping continues
 
     # IDENTIFY COMMAND - vendor identifies items for gold
@@ -953,7 +953,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
         gs.vendor_action = None
         return True # Shopping finished
     else:
-        set_shop_msg(f"Invalid input. Please use 'b [number]', 's [number]', 'x', or 'q'.")
+        set_shop_msg("Invalid input. Please use 'b [number]', 's [number]', 'x', or 'q'.")
         return False # Shopping continues
 
 

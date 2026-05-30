@@ -291,9 +291,7 @@ class Floor:
         """Prints the floor layout showing all room types, ignoring fog of war."""
         for r_idx in range(self.rows):
             for c_idx in range(self.cols):
-                room = self.grid[r_idx][c_idx]
-                char_to_print = room.room_type
-                output = f" {char_to_print} "
+                self.grid[r_idx][c_idx]
                 #add_log(output, end="")
             #add_log()
 

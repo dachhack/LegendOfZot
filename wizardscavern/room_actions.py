@@ -1651,13 +1651,13 @@ def process_library_action(player_character, my_tower, cmd):
 
         if player_character.intelligence >= 12:
             if found_spell.spell_type == 'damage':
-                hint += f"It contains Combat Magic.\n"
+                hint += "It contains Combat Magic.\n"
             elif found_spell.spell_type == 'healing':
-                hint += f"It contains Restorative Magic.\n"
+                hint += "It contains Restorative Magic.\n"
             elif found_spell.spell_type == 'add_status_effect':
-                hint += f"It contains Enhancement Magic.\n"
+                hint += "It contains Enhancement Magic.\n"
             elif found_spell.spell_type == 'remove_status':
-                hint += f"It contains Cleansing Magic.\n"
+                hint += "It contains Cleansing Magic.\n"
 
         if player_character.intelligence >= 16:
             if found_spell.spell_type == 'damage':
@@ -1731,7 +1731,7 @@ def process_library_read_decision(player_character, my_tower, cmd):
             )
             player_character.inventory.add_item(new_spell)
             add_log(f"{COLOR_GREEN}Success! You deciphered the grimoire and extracted the spell!{COLOR_RESET}")
-            add_log(f"The unidentified spell has been added to your inventory. Take it to a vendor to identify it.")
+            add_log("The unidentified spell has been added to your inventory. Take it to a vendor to identify it.")
 
             # Track stats
             gs.game_stats['spells_learned'] = gs.game_stats.get('spells_learned', 0) + 1
@@ -1867,7 +1867,7 @@ def process_library_book_selection(player_character, my_tower, cmd):
                 )
                 player_character.inventory.add_item(new_spell)
                 add_log(f"{COLOR_GREEN}Success! You've learned the spell '{found_spell.name}' (Level {found_spell.level})!{COLOR_RESET}")
-                add_log(f"The spell has been added to your inventory. Use spell memorization to prepare it for use.")
+                add_log("The spell has been added to your inventory. Use spell memorization to prepare it for use.")
 
                 # Track stats
                 gs.game_stats['spells_learned'] = gs.game_stats.get('spells_learned', 0) + 1
@@ -2769,7 +2769,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['monsters_killed_total'] - kills
             hints.append(f"You have slain {kills} foes. {remaining} more victories will summon a Champion bearing the Rune of Battle.")
         elif gs.champion_monster_available:
-            hints.append(f"A Champion Monster prowls nearby, bearing the Rune of Battle. Seek it in a monster room.")
+            hints.append("A Champion Monster prowls nearby, bearing the Rune of Battle. Seek it in a monster room.")
     
     # Treasure rune (legendary chest)
     if not gs.runes_obtained['treasure']:
@@ -2778,7 +2778,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['chests_opened_total'] - chests
             hints.append(f"You have opened {chests} chests. {remaining} more treasures must be claimed before a Legendary Chest appears.")
         elif gs.legendary_chest_available:
-            hints.append(f"A Legendary Chest awaits discovery in a treasure room, containing the Rune of Treasure.")
+            hints.append("A Legendary Chest awaits discovery in a treasure room, containing the Rune of Treasure.")
     
     # Devotion rune (altar sacrifice)
     if not gs.runes_obtained['devotion']:
@@ -2799,7 +2799,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['pools_drunk_total'] - pools
             hints.append(f"You have drunk from {pools} sacred pools. {remaining} more visions await before the Ancient Waters reveal themselves.")
         elif gs.ancient_waters_available:
-            hints.append(f"Ancient Waters shimmer in a mystical pool, ready to grant the Rune of Reflection.")
+            hints.append("Ancient Waters shimmer in a mystical pool, ready to grant the Rune of Reflection.")
     
     # Knowledge rune (codex)
     if not gs.runes_obtained['knowledge']:
@@ -2808,7 +2808,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['spells_learned_total'] - spells
             hints.append(f"You have memorized {spells} unique spells. Learn {remaining} more different spells to unlock the Codex of Zot.")
         elif gs.codex_available:
-            hints.append(f"The Codex of Zot awaits in an ancient library, ready to bestow the Rune of Knowledge.")
+            hints.append("The Codex of Zot awaits in an ancient library, ready to bestow the Rune of Knowledge.")
     
     # Secrets rune (master dungeon)
     if not gs.runes_obtained['secrets']:
@@ -2817,7 +2817,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['dungeons_unlocked_total'] - dungeons
             hints.append(f"You have unlocked {dungeons} dungeons. {remaining} more must yield their secrets before the Master Dungeon appears.")
         elif gs.master_dungeon_available:
-            hints.append(f"A Master Dungeon lies hidden, sealed with ancient locks. The Rune of Secrets awaits within.")
+            hints.append("A Master Dungeon lies hidden, sealed with ancient locks. The Rune of Secrets awaits within.")
     
     # Eternity rune (cursed tomb)
     if not gs.runes_obtained['eternity']:
@@ -2826,7 +2826,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['tombs_looted_total'] - tombs
             hints.append(f"You have desecrated {tombs} tombs. {remaining} more must be plundered before the Cursed Tomb reveals itself.")
         elif gs.cursed_tomb_available:
-            hints.append(f"A Cursed Tomb, heavy with dark power, awaits. The Rune of Eternity lies within.")
+            hints.append("A Cursed Tomb, heavy with dark power, awaits. The Rune of Eternity lies within.")
     
     # Growth rune (world tree)
     if not gs.runes_obtained['growth']:
@@ -2835,7 +2835,7 @@ def generate_oracle_hints(player_character, my_tower):
             remaining = gs.rune_progress_reqs['gardens_harvested_total'] - gardens
             hints.append(f"You have harvested {gardens} magical gardens. Tend {remaining} more before the World Tree sapling appears.")
         elif gs.world_tree_available:
-            hints.append(f"The World Tree Sapling grows in a mystical garden, ready to grant the Rune of Growth.")
+            hints.append("The World Tree Sapling grows in a mystical garden, ready to grant the Rune of Growth.")
     
     # =========================================================================
     # SECRET ROOM LOCATION HINTS (20% chance)
@@ -2893,17 +2893,17 @@ def generate_oracle_hints(player_character, my_tower):
     if runes_count > 0 and runes_count < 8:
         hints.append(f"You possess {runes_count} of 8 runes. {8 - runes_count} remain hidden in the depths.")
     elif runes_count == 8:
-        hints.append(f"All eight runes are yours! Seek the shard vaults to claim the Shards of Power.")
+        hints.append("All eight runes are yours! Seek the shard vaults to claim the Shards of Power.")
     
     # SHARD HINTS
     if shards_count > 0 and shards_count < 8:
         hints.append(f"The shards pulse with power. You have claimed {shards_count} of 8. Continue your hunt.")
     elif shards_count == 8:
-        hints.append(f"Eight shards of power resonate in harmony! The Gate to Floor 50 awaits on floor 49.")
+        hints.append("Eight shards of power resonate in harmony! The Gate to Floor 50 awaits on floor 49.")
     
     # FLOOR 50 HINT
     if gs.gate_to_floor_50_unlocked:
-        hints.append(f"The Gate to Floor 50 is open. Descend to face Zot's Guardian and claim the Orb!")
+        hints.append("The Gate to Floor 50 is open. Descend to face Zot's Guardian and claim the Orb!")
     
     # =========================================================================
     # CRYPTIC LORE (random flavor)
@@ -2930,7 +2930,7 @@ def generate_oracle_hints(player_character, my_tower):
     
     # LORE/FLAVOR
     if runes_count == 0:
-        hints.append(f"The Orb of Zot sleeps in the deepest chamber, guarded by an ancient power. Seek the eight runes to begin your quest.")
+        hints.append("The Orb of Zot sleeps in the deepest chamber, guarded by an ancient power. Seek the eight runes to begin your quest.")
     
     if len(hints) == 0:
         hints.append("The mirror shows swirling mists... Your path is not yet clear.")
@@ -3642,7 +3642,7 @@ def process_save_load_action(player_character, my_tower, cmd):
                 info = save['info']
                 add_log(f"  Slot {slot}: {info['name']} (Lvl {info['level']}, Floor {info['floor']}, {info['gold']}g)")
         add_log("")
-        add_log(f"Press 1-3 to save/load, 'x' to cancel")
+        add_log("Press 1-3 to save/load, 'x' to cancel")
         add_log(f"{COLOR_PURPLE}======================================{COLOR_RESET}")
         return
 

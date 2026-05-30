@@ -1082,10 +1082,10 @@ def process_combat_action(player_character, my_tower, cmd):
                     add_log("")
                     add_log(f"{COLOR_YELLOW}Final Statistics:{COLOR_RESET}")
                     add_log(f"  Level: {player_character.level}")
-                    add_log(f"  Floors Conquered: 50")
+                    add_log("  Floors Conquered: 50")
                     add_log(f"  Monsters Slain: {gs.game_stats.get('monsters_killed', 0)}")
-                    add_log(f"  Runes Collected: 8/8")
-                    add_log(f"  Shards Obtained: 8/8")
+                    add_log("  Runes Collected: 8/8")
+                    add_log("  Shards Obtained: 8/8")
                     add_log("")
                     add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
                     add_log("")
@@ -1726,7 +1726,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
 
-    main = _main()
+    _main()
 
     # Filter spells from inventory that the player can cast (based on level, mana, etc. - for simplicity, just type check for now)
     available_spells = player_character.memorized_spells
@@ -1735,12 +1735,6 @@ def process_spell_casting_action(player_character, my_tower, cmd):
         if not available_spells:
             add_log("You have no spells memorized. Visit the spell memorization menu to memorize spells.")
             gs.prompt_cntl = "combat_mode"
-        return
-
-        add_log("Your Memorized Spells:")
-        for i, spell in enumerate(available_spells):
-            add_log(f"  {i + 1}. {spell.name} (Cost: {spell.mana_cost} Mana, Power: {spell.base_power}, Type: {spell.damage_type})")
-        # Command prompt is now in the placeholder
         return
 
     if cmd == 'x':

@@ -2363,7 +2363,7 @@ def move_player_randomly(player_character, my_tower):
     Moves the player in a random valid direction, updating player_character's position.
     Calls _trigger_room_interaction if a move is successful.
     """
-    current_x, current_y = player_character.x, player_character.y
+    _current_x, _current_y = player_character.x, player_character.y
     all_directions = ['n', 's', 'e', 'w']
     random.shuffle(all_directions) # Shuffle to attempt directions randomly
 
@@ -2532,7 +2532,7 @@ def _trigger_room_interaction(player_character, my_tower):
             is_bug = room.properties.get('is_bug_merchant', False)
             if is_bug:
                 from .vendor import BUG_MERCHANT_GREETINGS
-                greeting = BUG_MERCHANT_GREETINGS.get(gs.active_vendor.name, f"A bug merchant chitters at you. 'Need gear, tiny one?'")
+                greeting = BUG_MERCHANT_GREETINGS.get(gs.active_vendor.name, "A bug merchant chitters at you. 'Need gear, tiny one?'")
                 set_vendor_greeting(greeting)
                 add_log(f"{COLOR_GREEN}{greeting}{COLOR_RESET}")
             elif is_magic:
@@ -2875,7 +2875,7 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
             return True # Consider this a 'move' action for processing purposes
 
     current_floor = my_tower.floors[character.z]
-    old_x, old_y = character.x, character.y
+    _old_x, _old_y = character.x, character.y
     new_x, new_y = character.x, character.y
 
     if direction == 'n':

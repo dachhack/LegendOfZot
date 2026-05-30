@@ -1342,7 +1342,7 @@ def generate_spell_cast_js(spell):
     # Banner hold time: 0.4s at L0, 0.9s at L5
     banner_hold = 400 + lvl * 100
     # Screen tint intensity scales with level
-    tint_base_opacity = 0.15 + lvl * 0.06
+    0.15 + lvl * 0.06
     tint_duration = '120' if dtype in ('Lightning', 'Wind') else str(300 + lvl * 60)
 
     # NOTE: haptic on high-level spells is triggered by
@@ -3226,12 +3226,12 @@ class WizardsCavernApp(toga.App):
                     UIColor = ObjCClass('UIColor')
                     native_field.tintColor = UIColor.clearColor
 
-                except Exception as e:
+                except Exception:
                     pass
                     import traceback
                     traceback.print_exc()
                     
-        except Exception as e:
+        except Exception:
             pass
     
     def disable_android_keyboard(self):
@@ -5602,7 +5602,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
             loaded_char = gs._pending_load[0] if gs._pending_load else gs.player_character
-            loaded_tower = gs._pending_load[1] if gs._pending_load else gs.my_tower
+            gs._pending_load[1] if gs._pending_load else gs.my_tower
 
             # Count unlocked achievements
             unlocked_count = sum(1 for a in ACHIEVEMENTS if a.unlocked)
@@ -6589,13 +6589,10 @@ class WizardsCavernApp(toga.App):
                 
                 # Apply filter in combat too
                 display_items = combat_usable_items
-                combat_filter_label = "Combat Items"
                 if gs.inventory_filter == 'eat':
                     display_items = [i for i in combat_usable_items if isinstance(i, (Food, Meat))]
-                    combat_filter_label = "Food Items"
                 elif gs.inventory_filter == 'use':
                     display_items = [i for i in combat_usable_items if isinstance(i, (Potion, Scroll))]
-                    combat_filter_label = "Usable Items"
 
                 # Segmented filter tabs — combat has no Equip tab (can't
                 # swap gear mid-fight). 'All' sends 'b' to clear the filter.
@@ -7087,39 +7084,6 @@ class WizardsCavernApp(toga.App):
             # HTML from character_stats_mode above so the player sees
             # their current stat values while spending. a/d/i spend a
             # point; x backs out.
-            allocation_html = f"""
-<div class='full-inventory-panel'>
-    <h2>Allocate Stat Points</h2>
-    <div style='margin-bottom: 8px;'>
-        <b style='color:#fbbf24;'>Unspent: {gs.player_character.unspent_stat_points}</b>
-    </div>
-    <div style='margin-bottom: 12px; padding: 8px; background: #1a1a1a; border-radius: 4px;'>
-        <b>Str:</b> {gs.player_character.strength} |
-        <b>Dex:</b> {gs.player_character.dexterity} |
-        <b>Int:</b> {gs.player_character.intelligence}
-    </div>
-    <div class='taprow altar-act' data-zcmd='a'
-         onclick="window.__zotTap('a', this)">
-        <div class='aname'>+1 Strength</div>
-        <div class='ameta'>Boosts attack, max HP, melee math.</div>
-    </div>
-    <div class='taprow altar-act' data-zcmd='d'
-         onclick="window.__zotTap('d', this)">
-        <div class='aname'>+1 Dexterity</div>
-        <div class='ameta'>Boosts dodge, ranged accuracy, initiative.</div>
-    </div>
-    <div class='taprow altar-act' data-zcmd='i'
-         onclick="window.__zotTap('i', this)">
-        <div class='aname'>+1 Intelligence</div>
-        <div class='ameta'>Unlocks spell casting at race threshold (elf 12, human 16, dwarf 21) and grows max mana.</div>
-    </div>
-    <div class='taprow cancel' data-zcmd='x'
-         onclick="window.__zotTap('x', this)">
-        <span class='tapnum'>&times;</span>Back to Stats
-    </div>
-</div>
-            """
-            room_html = allocation_html
             current_commands_text = "a = +STR | d = +DEX | i = +INT | x = back"
 
         elif gs.prompt_cntl == "crafting_mode":
@@ -7280,7 +7244,7 @@ class WizardsCavernApp(toga.App):
                     if identified:
                         slots_needed = gs.player_character.get_spell_slots(spell)
                         spell_info = f"<b>{display_name}</b>{marker}<br>"
-                        spell_info += f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        spell_info += "<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
                         spell_info += f"L{spell.level} | {spell.mana_cost} MP | "
                         spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''} | "
                         spell_info += f"{spell.spell_type}</span>"
@@ -7638,7 +7602,7 @@ class WizardsCavernApp(toga.App):
                                 </div>
                                 """
                         if item_template.is_unique:
-                            entry_html += f"""
+                            entry_html += """
                                 <div style="color: #FF69B4; font-size: 12px; font-weight: bold;">
                                      UNIQUE TREASURE 
                                 </div>
@@ -7684,7 +7648,7 @@ class WizardsCavernApp(toga.App):
 
                 else:
                     # Show as undiscovered
-                    entry_html = f"""
+                    entry_html = """
                         <div style="border-left: 3px solid #333; padding: 4px; margin: 5px 0; border-radius: 3px; opacity: 0.5;">
                             <div style="color: #555; font-weight: bold; font-size: 12px;"> ???</div>
                             <div style="color: #555; font-size: 12px; margin-top: 3px; font-style: italic;">Not yet discovered</div>
@@ -7712,7 +7676,7 @@ class WizardsCavernApp(toga.App):
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
             music_label = "vol-" if gs.music_enabled else "vol+"
-            current_commands_text = f"Tap Back | x = close journal"
+            current_commands_text = "Tap Back | x = close journal"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - Compact: Combat panels + spell list (no map)
@@ -7845,7 +7809,6 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -8105,7 +8068,6 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML (same as combat view)
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -8196,12 +8158,11 @@ class WizardsCavernApp(toga.App):
 
             # Generate map HTML (reuse existing map generation code)
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Scroll info panel
-            scroll_html = f"""
+            scroll_html = """
                 <div style="padding: 10px; border-radius: 4px; border: 2px solid #E040FB; margin-bottom: 5px;">
                     <div style="color: #E040FB; font-weight: bold; font-size: 15px; margin-bottom: 6px;"> Scroll of Foresight</div>
                     <div style="font-size: 12px; color: #DDD; margin-bottom: 8px;">
@@ -8258,16 +8219,13 @@ class WizardsCavernApp(toga.App):
 
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -8475,26 +8433,22 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             current_floor = gs.my_tower.floors[gs.player_character.z]
             room = current_floor.grid[gs.player_character.y][gs.player_character.x]
             pool_info = room.properties.get('pool_info', {})
 
-            pool_name = pool_info.get('name', 'Mysterious Pool')
-            pool_symbol = pool_info.get('symbol', '')
-            pool_color = pool_info.get('color', '#00CED1')
-            pool_desc = pool_info.get('description', 'A basin of water.')
-            unknown_pool_desc = "An unknown but powerful basin of water lies here."
+            pool_info.get('name', 'Mysterious Pool')
+            pool_info.get('symbol', '')
+            pool_info.get('color', '#00CED1')
+            pool_info.get('description', 'A basin of water.')
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -8568,7 +8522,7 @@ class WizardsCavernApp(toga.App):
             # Build pool commands with lantern if available
             current_commands_text = "Tap to drink | i = inventory"
             if has_lantern:
-                current_commands_text += f" | l = lantern"
+                current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "warp_mode":
@@ -8643,11 +8597,9 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
             
             # Generate map HTML
@@ -8711,11 +8663,9 @@ class WizardsCavernApp(toga.App):
             
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
             
             # Generate map HTML
@@ -8780,16 +8730,13 @@ class WizardsCavernApp(toga.App):
 
             # Check for lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
@@ -9371,7 +9318,7 @@ class WizardsCavernApp(toga.App):
                     "<div class='taprow altar-act offering' data-zcmd='o' "
                     "onclick=\"window.__zotTap('o', this)\">"
                     "<div class='aname'>Offering</div>"
-                    f"<div class='ameta'>50g &middot; potion / scroll</div>"
+                    "<div class='ameta'>50g &middot; potion / scroll</div>"
                     "</div>"
                     "</div>"
                 )
@@ -9625,10 +9572,10 @@ class WizardsCavernApp(toga.App):
             # Filter collections: bug taxidermist shows only bug collections, regular shows only non-bug
             collection_status = [(name, data, pieces, complete) for name, data, pieces, complete in collection_status
                                  if bool(data.get('is_bug')) == is_bug_tax]
-            trophies = get_player_trophies(gs.player_character)
+            get_player_trophies(gs.player_character)
             completable = [(name, data) for (name, data, pieces, complete) in collection_status
                            if complete and not room.properties.get(f'completed_{name}')]
-            already_done = [name for (name, data, pieces, complete) in collection_status
+            [name for (name, data, pieces, complete) in collection_status
                             if room.properties.get(f'completed_{name}')]
 
             # Build collection rows
@@ -9860,7 +9807,7 @@ class WizardsCavernApp(toga.App):
                 if letter:
                     current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #565758; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;">{letter}</div>'
                 else:
-                    current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
+                    current_row_html += '<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
             current_row_html += '</div>'
 
             guess_count = len(gs.zotle_puzzle['guesses']) if gs.zotle_puzzle else 0
@@ -10011,7 +9958,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Calculate valid coordinate ranges
-            max_floors = len(gs.my_tower.floors)
+            len(gs.my_tower.floors)
             typed_coords = (self.input_field.value or "").strip()
 
             teleporter_html = f"""
@@ -10115,7 +10062,6 @@ class WizardsCavernApp(toga.App):
             
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
@@ -10186,7 +10132,6 @@ class WizardsCavernApp(toga.App):
 
             if show_map:
                 floor = gs.my_tower.floors[gs.player_character.z]
-                highlight_coords = (gs.player_character.y, gs.player_character.x)
 
                 # ADD LANTERN INFO DISPLAY
                 if gs.prompt_cntl == "game_loop":
@@ -10197,9 +10142,7 @@ class WizardsCavernApp(toga.App):
                             break
 
                     if lantern:
-                        fuel_color = "#4CAF50" if lantern.fuel_amount > 5 else (
-                            "#FFD700" if lantern.fuel_amount > 2 else "#F44336")
-                        fuel_bar_pct = min(100, (lantern.fuel_amount / 10) * 100)
+                        min(100, (lantern.fuel_amount / 10) * 100)
 
                         lantern_info_html = ""
 
@@ -10364,11 +10307,9 @@ class WizardsCavernApp(toga.App):
                 """
             # Check if player has a lantern
             has_lantern = False
-            lantern_fuel = 0
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Lantern):
                     has_lantern = True
-                    lantern_fuel = item.fuel_amount
                     break
 
             # DYNAMIC COMMAND TEXT GENERATION
@@ -10381,18 +10322,18 @@ class WizardsCavernApp(toga.App):
 
                 # Add lantern command if player has one
                 if has_lantern:
-                    base_commands += f" | l = lantern"
+                    base_commands += " | l = lantern"
 
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
                     current_commands_text = "n/s/e/w = move | u = up | i = inventory"
                     if has_lantern:
-                        current_commands_text += f" | l = lantern"
+                        current_commands_text += " | l = lantern"
                 elif current_room.room_type == 'D':
                     current_commands_text = "n/s/e/w = move | d = down | i = inventory"
                     if has_lantern:
-                        current_commands_text += f" | l = lantern"
+                        current_commands_text += " | l = lantern"
                 else:
                     current_commands_text = base_commands
 
@@ -10401,12 +10342,12 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "chest_mode":
                 current_commands_text = "o = open | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "pool_mode":
                 current_commands_text = "dr = drink | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
                 if gs.altar_action:
@@ -10420,7 +10361,7 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "library_mode":
                 current_commands_text = "r = rummage for books | i = inventory"
                 if has_lantern:
-                    current_commands_text += f" | l = lantern"
+                    current_commands_text += " | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "library_read_decision_mode":
                 current_commands_text = "Tap Read or Leave it"

@@ -1577,7 +1577,7 @@ class Weapon(Item):
         elif pct > 0:
             return f"<span style='color: #FF5722;'>{self.durability}/{self.max_durability}</span>"
         else:
-            return f"<span style='color: #F44336;'>BROKEN</span>"
+            return "<span style='color: #F44336;'>BROKEN</span>"
 
     @property
     def calculated_value(self):
@@ -1706,7 +1706,7 @@ class Armor(Item):
         elif pct > 0:
             return f"<span style='color: #FF5722;'>{self.durability}/{self.max_durability}</span>"
         else:
-            return f"<span style='color: #F44336;'>BROKEN</span>"
+            return "<span style='color: #F44336;'>BROKEN</span>"
 
     @property
     def calculated_value(self):
@@ -2246,7 +2246,6 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
                 chosen_item.upgrade_level += 1
                 # Recalculate max_durability to reflect the upgrade, and heal proportionally
                 if isinstance(chosen_item, (Weapon, Armor)):
-                    old_max = chosen_item.max_durability
                     bonus = chosen_item.UPGRADE_DURABILITY_BONUS
                     chosen_item.max_durability += bonus
                     chosen_item.durability = min(chosen_item.max_durability, chosen_item.durability + bonus)
@@ -3102,7 +3101,6 @@ class Meat(Item):
         self.rot_timer -= 1
         if self.rot_timer <= 0:
             self.is_rotten = True
-            old_name = self.name
             self.name = f"Rotten {self.monster_name} {self.cut.capitalize()}"
             self.description = "Spoiled meat. Eating it will make you sick."
             self.nutrition = -15  # eating rotten meat hurts
@@ -3676,10 +3674,10 @@ class Towel(Item):
         
         # Not worn - offer options
         add_log(f"{COLOR_CYAN}What do you want to do with the towel?{COLOR_RESET}")
-        add_log(f"  1. Wear it over your face (blind yourself)")
-        add_log(f"  2. Wipe your face (cure face-based blindness)")
-        add_log(f"  3. Wipe your hands (cure slippery hands)")
-        add_log(f"  4. Cancel")
+        add_log("  1. Wear it over your face (blind yourself)")
+        add_log("  2. Wipe your face (cure face-based blindness)")
+        add_log("  3. Wipe your hands (cure slippery hands)")
+        add_log("  4. Cancel")
         
         # Set up towel action mode
         gs.prompt_cntl = "towel_action_mode"
@@ -4371,7 +4369,7 @@ def process_potion_effects_in_combat(character, active_monster):
 
     # Check for Vampirism - heal on damage dealt
     if 'Vampiric' in character.status_effects:
-        lifesteal_pct = character.status_effects['Vampiric'].magnitude
+        character.status_effects['Vampiric'].magnitude
         # After dealing damage, heal character based on percentage
         # Example: heal_amount = int(damage_dealt * lifesteal_pct / 100)
         pass
@@ -4385,7 +4383,7 @@ def process_potion_effects_in_combat(character, active_monster):
 
     # Check for Stone Skin - reduce incoming damage
     if 'Stone Skin' in character.status_effects:
-        reduction = character.status_effects['Stone Skin'].magnitude
+        character.status_effects['Stone Skin'].magnitude
         # Reduce damage in your damage calculation
         # Example: final_damage = max(0, damage - reduction)
         pass
