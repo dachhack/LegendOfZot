@@ -1999,13 +1999,14 @@ def generate_concentration_check_js(conc_roll):
 def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
-    Combat sequence on a kill (matches dice/damage timing):
-      0-600ms:    Player ATTACK dice tumbles + lands
-      600-1000ms: Monster DEFEND dice tumbles + lands (exchange resolved)
-      1300ms:     Monster damage float appears
-      2100ms:     Sprite fades to grayscale (kill confirmed)
-      2700ms:     Flash "MONSTER NAME / DEFEATED" overlay
-      4500ms:     Panel auto-dismissed by Python timer
+    Phase times come from game_state (single source of truth for the kill
+    sequence), so retuning the timeline only touches the constants:
+      0-600ms:               Player ATTACK dice tumbles + lands
+      600-1000ms:            Monster DEFEND dice tumbles + lands (resolved)
+      1300ms:                Monster damage float appears
+      DEFEAT_GRAYSCALE_MS:   Sprite fades to grayscale (kill confirmed)
+      DEFEAT_OVERLAY_MS:     Flash "MONSTER NAME / DEFEATED" overlay
+      DEFEAT_DISMISS_MS:     Panel auto-dismissed by Python timer
     """
     if not monster_name:
         return ""
@@ -2020,17 +2021,17 @@ def generate_monster_defeat_js(monster_name):
         # Cancel CSS entrance animation that might conflict
         'mp.style.animation="none";'
 
-        # Phase 1 (0-2100ms): wait for opposed dice + damage float to play
+        # Phase 1: wait for opposed dice + damage float to play
 
-        # Phase 2 (2100ms): grayscale + dim the sprite box only (not the text)
+        # Phase 2 (DEFEAT_GRAYSCALE_MS): grayscale + dim the sprite box only (not the text)
         'setTimeout(function(){'
         'var sb=document.getElementById("monster_sprite_box");'
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
-        '},2100);'
+        f'}},{gs.DEFEAT_GRAYSCALE_MS});'
 
-        # Phase 3 (2700ms): flash in overlay with monster name + DEFEATED
+        # Phase 3 (DEFEAT_OVERLAY_MS): flash in overlay with monster name + DEFEATED
         'setTimeout(function(){'
         'var ov=document.createElement("div");'
         'ov.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
@@ -2057,7 +2058,7 @@ def generate_monster_defeat_js(monster_name):
         'ov.style.opacity="1";'
         'ov.style.transform="scale(1)";'
         '});'
-        '},2700);'
+        f'}},{gs.DEFEAT_OVERLAY_MS});'
 
         '})();</script>'
     )
@@ -4554,8 +4555,10 @@ class WizardsCavernApp(toga.App):
         # 'q' already has its own y/n confirm flow (confirm_quit prompt).
         if c == 'df':
             return 'Drink potions to full'
-        if c == 'f' and gs.prompt_cntl == 'combat_mode':
-            return 'Flee combat'
+        # Flee is NOT armed for two-tap confirm: it's a defensive escape, not
+        # an irreversible act, and choosing a flee direction (with FIGHT to
+        # cancel) is already a natural confirm. The extra "tap again" made
+        # every escape attempt feel like three taps.
         if c == 's' and gs.prompt_cntl == 'altar_mode':
             return 'Sacrifice at the altar'
         # Save-overwrite commands (o1/o2/o3) destroy the existing save in
@@ -4874,9 +4877,11 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 4.5s total: opposed ATK exchange (0-1.0s) + damage (1.3-1.9s) +
-        # grayscale (2.1-2.7s) + DEFEATED flash (2.7-4.5s)
-        threading.Timer(4.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # Dismiss after the full defeat timeline: opposed ATK exchange +
+        # damage float + grayscale (DEFEAT_GRAYSCALE_MS) + DEFEATED flash
+        # (DEFEAT_OVERLAY_MS). DEFEAT_DISMISS_MS is the single tunable knob.
+        threading.Timer(gs.DEFEAT_DISMISS_MS / 1000.0,
+                        lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """Render the game state to the display.

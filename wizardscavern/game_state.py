@@ -512,13 +512,22 @@ def print_to_output(text):
     add_log(text)
 
 
+# --- Monster-defeat animation timeline (ms from the kill frame painting) ---
+# Single source of truth for the whole kill sequence. generate_monster_defeat_js
+# plays the grayscale + overlay phases off these, the victory-panel auto-dismiss
+# timer uses DEFEAT_DISMISS_MS, and the log/toast reveal is timed to land just
+# after the overlay flashes in (between OVERLAY and DISMISS).
+DEFEAT_GRAYSCALE_MS = 2100  # monster sprite box fades to grayscale (kill confirmed)
+DEFEAT_OVERLAY_MS = 2700    # "NAME / DEFEATED" overlay flashes in (0.3s scale+fade)
+DEFEAT_DISMISS_MS = 4500    # victory panel auto-dismissed, back to room view
+
 # Combat-log reveal timing (ms). New log lines added while a combat
 # animation is playing are held back until that animation has revealed the
 # result, so the log can't spoil a dice roll or a kill before the player
 # sees it on screen. This replaces the old "blank the whole log" approach.
 COMBAT_LOG_REVEAL_MS = 3300       # opposed-dice exchange fully resolved
 COMBAT_LOG_REVEAL_MS_INIT = 1000  # initiative-only roll resolves sooner
-DEFEAT_LOG_REVEAL_MS = 3300       # after the "DEFEATED" overlay flashes in (2700ms + fade)
+DEFEAT_LOG_REVEAL_MS = DEFEAT_OVERLAY_MS + 600  # after the "DEFEATED" overlay flashes in
 
 
 def consume_log_delays():
