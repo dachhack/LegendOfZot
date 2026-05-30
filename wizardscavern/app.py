@@ -2259,6 +2259,53 @@ def can_cast_spells(player_character):
     """
     return gs.player_character.max_mana > 0 and gs.player_character.get_max_memorized_spell_slots() > 0
 
+
+# Shared list-builders for the vendor shop screen. Both the buy/sell view and
+# the repair/identify view render the same "Vendor Wares" + "Your Inventory"
+# panels; only the player-row tap prefix differs between them.
+_INV_PANEL_OPEN = ("<div style='overflow-y: auto; border: 1px solid #444; "
+                   "padding: 3px; border-radius: 3px; max-height: 200px;'>")
+
+
+def _render_tappable_row(html, item_str, cmd_str):
+    """Append one inventory row -- tappable when cmd_str is set, else plain."""
+    if cmd_str:
+        return html + (
+            f"<div class='taprow' data-zcmd='{cmd_str}' "
+            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+            f"{item_str}"
+            f"</div>"
+        )
+    return html + f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
+
+
+def _render_vendor_wares_html():
+    """Build the 'Vendor Wares' panel; rows are tappable only in buy mode."""
+    sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
+    html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>" + _INV_PANEL_OPEN
+    if not sorted_vendor_items:
+        html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
+    else:
+        tappable = (gs.vendor_action == 'buy')
+        for i, item in enumerate(sorted_vendor_items):
+            item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
+            html = _render_tappable_row(html, item_str, f"b{i + 1}" if tappable else "")
+    return html + "</div>"
+
+
+def _render_player_inv_html(tap_prefix):
+    """Build the 'Your Inventory' panel; rows are tappable when tap_prefix set."""
+    sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
+    html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>" + _INV_PANEL_OPEN
+    if not sorted_player_items:
+        html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
+    else:
+        for i, item in enumerate(sorted_player_items):
+            item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
+            html = _render_tappable_row(html, item_str, f"{tap_prefix}{i + 1}" if tap_prefix else "")
+    return html + "</div>"
+
+
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display."""
     highlight_coords = (player_y, player_x)
@@ -5998,47 +6045,8 @@ class WizardsCavernApp(toga.App):
                 )
             starting_tabs_html += "</div>"
 
-            sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
-            vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
-            vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_vendor_items:
-                vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
-            else:
-                _wares_tappable = (gs.vendor_action == 'buy')
-                for i, item in enumerate(sorted_vendor_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    if _wares_tappable:
-                        cmd_str = f"b{i + 1}"
-                        vendor_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            vendor_html += "</div>"
-
-            _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
-            sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
-            player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
-            else:
-                for i, item in enumerate(sorted_player_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    if _player_tap_prefix:
-                        cmd_str = f"{_player_tap_prefix}{i + 1}"
-                        player_inv_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            player_inv_html += "</div>"
+            vendor_html = _render_vendor_wares_html()
+            player_inv_html = _render_player_inv_html('s' if gs.vendor_action == 'sell' else '')
 
             vendor_html = starting_tabs_html + vendor_html
 
@@ -6160,48 +6168,10 @@ class WizardsCavernApp(toga.App):
             vendor_tabs_html += "</div>"
 
             # Vendor wares: tappable "buy" targets when buy tab is active.
-            sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
-            vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
-            vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_vendor_items:
-                vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
-            else:
-                _wares_tappable = (gs.vendor_action == 'buy')
-                for i, item in enumerate(sorted_vendor_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    if _wares_tappable:
-                        cmd_str = f"b{i + 1}"
-                        vendor_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            vendor_html += "</div>"
-
+            vendor_html = _render_vendor_wares_html()
             # Player inventory: tappable when sell/repair/identify is active.
             _player_tap_prefix = {'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
-            sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
-            player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
-            if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
-            else:
-                for i, item in enumerate(sorted_player_items):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    if _player_tap_prefix:
-                        cmd_str = f"{_player_tap_prefix}{i + 1}"
-                        player_inv_html += (
-                            f"<div class='taprow' data-zcmd='{cmd_str}' "
-                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}"
-                            f"</div>"
-                        )
-                    else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
-            player_inv_html += "</div>"
+            player_inv_html = _render_player_inv_html(_player_tap_prefix)
 
             # Prepend tabs above the wares list so the player sees them first.
             vendor_html = vendor_tabs_html + vendor_html
