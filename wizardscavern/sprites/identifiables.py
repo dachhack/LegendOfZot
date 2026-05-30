@@ -27,7 +27,7 @@ name; we pick a deterministic variant by hashing item.name.
 
 import random
 
-from .pool import _stable_seed, get_image_b64
+from .pool import _stable_seed, get_image_b64, render_sprite_canvas
 from . import potions as _potions
 from . import scrolls as _scrolls
 from . import spells as _spells
@@ -296,18 +296,9 @@ def render_inline_item_sprite(pid, size=24):
     _render_seq[0] += 1
     safe_id = f'isp_{_render_seq[0]}'
     img_uri = f'data:image/webp;base64,{img_b64}'
-    return (
-        f'<canvas id="{safe_id}" width="{size}" height="{size}" '
-        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        f'vertical-align:middle;display:inline-block;margin-right:4px;"></canvas>'
-        f'<script>(function(){{'
-        f'var c=document.getElementById("{safe_id}");if(!c)return;'
-        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
-        f'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{size},{size});}};'
-        f'img.src="{img_uri}";'
-        f'}})()</script>'
-    )
+    return render_sprite_canvas(
+        safe_id, size, img_uri,
+        "vertical-align:middle;display:inline-block;margin-right:4px;")
 
 
 def render_item_icon(item, size=24, for_vendor=False):

@@ -160,20 +160,11 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
             + _vib + _flash +
             '}'
         )
-    return (
-        f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
-        f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
-        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        f'display:block;margin:2px auto;"></canvas>'
-        f'<script>(function(){{'
-        f'var c=document.getElementById("{safe_id}");if(!c)return;'
-        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
-        f'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});{loom_js}{flourish_js}}};'
-        f'img.src="{img_uri}";'
-        f'}})()</script>'
-        f'</div>'
-    )
+    from .sprites.pool import render_sprite_canvas
+    return render_sprite_canvas(
+        safe_id, SIZE, img_uri, "display:block;margin:2px auto;",
+        onload_extra=f"{loom_js}{flourish_js}", wrap_id=safe_id,
+        wrap_style="position:relative;display:inline-block;overflow:visible;")
 
 
 # ============================================================================
@@ -213,18 +204,9 @@ def generate_room_sprite_html(room_type, variant=None, seed=None):
     safe_id = "rs_" + room_type + ("_" + variant if variant else "")
     SIZE = 48
     img_uri = "data:image/webp;base64," + img_b64
-    return (
-        f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
-        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        f'display:block;margin:2px auto;"></canvas>'
-        f'<script>(function(){{'
-        f'var c=document.getElementById("{safe_id}");if(!c)return;'
-        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
-        f'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
-        f'img.src="{img_uri}";'
-        f'}})()</script>'
-    )
+    from .sprites.pool import render_sprite_canvas
+    return render_sprite_canvas(
+        safe_id, SIZE, img_uri, "display:block;margin:2px auto;")
 
 
 # ============================================================================
@@ -274,19 +256,8 @@ def generate_player_sprite_html(race, armor_state='none', seed=None, sprite_pid=
 
     SIZE = 64
     img_uri = "data:image/webp;base64," + img_b64
-    return (
-        '<div id="player_sprite_wrap" style="position:relative;display:inline-block;overflow:visible;">'
-        f'<canvas id="player_sprite" width="{SIZE}" height="{SIZE}"'
-        ' style="image-rendering:pixelated;image-rendering:crisp-edges;'
-        'display:block;margin:4px auto;"></canvas>'
-        '<script>(function(){'
-        'var c=document.getElementById("player_sprite");'
-        'if(!c)return;'
-        'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
-        'var img=new Image();'
-        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
-        f'img.src="{img_uri}";'
-        '})()'
-        '</script>'
-        '</div>'
-    )
+    from .sprites.pool import render_sprite_canvas
+    return render_sprite_canvas(
+        "player_sprite", SIZE, img_uri, "display:block;margin:4px auto;",
+        wrap_id="player_sprite",
+        wrap_style="position:relative;display:inline-block;overflow:visible;")
