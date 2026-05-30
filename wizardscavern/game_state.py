@@ -62,6 +62,11 @@ cantrip_selections = []
 # {'icon': html, 'text': str, 'created_at': float}. The renderer reads,
 # emits, and prunes via wizardscavern.sprites.loot_toast.
 loot_toasts = []
+# Reveal delay (ms) stamped onto toasts created right now. Combat kills set
+# this so loot/gold toasts hold until the defeat animation has revealed the
+# kill, instead of popping up top-right and spoiling the result. Reset to 0
+# after each render (parallel to monster_defeated_anim).
+loot_toast_delay_ms = 0
 game_should_quit = False
 lets_go = False
 html_cache = ""

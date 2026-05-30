@@ -4989,6 +4989,7 @@ class WizardsCavernApp(toga.App):
 
         # Clear one-shot flags (mirrors what wrap_html does on first render)
         gs.monster_defeated_anim = None
+        gs.loot_toast_delay_ms = 0
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
@@ -10228,7 +10229,10 @@ class WizardsCavernApp(toga.App):
                     font-size: 12px;
                     line-height: 1.2;
                     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-                    animation: lootFade 4s linear forwards;
+                    /* 'both' so a positive animation-delay (a combat-kill
+                       toast waiting out its reveal delay) holds the 0%
+                       keyframe — opacity 0 — instead of flashing visible. */
+                    animation: lootFade 4s linear both;
                     max-width: 100% !important;
                 }}
                 .loot-toast-text {{
@@ -11708,6 +11712,7 @@ class WizardsCavernApp(toga.App):
         """
         # Clear one-shot animation flags after rendering
         gs.monster_defeated_anim = None
+        gs.loot_toast_delay_ms = 0
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
         gs.last_concentration_roll = None

@@ -53,6 +53,13 @@ def _article(name):
     return 'an' if first in _VOWELS else 'a'
 
 
+def _current_reveal_delay():
+    """Reveal delay (seconds) for a toast created right now. >0 during a
+    combat kill so the toast holds until the defeat animation resolves."""
+    from .. import game_state as _gs
+    return max(0, getattr(_gs, 'loot_toast_delay_ms', 0)) / 1000.0
+
+
 def notify_loot(item, message=None):
     """Push a toast for an item the player just acquired.
 
@@ -69,6 +76,7 @@ def notify_loot(item, message=None):
         'icon': icon_html,
         'text': message,
         'created_at': time.time(),
+        'reveal_delay': _current_reveal_delay(),
     })
     # Cap queue size so a misbehaving caller can't blow up memory.
     if len(gs.loot_toasts) > _TOAST_QUEUE_CAP:
@@ -91,6 +99,7 @@ def notify_gold(amount, message=None):
         'icon': icon_html,
         'text': message,
         'created_at': time.time(),
+        'reveal_delay': _current_reveal_delay(),
     })
     if len(gs.loot_toasts) > _TOAST_QUEUE_CAP:
         gs.loot_toasts = gs.loot_toasts[-_TOAST_QUEUE_CAP:]
@@ -106,15 +115,22 @@ def render_loot_toasts_html():
     if not queue:
         return ''
     now = time.time()
-    live = [t for t in queue if (now - t['created_at']) < _TOAST_LIFETIME]
+    # `elapsed` is time into the 4s fade animation: negative while the toast
+    # is still waiting out its reveal_delay (held invisible by the CSS
+    # backwards fill), positive once it's playing. A toast lives until the
+    # fade has finished, i.e. elapsed >= _TOAST_LIFETIME.
+    live = [t for t in queue
+            if (now - t['created_at'] - t.get('reveal_delay', 0)) < _TOAST_LIFETIME]
     _gs.loot_toasts = live
     if not live:
         return ''
     items_html = []
     for t in live:
-        age = max(0.0, now - t['created_at'])
+        elapsed = now - t['created_at'] - t.get('reveal_delay', 0)
+        # animation-delay = -elapsed: negative fast-forwards into a running
+        # fade; positive (elapsed < 0) holds the toast hidden until reveal.
         items_html.append(
-            f'<div class="loot-toast" style="animation-delay:-{age:.2f}s;">'
+            f'<div class="loot-toast" style="animation-delay:{-elapsed:.2f}s;">'
             f'{t["icon"]}'
             f'<span class="loot-toast-text">{t["text"]}</span>'
             f'</div>'

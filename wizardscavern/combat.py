@@ -51,6 +51,9 @@ def _clear_combat_visuals_on_kill():
     gs.last_player_status = None
     gs.last_player_damage_badge = None
     gs.last_player_heal = 0
+    # Hold any loot/gold toasts spawned by this kill until the defeat
+    # animation has played out, so they don't spoil the result top-right.
+    gs.loot_toast_delay_ms = gs.DEFEAT_LOG_REVEAL_MS
 
 
 # ---------------------------------------------------------------------------
