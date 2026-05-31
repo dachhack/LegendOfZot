@@ -16,6 +16,97 @@ def is_wall_at_coordinate(current_floor, r, c):
 
     return current_floor.grid[r][c].room_type == gs.wall_char
 
+
+def generate_ore_vein(floor):
+    """Carve a directional worm ore vein of 5-10 tiles through walls.
+
+    Picks a wall adjacent to a floor tile, chooses a primary direction,
+    then extends mostly straight with occasional 1-tile perpendicular
+    jogs -- creating a natural mineral-vein look. Each vein wall gets the
+    ``is_ore_vein`` property so dwarves can detect and mine it. The wall
+    still renders as a normal '#' to non-dwarves, so this is harmless on
+    floors no dwarf ever visits.
+    """
+    wall_char = floor.wall_char
+
+    # Candidate walls: must border at least one floor tile so a miner can
+    # actually stand next to them.
+    candidates = []
+    for r in range(1, floor.rows - 1):
+        for c in range(1, floor.cols - 1):
+            room = floor.grid[r][c]
+            if room is None or room.room_type != wall_char:
+                continue
+            for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                nr, nc = r + dy, c + dx
+                if 0 <= nr < floor.rows and 0 <= nc < floor.cols:
+                    neighbor = floor.grid[nr][nc]
+                    if neighbor is not None and neighbor.room_type != wall_char:
+                        candidates.append((r, c))
+                        break
+
+    if not candidates:
+        return
+
+    start = random.choice(candidates)
+    vein_length = random.randint(5, 10)
+    vein_cells = [start]
+    visited = {start}
+    cr, cc = start
+
+    primary_dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    random.shuffle(primary_dirs)
+    primary = primary_dirs[0]
+    # Perpendicular directions for occasional jogs
+    if primary[0] == 0:  # horizontal primary
+        perp = [(-1, 0), (1, 0)]
+    else:  # vertical primary
+        perp = [(0, -1), (0, 1)]
+
+    def _is_minable_wall(nr, nc):
+        if (nr, nc) in visited:
+            return False
+        if not (1 <= nr < floor.rows - 1 and 1 <= nc < floor.cols - 1):
+            return False
+        cell = floor.grid[nr][nc]
+        return cell is not None and cell.room_type == wall_char
+
+    for _ in range(vein_length - 1):
+        # 70% continue in primary direction, 30% jog perpendicular
+        if random.random() < 0.70:
+            dirs = [primary]
+        else:
+            dirs = list(perp)
+            random.shuffle(dirs)
+
+        moved = False
+        for dy, dx in dirs:
+            nr, nc = cr + dy, cc + dx
+            if _is_minable_wall(nr, nc):
+                vein_cells.append((nr, nc))
+                visited.add((nr, nc))
+                cr, cc = nr, nc
+                moved = True
+                break
+        if not moved:
+            # Fallback: try every direction before giving up
+            for dy, dx in [primary] + perp:
+                nr, nc = cr + dy, cc + dx
+                if _is_minable_wall(nr, nc):
+                    vein_cells.append((nr, nc))
+                    visited.add((nr, nc))
+                    cr, cc = nr, nc
+                    moved = True
+                    break
+            if not moved:
+                break  # Dead end, stop the vein here
+
+    # Only commit the vein if we got a meaningful run
+    if len(vein_cells) >= 3:
+        for r, c in vein_cells:
+            floor.grid[r][c].properties['is_ore_vein'] = True
+
+
 def new_grid(grid_rows, grid_cols, wall_char):
     return [[wall_char for _ in range(gs.grid_cols)] for _ in range(gs.grid_rows)]
 
@@ -495,6 +586,16 @@ class Tower:
                     new_floor.grid[mr][mc].room_type = 'V'
                     new_floor.grid[mr][mc].properties['is_magic_shop'] = True
                     add_log(f"{COLOR_PURPLE}You sense arcane commerce somewhere on this floor...{COLOR_RESET}")
+
+        # Dwarf mining: seed ore veins in the walls. Skip the floor-50 boss
+        # arena (len == 49 before append). ~70% of floors get a vein, and a
+        # ~25% of those get a second, so dwarves usually have something to
+        # swing at without every floor turning into a quarry.
+        if len(self.floors) != 49:
+            if random.random() < 0.70:
+                generate_ore_vein(new_floor)
+                if random.random() < 0.25:
+                    generate_ore_vein(new_floor)
 
         self._ensure_d_reachable(new_floor)
         self.floors.append(new_floor)

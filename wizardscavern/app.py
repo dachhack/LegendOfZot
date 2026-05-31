@@ -2321,7 +2321,11 @@ def generate_grid_html(floor, player_x, player_y):
 
             if room.discovered or (r_idx, c_idx) == highlight_coords:
                 content = room.room_type
-                if content == '#':
+                if content == '#' and room.properties.get('ore_vein_detected'):
+                    # Dwarf-detected ore vein: distinct glyph + amber tint
+                    content = '%'
+                    cell_style += "color: #B8860B;"
+                elif content == '#':
                     cell_style += "color: #555;"
                 elif content == '.':
                     cell_style += "color: #888;"
@@ -2687,6 +2691,7 @@ class WizardsCavernApp(toga.App):
         gs.harvested_fey_floors = set()
         gs.haunted_floors = {}
         gs.ephemeral_gardens = {}
+        gs.dwarf_mines_per_floor = {}
         gs.pending_tomb_guardian_reward = None
         
         # Initialize quest tracking for Orb of Zot
@@ -4662,6 +4667,36 @@ class WizardsCavernApp(toga.App):
             gs.music_enabled = not gs.music_enabled
             state = "on" if gs.music_enabled else "off"
             add_log(f"Music toggled {state}.")
+            return
+
+        if cmd == 'm' and gs.prompt_cntl == "game_loop":
+            # Dwarf mining: break an adjacent ore-vein wall. No per-floor
+            # cap -- a vein is a finite worm, so its length is the limit.
+            # Core logic lives in game_systems so the harness shares it.
+            from .game_systems import dwarf_adjacent_vein_directions
+            pc = gs.player_character
+            if getattr(pc, 'race', '').lower() != 'dwarf':
+                add_log(f"{COLOR_YELLOW}Only dwarves know how to mine ore veins.{COLOR_RESET}")
+                return
+            if not dwarf_adjacent_vein_directions(pc, gs.my_tower):
+                add_log(f"{COLOR_YELLOW}No ore veins adjacent to mine.{COLOR_RESET}")
+                return
+            add_log(f"{COLOR_CYAN}Which direction to mine? (n/s/e/w, c to cancel){COLOR_RESET}")
+            gs.prompt_cntl = "mine_direction_mode"
+            return
+
+        if gs.prompt_cntl == "mine_direction_mode":
+            if cmd in ['n', 's', 'e', 'w']:
+                from .game_systems import process_mine_action
+                process_mine_action(gs.player_character, gs.my_tower, cmd)
+                gs.prompt_cntl = "game_loop"
+                self.render()
+            elif cmd == 'c':
+                add_log("Mining cancelled.")
+                gs.prompt_cntl = "game_loop"
+                self.render()
+            else:
+                add_log("Pick a direction (n/s/e/w) or 'c' to cancel.")
             return
 
         if cmd == 'i' and gs.prompt_cntl == "game_loop":
@@ -9998,6 +10033,11 @@ class WizardsCavernApp(toga.App):
                 if has_lantern:
                     base_commands += " | l = lantern"
 
+                # Add mine command for dwarves standing next to an ore vein
+                # (with mining charges left on this floor)
+                from .game_systems import dwarf_mining_available
+                if dwarf_mining_available(gs.player_character, gs.my_tower):
+                    base_commands += " | m = mine"
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
@@ -10011,6 +10051,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     current_commands_text = base_commands
 
+            elif gs.prompt_cntl == "mine_direction_mode":
+                current_commands_text = "n/s/e/w = mine direction | c = cancel"
             elif gs.prompt_cntl == "confirm_quit":
                 current_commands_text = "Tap Yes or Keep Playing"
             elif gs.prompt_cntl == "chest_mode":

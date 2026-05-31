@@ -322,6 +322,11 @@ def _equipped_obs(pc):
             armor_gear_idx = idx
     out["weapon_gear_idx"] = weapon_gear_idx
     out["armor_gear_idx"] = armor_gear_idx
+    # Accessory slots (4): how many are free, so the policy knows whether
+    # it can equip a crafted Ioun Stone / found accessory.
+    accs = getattr(pc, "equipped_accessories", []) or []
+    out["accessory_free_slots"] = sum(1 for a in accs if a is None)
+    out["equipped_accessory_names"] = [a.name for a in accs if a is not None]
     return out
 
 
@@ -1604,6 +1609,8 @@ class PlaytestSession:
             "spell_inventory": self._spell_inventory_obs(),
             "vendor_inventory": self._vendor_obs(),
             "neighbors": self._neighbors_obs(),
+            "mining": self._mining_obs(),
+            "mining_target": self._mining_target_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
             "nearest_features": self._nearest_features_obs(),
             "feature_paths": self._feature_paths_obs(),
@@ -1892,6 +1899,13 @@ class PlaytestSession:
                 # her Falchion -- the handler silently rejected each
                 # attempt with "too tiny" and the policy never knew.
                 entry["is_bug_gear"] = item.name in _BUG_GEAR_NAMES
+            # Passive treasures (accessories: rings, amulets, Ioun Stones).
+            # Surface the equip state + slot index in the equip-filtered
+            # view so the policy can wear an unequipped one with 'e<N>'.
+            if isinstance(item, Treasure) and getattr(item, "treasure_type", None) == "passive":
+                entry["is_accessory"] = True
+                entry["is_equipped_accessory"] = bool(getattr(item, "is_equipped", False))
+                entry["passive_effect"] = getattr(item, "passive_effect", None)
             # Identification status applies to potions / scrolls / spells
             # too -- knowing what's in your bag changes what's safe to
             # use. is_item_identified is the canonical check.
@@ -2580,6 +2594,67 @@ class PlaytestSession:
         return out
         return out
 
+    def _mining_obs(self):
+        """Dwarf mining availability for the policy. Returns a dict with
+        `can_mine` (dwarf + charges left + an adjacent ore-vein wall) and
+        `dirs` (the cardinal directions of those veins). Empty/False for
+        non-dwarves. Mirrors the in-game 'm' command guard, which keys off
+        is_ore_vein regardless of fog -- detection only affects rendering.
+        """
+        from wizardscavern.game_systems import (
+            dwarf_mining_available, dwarf_adjacent_vein_directions)
+        pc = gs.player_character
+        if not dwarf_mining_available(pc, gs.my_tower):
+            return {"can_mine": False, "dirs": []}
+        return {"can_mine": True,
+                "dirs": dwarf_adjacent_vein_directions(pc, gs.my_tower)}
+
+    def _mining_target_obs(self):
+        """BFS first-step toward the nearest reachable floor tile that is
+        adjacent to a known ore-vein wall -- proactive dwarf mining for
+        playtests. Returns None for non-dwarves, when the floor's mining
+        budget is spent, or when no reachable vein-adjacent standing tile
+        exists. When the player is ALREADY on such a tile we return None
+        and let the opportunistic in-place mining intent fire (no point
+        'walking' to our own tile).
+
+        Veins are only auto-detected when the dwarf is orthogonally
+        adjacent, so this navigator instead targets is_ore_vein walls the
+        agent has merely *discovered* (walked near or lit with the
+        lantern). That's a small testing affordance -- the harness exists
+        to exercise mining volume, not to play fair -- bounded by fog
+        (undiscovered vein walls are ignored). There is no per-floor cap;
+        a vein's finite length is the natural limit.
+        """
+        pc = gs.player_character
+        if getattr(pc, "race", "").lower() != "dwarf":
+            return None
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        best = None  # (path_dist, x, y)
+        for (x, y), d in dist.items():
+            if (x, y) == (pc.x, pc.y):
+                continue  # already here -> opportunistic intent handles it
+            adj_vein = False
+            for dx, dy in ((0, -1), (0, 1), (1, 0), (-1, 0)):
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                    continue
+                cell = floor.grid[ny][nx]
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                if (cell.room_type == floor.wall_char
+                        and cell.properties.get("is_ore_vein")):
+                    adj_vein = True
+                    break
+            if adj_vein and (best is None or d < best[0]):
+                best = (d, x, y)
+        if best is None:
+            return None
+        _, bx, by = best
+        return {"first_step": first_step.get((bx, by)), "path_dist": best[0],
+                "dx": bx - pc.x, "dy": by - pc.y}
+
     # ------------------------------------------------------------------
     # ASCII map (debug / human-readable)
     # ------------------------------------------------------------------
@@ -2705,12 +2780,30 @@ class PlaytestSession:
                     # Fuel items in inventory when fuel hits 0.
                     from wizardscavern.room_actions import process_lantern_quick_use
                     process_lantern_quick_use(pc, tw)
+                elif action == "m":
+                    # Dwarf mining: enter the direction prompt if a vein is
+                    # actually minable (mirrors the app.py 'm' guard).
+                    from wizardscavern.game_systems import dwarf_mining_available
+                    if dwarf_mining_available(pc, tw):
+                        gs.prompt_cntl = "mine_direction_mode"
+                    else:
+                        self.last_error = "mine requested with no minable vein adjacent"
                 elif action == "pass":
                     pass
                 else:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+            elif mode == "mine_direction_mode":
+                # Dwarf mining direction prompt: n/s/e/w breaks the vein
+                # and rolls loot; 'c' cancels. Either way return to
+                # game_loop. Unknown keys stay in the prompt.
+                from wizardscavern.game_systems import process_mine_action
+                if action in ("n", "s", "e", "w"):
+                    process_mine_action(pc, tw, action)
+                    gs.prompt_cntl = "game_loop"
+                elif action == "c":
+                    gs.prompt_cntl = "game_loop"
             elif mode == "flee_direction_mode":
                 # Mid-flee direction prompt. Handler accepts n/s/e/w to
                 # move + exit combat, or 'c' to cancel + return to
@@ -3225,6 +3318,29 @@ def _pick_craftable_food(player_character):
     return best_idx
 
 
+def _pick_craftable_ioun(player_character):
+    """1-based index (into process_crafting_action's craftable list) of the
+    best craftable dwarven Ioun Stone, or None. Prefers the highest tier
+    (rarest, strongest stone) so a dwarf who banked the mined ore makes the
+    most of it. Dwarf-only by construction -- DWARVEN_RECIPES only surface
+    in get_available_recipes for dwarves. Index math mirrors
+    _pick_craftable_food (same `craftable = [r for r in available if r[2]]`
+    list that process_crafting_action numbers off)."""
+    from wizardscavern.game_systems import get_available_recipes
+    from wizardscavern.item_templates import DWARVEN_RECIPES
+    craftable = [r for r in get_available_recipes(player_character) if r[2]]
+    best_idx = None
+    best_tier = -1
+    for i, (recipe_name, recipe_data, _flag, _missing) in enumerate(craftable):
+        if recipe_name not in DWARVEN_RECIPES:
+            continue
+        tier = recipe_data.get("tier", 0)
+        if tier > best_tier:
+            best_tier = tier
+            best_idx = i + 1
+    return best_idx
+
+
 # ----------------------------------------------------------------------
 # Policies
 # ----------------------------------------------------------------------
@@ -3712,6 +3828,26 @@ def smart_policy(obs, rng, use_lantern=True):
                 and obs.get("last_action") not in ("i", "x", "c")):
             if _pick_craftable_food(gs.player_character) is not None:
                 return "i"
+        # Dwarven Ioun Stone crafting gate: a dwarf with enough mined ore
+        # for a stone opens inventory to craft it (the inventory cascade
+        # + crafting_mode handler finish the job). Same anti-reentry gate
+        # as the food trigger. Exercises the ore -> Ioun Stone half of
+        # the mining loop in playtests.
+        is_dwarf_gl = (getattr(gs.player_character, "race", "") or "").lower() == "dwarf"
+        if (is_dwarf_gl and has_ingredients_gl
+                and obs.get("last_action") not in ("i", "x", "c")):
+            if _pick_craftable_ioun(gs.player_character) is not None:
+                return "i"
+        # Wear a crafted-but-unequipped Ioun Stone: open inventory when one
+        # sits in the bag and an accessory slot is free (the cascade then
+        # fires 'e<N>'). Exercises the equip + stat-bonus path.
+        if (p.get("equipped", {}).get("accessory_free_slots", 0) > 0
+                and obs.get("last_action") not in ("i", "x", "e")
+                and any(e.get("is_accessory")
+                        and not e.get("is_equipped_accessory")
+                        and "Ioun Stone" in e.get("name", "")
+                        for e in inv)):
+            return "i"
         # Stat-point allocation (build 380). When the level-up granted
         # points are sitting unspent, route into the inventory -> stats
         # -> allocation flow. The inventory cascade has a parallel gate
@@ -3786,6 +3922,15 @@ def smart_policy(obs, rng, use_lantern=True):
         # extends the food-clock window proportionally.
         if hunger < 50 and eat_slot:
             return "i"
+
+        # Dwarf mining: when a vein is minable right here and no monster
+        # is breathing down our neck, swing the pick before moving on.
+        # Gated on `not m_adjacent` so we never mine instead of dealing
+        # with an adjacent M (the pre-combat heal/buff gates above own
+        # that case). Opportunistic free loot for the ore -> Ioun Stone
+        # economy; the finite vein length is the natural per-floor limit.
+        if (obs.get("mining") or {}).get("can_mine") and not m_adjacent:
+            return "m"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
         # show None for undiscovered tiles -- light up so the wayfinder
@@ -3870,6 +4015,20 @@ def smart_policy(obs, rng, use_lantern=True):
         if (use_lantern and fuel_total > 5
                 and very_stuck and obs["turn"] % 10 == 0):
             return "l"
+
+        # Proactive dwarf mining: when a known ore vein is reachable and
+        # this floor's mining budget remains, detour to it (BFS first
+        # step through safe, discovered tiles). The opportunistic intent
+        # above mines once we're adjacent; this is what gets us there.
+        # Bounded by the per-floor cap -- once spent, mining_target goes
+        # None and normal exploration/descent resumes. Skipped while
+        # wedged/oscillating so it never fights an escape valve, and
+        # never overrides dealing with an adjacent monster.
+        mining_target = obs.get("mining_target")
+        if (mining_target and mining_target.get("first_step")
+                and not m_adjacent
+                and freeze_streak < 20 and osc_streak < 40):
+            return mining_target["first_step"]
 
         # Weakness model (hoisted to top of smart_policy for reuse in
         # tomb_mode / pool_mode). When weak we avoid stepping onto
@@ -5008,7 +5167,14 @@ def smart_policy(obs, rng, use_lantern=True):
             max_slots = p.get("max_spell_slots", 0)
             used_slots = p.get("used_spell_slots", 0)
             free_slots = max_slots - used_slots
-            if free_slots > 0:
+            # Only memorize if we can actually cast (max_mana > 0). Without
+            # this gate a non-caster (e.g. a dwarf, INT 8, max_mana 0) with
+            # a spell slot but no mana tries to memorize a spell it can
+            # never cast, the memorize handler bounces it, and the agent
+            # loops i -> m -> x forever -- burning ~half a dwarf run that
+            # should have been spent mining. (Pre-existing; surfaced by
+            # dwarf mining playtests.)
+            if free_slots > 0 and p.get("can_cast"):
                 memorized_names = {s.get("name")
                                    for s in obs.get("memorized_spells") or []}
                 for entry in inv:
@@ -5063,6 +5229,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # Hunger-gated >= 30 so a starving agent with only 1-2 cooked
         # meats eats them instead of crafting (food crafts cost 4-5
         # turns: i -> c -> <recipe> -> x -> eat).
+        #
+        # Wear an unequipped accessory (e.g. a crafted Ioun Stone) FIRST --
+        # before food crafting, which otherwise fires 'c' every inventory
+        # visit and starves the equip. 'e<N>' on a passive Treasure routes
+        # to equip_accessory. Scoped to Ioun Stones to keep the change
+        # inside the mining feature; the equip-filtered slot order matches
+        # the obs.
+        if proposed is None and equipped.get("accessory_free_slots", 0) > 0:
+            for e in inv:
+                if (e.get("is_accessory") and not e.get("is_equipped_accessory")
+                        and "Ioun Stone" in e.get("name", "")):
+                    proposed = f"e{e['slot']}"
+                    break
         if proposed is None:
             has_curing_kit = any(e["category"] == "curing_kit" for e in inv)
             has_cooked_meat_iv = any(
@@ -5083,6 +5262,12 @@ def smart_policy(obs, rng, use_lantern=True):
             if (can_try_sausage or can_try_lembas) and hunger >= 30:
                 if _pick_craftable_food(gs.player_character) is not None:
                     proposed = "c"
+            # Dwarven Ioun Stone craft (from mined ore). No hunger gate --
+            # it's a permanent accessory, not food -- just an ore check.
+            is_dwarf_iv = (getattr(gs.player_character, "race", "") or "").lower() == "dwarf"
+            if (proposed is None and is_dwarf_iv and has_ingredients
+                    and _pick_craftable_ioun(gs.player_character) is not None):
+                proposed = "c"
         if (proposed is None
                 and equipped.get("weapon", {})
                 and equipped["weapon"].get("is_broken")
@@ -5594,6 +5779,11 @@ def smart_policy(obs, rng, use_lantern=True):
         idx = _pick_craftable_food(gs.player_character)
         if idx is not None:
             return str(idx)
+        # Dwarven Ioun Stones (crafted from mined ore) -- exercise the
+        # back half of the mining loop when the materials line up.
+        idx = _pick_craftable_ioun(gs.player_character)
+        if idx is not None:
+            return str(idx)
         return "x"
 
     if mode == "character_stats_mode":
@@ -5764,6 +5954,14 @@ def smart_policy(obs, rng, use_lantern=True):
         if chosen_idx is not None and chosen_idx <= 9:
             return str(chosen_idx)
         return "1"
+
+    if mode == "mine_direction_mode":
+        # Dwarf mining prompt: swing at a known adjacent ore vein. The
+        # mining obs lists the vein directions; pick the first, or cancel
+        # with 'c' if the vein vanished (shouldn't happen, but keeps us
+        # from looping in the prompt).
+        mine_dirs = (obs.get("mining") or {}).get("dirs") or []
+        return mine_dirs[0] if mine_dirs else "c"
 
     if mode == "foresight_direction_mode":
         # Scroll of Foresight reveals 3 rows/cols toward n/s/e/w.

@@ -17,6 +17,39 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _INGREDIENTS_MAP = {
+    # Dwarf mining ore drops. Reserve sprites hand-picked via the mining
+    # picker (sprite_package/picks_mining) and keyed to transparent by
+    # apply_mining_sprites.py; each is a distinct gem / mineral / metal.
+    'Iron Chunk': [
+        ('PH0189_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Copper Nugget': [
+        ('PH0246_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Stone Shard': [
+        ('PH0198_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Silver Vein': [
+        ('PH0209_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Gold Flake': [
+        ('PH0207_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Coal Ember': [
+        ('PH0210_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Mithril Shard': [
+        ('PH0206_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Ruby Fragment': [
+        ('PH0178_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Diamond Chip': [
+        ('PH0152_PH2', 0),  # reserve pick, keyed transparent
+    ],
+    'Adamantine Dust': [
+        ('CR0013_CR1', 0),  # reserve pick, keyed transparent -- rainbow dust
+    ],
     'Crystal Dew': [
         ('IN0489', 0),  # sheet=IN6 src=r04c06
     ],

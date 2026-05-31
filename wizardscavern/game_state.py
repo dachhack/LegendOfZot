@@ -185,6 +185,10 @@ discovered_items = {
     'ingredients': set(),
 }
 
+# Dwarf mining: per-floor count of ore-vein walls mined (capped at 3/floor).
+# Keyed by floor number (z). Reset on new game, persisted in saves.
+dwarf_mines_per_floor = {}
+
 # ============================================================================
 # ITEM IDENTIFICATION SYSTEM
 # ============================================================================

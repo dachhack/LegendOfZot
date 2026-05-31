@@ -708,6 +708,8 @@ class SaveSystem:
             'gs.identified_items': list(gs.identified_items),
             'gs.item_cryptic_mapping': gs.item_cryptic_mapping,
             'gs.equipment_use_count': {str(k): v for k, v in gs.equipment_use_count.items()},
+            # Dwarf mining: per-floor mined-wall counts
+            'gs.dwarf_mines_per_floor': {str(k): v for k, v in gs.dwarf_mines_per_floor.items()},
         }
 
     @staticmethod
@@ -802,6 +804,11 @@ class SaveSystem:
             gs.equipment_use_count.clear()
             for k, v in data['gs.equipment_use_count'].items():
                 gs.equipment_use_count[int(k)] = v
+
+        gs.dwarf_mines_per_floor = {}
+        if 'gs.dwarf_mines_per_floor' in data:
+            for k, v in data['gs.dwarf_mines_per_floor'].items():
+                gs.dwarf_mines_per_floor[int(k)] = v
 
     @staticmethod
     def save_game(player_character, my_tower, slot=1):

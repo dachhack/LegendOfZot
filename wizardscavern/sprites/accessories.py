@@ -17,6 +17,21 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _ACCESSORIES_MAP = {
+    # Dwarven Ioun Stones (crafted from mined ore). Reserve sprites
+    # hand-picked via the mining picker (sprite_package/picks_mining) and
+    # keyed to transparent by apply_mining_sprites.py; distinct gems/orbs.
+    'Ioun Stone of Fortitude': [
+        ('CR0163_CR2', 0),  # reserve pick, keyed transparent
+    ],
+    'Ioun Stone of Might': [
+        ('CR0159_CR2', 0),  # reserve pick, keyed transparent
+    ],
+    'Ioun Stone of Agility': [
+        ('CR0164_CR2', 0),  # reserve pick, keyed transparent
+    ],
+    'Ioun Stone of Mastery': [
+        ('CR0157_CR2', 0),  # reserve pick, keyed transparent
+    ],
     'Amulet of Health': [
         ('AC0058', 0),  # sheet=AC1 src=r04c11
         ('AC0069', 1),  # sheet=AC1 src=r05c10
