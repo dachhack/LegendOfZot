@@ -4,20 +4,21 @@ Status of the dwarf-mining feature (ore veins → mine → ore/gems → Ioun
 Stones) and what's left to call it *done*. Core mechanic is in and works
 end-to-end; everything below is polish, balance, and verification.
 
-## 1. Sprites (cosmetic — currently placeholder reuse)
-- [ ] **Ore ingredients** (`sprites/ingredients.py`): Iron Chunk, Copper
-      Nugget, Stone Shard, Silver Vein, Gold Flake, Coal Ember, Mithril
-      Shard, Ruby Fragment, Diamond Chip, Adamantine Dust currently
-      *reuse* in-pool gem/crystal pids (TR0163-165, CR0240/252/254,
-      IN0261/0535, LN0085). They render, but aren't bespoke.
-- [ ] **Ioun Stones** (`sprites/accessories.py`): Fortitude/Might/Agility/
-      Mastery reuse the same gem/crystal pids. Want four distinct
-      rhomboid/spindle "orbiting stone" sprites matching the lore colours
-      (red / pale-blue / emerald / prismatic).
-- [ ] Promote real art via the canonical-pool workflow in `CLAUDE.md`
-      (drop PNGs in `assets/sprites/in_game/by_category/{ingredients,
-      accessories}/`, rebuild pool, map the new pids). Reserve pool has
-      gems/minerals — check `--include-reserve` before drawing new ones.
+## 1. Sprites (distinct icons assigned; bespoke art still optional)
+- [x] **Ore ingredients** (`sprites/ingredients.py`) + **Ioun Stones**
+      (`sprites/accessories.py`) now each have a *distinct, hand-picked*
+      in-pool sprite (chosen from rendered montages of the gem/mineral/
+      metal sprites, no two sharing a pid): Iron→IN0535, Copper→LN0085,
+      Stone→PR0099, Silver→IN0255, Gold→CR0060, Coal→CR0009,
+      Mithril→TR0164, Ruby→TR0163, Diamond→TR0165, Adamantine→CR0015;
+      Ioun Fortitude/Might/Agility→CR0240/0252/0254 (orbs),
+      Mastery→TR0568 (ornate brooch capstone). Verified all render.
+- [ ] (Optional polish) Some reuse known game sprites (e.g. Iron Bark,
+      Quicksilver Drop, Orb of Vitality), so an ore can share an icon with
+      its unrelated original. For truly bespoke art, drop PNGs in
+      `assets/sprites/in_game/by_category/{ingredients,accessories}/` and
+      rebuild the pool (see `CLAUDE.md`); the reserve release has more
+      gems/minerals via `--include-reserve`.
 - [ ] Optional: a distinct **ore-vein wall tile** sprite for the map (the
       detected vein currently renders as an amber `%` glyph, not a sprite).
 

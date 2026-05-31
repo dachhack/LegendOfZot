@@ -17,38 +17,38 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _INGREDIENTS_MAP = {
-    # Dwarf mining ore drops. No bespoke sprites yet -- reuse in-pool
-    # gem / crystal / hard-mineral pids so they render an icon instead of
-    # a blank slot. Picked to roughly match each ore's colour/feel.
+    # Dwarf mining ore drops. Each reuses a distinct in-pool gem / mineral
+    # / metal sprite, hand-picked from a rendered montage for a fitting
+    # colour + a shape distinct from the other ores (no two share a pid).
     'Iron Chunk': [
-        ('IN0261', 0),  # Dragon Scale -- hard grey plate
+        ('IN0535', 0),  # Iron Bark -- rough grey-brown chunk
     ],
     'Copper Nugget': [
-        ('TR0165', 0),  # Small Gem -- warm metallic
+        ('LN0085', 0),  # copper-brown nugget pouch
     ],
     'Stone Shard': [
-        ('IN0535', 0),  # Iron Bark -- rough stony chunk
+        ('PR0099', 0),  # Stone Flower -- cyan crystal cluster
     ],
     'Silver Vein': [
-        ('TR0163', 0),  # Small Gem
+        ('IN0255', 0),  # Quicksilver Drop -- silver bead
     ],
     'Gold Flake': [
-        ('LN0085', 0),  # gold coin-pouch tone
+        ('CR0060', 0),  # bright gold wisp
     ],
     'Coal Ember': [
-        ('CR0252', 0),  # dark crystal
+        ('CR0009', 0),  # dark coal cluster
     ],
     'Mithril Shard': [
-        ('CR0240', 0),  # bright blue crystal
+        ('TR0164', 0),  # blue gem -- light mithril
     ],
     'Ruby Fragment': [
         ('TR0163', 0),  # red gem
     ],
     'Diamond Chip': [
-        ('TR0164', 0),  # clear gem
+        ('TR0165', 0),  # bright cut gem
     ],
     'Adamantine Dust': [
-        ('CR0254', 0),  # prismatic crystal
+        ('CR0015', 0),  # sparkling dust
     ],
     'Crystal Dew': [
         ('IN0489', 0),  # sheet=IN6 src=r04c06
