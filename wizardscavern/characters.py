@@ -1103,6 +1103,13 @@ class Character:
             # 25 elf this stacks to 32 + 20 = 52% chance to skip
             # channel-init monster swing per L2+ cast.
             "Hourglass Talisman":     {"cast_speed_bonus": 20, "intelligence": 2},
+            # Dwarven Ioun Stones (crafted from mined ore). Keep these
+            # numbers in sync with the passive_effect strings in
+            # item_templates.py DWARVEN_RECIPES.
+            "Ioun Stone of Fortitude": {"base_max_health_bonus": 10, "_base_defense": 2},
+            "Ioun Stone of Might":     {"strength": 3, "_base_attack": 3},
+            "Ioun Stone of Agility":   {"dexterity": 4},
+            "Ioun Stone of Mastery":   {"strength": 3, "dexterity": 3, "intelligence": 3, "base_max_health_bonus": 15},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})
@@ -1156,6 +1163,13 @@ class Character:
             # 25 elf this stacks to 32 + 20 = 52% chance to skip
             # channel-init monster swing per L2+ cast.
             "Hourglass Talisman":     {"cast_speed_bonus": 20, "intelligence": 2},
+            # Dwarven Ioun Stones (crafted from mined ore). Keep these
+            # numbers in sync with the passive_effect strings in
+            # item_templates.py DWARVEN_RECIPES.
+            "Ioun Stone of Fortitude": {"base_max_health_bonus": 10, "_base_defense": 2},
+            "Ioun Stone of Might":     {"strength": 3, "_base_attack": 3},
+            "Ioun Stone of Agility":   {"dexterity": 4},
+            "Ioun Stone of Mastery":   {"strength": 3, "dexterity": 3, "intelligence": 3, "base_max_health_bonus": 15},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})

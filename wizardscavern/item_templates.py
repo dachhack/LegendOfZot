@@ -352,6 +352,90 @@ SAUSAGE_RECIPES = {
     },
 }
 
+# ============================================================================
+# MINING INGREDIENTS (Dwarf mining loot)
+# The 5th tuple value is the relative draw weight used by random.choices.
+# ============================================================================
+MINING_INGREDIENTS = [
+    # Common
+    ('Iron Chunk', 'A rough piece of iron ore', 8, 1, 0.20),
+    ('Copper Nugget', 'A small nugget of gleaming copper', 6, 1, 0.20),
+    ('Stone Shard', 'A sharp fragment of cave stone', 4, 1, 0.20),
+    # Uncommon
+    ('Silver Vein', 'A thin strip of pure silver', 15, 2, 0.12),
+    ('Gold Flake', 'A glittering flake of gold', 20, 2, 0.10),
+    ('Coal Ember', 'A smoldering piece of deep coal', 10, 2, 0.08),
+    # Rare
+    ('Mithril Shard', 'A sliver of the legendary metal, light as air', 50, 4, 0.04),
+    ('Ruby Fragment', 'A rough ruby shard pulsing with inner fire', 40, 3, 0.03),
+    ('Diamond Chip', 'A tiny but brilliant diamond chip', 60, 5, 0.02),
+    ('Adamantine Dust', 'Dust from the hardest substance known', 75, 5, 0.01),
+]
+
+# Sellable gems that drop from ore veins (straight gold, not crafting ingredients)
+SELLABLE_GEMS = [
+    ('Rough Quartz', 5),
+    ('Polished Agate', 8),
+    ('Citrine Shard', 12),
+    ('Amethyst Chunk', 18),
+    ('Topaz Fragment', 25),
+]
+
+# ============================================================================
+# DWARVEN RECIPES (Dwarf-only): mining ingredients -> Ioun Stone accessories.
+# Inspired by D&D Ioun Stones -- orbiting gemstones that grant passive
+# bonuses. Equip in an accessory slot for permanent stat boosts while worn.
+# The real stat bonuses are registered in characters.py
+# `_apply_accessory_bonuses` / `_remove_accessory_bonuses`; the
+# `passive_effect` strings below must stay in sync with those numbers.
+# ============================================================================
+DWARVEN_RECIPES = {
+    'Ioun Stone of Fortitude': {
+        'ingredients': [('Iron Chunk', 2), ('Copper Nugget', 2)],
+        'tier': 1,
+        'result': lambda: Treasure(
+            name="Ioun Stone of Fortitude",
+            description="A deep red rhomboid that orbits your head, pulsing with earthy vitality.",
+            gold_value=60, value=60, level=2,
+            treasure_type='passive',
+            passive_effect="+10 Max HP, +2 Defense",
+        ),
+    },
+    'Ioun Stone of Might': {
+        'ingredients': [('Silver Vein', 2), ('Coal Ember', 1)],
+        'tier': 2,
+        'result': lambda: Treasure(
+            name="Ioun Stone of Might",
+            description="A pale blue rhomboid that orbits your head, humming with raw power.",
+            gold_value=80, value=80, level=3,
+            treasure_type='passive',
+            passive_effect="+3 Strength, +3 Attack",
+        ),
+    },
+    'Ioun Stone of Agility': {
+        'ingredients': [('Mithril Shard', 1), ('Gold Flake', 1)],
+        'tier': 3,
+        'result': lambda: Treasure(
+            name="Ioun Stone of Agility",
+            description="A shimmering emerald sphere that orbits your head in quick, darting loops.",
+            gold_value=120, value=120, level=4,
+            treasure_type='passive',
+            passive_effect="+4 Dexterity",
+        ),
+    },
+    'Ioun Stone of Mastery': {
+        'ingredients': [('Ruby Fragment', 2), ('Diamond Chip', 1), ('Adamantine Dust', 1)],
+        'tier': 4,
+        'result': lambda: Treasure(
+            name="Ioun Stone of Mastery",
+            description="A brilliant prismatic spindle that orbits your head, refracting light into rainbows.",
+            gold_value=200, value=200, level=5,
+            treasure_type='passive',
+            passive_effect="+3 Str/Dex/Int, +15 Max HP",
+        ),
+    },
+}
+
 # Available garden ingredients with spawn chances
 GARDEN_INGREDIENTS = [
     # Common (60% chance)

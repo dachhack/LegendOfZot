@@ -24,6 +24,7 @@ from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES
                             SPELL_TEMPLATES, UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
                             POTION_RECIPES, LEMBAS_RECIPES, SAUSAGE_RECIPES,
+                            DWARVEN_RECIPES,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
                             ELEMENTAL_SUFFIXES, MULTI_ELEMENT_SUFFIXES)
@@ -1597,10 +1598,13 @@ def get_available_recipes(player_character):
     available = []
     inventory_items = {}
 
-    # Count ingredients in inventory
+    # Count ingredients in inventory. Ingredients stack (Inventory.add_item
+    # merges same-name ingredients into one object with a .count), so we
+    # must sum .count -- not object instances -- or any recipe needing 2+
+    # of a stacked ingredient (almost all of them) reads as uncraftable.
     for item in player_character.inventory.items:
         if isinstance(item, Ingredient):
-            inventory_items[item.name] = inventory_items.get(item.name, 0) + 1
+            inventory_items[item.name] = inventory_items.get(item.name, 0) + getattr(item, 'count', 1)
 
     # Count rations in inventory
     ration_count = 0
@@ -1682,10 +1686,26 @@ def get_available_recipes(player_character):
                 if len(missing) <= 2:
                     available.append((recipe_name, recipe_data, False, missing))
 
+    # Check dwarven recipes (dwarf only): mined ore -> Ioun Stone accessories
+    if getattr(player_character, 'race', '').lower() == 'dwarf':
+        for recipe_name, recipe_data in DWARVEN_RECIPES.items():
+            can_craft = True
+            missing = []
+            for ing_name, ing_count in recipe_data['ingredients']:
+                if inventory_items.get(ing_name, 0) < ing_count:
+                    can_craft = False
+                    missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
+
+            if can_craft:
+                available.append((recipe_name, recipe_data, True, []))
+            else:
+                if len(missing) <= 2:
+                    available.append((recipe_name, recipe_data, False, missing))
+
     return available
 
 def craft_potion(player_character, recipe_name):
-    """Craft a potion, lembas, or sausage, removing ingredients and adding result"""
+    """Craft a potion, lembas, sausage, or Ioun Stone, removing ingredients and adding result"""
     # Check all recipe dicts
     if recipe_name in POTION_RECIPES:
         recipe = POTION_RECIPES[recipe_name]
@@ -1693,19 +1713,29 @@ def craft_potion(player_character, recipe_name):
         recipe = LEMBAS_RECIPES[recipe_name]
     elif recipe_name in SAUSAGE_RECIPES:
         recipe = SAUSAGE_RECIPES[recipe_name]
+    elif recipe_name in DWARVEN_RECIPES:
+        recipe = DWARVEN_RECIPES[recipe_name]
     else:
         add_log(f"{COLOR_RED}Unknown recipe: {recipe_name}{COLOR_RESET}")
         return
 
-    # Remove herb/ingredient components from inventory
+    # Remove herb/ingredient components from inventory. Ingredients stack
+    # into a single object with a .count, so decrement the stack and only
+    # drop the object when it's depleted -- removing whole objects would
+    # over-consume (a stack of 5 wiped to craft a recipe needing 2).
     for ing_name, ing_count in recipe['ingredients']:
-        removed = 0
+        remaining = ing_count
         for item in list(player_character.inventory.items):
+            if remaining <= 0:
+                break
             if isinstance(item, Ingredient) and item.name == ing_name:
-                player_character.inventory.items.remove(item)
-                removed += 1
-                if removed >= ing_count:
-                    break
+                have = getattr(item, 'count', 1)
+                if have > remaining:
+                    item.count = have - remaining
+                    remaining = 0
+                else:
+                    player_character.inventory.items.remove(item)
+                    remaining -= have
 
     # Remove rations if recipe requires them (lembas)
     ration_cost = recipe.get('ration_cost', 0)
@@ -2835,7 +2865,18 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
 
         # Reveal adjacent walls
         reveal_adjacent_walls(character, my_tower)
-        
+
+        # Dwarf ore-vein detection: sense mineable ore in adjacent walls
+        if getattr(character, 'race', '').lower() == 'dwarf':
+            dir_names = {(-1, 0): 'north', (1, 0): 'south', (0, -1): 'west', (0, 1): 'east'}
+            for (dy, dx), dname in dir_names.items():
+                ty, tx = new_y + dy, new_x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    adj = current_floor.grid[ty][tx]
+                    if adj.properties.get('is_ore_vein') and not adj.properties.get('ore_vein_detected'):
+                        adj.properties['ore_vein_detected'] = True
+                        add_log(f"{COLOR_YELLOW}You sense mineral deposits in the wall to the {dname}!{COLOR_RESET}")
+
         # Secrets Shard: Reveal hidden rooms on current floor
         reveal_secrets_shard_rooms(character, my_tower)
 

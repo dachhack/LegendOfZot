@@ -2321,7 +2321,11 @@ def generate_grid_html(floor, player_x, player_y):
 
             if room.discovered or (r_idx, c_idx) == highlight_coords:
                 content = room.room_type
-                if content == '#':
+                if content == '#' and room.properties.get('ore_vein_detected'):
+                    # Dwarf-detected ore vein: distinct glyph + amber tint
+                    content = '%'
+                    cell_style += "color: #B8860B;"
+                elif content == '#':
                     cell_style += "color: #555;"
                 elif content == '.':
                     cell_style += "color: #888;"
@@ -2687,6 +2691,7 @@ class WizardsCavernApp(toga.App):
         gs.harvested_fey_floors = set()
         gs.haunted_floors = {}
         gs.ephemeral_gardens = {}
+        gs.dwarf_mines_per_floor = {}
         gs.pending_tomb_guardian_reward = None
         
         # Initialize quest tracking for Orb of Zot
@@ -4662,6 +4667,90 @@ class WizardsCavernApp(toga.App):
             gs.music_enabled = not gs.music_enabled
             state = "on" if gs.music_enabled else "off"
             add_log(f"Music toggled {state}.")
+            return
+
+        if cmd == 'm' and gs.prompt_cntl == "game_loop":
+            # Dwarf mining: break an adjacent ore-vein wall (3/floor).
+            if getattr(gs.player_character, 'race', '').lower() != 'dwarf':
+                add_log(f"{COLOR_YELLOW}Only dwarves know how to mine ore veins.{COLOR_RESET}")
+                return
+            floor_num = gs.player_character.z
+            mines_used = gs.dwarf_mines_per_floor.get(floor_num, 0)
+            if mines_used >= 3:
+                add_log(f"{COLOR_YELLOW}Your arms ache — no more mining on this floor (3/3).{COLOR_RESET}")
+                return
+            current_floor = gs.my_tower.floors[gs.player_character.z]
+            has_vein = False
+            for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                ty, tx = gs.player_character.y + dy, gs.player_character.x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    adj = current_floor.grid[ty][tx]
+                    if adj.room_type == current_floor.wall_char and adj.properties.get('is_ore_vein'):
+                        has_vein = True
+                        break
+            if not has_vein:
+                add_log(f"{COLOR_YELLOW}No ore veins adjacent to mine.{COLOR_RESET}")
+                return
+            add_log(f"{COLOR_CYAN}Which direction to mine? (n/s/e/w, c to cancel){COLOR_RESET}")
+            gs.prompt_cntl = "mine_direction_mode"
+            return
+
+        if gs.prompt_cntl == "mine_direction_mode":
+            import random
+            if cmd in ['n', 's', 'e', 'w']:
+                from .item_templates import MINING_INGREDIENTS, SELLABLE_GEMS
+                current_floor = gs.my_tower.floors[gs.player_character.z]
+                # NOTE: map dirs match movement -- n=up (-y), s=down (+y),
+                # w=left (-x), e=right (+x).
+                dx, dy = {'n': (0, -1), 's': (0, 1), 'e': (1, 0), 'w': (-1, 0)}[cmd]
+                tx, ty = gs.player_character.x + dx, gs.player_character.y + dy
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    room = current_floor.grid[ty][tx]
+                    if room.room_type == current_floor.wall_char and room.properties.get('is_ore_vein'):
+                        # Break the ore vein wall into open floor
+                        room.room_type = '.'
+                        room.discovered = True
+                        room.properties.pop('is_ore_vein', None)
+                        room.properties.pop('ore_vein_detected', None)
+                        floor_num = gs.player_character.z
+                        gs.dwarf_mines_per_floor[floor_num] = gs.dwarf_mines_per_floor.get(floor_num, 0) + 1
+                        mines_left = 3 - gs.dwarf_mines_per_floor[floor_num]
+                        direction_name = {'n': 'northern', 's': 'southern', 'e': 'eastern', 'w': 'western'}[cmd]
+                        add_log(f"{COLOR_CYAN}You smash through the {direction_name} ore vein!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREY}({mines_left} mine{'s' if mines_left != 1 else ''} remaining on this floor){COLOR_RESET}")
+                        # 75% chance to drop loot per mine
+                        if random.random() < 0.75:
+                            # 70% ore ingredient, 30% sellable gem (straight gold)
+                            if random.random() < 0.70:
+                                weights = [entry[4] for entry in MINING_INGREDIENTS]
+                                item_data = random.choices(MINING_INGREDIENTS, weights=weights, k=1)[0]
+                                ingredient = Ingredient(name=item_data[0], description=item_data[1],
+                                                        value=item_data[2], level=item_data[3],
+                                                        ingredient_type='ore')
+                                gs.player_character.inventory.add_item(ingredient)
+                                add_log(f"{COLOR_GREEN}Mined: {ingredient.name}{COLOR_RESET}")
+                            else:
+                                gem_name, gem_value = random.choice(SELLABLE_GEMS)
+                                # Scale gem value slightly with floor depth
+                                scaled_value = gem_value + (floor_num // 5) * 3
+                                gs.player_character.gold += scaled_value
+                                add_log(f"{COLOR_YELLOW}Found a {gem_name} worth {scaled_value} gold!{COLOR_RESET}")
+                        else:
+                            add_log(f"{COLOR_GREY}Nothing but rubble.{COLOR_RESET}")
+                    elif room.room_type == current_floor.wall_char:
+                        add_log(f"{COLOR_YELLOW}That wall has no ore deposits.{COLOR_RESET}")
+                    else:
+                        add_log(f"{COLOR_YELLOW}That's not a wall!{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}Nothing to mine in that direction.{COLOR_RESET}")
+                gs.prompt_cntl = "game_loop"
+                self.render()
+            elif cmd == 'c':
+                add_log("Mining cancelled.")
+                gs.prompt_cntl = "game_loop"
+                self.render()
+            else:
+                add_log("Pick a direction (n/s/e/w) or 'c' to cancel.")
             return
 
         if cmd == 'i' and gs.prompt_cntl == "game_loop":
@@ -9998,6 +10087,17 @@ class WizardsCavernApp(toga.App):
                 if has_lantern:
                     base_commands += " | l = lantern"
 
+                # Add mine command for dwarves standing next to an ore vein
+                # (with mining charges left on this floor)
+                if getattr(gs.player_character, 'race', '').lower() == 'dwarf':
+                    if gs.dwarf_mines_per_floor.get(gs.player_character.z, 0) < 3:
+                        for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                            ty, tx = gs.player_character.y + dy, gs.player_character.x + dx
+                            if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                                adj = current_floor.grid[ty][tx]
+                                if adj.room_type == current_floor.wall_char and adj.properties.get('is_ore_vein'):
+                                    base_commands += " | m = mine"
+                                    break
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
@@ -10011,6 +10111,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     current_commands_text = base_commands
 
+            elif gs.prompt_cntl == "mine_direction_mode":
+                current_commands_text = "n/s/e/w = mine direction | c = cancel"
             elif gs.prompt_cntl == "confirm_quit":
                 current_commands_text = "Tap Yes or Keep Playing"
             elif gs.prompt_cntl == "chest_mode":

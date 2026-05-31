@@ -17,6 +17,20 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _ACCESSORIES_MAP = {
+    # Dwarven Ioun Stones (crafted from mined ore). No bespoke art yet --
+    # reuse in-pool gem/crystal pids matching each stone's described hue.
+    'Ioun Stone of Fortitude': [
+        ('TR0163', 0),  # deep red gem
+    ],
+    'Ioun Stone of Might': [
+        ('CR0240', 0),  # pale blue crystal
+    ],
+    'Ioun Stone of Agility': [
+        ('CR0254', 0),  # emerald-green crystal
+    ],
+    'Ioun Stone of Mastery': [
+        ('CR0252', 0),  # prismatic crystal
+    ],
     'Amulet of Health': [
         ('AC0058', 0),  # sheet=AC1 src=r04c11
         ('AC0069', 1),  # sheet=AC1 src=r05c10

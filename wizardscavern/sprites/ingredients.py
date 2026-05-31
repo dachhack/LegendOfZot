@@ -17,6 +17,39 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _INGREDIENTS_MAP = {
+    # Dwarf mining ore drops. No bespoke sprites yet -- reuse in-pool
+    # gem / crystal / hard-mineral pids so they render an icon instead of
+    # a blank slot. Picked to roughly match each ore's colour/feel.
+    'Iron Chunk': [
+        ('IN0261', 0),  # Dragon Scale -- hard grey plate
+    ],
+    'Copper Nugget': [
+        ('TR0165', 0),  # Small Gem -- warm metallic
+    ],
+    'Stone Shard': [
+        ('IN0535', 0),  # Iron Bark -- rough stony chunk
+    ],
+    'Silver Vein': [
+        ('TR0163', 0),  # Small Gem
+    ],
+    'Gold Flake': [
+        ('LN0085', 0),  # gold coin-pouch tone
+    ],
+    'Coal Ember': [
+        ('CR0252', 0),  # dark crystal
+    ],
+    'Mithril Shard': [
+        ('CR0240', 0),  # bright blue crystal
+    ],
+    'Ruby Fragment': [
+        ('TR0163', 0),  # red gem
+    ],
+    'Diamond Chip': [
+        ('TR0164', 0),  # clear gem
+    ],
+    'Adamantine Dust': [
+        ('CR0254', 0),  # prismatic crystal
+    ],
     'Crystal Dew': [
         ('IN0489', 0),  # sheet=IN6 src=r04c06
     ],
