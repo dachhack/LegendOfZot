@@ -5752,9 +5752,9 @@ class WizardsCavernApp(toga.App):
                             <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
                                 <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Balanced stats (HP 30, ATK 15, all 10s) &middot; Mind Touch cantrip</div>
                                 <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Versatility: +20% XP and DOUBLE stat points &mdash; the fastest learner</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Path of Ambition: spend points on special skills (haggle, explore, mine, bake Lembas)</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Path of Ambition: a 19-skill point-buy tree &mdash; specialize as a duelist, battlemage, juggernaut, or survivor</div>
                                 <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Stats vs. skills is your choice &mdash; build any human you want</div>
-                                <div style='color: #EF9A9A;'><b>−</b> No innate gifts &mdash; an adaptable generalist who grows into anything</div>
+                                <div style='color: #EF9A9A;'><b>−</b> No innate stat bonuses &mdash; your edge is the skills you choose, not your blood</div>
                             </div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='e'
