@@ -55,15 +55,33 @@ end-to-end; everything below is polish, balance, and verification.
 - [ ] Confirm Ioun Stones sell/vendor sensibly and aren't trivially
       buyable elsewhere (should be a dwarf craft, not shop stock).
 
-## 4. Playtest engagement (added, but opportunistic)
+## 4. Playtest engagement (full loop wired; volume gated by survival + economy)
 - [x] Harness drives mining: `m` → `mine_direction_mode` dispatch, shared
       `process_mine_action`, smart-policy intent (mines when adjacent to a
       vein, no monster next door), and `obs["mining"]`.
-- [ ] **Opportunistic only**: the agent mines a vein it happens to walk
-      next to (0–7 mines per 800-turn run across test seeds). For real
-      balance data, add *proactive* vein-seeking: when a floor has a
-      detected, reachable vein and mining budget remains, path toward it
-      (hook into the `nearest_features` / `feature_paths` wayfinder).
+- [x] **Proactive vein-seeking**: `_mining_target_obs` BFS-paths to the
+      nearest reachable floor tile adjacent to a known ore-vein wall;
+      the policy detours there (safe BFS, skipped while wedged/oscillating,
+      bounded by the per-floor cap). On surviving runs this works well
+      (e.g. 15 mines, reached F12).
+- [x] **Crafting**: `_pick_craftable_ioun` + inventory/game_loop triggers
+      so a dwarf with enough ore crafts the highest-tier Ioun Stone.
+- [x] **Equipping**: policy wears a crafted Ioun Stone (verified in
+      isolation: opens inventory → `e<N>` → worn within ~2 steps, stats
+      apply). Prioritised above food-crafting so it isn't starved.
+- [x] Fixed a pre-existing dwarf **memorize-spell loop** (non-casters
+      with a spell slot but `max_mana 0` looped `i→m→x` forever, burning
+      ~half a dwarf run) — gated the memorize intent on `can_cast`. This
+      was the single biggest drag on dwarf mining volume.
+- [ ] **Volume is gated by two things, both balance, not harness:**
+      (a) **Dwarf survival** — the policy pilots the melee dwarf poorly
+      (≈1/15 runs alive at 4000T), so most runs die before mining much
+      (aggregate ≈2 mines/run; healthy runs hit 15). (b) **Ore economy** —
+      the cheapest Ioun Stone needs 4 specific commons (Iron×2+Copper×2)
+      but ~2 mines/run × 75% drop × 70% ore ≈ 1 ore/run, so **0 Ioun
+      Stones were crafted across 15 live runs** despite the path working.
+      Tuning recipe costs / drop rates (§2, §3) is what unlocks the full
+      loop in live runs.
 - [ ] Add ore/Ioun-Stone counters to the playtest report
       (`playtest_report.py`) so balance runs surface mining volume.
 
@@ -77,8 +95,10 @@ end-to-end; everything below is polish, balance, and verification.
 ## 6. Loose ends / flags
 - [ ] `ingredient_type='ore'` is a new label; nothing branches on it yet.
       Confirm it's fine everywhere meat/herb/fey types are special-cased.
-- [ ] **Pre-existing harness bug (NOT mining):** non-casters (e.g. dwarf,
-      INT 8) can fall into an inventory *memorize-spell* loop (`m` at
-      playtest_harness.py:5077) — surfaced incidentally during mining
-      playtests. Worth fixing separately (gate the memorize intent on
-      `max_spell_slots > 0`).
+- [x] **Pre-existing harness bug (fixed):** non-casters (dwarf, INT 8)
+      fell into an inventory *memorize-spell* loop — fixed by gating the
+      memorize intent on `can_cast`. Casters (elf/human) unaffected.
+- [ ] **Pre-existing harness fragility (NOT mining):** the smart-policy
+      gear-swap can oscillate between two similar non-broken weapons
+      (`e1`↔`e2`), and the melee dwarf dies early on many seeds. Neither
+      is caused by mining, but both cap how much a dwarf run mines.
