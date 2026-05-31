@@ -703,10 +703,10 @@ def process_vendor_action(player_character, vendor_character, cmd):
 
             if 0 <= item_number_to_buy < len(sorted_vendor_items):
                 item_to_buy = sorted_vendor_items[item_number_to_buy]
-                # Silver Tongue (human Path-of-Ambition, depth 3): a 15%
-                # haggle discount on everything a vendor sells.
+                # Silver Tongue (human skill): a 15% haggle discount on
+                # everything a vendor sells.
                 buy_price = item_to_buy.calculated_value
-                if 'silver_tongue' in getattr(player_character, 'human_milestones', ()):
+                if 'silver_tongue' in getattr(player_character, 'human_skills', ()):
                     buy_price = int(buy_price * 0.85)
                 if player_character.gold >= buy_price:
                     player_character.gold -= buy_price
@@ -1257,10 +1257,10 @@ def reveal_adjacent_walls(character, my_tower):
     # Check cardinal directions: N, S, E, W
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # (dy, dx)
 
-    # Explorer's Ambition (human Path-of-Ambition, depth 6): keener sight
-    # reveals walls two tiles out along the cardinals and on the diagonals,
-    # so the map fills in faster as the human pushes deeper.
-    if 'explorer' in getattr(character, 'human_milestones', ()):
+    # Explorer's Ambition (human skill): keener sight reveals walls two
+    # tiles out along the cardinals and on the diagonals, so the map fills
+    # in faster as the human pushes deeper.
+    if 'explorer' in getattr(character, 'human_skills', ()):
         directions = directions + [(-2, 0), (2, 0), (0, -2), (0, 2),
                                    (-1, -1), (-1, 1), (1, -1), (1, 1)]
 

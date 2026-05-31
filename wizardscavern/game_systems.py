@@ -1637,10 +1637,10 @@ def get_available_recipes(player_character):
             if len(missing) <= 2:  # Show if only missing 1-2 ingredient types
                 available.append((recipe_name, recipe_data, False, missing))
 
-    # Check lembas recipes (elves always; humans once they've reached the
-    # Wayfarer's Lore milestone at depth 15 and learned elven waybread).
+    # Check lembas recipes (elves always; humans once they've bought the
+    # Wayfarer's Lore skill and learned elven waybread).
     if (getattr(player_character, 'race', '').lower() == 'elf'
-            or human_milestone_unlocked(player_character, 'wayfarer')):
+            or human_has_skill(player_character, 'wayfarer')):
         for recipe_name, recipe_data in LEMBAS_RECIPES.items():
             can_craft = True
             missing = []
@@ -2849,37 +2849,40 @@ def dwarf_adjacent_vein_directions(character, my_tower):
 
 
 # --------------------------------------------------------------------------------
-# HUMAN "PATH OF AMBITION" -- depth-milestone progression
+# HUMAN "PATH OF AMBITION" -- point-buy special skills
 # --------------------------------------------------------------------------------
 # Humans have no innate claws or arcane blood; their edge is grit,
-# ambition and adaptability. As they descend they LEARN from the world:
-# the dwarves' mining, the elves' lembas-craft, plus a social/economy
-# and explorer toolkit no other race gets. Each milestone fires once,
-# the first time the human reaches the given dungeon depth (z+1), and
-# grants flexible stat points (the universal currency that lets a human
-# grow into any build) on top of a borrowed subsystem. See the design
-# notes on characters.Character.human_milestones.
+# ambition and adaptability. They learn at double the stat-point rate
+# (see Character._stat_points_due) and may spend those points -- on the
+# character screen -- to BUY special skills that borrow other cultures'
+# tricks: the dwarves' mining, the elves' lembas-craft, plus a social
+# and explorer toolkit no other race gets. Stats vs. skills is a real
+# choice: every skill bought is a point not spent on STR/DEX/INT.
 #
-#   Depth  Key            Title                 Stat pts  Borrowed power
-#   -----  -------------  --------------------  --------  ----------------------
-#     3    silver_tongue  Silver Tongue            1      vendor discount + altar luck
-#     6    explorer       Explorer's Ambition      1      keener sight, stair-sense, richer chests
-#    10    stonelore      Stonelore                1      detect + mine ore veins (dwarf-style)
-#    15    wayfarer       Wayfarer's Lore          2      craft Lembas wafers + a learned cantrip
-HUMAN_MILESTONES = [
-    (3,  'silver_tongue', 'Silver Tongue',        1),
-    (6,  'explorer',      "Explorer's Ambition",  1),
-    (10, 'stonelore',     'Stonelore',            1),
-    (15, 'wayfarer',      "Wayfarer's Lore",      2),
-]
+#   Key            Name                 Cost  Borrowed power
+#   -------------  -------------------  ----  ----------------------------------
+#   silver_tongue  Silver Tongue          1   vendor discount + altar/Loki luck
+#   explorer       Explorer's Ambition    1   keener sight, stair-sense, richer chests
+#   stonelore      Stonelore              1   detect + mine ore veins (dwarf-style)
+#   wayfarer       Wayfarer's Lore        1   craft Lembas wafers + learn Light cantrip
+HUMAN_SKILLS = {
+    'silver_tongue': {'name': 'Silver Tongue', 'cost': 1, 'order': 1,
+                      'desc': '15% vendor discount + better altar/Loki luck'},
+    'explorer':      {'name': "Explorer's Ambition", 'cost': 1, 'order': 2,
+                      'desc': 'Two-tile sight, sense down-stairs, +25% chest gold'},
+    'stonelore':     {'name': 'Stonelore', 'cost': 1, 'order': 3,
+                      'desc': 'Detect & mine ore veins like a dwarf'},
+    'wayfarer':      {'name': "Wayfarer's Lore", 'cost': 1, 'order': 4,
+                      'desc': 'Craft Lembas wafers + learn the Light cantrip'},
+}
 
 
-def human_milestone_unlocked(character, key):
-    """True if `character` is a human who has reached milestone `key`.
+def human_has_skill(character, key):
+    """True if `character` is a human who has bought special skill `key`.
 
-    Only humans ever populate `human_milestones`, so this doubles as the
+    Only humans ever populate `human_skills`, so this doubles as the
     is-human guard for every borrowed-subsystem hook."""
-    return key in getattr(character, 'human_milestones', ())
+    return key in getattr(character, 'human_skills', ())
 
 
 def _grant_human_cantrip(character, cantrip_name):
@@ -2901,41 +2904,44 @@ def _grant_human_cantrip(character, cantrip_name):
             return
 
 
-def check_human_milestones(character):
-    """Unlock any Path-of-Ambition milestones the human has newly reached.
+def buy_human_skill(player_character, skill_key):
+    """Spend stat points to permanently learn a human special skill.
 
-    Idempotent and cheap -- safe to call every move and on every descent.
-    No-op for non-humans."""
-    if getattr(character, 'race', '').lower() != 'human':
-        return
-    milestones = character.human_milestones
-    depth = character.z + 1
-    for d, key, title, pts in HUMAN_MILESTONES:
-        if depth >= d and key not in milestones:
-            milestones.add(key)
-            character.unspent_stat_points += pts
-            add_log(f"{COLOR_PURPLE}*** PATH OF AMBITION: {title} unlocked! ***{COLOR_RESET}")
-            pts_word = 'point' if pts == 1 else 'points'
-            add_log(f"{COLOR_CYAN}Your ambition is rewarded -- +{pts} stat {pts_word}! "
-                    f"({character.unspent_stat_points} unspent){COLOR_RESET}")
-            if key == 'silver_tongue':
-                add_log(f"{COLOR_GREEN}Silver Tongue: vendors cut you deals and the gods favour your luck.{COLOR_RESET}")
-            elif key == 'explorer':
-                add_log(f"{COLOR_GREEN}Explorer's Ambition: keener sight, a nose for stairs, and richer chests.{COLOR_RESET}")
-            elif key == 'stonelore':
-                add_log(f"{COLOR_GREEN}Stonelore: you've learned to read and mine ore veins like a dwarf.{COLOR_RESET}")
-            elif key == 'wayfarer':
-                add_log(f"{COLOR_GREEN}Wayfarer's Lore: you can now bake elven Lembas wafers.{COLOR_RESET}")
-                _grant_human_cantrip(character, 'Light')
+    Returns True on success, False (with a log line) otherwise. Invoked
+    from the character-stats screen when the player taps a skill row."""
+    if getattr(player_character, 'race', '').lower() != 'human':
+        add_log(f"{COLOR_YELLOW}Only humans can learn these adaptive skills.{COLOR_RESET}")
+        return False
+    skill = HUMAN_SKILLS.get(skill_key)
+    if not skill:
+        return False
+    if skill_key in player_character.human_skills:
+        add_log(f"{COLOR_YELLOW}You already know {skill['name']}.{COLOR_RESET}")
+        return False
+    cost = skill['cost']
+    if player_character.unspent_stat_points < cost:
+        pts_word = 'point' if cost == 1 else 'points'
+        add_log(f"{COLOR_YELLOW}{skill['name']} costs {cost} stat {pts_word}; "
+                f"you have {player_character.unspent_stat_points}.{COLOR_RESET}")
+        return False
+    player_character.unspent_stat_points -= cost
+    player_character.human_skills.add(skill_key)
+    add_log(f"{COLOR_PURPLE}*** You learned {skill['name']}! ***{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}{skill['desc']}{COLOR_RESET}")
+    if player_character.unspent_stat_points > 0:
+        add_log(f"{COLOR_CYAN}{player_character.unspent_stat_points} stat point(s) remaining.{COLOR_RESET}")
+    if skill_key == 'wayfarer':
+        _grant_human_cantrip(player_character, 'Light')
+    return True
 
 
 def can_mine_ore(character):
     """True if this character has learned to mine ore veins: any dwarf,
-    or a human who has reached the Stonelore milestone (depth 10)."""
+    or a human who has bought the Stonelore skill."""
     race = getattr(character, 'race', '').lower()
     if race == 'dwarf':
         return True
-    return human_milestone_unlocked(character, 'stonelore')
+    return human_has_skill(character, 'stonelore')
 
 
 def dwarf_mining_available(character, my_tower):
@@ -3046,12 +3052,8 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         # Reveal adjacent walls
         reveal_adjacent_walls(character, my_tower)
 
-        # Human Path-of-Ambition: unlock any depth milestone newly
-        # reached (idempotent; also fired on descent for instant feedback).
-        check_human_milestones(character)
-
         # Ore-vein detection: sense mineable ore in adjacent walls. Dwarves
-        # always; humans once they've learned Stonelore (depth 10).
+        # always; humans once they've bought the Stonelore skill.
         if can_mine_ore(character):
             dir_names = {(-1, 0): 'north', (1, 0): 'south', (0, -1): 'west', (0, 1): 'east'}
             for (dy, dx), dname in dir_names.items():
@@ -3062,9 +3064,9 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
                         adj.properties['ore_vein_detected'] = True
                         add_log(f"{COLOR_YELLOW}You sense mineral deposits in the wall to the {dname}!{COLOR_RESET}")
 
-        # Explorer's Ambition (human, depth 6): sense an adjacent downward
+        # Explorer's Ambition (human skill): sense an adjacent downward
         # passage before stepping onto it -- a nose for the way deeper.
-        if human_milestone_unlocked(character, 'explorer'):
+        if human_has_skill(character, 'explorer'):
             for (dy, dx) in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 ty, tx = new_y + dy, new_x + dx
                 if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
@@ -3293,8 +3295,8 @@ def process_chest_action(player_character, my_tower, cmd):
             
             # Guaranteed large gold
             gold_found = random.randint(300, 600)
-            # Explorer's Ambition (human, depth 6): +25% chest gold.
-            if human_milestone_unlocked(player_character, 'explorer'):
+            # Explorer's Ambition (human skill): +25% chest gold.
+            if human_has_skill(player_character, 'explorer'):
                 gold_found = int(gold_found * 1.25)
             add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
             player_character.gold += gold_found
@@ -3393,9 +3395,9 @@ def process_chest_action(player_character, my_tower, cmd):
                 for _ in range(player_character.z + 1):
                     gold_found += random.randint(1, 4)
                 gold_found *= 10
-                # Explorer's Ambition (human, depth 6): a curious eye finds
-                # the coins others miss -- +25% chest gold.
-                if human_milestone_unlocked(player_character, 'explorer'):
+                # Explorer's Ambition (human skill): a curious eye finds the
+                # coins others miss -- +25% chest gold.
+                if human_has_skill(player_character, 'explorer'):
                     gold_found = int(gold_found * 1.25)
                 add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
                 player_character.gold += gold_found
@@ -4528,11 +4530,6 @@ def handle_stairs_down(player_character, my_tower, floor_params):
         my_tower.add_floor(**gs.floor_params)  # Generate new deeper floor
 
     print_to_output(f"Descending deeper! Depth {player_character.z + 1}!")
-
-    # Human Path-of-Ambition: announce any milestone the new depth unlocks
-    # the instant the player descends (move_player also calls this as a
-    # safety net for warps / tourist depth-jumps).
-    check_human_milestones(player_character)
 
     current_floor = my_tower.floors[player_character.z]
     # Find the 'U' room on the previous floor to place the character

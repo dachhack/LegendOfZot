@@ -288,9 +288,9 @@ def process_altar_action(player_character, my_tower, cmd):
         elif god_id == 6:  # Loki: random outcome scaled by item value
             is_rare = item.value >= 200
             good_chance = 0.80 if is_rare else 0.50
-            # Silver Tongue (human Path-of-Ambition, depth 3): the gods
-            # favour a smooth talker -- +10% odds of a good outcome.
-            if 'silver_tongue' in getattr(player_character, 'human_milestones', ()):
+            # Silver Tongue (human skill): the gods favour a smooth talker
+            # -- +10% odds of a good outcome.
+            if 'silver_tongue' in getattr(player_character, 'human_skills', ()):
                 good_chance = min(0.95, good_chance + 0.10)
             if random.random() < good_chance:
                 outcome = random.choice(['upgrade_scroll', 'gold', 'stat'])
@@ -486,10 +486,10 @@ def process_altar_action(player_character, my_tower, cmd):
                     healed = _heal_pct(player_character, 0.20)
                     add_log(f"{COLOR_GREEN}+{healed} HP!{COLOR_RESET}")
             elif tier == 2:
-                # Silver Tongue (human, depth 3): the Trickster likes you
-                # -- nudge the double-or-nothing toward a win.
+                # Silver Tongue (human skill): the Trickster likes you --
+                # nudge the double-or-nothing toward a win.
                 win_chance = 0.5
-                if 'silver_tongue' in getattr(player_character, 'human_milestones', ()):
+                if 'silver_tongue' in getattr(player_character, 'human_skills', ()):
                     win_chance = 0.6
                 if random.random() < win_chance:
                     player_character.gold *= 2

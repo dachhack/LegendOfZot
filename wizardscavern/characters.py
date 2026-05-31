@@ -880,12 +880,12 @@ class Character:
         # this, level-ups granted only HP via the max_health formula
         # and INT was locked at character creation for non-elves.
         self.unspent_stat_points = 0
-        # Human "Path of Ambition" depth-milestone unlocks. A set of
-        # milestone keys ('silver_tongue', 'explorer', 'stonelore',
-        # 'wayfarer') the human has reached by descending; each grants
-        # flexible stat points plus a borrowed subsystem ability. Stays
-        # empty (and inert) for elves and dwarves.
-        self.human_milestones = set()
+        # Human "Path of Ambition" special skills. A set of skill keys
+        # ('silver_tongue', 'explorer', 'stonelore', 'wayfarer') the human
+        # has BOUGHT with stat points on the character screen; each grants
+        # a borrowed subsystem ability. Stays empty (and inert) for elves
+        # and dwarves, who can't learn them.
+        self.human_skills = set()
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -1369,12 +1369,22 @@ class Character:
             add_log(f"You are now weak against {element}!")
 
 
+    def _stat_points_due(self, level):
+        # Total stat points a character should have earned by `level`.
+        # Humans (Path of Ambition) learn at DOUBLE the rate -- 1 point
+        # per level vs everyone else's 1 per 2 levels. Those extra points
+        # are what let a human fund their special-skill purchases (Silver
+        # Tongue, Stonelore, etc.) without gutting their raw STR/DEX/INT.
+        if getattr(self, 'race', '').lower() == 'human':
+            return max(0, level - 1)
+        return (level - 1) // 2
+
     def gain_experience(self, amount):
         # Human "Versatility" (Path of Ambition, always-on): +20% XP.
         # The classic adaptable-human edge -- humans learn faster, so
-        # they reach their depth milestones and stat-point payouts
-        # ahead of the curve. Because level scales with sqrt(XP) this
-        # is a modest ~+10% level tempo, not a power spike.
+        # they bank stat points (and the skills they buy) ahead of the
+        # curve. Because level scales with sqrt(XP) this is a modest
+        # ~+10% level tempo, not a power spike.
         if getattr(self, 'race', '').lower() == 'human':
             amount = int(round(amount * 1.20))
         self.experience += amount
@@ -1383,19 +1393,15 @@ class Character:
             old_level = self.level
             self.level = int(math.sqrt(self.experience)/5)
             gs.sfx_event = 'level_up'
-            # Grant 1 stat point per 2 levels gained -- the player
-            # allocates via the character-stats screen ('p' to allocate,
-            # then a/d/i for STR/DEX/INT). Spacing the points out
-            # keeps starting race differences meaningful: a median-L6
-            # run yields 3 pts (not enough for a human's 6-point cast
-            # gap), an L13 run yields 6 pts (humans cast naturally
-            # mid-deep), an L19 run yields 9 pts (dwarves still need
-            # to push to L27 for cast access -- effectively endgame).
-            # Formula: total points due = (level - 1) // 2. A multi-
-            # level jump in one gain_experience call grants the delta
-            # so big-XP kills don't lose points.
-            old_pts_due = (old_level - 1) // 2
-            new_pts_due = (self.level - 1) // 2
+            # Grant stat points for the levels gained. Non-humans earn 1
+            # per 2 levels; humans earn 1 per level (see _stat_points_due)
+            # to bankroll their Path-of-Ambition skill purchases. The
+            # player allocates via the character-stats screen ('p' to
+            # spend on STR/DEX/INT, or tap a special-skill row). A multi-
+            # level jump in one gain_experience call grants the delta so
+            # big-XP kills don't lose points.
+            old_pts_due = self._stat_points_due(old_level)
+            new_pts_due = self._stat_points_due(self.level)
             points_gained = new_pts_due - old_pts_due
             self.unspent_stat_points += points_gained
             add_log(f"{COLOR_YELLOW}*** LEVEL UP! You are now level {self.level} ***{COLOR_RESET}")

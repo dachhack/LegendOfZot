@@ -4677,7 +4677,7 @@ class WizardsCavernApp(toga.App):
             from .game_systems import dwarf_adjacent_vein_directions, can_mine_ore
             pc = gs.player_character
             if not can_mine_ore(pc):
-                add_log(f"{COLOR_YELLOW}You don't know how to mine ore veins. (Dwarves do; humans learn Stonelore at depth 10.){COLOR_RESET}")
+                add_log(f"{COLOR_YELLOW}You don't know how to mine ore veins. (Dwarves do; humans can buy the Stonelore skill on the character screen.){COLOR_RESET}")
                 return
             if not dwarf_adjacent_vein_directions(pc, gs.my_tower):
                 add_log(f"{COLOR_YELLOW}No ore veins adjacent to mine.{COLOR_RESET}")
@@ -4804,6 +4804,12 @@ class WizardsCavernApp(toga.App):
                     gs.prompt_cntl = "stat_allocation_mode"
                 else:
                     add_log(f"{COLOR_YELLOW}You have no stat points to spend.{COLOR_RESET}")
+            elif cmd.startswith('sk_'):
+                # Human "Path of Ambition": buy a special skill with stat
+                # points by tapping its row on the character screen. Stays
+                # on this screen so the player can keep spending.
+                from .game_systems import buy_human_skill
+                buy_human_skill(gs.player_character, cmd[3:])
             # Invalid commands are silently ignored - prompt is in placeholder
         elif gs.prompt_cntl == "stat_allocation_mode":
             from .game_systems import process_stat_allocation_action
@@ -5745,9 +5751,9 @@ class WizardsCavernApp(toga.App):
                             <div class='aname' style='font-size: 20px;'>Human</div>
                             <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
                                 <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Balanced stats (HP 30, ATK 15, all 10s) &middot; Mind Touch cantrip</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Versatility: +20% XP &mdash; the fastest learner</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Path of Ambition: depth milestones grant stat points &amp; borrowed powers</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Learns to haggle, explore, mine, &amp; bake Lembas as you descend</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Versatility: +20% XP and DOUBLE stat points &mdash; the fastest learner</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Path of Ambition: spend points on special skills (haggle, explore, mine, bake Lembas)</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Stats vs. skills is your choice &mdash; build any human you want</div>
                                 <div style='color: #EF9A9A;'><b>−</b> No innate gifts &mdash; an adaptable generalist who grows into anything</div>
                             </div>
                         </div>
@@ -6761,7 +6767,47 @@ class WizardsCavernApp(toga.App):
                         stats_html += f"""<div style="color: #00CED1; font-size: 9px; margin-left: 10px;">- {acc.passive_effect}</div>"""
             if not has_accessories:
                 stats_html += """<span style="color: #888; font-size: 12px;">(None equipped)</span>"""
-            
+
+            # Human "Path of Ambition" -- special-skill purchase rows. Only
+            # humans see these; each skill costs stat points (shared with
+            # STR/DEX/INT allocation, so stats vs. skills is a real choice).
+            # Owned skills show a checkmark; affordable ones are tappable;
+            # the rest are greyed until the player banks more points.
+            skills_html = ""
+            if getattr(gs.player_character, 'race', '').lower() == 'human':
+                from .game_systems import HUMAN_SKILLS
+                _pts = gs.player_character.unspent_stat_points
+                _owned = getattr(gs.player_character, 'human_skills', set())
+                _rows = ""
+                for _key, _sk in sorted(HUMAN_SKILLS.items(), key=lambda kv: kv[1]['order']):
+                    if _key in _owned:
+                        _rows += (
+                            f"<div class='taprow altar-act' style='border-left:3px solid #4CAF50; opacity:0.75;'>"
+                            f"<div class='aname' style='color:#4CAF50;'>&#10003; {_sk['name']}</div>"
+                            f"<div class='ameta'>{_sk['desc']}</div></div>"
+                        )
+                    elif _pts >= _sk['cost']:
+                        _pts_word = 'pt' if _sk['cost'] == 1 else 'pts'
+                        _rows += (
+                            f"<div class='taprow altar-act' data-zcmd='sk_{_key}' "
+                            f"onclick=\"window.__zotTap('sk_{_key}', this)\" style='border-left:3px solid #fbbf24;'>"
+                            f"<div class='aname' style='color:#fbbf24;'>{_sk['name']} &middot; {_sk['cost']} {_pts_word}</div>"
+                            f"<div class='ameta'>{_sk['desc']}</div></div>"
+                        )
+                    else:
+                        _pts_word = 'pt' if _sk['cost'] == 1 else 'pts'
+                        _rows += (
+                            f"<div class='taprow altar-act' style='border-left:3px solid #555; opacity:0.5;'>"
+                            f"<div class='aname' style='color:#888;'>{_sk['name']} &middot; {_sk['cost']} {_pts_word} (need points)</div>"
+                            f"<div class='ameta'>{_sk['desc']}</div></div>"
+                        )
+                skills_html = (
+                    "<div style='margin-top:6px;'>"
+                    "<div style='color:#fbbf24; font-weight:bold; font-size:13px; "
+                    "letter-spacing:1px; margin:6px 0 3px 0;'>PATH OF AMBITION &middot; SPECIAL SKILLS</div>"
+                    f"{_rows}</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -6780,6 +6826,7 @@ class WizardsCavernApp(toga.App):
                         <div class='ameta'>Spend level-up points on STR / DEX / INT</div>
                     </div>
                     ''') if gs.player_character.unspent_stat_points > 0 else ''}
+                    {skills_html}
                     <div class='taprow cancel' data-zcmd='x'
                          onclick="window.__zotTap('x', this)">
                         <span class='tapnum'>&times;</span>Back to Inventory
