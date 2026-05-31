@@ -17,38 +17,38 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _INGREDIENTS_MAP = {
-    # Dwarf mining ore drops. Each reuses a distinct in-pool gem / mineral
-    # / metal sprite, hand-picked from a rendered montage for a fitting
-    # colour + a shape distinct from the other ores (no two share a pid).
+    # Dwarf mining ore drops. Reserve sprites hand-picked via the mining
+    # picker (sprite_package/picks_mining) and keyed to transparent by
+    # apply_mining_sprites.py; each is a distinct gem / mineral / metal.
     'Iron Chunk': [
-        ('IN0535', 0),  # Iron Bark -- rough grey-brown chunk
+        ('PH0189_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Copper Nugget': [
-        ('LN0085', 0),  # copper-brown nugget pouch
+        ('PH0246_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Stone Shard': [
-        ('PR0099', 0),  # Stone Flower -- cyan crystal cluster
+        ('PH0198_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Silver Vein': [
-        ('IN0255', 0),  # Quicksilver Drop -- silver bead
+        ('PH0209_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Gold Flake': [
-        ('CR0060', 0),  # bright gold wisp
+        ('PH0207_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Coal Ember': [
-        ('CR0009', 0),  # dark coal cluster
+        ('PH0210_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Mithril Shard': [
-        ('TR0164', 0),  # blue gem -- light mithril
+        ('PH0206_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Ruby Fragment': [
-        ('TR0163', 0),  # red gem
+        ('PH0178_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Diamond Chip': [
-        ('TR0165', 0),  # bright cut gem
+        ('PH0152_PH2', 0),  # reserve pick, keyed transparent
     ],
     'Adamantine Dust': [
-        ('CR0015', 0),  # sparkling dust
+        ('CR0013_CR1', 0),  # reserve pick, keyed transparent -- rainbow dust
     ],
     'Crystal Dew': [
         ('IN0489', 0),  # sheet=IN6 src=r04c06

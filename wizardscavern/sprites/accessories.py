@@ -17,21 +17,20 @@ Use: pick a deterministic variant per game-instance:
 """
 
 _ACCESSORIES_MAP = {
-    # Dwarven Ioun Stones (crafted from mined ore). Hand-picked distinct
-    # orbs/gems from a rendered montage; the three lesser stones are
-    # Orb-of-Vitality crystals (blue/green/white), Mastery is the ornate
-    # diamond brooch to read as the premium capstone.
+    # Dwarven Ioun Stones (crafted from mined ore). Reserve sprites
+    # hand-picked via the mining picker (sprite_package/picks_mining) and
+    # keyed to transparent by apply_mining_sprites.py; distinct gems/orbs.
     'Ioun Stone of Fortitude': [
-        ('CR0240', 0),  # white/silver crackling orb
+        ('CR0163_CR2', 0),  # reserve pick, keyed transparent
     ],
     'Ioun Stone of Might': [
-        ('CR0252', 0),  # deep blue crystal orb
+        ('CR0159_CR2', 0),  # reserve pick, keyed transparent
     ],
     'Ioun Stone of Agility': [
-        ('CR0254', 0),  # emerald-green orb
+        ('CR0164_CR2', 0),  # reserve pick, keyed transparent
     ],
     'Ioun Stone of Mastery': [
-        ('TR0568', 0),  # ornate gold + diamond -- capstone
+        ('CR0157_CR2', 0),  # reserve pick, keyed transparent
     ],
     'Amulet of Health': [
         ('AC0058', 0),  # sheet=AC1 src=r04c11
