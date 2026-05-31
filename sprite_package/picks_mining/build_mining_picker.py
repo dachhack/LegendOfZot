@@ -46,6 +46,26 @@ ITEMS = [
 ]
 CATS = ['treasures', 'ingredients', 'accessories']
 
+# Per-item hand-picked shortlist, shown as a "Suggested" strip above the
+# full browsable pool (you can still pick anything). Adamantine carries
+# the full dust/powder set, which is otherwise hard to find in the grid.
+SUGGEST = {
+    "Ioun Stone of Fortitude": ["CR0156", "CR0144", "CR0149"],
+    "Ioun Stone of Might":     ["CR0157", "CR0145"],
+    "Ioun Stone of Agility":   ["CR0158", "CR0146", "CR0167"],
+    "Ioun Stone of Mastery":   ["CR0149", "CR0161", "CR0166"],
+    "Iron Chunk":              ["CR0153", "CR0154"],
+    "Copper Nugget":           ["CR0151", "CR0163"],
+    "Stone Shard":             ["CR0150", "CR0167"],
+    "Silver Vein":             ["CR0162", "CR0150"],
+    "Gold Flake":              ["CR0147", "CR0159", "CR0160"],
+    "Coal Ember":              ["CR0155", "CR0152", "CR0164"],
+    "Mithril Shard":           ["CR0145", "CR0157"],
+    "Ruby Fragment":           ["CR0144", "CR0156"],
+    "Diamond Chip":            ["CR0161", "CR0149", "CR0150"],
+    "Adamantine Dust":         ["CR0004", "CR0028", "CR0013", "CR0001", "CR0014", "CR0003"],
+}
+
 
 def _border_median_key(im):
     rgb = im.convert('RGB'); w, h = rgb.size; px = rgb.load(); ring = []
@@ -84,7 +104,7 @@ def main():
             cands.append({"id": rid, "cat": cat, "b64": thumb_b64(f, a.size)})
     print("candidates:", len(cands))
 
-    data = json.dumps({"items": ITEMS, "cands": cands})
+    data = json.dumps({"items": ITEMS, "cands": cands, "suggest": SUGGEST})
     html = _TEMPLATE.replace("/*DATA*/", data)
     with open(a.out, 'w') as fh:
         fh.write(html)
@@ -111,13 +131,17 @@ button{background:#2e7d32;color:#fff;border:0;border-radius:6px;padding:8px 14px
 .cand .id{font-size:8px;color:#aab;background:#16161c}
 .cand.sel{border-color:#ffd23f}
 .hint{font-size:12px;color:#9a9aa8;padding:0 6px}
+#suggest{padding:4px 6px;background:#201d12;border-bottom:1px solid #3a3320}
+.sgh{font-size:12px;color:#ffd23f;margin:2px 0}
+.sgrow{display:flex;flex-wrap:wrap;gap:4px}
 </style></head><body>
 <div id=slots></div>
 <div id=bar>
   <div id=tabs></div>
   <button onclick=save()>Save picks JSON</button>
-  <span class=hint>Tap an item chip (top), then tap a sprite to assign it. Repeat for each item.</span>
+  <span class=hint>Tap an item chip, pick from its Suggested strip, or browse the full pool below.</span>
 </div>
+<div id=suggest></div>
 <div id=grid></div>
 <script>
 const D=/*DATA*/;
@@ -130,10 +154,24 @@ function drawSlots(){
     const c=picks[it];
     const el=document.createElement('div'); el.className='slot'+(it===active?' active':'');
     el.innerHTML=(c?`<img class=chk src="data:image/webp;base64,${byId(c).b64}">`:'<img class=chk>')+`<span class=nm>${it}</span>`;
-    el.onclick=()=>{active=it;drawSlots();};
+    el.onclick=()=>{active=it;drawSlots();drawSuggest();drawGrid();};
     slots.appendChild(el);
   });
 }
+function drawSuggest(){
+  const sg=document.getElementById('suggest');
+  const ids=(D.suggest&&D.suggest[active])||[];
+  let h=`<div class=sgh>Suggested for ${active}:</div><div class=sgrow>`;
+  ids.forEach(sid=>{
+    // SUGGEST holds short ids (CR0004); the grid cands use full ids
+    // (CR0004_CR1) -- resolve by prefix and pick the FULL id so it
+    // matches the grid + what apply_mining_sprites.py expects.
+    const c=D.cands.find(x=>x.id.split('_')[0]===sid); if(!c)return;
+    h+=`<div class="cand${picks[active]===c.id?' sel':''}" onclick="pickId('${c.id}')"><img class=chk src="data:image/webp;base64,${c.b64}"><div class=id>${sid}</div></div>`;
+  });
+  sg.innerHTML=h+'</div>';
+}
+function pickId(id){picks[active]=id;drawSlots();drawSuggest();drawGrid();}
 function drawTabs(){
   tabs.innerHTML='';
   ['treasures','ingredients','accessories'].forEach(t=>{
@@ -154,7 +192,7 @@ function save(){
   const blob=new Blob([JSON.stringify(picks,null,2)],{type:'application/json'});
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='mining_sprite_picks.json'; a.click();
 }
-drawSlots();drawTabs();drawGrid();
+drawSlots();drawTabs();drawSuggest();drawGrid();
 </script></body></html>"""
 
 
