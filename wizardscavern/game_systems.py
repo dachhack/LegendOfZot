@@ -2823,7 +2823,11 @@ def _trigger_room_interaction(player_character, my_tower):
 # Shared by the app key handler (app.py) and the playtest harness so both
 # paths break veins, roll loot, and enforce the per-floor cap identically.
 # ============================================================================
-MINE_LIMIT_PER_FLOOR = 3
+# Dwarf mining. There is intentionally NO per-floor mine cap -- a vein is
+# a finite 5-10 tile worm, so the natural limit on a floor's ore is the
+# vein length itself (mining a tile opens the next one for tunnelling).
+# gs.dwarf_mines_per_floor is kept only as a stat counter (saved for the
+# report); nothing gates on it.
 # (dx, dy) by direction key -- matches move_player (n=-y, s=+y, w=-x, e=+x).
 _MINE_DIR_DELTAS = {'n': (0, -1), 's': (0, 1), 'e': (1, 0), 'w': (-1, 0)}
 _MINE_DIR_NAMES = {'n': 'northern', 's': 'southern', 'e': 'eastern', 'w': 'western'}
@@ -2843,10 +2847,8 @@ def dwarf_adjacent_vein_directions(character, my_tower):
 
 
 def dwarf_mining_available(character, my_tower):
-    """True if a dwarf can mine right now: dwarf + charges left + adjacent vein."""
+    """True if a dwarf can mine right now: dwarf + an adjacent ore vein."""
     if getattr(character, 'race', '').lower() != 'dwarf':
-        return False
-    if gs.dwarf_mines_per_floor.get(character.z, 0) >= MINE_LIMIT_PER_FLOOR:
         return False
     return bool(dwarf_adjacent_vein_directions(character, my_tower))
 
@@ -2873,16 +2875,14 @@ def process_mine_action(character, my_tower, direction):
         add_log(f"{COLOR_YELLOW}That wall has no ore deposits.{COLOR_RESET}")
         return False
 
-    # Break the vein into open floor
+    # Break the vein into open floor (opens the next worm tile for tunnelling)
     room.room_type = '.'
     room.discovered = True
     room.properties.pop('is_ore_vein', None)
     room.properties.pop('ore_vein_detected', None)
     floor_num = character.z
     gs.dwarf_mines_per_floor[floor_num] = gs.dwarf_mines_per_floor.get(floor_num, 0) + 1
-    mines_left = MINE_LIMIT_PER_FLOOR - gs.dwarf_mines_per_floor[floor_num]
     add_log(f"{COLOR_CYAN}You smash through the {_MINE_DIR_NAMES[direction]} ore vein!{COLOR_RESET}")
-    add_log(f"{COLOR_GREY}({mines_left} mine{'s' if mines_left != 1 else ''} remaining on this floor){COLOR_RESET}")
 
     # 75% chance to drop loot: 70% ore ingredient, 30% sellable gem (gold)
     if random.random() < 0.75:

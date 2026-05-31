@@ -4670,16 +4670,13 @@ class WizardsCavernApp(toga.App):
             return
 
         if cmd == 'm' and gs.prompt_cntl == "game_loop":
-            # Dwarf mining: break an adjacent ore-vein wall (capped per floor).
+            # Dwarf mining: break an adjacent ore-vein wall. No per-floor
+            # cap -- a vein is a finite worm, so its length is the limit.
             # Core logic lives in game_systems so the harness shares it.
-            from .game_systems import (MINE_LIMIT_PER_FLOOR,
-                                       dwarf_adjacent_vein_directions)
+            from .game_systems import dwarf_adjacent_vein_directions
             pc = gs.player_character
             if getattr(pc, 'race', '').lower() != 'dwarf':
                 add_log(f"{COLOR_YELLOW}Only dwarves know how to mine ore veins.{COLOR_RESET}")
-                return
-            if gs.dwarf_mines_per_floor.get(pc.z, 0) >= MINE_LIMIT_PER_FLOOR:
-                add_log(f"{COLOR_YELLOW}Your arms ache — no more mining on this floor ({MINE_LIMIT_PER_FLOOR}/{MINE_LIMIT_PER_FLOOR}).{COLOR_RESET}")
                 return
             if not dwarf_adjacent_vein_directions(pc, gs.my_tower):
                 add_log(f"{COLOR_YELLOW}No ore veins adjacent to mine.{COLOR_RESET}")

@@ -2623,13 +2623,11 @@ class PlaytestSession:
         agent has merely *discovered* (walked near or lit with the
         lantern). That's a small testing affordance -- the harness exists
         to exercise mining volume, not to play fair -- bounded by fog
-        (undiscovered vein walls are ignored) and the per-floor cap.
+        (undiscovered vein walls are ignored). There is no per-floor cap;
+        a vein's finite length is the natural limit.
         """
-        from wizardscavern.game_systems import MINE_LIMIT_PER_FLOOR
         pc = gs.player_character
         if getattr(pc, "race", "").lower() != "dwarf":
-            return None
-        if gs.dwarf_mines_per_floor.get(pc.z, 0) >= MINE_LIMIT_PER_FLOOR:
             return None
         floor = gs.my_tower.floors[pc.z]
         dist, first_step = self._bfs_paths()
@@ -3930,8 +3928,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # Gated on `not m_adjacent` so we never mine instead of dealing
         # with an adjacent M (the pre-combat heal/buff gates above own
         # that case). Opportunistic free loot for the ore -> Ioun Stone
-        # economy; the per-floor cap (game_systems.MINE_LIMIT_PER_FLOOR)
-        # keeps it from dominating a run.
+        # economy; the finite vein length is the natural per-floor limit.
         if (obs.get("mining") or {}).get("can_mine") and not m_adjacent:
             return "m"
 

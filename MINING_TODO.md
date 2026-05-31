@@ -21,30 +21,33 @@ end-to-end; everything below is polish, balance, and verification.
 - [ ] Optional: a distinct **ore-vein wall tile** sprite for the map (the
       detected vein currently renders as an amber `%` glyph, not a sprite).
 
-## 2. Mining limits / tuning (mechanic is in; numbers need a balance pass)
-- [x] Per-floor cap enforced at **3** (`game_systems.MINE_LIMIT_PER_FLOOR`)
-      — verified by direct test (locked out at 3 even with fresh adjacent
-      veins) and per-floor independence.
-- [ ] Decide whether 3/floor is the right number, or should scale (with
-      depth? with a dwarf-mining skill/level? with a pickaxe item?).
-- [ ] **Vein spawn rate**: currently ~70% of non-boss floors get one vein,
-      ~25% of those get a second (`dungeon.py` add_floor). Confirm density
-      feels right and isn't too sparse on early floors.
-- [ ] **Drop rate / split**: 75% chance of loot per mine; of that, 70% ore
-      ingredient (rarity-weighted) / 30% sellable gem → gold. Confirm
-      these against the crafting economy.
-- [ ] **Gem gold scaling**: `gem_value + (floor//5)*3`. Sanity-check vs
-      vendor prices at depth.
-- [ ] **Ore rarity weights** (`item_templates.MINING_INGREDIENTS`, 5th
-      tuple field, sums to ~1.0): confirm Adamantine/Diamond stay rare
-      enough that the top Ioun Stone is a real grind.
+## 2. Mining limits / tuning (economy checked — healthy)
+- [x] **Per-floor cap REMOVED.** A vein is a finite 5-10 tile worm and
+      mining one tile opens the next for tunnelling, so the vein's length
+      is the natural per-floor limit — no artificial cap.
+      `gs.dwarf_mines_per_floor` is kept only as a stat counter.
+- [x] **Economy measured** (drop-table model over deep ~17-vein runs +
+      20 live no-fog dwarf runs). Removing the cap took live mining from
+      ~2 → ~10 attempts/run and Ioun-Stone crafts from 0 → 14 across 20
+      runs (7 worn). Curve is good: ~13 of each common, 5-8 uncommon,
+      0.7-2.6 rare per deep run.
+- [ ] **Vein spawn rate**: ~70% of non-boss floors get one vein, ~25% of
+      those get a second (`dungeon.py` add_floor). Density feels fine;
+      revisit if early floors seem sparse.
+- [ ] **Drop rate / split** (75% loot/mine; 70% ore / 30% gem) and **gem
+      gold scaling** (`gem_value + (floor//5)*3`, ~547 gold/deep-run) look
+      reasonable; leave unless a depth sweep says otherwise.
+- [x] **Ore rarity weights** verified: Adamantine (0.01) / Diamond (0.02)
+      stay rare enough that Mastery is craftable in only ~21% of deep
+      runs — appropriately aspirational.
 
-## 3. Recipes (4 Ioun Stones — review costs & power)
+## 3. Recipes (4 Ioun Stones — costs validated, power still TBD)
 - [x] Dwarf-only gating works; recipes appear only for dwarves; ore is
       consumed correctly (ingredient `.count` fix landed alongside).
-- [ ] Balance ingredient **costs** vs realistic ore drop rates — e.g.
-      Mastery needs Ruby×2 + Diamond + Adamantine (all rare); confirm
-      that's achievable but aspirational over a full run.
+- [x] Ingredient **costs validated against measured drop rates**: the
+      three cheap stones (Fortitude/Might/Agility) are readily craftable
+      on a deep run (~92-99%); Mastery (Ruby×2 + Diamond + Adamantine) is
+      a real grind (~21%). Good entry-to-capstone curve.
 - [ ] Balance **stat bonuses** vs existing accessories in
       `characters._apply_accessory_bonuses` (Ioun numbers must stay in
       sync with the `passive_effect` display strings in
@@ -73,15 +76,13 @@ end-to-end; everything below is polish, balance, and verification.
       with a spell slot but `max_mana 0` looped `i→m→x` forever, burning
       ~half a dwarf run) — gated the memorize intent on `can_cast`. This
       was the single biggest drag on dwarf mining volume.
-- [ ] **Volume is gated by two things, both balance, not harness:**
-      (a) **Dwarf survival** — the policy pilots the melee dwarf poorly
-      (≈1/15 runs alive at 4000T), so most runs die before mining much
-      (aggregate ≈2 mines/run; healthy runs hit 15). (b) **Ore economy** —
-      the cheapest Ioun Stone needs 4 specific commons (Iron×2+Copper×2)
-      but ~2 mines/run × 75% drop × 70% ore ≈ 1 ore/run, so **0 Ioun
-      Stones were crafted across 15 live runs** despite the path working.
-      Tuning recipe costs / drop rates (§2, §3) is what unlocks the full
-      loop in live runs.
+- [x] **Full loop now fires in live runs** after removing the per-floor
+      cap (§2): 20 no-fog dwarf runs went from ~2 → ~10 mine attempts/run
+      and **0 → 14 Ioun Stones crafted (7 worn)**. The cap was the blocker.
+- [ ] **Remaining limiter is dwarf survival** (≈0/20 alive at 4000T, avg
+      depth ~F3) — the policy pilots the melee dwarf poorly, so most runs
+      die shallow. Not a mining issue; better dwarf combat/descent piloting
+      would lift mining volume further. (See §6.)
 - [ ] Add ore/Ioun-Stone counters to the playtest report
       (`playtest_report.py`) so balance runs surface mining volume.
 
