@@ -886,6 +886,9 @@ class Character:
         # a borrowed subsystem ability. Stays empty (and inert) for elves
         # and dwarves, who can't learn them.
         self.human_skills = set()
+        # Veteran skill: set of floor z-indices where the per-floor first-
+        # kill gold bounty has already been paid out.
+        self._veteran_kill_floors = set()
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -936,9 +939,13 @@ class Character:
             # (median runs L6, deep runs L13+). Threshold-15 left
             # them locked out -- b381 sweep: 1/6 humans reached INT
             # 16, that one died 43 turns later before casting.
-            if int_score <= 13:
+            # Prodigy (human skill) drops the INT cast-gate 13 -> 10, so a
+            # natural-INT-10 human can dabble in magic with a couple of
+            # level-up points instead of being locked out mid-game.
+            gate = 10 if 'prodigy' in getattr(self, 'human_skills', ()) else 13
+            if int_score <= gate:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 13) * 3 + 5
+            int_mp = (int_score - gate) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 6)
 
         return int_mp + lvl_mp + self.base_max_mana_bonus
@@ -956,6 +963,16 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'attack_boost':
                 attack_from_stats += effect.magnitude
+        # Human skills (Path of Ambition):
+        _skills = getattr(self, 'human_skills', ())
+        if _skills:
+            # Weapon Master: +3 ATK regardless of which weapon you wield.
+            if 'weapon_master' in _skills:
+                attack_from_stats += 3
+            # Adrenaline: a cornered human fights harder -- surge when below
+            # 25% HP. (Defense gets the matching surge in the defense prop.)
+            if 'adrenaline' in _skills and self.health <= self.max_health * 0.25:
+                attack_from_stats += 6
         # BUC bonus: blessed weapon +2, cursed weapon -2
         if self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'blessed':
             attack_from_stats += 2
@@ -975,6 +992,11 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'defense_boost':
                 defense_from_stats += effect.magnitude
+        # Adrenaline (human skill): +4 DEF when below 25% HP (matches the
+        # attack surge -- the desperate-comeback fantasy).
+        if ('adrenaline' in getattr(self, 'human_skills', ())
+                and self.health <= self.max_health * 0.25):
+            defense_from_stats += 4
         # BUC bonus: blessed armor +2, cursed armor -2
         if self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'blessed':
             defense_from_stats += 2
@@ -1386,7 +1408,11 @@ class Character:
         # curve. Because level scales with sqrt(XP) this is a modest
         # ~+10% level tempo, not a power spike.
         if getattr(self, 'race', '').lower() == 'human':
-            amount = int(round(amount * 1.20))
+            mult = 1.20
+            # Veteran skill stacks another +15% XP on top of Versatility.
+            if 'veteran' in getattr(self, 'human_skills', ()):
+                mult += 0.15
+            amount = int(round(amount * mult))
         self.experience += amount
         add_log(f"You gained {amount} experience.")
         if int(math.sqrt(self.experience)/5) > self.level:
@@ -1577,6 +1603,11 @@ class Character:
         if effect_type == 'confusion' and _has_confusion_immunity(self):
             add_log(f"{COLOR_CYAN}[Psychic Shield] Your mind repels the confusion!{COLOR_RESET}")
             return
+        # Iron Will (human skill): an unbreakable mind shrugs off confusion
+        # and paralysis -- the control effects that otherwise steal turns.
+        if effect_type in ('confusion', 'paralysis') and 'iron_will' in getattr(self, 'human_skills', ()):
+            add_log(f"{COLOR_CYAN}[Iron Will] Your resolve breaks the {effect_type}!{COLOR_RESET}")
+            return
         effect = StatusEffect(effect_name, duration, effect_type, magnitude, description, resistance_element)
         self.status_effects[effect_name] = effect
         add_log(f"{self.name} is now affected by {effect_name}!")
@@ -1634,7 +1665,11 @@ class Character:
         lvl_ss = 0
         if (self.intelligence>15):
             lvl_ss = max(0, (self.level-4))
-        return max(0, (int_ss+lvl_ss))
+        total = int_ss + lvl_ss
+        # Prodigy (human skill): one extra memorized-spell slot.
+        if 'prodigy' in getattr(self, 'human_skills', ()):
+            total += 1
+        return max(0, total)
 
 
     def get_used_spell_slots(self):

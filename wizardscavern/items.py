@@ -363,11 +363,16 @@ def degrade_equipment(player_character, monster_level):
     Returns a list of messages about equipment status.
     """
     messages = []
-    
+
+    # Weapon Master (human skill): gear degrades half as fast.
+    _wm = 'weapon_master' in getattr(player_character, 'human_skills', ())
+
     # Degrade weapon
     if player_character.equipped_weapon and not player_character.equipped_weapon.is_broken:
         weapon = player_character.equipped_weapon
         loss = calculate_durability_loss(weapon, monster_level)
+        if _wm:
+            loss = max(1, loss // 2)
         weapon.durability = max(0, weapon.durability - loss)
         
         # Check for low durability warnings
@@ -388,6 +393,8 @@ def degrade_equipment(player_character, monster_level):
     if player_character.equipped_armor and not player_character.equipped_armor.is_broken:
         armor = player_character.equipped_armor
         loss = calculate_durability_loss(armor, monster_level)
+        if _wm:
+            loss = max(1, loss // 2)
         armor.durability = max(0, armor.durability - loss)
         
         # Check for low durability warnings
@@ -3336,7 +3343,11 @@ def process_hunger(character):
         # At the 7/10 ratio that averages 0.7 hunger/move while
         # keeping every decrement an integer step.
         tracker = getattr(character, 'hunger_decay_tracker', 0)
-        tracker += HUNGER_DECAY_PER_MOVE
+        decay = HUNGER_DECAY_PER_MOVE
+        # Survivalist (human skill): hunger decays half as fast.
+        if 'survivalist' in getattr(character, 'human_skills', ()):
+            decay *= 0.5
+        tracker += decay
         while tracker >= HUNGER_DECAY_INTERVAL:
             character.hunger = max(0, character.hunger - 1)
             tracker -= HUNGER_DECAY_INTERVAL

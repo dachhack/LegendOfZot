@@ -11,7 +11,7 @@ from .game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR
 from .sprite_data import generate_player_sprite_html as _generate_player_sprite_html
 from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE,
                        BUG_MONSTER_TEMPLATES)
-from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel, HUNGER_MAX,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
                    Sausage, Ingredient,
                    Rune, identify_item, get_item_display_name, _create_item_copy,
@@ -2866,14 +2866,28 @@ def dwarf_adjacent_vein_directions(character, my_tower):
 #   stonelore      Stonelore              1   detect + mine ore veins (dwarf-style)
 #   wayfarer       Wayfarer's Lore        1   craft Lembas wafers + learn Light cantrip
 HUMAN_SKILLS = {
-    'silver_tongue': {'name': 'Silver Tongue', 'cost': 1, 'order': 1,
-                      'desc': '15% vendor discount + better altar/Loki luck'},
-    'explorer':      {'name': "Explorer's Ambition", 'cost': 1, 'order': 2,
-                      'desc': 'Two-tile sight, sense down-stairs, +25% chest gold'},
-    'stonelore':     {'name': 'Stonelore', 'cost': 1, 'order': 3,
-                      'desc': 'Detect & mine ore veins like a dwarf'},
-    'wayfarer':      {'name': "Wayfarer's Lore", 'cost': 1, 'order': 4,
-                      'desc': 'Craft Lembas wafers + learn the Light cantrip'},
+    'silver_tongue':   {'name': 'Silver Tongue', 'cost': 1, 'order': 1,
+                        'desc': '15% vendor discount + better altar/Loki luck'},
+    'explorer':        {'name': "Explorer's Ambition", 'cost': 1, 'order': 2,
+                        'desc': 'Two-tile sight, sense down-stairs, +25% chest gold'},
+    'veteran':         {'name': 'Veteran', 'cost': 1, 'order': 3,
+                        'desc': '+15% XP, and the first kill each floor pays a gold bounty'},
+    'iron_will':       {'name': 'Iron Will', 'cost': 1, 'order': 4,
+                        'desc': 'Immune to confusion and paralysis -- an unbreakable mind'},
+    'adrenaline':      {'name': 'Adrenaline', 'cost': 1, 'order': 5,
+                        'desc': 'Below 25% HP, surge to +6 ATK / +4 DEF -- fight harder when cornered'},
+    'combat_reflexes': {'name': 'Combat Reflexes', 'cost': 1, 'order': 6,
+                        'desc': 'Win initiative far more often -- act before the enemy strikes'},
+    'weapon_master':   {'name': 'Weapon Master', 'cost': 1, 'order': 7,
+                        'desc': '+3 ATK with ANY weapon, and your gear degrades half as fast'},
+    'prodigy':         {'name': 'Prodigy', 'cost': 1, 'order': 8,
+                        'desc': 'An extra spell slot and a lower INT cast-gate -- dabble in magic early'},
+    'survivalist':     {'name': 'Survivalist', 'cost': 1, 'order': 9,
+                        'desc': 'Hunger decays half as fast, forage food while walking, self-repair gear'},
+    'stonelore':       {'name': 'Stonelore', 'cost': 1, 'order': 10,
+                        'desc': 'Detect & mine ore veins like a dwarf'},
+    'wayfarer':        {'name': "Wayfarer's Lore", 'cost': 1, 'order': 11,
+                        'desc': 'Craft Lembas wafers + learn the Light cantrip'},
 }
 
 
@@ -2942,6 +2956,31 @@ def can_mine_ore(character):
     if race == 'dwarf':
         return True
     return human_has_skill(character, 'stonelore')
+
+
+def process_human_skills_per_move(character):
+    """Per-move tick for human special skills with ongoing effects.
+    No-op for non-humans and humans who haven't bought the relevant skill."""
+    skills = getattr(character, 'human_skills', None)
+    if not skills:
+        return
+    # Survivalist -- Field Repair: mend equipped gear a little as you travel,
+    # un-breaking it once durability climbs back above zero.
+    if 'survivalist' in skills:
+        for gear in (character.equipped_weapon, character.equipped_armor):
+            if gear is None or not hasattr(gear, 'durability') or not hasattr(gear, 'max_durability'):
+                continue
+            if gear.durability < gear.max_durability:
+                was_broken = gear.durability <= 0
+                gear.durability = min(gear.max_durability, gear.durability + 1)
+                if was_broken and gear.durability > 0:
+                    add_log(f"{COLOR_GREEN}[Field Repair] You patch your {gear.name} back into working order.{COLOR_RESET}")
+        # Survivalist -- Forager: occasionally scavenge edible roots/berries
+        # while travelling, topping up hunger without using an item.
+        if character.hunger < HUNGER_MAX and random.random() < 0.05:
+            forage = random.randint(8, 16)
+            character.hunger = min(HUNGER_MAX, character.hunger + forage)
+            add_log(f"{COLOR_GREEN}[Forager] You scavenge some edible roots (+{forage} hunger).{COLOR_RESET}")
 
 
 def dwarf_mining_available(character, my_tower):
@@ -3086,6 +3125,7 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         process_hunger(character)
         process_mana_regen(character)
         tick_meat_rot(character)
+        process_human_skills_per_move(character)
         
         # Process haunted floor effects (may trigger combat)
         process_haunted_floor(character, my_tower)
