@@ -880,6 +880,12 @@ class Character:
         # this, level-ups granted only HP via the max_health formula
         # and INT was locked at character creation for non-elves.
         self.unspent_stat_points = 0
+        # Human "Path of Ambition" depth-milestone unlocks. A set of
+        # milestone keys ('silver_tongue', 'explorer', 'stonelore',
+        # 'wayfarer') the human has reached by descending; each grants
+        # flexible stat points plus a borrowed subsystem ability. Stays
+        # empty (and inert) for elves and dwarves.
+        self.human_milestones = set()
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -1364,6 +1370,13 @@ class Character:
 
 
     def gain_experience(self, amount):
+        # Human "Versatility" (Path of Ambition, always-on): +20% XP.
+        # The classic adaptable-human edge -- humans learn faster, so
+        # they reach their depth milestones and stat-point payouts
+        # ahead of the curve. Because level scales with sqrt(XP) this
+        # is a modest ~+10% level tempo, not a power spike.
+        if getattr(self, 'race', '').lower() == 'human':
+            amount = int(round(amount * 1.20))
         self.experience += amount
         add_log(f"You gained {amount} experience.")
         if int(math.sqrt(self.experience)/5) > self.level:

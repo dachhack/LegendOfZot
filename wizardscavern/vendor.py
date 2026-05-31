@@ -703,9 +703,14 @@ def process_vendor_action(player_character, vendor_character, cmd):
 
             if 0 <= item_number_to_buy < len(sorted_vendor_items):
                 item_to_buy = sorted_vendor_items[item_number_to_buy]
-                if player_character.gold >= item_to_buy.calculated_value:
-                    player_character.gold -= item_to_buy.calculated_value
-                    vendor_character.gold += item_to_buy.calculated_value
+                # Silver Tongue (human Path-of-Ambition, depth 3): a 15%
+                # haggle discount on everything a vendor sells.
+                buy_price = item_to_buy.calculated_value
+                if 'silver_tongue' in getattr(player_character, 'human_milestones', ()):
+                    buy_price = int(buy_price * 0.85)
+                if player_character.gold >= buy_price:
+                    player_character.gold -= buy_price
+                    vendor_character.gold += buy_price
                     gs.sfx_event = 'buy'
 
                     new_item = _create_item_copy(item_to_buy)
@@ -1251,6 +1256,13 @@ def reveal_adjacent_walls(character, my_tower):
     current_floor = my_tower.floors[character.z]
     # Check cardinal directions: N, S, E, W
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)] # (dy, dx)
+
+    # Explorer's Ambition (human Path-of-Ambition, depth 6): keener sight
+    # reveals walls two tiles out along the cardinals and on the diagonals,
+    # so the map fills in faster as the human pushes deeper.
+    if 'explorer' in getattr(character, 'human_milestones', ()):
+        directions = directions + [(-2, 0), (2, 0), (0, -2), (0, 2),
+                                   (-1, -1), (-1, 1), (1, -1), (1, 1)]
 
     for dy, dx in directions:
         target_y, target_x = character.y + dy, character.x + dx

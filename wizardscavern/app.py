@@ -2322,7 +2322,8 @@ def generate_grid_html(floor, player_x, player_y):
             if room.discovered or (r_idx, c_idx) == highlight_coords:
                 content = room.room_type
                 if content == '#' and room.properties.get('ore_vein_detected'):
-                    # Dwarf-detected ore vein: distinct glyph + amber tint
+                    # Detected ore vein (dwarves, or humans with Stonelore):
+                    # distinct glyph + amber tint
                     content = '%'
                     cell_style += "color: #B8860B;"
                 elif content == '#':
@@ -4673,10 +4674,10 @@ class WizardsCavernApp(toga.App):
             # Dwarf mining: break an adjacent ore-vein wall. No per-floor
             # cap -- a vein is a finite worm, so its length is the limit.
             # Core logic lives in game_systems so the harness shares it.
-            from .game_systems import dwarf_adjacent_vein_directions
+            from .game_systems import dwarf_adjacent_vein_directions, can_mine_ore
             pc = gs.player_character
-            if getattr(pc, 'race', '').lower() != 'dwarf':
-                add_log(f"{COLOR_YELLOW}Only dwarves know how to mine ore veins.{COLOR_RESET}")
+            if not can_mine_ore(pc):
+                add_log(f"{COLOR_YELLOW}You don't know how to mine ore veins. (Dwarves do; humans learn Stonelore at depth 10.){COLOR_RESET}")
                 return
             if not dwarf_adjacent_vein_directions(pc, gs.my_tower):
                 add_log(f"{COLOR_YELLOW}No ore veins adjacent to mine.{COLOR_RESET}")
@@ -5743,10 +5744,11 @@ class WizardsCavernApp(toga.App):
                              style="padding: 14px 14px; line-height: 1.45;">
                             <div class='aname' style='font-size: 20px;'>Human</div>
                             <div class='ameta' style='font-size: 14px; margin-top: 6px; color: #CCC;'>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Balanced stats (HP 30, ATK 15, DEF 5, all 10s)</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Starts with Mind Touch cantrip</div>
-                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Casts at INT 14+ &middot; balanced melee &amp; magic</div>
-                                <div style='color: #EF9A9A;'><b>−</b> No standout strengths &mdash; a true generalist</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Balanced stats (HP 30, ATK 15, all 10s) &middot; Mind Touch cantrip</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Versatility: +20% XP &mdash; the fastest learner</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Path of Ambition: depth milestones grant stat points &amp; borrowed powers</div>
+                                <div style='color: #8BC34A; margin-bottom: 2px;'><b>+</b> Learns to haggle, explore, mine, &amp; bake Lembas as you descend</div>
+                                <div style='color: #EF9A9A;'><b>−</b> No innate gifts &mdash; an adaptable generalist who grows into anything</div>
                             </div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='e'
