@@ -1604,6 +1604,7 @@ class PlaytestSession:
             "spell_inventory": self._spell_inventory_obs(),
             "vendor_inventory": self._vendor_obs(),
             "neighbors": self._neighbors_obs(),
+            "mining": self._mining_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
             "nearest_features": self._nearest_features_obs(),
             "feature_paths": self._feature_paths_obs(),
@@ -2580,6 +2581,21 @@ class PlaytestSession:
         return out
         return out
 
+    def _mining_obs(self):
+        """Dwarf mining availability for the policy. Returns a dict with
+        `can_mine` (dwarf + charges left + an adjacent ore-vein wall) and
+        `dirs` (the cardinal directions of those veins). Empty/False for
+        non-dwarves. Mirrors the in-game 'm' command guard, which keys off
+        is_ore_vein regardless of fog -- detection only affects rendering.
+        """
+        from wizardscavern.game_systems import (
+            dwarf_mining_available, dwarf_adjacent_vein_directions)
+        pc = gs.player_character
+        if not dwarf_mining_available(pc, gs.my_tower):
+            return {"can_mine": False, "dirs": []}
+        return {"can_mine": True,
+                "dirs": dwarf_adjacent_vein_directions(pc, gs.my_tower)}
+
     # ------------------------------------------------------------------
     # ASCII map (debug / human-readable)
     # ------------------------------------------------------------------
@@ -2705,12 +2721,30 @@ class PlaytestSession:
                     # Fuel items in inventory when fuel hits 0.
                     from wizardscavern.room_actions import process_lantern_quick_use
                     process_lantern_quick_use(pc, tw)
+                elif action == "m":
+                    # Dwarf mining: enter the direction prompt if a vein is
+                    # actually minable (mirrors the app.py 'm' guard).
+                    from wizardscavern.game_systems import dwarf_mining_available
+                    if dwarf_mining_available(pc, tw):
+                        gs.prompt_cntl = "mine_direction_mode"
+                    else:
+                        self.last_error = "mine requested with no minable vein adjacent"
                 elif action == "pass":
                     pass
                 else:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+            elif mode == "mine_direction_mode":
+                # Dwarf mining direction prompt: n/s/e/w breaks the vein
+                # and rolls loot; 'c' cancels. Either way return to
+                # game_loop. Unknown keys stay in the prompt.
+                from wizardscavern.game_systems import process_mine_action
+                if action in ("n", "s", "e", "w"):
+                    process_mine_action(pc, tw, action)
+                    gs.prompt_cntl = "game_loop"
+                elif action == "c":
+                    gs.prompt_cntl = "game_loop"
             elif mode == "flee_direction_mode":
                 # Mid-flee direction prompt. Handler accepts n/s/e/w to
                 # move + exit combat, or 'c' to cancel + return to
@@ -3786,6 +3820,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # extends the food-clock window proportionally.
         if hunger < 50 and eat_slot:
             return "i"
+
+        # Dwarf mining: when a vein is minable right here and no monster
+        # is breathing down our neck, swing the pick before moving on.
+        # Gated on `not m_adjacent` so we never mine instead of dealing
+        # with an adjacent M (the pre-combat heal/buff gates above own
+        # that case). Opportunistic free loot for the ore -> Ioun Stone
+        # economy; the per-floor cap (game_systems.MINE_LIMIT_PER_FLOOR)
+        # keeps it from dominating a run.
+        if (obs.get("mining") or {}).get("can_mine") and not m_adjacent:
+            return "m"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
         # show None for undiscovered tiles -- light up so the wayfinder
@@ -5764,6 +5808,14 @@ def smart_policy(obs, rng, use_lantern=True):
         if chosen_idx is not None and chosen_idx <= 9:
             return str(chosen_idx)
         return "1"
+
+    if mode == "mine_direction_mode":
+        # Dwarf mining prompt: swing at a known adjacent ore vein. The
+        # mining obs lists the vein directions; pick the first, or cancel
+        # with 'c' if the vein vanished (shouldn't happen, but keeps us
+        # from looping in the prompt).
+        mine_dirs = (obs.get("mining") or {}).get("dirs") or []
+        return mine_dirs[0] if mine_dirs else "c"
 
     if mode == "foresight_direction_mode":
         # Scroll of Foresight reveals 3 rows/cols toward n/s/e/w.

@@ -24,7 +24,7 @@ from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES
                             SPELL_TEMPLATES, UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
                             POTION_RECIPES, LEMBAS_RECIPES, SAUSAGE_RECIPES,
-                            DWARVEN_RECIPES,
+                            DWARVEN_RECIPES, MINING_INGREDIENTS, SELLABLE_GEMS,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
                             ELEMENTAL_SUFFIXES, MULTI_ELEMENT_SUFFIXES)
@@ -2817,6 +2817,93 @@ def _trigger_room_interaction(player_character, my_tower):
 # --------------------------------------------------------------------------------
 # 17. MOVEMENT & NAVIGATION
 # --------------------------------------------------------------------------------
+
+# ============================================================================
+# DWARF MINING
+# Shared by the app key handler (app.py) and the playtest harness so both
+# paths break veins, roll loot, and enforce the per-floor cap identically.
+# ============================================================================
+MINE_LIMIT_PER_FLOOR = 3
+# (dx, dy) by direction key -- matches move_player (n=-y, s=+y, w=-x, e=+x).
+_MINE_DIR_DELTAS = {'n': (0, -1), 's': (0, 1), 'e': (1, 0), 'w': (-1, 0)}
+_MINE_DIR_NAMES = {'n': 'northern', 's': 'southern', 'e': 'eastern', 'w': 'western'}
+
+
+def dwarf_adjacent_vein_directions(character, my_tower):
+    """Return direction keys ('n'/'s'/'e'/'w') of any adjacent ore-vein wall."""
+    floor = my_tower.floors[character.z]
+    dirs = []
+    for d, (dx, dy) in _MINE_DIR_DELTAS.items():
+        tx, ty = character.x + dx, character.y + dy
+        if 0 <= ty < floor.rows and 0 <= tx < floor.cols:
+            cell = floor.grid[ty][tx]
+            if cell.room_type == floor.wall_char and cell.properties.get('is_ore_vein'):
+                dirs.append(d)
+    return dirs
+
+
+def dwarf_mining_available(character, my_tower):
+    """True if a dwarf can mine right now: dwarf + charges left + adjacent vein."""
+    if getattr(character, 'race', '').lower() != 'dwarf':
+        return False
+    if gs.dwarf_mines_per_floor.get(character.z, 0) >= MINE_LIMIT_PER_FLOOR:
+        return False
+    return bool(dwarf_adjacent_vein_directions(character, my_tower))
+
+
+def process_mine_action(character, my_tower, direction):
+    """Break an adjacent ore-vein wall in `direction` and roll loot.
+
+    Logs the outcome. Returns True if a vein was actually mined.
+    """
+    floor = my_tower.floors[character.z]
+    delta = _MINE_DIR_DELTAS.get(direction)
+    if delta is None:
+        return False
+    dx, dy = delta
+    tx, ty = character.x + dx, character.y + dy
+    if not (0 <= ty < floor.rows and 0 <= tx < floor.cols):
+        add_log(f"{COLOR_YELLOW}Nothing to mine in that direction.{COLOR_RESET}")
+        return False
+    room = floor.grid[ty][tx]
+    if room.room_type != floor.wall_char:
+        add_log(f"{COLOR_YELLOW}That's not a wall!{COLOR_RESET}")
+        return False
+    if not room.properties.get('is_ore_vein'):
+        add_log(f"{COLOR_YELLOW}That wall has no ore deposits.{COLOR_RESET}")
+        return False
+
+    # Break the vein into open floor
+    room.room_type = '.'
+    room.discovered = True
+    room.properties.pop('is_ore_vein', None)
+    room.properties.pop('ore_vein_detected', None)
+    floor_num = character.z
+    gs.dwarf_mines_per_floor[floor_num] = gs.dwarf_mines_per_floor.get(floor_num, 0) + 1
+    mines_left = MINE_LIMIT_PER_FLOOR - gs.dwarf_mines_per_floor[floor_num]
+    add_log(f"{COLOR_CYAN}You smash through the {_MINE_DIR_NAMES[direction]} ore vein!{COLOR_RESET}")
+    add_log(f"{COLOR_GREY}({mines_left} mine{'s' if mines_left != 1 else ''} remaining on this floor){COLOR_RESET}")
+
+    # 75% chance to drop loot: 70% ore ingredient, 30% sellable gem (gold)
+    if random.random() < 0.75:
+        if random.random() < 0.70:
+            weights = [entry[4] for entry in MINING_INGREDIENTS]
+            item_data = random.choices(MINING_INGREDIENTS, weights=weights, k=1)[0]
+            ingredient = Ingredient(name=item_data[0], description=item_data[1],
+                                    value=item_data[2], level=item_data[3],
+                                    ingredient_type='ore')
+            character.inventory.add_item(ingredient)
+            add_log(f"{COLOR_GREEN}Mined: {ingredient.name}{COLOR_RESET}")
+        else:
+            gem_name, gem_value = random.choice(SELLABLE_GEMS)
+            # Scale gem value slightly with floor depth
+            scaled_value = gem_value + (floor_num // 5) * 3
+            character.gold += scaled_value
+            add_log(f"{COLOR_YELLOW}Found a {gem_name} worth {scaled_value} gold!{COLOR_RESET}")
+    else:
+        add_log(f"{COLOR_GREY}Nothing but rubble.{COLOR_RESET}")
+    return True
+
 
 def move_player(character, my_tower, direction, ignore_confusion=False):
 
