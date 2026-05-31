@@ -7805,13 +7805,14 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                         {grid_html}
-                        <div class='taprow altar-act bless' data-zcmd=' '
+                        <div id='victory_continue' class='taprow altar-act bless' data-zcmd=' '
                              onclick="window.__zotTap(' ', this)"
-                             style="margin-top: 8px;">
+                             style="margin-top: 8px; opacity: 0; transition: opacity 0.4s ease-out;">
                             <div class='aname'>Victory! Continue</div>
                             <div class='ameta'>Tap anywhere or wait for auto-dismiss</div>
                         </div>
                     </div>
+                    <script>(function(){{var vc=document.getElementById("victory_continue");if(vc){{setTimeout(function(){{vc.style.opacity="1";}},{gs.DEFEAT_OVERLAY_MS});}}}})();</script>
                     {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(0, 1, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
                 </div>
