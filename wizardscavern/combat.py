@@ -406,6 +406,12 @@ def process_combat_action(player_character, my_tower, cmd):
         # Combat Reflexes (human skill): sharply better odds of acting first.
         if 'combat_reflexes' in getattr(player_character, 'human_skills', ()):
             init_chance = min(0.95, init_chance + 0.30)
+        # Forewarned (human skill): if you'd scouted this monster room through
+        # the fog before stepping in, you get the drop on whatever's lurking.
+        if ('forewarned' in getattr(player_character, 'human_skills', ())
+                and getattr(gs, 'encounter_scouted', False)):
+            init_chance = min(0.97, init_chance + 0.35)
+            add_log(f"{COLOR_GREEN}[Forewarned] You scouted this lair ahead -- you ready your stance and seize the moment!{COLOR_RESET}")
         player_goes_first = random.random() < init_chance
         p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
         gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))

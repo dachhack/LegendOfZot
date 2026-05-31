@@ -2878,15 +2878,17 @@ HUMAN_SKILLS = {
                         'desc': 'Below 25% HP, surge to +6 ATK / +4 DEF -- fight harder when cornered'},
     'combat_reflexes': {'name': 'Combat Reflexes', 'cost': 1, 'order': 6,
                         'desc': 'Win initiative far more often -- act before the enemy strikes'},
-    'weapon_master':   {'name': 'Weapon Master', 'cost': 1, 'order': 7,
+    'forewarned':      {'name': 'Forewarned', 'cost': 1, 'order': 7,
+                        'desc': 'Scout a monster room through the fog before entering and you get the drop on it (big initiative bonus)'},
+    'weapon_master':   {'name': 'Weapon Master', 'cost': 1, 'order': 8,
                         'desc': '+3 ATK with ANY weapon, and your gear degrades half as fast'},
-    'prodigy':         {'name': 'Prodigy', 'cost': 1, 'order': 8,
+    'prodigy':         {'name': 'Prodigy', 'cost': 1, 'order': 9,
                         'desc': 'An extra spell slot and a lower INT cast-gate -- dabble in magic early'},
-    'survivalist':     {'name': 'Survivalist', 'cost': 1, 'order': 9,
+    'survivalist':     {'name': 'Survivalist', 'cost': 1, 'order': 10,
                         'desc': 'Hunger decays half as fast, forage food while walking, self-repair gear'},
-    'stonelore':       {'name': 'Stonelore', 'cost': 1, 'order': 10,
+    'stonelore':       {'name': 'Stonelore', 'cost': 1, 'order': 11,
                         'desc': 'Detect & mine ore veins like a dwarf'},
-    'wayfarer':        {'name': "Wayfarer's Lore", 'cost': 1, 'order': 11,
+    'wayfarer':        {'name': "Wayfarer's Lore", 'cost': 1, 'order': 12,
                         'desc': 'Craft Lembas wafers + learn the Light cantrip'},
 }
 
@@ -3084,6 +3086,13 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         if character.z > gs.game_stats.get('max_floor_reached', 0):
             gs.game_stats['max_floor_reached'] = character.z
             check_achievements(character)
+
+        # Forewarned (human skill): record whether the tile we're entering is
+        # a monster room that was ALREADY on the map -- i.e. scouted through
+        # the fog before we stepped in. Must read .discovered before the line
+        # below flips it. Drives the combat-start initiative bonus.
+        _entered = current_floor.grid[new_y][new_x]
+        gs.encounter_scouted = (_entered.room_type == 'M' and _entered.discovered)
 
         # Mark the new room as discovered
         current_floor.grid[new_y][new_x].discovered = True
