@@ -11,7 +11,7 @@ from .game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR
 from .sprite_data import generate_player_sprite_html as _generate_player_sprite_html
 from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE,
                        BUG_MONSTER_TEMPLATES)
-from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel, HUNGER_MAX,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
                    Sausage, Ingredient,
                    Rune, identify_item, get_item_display_name, _create_item_copy,
@@ -1637,8 +1637,10 @@ def get_available_recipes(player_character):
             if len(missing) <= 2:  # Show if only missing 1-2 ingredient types
                 available.append((recipe_name, recipe_data, False, missing))
 
-    # Check lembas recipes (elf only)
-    if getattr(player_character, 'race', '').lower() == 'elf':
+    # Check lembas recipes (elves always; humans once they've bought the
+    # Wayfarer's Lore skill and learned elven waybread).
+    if (getattr(player_character, 'race', '').lower() == 'elf'
+            or human_has_skill(player_character, 'wayfarer')):
         for recipe_name, recipe_data in LEMBAS_RECIPES.items():
             can_craft = True
             missing = []
@@ -2846,9 +2848,161 @@ def dwarf_adjacent_vein_directions(character, my_tower):
     return dirs
 
 
+# --------------------------------------------------------------------------------
+# HUMAN "PATH OF AMBITION" -- point-buy special skills
+# --------------------------------------------------------------------------------
+# Humans have no innate claws or arcane blood; their edge is grit,
+# ambition and adaptability. They learn at double the stat-point rate
+# (see Character._stat_points_due) and may spend those points -- on the
+# character screen -- to BUY special skills that borrow other cultures'
+# tricks: the dwarves' mining, the elves' lembas-craft, plus a social
+# and explorer toolkit no other race gets. Stats vs. skills is a real
+# choice: every skill bought is a point not spent on STR/DEX/INT.
+#
+#   Key            Name                 Cost  Borrowed power
+#   -------------  -------------------  ----  ----------------------------------
+#   silver_tongue  Silver Tongue          1   vendor discount + altar/Loki luck
+#   explorer       Explorer's Ambition    1   keener sight, stair-sense, richer chests
+#   stonelore      Stonelore              1   detect + mine ore veins (dwarf-style)
+#   wayfarer       Wayfarer's Lore        1   craft Lembas wafers + learn Light cantrip
+HUMAN_SKILLS = {
+    'silver_tongue':   {'name': 'Silver Tongue', 'cost': 1, 'order': 1,
+                        'desc': '15% vendor discount + better altar/Loki luck'},
+    'explorer':        {'name': "Explorer's Ambition", 'cost': 2, 'order': 2,
+                        'desc': 'Two-tile sight, sense down-stairs, +25% chest gold'},
+    'appraiser':       {'name': 'Appraiser', 'cost': 1, 'order': 3,
+                        'desc': 'A trained eye reveals an item\'s blessed/cursed (BUC) status the moment you pick it up'},
+    'veteran':         {'name': 'Veteran', 'cost': 2, 'order': 4,
+                        'desc': '+15% XP, and the first kill each floor pays a gold bounty'},
+    'iron_will':       {'name': 'Iron Will', 'cost': 3, 'order': 5,
+                        'desc': 'Immune to confusion and paralysis -- an unbreakable mind'},
+    'adrenaline':      {'name': 'Adrenaline', 'cost': 2, 'order': 6,
+                        'desc': 'Below 25% HP, surge to +6 ATK / +4 DEF -- fight harder when cornered'},
+    'toughness':       {'name': 'Toughness', 'cost': 2, 'order': 7,
+                        'desc': 'A flat HP cushion that grows with level (+15 at L1 up to ~+49 deep)'},
+    'combat_reflexes': {'name': 'Combat Reflexes', 'cost': 2, 'order': 8,
+                        'desc': 'Win initiative far more often -- act before the enemy strikes'},
+    'forewarned':      {'name': 'Forewarned', 'cost': 1, 'order': 9,
+                        'desc': 'Scout a monster room through the fog before entering and you get the drop on it (big initiative bonus)'},
+    'riposte':         {'name': 'Riposte', 'cost': 2, 'order': 10,
+                        'desc': 'Win initiative and your opening strike of the fight lands DOUBLE damage'},
+    'executioner':     {'name': 'Executioner', 'cost': 2, 'order': 11,
+                        'desc': '+50% damage against any monster already below 25% HP -- finish the kill'},
+    'weapon_master':   {'name': 'Weapon Master', 'cost': 2, 'order': 12,
+                        'desc': '+3 ATK with ANY weapon, and your gear degrades half as fast'},
+    'fortune':         {'name': "Fortune's Favor", 'cost': 1, 'order': 13,
+                        'desc': 'Once per fight, reroll a missed attack -- luck nudged in your favor'},
+    'prodigy':         {'name': 'Prodigy', 'cost': 3, 'order': 14,
+                        'desc': 'An extra spell slot and a lower INT cast-gate -- dabble in magic early'},
+    'quick_study':     {'name': 'Quick Study', 'cost': 1, 'order': 15,
+                        'desc': 'Spells cost one fewer slot to memorize, and enchant scrolls fizzle far less'},
+    'survivalist':     {'name': 'Survivalist', 'cost': 2, 'order': 16,
+                        'desc': 'Hunger decays half as fast, forage food while walking, self-repair gear'},
+    'gourmand':        {'name': 'Gourmand', 'cost': 1, 'order': 17,
+                        'desc': '+35% nutrition from all food, and you can eat rotten meat with no ill effect'},
+    'stonelore':       {'name': 'Stonelore', 'cost': 1, 'order': 18,
+                        'desc': 'Detect & mine ore veins like a dwarf'},
+    'wayfarer':        {'name': "Wayfarer's Lore", 'cost': 1, 'order': 19,
+                        'desc': 'Craft Lembas wafers + learn the Light cantrip'},
+}
+
+
+def human_has_skill(character, key):
+    """True if `character` is a human who has bought special skill `key`.
+
+    Only humans ever populate `human_skills`, so this doubles as the
+    is-human guard for every borrowed-subsystem hook."""
+    return key in getattr(character, 'human_skills', ())
+
+
+def _grant_human_cantrip(character, cantrip_name):
+    """Teach the human one elven utility cantrip (Wayfarer's Lore). The
+    cantrip sits in memorized_spells and becomes castable once the human
+    clears their INT mana gate, exactly like their starter Mind Touch."""
+    from .item_templates import SPELL_TEMPLATES as _ST
+    import copy as _copy
+    have = {s.name.lower() for s in character.memorized_spells}
+    if cantrip_name.lower() in have:
+        return
+    for spell in _ST:
+        if getattr(spell, 'is_cantrip', False) and spell.name.lower() == cantrip_name.lower():
+            sc = _copy.deepcopy(spell)
+            if hasattr(sc, 'is_identified'):
+                sc.is_identified = True
+            character.memorized_spells.append(sc)
+            add_log(f"{COLOR_GREEN}You study the elven ways and learn the {spell.name} cantrip!{COLOR_RESET}")
+            return
+
+
+def buy_human_skill(player_character, skill_key):
+    """Spend stat points to permanently learn a human special skill.
+
+    Returns True on success, False (with a log line) otherwise. Invoked
+    from the character-stats screen when the player taps a skill row."""
+    if getattr(player_character, 'race', '').lower() != 'human':
+        add_log(f"{COLOR_YELLOW}Only humans can learn these adaptive skills.{COLOR_RESET}")
+        return False
+    skill = HUMAN_SKILLS.get(skill_key)
+    if not skill:
+        return False
+    if skill_key in player_character.human_skills:
+        add_log(f"{COLOR_YELLOW}You already know {skill['name']}.{COLOR_RESET}")
+        return False
+    cost = skill['cost']
+    if player_character.unspent_stat_points < cost:
+        pts_word = 'point' if cost == 1 else 'points'
+        add_log(f"{COLOR_YELLOW}{skill['name']} costs {cost} stat {pts_word}; "
+                f"you have {player_character.unspent_stat_points}.{COLOR_RESET}")
+        return False
+    player_character.unspent_stat_points -= cost
+    player_character.human_skills.add(skill_key)
+    add_log(f"{COLOR_PURPLE}*** You learned {skill['name']}! ***{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}{skill['desc']}{COLOR_RESET}")
+    if player_character.unspent_stat_points > 0:
+        add_log(f"{COLOR_CYAN}{player_character.unspent_stat_points} stat point(s) remaining.{COLOR_RESET}")
+    if skill_key == 'wayfarer':
+        _grant_human_cantrip(player_character, 'Light')
+    return True
+
+
+def can_mine_ore(character):
+    """True if this character has learned to mine ore veins: any dwarf,
+    or a human who has bought the Stonelore skill."""
+    race = getattr(character, 'race', '').lower()
+    if race == 'dwarf':
+        return True
+    return human_has_skill(character, 'stonelore')
+
+
+def process_human_skills_per_move(character):
+    """Per-move tick for human special skills with ongoing effects.
+    No-op for non-humans and humans who haven't bought the relevant skill."""
+    skills = getattr(character, 'human_skills', None)
+    if not skills:
+        return
+    # Survivalist -- Field Repair: mend equipped gear a little as you travel,
+    # un-breaking it once durability climbs back above zero.
+    if 'survivalist' in skills:
+        for gear in (character.equipped_weapon, character.equipped_armor):
+            if gear is None or not hasattr(gear, 'durability') or not hasattr(gear, 'max_durability'):
+                continue
+            if gear.durability < gear.max_durability:
+                was_broken = gear.durability <= 0
+                gear.durability = min(gear.max_durability, gear.durability + 1)
+                if was_broken and gear.durability > 0:
+                    add_log(f"{COLOR_GREEN}[Field Repair] You patch your {gear.name} back into working order.{COLOR_RESET}")
+        # Survivalist -- Forager: occasionally scavenge edible roots/berries
+        # while travelling, topping up hunger without using an item.
+        if character.hunger < HUNGER_MAX and random.random() < 0.05:
+            forage = random.randint(8, 16)
+            character.hunger = min(HUNGER_MAX, character.hunger + forage)
+            add_log(f"{COLOR_GREEN}[Forager] You scavenge some edible roots (+{forage} hunger).{COLOR_RESET}")
+
+
 def dwarf_mining_available(character, my_tower):
-    """True if a dwarf can mine right now: dwarf + an adjacent ore vein."""
-    if getattr(character, 'race', '').lower() != 'dwarf':
+    """True if the character can mine right now: a miner (dwarf, or human
+    with Stonelore) standing next to an adjacent ore vein."""
+    if not can_mine_ore(character):
         return False
     return bool(dwarf_adjacent_vein_directions(character, my_tower))
 
@@ -2947,14 +3101,22 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
             gs.game_stats['max_floor_reached'] = character.z
             check_achievements(character)
 
+        # Forewarned (human skill): record whether the tile we're entering is
+        # a monster room that was ALREADY on the map -- i.e. scouted through
+        # the fog before we stepped in. Must read .discovered before the line
+        # below flips it. Drives the combat-start initiative bonus.
+        _entered = current_floor.grid[new_y][new_x]
+        gs.encounter_scouted = (_entered.room_type == 'M' and _entered.discovered)
+
         # Mark the new room as discovered
         current_floor.grid[new_y][new_x].discovered = True
 
         # Reveal adjacent walls
         reveal_adjacent_walls(character, my_tower)
 
-        # Dwarf ore-vein detection: sense mineable ore in adjacent walls
-        if getattr(character, 'race', '').lower() == 'dwarf':
+        # Ore-vein detection: sense mineable ore in adjacent walls. Dwarves
+        # always; humans once they've bought the Stonelore skill.
+        if can_mine_ore(character):
             dir_names = {(-1, 0): 'north', (1, 0): 'south', (0, -1): 'west', (0, 1): 'east'}
             for (dy, dx), dname in dir_names.items():
                 ty, tx = new_y + dy, new_x + dx
@@ -2963,6 +3125,17 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
                     if adj.properties.get('is_ore_vein') and not adj.properties.get('ore_vein_detected'):
                         adj.properties['ore_vein_detected'] = True
                         add_log(f"{COLOR_YELLOW}You sense mineral deposits in the wall to the {dname}!{COLOR_RESET}")
+
+        # Explorer's Ambition (human skill): sense an adjacent downward
+        # passage before stepping onto it -- a nose for the way deeper.
+        if human_has_skill(character, 'explorer'):
+            for (dy, dx) in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                ty, tx = new_y + dy, new_x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    adj = current_floor.grid[ty][tx]
+                    if adj.room_type == 'D' and not adj.properties.get('stairs_sensed'):
+                        adj.properties['stairs_sensed'] = True
+                        add_log(f"{COLOR_CYAN}Your instincts prickle -- a passage leads down nearby!{COLOR_RESET}")
 
         # Secrets Shard: Reveal hidden rooms on current floor
         reveal_secrets_shard_rooms(character, my_tower)
@@ -2975,6 +3148,7 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         process_hunger(character)
         process_mana_regen(character)
         tick_meat_rot(character)
+        process_human_skills_per_move(character)
         
         # Process haunted floor effects (may trigger combat)
         process_haunted_floor(character, my_tower)
@@ -3184,6 +3358,9 @@ def process_chest_action(player_character, my_tower, cmd):
             
             # Guaranteed large gold
             gold_found = random.randint(300, 600)
+            # Explorer's Ambition (human skill): +25% chest gold.
+            if human_has_skill(player_character, 'explorer'):
+                gold_found = int(gold_found * 1.25)
             add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
             player_character.gold += gold_found
             from .sprites.loot_toast import notify_gold
@@ -3281,6 +3458,10 @@ def process_chest_action(player_character, my_tower, cmd):
                 for _ in range(player_character.z + 1):
                     gold_found += random.randint(1, 4)
                 gold_found *= 10
+                # Explorer's Ambition (human skill): a curious eye finds the
+                # coins others miss -- +25% chest gold.
+                if human_has_skill(player_character, 'explorer'):
+                    gold_found = int(gold_found * 1.25)
                 add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
                 player_character.gold += gold_found
                 from .sprites.loot_toast import notify_gold

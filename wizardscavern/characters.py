@@ -183,6 +183,13 @@ class Inventory:
         register_item_discovery = _get_register_item_discovery()
         register_item_discovery(item_obj)
 
+        # Appraiser (human skill): a trained eye reads an item's blessing or
+        # curse the moment it enters the pack -- reveal BUC status on pickup.
+        owner = getattr(self, 'owner', None)
+        if (owner is not None and hasattr(item_obj, 'buc_status')
+                and 'appraiser' in getattr(owner, 'human_skills', ())):
+            item_obj.buc_known = True
+
         def _toast():
             if not notify:
                 return
@@ -845,6 +852,9 @@ class Character:
         self.level = 1
         self.experience = 0
         self.inventory = Inventory()
+        # Backref so the inventory can consult the owner's human skills
+        # (e.g. Appraiser reveals BUC status on pickup).
+        self.inventory.owner = self
         self.equipped_weapon = None
         self.equipped_armor = None
         self.equipped_accessories = [None, None, None, None]  # 4 accessory slots
@@ -880,6 +890,15 @@ class Character:
         # this, level-ups granted only HP via the max_health formula
         # and INT was locked at character creation for non-elves.
         self.unspent_stat_points = 0
+        # Human "Path of Ambition" special skills. A set of skill keys
+        # ('silver_tongue', 'explorer', 'stonelore', 'wayfarer') the human
+        # has BOUGHT with stat points on the character screen; each grants
+        # a borrowed subsystem ability. Stays empty (and inert) for elves
+        # and dwarves, who can't learn them.
+        self.human_skills = set()
+        # Veteran skill: set of floor z-indices where the per-floor first-
+        # kill gold bounty has already been paid out.
+        self._veteran_kill_floors = set()
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -887,7 +906,12 @@ class Character:
     def max_health(self):
         # Lv1 Human (str=10) starts at 10+20 = 30 HP.  Each level adds
         # +10, each point of strength adds +2.
-        return (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
+        base = (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
+        # Toughness (human skill): a flat HP cushion that grows with level
+        # (+15 at L1 up to ~+49 at L17) -- the tree's pure-survivability pick.
+        if 'toughness' in getattr(self, 'human_skills', ()):
+            base += 15 + self.level * 2
+        return base
 
     @property
     def max_mana(
@@ -930,9 +954,13 @@ class Character:
             # (median runs L6, deep runs L13+). Threshold-15 left
             # them locked out -- b381 sweep: 1/6 humans reached INT
             # 16, that one died 43 turns later before casting.
-            if int_score <= 13:
+            # Prodigy (human skill) drops the INT cast-gate 13 -> 10, so a
+            # natural-INT-10 human can dabble in magic with a couple of
+            # level-up points instead of being locked out mid-game.
+            gate = 10 if 'prodigy' in getattr(self, 'human_skills', ()) else 13
+            if int_score <= gate:
                 return self.base_max_mana_bonus
-            int_mp = (int_score - 13) * 3 + 5
+            int_mp = (int_score - gate) * 3 + 5
             lvl_mp = max(0, (self.level - 4) * 6)
 
         return int_mp + lvl_mp + self.base_max_mana_bonus
@@ -950,6 +978,16 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'attack_boost':
                 attack_from_stats += effect.magnitude
+        # Human skills (Path of Ambition):
+        _skills = getattr(self, 'human_skills', ())
+        if _skills:
+            # Weapon Master: +3 ATK regardless of which weapon you wield.
+            if 'weapon_master' in _skills:
+                attack_from_stats += 3
+            # Adrenaline: a cornered human fights harder -- surge when below
+            # 25% HP. (Defense gets the matching surge in the defense prop.)
+            if 'adrenaline' in _skills and self.health <= self.max_health * 0.25:
+                attack_from_stats += 6
         # BUC bonus: blessed weapon +2, cursed weapon -2
         if self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'blessed':
             attack_from_stats += 2
@@ -969,6 +1007,11 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'defense_boost':
                 defense_from_stats += effect.magnitude
+        # Adrenaline (human skill): +4 DEF when below 25% HP (matches the
+        # attack surge -- the desperate-comeback fantasy).
+        if ('adrenaline' in getattr(self, 'human_skills', ())
+                and self.health <= self.max_health * 0.25):
+            defense_from_stats += 4
         # BUC bonus: blessed armor +2, cursed armor -2
         if self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'blessed':
             defense_from_stats += 2
@@ -1220,6 +1263,16 @@ class Character:
         # weapon upgrades, dex, level diffs, and status effects all show.
         sides = 20
         player_wins = random.random() < hit_chance
+        # Fortune's Favor (human skill): once per fight, reroll a missed
+        # swing. The reroll uses the same odds -- luck nudged, not guaranteed.
+        if (not player_wins and 'fortune' in getattr(self, 'human_skills', ())
+                and not getattr(gs, 'fortune_used', False)):
+            gs.fortune_used = True
+            player_wins = random.random() < hit_chance
+            if player_wins:
+                add_log(f"{COLOR_YELLOW}[Fortune's Favor] You turn a miss into a hit!{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_YELLOW}[Fortune's Favor] You press your luck... but still miss.{COLOR_RESET}")
         p_mod = compute_player_attack_mod(self, target)
         m_mod = compute_monster_defense_mod(target, self)
         p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
@@ -1265,6 +1318,23 @@ class Character:
             dmg += holy_bonus
             badge = f"HOLY +{holy_bonus}" if not badge else badge + " +HOLY"
             add_log(f"{COLOR_YELLOW}[Holy Brand] +{holy_bonus} Holy damage!{COLOR_RESET}")
+
+        # Executioner (human skill): +50% damage against a monster already
+        # below 25% HP -- you finish what desperation started.
+        if ('executioner' in getattr(self, 'human_skills', ())
+                and target.max_health > 0 and target.health <= target.max_health * 0.25):
+            dmg = int(dmg * 1.5)
+            badge = "EXECUTE!" if not badge else badge + " +EXEC"
+            add_log(f"{COLOR_RED}[Executioner] You go for the kill -- +50% damage!{COLOR_RESET}")
+
+        # Riposte (human skill): seizing the initiative, your opening strike
+        # of the fight lands double. gs.riposte_opening is armed at combat
+        # start only when you won initiative, and is consumed on first hit.
+        if 'riposte' in getattr(self, 'human_skills', ()) and getattr(gs, 'riposte_opening', False):
+            gs.riposte_opening = False
+            dmg *= 2
+            badge = "RIPOSTE!" if not badge else badge + " +RIPOSTE"
+            add_log(f"{COLOR_GREEN}[Riposte] You exploit the opening with a devastating strike!{COLOR_RESET}")
 
         gs.last_monster_damage_badge = badge
         add_log(f"You hit the evil {target.name}!")
@@ -1363,26 +1433,43 @@ class Character:
             add_log(f"You are now weak against {element}!")
 
 
+    def _stat_points_due(self, level):
+        # Total stat points a character should have earned by `level`.
+        # Humans (Path of Ambition) learn at DOUBLE the rate -- 1 point
+        # per level vs everyone else's 1 per 2 levels. Those extra points
+        # are what let a human fund their special-skill purchases (Silver
+        # Tongue, Stonelore, etc.) without gutting their raw STR/DEX/INT.
+        if getattr(self, 'race', '').lower() == 'human':
+            return max(0, level - 1)
+        return (level - 1) // 2
+
     def gain_experience(self, amount):
+        # Human "Versatility" (Path of Ambition, always-on): +20% XP.
+        # The classic adaptable-human edge -- humans learn faster, so
+        # they bank stat points (and the skills they buy) ahead of the
+        # curve. Because level scales with sqrt(XP) this is a modest
+        # ~+10% level tempo, not a power spike.
+        if getattr(self, 'race', '').lower() == 'human':
+            mult = 1.20
+            # Veteran skill stacks another +15% XP on top of Versatility.
+            if 'veteran' in getattr(self, 'human_skills', ()):
+                mult += 0.15
+            amount = int(round(amount * mult))
         self.experience += amount
         add_log(f"You gained {amount} experience.")
         if int(math.sqrt(self.experience)/5) > self.level:
             old_level = self.level
             self.level = int(math.sqrt(self.experience)/5)
             gs.sfx_event = 'level_up'
-            # Grant 1 stat point per 2 levels gained -- the player
-            # allocates via the character-stats screen ('p' to allocate,
-            # then a/d/i for STR/DEX/INT). Spacing the points out
-            # keeps starting race differences meaningful: a median-L6
-            # run yields 3 pts (not enough for a human's 6-point cast
-            # gap), an L13 run yields 6 pts (humans cast naturally
-            # mid-deep), an L19 run yields 9 pts (dwarves still need
-            # to push to L27 for cast access -- effectively endgame).
-            # Formula: total points due = (level - 1) // 2. A multi-
-            # level jump in one gain_experience call grants the delta
-            # so big-XP kills don't lose points.
-            old_pts_due = (old_level - 1) // 2
-            new_pts_due = (self.level - 1) // 2
+            # Grant stat points for the levels gained. Non-humans earn 1
+            # per 2 levels; humans earn 1 per level (see _stat_points_due)
+            # to bankroll their Path-of-Ambition skill purchases. The
+            # player allocates via the character-stats screen ('p' to
+            # spend on STR/DEX/INT, or tap a special-skill row). A multi-
+            # level jump in one gain_experience call grants the delta so
+            # big-XP kills don't lose points.
+            old_pts_due = self._stat_points_due(old_level)
+            new_pts_due = self._stat_points_due(self.level)
             points_gained = new_pts_due - old_pts_due
             self.unspent_stat_points += points_gained
             add_log(f"{COLOR_YELLOW}*** LEVEL UP! You are now level {self.level} ***{COLOR_RESET}")
@@ -1558,6 +1645,11 @@ class Character:
         if effect_type == 'confusion' and _has_confusion_immunity(self):
             add_log(f"{COLOR_CYAN}[Psychic Shield] Your mind repels the confusion!{COLOR_RESET}")
             return
+        # Iron Will (human skill): an unbreakable mind shrugs off confusion
+        # and paralysis -- the control effects that otherwise steal turns.
+        if effect_type in ('confusion', 'paralysis') and 'iron_will' in getattr(self, 'human_skills', ()):
+            add_log(f"{COLOR_CYAN}[Iron Will] Your resolve breaks the {effect_type}!{COLOR_RESET}")
+            return
         effect = StatusEffect(effect_name, duration, effect_type, magnitude, description, resistance_element)
         self.status_effects[effect_name] = effect
         add_log(f"{self.name} is now affected by {effect_name}!")
@@ -1600,11 +1692,16 @@ class Character:
         # Level 1-2 spells: 2 slots
         # Level 3+ spells: 3 slots
         if spell.level == 0:
-            return 1
+            base = 1
         elif spell.level <= 2:
-            return 2
+            base = 2
         else:
-            return 3
+            base = 3
+        # Quick Study (human skill): a fast learner packs more into memory --
+        # every non-cantrip spell costs one fewer slot (floor of 1).
+        if 'quick_study' in getattr(self, 'human_skills', ()):
+            base = max(1, base - 1)
+        return base
 
     def get_max_memorized_spell_slots(self):
         """Calculate maximum number of spell slots available."""
@@ -1615,7 +1712,11 @@ class Character:
         lvl_ss = 0
         if (self.intelligence>15):
             lvl_ss = max(0, (self.level-4))
-        return max(0, (int_ss+lvl_ss))
+        total = int_ss + lvl_ss
+        # Prodigy (human skill): one extra memorized-spell slot.
+        if 'prodigy' in getattr(self, 'human_skills', ()):
+            total += 1
+        return max(0, total)
 
 
     def get_used_spell_slots(self):

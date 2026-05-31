@@ -403,11 +403,26 @@ def process_combat_action(player_character, my_tower, cmd):
         p_init_mod = max(0, (player_character.dexterity - 10) // 3)
         m_init_mod = max(0, gs.active_monster.level)
         init_chance = max(0.20, min(0.80, 0.55 + (p_init_mod - m_init_mod) * 0.05))
+        # Combat Reflexes (human skill): sharply better odds of acting first.
+        if 'combat_reflexes' in getattr(player_character, 'human_skills', ()):
+            init_chance = min(0.95, init_chance + 0.30)
+        # Forewarned (human skill): if you'd scouted this monster room through
+        # the fog before stepping in, you get the drop on whatever's lurking.
+        if ('forewarned' in getattr(player_character, 'human_skills', ())
+                and getattr(gs, 'encounter_scouted', False)):
+            init_chance = min(0.97, init_chance + 0.35)
+            add_log(f"{COLOR_GREEN}[Forewarned] You scouted this lair ahead -- you ready your stance and seize the moment!{COLOR_RESET}")
         player_goes_first = random.random() < init_chance
         p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
         gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))
         gs.monster_acts_first = not player_goes_first
         gs.monster_initiative_pending = gs.monster_acts_first
+
+        # Per-fight human-skill state: refresh Fortune's Favor's once-per-fight
+        # reroll, and arm Riposte's doubled opening strike only if we actually
+        # won initiative. Both are consumed inside Character.attack_target.
+        gs.fortune_used = False
+        gs.riposte_opening = player_goes_first and 'riposte' in getattr(player_character, 'human_skills', ())
 
         if player_goes_first:
             add_log(f"{COLOR_GREEN}You seize the initiative!{COLOR_RESET}")
@@ -513,6 +528,19 @@ def process_combat_action(player_character, my_tower, cmd):
             if raid_left <= 0:
                 current_fl.properties['raid_mode_active'] = False
                 add_log(f"{COLOR_YELLOW}Raid mode ends. The dust settles.{COLOR_RESET}")
+
+        # Veteran (human skill): the first kill on each floor pays a bounty
+        # that scales with depth.
+        if 'veteran' in getattr(player_character, 'human_skills', ()):
+            _vfloors = getattr(player_character, '_veteran_kill_floors', None)
+            if _vfloors is None:
+                _vfloors = set()
+                player_character._veteran_kill_floors = _vfloors
+            if player_character.z not in _vfloors:
+                _vfloors.add(player_character.z)
+                vbonus = (player_character.z + 1) * 10
+                gold_drop += vbonus
+                add_log(f"{COLOR_YELLOW} [Veteran] First-blood bounty on this floor: +{vbonus} gold!{COLOR_RESET}")
 
         # Give rewards
         player_character.gain_experience(xp_reward)

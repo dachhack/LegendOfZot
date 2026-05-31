@@ -363,11 +363,16 @@ def degrade_equipment(player_character, monster_level):
     Returns a list of messages about equipment status.
     """
     messages = []
-    
+
+    # Weapon Master (human skill): gear degrades half as fast.
+    _wm = 'weapon_master' in getattr(player_character, 'human_skills', ())
+
     # Degrade weapon
     if player_character.equipped_weapon and not player_character.equipped_weapon.is_broken:
         weapon = player_character.equipped_weapon
         loss = calculate_durability_loss(weapon, monster_level)
+        if _wm:
+            loss = max(1, loss // 2)
         weapon.durability = max(0, weapon.durability - loss)
         
         # Check for low durability warnings
@@ -388,6 +393,8 @@ def degrade_equipment(player_character, monster_level):
     if player_character.equipped_armor and not player_character.equipped_armor.is_broken:
         armor = player_character.equipped_armor
         loss = calculate_durability_loss(armor, monster_level)
+        if _wm:
+            loss = max(1, loss // 2)
         armor.durability = max(0, armor.durability - loss)
         
         # Check for low durability warnings
@@ -2216,6 +2223,10 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
             
             # Intelligence and level bonuses
             upgrade_prob = base_prob + (player_character.intelligence / 100) + (player_character.level / 100)
+            # Quick Study (human skill): a careful reader coaxes far more
+            # successes out of finicky enchant scrolls (+15pp before clamp).
+            if 'quick_study' in getattr(player_character, 'human_skills', ()):
+                upgrade_prob += 0.15
             upgrade_prob = min(0.95, max(0.10, upgrade_prob))  # Clamp between 10% and 95%
 
             if random.random() < upgrade_prob:
@@ -2934,6 +2945,14 @@ def get_monster_meat_info(monster_name):
     return (random.choice(MEAT_DEFAULT_CUTS), "dubious", 12)
 
 
+def gourmand_nutrition(character, base_gain):
+    """Gourmand (human skill): you wring +35% nutrition out of every meal.
+    Returns the adjusted gain; a no-op for anyone without the skill."""
+    if 'gourmand' in getattr(character, 'human_skills', ()):
+        return int(round(base_gain * 1.35))
+    return base_gain
+
+
 class Food(Item):
     """Generic food item (rations, mushrooms, berries, etc.)"""
     def __init__(self, name, description="", value=5, level=0, nutrition=30, count=1):
@@ -2953,7 +2972,7 @@ class Food(Item):
         # as the dwarf food economy means rations are a budget filler,
         # meat is the meal.
         old_hunger = character.hunger
-        character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+        character.hunger = min(HUNGER_MAX, character.hunger + gourmand_nutrition(character, self.nutrition))
         gained = character.hunger - old_hunger
         add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger restored by {gained}.{COLOR_RESET}")
         return True  # consumed
@@ -3000,6 +3019,7 @@ class Sausage(Food):
         # Sausages are cured meat -- they fit the same race archetype
         # that gives dwarves a meat-only food advantage.
         nutrition_gain = self.nutrition * 2 if is_dwarf else self.nutrition
+        nutrition_gain = gourmand_nutrition(character, nutrition_gain)
         base_heal = 5
         heal_amount = base_heal * 2 if is_dwarf else base_heal
 
@@ -3095,7 +3115,17 @@ class Meat(Item):
         # Lore: dwarves draw on a hearty meat-and-mead constitution
         # that processed grains never satisfy.
         is_dwarf = (getattr(character, 'race', '') or '').lower() == 'dwarf'
+        is_gourmand = 'gourmand' in getattr(character, 'human_skills', ())
         if self.is_rotten:
+            if is_gourmand:
+                # Gourmand: an iron stomach handles spoilage -- no poisoning,
+                # and the meat still gives a modest meal.
+                add_log(f"{COLOR_GREEN}[Gourmand] You eat the rotten {self.monster_name} {self.cut} without flinching -- your iron stomach handles it.{COLOR_RESET}")
+                old_hunger = character.hunger
+                character.hunger = min(HUNGER_MAX, character.hunger + 15)
+                gained = character.hunger - old_hunger
+                add_log(f"{COLOR_GREEN}Hunger restored by {gained}.{COLOR_RESET}")
+                return True  # consumed
             add_log(f"{COLOR_RED}You choke down the rotten {self.monster_name} {self.cut}. Ugh! Your stomach protests.{COLOR_RESET}")
             character.take_damage_no_def(10, "Physical")
             add_log(f"{COLOR_RED}You lose 10 HP from food poisoning!{COLOR_RESET}")
@@ -3103,6 +3133,7 @@ class Meat(Item):
         if not self.is_cooked:
             base_gain = max(5, self.nutrition // 2)
             gain = base_gain * 2 if is_dwarf else base_gain
+            gain = gourmand_nutrition(character, gain)
             add_log(f"{COLOR_YELLOW}You gnaw on the raw {self.monster_name} {self.cut}. It's disgusting but fills you a little.{COLOR_RESET}")
             old_hunger = character.hunger
             character.hunger = min(HUNGER_MAX, character.hunger + gain)
@@ -3111,6 +3142,7 @@ class Meat(Item):
         else:
             base_gain = self.nutrition
             gain = base_gain * 2 if is_dwarf else base_gain
+            gain = gourmand_nutrition(character, gain)
             old_hunger = character.hunger
             character.hunger = min(HUNGER_MAX, character.hunger + gain)
             gained = character.hunger - old_hunger
@@ -3336,7 +3368,11 @@ def process_hunger(character):
         # At the 7/10 ratio that averages 0.7 hunger/move while
         # keeping every decrement an integer step.
         tracker = getattr(character, 'hunger_decay_tracker', 0)
-        tracker += HUNGER_DECAY_PER_MOVE
+        decay = HUNGER_DECAY_PER_MOVE
+        # Survivalist (human skill): hunger decays half as fast.
+        if 'survivalist' in getattr(character, 'human_skills', ()):
+            decay *= 0.5
+        tracker += decay
         while tracker >= HUNGER_DECAY_INTERVAL:
             character.hunger = max(0, character.hunger - 1)
             tracker -= HUNGER_DECAY_INTERVAL
