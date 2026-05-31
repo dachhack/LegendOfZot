@@ -183,6 +183,13 @@ class Inventory:
         register_item_discovery = _get_register_item_discovery()
         register_item_discovery(item_obj)
 
+        # Appraiser (human skill): a trained eye reads an item's blessing or
+        # curse the moment it enters the pack -- reveal BUC status on pickup.
+        owner = getattr(self, 'owner', None)
+        if (owner is not None and hasattr(item_obj, 'buc_status')
+                and 'appraiser' in getattr(owner, 'human_skills', ())):
+            item_obj.buc_known = True
+
         def _toast():
             if not notify:
                 return
@@ -845,6 +852,9 @@ class Character:
         self.level = 1
         self.experience = 0
         self.inventory = Inventory()
+        # Backref so the inventory can consult the owner's human skills
+        # (e.g. Appraiser reveals BUC status on pickup).
+        self.inventory.owner = self
         self.equipped_weapon = None
         self.equipped_armor = None
         self.equipped_accessories = [None, None, None, None]  # 4 accessory slots
@@ -896,7 +906,12 @@ class Character:
     def max_health(self):
         # Lv1 Human (str=10) starts at 10+20 = 30 HP.  Each level adds
         # +10, each point of strength adds +2.
-        return (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
+        base = (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
+        # Toughness (human skill): a flat HP cushion that grows with level
+        # (+15 at L1 up to ~+49 at L17) -- the tree's pure-survivability pick.
+        if 'toughness' in getattr(self, 'human_skills', ()):
+            base += 15 + self.level * 2
+        return base
 
     @property
     def max_mana(
@@ -1248,6 +1263,16 @@ class Character:
         # weapon upgrades, dex, level diffs, and status effects all show.
         sides = 20
         player_wins = random.random() < hit_chance
+        # Fortune's Favor (human skill): once per fight, reroll a missed
+        # swing. The reroll uses the same odds -- luck nudged, not guaranteed.
+        if (not player_wins and 'fortune' in getattr(self, 'human_skills', ())
+                and not getattr(gs, 'fortune_used', False)):
+            gs.fortune_used = True
+            player_wins = random.random() < hit_chance
+            if player_wins:
+                add_log(f"{COLOR_YELLOW}[Fortune's Favor] You turn a miss into a hit!{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_YELLOW}[Fortune's Favor] You press your luck... but still miss.{COLOR_RESET}")
         p_mod = compute_player_attack_mod(self, target)
         m_mod = compute_monster_defense_mod(target, self)
         p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
@@ -1293,6 +1318,23 @@ class Character:
             dmg += holy_bonus
             badge = f"HOLY +{holy_bonus}" if not badge else badge + " +HOLY"
             add_log(f"{COLOR_YELLOW}[Holy Brand] +{holy_bonus} Holy damage!{COLOR_RESET}")
+
+        # Executioner (human skill): +50% damage against a monster already
+        # below 25% HP -- you finish what desperation started.
+        if ('executioner' in getattr(self, 'human_skills', ())
+                and target.max_health > 0 and target.health <= target.max_health * 0.25):
+            dmg = int(dmg * 1.5)
+            badge = "EXECUTE!" if not badge else badge + " +EXEC"
+            add_log(f"{COLOR_RED}[Executioner] You go for the kill -- +50% damage!{COLOR_RESET}")
+
+        # Riposte (human skill): seizing the initiative, your opening strike
+        # of the fight lands double. gs.riposte_opening is armed at combat
+        # start only when you won initiative, and is consumed on first hit.
+        if 'riposte' in getattr(self, 'human_skills', ()) and getattr(gs, 'riposte_opening', False):
+            gs.riposte_opening = False
+            dmg *= 2
+            badge = "RIPOSTE!" if not badge else badge + " +RIPOSTE"
+            add_log(f"{COLOR_GREEN}[Riposte] You exploit the opening with a devastating strike!{COLOR_RESET}")
 
         gs.last_monster_damage_badge = badge
         add_log(f"You hit the evil {target.name}!")
@@ -1650,11 +1692,16 @@ class Character:
         # Level 1-2 spells: 2 slots
         # Level 3+ spells: 3 slots
         if spell.level == 0:
-            return 1
+            base = 1
         elif spell.level <= 2:
-            return 2
+            base = 2
         else:
-            return 3
+            base = 3
+        # Quick Study (human skill): a fast learner packs more into memory --
+        # every non-cantrip spell costs one fewer slot (floor of 1).
+        if 'quick_study' in getattr(self, 'human_skills', ()):
+            base = max(1, base - 1)
+        return base
 
     def get_max_memorized_spell_slots(self):
         """Calculate maximum number of spell slots available."""

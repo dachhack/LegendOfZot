@@ -418,6 +418,12 @@ def process_combat_action(player_character, my_tower, cmd):
         gs.monster_acts_first = not player_goes_first
         gs.monster_initiative_pending = gs.monster_acts_first
 
+        # Per-fight human-skill state: refresh Fortune's Favor's once-per-fight
+        # reroll, and arm Riposte's doubled opening strike only if we actually
+        # won initiative. Both are consumed inside Character.attack_target.
+        gs.fortune_used = False
+        gs.riposte_opening = player_goes_first and 'riposte' in getattr(player_character, 'human_skills', ())
+
         if player_goes_first:
             add_log(f"{COLOR_GREEN}You seize the initiative!{COLOR_RESET}")
         else:
