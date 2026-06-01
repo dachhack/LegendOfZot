@@ -782,18 +782,15 @@ def process_combat_action(player_character, my_tower, cmd):
                     # _was_guardian was captured before the active_monster
                     # clear at the top of this block.
                     if _was_guardian:
-                        add_log("")
-                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                        add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
-                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                        add_log("")
-                        add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
-                        add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
-                        add_log("")
-                        add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
-                        add_log("")
-                        gs.prompt_cntl = "victory_screen"
+                        # Zot's Guardian falls — the Orb of Zot drops into the
+                        # hero's pack. The cavern stays open; USING the Orb later
+                        # is what seals it and launches the nested 1980 Wizard's
+                        # Castle (see OrbOfZot.use). Show the normal victory.
+                        from .orb_game import grant_orb_of_zot
+                        grant_orb_of_zot(player_character)
+                        gs.victory_monster_name = gs.victory_monster_name or "Zot's Guardian"
                         check_achievements(player_character)
+                        gs.prompt_cntl = "combat_victory"
                         return
 
                     gs.prompt_cntl = "combat_victory"
@@ -1097,27 +1094,15 @@ def process_combat_action(player_character, my_tower, cmd):
 
                 # Check if this was Zot's Guardian - VICTORY!
                 if gs.active_monster.properties.get('is_zots_guardian'):
-                    add_log("")
-                    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                    add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
-                    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                    add_log("")
-                    add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
-                    add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
-                    add_log("")
-                    add_log(f"{COLOR_YELLOW}Final Statistics:{COLOR_RESET}")
-                    add_log(f"  Level: {player_character.level}")
-                    add_log("  Floors Conquered: 50")
-                    add_log(f"  Monsters Slain: {gs.game_stats.get('monsters_killed', 0)}")
-                    add_log("  Runes Collected: 8/8")
-                    add_log("  Shards Obtained: 8/8")
-                    add_log("")
-                    add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
-                    add_log("")
-
-                    # Set victory state
-                    gs.prompt_cntl = "victory_screen"
+                    # Zot's Guardian falls — the Orb of Zot drops into the hero's
+                    # pack. The cavern stays open; USING the Orb later is what
+                    # seals it and launches the nested 1980 Wizard's Castle (see
+                    # OrbOfZot.use). Show the normal victory.
+                    from .orb_game import grant_orb_of_zot
+                    grant_orb_of_zot(player_character)
+                    gs.victory_monster_name = gs.victory_monster_name or "Zot's Guardian"
                     check_achievements(player_character)
+                    gs.prompt_cntl = "combat_victory"
                     return
 
             # Check achievements
@@ -1234,18 +1219,15 @@ def process_combat_action(player_character, my_tower, cmd):
             # the YOU WIN screen never fired. Smoke test: dwarf s=0
             # killed the Guardian with 'a' at T56 -> combat_victory.
             if _was_guardian:
-                add_log("")
-                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
-                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                add_log("")
-                add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
-                add_log("")
-                add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
-                add_log("")
-                gs.prompt_cntl = "victory_screen"
+                # Zot's Guardian falls — the Orb of Zot drops into the hero's
+                # pack. The cavern stays open; USING the Orb later is what seals
+                # it and launches the nested 1980 Wizard's Castle (see
+                # OrbOfZot.use). Show the normal victory.
+                from .orb_game import grant_orb_of_zot
+                grant_orb_of_zot(player_character)
+                gs.victory_monster_name = gs.victory_monster_name or "Zot's Guardian"
                 check_achievements(player_character)
+                gs.prompt_cntl = "combat_victory"
                 return
 
             gs.prompt_cntl = "combat_victory"
@@ -1966,18 +1948,15 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     # _was_guardian was captured before the active_monster
                     # clear at the top of this block.
                     if _was_guardian:
-                        add_log("")
-                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                        add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
-                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-                        add_log("")
-                        add_log(f"{COLOR_CYAN}A brilliant orb materializes, pulsing with infinite power!{COLOR_RESET}")
-                        add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the legendary Orb!{COLOR_RESET}")
-                        add_log("")
-                        add_log(f"{COLOR_PURPLE}*** CONGRATULATIONS! YOU WIN! ***{COLOR_RESET}")
-                        add_log("")
-                        gs.prompt_cntl = "victory_screen"
+                        # Zot's Guardian falls — the Orb of Zot drops into the
+                        # hero's pack. The cavern stays open; USING the Orb later
+                        # is what seals it and launches the nested 1980 Wizard's
+                        # Castle (see OrbOfZot.use). Show the normal victory.
+                        from .orb_game import grant_orb_of_zot
+                        grant_orb_of_zot(player_character)
+                        gs.victory_monster_name = gs.victory_monster_name or "Zot's Guardian"
                         check_achievements(player_character)
+                        gs.prompt_cntl = "combat_victory"
                         return
 
                     gs.prompt_cntl = "combat_victory"

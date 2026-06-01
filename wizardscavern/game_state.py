@@ -325,6 +325,18 @@ harvested_gardens = {}
 harvested_fey_floors = set()  # Floors where a fey garden has been harvested (no respawn)
 
 # ============================================================================
+# ORB OF ZOT ENDGAME — the sealed cavern + nested Wizard's Castle
+# ============================================================================
+# Set when Zot's Guardian falls: the cavern seals and the only way out is to
+# beat the playable 1980 Wizard's Castle embedded in the Orb of Zot (see
+# orb_game.py).  Beating it reveals orb_escape_code; entering it sets
+# orb_escaped and ends the run in triumph.
+cavern_sealed = False
+orb_escaped = False
+orb_escape_code = None
+orb_game = None   # full nested-game state dict (owned by orb_game.py)
+
+# ============================================================================
 # QUEST TRACKING - RUNES & SHARDS (Orb of Zot)
 # ============================================================================
 runes_obtained = {

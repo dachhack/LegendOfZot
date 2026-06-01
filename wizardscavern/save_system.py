@@ -21,6 +21,7 @@ from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
     CookingKit, CuringKit, Sausage, Ingredient, Rune, Shard, LembasWafer,
+    OrbOfZot,
 )
 from .characters import Character, Monster, Inventory, StatusEffect
 from .vendor import Vendor
@@ -445,6 +446,9 @@ class SaveSystem:
                 name=data['name'], description=data.get('description', ''),
                 value=data.get('value', 180), level=data.get('level', 1)
             )
+        elif cls_name == 'OrbOfZot':
+            # The Orb of Zot — no extra fields; defaults rebuild it intact.
+            return OrbOfZot()
         elif cls_name == 'Sausage':
             return Sausage(
                 name=data['name'], description=data.get('description', ''),
@@ -710,6 +714,12 @@ class SaveSystem:
             'gs.equipment_use_count': {str(k): v for k, v in gs.equipment_use_count.items()},
             # Dwarf mining: per-floor mined-wall counts
             'gs.dwarf_mines_per_floor': {str(k): v for k, v in gs.dwarf_mines_per_floor.items()},
+            # Orb of Zot endgame (sealed cavern + nested Wizard's Castle).
+            # orb_game is plain dicts/lists/ints/strings — JSON-safe as-is.
+            'gs.cavern_sealed': gs.cavern_sealed,
+            'gs.orb_escaped': gs.orb_escaped,
+            'gs.orb_escape_code': gs.orb_escape_code,
+            'gs.orb_game': gs.orb_game,
         }
 
     @staticmethod
@@ -809,6 +819,12 @@ class SaveSystem:
         if 'gs.dwarf_mines_per_floor' in data:
             for k, v in data['gs.dwarf_mines_per_floor'].items():
                 gs.dwarf_mines_per_floor[int(k)] = v
+
+        # Orb of Zot endgame state.
+        gs.cavern_sealed = data.get('gs.cavern_sealed', False)
+        gs.orb_escaped = data.get('gs.orb_escaped', False)
+        gs.orb_escape_code = data.get('gs.orb_escape_code', None)
+        gs.orb_game = data.get('gs.orb_game', None)
 
     @staticmethod
     def save_game(player_character, my_tower, slot=1):

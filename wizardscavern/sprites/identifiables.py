@@ -275,6 +275,11 @@ def get_named_item_pid(item):
     if cls == 'CuringKit':
         return _pick_named(_foods._FOODS_MAP, 'Curing Kit')
 
+    if cls == 'OrbOfZot':
+        # The Orb of Zot reuses the crystal-orb ("Orb of Vitality") sprites
+        # for an unmistakable glowing-sphere look.
+        return _pick_named(_treasures._TREASURES_MAP, 'Orb of Vitality')
+
     return None
 
 
