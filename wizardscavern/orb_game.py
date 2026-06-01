@@ -552,18 +552,30 @@ def _resolve_warp(g, room):
         room.pop("orb", None)
         _log(g, "*** A blazing sphere hangs in the void: THE ORB OF ZOT! ***")
         _log(g, "It is yours. Now bear it back to the Entrance and leave!")
+        _log(g, "BEWARE: step into a Warp ('W') while carrying it and it may be torn from your grasp!")
         return
     # An ordinary warp flings you elsewhere.
     if p["orb"] and random.random() < 0.25:
         p["orb"] = False
-        # Hide the orb again in a fresh deep warp / room.
-        deep = [k for k in g["castle"] if int(k.split(",")[2]) >= 5]
-        target = random.choice(deep)
-        if g["castle"][target]["t"] == "warp":
-            g["castle"][target]["orb"] = True
+        # Hide the orb again on a deep level. Prefer an existing warp; only
+        # ever convert a plain empty room as a fallback. NEVER overwrite the
+        # entrance or a stairway (doing so could shred level connectivity).
+        deep_warps = [k for k, r in g["castle"].items()
+                      if int(k.split(",")[2]) >= 5 and r["t"] == "warp"]
+        if deep_warps:
+            g["castle"][random.choice(deep_warps)]["orb"] = True
         else:
-            g["castle"][target] = {"t": "warp", "orb": True}
-        _log(g, "The warp wrenches the Orb of Zot from your grasp! It is gone...")
+            deep_empty = [k for k, r in g["castle"].items()
+                          if int(k.split(",")[2]) >= 5 and r["t"] == "empty"]
+            target = random.choice(deep_empty) if deep_empty else None
+            if target:
+                g["castle"][target] = {"t": "warp", "orb": True}
+            else:
+                # Pathological castle with no deep warp/empty — keep the orb
+                # rather than clobber a stairway/entrance.
+                p["orb"] = True
+        if not p["orb"]:
+            _log(g, "The warp wrenches the Orb of Zot from your grasp! It is gone...")
     p["x"] = random.randint(1, SIZE)
     p["y"] = random.randint(1, SIZE)
     p["z"] = random.randint(1, SIZE)
