@@ -3126,6 +3126,7 @@ class PlaytestSession:
     def is_done(self):
         return (gs.game_should_quit
                 or gs.prompt_cntl == "death_screen"
+                or gs.prompt_cntl == "orb_game"  # Guardian slain -> orb endgame: the cavern is beaten
                 or not gs.player_character.is_alive()
                 or self.early_terminated)
 

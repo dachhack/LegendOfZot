@@ -2501,6 +2501,8 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     'flee_direction_mode', 'foresight_direction_mode',
     'upgrade_scroll_mode', 'identify_scroll_mode',
     'zotle_teleporter_mode',
+    # Orb of Zot endgame — the nested Wizard's Castle owns the whole body.
+    'orb_game',
 })
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
@@ -2731,6 +2733,12 @@ class WizardsCavernApp(toga.App):
         gs.cursed_tomb_available = False
         gs.world_tree_available = False
         gs.gate_to_floor_50_unlocked = False
+
+        # Orb of Zot endgame — fresh run, cavern is open.
+        gs.cavern_sealed = False
+        gs.orb_escaped = False
+        gs.orb_escape_code = None
+        gs.orb_game = None
         
         gs.game_stats = {
             'monsters_killed': 0,
@@ -4620,6 +4628,14 @@ class WizardsCavernApp(toga.App):
         if gs.game_should_quit:
             return
 
+        # Orb of Zot endgame owns ALL input while active — the nested
+        # Wizard's Castle has its own command vocabulary and must not be
+        # intercepted by the global single-key handlers (q/v/m/i/etc.).
+        if gs.prompt_cntl == "orb_game":
+            from . import orb_game as _orb
+            _orb.process_orb_command(self, cmd)
+            return
+
         # Handle splash screen - any input skips to intro
         if gs.prompt_cntl == "splash":
             if hasattr(self, '_splash_timer'):
@@ -4773,7 +4789,12 @@ class WizardsCavernApp(toga.App):
                 gs._pending_load = None
                 gs.prompt_cntl = "game_loop"
                 add_log(f"{COLOR_GREEN}Welcome back, {gs.player_character.name}!{COLOR_RESET}")
-                _trigger_room_interaction(gs.player_character, gs.my_tower)
+                # If the cavern was sealed (Orb of Zot obtained) and not yet
+                # escaped, resume the nested Wizard's Castle instead of the
+                # normal dungeon loop.
+                from . import orb_game as _orb
+                if not _orb.resume_orb_if_sealed():
+                    _trigger_room_interaction(gs.player_character, gs.my_tower)
             else:
                 add_log(f"{COLOR_RED}No pending load data found!{COLOR_RESET}")
                 gs.prompt_cntl = "inventory"
@@ -5119,6 +5140,16 @@ class WizardsCavernApp(toga.App):
 
         html_code = ""
         current_commands_text = ""
+
+        # ORB OF ZOT ENDGAME — the body owns the entire screen (its own
+        # stat strip, minimap, log and tap chips).  Blank the top stats
+        # strip and the toga button panel, like splash / death do.
+        if gs.prompt_cntl == "orb_game":
+            from . import orb_game as _orb
+            self._last_stats_html = ""
+            html_code = _orb.render_orb_html(self)
+            self.update_button_panel("", False)
+            return html_code
 
         # SPLASH SCREEN - Show version and recent changes for 5 seconds
         if gs.prompt_cntl == "splash":
@@ -10204,6 +10235,7 @@ class WizardsCavernApp(toga.App):
             'player_name', 'player_race', 'player_gender',
             'player_sprite', 'tourist_depth',
             'starting_shop', 'game_loaded_summary',
+            'orb_game',
         }
         return 'full-bleed' if prompt_cntl in full_bleed else ''
 
