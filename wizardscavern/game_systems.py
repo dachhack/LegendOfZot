@@ -13,6 +13,7 @@ from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE,
                        BUG_MONSTER_TEMPLATES)
 from .items import (Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel, HUNGER_MAX,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
+                   OrbOfZot,
                    Sausage, Ingredient,
                    Rune, identify_item, get_item_display_name, _create_item_copy,
                    apply_corrosion_effect,
@@ -2020,7 +2021,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
     # Apply active inventory filter to narrow working_items for numbered commands.
     # Must stay in sync with the render filter in app.py (inventory view).
     if gs.inventory_filter == 'use':
-        working_items = [i for i in working_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit))]
+        working_items = [i for i in working_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit, OrbOfZot))]
     elif gs.inventory_filter == 'equip':
         working_items = [i for i in working_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and i.treasure_type == 'passive')]
     elif gs.inventory_filter == 'eat':
@@ -2171,6 +2172,17 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                     item_to_use.use(player_character, my_tower)  # Not consumed
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
+
+                elif isinstance(item_to_use, OrbOfZot):
+                    # Using the Orb seals the cavern and launches the nested
+                    # Wizard's Castle — orb.use() sets prompt_cntl to
+                    # "orb_game". Mirror the Towel pattern: only bounce back
+                    # to the inventory if the mode DIDN'T change.
+                    prompt_before = gs.prompt_cntl
+                    item_to_use.use(player_character, my_tower)  # Not consumed
+                    if gs.prompt_cntl == prompt_before:
+                        gs.prompt_cntl = "inventory"
+                        handle_inventory_menu(player_character, my_tower, "init")
 
                 else:
                     add_log(f"{COLOR_YELLOW}You cannot use {item_to_use.name}.{COLOR_RESET}")

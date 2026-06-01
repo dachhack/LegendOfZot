@@ -6507,7 +6507,7 @@ class WizardsCavernApp(toga.App):
                 display_items = sorted_items
                 filter_label = "Your Inventory"
                 if gs.inventory_filter == 'use':
-                    display_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit))]
+                    display_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit, OrbOfZot))]
                     filter_label = "Usable Items"
                 elif gs.inventory_filter == 'equip':
                     display_items = [i for i in sorted_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and getattr(i, 'treasure_type', '') == 'passive')]

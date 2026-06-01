@@ -252,8 +252,41 @@ def _gen_code():
 # Public entry — called by combat.py when Zot's Guardian falls
 # ---------------------------------------------------------------------------
 
+def grant_orb_of_zot(player_character):
+    """Zot's Guardian is slain — drop the Orb of Zot into the player's pack.
+
+    The cavern is NOT sealed yet. The hero keeps the run going and may
+    *use* the Orb from the inventory whenever they're ready to enter the
+    nested Wizard's Castle (see OrbOfZot.use -> begin_orb_endgame)."""
+    from .combat import add_log, COLOR_PURPLE, COLOR_YELLOW, COLOR_CYAN, COLOR_GREEN, COLOR_RESET
+    try:
+        from .items import OrbOfZot
+        already = any(getattr(it, "name", "") == "Orb of Zot"
+                      for it in player_character.inventory.items)
+        if not already:
+            player_character.inventory.add_item(OrbOfZot())
+    except Exception:
+        pass
+    try:
+        gs.game_stats["orb_obtained"] = True
+    except Exception:
+        pass
+    add_log("")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}*** THE ORB OF ZOT IS YOURS! ***{COLOR_RESET}")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log("")
+    add_log(f"{COLOR_CYAN}A brilliant orb materializes and settles into your pack, "
+            f"pulsing with infinite power.{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}You have conquered the Wizard's Cavern and claimed the "
+            f"legendary Orb of Zot!{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}Within it folds a whole castle... USE the Orb when you "
+            f"dare to enter and seek the Word of Passage that frees you.{COLOR_RESET}")
+    add_log("")
+
+
 def begin_orb_endgame(player_character):
-    """The Guardian is slain. Grant the Orb, seal the cavern, open the orb."""
+    """The Orb is USED. Seal the cavern, open the orb, enter the castle."""
     gs.cavern_sealed = True
     gs.orb_escaped = False
     gs.orb_escape_code = None

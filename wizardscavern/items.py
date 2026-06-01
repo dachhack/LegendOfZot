@@ -3741,6 +3741,35 @@ class Towel(Item):
         return self.is_worn and self.wetness >= 3
 
 
+class OrbOfZot(Item):
+    """The legendary Orb of Zot — the prize for slaying Zot's Guardian.
+
+    It is never consumed. *Using* it from the inventory plunges the hero
+    into the playable 1980 Wizard's Castle nested within (orb_game.py),
+    sealing the cavern behind them until they beat it and earn the Word
+    of Passage. Carrying it does nothing on its own; the choice to enter
+    is the player's."""
+
+    def __init__(self, name="Orb of Zot",
+                 description=("A sphere of impossible light, heavy as a "
+                              "mountain and warm as a held hand. Peer into "
+                              "it and you glimpse a castle of eight floors "
+                              "folding endlessly inward. USE it to step "
+                              "inside — but know the cavern will seal behind "
+                              "you until you conquer what waits within."),
+                 value=0, level=0):
+        super().__init__(name, description, value, level)
+
+    def use(self, character, my_tower=None):
+        # Entering seals the cavern and launches the nested Wizard's Castle.
+        # begin_orb_endgame sets gs.prompt_cntl = "orb_game"; the inventory
+        # dispatch detects the mode change and does NOT bounce us back to
+        # the inventory screen. The orb is not consumed.
+        from .orb_game import begin_orb_endgame
+        begin_orb_endgame(character)
+        return False
+
+
 class Spell(Item):
     def __init__(self, name, description="", mana_cost=0, damage_type='Physical', base_power=0, level=0, spell_type='damage',
                  status_effect_name=None, status_effect_duration=0, status_effect_type=None, status_effect_magnitude=0,

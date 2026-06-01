@@ -21,6 +21,7 @@ from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
     CookingKit, CuringKit, Sausage, Ingredient, Rune, Shard, LembasWafer,
+    OrbOfZot,
 )
 from .characters import Character, Monster, Inventory, StatusEffect
 from .vendor import Vendor
@@ -445,6 +446,9 @@ class SaveSystem:
                 name=data['name'], description=data.get('description', ''),
                 value=data.get('value', 180), level=data.get('level', 1)
             )
+        elif cls_name == 'OrbOfZot':
+            # The Orb of Zot — no extra fields; defaults rebuild it intact.
+            return OrbOfZot()
         elif cls_name == 'Sausage':
             return Sausage(
                 name=data['name'], description=data.get('description', ''),
