@@ -2608,6 +2608,13 @@ class WizardsCavernApp(toga.App):
         # Schedule transition from splash to intro after 5 seconds
         import threading
         def _end_splash():
+            # Only advance if we're still on the splash. A tap on "Enter the
+            # Cavern" cancels this timer, but if the tap and the timer race the
+            # timer thread may already be mid-flight -- without this guard a
+            # late fire would clobber whatever state the player advanced into
+            # (the story page, or even character creation) back to intro_story.
+            if gs.prompt_cntl != "splash":
+                return
             gs.prompt_cntl = "intro_story"
             try:
                 self.render()

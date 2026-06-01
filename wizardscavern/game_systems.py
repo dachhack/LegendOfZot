@@ -4739,6 +4739,15 @@ def _handle(my_tower, player_character, cmd):
         gs.log_line_delays.clear()
         gs.prompt_cntl = "player_name"
         return True
+    # A leftover space can race into this state and skip the story page: the
+    # splash dismisses via TWO independent triggers -- the 5s auto-timer and a
+    # tap on "Enter the Cavern" (which sends ' ') -- and a mobile WebView can
+    # also fire touchstart+click from one tap. Whichever fires second lands its
+    # ' ' here, and the catch-all below used to read that as "start a new game",
+    # jumping straight into character creation. Swallow the stray dismiss so the
+    # player reliably lands on (and stays on) the story/menu page.
+    if cmd == ' ':
+        return True
     # Otherwise start new game (legacy SEND / empty input path)
     gs.log_lines.clear()
     gs.log_line_delays.clear()
