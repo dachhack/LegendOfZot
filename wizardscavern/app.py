@@ -3750,23 +3750,14 @@ class WizardsCavernApp(toga.App):
         This returns a thin info card (floor + flavor + lantern fuel)
         so the layout stays stable.
 
-        Flavor line is picked deterministically from the player's
-        floor + position so it stays consistent until the player
-        moves.
+        Flavor line is generated deterministically from the player's
+        floor + position (see ``flavor.empty_room_flavor``) so it stays
+        consistent until the player moves.
         """
-        flavors = (
-            "An empty stretch of dungeon -- silent and still.",
-            "Cool, damp stones underfoot.",
-            "Dust drifts in the still air.",
-            "Distant water drips somewhere far off.",
-            "Faint runes glow on a nearby wall and fade.",
-            "The torch-smoke of long-dead adventurers lingers.",
-            "Stone, shadow, and the smell of mildew.",
-            "A draft from somewhere chills the back of your neck.",
-        )
+        from .flavor import empty_room_flavor
         ch = gs.player_character
-        idx = (ch.z * 31 + ch.x * 7 + ch.y) % len(flavors)
-        flavor = flavors[idx]
+        seed = ch.z * 73856093 ^ ch.x * 19349663 ^ ch.y * 83492791
+        flavor = empty_room_flavor(seed)
 
         # Lantern fuel readout if equipped/owned -- one-liner so it
         # never grows the card much.

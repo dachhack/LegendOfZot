@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 471
+BUILD_NUMBER = 472
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "b472: empty-tile flavor text gets a massive glow-up, channeling the 1980 Wizard's Castle ambient bank (the frog, the bat, the distant scream, the 'you smell something frying' gag). The old fixed list of 8 lines is now a deterministic phrase generator (new flavor.py) that assembles ~70+ distinct lines from sense-keyed pools -- you hear/smell/feel/see a thing, plus standalone dread and a few deadpan Zot-voice beats. Still position-seeded so a tile keeps its line until you actually move (no flicker on re-render).",
     "b471: killed the stray grey scrollbar on the right of the splash/intro/full-bleed screens. #content-area already hid its bar, and body was overflow:hidden, so the culprit was the document root -- the html element had no overflow guard, and mobile WebView 100vh quirks let it overflow by a sliver, just enough to paint the global 8px scrollbar. Locked html to height:100vh / overflow:hidden to match body. Inner lists (inventory/vendor) keep their own scrollbars; only the phantom root bar is gone.",
     "b470: fixed the intro 'story' page intermittently getting skipped on launch -- you'd sometimes land straight in name entry instead. Root cause: the splash dismisses via TWO racing triggers (a 5s auto-timer AND a tap on 'Enter the Cavern', which sends a space), and the menu handler treated ANY stray input as 'start new game'. Whichever trigger fired second slipped its space into the story screen and blew right past it. Now the menu swallows that stray space (so you reliably land on -- and stay on -- the story page), and the splash timer no-ops if you've already tapped past it.",
     "b469: fixed the victory toast firing too early -- the 'Victory! Continue' prompt used to render the instant a foe dropped to 0 HP, popping up a full ~2.7s before the kill animation (sprite grayscale + 'DEFEATED' flash) actually landed, so the game declared victory before the final blow visibly connected. The prompt now starts hidden and fades in synced to the DEFEATED overlay (DEFEAT_OVERLAY_MS), matching how the combat log lines are already held back. Still tappable underneath the whole time, so you can skip the flourish.",
