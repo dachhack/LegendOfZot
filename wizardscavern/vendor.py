@@ -15,7 +15,7 @@ import random
 from . import game_state as gs
 from .game_state import (
     add_log,
-    COLOR_RESET, COLOR_YELLOW,
+    COLOR_RESET, COLOR_YELLOW, COLOR_PURPLE, COLOR_CYAN, COLOR_RED,
 )
 
 # Item classes and item functions
@@ -1217,6 +1217,15 @@ def handle_starting_shop(player_character, my_tower, cmd):
         add_log("You finish shopping and head out on your adventure!")
         gs.active_vendor = None
         gs.prompt_cntl = "game_loop"
+        # The cavern seals the moment a venturer commits to the descent.
+        # Fire the one-time framing for the whole run: the only way out is
+        # to claim the Orb of Zot — and that lets you leave with the loot.
+        add_log("")
+        add_log(f"{COLOR_RED}With a grinding roar, the entrance collapses behind you. The cavern is SEALED.{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}This is why none have ever emerged — there is no walking back out.{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}Only the ORB OF ZOT, hidden in the deepest dark, can break the seal.{COLOR_RESET}")
+        add_log(f"{COLOR_CYAN}Claim it, master its secret, and you may yet escape — with every coin and treasure you can carry.{COLOR_RESET}")
+        add_log("")
 
     return True
 

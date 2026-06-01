@@ -5405,7 +5405,8 @@ class WizardsCavernApp(toga.App):
                                             text-shadow: 0 1px 2px #000;">
                                     Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
                                     He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
-                                    Many a bold venturer has ventured in &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
+                                    The cavern seals behind all who enter &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
+                                    Claim the ORB OF ZOT and you alone may break the seal, and escape with all the riches you can carry.
                                 </div>
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
                                             padding: 8px; margin-top: 8px; margin-bottom: 0;

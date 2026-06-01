@@ -1553,6 +1553,39 @@ def _render_escape_lock(g):
     return html
 
 
+def _riches_html():
+    """A celebratory tally of the loot the hero is escaping the cavern with —
+    pulled from the MAIN-game character (gs.player_character), not the inner
+    castle adventurer."""
+    pc = getattr(gs, "player_character", None)
+    if pc is None:
+        return ""
+    gold = getattr(pc, "gold", 0)
+    treasures = 0
+    try:
+        for it in pc.inventory.items:
+            # Treasure items carry a treasure_type / gold_value; count them
+            # without importing the class (avoids a cycle).
+            if type(it).__name__ == "Treasure" or hasattr(it, "treasure_type"):
+                treasures += getattr(it, "count", 1) or 1
+    except Exception:
+        pass
+    level = getattr(pc, "level", 0)
+    rows = (
+        f"<div style='margin:3px 0;'><b style='color:#ffd24a;'>{gold:,}</b> gold pieces</div>"
+        f"<div style='margin:3px 0;'><b style='color:#9cf;'>{treasures}</b> treasure"
+        f"{'s' if treasures != 1 else ''} hauled out of the dark</div>"
+        f"<div style='margin:3px 0;'>Escaped at <b>Level {level}</b></div>"
+    )
+    return (
+        "<div style='max-width:300px; margin:10px auto; padding:10px 14px; "
+        "background:rgba(0,0,0,0.45); border:1px solid rgba(255,210,74,0.35); "
+        "border-radius:5px; font-size:13px; color:#cfd2e0;'>"
+        "<div style='color:#ffd24a; letter-spacing:1px; margin-bottom:5px;'>&mdash; THE RICHES OF THE CAVERN &mdash;</div>"
+        f"{rows}</div>"
+    )
+
+
 def _render_escaped(g):
     html = _panel_open("text-align:center;")
     html += _header("FREEDOM!", "The Legend of Zot is complete")
@@ -1561,9 +1594,11 @@ def _render_escaped(g):
         "The Word leaves your lips and the great seal cracks like spring ice. "
         "Daylight &mdash; real, warm, impossible daylight &mdash; pours into the "
         "cavern. You climb out with the Orb of Zot under one arm, a folded "
-        "castle inside it, and the whole sprawling Wizard's Cavern conquered "
-        "behind you.</div>"
+        "castle inside it, and &mdash; for the first time in the cavern's "
+        "history &mdash; you walk out the way you came, dragging every coin and "
+        "treasure you clawed from the dark.</div>"
     )
+    html += _riches_html()
     html += (
         "<div style='max-width:430px; margin:8px auto; font-size:13px; color:#9ab;'>"
         "You have beaten Wizard's Cavern <i>and</i> the 1980 Wizard's Castle "
