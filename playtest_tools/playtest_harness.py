@@ -438,6 +438,14 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     gs.html_cache = ""
     gs.loot_toasts = []
 
+    # Orb of Zot endgame fields — the app's new-game path clears these, so
+    # the harness must too, or a second run in the same process starts
+    # pre-sealed / pre-escaped (state leak across runs).
+    gs.cavern_sealed = False
+    gs.orb_escaped = False
+    gs.orb_escape_code = None
+    gs.orb_game = None
+
     gs.active_monster = None
     gs.active_vendor = None
     gs.active_altar_state = None
