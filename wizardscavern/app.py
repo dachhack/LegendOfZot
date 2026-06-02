@@ -5405,7 +5405,8 @@ class WizardsCavernApp(toga.App):
                                             text-shadow: 0 1px 2px #000;">
                                     Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
                                     He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
-                                    Many a bold venturer has ventured in &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
+                                    The cavern seals behind all who enter &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
+                                    Claim the ORB OF ZOT and you alone may break the seal, and escape with all the riches you can carry.
                                 </div>
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
                                             padding: 8px; margin-top: 8px; margin-bottom: 0;
@@ -5987,6 +5988,21 @@ class WizardsCavernApp(toga.App):
                     f"<div class='ameta' style='font-size:12px;color:#BBB;'>{blurb}</div>"
                     f"</div>"
                 )
+            # Endgame test: plant at the boss arena (F50) AND hand the
+            # Tourist the Orb of Zot directly, so the sealed-cavern endgame
+            # (USE the Orb -> nested Wizard's Castle -> escape) can be
+            # exercised without first grinding the Guardian.
+            chips.append(
+                "<div class='taprow altar-act' data-zcmd='tdorb' "
+                "onclick=\"window.__zotTap('tdorb', this)\" "
+                "style='display:block;margin:10px 0 4px;padding:10px 12px;"
+                "line-height:1.35;border:1px solid rgba(255,210,74,0.5);"
+                "background:rgba(58,42,90,0.35);'>"
+                "<div class='aname' style='font-size:16px;color:#FFD24A;'>&#10024; ORB IN HAND (F50)</div>"
+                "<div class='ameta' style='font-size:12px;color:#BBB;'>"
+                "Boss arena, plus the Orb of Zot already in your pack. Open inventory and USE it to dive straight into the Wizard's Castle endgame.</div>"
+                "</div>"
+            )
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 8px; color: #FFD700; text-align: center;">

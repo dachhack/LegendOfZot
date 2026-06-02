@@ -4038,6 +4038,17 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
         # intervening floors on demand so retreat-up via stairs lands
         # on a fully mapped F<n-1>. F1 short-circuits the warp.
         choice = (cmd or '').lower().strip()
+        if choice == 'tdorb':
+            # Endgame test: plant at the boss arena and hand the Tourist the
+            # Orb of Zot directly, so they can USE it from the inventory and
+            # dive into the nested Wizard's Castle without killing the Guardian.
+            plant_player_at_depth(player_character, my_tower, 50)
+            from .orb_game import grant_orb_of_zot
+            grant_orb_of_zot(player_character)
+            add_log(f"{COLOR_PURPLE}[TOURIST] Planted at F50 with the Orb of Zot in hand. "
+                    f"Open your inventory and USE it to test the sealed-cavern endgame.{COLOR_RESET}")
+            gs.prompt_cntl = "game_loop"
+            return True
         if choice.startswith('td') and choice[2:].isdigit():
             target = int(choice[2:])
             if not (1 <= target <= 50):
