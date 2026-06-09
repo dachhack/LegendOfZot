@@ -2064,6 +2064,52 @@ def generate_monster_defeat_js(monster_name):
     )
 
 
+def generate_sprite_anim_triggers_js(monster_name, monster_dmg, player_dmg,
+                                     spell_cast, monster_defeated,
+                                     has_dice_rolls=False, has_init_roll=False):
+    """Generate JS to trigger procedural sprite animations synced to the combat timeline."""
+    if not monster_name:
+        return ""
+    safe_id = "ms_" + "".join(ch if ch.isalnum() else "_" for ch in monster_name)
+    init_offset = 1000 if has_init_roll else 0
+    monster_dmg_delay = 1300 + init_offset
+    player_dmg_delay = 3200 + init_offset
+
+    triggers = []
+
+    if spell_cast:
+        element = _spell_visual_element(spell_cast).lower()
+        glow_map = {'fire': '#ff7a3a', 'ice': '#5af0ff', 'frost': '#5af0ff',
+                    'poison': '#44ff44', 'healing': '#44ff44', 'holy': '#ffffa0',
+                    'necrotic': '#88ff88', 'light': '#ffffa0'}
+        gc = glow_map.get(element, '#b46aff')
+        triggers.append(
+            f'setTimeout(function(){{if(window._sprAnim)window._sprAnim.trigger("{safe_id}",window._sprAnim.CAST,{{glowColor:"{gc}"}});}},100);'
+        )
+    elif monster_dmg and monster_dmg > 0:
+        triggers.append(
+            f'setTimeout(function(){{if(window._sprAnim)window._sprAnim.trigger("{safe_id}",window._sprAnim.HIT);}},{monster_dmg_delay});'
+        )
+
+    if player_dmg and player_dmg > 0:
+        triggers.append(
+            f'setTimeout(function(){{if(window._sprAnim)window._sprAnim.trigger("{safe_id}",window._sprAnim.ATTACK);}},{player_dmg_delay - 550});'
+        )
+        triggers.append(
+            f'setTimeout(function(){{if(window._sprAnim)window._sprAnim.trigger("player_sprite",window._sprAnim.HIT);}},{player_dmg_delay});'
+        )
+
+    if monster_defeated:
+        death_delay = gs.DEFEAT_GRAYSCALE_MS + init_offset
+        triggers.append(
+            f'setTimeout(function(){{if(window._sprAnim)window._sprAnim.trigger("{safe_id}",window._sprAnim.DEATH);}},{death_delay});'
+        )
+
+    if not triggers:
+        return ""
+    return '<script>(function(){' + ''.join(triggers) + '})();</script>'
+
+
 # ============================================================
 # SPRITE SYSTEM
 # Sprite sheets, mappings, and rendering functions
@@ -5003,6 +5049,7 @@ class WizardsCavernApp(toga.App):
             gs.music_restart = False
 
         # Extract animation / SFX script bodies (raw JS, no <script> wrapper)
+        _active_name = getattr(gs.active_monster, 'name', None) if getattr(gs, 'active_monster', None) else None
         anim_scripts = []
         for raw in (
             generate_spell_cast_js(gs.last_spell_cast),
@@ -5011,6 +5058,11 @@ class WizardsCavernApp(toga.App):
             generate_dice_roll_js(gs.last_dice_rolls),
             generate_concentration_check_js(gs.last_concentration_roll),
             generate_monster_defeat_js(gs.monster_defeated_anim),
+            generate_sprite_anim_triggers_js(
+                _active_name, gs.last_monster_damage, gs.last_player_damage,
+                gs.last_spell_cast, gs.monster_defeated_anim,
+                bool(gs.last_dice_rolls), has_init,
+            ),
             generate_sfx_js(
                 gs.last_monster_damage, gs.last_player_damage,
                 gs.last_player_blocked, gs.last_player_heal,
@@ -10262,6 +10314,9 @@ class WizardsCavernApp(toga.App):
         log_lines_json = json.dumps(gs.log_lines)
         log_delays_json = json.dumps(gs.consume_log_delays())
 
+        from .sprite_animator import generate_animator_js
+        _sprite_animator_js = generate_animator_js()
+
         # Stats bar lives in the fixed top strip alongside the log.
         # Stash is set in generate_html() right after player_stats_html
         # is built.  On full-bleed screens (splash/intro/death) the
@@ -11516,6 +11571,9 @@ class WizardsCavernApp(toga.App):
                                 inset -2px -2px 0 rgba(120,200,110,0.4);
                 }}
             </style>
+            <script>
+                {_sprite_animator_js}
+            </script>
         </head>
         <body class="{body_class}">
             <script>
@@ -11757,6 +11815,8 @@ class WizardsCavernApp(toga.App):
                         // loom fight.
                         var _lo = document.querySelectorAll('.loom-overlay');
                         for (var _i = 0; _i < _lo.length; _i++) _lo[_i].remove();
+                        // Prune dead sprite animators before swapping content
+                        if (window._sprAnim) window._sprAnim.cleanup();
                         ca.innerHTML = p.contentHtml;
                         // Re-execute inline <script> tags from new content
                         var inner = ca.querySelectorAll('script');
@@ -11877,6 +11937,7 @@ class WizardsCavernApp(toga.App):
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
+            {generate_sprite_anim_triggers_js(getattr(gs.active_monster, 'name', None) if getattr(gs, 'active_monster', None) else None, gs.last_monster_damage, gs.last_player_damage, gs.last_spell_cast, gs.monster_defeated_anim, bool(gs.last_dice_rolls), bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
             {music_js}
             {generate_sfx_js(gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, gs.last_player_status, gs.last_monster_status, gs.last_spell_cast, gs.last_concentration_roll, gs.monster_defeated_anim, gs.sfx_event, gs.music_enabled, bool(gs.last_dice_rolls), bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
         </body>
