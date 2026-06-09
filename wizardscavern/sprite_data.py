@@ -160,10 +160,18 @@ def generate_monster_sprite_html(monster_name, seed=None, size=64, loom=False, f
             + _vib + _flash +
             '}'
         )
+    # Register with the procedural animator so the sprite breathes/reacts
+    try:
+        from .sprite_animator import get_monster_feel, generate_register_js
+        _feel = get_monster_feel(monster_name)
+        anim_register_js = generate_register_js(safe_id, _feel)
+    except Exception:
+        anim_register_js = ''
+
     from .sprites.pool import render_sprite_canvas
     return render_sprite_canvas(
         safe_id, SIZE, img_uri, "display:block;margin:2px auto;",
-        onload_extra=f"{loom_js}{flourish_js}", wrap_id=safe_id,
+        onload_extra=f"{loom_js}{flourish_js}{anim_register_js}", wrap_id=safe_id,
         wrap_style="position:relative;display:inline-block;overflow:visible;")
 
 
@@ -256,8 +264,16 @@ def generate_player_sprite_html(race, armor_state='none', seed=None, sprite_pid=
 
     SIZE = 64
     img_uri = "data:image/webp;base64," + img_b64
+
+    try:
+        from .sprite_animator import generate_register_js
+        anim_register_js = generate_register_js("player_sprite", "default")
+    except Exception:
+        anim_register_js = ''
+
     from .sprites.pool import render_sprite_canvas
     return render_sprite_canvas(
         "player_sprite", SIZE, img_uri, "display:block;margin:4px auto;",
+        onload_extra=anim_register_js,
         wrap_id="player_sprite",
         wrap_style="position:relative;display:inline-block;overflow:visible;")
