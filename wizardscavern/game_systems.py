@@ -2334,6 +2334,68 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         else:
             add_log(f"{COLOR_YELLOW}Invalid command. Use 'u [number]' to use, 'e [number]' to equip, 'm' for spells, 'j' for journal, 'a' for achievements, 'x' to exit.{COLOR_RESET}")
 
+# Room types safe to auto-walk THROUGH during tap-to-travel: entering them
+# leaves prompt_cntl as "game_loop" (see _trigger_room_interaction). Every
+# other type opens an interaction mode on entry, so it may only ever be the
+# travel DESTINATION -- never an intermediate step the player didn't ask for.
+_TRAVEL_PASS_THROUGH = {'.', 'E'}
+
+
+def find_travel_path(floor, start, goal):
+    """BFS shortest path for tap-to-travel over DISCOVERED rooms.
+
+    `start` and `goal` are (x, y) tuples. Returns the full path
+    [(x, y), ...] including both endpoints, or None if unreachable.
+
+    Rules (fog-of-war honest, interruption safe):
+      - intermediate steps must be discovered pass-through rooms
+        (_TRAVEL_PASS_THROUGH) -- travel never drags the player through
+        a monster/vendor/warp room they didn't tap;
+      - the goal may be any discovered non-wall room (walking TO a chest
+        or monster is exactly what the tap means), OR an undiscovered
+        cell: the fog frontier is tappable for exploration, entered only
+        as the FINAL step (if it turns out to be a wall, move_player just
+        reports the wall and travel stops -- no information leaked);
+      - no routing THROUGH the fog.
+    """
+    from collections import deque
+
+    gx, gy = goal
+    if not (0 <= gx < floor.cols and 0 <= gy < floor.rows):
+        return None
+    goal_room = floor.grid[gy][gx]
+    if goal_room.discovered and goal_room.room_type == floor.wall_char:
+        return None  # a known wall is never a destination
+    if start == goal:
+        return [start]
+
+    prev = {start: None}
+    queue = deque([start])
+    while queue:
+        x, y = queue.popleft()
+        for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)):
+            nx, ny = x + dx, y + dy
+            if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                continue
+            if (nx, ny) in prev:
+                continue
+            if (nx, ny) == (gx, gy):
+                path = [(nx, ny)]
+                cur = (x, y)
+                while cur is not None:
+                    path.append(cur)
+                    cur = prev[cur]
+                return list(reversed(path))
+            room = floor.grid[ny][nx]
+            if not room.discovered:
+                continue
+            if room.room_type not in _TRAVEL_PASS_THROUGH:
+                continue
+            prev[(nx, ny)] = (x, y)
+            queue.append((nx, ny))
+    return None
+
+
 def move_player_randomly(player_character, my_tower):
     """
     Moves the player in a random valid direction, updating player_character's position.
@@ -3182,6 +3244,10 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         return True # Indicating a successful move
     else:
         add_log("You hit a wall!")
+        # Bump-reveal: you touched it, so it shows on the map. Also clears
+        # any stale frontier dot the tap-to-travel map drew over this cell.
+        if 0 <= new_x < current_floor.cols and 0 <= new_y < current_floor.rows:
+            current_floor.grid[new_y][new_x].discovered = True
         return False # Indicating no move
 
 def process_warp_action(player_character, my_tower, cmd, floor_params_ref):

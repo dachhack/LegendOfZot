@@ -2353,127 +2353,203 @@ def _render_player_inv_html(tap_prefix):
     return html + "</div>"
 
 
+def _room_glyph_css(room):
+    """Return (glyph, color_css) for one discovered room on the map.
+
+    Shared by both zoom levels so a room always looks the same whether
+    it's a 19px overview dot or a 36px tappable tile."""
+    content = room.room_type
+    if content == '#' and room.properties.get('ore_vein_detected'):
+        # Detected ore vein (dwarves, or humans with Stonelore):
+        # distinct glyph + amber tint
+        return '%', "color: #B8860B;"
+    if content == '#':
+        return content, "color: #555;"
+    if content == '.':
+        return content, "color: #888;"
+    if content in ['E', 'D', 'U']:
+        return content, "color: #4CAF50;"
+    if content == 'V':
+        return content, "color: #FFD700;"
+    if content == 'M':
+        # Monster room - red
+        if room.properties.get('is_champion'):
+            return content, "color: #FF0000; font-weight: bold; text-shadow: 0 0 3px #FF0000;"
+        return content, "color: #F44336;"
+    if content == 'W':
+        # Wandering monster - orange to distinguish from M
+        return content, "color: #FF9800;"
+    if content == 'C':
+        if room.properties.get('is_legendary'):
+            return content, "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
+        return content, "color: #03A9F4;"
+    if content == 'A':
+        return content, "color: #FFEB3B;"
+    if content == 'P':
+        if room.properties.get('is_ancient'):
+            return content, "color: #00FFFF; font-weight: bold; text-shadow: 0 0 3px #00FFFF;"
+        return content, "color: #03A9F4;"
+    if content == 'L':
+        if room.properties.get('has_codex'):
+            return content, "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
+        return content, "color: #E040FB;"
+    if content == 'N':
+        if room.properties.get('is_master'):
+            return content, "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
+        return content, "color: #CE93D8;"  # Light purple for locked dungeons (distinct from M red and W orange)
+    if content == 'T':
+        if room.properties.get('is_cursed'):
+            return content, "color: #E040FB; font-weight: bold; text-shadow: 0 0 3px #E040FB;"
+        return content, "color: #8B4513;"  # Brown for tombs
+    if content == 'G':
+        if room.properties.get('has_world_tree'):
+            return content, "color: #00FF00; font-weight: bold; text-shadow: 0 0 3px #00FF00;"
+        if room.properties.get('is_fey_garden'):
+            return content, "color: #FF00FF; font-weight: bold; text-shadow: 0 0 3px #FF00FF;"
+        return content, "color: #4CAF50;"  # Green for magical gardens
+    if content == 'O':
+        return content, "color: #E040FB;"  # Purple for oracle rooms
+    if content == 'B':
+        return content, "color: #FF8C00;"  # Orange for blacksmith
+    if content == 'F':
+        return content, "color: #87CEEB;"  # Sky blue for shrine
+    if content == 'Q':
+        return content, "color: #39FF14;"  # Neon green for alchemist lab
+    if content == 'K':
+        return content, "color: #CD5C5C;"  # Indian red for war room
+    if content == 'X':
+        return content, "color: #D4A017;"  # Gold/amber for taxidermist
+    if content == 'Z':
+        # Puzzle room (Zotle)
+        return content, "color: #E040FB; font-weight: bold; text-shadow: 0 0 3px #E040FB;"
+    return content, "color: #DDD;"
+
+
+# Zoomed viewport dimensions: 9x7 rooms at 36px cells (~342px wide) keeps
+# every room a real touch target (Material/HIG want >=44px incl. spacing)
+# while fitting a phone screen. The viewport follows the player.
+_ZOOM_VIEW_COLS = 9
+_ZOOM_VIEW_ROWS = 7
+_ZOOM_CELL_PX = 36
+_FULL_CELL_PX = 19
+
+
+def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable,
+                    frontier=False):
+    """Render one map cell. Discovered non-wall cells become tap-to-travel
+    targets (cmd 'g:x,y'); modes without travel just swallow the command.
+
+    `frontier` marks an undiscovered cell adjacent to a known room: it
+    renders as a dim dot and is tappable, so exploration is also just
+    "tap where you want to go" (final travel step enters the fog)."""
+    cell_style = (
+        f"display: inline-block; width: {cell_px}px; height: {cell_px}px; "
+        f"line-height: {cell_px}px; text-align: center; vertical-align: top; "
+        f"font-family: monospace; font-size: {font_px}px;"
+    )
+    content = "&nbsp;"
+    tap_attrs = ""
+    if room.discovered or is_player:
+        content, glyph_css = _room_glyph_css(room)
+        cell_style += glyph_css
+        if is_player:
+            cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 3px;"
+        elif tappable and room.room_type != '#':
+            # Visible tile affordance + travel tap
+            cell_style += "background-color: rgba(255,255,255,0.07); border-radius: 4px; cursor: pointer;"
+            tap_attrs = (
+                f" data-zcmd='g:{x},{y}'"
+                f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
+            )
+        if is_target and not is_player:
+            cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
+    elif frontier:
+        content = '·'
+        cell_style += "color: #555;"
+        if tappable:
+            cell_style += "background-color: rgba(255,255,255,0.03); border-radius: 4px; cursor: pointer;"
+            tap_attrs = (
+                f" data-zcmd='g:{x},{y}'"
+                f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
+            )
+        if is_target:
+            cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
+    return f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
+
+
+def _is_frontier(floor, x, y):
+    """True for an undiscovered cell adjacent to a discovered non-wall room
+    — i.e. a place the player can plausibly step next to explore."""
+    for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)):
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < floor.cols and 0 <= ny < floor.rows:
+            n = floor.grid[ny][nx]
+            if n.discovered and n.room_type != floor.wall_char:
+                return True
+    return False
+
+
 def generate_grid_html(floor, player_x, player_y):
-    """Generate the HTML for the dungeon grid/map display."""
-    highlight_coords = (player_y, player_x)
-    grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
+    """Generate the HTML for the dungeon grid/map display.
 
-    for r_idx in range(floor.rows):
-        grid_html += '<div style="height: 19px; white-space: nowrap;">'
-        for c_idx in range(floor.cols):
+    Two zoom levels, toggled by gs.map_view_full (the FULL MAP hud chip):
+
+      - zoomed viewport (default): a player-centered _ZOOM_VIEW_COLS x
+        _ZOOM_VIEW_ROWS window at big 36px cells. Every discovered room
+        is a touch target: tapping queues tap-to-travel ('g:x,y' -> BFS
+        walk, see process_command). Dim chevrons mark edges where the
+        floor continues beyond the viewport.
+      - full-floor overview: the whole grid at 19px cells. Rooms stay
+        tappable (travel works from the overview too), just smaller.
+    """
+    target = getattr(gs, 'travel_target', None)
+
+    if getattr(gs, 'map_view_full', False):
+        view_cols, view_rows = floor.cols, floor.rows
+        col0 = row0 = 0
+        cell_px, font_px = _FULL_CELL_PX, 15
+    else:
+        view_cols = min(_ZOOM_VIEW_COLS, floor.cols)
+        view_rows = min(_ZOOM_VIEW_ROWS, floor.rows)
+        col0 = max(0, min(player_x - view_cols // 2, floor.cols - view_cols))
+        row0 = max(0, min(player_y - view_rows // 2, floor.rows - view_rows))
+        cell_px, font_px = _ZOOM_CELL_PX, 22
+
+    grid_html = (
+        '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;">'
+        '<div style="background-color: #222; display: inline-block; padding: 3px; border-radius: 4px; max-width: 100%;">'
+    )
+    for r_idx in range(row0, row0 + view_rows):
+        grid_html += f'<div style="height: {cell_px}px; white-space: nowrap;">'
+        for c_idx in range(col0, col0 + view_cols):
             room = floor.grid[r_idx][c_idx]
-            cell_style = "display: inline-block; width: 19px; height: 19px; line-height: 19px; text-align: center; vertical-align: top; font-family: monospace; font-size: 15px;"
-            content = "&nbsp;"
-
-            if room.discovered or (r_idx, c_idx) == highlight_coords:
-                content = room.room_type
-                if content == '#' and room.properties.get('ore_vein_detected'):
-                    # Detected ore vein (dwarves, or humans with Stonelore):
-                    # distinct glyph + amber tint
-                    content = '%'
-                    cell_style += "color: #B8860B;"
-                elif content == '#':
-                    cell_style += "color: #555;"
-                elif content == '.':
-                    cell_style += "color: #888;"
-                elif content in ['E', 'D', 'U']:
-                    cell_style += "color: #4CAF50;"
-                elif content == 'V':
-                    cell_style += "color: #FFD700;"
-                elif content == 'M':
-                    # Monster room - red
-                    if room.properties.get('is_champion'):
-                        cell_style += "color: #FF0000; font-weight: bold; text-shadow: 0 0 3px #FF0000;"
-                    else:
-                        cell_style += "color: #F44336;"
-                elif content == 'W':
-                    # Wandering monster - orange to distinguish from M
-                    cell_style += "color: #FF9800;"
-                elif content == 'C':
-                    # Check if this is a legendary chest
-                    if room.properties.get('is_legendary'):
-                        cell_style += "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
-                    else:
-                        cell_style += "color: #03A9F4;"
-                elif content == 'A':
-                    cell_style += "color: #FFEB3B;"
-                elif content == 'P':
-                    # Check if this is ancient waters
-                    if room.properties.get('is_ancient'):
-                        cell_style += "color: #00FFFF; font-weight: bold; text-shadow: 0 0 3px #00FFFF;"
-                    else:
-                        cell_style += "color: #03A9F4;"
-                elif content == 'L':
-                    # Check if this has the Codex
-                    if room.properties.get('has_codex'):
-                        cell_style += "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
-                    else:
-                        cell_style += "color: #E040FB;"
-                elif content == 'N':
-                    # Check if this is a master dungeon
-                    if room.properties.get('is_master'):
-                        cell_style += "color: #FFD700; font-weight: bold; text-shadow: 0 0 3px #FFD700;"
-                    else:
-                        cell_style += "color: #CE93D8;"  # Light purple for locked dungeons (distinct from M red and W orange)
-                elif content == 'T':
-                    # Check if this is a cursed tomb
-                    if room.properties.get('is_cursed'):
-                        cell_style += "color: #E040FB; font-weight: bold; text-shadow: 0 0 3px #E040FB;"
-                    else:
-                        cell_style += "color: #8B4513;"  # Brown for tombs
-                elif content == 'G':
-                    # Check if this is a world tree or fey garden
-                    if room.properties.get('has_world_tree'):
-                        cell_style += "color: #00FF00; font-weight: bold; text-shadow: 0 0 3px #00FF00;"
-                    elif room.properties.get('is_fey_garden'):
-                        cell_style += "color: #FF00FF; font-weight: bold; text-shadow: 0 0 3px #FF00FF;"
-                    else:
-                        cell_style += "color: #4CAF50;"  # Green for magical gardens
-                elif content == 'O':
-                    cell_style += "color: #E040FB;"  # Purple for oracle rooms
-                elif content == 'B':
-                    cell_style += "color: #FF8C00;"  # Orange for blacksmith
-                elif content == 'F':
-                    cell_style += "color: #87CEEB;"  # Sky blue for shrine
-                elif content == 'Q':
-                    cell_style += "color: #39FF14;"  # Neon green for alchemist lab
-                elif content == 'K':
-                    cell_style += "color: #CD5C5C;"  # Indian red for war room
-                elif content == 'X':
-                    cell_style += "color: #D4A017;"  # Gold/amber for taxidermist
-                elif content == 'X':
-                    cell_style += "color: #D2691E;"  # Saddle brown for taxidermist
-                elif content == 'Z':
-                    # Puzzle room (Zotle)
-                    cell_style += "color: #E040FB; font-weight: bold; text-shadow: 0 0 3px #E040FB;"
-                else:
-                    cell_style += "color: #DDD;"
-
-                if (r_idx, c_idx) == highlight_coords:
-                    cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 2px;"
-
-            grid_html += f'<span class="zmap-cell" style="{cell_style}">{content}</span>'
+            grid_html += _grid_cell_html(
+                room, c_idx, r_idx,
+                is_player=(r_idx, c_idx) == (player_y, player_x),
+                is_target=(target == (c_idx, r_idx)),
+                cell_px=cell_px, font_px=font_px, tappable=True,
+                frontier=(not room.discovered
+                          and _is_frontier(floor, c_idx, r_idx)),
+            )
         grid_html += "</div>"
     grid_html += "</div></div>"
 
-    # Four triangular tap zones tile the entire map area (X-quadrant
-    # split through the diagonals).  Tapping the top triangle steps n,
-    # bottom = s, left = w, right = e.  Walls just log "You hit a wall!"
-    # — we don't dim the affordance.  Small ▲▼◄► glyphs render at the
-    # midpoint of each edge as visual hints.
-    triangles = [
-        ('n', '▲', 'mv-n'),
-        ('s', '▼', 'mv-s'),
-        ('w', '◄', 'mv-w'),
-        ('e', '►', 'mv-e'),
-    ]
-    tri_html = ""
-    for cmd_dir, glyph, cls in triangles:
-        tri_html += (
-            f"<div class='mvtri {cls}' data-zcmd='{cmd_dir}' "
-            f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
-        )
-    return f"<div class='mvframe'><div class='mvmap'>{grid_html}{tri_html}</div></div>"
+    # Dim chevrons where the floor continues beyond the zoomed viewport.
+    edge_html = ""
+    if not getattr(gs, 'map_view_full', False):
+        edge_marks = [
+            (row0 > 0, "top:-1px;left:50%;transform:translateX(-50%);", '▲'),
+            (row0 + view_rows < floor.rows, "bottom:-1px;left:50%;transform:translateX(-50%);", '▼'),
+            (col0 > 0, "left:-1px;top:50%;transform:translateY(-50%);", '◄'),
+            (col0 + view_cols < floor.cols, "right:-1px;top:50%;transform:translateY(-50%);", '►'),
+        ]
+        for show, pos_css, glyph in edge_marks:
+            if show:
+                edge_html += (
+                    f"<div style='position:absolute;{pos_css}color:#777;"
+                    f"font-size:10px;pointer-events:none;z-index:2;'>{glyph}</div>"
+                )
+    return f"<div class='mvframe'><div class='mvmap'>{grid_html}{edge_html}</div></div>"
 
 
 
@@ -2570,6 +2646,11 @@ _MODES_WITH_NUMPAD = frozenset()
 # puzzle_mode + player_name, but those have moved to body-only HTML
 # flows.  Empty for now; kept as a frozenset so future modes can opt in.
 _MODES_WITH_INPUT_FIELD = frozenset()
+
+# Modes where tap-to-travel (map tap 'g:x,y') is honoured: the map is
+# visible AND the player is free to walk (their hints advertise
+# n/s/e/w = move).  Everywhere else a map tap is swallowed silently.
+_TRAVEL_MODES = frozenset({'game_loop', 'chest_mode', 'pool_mode', 'library_mode'})
 
 
 class WizardsCavernApp(toga.App):
@@ -3876,6 +3957,12 @@ class WizardsCavernApp(toga.App):
             "<div class='hudchip' data-zcmd='i' "
             "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
         )
+        # Map zoom toggle: zoomed tappable viewport <-> whole-floor overview.
+        zoom_label = "ZOOM IN" if getattr(gs, 'map_view_full', False) else "FULL MAP"
+        chips.append(
+            f"<div class='hudchip' data-zcmd='zm' "
+            f"onclick=\"window.__zotTap('zm', this)\">{zoom_label}</div>"
+        )
         if lantern_item is not None:
             # Bigger sprite (size=32) so the lantern is actually readable
             # in the chip.
@@ -4718,6 +4805,28 @@ class WizardsCavernApp(toga.App):
         if not self._check_confirm_commit(cmd):
             return
 
+        # Any explicit player input cancels an in-flight tap-to-travel;
+        # travel's own steps go through move_player directly, never here,
+        # so this only ever fires on real taps/keys.
+        gs.travel_target = None
+
+        # Map tap: 'g:<x>,<y>' queues tap-to-travel toward that room.
+        # Only honoured in modes with free movement; the map also renders
+        # in combat/flee/etc., where a stray tap must do nothing.
+        if isinstance(cmd, str) and cmd.startswith('g:'):
+            if gs.prompt_cntl in _TRAVEL_MODES:
+                try:
+                    tx_s, ty_s = cmd[2:].split(',', 1)
+                    self._start_travel(int(tx_s), int(ty_s))
+                except (ValueError, AttributeError):
+                    pass
+            return
+
+        # Map zoom toggle (FULL MAP / ZOOM IN hud chip).
+        if cmd == 'zm' and gs.prompt_cntl in _TRAVEL_MODES:
+            gs.map_view_full = not getattr(gs, 'map_view_full', False)
+            return
+
         if cmd == 'q':
             gs.previous_prompt_cntl = gs.prompt_cntl
             gs.prompt_cntl = "confirm_quit"
@@ -4965,6 +5074,75 @@ class WizardsCavernApp(toga.App):
                 # prompt_cntl to death_screen / combat_mode internally. Don't
                 # second-guess the result; it already reflects the intent.
                 move_player(gs.player_character, gs.my_tower, cmd)
+
+    # ------------------------------------------------------------------
+    # Tap-to-travel: tap a discovered room on the map, auto-walk there.
+    # ------------------------------------------------------------------
+    _TRAVEL_STEP_SEC = 0.22  # pace between auto-steps (fast walk, still readable)
+
+    def _start_travel(self, tx, ty):
+        """Validate a map tap and kick off the auto-walk toward (tx, ty)."""
+        from .game_systems import find_travel_path
+        pc = gs.player_character
+        if pc is None or (tx, ty) == (pc.x, pc.y):
+            return
+        floor = gs.my_tower.floors[pc.z]
+        path = find_travel_path(floor, (pc.x, pc.y), (tx, ty))
+        if path is None:
+            # Fog, a wall, or no safe corridor of plain rooms leads there.
+            add_log(f"{COLOR_YELLOW}No clear path there.{COLOR_RESET}")
+            return
+        gs.travel_target = (tx, ty)
+        gs.travel_floor_z = pc.z
+        # Step budget: path length + slack. Confusion re-routes every step,
+        # so without a cap a badly confused traveller could wander forever.
+        gs.travel_steps_left = len(path) + 6
+        self._travel_step()
+
+    def _travel_step(self):
+        """Walk one room toward gs.travel_target, then reschedule.
+
+        Re-paths every step (BFS is cheap on an 18x21 grid), so warps,
+        confusion stumbles, and newly revealed walls self-correct. Stops
+        the moment anything interrupts: arrival, a mode change (combat,
+        chest, stairs...), a failed move (webbed), floor change, or the
+        step budget running out.
+        """
+        from .game_systems import find_travel_path
+        target = getattr(gs, 'travel_target', None)
+        if target is None:
+            return
+        pc = gs.player_character
+        if (pc is None
+                or gs.prompt_cntl not in _TRAVEL_MODES
+                or pc.z != gs.travel_floor_z
+                or gs.travel_steps_left <= 0):
+            gs.travel_target = None
+            return
+        if (pc.x, pc.y) == target:
+            gs.travel_target = None
+            return
+        floor = gs.my_tower.floors[pc.z]
+        path = find_travel_path(floor, (pc.x, pc.y), target)
+        if not path or len(path) < 2:
+            gs.travel_target = None
+            return
+        nx, ny = path[1]
+        direction = {(0, -1): 'n', (0, 1): 's', (-1, 0): 'w', (1, 0): 'e'}[
+            (nx - pc.x, ny - pc.y)]
+        gs.travel_steps_left -= 1
+        moved = move_player(pc, gs.my_tower, direction)
+        if (not moved
+                or (pc.x, pc.y) == target
+                or gs.prompt_cntl not in _TRAVEL_MODES):
+            gs.travel_target = None
+        self.render()
+        if getattr(gs, 'travel_target', None) is not None:
+            import threading
+            threading.Timer(
+                self._TRAVEL_STEP_SEC,
+                lambda: self.app.loop.call_soon_threadsafe(self._travel_step),
+            ).start()
 
     def _schedule_initiative_strike(self):
         """Auto-fire monster's initiative attack after init dice animation plays."""
@@ -10192,7 +10370,7 @@ class WizardsCavernApp(toga.App):
                 current_floor = gs.my_tower.floors[gs.player_character.z]
                 current_room = current_floor.grid[gs.player_character.y][gs.player_character.x]
 
-                base_commands = "n/s/e/w = move | i = inventory"
+                base_commands = "tap a room = walk there | i = inventory"
 
                 # Add lantern command if player has one
                 if has_lantern:
@@ -10206,11 +10384,11 @@ class WizardsCavernApp(toga.App):
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
-                    current_commands_text = "n/s/e/w = move | u = up | i = inventory"
+                    current_commands_text = "tap a room = walk | u = up | i = inventory"
                     if has_lantern:
                         current_commands_text += " | l = lantern"
                 elif current_room.room_type == 'D':
-                    current_commands_text = "n/s/e/w = move | d = down | i = inventory"
+                    current_commands_text = "tap a room = walk | d = down | i = inventory"
                     if has_lantern:
                         current_commands_text += " | l = lantern"
                 else:
@@ -11100,8 +11278,9 @@ class WizardsCavernApp(toga.App):
                     user-select: none;
                 }}
                 /* Map frame — centers the grid horizontally on screen.
-                   Tap-to-move lives on four triangular overlays that tile
-                   the entire map (X-split through the diagonals). */
+                   Tap-to-move: every discovered room in the zoomed
+                   viewport is a tap-to-travel target (see
+                   generate_grid_html); .armed flashes briefly on tap. */
                 .mvframe {{
                     display: block;
                     width: fit-content;
@@ -11110,48 +11289,8 @@ class WizardsCavernApp(toga.App):
                 .mvmap {{
                     position: relative;
                 }}
-                .mvtri {{
-                    position: absolute;
-                    top: 0; left: 0; right: 0; bottom: 0;
-                    display: flex;
-                    cursor: pointer;
-                    color: rgba(76,175,80,0.25);
-                    font-family: monospace;
-                    font-size: 12px;
-                    font-weight: bold;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    -webkit-tap-highlight-color: transparent;
-                    background: transparent;
-                    z-index: 2;
-                }}
-                .mvtri.mv-n {{
-                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
-                    clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
-                    align-items: flex-start;
-                    justify-content: center;
-                    padding-top: 4px;
-                }}
-                .mvtri.mv-s {{
-                    -webkit-clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
-                    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
-                    align-items: flex-end;
-                    justify-content: center;
-                    padding-bottom: 4px;
-                }}
-                .mvtri.mv-w {{
-                    -webkit-clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
-                    clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding-left: 4px;
-                }}
-                .mvtri.mv-e {{
-                    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
-                    clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
-                    align-items: center;
-                    justify-content: flex-end;
-                    padding-right: 4px;
+                .zmap-cell.armed {{
+                    filter: brightness(1.8);
                 }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the

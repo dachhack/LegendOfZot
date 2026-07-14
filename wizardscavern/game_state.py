@@ -419,6 +419,13 @@ pre_round_monster_max_hp = None   # Monster max HP snapshot (survives active_mon
 pre_round_player_hp = None        # Player HP before this combat round
 last_spell_cast = None            # Spell object from the last cast (for animation rendering)
 monster_acts_first = False        # Initiative result: True if monster swings before player this round
+# Tap-to-travel state (map taps queue a destination; app._travel_step walks
+# there one room at a time, re-pathing every step and stopping the moment
+# anything interrupts). Transient -- never saved.
+travel_target = None              # (x, y) travel destination, or None
+travel_floor_z = None             # Floor the travel was started on (abort on floor change)
+travel_steps_left = 0             # Step budget guard (confusion can't loop travel forever)
+map_view_full = False             # False = zoomed viewport (default), True = whole-floor overview
 monster_initiative_pending = False # True after init when monster won; triggers auto-attack before player acts
 
 # ============================================================================
