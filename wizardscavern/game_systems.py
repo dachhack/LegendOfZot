@@ -2334,34 +2334,46 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         else:
             add_log(f"{COLOR_YELLOW}Invalid command. Use 'u [number]' to use, 'e [number]' to equip, 'm' for spells, 'j' for journal, 'a' for achievements, 'x' to exit.{COLOR_RESET}")
 
-# Room types safe to auto-walk THROUGH during tap-to-travel.
+# Rooms tap-to-travel may walk THROUGH, with a step cost. Travel uses
+# Dijkstra over these costs, so it PREFERS plain corridors and only cuts
+# through a prompt room when the detour would be longer than the nuisance
+# (a cost-4 room is worth crossing only to save 4+ plain steps).
 #
-# Reviewed per type (b484):
-#   '.' plain floor / 'E' entrance -- no interaction at all.
-#   'U'/'D' stairs -- entering only opens a harmless info prompt (no cost,
-#       no risk, and the stairs modes accept movement), so travel may cross
-#       them; on tunnel floors a mid-corridor stairwell would otherwise
-#       block every route past it. Ascending/descending still requires an
-#       explicit u/d tap.
-#   'C' chests need no entry here: looting converts the room to '.', so a
+# Reviewed per type (b484/b485):
+#   cost 1 -- '.' floor / 'E' entrance: no interaction at all.
+#   cost 2 -- 'U'/'D' stairs: harmless info prompt; ascending still takes
+#       an explicit u/d tap.
+#   cost 4 -- the prompt-only decision rooms (altar, pool, library,
+#       dungeon door, tomb, garden, oracle, blacksmith, shrine, alchemist,
+#       war room, taxidermist): entering just shows their dialog, nothing
+#       fires without another tap, and spent ones drop straight back to
+#       game_loop. Crossing one mid-travel flashes its prompt and walks on.
+#   'C' chests need no entry: looting converts the room to '.', so a
 #       spent chest stops blocking by itself.
-#   Everything else stays DESTINATION-ONLY on purpose: 'M' (fight) and
-#   'W' (teleport) are dangerous, 'V' opens a shop, and A/P/L/O/B/F/Q/K/
-#   X/T/G/N/Z all pop persistent interaction dialogs -- travel must never
-#   drag the player through a decision they didn't tap.
-_TRAVEL_PASS_THROUGH = {'.', 'E', 'U', 'D'}
+#   NEVER pass-through: 'M' starts a fight, 'W' can teleport you, 'V'
+#       opens a shop, 'Z' opens the puzzle -- travel must not volunteer
+#       the player for any of those.
+_TRAVEL_PASS_COST = {
+    '.': 1, 'E': 1,
+    'U': 2, 'D': 2,
+    'A': 4, 'P': 4, 'L': 4, 'N': 4, 'T': 4, 'G': 4,
+    'O': 4, 'B': 4, 'F': 4, 'Q': 4, 'K': 4, 'X': 4,
+}
+_TRAVEL_PASS_THROUGH = frozenset(_TRAVEL_PASS_COST)
 
 
 def find_travel_path(floor, start, goal):
-    """BFS shortest path for tap-to-travel over DISCOVERED rooms.
+    """Cheapest tap-to-travel path over DISCOVERED rooms (Dijkstra).
 
     `start` and `goal` are (x, y) tuples. Returns the full path
     [(x, y), ...] including both endpoints, or None if unreachable.
 
     Rules (fog-of-war honest, interruption safe):
-      - intermediate steps must be discovered pass-through rooms
-        (_TRAVEL_PASS_THROUGH) -- travel never drags the player through
-        a monster/vendor/warp room they didn't tap;
+      - intermediate steps must be discovered pass-through rooms, and
+        each type has a cost (_TRAVEL_PASS_COST) so routes prefer plain
+        corridors and only cut through stairs/prompt rooms when the
+        detour is genuinely longer; monsters/warps/vendors/puzzles are
+        never intermediates;
       - the goal may be any discovered non-wall room (walking TO a chest
         or monster is exactly what the tap means), OR an undiscovered
         cell: the fog frontier is tappable for exploration, entered only
@@ -2369,7 +2381,7 @@ def find_travel_path(floor, start, goal):
         reports the wall and travel stops -- no information leaked);
       - no routing THROUGH the fog.
     """
-    from collections import deque
+    import heapq
 
     gx, gy = goal
     if not (0 <= gx < floor.cols and 0 <= gy < floor.rows):
@@ -2380,31 +2392,42 @@ def find_travel_path(floor, start, goal):
     if start == goal:
         return [start]
 
+    dist = {start: 0}
     prev = {start: None}
-    queue = deque([start])
-    while queue:
-        x, y = queue.popleft()
+    heap = [(0, start)]
+    while heap:
+        d, (x, y) = heapq.heappop(heap)
+        if d > dist.get((x, y), float('inf')):
+            continue
+        if (x, y) == (gx, gy):
+            break  # cheapest route to the goal settled
         for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)):
             nx, ny = x + dx, y + dy
             if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
                 continue
-            if (nx, ny) in prev:
-                continue
             if (nx, ny) == (gx, gy):
-                path = [(nx, ny)]
-                cur = (x, y)
-                while cur is not None:
-                    path.append(cur)
-                    cur = prev[cur]
-                return list(reversed(path))
-            room = floor.grid[ny][nx]
-            if not room.discovered:
-                continue
-            if room.room_type not in _TRAVEL_PASS_THROUGH:
-                continue
-            prev[(nx, ny)] = (x, y)
-            queue.append((nx, ny))
-    return None
+                step_cost = 1  # entering the goal is always allowed
+            else:
+                room = floor.grid[ny][nx]
+                if not room.discovered:
+                    continue
+                step_cost = _TRAVEL_PASS_COST.get(room.room_type)
+                if step_cost is None:
+                    continue
+            nd = d + step_cost
+            if nd < dist.get((nx, ny), float('inf')):
+                dist[(nx, ny)] = nd
+                prev[(nx, ny)] = (x, y)
+                heapq.heappush(heap, (nd, (nx, ny)))
+
+    if (gx, gy) not in prev:
+        return None
+    path = [(gx, gy)]
+    cur = prev[(gx, gy)]
+    while cur is not None:
+        path.append(cur)
+        cur = prev[cur]
+    return list(reversed(path))
 
 
 # ── Monster movement: notice / chase / wander ────────────────────────────
