@@ -3583,6 +3583,9 @@ def process_taxidermist_action(player_character, my_tower, cmd):
     elif cmd == 'x':
         # Exit taxidermist interaction back to normal room mode
         gs.prompt_cntl = "move"
+    elif cmd in ['n', 's', 'e', 'w']:
+        # Walk away — same as every other room mode (map taps route here)
+        move_player(player_character, my_tower, cmd)
 
 
 def process_shard_vault_action(player_character, my_tower, cmd):

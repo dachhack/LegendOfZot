@@ -2648,9 +2648,24 @@ _MODES_WITH_NUMPAD = frozenset()
 _MODES_WITH_INPUT_FIELD = frozenset()
 
 # Modes where tap-to-travel (map tap 'g:x,y') is honoured: the map is
-# visible AND the player is free to walk (their hints advertise
-# n/s/e/w = move).  Everywhere else a map tap is swallowed silently.
-_TRAVEL_MODES = frozenset({'game_loop', 'chest_mode', 'pool_mode', 'library_mode'})
+# visible AND walking away is part of the room's verb set (the removed
+# tap-triangles used to be the touch affordance for exactly that).
+# Travel steps call move_player directly — NOT the mode's command
+# table, where direction letters double as room verbs ('s' at an altar
+# means sacrifice) — and _travel_step closes the room dialogs a manual
+# move would have closed.  Everywhere else a map tap is swallowed
+# silently — combat, flee, aiming modes (flare/mine/foresight), warp
+# y/n prompts, etc.
+_TRAVEL_MODES = frozenset({
+    'game_loop',
+    'chest_mode', 'pool_mode', 'library_mode', 'altar_mode',
+    'dungeon_mode', 'dungeon_unlocked_mode', 'tomb_mode',
+    'garden_mode', 'fey_garden_mode', 'oracle_mode',
+    'blacksmith_mode', 'shrine_mode', 'alchemist_mode',
+    'war_room_mode', 'taxidermist_mode', 'shard_vault_mode',
+    'towel_action_mode', 'vault_warp_mode',
+    'stairs_up_mode', 'stairs_down_mode',
+})
 
 
 class WizardsCavernApp(toga.App):
@@ -4806,7 +4821,7 @@ class WizardsCavernApp(toga.App):
             return
 
         # Any explicit player input cancels an in-flight tap-to-travel;
-        # travel's own steps go through move_player directly, never here,
+        # travel's own steps call move_player directly, never this method,
         # so this only ever fires on real taps/keys.
         gs.travel_target = None
 
@@ -5131,6 +5146,13 @@ class WizardsCavernApp(toga.App):
         direction = {(0, -1): 'n', (0, 1): 's', (-1, 0): 'w', (1, 0): 'e'}[
             (nx - pc.x, ny - pc.y)]
         gs.travel_steps_left -= 1
+        # Step via move_player DIRECTLY — never through the mode's command
+        # table, where direction letters double as room verbs ('s' at an
+        # altar means SACRIFICE, 'u' at a dungeon means unlock...). Close
+        # the two room dialogs whose mode handlers would have closed them
+        # on a manual move; walking away always dismisses a dialog.
+        gs.altar_action = None
+        gs.active_towel_item = None
         moved = move_player(pc, gs.my_tower, direction)
         if (not moved
                 or (pc.x, pc.y) == target
