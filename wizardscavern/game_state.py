@@ -415,6 +415,7 @@ last_player_damage_badge = None   # Badge on damage dealt TO player
 # Pre-round HP snapshots: used to render health bars at their pre-damage values
 # so the bar doesn't drop until after the damage animation plays.
 pre_round_monster_hp = None       # Monster HP before this combat round
+pre_round_monster_max_hp = None   # Monster max HP snapshot (survives active_monster clearing on a kill)
 pre_round_player_hp = None        # Player HP before this combat round
 last_spell_cast = None            # Spell object from the last cast (for animation rendering)
 monster_acts_first = False        # Initiative result: True if monster swings before player this round

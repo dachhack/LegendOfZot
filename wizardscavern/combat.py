@@ -374,6 +374,7 @@ def process_combat_action(player_character, my_tower, cmd):
     # DON'T reset monster_acts_first here — it persists from the init roll
     # Snapshot HP BEFORE any damage so the render can show pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
+    gs.pre_round_monster_max_hp = gs.active_monster.max_health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
 
     if cmd == "init":
@@ -1731,6 +1732,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
     gs.last_concentration_roll = None
     # Snapshot HP BEFORE any damage so the render shows pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
+    gs.pre_round_monster_max_hp = gs.active_monster.max_health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
 
     _main()

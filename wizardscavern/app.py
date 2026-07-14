@@ -7546,7 +7546,7 @@ class WizardsCavernApp(toga.App):
 
             # Compact Monster Info (same as combat_mode compact style)
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
+                <div id="monster_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
                     <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -7571,7 +7571,7 @@ class WizardsCavernApp(toga.App):
                 sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
+                <div id="player_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -7676,7 +7676,7 @@ class WizardsCavernApp(toga.App):
 
             # Compact Monster Info
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
+                <div id="monster_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; {threat['panel_css']} margin-bottom: 4px;">
                     <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -7750,7 +7750,7 @@ class WizardsCavernApp(toga.App):
                 sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
+                <div id="player_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -7836,6 +7836,10 @@ class WizardsCavernApp(toga.App):
             # Reuse the threat styling from the fight so the defeated foe keeps
             # its size + fierce box during the victory/defeat animation.
             _v_threat = getattr(gs, 'combat_threat_style', None) or {}
+            # Reuse the fight's anim token (read, don't bump: active_monster is
+            # already None) so the panels don't replay their entrance pop when
+            # the view flips from combat to victory.
+            _anim_tok = getattr(gs, 'combat_anim_token', 0)
             # Cap the defeated sprite so it fits the box without clipping -- the
             # defeat grayscale runs on this in-flow canvas, so we don't mount
             # the over-the-HUD overlay on the victory frame.
@@ -7846,18 +7850,32 @@ class WizardsCavernApp(toga.App):
             _v_panel_loom = ''
             monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z), size=_v_size)
 
+            # Killing-blow HP bar: render the PRE-round HP and let
+            # generate_hp_drain_js drop it to zero at the damage-float
+            # moment (1.3s), matching the attack animation — otherwise the
+            # empty bar spoils the kill before the dice even land.
+            # active_monster is already cleared here, so max HP comes from
+            # the pre-round snapshot. Kills without a damage number (e.g.
+            # status-effect deaths) have no drain scheduled, so show the
+            # empty bar immediately.
+            _v_max_hp = getattr(gs, 'pre_round_monster_max_hp', None) or 1
+            if gs.last_monster_damage > 0 and getattr(gs, 'pre_round_monster_hp', None):
+                _v_hp_bar = health_bar(gs.pre_round_monster_hp, _v_max_hp, width=10)
+            else:
+                _v_hp_bar = health_bar(0, _v_max_hp, width=10)
+
             # Show last damage dealt
             dmg_text = ""
             if gs.last_monster_damage > 0:
                 dmg_text = f'<div style="font-size: 9px; color: #FF5252; font-weight: bold;">-{gs.last_monster_damage} HP</div>'
 
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
+                <div id="monster_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; {_v_panel_css} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
                         <div id="monster_info_box">
                             <div style="color: {_v_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}{_v_label_html}</div>
-                            <div style="font-size: 9px;">{health_bar(0, 1, width=10)}</div>
+                            <div style="font-size: 9px;"><span class="monster-hp-bar">{_v_hp_bar}</span></div>
                             {dmg_text}
                     <div id="monster_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
@@ -7876,7 +7894,7 @@ class WizardsCavernApp(toga.App):
                 sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
+                <div id="player_panel" data-fight="{_anim_tok}" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -7911,7 +7929,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                     <script>(function(){{var vc=document.getElementById("victory_continue");if(vc){{setTimeout(function(){{vc.style.opacity="1";}},{gs.DEFEAT_OVERLAY_MS});}}}})();</script>
                     {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
-                    {generate_hp_drain_js(0, 1, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
+                    {generate_hp_drain_js(0, _v_max_hp, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
@@ -7936,7 +7954,7 @@ class WizardsCavernApp(toga.App):
 
             # Monster info (still there, but you're fleeing)
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {threat['panel_css']} margin-bottom: 5px;">
+                <div id="monster_panel" data-fight="{_anim_tok}" style="position:relative; padding: 4px; border-radius: 4px; {threat['panel_css']} margin-bottom: 5px;">
                     <div style="display:flex; align-items:{threat['row_align']}; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -7959,7 +7977,7 @@ class WizardsCavernApp(toga.App):
                 sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
+                <div id="player_panel" data-fight="{_anim_tok}" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -11818,6 +11836,25 @@ class WizardsCavernApp(toga.App):
                         // Prune dead sprite animators before swapping content
                         if (window._sprAnim) window._sprAnim.cleanup();
                         ca.innerHTML = p.contentHtml;
+                        // Combat panels re-render every round, which would
+                        // restart their combatIn entrance and blink the boxes.
+                        // Replay the entrance only when a NEW fight starts
+                        // (data-fight token changes); within the same fight,
+                        // jump the animations past the entrance so the panels
+                        // stay solid. The negative delay merely phase-shifts
+                        // the infinite pulse animations, so those keep going.
+                        var _mp = document.getElementById('monster_panel');
+                        var _pp = document.getElementById('player_panel');
+                        var _ftok = (_mp && _mp.getAttribute('data-fight')) ||
+                                    (_pp && _pp.getAttribute('data-fight'));
+                        if (_ftok) {{
+                            if (window.__combatEnterTok === _ftok) {{
+                                if (_mp) _mp.style.animationDelay = '-2500ms';
+                                if (_pp) _pp.style.animationDelay = '-2500ms';
+                            }} else {{
+                                window.__combatEnterTok = _ftok;
+                            }}
+                        }}
                         // Re-execute inline <script> tags from new content
                         var inner = ca.querySelectorAll('script');
                         for (var i = 0; i < inner.length; i++) {{

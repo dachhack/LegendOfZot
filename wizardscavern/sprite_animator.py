@@ -372,9 +372,9 @@ SpriteAnimator.prototype._drawSprite = function(s, canvas, t) {
         switch (bh) {
             case BH_IDLE:
                 var breathe = Math.sin(st * 2.2);
-                sy = 1 + 0.045 * breathe * amp;
-                sx = 1 - 0.045 * breathe * amp;
-                offsetY = -1.5 * breathe * amp;
+                sy = 1 + 0.022 * breathe * amp;
+                sx = 1 - 0.022 * breathe * amp;
+                offsetY = -0.6 * breathe * amp;
                 // Floaty hover
                 if (s.feel.hover) {
                     offsetY += Math.sin(st * 1.1) * 3;
