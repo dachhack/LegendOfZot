@@ -2425,12 +2425,12 @@ def _room_glyph_css(room):
     return content, "color: #DDD;"
 
 
-# Zoomed viewport dimensions: 9x7 rooms at 36px cells (~342px wide) keeps
+# Zoomed viewport dimensions: 8x8 rooms at 42px cells (~358px wide) keeps
 # every room a real touch target (Material/HIG want >=44px incl. spacing)
-# while fitting a phone screen. The viewport follows the player.
-_ZOOM_VIEW_COLS = 9
-_ZOOM_VIEW_ROWS = 7
-_ZOOM_CELL_PX = 36
+# while fitting a 360px phone screen edge to edge. Follows the player.
+_ZOOM_VIEW_COLS = 8
+_ZOOM_VIEW_ROWS = 8
+_ZOOM_CELL_PX = 42
 _FULL_CELL_PX = 19
 
 
@@ -2440,8 +2440,8 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
     targets (cmd 'g:x,y'); modes without travel just swallow the command.
 
     `frontier` marks an undiscovered cell adjacent to a known room: it
-    renders as a dim dot and is tappable, so exploration is also just
-    "tap where you want to go" (final travel step enters the fog)."""
+    stays visually BLANK (fog is fog) but is tappable, so exploration is
+    also just "tap where you want to go" (final travel step enters it)."""
     cell_style = (
         f"display: inline-block; width: {cell_px}px; height: {cell_px}px; "
         f"line-height: {cell_px}px; text-align: center; vertical-align: top; "
@@ -2454,7 +2454,10 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
         cell_style += glyph_css
         if is_player:
             cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 3px;"
-        elif tappable and room.room_type != '#':
+        elif room.room_type == '#':
+            # Known walls render as solid mass so tunnels read at a glance
+            cell_style += "background-color: #2e2e2e; border-radius: 3px;"
+        elif tappable:
             # Visible tile affordance + travel tap
             cell_style += "background-color: rgba(255,255,255,0.07); border-radius: 4px; cursor: pointer;"
             tap_attrs = (
@@ -2463,15 +2466,13 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
             )
         if is_target and not is_player:
             cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
-    elif frontier:
-        content = '·'
-        cell_style += "color: #555;"
-        if tappable:
-            cell_style += "background-color: rgba(255,255,255,0.03); border-radius: 4px; cursor: pointer;"
-            tap_attrs = (
-                f" data-zcmd='g:{x},{y}'"
-                f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
-            )
+    elif frontier and tappable:
+        # Undiscovered: blank. No dot, no tile -- just a silent tap zone.
+        cell_style += "cursor: pointer;"
+        tap_attrs = (
+            f" data-zcmd='g:{x},{y}'"
+            f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
+        )
         if is_target:
             cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
     return f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'

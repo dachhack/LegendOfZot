@@ -2396,6 +2396,149 @@ def find_travel_path(floor, start, goal):
     return None
 
 
+# ── Monster movement: notice / chase / wander ────────────────────────────
+# Plain 'M' rooms are live creatures now: after each player move they take
+# a turn. Within AGGRO radius they notice you and chase through corridors
+# (BFS over plain floor); past CHASE radius they lose the scent; unaggro'd
+# monsters sometimes wander a step. A monster that reaches YOUR room
+# ambushes you straight into combat. Anchored monsters never move: bosses,
+# champions, tomb guardians, bug monsters, and dungeon key holders.
+MONSTER_AGGRO_RADIUS = 2       # Manhattan distance at which you're noticed
+MONSTER_CHASE_RADIUS = 6       # beyond this an aggro'd monster gives up
+MONSTER_CHASE_STEP_CHANCE = 0.8  # chaser moves most turns -- you can just outrun it
+MONSTER_WANDER_CHANCE = 0.2    # idle monsters mill about occasionally
+
+_MONSTER_ANCHOR_FLAGS = ('has_zots_guardian', 'is_platino', 'is_champion',
+                         'undead_guardian', 'tomb_elite', 'is_bug_monster',
+                         'is_vault_defender', 'is_vault_chamber')
+
+
+def _mobile_monster_cells(floor):
+    """(row, col) of every M room that is allowed to move."""
+    key_holder_positions = set()
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            room = floor.grid[r][c]
+            if room.room_type == 'N':
+                kh = room.properties.get('key_holder')
+                if kh:
+                    key_holder_positions.add(tuple(kh))  # stored as (x, y)
+    cells = []
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            room = floor.grid[r][c]
+            if room.room_type != 'M':
+                continue
+            if any(room.properties.get(f) for f in _MONSTER_ANCHOR_FLAGS):
+                continue
+            if (c, r) in key_holder_positions:
+                continue
+            cells.append((r, c))
+    return cells
+
+
+def _monster_step_toward(floor, mr, mc, pr, pc):
+    """First step of the shortest corridor path from monster to player.
+
+    Routes only through plain floor rooms; the player's cell is the goal.
+    Returns (row, col) or None if no route within reach."""
+    from collections import deque
+    max_span = MONSTER_CHASE_RADIUS + 2
+    prev = {(mr, mc): None}
+    queue = deque([(mr, mc)])
+    while queue:
+        r, c = queue.popleft()
+        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            nr, nc = r + dr, c + dc
+            if not (0 <= nr < floor.rows and 0 <= nc < floor.cols):
+                continue
+            if (nr, nc) in prev:
+                continue
+            if abs(nr - mr) + abs(nc - mc) > max_span:
+                continue
+            if (nr, nc) == (pr, pc):
+                step = (nr, nc)
+                cur = (r, c)
+                while cur != (mr, mc):
+                    step = cur
+                    cur = prev[cur]
+                return step
+            if floor.grid[nr][nc].room_type != floor.floor_char:
+                continue
+            prev[(nr, nc)] = (r, c)
+            queue.append((nr, nc))
+    return None
+
+
+def _move_monster_room(floor, r1, c1, r2, c2, z):
+    """Relocate an M room by swapping Room objects.
+
+    Properties (incl. the aggro flag) travel WITH the monster; discovery
+    stays with the map CELL, so a monster stepping into a room you've lit
+    shows up -- and one slinking into the dark vanishes. Any live combat
+    instance saved for the old coords (you fled it earlier) moves too, so
+    it can't respawn at full health."""
+    m_room = floor.grid[r1][c1]
+    dest = floor.grid[r2][c2]
+    floor.grid[r2][c2] = m_room
+    floor.grid[r1][c1] = dest
+    m_room.discovered, dest.discovered = dest.discovered, m_room.discovered
+    old_key, new_key = (c1, r1, z), (c2, r2, z)
+    if old_key in gs.encountered_monsters:
+        gs.encountered_monsters[new_key] = gs.encountered_monsters.pop(old_key)
+
+
+def process_monster_turns(player_character, my_tower):
+    """Give every mobile monster on the floor a turn after the player's move."""
+    floor = my_tower.floors[player_character.z]
+    z = player_character.z
+    px, py = player_character.x, player_character.y
+    for (mr, mc) in _mobile_monster_cells(floor):
+        if gs.prompt_cntl != "game_loop":
+            return  # an ambush already started combat -- time stops
+        room = floor.grid[mr][mc]
+        dist = abs(mc - px) + abs(mr - py)
+        if room.properties.get('aggro'):
+            if dist > MONSTER_CHASE_RADIUS:
+                room.properties['aggro'] = False  # lost the scent
+        elif dist <= MONSTER_AGGRO_RADIUS:
+            room.properties['aggro'] = True
+            if room.discovered:
+                add_log(f"{COLOR_RED}Something nearby takes notice of you...{COLOR_RESET}")
+
+        if room.properties.get('aggro'):
+            if random.random() > MONSTER_CHASE_STEP_CHANCE:
+                continue
+            step = _monster_step_toward(floor, mr, mc, py, px)
+            if step is None:
+                continue
+            nr, nc = step
+            if (nr, nc) == (py, px):
+                # Ambush! Only if the player stands on plain floor --
+                # special rooms (stairs, entrance...) must never be
+                # displaced by the room swap.
+                if floor.grid[py][px].room_type != floor.floor_char:
+                    continue
+                _move_monster_room(floor, mr, mc, nr, nc, z)
+                floor.grid[nr][nc].discovered = True
+                gs.encounter_scouted = False  # ambushed, not scouted
+                add_log(f"{COLOR_RED}It bursts out of the darkness -- it found YOU!{COLOR_RESET}")
+                _trigger_room_interaction(player_character, my_tower)
+                return
+            if floor.grid[nr][nc].room_type == floor.floor_char:
+                _move_monster_room(floor, mr, mc, nr, nc, z)
+        elif random.random() < MONSTER_WANDER_CHANCE:
+            options = []
+            for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                nr, nc = mr + dr, mc + dc
+                if (0 <= nr < floor.rows and 0 <= nc < floor.cols
+                        and floor.grid[nr][nc].room_type == floor.floor_char):
+                    options.append((nr, nc))
+            if options:
+                nr, nc = random.choice(options)
+                _move_monster_room(floor, mr, mc, nr, nc, z)
+
+
 def move_player_randomly(player_character, my_tower):
     """
     Moves the player in a random valid direction, updating player_character's position.
@@ -3241,6 +3384,10 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
             return False # Player died, no further interaction needed
 
         _trigger_room_interaction(character, my_tower) # Trigger room interaction after successful move
+        # Monsters act after you do: chase, wander, maybe ambush. Skipped
+        # when the room you entered already grabbed you (combat, chest...).
+        if gs.prompt_cntl == "game_loop":
+            process_monster_turns(character, my_tower)
         return True # Indicating a successful move
     else:
         add_log("You hit a wall!")

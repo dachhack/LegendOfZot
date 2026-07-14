@@ -203,6 +203,87 @@ def carve_grid(grid_rows_param, grid_cols_param, grid, floor_char_param, top_ste
    return grid, maxed
 
 
+def _floor_cells_connected(grid, floor_char):
+    """True if every floor cell in the char grid is one 4-connected blob."""
+    rows, cols = len(grid), len(grid[0])
+    start = None
+    total = 0
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == floor_char:
+                total += 1
+                if start is None:
+                    start = (r, c)
+    if total == 0:
+        return False
+    seen = {start}
+    queue = deque([start])
+    while queue:
+        r, c = queue.popleft()
+        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            nr, nc = r + dr, c + dc
+            if (0 <= nr < rows and 0 <= nc < cols
+                    and grid[nr][nc] == floor_char and (nr, nc) not in seen):
+                seen.add((nr, nc))
+                queue.append((nr, nc))
+    return len(seen) == total
+
+
+# Fraction of the carved floor that survives tunnel-thinning. The drunk
+# carve makes one big open blob; thinning sculpts it into corridors and
+# chambers. 0.62 keeps ~2/3 of the floor -- winding but not a cruel maze.
+_TUNNEL_KEEP_FRACTION = 0.62
+# Never thin a floor below this many cells -- populate_rooms needs space
+# for stairs/vaults/vendors plus a healthy spread of regular rooms.
+_TUNNEL_MIN_FLOOR = 60
+
+
+def _thin_to_tunnels(grid, wall_char, floor_char):
+    """Sculpt the carved blob into tunnels and chambers.
+
+    Converts floor cells back to wall, INTERIOR-first (cells with 4 floor
+    neighbours), keeping every conversion only if the remaining floor
+    stays fully 4-connected. Open halls become pillars, then passages;
+    connectivity can never break, so every room stays reachable. The
+    carve anchors (1,1) and (rows-2, cols-2) are protected -- forced
+    placements (Entrance/stairs) target them.
+    """
+    rows, cols = len(grid), len(grid[0])
+    floor_cells = [(r, c) for r in range(rows) for c in range(cols)
+                   if grid[r][c] == floor_char]
+    target = max(_TUNNEL_MIN_FLOOR, int(len(floor_cells) * _TUNNEL_KEEP_FRACTION))
+    if len(floor_cells) <= target:
+        return
+    protected = {(1, 1), (rows - 2, cols - 2)}
+
+    def neighbours_floor(r, c):
+        n = 0
+        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            nr, nc = r + dr, c + dc
+            if 0 <= nr < rows and 0 <= nc < cols and grid[nr][nc] == floor_char:
+                n += 1
+        return n
+
+    remaining = len(floor_cells)
+    # Pass 1: interior cells only (deep inside blobs) -- carves halls into
+    # winding passages. Pass 2: any cell -- adds nooks and dead ends.
+    for interior_only in (True, False):
+        candidates = [cell for cell in floor_cells if cell not in protected]
+        random.shuffle(candidates)
+        for r, c in candidates:
+            if remaining <= target:
+                return
+            if grid[r][c] != floor_char:
+                continue
+            if interior_only and neighbours_floor(r, c) < 4:
+                continue
+            grid[r][c] = wall_char
+            if _floor_cells_connected(grid, floor_char):
+                remaining -= 1
+            else:
+                grid[r][c] = floor_char
+
+
 # --------------------------------------------------------------------------------
 # 7. DUNGEON STRUCTURE (Room, Floor, Tower)
 # --------------------------------------------------------------------------------
@@ -243,6 +324,7 @@ class Floor:
           if maxed_attempts:
             break
 
+        _thin_to_tunnels(carved_grid, wall_char, floor_char)
         return carved_grid
 
     def populate_rooms(self, carved_layout_grid, specified_chars_for_fill, required_chars_to_place_randomly,
