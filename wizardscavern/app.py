@@ -2805,8 +2805,9 @@ class WizardsCavernApp(toga.App):
         
         # Generate the first floor with proper carving and room population
         gs.my_tower.add_floor(gs.specified_chars, gs.required_chars, gs.grid_rows, gs.grid_cols, gs.wall_char, gs.floor_char,
-                           p_limits=gs.p_limits_val, c_limits=gs.c_limits_val, w_limits=gs.w_limits_val, 
+                           p_limits=gs.p_limits_val, c_limits=gs.c_limits_val, w_limits=gs.w_limits_val,
                            a_limits=gs.a_limits_val, l_limits=gs.l_limits_val, dungeon_limits=gs.dungeon_limits_val, t_limits=gs.t_limits_val, garden_limits=gs.garden_limits_val, o_limits=gs.o_limits_val,
+                           m_limits=gs.m_limits_val,
                            b_limits=gs.b_limits_val, f_limits=gs.f_limits_val, q_limits=gs.q_limits_val, k_limits=gs.k_limits_val, x_limits=gs.x_limits_val)
         
         # Player starting position (entrance is at 1,1)

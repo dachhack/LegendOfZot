@@ -282,7 +282,9 @@ dungeon_limits_val = (1, 2)
 t_limits_val = (1, 2)
 garden_limits_val = (1, 2)
 o_limits_val = (1, 2)
-m_limits_val = (5, 12)
+# Monsters seed sparse (tunnels make each one count) and a respawner
+# tops the floor back up over time -- see process_monster_respawn.
+m_limits_val = (3, 6)
 b_limits_val = (0, 1)
 f_limits_val = (0, 1)
 q_limits_val = (0, 1)

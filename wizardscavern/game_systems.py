@@ -2488,6 +2488,58 @@ def _move_monster_room(floor, r1, c1, r2, c2, z):
         gs.encountered_monsters[new_key] = gs.encountered_monsters.pop(old_key)
 
 
+# ── Monster respawner ─────────────────────────────────────────────────────
+# Floors now seed only 3-6 plain monsters (m_limits_val) so the tunnels
+# aren't wall-to-wall red, and this tops the ROAMING population back up
+# over time -- the same overall pressure as the old 5-12 burst, arriving
+# as a trickle. Anchored specials (tomb guardians, vault defenders, bug
+# monsters, bosses) live outside this budget entirely.
+MONSTER_FLOOR_CAP = 12        # concurrent MOBILE-monster ceiling per floor
+MONSTER_RESPAWN_CHANCE = 0.03  # per player move while below the cap (~1 per 33 moves)
+MONSTER_RESPAWN_MIN_DIST = 8   # never pops in near the player
+
+
+def process_monster_respawn(player_character, my_tower):
+    """Maybe trickle one new monster onto the player's floor.
+
+    Spawns only on plain floor rooms that are REACHABLE from the player
+    (never inside sealed vault chambers), at least MIN_DIST away, and
+    prefers unexplored rooms so nothing materialises in front of you.
+    The new arrival is a plain M -- fully mobile, so it joins the hunt."""
+    floor = my_tower.floors[player_character.z]
+    if len(_mobile_monster_cells(floor)) >= MONSTER_FLOOR_CAP:
+        return
+    if random.random() >= MONSTER_RESPAWN_CHANCE:
+        return
+
+    # Reachable set: BFS from the player over non-wall rooms.
+    from collections import deque
+    px, py = player_character.x, player_character.y
+    seen = {(py, px)}
+    queue = deque([(py, px)])
+    while queue:
+        r, c = queue.popleft()
+        for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            nr, nc = r + dr, c + dc
+            if (0 <= nr < floor.rows and 0 <= nc < floor.cols
+                    and (nr, nc) not in seen
+                    and floor.grid[nr][nc].room_type != floor.wall_char):
+                seen.add((nr, nc))
+                queue.append((nr, nc))
+
+    candidates = [(r, c) for (r, c) in seen
+                  if floor.grid[r][c].room_type == floor.floor_char
+                  and abs(c - px) + abs(r - py) >= MONSTER_RESPAWN_MIN_DIST]
+    if not candidates:
+        return
+    dark = [cell for cell in candidates if not floor.grid[cell[0]][cell[1]].discovered]
+    r, c = random.choice(dark if dark else candidates)
+    room = floor.grid[r][c]
+    room.room_type = 'M'
+    room.properties.pop('aggro', None)  # fresh arrival, no stale scent
+    add_log(f"{COLOR_GREY}You hear something skitter in the distance...{COLOR_RESET}")
+
+
 def process_monster_turns(player_character, my_tower):
     """Give every mobile monster on the floor a turn after the player's move."""
     floor = my_tower.floors[player_character.z]
@@ -3388,6 +3440,8 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         # when the room you entered already grabbed you (combat, chest...).
         if gs.prompt_cntl == "game_loop":
             process_monster_turns(character, my_tower)
+        if gs.prompt_cntl == "game_loop":
+            process_monster_respawn(character, my_tower)
         return True # Indicating a successful move
     else:
         add_log("You hit a wall!")
