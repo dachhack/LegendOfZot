@@ -2334,30 +2334,29 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         else:
             add_log(f"{COLOR_YELLOW}Invalid command. Use 'u [number]' to use, 'e [number]' to equip, 'm' for spells, 'j' for journal, 'a' for achievements, 'x' to exit.{COLOR_RESET}")
 
-# Rooms tap-to-travel may walk THROUGH, with a step cost. Travel uses
-# Dijkstra over these costs, so it PREFERS plain corridors and only cuts
-# through a prompt room when the detour would be longer than the nuisance
-# (a cost-4 room is worth crossing only to save 4+ plain steps).
+# Rooms tap-to-travel may walk THROUGH, with a step cost (Dijkstra).
+# As of b486 every passable room costs 1 -- decision rooms (vendor
+# included) act exactly like empty floor for pathfinding: their dialog
+# flashes by mid-travel and nothing fires without another tap. The cost
+# table is kept so future tuning (e.g. nudging routes around shops
+# again) is a one-number change.
 #
-# Reviewed per type (b484/b485):
-#   cost 1 -- '.' floor / 'E' entrance: no interaction at all.
-#   cost 2 -- 'U'/'D' stairs: harmless info prompt; ascending still takes
-#       an explicit u/d tap.
-#   cost 4 -- the prompt-only decision rooms (altar, pool, library,
-#       dungeon door, tomb, garden, oracle, blacksmith, shrine, alchemist,
-#       war room, taxidermist): entering just shows their dialog, nothing
-#       fires without another tap, and spent ones drop straight back to
-#       game_loop. Crossing one mid-travel flashes its prompt and walks on.
+#   '.' floor / 'E' entrance -- no interaction at all.
+#   'U'/'D' stairs -- info prompt; ascending still takes an explicit tap.
+#   A/P/L/N/T/G/O/B/F/Q/K/X -- prompt-only decision rooms; spent ones
+#       drop straight back to game_loop.
+#   'V' vendor -- the shop view flashes for one travel step, then travel
+#       walks on (vendor_shop is travel-whitelisted in app._TRAVEL_MODES).
 #   'C' chests need no entry: looting converts the room to '.', so a
 #       spent chest stops blocking by itself.
-#   NEVER pass-through: 'M' starts a fight, 'W' can teleport you, 'V'
-#       opens a shop, 'Z' opens the puzzle -- travel must not volunteer
-#       the player for any of those.
+#   NEVER pass-through: 'M' starts a fight, 'W' can teleport you, 'Z'
+#       opens the Zotle puzzle -- travel must not volunteer the player.
 _TRAVEL_PASS_COST = {
     '.': 1, 'E': 1,
-    'U': 2, 'D': 2,
-    'A': 4, 'P': 4, 'L': 4, 'N': 4, 'T': 4, 'G': 4,
-    'O': 4, 'B': 4, 'F': 4, 'Q': 4, 'K': 4, 'X': 4,
+    'U': 1, 'D': 1,
+    'A': 1, 'P': 1, 'L': 1, 'N': 1, 'T': 1, 'G': 1,
+    'O': 1, 'B': 1, 'F': 1, 'Q': 1, 'K': 1, 'X': 1,
+    'V': 1,
 }
 _TRAVEL_PASS_THROUGH = frozenset(_TRAVEL_PASS_COST)
 

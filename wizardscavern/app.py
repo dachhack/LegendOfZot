@@ -2672,6 +2672,9 @@ _TRAVEL_MODES = frozenset({
     'war_room_mode', 'taxidermist_mode', 'shard_vault_mode',
     'towel_action_mode', 'vault_warp_mode',
     'stairs_up_mode', 'stairs_down_mode',
+    # Vendors are pathfinding-passable (b486): travel entering a 'V' room
+    # flips to the shop view for one step, then walks on out.
+    'vendor_shop',
 })
 
 
@@ -5159,10 +5162,11 @@ class WizardsCavernApp(toga.App):
         # Step via move_player DIRECTLY — never through the mode's command
         # table, where direction letters double as room verbs ('s' at an
         # altar means SACRIFICE, 'u' at a dungeon means unlock...). Close
-        # the two room dialogs whose mode handlers would have closed them
+        # the room dialog state whose mode handlers would have closed it
         # on a manual move; walking away always dismisses a dialog.
         gs.altar_action = None
         gs.active_towel_item = None
+        gs.vendor_action = None
         moved = move_player(pc, gs.my_tower, direction)
         if (not moved
                 or (pc.x, pc.y) == target
