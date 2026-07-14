@@ -2425,12 +2425,17 @@ def _room_glyph_css(room):
     return content, "color: #DDD;"
 
 
-# Zoomed viewport dimensions: 8x8 rooms at 42px cells (~358px wide) keeps
-# every room a real touch target (Material/HIG want >=44px incl. spacing)
-# while fitting a 360px phone screen edge to edge. Follows the player.
-_ZOOM_VIEW_COLS = 8
-_ZOOM_VIEW_ROWS = 8
-_ZOOM_CELL_PX = 42
+# Map zoom levels (cycled by the hud chip). Levels 0-1 are player-centered
+# viewports; level 2 shows the whole floor. Cell footprints are sized so
+# each level fits a 360px phone edge to edge:
+#   0 close: 8x8 @ 42px (~358px) -- thumb-sized rooms, the default
+#   1 mid:  12x12 @ 27px (~354px) -- tactical view, still tappable
+#   2 full: whole floor @ 19px   -- strategic overview
+# Tuples: (view_cols, view_rows, cell_px, font_px)
+_MAP_ZOOM_LEVELS = (
+    (8, 8, 42, 26),
+    (12, 12, 27, 18),
+)
 _FULL_CELL_PX = 19
 
 
@@ -2493,28 +2498,29 @@ def _is_frontier(floor, x, y):
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display.
 
-    Two zoom levels, toggled by gs.map_view_full (the FULL MAP hud chip):
+    Three zoom levels, cycled by gs.map_zoom_level (the map hud chip):
 
-      - zoomed viewport (default): a player-centered _ZOOM_VIEW_COLS x
-        _ZOOM_VIEW_ROWS window at big 36px cells. Every discovered room
-        is a touch target: tapping queues tap-to-travel ('g:x,y' -> BFS
-        walk, see process_command). Dim chevrons mark edges where the
-        floor continues beyond the viewport.
-      - full-floor overview: the whole grid at 19px cells. Rooms stay
-        tappable (travel works from the overview too), just smaller.
+      - 0 close / 1 mid: player-centered viewports (_MAP_ZOOM_LEVELS).
+        Every discovered room is a touch target: tapping queues
+        tap-to-travel ('g:x,y' -> BFS walk, see process_command). Dim
+        chevrons mark edges where the floor continues beyond the view.
+      - 2 full: the whole grid at 19px cells. Rooms stay tappable
+        (travel works from the overview too), just smaller.
     """
     target = getattr(gs, 'travel_target', None)
+    level = getattr(gs, 'map_zoom_level', 0)
 
-    if getattr(gs, 'map_view_full', False):
+    windowed = level < len(_MAP_ZOOM_LEVELS)
+    if not windowed:
         view_cols, view_rows = floor.cols, floor.rows
         col0 = row0 = 0
         cell_px, font_px = _FULL_CELL_PX, 15
     else:
-        view_cols = min(_ZOOM_VIEW_COLS, floor.cols)
-        view_rows = min(_ZOOM_VIEW_ROWS, floor.rows)
+        v_cols, v_rows, cell_px, font_px = _MAP_ZOOM_LEVELS[level]
+        view_cols = min(v_cols, floor.cols)
+        view_rows = min(v_rows, floor.rows)
         col0 = max(0, min(player_x - view_cols // 2, floor.cols - view_cols))
         row0 = max(0, min(player_y - view_rows // 2, floor.rows - view_rows))
-        cell_px, font_px = _ZOOM_CELL_PX, 22
 
     grid_html = (
         '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;">'
@@ -2537,7 +2543,7 @@ def generate_grid_html(floor, player_x, player_y):
 
     # Dim chevrons where the floor continues beyond the zoomed viewport.
     edge_html = ""
-    if not getattr(gs, 'map_view_full', False):
+    if windowed:
         edge_marks = [
             (row0 > 0, "top:-1px;left:50%;transform:translateX(-50%);", '▲'),
             (row0 + view_rows < floor.rows, "bottom:-1px;left:50%;transform:translateX(-50%);", '▼'),
@@ -3974,8 +3980,10 @@ class WizardsCavernApp(toga.App):
             "<div class='hudchip' data-zcmd='i' "
             "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
         )
-        # Map zoom toggle: zoomed tappable viewport <-> whole-floor overview.
-        zoom_label = "ZOOM IN" if getattr(gs, 'map_view_full', False) else "FULL MAP"
+        # Map zoom cycle: close (8x8) -> mid (12x12) -> whole floor.
+        # Label names what the NEXT tap does.
+        _zoom_labels = {0: "ZOOM OUT", 1: "FULL MAP", 2: "ZOOM IN"}
+        zoom_label = _zoom_labels.get(getattr(gs, 'map_zoom_level', 0), "ZOOM IN")
         chips.append(
             f"<div class='hudchip' data-zcmd='zm' "
             f"onclick=\"window.__zotTap('zm', this)\">{zoom_label}</div>"
@@ -4839,9 +4847,9 @@ class WizardsCavernApp(toga.App):
                     pass
             return
 
-        # Map zoom toggle (FULL MAP / ZOOM IN hud chip).
+        # Map zoom cycle (hud chip): close -> mid -> whole floor -> close.
         if cmd == 'zm' and gs.prompt_cntl in _TRAVEL_MODES:
-            gs.map_view_full = not getattr(gs, 'map_view_full', False)
+            gs.map_zoom_level = (getattr(gs, 'map_zoom_level', 0) + 1) % 3
             return
 
         if cmd == 'q':

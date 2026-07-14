@@ -2334,11 +2334,22 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         else:
             add_log(f"{COLOR_YELLOW}Invalid command. Use 'u [number]' to use, 'e [number]' to equip, 'm' for spells, 'j' for journal, 'a' for achievements, 'x' to exit.{COLOR_RESET}")
 
-# Room types safe to auto-walk THROUGH during tap-to-travel: entering them
-# leaves prompt_cntl as "game_loop" (see _trigger_room_interaction). Every
-# other type opens an interaction mode on entry, so it may only ever be the
-# travel DESTINATION -- never an intermediate step the player didn't ask for.
-_TRAVEL_PASS_THROUGH = {'.', 'E'}
+# Room types safe to auto-walk THROUGH during tap-to-travel.
+#
+# Reviewed per type (b484):
+#   '.' plain floor / 'E' entrance -- no interaction at all.
+#   'U'/'D' stairs -- entering only opens a harmless info prompt (no cost,
+#       no risk, and the stairs modes accept movement), so travel may cross
+#       them; on tunnel floors a mid-corridor stairwell would otherwise
+#       block every route past it. Ascending/descending still requires an
+#       explicit u/d tap.
+#   'C' chests need no entry here: looting converts the room to '.', so a
+#       spent chest stops blocking by itself.
+#   Everything else stays DESTINATION-ONLY on purpose: 'M' (fight) and
+#   'W' (teleport) are dangerous, 'V' opens a shop, and A/P/L/O/B/F/Q/K/
+#   X/T/G/N/Z all pop persistent interaction dialogs -- travel must never
+#   drag the player through a decision they didn't tap.
+_TRAVEL_PASS_THROUGH = {'.', 'E', 'U', 'D'}
 
 
 def find_travel_path(floor, start, goal):
