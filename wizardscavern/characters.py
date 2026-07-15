@@ -1244,8 +1244,12 @@ class Character:
                 return 0
 
         # --- Hit Probability Calculation ---
-        # Base chance: 75%
-        base_chance = 0.50
+        # Base chance: 70%. b488: was 50% while monsters enjoyed 70% --
+        # players correctly sensed the loaded dice (measured: player hits
+        # landed 57%, monster hits landed 77%). The hero is the accurate
+        # one now; whiffing half your own turns reads as unfair, a monster
+        # missing reads as you being good.
+        base_chance = 0.70
 
         # Dex bonus: +2% per point over 10
         dex_bonus = (self.dexterity - 10) * 0.02
@@ -1822,7 +1826,10 @@ class Monster:
         return self.health <= 0
 
     def attack_target(self, target):
-        base_chance = 0.70
+        # b488: was 70% vs the player's 50% -- flipped so the hero is the
+        # accurate side (player 70%, monster 60% at parity). Damage values
+        # are untouched; only who connects how often changed.
+        base_chance = 0.60
         # Monster Level bonus: +3% per level difference (monster_level - player_level)
         level_bonus = (self.level - target.level) * 0.03
         # Player Dexterity penalty (dodge chance): -1% per point over 10

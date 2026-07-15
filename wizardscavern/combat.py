@@ -399,10 +399,17 @@ def process_combat_action(player_character, my_tower, cmd):
             else:
                 add_log(f"A {gs.active_monster.name} (Level {gs.active_monster.level}) appears!")
 
-        # Roll initiative ONCE at combat start — determines turn order for the fight
+        # Roll initiative ONCE at combat start — determines turn order for the fight.
+        # b488: the monster's init mod is now its level ADVANTAGE over the
+        # player (capped at 5), not its absolute level -- previously any
+        # level-3+ monster won initiative most fights, and deep-floor
+        # monsters' uncapped +level display mod (up to +50) forced the dice
+        # synthesizer into its fallback, showing rolls that contradicted
+        # the outcome. A monster at your level is now a fair 55/45 in your
+        # favor; only genuinely higher-level threats outdraw you.
         from .characters import opposed_roll
         p_init_mod = max(0, (player_character.dexterity - 10) // 3)
-        m_init_mod = max(0, gs.active_monster.level)
+        m_init_mod = max(0, min(5, gs.active_monster.level - player_character.level))
         init_chance = max(0.20, min(0.80, 0.55 + (p_init_mod - m_init_mod) * 0.05))
         # Combat Reflexes (human skill): sharply better odds of acting first.
         if 'combat_reflexes' in getattr(player_character, 'human_skills', ()):
