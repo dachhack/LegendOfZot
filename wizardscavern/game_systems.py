@@ -3500,6 +3500,36 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
             current_floor.grid[new_y][new_x].discovered = True
         return False # Indicating no move
 
+def process_rest_turn(character, my_tower):
+    """Pass one turn in place (the REST hud chip): the world moves, you don't.
+
+    Runs the same per-turn ticks as a successful move_player step --
+    status effects, hunger, mana regen, meat rot, haunted floors, and
+    the monster turn/respawn -- with no position change and no room
+    re-trigger. Classic roguelike wait: lets you bait a chasing monster
+    into your corridor, tick down a status, or let mana trickle back
+    (hunger still bites, so it's never free)."""
+    add_log("You hold your position and stay alert.")
+    character.process_status_effects()
+    process_passive_treasures(character)
+    process_hunger(character)
+    process_mana_regen(character)
+    tick_meat_rot(character)
+    process_human_skills_per_move(character)
+    process_haunted_floor(character, my_tower)
+    if gs.prompt_cntl == "combat_mode":
+        return
+    process_ephemeral_gardens(character, my_tower)
+    if not character.is_alive():
+        add_log(f"{COLOR_RED}You succumb to your afflictions while resting... Game Over!{COLOR_RESET}")
+        gs.prompt_cntl = "death_screen"
+        return
+    if gs.prompt_cntl == "game_loop":
+        process_monster_turns(character, my_tower)
+    if gs.prompt_cntl == "game_loop":
+        process_monster_respawn(character, my_tower)
+
+
 def process_warp_action(player_character, my_tower, cmd, floor_params_ref):
 
     current_floor = my_tower.floors[player_character.z]

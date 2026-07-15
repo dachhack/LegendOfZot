@@ -2541,22 +2541,14 @@ def generate_grid_html(floor, player_x, player_y):
         grid_html += "</div>"
     grid_html += "</div></div>"
 
-    # Dim chevrons where the floor continues beyond the zoomed viewport.
-    edge_html = ""
-    if windowed:
-        edge_marks = [
-            (row0 > 0, "top:-1px;left:50%;transform:translateX(-50%);", '▲'),
-            (row0 + view_rows < floor.rows, "bottom:-1px;left:50%;transform:translateX(-50%);", '▼'),
-            (col0 > 0, "left:-1px;top:50%;transform:translateY(-50%);", '◄'),
-            (col0 + view_cols < floor.cols, "right:-1px;top:50%;transform:translateY(-50%);", '►'),
-        ]
-        for show, pos_css, glyph in edge_marks:
-            if show:
-                edge_html += (
-                    f"<div style='position:absolute;{pos_css}color:#777;"
-                    f"font-size:10px;pointer-events:none;z-index:2;'>{glyph}</div>"
-                )
-    return f"<div class='mvframe'><div class='mvmap'>{grid_html}{edge_html}</div></div>"
+    # Fixed-size slot: the map occupies the SAME footprint at every zoom
+    # level (sized for the largest layout), so cycling zoom never shifts
+    # the chips/log around it. The grid centers inside the slot.
+    return (
+        f"<div class='mvslot'>"
+        f"<div class='mvframe'><div class='mvmap'>{grid_html}</div></div>"
+        f"</div>"
+    )
 
 
 
@@ -3983,6 +3975,11 @@ class WizardsCavernApp(toga.App):
             "<div class='hudchip' data-zcmd='i' "
             "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
         )
+        # Rest: pass one turn in place (world ticks, monsters move, you don't)
+        chips.append(
+            "<div class='hudchip' data-zcmd='rest' "
+            "onclick=\"window.__zotTap('rest', this)\">REST</div>"
+        )
         # Map zoom cycle: close (8x8) -> mid (12x12) -> whole floor.
         # Label names what the NEXT tap does.
         _zoom_labels = {0: "ZOOM OUT", 1: "FULL MAP", 2: "ZOOM IN"}
@@ -4853,6 +4850,12 @@ class WizardsCavernApp(toga.App):
         # Map zoom cycle (hud chip): close -> mid -> whole floor -> close.
         if cmd == 'zm' and gs.prompt_cntl in _TRAVEL_MODES:
             gs.map_zoom_level = (getattr(gs, 'map_zoom_level', 0) + 1) % 3
+            return
+
+        # Rest (hud chip): pass one turn in place — the world ticks, you don't.
+        if cmd == 'rest' and gs.prompt_cntl == "game_loop":
+            from .game_systems import process_rest_turn
+            process_rest_turn(gs.player_character, gs.my_tower)
             return
 
         if cmd == 'q':
@@ -11313,6 +11316,17 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     user-select: none;
                 }}
+                /* Map slot — a FIXED footprint shared by all three zoom
+                   levels (sized for the tallest layout: close 8x8@42px
+                   ≈ 348px), so cycling zoom never reflows the chips or
+                   log around the map. The grid centers inside it. */
+                .mvslot {{
+                    height: 352px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }}
                 /* Map frame — centers the grid horizontally on screen.
                    Tap-to-move: every discovered room in the zoomed
                    viewport is a tap-to-travel target (see
@@ -11320,6 +11334,7 @@ class WizardsCavernApp(toga.App):
                 .mvframe {{
                     display: block;
                     width: fit-content;
+                    max-width: 100%;
                     margin: 0 auto;
                 }}
                 .mvmap {{
