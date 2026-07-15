@@ -766,6 +766,7 @@ def handle_vault_defender_victory(player_character, my_tower):
     current_floor = my_tower.floors[player_character.z]
     room = current_floor.grid[player_character.y][player_character.x]
     room.room_type = 'W'  # Turn into a warp for escape
+    gs.encountered_monsters.pop((player_character.x, player_character.y, player_character.z), None)
     room.properties['vault_cleared'] = True
     room.properties['vault_warp'] = False  # Make it a regular warp, not vault warp
     room.properties.pop('is_vault_chamber', None)
@@ -2519,6 +2520,11 @@ def _move_monster_room(floor, r1, c1, r2, c2, z):
     old_key, new_key = (c1, r1, z), (c2, r2, z)
     if old_key in gs.encountered_monsters:
         gs.encountered_monsters[new_key] = gs.encountered_monsters.pop(old_key)
+    else:
+        # The mover has no saved instance -- make sure it doesn't inherit
+        # a stale one (e.g. a dead record from a pre-b487 kill) at the
+        # destination, which would turn it into a ghost 'M'.
+        gs.encountered_monsters.pop(new_key, None)
 
 
 # ── Monster respawner ─────────────────────────────────────────────────────
@@ -2570,6 +2576,8 @@ def process_monster_respawn(player_character, my_tower):
     room = floor.grid[r][c]
     room.room_type = 'M'
     room.properties.pop('aggro', None)  # fresh arrival, no stale scent
+    # A fresh spawn must never inherit an old combat record at this cell
+    gs.encountered_monsters.pop((c, r, player_character.z), None)
     add_log(f"{COLOR_GREY}You hear something skitter in the distance...{COLOR_RESET}")
 
 
@@ -3070,8 +3078,16 @@ def _trigger_room_interaction(player_character, my_tower):
             gs.prompt_cntl = "combat_mode"
             process_combat_action(player_character, my_tower, "init")
         else:
-            add_log("A dead monster lies here.")
-            gs.prompt_cntl = "game_loop" # Explicitly set if monster is dead
+            # Stale corpse record: kills now clean up their saved combat
+            # instance, so a dead one here is leftover state (pre-b487
+            # kills didn't -- and a live monster wandering onto such a
+            # cell would inherit the death certificate and turn into a
+            # permanent ghost 'M'). Self-heal: clear the carcass.
+            add_log("Only a rotting carcass lies here. You shove it aside.")
+            gs.encountered_monsters.pop(coords, None)
+            gs.active_monster = None
+            room.room_type = '.'
+            gs.prompt_cntl = "game_loop"
     elif room.room_type == 'U':
         gs.prompt_cntl = "stairs_up_mode"
         process_stairs_up_action(player_character, my_tower, "init", gs.floor_params)
