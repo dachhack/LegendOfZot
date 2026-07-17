@@ -255,28 +255,44 @@ function drawVein(ctx, px, py, s, rng, centers) {
   var gx = 1 + (rng() * 2 | 0), gy = 1 + (rng() * 2 | 0);  // start rock
   var pts = [];
   var prev = gy * 4 + gx;
-  for (var i = 0; i < 8; i++) {
+  // SELF-AVOIDING walk with momentum: never revisit a rock (so the
+  // bolt cannot cross or double back on itself), and prefer to keep
+  // heading the same way -- long clean cracks, not knots.
+  var visited = {};
+  visited[prev] = true;
+  var lastD = null;
+  for (var i = 0; i < 9; i++) {
     var dirs = [];
-    if (gx > 0) dirs.push([-1, 0]);
-    if (gx < 3) dirs.push([1, 0]);
-    if (gy > 0) dirs.push([0, -1]);
-    if (gy < 3) dirs.push([0, 1]);
-    var d = dirs[rng() * dirs.length | 0];
+    if (gx > 0 && !visited[gy * 4 + gx - 1]) dirs.push([-1, 0]);
+    if (gx < 3 && !visited[gy * 4 + gx + 1]) dirs.push([1, 0]);
+    if (gy > 0 && !visited[(gy - 1) * 4 + gx]) dirs.push([0, -1]);
+    if (gy < 3 && !visited[(gy + 1) * 4 + gx]) dirs.push([0, 1]);
+    if (!dirs.length) break;  // boxed in: the crack ends here
+    var d = null, mroll = rng();
+    if (lastD && mroll < 0.6) {
+      for (var m = 0; m < dirs.length; m++)
+        if (dirs[m][0] === lastD[0] && dirs[m][1] === lastD[1]) d = dirs[m];
+    }
+    if (!d) d = dirs[rng() * dirs.length | 0];
     gx += d[0]; gy += d[1];
     var cur = gy * 4 + gx;
     // waypoint: the crevice between the two rocks
     pts.push([(centers[prev][0] + centers[cur][0]) / 2,
               (centers[prev][1] + centers[cur][1]) / 2]);
+    visited[cur] = true;
     prev = cur;
+    lastD = d;
   }
+  if (pts.length < 2) return;
   // sharpen into a bolt: kink each segment at an offset midpoint
+  // (capped small so a jag can't visually cross a neighbouring leg)
   var bolt = [pts[0]];
   for (var j = 1; j < pts.length; j++) {
     var ax = pts[j - 1][0], ay = pts[j - 1][1];
     var bx = pts[j][0], by = pts[j][1];
     var dx = bx - ax, dy = by - ay;
     var len = Math.sqrt(dx * dx + dy * dy) || 1;
-    var off = (rng() - 0.5) * len * 0.8;
+    var off = (rng() - 0.5) * Math.min(len * 0.5, s * 0.16);
     bolt.push([(ax + bx) / 2 - dy / len * off, (ay + by) / 2 + dx / len * off]);
     bolt.push([bx, by]);
   }
