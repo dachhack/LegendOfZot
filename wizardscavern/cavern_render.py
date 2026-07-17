@@ -152,6 +152,56 @@ function drawDebris(ctx, px, py, s, rng, theme) {
   ctx.restore();
 }
 
+// ── Room identity props: the ART says what the room is ──
+// The room letter shrank to a tiny corner badge (app.py); a centered
+// prop from ROOM_PROPS (sprites/cavern_props.py) carries the identity.
+function drawLadder(ctx, cx, cy, s) {
+  var w = s * 0.30, h = s * 0.54, x0 = cx - w / 2, y0 = cy - h / 2;
+  function strut(x1, y1, x2, y2, dark, lite, wd) {
+    ctx.strokeStyle = dark; ctx.lineWidth = wd + 1.6; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.strokeStyle = lite; ctx.lineWidth = wd;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+  }
+  strut(x0, y0, x0, y0 + h, '#2a1c0e', '#a8773f', Math.max(1.4, s * 0.05));
+  strut(x0 + w, y0, x0 + w, y0 + h, '#2a1c0e', '#a8773f', Math.max(1.4, s * 0.05));
+  for (var i = 0; i <= 3; i++) {
+    var yy = y0 + h * i / 3;
+    strut(x0, yy, x0 + w, yy, '#2a1c0e', '#c9944f', Math.max(1.2, s * 0.045));
+  }
+}
+
+function drawPit(ctx, cx, cy, s) {
+  ctx.fillStyle = 'rgba(0,0,0,0.30)';
+  ctx.beginPath(); ctx.ellipse(cx, cy + s * 0.03, s * 0.30, s * 0.20, 0, 0, 7); ctx.fill();
+  ctx.fillStyle = '#0d0a08';
+  ctx.beginPath(); ctx.ellipse(cx, cy, s * 0.26, s * 0.17, 0, 0, 7); ctx.fill();
+  ctx.strokeStyle = 'rgba(200,170,130,0.5)';
+  ctx.lineWidth = Math.max(1, s * 0.03);
+  ctx.beginPath();
+  ctx.ellipse(cx, cy - s * 0.01, s * 0.26, s * 0.17, 0, Math.PI * 1.05, Math.PI * 1.95);
+  ctx.stroke();
+}
+
+function drawRoomProp(ctx, px, py, s, rng, t) {
+  var cx = px + s / 2, cy = py + s / 2;
+  if (t === 'U') { drawLadder(ctx, cx, cy, s); return; }
+  if (t === 'D') { drawPit(ctx, cx, cy, s); return; }
+  if (t === 'E') return;  // entrance: the theme cast is enough
+  var pick = rng();       // consume before the image-ready early return
+  var imgs = window._cavernRoomImgs;
+  if (!imgs || !imgs[t] || !imgs[t].length) return;
+  var im = imgs[t][pick * imgs[t].length | 0];
+  if (!im.complete || !im.naturalWidth) return;  // preloader redraws when ready
+  var maxD = s * 0.68;
+  var sc = Math.min(maxD / im.naturalWidth, maxD / im.naturalHeight);
+  var w = im.naturalWidth * sc, h = im.naturalHeight * sc;
+  ctx.save();
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(im, cx - w / 2, cy - h / 2 - s * 0.02, w, h);
+  ctx.restore();
+}
+
 function drawRing(ctx, px, py, s, mask, rng) {
   var r = s * 0.135;
   function row(x0, y0, x1, y1, open) {
@@ -216,6 +266,7 @@ window._cavernDraw = function(canvasId, cells, cols, rows, cellPx, seed) {
     if (c.k === 1) {
       drawFloor(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed + 1), c.t);
       drawDebris(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed + 3), c.t);
+      if (c.t) drawRoomProp(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed + 4), c.t);
     }
   }
   // pass 3: rock rings (drawn after all floors so ring rocks may

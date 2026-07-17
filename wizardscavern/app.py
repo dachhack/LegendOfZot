@@ -2471,8 +2471,17 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
             if room.room_type == '.':
                 content = "&nbsp;"  # the drawn floor IS the room
             else:
-                cell_style += ("font-weight: bold; "
-                               "text-shadow: 0 1px 2px #000, 0 0 5px #000;")
+                # Tiny corner badge (b497): the room's drawn PROP carries
+                # its identity now (cavern_render.drawRoomProp); the
+                # letter is a small annotation in the top-left corner.
+                badge_px = max(7, round(cell_px * 0.30))
+                content = (
+                    f'<span style="position:absolute; top:0; left:2px; '
+                    f'font-size:{badge_px}px; line-height:{badge_px + 2}px; '
+                    f'font-weight:bold; '
+                    f'text-shadow: 0 1px 2px #000, 0 0 4px #000;">'
+                    f'{content}</span>'
+                )
             if tappable:
                 cell_style += "cursor: pointer;"
                 tap_attrs = (
