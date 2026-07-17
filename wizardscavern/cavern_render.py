@@ -255,7 +255,7 @@ function drawVein(ctx, px, py, s, rng, centers) {
   var gx = 1 + (rng() * 2 | 0), gy = 1 + (rng() * 2 | 0);  // start rock
   var pts = [];
   var prev = gy * 4 + gx;
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 8; i++) {
     var dirs = [];
     if (gx > 0) dirs.push([-1, 0]);
     if (gx < 3) dirs.push([1, 0]);

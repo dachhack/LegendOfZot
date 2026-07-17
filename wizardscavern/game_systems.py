@@ -3382,6 +3382,7 @@ def process_mine_action(character, my_tower, direction):
     room.discovered = True
     room.properties.pop('is_ore_vein', None)
     room.properties.pop('ore_vein_detected', None)
+    gs.mine_burst = (tx, ty)  # one-shot dust-puff on the next map render
     floor_num = character.z
     gs.dwarf_mines_per_floor[floor_num] = gs.dwarf_mines_per_floor.get(floor_num, 0) + 1
     add_log(f"{COLOR_CYAN}You smash through the {_MINE_DIR_NAMES[direction]} ore vein!{COLOR_RESET}")

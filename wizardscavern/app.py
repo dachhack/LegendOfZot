@@ -2638,6 +2638,38 @@ def generate_grid_html(floor, player_x, player_y):
                           and _is_frontier(floor, c_idx, r_idx)),
             )
         grid_html += "</div>"
+
+    # One-shot mining feedback (b510): a dust puff + flying rock chips
+    # over the freshly-smashed cell. The flag is consumed here so it
+    # plays exactly once, on the render right after the pickaxe lands.
+    burst = getattr(gs, 'mine_burst', None)
+    gs.mine_burst = None
+    if burst:
+        bx, by = burst
+        if col0 <= bx < col0 + view_cols and row0 <= by < row0 + view_rows:
+            left = 3 + (bx - col0) * cell_px
+            top = 3 + (by - row0) * cell_px
+            chips = "".join(
+                f'<span style="position:absolute; left:{cell_px // 2}px; '
+                f'top:{cell_px // 2}px; width:{max(2, cell_px // 10)}px; '
+                f'height:{max(2, cell_px // 10)}px; background:#8a7d6a; '
+                f'--cdx:{dx}px; --cdy:{dy}px; '
+                f'animation: zotMineChip 520ms ease-out forwards;"></span>'
+                for dx, dy in ((-cell_px // 2, -cell_px // 3),
+                               (cell_px // 2, -cell_px // 4),
+                               (-cell_px // 3, cell_px // 2),
+                               (cell_px // 3, cell_px // 2))
+            )
+            grid_html += (
+                f'<span style="position:absolute; left:{left}px; top:{top}px; '
+                f'width:{cell_px}px; height:{cell_px}px; z-index:3; '
+                f'pointer-events:none;">'
+                f'<span style="position:absolute; inset:0; border-radius:50%; '
+                f'background: radial-gradient(circle, rgba(205,185,155,0.95) 0%, '
+                f'rgba(130,110,85,0.6) 45%, rgba(60,50,40,0) 72%); '
+                f'animation: zotMinePuff 620ms ease-out forwards;"></span>'
+                f'{chips}</span>'
+            )
     grid_html += "</div></div>"
 
     _seed = ((gs.player_character.z if gs.player_character else 0) * 31 + 7)
@@ -11428,6 +11460,16 @@ class WizardsCavernApp(toga.App):
                     user-select: none;
                     position: relative;
                     z-index: 1;
+                }}
+                /* Mining feedback (b510): dust puff + rock chips */
+                @keyframes zotMinePuff {{
+                    0%   {{ transform: scale(0.25); opacity: 0.95; }}
+                    60%  {{ opacity: 0.6; }}
+                    100% {{ transform: scale(1.35); opacity: 0; }}
+                }}
+                @keyframes zotMineChip {{
+                    0%   {{ transform: translate(0, 0); opacity: 1; }}
+                    100% {{ transform: translate(var(--cdx), var(--cdy)); opacity: 0; }}
                 }}
                 /* Map slot — a FIXED footprint shared by all three zoom
                    levels (sized for the tallest layout: close 8x8@42px
