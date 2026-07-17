@@ -233,47 +233,67 @@ function drawRing(ctx, px, py, s, mask, rng) {
 function drawWall(ctx, px, py, s, rng) {
   ctx.fillStyle = '#2e2a27';
   ctx.fillRect(px, py, s, s);
-  var r = s * 0.16;
+  var r = s * 0.16, centers = [];
   for (var gy = 0; gy < 4; gy++)
-    for (var gx = 0; gx < 4; gx++)
-      rock(ctx, px + (gx + 0.5) * s / 4 + (rng() - 0.5) * r,
-           py + (gy + 0.5) * s / 4 + (rng() - 0.5) * r,
-           r * (0.75 + rng() * 0.4), rng);
+    for (var gx = 0; gx < 4; gx++) {
+      var cx = px + (gx + 0.5) * s / 4 + (rng() - 0.5) * r;
+      var cy = py + (gy + 0.5) * s / 4 + (rng() - 0.5) * r;
+      rock(ctx, cx, cy, r * (0.75 + rng() * 0.4), rng);
+      centers.push([cx, cy]);
+    }
   ctx.fillStyle = 'rgba(0,0,0,0.30)';
   ctx.fillRect(px, py, s, s);
+  return centers;  // 4x4 row-major rock centers, for vein routing
 }
 
-// Detected ore vein (dwarves / Stonelore): a jagged golden seam with
-// glinting nuggets, drawn INTO the rock. Restores the mining cue the
-// b493 wall-glyph blanking removed (the old amber '%').
-function drawVein(ctx, px, py, s, rng) {
+// Detected ore vein (dwarves / Stonelore): a muted ochre seam that
+// SNAKES THROUGH THE CREVICES between the drawn rock blobs -- a random
+// walk over the wall's 4x4 rock grid, with each waypoint the midpoint
+// between two neighbouring rocks, so the mineral follows the stone's
+// own curves. Restores the mining cue lost in b493.
+function drawVein(ctx, px, py, s, rng, centers) {
+  var gx = 1 + (rng() * 2 | 0), gy = 1 + (rng() * 2 | 0);  // start rock
+  var pts = [];
+  var prev = gy * 4 + gx;
+  for (var i = 0; i < 4; i++) {
+    var dirs = [];
+    if (gx > 0) dirs.push([-1, 0]);
+    if (gx < 3) dirs.push([1, 0]);
+    if (gy > 0) dirs.push([0, -1]);
+    if (gy < 3) dirs.push([0, 1]);
+    var d = dirs[rng() * dirs.length | 0];
+    gx += d[0]; gy += d[1];
+    var cur = gy * 4 + gx;
+    // waypoint: the crevice between the two rocks
+    pts.push([(centers[prev][0] + centers[cur][0]) / 2,
+              (centers[prev][1] + centers[cur][1]) / 2]);
+    prev = cur;
+  }
   ctx.save();
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
-  var x = px + s * (0.18 + rng() * 0.18), y = py + s * (0.24 + rng() * 0.22);
-  var ang = rng() * Math.PI;
-  var pts = [[x, y]];
-  for (var i = 0; i < 3; i++) {
-    ang += (rng() - 0.5) * 1.2;
-    x = Math.max(px + s * 0.08, Math.min(px + s * 0.92, x + Math.cos(ang) * s * (0.16 + rng() * 0.12)));
-    y = Math.max(py + s * 0.08, Math.min(py + s * 0.92, y + Math.sin(ang) * s * (0.14 + rng() * 0.10)));
-    pts.push([x, y]);
-  }
+  ctx.globalAlpha = 0.9;
   function seam(color, w) {
     ctx.strokeStyle = color;
     ctx.lineWidth = w;
     ctx.beginPath();
     ctx.moveTo(pts[0][0], pts[0][1]);
-    for (var j = 1; j < pts.length; j++) ctx.lineTo(pts[j][0], pts[j][1]);
+    for (var j = 1; j < pts.length - 1; j++) {
+      var mx = (pts[j][0] + pts[j + 1][0]) / 2, my = (pts[j][1] + pts[j + 1][1]) / 2;
+      ctx.quadraticCurveTo(pts[j][0], pts[j][1], mx, my);
+    }
+    ctx.lineTo(pts[pts.length - 1][0], pts[pts.length - 1][1]);
     ctx.stroke();
   }
-  seam('#4a3208', Math.max(2.4, s * 0.10));
-  seam('#c98f28', Math.max(1.3, s * 0.05));
-  for (i = 0; i < pts.length; i++) {
-    ctx.fillStyle = rng() < 0.5 ? '#ffd54f' : '#ffecb3';
-    var g = Math.max(1, s * (0.03 + rng() * 0.035));
-    ctx.fillRect(pts[i][0] - g / 2 + (rng() - 0.5) * s * 0.06,
-                 pts[i][1] - g / 2 + (rng() - 0.5) * s * 0.06, g, g);
+  seam('#352818', Math.max(1.8, s * 0.075));
+  seam('#8a6b2e', Math.max(1.0, s * 0.032));
+  // a few dull flecks, not treasure-glitter
+  for (var k = 0; k < pts.length; k++) {
+    if (rng() < 0.35) continue;
+    ctx.fillStyle = rng() < 0.7 ? '#a8863d' : '#bfa050';
+    var g = Math.max(1, s * (0.022 + rng() * 0.022));
+    ctx.fillRect(pts[k][0] - g / 2 + (rng() - 0.5) * s * 0.04,
+                 pts[k][1] - g / 2 + (rng() - 0.5) * s * 0.04, g, g);
   }
   ctx.restore();
 }
@@ -304,8 +324,8 @@ window._cavernDraw = function(canvasId, cells, cols, rows, cellPx, seed) {
   for (i = 0; i < cells.length; i++) {
     c = cells[i];
     if (c.k === 2) {
-      drawWall(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed));
-      if (c.v) drawVein(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed + 5));
+      var rc = drawWall(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed));
+      if (c.v) drawVein(ctx, c.cx * cellPx, c.cy * cellPx, cellPx, cellRng(c.x, c.y, seed + 5), rc);
     }
   }
   // pass 2: floors + debris
