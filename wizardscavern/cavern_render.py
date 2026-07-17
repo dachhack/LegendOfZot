@@ -107,7 +107,7 @@ var PROP_GROUPS = [
   ['rubble', 16], ['bones', 11], ['pottery', 10], ['mushrooms', 8],
   ['moss', 8], ['wood', 8], ['dust', 7], ['flora', 7], ['web', 6],
   ['skulls', 5], ['cloth', 4], ['chains', 4], ['stalag', 4],
-  ['crystals', 3], ['goo', 3], ['skeleton', 3], ['bricks', 3]];
+  ['goo', 3], ['skeleton', 3], ['bricks', 3]];
 var PROP_TOTAL = 0;
 for (var _pi = 0; _pi < PROP_GROUPS.length; _pi++) PROP_TOTAL += PROP_GROUPS[_pi][1];
 
