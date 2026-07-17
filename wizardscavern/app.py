@@ -2440,13 +2440,18 @@ _FULL_CELL_PX = 19
 
 
 def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable,
-                    frontier=False):
+                    frontier=False, tile_class=""):
     """Render one map cell. Discovered non-wall cells become tap-to-travel
     targets (cmd 'g:x,y'); modes without travel just swallow the command.
 
     `frontier` marks an undiscovered cell adjacent to a known room: it
     stays visually BLANK (fog is fog) but is tappable, so exploration is
-    also just "tap where you want to go" (final travel step enters it)."""
+    also just "tap where you want to go" (final travel step enters it).
+
+    `tile_class` paints the cell with a room-tile background (classes are
+    defined once in the shell CSS -- see sprites/map_tiles.py). Floor
+    tiles are entrance-matched to the cell's open neighbours; themed
+    rooms get their own art. Glyphs get a dark halo to stay readable."""
     cell_style = (
         f"display: inline-block; width: {cell_px}px; height: {cell_px}px; "
         f"line-height: {cell_px}px; text-align: center; vertical-align: top; "
@@ -2454,6 +2459,7 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
     )
     content = "&nbsp;"
     tap_attrs = ""
+    css_classes = "zmap-cell"
     if room.discovered or is_player:
         content, glyph_css = _room_glyph_css(room)
         cell_style += glyph_css
@@ -2462,13 +2468,24 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
         elif room.room_type == '#':
             # Known walls render as solid mass so tunnels read at a glance
             cell_style += "background-color: #2e2e2e; border-radius: 3px;"
-        elif tappable:
-            # Visible tile affordance + travel tap
-            cell_style += "background-color: rgba(255,255,255,0.07); border-radius: 4px; cursor: pointer;"
-            tap_attrs = (
-                f" data-zcmd='g:{x},{y}'"
-                f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
-            )
+        else:
+            if tile_class:
+                css_classes += f" mt {tile_class}"
+                cell_style += ("font-weight: bold; "
+                               "text-shadow: 0 1px 2px #000, 0 0 5px #000;")
+                if room.room_type == '.':
+                    # The tile art itself says "discovered empty floor" —
+                    # the grey dot on top is just noise.
+                    content = "&nbsp;"
+            elif tappable:
+                # No tile art available: fall back to the flat tile look
+                cell_style += "background-color: rgba(255,255,255,0.07); border-radius: 4px;"
+            if tappable:
+                cell_style += "cursor: pointer;"
+                tap_attrs = (
+                    f" data-zcmd='g:{x},{y}'"
+                    f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
+                )
         if is_target and not is_player:
             cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
     elif frontier and tappable:
@@ -2480,7 +2497,21 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
         )
         if is_target:
             cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
-    return f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
+    return f'<span class="{css_classes}" style="{cell_style}"{tap_attrs}>{content}</span>'
+
+
+_MAP_TILES_CSS_CACHE = None
+
+
+def _map_tiles_css_block():
+    """The (large, ~170KB) tile-background CSS, built once per process.
+    Lives in the shell stylesheet so per-move DOM updates never re-ship
+    image data — cells reference these classes by name."""
+    global _MAP_TILES_CSS_CACHE
+    if _MAP_TILES_CSS_CACHE is None:
+        from .sprites.map_tiles import map_tiles_css
+        _MAP_TILES_CSS_CACHE = map_tiles_css()
+    return _MAP_TILES_CSS_CACHE
 
 
 def _is_frontier(floor, x, y):
@@ -2493,6 +2524,29 @@ def _is_frontier(floor, x, y):
             if n.discovered and n.room_type != floor.wall_char:
                 return True
     return False
+
+
+def _cell_tile_class(floor, x, y, room):
+    """Pick the background tile for a discovered cell.
+
+    Themed rooms get their dedicated art. Everything else (plain floor,
+    monsters, entrance) gets a cave-floor tile whose painted entrances
+    match the cell's OPEN cardinal neighbours: a neighbour counts as open
+    unless it is a KNOWN wall — undiscovered neighbours render as an
+    opening into darkness, which doubles as the tappable-frontier cue."""
+    from .sprites.map_tiles import THEMED_TILE_CLASSES, floor_tile_class
+    if room.room_type in THEMED_TILE_CLASSES:
+        return THEMED_TILE_CLASSES[room.room_type]
+    if room.room_type == floor.wall_char:
+        return ""
+    mask = 0
+    for bit, dx, dy in ((1, 0, -1), (2, 1, 0), (4, 0, 1), (8, -1, 0)):
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < floor.cols and 0 <= ny < floor.rows:
+            n = floor.grid[ny][nx]
+            if not (n.discovered and n.room_type == floor.wall_char):
+                mask |= bit
+    return floor_tile_class(mask, x, y)
 
 
 def generate_grid_html(floor, player_x, player_y):
@@ -2530,13 +2584,16 @@ def generate_grid_html(floor, player_x, player_y):
         grid_html += f'<div style="height: {cell_px}px; white-space: nowrap;">'
         for c_idx in range(col0, col0 + view_cols):
             room = floor.grid[r_idx][c_idx]
+            _is_player_cell = (r_idx, c_idx) == (player_y, player_x)
             grid_html += _grid_cell_html(
                 room, c_idx, r_idx,
-                is_player=(r_idx, c_idx) == (player_y, player_x),
+                is_player=_is_player_cell,
                 is_target=(target == (c_idx, r_idx)),
                 cell_px=cell_px, font_px=font_px, tappable=True,
                 frontier=(not room.discovered
                           and _is_frontier(floor, c_idx, r_idx)),
+                tile_class=("" if _is_player_cell or not room.discovered
+                            else _cell_tile_class(floor, c_idx, r_idx, room)),
             )
         grid_html += "</div>"
     grid_html += "</div></div>"
@@ -11316,6 +11373,9 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     user-select: none;
                 }}
+                /* Room-tile backgrounds: entrance-matched cave art, defined
+                   once here so per-move renders only carry class names. */
+                {_map_tiles_css_block()}
                 /* Map slot — a FIXED footprint shared by all three zoom
                    levels (sized for the tallest layout: close 8x8@42px
                    ≈ 348px), so cycling zoom never reflows the chips or

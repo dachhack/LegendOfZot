@@ -34,6 +34,15 @@ Inventory item icons are dispatched via
 `wizardscavern/sprites/identifiables.py:render_item_icon(item)`.
 Spell-cast animations are in `app.py:generate_spell_icon_visual_js`.
 
+Map background tiles (b490) are SEPARATE from the canonical pool:
+`wizardscavern/sprites/map_tiles.py` holds 40 hand-painted 96x96 cave-room
+tiles (base64 WebP) sliced from `sprite_package/source_sheets/
+room_tiles_sheet.png`. Floor tiles are keyed by an entrance MASK
+(N=1 E=2 S=4 W=8) matching the cell's open neighbours; themed room types
+map to dedicated art via `THEMED_TILE_CLASSES`. The CSS is injected once
+into the shell (`app.py:_map_tiles_css_block`); cells reference classes
+only. Regenerate the module with a build script rather than editing it.
+
 To add or swap a sprite assignment:
 
 1. Edit the relevant per-category map in `wizardscavern/sprites/<cat>.py`
