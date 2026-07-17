@@ -10605,6 +10605,8 @@ class WizardsCavernApp(toga.App):
         _sprite_animator_js = generate_animator_js()
         from .cavern_render import cavern_renderer_js
         _cavern_renderer_js = cavern_renderer_js()
+        from .sprites.cavern_props import cavern_props_js
+        _cavern_props_js = cavern_props_js()
 
         # Stats bar lives in the fixed top strip alongside the log.
         # Stash is set in generate_html() right after player_stats_html
@@ -11841,6 +11843,9 @@ class WizardsCavernApp(toga.App):
             </script>
             <script>
                 {_cavern_renderer_js}
+            </script>
+            <script>
+                {_cavern_props_js}
             </script>
         </head>
         <body class="{body_class}">

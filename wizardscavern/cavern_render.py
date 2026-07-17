@@ -17,6 +17,10 @@ Drawing model per cell:
            entrance gap in the ring toward each open neighbour; themed
            rooms get a subtle color cast mixed into the floor
   fog   -- untouched (the container's dark background shows through)
+
+Debris (b495): plain floors are decorated with hand-painted pixel-art
+props (bones, rubble, webs, mushrooms...) preloaded from
+wizardscavern/sprites/cavern_props.py -- see drawDebris below.
 """
 
 
@@ -96,138 +100,56 @@ function drawFloor(ctx, px, py, s, rng, theme) {
   }
 }
 
-// ── Debris kit: little stories on the floor ──
-var BONE = '#cfc4a8', BONE_EDGE = '#4a4136';
-
-function propBone(ctx, x, y, len, ang, rng) {
-  ctx.save();
-  ctx.translate(x, y); ctx.rotate(ang);
-  var w = Math.max(1.2, len * 0.16);
-  ctx.strokeStyle = BONE_EDGE; ctx.lineWidth = w + 1.6; ctx.lineCap = 'round';
-  ctx.beginPath(); ctx.moveTo(-len / 2, 0); ctx.lineTo(len / 2, 0); ctx.stroke();
-  ctx.strokeStyle = BONE; ctx.lineWidth = w;
-  ctx.beginPath(); ctx.moveTo(-len / 2, 0); ctx.lineTo(len / 2, 0); ctx.stroke();
-  ctx.fillStyle = BONE;
-  var k = w * 0.85;
-  [[-len/2, -k*0.6], [-len/2, k*0.6], [len/2, -k*0.6], [len/2, k*0.6]].forEach(function(p) {
-    ctx.beginPath(); ctx.arc(p[0], p[1], k, 0, 7); ctx.fill();
-  });
-  ctx.restore();
-}
-
-function propSkull(ctx, x, y, r, rng) {
-  ctx.fillStyle = BONE_EDGE;
-  ctx.beginPath(); ctx.arc(x, y, r + 1.2, 0, 7); ctx.fill();
-  ctx.fillStyle = BONE;
-  ctx.beginPath(); ctx.arc(x, y - r * 0.15, r, 0, 7); ctx.fill();
-  ctx.fillRect(x - r * 0.55, y + r * 0.3, r * 1.1, r * 0.55);
-  ctx.fillStyle = '#241d15';
-  ctx.beginPath(); ctx.arc(x - r * 0.38, y - r * 0.15, r * 0.26, 0, 7); ctx.fill();
-  ctx.beginPath(); ctx.arc(x + r * 0.38, y - r * 0.15, r * 0.26, 0, 7); ctx.fill();
-}
-
-function propCrack(ctx, x, y, s, rng) {
-  ctx.strokeStyle = 'rgba(20,12,6,0.75)';
-  ctx.lineWidth = Math.max(1, s * 0.022);
-  ctx.beginPath();
-  var a = rng() * Math.PI * 2, cx = x, cy = y;
-  ctx.moveTo(cx, cy);
-  for (var i = 0; i < 4; i++) {
-    a += (rng() - 0.5) * 1.4;
-    cx += Math.cos(a) * s * (0.08 + rng() * 0.08);
-    cy += Math.sin(a) * s * (0.08 + rng() * 0.08);
-    ctx.lineTo(cx, cy);
-  }
-  ctx.stroke();
-}
-
-function propWeb(ctx, px, py, s, corner, rng) {
-  // corner: 0 TL, 1 TR, 2 BR, 3 BL
-  var cx = (corner === 1 || corner === 2) ? px + s : px;
-  var cy = (corner >= 2) ? py + s : py;
-  var a0 = [0, Math.PI / 2, Math.PI, Math.PI * 1.5][corner];
-  ctx.strokeStyle = 'rgba(215,215,225,0.34)';
-  ctx.lineWidth = Math.max(0.7, s * 0.012);
-  var R = s * (0.24 + rng() * 0.1);
-  for (var ring = 1; ring <= 3; ring++) {
-    ctx.beginPath(); ctx.arc(cx, cy, R * ring / 3, a0, a0 + Math.PI / 2); ctx.stroke();
-  }
-  for (var i = 0; i <= 3; i++) {
-    var a = a0 + (i / 3) * Math.PI / 2;
-    ctx.beginPath(); ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + Math.cos(a) * R, cy + Math.sin(a) * R); ctx.stroke();
-  }
-}
-
-function propMoss(ctx, x, y, s, rng) {
-  for (var i = 0; i < 9; i++) {
-    ctx.fillStyle = rng() < 0.5 ? 'rgba(76,150,60,0.55)' : 'rgba(105,180,80,0.45)';
-    var r = s * (0.02 + rng() * 0.03);
-    ctx.beginPath();
-    ctx.arc(x + (rng() - 0.5) * s * 0.24, y + (rng() - 0.5) * s * 0.2, r, 0, 7);
-    ctx.fill();
-  }
-}
-
-function propShrooms(ctx, x, y, s, rng) {
-  var n = 1 + (rng() * 3 | 0);
-  for (var i = 0; i < n; i++) {
-    var mx = x + (rng() - 0.5) * s * 0.2, my = y + (rng() - 0.5) * s * 0.18;
-    var r = s * (0.035 + rng() * 0.03);
-    ctx.fillStyle = '#d8cbb2';
-    ctx.fillRect(mx - r * 0.22, my, r * 0.44, r * 1.1);
-    ctx.fillStyle = rng() < 0.6 ? '#c14b32' : '#c9903a';
-    ctx.beginPath(); ctx.arc(mx, my, r, Math.PI, 0); ctx.fill();
-    ctx.fillStyle = 'rgba(255,240,220,0.8)';
-    ctx.beginPath(); ctx.arc(mx - r * 0.3, my - r * 0.4, r * 0.16, 0, 7); ctx.fill();
-  }
-}
-
-function propPebbles(ctx, x, y, s, rng) {
-  for (var i = 0; i < 3 + (rng() * 3 | 0); i++) {
-    rock(ctx, x + (rng() - 0.5) * s * 0.28, y + (rng() - 0.5) * s * 0.24,
-         s * (0.02 + rng() * 0.025), rng);
-  }
-}
-
-function propPuddle(ctx, x, y, s, rng) {
-  ctx.fillStyle = 'rgba(30,50,80,0.55)';
-  ctx.beginPath();
-  ctx.ellipse(x, y, s * (0.1 + rng() * 0.06), s * (0.06 + rng() * 0.04), rng(), 0, 7);
-  ctx.fill();
-  ctx.strokeStyle = 'rgba(160,200,255,0.35)';
-  ctx.lineWidth = Math.max(0.7, s * 0.012);
-  ctx.beginPath();
-  ctx.ellipse(x - s * 0.02, y - s * 0.015, s * 0.05, s * 0.025, rng(), Math.PI * 1.1, Math.PI * 1.8);
-  ctx.stroke();
-}
-
-// Off-center anchor so the glyph zone (cell center) stays clean
-function propSpot(px, py, s, rng) {
-  var qx = rng() < 0.5 ? 0.30 : 0.70, qy = rng() < 0.5 ? 0.32 : 0.68;
-  return [px + s * (qx + (rng() - 0.5) * 0.12), py + s * (qy + (rng() - 0.5) * 0.12)];
-}
+// ── Debris: hand-painted pixel-art props stamped onto plain floors ──
+// Images preloaded once at shell init by cavern_props_js()
+// (wizardscavern/sprites/cavern_props.py) into window._cavernPropImgs.
+var PROP_GROUPS = [
+  ['rubble', 16], ['bones', 11], ['pottery', 10], ['mushrooms', 8],
+  ['moss', 8], ['wood', 8], ['dust', 7], ['web', 6], ['skulls', 5],
+  ['cloth', 4], ['chains', 4], ['stalag', 4], ['crystals', 3],
+  ['goo', 3], ['skeleton', 3], ['bricks', 3]];
+var PROP_TOTAL = 0;
+for (var _pi = 0; _pi < PROP_GROUPS.length; _pi++) PROP_TOTAL += PROP_GROUPS[_pi][1];
 
 function drawDebris(ctx, px, py, s, rng, theme) {
   if (theme && theme !== 'M' && theme !== 'E') return;  // themed rooms carry their own story
   if (rng() > 0.42) return;                             // most floors stay bare
-  var roll = rng(), p = propSpot(px, py, s, rng);
-  if (roll < 0.26)      propPebbles(ctx, p[0], p[1], s, rng);
-  else if (roll < 0.42) propCrack(ctx, p[0], p[1], s, rng);
-  else if (roll < 0.56) propMoss(ctx, p[0], p[1], s, rng);
-  else if (roll < 0.70) {
-    propBone(ctx, p[0], p[1], s * (0.14 + rng() * 0.08), rng() * Math.PI, rng);
-    if (rng() < 0.5) propBone(ctx, p[0] + s * 0.05, p[1] + s * 0.04,
-                              s * (0.11 + rng() * 0.06), rng() * Math.PI, rng);
+  // Consume ALL randomness up front so the not-yet-loaded early return
+  // below can't shift the sequence between first draw and redraw.
+  var r = rng() * PROP_TOTAL, g = PROP_GROUPS[0][0];
+  for (var i = 0; i < PROP_GROUPS.length; i++) {
+    r -= PROP_GROUPS[i][1];
+    if (r <= 0) { g = PROP_GROUPS[i][0]; break; }
   }
-  else if (roll < 0.80) {
-    propSkull(ctx, p[0], p[1], s * (0.07 + rng() * 0.03), rng);
-    if (rng() < 0.6) propBone(ctx, p[0] + s * 0.1, p[1] + s * 0.06,
-                              s * 0.12, rng() * Math.PI, rng);
+  var pick = rng(), sizeJ = rng(), jx = rng(), jy = rng(),
+      qx = rng(), qy = rng(), flip = rng() < 0.5;
+  var imgs = window._cavernPropImgs;
+  if (!imgs || !imgs[g] || !imgs[g].length) return;
+  var im = imgs[g][pick * imgs[g].length | 0];
+  if (!im.complete || !im.naturalWidth) return;         // preloader redraws when ready
+  var maxD = s * (0.50 + sizeJ * 0.16);
+  var sc = Math.min(maxD / im.naturalWidth, maxD / im.naturalHeight);
+  var w = im.naturalWidth * sc, h = im.naturalHeight * sc;
+  var x, y;
+  if (g === 'web') {
+    // webs cling to a corner
+    x = qx < 0.5 ? px + s * 0.02 : px + s - w - s * 0.02;
+    y = qy < 0.5 ? py + s * 0.02 : py + s - h - s * 0.02;
+  } else {
+    // off-center so the glyph zone (cell center) stays clean
+    var ax = (qx < 0.5 ? 0.30 : 0.70) + (jx - 0.5) * 0.14;
+    var ay = (qy < 0.5 ? 0.32 : 0.68) + (jy - 0.5) * 0.14;
+    x = Math.max(px + 1, Math.min(px + s - w - 1, px + s * ax - w / 2));
+    y = Math.max(py + 1, Math.min(py + s - h - 1, py + s * ay - h / 2));
   }
-  else if (roll < 0.88) propWeb(ctx, px, py, s, rng() * 4 | 0, rng);
-  else if (roll < 0.95) propShrooms(ctx, p[0], p[1], s, rng);
-  else                  propPuddle(ctx, p[0], p[1], s, rng);
+  ctx.save();
+  ctx.imageSmoothingEnabled = true;
+  if (flip && g !== 'web') {
+    ctx.translate(x + w / 2, 0); ctx.scale(-1, 1); ctx.translate(-(x + w / 2), 0);
+  }
+  ctx.globalAlpha = 0.96;
+  ctx.drawImage(im, x, y, w, h);
+  ctx.restore();
 }
 
 function drawRing(ctx, px, py, s, mask, rng) {
@@ -261,10 +183,20 @@ function drawWall(ctx, px, py, s, rng) {
   ctx.fillRect(px, py, s, s);
 }
 
+// Replay the latest draw once all prop images finish decoding (first
+// paint can beat the async Image loads; every draw is deterministic).
+window._cavernRedrawAll = function() {
+  var a = window._cavernLastDraw;
+  if (a && document.getElementById(a[0])) {
+    window._cavernDraw(a[0], a[1], a[2], a[3], a[4], a[5]);
+  }
+};
+
 // cells: [{x,y,cx,cy,k,m,t}] k: 0=fog 1=floor 2=wall; cx/cy = viewport col/row
 window._cavernDraw = function(canvasId, cells, cols, rows, cellPx, seed) {
   var canvas = document.getElementById(canvasId);
   if (!canvas) return;
+  window._cavernLastDraw = [canvasId, cells, cols, rows, cellPx, seed];
   var dpr = Math.min(3, window.devicePixelRatio || 1);
   canvas.width = Math.round(cols * cellPx * dpr);
   canvas.height = Math.round(rows * cellPx * dpr);
