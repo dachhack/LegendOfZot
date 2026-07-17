@@ -4,10 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 508
+BUILD_NUMBER = 509
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "b508: VEINS THAT BELONG TO THE STONE. The b507 ore seams were bright zigzags stamped OVER the rocks; now each seam is a muted ochre thread that snakes through the actual crevices between the wall's drawn boulders -- the vein router walks the same rock grid the wall painter placed, so the mineral follows the stone's own curves. Duller flecks instead of treasure glitter: it reads like ORE a trained dwarven eye would spot, not like dropped loot.",
+    "b509: VEINS LIKE LIGHTNING. Ore seams take their final form: a muted ochre BOLT cracking through the wall -- the vein still routes through the crevices between the drawn boulders, but each segment now kinks at a sharp perpendicular jag with hard miter corners, like a fissure of mineral splitting the stone. The nugget flecks are gone entirely; the crack IS the tell.",
     "b507: GOLD IN THEM WALLS. Detected ore veins are visible again. The old amber % glyph silently vanished when walls went art-only in b493; now a dwarf (or a Stonelore human) walking past a vein sees a golden seam drawn right into the rock, one segment per vein tile, so you can trace the whole worm before you swing. Tap MINE, pick the direction, follow the sparkle.",
     "b506: YOU ARE THE BRACKETS. The white player box is retired for four clean corner brackets -- a targeting reticle around your cell -- so the room you occupy stays fully visible: its floor, its prop, its letter badge, even the debris under your boots. No more standing in a chest room wondering what you're standing on.",
     "b505: LURKERS UNMASKED + LUSHER GARDENS. (1) The monster M shrinks to a compact centered glyph -- and when a monster squats in a themed room, that room's own color-coded letter now shows in the corner beside it: you can see it's YOUR chest room the thing is guarding before you commit to the fight. (2) Gardens stopped being a single potted plant: each garden room grows its own dense little grove -- 5 to 7 plants, flowers and mushrooms clustered together, seeded per room so every garden grows differently.",

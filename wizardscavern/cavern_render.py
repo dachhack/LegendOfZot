@@ -246,16 +246,16 @@ function drawWall(ctx, px, py, s, rng) {
   return centers;  // 4x4 row-major rock centers, for vein routing
 }
 
-// Detected ore vein (dwarves / Stonelore): a muted ochre seam that
-// SNAKES THROUGH THE CREVICES between the drawn rock blobs -- a random
-// walk over the wall's 4x4 rock grid, with each waypoint the midpoint
-// between two neighbouring rocks, so the mineral follows the stone's
-// own curves. Restores the mining cue lost in b493.
+// Detected ore vein (dwarves / Stonelore): a muted ochre LIGHTNING
+// BOLT cracking through the wall -- a random walk over the wall's 4x4
+// rock grid (waypoints in the crevices between neighbouring rocks),
+// with a sharp perpendicular jag inserted mid-segment. Straight lines,
+// miter joins, no nuggets. Restores the mining cue lost in b493.
 function drawVein(ctx, px, py, s, rng, centers) {
   var gx = 1 + (rng() * 2 | 0), gy = 1 + (rng() * 2 | 0);  // start rock
   var pts = [];
   var prev = gy * 4 + gx;
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 5; i++) {
     var dirs = [];
     if (gx > 0) dirs.push([-1, 0]);
     if (gx < 3) dirs.push([1, 0]);
@@ -269,32 +269,31 @@ function drawVein(ctx, px, py, s, rng, centers) {
               (centers[prev][1] + centers[cur][1]) / 2]);
     prev = cur;
   }
+  // sharpen into a bolt: kink each segment at an offset midpoint
+  var bolt = [pts[0]];
+  for (var j = 1; j < pts.length; j++) {
+    var ax = pts[j - 1][0], ay = pts[j - 1][1];
+    var bx = pts[j][0], by = pts[j][1];
+    var dx = bx - ax, dy = by - ay;
+    var len = Math.sqrt(dx * dx + dy * dy) || 1;
+    var off = (rng() - 0.5) * len * 0.8;
+    bolt.push([(ax + bx) / 2 - dy / len * off, (ay + by) / 2 + dx / len * off]);
+    bolt.push([bx, by]);
+  }
   ctx.save();
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
+  ctx.lineCap = 'butt';
+  ctx.lineJoin = 'miter';
   ctx.globalAlpha = 0.9;
   function seam(color, w) {
     ctx.strokeStyle = color;
     ctx.lineWidth = w;
     ctx.beginPath();
-    ctx.moveTo(pts[0][0], pts[0][1]);
-    for (var j = 1; j < pts.length - 1; j++) {
-      var mx = (pts[j][0] + pts[j + 1][0]) / 2, my = (pts[j][1] + pts[j + 1][1]) / 2;
-      ctx.quadraticCurveTo(pts[j][0], pts[j][1], mx, my);
-    }
-    ctx.lineTo(pts[pts.length - 1][0], pts[pts.length - 1][1]);
+    ctx.moveTo(bolt[0][0], bolt[0][1]);
+    for (var k = 1; k < bolt.length; k++) ctx.lineTo(bolt[k][0], bolt[k][1]);
     ctx.stroke();
   }
-  seam('#352818', Math.max(1.8, s * 0.075));
-  seam('#8a6b2e', Math.max(1.0, s * 0.032));
-  // a few dull flecks, not treasure-glitter
-  for (var k = 0; k < pts.length; k++) {
-    if (rng() < 0.35) continue;
-    ctx.fillStyle = rng() < 0.7 ? '#a8863d' : '#bfa050';
-    var g = Math.max(1, s * (0.022 + rng() * 0.022));
-    ctx.fillRect(pts[k][0] - g / 2 + (rng() - 0.5) * s * 0.04,
-                 pts[k][1] - g / 2 + (rng() - 0.5) * s * 0.04, g, g);
-  }
+  seam('#352818', Math.max(1.8, s * 0.07));
+  seam('#8a6b2e', Math.max(1.0, s * 0.03));
   ctx.restore();
 }
 
