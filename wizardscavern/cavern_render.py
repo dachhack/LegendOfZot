@@ -168,14 +168,14 @@ function drawRoomProp(ctx, px, py, s, rng, t) {
     if (rgi && rgi.G) pool = pool.concat(rgi.G);
     if (dgi && dgi.flora) pool = pool.concat(dgi.flora);
     if (dgi && dgi.mushrooms) pool = pool.concat(dgi.mushrooms);
-    var n = 3 + (rng() * 3 | 0);
-    for (var gi = 0; gi < 5; gi++) {
+    var n = 5 + (rng() * 3 | 0);
+    for (var gi = 0; gi < 7; gi++) {
       // consume the same randomness every draw, loaded or not
       var pk = rng(), gx = rng(), gy = rng(), gs2 = rng();
       if (gi >= n || !pool.length) continue;
       var gim = pool[pk * pool.length | 0];
       if (!gim.complete || !gim.naturalWidth) continue;
-      var gD = s * (0.24 + gs2 * 0.14);
+      var gD = s * (0.21 + gs2 * 0.13);
       var gsc = Math.min(gD / gim.naturalWidth, gD / gim.naturalHeight);
       var gw = gim.naturalWidth * gsc, gh = gim.naturalHeight * gsc;
       var gxp = Math.max(px + 1, Math.min(px + s - gw - 1, px + s * (0.16 + gx * 0.68) - gw / 2));
