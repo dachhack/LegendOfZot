@@ -2621,6 +2621,8 @@ def generate_grid_html(floor, player_x, player_y):
                          'cx': c_idx - col0, 'cy': r_idx - row0}
                 if room.room_type == floor.wall_char:
                     entry['k'] = 2
+                    if room.properties.get('ore_vein_detected'):
+                        entry['v'] = 1  # detected ore vein: gold seam art
                 else:
                     entry['k'] = 1
                     entry['m'] = _cell_entrance_mask(floor, c_idx, r_idx)
