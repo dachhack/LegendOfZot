@@ -159,6 +159,34 @@ function drawDebris(ctx, px, py, s, rng, theme) {
 function drawRoomProp(ctx, px, py, s, rng, t) {
   if (t === 'E') return;  // entrance: the theme cast is enough
   if (t === 'M') return;  // monsters are ENTITIES: the M glyph is the mark
+  if (t === 'G') {
+    // Gardens GROW: a cluster of 3-5 plants and mushrooms scattered
+    // across the room instead of a single specimen. Pool = the G props
+    // plus the flora and mushroom debris sets.
+    var pool = [];
+    var rgi = window._cavernRoomImgs, dgi = window._cavernPropImgs;
+    if (rgi && rgi.G) pool = pool.concat(rgi.G);
+    if (dgi && dgi.flora) pool = pool.concat(dgi.flora);
+    if (dgi && dgi.mushrooms) pool = pool.concat(dgi.mushrooms);
+    var n = 3 + (rng() * 3 | 0);
+    for (var gi = 0; gi < 5; gi++) {
+      // consume the same randomness every draw, loaded or not
+      var pk = rng(), gx = rng(), gy = rng(), gs2 = rng();
+      if (gi >= n || !pool.length) continue;
+      var gim = pool[pk * pool.length | 0];
+      if (!gim.complete || !gim.naturalWidth) continue;
+      var gD = s * (0.24 + gs2 * 0.14);
+      var gsc = Math.min(gD / gim.naturalWidth, gD / gim.naturalHeight);
+      var gw = gim.naturalWidth * gsc, gh = gim.naturalHeight * gsc;
+      var gxp = Math.max(px + 1, Math.min(px + s - gw - 1, px + s * (0.16 + gx * 0.68) - gw / 2));
+      var gyp = Math.max(py + 1, Math.min(py + s - gh - 1, py + s * (0.20 + gy * 0.62) - gh / 2));
+      ctx.save();
+      ctx.imageSmoothingEnabled = true;
+      ctx.drawImage(gim, gxp, gyp, gw, gh);
+      ctx.restore();
+    }
+    return;
+  }
   // consume all randomness before the image-ready early return
   var pick = rng(), sizeJ = rng(), jx = rng(), jy = rng();
   var imgs = window._cavernRoomImgs;
