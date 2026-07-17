@@ -829,7 +829,7 @@ def use_carnyx_of_doom(character, my_tower):
                         monster = gs.encountered_monsters[coords]
                         if monster.is_alive():
                             monster.health = 0
-                            room.room_type = '.'
+                            monster_room_cleared(room)
                             monsters_killed += 1
                             add_log(f"{COLOR_RED} The {monster.name} at ({target_x}, {target_y}) was obliterated by the sonic blast!{COLOR_RESET}")
 
@@ -2446,6 +2446,28 @@ _MONSTER_ANCHOR_FLAGS = ('has_zots_guardian', 'is_platino', 'is_champion',
                          'undead_guardian', 'tomb_elite', 'is_bug_monster',
                          'is_vault_defender', 'is_vault_chamber')
 
+# Room types a roaming monster may walk into (b498). Themed rooms are
+# fair game -- the monster OCCUPIES the room (its type is remembered in
+# properties['_under_type'] and restored when it leaves or dies), so a
+# wanderer can lurk in a chest room like a mimic. Excluded: entrance,
+# warp, locked dungeons, vendor camps and Zotle chambers (critical
+# transit / NPC spaces), plus 'M' itself (no stacking).
+_MONSTER_ENTERABLE = frozenset('CPALTGOBFQKXUD')
+
+
+def _monster_can_enter(floor, r, c):
+    room = floor.grid[r][c]
+    return (room.room_type == floor.floor_char
+            or room.room_type in _MONSTER_ENTERABLE)
+
+
+def monster_room_cleared(room):
+    """The monster standing here is gone -- restore whatever room it was
+    occupying ('.' for plain floor). ALL monster-kill paths go through
+    this so a mimic-style lurker gives the chest back."""
+    room.room_type = room.properties.pop('_under_type', '.')
+    room.properties.pop('aggro', None)
+
 
 def _mobile_monster_cells(floor):
     """(row, col) of every M room that is allowed to move."""
@@ -2474,8 +2496,9 @@ def _mobile_monster_cells(floor):
 def _monster_step_toward(floor, mr, mc, pr, pc):
     """First step of the shortest corridor path from monster to player.
 
-    Routes only through plain floor rooms; the player's cell is the goal.
-    Returns (row, col) or None if no route within reach."""
+    Routes through plain floors AND enterable themed rooms (b498); the
+    player's cell is the goal. Returns (row, col) or None if no route
+    within reach."""
     from collections import deque
     max_span = MONSTER_CHASE_RADIUS + 2
     prev = {(mr, mc): None}
@@ -2497,7 +2520,7 @@ def _monster_step_toward(floor, mr, mc, pr, pc):
                     step = cur
                     cur = prev[cur]
                 return step
-            if floor.grid[nr][nc].room_type != floor.floor_char:
+            if not _monster_can_enter(floor, nr, nc):
                 continue
             prev[(nr, nc)] = (r, c)
             queue.append((nr, nc))
@@ -2505,18 +2528,25 @@ def _monster_step_toward(floor, mr, mc, pr, pc):
 
 
 def _move_monster_room(floor, r1, c1, r2, c2, z):
-    """Relocate an M room by swapping Room objects.
+    """Move a monster one cell: occupy the destination, vacate the source.
 
-    Properties (incl. the aggro flag) travel WITH the monster; discovery
-    stays with the map CELL, so a monster stepping into a room you've lit
-    shows up -- and one slinking into the dark vanishes. Any live combat
-    instance saved for the old coords (you fled it earlier) moves too, so
-    it can't respawn at full health."""
-    m_room = floor.grid[r1][c1]
+    b498 occupy model (replaces the b482 Room-object swap, which could
+    only ever trade places with plain floor): the destination room KEEPS
+    its own identity -- its type is stashed in properties['_under_type']
+    and the cell becomes 'M' until the monster leaves or dies, so a
+    monster can lurk inside a chest room or a garden without dragging
+    that room around the map. Only the aggro flag travels with the
+    monster; discovery stays with each CELL, so a monster stepping into
+    a room you've lit shows up -- and one slinking into the dark
+    vanishes. Any live combat instance saved for the old coords (you
+    fled it earlier) moves too, so it can't respawn at full health."""
+    src = floor.grid[r1][c1]
     dest = floor.grid[r2][c2]
-    floor.grid[r2][c2] = m_room
-    floor.grid[r1][c1] = dest
-    m_room.discovered, dest.discovered = dest.discovered, m_room.discovered
+    dest.properties['_under_type'] = dest.room_type
+    dest.room_type = 'M'
+    if src.properties.pop('aggro', False):
+        dest.properties['aggro'] = True
+    src.room_type = src.properties.pop('_under_type', '.')
     old_key, new_key = (c1, r1, z), (c2, r2, z)
     if old_key in gs.encountered_monsters:
         gs.encountered_monsters[new_key] = gs.encountered_monsters.pop(old_key)
@@ -2607,10 +2637,10 @@ def process_monster_turns(player_character, my_tower):
                 continue
             nr, nc = step
             if (nr, nc) == (py, px):
-                # Ambush! Only if the player stands on plain floor --
-                # special rooms (stairs, entrance...) must never be
-                # displaced by the room swap.
-                if floor.grid[py][px].room_type != floor.floor_char:
+                # Ambush! Only in rooms a monster may occupy (the occupy
+                # model restores the room after the fight) -- entrances,
+                # warps, vendor camps etc. stay monster-free ground.
+                if not _monster_can_enter(floor, py, px):
                     continue
                 _move_monster_room(floor, mr, mc, nr, nc, z)
                 floor.grid[nr][nc].discovered = True
@@ -2618,14 +2648,14 @@ def process_monster_turns(player_character, my_tower):
                 add_log(f"{COLOR_RED}It bursts out of the darkness -- it found YOU!{COLOR_RESET}")
                 _trigger_room_interaction(player_character, my_tower)
                 return
-            if floor.grid[nr][nc].room_type == floor.floor_char:
+            if _monster_can_enter(floor, nr, nc):
                 _move_monster_room(floor, mr, mc, nr, nc, z)
         elif random.random() < MONSTER_WANDER_CHANCE:
             options = []
             for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
                 nr, nc = mr + dr, mc + dc
                 if (0 <= nr < floor.rows and 0 <= nc < floor.cols
-                        and floor.grid[nr][nc].room_type == floor.floor_char):
+                        and _monster_can_enter(floor, nr, nc)):
                     options.append((nr, nc))
             if options:
                 nr, nc = random.choice(options)
@@ -3086,7 +3116,7 @@ def _trigger_room_interaction(player_character, my_tower):
             add_log("Only a rotting carcass lies here. You shove it aside.")
             gs.encountered_monsters.pop(coords, None)
             gs.active_monster = None
-            room.room_type = '.'
+            monster_room_cleared(room)
             gs.prompt_cntl = "game_loop"
     elif room.room_type == 'U':
         gs.prompt_cntl = "stairs_up_mode"

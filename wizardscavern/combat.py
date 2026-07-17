@@ -628,7 +628,9 @@ def process_combat_action(player_character, my_tower, cmd):
         current_floor = my_tower.floors[player_character.z]
         room = current_floor.grid[player_character.y][player_character.x]
         _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
-        room.room_type = '.'  # Clear room
+        # Clear room -- a lurker occupying a themed room gives it back
+        room.room_type = room.properties.pop('_under_type', '.')
+        room.properties.pop('aggro', None)
         # Drop the saved combat instance too -- a stale dead record here
         # turns any monster that later wanders onto this cell into a ghost
         # ("A dead monster lies here" instead of a fight).
@@ -770,7 +772,8 @@ def process_combat_action(player_character, my_tower, cmd):
                     room = current_floor.grid[player_character.y][player_character.x]
                     _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
                     _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
-                    room.room_type = '.'
+                    room.room_type = room.properties.pop('_under_type', '.')
+                    room.properties.pop('aggro', None)
                     gs.encountered_monsters.pop((player_character.x, player_character.y, player_character.z), None)
                     drop_monster_items(gs.active_monster, player_character)
                     drop_monster_meat(gs.active_monster, player_character)
@@ -1208,7 +1211,8 @@ def process_combat_action(player_character, my_tower, cmd):
             room = current_floor.grid[player_character.y][player_character.x]
             _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
             _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
-            room.room_type = '.'  # Clear room
+            room.room_type = room.properties.pop('_under_type', '.')
+            room.properties.pop('aggro', None)
             gs.encountered_monsters.pop((player_character.x, player_character.y, player_character.z), None)
             # Drop items from monster
             drop_monster_items(gs.active_monster, player_character)
@@ -1938,7 +1942,8 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     room = current_floor.grid[player_character.y][player_character.x]
                     _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
                     _was_guardian = gs.active_monster.properties.get('is_zots_guardian', False)
-                    room.room_type = '.'  # Clear room
+                    room.room_type = room.properties.pop('_under_type', '.')
+                    room.properties.pop('aggro', None)
                     gs.encountered_monsters.pop((player_character.x, player_character.y, player_character.z), None)
                     drop_monster_items(gs.active_monster, player_character)
                     drop_monster_meat(gs.active_monster, player_character)

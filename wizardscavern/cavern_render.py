@@ -127,7 +127,7 @@ function drawDebris(ctx, px, py, s, rng, theme) {
   if (!imgs || !imgs[g] || !imgs[g].length) return;
   var im = imgs[g][pick * imgs[g].length | 0];
   if (!im.complete || !im.naturalWidth) return;         // preloader redraws when ready
-  var maxD = s * (0.50 + sizeJ * 0.16);
+  var maxD = s * (0.32 + sizeJ * 0.12);
   var sc = Math.min(maxD / im.naturalWidth, maxD / im.naturalHeight);
   var w = im.naturalWidth * sc, h = im.naturalHeight * sc;
   var x, y;
@@ -136,9 +136,8 @@ function drawDebris(ctx, px, py, s, rng, theme) {
     x = qx < 0.5 ? px + s * 0.02 : px + s - w - s * 0.02;
     y = qy < 0.5 ? py + s * 0.02 : py + s - h - s * 0.02;
   } else {
-    // off-center so the glyph zone (cell center) stays clean
-    var ax = (qx < 0.5 ? 0.30 : 0.70) + (jx - 0.5) * 0.14;
-    var ay = (qy < 0.5 ? 0.32 : 0.68) + (jy - 0.5) * 0.14;
+    // anywhere on the floor (uniform scatter), just off the exact rim
+    var ax = 0.22 + jx * 0.56, ay = 0.24 + jy * 0.52;
     x = Math.max(px + 1, Math.min(px + s - w - 1, px + s * ax - w / 2));
     y = Math.max(py + 1, Math.min(py + s - h - 1, py + s * ay - h / 2));
   }
@@ -185,20 +184,27 @@ function drawPit(ctx, cx, cy, s) {
 
 function drawRoomProp(ctx, px, py, s, rng, t) {
   var cx = px + s / 2, cy = py + s / 2;
-  if (t === 'U') { drawLadder(ctx, cx, cy, s); return; }
-  if (t === 'D') { drawPit(ctx, cx, cy, s); return; }
+  if (t === 'U') { drawLadder(ctx, cx, cy, s); return; }  // fixtures stay
+  if (t === 'D') { drawPit(ctx, cx, cy, s); return; }     // centered
   if (t === 'E') return;  // entrance: the theme cast is enough
-  var pick = rng();       // consume before the image-ready early return
+  if (t === 'M') return;  // monsters are ENTITIES: the M glyph is the mark
+  // consume all randomness before the image-ready early return
+  var pick = rng(), sizeJ = rng(), jx = rng(), jy = rng();
   var imgs = window._cavernRoomImgs;
   if (!imgs || !imgs[t] || !imgs[t].length) return;
   var im = imgs[t][pick * imgs[t].length | 0];
   if (!im.complete || !im.naturalWidth) return;  // preloader redraws when ready
-  var maxD = s * 0.68;
+  var maxD = s * (0.44 + sizeJ * 0.12);
   var sc = Math.min(maxD / im.naturalWidth, maxD / im.naturalHeight);
   var w = im.naturalWidth * sc, h = im.naturalHeight * sc;
+  // seeded off-center placement -- rooms stop looking like a museum row
+  var x = px + s * (0.30 + jx * 0.40) - w / 2;
+  var y = py + s * (0.32 + jy * 0.38) - h / 2;
+  x = Math.max(px + 1, Math.min(px + s - w - 1, x));
+  y = Math.max(py + 1, Math.min(py + s - h - 1, y));
   ctx.save();
   ctx.imageSmoothingEnabled = true;
-  ctx.drawImage(im, cx - w / 2, cy - h / 2 - s * 0.02, w, h);
+  ctx.drawImage(im, x, y, w, h);
   ctx.restore();
 }
 

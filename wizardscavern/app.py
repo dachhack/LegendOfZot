@@ -2470,6 +2470,11 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
         else:
             if room.room_type == '.':
                 content = "&nbsp;"  # the drawn floor IS the room
+            elif room.room_type == 'M':
+                # Monsters are ENTITIES, not room decor: the glyph IS the
+                # monster, so it stays centered and full-size (b498).
+                cell_style += ("font-weight: bold; "
+                               "text-shadow: 0 1px 2px #000, 0 0 5px #000;")
             else:
                 # Tiny corner badge (b497): the room's drawn PROP carries
                 # its identity now (cavern_render.drawRoomProp); the
