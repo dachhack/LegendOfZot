@@ -2463,9 +2463,7 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
     if room.discovered or is_player:
         content, glyph_css = _room_glyph_css(room)
         cell_style += glyph_css
-        if is_player:
-            cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 3px;"
-        elif room.room_type == '#':
+        if room.room_type == '#':
             content = "&nbsp;"  # the drawn rock field IS the wall
         else:
             if room.room_type == '.':
@@ -2507,12 +2505,32 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
                     f'text-shadow: 0 1px 2px #000, 0 0 4px #000;">'
                     f'{content}</span>'
                 )
-            if tappable:
+            if tappable and not is_player:
                 cell_style += "cursor: pointer;"
                 tap_attrs = (
                     f" data-zcmd='g:{x},{y}'"
                     f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
                 )
+        if is_player:
+            # Player marker (b506): four white corner brackets, so the
+            # room you're standing in -- its floor, prop and letter
+            # badge -- stays fully visible under you.
+            bw = max(2, round(cell_px * 0.075))
+            arm = max(5, round(cell_px * 0.28))
+            corners = (
+                ("top:1px; left:1px", f"{bw}px 0 0 {bw}px"),
+                ("top:1px; right:1px", f"{bw}px {bw}px 0 0"),
+                ("bottom:1px; left:1px", f"0 0 {bw}px {bw}px"),
+                ("bottom:1px; right:1px", f"0 {bw}px {bw}px 0"),
+            )
+            content = "".join(
+                f'<span style="position:absolute; {pos}; '
+                f'width:{arm}px; height:{arm}px; box-sizing:border-box; '
+                f'border:0 solid #FFF; border-width:{widths}; '
+                f'filter: drop-shadow(0 0 1.5px #000); '
+                f'pointer-events:none;"></span>'
+                for pos, widths in corners
+            ) + content
         if is_target and not is_player:
             cell_style += "outline: 2px solid #FFD700; outline-offset: -2px;"
     elif frontier and tappable:
