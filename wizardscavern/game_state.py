@@ -427,7 +427,7 @@ monster_acts_first = False        # Initiative result: True if monster swings be
 travel_target = None              # (x, y) travel destination, or None
 travel_floor_z = None             # Floor the travel was started on (abort on floor change)
 travel_steps_left = 0             # Step budget guard (confusion can't loop travel forever)
-map_zoom_level = 0                # 0 = close (8x8 @42px), 1 = mid (12x12 @27px), 2 = whole floor (@19px)
+map_zoom_level = 1                # 0 = super-close (5x5 @66px), 1 = close (8x8 @42px), 2 = mid (12x12 @27px), 3 = whole floor (@19px)
 monster_initiative_pending = False # True after init when monster won; triggers auto-attack before player acts
 
 # ============================================================================

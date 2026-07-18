@@ -2425,18 +2425,64 @@ def _room_glyph_css(room):
     return content, "color: #DDD;"
 
 
-# Map zoom levels (cycled by the hud chip). Levels 0-1 are player-centered
-# viewports; level 2 shows the whole floor. Cell footprints are sized so
-# each level fits a 360px phone edge to edge:
-#   0 close: 8x8 @ 42px (~358px) -- thumb-sized rooms, the default
-#   1 mid:  12x12 @ 27px (~354px) -- tactical view, still tappable
-#   2 full: whole floor @ 19px   -- strategic overview
+# Map zoom levels (stepped by the +/- hud chips). Levels 0-2 are
+# player-centered viewports; level 3 shows the whole floor. Cell
+# footprints are sized so each level fits a 360px phone edge to edge:
+#   0 super-close: 5x5 @ 66px (~330px) -- room-scale, watch your hero
+#   1 close:       8x8 @ 42px (~336px) -- thumb-sized rooms, the default
+#   2 mid:       12x12 @ 27px (~324px) -- tactical view, still tappable
+#   3 full: whole floor @ 19px         -- strategic overview
 # Tuples: (view_cols, view_rows, cell_px, font_px)
 _MAP_ZOOM_LEVELS = (
+    (5, 5, 66, 32),
     (8, 8, 42, 26),
     (12, 12, 27, 18),
 )
 _FULL_CELL_PX = 19
+
+
+def _map_player_sprite_html(cell_px):
+    """The hero's avatar standing in their map cell, idle-bobbing (b513).
+
+    Renders the same pool sprite the character screen uses onto a small
+    canvas registered with the sprite animator ('default' feel = the
+    gentle idle bob). Unique DOM id so it never collides with the
+    character-screen canvas. Returns '' when no sprite resolves (legacy
+    saves with no pid/name) -- the corner brackets still mark the cell."""
+    pc = gs.player_character
+    if pc is None:
+        return ''
+    try:
+        from .sprites import get_image_b64, get_generic_variant
+        from .sprites.pool import render_sprite_canvas
+        from .sprites.characters import get_race_pool
+        from .sprite_animator import generate_register_js
+    except Exception:
+        return ''
+    pid = getattr(pc, 'sprite_pid', None)
+    if pid is None:
+        name = getattr(pc, 'name', None)
+        if not name:
+            return ''
+        race = getattr(pc, 'race', 'human')
+        pool = get_race_pool(race) if race else None
+        if not pool:
+            return ''
+        pid = get_generic_variant(pool, seed=(race, getattr(pc, 'gender', 'male'), name))
+    if not pid:
+        return ''
+    b64 = get_image_b64(pid)
+    if not b64:
+        return ''
+    d = max(12, cell_px - 6)
+    return render_sprite_canvas(
+        'map_player_sprite', 64, 'data:image/webp;base64,' + b64,
+        f'width:{d}px;height:{d}px;display:block;',
+        onload_extra=generate_register_js('map_player_sprite', 'default'),
+        wrap_id='map_player_sprite',
+        wrap_style=(f'position:absolute; left:{(cell_px - d) // 2}px; '
+                    f'top:{(cell_px - d) // 2}px; overflow:visible; '
+                    f'pointer-events:none; z-index:2;'))
 
 
 def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable,
@@ -2512,9 +2558,10 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
                     f" onclick=\"window.__zotTap('g:{x},{y}', this)\""
                 )
         if is_player:
-            # Player marker (b506): four white corner brackets, so the
-            # room you're standing in -- its floor, prop and letter
-            # badge -- stays fully visible under you.
+            # The hero stands IN the room, idle-bobbing (b513)...
+            content = _map_player_sprite_html(cell_px) + content
+            # ...framed by the b506 corner brackets, so the room's
+            # floor, prop and letter badge stay visible under you.
             bw = max(2, round(cell_px * 0.075))
             arm = max(5, round(cell_px * 0.28))
             corners = (
@@ -2586,7 +2633,7 @@ def generate_grid_html(floor, player_x, player_y):
         (travel works from the overview too), just smaller.
     """
     target = getattr(gs, 'travel_target', None)
-    level = getattr(gs, 'map_zoom_level', 0)
+    level = min(max(getattr(gs, 'map_zoom_level', 1), 0), len(_MAP_ZOOM_LEVELS))
 
     windowed = level < len(_MAP_ZOOM_LEVELS)
     if not windowed:
@@ -4118,13 +4165,18 @@ class WizardsCavernApp(toga.App):
             "<div class='hudchip' data-zcmd='rest' "
             "onclick=\"window.__zotTap('rest', this)\">REST</div>"
         )
-        # Map zoom cycle: close (8x8) -> mid (12x12) -> whole floor.
-        # Label names what the NEXT tap does.
-        _zoom_labels = {0: "ZOOM OUT", 1: "FULL MAP", 2: "ZOOM IN"}
-        zoom_label = _zoom_labels.get(getattr(gs, 'map_zoom_level', 0), "ZOOM IN")
+        # Map zoom: compact +/- stepper chips (b513). '+' steps closer,
+        # '-' steps wider; each dims at its end of the range.
+        _lvl = min(max(getattr(gs, 'map_zoom_level', 1), 0), 3)
+        _in_style = " opacity:0.35;" if _lvl == 0 else ""
+        _out_style = " opacity:0.35;" if _lvl == 3 else ""
         chips.append(
-            f"<div class='hudchip' data-zcmd='zm' "
-            f"onclick=\"window.__zotTap('zm', this)\">{zoom_label}</div>"
+            f"<div class='hudchip' data-zcmd='z+' style='min-width:1.4em; "
+            f"text-align:center;{_in_style}' "
+            f"onclick=\"window.__zotTap('z+', this)\">&#65291;</div>"
+            f"<div class='hudchip' data-zcmd='z-' style='min-width:1.4em; "
+            f"text-align:center;{_out_style}' "
+            f"onclick=\"window.__zotTap('z-', this)\">&#65293;</div>"
         )
         if lantern_item is not None:
             # Bigger sprite (size=32) so the lantern is actually readable
@@ -4985,9 +5037,15 @@ class WizardsCavernApp(toga.App):
                     pass
             return
 
-        # Map zoom cycle (hud chip): close -> mid -> whole floor -> close.
+        # Map zoom stepper (b513): 'z+' steps closer, 'z-' steps wider,
+        # clamped to [0, 3]. 'zm' keeps cycling for old muscle memory
+        # and the playtest harness.
+        if cmd in ('z+', 'z-') and gs.prompt_cntl in _TRAVEL_MODES:
+            _lvl = min(max(getattr(gs, 'map_zoom_level', 1), 0), 3)
+            gs.map_zoom_level = max(0, _lvl - 1) if cmd == 'z+' else min(3, _lvl + 1)
+            return
         if cmd == 'zm' and gs.prompt_cntl in _TRAVEL_MODES:
-            gs.map_zoom_level = (getattr(gs, 'map_zoom_level', 0) + 1) % 3
+            gs.map_zoom_level = (getattr(gs, 'map_zoom_level', 1) + 1) % 4
             return
 
         # Rest (hud chip): pass one turn in place — the world ticks, you don't.
