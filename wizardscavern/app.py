@@ -2473,7 +2473,7 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
                 # smaller and centered (b504), so the room it occupies
                 # keeps its own tiny corner badge (the occupy model
                 # stashes the real type in properties['_under_type']).
-                m_px = max(9, round(cell_px * 0.45))
+                m_px = round(10 + cell_px * 0.215)  # scales like the badges
                 content = (
                     f'<span style="font-size:{m_px}px; font-weight:bold; '
                     f'text-shadow: 0 1px 2px #000, 0 0 5px #000;">'
@@ -2484,7 +2484,7 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
                     from types import SimpleNamespace
                     u_glyph, u_css = _room_glyph_css(SimpleNamespace(
                         room_type=under, properties=room.properties))
-                    badge_px = max(7, round(cell_px * 0.30))
+                    badge_px = round(8 + cell_px * 0.145)  # bigger share at far zooms
                     content = (
                         f'<span style="position:absolute; top:0; left:2px; '
                         f'font-size:{badge_px}px; '
@@ -2497,7 +2497,7 @@ def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable
                 # Tiny corner badge (b497): the room's drawn PROP carries
                 # its identity now (cavern_render.drawRoomProp); the
                 # letter is a small annotation in the top-left corner.
-                badge_px = max(7, round(cell_px * 0.30))
+                badge_px = round(8 + cell_px * 0.145)  # bigger share at far zooms
                 content = (
                     f'<span style="position:absolute; top:0; left:2px; '
                     f'font-size:{badge_px}px; line-height:{badge_px + 2}px; '
