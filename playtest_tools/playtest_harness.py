@@ -7652,10 +7652,12 @@ def main(argv=None):
 
     # Final summary
     p = obs["player"]
+    _mined = sum(getattr(gs, 'dwarf_mines_per_floor', {}).values())
     print()
     print(f"=== run finished: turns={sess.turn} "
           f"floor={p['floor']} hp={p['hp']}/{p['max_hp']} "
-          f"gold={p['gold']} alive={obs['alive']} mode={obs['mode']} ===")
+          f"gold={p['gold']} mined={_mined} "
+          f"alive={obs['alive']} mode={obs['mode']} ===")
 
     # Append a one-line summary to the run log. Lives at the repo root
     # by default (gitignored) so you can `tail -f playtest_runs.log`

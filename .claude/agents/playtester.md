@@ -47,6 +47,15 @@ python3 -m playtest_tools.playtest_harness --seed 42 --turns 300 --playtest-mode
 python3 -m playtest_tools.playtest_harness --seed 42 --turns 200 \
     --race elf --int-bonus 6 --spells "Ice Shard,Heal,Fireball"
 
+# MINING coverage: only dwarves mine (humans need the Stonelore skill),
+# so exercise ore veins with a dwarf run. The smart policy detects
+# adjacent veins, walks to known veins, and swings the pickaxe on its
+# own. The final summary prints `mined=N`; N=0 on a 400+ turn dwarf run
+# means vein generation or the mining path regressed. Mined ore feeds
+# Ioun Stone crafting (also exercised by the smart policy).
+python3 -m playtest_tools.playtest_harness --seed 42 --turns 400 \
+    --race dwarf --policy smart
+
 # Scripted run — feed actions one-per-line
 python3 -m playtest_tools.playtest_harness --seed 42 --script - <<'EOF'
 s
@@ -100,6 +109,11 @@ the dispatch. Use `back` to escape and continue.
 1. **Pick a question first.** "Find crashes" / "is floor 5 reachable
    with random play?" / "does the chest at room C dispense a key
    item?" — narrow your sample to that.
+1b. **Cover the races.** A default (human) run never mines and never
+   casts; when doing a broad regression sweep, include one
+   `--race dwarf` run (mining + Ioun crafting) and one
+   `--race elf --int-bonus 6 --spells ...` run (casting) alongside the
+   human baseline. Check `mined=` in the dwarf run's summary.
 2. **Use seeds.** Always pass `--seed <int>` so the engineer can
    reproduce. Try at least 5 seeds before claiming a pattern.
 3. **Start with random policy** to surface crashes cheaply.
