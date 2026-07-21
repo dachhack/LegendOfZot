@@ -519,15 +519,16 @@ unlocked_achievements = set()
 def add_log(text):
     """Add a message to the game log, converting ANSI codes to HTML spans.
 
-    b518: the palette is MUTED -- desaturated dungeon tones instead of
-    max-saturation web colors, so a busy transcript reads as one voice
-    with a few accents rather than a rainbow. Reds stay warm enough to
-    signal danger; everything else is a tint, not a shout."""
+    b518 muted the palette; b519 SHRINKS it. Color is a signal, not
+    decoration: only four channels survive -- muted red (danger/damage),
+    sage green (healing/success), parchment gold (treasure/important)
+    and dim grey (whispers). Cyan, blue and purple demote to plain
+    body text; their COLOR_RESETs still close a (styleless) span."""
     text = text.replace(COLOR_GREEN, '<span style="color: #9BBF8A;">')
     text = text.replace(COLOR_RED, '<span style="color: #E08070;">')
-    text = text.replace(COLOR_PURPLE, '<span style="color: #B39DCB;">')
-    text = text.replace(COLOR_BLUE, '<span style="color: #8FA8CC;">')
-    text = text.replace(COLOR_CYAN, '<span style="color: #8FBFC9;">')
+    text = text.replace(COLOR_PURPLE, '<span>')
+    text = text.replace(COLOR_BLUE, '<span>')
+    text = text.replace(COLOR_CYAN, '<span>')
     text = text.replace(COLOR_YELLOW, '<span style="color: #D6C083;">')
     text = text.replace(COLOR_GREY, '<span style="color: #9a9188;">')
     text = text.replace(COLOR_RESET, '</span>')
