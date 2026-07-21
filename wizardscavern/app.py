@@ -2729,7 +2729,15 @@ def generate_grid_html(floor, player_x, player_y):
     # Fixed-size slot: the map occupies the SAME footprint at every zoom
     # level (sized for the largest layout), so cycling zoom never shifts
     # the chips/log around it. The grid centers inside the slot.
+    #
+    # The inline game log (b515) rides directly ABOVE the map, i.e.
+    # immediately below whatever room/interaction panel the mode drew --
+    # one glance zone instead of panel-at-top + log-at-bottom.
+    # updateLog() fills it and hides the legacy bottom log whenever this
+    # div exists; list views (inventory, vendor...) don't render the map,
+    # so they keep the bottom log automatically.
     return (
+        f"<div id='game-log-inline'></div>"
         f"<div class='mvslot'>"
         f"<div class='mvframe'><div class='mvmap'>{grid_html}</div></div>"
         f"</div>{draw_js}"
@@ -11016,6 +11024,26 @@ class WizardsCavernApp(toga.App):
                     line-height: 1.2;
                 }}
 
+                /* Inline log (b515): lives INSIDE the map-view content,
+                   directly below the room/interaction panel, so the
+                   panel's prompt and its resulting text share one glance
+                   zone. updateLog() hides the pinned bottom log while
+                   this exists. */
+                #game-log-inline {{
+                    height: 118px;
+                    background-color: #111;
+                    color: #EEE;
+                    padding: 5px 8px;
+                    font-family: monospace;
+                    font-size: 11px;
+                    overflow-y: auto;
+                    border-top: 2px solid #444;
+                    border-bottom: 2px solid #444;
+                    line-height: 1.2;
+                    text-align: left;
+                    box-sizing: border-box;
+                }}
+
                 /* Content-area sits between the top-strip and the
                    pinned log and takes the remaining vertical space.
                    On views with shorter content (inventory, vendor)
@@ -12339,7 +12367,14 @@ class WizardsCavernApp(toga.App):
                 // so the log never spoils a roll or a kill. Replaces the old
                 // "blank the whole log" hack.
                 function updateLog() {{
-                    var ld = document.getElementById('game-log');
+                    // Prefer the inline log (rides under the room panel on
+                    // map views, b515); the pinned bottom log is the
+                    // fallback for list views and hides while the inline
+                    // one is on screen.
+                    var inl = document.getElementById('game-log-inline');
+                    var bot = document.getElementById('game-log');
+                    if (bot) bot.style.display = inl ? 'none' : '';
+                    var ld = inl || bot;
                     if (!ld || !window.logLines) return;
                     var token = ++window._logToken;
                     var lines = window.logLines, delays = window.logDelays || [];
