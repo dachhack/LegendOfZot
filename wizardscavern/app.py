@@ -11088,13 +11088,19 @@ class WizardsCavernApp(toga.App):
                    from shifting between modes. */
                 .ibox {{
                     height: 322px;
+                    min-height: 322px;
+                    max-height: 322px;
                     display: flex;
                     flex-direction: column;
                     box-sizing: border-box;
                     overflow: hidden;
                 }}
+                /* flex-shrink 0 (b518): Android WebView could shrink the
+                   panel BELOW its content under text zoom, painting panel
+                   text over the log. The panel now sizes strictly to its
+                   content, capped at 204px with an internal scroll. */
                 .ibox .room-panel {{
-                    flex: 0 1 auto;
+                    flex: 0 0 auto;
                     height: auto;
                     min-height: 0;
                     max-height: 204px;
@@ -11625,6 +11631,11 @@ class WizardsCavernApp(toga.App):
                    log around the map. The grid centers inside it. */
                 .mvslot {{
                     height: 352px;
+                    /* b518: hard floor so no parent flex/zoom quirk can
+                       ever crush the map to a sliver (seen once on-device
+                       right after the shop transition). */
+                    min-height: 352px;
+                    flex: 0 0 auto;
                     width: 100%;
                     display: flex;
                     align-items: center;
