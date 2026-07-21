@@ -2485,27 +2485,6 @@ def _map_player_sprite_html(cell_px):
                     f'pointer-events:none; z-index:2;'))
 
 
-def _merge_interaction_box(html):
-    """Fuse the room panel and the inline log into ONE interaction box.
-
-    b516: wraps `<div class="room-panel">...` through the
-    `#game-log-inline` div in a fixed-height flex column (.ibox). The
-    panel shrinks to its content and the log takes every remaining
-    pixel -- a bare corridor gives the transcript ~240px, a combat
-    round still gets its full cards -- while the box's fixed total
-    keeps the map from shifting between modes. Views without both
-    pieces (inventory, vendor lists, full-bleed screens) pass through
-    untouched. Inserting the wrapper around the two SIBLINGS keeps the
-    markup balanced no matter how deeply the panel nests."""
-    i = html.find('<div class="room-panel"')
-    j = html.find("<div id='game-log-inline'></div>")
-    if i == -1 or j == -1 or j < i:
-        return html
-    k = j + len("<div id='game-log-inline'></div>")
-    return (html[:i] + '<div class="ibox">' + html[i:k] + '</div>'
-            + html[k:])
-
-
 def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable,
                     frontier=False):
     """Render one map cell. Discovered non-wall cells become tap-to-travel
@@ -5448,7 +5427,7 @@ class WizardsCavernApp(toga.App):
 
     def _render_initial(self):
         """First render: full set_content with shell + initial content."""
-        html_content = _merge_interaction_box(self.generate_html())
+        html_content = self.generate_html()
         full_html = self.wrap_html(html_content, gs.log_lines)
         import sys
         if sys.platform == 'android':
@@ -5468,7 +5447,7 @@ class WizardsCavernApp(toga.App):
         are untouched.
         """
         import json as _json
-        html_content = _merge_interaction_box(self.generate_html())
+        html_content = self.generate_html()
 
         # Compute music state
         new_mood = get_audio_mood(gs.prompt_cntl)
@@ -12439,11 +12418,33 @@ class WizardsCavernApp(toga.App):
                 // animation (a dice exchange or the defeat overlay) resolves,
                 // so the log never spoils a roll or a kill. Replaces the old
                 // "blank the whole log" hack.
+                // Fuse the room panel + inline log into one .ibox flex
+                // column (b520). Done in the DOM -- not by Python string
+                // surgery -- because room modes nest the map/log inside
+                // wrapper divs the old string splice couldn't see, which
+                // left the .ibox open and SWALLOWED the map into its
+                // overflow:hidden (invisible map on chest/altar views).
+                // Adopting the log as the panel's sibling is
+                // structure-proof: wherever each starts, they end up
+                // together and everything else stays where it was.
+                function mountIbox() {{
+                    var log = document.getElementById('game-log-inline');
+                    var panel = document.querySelector('.room-panel');
+                    if (!log || !panel) return;
+                    if (panel.parentElement &&
+                        panel.parentElement.classList.contains('ibox')) return;
+                    var box = document.createElement('div');
+                    box.className = 'ibox';
+                    panel.parentNode.insertBefore(box, panel);
+                    box.appendChild(panel);
+                    box.appendChild(log);
+                }}
                 function updateLog() {{
                     // Prefer the inline log (rides under the room panel on
                     // map views, b515); the pinned bottom log is the
                     // fallback for list views and hides while the inline
                     // one is on screen.
+                    mountIbox();
                     var inl = document.getElementById('game-log-inline');
                     var bot = document.getElementById('game-log');
                     if (bot) bot.style.display = inl ? 'none' : '';
