@@ -3420,12 +3420,14 @@ def process_hunger(character):
         else:
             add_log(f"{COLOR_RED}You are STARVING! Lost {dmg} HP from hunger!{COLOR_RESET}")
     elif h <= HUNGER_STARVING_THRESHOLD:
-        # About to starve warning
+        # About to starve warning -- transient toast, not log clutter (b517)
         if h % 10 == 0:
-            add_log(f"{COLOR_RED}You are desperately hungry! Find food soon!{COLOR_RESET}")
+            from .sprites.loot_toast import notify_toast
+            notify_toast("You are desperately hungry! Find food soon!", kind='alert')
     elif h <= HUNGER_HUNGRY_THRESHOLD:
         if h % 20 == 0:
-            add_log(f"{COLOR_YELLOW}Your stomach growls. You are hungry.{COLOR_RESET}")
+            from .sprites.loot_toast import notify_toast
+            notify_toast("Your stomach growls. You are hungry.", kind='warn')
 
 
 def process_mana_regen(character):

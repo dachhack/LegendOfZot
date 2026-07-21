@@ -2608,7 +2608,8 @@ def process_monster_respawn(player_character, my_tower):
     room.properties.pop('aggro', None)  # fresh arrival, no stale scent
     # A fresh spawn must never inherit an old combat record at this cell
     gs.encountered_monsters.pop((c, r, player_character.z), None)
-    add_log(f"{COLOR_GREY}You hear something skitter in the distance...{COLOR_RESET}")
+    from .sprites.loot_toast import notify_toast
+    notify_toast("You hear something skitter in the distance...", kind='info')
 
 
 def process_monster_turns(player_character, my_tower):
@@ -3473,7 +3474,8 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
                     adj = current_floor.grid[ty][tx]
                     if adj.properties.get('is_ore_vein') and not adj.properties.get('ore_vein_detected'):
                         adj.properties['ore_vein_detected'] = True
-                        add_log(f"{COLOR_YELLOW}You sense mineral deposits in the wall to the {dname}!{COLOR_RESET}")
+                        from .sprites.loot_toast import notify_toast
+                        notify_toast(f"You sense mineral deposits to the {dname}!", kind='warn')
 
         # Explorer's Ambition (human skill): sense an adjacent downward
         # passage before stepping onto it -- a nose for the way deeper.

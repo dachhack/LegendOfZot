@@ -10917,6 +10917,21 @@ class WizardsCavernApp(toga.App):
                     flex: 1;
                     word-break: break-word;
                 }}
+                /* General notification toasts (b517): ambient world pings
+                   promoted out of the log. Neutral = parchment; warn =
+                   amber; alert = red. */
+                .loot-toast.toast-info {{
+                    border-color: #8a7d6a;
+                    color: #E8DDC9;
+                }}
+                .loot-toast.toast-warn {{
+                    border-color: #E0A030;
+                    color: #F5C05A;
+                }}
+                .loot-toast.toast-alert {{
+                    border-color: #E05050;
+                    color: #FF8A80;
+                }}
                 @keyframes lootFade {{
                     0%   {{ opacity: 0; transform: translateX(20px); }}
                     8%   {{ opacity: 1; transform: translateX(0); }}

@@ -105,6 +105,28 @@ def notify_gold(amount, message=None):
         gs.loot_toasts = gs.loot_toasts[-_TOAST_QUEUE_CAP:]
 
 
+def notify_toast(text, kind='info', icon_html=''):
+    """Push a general notification toast (b517) -- ambient world pings
+    that used to clutter the log: monster noises, vein senses, hunger
+    pangs, level-ups, achievements.
+
+    `kind` tints the banner: 'info' (neutral), 'warn' (amber),
+    'alert' (red). Rides the same queue/fade machinery as loot toasts.
+    """
+    if not text:
+        return
+    gs = _ensure_queue()
+    gs.loot_toasts.append({
+        'icon': icon_html,
+        'text': text,
+        'created_at': time.time(),
+        'reveal_delay': _current_reveal_delay(),
+        'kind': kind,
+    })
+    if len(gs.loot_toasts) > _TOAST_QUEUE_CAP:
+        gs.loot_toasts = gs.loot_toasts[-_TOAST_QUEUE_CAP:]
+
+
 def render_loot_toasts_html():
     """Return the toast container HTML, or '' if no live toasts.
 
@@ -129,8 +151,11 @@ def render_loot_toasts_html():
         elapsed = now - t['created_at'] - t.get('reveal_delay', 0)
         # animation-delay = -elapsed: negative fast-forwards into a running
         # fade; positive (elapsed < 0) holds the toast hidden until reveal.
+        kind_cls = t.get('kind', '')
+        kind_cls = f' toast-{kind_cls}' if kind_cls in ('info', 'warn', 'alert') else ''
         items_html.append(
-            f'<div class="loot-toast" style="animation-delay:{-elapsed:.2f}s;">'
+            f'<div class="loot-toast{kind_cls}" '
+            f'style="animation-delay:{-elapsed:.2f}s;">'
             f'{t["icon"]}'
             f'<span class="loot-toast-text">{t["text"]}</span>'
             f'</div>'

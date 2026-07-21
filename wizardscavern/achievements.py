@@ -124,11 +124,14 @@ def check_achievements(player_character):
         if achievement.check_unlock(player_character, gs.game_stats):
             # Achievement just unlocked!
             gs.sfx_event = 'achievement'
-            # Only show in log with description
-            add_log(f"{COLOR_YELLOW} ACHIEVEMENT UNLOCKED: {achievement.name} - {achievement.description}{COLOR_RESET}")
+            # Milestone toast (b517) -- the achievements screen keeps the
+            # permanent record, so the log stays clean.
+            from .sprites.loot_toast import notify_toast, notify_gold
+            notify_toast(f"ACHIEVEMENT: {achievement.name} - {achievement.description}")
 
             if achievement.reward_gold > 0:
                 player_character.gold += achievement.reward_gold
-                add_log(f"{COLOR_GREEN}Reward: {achievement.reward_gold} gold!{COLOR_RESET}")
+                notify_gold(achievement.reward_gold,
+                            message=f"Reward: {achievement.reward_gold} gold!")
                 gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + achievement.reward_gold
                 check_achievements(player_character)

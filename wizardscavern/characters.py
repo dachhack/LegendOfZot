@@ -1476,11 +1476,17 @@ class Character:
             new_pts_due = self._stat_points_due(self.level)
             points_gained = new_pts_due - old_pts_due
             self.unspent_stat_points += points_gained
-            add_log(f"{COLOR_YELLOW}*** LEVEL UP! You are now level {self.level} ***{COLOR_RESET}")
-            add_log(f"Max Health increased to {self.max_health}!")
+            # Level-up celebration rides the toast rail (b517); the log
+            # keeps one compact line for the combat record.
+            from .sprites.loot_toast import notify_toast
+            notify_toast(f"LEVEL UP! You are now level {self.level} "
+                         f"(Max HP {self.max_health})")
+            add_log(f"{COLOR_YELLOW}*** LEVEL UP! Level {self.level} ***{COLOR_RESET}")
             if points_gained > 0:
                 pts_word = "point" if points_gained == 1 else "points"
-                add_log(f"{COLOR_CYAN}You earned {points_gained} stat {pts_word}! ({self.unspent_stat_points} unspent total){COLOR_RESET}")
+                notify_toast(f"You earned {points_gained} stat {pts_word}! "
+                             f"({self.unspent_stat_points} unspent -- see character screen)",
+                             kind='info')
             _check_achievements(self)
 
     def is_alive(self):
