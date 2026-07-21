@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 515
+BUILD_NUMBER = 516
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "b516: ONE BOX TO RULE THEM ALL. The room panel and the message log fuse into a single interaction box: the panel now shrinks to fit its content and the transcript absorbs every leftover pixel -- a quiet corridor gives the log nearly 240px of story instead of cramming it under a half-empty 200px panel, while combat still gets its full monster and hero cards with the blow-by-blow directly beneath. The box's total height is fixed, so the map never twitches when you step from an empty tunnel into an altar chamber.",
     "b515: ONE GLANCE ZONE. The message log moves from the bottom of the screen to directly UNDER the room interaction panel -- pray at an altar and the god's answer appears right below the prompt, not a screen-length away. No more eye tennis between the top panel and a basement log. List views (inventory, vendor) keep the classic bottom log since they have no room panel; combat text lands under the fight cards with its dice-reveal timing intact.",
     "b514: QA GETS A PICKAXE. Under-the-hood: the headless playtest tourist now reports mining coverage (mined=N in every run summary), and the playtest playbook gained a dedicated dwarf mining run plus a cover-the-races rule -- so ore veins, pickaxe swings and Ioun Stone crafting get exercised on every regression sweep instead of only when a dwarf happens to wander by.",
     "b513: MEET YOUR HERO. (1) Your character now STANDS on the map -- the same avatar from the character screen, idle-bobbing inside the corner brackets, at every zoom level. (2) A brand-new SUPER-CLOSE zoom: 5x5 rooms at 66px, big enough to admire the furniture (and your own boots). (3) The zoom chip is now a compact +/- stepper -- tap + to lean in, - to pull back, four levels from room-scale to whole-floor; the button dims when you hit the end of the range.",
@@ -14,5 +15,4 @@ CHANGELOG = [
     "b511: CRACKS, NOT KNOTS. Ore-vein bolts now use a self-avoiding walk: a vein never crosses itself and never turns back toward rock it already split, and a momentum bias makes it prefer running straight -- so each detected tile carries one long clean fissure, and neighbouring vein tiles chain into what reads as a single crack streaking through the wall.",
     "b510: LONGER BOLTS + PICKAXE FEEDBACK. (1) Ore-vein bolts run longer -- 8 crevice steps instead of 5, so a detected vein tile carries one proper lightning crack instead of a stub. (2) Mining finally LOOKS like mining: when your pickaxe smashes through, a dust cloud bursts over the broken wall and four rock chips fly outward while the stone becomes open floor. One swing, one satisfying puff.",
     "b509: VEINS LIKE LIGHTNING. Ore seams take their final form: a muted ochre BOLT cracking through the wall -- the vein routes through the crevices between the drawn boulders, but each segment kinks at a sharp perpendicular jag with hard miter corners, like a fissure of mineral splitting the stone. The nugget flecks are gone entirely; the crack IS the tell.",
-    "b507: GOLD IN THEM WALLS. Detected ore veins are visible again. The old amber % glyph silently vanished when walls went art-only in b493; now a dwarf (or a Stonelore human) walking past a vein sees a golden seam drawn right into the rock, one segment per vein tile, so you can trace the whole worm before you swing. Tap MINE, pick the direction, follow the sparkle.",
 ]

@@ -2485,6 +2485,27 @@ def _map_player_sprite_html(cell_px):
                     f'pointer-events:none; z-index:2;'))
 
 
+def _merge_interaction_box(html):
+    """Fuse the room panel and the inline log into ONE interaction box.
+
+    b516: wraps `<div class="room-panel">...` through the
+    `#game-log-inline` div in a fixed-height flex column (.ibox). The
+    panel shrinks to its content and the log takes every remaining
+    pixel -- a bare corridor gives the transcript ~240px, a combat
+    round still gets its full cards -- while the box's fixed total
+    keeps the map from shifting between modes. Views without both
+    pieces (inventory, vendor lists, full-bleed screens) pass through
+    untouched. Inserting the wrapper around the two SIBLINGS keeps the
+    markup balanced no matter how deeply the panel nests."""
+    i = html.find('<div class="room-panel"')
+    j = html.find("<div id='game-log-inline'></div>")
+    if i == -1 or j == -1 or j < i:
+        return html
+    k = j + len("<div id='game-log-inline'></div>")
+    return (html[:i] + '<div class="ibox">' + html[i:k] + '</div>'
+            + html[k:])
+
+
 def _grid_cell_html(room, x, y, is_player, is_target, cell_px, font_px, tappable,
                     frontier=False):
     """Render one map cell. Discovered non-wall cells become tap-to-travel
@@ -5427,7 +5448,7 @@ class WizardsCavernApp(toga.App):
 
     def _render_initial(self):
         """First render: full set_content with shell + initial content."""
-        html_content = self.generate_html()
+        html_content = _merge_interaction_box(self.generate_html())
         full_html = self.wrap_html(html_content, gs.log_lines)
         import sys
         if sys.platform == 'android':
@@ -5447,7 +5468,7 @@ class WizardsCavernApp(toga.App):
         are untouched.
         """
         import json as _json
-        html_content = self.generate_html()
+        html_content = _merge_interaction_box(self.generate_html())
 
         # Compute music state
         new_mood = get_audio_mood(gs.prompt_cntl)
@@ -11042,6 +11063,32 @@ class WizardsCavernApp(toga.App):
                     line-height: 1.2;
                     text-align: left;
                     box-sizing: border-box;
+                }}
+
+                /* Unified interaction box (b516): panel + log fused into
+                   one fixed-height flex column. The panel shrinks to its
+                   content and the log absorbs the remainder, so quiet
+                   rooms hand the transcript the space a half-empty panel
+                   used to waste -- while the fixed total keeps the map
+                   from shifting between modes. */
+                .ibox {{
+                    height: 322px;
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                }}
+                .ibox .room-panel {{
+                    flex: 0 1 auto;
+                    height: auto;
+                    min-height: 0;
+                    max-height: 204px;
+                    overflow-y: auto;
+                }}
+                .ibox #game-log-inline {{
+                    flex: 1 1 auto;
+                    height: auto;
+                    min-height: 60px;
                 }}
 
                 /* Content-area sits between the top-strip and the
